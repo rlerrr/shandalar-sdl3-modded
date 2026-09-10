@@ -11,8 +11,10 @@
 #include <sys/stat.h>
 #endif
 
-// TODO: this is real dumb
-#define ASSET_REQUEST_LIMIT 4096
+/* Requests only need tracking while an asynchronous fetch is in flight or
+ * until its terminal state is observed. This is a concurrency limit, not a
+ * limit on the number of distinct assets used during the process lifetime. */
+#define ASSET_REQUEST_LIMIT 64
 
 typedef struct AssetRequest
 {
@@ -111,6 +113,7 @@ static AssetRequest *find_request(const char *relative_path)
 static AssetRequest *alloc_request(const char *relative_path)
 {
   int i;
+  AssetRequest *reclaimable = 0;
   char normalized[260];
   snprintf(normalized, sizeof(normalized), "%s", relative_path ? relative_path : "");
   normalize_slashes(normalized);
@@ -122,9 +125,18 @@ static AssetRequest *alloc_request(const char *relative_path)
       g_requests[i].state = SHANDALAR_ASSET_NOT_REQUESTED;
       return &g_requests[i];
     }
+    if (!reclaimable && g_requests[i].state != SHANDALAR_ASSET_PENDING)
+      reclaimable = &g_requests[i];
   }
-  snprintf(g_last_error, sizeof(g_last_error), "asset request table is full");
-  return 0;
+  if (reclaimable)
+  {
+    memset(reclaimable, 0, sizeof(*reclaimable));
+    snprintf(reclaimable->relative_path, sizeof(reclaimable->relative_path), "%s", normalized);
+    return reclaimable;
+  }
+  snprintf(g_last_error, sizeof(g_last_error),
+           "too many asset fetches in flight (limit %d)", ASSET_REQUEST_LIMIT);
+  return NULL;
 }
 
 void shandalar_assets_set_root(const char *root)
@@ -309,17 +321,18 @@ ShandalarAssetState shandalar_assets_prefetch(const char *relative_path)
   if (!relative_path || !relative_path[0])
     return SHANDALAR_ASSET_ERROR;
   request = find_request(relative_path);
+  if (request && request->state == SHANDALAR_ASSET_PENDING)
+    return request->state;
+  if (asset_file_exists(relative_path))
+  {
+    if (request)
+      memset(request, 0, sizeof(*request));
+    return SHANDALAR_ASSET_READY;
+  }
   if (!request)
     request = alloc_request(relative_path);
   if (!request)
     return SHANDALAR_ASSET_ERROR;
-  if (request->state == SHANDALAR_ASSET_READY || request->state == SHANDALAR_ASSET_PENDING)
-    return request->state;
-  if (asset_file_exists(request->relative_path))
-  {
-    request->state = SHANDALAR_ASSET_READY;
-    return request->state;
-  }
 #ifdef __EMSCRIPTEN__
   {
     char url[1024];
@@ -376,7 +389,12 @@ ShandalarAssetState shandalar_assets_state(const char *relative_path)
 {
   AssetRequest *request = find_request(relative_path);
   if (request)
-    return request->state;
+  {
+    ShandalarAssetState state = request->state;
+    if (state == SHANDALAR_ASSET_READY || state == SHANDALAR_ASSET_ERROR)
+      memset(request, 0, sizeof(*request));
+    return state;
+  }
   return asset_file_exists(relative_path) ? SHANDALAR_ASSET_READY : SHANDALAR_ASSET_NOT_REQUESTED;
 }
 
@@ -385,7 +403,15 @@ int shandalar_assets_is_ready(const char *relative_path)
   return shandalar_assets_state(relative_path) == SHANDALAR_ASSET_READY;
 }
 
-void shandalar_assets_update(void) {}
+void shandalar_assets_update(void)
+{
+  int i;
+  for (i = 0; i < ASSET_REQUEST_LIMIT; ++i)
+  {
+    if (g_requests[i].state == SHANDALAR_ASSET_READY)
+      memset(&g_requests[i], 0, sizeof(g_requests[i]));
+  }
+}
 const char *shandalar_assets_last_error(void) { return g_last_error; }
 
 ShandalarAssetState shandalar_assets_prefetch_small_art_cat(void)

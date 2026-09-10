@@ -35,7 +35,7 @@ extern "C" {
 	int IsBigArtIn(int id, int version);
 	int IsSmallArtIn(int id, int version);
 	int ReloadBigArtIfWrongSize(int id, int version, LONG width, int height);
-	int ReloadSmallArtIfWrongSize(int id, int version);
+	int ReloadSmallArtIfWrongSize(int id, int version, int width, int height);
 	int DrawBigArt(HDC hdc, const RECT* rect, int id, int version);
 	int DrawSmallArt(HDC hdc, const RECT* rect, int id, int version);
 	void Cardartlib_initialize_for_shandalar(card_data_t* real_cards_data, card_ptr_t* real_cards_ptr);

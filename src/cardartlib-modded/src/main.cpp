@@ -271,7 +271,7 @@ int ReloadBigArtIfWrongSize(int id, int version, LONG width, int height) {
 	return 0;
 } //Shandalar
 
-int ReloadSmallArtIfWrongSize(int id, int version) {
+int ReloadSmallArtIfWrongSize(int id, int version, int width, int height) {
 	return 0;
 }
 
