@@ -19,6 +19,7 @@ int main(void)
   BITMAPINFO info;
   HPALETTE palette;
   HDC destination;
+  HDC mapping;
   HDC source;
   HDC hatch_dc;
   HBRUSH hatch_brush;
@@ -29,6 +30,7 @@ int main(void)
   void *source_bits;
   unsigned char *bgr;
   uint32_t rgba[16];
+  POINT mapped[2];
 
   memset(&palette_data, 0, sizeof(palette_data));
   palette_data.version = 0x300;
@@ -39,6 +41,27 @@ int main(void)
   destination = shandalar_create_screen_dc(4, 4);
   CHECK(palette && destination);
   CHECK(SelectPalette(destination, palette, FALSE) == NULL);
+
+  mapping = CreateCompatibleDC(NULL);
+  CHECK(mapping);
+  CHECK(SetMapMode(mapping, MM_ISOTROPIC) == 0);
+  CHECK(SetWindowExtEx(mapping, 800, 1200, NULL));
+  CHECK(SetViewportExtEx(mapping, 400, 700, NULL));
+  mapped[0].x = 0;
+  mapped[0].y = 0;
+  mapped[1].x = 800;
+  mapped[1].y = 1200;
+  CHECK(LPtoDP(mapping, mapped, 2));
+  CHECK(mapped[0].x == 0 && mapped[0].y == 0);
+  CHECK(mapped[1].x == 400 && mapped[1].y == 600);
+  CHECK(DPtoLP(mapping, mapped, 2));
+  CHECK(mapped[1].x == 800 && mapped[1].y == 1200);
+  CHECK(SetViewportExtEx(mapping, -400, 700, NULL));
+  mapped[0].x = 800;
+  mapped[0].y = 1200;
+  CHECK(LPtoDP(mapping, mapped, 1));
+  CHECK(mapped[0].x == -400 && mapped[0].y == 600);
+  CHECK(DeleteDC(mapping));
 
   memset(&info, 0, sizeof(info));
   info.bmiHeader.biSize = sizeof(info.bmiHeader);

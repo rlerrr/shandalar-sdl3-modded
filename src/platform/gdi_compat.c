@@ -1658,7 +1658,43 @@ BOOL DrawFocusRect(HDC dc, const RECT *rect)
 int SetMapMode(HDC dc, int mode) { int old = dc ? dc->map_mode : 0; if (dc) dc->map_mode = mode; return old; }
 int GetMapMode(HDC dc) { return dc ? dc->map_mode : 0; }
 BOOL SetWindowExtEx(HDC dc, int x, int y, LPSIZE old) { if (!dc || !x || !y) return FALSE; if (old) { old->cx = dc->window_ext_x; old->cy = dc->window_ext_y; } dc->window_ext_x = x; dc->window_ext_y = y; return TRUE; }
-BOOL SetViewportExtEx(HDC dc, int x, int y, LPSIZE old) { if (!dc) return FALSE; if (old) { old->cx = dc->viewport_ext_x; old->cy = dc->viewport_ext_y; } dc->viewport_ext_x = x; dc->viewport_ext_y = y; return TRUE; }
+BOOL SetViewportExtEx(HDC dc, int x, int y, LPSIZE old)
+{
+  int64_t window_x;
+  int64_t window_y;
+  int64_t viewport_x;
+  int64_t viewport_y;
+
+  if (!dc)
+    return FALSE;
+  if (old) {
+    old->cx = dc->viewport_ext_x;
+    old->cy = dc->viewport_ext_y;
+  }
+
+  dc->viewport_ext_x = x;
+  dc->viewport_ext_y = y;
+  if (dc->map_mode != MM_ISOTROPIC || !x || !y ||
+      !dc->window_ext_x || !dc->window_ext_y)
+    return TRUE;
+
+  window_x = dc->window_ext_x < 0 ? -(int64_t)dc->window_ext_x : dc->window_ext_x;
+  window_y = dc->window_ext_y < 0 ? -(int64_t)dc->window_ext_y : dc->window_ext_y;
+  viewport_x = x < 0 ? -(int64_t)x : x;
+  viewport_y = y < 0 ? -(int64_t)y : y;
+
+  /* MM_ISOTROPIC uses the smaller of the requested horizontal and vertical
+   * scales, adjusting the other viewport extent so logical units remain
+   * square.  Callers set the window extent first, as required by Win32. */
+  if (viewport_x * window_y < viewport_y * window_x) {
+    viewport_y = (viewport_x * window_y + window_x / 2) / window_x;
+    dc->viewport_ext_y = y < 0 ? -(int)viewport_y : (int)viewport_y;
+  } else {
+    viewport_x = (viewport_y * window_x + window_y / 2) / window_y;
+    dc->viewport_ext_x = x < 0 ? -(int)viewport_x : (int)viewport_x;
+  }
+  return TRUE;
+}
 BOOL SetWindowOrgEx(HDC dc, int x, int y, LPPOINT old) { if (!dc) return FALSE; if (old) { old->x = dc->window_org_x; old->y = dc->window_org_y; } dc->window_org_x = x; dc->window_org_y = y; return TRUE; }
 BOOL SetViewportOrgEx(HDC dc, int x, int y, LPPOINT old) { if (!dc) return FALSE; if (old) { old->x = dc->viewport_org_x; old->y = dc->viewport_org_y; } dc->viewport_org_x = x; dc->viewport_org_y = y; return TRUE; }
 BOOL OffsetViewportOrgEx(HDC dc, int x, int y, LPPOINT old) { if (!dc) return FALSE; if (old) { old->x = dc->viewport_org_x; old->y = dc->viewport_org_y; } dc->viewport_org_x += x; dc->viewport_org_y += y; return TRUE; }
