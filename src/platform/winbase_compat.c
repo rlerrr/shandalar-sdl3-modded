@@ -95,6 +95,32 @@ DWORD GetCurrentDirectoryA(DWORD size, LPSTR buffer)
   return needed;
 }
 
+HMODULE LoadLibraryA(LPCSTR path)
+{
+  (void)path;
+  return (HMODULE)1;
+}
+
+BOOL FreeLibrary(HMODULE module)
+{
+  (void)module;
+  return TRUE;
+}
+
+BOOL SystemParametersInfoA(UINT action, UINT parameter, LPVOID value, UINT flags)
+{
+  RECT *rect = (RECT *)value;
+  (void)parameter;
+  (void)flags;
+  if (action != SPI_GETWORKAREA || !rect)
+    return FALSE;
+  rect->left = 0;
+  rect->top = 0;
+  rect->right = GetSystemMetrics(SM_CXSCREEN);
+  rect->bottom = GetSystemMetrics(SM_CYSCREEN);
+  return TRUE;
+}
+
 BOOL SetCurrentDirectoryA(LPCSTR path)
 {
   return path &&

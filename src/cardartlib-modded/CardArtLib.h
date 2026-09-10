@@ -1,9 +1,14 @@
 #ifndef __CARDARTLIB_H__
 #define __CARDARTLIB_H__
 
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+#include "platform/winuser_compat.h"
+#include "platform/legacy_io.h"
+#else
 #include <windows.h>
 #include <io.h>
 #include <gdiplus.h>
+#endif
 #include <unordered_map>
 #include <string>
 #include <cstdio>

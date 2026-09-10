@@ -1,7 +1,9 @@
 #include "deckdll.h"
 #include <limits.h>
 
+#ifndef SHANDALAR_MODDED_DECKDLL
 extern HINSTANCE global_hinstance;
+#endif
 #include "resources.h"
 
 #define SX(value) ((value) * 3 / 2)
@@ -14,7 +16,13 @@ static HWND add_control(HWND dialog, const char *class_name, int id,
 {
   HWND control = CreateWindowExA(0, class_name, "", WS_CHILD | WS_VISIBLE | style,
                                  SX(x), SY(y), SX(width), SY(height), dialog,
-                                 (HMENU)(intptr_t)id, global_hinstance, NULL);
+                                 (HMENU)(intptr_t)id,
+#ifdef SHANDALAR_MODDED_DECKDLL
+                                 NULL,
+#else
+                                 global_hinstance,
+#endif
+                                 NULL);
   if (control)
     SendMessageA(control, WM_SETFONT, SendMessageA(dialog, WM_GETFONT, 0, 0), FALSE);
   return control;

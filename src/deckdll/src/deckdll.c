@@ -4294,6 +4294,23 @@ LRESULT CALLBACK wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARA
 
   switch (msg)
   {
+  case 0x8443:
+  {
+    RECT *drag_rect = (RECT *)lparam;
+    int currsel = GetWindowWord(hwnd, HORZLIST_CURRSEL_INDEX);
+    if (!drag_rect || currsel < 0 ||
+        currsel >= GetWindowWord(hwnd, HORZLIST_LASTPIC_INDEX))
+      return 0;
+    horzlist_prep_rectangle(hwnd, currsel, drag_rect);
+    drag_rect->left +=
+        (drag_rect->right - drag_rect->left - global_smallcard_piclist_width) / 2;
+    drag_rect->top +=
+        (drag_rect->bottom - drag_rect->top - global_smallcard_piclist_height) / 2;
+    drag_rect->right = drag_rect->left + global_smallcard_piclist_width;
+    drag_rect->bottom = drag_rect->top + global_smallcard_piclist_height;
+    return 1;
+  }
+
   case 0x464:
     SendMessageA(global_main_hwnd, 0x466, (WPARAM)wparam, (LPARAM)hwnd);
     return 0;

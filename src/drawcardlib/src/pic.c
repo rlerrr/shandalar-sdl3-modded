@@ -243,7 +243,9 @@ DIBSurface *CreateDIBSurface(int width, int height, int bitsPerPixel)
 
   // Create the DIB section
   global_dibSurface->hTempDC = GetDC(NULL);
+#ifndef SHANDALAR_MODDED_PIC_LOADER
   ApplyCardArtPaletteToDc(global_dibSurface->hTempDC);
+#endif
 
   global_dibSurface->hBitmap = CreateDIBSection(
       global_dibSurface->hTempDC,

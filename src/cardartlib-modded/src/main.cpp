@@ -1,21 +1,16 @@
 #include "manalink.h"
 #include "CardArtLib.h"
 
-#define BOOST_FILESYSTEM_VERSION 3
-#include <boost/filesystem.hpp>
+#include <SDL3/SDL.h>
+#include <SDL3_image/SDL_image.h>
+#include <filesystem>
 
-namespace gdi = Gdiplus;
-namespace fs = boost::filesystem;
+namespace fs = std::filesystem;
 
-static std::unordered_map<std::string, std::unique_ptr<gdi::Image>> *cache;
+static std::unordered_map<std::string, SDL_Surface*> *cache;
 static char** idToName;
 static size_t numberOfCards = 0;
 static CRITICAL_SECTION crit;
-//gdiplus
-static ULONG_PTR gdiplusToken;
-static ULONG_PTR gdiplusBGThreadToken;
-static gdi::GdiplusStartupInput gdiplusStartupInput;
-static gdi::GdiplusStartupOutput gdiplusStartupOutput;
 static bool images_counted = false;
 
 static card_ptr_t* cards_ptr_shandalar_dll = NULL;
@@ -194,15 +189,20 @@ int LoadBigArt(int id, int version, LONG width, int height) {
 	if (!images_counted)
 		count_images();
 	std::string path = idToNameFun(id, version);
-	std::unordered_map<std::string, std::unique_ptr<gdi::Image>>::const_iterator it = cache->find(path);
+	std::unordered_map<std::string, SDL_Surface*>::const_iterator it = cache->find(path);
 	if (it == cache->end()) {
 		if (!file_exists(path.c_str())) {
 			LeaveCriticalSection(&crit);
 			return 0;
 		}
-		std::unique_ptr<wchar_t[]> wPath = stringToWChar(path);
-		std::unique_ptr<gdi::Image> tmpSurface(new gdi::Image(wPath.get()));
-		(*cache)[path] = move(tmpSurface);
+		SDL_Surface* loaded = IMG_Load(path.c_str());
+		SDL_Surface* converted = loaded ? SDL_ConvertSurface(loaded, SDL_PIXELFORMAT_BGRA32) : NULL;
+		SDL_DestroySurface(loaded);
+		if (!converted) {
+			LeaveCriticalSection(&crit);
+			return 0;
+		}
+		(*cache)[path] = converted;
 	}
 	LeaveCriticalSection(&crit);
 	return 1; // 1 if the art is available
@@ -215,8 +215,9 @@ int LoadSmallArt(int id, int version, LONG width, int height) {
 void DestroyBigArt(int id, int version) {
 	EnterCriticalSection(&crit);
 	std::string path = idToNameFun(id, version);
-	std::unordered_map<std::string, std::unique_ptr<gdi::Image>>::iterator it = cache->find(path);
+	std::unordered_map<std::string, SDL_Surface*>::iterator it = cache->find(path);
 	if (it != cache->end()) {
+		SDL_DestroySurface(it->second);
 		cache->erase(it);
 		//MessageBox(0, path.c_str(), 0, MB_ICONSTOP | MB_SYSTEMMODAL);
 	}
@@ -237,6 +238,8 @@ int IsSmallArtRightSize(int id, int version, int width, int height) {
 
 void DestroyAllBigArts(void) {
 	EnterCriticalSection(&crit);
+	for (std::unordered_map<std::string, SDL_Surface*>::iterator it = cache->begin(); it != cache->end(); ++it)
+		SDL_DestroySurface(it->second);
 	cache->clear();
 	LeaveCriticalSection(&crit);
 } //Shandalar
@@ -264,19 +267,19 @@ int ReloadSmallArtIfWrongSize(int id, int version) {
 int DrawBigArt(HDC hdc, const RECT* rect, int id, int version) {
 	if (!LoadBigArt(id, version, 0, 0)) {
 		EnterCriticalSection(&crit);
-		gdi::Graphics graphics(hdc);
-		gdi::SolidBrush brush(gdi::Color(211,211,211));
-		gdi::Rect tmpRect(rect->left, rect->top, rect->right - rect->left, rect->bottom - rect->top);
-		graphics.FillRectangle(&brush, tmpRect);
+		HBRUSH brush = CreateSolidBrush(RGB(211, 211, 211));
+		FillRect(hdc, rect, brush);
+		DeleteObject(brush);
 		LeaveCriticalSection(&crit);
 		return 0;
 	}
 	EnterCriticalSection(&crit);
-	gdi::Graphics graphics(hdc);
-
 	std::string path = idToNameFun(id, version);
-	gdi::Rect tmpRect(rect->left, rect->top, rect->right - rect->left, rect->bottom - rect->top);
-	graphics.DrawImage((*cache)[path].get(), tmpRect);
+	SDL_Surface* surface = (*cache)[path];
+	shandalar_dc_blit_bgra32(hdc, rect->left, rect->top,
+						   rect->right - rect->left, rect->bottom - rect->top,
+						   surface->pixels, surface->pitch, surface->w, surface->h,
+						   0, 0, surface->w, surface->h, 255);
 
 	LeaveCriticalSection(&crit);
 	return 1;
@@ -287,13 +290,9 @@ int DrawSmallArt(HDC hdc, const RECT* rect, int id, int version) {
 }
 
 static void init() {
-	cache = new std::unordered_map<std::string, std::unique_ptr<gdi::Image>>;
+	cache = new std::unordered_map<std::string, SDL_Surface*>;
 
 	InitializeCriticalSection(&crit);
-	gdiplusStartupInput.SuppressBackgroundThread = TRUE;
-	GdiplusStartup(&gdiplusToken, &gdiplusStartupInput, &gdiplusStartupOutput);
-	gdi::Status stat = gdiplusStartupOutput.NotificationHook(&gdiplusBGThreadToken);
-	assert(stat == gdi::Ok);
 
 	images_counted = false;
 }
@@ -308,8 +307,6 @@ static void deinit() {
 	}
 
 	DeleteCriticalSection(&crit);
-	gdiplusStartupOutput.NotificationUnhook(gdiplusBGThreadToken);
-	gdi::GdiplusShutdown(gdiplusToken);
 }
 
 int WINAPI DllMain(HINSTANCE hDllHandle, DWORD nReason, LPVOID reserved) {

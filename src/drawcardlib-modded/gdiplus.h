@@ -1,3 +1,7 @@
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+#include "platform/gdi_compat.h"
+#endif
+
 #define WINGDIPAPI __stdcall
 #define GDIPCONST const
 
@@ -121,11 +125,11 @@ typedef INT PixelFormat;
 #define PixelFormat32bppARGB	(10 | (32 << 8) | PixelFormatAlpha | PixelFormatGDI | PixelFormatCanonical)
 
 typedef Status GpStatus;
-typedef struct {} GpGraphics;
-typedef struct {} GpImage;
+typedef struct GpGraphics GpGraphics;
+typedef struct GpImage GpImage;
 typedef GpImage GpBitmap;
 typedef Unit GpUnit;
-typedef struct {} GpImageAttributes;
+typedef struct GpImageAttributes GpImageAttributes;
 typedef BOOL (CALLBACK * ImageAbort)(VOID *);
 typedef ImageAbort DrawImageAbort;
 typedef VOID (WINAPI *DebugEventProc)(DebugEventLevel level, CHAR *message);

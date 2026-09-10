@@ -6,10 +6,15 @@
 #include <math.h>
 #include <stdio.h>
 
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+#include "platform/winuser_compat.h"
+#include "platform/legacy_io.h"
+#else
 #include <windows.h>
 #include <windowsx.h>
 #include <commctrl.h>
 #include <shlwapi.h>
+#endif
 
 // windows.h defines this to either LoadImageA or LoadImageW.
 // We want the function in image.dll.
@@ -18,7 +23,19 @@
 #define DECKBUILDER 1
 
 #include "../defs.h"
+#include "modded_compat.h"
 #include "resources.h"
+
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+#define req_colorless req.req_colorless
+#define req_black req.req_black
+#define req_blue req.req_blue
+#define req_hybrid req.req_hybrid
+#define hybrid_type req.hybrid_type
+#define req_green req.req_green
+#define req_red req.req_red
+#define req_white req.req_white
+#endif
 
 struct DeckEntry;
 struct GlobalDeckEntry;
@@ -52,7 +69,11 @@ extern "C"
 					int (*check_colors_inout_edited_deck_fn)(const GlobalDeckEntry*, int, bool));
 
   // Imports
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+#define DLLIMPORT
+#else
 #define DLLIMPORT __attribute__((dllimport))
+#endif
   // from image.dll
   DLLIMPORT HANDLE LoadImage(const char*, HPALETTE, int, int);
   // from Drawcardlib.dll

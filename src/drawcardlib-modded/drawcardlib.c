@@ -4,6 +4,18 @@
 
 #include "drawcardlib.h"
 
+char card_coded[30000/8];
+char* set_legacy_effect_name_addr;
+
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+card_instance_t* get_displayed_card_instance_manalink(int player, int card)
+{
+  (void)player;
+  (void)card;
+  return NULL;
+}
+#endif
+
 typedef struct
 {
   WORD palVersion;
@@ -115,6 +127,9 @@ popup(const char* title, const char* fmt, ...)
   vsnprintf(buf, 8000, fmt, args);
   va_end(args);
 
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+  fprintf(stderr, "%s: %s\n", title, buf);
+#endif
   MessageBox(0, buf, title, MB_ICONERROR|MB_TASKMODAL);
 }
 

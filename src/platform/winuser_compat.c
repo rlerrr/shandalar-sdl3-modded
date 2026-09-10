@@ -946,6 +946,12 @@ int GetClassNameA(HWND window, LPSTR class_name, int max_count)
   return (int)length;
 }
 
+BOOL GetUpdateRect(HWND window, LPRECT rect, BOOL erase)
+{
+  (void)erase;
+  return rect ? GetClientRect(window, rect) : valid_window(window);
+}
+
 DWORD GetWindowThreadProcessId(HWND window, DWORD *process_id)
 {
   if (!valid_window(window))

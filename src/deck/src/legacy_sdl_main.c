@@ -1,15 +1,24 @@
 #include <SDL3/SDL.h>
 
+#ifdef SHANDALAR_MODDED_DECK
 #include "deckdll/src/deckdll.h"
-#include "deck/src/deck_imgui_interaction.h"
+#else
+#include "deckdll/src/deckdll.h"
 #include "cardartlib/CardArtLib.h"
 #include "drawcardlib/Drawcardlib.h"
+#endif
+#include "deck/src/deck_imgui_interaction.h"
 #include "platform/gdi_compat.h"
 #include "platform/asset_manager.h"
 #include "platform/winuser_compat.h"
 #include "platform/winuser_imgui_bridge.h"
 
 #include <stdio.h>
+
+#ifdef SHANDALAR_MODDED_DECK
+BOOL WINAPI CardArtModded_DllMain(HINSTANCE instance, DWORD reason, LPVOID reserved);
+BOOL WINAPI DrawCardModded_DllMain(HINSTANCE instance, DWORD reason, LPVOID reserved);
+#endif
 
 #ifdef __EMSCRIPTEN__
 #include <emscripten.h>
@@ -172,6 +181,10 @@ static BOOL pump_legacy_ui(BOOL wait)
     GetWindowRect(global_horzlist_hwnd, &rect);
     push_smoke_mouse_button((float)rect.left + 30.0f, (float)rect.top + 30.0f, 1);
   } else if (g_smoke_drag_card && g_smoke_frames_remaining == 24) {
+    push_smoke_mouse_button(500.0f, 250.0f, 1);
+  } else if (g_smoke_drag_card && g_smoke_frames_remaining == 23) {
+    save_snapshot();
+  } else if (g_smoke_drag_card && g_smoke_frames_remaining == 22) {
     push_smoke_mouse_button(500.0f, 250.0f, 0);
     g_smoke_drag_card = 0;
   }
@@ -251,7 +264,11 @@ static BOOL pump_legacy_ui(BOOL wait)
 
 int main(int argc, char **argv)
 {
+#ifdef SHANDALAR_MODDED_DECK
+  const char *asset_root = "C:/dev/Shandalar";
+#else
   const char *asset_root = "C:/Magic/Program";
+#endif
   char module_path[1024];
   int i;
   WPARAM result;
@@ -312,12 +329,27 @@ int main(int argc, char **argv)
   }
 
   shandalar_assets_set_root(asset_root);
+#ifdef SHANDALAR_MODDED_DECK
+  /* The imported libraries still open rarity.dat and several text files
+     relative to the executable, just as the original deck.exe did. */
+  SetCurrentDirectoryA(asset_root);
+#endif
   SDL_snprintf(module_path, sizeof(module_path), "%s/deck.exe", asset_root);
   shandalar_win32_set_module_path(module_path);
   shandalar_win32_set_pump_proc(pump_legacy_ui);
   deck_register_dialog_resources();
 
   printf("deck: initializing card art and drawcard\n");
+#ifdef SHANDALAR_MODDED_DECK
+  if (!CardArtModded_DllMain((HINSTANCE)1, DLL_PROCESS_ATTACH, NULL)) {
+    printf("deck: modded card art init failed\n");
+    return 1;
+  }
+  if (!DrawCardModded_DllMain((HINSTANCE)1, DLL_PROCESS_ATTACH, NULL)) {
+    printf("deck: modded drawcard init failed\n");
+    return 1;
+  }
+#else
   if (!CardArtLib_InitializeFromRoot(asset_root)) {
     printf("deck: card art init failed\n");
     return 1;
@@ -328,6 +360,7 @@ int main(int argc, char **argv)
     return 1;
   }
   printf("deck: drawcard init ok\n");
+#endif
 
   printf("deck: attaching deck dll\n");
   if (!DllMain((HINSTANCE)1, DLL_PROCESS_ATTACH, NULL)) {
@@ -339,8 +372,13 @@ int main(int argc, char **argv)
   result = DeckBuilderMain(NULL, DBFLAGS_STANDALONE, 1);
   printf("deck: DeckBuilderMain returned %d\n", (int)result);
   DllMain((HINSTANCE)1, DLL_PROCESS_DETACH, NULL);
+#ifdef SHANDALAR_MODDED_DECK
+  DrawCardModded_DllMain((HINSTANCE)1, DLL_PROCESS_DETACH, NULL);
+  CardArtModded_DllMain((HINSTANCE)1, DLL_PROCESS_DETACH, NULL);
+#else
   DrawCardLib_Shutdown();
   CardArtLib_Shutdown();
+#endif
 
   shandalar_deck_imgui_interaction_shutdown();
   shandalar_win32_imgui_shutdown();

@@ -9,8 +9,13 @@
 #include <stdlib.h>
 #include <string.h>
 #define NOMINMAX
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+#include "platform/winuser_compat.h"
+#include "platform/legacy_io.h"
+#else
 #include <windows.h>
 #include <shlwapi.h>
+#endif
 
 // windows.h defines this to either LoadImageA or LoadImageW.
 // We want the function in image.dll.
@@ -19,9 +24,58 @@
 #undef PACKED	// (unconditionally!) redefined within manalink.h
 #define DRAWCARDLIB 1
 #include "manalink.h"
+#include "modded_compat.h"
+#ifndef SHANDALAR_SDL_WIN32_COMPAT
 #include "../shandalar/export_to_drawcardlib.h"	// for INSTANCE_FLAG_ARTIFACT/INSTANCE_FLAG_ENCHANTMENT display in Shandalar.
+#endif
 
 #include "gdiplus.h"
+
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+/* Types added to the later Manalink dump used by this draw library. */
+typedef struct
+{
+  uint8_t default_expansion, default_rarity, watermark, dfc_symbol, flags;
+  uint8_t rarity_in_expansion[0];
+} Rarities;
+
+typedef struct
+{
+  char* name;
+  char* disp;
+  uint8_t* expansions;
+  uint8_t row, col, copied_expansions, saturation;
+} Watermark;
+
+typedef enum
+{
+  BORDER_BLACK = 0,
+  BORDER_WHITE = 1,
+  BORDER_SILVER = 2
+} border_t;
+
+/* card_ptr_t kept the same bytes but grouped the casting cost meanwhile. */
+#define req_colorless req.req_colorless
+#define req_black req.req_black
+#define req_blue req.req_blue
+#define req_hybrid req.req_hybrid
+#define hybrid_type req.hybrid_type
+#define req_green req.req_green
+#define req_red req.req_red
+#define req_white req.req_white
+
+#ifndef SUBTYPE_VEHICLE
+#define SUBTYPE_VEHICLE 0x3005
+#endif
+#ifndef STATE_JUST_CAST
+/* This flag no longer exists in the current card_instance_t ABI. */
+#define STATE_JUST_CAST 0
+#endif
+#ifndef DFC_SYMBOL_COMPASS
+#define DFC_SYMBOL_COMPASS 6
+#define DFC_SYMBOL_LAND 7
+#endif
+#endif
 
 typedef enum
 {
@@ -413,7 +467,11 @@ typedef enum
 } renderer_t;
 
 /******************************** Extern functions ********************************/
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+#define DLLIMPORT
+#else
 #define DLLIMPORT __attribute__((dllimport))
+#endif
 
 /**************** In image.dll ****************/
 DLLIMPORT HANDLE LoadImage(const char*, HPALETTE, int, int);

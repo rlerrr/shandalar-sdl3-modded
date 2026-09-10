@@ -26,10 +26,11 @@
 #ifdef __cplusplus
 #define STATIC_ASSERT(e, msg) static_assert(e, #msg)
 #else
-#define STATIC_ASSERT(e, msg) enum    \
-{                                     \
-	static_assertion__##msg = 1 / (e) \
-}
+#define STATIC_ASSERT(e, msg)             \
+	enum                                  \
+	{                                     \
+		static_assertion__##msg = 1 / (e) \
+	}
 #endif
 
 /* Colors */
@@ -44,7 +45,7 @@ typedef enum
 	COLOR_ARTIFACT = 6,
 	COLOR_ANY = 7
 #ifdef SHANDALAR
-	,
+		,
 	COLOR_HYBRID = 7 // only valid in the context of pay_mana_xbugrwaU[]
 #endif
 } color_t;
@@ -758,8 +759,39 @@ typedef enum
 	COUNTER_invalid = 255,
 } counter_t;
 
+#if defined(SHANDALAR_MODDED_DECKDLL) && defined(__cplusplus)
+struct iid_t
+{
+	iid_t(void) {}
+	iid_t(int value) : raw(value) {}
+	explicit iid_t(uint16_t value) : raw(value == 0xffff ? -1 : (int)value) {}
+	explicit iid_t(uint32_t value) : raw((int)value) {}
+	iid_t &operator++(void)
+	{
+		++raw;
+		return *this;
+	}
+	bool ok(void) const { return raw >= 0; }
+	int raw;
+};
+struct csvid_t
+{
+	csvid_t(void) {}
+	csvid_t(card_id_t value) : raw((int)value) {}
+	csvid_t(int value) : raw(value) {}
+	explicit csvid_t(uint32_t value) : raw((int)value) {}
+	explicit csvid_t(uint16_t value) : raw(value == 0xffff ? -1 : (int)value) {}
+	bool ok(void) const { return raw >= 0; }
+	int raw;
+};
+inline bool operator==(iid_t lhs, iid_t rhs) { return lhs.raw == rhs.raw; }
+inline bool operator!=(iid_t lhs, iid_t rhs) { return lhs.raw != rhs.raw; }
+inline bool operator==(csvid_t lhs, csvid_t rhs) { return lhs.raw == rhs.raw; }
+inline bool operator!=(csvid_t lhs, csvid_t rhs) { return lhs.raw != rhs.raw; }
+#else
 typedef int csvid_t;
 typedef int iid_t;
+#endif
 
 /* Info struct */
 typedef struct card_instance_struct
@@ -820,11 +852,11 @@ typedef struct card_instance_struct
 		struct
 		{
 			uint16_t display_pic_csv_id; /*  0x64 */
-			uint16_t display_pic_num;	/*  0x66 */
+			uint16_t display_pic_num;	 /*  0x66 */
 		};
 		uint32_t display_pic_info;
 	};
-	uint8_t kill_code;				   /*  0x68 */
+	uint8_t kill_code; /*  0x68 */
 
 	uint8_t unk69; /*  0x69 */ // Entirely untouched by exe.
 	uint8_t unk6A; /*  0x6A */ // Entirely untouched by exe.
@@ -874,12 +906,12 @@ typedef enum
 	EA_INF_POWER = 0x8,
 	EA_INF_TOUGHNESS = 0x10,
 	EA_COUNTERS = 0x20,
-	EA_UNK40 = 0x40,   // copper tablet/disrupting scepter
-	EA_UNK80 = 0x80,   // Shandalar: more expensive?
-	EA_UNK100 = 0x100, // Shandalar: card may be put in a dungeon; not selectable in cardpicker
-	EA_UNK200 = 0x200, // Shandalar: double cost?
-	EA_UNK400 = 0x400, // Shandalar: rarer?  Lich, most Arabian Nights and Antiquities cards
-	EA_UNK800 = 0x800, // Shandalar: card not selectable in cardpicker.  Unclear if this is its primary function or a side effect.
+	EA_UNK40 = 0x40,					   // copper tablet/disrupting scepter
+	EA_SHANDALAR_RAREST = 0x80,			   // Shandalar: originally, force rarity to 4; not sold in towns.  Unassigned to any cards.
+	EA_SHANDALAR_DUNGEON_TREASURE = 0x100, // Shandalar: dungeon card
+	EA_SHANDALAR_2X_PRICE = 0x200,		   // Was double cost in Shandalar, now reassigned.  Unused in Manalink.
+	EA_SHANDALAR_1_5X_PRICE_RARER = 0x400, // Shandalar: 1.5x cost; increment rarity; counts extra when giving bonus cards at duel win.  Unassigned to any cards.
+	EA_SHANDALAR_NOCHOOSE = 0x800,		   // Shandalar: not in cardpicker, in starting deck, lair bonus, enemy ante.  Unassigned to any cards (but settable in config).
 	EA_MANA_SOURCE = 0x1000,
 	EA_INTERRUPT = 0x2000,
 	EA_UNK4000 = 0x4000, // Interrupt effects
@@ -1089,10 +1121,14 @@ typedef struct
 	int32_t expansion_rarity;
 	char *rules_text;
 	char *flavor_text;
-	int32_t power;		// 0x7c
-	int32_t toughness;	// 0x80
+	int32_t power;	   // 0x7c
+	int32_t toughness; // 0x80
+#if defined(SHANDALAR_MODDED_DECKDLL)
+	int16_t types[7]; // 0x84
+#else
 	int16_t types[2];	// 0x84
 	char abilities[10]; // 0x88
+#endif
 	int8_t mana_source_colors;
 	int8_t inflatable;
 	uint8_t hack_colors; // In Shandalar: color_test_t of |Hlandtypes appearing in rules text or type text
@@ -1722,7 +1758,7 @@ typedef enum
 	GA_RETURN_TO_PLAY_WITH_EFFECT = GA_RETURN_TO_PLAY | (1 << 8),
 	GA_PUT_ON_TOP_OF_DECK = 1 << 9,
 	GA_GRAVE_ABILITY_MASK = GA_PLAYABLE_FROM_GRAVE | GA_RETURN_TO_HAND | GA_RETURN_TO_PLAY | GA_UNEARTH | GA_BASIC | GA_SCAVENGE |
-							GA_RETURN_TO_PLAY_MODIFIED | GA_RETURN_TO_PLAY_WITH_EFFECT | GA_PUT_ON_TOP_OF_DECK,
+		GA_RETURN_TO_PLAY_MODIFIED | GA_RETURN_TO_PLAY_WITH_EFFECT | GA_PUT_ON_TOP_OF_DECK,
 	GA_INTERRUPT_ABILITY = 1 << 10,
 } graveyard_ability_type_t;
 

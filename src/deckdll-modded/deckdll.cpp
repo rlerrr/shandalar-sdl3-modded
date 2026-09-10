@@ -10,10 +10,21 @@
 #endif
 
 #include <ctype.h>
+#ifndef SHANDALAR_SDL_WIN32_COMPAT
 #include <strings.h>
+#else
+#define strcasecmp _stricmp
+#define strncasecmp _strnicmp
+#define SWAP(a, b) do { auto swap_tmp = (a); (a) = (b); (b) = swap_tmp; } while (0)
+#endif
 
 #include "deckdll.h"
 #include "File.h"
+
+extern "C" HWND global_decksurface_hwnd;
+extern "C" HWND global_horzlist_hwnd;
+extern "C" HWND deckdll_global_main_hwnd;
+extern "C" HWND cardlistfilter_hwnd;
 
 //[[[ types and enums
 OP_BITWISE(color_test_t);
@@ -378,6 +389,8 @@ enum SoundFn
 #define HORZLIST_PICSINLINE_INDEX	20
 #define HORZLIST_SIZE_INDEX		24
 
+#define WM_DECKBUILDER_QUERY_DRAG_RECT 0x8443
+
 #define CARD_CSVID_INDEX	0
 #define CARD_AMOUNT_INDEX	4
 
@@ -521,7 +534,7 @@ static WNDPROC global_wndproc_std_ButtonClass = NULL;
 
 static HWND global_cuecard_hwnd = NULL;
 
-static HWND global_decksurface_hwnd = NULL;
+HWND global_decksurface_hwnd = NULL;
 static HMENU global_decksurface_popup = NULL;
 
 static HMENU global_filtermenu_default = NULL;
@@ -549,12 +562,14 @@ static bool global_filtermenu_gold_enabled = true;	// And this one isn't even us
 static HWND global_fullcard_hwnd = NULL;
 static HMENU global_fullcard_popup = NULL;
 
-static HWND global_horzlist_hwnd = NULL;
+HWND global_horzlist_hwnd = NULL;
 static HMENU global_horzlist_popup = NULL;
 
 static HWND global_listbox_hwnd = NULL;
 
-static HWND global_main_hwnd = NULL;
+HWND deckdll_global_main_hwnd = NULL;
+#define global_main_hwnd deckdll_global_main_hwnd
+HWND cardlistfilter_hwnd = NULL;
 static int global_main_window_width = 0;
 static int global_main_window_height = 0;
 
@@ -4502,6 +4517,23 @@ wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
   switch (msg)
     {
+      case WM_DECKBUILDER_QUERY_DRAG_RECT:
+	{
+	  RECT* drag_rect = reinterpret_cast<RECT*>(lparam);
+	  currsel = GetWindowLong(hwnd, HORZLIST_CURRSEL_INDEX);
+	  if (!drag_rect || currsel < 0 ||
+	      currsel >= GetWindowLong(hwnd, HORZLIST_LASTPIC_INDEX))
+	    return 0;
+	  horzlist_prep_rectangle(hwnd, currsel, drag_rect);
+	  drag_rect->left += (drag_rect->right - drag_rect->left -
+			      global_smallcard_piclist_width) / 2;
+	  drag_rect->top += (drag_rect->bottom - drag_rect->top -
+			     global_smallcard_piclist_height) / 2;
+	  drag_rect->right = drag_rect->left + global_smallcard_piclist_width;
+	  drag_rect->bottom = drag_rect->top + global_smallcard_piclist_height;
+	  return 1;
+	}
+
       case WM_PAINT:
 	last_pic_index = GetWindowLong(hwnd, HORZLIST_LASTPIC_INDEX);
 	horz_list_addr = reinterpret_cast<int*>(GetWindowLong(hwnd, HORZLIST_ADDR_INDEX));
@@ -6223,7 +6255,7 @@ wndproc_MainClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 {
   static HPEN pen_ltgrey = NULL, pen_medgrey = NULL;
   static HWND button_deckinfo = NULL, button_exit = NULL, button_deck_num[4] = {0};
-  static HWND cardlistfilter_hwnd = NULL, search_hwnd = NULL;
+  static HWND search_hwnd = NULL;
   static HMENU popup = NULL;
 
   HDC hdc;
@@ -7388,7 +7420,7 @@ check_creatures(const card_ptr_t* cp)
     return true;
 
   if ((global_filter_cardtypes & FT_CREATURE_ARTIFACT) && cp->card_type == CP_TYPE_ARTIFACT
-      && cp->subtype1 == HARDCODED_SUBTYPE_ARTIFACT_CREATURE_OR_AURA_MOSTLY_WITH_ENCHANT_CREATURE)
+      && (uint16_t)cp->subtype == HARDCODED_SUBTYPE_ARTIFACT_CREATURE_OR_AURA_MOSTLY_WITH_ENCHANT_CREATURE)
     return true;
 
   if (global_filter_cardtypes & FT_CREATURE_LIST)
@@ -7418,8 +7450,8 @@ check_enchantments(const card_ptr_t* cp)
   if (!(global_filter_cardtypes & FT_ENCHANTMENT))
     return false;
 
-  uint16_t s1 = cp->subtype1;
-  uint16_t s2 = cp->subtype2;
+  uint16_t s1 = (uint16_t)cp->subtype;
+  uint16_t s2 = (uint16_t)(cp->subtype >> 16);
 
   bool world = s1 == HARDCODED_SUBTYPE_WORLD || s2 == HARDCODED_SUBTYPE_WORLD;
   if (world && (global_filter_cardtypes & FT_ENCHANTMENT_WORLD))
@@ -7801,7 +7833,7 @@ check_filters(csvid_t csvid)
   //int dbcardtype2 = *reinterpret_cast<int*>(entry);
 
   if (!check_lands(cp->card_type, cp->mana_source_colors & (COLOR_TEST_ANY|COLOR_TEST_ARTIFACT))
-      && !check_artifacts(cp->card_type, cp->subtype1)
+      && !check_artifacts(cp->card_type, (uint16_t)cp->subtype)
       && !check_creatures(cp)
       && !check_enchantments(cp)
       && !((cp->card_type == CP_TYPE_INSTANT || cp->card_type == CP_TYPE_INTERRUPT)
@@ -7811,7 +7843,7 @@ check_filters(csvid_t csvid)
 
   // artifact creatures - either the artifact or creature submenu filter is enough to remove, rather than needing both
   if (cp->card_type == CP_TYPE_ARTIFACT
-      && cp->subtype1 == HARDCODED_SUBTYPE_ARTIFACT_CREATURE_OR_AURA_MOSTLY_WITH_ENCHANT_CREATURE
+      && (uint16_t)cp->subtype == HARDCODED_SUBTYPE_ARTIFACT_CREATURE_OR_AURA_MOSTLY_WITH_ENCHANT_CREATURE
       && (!((global_filter_cardtypes & FT_ARTIFACT) && (global_filter_cardtypes & FT_ARTIFACT_CREATURE))
 	  || !((global_filter_cardtypes & FT_CREATURE) && (global_filter_cardtypes & FT_CREATURE_ARTIFACT)))
       && !is_colored(cp->color))

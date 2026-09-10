@@ -109,6 +109,10 @@ typedef uint32_t DWORD;
 typedef int32_t LONG;
 typedef intptr_t LONG_PTR;
 typedef uint32_t UINT;
+typedef int INT;
+typedef uint32_t UINT32;
+typedef uintptr_t UINT_PTR;
+typedef void VOID;
 typedef int BOOL;
 typedef uintptr_t WPARAM;
 typedef uintptr_t ULONG_PTR;
@@ -204,6 +208,13 @@ typedef struct TEXTMETRICA {
   LONG tmHeight, tmAscent, tmDescent, tmInternalLeading, tmExternalLeading;
   LONG tmAveCharWidth, tmMaxCharWidth, tmWeight, tmOverhang;
 } TEXTMETRICA;
+typedef TEXTMETRICA TEXTMETRIC;
+typedef struct BLENDFUNCTION {
+  BYTE BlendOp;
+  BYTE BlendFlags;
+  BYTE SourceConstantAlpha;
+  BYTE AlphaFormat;
+} BLENDFUNCTION;
 typedef struct CRITICAL_SECTION { int unused; } CRITICAL_SECTION;
 typedef struct DRAWITEMSTRUCT {
   UINT CtlType;
@@ -234,9 +245,16 @@ typedef struct MEASUREITEMSTRUCT {
 
 #define TRUE 1
 #define FALSE 0
+#define OUT
+#define WINGDIAPI
 #define BI_RGB 0
 #define DIB_RGB_COLORS 0
 #define DIB_PAL_COLORS 1
+#define AC_SRC_OVER 0
+#define AC_SRC_ALPHA 1
+#define LF_FACESIZE 32
+#define ETO_CLIPPED 0x0004
+#define PC_EXPLICIT 0x02
 #define SRCCOPY 0x00cc0020
 #define SRCPAINT 0x00ee0086
 #define SRCAND 0x008800c6
@@ -280,6 +298,7 @@ typedef struct MEASUREITEMSTRUCT {
 #define FW_NORMAL 400
 #define ANSI_CHARSET 0
 #define OUT_DEFAULT_PRECIS 0
+#define OUT_TT_PRECIS 4
 #define CLIP_DEFAULT_PRECIS 0
 #define DEFAULT_QUALITY 0
 #define DEFAULT_PITCH 0
@@ -344,6 +363,7 @@ HGDIOBJ GetStockObject(int object);
 int SaveDC(HDC dc);
 BOOL RestoreDC(HDC dc, int saved);
 int IntersectClipRect(HDC dc, int left, int top, int right, int bottom);
+int ExcludeClipRect(HDC dc, int left, int top, int right, int bottom);
 void *CreateRectRgn(int left, int top, int right, int bottom);
 HRGN CreateRectRgnIndirect(const RECT *rect);
 BOOL SetRectRgn(void *region, int left, int top, int right, int bottom);
@@ -355,8 +375,10 @@ BOOL InflateRect(RECT *rect, int dx, int dy);
 BOOL PtInRect(const RECT *rect, POINT point);
 BOOL IsRectEmpty(const RECT *rect);
 BOOL UnionRect(RECT *destination, const RECT *first, const RECT *second);
+BOOL IntersectRect(RECT *destination, const RECT *first, const RECT *second);
 BOOL DrawFocusRect(HDC dc, const RECT *rect);
 int SetMapMode(HDC dc, int mode);
+int GetMapMode(HDC dc);
 BOOL SetWindowExtEx(HDC dc, int x, int y, LPSIZE old);
 BOOL SetViewportExtEx(HDC dc, int x, int y, LPSIZE old);
 BOOL SetWindowOrgEx(HDC dc, int x, int y, LPPOINT old);
@@ -381,19 +403,27 @@ COLORREF SetBkColor(HDC dc, COLORREF color);
 int SetBkMode(HDC dc, int mode);
 int SetROP2(HDC dc, int mode);
 BOOL TextOutA(HDC dc, int x, int y, LPCSTR text, int length);
+BOOL ExtTextOutA(HDC dc, int x, int y, UINT options, const RECT *rect,
+                 LPCSTR text, UINT length, const INT *dx);
 int DrawTextA(HDC dc, LPCSTR text, int length, RECT *rect, UINT format);
+#define DrawText DrawTextA
 BOOL GetTextExtentPoint32A(HDC dc, LPCSTR text, int length, SIZE *size);
 BOOL GetCharWidthA(HDC dc, UINT first, UINT last, int *widths);
 #define TextOut TextOutA
+#define ExtTextOut ExtTextOutA
 #define GetTextExtentPoint32 GetTextExtentPoint32A
 BOOL GetTextMetricsA(HDC dc, TEXTMETRICA *metrics);
+#define GetTextMetrics GetTextMetricsA
 BOOL GetCharABCWidthsA(HDC dc, UINT first, UINT last, ABC *widths);
 int AddFontResourceA(LPCSTR path);
 BOOL RemoveFontResourceA(LPCSTR path);
+#define AddFontResource AddFontResourceA
+#define RemoveFontResource RemoveFontResourceA
 HFONT CreateFontA(int height, int width, int escapement, int orientation, int weight,
                   DWORD italic, DWORD underline, DWORD strikeout, DWORD charset,
                   DWORD out_precision, DWORD clip_precision, DWORD quality,
                   DWORD pitch_family, LPCSTR face);
+#define CreateFont CreateFontA
 HFONT CreateFontIndirectA(const LOGFONTA *font);
 #define CreateFontIndirect CreateFontIndirectA
 #define GetObject GetObjectA
@@ -407,10 +437,17 @@ int MessageBoxA(HWND window, LPCSTR message, LPCSTR title, UINT flags);
 #define MessageBox MessageBoxA
 HWND GetDesktopWindow(void);
 UINT GetModuleFileNameA(HMODULE module, LPSTR buffer, UINT size);
+#define GetModuleFileName GetModuleFileNameA
+BOOL PathCanonicalizeA(LPSTR destination, LPCSTR source);
+#define PathCanonicalize PathCanonicalizeA
+BOOL PathMatchSpecA(LPCSTR path, LPCSTR spec);
+#define PathMatchSpec PathMatchSpecA
 void shandalar_win32_set_module_path(LPCSTR path);
 int GetPrivateProfileIntA(LPCSTR section, LPCSTR key, int default_value, LPCSTR filename);
 DWORD GetPrivateProfileStringA(LPCSTR section, LPCSTR key, LPCSTR default_value,
                                LPSTR returned_string, DWORD size, LPCSTR filename);
+#define GetPrivateProfileInt GetPrivateProfileIntA
+#define GetPrivateProfileString GetPrivateProfileStringA
 BOOL WritePrivateProfileStringA(LPCSTR section, LPCSTR key, LPCSTR value, LPCSTR filename);
 BOOL GetVersionExA(OSVERSIONINFOA *version_info);
 void OutputDebugStringA(LPCSTR message);
@@ -430,6 +467,9 @@ BOOL GlobalUnlock(void *memory);
 void *GlobalHandle(void *memory);
 void *GlobalFree(void *memory);
 BOOL GdiFlush(void);
+BOOL WINAPI AlphaBlend(HDC dst, int dx, int dy, int dw, int dh,
+                HDC src, int sx, int sy, int sw, int sh,
+                BLENDFUNCTION blend);
 DWORD GdiGetBatchLimit(void);
 DWORD GdiSetBatchLimit(DWORD limit);
 void checked_DeleteDC_DeleteObject(HDC dc, HGDIOBJ obj);
@@ -449,6 +489,13 @@ BOOL shandalar_dc_copy_rgba(HDC dc, uint32_t *pixels, int pitch_bytes);
 COLORREF shandalar_dc_resolve_color(HDC dc, COLORREF color);
 BOOL shandalar_dc_blit_argb8888(HDC dc, const uint32_t *pixels,
                                 int pitch_bytes, int width, int height);
+BOOL shandalar_dc_blit_bgra32(HDC dc, int dst_x, int dst_y,
+                              int dst_width, int dst_height,
+                              const void *pixels, int pitch_bytes,
+                              int image_width, int image_height,
+                              int src_x, int src_y,
+                              int src_width, int src_height,
+                              BYTE alpha);
 void shandalar_set_default_font_root(const char *root);
 const char *shandalar_default_font_root(void);
 double shandalar_set_font_device_scale(double scale);

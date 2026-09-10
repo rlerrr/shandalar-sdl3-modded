@@ -3,7 +3,12 @@
 // config.c: read Duel.dat, watermarks.csv, menus.txt, Rarity.dat
 
 #include <ctype.h>
+#ifndef SHANDALAR_SDL_WIN32_COMPAT
 #include <strings.h>
+#else
+#define strcasecmp _stricmp
+#define strncasecmp _strnicmp
+#endif
 
 #include "drawcardlib.h"
 
@@ -1519,9 +1524,11 @@ read_rarities(void)
   if (fread(&total_cards, 4, 1, rarity_dat) != 1)
 	BAIL("Could not read number of cards: %s", strerror(errno));
 
+#ifndef SHANDALAR_SDL_WIN32_COMPAT
   if (parent == PARENT_MANALINK
 	  && total_cards != EXE_DWORD(0x7375ac)/*available_slots*/)
 	BAIL("Mismatch between rarity.dat (%d) and cards.dat (%d)", total_cards, EXE_DWORD(0x7375ac));
+#endif
 
   if (fread(&raw_expansions, 4, 1, rarity_dat) != 1)
 	BAIL("Could not read number of expansions: %s", strerror(errno));

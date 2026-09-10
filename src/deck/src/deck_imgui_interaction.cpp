@@ -9,6 +9,7 @@
 #include <imgui.h>
 
 extern "C" HWND global_decksurface_hwnd;
+extern "C" HWND global_horzlist_hwnd;
 
 namespace {
 
@@ -17,6 +18,7 @@ namespace {
 #endif
 
 #define WM_DECKBUILDER_DRAG_SELL_HOVER (WM_APP + 0x442)
+#define WM_DECKBUILDER_QUERY_DRAG_RECT 0x8443
 
 HWND g_left_down_target;
 HWND g_deckbuilder_drag_hover_title;
@@ -187,12 +189,21 @@ bool is_descendant_or_self(HWND window, HWND ancestor)
   return false;
 }
 
+bool is_deck_class_name(const char *class_name, const char *unprefixed_name)
+{
+  char prefixed_name[64];
+  SDL_snprintf(prefixed_name, sizeof(prefixed_name), "MAGICDECK_%s",
+               unprefixed_name);
+  return SDL_strcasecmp(class_name, unprefixed_name) == 0 ||
+         SDL_strcasecmp(class_name, prefixed_name) == 0;
+}
+
 bool is_card_drag_source(HWND window)
 {
   char name[64] = {};
   GetClassNameA(window, name, sizeof(name));
-  return SDL_strcasecmp(name, "MAGICDECK_CardClass") == 0 ||
-         SDL_strcasecmp(name, "MAGICDECK_HorzListClass") == 0;
+  return is_deck_class_name(name, "CardClass") ||
+         is_deck_class_name(name, "HorzListClass");
 }
 
 HWND find_child_window_by_class(HWND window, const char *wanted_class)
@@ -203,7 +214,7 @@ HWND find_child_window_by_class(HWND window, const char *wanted_class)
        child = GetWindow(child, GW_HWNDNEXT)) {
     HWND found;
     GetClassNameA(child, class_name, sizeof(class_name));
-    if (SDL_strcasecmp(class_name, wanted_class) == 0)
+    if (is_deck_class_name(class_name, wanted_class))
       return child;
     found = find_child_window_by_class(child, wanted_class);
     if (found)
@@ -218,13 +229,13 @@ HWND find_deckbuilder_title_window(HWND window)
   HWND found;
   while (root && GetParent(root))
     root = GetParent(root);
-  found = root ? find_child_window_by_class(root, "MAGICDECK_TitleClass")
+  found = root ? find_child_window_by_class(root, "TitleClass")
                : nullptr;
   if (found)
     return found;
   for (root = GetWindow(GetDesktopWindow(), GW_CHILD); root;
        root = GetWindow(root, GW_HWNDNEXT)) {
-    found = find_child_window_by_class(root, "MAGICDECK_TitleClass");
+    found = find_child_window_by_class(root, "TitleClass");
     if (found)
       return found;
   }
@@ -260,7 +271,6 @@ void clear_drag_hover(void)
 
 void draw_drag_preview(void)
 {
-  char class_name[64] = {};
   RECT rect = {};
   ImVec2 mouse;
   ImVec2 uv0(0.0f, 0.0f);
@@ -280,26 +290,26 @@ void draw_drag_preview(void)
   if (!texture || texture_width <= 0 || texture_height <= 0)
     return;
   GetWindowRect(g_left_down_target, &rect);
-  GetClassNameA(g_left_down_target, class_name, sizeof(class_name));
   size = ImVec2(static_cast<float>(texture_width),
                 static_cast<float>(texture_height));
   offset = ImVec2(g_left_down_position.x - rect.left,
                   g_left_down_position.y - rect.top);
-  if (SDL_strcasecmp(class_name, "MAGICDECK_HorzListClass") == 0) {
-    int content_height = texture_height - GetSystemMetrics(SM_CYHSCROLL);
-    int card_width = content_height > 0 ? content_height : texture_height;
-    int local_x = static_cast<int>(g_left_down_position.x) - rect.left;
-    int source_x = card_width > 0 ? (local_x / card_width) * card_width : 0;
-    if (source_x + card_width > texture_width)
-      source_x = texture_width - card_width;
-    if (source_x < 0)
-      source_x = 0;
-    uv0 = ImVec2(static_cast<float>(source_x) / texture_width, 0.0f);
-    uv1 = ImVec2(static_cast<float>(source_x + card_width) / texture_width,
-                 static_cast<float>(content_height) / texture_height);
-    size = ImVec2(static_cast<float>(card_width),
-                  static_cast<float>(content_height));
-    offset.x -= source_x;
+  if (g_left_down_target == global_horzlist_hwnd) {
+    RECT source = {};
+    if (SendMessageA(g_left_down_target, WM_DECKBUILDER_QUERY_DRAG_RECT, 0,
+                     reinterpret_cast<LPARAM>(&source)) &&
+        source.left >= 0 && source.top >= 0 && source.right <= texture_width &&
+        source.bottom <= texture_height && source.right > source.left &&
+        source.bottom > source.top) {
+      uv0 = ImVec2(static_cast<float>(source.left) / texture_width,
+                   static_cast<float>(source.top) / texture_height);
+      uv1 = ImVec2(static_cast<float>(source.right) / texture_width,
+                   static_cast<float>(source.bottom) / texture_height);
+      size = ImVec2(static_cast<float>(source.right - source.left),
+                    static_cast<float>(source.bottom - source.top));
+      offset.x -= source.left;
+      offset.y -= source.top;
+    }
   }
   mouse = ImGui::GetIO().MousePos;
   ImGui::GetForegroundDrawList()->AddImage(
@@ -354,6 +364,7 @@ void forward_mouse(void)
     bool was_dragged = g_left_drag_started || left_drag_threshold_crossed(mouse);
     g_left_down_target = nullptr;
     g_left_drag_started = false;
+    SDL_CaptureMouse(false);
     // A stationary card click is selection/double-click input, not a drag.
     // Sending the legacy button-down handler would remove and reinsert the
     // card, changing its deck-surface order before a second click can arrive.
@@ -378,6 +389,7 @@ void forward_mouse(void)
   if (modal && !is_descendant_or_self(target, modal)) {
     g_left_down_target = nullptr;
     g_left_drag_started = false;
+    SDL_CaptureMouse(false);
     BringWindowToTop(modal);
     return;
   }
@@ -410,6 +422,7 @@ void forward_mouse(void)
       g_left_down_target = target;
       g_left_down_position = mouse;
       g_left_drag_started = false;
+      SDL_CaptureMouse(true);
     }
   }
   if (ImGui::IsMouseReleased(ImGuiMouseButton_Left) &&
@@ -489,6 +502,7 @@ extern "C" void shandalar_deck_imgui_interaction_present(void)
 extern "C" void shandalar_deck_imgui_interaction_shutdown(void)
 {
   clear_drag_hover();
+  SDL_CaptureMouse(false);
   g_left_down_target = nullptr;
   g_left_drag_started = false;
   g_deck_menu_button_left_down = false;

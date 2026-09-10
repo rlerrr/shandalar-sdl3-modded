@@ -26,6 +26,23 @@
     legacy_win32_imgui_bridge
     SDL3::SDL3
   )
+
+  add_executable(deck-modded
+    src/legacy_sdl_main.c
+  )
+  target_include_directories(deck-modded PRIVATE
+    "${SHANDALAR_SRC_ROOT}"
+  )
+  target_compile_definitions(deck-modded PRIVATE
+    SHANDALAR_SDL_WIN32_COMPAT
+    SHANDALAR_MODDED_DECK
+  )
+  target_link_libraries(deck-modded PRIVATE
+    deckdll_modded
+    deck_imgui_interaction
+    legacy_win32_imgui_bridge
+    SDL3::SDL3
+  )
   if(EMSCRIPTEN)
     set_target_properties(deck PROPERTIES SUFFIX ".html")
     target_link_options(deck PRIVATE

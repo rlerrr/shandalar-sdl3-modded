@@ -5,6 +5,19 @@
 
 #include <stdarg.h>
 
+#ifndef MB_TASKMODAL
+#define MB_TASKMODAL 0x00002000L
+#endif
+#ifndef EM_SETLIMITTEXT
+#define EM_SETLIMITTEXT 0x00C5
+#endif
+#define SPI_GETWORKAREA 0x0030
+#define DDL_READWRITE 0x0000
+#define GET_X_LPARAM(lp) ((int)(SHORT)((lp) & 0xffff))
+#define GET_Y_LPARAM(lp) ((int)(SHORT)(((lp) >> 16) & 0xffff))
+#define ES_AUTOHSCROLL 0x0080L
+#define WM_CTLCOLOREDIT 0x0133
+
 #ifdef __cplusplus
 extern "C" {
 #endif
@@ -520,6 +533,7 @@ HWND CreateWindowExA(DWORD ex_style, LPCSTR class_name, LPCSTR window_name,
 BOOL DestroyWindow(HWND window);
 LRESULT DefWindowProcA(HWND window, UINT message, WPARAM wparam, LPARAM lparam);
 LRESULT CallWindowProcA(WNDPROC proc, HWND window, UINT message, WPARAM wparam, LPARAM lparam);
+#define CallWindowProc CallWindowProcA
 LRESULT SendMessageA(HWND window, UINT message, WPARAM wparam, LPARAM lparam);
 BOOL PostMessageA(HWND window, UINT message, WPARAM wparam, LPARAM lparam);
 void PostQuitMessage(int exit_code);
@@ -547,6 +561,8 @@ BOOL EnumChildWindows(HWND parent, WNDENUMPROC proc, LPARAM param);
 HWND GetDlgItem(HWND parent, int id);
 int GetDlgCtrlID(HWND window);
 int GetClassNameA(HWND window, LPSTR class_name, int max_count);
+#define GetClassName GetClassNameA
+BOOL GetUpdateRect(HWND window, LPRECT rect, BOOL erase);
 DWORD GetWindowThreadProcessId(HWND window, DWORD *process_id);
 
 BOOL GetClientRect(HWND window, RECT *rect);
@@ -639,6 +655,7 @@ INT_PTR DialogBoxParamA(HINSTANCE instance, LPCSTR template_name, HWND parent,
 BOOL EndDialog(HWND dialog, INT_PTR result);
 HWND shandalar_win32_active_dialog(void);
 LRESULT SendDlgItemMessageA(HWND dialog, int id, UINT message, WPARAM wparam, LPARAM lparam);
+#define SendDlgItemMessage SendDlgItemMessageA
 BOOL SetDlgItemTextA(HWND dialog, int id, LPCSTR text);
 UINT GetDlgItemTextA(HWND dialog, int id, LPSTR text, int max_count);
 BOOL SetDlgItemInt(HWND dialog, int id, UINT value, BOOL is_signed);
@@ -657,9 +674,16 @@ BOOL shandalar_win32_set_dialog_template_font(HWND dialog, LPCSTR face,
                                               int pixel_height);
 
 HMODULE GetModuleHandleA(LPCSTR module_name);
+#define GetModuleHandle GetModuleHandleA
 FARPROC GetProcAddress(HMODULE module, LPCSTR proc_name);
 BOOL shandalar_win32_register_proc(LPCSTR proc_name, FARPROC proc);
 DWORD GetCurrentDirectoryA(DWORD size, LPSTR buffer);
+#define GetCurrentDirectory GetCurrentDirectoryA
+BOOL SystemParametersInfoA(UINT action, UINT parameter, LPVOID value, UINT flags);
+#define SystemParametersInfo SystemParametersInfoA
+HMODULE LoadLibraryA(LPCSTR path);
+#define LoadLibrary LoadLibraryA
+BOOL FreeLibrary(HMODULE module);
 BOOL SetCurrentDirectoryA(LPCSTR path);
 BOOL CopyFileA(LPCSTR existing_filename, LPCSTR new_filename, BOOL fail_if_exists);
 void Sleep(DWORD milliseconds);

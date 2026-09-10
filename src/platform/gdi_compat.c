@@ -80,6 +80,8 @@ typedef struct DCState {
   int viewport_org_y;
   int has_clip;
   RECT clip;
+  int has_excluded_clip;
+  RECT excluded_clip;
 } DCState;
 
 typedef struct PaintObject {
@@ -132,6 +134,8 @@ struct ShandalarDC {
   int device_org_y;
   int has_clip;
   RECT clip;
+  int has_excluded_clip;
+  RECT excluded_clip;
   DCState saved[16];
   int saved_count;
 };
@@ -426,6 +430,16 @@ static COLORREF read_pixel_color(HDC dc, int x, int y)
   return RGB(*pixel, *pixel, *pixel);
 }
 
+static int point_is_clipped_out(HDC dc, int x, int y)
+{
+  return (dc->has_clip &&
+          (x < dc->clip.left || x >= dc->clip.right ||
+           y < dc->clip.top || y >= dc->clip.bottom)) ||
+         (dc->has_excluded_clip &&
+          x >= dc->excluded_clip.left && x < dc->excluded_clip.right &&
+          y >= dc->excluded_clip.top && y < dc->excluded_clip.bottom);
+}
+
 static COLORREF resolve_color(HDC dc, COLORREF color)
 {
   HPALETTE palette = effective_palette(dc);
@@ -439,8 +453,7 @@ static COLORREF resolve_color(HDC dc, COLORREF color)
 static void write_pixel_color(HDC dc, int x, int y, COLORREF color, DWORD rop)
 {
   unsigned char *pixel = dc && dc->bitmap ? pixel_at(dc->bitmap, x, y) : NULL;
-  if (dc && dc->has_clip &&
-      (x < dc->clip.left || x >= dc->clip.right || y < dc->clip.top || y >= dc->clip.bottom))
+  if (dc && point_is_clipped_out(dc, x, y))
     return;
   if (!pixel)
     return;
@@ -984,7 +997,12 @@ COLORREF SetPixel(HDC dc, int x, int y, COLORREF color)
 
 BOOL SetPixelV(HDC dc, int x, int y, COLORREF color)
 {
-  unsigned char *pixel = dc ? pixel_at(dc->bitmap, x, y) : NULL;
+  unsigned char *pixel;
+  if (!dc)
+    return FALSE;
+  if (point_is_clipped_out(dc, x, y))
+    return TRUE;
+  pixel = pixel_at(dc->bitmap, x, y);
   if (!pixel)
     return FALSE;
   if (is_true_color_bitmap(dc->bitmap)) {
@@ -1344,6 +1362,8 @@ static void copy_dc_to_state(DCState *state, const HDC dc)
   state->viewport_org_y = dc->viewport_org_y;
   state->has_clip = dc->has_clip;
   state->clip = dc->clip;
+  state->has_excluded_clip = dc->has_excluded_clip;
+  state->excluded_clip = dc->excluded_clip;
 }
 
 static void copy_state_to_dc(HDC dc, const DCState *state)
@@ -1370,6 +1390,8 @@ static void copy_state_to_dc(HDC dc, const DCState *state)
   dc->viewport_org_y = state->viewport_org_y;
   dc->has_clip = state->has_clip;
   dc->clip = state->clip;
+  dc->has_excluded_clip = state->has_excluded_clip;
+  dc->excluded_clip = state->excluded_clip;
 }
 
 int SaveDC(HDC dc)
@@ -1434,6 +1456,84 @@ int IntersectClipRect(HDC dc, int left, int top, int right, int bottom)
   return 1;
 }
 
+BOOL WINAPI AlphaBlend(HDC dst, int dx, int dy, int dw, int dh,
+                HDC src, int sx, int sy, int sw, int sh,
+                BLENDFUNCTION blend)
+{
+  int x, y;
+  int mapped_right;
+  int mapped_bottom;
+  if (!dst || !src || !dst->bitmap || !src->bitmap ||
+      dw <= 0 || dh <= 0 || sw <= 0 || sh <= 0 ||
+      blend.BlendOp != AC_SRC_OVER)
+    return FALSE;
+
+  mapped_right = map_x(dst, dx + dw);
+  mapped_bottom = map_y(dst, dy + dh);
+  dx = map_x(dst, dx);
+  dy = map_y(dst, dy);
+  dw = mapped_right - dx;
+  dh = mapped_bottom - dy;
+  if (dw <= 0 || dh <= 0)
+    return FALSE;
+
+  for (y = 0; y < dh; ++y) {
+    for (x = 0; x < dw; ++x) {
+      int target_x = dx + x;
+      int target_y = dy + y;
+      int source_x = sx + x * sw / dw;
+      int source_y = sy + y * sh / dh;
+      COLORREF source_color;
+      COLORREF target_color;
+      COLORREF result;
+      unsigned int alpha = blend.SourceConstantAlpha;
+      unsigned char *source_pixel;
+
+      if (dst->has_clip &&
+          (target_x < dst->clip.left || target_x >= dst->clip.right ||
+           target_y < dst->clip.top || target_y >= dst->clip.bottom))
+        continue;
+      source_pixel = pixel_at(src->bitmap, source_x, source_y);
+      if (!source_pixel)
+        continue;
+      if ((blend.AlphaFormat & AC_SRC_ALPHA) && src->bitmap->bits_per_pixel == 32)
+        alpha = alpha * source_pixel[3] / 255;
+      source_color = read_pixel_color(src, source_x, source_y);
+      target_color = read_pixel_color(dst, target_x, target_y);
+      result = RGB((((source_color      ) & 0xff) * alpha + ((target_color      ) & 0xff) * (255 - alpha)) / 255,
+                   (((source_color >>  8) & 0xff) * alpha + ((target_color >>  8) & 0xff) * (255 - alpha)) / 255,
+                   (((source_color >> 16) & 0xff) * alpha + ((target_color >> 16) & 0xff) * (255 - alpha)) / 255);
+      write_pixel_color(dst, target_x, target_y, result, SRCCOPY);
+    }
+  }
+  return TRUE;
+}
+
+int ExcludeClipRect(HDC dc, int left, int top, int right, int bottom)
+{
+  RECT excluded;
+  int temp;
+  if (!dc)
+    return 0;
+  excluded.left = map_x(dc, left);
+  excluded.top = map_y(dc, top);
+  excluded.right = map_x(dc, right);
+  excluded.bottom = map_y(dc, bottom);
+  if (excluded.left > excluded.right) {
+    temp = excluded.left;
+    excluded.left = excluded.right;
+    excluded.right = temp;
+  }
+  if (excluded.top > excluded.bottom) {
+    temp = excluded.top;
+    excluded.top = excluded.bottom;
+    excluded.bottom = temp;
+  }
+  dc->excluded_clip = excluded;
+  dc->has_excluded_clip = 1;
+  return 1;
+}
+
 void *CreateRectRgn(int left, int top, int right, int bottom)
 {
   CompatRegion *region = (CompatRegion *)calloc(1, sizeof(*region));
@@ -1462,11 +1562,13 @@ int SelectClipRgn(HDC dc, void *handle)
   if (!dc) return 0;
   if (!region) {
     dc->has_clip = 0;
+    dc->has_excluded_clip = 0;
     return 1;
   }
   if (region->header.kind != OBJECT_REGION) return 0;
   dc->clip = region->rect;
   dc->has_clip = 1;
+  dc->has_excluded_clip = 0;
   return 1;
 }
 
@@ -1554,6 +1656,7 @@ BOOL DrawFocusRect(HDC dc, const RECT *rect)
 }
 
 int SetMapMode(HDC dc, int mode) { int old = dc ? dc->map_mode : 0; if (dc) dc->map_mode = mode; return old; }
+int GetMapMode(HDC dc) { return dc ? dc->map_mode : 0; }
 BOOL SetWindowExtEx(HDC dc, int x, int y, LPSIZE old) { if (!dc || !x || !y) return FALSE; if (old) { old->cx = dc->window_ext_x; old->cy = dc->window_ext_y; } dc->window_ext_x = x; dc->window_ext_y = y; return TRUE; }
 BOOL SetViewportExtEx(HDC dc, int x, int y, LPSIZE old) { if (!dc) return FALSE; if (old) { old->cx = dc->viewport_ext_x; old->cy = dc->viewport_ext_y; } dc->viewport_ext_x = x; dc->viewport_ext_y = y; return TRUE; }
 BOOL SetWindowOrgEx(HDC dc, int x, int y, LPPOINT old) { if (!dc) return FALSE; if (old) { old->x = dc->window_org_x; old->y = dc->window_org_y; } dc->window_org_x = x; dc->window_org_y = y; return TRUE; }
@@ -2172,9 +2275,10 @@ int SetDIBitsToDevice(HDC dc, int x, int y, DWORD width, DWORD height,
 int MessageBoxA(HWND window, LPCSTR message, LPCSTR title, UINT flags)
 {
   UINT button_type = flags & 0x0f;
-  const char *caption = title ? title : "Facemaker";
+  const char *caption = title ? title : "Shandalar";
   const char *text = message ? message : "";
   (void)window;
+  fprintf(stderr, "%s: %s\n", caption, text);
 
   SDL_MessageBoxButtonData buttons[3];
   SDL_MessageBoxData data;
@@ -2214,6 +2318,43 @@ UINT GetModuleFileNameA(HMODULE module, LPSTR buffer, UINT size)
     return 0;
   SDL_strlcpy(buffer, g_module_path, size);
   return (UINT)strlen(buffer);
+}
+
+BOOL PathCanonicalizeA(LPSTR destination, LPCSTR source)
+{
+  size_t length;
+  if (!destination || !source)
+    return FALSE;
+  length = strlen(source);
+  if (length >= MAX_PATH)
+    return FALSE;
+  memmove(destination, source, length + 1);
+  return TRUE;
+}
+
+static BOOL path_match_spec_impl(const char *path, const char *spec)
+{
+  while (*spec) {
+    if (*spec == '*') {
+      ++spec;
+      if (!*spec)
+        return TRUE;
+      while (*path)
+        if (path_match_spec_impl(path++, spec))
+          return TRUE;
+      return FALSE;
+    }
+    if (!*path || (*spec != '?' && SDL_tolower((unsigned char)*spec) != SDL_tolower((unsigned char)*path)))
+      return FALSE;
+    ++path;
+    ++spec;
+  }
+  return *path == '\0';
+}
+
+BOOL PathMatchSpecA(LPCSTR path, LPCSTR spec)
+{
+  return path && spec && path_match_spec_impl(path, spec);
 }
 
 void shandalar_win32_set_module_path(LPCSTR path)
@@ -2487,6 +2628,78 @@ BOOL shandalar_dc_blit_argb8888(HDC dc, const uint32_t *pixels,
   return TRUE;
 }
 
+BOOL ExtTextOutA(HDC dc, int x, int y, UINT options, const RECT *rect,
+                 LPCSTR text, UINT length, const INT *dx)
+{
+  int saved = 0;
+  BOOL result;
+  (void)dx;
+  if ((options & ETO_CLIPPED) && rect) {
+    saved = SaveDC(dc);
+    IntersectClipRect(dc, rect->left, rect->top, rect->right, rect->bottom);
+  }
+  result = TextOutA(dc, x, y, text, (int)length);
+  if (saved)
+    RestoreDC(dc, saved);
+  return result;
+}
+
+BOOL shandalar_dc_blit_bgra32(HDC dc, int dst_x, int dst_y,
+                              int dst_width, int dst_height,
+                              const void *pixels, int pitch_bytes,
+                              int image_width, int image_height,
+                              int src_x, int src_y,
+                              int src_width, int src_height,
+                              BYTE alpha)
+{
+  int logical_right;
+  int logical_bottom;
+  int x;
+  int y;
+  if (!dc || !dc->bitmap || !pixels || pitch_bytes < image_width * 4 ||
+      dst_width <= 0 || dst_height <= 0 || src_width <= 0 || src_height <= 0)
+    return FALSE;
+  logical_right = map_x(dc, dst_x + dst_width);
+  logical_bottom = map_y(dc, dst_y + dst_height);
+  dst_x = map_x(dc, dst_x);
+  dst_y = map_y(dc, dst_y);
+  dst_width = logical_right - dst_x;
+  dst_height = logical_bottom - dst_y;
+  if (dst_width <= 0 || dst_height <= 0)
+    return FALSE;
+  for (y = 0; y < dst_height; ++y) {
+    int source_y = src_y + y * src_height / dst_height;
+    if (source_y < 0 || source_y >= image_height)
+      continue;
+    for (x = 0; x < dst_width; ++x) {
+      int source_x = src_x + x * src_width / dst_width;
+      const unsigned char *source;
+      unsigned int source_alpha;
+      COLORREF destination;
+      unsigned int red;
+      unsigned int green;
+      unsigned int blue;
+      if (source_x < 0 || source_x >= image_width)
+        continue;
+      source = (const unsigned char *)pixels + source_y * pitch_bytes + source_x * 4;
+      source_alpha = source[3] * alpha / 255;
+      if (source_alpha == 0)
+        continue;
+      destination = read_pixel_color(dc, dst_x + x, dst_y + y);
+      if (destination == UINT32_MAX)
+        continue;
+      red = (source[2] * source_alpha +
+             (destination & 0xff) * (255 - source_alpha) + 127) / 255;
+      green = (source[1] * source_alpha +
+               ((destination >> 8) & 0xff) * (255 - source_alpha) + 127) / 255;
+      blue = (source[0] * source_alpha +
+              ((destination >> 16) & 0xff) * (255 - source_alpha) + 127) / 255;
+      write_pixel_color(dc, dst_x + x, dst_y + y, RGB(red, green, blue), SRCCOPY);
+    }
+  }
+  return TRUE;
+}
+
 void shandalar_set_default_font_root(const char *root)
 {
   char *cursor;
@@ -2592,6 +2805,21 @@ BOOL UnionRect(RECT *destination, const RECT *first, const RECT *second)
   destination->bottom = max(first->bottom, second->bottom);
   return destination->right > destination->left &&
          destination->bottom > destination->top;
+}
+
+BOOL IntersectRect(RECT *destination, const RECT *first, const RECT *second)
+{
+  if (!destination || !first || !second)
+    return FALSE;
+  destination->left = max(first->left, second->left);
+  destination->top = max(first->top, second->top);
+  destination->right = min(first->right, second->right);
+  destination->bottom = min(first->bottom, second->bottom);
+  if (destination->right <= destination->left || destination->bottom <= destination->top) {
+    SetRect(destination, 0, 0, 0, 0);
+    return FALSE;
+  }
+  return TRUE;
 }
 
 double shandalar_set_font_device_scale(double scale)

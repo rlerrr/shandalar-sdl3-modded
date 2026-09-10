@@ -77,6 +77,18 @@ int main(void)
   CHECK(GetPixel(destination, 1, 3) == RGB(0, 255, 0));
   CHECK(GetPixel(destination, 2, 3) == RGB(255, 0, 0));
 
+  CHECK(SelectClipRgn(destination, NULL));
+  CHECK(SetPixelV(destination, 1, 1, RGB(0, 0, 255)));
+  CHECK(SaveDC(destination) == 1);
+  CHECK(ExcludeClipRect(destination, 1, 1, 3, 3));
+  CHECK(SetPixelV(destination, 1, 1, RGB(255, 0, 0)));
+  CHECK(SetPixelV(destination, 0, 0, RGB(255, 0, 0)));
+  CHECK(GetPixel(destination, 1, 1) == RGB(0, 0, 255));
+  CHECK(GetPixel(destination, 0, 0) == RGB(255, 0, 0));
+  CHECK(RestoreDC(destination, -1));
+  CHECK(SetPixelV(destination, 1, 1, RGB(0, 255, 0)));
+  CHECK(GetPixel(destination, 1, 1) == RGB(0, 255, 0));
+
   changed_entries[0] = palette_data.entries[42];
   changed_entries[0].peRed = 0;
   changed_entries[1] = palette_data.entries[43];

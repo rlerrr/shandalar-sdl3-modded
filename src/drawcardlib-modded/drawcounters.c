@@ -185,10 +185,10 @@ draw_standard_counters(HDC hdc, const RECT* rect, int player, int card)
   instance = &actual;	// now safe
 
   int counters = instance->counters;
-  int counters2 = instance->counters2;
-  int counters3 = instance->counters3;
-  int counters4 = instance->counters4;
-  int counters5 = instance->counters5;
+  int counters2 = (instance->special_counters >> 8) & 0xff;
+  int counters3 = (instance->special_counters >> 16) & 0xff;
+  int counters4 = (instance->special_counters >> 24) & 0xff;
+  int counters5 = (instance->counters >> 8) & 0xff;
   int counters_m1m1 = instance->counters_m1m1;
 
   int counter_type_2;
