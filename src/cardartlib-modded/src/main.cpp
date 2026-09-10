@@ -4,6 +4,11 @@
 #include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
 #include <filesystem>
+#include "platform/file_io.h"
+
+#ifndef _MSC_VER
+#include <unistd.h>
+#endif
 
 namespace fs = std::filesystem;
 
@@ -178,9 +183,14 @@ void Cardartlib_initialize_for_shandalar(card_data_t* real_cards_data, card_ptr_
 
 static bool file_exists(const char *filename)
 {
+#ifndef _MSC_VER
+	if (access(filename, 4) == 0) // check read permission
+		return true;
+#else
 	std::unique_ptr<wchar_t[]> wFilename = stringToWChar(filename);
 	if (_waccess(wFilename.get(), 4) == 0) // check read permission
 		return true;
+#endif
 	return false;
 }
 
@@ -191,11 +201,12 @@ int LoadBigArt(int id, int version, LONG width, int height) {
 	std::string path = idToNameFun(id, version);
 	std::unordered_map<std::string, SDL_Surface*>::const_iterator it = cache->find(path);
 	if (it == cache->end()) {
-		if (!file_exists(path.c_str())) {
+		SDL_IOStream *io = shandalar_open_file_io(path.c_str(), "rb");
+		if (!io) {
 			LeaveCriticalSection(&crit);
 			return 0;
 		}
-		SDL_Surface* loaded = IMG_Load(path.c_str());
+		SDL_Surface* loaded = IMG_Load_IO(io, true);
 		SDL_Surface* converted = loaded ? SDL_ConvertSurface(loaded, SDL_PIXELFORMAT_BGRA32) : NULL;
 		SDL_DestroySurface(loaded);
 		if (!converted) {

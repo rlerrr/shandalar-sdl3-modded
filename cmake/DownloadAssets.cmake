@@ -1,16 +1,17 @@
-function(download_assets)
-  if(SHANDALAR_ASSET_DIR STREQUAL "")
+function(download_assets asset_root source_dir)
+  if(source_dir STREQUAL "")
     return()
   endif()
+  string(REGEX REPLACE "^/+|/+$" "" asset_root "${asset_root}")
   foreach(asset_path IN LISTS ARGN)
-    set(local_path "${SHANDALAR_ASSET_DIR}/${asset_path}")
+    set(local_path "${source_dir}/${asset_path}")
     if(NOT EXISTS "${local_path}")
       string(TOLOWER "${asset_path}" url_path)
       string(REPLACE "\\" "/" url_path "${url_path}")
       get_filename_component(asset_dir "${local_path}" DIRECTORY)
       file(MAKE_DIRECTORY "${asset_dir}")
       message(STATUS "Downloading asset: ${asset_path}")
-      file(DOWNLOAD "https://shandalar-dot-dev-test.pages.dev/assets/${url_path}"
+      file(DOWNLOAD "https://shandalar-dot-dev-test.pages.dev/${asset_root}/${url_path}"
            "${local_path}"
            STATUS download_status)
       list(GET download_status 0 status_code)

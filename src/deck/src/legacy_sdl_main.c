@@ -181,10 +181,6 @@ static BOOL pump_legacy_ui(BOOL wait)
     GetWindowRect(global_horzlist_hwnd, &rect);
     push_smoke_mouse_button((float)rect.left + 30.0f, (float)rect.top + 30.0f, 1);
   } else if (g_smoke_drag_card && g_smoke_frames_remaining == 24) {
-    push_smoke_mouse_button(500.0f, 250.0f, 1);
-  } else if (g_smoke_drag_card && g_smoke_frames_remaining == 23) {
-    save_snapshot();
-  } else if (g_smoke_drag_card && g_smoke_frames_remaining == 22) {
     push_smoke_mouse_button(500.0f, 250.0f, 0);
     g_smoke_drag_card = 0;
   }
@@ -265,16 +261,22 @@ static BOOL pump_legacy_ui(BOOL wait)
 int main(int argc, char **argv)
 {
 #ifdef SHANDALAR_MODDED_DECK
+#ifdef __EMSCRIPTEN__
+  const char *asset_root = "/assets_modded";
+#else	
   const char *asset_root = "C:/dev/Shandalar";
+#endif
 #else
+#ifdef __EMSCRIPTEN__
+  const char *asset_root = "/assets";
+#else	
   const char *asset_root = "C:/Magic/Program";
+#endif
 #endif
   char module_path[1024];
   int i;
   WPARAM result;
-#ifdef __EMSCRIPTEN__
-  asset_root = "/assets";
-#endif
+
   for (i = 1; i < argc; ++i) {
     if (SDL_strcmp(argv[i], "--smoke") == 0)
       g_smoke_frames_remaining = 30;

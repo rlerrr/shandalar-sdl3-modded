@@ -72,7 +72,7 @@ if(SHANDALAR_BUILD_FACEMAKER)
         TT0530M_.TTF
 
       )
-      download_assets(${facemaker_preload_assets})
+      download_assets(assets "${SHANDALAR_ASSET_DIR}" ${facemaker_preload_assets})
       foreach(entry IN LISTS facemaker_preload_assets)
         target_link_options(facemaker PRIVATE
           "SHELL:--preload-file ${SHANDALAR_ASSET_DIR}/${entry}@/assets/${entry}"

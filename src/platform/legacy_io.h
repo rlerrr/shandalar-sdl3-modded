@@ -47,6 +47,10 @@ struct _finddata_t {
   char name[260];
 };
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 intptr_find_t shandalar_findfirst(const char *pattern, struct _finddata_t *data);
 int shandalar_findnext(intptr_find_t handle, struct _finddata_t *data);
 int shandalar_findclose(intptr_find_t handle);
@@ -63,6 +67,10 @@ int shandalar_resolve_existing_path(const char *path, char *out, size_t out_size
 void shandalar_map_file_path(const char *path, char *out, size_t out_size);
 const char *shandalar_user_data_root(void);
 int shandalar_user_data_sync(void);
+
+#ifdef __cplusplus
+}
+#endif
 
 #define _findfirst shandalar_findfirst
 #define _findnext shandalar_findnext

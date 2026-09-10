@@ -3,7 +3,7 @@
 // config.c: read Duel.dat, watermarks.csv, menus.txt, Rarity.dat
 
 #include <ctype.h>
-#ifndef SHANDALAR_SDL_WIN32_COMPAT
+#ifndef _MSC_VER
 #include <strings.h>
 #else
 #define strcasecmp _stricmp

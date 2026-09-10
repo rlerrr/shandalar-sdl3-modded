@@ -43,6 +43,7 @@ jobs:
                        -DCMAKE_BUILD_TYPE=Release \
                        -DCMAKE_RUNTIME_OUTPUT_DIRECTORY="${{ github.workspace }}/out/shandalar" \
                        -DSHANDALAR_ASSET_DIR="${{ github.workspace }}/assets" \
+                       -DSHANDALAR_MODDED_ASSET_DIR="${{ github.workspace }}/assets_modded" \
                        -DSHANDALAR_BUILD_TESTS=OFF \
                        -DSHANDALAR_BUILD_FACEMAKER=OFF -DSHANDALAR_BUILD_SHANDALAR=ON -DSHANDALAR_BUILD_DECK=OFF
 

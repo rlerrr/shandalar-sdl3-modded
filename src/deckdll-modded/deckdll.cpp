@@ -10,13 +10,13 @@
 #endif
 
 #include <ctype.h>
-#ifndef SHANDALAR_SDL_WIN32_COMPAT
+#ifndef _MSC_VER
 #include <strings.h>
 #else
 #define strcasecmp _stricmp
 #define strncasecmp _strnicmp
-#define SWAP(a, b) do { auto swap_tmp = (a); (a) = (b); (b) = swap_tmp; } while (0)
 #endif
+#define SWAP(a, b) do { auto swap_tmp = (a); (a) = (b); (b) = swap_tmp; } while (0)
 
 #include "deckdll.h"
 #include "File.h"
@@ -52,6 +52,7 @@ enum class DBFlags2
 };
 OP_BITWISE(DBFlags2);
 
+#undef DT_UNKNOWN
 enum DeckType
 {
   DT_UNKNOWN		= 0,
@@ -5435,7 +5436,7 @@ wndproc_DeckSurfaceClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	rval = 1;
 
 	{
-	  csvid_t csvid{wparam};
+	  csvid_t csvid{(int)wparam};
 
 	  HWND hwnd_card;
 

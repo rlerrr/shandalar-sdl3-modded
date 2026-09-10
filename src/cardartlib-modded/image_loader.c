@@ -1,6 +1,7 @@
 #include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
-#include <stdio.h>
+#include "platform/legacy_io.h"
+#include "platform/file_io.h"
 #include <string.h>
 
 #include "platform/gdi_compat.h"
@@ -83,7 +84,10 @@ HANDLE LoadImage(const char *path, HPALETTE palette, int unused_width,
   /* The modded asset sets use .pic for both the original proprietary format
      and ordinary images such as PNGs.  SDL_image sniffs the file contents, so
      try it before selecting the legacy decoder by extension. */
-  loaded = IMG_Load(path);
+  SDL_IOStream *io = shandalar_open_file_io(path, "rb");
+  if (!io)
+    return NULL;
+  loaded = IMG_Load_IO(io, true);
   if (loaded)
     goto convert_surface;
 

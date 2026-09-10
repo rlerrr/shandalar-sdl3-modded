@@ -39,6 +39,7 @@ option(SHANDALAR_BUILD_SHANDALAR "Build the SDL3 Shandalar application" OFF)
 option(SHANDALAR_BUILD_DECK "Build the SDL3 Deck Builder application" OFF)
 option(SHANDALAR_BUILD_TESTS "Build unit tests" ON)
 set(SHANDALAR_ASSET_DIR "" CACHE PATH "Directory containing the Magic game data")
+set(SHANDALAR_MODDED_ASSET_DIR "" CACHE PATH "Directory containing the modded Magic game data")
 
 if(SHANDALAR_BUILD_TESTS)
   enable_testing()

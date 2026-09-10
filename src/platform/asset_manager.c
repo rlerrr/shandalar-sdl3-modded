@@ -11,7 +11,8 @@
 #include <sys/stat.h>
 #endif
 
-#define ASSET_REQUEST_LIMIT 256
+// TODO: this is real dumb
+#define ASSET_REQUEST_LIMIT 4096
 
 typedef struct AssetRequest
 {

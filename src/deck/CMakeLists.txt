@@ -54,37 +54,60 @@
       "-sFETCH=1"
       "-lidbfs.js"
     )
+    set_target_properties(deck-modded PROPERTIES SUFFIX ".html")
+    target_link_options(deck-modded PRIVATE
+      "-sALLOW_MEMORY_GROWTH=1"
+      "-sFORCE_FILESYSTEM=1"
+      "-sASYNCIFY=1"
+      "-sASYNCIFY_STACK_SIZE=16384"
+      "-sEXIT_RUNTIME=1"
+      "-sFETCH=1"
+      "-lidbfs.js"
+    )
+
+    set(deck_preload_assets
+      MENUBAK.PIC
+      cards.dat
+      Deckbuilder.csv
+      MENUS.TXT
+      menusx1.txt
+      CUECARDS.TXT
+      UIStrings.txt
+      MP_UIStrings.txt
+      duelpalall.tr
+      duel.plogpal
+      TT0085M_.TTF
+      TT0127M_.TTF
+      TT0298M_.TTF
+      TT0299M_.TTF
+      TT0300M_.TTF
+      TT0530M_.TTF
+      Magis___.TTF
+      Magim___.TTF
+      fonts.cv
+      DuelArt/Duel.dat
+      DuelSounds/DRAW.WAV
+      DuelSounds/DISCARD.WAV
+      DuelSounds/BUTTON.WAV
+      DuelSounds/CANCEL.WAV
+    )
+
     if(SHANDALAR_ASSET_DIR)
-      set(deck_preload_assets
-        MENUBAK.PIC
-        cards.dat
-        Deckbuilder.csv
-        MENUS.TXT
-        menusx1.txt
-        CUECARDS.TXT
-        UIStrings.txt
-        MP_UIStrings.txt
-        duelpalall.tr
-        duel.plogpal
-        TT0085M_.TTF
-        TT0127M_.TTF
-        TT0298M_.TTF
-        TT0299M_.TTF
-        TT0300M_.TTF
-        TT0530M_.TTF
-        Magis___.TTF
-        Magim___.TTF
-        fonts.cv
-        DuelArt/Duel.dat
-        DuelSounds/DRAW.WAV
-        DuelSounds/DISCARD.WAV
-        DuelSounds/BUTTON.WAV
-        DuelSounds/CANCEL.WAV
-      )
-      download_assets(${deck_preload_assets})
+      download_assets(assets "${SHANDALAR_ASSET_DIR}" ${deck_preload_assets})
       foreach(deck_preload_asset IN LISTS deck_preload_assets)
         target_link_options(deck PRIVATE
           "SHELL:--preload-file ${SHANDALAR_ASSET_DIR}/${deck_preload_asset}@/assets/${deck_preload_asset}"
+        )
+      endforeach()
+    endif()
+    
+    if(SHANDALAR_MODDED_ASSET_DIR)
+      list(APPEND deck_preload_assets "rarity.dat")
+      download_assets(assets_modded "${SHANDALAR_MODDED_ASSET_DIR}" ${deck_preload_assets})
+
+      foreach(deck_preload_asset IN LISTS deck_preload_assets)
+        target_link_options(deck-modded PRIVATE
+          "SHELL:--preload-file ${SHANDALAR_MODDED_ASSET_DIR}/${deck_preload_asset}@/assets_modded/${deck_preload_asset}"
         )
       endforeach()
     endif()
