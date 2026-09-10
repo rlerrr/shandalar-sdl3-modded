@@ -102,13 +102,26 @@
     endif()
     
     if(SHANDALAR_MODDED_ASSET_DIR)
+      include("${CMAKE_CURRENT_LIST_DIR}/DeckModdedStartupAssets.cmake")
+      list(APPEND deck_preload_assets ${deck_modded_startup_assets})
       list(APPEND deck_preload_assets "rarity.dat")
+      list(REMOVE_DUPLICATES deck_preload_assets)
       download_assets(assets_modded "${SHANDALAR_MODDED_ASSET_DIR}" ${deck_preload_assets})
 
+      set(deck_modded_preload_response "")
       foreach(deck_preload_asset IN LISTS deck_preload_assets)
-        target_link_options(deck-modded PRIVATE
-          "SHELL:--preload-file ${SHANDALAR_MODDED_ASSET_DIR}/${deck_preload_asset}@/assets_modded/${deck_preload_asset}"
+        string(APPEND deck_modded_preload_response
+          "--preload-file\n\"${SHANDALAR_MODDED_ASSET_DIR}/${deck_preload_asset}@/assets_modded/${deck_preload_asset}\"\n"
         )
       endforeach()
+      set(deck_modded_preload_response_file
+        "${CMAKE_CURRENT_BINARY_DIR}/deck-modded-preload.rsp"
+      )
+      file(GENERATE OUTPUT "${deck_modded_preload_response_file}"
+        CONTENT "${deck_modded_preload_response}"
+      )
+      target_link_options(deck-modded PRIVATE
+        "@${deck_modded_preload_response_file}"
+      )
     endif()
   endif()
