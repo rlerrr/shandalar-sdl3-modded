@@ -1,0 +1,340 @@
+int card_natures_way(int player, int card, event_t event ){
+/*
+Nature's Way |1|G	0x200f38b
+Sorcery
+Target creature you control gains vigilance and trample until end of turn.
+It deals damage equal to its power to target creature you don't control.
+*/
+
+  if (!IS_CASTING(player, card, event))
+	return 0;
+
+	target_definition_t td;
+	default_target_definition(player, card, &td, TYPE_CREATURE);
+	td.allowed_controller = td.preferred_controller = player;
+
+	target_definition_t td2;
+	default_target_definition(player, card, &td2, TYPE_CREATURE);
+	td2.allowed_controller = td2.preferred_controller = 1-player;
+
+	card_instance_t *instance = get_card_instance( player, card);
+
+	if( event == EVENT_CAN_CAST ){
+		return can_target(&td) && can_target(&td2);		 
+		}
+
+	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
+		instance->number_of_targets = 0;
+		if( new_pick_target(&td, "Select target creature you control.", 0, 1 | GS_LITERAL_PROMPT) )
+			new_pick_target(&td2, "Select target creature you don't control.", 1, 1 | GS_LITERAL_PROMPT);
+	}
+
+	if( event == EVENT_RESOLVE_SPELL ){
+		if (validate_target(player, card, &td, 0)){
+			pump_ability_until_eot(player, card, instance->targets[0].player, instance->targets[0].card,
+									0, 0, KEYWORD_TRAMPLE, SP_KEYWORD_VIGILANCE);
+			if (validate_target(player, card, &td2, 1))
+				damage_creature(instance->targets[1].player, instance->targets[1].card,
+				                get_power(instance->targets[0].player, instance->targets[0].card),
+				                instance->targets[0].player, instance->targets[0].card);
+		}
+		kill_card(player, card, KILL_DESTROY);
+	}
+
+	return 0;
+}
+int card_clear_shot(int player, int card, event_t event)
+{
+  /* Clear Shot	|2|G	0x200edbe
+   * Instant
+   * Target creature you control gets +1/+1 until end of turn. It deals damage equal to its power to target creature you don't control. */
+  if (event == EVENT_CHECK_PUMP && can_play_iid(player, event, get_card_instance(player, card)->internal_card_id))
+	{
+	  pumpable_power[player] += 1;
+	  pumpable_toughness[player] += 1;
+	}
+  if (!IS_CASTING(player, card, event))
+	return 0;
+  target_definition_t td_control;
+  default_target_definition(player, card, &td_control, TYPE_CREATURE);
+  td_control.allowed_controller = td_control.preferred_controller = player;
+
+  target_definition_t td_dont;
+  default_target_definition(player, card, &td_dont, TYPE_CREATURE);
+  td_dont.allowed_controller = td_dont.preferred_controller = 1-player;
+
+  if (event == EVENT_CAN_CAST)
+	return can_target(&td_control) && can_target(&td_dont);
+
+  card_instance_t* inst = get_card_instance(player, card);
+
+  if (event == EVENT_CAST_SPELL && affect_me(player, card))
+	{
+	  inst->number_of_targets = 0;
+	  if (new_pick_target(&td_control, "ASHNODS_BATTLEGEAR", 0, 1))
+		new_pick_target(&td_dont, "Select target creature you don't control.", 1, 1 | GS_LITERAL_PROMPT);
+	}
+
+  if (event == EVENT_RESOLVE_SPELL)
+	{
+	  if (validate_target(player, card, &td_control, 0))
+		{
+		  pump_until_eot(player, card, inst->targets[0].player, inst->targets[0].card, 1,1);
+		  if (validate_target(player, card, &td_dont, 1))
+			damage_creature(inst->targets[1].player, inst->targets[1].card,
+							get_power(inst->targets[0].player, inst->targets[0].card),
+							inst->targets[0].player, inst->targets[0].card);
+		}
+
+	  kill_card(player, card, KILL_DESTROY);
+	}
+
+  return 0;
+}
+int card_god_favored_general(int player, int card, event_t event)
+{
+  /* God-Favored General |1|W
+   * Creature - Human Soldier (1/1)
+   * Inspired - Whenever ~ becomes untapped, you may pay |2|W. If you do, put two 1/1 white Soldier enchantment creature tokens onto the battlefield. */
+
+  if (inspired(player, card, event) && has_mana_multi(player, MANACOST_XW(2,1))
+	  && DIALOG(player, card, EVENT_ACTIVATE, DLG_NO_STORAGE, "Generate Soldiers", 1, 1)
+	  && charge_mana_multi_while_resolving(player, card, EVENT_RESOLVE_TRIGGER, player, MANACOST_XW(2,1)))
+	{
+	  token_generation_t token;
+	  default_token_definition(player, card, CARD_ID_SOLDIER, &token);
+	  token.special_flags2 = SF2_ENCHANTED_EVENING;
+	  token.qty = 2;
+	  generate_token(&token);
+	}
+
+  return 0;
+}
+int card_key_to_the_city(int player, int card, event_t event){
+/*
+Key to the City |2	0x200f48a
+Artifact
+|T, Discard a card: Up to one target creature can't be blocked this turn.
+Whenever Key to the City becomes untapped, you may pay |2. If you do, draw a card.
+*/
+	if( inspired(player, card, event) && has_mana(player, COLOR_ANY, 2) &&
+		DIALOG(player, card, EVENT_ACTIVATE, DLG_NO_STORAGE, "Draw a card", 1, 1) &&
+		charge_mana_while_resolving(player, card, EVENT_RESOLVE_TRIGGER, player, COLOR_COLORLESS, 2) )
+	{
+		draw_cards(player, 1);
+	}
+
+	if (!IS_GAA_EVENT(event)  ){
+		return 0;
+	}
+
+	target_definition_t td;
+	default_target_definition(player, card, &td, TYPE_CREATURE);
+	td.preferred_controller = player;
+
+	card_instance_t *instance = get_card_instance(player, card);
+
+	if( event == EVENT_CAN_ACTIVATE ){
+		return generic_activated_ability(player, card, event, GAA_UNTAPPED|GAA_DISCARD, MANACOST0, 0, NULL, NULL);
+	}
+
+	if( event == EVENT_ACTIVATE ){
+		add_state(player, card, STATE_TAPPED);
+		instance->number_of_targets = 0;
+		discard(player, 0, player);
+		new_pick_target(&td, "TARGET_CREATURE", 0, 0);
+	}
+
+	if( event == EVENT_RESOLVE_ACTIVATION ){
+		if( instance->number_of_targets == 1 && valid_target(&td) ){
+			pump_ability_until_eot(instance->parent_controller, instance->parent_card,
+									instance->targets[0].player, instance->targets[0].card, 0, 0, 0, SP_KEYWORD_UNBLOCKABLE);
+		}
+	}
+
+	return 0;
+}
+Jae, Telepath
+		if (event == EVENT_RESOLVE_ACTIVATION)
+		{
+			int choice = instance->info_slot;
+			switch (choice){
+					case CHOICE_DEPOWER:
+					{
+						if( instance->number_of_targets && can_target(&td) &&  valid_target(&td)){
+				pump_ability_t pump;
+				default_pump_ability_definition(player, card, &pump, -2, 0, 0, 0);
+				pump.paue_flags = PAUE_END_AT_THE_BEGINNING_OF_YOUR_NEXT_TURN;
+				pump.eot_removal_method = KILL_DESTROY;
+				pump_ability(player, card, instance->targets[0].player, instance->targets[0].card, &pump);
+			}
+				 }
+					break;
+
+					case CHOICE_FLASHBACK:
+int card_engineered_might(int player, int card, event_t event){
+/*
+Engineered Might |3|G|W	0x200f3ea
+Sorcery
+Choose one -
+* Target creature gets +5/+5 and gains trample until end of turn.
+* Creatures you control get +2/+2 and gain vigilance until end of turn.
+*/
+	if( ! IS_GS_EVENT(player, card, event) ){
+		return 0;
+	}
+
+	enum{
+		CHOICE_PUMP_TARGET = 1,
+		CHOICE_PUMP_ALL,
+	};
+
+	target_definition_t td;
+	default_target_definition(player, card, &td, TYPE_CREATURE);
+	td.preferred_controller = player;
+
+	card_instance_t *instance = get_card_instance( player, card );
+
+	if( event == EVENT_CAN_CAST ){
+		return basic_spell(player, card, event);
+	}
+
+	if(	event == EVENT_CAST_SPELL && affect_me(player, card) ){
+		instance->number_of_targets = 0;
+		if( ! check_special_flags2(player, card, SF2_COPIED_FROM_STACK) ){
+			int choice = DIALOG(player, card, event, DLG_RANDOM,
+								"+5/+5 and trample to target creature", can_target(&td), 10,
+								"+2/+2 and vigilance to all your crits", 1, 5);
+			if( ! choice ){
+				spell_fizzled = 1;
+				return 0;
+			}
+		}
+		if( instance->info_slot == CHOICE_PUMP_TARGET ){
+			if( ! pick_target(&td, "TARGET_CREATURE") ){
+				return 0;
+			}
+		}
+	}
+
+	if( event == EVENT_RESOLVE_SPELL ){
+		int choice = instance->info_slot;
+		if( choice == CHOICE_PUMP_ALL ){
+			int c;
+			for(c=active_cards_count[player]; c > -1; c--){
+				if( in_play(player, c) && is_what(player, c, TYPE_CREATURE) ){
+				   alternate_legacy_text(2, player,  pump_ability_until_eot(player, card, player, c, 2, 2, 0, SP_KEYWORD_VIGILANCE));
+			    }
+			}
+		}
+		 if( choice == CHOICE_PUMP_TARGET ){
+			if( valid_target(&td) ){
+			   alternate_legacy_text(1, player, pump_ability_until_eot(player, card, instance->targets[0].player, instance->targets[0].card, 5, 5, KEYWORD_TRAMPLE, 0));
+			}
+		 }
+		kill_card(player, card, KILL_DESTROY);  
+	}
+	return 0;
+}	
+	int card_ceremonious_rejection(int player, int card, event_t event){
+/*
+Ceremonious Rejection |U	0x200f197
+Instant
+Counter target colorless spell.
+*/
+	if( ! IS_GS_EVENT(player, card, event) ){
+		return 0;
+	}
+
+	target_definition_t td;
+	counterspell_target_definition(player, card, &td, TYPE_ANY);
+	td.illegal_color = get_sleighted_color_test(player, card, COLOR_TEST_BLACK|COLOR_TEST_BLUE|COLOR_TEST_RED|COLOR_TEST_GREEN|COLOR_TEST_WHITE);
+
+	return counterspell(player, card, event, &td, 0);
+}
+		int card_fireblast(int player, int card, event_t event){
+	/* Fireblast	|4|R|R	0x2001317
+	 * Instant
+	 * You may sacrifice two |H1Mountains rather than pay this spell's mana cost.
+	 * ~ deals 4 damage to any target. */
+	if( event == EVENT_MODIFY_COST ){
+		test_definition_t test;
+		default_test_definition(&test, TYPE_LAND);
+		test.subtype = SUBTYPE_MOUNTAIN;
+		test.qty = 2;
+		if( new_can_sacrifice_as_cost(player, card, &test) ){
+			get_card_instance(player, card)->info_slot = 1;
+			null_casting_cost(player, card);
+		}
+		else{
+			get_card_instance(player, card)->info_slot = 0;
+		}
+	}
+
+	if( ! IS_GS_EVENT(player, card, event) ){
+		return 0;
+	}
+
+	target_definition_t td;
+	default_target_definition(player, card, &td, TYPE_CREATURE|TARGET_TYPE_PLANESWALKER );
+	td.zone = TARGET_ZONE_CREATURE_OR_PLAYER;
+
+	card_instance_t *instance = get_card_instance(player, card);
+
+	if( event == EVENT_CAN_CAST ){
+		return generic_spell(player, card, event, GS_CAN_TARGET, &td, NULL, 1, NULL);
+	}
+
+	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
+		if( ! played_for_free(player, card) && ! is_token(player, card) && instance->info_slot == 1 ){
+			int choice = 0;
+			if( has_mana_to_cast_iid(player, event, instance->internal_card_id) ){
+				choice = DIALOG(player, card, event, DLG_RANDOM, DLG_NO_STORAGE,
+								"Sacrifice two mountains", 1, count_subtype(player, TYPE_LAND, -1) * 2,
+								"Cast normally", 1, 5);
+			}
+	
+			if( choice == 0 ){
+				test_definition_t test;
+				new_default_test_definition(&test, TYPE_LAND, "Select a Mountain to sacrifice.");
+			    test.subtype = get_hacked_subtype(player, card, SUBTYPE_MOUNTAIN);	// not hacked; it's a cost, so there's no opportunity to cast Magical Hack
+
+				int ts = 0;
+				int sacced[2];
+				while( ts < 2 ){
+						int sac = new_sacrifice(player, card, player, SAC_JUST_MARK|SAC_AS_COST|SAC_RETURN_CHOICE, &test);
+						if (!sac){
+							cancel = 1;
+							break;
+						}
+						sacced[ts] = sac;
+						ts++;
+				}
+				int i;
+				for(i=0; i<ts; i++){
+					state_untargettable(BYTE2(sacced[i]), BYTE3(sacced[i]), 0);
+					if( ts == 2 ){
+						kill_card(BYTE2(sacced[i]), BYTE3(sacced[i]), KILL_SACRIFICE);
+					}
+				}
+			}
+			else if( choice == 1 ){
+					charge_mana_from_id(player, card, event, get_id(player, card));
+			}
+	          else{
+				   spell_fizzled = 1;
+			      }
+		}
+
+	 generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_ANY", 1, NULL);
+	}
+
+	if( event == EVENT_RESOLVE_SPELL ){
+		if( valid_target(&td) ){
+			damage_target0(player, card, 4);
+		}
+		kill_card(player, card, KILL_DESTROY);
+	}
+
+	return 0;
+}
