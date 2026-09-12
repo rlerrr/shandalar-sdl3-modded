@@ -77,6 +77,9 @@ if(EMSCRIPTEN)
   target_include_directories(manalinkeh_static BEFORE PRIVATE
     "${SHANDALAR_SRC_ROOT}/magic/compat"
   )
+  target_link_libraries(manalinkeh_static PRIVATE
+    SDL3::Headers
+  )
 endif()
 
 # This is initially a faithful source import.  The DLL veneer, injection
