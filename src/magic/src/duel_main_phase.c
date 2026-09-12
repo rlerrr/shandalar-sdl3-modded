@@ -210,6 +210,9 @@ int player_has_available_blocker(int player)
 
 // FUNCTION: MAGIC 0x00440d82
 // FUNCTION: SHANDALAR 0x0040c602
+#ifdef SHANDALAR_USE_MANALINKEH
+void choose_blockers_human(int player);
+#else
 void choose_blockers_human(int player)
 {
   int attacking_cards[16];
@@ -312,6 +315,7 @@ void choose_blockers_human(int player)
 
   return;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: choose_blockers_human */
 
 // FUNCTION: MAGIC 0x00445d1a
 // FUNCTION: SHANDALAR 0x004115b3

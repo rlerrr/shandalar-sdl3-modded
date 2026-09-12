@@ -649,6 +649,9 @@ int card_twiddle(int player, int card, event_t event)
 
 // FUNCTION: MAGIC 0x004f7783
 // FUNCTION: SHANDALAR 0x004b183c
+#ifdef SHANDALAR_USE_MANALINKEH
+int tap_card_and_dispatch_event(int player, int card);
+#else
 int tap_card_and_dispatch_event(int player, int card)
 {
   if ((PLAYER_CARD_INSTANCE(player, card).state & STATE_TAPPED) == 0)
@@ -663,6 +666,7 @@ int tap_card_and_dispatch_event(int player, int card)
 
   return 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: tap_card_and_dispatch_event */
 
 // FUNCTION: MAGIC 0x004f7857
 // FUNCTION: SHANDALAR 0x004b1910

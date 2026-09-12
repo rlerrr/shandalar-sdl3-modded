@@ -533,6 +533,27 @@ int show_deck(int player, int *cards, int count, char *title, int require_select
 
 // FUNCTION: MAGIC 0x004bd7d0
 // FUNCTION: SHANDALAR 0x004be650
+#ifdef SHANDALAR_USE_MANALINKEH
+int real_target_available(int *num_valid_targets,
+                          target_scan_mode_t target_source_mode,
+                          int who_chooses,
+                          unsigned int allowed_controller,
+                          unsigned int preferred_controller,
+                          target_zone_t zone,
+                          type_t required_type,
+                          type_t illegal_type,
+                          keyword_t required_abilities,
+                          keyword_t illegal_abilities,
+                          color_test_t required_color,
+                          color_test_t illegal_color,
+                          int extra,
+                          subtype_in_card_data_t required_subtype,
+                          int required_power,
+                          int required_toughness,
+                          target_special_t special,
+                          target_state_t required_state,
+                          target_state_t illegal_state);
+#else
 int real_target_available(int *num_valid_targets,
                           target_scan_mode_t target_source_mode,
                           int who_chooses,
@@ -709,9 +730,32 @@ int real_target_available(int *num_valid_targets,
   }
   return found_any;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: real_target_available */
 
 // FUNCTION: MAGIC 0x004bdc06
 // FUNCTION: SHANDALAR 0x004bea85
+#ifdef SHANDALAR_USE_MANALINKEH
+unsigned int C_real_validate_target(int tgt_player,
+                                    int tgt_card,
+                                    char *return_error_str,
+                                    int who_chooses,
+                                    int allowed_controller,
+                                    int preferred_controller,
+                                    target_zone_t zone,
+                                    type_t required_type,
+                                    type_t illegal_type,
+                                    keyword_t required_abilities,
+                                    keyword_t illegal_abilities,
+                                    color_test_t required_color,
+                                    color_test_t illegal_color,
+                                    int extra,
+                                    subtype_in_card_data_t required_subtype,
+                                    int power_requirement,
+                                    int toughness_requirement,
+                                    target_special_t special,
+                                    target_state_t required_state,
+                                    target_state_t illegal_state);
+#else
 unsigned int C_real_validate_target(int tgt_player,
                                     int tgt_card,
                                     char *return_error_str,
@@ -1455,6 +1499,7 @@ unsigned int C_real_validate_target(int tgt_player,
 
   return is_valid;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: C_real_validate_target */
 
 // FUNCTION: MAGIC 0x004e9c50
 // FUNCTION: SHANDALAR 0x00507a50

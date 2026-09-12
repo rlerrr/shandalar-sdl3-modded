@@ -178,6 +178,9 @@ int CardIDFromType(unsigned int type)
 
 // FUNCTION: MAGIC 0x004a5929
 // FUNCTION: SHANDALAR 0x00557aa9
+#ifdef SHANDALAR_USE_MANALINKEH
+int CardTypeFromID(int csvid);
+#else
 int CardTypeFromID(int csvid)
 {
   int result;
@@ -200,6 +203,7 @@ int CardTypeFromID(int csvid)
     return result;
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: CardTypeFromID */
 
 // FUNCTION: MAGIC 0x004a59ea
 // FUNCTION: SHANDALAR 0x00557b6a

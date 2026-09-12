@@ -55,6 +55,9 @@ int select_target(int player, int card, target_definition_t *td, const char *pro
 // FUNCTION: MOK 0x0042de60
 // FUNCTION: MAGIC 0x00432f00
 // FUNCTION: SHANDALAR 0x004143e0
+#ifdef SHANDALAR_USE_MANALINKEH
+int charge_mana(int player, color_t color, int amount);
+#else
 int charge_mana(int player, color_t color, int amount)
 {
   int idx8;               /* [ebp-0xd4] */
@@ -540,6 +543,7 @@ skipped_for_copied_card:
 
   return mana_paid_total;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: charge_mana */
 
 // FUNCTION: MAGIC 0x0043410a
 // FUNCTION: SHANDALAR 0x004155ee
@@ -767,6 +771,9 @@ unsigned int get_required_mana_color_mask(int *mana)
 
 // FUNCTION: MAGIC 0x0043479e
 // FUNCTION: SHANDALAR 0x00415c7c
+#ifdef SHANDALAR_USE_MANALINKEH
+int format_mana_payment_prompt(char *prompt, int *mana_cost, int x_paid, int max_x);
+#else
 int format_mana_payment_prompt(char *prompt, int *mana_cost, int x_paid, int max_x)
 {
   char symbol[8];               /* [ebp-0x1b8] */
@@ -872,6 +879,7 @@ int format_mana_payment_prompt(char *prompt, int *mana_cost, int x_paid, int max
 
   return 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: format_mana_payment_prompt */
 
 // FUNCTION: MAGIC 0x00434af9
 // FUNCTION: SHANDALAR 0x00415fd7
@@ -1156,6 +1164,9 @@ int can_activate_mana_source(int player, int card, int activation_flags)
 
 // FUNCTION: MAGIC 0x00435881
 // FUNCTION: SHANDALAR 0x00416d5a
+#ifdef SHANDALAR_USE_MANALINKEH
+int activate_mana_source_for_payment(int player, int card);
+#else
 int activate_mana_source_for_payment(int player, int card)
 {
   int old_max_x_value;
@@ -1213,6 +1224,7 @@ int activate_mana_source_for_payment(int player, int card)
 
   return result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: activate_mana_source_for_payment */
 
 // FUNCTION: MAGIC 0x00435b18
 // FUNCTION: SHANDALAR 0x00416ff1
@@ -1390,6 +1402,9 @@ int charge_mana_w_global_cost_mod(int player, int card, int color, int amount)
 
 // FUNCTION: MAGIC 0x0043fdb3
 // FUNCTION: SHANDALAR 0x0040b633
+#ifdef SHANDALAR_USE_MANALINKEH
+int can_pay_card_mana_cost(int player, int target_player, int target_card);
+#else
 int can_pay_card_mana_cost(int player, int target_player, int target_card)
 {
   int color;
@@ -1444,6 +1459,7 @@ int can_pay_card_mana_cost(int player, int target_player, int target_card)
 
   return result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: can_pay_card_mana_cost */
 
 // FUNCTION: MAGIC 0x00442cf9
 // FUNCTION: SHANDALAR 0x0040e593
@@ -1504,6 +1520,9 @@ int card_activation_uses_x(int player, int card)
 
 // FUNCTION: MAGIC 0x0044b3d4
 // FUNCTION: SHANDALAR 0x00403d55
+#ifdef SHANDALAR_USE_MANALINKEH
+void resolve_mana_burn(void);
+#else
 void resolve_mana_burn(void)
 {
   int current_card;
@@ -1551,9 +1570,13 @@ void resolve_mana_burn(void)
     }
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: resolve_mana_burn */
 
 // FUNCTION: MAGIC 0x0044b6af
 // FUNCTION: SHANDALAR 0x00404030
+#ifdef SHANDALAR_USE_MANALINKEH
+int can_activate_mana_source_for_stop_prompt(int player, int card);
+#else
 int can_activate_mana_source_for_stop_prompt(int player, int card)
 {
   if (is_in_play(player, card) != 0 &&
@@ -1569,9 +1592,13 @@ int can_activate_mana_source_for_stop_prompt(int player, int card)
     return 0;
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: can_activate_mana_source_for_stop_prompt */
 
 // FUNCTION: MAGIC 0x0044b7d4
 // FUNCTION: SHANDALAR 0x00404155
+#ifdef SHANDALAR_USE_MANALINKEH
+int activate_mana_source_card(int player, int card);
+#else
 int activate_mana_source_card(int player, int card)
 {
   g_required_mana_color_mask = 0x3e;
@@ -1597,6 +1624,7 @@ int activate_mana_source_card(int player, int card)
   g_required_mana_color_mask = 0;
   return g_produced_mana_color;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: activate_mana_source_card */
 
 // FUNCTION: MAGIC 0x004a6d0e
 // FUNCTION: SHANDALAR 0x00558e90
@@ -1665,6 +1693,9 @@ void count_mana(void)
 }
 // FUNCTION: MAGIC 0x004a6faa
 // FUNCTION: SHANDALAR 0x0055912c
+#ifdef SHANDALAR_USE_MANALINKEH
+void C_count_colors_of_lands_in_play(void);
+#else
 void C_count_colors_of_lands_in_play(void)
 {
   int player;
@@ -1766,6 +1797,7 @@ void C_count_colors_of_lands_in_play(void)
     }
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: C_count_colors_of_lands_in_play */
 
 // FUNCTION: MAGIC 0x004eab5c
 // FUNCTION: SHANDALAR 0x004412ec

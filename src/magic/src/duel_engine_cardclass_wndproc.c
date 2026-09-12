@@ -1954,6 +1954,9 @@ void draw_dying_overlay(HDC dc, RECT *rect)
 
 // FUNCTION: MAGIC 0x0055d54e
 // FUNCTION: SHANDALAR 0x00573868
+#ifdef SHANDALAR_USE_MANALINKEH
+int get_card_special_counter_icon(card_id_t card_id);
+#else
 int get_card_special_counter_icon(card_id_t card_id)
 {
   int result;
@@ -2017,6 +2020,7 @@ int get_card_special_counter_icon(card_id_t card_id)
 
   return result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: get_card_special_counter_icon */
 
 // FUNCTION: MAGIC 0x0055a986
 // FUNCTION: SHANDALAR 0x00570cbe
@@ -2685,6 +2689,9 @@ int can_card_join_banding_group(int player, int card, int unused_player, int unu
 
 // FUNCTION: MAGIC 0x0044184b
 // FUNCTION: SHANDALAR 0x0040d0cb
+#ifdef SHANDALAR_USE_MANALINKEH
+int can_block_attacker_with_landwalk_checks(int blocker_player, int blocker_card, int attacker_player, int attacker_card);
+#else
 int can_block_attacker_with_landwalk_checks(int blocker_player, int blocker_card, int attacker_player, int attacker_card)
 {
   int result;
@@ -2713,6 +2720,7 @@ int can_block_attacker_with_landwalk_checks(int blocker_player, int blocker_card
                                              selected);
   return result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: can_block_attacker_with_landwalk_checks */
 
 // FUNCTION: MAGIC 0x00441b94
 // FUNCTION: SHANDALAR 0x0040d414

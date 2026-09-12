@@ -950,6 +950,9 @@ int card_animate_dead(int player, int card, event_t event)
 
 // FUNCTION: MAGIC 0x0051a41c
 // FUNCTION: SHANDALAR 0x004d1c03
+#ifdef SHANDALAR_USE_MANALINKEH
+int process_card_enters_play(int player, int card);
+#else
 int process_card_enters_play(int player, int card)
 {
   int internal_card_id;
@@ -1005,6 +1008,7 @@ int process_card_enters_play(int player, int card)
 
   return 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: process_card_enters_play */
 
 // FUNCTION: MAGIC 0x0051a64c
 // FUNCTION: SHANDALAR 0x004d1e33
@@ -3951,6 +3955,9 @@ int card_lure(int player, int card, event_t event)
 
 // FUNCTION: MAGIC 0x0052460c
 // FUNCTION: SHANDALAR 0x004dbdfc
+#ifdef SHANDALAR_USE_MANALINKEH
+int can_block_with_landwalk_masks(int blocker_player, int blocker_card, int attacker_player, int attacker_card);
+#else
 int can_block_with_landwalk_masks(int blocker_player, int blocker_card, int attacker_player, int attacker_card)
 {
   struct
@@ -3982,6 +3989,7 @@ int can_block_with_landwalk_masks(int blocker_player, int blocker_card, int atta
                                                s.selected);
   return s.result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: can_block_with_landwalk_masks */
 
 // FUNCTION: MAGIC 0x00524687
 // FUNCTION: SHANDALAR 0x004dbe77
@@ -4376,6 +4384,9 @@ int card_backfire(int player, int card, event_t event)
 
 // FUNCTION: MAGIC 0x00526202
 // FUNCTION: SHANDALAR 0x004dd9ef
+#ifdef SHANDALAR_USE_MANALINKEH
+int card_holy_armor(int player, int card, event_t event);
+#else
 int card_holy_armor(int player, int card, event_t event)
 {
   int local;
@@ -4624,9 +4635,13 @@ int card_holy_armor(int player, int card, event_t event)
 
   return 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: card_holy_armor */
 
 // FUNCTION: MAGIC 0x0052700b
 // FUNCTION: SHANDALAR 0x004de7f8
+#ifdef SHANDALAR_USE_MANALINKEH
+int card_blessing(int player, int card, event_t event);
+#else
 int card_blessing(int player, int card, event_t event)
 {
   int local;
@@ -4866,6 +4881,7 @@ int card_blessing(int player, int card, event_t event)
   }
   return 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: card_blessing */
 
 // FUNCTION: MAGIC 0x00527e71
 // FUNCTION: SHANDALAR 0x004df65e

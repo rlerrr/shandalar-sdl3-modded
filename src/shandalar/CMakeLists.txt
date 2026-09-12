@@ -39,6 +39,7 @@ add_executable(shandalar
   src/adventureListPicker.c
   src/iniFile.c
   src/magic_runtime.c
+  src/manalinkeh_host_bridge.c
   src/shandalar_global_strings.c
   ${SHANDALAR_MAGIC_DUEL_SOURCES}
   ../magic/src/global_duel_ui_ids.c
@@ -69,11 +70,19 @@ add_dependencies(shandalar shandalar_version_header_target)
 target_compile_definitions(shandalar PRIVATE
   MODERN_FIXES
   SHANDALAR
+  SHANDALAR_USE_MANALINKEH
   LoadPcxIntoPageNoPalette=ShandalarLoadPcxIntoPageNoPalette
 )
-# Non-Windows libcs lack MSVC's extras (_itoa, _stricmp, ...). Force-include the
-# platform shim everywhere except Windows: MSVC/clang-cl provide the real
-# functions (and clang-cl wants /FI rather than -include).
+if(MSVC)
+  target_compile_options(shandalar PRIVATE
+    "/FI${SHANDALAR_SRC_ROOT}/manalinkeh/mok_manalink_redirects.h"
+  )
+else()
+  target_compile_options(shandalar PRIVATE
+    "-include" "${SHANDALAR_SRC_ROOT}/manalinkeh/mok_manalink_redirects.h"
+  )
+endif()
+# Non-Windows libcs lack MSVC's extras (_itoa, _stricmp, ...).
 if(NOT WIN32)
   target_compile_options(shandalar PRIVATE
     -include platform/legacy_io.h
@@ -88,6 +97,7 @@ target_include_directories(shandalar BEFORE PRIVATE
   "${SHANDALAR_SRC_ROOT}/magic/compat"
 )
 target_link_libraries(shandalar PRIVATE
+  manalinkeh_static
   facemaker_legacy_ui
   deck_imgui_interaction
   legacy_win32_imgui_bridge
@@ -99,6 +109,9 @@ target_link_libraries(shandalar PRIVATE
   SDL3::SDL3
   SDL3_ttf::SDL3_ttf
 )
+if(MSVC)
+  target_link_options(shandalar PRIVATE /errorlimit:0 /OPT:REF)
+endif()
 
 if(EMSCRIPTEN)
   set_target_properties(shandalar PROPERTIES SUFFIX ".html")

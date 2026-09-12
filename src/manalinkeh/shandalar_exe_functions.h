@@ -86,11 +86,13 @@ extern void refund_paid_mana(int*);
 extern int regenerate_or_graveyard_triggers(void);
 extern int replay_ai_action_selection(void);
 extern void request_duel_display_refresh(void);
-extern void reset_ai_search_trial_state(void);
+extern void __stdcall reset_ai_search_trial_state(void);
 extern void resize_duel_hand_window(void*);
 extern void resolve_mana_burn(void);
 extern void resolve_top_card_on_stack(void);
-extern void save_recorded_ai_actions(void);
+extern void __stdcall save_recorded_ai_actions(void);
+extern int shandalar_add_card_to_hand(int player, int internal_card_id);
+#define add_card_to_hand_exe shandalar_add_card_to_hand
 extern int select_card_for_action(int, int, int, int, int, char*, int);
 extern void send_library_contents(int);
 extern int set_duel_prompt_text(const char*);

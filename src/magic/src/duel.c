@@ -304,6 +304,9 @@ int reset_timestamp_players(void)
 
 // FUNCTION: MAGIC 0x0044b56a
 // FUNCTION: SHANDALAR 0x00403eeb
+#ifdef SHANDALAR_USE_MANALINKEH
+int check_duel_finished(void);
+#else
 int check_duel_finished(void)
 {
   int player_died;
@@ -347,6 +350,7 @@ int check_duel_finished(void)
   }
   return result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: check_duel_finished */
 
 // FUNCTION: MAGIC 0x0044a7e0
 // FUNCTION: SHANDALAR 0x00403160
@@ -816,6 +820,9 @@ void reset_recorded_actions(void)
 
 // FUNCTION: MAGIC 0x004432ed
 // FUNCTION: SHANDALAR 0x0040eb87
+#ifdef SHANDALAR_USE_MANALINKEH
+void update_phase_display(int player, phase_t phase);
+#else
 void update_phase_display(int player, phase_t phase)
 {
   if (g_duel_ai_mode_state != 1)
@@ -824,6 +831,7 @@ void update_phase_display(int player, phase_t phase)
   }
   g_spell_fizzled = 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: update_phase_display */
 
 // FUNCTION: MAGIC 0x00446036
 // FUNCTION: SHANDALAR 0x004118ce
@@ -1113,6 +1121,9 @@ int untap_phase_exe(unsigned int player)
 
 // FUNCTION: MAGIC 0x0044c88f
 // FUNCTION: SHANDALAR 0x0040520a
+#ifdef SHANDALAR_USE_MANALINKEH
+int upkeep_phase(unsigned int player);
+#else
 int upkeep_phase(unsigned int player)
 {
   int trace_counter;
@@ -1181,6 +1192,7 @@ int upkeep_phase(unsigned int player)
   }
   return 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: upkeep_phase */
 
 // FUNCTION: MAGIC 0x0044caa3
 // FUNCTION: SHANDALAR 0x0040541e
@@ -1628,6 +1640,9 @@ int end_turn_phase(unsigned int player)
 
 // FUNCTION: MAGIC 0x00450468
 // FUNCTION: SHANDALAR 0x00408dcc
+#ifdef SHANDALAR_USE_MANALINKEH
+int ai_decision_phase(unsigned int player, int *next_state, int *phase_mode, int *phase_value);
+#else
 int ai_decision_phase(unsigned int player, int *next_state, int *phase_mode, int *phase_value)
 {
   char debug_text[100];
@@ -1822,6 +1837,7 @@ int ai_decision_phase(unsigned int player, int *next_state, int *phase_mode, int
   }
   return 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: ai_decision_phase */
 
 // FUNCTION: MAGIC 0x004b559a
 // FUNCTION: SHANDALAR 0x0056bd9d

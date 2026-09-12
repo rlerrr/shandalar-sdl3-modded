@@ -121,6 +121,9 @@ static int build_duel_sound_path(char *out, size_t out_size, int filename_index)
 
 // FUNCTION: MAGIC 0x0044331f
 // FUNCTION: SHANDALAR 0x0040ebb9
+#ifdef SHANDALAR_USE_MANALINKEH
+int play_sound_effect(wav_t sound_id);
+#else
 int play_sound_effect(wav_t sound_id)
 {
   char path[264];
@@ -271,6 +274,7 @@ int play_sound_effect(wav_t sound_id)
 
   return 1;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: play_sound_effect */
 
 // FUNCTION: MAGIC 0x00446c95
 // FUNCTION: SHANDALAR 0x00450813
@@ -936,6 +940,9 @@ int restack_visible_windows_after(HWND previous_window, HWND *windows, int windo
 
 // FUNCTION: MAGIC 0x004964dd
 // FUNCTION: SHANDALAR 0x00466f70
+#ifdef SHANDALAR_USE_MANALINKEH
+int get_card_display_pic_num(card_id_t card_id, int player, int card);
+#else
 int get_card_display_pic_num(card_id_t card_id, int player, int card)
 {
   int num_pics;
@@ -958,6 +965,7 @@ int get_card_display_pic_num(card_id_t card_id, int player, int card)
     return (player + card) % num_pics;
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: get_card_display_pic_num */
 
 // FUNCTION: MAGIC 0x004a09c6
 // FUNCTION: SHANDALAR 0x0053c35e

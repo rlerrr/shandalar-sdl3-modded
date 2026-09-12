@@ -42,16 +42,20 @@ find_package(Python3 REQUIRED COMPONENTS Interpreter)
 set(manalinkeh_generated_dir "${CMAKE_CURRENT_BINARY_DIR}/generated")
 set(manalinkeh_veneer_source "${manalinkeh_generated_dir}/manalinkeh_veneer_table.c")
 set(manalinkeh_veneer_header "${manalinkeh_generated_dir}/manalinkeh_veneer_table.h")
+set(manalinkeh_namespace_header "${manalinkeh_generated_dir}/manalinkeh_symbol_namespace.h")
 add_custom_command(
-  OUTPUT "${manalinkeh_veneer_source}" "${manalinkeh_veneer_header}"
+  OUTPUT "${manalinkeh_veneer_source}" "${manalinkeh_veneer_header}" "${manalinkeh_namespace_header}"
   COMMAND "${Python3_EXECUTABLE}"
           "${CMAKE_CURRENT_SOURCE_DIR}/generate_veneer_table.py"
           "${CMAKE_CURRENT_SOURCE_DIR}/ManalinkEh.asm"
           "${manalinkeh_veneer_source}"
           "${manalinkeh_veneer_header}"
+          "${manalinkeh_namespace_header}"
+          "${CMAKE_CURRENT_SOURCE_DIR}/internal_symbols.txt"
   DEPENDS
     "${CMAKE_CURRENT_SOURCE_DIR}/ManalinkEh.asm"
     "${CMAKE_CURRENT_SOURCE_DIR}/generate_veneer_table.py"
+    "${CMAKE_CURRENT_SOURCE_DIR}/internal_symbols.txt"
   VERBATIM
 )
 
@@ -59,6 +63,7 @@ add_library(manalinkeh_static STATIC EXCLUDE_FROM_ALL
   ${manalinkeh_card_sources}
   ${manalinkeh_function_sources}
   "${manalinkeh_veneer_source}"
+  "${manalinkeh_namespace_header}"
 )
 
 target_include_directories(manalinkeh_static PRIVATE
@@ -72,3 +77,19 @@ target_include_directories(manalinkeh_static PRIVATE
 target_compile_definitions(manalinkeh_static PRIVATE
   MANALINKEH_STATIC
 )
+
+# Keep legacy translation units from retaining every unrelated function when
+# the host requests only one of their MOK replacement entry points.
+if(MSVC)
+  target_compile_options(manalinkeh_static PRIVATE
+    /Gy
+    -fcommon
+    "/FI${manalinkeh_namespace_header}"
+  )
+else()
+  target_compile_options(manalinkeh_static PRIVATE
+    -ffunction-sections
+    -fdata-sections
+    "-include" "${manalinkeh_namespace_header}"
+  )
+endif()

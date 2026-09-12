@@ -124,14 +124,45 @@ def write_source(path, entries):
     path.write_text("\n".join(lines), encoding="utf-8")
 
 
+def write_namespace_header(path, entries, internal_names):
+    names = {
+        name for _address, name, _line in entries if IDENTIFIER_RE.fullmatch(name)
+    }
+    names.update(
+        match.group(1)
+        for _address, name, _line in entries
+        if (match := STDCALL_RE.fullmatch(name))
+    )
+    names.update(internal_names)
+    lines = [
+        "#ifndef MANALINKEH_SYMBOL_NAMESPACE_H",
+        "#define MANALINKEH_SYMBOL_NAMESPACE_H",
+        "",
+        "/* Keep imported implementations distinct from surviving host code. */",
+    ]
+    lines.extend(f"#define {name} manalinkeh_{name}" for name in sorted(names))
+    lines.extend(["", "#endif", ""])
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text("\n".join(lines), encoding="utf-8")
+
+
 def main():
-    if len(sys.argv) != 4:
+    if len(sys.argv) != 6:
         raise SystemExit(
-            "usage: generate_veneer_table.py MANALINKEH_ASM OUTPUT_C OUTPUT_H"
+            "usage: generate_veneer_table.py MANALINKEH_ASM OUTPUT_C OUTPUT_H OUTPUT_NAMESPACE_H INTERNAL_SYMBOLS"
         )
     entries = read_veneers(Path(sys.argv[1]))
     write_source(Path(sys.argv[2]), entries)
     write_header(Path(sys.argv[3]), entries[0][0], len(entries))
+    internal_names = {
+        name.strip()
+        for name in Path(sys.argv[5]).read_text(encoding="ascii").splitlines()
+        if name.strip()
+    }
+    invalid_names = sorted(name for name in internal_names if not IDENTIFIER_RE.fullmatch(name))
+    if invalid_names:
+        raise ValueError(f"invalid internal symbols: {invalid_names}")
+    write_namespace_header(Path(sys.argv[4]), entries, internal_names)
 
 
 if __name__ == "__main__":

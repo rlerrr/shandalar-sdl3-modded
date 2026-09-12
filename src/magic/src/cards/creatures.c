@@ -30,6 +30,9 @@ int card_data_card(int player, int card, event_t event)
 
 // FUNCTION: MAGIC 0x0053aa74
 // FUNCTION: SHANDALAR 0x00488cc4
+#ifdef SHANDALAR_USE_MANALINKEH
+unsigned int get_protections_from(int player, int card);
+#else
 unsigned int get_protections_from(int player, int card)
 {
   struct
@@ -76,6 +79,7 @@ unsigned int get_protections_from(int player, int card)
                                    1)) |
          s.illegal_abilities;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: get_protections_from */
 
 // FUNCTION: MAGIC 0x0053ac18
 // FUNCTION: SHANDALAR 0x00488e68

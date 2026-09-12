@@ -18,10 +18,11 @@ extern "C" {
 #define opp (1-player)
 
 extern trigger_t trigger_condition;
+extern int g_trigger_condition;
 extern xtrigger_t xtrigger_impl_value_dont_use_directly;
 static inline int xtrigger_condition(void)	// Deliberately int, so it can be compared against either a trigger_t or an xtrigger_t
 {
-  return trigger_condition == TRIGGER_XTRIGGER ? (int)xtrigger_impl_value_dont_use_directly : (int)trigger_condition;
+  return g_trigger_condition == TRIGGER_XTRIGGER ? (int)xtrigger_impl_value_dont_use_directly : (int)g_trigger_condition;
 }
 extern enable_xtrigger_flags_t enable_xtrigger_flags;
 extern int replace_milled;	// for XTRIGGER_REPLACE_MILL and XTRIGGER_REPLACE_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY
@@ -82,7 +83,8 @@ extern int event_flags;	// an event_flag_t
 extern int event_result;
 extern game_type_t game_type;
 extern int *graveyard_ptr_mutable[];	// only use directly in deck.c, and only when changing
-static inline const int* get_grave(int player){return graveyard_ptr_mutable[player];}
+extern int** shandalar_graveyard_ptr(void);
+static inline const int* get_grave(int player){return shandalar_graveyard_ptr()[player];}
 extern int graveyard_source[2][500];
 extern int next_graveyard_source_id;
 extern int hand_count[2];
@@ -143,7 +145,7 @@ extern int unknown62BCEC;
 extern int mana_paid[7];	// Mana paid in the last successful call to charge_mana().
 extern int mana_pool[2][8];
 extern int available_slots;
-char card_coded[30000/8];
+extern char card_coded[30000/8];
 extern int creatures_dead_this_turn;
 extern int activation_card;
 extern int ai_is_speculating;
@@ -214,7 +216,9 @@ extern int PAY_MANA_RED;
 extern int PAY_MANA_WHITE;
 extern int PAY_MANA_ARTIFACT;
 
-char* set_legacy_effect_name_addr;
+extern char* set_legacy_effect_name_addr;
+
+#include "shandalar_host_names.h"
 
 int pick_creature_to_regen(target_definition_t td);
 int is_creature_dead(void);

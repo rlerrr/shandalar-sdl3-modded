@@ -78,6 +78,9 @@ int combat_damage_blocker_damage[16];
 
 // FUNCTION: MAGIC 0x00515bba
 // FUNCTION: SHANDALAR 0x0042476a
+#ifdef SHANDALAR_USE_MANALINKEH
+int adjust_two_headed_giant_damage(int player, int card, int amount);
+#else
 int adjust_two_headed_giant_damage(int player, int card, int amount)
 {
   card_instance_t *instance;
@@ -144,6 +147,7 @@ int adjust_two_headed_giant_damage(int player, int card, int amount)
 
   return 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: adjust_two_headed_giant_damage */
 
 // FUNCTION: MAGIC 0x00515ee6
 // FUNCTION: SHANDALAR 0x00424a96

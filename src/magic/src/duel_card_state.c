@@ -202,6 +202,9 @@ int is_in_play(int player, int card)
 
 // FUNCTION: MAGIC 0x004817fd
 // FUNCTION: SHANDALAR 0x00485308
+#ifdef SHANDALAR_USE_MANALINKEH
+int ante_drawn_card(int player);
+#else
 int ante_drawn_card(int player)
 {
   int ante_slot = 0;
@@ -236,6 +239,7 @@ int ante_drawn_card(int player)
     return 0;
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: ante_drawn_card */
 
 // FUNCTION: MAGIC 0x00481e25
 // FUNCTION: SHANDALAR 0x0048592f
@@ -675,6 +679,9 @@ int gain_life(int player, int amount, ...)
 
 // FUNCTION: MAGIC 0x00495311
 // FUNCTION: SHANDALAR 0x00465dac
+#ifdef SHANDALAR_USE_MANALINKEH
+char *get_hunting_subtype_name(int value);
+#else
 char *get_hunting_subtype_name(int value)
 {
   if (value < 0 || value >= 0xd4)
@@ -684,9 +691,13 @@ char *get_hunting_subtype_name(int value)
   else
     return gs_hunting_subtype_name_00926930[value];
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: get_hunting_subtype_name */
 
 // FUNCTION: MAGIC 0x004b08e6
 // FUNCTION: SHANDALAR 0x0046d8c1
+#ifdef SHANDALAR_USE_MANALINKEH
+void kill_card(int player, int card, kill_t kill_mode);
+#else
 void kill_card(int player, int card, kill_t kill_mode)
 {
   int internal_card_id;
@@ -727,6 +738,7 @@ void kill_card(int player, int card, kill_t kill_mode)
     pending_killed_card_handler = process_killed_card;
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: kill_card */
 
 // FUNCTION: MAGIC 0x004b0b53
 // FUNCTION: SHANDALAR 0x0046db2e
@@ -879,6 +891,9 @@ int process_killed_card(int player, int card)
 
 // FUNCTION: MAGIC 0x004b117e
 // FUNCTION: SHANDALAR 0x0046e159
+#ifdef SHANDALAR_USE_MANALINKEH
+void clear_card_attachments(int player, int card);
+#else
 void clear_card_attachments(int player, int card)
 {
   int current_card;   /* ebp - 0x970 */
@@ -924,9 +939,13 @@ void clear_card_attachments(int player, int card)
   PLAYER_CARD_INSTANCE(player, card).counter_power = PLAYER_CARD_INSTANCE(player, card).counter_toughness;
   PLAYER_CARD_INSTANCE(player, card).blocking = 0xff;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: clear_card_attachments */
 
 // FUNCTION: MAGIC 0x004b14f5
 // FUNCTION: SHANDALAR 0x0046e4d0
+#ifdef SHANDALAR_USE_MANALINKEH
+void move_card_to_graveyard(int player, int card);
+#else
 void move_card_to_graveyard(int player, int card)
 {
   int graveyard_index;
@@ -952,9 +971,13 @@ void move_card_to_graveyard(int player, int card)
     global_graveyard_slots[graveyard_player][graveyard_index] = original_internal_card_id;
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: move_card_to_graveyard */
 
 // FUNCTION: MAGIC 0x004b15f7
 // FUNCTION: SHANDALAR 0x0046e5d2
+#ifdef SHANDALAR_USE_MANALINKEH
+void remove_card_from_graveyard(int player, int graveyard_index);
+#else
 void remove_card_from_graveyard(int player, int graveyard_index)
 {
   int i = graveyard_index;
@@ -964,6 +987,7 @@ void remove_card_from_graveyard(int player, int graveyard_index)
   }
   global_graveyard_slots[player][499] = -1;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: remove_card_from_graveyard */
 
 // FUNCTION: MAGIC 0x004b1670
 // FUNCTION: SHANDALAR 0x0046e64b
@@ -1176,6 +1200,9 @@ int is_card_color_compatible_with_mask(int card_color, int color_mask, int compa
 
 // FUNCTION: MAGIC 0x004b59b2
 // FUNCTION: SHANDALAR 0x0056c1b5
+#ifdef SHANDALAR_USE_MANALINKEH
+void shuffle_duel_library(int player, int deck_owner);
+#else
 void shuffle_duel_library(int player, int deck_owner)
 {
   int swap_slot;    /* [ebp-0x14] */
@@ -1228,6 +1255,7 @@ void shuffle_duel_library(int player, int deck_owner)
     receive_library_contents(deck_owner);
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: shuffle_duel_library */
 
 // FUNCTION: MAGIC 0x004b5b7a
 // FUNCTION: SHANDALAR 0x0056c37c
@@ -1323,6 +1351,9 @@ void real_put_on_top_of_deck(int player, int internal_card_id)
 
 // FUNCTION: MAGIC 0x004b5f03
 // FUNCTION: SHANDALAR 0x0056c705
+#ifdef SHANDALAR_USE_MANALINKEH
+int find_internal_card_id_by_csv_id(card_id_t card_id);
+#else
 int find_internal_card_id_by_csv_id(card_id_t card_id)
 {
   int result;
@@ -1344,6 +1375,7 @@ int find_internal_card_id_by_csv_id(card_id_t card_id)
 
   return result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: find_internal_card_id_by_csv_id */
 
 // FUNCTION: MAGIC 0x004bff5a
 // FUNCTION: SHANDALAR 0x004c0dd4
@@ -1553,6 +1585,9 @@ int get_sleighted_color(int player, int card, int orig_color)
 
 // FUNCTION: MAGIC 0x0050047c
 // FUNCTION: SHANDALAR 0x004ba5a1
+#ifdef SHANDALAR_USE_MANALINKEH
+int damage_creature(int target_player, int target_card, int amount, int source_player, int source_card);
+#else
 int damage_creature(int target_player, int target_card, int amount, int source_player, int source_card)
 {
   int source_internal_card_id;
@@ -1636,6 +1671,7 @@ int damage_creature(int target_player, int target_card, int amount, int source_p
 
   return result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: damage_creature */
 
 // FUNCTION: MAGIC 0x00500a13
 // FUNCTION: SHANDALAR 0x004bab38

@@ -416,6 +416,28 @@ int run_target_selection_modal(int who_chooses,
 
 // FUNCTION: MAGIC 0x004c0080
 // FUNCTION: SHANDALAR 0x004c0efa
+#ifdef SHANDALAR_USE_MANALINKEH
+int C_real_select_target(int who_chooses,
+                         int allowed_controller,
+                         int preferred_controller,
+                         int zone,
+                         int required_type,
+                         int illegal_type,
+                         unsigned int required_abilities,
+                         unsigned int illegal_abilities,
+                         unsigned int required_color,
+                         unsigned int illegal_color,
+                         int extra,
+                         int required_subtype,
+                         int power_requirement,
+                         int toughness_requirement,
+                         unsigned int special,
+                         unsigned int required_state,
+                         unsigned int illegal_state,
+                         char *prompt,
+                         int allow_cancel,
+                         target_t *ret_tgt);
+#else
 int C_real_select_target(int who_chooses,
                          int allowed_controller,
                          int preferred_controller,
@@ -785,6 +807,7 @@ int C_real_select_target(int who_chooses,
 
   return result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: C_real_select_target */
 
 // FUNCTION: MAGIC 0x0048930a
 // FUNCTION: SHANDALAR 0x004cbed2

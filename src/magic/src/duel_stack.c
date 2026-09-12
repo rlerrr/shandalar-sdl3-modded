@@ -18,6 +18,9 @@
 
 // FUNCTION: MAGIC 0x0043e18b
 // FUNCTION: SHANDALAR 0x00409a0b
+#ifdef SHANDALAR_USE_MANALINKEH
+int draw_card_for_player(int player);
+#else
 int draw_card_for_player(int player)
 {
   int candidate_ok;      // ebp-0xc
@@ -164,6 +167,7 @@ int draw_card_for_player(int player)
 
   return drawn_card;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: draw_card_for_player */
 
 // FUNCTION: MAGIC 0x0043ec38
 // FUNCTION: SHANDALAR 0x0040a4b8
@@ -584,6 +588,9 @@ finish_put_card_on_stack:
 
 // FUNCTION: MAGIC 0x0043f9ed
 // FUNCTION: SHANDALAR 0x0040b26d
+#ifdef SHANDALAR_USE_MANALINKEH
+int resolve_card_on_stack(int player, int card);
+#else
 int resolve_card_on_stack(int player, int card)
 {
   int internal_card_id;
@@ -689,6 +696,7 @@ int resolve_card_on_stack(int player, int card)
   TENTATIVE_reassess_all_cards(0, 0xff);
   return 1;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: resolve_card_on_stack */
 
 // FUNCTION: MAGIC 0x0043ff32
 // FUNCTION: SHANDALAR 0x0040b7b2
@@ -994,6 +1002,9 @@ int activate(int who_activates, int player, int card)
 
 // FUNCTION: MAGIC 0x0044096f
 // FUNCTION: SHANDALAR 0x0040c1ef
+#ifdef SHANDALAR_USE_MANALINKEH
+int resolve_activated_ability(int player, int card);
+#else
 int resolve_activated_ability(int player, int card)
 {
   int internal_card_id;
@@ -1041,9 +1052,13 @@ int resolve_activated_ability(int player, int card)
 
   return 1;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: resolve_activated_ability */
 
 // FUNCTION: MAGIC 0x00440ad2
 // FUNCTION: SHANDALAR 0x0040c352
+#ifdef SHANDALAR_USE_MANALINKEH
+int resolve_card_immediately(int player, int card, int arg_3);
+#else
 int resolve_card_immediately(int player, int card, int arg_3)
 {
   int trace_counter;       /* iVar2 / local_324 */
@@ -1087,6 +1102,7 @@ int resolve_card_immediately(int player, int card, int arg_3)
 
   g_ai_search_result = 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: resolve_card_immediately */
 
 // FUNCTION: MAGIC 0x00440c61
 // FUNCTION: SHANDALAR 0x0040c4e1
@@ -1102,6 +1118,9 @@ int is_card_pending_resolution(int player, int card)
 
 // FUNCTION: MAGIC 0x0044125c
 // FUNCTION: SHANDALAR 0x0040cadc
+#ifdef SHANDALAR_USE_MANALINKEH
+int can_attack(int player, int card);
+#else
 int can_attack(int player, int card)
 {
   int saved_affected_card;
@@ -1166,6 +1185,7 @@ int can_attack(int player, int card)
 
   return result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: can_attack */
 
 // FUNCTION: MAGIC 0x00441514
 // FUNCTION: SHANDALAR 0x0040cd94
@@ -1179,6 +1199,14 @@ int has_vigilance(int player, int card)
 
 // FUNCTION: MAGIC 0x004418c6
 // FUNCTION: SHANDALAR 0x0040d146
+#ifdef SHANDALAR_USE_MANALINKEH
+int can_block_attacker_with_abilities(int blocker_player,
+                                      int blocker_card,
+                                      int attacker_player,
+                                      int attacker_card,
+                                      unsigned int attacker_abilities,
+                                      unsigned int land_bits);
+#else
 int can_block_attacker_with_abilities(int blocker_player,
                                       int blocker_card,
                                       int attacker_player,
@@ -1257,9 +1285,13 @@ int can_block_attacker_with_abilities(int blocker_player,
   return result;
 #undef BLOCKER_INSTANCE
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: can_block_attacker_with_abilities */
 
 // FUNCTION: MAGIC 0x00441d78
 // FUNCTION: SHANDALAR 0x0040d614
+#ifdef SHANDALAR_USE_MANALINKEH
+void reassess_all_cards_and_mana(void);
+#else
 void reassess_all_cards_and_mana(void)
 {
   int player;
@@ -1296,9 +1328,13 @@ void reassess_all_cards_and_mana(void)
     }
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: reassess_all_cards_and_mana */
 
 // FUNCTION: MAGIC 0x00441f16
 // FUNCTION: SHANDALAR 0x0040d7b2
+#ifdef SHANDALAR_USE_MANALINKEH
+int C_get_abilities(int player, int card, event_t event, int new_attacking_card);
+#else
 int C_get_abilities(int player, int card, event_t event, int new_attacking_card)
 {
   card_instance_t *test_instance;
@@ -1561,6 +1597,7 @@ post_dispatch:
   g_adventure_duel_internal_card_id = current_abilities;
   return result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: C_get_abilities */
 
 // FUNCTION: MAGIC 0x004427d9
 // FUNCTION: SHANDALAR 0x0040e073
@@ -1625,6 +1662,9 @@ int dispatch_event(int player, int card, event_t event)
 
 // FUNCTION: MAGIC 0x0044295b
 // FUNCTION: SHANDALAR 0x0040e1f5
+#ifdef SHANDALAR_USE_MANALINKEH
+void C_dispatch_event_raw(event_t event);
+#else
 void C_dispatch_event_raw(event_t event)
 {
   card_instance_t *instance;
@@ -1682,9 +1722,17 @@ void C_dispatch_event_raw(event_t event)
   }
   g_adventure_duel_internal_card_id = saved_trigger_condition;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: C_dispatch_event_raw */
 
 // FUNCTION: MAGIC 0x00442b42
 // FUNCTION: SHANDALAR 0x0040e3dc
+#ifdef SHANDALAR_USE_MANALINKEH
+int dispatch_event_to_single_card(int player,
+                                  int card,
+                                  event_t event,
+                                  int new_attacking_card_controller,
+                                  int new_attacking_card);
+#else
 int dispatch_event_to_single_card(int player,
                                   int card,
                                   event_t event,
@@ -1734,6 +1782,7 @@ int dispatch_event_to_single_card(int player,
   pop_affected_card_stack();
   return result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: dispatch_event_to_single_card */
 
 // FUNCTION: MAGIC 0x00442dac
 // FUNCTION: SHANDALAR 0x0040e646
@@ -1784,6 +1833,9 @@ unsigned int get_current_stack_action(void)
 
 // FUNCTION: MAGIC 0x004438cb
 // FUNCTION: SHANDALAR 0x0040f165
+#ifdef SHANDALAR_USE_MANALINKEH
+int refresh_stack_proxy_card(int prompt_flag);
+#else
 int refresh_stack_proxy_card(int prompt_flag)
 {
   int card;                    /* ebp-0x18 */
@@ -1849,9 +1901,13 @@ int refresh_stack_proxy_card(int prompt_flag)
       PLAYER_CARD_INSTANCE(player, card).damage_target_card;
   return 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: refresh_stack_proxy_card */
 
 // FUNCTION: MAGIC 0x00443ee2
 // FUNCTION: SHANDALAR 0x0040f77c
+#ifdef SHANDALAR_USE_MANALINKEH
+int push_card_onto_stack(int player, int card, int event, int extra, int prompt);
+#else
 int push_card_onto_stack(int player, int card, int event, int extra, int prompt)
 {
   int should_push;
@@ -1921,6 +1977,7 @@ int push_card_onto_stack(int player, int card, int event, int extra, int prompt)
 
   return 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: push_card_onto_stack */
 
 // FUNCTION: MAGIC 0x00444443
 // FUNCTION: SHANDALAR 0x0040fcdd
@@ -2496,6 +2553,9 @@ int dispatch_trigger_twice_once_with_each_player_as_reason(int reason_for_trig, 
 
 // FUNCTION: MAGIC 0x004456ad
 // FUNCTION: SHANDALAR 0x00410f46
+#ifdef SHANDALAR_USE_MANALINKEH
+int dispatch_trigger(int player, trigger_t trig, const char *prompt, int TENTATIVE_allow_response);
+#else
 int dispatch_trigger(int player, trigger_t trig, const char *prompt, int TENTATIVE_allow_response)
 {
   int saved_trig;          // ebp-0x24
@@ -2610,6 +2670,7 @@ int dispatch_trigger(int player, trigger_t trig, const char *prompt, int TENTATI
 
   return 0;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: dispatch_trigger */
 
 // FUNCTION: MAGIC 0x00445b56
 // FUNCTION: SHANDALAR 0x004113ef
@@ -3979,6 +4040,9 @@ int get_card_response_action_type(int player, int card)
 
 // FUNCTION: MAGIC 0x004af6f4
 // FUNCTION: SHANDALAR 0x0046c6cf
+#ifdef SHANDALAR_USE_MANALINKEH
+int is_phase_stop_allowed_for_current_event(void);
+#else
 int is_phase_stop_allowed_for_current_event(void)
 {
   if (g_current_action_event_code == 0x8e)
@@ -4014,6 +4078,7 @@ int is_phase_stop_allowed_for_current_event(void)
     return 1;
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: is_phase_stop_allowed_for_current_event */
 
 // FUNCTION: MAGIC 0x004afa4b
 // FUNCTION: SHANDALAR 0x0046ca26
@@ -4151,6 +4216,9 @@ after_setup:
 
 // FUNCTION: MAGIC 0x004aff25
 // FUNCTION: SHANDALAR 0x0046cf00
+#ifdef SHANDALAR_USE_MANALINKEH
+void kill_creatures_with_lethal_damage(void);
+#else
 void kill_creatures_with_lethal_damage(void)
 {
   int player;
@@ -4175,9 +4243,13 @@ void kill_creatures_with_lethal_damage(void)
     }
   }
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: kill_creatures_with_lethal_damage */
 
 // FUNCTION: MAGIC 0x004b082f
 // FUNCTION: SHANDALAR 0x0046d80a
+#ifdef SHANDALAR_USE_MANALINKEH
+int dispatch_card_trigger_event(int player, int card, event_t event, int extra);
+#else
 int dispatch_card_trigger_event(int player, int card, event_t event, int extra)
 {
   if (event == EVENT_TRIGGER && ((PLAYER_CARD_INSTANCE(player, card).state & STATE_PROCESSING) != 0 || g_ai_search_result != 0))
@@ -4198,6 +4270,7 @@ int dispatch_card_trigger_event(int player, int card, event_t event, int extra)
   C_dispatch_event_raw(event);
   return g_event_result;
 }
+#endif /* !SHANDALAR_USE_MANALINKEH: dispatch_card_trigger_event */
 
 // FUNCTION: MAGIC 0x004c0a36
 // FUNCTION: SHANDALAR 0x004ecec6
