@@ -187,6 +187,10 @@ extern void shandalar_draw_special_counters(HDC dc, const RECT* rect,
                                              int player, int card);
 extern HBITMAP shandalar_read_graphics_file(const char* path);
 extern void shandalar_redraw_libraries(void);
+extern const char* shandalar_legacy_title(int card_id);
+extern const char* shandalar_effect_title(int card_id);
+extern const char* shandalar_hunting_subtype_name(int subtype);
+extern int shandalar_check_mana_multi(int player);
 
 #define active_cards_count g_active_cards_count
 #define affected_card g_affected_card
@@ -315,6 +319,7 @@ extern void shandalar_redraw_libraries(void);
 #define read_graphics_file2 shandalar_read_graphics_file
 #define redraw_libraries shandalar_redraw_libraries
 #define bmp_poison_pic g_life_poison_bitmap
+#define check_mana_multi shandalar_check_mana_multi
 #define x_value g_x_value
 #define choose_a_color_exe shandalar_choose_a_color
 #define is_tapped shandalar_is_tapped

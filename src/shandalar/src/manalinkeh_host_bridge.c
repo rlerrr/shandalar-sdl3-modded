@@ -1,7 +1,10 @@
 #include "magic/src/game_support.h"
 #include "magic/src/global_state.h"
 #include "magic/src/global_other.h"
+#include "magic/src/global_strings.h"
 #include "magic/src/network.h"
+#include "deckdll/src/card_db.h"
+#include <string.h>
 
 int pick_internal_card_from_list_dialog(char* prompt, int initial_card_id,
                                         int filter);
@@ -90,6 +93,8 @@ char* set_legacy_effect_name_addr = manalinkeh_legacy_effect_name;
 int trace_mode;
 int debug_mode;
 int singleplayer_mode;
+/* Network match numbering has no owner in the SDL single-process duel. */
+int game_number;
 int must_attack;
 int forbid_attack;
 int turn_count;
@@ -545,6 +550,185 @@ void shandalar_redraw_libraries(void)
 {
   SendMessageA(g_duel_main_window_hwnd, 0x432, 0, 0);
   SendMessageA(g_duel_status_window_hwnd, 0x432, 0, 0);
+}
+
+const char* shandalar_legacy_title(int card_id)
+{
+  const char* title;
+
+  if (card_id < 0 || card_id >= 2000)
+    return "";
+  title = global_legacy_names[card_id].legacy_title;
+  return title != NULL ? title : "";
+}
+
+const char* shandalar_effect_title(int card_id)
+{
+  const char* title;
+
+  if (card_id < 0 || card_id >= 2000)
+    return "";
+  title = global_legacy_names[card_id].effect_title;
+  return title != NULL ? title : "";
+}
+
+const char* shandalar_hunting_subtype_name(int subtype)
+{
+  if (subtype < 0 || subtype >= 212)
+    return "";
+  return gs_hunting_subtype_name_00926930[subtype];
+}
+
+/*
+ * Decide whether the declared fixed and flexible mana can satisfy the seven
+ * simultaneous MOK cost buckets.  Treating each color independently would
+ * double-count flexible mana, so use a small integral max-flow network.
+ */
+int shandalar_check_mana_multi(int player)
+{
+  enum { MAX_GROUPS = 57, REQUIREMENTS = 7, MAX_NODES = 70 };
+  int capacity[MAX_NODES][MAX_NODES];
+  int parent[MAX_NODES];
+  int queue[MAX_NODES];
+  int group_capacity[MAX_GROUPS];
+  unsigned int group_mask[MAX_GROUPS];
+  unsigned char group_can_pay_generic[MAX_GROUPS];
+  int source;
+  int group_base;
+  int requirement_base;
+  int sink;
+  int nodes;
+  int groups;
+  int color;
+  int slot;
+  int conversion;
+  int source_color;
+  int produced_color;
+  int amount;
+  int total_cost;
+  int head;
+  int tail;
+  int node;
+  int next;
+  int path_capacity;
+  int flow;
+  int result;
+
+  memset(capacity, 0, sizeof(capacity));
+  memset(group_capacity, 0, sizeof(group_capacity));
+  memset(group_mask, 0, sizeof(group_mask));
+  memset(group_can_pay_generic, 0, sizeof(group_can_pay_generic));
+
+  groups = 0;
+  for (color = COLOR_COLORLESS; color <= COLOR_ARTIFACT; ++color)
+  {
+    amount = g_raw_mana_available[player][color] +
+             g_special_mana_pool[player][color];
+    if (amount > 0)
+    {
+      group_capacity[groups] = amount;
+      if (color != COLOR_COLORLESS)
+        group_mask[groups] = 1U << color;
+      group_can_pay_generic[groups] = color != COLOR_ARTIFACT;
+
+      for (slot = 0; slot < 10 &&
+                     g_mana_color_conversions[player][slot] != -1; ++slot)
+      {
+        conversion = g_mana_color_conversions[player][slot];
+        source_color = (unsigned short)conversion;
+        produced_color = ((unsigned int)conversion >> 16) & 0xffff;
+        if (source_color == color && produced_color < REQUIREMENTS)
+          group_mask[groups] |= 1U << produced_color;
+      }
+      ++groups;
+    }
+  }
+
+  for (slot = 0; slot < 50 && g_raw_mana_available_hex[player][slot] != -1;
+       ++slot)
+  {
+    conversion = g_raw_mana_available_hex[player][slot];
+    amount = (int)((unsigned int)conversion >> 16);
+    if (amount > 0)
+    {
+      group_capacity[groups] = amount;
+      group_mask[groups] = (unsigned int)conversion & 0x7f;
+      group_can_pay_generic[groups] = 1;
+      ++groups;
+    }
+  }
+
+  source = 0;
+  group_base = 1;
+  requirement_base = group_base + groups;
+  sink = requirement_base + REQUIREMENTS;
+  nodes = sink + 1;
+  total_cost = 0;
+
+  for (slot = 0; slot < groups; ++slot)
+  {
+    capacity[source][group_base + slot] = group_capacity[slot];
+    for (color = COLOR_BLACK; color <= COLOR_ARTIFACT; ++color)
+    {
+      if ((group_mask[slot] & (1U << color)) != 0)
+        capacity[group_base + slot][requirement_base + color] =
+            group_capacity[slot];
+    }
+    if (group_can_pay_generic[slot])
+      capacity[group_base + slot][requirement_base + COLOR_COLORLESS] =
+          group_capacity[slot];
+  }
+
+  for (color = COLOR_COLORLESS; color <= COLOR_ARTIFACT; ++color)
+  {
+    amount = (unsigned char)manalinkeh_mana_scratch[color];
+    capacity[requirement_base + color][sink] = amount;
+    total_cost += amount;
+  }
+
+  flow = 0;
+  for (;;)
+  {
+    for (node = 0; node < nodes; ++node)
+      parent[node] = -1;
+    parent[source] = source;
+    queue[0] = source;
+    head = 0;
+    tail = 1;
+
+    while (head < tail && parent[sink] == -1)
+    {
+      node = queue[head++];
+      for (next = 0; next < nodes; ++next)
+      {
+        if (parent[next] == -1 && capacity[node][next] > 0)
+        {
+          parent[next] = node;
+          queue[tail++] = next;
+        }
+      }
+    }
+
+    if (parent[sink] == -1)
+      break;
+
+    path_capacity = 0x7fffffff;
+    for (node = sink; node != source; node = parent[node])
+    {
+      if (capacity[parent[node]][node] < path_capacity)
+        path_capacity = capacity[parent[node]][node];
+    }
+    for (node = sink; node != source; node = parent[node])
+    {
+      capacity[parent[node]][node] -= path_capacity;
+      capacity[node][parent[node]] += path_capacity;
+    }
+    flow += path_capacity;
+  }
+
+  result = flow == total_cost;
+  memset(manalinkeh_mana_scratch, 0, sizeof(manalinkeh_mana_scratch));
+  return result;
 }
 
 int shandalar_card_fireball(int player, int card, event_t event)

@@ -28,7 +28,11 @@ static const int territoryclass_offset_card_hwnd_length = 4;
 DLLIMPORT int DrawSmallCard(HDC hdc, const RECT* card_rect, const card_ptr_t* cp, int version, int mode, int player, int card);
 DLLIMPORT int DrawSmallCardTitle(HDC hdc, const RECT* dest_rect, const char* card_title, int color, int controlled_by_owner, const card_ptr_t* cp, int player, int card);
 DLLIMPORT int DrawCardBack(HDC hdc, const RECT* dest_rect, int mode);
+#ifdef MANALINKEH_STATIC
+void draw_special_counters(HDC hdc, const RECT* rect, int player, int card);
+#else
 DLLIMPORT void draw_special_counters(HDC hdc, const RECT* rect, int player, int card);
+#endif
 DLLIMPORT void draw_standard_counters(HDC hdc, const RECT* rect, int player, int card);
 
 #define card_is_valid_for_leftclick			card_window_matches_action_request
@@ -1751,6 +1755,7 @@ void load_endduel_assets(HGDIOBJ *a1, COLORREF *a2, COLORREF *a3, HBRUSH *a4, HP
 #undef path_DuelArt
 
 #define call_UnloadAllSnds				sound_unload_all
+#ifndef MANALINKEH_STATIC
 int launch_mcu(void)
 {
   char cmd_line[264];
@@ -1765,6 +1770,7 @@ int launch_mcu(void)
     rval = PostMessageA(global_main_hwnd, WM_CLOSE, 0, 0);
   return rval;
 }
+#endif
 #undef call_UnloadAllSnds
 #undef TENTATIVE_finalize_sound_system
 #undef path_base
@@ -1876,13 +1882,11 @@ void draw_smallcard_special_effect_card(HDC hdc, RECT* card_rect, int csvidraw, 
 		break;
 
 	  case 902:
-		strcpy(card_name, cards_txt[src_csvid].legacy_title_text);
+		strcpy(card_name, shandalar_legacy_title(src_csvid));
 		break;
 
 	  case 903:;
-		const char* src = cards_txt[src_csvid].effect_title_text;
-		if (!src)
-		  src = "";
+		const char* src = shandalar_effect_title(src_csvid);
 
 		if (src_csvid == CARD_ID_FAERIE_DRAGON || src_csvid == CARD_ID_WHIMSY)
 		  strcpy(card_name, src);

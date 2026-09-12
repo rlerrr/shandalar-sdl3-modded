@@ -415,18 +415,21 @@ int card_faerie_dragon(int player, int card, event_t event)
 			break;
 
 		  case 3:
-			// change_color_and_kill_other_change_color_effects
-			change_color_and_kill_other_change_color_effects(tgt_player, tgt_card, get_sleighted_color_test(player, card, COLOR_TEST_GREEN), player, card);
+			change_color(player, card, tgt_player, tgt_card,
+					 get_sleighted_color_test(player, card, COLOR_TEST_GREEN),
+					 CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
 			break;
 
 		  case 4:
-			// change_color_and_kill_other_change_color_effects
-			change_color_and_kill_other_change_color_effects(tgt_player, tgt_card, get_sleighted_color_test(player, card, COLOR_TEST_WHITE), player, card);
+			change_color(player, card, tgt_player, tgt_card,
+					 get_sleighted_color_test(player, card, COLOR_TEST_WHITE),
+					 CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
 			break;
 
 		  case 5:
-			// change_color_and_kill_other_change_color_effects
-			change_color_and_kill_other_change_color_effects(tgt_player, tgt_card, get_sleighted_color_test(player, card, COLOR_TEST_RED), player, card);
+			change_color(player, card, tgt_player, tgt_card,
+					 get_sleighted_color_test(player, card, COLOR_TEST_RED),
+					 CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
 			break;
 
 		  case 6:
@@ -446,13 +449,15 @@ int card_faerie_dragon(int player, int card, event_t event)
 			break;
 
 		  case 10:
-			// change_color_and_kill_other_change_color_effects
-			change_color_and_kill_other_change_color_effects(tgt_player, tgt_card, get_sleighted_color_test(player, card, COLOR_TEST_BLACK), player, card);
+			change_color(player, card, tgt_player, tgt_card,
+					 get_sleighted_color_test(player, card, COLOR_TEST_BLACK),
+					 CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
 			break;
 
 		  case 11:
-			// change_color_and_kill_other_change_color_effects
-			change_color_and_kill_other_change_color_effects(tgt_player, tgt_card, get_sleighted_color_test(player, card, COLOR_TEST_BLUE), player, card);
+			change_color(player, card, tgt_player, tgt_card,
+					 get_sleighted_color_test(player, card, COLOR_TEST_BLUE),
+					 CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
 			break;
 
 		  case 12:

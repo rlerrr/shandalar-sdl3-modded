@@ -201,7 +201,7 @@ const char* get_card_or_subtype_name(int subtype_or_csvid)
   if (subtype_or_csvid < 0)
 	return cards_ptr[-(subtype_or_csvid + 1)]->name;
   else if (subtype_or_csvid <= 232)	// Should be the number in Text.res - 1 (since indexed from 0).  Good to a maximum of 249 before it needs splitting.  If this number is changed, then grep for it and adjacent numberals.  There's currently four occurrences in has_creature_type.c.
-	return strs_hunting_subtypenames[subtype_or_csvid];
+	return shandalar_hunting_subtype_name(subtype_or_csvid);
 #if 0
   else if (subtype_or_csvid <= 499)
 	return strs_hunting_subtypenames_2[subtype_or_csvid - 250];	// extern char strs_hunting_subtypenames_2[250][300], to be initialized in initialize_ability_tooltip_names()
