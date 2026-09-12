@@ -3,6 +3,27 @@
 
 #include <windows.h>
 
+#ifdef MANALINKEH_STATIC
+/*
+ * These imports have legacy prototypes that do not match the surviving host
+ * declarations.  Native x86 tolerated the mismatch at the ABI boundary;
+ * WebAssembly requires an exact function type.  Keep the imported call shape
+ * and route it through typed adapters supplied by the SDL host.
+ */
+#define DrawCardBack manalinkeh_hostabi_DrawCardBack
+#define DrawSmallCard manalinkeh_hostabi_DrawSmallCard
+#define DrawSmallCardTitle manalinkeh_hostabi_DrawSmallCardTitle
+#define TENTATIVE_reassess_all_cards manalinkeh_hostabi_TENTATIVE_reassess_all_cards
+#define damage_player manalinkeh_hostabi_damage_player
+#define draw_standard_counters manalinkeh_hostabi_draw_standard_counters
+#define draw_masked_bitmap_left_half_to_rect manalinkeh_hostabi_draw_masked_bitmap_left_half_to_rect
+#define process_damage_prevention manalinkeh_hostabi_process_damage_prevention
+#define request_duel_display_refresh manalinkeh_hostabi_request_duel_display_refresh
+#define should_skip_phase manalinkeh_hostabi_should_skip_phase
+#define show_card_preview_if_human manalinkeh_hostabi_show_card_preview_if_human
+#define show_duel_card_preview manalinkeh_hostabi_show_duel_card_preview
+#endif
+
 /* Legacy Manalink spellings for state now owned by the SDL host. */
 extern int g_active_cards_count[2];
 extern int g_affected_card;

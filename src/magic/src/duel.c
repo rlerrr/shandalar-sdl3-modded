@@ -39,7 +39,11 @@ int player_can_stop_at_phase(int player, phase_t phase);
 void reset_trigger_dispatch_state(void);
 int contains_player_card_pair(int *card_pairs, int card_pair_count, int player, int card);
 int can_activate_mana_source_for_stop_prompt(int player, int card);
+#ifdef SHANDALAR_USE_MANALINKEH
+void activate_mana_source_card(int player, int card);
+#else
 int activate_mana_source_card(int player, int card);
+#endif
 int prompt_stop_phase_anyway(phase_t phase);
 void resolve_mana_burn(void);
 int show_ai_action_log_dialog(int use_saved_actions, int score);

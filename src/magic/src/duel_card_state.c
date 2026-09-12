@@ -892,7 +892,7 @@ int process_killed_card(int player, int card)
 // FUNCTION: MAGIC 0x004b117e
 // FUNCTION: SHANDALAR 0x0046e159
 #ifdef SHANDALAR_USE_MANALINKEH
-void clear_card_attachments(int player, int card);
+int clear_card_attachments(int player, int card);
 #else
 void clear_card_attachments(int player, int card)
 {

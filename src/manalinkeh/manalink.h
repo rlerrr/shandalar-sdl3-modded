@@ -274,7 +274,7 @@ int damage_target0(int player, int card, int dmg);	// Convenient frontend to dam
 int damage_creature_or_player(int source_player, int source_card, event_t event, int amount);	// Mostly a wrapper around damage_creature().  Also validates.  Damage is always dealt by activating_player/activating_card; the player/card given are used only in validation.  This usually isn't what you want - damage_target0 is better.  Avoid.
 int damage_player(int target_player, int amount, int source_player, int source_card);	// Identical to damage_creature(target_player, -1, amount, source_player, source_card)
 void deathtouch(int player, int card, event_t event);
-void declare_mana_available(int player, color_t color, int amount);
+int declare_mana_available(int player, color_t color, int amount);
 void declare_mana_available_hex(int player, color_test_t colors, int amount);
 void discard_exe(int player, int random, int there_isnt_actually_a_third_argument);	// Third argument used to be "this discard can be replaced by Library of Leng", which only replaces effects, not costs or end-of-turn discard (and used to be "if a card forces you to discard", so it gets the wrong value for Mind Bomb and Cursed Rack).  It gets ignored now instead of being forwarded to discard_card_exe().
 void discard(int player, int flags, int player_who_controls_effect);	// flags is a discard_flags_t
@@ -311,12 +311,12 @@ int is_legal_block(int blocking_player, int blocking_card, int blocked_player, i
 int is_tapped(int, int);
 void kill_card(int, int, kill_t);
 void kill_card_exe(int player, int card, kill_t kill_mode);
-void load_text(int, const char *);
+int load_text(const char *, const char *);
 int mana_producer_fixed(int, int, event_t, int);
-void obliterate_top_card_of_stack(void);
+int obliterate_top_card_of_stack(void);
 void put_card_or_activation_onto_stack(int player, int card, event_t event, int unknown1, int unknown2);	// unknown1 is almost always 0, occasionally player.  unknown2 always 0.  A reference to the card is put onto the stack for EVENT_RESOLVE_SPELL/EVENT_RESOLVE_TRIGGER, otherwise an activation card is created and put there instead.
 int pro_black(int, int, event_t);
-void produce_mana(int, int, int);
+int produce_mana(int, int, int);
 void real_lose_the_game(int);
 int real_put_into_play(int, int);
 int raw_put_iid_on_top_of_deck(int player, int iid);	// Put a newly-created card with internal_card_id iid on top of player's library.
@@ -325,7 +325,7 @@ void redraw_libraries(void);
 int regenerate(int, int, event_t, int, int);
 int regenerate_green(int , int, event_t);
 int regenerate_target_exe(int, int);
-int remove_card_from_deck(int, int);
+void remove_card_from_deck(int, int);
 void remove_card_from_grave(int player, int position);
 int should_ai_play(int, int);	// equivalent to in_play(); has nothing to do with ai
 int show_deck(int player, const int* deck, int num_cards, const char* prompt, int suppress_done_label, /* const char* */int done_label);	// no desire to cast all the references to 0x7375B0 to const char* (they're the localized "Done" string in Text.res:DIALOGBUTTONS[3]).  See also show_bottom_of_deck() below.
@@ -654,7 +654,7 @@ int remove_card_from_rfg(int player, int csvid);	// Obliterates the highest-posi
 void remove_card_from_rfg_by_position(int player, int count);	// Obliterates the card at position count in player's exile zone.
 int find_iid_in_rfg(int player, int iid);	// Return the highest position in player's exile zone with internal_card_id iid, or -1 if not found.
 int check_rfg(int player, int csvid);	// Returns 1 if a card with csvid is in player's exile zone.
-int obliterate_top_card_of_deck(int player);	// Remove the top card of player's library, without putting it anywhere else
+void obliterate_top_card_of_deck(int player);	// Remove the top card of player's library, without putting it anywhere else
 void obliterate_top_n_cards_of_deck(int player, int number);	// Remove the top number cards of player's library, without putting them anywhere else
 static inline void obliterate_card_in_grave(int player, int position){remove_card_from_grave(player, position);}	// The primary function the exe uses to remove a card from a player's graveyard.  Does not put the card anywhere else.
 int mana_producer(int, int, event_t);

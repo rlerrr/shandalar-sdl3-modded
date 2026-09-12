@@ -487,8 +487,8 @@ static void obliterate_card_from_deck_impl(int* deck, int pos){
 }
 
 // Remove the top card of player's library, without putting it anywhere else
-int obliterate_top_card_of_deck(int player){
-	return remove_card_from_deck(player, 0);
+void obliterate_top_card_of_deck(int player){
+	remove_card_from_deck(player, 0);
 }
 
 // Remove the top number cards of player's library, without putting them anywhere else

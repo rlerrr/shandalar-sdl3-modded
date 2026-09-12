@@ -19,7 +19,11 @@ int prompt_stop_phase_anyway(phase_t phase);
 char *get_displayed_card_name(int player, int card);
 int process_killed_card(int player, int card);
 int is_combat_damage_ability_in_step(int damage_step, int abilities);
+#ifdef SHANDALAR_USE_MANALINKEH
+void adjust_two_headed_giant_damage(int player, int card, int amount);
+#else
 int adjust_two_headed_giant_damage(int player, int card, int amount);
+#endif
 void clear_combat_damage_assignment_matrix(void);
 void assign_attacker_combat_damage(int player, int index, int has_trample, int *damage_ids, int damage_step, int mode, int *best_low, int *best_high);
 void assign_blocker_combat_damage(int player, int index, int multiple_attackers, int *damage_ids, int damage_step, int mode, int *best_low, int *best_high);
@@ -79,7 +83,7 @@ int combat_damage_blocker_damage[16];
 // FUNCTION: MAGIC 0x00515bba
 // FUNCTION: SHANDALAR 0x0042476a
 #ifdef SHANDALAR_USE_MANALINKEH
-int adjust_two_headed_giant_damage(int player, int card, int amount);
+void adjust_two_headed_giant_damage(int player, int card, int amount);
 #else
 int adjust_two_headed_giant_damage(int player, int card, int amount)
 {

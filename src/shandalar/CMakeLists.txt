@@ -39,6 +39,7 @@ add_executable(shandalar
   src/adventureListPicker.c
   src/iniFile.c
   src/magic_runtime.c
+  src/manalinkeh_host_abi.c
   src/manalinkeh_host_bridge.c
   src/shandalar_global_strings.c
   ${SHANDALAR_MAGIC_DUEL_SOURCES}
@@ -116,6 +117,7 @@ endif()
 if(EMSCRIPTEN)
   set_target_properties(shandalar PROPERTIES SUFFIX ".html")
   target_link_options(shandalar PRIVATE
+    "-Wl,--fatal-warnings"
     "-sALLOW_MEMORY_GROWTH=1"
     "-sFORCE_FILESYSTEM=1"
     "-sMAXIMUM_MEMORY=1GB"

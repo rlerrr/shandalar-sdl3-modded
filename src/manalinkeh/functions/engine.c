@@ -1431,7 +1431,9 @@ int autotap_mana_source(int player, int card)
 
 #undef calculate_needed_mana_colors
 #undef copy_mana_pool_to_display
+#ifndef MANALINKEH_STATIC
 #undef TENTATIVE_reassess_all_cards
+#endif
 #undef resolve_top_card_on_stack
 #undef single_color_test_bit_to_color_t
 #undef TENTATIVE_update_mana_spent

@@ -48,7 +48,7 @@
 #define get_ai_search_elapsed_time manalinkeh_check_timer_for_ai_speculation /* 0x00472d10 -> 0x0200aa07 */
 #define is_phase_stop_allowed_for_current_event manalinkeh_current_trigger_or_event_is_forced /* 0x00476f10 -> 0x0200bb37 */
 #define kill_creatures_with_lethal_damage manalinkeh_after_damage /* 0x00477340 -> 0x02007127 */
-#define dispatch_card_trigger_event manalinkeh_dispatch_trigger_to_one_card /* 0x00477970 -> 0x0200892d */
+#define dispatch_card_trigger_event manalinkeh_hostabi_dispatch_card_trigger_event /* 0x00477970 -> 0x0200892d */
 #define kill_card manalinkeh_kill_card_exe /* 0x004779f0 -> 0x0200bb69 */
 #define clear_card_attachments manalinkeh_destroy_attached_auras_and_obliterate_card /* 0x00477d90 -> 0x0200b222 */
 #define move_card_to_graveyard manalinkeh_raw_put_card_in_graveyard /* 0x00477ec0 -> 0x0200bb28 */

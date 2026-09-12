@@ -1597,7 +1597,7 @@ int can_activate_mana_source_for_stop_prompt(int player, int card)
 // FUNCTION: MAGIC 0x0044b7d4
 // FUNCTION: SHANDALAR 0x00404155
 #ifdef SHANDALAR_USE_MANALINKEH
-int activate_mana_source_card(int player, int card);
+void activate_mana_source_card(int player, int card);
 #else
 int activate_mana_source_card(int player, int card)
 {

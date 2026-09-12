@@ -1057,7 +1057,7 @@ int resolve_activated_ability(int player, int card)
 // FUNCTION: MAGIC 0x00440ad2
 // FUNCTION: SHANDALAR 0x0040c352
 #ifdef SHANDALAR_USE_MANALINKEH
-int resolve_card_immediately(int player, int card, int arg_3);
+void resolve_card_immediately(int player, int card, int arg_3);
 #else
 int resolve_card_immediately(int player, int card, int arg_3)
 {
@@ -1834,7 +1834,7 @@ unsigned int get_current_stack_action(void)
 // FUNCTION: MAGIC 0x004438cb
 // FUNCTION: SHANDALAR 0x0040f165
 #ifdef SHANDALAR_USE_MANALINKEH
-int refresh_stack_proxy_card(int prompt_flag);
+void refresh_stack_proxy_card(int prompt_flag);
 #else
 int refresh_stack_proxy_card(int prompt_flag)
 {
@@ -1906,7 +1906,7 @@ int refresh_stack_proxy_card(int prompt_flag)
 // FUNCTION: MAGIC 0x00443ee2
 // FUNCTION: SHANDALAR 0x0040f77c
 #ifdef SHANDALAR_USE_MANALINKEH
-int push_card_onto_stack(int player, int card, int event, int extra, int prompt);
+void push_card_onto_stack(int player, int card, int event, int extra, int prompt);
 #else
 int push_card_onto_stack(int player, int card, int event, int extra, int prompt)
 {
