@@ -2569,6 +2569,16 @@ public:
 #endif
 } PlayerCounters;
 
+#ifdef MANALINKEH_STATIC
+extern int shandalar_get_poison_counter(int player);
+extern void shandalar_set_poison_counter(int player, uint8_t value);
+#  undef POISON_COUNTERS
+#  define POISON_COUNTERS(p) shandalar_get_poison_counter(p)
+#  define SET_POISON_COUNTERS(p, value) shandalar_set_poison_counter((p), (value))
+#else
+#  define SET_POISON_COUNTERS(p, value) (player_counters[(p)].poison_ = (value))
+#endif
+
 typedef enum {
 	PB_OPPONENT_CHECKS_ATTACK_LEGALITY	= 1<<0,	// Always dispatch EVENT_ATTACK_LEGALITY for the other player's creatures, even if no card with EA_DECLARE_ATTACK is on the battlefield.
 	PB_SHANDALAR_LIBRARY_OF_LENG		= 1<<1,	// Suppresses discard phase; shoehorns Library of Leng's replacement effect into discard().  Set and works only in Shandalar.

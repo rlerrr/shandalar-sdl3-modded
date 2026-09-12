@@ -39,6 +39,17 @@ extern int TENTATIVE_timestamp_player[500];
 extern int TENTATIVE_timestamp_card[500];
 extern int g_life_gained;
 extern int g_attacking_creature_count;
+extern int g_duel_extra_turn_player;
+extern int g_duel_state_0093a848;
+extern char manalinkeh_cost_scratch[6];
+extern char manalinkeh_mana_scratch[8];
+extern char manalinkeh_surplus_free_mana[8];
+extern char manalinkeh_prevent_normal_graveyard_effect;
+extern char manalinkeh_next_spell_always_castable;
+extern char global_base_directory[];
+extern int g_hand_count_adjustment;
+extern void calculate_hand_art_offsets(int, int, int, int, int, int,
+                                       int*, int*, int*, int*);
 extern char gs_illegal_target_why_power_00781aa0[];
 extern char gs_illegal_target_why_toughness_007894b0[];
 extern char gs_illegal_target_why_damaged_007911b0[];
@@ -109,10 +120,29 @@ extern int shandalar_choose_a_card(const char* prompt, int initial_card_id,
                                    int filter);
 extern int shandalar_record_ai_action_selection(void);
 extern int shandalar_replay_ai_action_selection(void);
+extern char* shandalar_opponent_name(void);
+extern int* shandalar_option_layout(void);
+extern int* shandalar_option_show_power_toughness(void);
+extern int* shandalar_option_show_abilities(void);
+extern int* shandalar_option_show_all_summoning_sickness(void);
+extern char (*shandalar_phase_stoppers(void))[38];
+extern void* shandalar_handclass_player(void);
+extern void* shandalar_handclass_opponent(void);
+extern void* shandalar_lifeclass_player(void);
+extern int* shandalar_hand_window_vertical_offset(void);
+extern int* shandalar_opponent_hand_update_flag(void);
+extern int* shandalar_lifeclass_offset_life(void);
+extern int* shandalar_lifeclass_offset_counters(void);
+extern int* shandalar_lifeclass_offset_liched(void);
+extern int* shandalar_network_result(void);
+extern unsigned char* shandalar_network_packet_type(void);
 extern int shandalar_card_fireball(int player, int card, event_t event);
 extern int shandalar_card_lich(int player, int card, event_t event);
 extern int shandalar_card_spell_blast(int player, int card, event_t event);
 extern int shandalar_card_zombie_master(int player, int card, event_t event);
+extern int shandalar_card_detonate(int player, int card, event_t event);
+extern int shandalar_card_whimsy(int player, int card, event_t event);
+extern int shandalar_card_winter_blast(int player, int card, event_t event);
 
 #define active_cards_count g_active_cards_count
 #define affected_card g_affected_card
@@ -143,6 +173,12 @@ extern int shandalar_card_zombie_master(int player, int card, event_t event);
 #define life g_life
 #define max_x_value g_max_x_value
 #define PAY_MANA_COLORLESS g_mana_charge[0]
+#define PAY_MANA_BLACK g_mana_charge[1]
+#define PAY_MANA_BLUE g_mana_charge[2]
+#define PAY_MANA_GREEN g_mana_charge[3]
+#define PAY_MANA_RED g_mana_charge[4]
+#define PAY_MANA_WHITE g_mana_charge[5]
+#define PAY_MANA_ARTIFACT g_mana_charge[6]
 #define pay_mana_xbugrwaU g_mana_charge
 #define mana_pool g_special_mana_pool
 #define needed_mana_colors g_required_mana_color_mask
@@ -171,6 +207,28 @@ extern int shandalar_card_zombie_master(int player, int card, event_t event);
 #define life_gained g_life_gained
 #define creatures_dead_this_turn (*shandalar_creatures_dead_this_turn())
 #define number_of_attackers_declared g_attacking_creature_count
+#define time_walk_flag g_duel_extra_turn_player
+#define dword_4EF1B8 g_duel_state_0093a848
+#define opponent_name (shandalar_opponent_name())
+#define option_Layout (*shandalar_option_layout())
+#define option_ShowPowerToughnessOnCards (*shandalar_option_show_power_toughness())
+#define option_ShowAbilitiesOnCards (*shandalar_option_show_abilities())
+#define option_ShowAllCardsSummonSickness (*shandalar_option_show_all_summoning_sickness())
+#define option_PhaseStoppers (shandalar_phase_stoppers())
+#define hwnd_HandClass_player (shandalar_handclass_player())
+#define hwnd_HandClass_opponent (shandalar_handclass_opponent())
+#define hwnd_LifeClass_player (shandalar_lifeclass_player())
+#define g_hand_window_card_vertical_offset (*shandalar_hand_window_vertical_offset())
+#define g_opponent_hand_window_update_flag (*shandalar_opponent_hand_update_flag())
+#define lifeclass_offset_life (*shandalar_lifeclass_offset_life())
+#define lifeclass_offset_player_counters (*shandalar_lifeclass_offset_counters())
+#define lifeclass_offset_liched (*shandalar_lifeclass_offset_liched())
+#define dword_60A4B0 g_hand_count_adjustment
+#define dblword_628C10 (*shandalar_network_result())
+#define byte_628C0C (*shandalar_network_packet_type())
+#define path_base global_base_directory
+#define byte_55CF20 manalinkeh_surplus_free_mana
+#define calculate_hand_window_layout calculate_hand_art_offsets
 #define x_value g_x_value
 #define choose_a_color_exe shandalar_choose_a_color
 #define is_tapped shandalar_is_tapped
@@ -193,6 +251,9 @@ extern int shandalar_card_zombie_master(int player, int card, event_t event);
 #define card_lich_exe shandalar_card_lich
 #define card_spell_blast_exe shandalar_card_spell_blast
 #define card_zombie_master_exe shandalar_card_zombie_master
+#define card_detonate_exe shandalar_card_detonate
+#define card_whimsy_exe shandalar_card_whimsy
+#define card_winter_blast_exe shandalar_card_winter_blast
 #define gs_target_error_power gs_illegal_target_why_power_00781aa0
 #define gs_target_error_toughness gs_illegal_target_why_toughness_007894b0
 #define gs_target_error_damaged gs_illegal_target_why_damaged_007911b0
@@ -226,6 +287,23 @@ extern int shandalar_card_zombie_master(int player, int card, event_t event);
 #define gs_illegal_target_format gs_illegal_target_with_reason_008ce7e0
 #define should_ai_play is_in_play
 #define put_card_in_graveyard raw_put_card_in_graveyard
+#define COST_COLORLESS manalinkeh_cost_scratch[0]
+#define COST_BLACK manalinkeh_cost_scratch[1]
+#define COST_BLUE manalinkeh_cost_scratch[2]
+#define COST_GREEN manalinkeh_cost_scratch[3]
+#define COST_RED manalinkeh_cost_scratch[4]
+#define COST_WHITE manalinkeh_cost_scratch[5]
+#define MANA_COLORLESS manalinkeh_mana_scratch[0]
+#define MANA_BLACK manalinkeh_mana_scratch[1]
+#define MANA_BLUE manalinkeh_mana_scratch[2]
+#define MANA_GREEN manalinkeh_mana_scratch[3]
+#define MANA_RED manalinkeh_mana_scratch[4]
+#define MANA_WHITE manalinkeh_mana_scratch[5]
+#define MANA_ARTIFACT manalinkeh_mana_scratch[6]
+#define MANA_UNKNOWN manalinkeh_mana_scratch[7]
+#define byte_786DD4 manalinkeh_prevent_normal_graveyard_effect
+#define g_prevent_normal_card_to_graveyard_effect manalinkeh_prevent_normal_graveyard_effect
+#define TENTATIVE_next_spell_always_castable manalinkeh_next_spell_always_castable
 #define gs_cuecard_smallcard_is_target gs_cuecard_is_a_target_00789c40
 #define gs_cuecard_smallcard_damage_to_player gs_cuecard_damage_to_player_007a77d0
 #define gs_cuecard_smallcard_phased gs_cuecard_phased_007aae00

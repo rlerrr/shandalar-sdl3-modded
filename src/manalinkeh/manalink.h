@@ -357,11 +357,13 @@ extern char str_Draw_a_card[64];
 int dispatch_event_to_single_card(int player, int card, event_t event, int new_attacking_card_controller, int new_attacking_card);
 void put_card_in_graveyard(int player, int card);
 void call_sub_437E20_unless_ai_is_speculating(void);
+#ifndef MANALINKEH_STATIC
 extern int dword_60A4B0;
 int TENTATIVE_wait_for_network_result(int a1, signed int a2);
 int TENTATIVE_send_network_result(int a1, signed int a2);
 extern long dblword_628C10;
 extern char byte_628C0C;
+#endif
 
 /* Our own functions */
 int add_card_to_hand(int, int);

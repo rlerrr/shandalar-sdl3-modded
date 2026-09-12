@@ -9,7 +9,23 @@ int card_fireball(int player, int card, event_t event);
 int card_lich(int player, int card, event_t event);
 int card_spell_blast(int player, int card, event_t event);
 int card_zombie_master(int player, int card, event_t event);
+int card_detonate(int player, int card, event_t event);
+int card_whimsy(int player, int card, event_t event);
+int card_winter_blast(int player, int card, event_t event);
+extern int g_duel_selected_card_window;
+extern int g_life_window_life_window_long_offset;
+extern int g_life_window_poison_window_long_offset;
+extern int g_life_window_lich_window_long_offset;
 typedef int (*manalinkeh_card_function_t)(int player, int card, event_t event);
+typedef struct manalinkeh_player_counters_storage
+{
+  unsigned char poison;
+  unsigned char experience;
+  unsigned char energy;
+  unsigned char unused;
+} manalinkeh_player_counters_storage_t;
+
+manalinkeh_player_counters_storage_t player_counters[2];
 
 /*
  * The DLL build used a NASM shim that also loaded ESI for a few original
@@ -21,6 +37,16 @@ int call_card_fn_impl(manalinkeh_card_function_t address, void* instance,
 {
   (void)instance;
   return address(player, card, event);
+}
+
+int shandalar_get_poison_counter(int player)
+{
+  return g_poison_counters[player];
+}
+
+void shandalar_set_poison_counter(int player, unsigned char value)
+{
+  g_poison_counters[player] = value;
 }
 
 #undef resize_duel_hand_window
@@ -61,11 +87,20 @@ int mana_paid[7];
 int pumpable_power[2];
 int pumpable_toughness[2];
 int ai_defensive_modifier;
+char manalinkeh_cost_scratch[6];
+char manalinkeh_mana_scratch[8];
+char manalinkeh_surplus_free_mana[8];
+char manalinkeh_prevent_normal_graveyard_effect;
+char manalinkeh_next_spell_always_castable;
+int displayed_x_value;
+int target_controller;
+int target_card;
+unsigned char mana_doesnt_drain_from_pool[2][7];
+unsigned char types_that_dont_untap;
 int (*charge_mana_addr_of_pre_mana_pool)[8];
 int* charge_mana_addr_of_x_value;
 int (*charge_mana_addr_of_pay_mana_xbugrw)[8];
 int* charge_mana_addr_of_max_x_value;
-void* hwnd_HandClass_opponent;
 unsigned short cards_drawn_this_turn[2];
 int suppress_draw;
 char gs_prompt_turnsequence_0[] = "Select attackers";
@@ -74,6 +109,15 @@ char gs_prompt_specialfephase_5[] = "Draw a card";
 char gs_prompt_specialfephase_8[] = "Upkeep";
 char gs_prompt_specialfephase_9[] = "Upkeep";
 char PROMPT_CHECKFEPHASE_5[] = "Upkeep";
+char gs_prompt_specialfephase_6[] = "Spell cast";
+char gs_prompt_specialfephase_7[] = "Card tapped";
+char gs_prompt_checkfephase_2[] = "Cast %s?";
+char gs_prompt_checkfephase_3[] = "Activate %s?";
+char gs_localized_cancel[] = "Cancel";
+char gs_prompt_action_2[] = "Choose a target for";
+char str_Activation[] = "Activation";
+char str_Upkeep[] = "Upkeep";
+char str_Draw_a_card[64] = "Draw a card";
 char gs_prompt_grabmana_1[] = "%s X: %d";
 char gs_prompt_grabmana_2[] = "%s X: %d (maximum %d)";
 char gs_prompt_grabmana_0[] = "%s";
@@ -217,6 +261,78 @@ int shandalar_replay_ai_action_selection(void)
   return 0;
 }
 
+char* shandalar_opponent_name(void)
+{
+  static char name[100];
+  copy_opponent_name_prefix(name);
+  return name;
+}
+
+int* shandalar_option_layout(void)
+{
+  return &g_duel_interface_options.layout;
+}
+
+int* shandalar_option_show_power_toughness(void)
+{
+  return &g_duel_interface_options.show_power_toughness_on_cards;
+}
+
+int* shandalar_option_show_abilities(void)
+{
+  return &g_duel_interface_options.show_abilities_on_cards;
+}
+
+int* shandalar_option_show_all_summoning_sickness(void)
+{
+  return &g_duel_interface_options.show_all_cards_summon_sickness;
+}
+
+char (*shandalar_phase_stoppers(void))[38]
+{
+  return (char (*)[38])g_duel_phase_stop_settings;
+}
+
+void* shandalar_handclass_player(void)
+{
+  return g_duel_full_card_window_hwnd;
+}
+
+void* shandalar_handclass_opponent(void)
+{
+  return g_duel_life_window_hwnd;
+}
+
+void* shandalar_lifeclass_player(void)
+{
+  return g_duel_life_status_window_1_hwnd;
+}
+
+int* shandalar_hand_window_vertical_offset(void)
+{
+  return &g_duel_selected_card_window;
+}
+
+int* shandalar_opponent_hand_update_flag(void)
+{
+  return &g_duel_surface_reset_state;
+}
+
+int* shandalar_lifeclass_offset_life(void)
+{
+  return &g_life_window_life_window_long_offset;
+}
+
+int* shandalar_lifeclass_offset_counters(void)
+{
+  return &g_life_window_poison_window_long_offset;
+}
+
+int* shandalar_lifeclass_offset_liched(void)
+{
+  return &g_life_window_lich_window_long_offset;
+}
+
 int shandalar_card_fireball(int player, int card, event_t event)
 {
   return card_fireball(player, card, event);
@@ -235,6 +351,21 @@ int shandalar_card_spell_blast(int player, int card, event_t event)
 int shandalar_card_zombie_master(int player, int card, event_t event)
 {
   return card_zombie_master(player, card, event);
+}
+
+int shandalar_card_detonate(int player, int card, event_t event)
+{
+  return card_detonate(player, card, event);
+}
+
+int shandalar_card_whimsy(int player, int card, event_t event)
+{
+  return card_whimsy(player, card, event);
+}
+
+int shandalar_card_winter_blast(int player, int card, event_t event)
+{
+  return card_winter_blast(player, card, event);
 }
 
 int get_usertime_of_current_thread_in_ms(void)

@@ -2081,7 +2081,7 @@ void poison(int player, int number_of_counters)
   pois += number_of_counters;
   if (pois > 255)
     pois = 255;
-  player_counters[player].poison_ = pois;
+  SET_POISON_COUNTERS(player, pois);
 
   /* in Shandalar, check_loss_of_game() checks for Platinum Angel-like effects, and if there aren't any and a player has < 0 life or > 10 poison, sets life[] to
    * influence ai_modifier (much like is_anyone_dead() does) */
@@ -2097,7 +2097,7 @@ void raw_set_poison(int player, uint8_t new_number_of_counters)
   //    check_loss_of_game(false);
   //  }
   //else
-  player_counters[player].poison_ = new_number_of_counters;
+  SET_POISON_COUNTERS(player, new_number_of_counters);
 }
 
 void add_experience(int player, int number_of_counters)

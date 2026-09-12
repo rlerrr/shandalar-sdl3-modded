@@ -20,12 +20,12 @@ absolute MOK executable addresses.
   compatibility behavior was only needed by original assembly card handlers;
   the static target calls C handlers.
 
-The target currently reaches the final link with no compile errors and 120
+The target currently reaches the final link with no compile errors and 58
 unique unresolved symbols (down from 205 at the start of the bridge work).
 The latest diagnostic is generated with:
 
 ```text
-clang.bat shandalar > temp\manalink_link_checkpoint.txt 2>&1
+clang.bat shandalar > temp\manalink_link_host_state2.txt 2>&1
 ```
 
 Files in `temp/` are diagnostics and are not part of the source checkpoint.
@@ -36,8 +36,10 @@ The unresolved symbols fall into these groups:
 
 1. Typed engine adapters still needing semantic verification, including draw,
    game-loss, mana-check, deck-display, and refresh paths.
-2. Manalink state without an SDL owner yet, notably the extended player
-   counters, mana-cost scratch bytes, legacy effect IDs, and duel-mode state.
+2. Manalink state without an SDL owner yet, notably legacy effect IDs,
+   newer-card lookup tables, and duel-mode state.  Poison counters, mana-cost
+   scratch blocks, phase stops, interface options, and network dialog state
+   now use synchronized host storage.
 3. UI resources and drawing helpers pulled in by the replacement small-card
    drawing functions.
 4. Neighbor dependencies pulled from large historical translation units.

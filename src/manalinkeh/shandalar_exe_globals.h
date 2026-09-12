@@ -2,9 +2,11 @@
 #define SHANDALAR_EXE_GLOBALS_H
 
 /* Named host-engine storage used by the statically linked Manalink sources. */
+#ifndef MANALINKEH_STATIC
 extern int lifeclass_offset_life; /* MOK 0x004d753c */
 extern int lifeclass_offset_player_counters; /* MOK 0x004d7540 */
 extern int lifeclass_offset_liched; /* MOK 0x004d7544 */
+#endif
 extern int unknown_charge_mana_004d7cb0; /* MOK 0x004d7cb0 */
 extern HDC global_screen_dc; /* MOK 0x004eb7ac */
 extern int g_mimicked_effect_csv_ids[]; /* MOK 0x004ec234 */
@@ -70,7 +72,9 @@ extern char gs_cuecard_smallcard_damage_to_player[]; /* MOK 0x006286f4 */
 extern int g_current_encounter_strength; /* MOK 0x00628798 */
 extern int g_deck_rating_multipliers[]; /* MOK 0x00628c1c */
 extern int g_duel_state_008cfd20; /* MOK 0x00628c24 */
+#ifndef MANALINKEH_STATIC
 extern int g_opponent_hand_window_update_flag; /* MOK 0x00628c28 */
+#endif
 extern int iid_legacy_data_card; /* MOK 0x00628c64 */
 extern char gs_target_error_owner[]; /* MOK 0x0062bbbc */
 extern int g_current_action_event_code; /* MOK 0x0062bce8 */
@@ -81,7 +85,9 @@ extern int g_activation_dispatch_flags; /* MOK 0x0062c180 */
 extern HWND global_main_hwnd; /* MOK 0x00715780 */
 extern char global_duelsounds_path[]; /* MOK 0x00715788 */
 extern int g_encounter_color_match_mode; /* MOK 0x00715890 */
+#ifndef MANALINKEH_STATIC
 extern void* hwnd_HandClass_player; /* MOK 0x007158c8 */
+#endif
 extern char gs_prompt_specialfephase_5[]; /* MOK 0x007158d4 */
 extern char gs_prompt_specialfephase_6[]; /* MOK 0x00715a04 */
 extern int g_ai_search_best_score; /* MOK 0x00715b30 */
@@ -111,7 +117,9 @@ extern int g_affected_internal_card_id; /* MOK 0x0073825c */
 extern int g_duel_modal_action_active; /* MOK 0x00738a10 */
 extern int g_ai_search_try_count; /* MOK 0x00738b48 */
 extern char gs_target_error_attacking_or_blocking[]; /* MOK 0x00738b4c */
+#ifndef MANALINKEH_STATIC
 extern HWND hwnd_LifeClass_player; /* MOK 0x00738c7c */
+#endif
 extern char gs_prompt_action_2[]; /* MOK 0x00738f34 */
 extern char gs_target_error_color[]; /* MOK 0x00739060 */
 extern int g_current_encounter_color; /* MOK 0x007391a0 */
@@ -150,10 +158,12 @@ extern int g_ai_search_time_limit; /* MOK 0x00786dcc */
 extern char g_prevent_normal_card_to_graveyard_effect; /* MOK 0x00786dd4 */
 extern char gs_cuecard_smallcard_dying[]; /* MOK 0x00786f08 */
 extern char gs_card_into_play_0091c840[]; /* MOK 0x00787108 */
+#ifndef MANALINKEH_STATIC
 extern int option_ShowPowerToughnessOnCards; /* MOK 0x00787240 */
 extern int option_ShowAbilitiesOnCards; /* MOK 0x00787244 */
 extern int option_ShowAllCardsSummonSickness; /* MOK 0x00787258 */
 extern int option_Layout; /* MOK 0x00787260 */
+#endif
 extern char gs_target_error_blocked[]; /* MOK 0x0078735c */
 extern char gs_target_error_where[]; /* MOK 0x007875bc */
 extern char gs_ok_00924800[]; /* MOK 0x0078f0a8 */
@@ -167,7 +177,9 @@ extern char gs_prompt_turnsequence_0[]; /* MOK 0x00790248 */
 extern char gs_target_error_casted[]; /* MOK 0x007a2d7c */
 extern int g_ai_speculation_depth; /* MOK 0x007a2fd8 */
 extern int g_ai_recorded_choice; /* MOK 0x007a2fe4 */
+#ifndef MANALINKEH_STATIC
 extern int g_hand_window_card_vertical_offset; /* MOK 0x007a31a4 */
+#endif
 extern int g_trigger_dispatch_depth; /* MOK 0x007a31ac */
 extern int g_phase_was_skipped; /* MOK 0x007a34d0 */
 extern int g_ai_speculation_spell_fizzled; /* MOK 0x007a372c */
@@ -177,7 +189,9 @@ extern int g_card_count; /* MOK 0x007a5380 */
 
 /* Interior fields of larger host objects. */
 extern int* shandalar_damage_taken_this_turn(void);
+#ifndef MANALINKEH_STATIC
 extern int* shandalar_network_result(void);
 extern unsigned char* shandalar_network_packet_type(void);
+#endif
 
 #endif
