@@ -57,6 +57,17 @@ typedef struct manalinkeh_player_counters_storage
 manalinkeh_player_counters_storage_t player_counters[2];
 
 /*
+ * Mok routed both CardTypeFromID(int) and
+ * find_internal_card_id_by_csv_id(card_id_t) to the same Manalink entry.
+ * Keep separate C names so compilers that distinguish enum parameters do not
+ * see two incompatible declarations for one symbol.
+ */
+int manalinkeh_CardTypeFromID(int csvid)
+{
+  return find_internal_card_id_by_csv_id((card_id_t)csvid);
+}
+
+/*
  * The DLL build used a NASM shim that also loaded ESI for a few original
  * assembly card handlers.  The static target calls C handlers, so a normal
  * typed call is the appropriate equivalent and keeps NASM out of this build.

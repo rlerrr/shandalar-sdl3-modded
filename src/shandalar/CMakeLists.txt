@@ -79,13 +79,13 @@ if(MSVC)
   )
 else()
   target_compile_options(shandalar PRIVATE
-    "-include" "${SHANDALAR_SRC_ROOT}/manalinkeh/mok_manalink_redirects.h"
+    "SHELL:-include ${SHANDALAR_SRC_ROOT}/manalinkeh/mok_manalink_redirects.h"
   )
 endif()
 # Non-Windows libcs lack MSVC's extras (_itoa, _stricmp, ...).
 if(NOT WIN32)
   target_compile_options(shandalar PRIVATE
-    -include platform/legacy_io.h
+    "SHELL:-include platform/legacy_io.h"
   )
 endif()
 target_include_directories(shandalar PRIVATE

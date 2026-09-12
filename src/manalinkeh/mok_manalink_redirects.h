@@ -43,7 +43,7 @@
 #define load_startduel_assets2 manalinkeh_load_startduel_assets2
 #define load_startduel_assets manalinkeh_load_startduel_assets
 #define load_endduel_assets manalinkeh_load_endduel_assets
-#define CardTypeFromID manalinkeh_get_internal_card_id_from_csv_id /* 0x00471c70 -> 0x0200b77c */
+#define CardTypeFromID manalinkeh_CardTypeFromID /* 0x00471c70 -> 0x0200b77c */
 #define C_count_colors_of_lands_in_play manalinkeh_count_colors_of_lands_in_play /* 0x004725c0 -> 0x0200b39e */
 #define get_ai_search_elapsed_time manalinkeh_check_timer_for_ai_speculation /* 0x00472d10 -> 0x0200aa07 */
 #define is_phase_stop_allowed_for_current_event manalinkeh_current_trigger_or_event_is_forced /* 0x00476f10 -> 0x0200bb37 */

@@ -630,7 +630,6 @@ from_grave_to_hand_multiple
 from_grave_to_hand_triggers
 from_graveyard_to_deck
 from_hardcodedsubtype_to_subtype
-fscanf
 fx_attack_gideon_battle_forged
 fx_change_landtype
 fx_dark_maze

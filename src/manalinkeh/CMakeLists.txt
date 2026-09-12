@@ -70,6 +70,14 @@ target_include_directories(manalinkeh_static PRIVATE
   "${CMAKE_CURRENT_SOURCE_DIR}"
   "${manalinkeh_generated_dir}"
 )
+if(EMSCRIPTEN)
+  target_include_directories(manalinkeh_static PRIVATE
+    "${SHANDALAR_SRC_ROOT}"
+  )
+  target_include_directories(manalinkeh_static BEFORE PRIVATE
+    "${SHANDALAR_SRC_ROOT}/magic/compat"
+  )
+endif()
 
 # This is initially a faithful source import.  The DLL veneer, injection
 # patches, and absolute-address assembly helpers are intentionally excluded;

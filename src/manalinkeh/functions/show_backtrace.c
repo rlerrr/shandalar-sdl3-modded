@@ -2,11 +2,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#ifndef __EMSCRIPTEN__
 #include <windows.h>
 
 #ifndef CaptureStackBackTrace
 USHORT WINAPI RtlCaptureStackBackTrace(ULONG FramesToSkip, ULONG FramesToCapture, PVOID *BackTrace, PULONG BackTraceHash);
 #  define CaptureStackBackTrace RtlCaptureStackBackTrace
+#endif
 #endif
 
 void popup(const char* title, const char* fmt, ...);
@@ -14,17 +16,23 @@ void popup(const char* title, const char* fmt, ...);
 void
 show_backtrace(const char* title, const char* header)
 {
+#ifndef __EMSCRIPTEN__
   PVOID frames[100];
 
   int numframes = CaptureStackBackTrace(0, 30, &frames[0], NULL);
+#endif
 
   char buf[4000];
   char* p = &buf[0];
   p += sprintf(p, "%s\n", header);
   *p = 0;
+#ifndef __EMSCRIPTEN__
   int i;
   for (i = 0; i < numframes; ++i)
 	p += sprintf(p, "%d: 0x%p\n", i, frames[i]);
+#else
+  p += sprintf(p, "Native stack backtrace unavailable in WebAssembly.\n");
+#endif
 
   FILE* f = fopen("dump.dmp", "w");
   fprintf(f, "%s\n%s", title, buf);
