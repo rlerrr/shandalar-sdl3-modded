@@ -1,6 +1,8 @@
 #ifndef MANALINKEH_SHANDALAR_HOST_NAMES_H
 #define MANALINKEH_SHANDALAR_HOST_NAMES_H
 
+#include <windows.h>
+
 /* Legacy Manalink spellings for state now owned by the SDL host. */
 extern int g_active_cards_count[2];
 extern int g_affected_card;
@@ -48,6 +50,19 @@ extern char manalinkeh_prevent_normal_graveyard_effect;
 extern char manalinkeh_next_spell_always_castable;
 extern char global_base_directory[];
 extern int g_hand_count_adjustment;
+extern int deck[500];
+extern int g_duel_run_mode;
+extern int g_duel_state_00925bf8;
+extern int g_creature_power_by_color[2][8];
+extern int g_duel_generated_internal_card_id_06;
+extern int g_duel_generated_internal_card_id_0a;
+extern int g_duel_generated_internal_card_id_0f;
+extern int g_control_aura_special_internal_card_id;
+extern int g_duel_generated_internal_card_id_2c;
+extern int gs_words_to_hack_count_008cd924;
+extern int gs_words_to_sleight_count_00789c34;
+extern char gs_words_to_hack_00789c80[6][50][100];
+extern char gs_words_to_sleight_00781bd0[6][50][100];
 extern void calculate_hand_art_offsets(int, int, int, int, int, int,
                                        int*, int*, int*, int*);
 extern char gs_illegal_target_why_power_00781aa0[];
@@ -91,6 +106,7 @@ extern char gs_cuecard_is_a_target_cant_target_again_008cf230[];
 extern char gs_cuecard_damage_n_0091b290[];
 extern char gs_cuecard_dying_0091c640[];
 extern char gs_cuecard_this_card_will_untap_00925040[];
+extern HBITMAP g_life_poison_bitmap;
 extern card_data_t global_cards_data[];
 extern card_instance_t global_card_instances[2][151];
 extern card_instance_t global_displayed_card_instances[2][151];
@@ -136,6 +152,22 @@ extern int* shandalar_lifeclass_offset_counters(void);
 extern int* shandalar_lifeclass_offset_liched(void);
 extern int* shandalar_network_result(void);
 extern unsigned char* shandalar_network_packet_type(void);
+extern int shandalar_get_displayed_damage(unsigned int, unsigned int);
+extern int shandalar_get_displayed_kill_code(unsigned int, unsigned int);
+extern int shandalar_get_displayed_owned_by_opponent(int, int);
+extern state_t shandalar_get_displayed_state(unsigned int, unsigned int);
+extern void shandalar_display_mana_burn_dialog(int, int);
+extern void shandalar_copy_special_counter_rect(RECT*, RECT*, int);
+extern int shandalar_mana_producer_fixed(int, int, event_t, int);
+extern int shandalar_regenerate_target(int, int);
+extern int shandalar_raw_put_iid_on_top_of_deck(int, int);
+extern int shandalar_show_deck_exe(int, const int*, int, const char*, int, int);
+extern void shandalar_refresh_unless_ai_speculating(void);
+extern int shandalar_redisplay_all(int, int);
+extern void shandalar_real_lose_the_game(int);
+extern int shandalar_draw_cards(int, int);
+extern int* shandalar_ante_setting(void);
+extern int is_selected_target_already_attached(int, int, int);
 extern int shandalar_card_fireball(int player, int card, event_t event);
 extern int shandalar_card_lich(int player, int card, event_t event);
 extern int shandalar_card_spell_blast(int player, int card, event_t event);
@@ -143,6 +175,18 @@ extern int shandalar_card_zombie_master(int player, int card, event_t event);
 extern int shandalar_card_detonate(int player, int card, event_t event);
 extern int shandalar_card_whimsy(int player, int card, event_t event);
 extern int shandalar_card_winter_blast(int player, int card, event_t event);
+extern int card_sea_serpent(int player, int card, event_t event);
+extern int card_white_knight(int player, int card, event_t event);
+extern int resolve_control_aura_conflict(int player, int card);
+extern int shandalar_urzatron_parts(int player);
+extern int shandalar_transfer_control(int player, int card);
+extern void shandalar_draw_summoning_overlay(HDC dc, RECT* rect);
+extern void shandalar_draw_dying_overlay(HDC dc, RECT* rect);
+extern int shandalar_draw_oublietted_overlay(HDC dc, RECT* rect);
+extern void shandalar_draw_special_counters(HDC dc, const RECT* rect,
+                                             int player, int card);
+extern HBITMAP shandalar_read_graphics_file(const char* path);
+extern void shandalar_redraw_libraries(void);
 
 #define active_cards_count g_active_cards_count
 #define affected_card g_affected_card
@@ -229,6 +273,48 @@ extern int shandalar_card_winter_blast(int player, int card, event_t event);
 #define path_base global_base_directory
 #define byte_55CF20 manalinkeh_surplus_free_mana
 #define calculate_hand_window_layout calculate_hand_art_offsets
+#define Deck deck
+#define game_type g_duel_run_mode
+#define gauntlet_round g_duel_state_00925bf8
+#define ante (*shandalar_ante_setting())
+#define total_power_of_creatures_by_color g_creature_power_by_color
+#define another_copy_attached is_selected_target_already_attached
+#define LEGACY_EFFECT_GENERIC g_duel_generated_internal_card_id_0f
+#define LEGACY_EFFECT_STONING g_duel_generated_internal_card_id_06
+#define LEGACY_EFFECT_ASWAN g_duel_generated_internal_card_id_0a
+#define LEGACY_EFFECT_ALADDIN g_control_aura_special_internal_card_id
+#define iid_legacy_data_card g_damage_card_internal_card_id
+#define iid_legacy_swap_power_toughness g_duel_generated_internal_card_id_2c
+#define num_words_to_hack gs_words_to_hack_count_008cd924
+#define num_words_to_sleight gs_words_to_sleight_count_00789c34
+#define strs_words_to_hack gs_words_to_hack_00789c80
+#define strs_words_to_sleight gs_words_to_sleight_00781bd0
+#define get_displayed_damage_on_card shandalar_get_displayed_damage
+#define get_displayed_kill_code shandalar_get_displayed_kill_code
+#define get_displayed_owned_by_opponent shandalar_get_displayed_owned_by_opponent
+#define get_displayed_state shandalar_get_displayed_state
+#define display_mana_burn_dialog shandalar_display_mana_burn_dialog
+#define copy_special_counter_rect shandalar_copy_special_counter_rect
+#define mana_producer_fixed shandalar_mana_producer_fixed
+#define regenerate_target_exe shandalar_regenerate_target
+#define raw_put_iid_on_top_of_deck shandalar_raw_put_iid_on_top_of_deck
+#define show_deck_exe shandalar_show_deck_exe
+#define call_sub_437E20_unless_ai_is_speculating shandalar_refresh_unless_ai_speculating
+#define TENTATIVE_redisplay_all shandalar_redisplay_all
+#define real_lose_the_game shandalar_real_lose_the_game
+#define draw_cards_exe shandalar_draw_cards
+#define urzatron_parts shandalar_urzatron_parts
+#define islandhome card_sea_serpent
+#define pro_black card_white_knight
+#define u4585f0 resolve_control_aura_conflict
+#define u4b6860 shandalar_transfer_control
+#define blt_summon_pic shandalar_draw_summoning_overlay
+#define blt_dying_pic shandalar_draw_dying_overlay
+#define draw_oublietted_effect shandalar_draw_oublietted_overlay
+#define draw_special_counters shandalar_draw_special_counters
+#define read_graphics_file2 shandalar_read_graphics_file
+#define redraw_libraries shandalar_redraw_libraries
+#define bmp_poison_pic g_life_poison_bitmap
 #define x_value g_x_value
 #define choose_a_color_exe shandalar_choose_a_color
 #define is_tapped shandalar_is_tapped

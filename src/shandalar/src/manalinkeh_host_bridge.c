@@ -12,6 +12,32 @@ int card_zombie_master(int player, int card, event_t event);
 int card_detonate(int player, int card, event_t event);
 int card_whimsy(int player, int card, event_t event);
 int card_winter_blast(int player, int card, event_t event);
+int get_displayed_card_damage_on_card(int player, int card);
+int get_displayed_card_kill_code(int player, int card);
+int is_displayed_card_owned_by_opponent(int player, int card);
+state_t get_displayed_card_state(int player, int card);
+void show_mana_burn_dialog(int player, int amount);
+void get_special_counter_icons_rect(LPRECT rect, RECT* client_rect, int counters);
+int mana_producer_sound_on_resolve(int player, int card, event_t event,
+                                   color_t color);
+int regenerate_card(int player, int card);
+void real_put_on_top_of_deck(int player, int internal_card_id);
+int show_deck(int player, int* cards, int count, char* title,
+              int require_selection, char* prompt);
+void request_duel_display_refresh_if_human(int player, int card,
+                                           int unknown1, int unknown2);
+unsigned int refresh_duel_display_cache(void);
+int manalinkeh_draw_a_card(int player);
+unsigned int get_urza_land_types_in_play(int player);
+int gain_control(int player, int card);
+void draw_summoning_sickness_overlay(HDC dc, RECT* rect);
+void draw_dying_overlay(HDC dc, RECT* rect);
+void draw_card_ui_flag_20_overlay(HDC dc, RECT* rect);
+unsigned int get_displayed_card_special_counter_count(int player, int card);
+card_id_t get_displayed_card_id(int player, int card);
+int get_card_special_counter_icon(card_id_t card_id);
+int draw_special_counter_icons(HDC dc, RECT* rect, int icon, int count);
+HBITMAP load_pic(char* filename);
 extern int g_duel_selected_card_window;
 extern int g_life_window_life_window_long_offset;
 extern int g_life_window_poison_window_long_offset;
@@ -62,6 +88,8 @@ char* set_legacy_effect_name_addr = manalinkeh_legacy_effect_name;
 
 /* Legacy-only state with no direct SDL global owner yet. */
 int trace_mode;
+int debug_mode;
+int singleplayer_mode;
 int must_attack;
 int forbid_attack;
 int turn_count;
@@ -92,6 +120,11 @@ char manalinkeh_mana_scratch[8];
 char manalinkeh_surplus_free_mana[8];
 char manalinkeh_prevent_normal_graveyard_effect;
 char manalinkeh_next_spell_always_castable;
+char ability_tooltip_names_exe[17][50];
+int g_mimicked_effect_csv_ids[20] = {
+  14, 532, 583, 143, 196, 32, 145, 133, 97, 109,
+  59, 245, 425, 256, 745, 260, 208, 460, 240, 869
+};
 int displayed_x_value;
 int target_controller;
 int target_card;
@@ -118,6 +151,12 @@ char gs_prompt_action_2[] = "Choose a target for";
 char str_Activation[] = "Activation";
 char str_Upkeep[] = "Upkeep";
 char str_Draw_a_card[64] = "Draw a card";
+char gs_prompt_defendwhom_illegal_block[] = "Illegal block.";
+char gs_target_error_cannot_target_this_prefixed[] = ",can't target this";
+char gs_target_error_destroyed[] = ",destroyed";
+char gs_target_error_djinn_or_efreet[] = ",djinn/efreet";
+char gs_target_error_elephant_or_mammoth[] = ",elephant/mammoth";
+char gs_target_error_summoning_sickness[] = ",summoning sickness";
 char gs_prompt_grabmana_1[] = "%s X: %d";
 char gs_prompt_grabmana_2[] = "%s X: %d (maximum %d)";
 char gs_prompt_grabmana_0[] = "%s";
@@ -273,6 +312,11 @@ int* shandalar_option_layout(void)
   return &g_duel_interface_options.layout;
 }
 
+int* shandalar_ante_setting(void)
+{
+  return &g_gauntlet_options.ante;
+}
+
 int* shandalar_option_show_power_toughness(void)
 {
   return &g_duel_interface_options.show_power_toughness_on_cards;
@@ -331,6 +375,176 @@ int* shandalar_lifeclass_offset_counters(void)
 int* shandalar_lifeclass_offset_liched(void)
 {
   return &g_life_window_lich_window_long_offset;
+}
+
+int shandalar_get_displayed_damage(unsigned int player, unsigned int card)
+{
+  return get_displayed_card_damage_on_card((int)player, (int)card);
+}
+
+int shandalar_get_displayed_kill_code(unsigned int player, unsigned int card)
+{
+  return get_displayed_card_kill_code((int)player, (int)card);
+}
+
+int shandalar_get_displayed_owned_by_opponent(int player, int card)
+{
+  return is_displayed_card_owned_by_opponent(player, card);
+}
+
+state_t shandalar_get_displayed_state(unsigned int player, unsigned int card)
+{
+  return get_displayed_card_state((int)player, (int)card);
+}
+
+void shandalar_display_mana_burn_dialog(int player, int amount)
+{
+  show_mana_burn_dialog(player, amount);
+}
+
+void shandalar_copy_special_counter_rect(RECT* rect, RECT* client_rect,
+                                         int counters)
+{
+  get_special_counter_icons_rect(rect, client_rect, counters);
+}
+
+int shandalar_mana_producer_fixed(int player, int card, event_t event,
+                                  int color)
+{
+  return mana_producer_sound_on_resolve(player, card, event, (color_t)color);
+}
+
+int shandalar_regenerate_target(int player, int card)
+{
+  return regenerate_card(player, card);
+}
+
+int shandalar_raw_put_iid_on_top_of_deck(int player, int internal_card_id)
+{
+  real_put_on_top_of_deck(player, internal_card_id);
+  return 1;
+}
+
+int shandalar_show_deck_exe(int player, const int* cards, int count,
+                            const char* title, int require_selection,
+                            int prompt_address)
+{
+  char* prompt;
+
+  switch (prompt_address)
+  {
+    case 0:
+      prompt = NULL;
+      break;
+    case 0x7375b0:
+      prompt = "Done";
+      break;
+    case 0x7281a4:
+      prompt = "Cancel";
+      break;
+    case 0x78f0a8:
+      prompt = "OK";
+      break;
+    default:
+      prompt = (char*)prompt_address;
+      break;
+  }
+
+  return show_deck(player, (int*)cards, count, (char*)title,
+                   require_selection, prompt);
+}
+
+void shandalar_refresh_unless_ai_speculating(void)
+{
+  if (g_ai_speculation_depth != 1)
+    request_duel_display_refresh_if_human(-1, -1, 0, 0);
+}
+
+int shandalar_redisplay_all(int unused_player, int unused_card)
+{
+  (void)unused_player;
+  (void)unused_card;
+  return (int)refresh_duel_display_cache();
+}
+
+void shandalar_real_lose_the_game(int player)
+{
+  if (player < 0)
+  {
+    g_life[0] = -99;
+    g_life[1] = -99;
+  }
+  else
+  {
+    g_life[player] = -99;
+  }
+}
+
+int shandalar_draw_cards(int player, int amount)
+{
+  int index;
+  int result;
+
+  result = -1;
+  for (index = 0; index < amount; ++index)
+    result = manalinkeh_draw_a_card(player);
+  return result;
+}
+
+int shandalar_urzatron_parts(int player)
+{
+  return (int)get_urza_land_types_in_play(player);
+}
+
+int shandalar_transfer_control(int player, int card)
+{
+  return gain_control(player, card);
+}
+
+void shandalar_draw_summoning_overlay(HDC dc, RECT* rect)
+{
+  draw_summoning_sickness_overlay(dc, rect);
+}
+
+void shandalar_draw_dying_overlay(HDC dc, RECT* rect)
+{
+  draw_dying_overlay(dc, rect);
+}
+
+int shandalar_draw_oublietted_overlay(HDC dc, RECT* rect)
+{
+  draw_card_ui_flag_20_overlay(dc, rect);
+  return 0;
+}
+
+void shandalar_draw_special_counters(HDC dc, const RECT* rect,
+                                      int player, int card)
+{
+  unsigned int count;
+  card_id_t card_id;
+
+  count = get_displayed_card_special_counter_count(player, card);
+  if (count == 0)
+    return;
+
+  card_id = get_displayed_card_id(player, card);
+  if (card_id == -1)
+    return;
+
+  draw_special_counter_icons(dc, (RECT*)rect,
+                             get_card_special_counter_icon(card_id),
+                             (int)count);
+}
+
+HBITMAP shandalar_read_graphics_file(const char* path)
+{
+  return load_pic((char*)path);
+}
+
+void shandalar_redraw_libraries(void)
+{
+  SendMessageA(g_duel_main_window_hwnd, 0x432, 0, 0);
+  SendMessageA(g_duel_status_window_hwnd, 0x432, 0, 0);
 }
 
 int shandalar_card_fireball(int player, int card, event_t event)
