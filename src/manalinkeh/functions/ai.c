@@ -149,10 +149,14 @@ BACKUP_AND_SAVE_LIST
 void backup_data_for_ai(void)
 {
   // 0x498e30
+#ifdef MANALINKEH_STATIC
+  save_combat_simulation_state();
+#else
   memcpy((void*)0x50be70, &must_attack, 0x1a740);
   STATIC_ASSERT(sizeof(card_data_t) == 72, sizeof_card_data_t_must_be_72);
   // This target immediately follows 0x50be70.
   memcpy((void*)0x5265b0, &cards_data[g_card_count], 16 * sizeof(card_data_t));
+#endif
   g_saved_ai_modifier = ai_modifier;
 
 #define BACKUP_CMD_A(data)	memcpy(backup_##data, data, sizeof(data))
@@ -165,9 +169,13 @@ void backup_data_for_ai(void)
 void restore_data_for_ai(void)
 {
   // 0x498e70
+#ifdef MANALINKEH_STATIC
+  restore_combat_simulation_state();
+#else
   memcpy_suppress_size_warning(&must_attack, (void*)0x50be70, 0x1a740);
   STATIC_ASSERT(sizeof(card_data_t) == 72, sizeof_card_data_t_must_be_72);
   memcpy(&cards_data[g_card_count], (void*)0x5265b0, 16 * sizeof(card_data_t));
+#endif
   ai_modifier = g_saved_ai_modifier;
 
 #define BACKUP_CMD_A(data)	memcpy(data, backup_##data, sizeof(data))
@@ -191,6 +199,9 @@ BACKUP_AND_SAVE_LIST
 void backup_data_for_ai_0(void)
 {
   // 0x498d90
+#ifdef MANALINKEH_STATIC
+  save_ai_search_state();
+#else
   // This target immediately follows 0x5265b0 in backup_data_for_ai()/restore_data_for_ai().
   memcpy((void*)0x526a30, &must_attack, 0x1cd00);
   g_saved_recorded_action_count = 0;
@@ -199,6 +210,7 @@ void backup_data_for_ai_0(void)
   memcpy((void*)0x543730, &cards_data[g_card_count], 16 * sizeof(card_data_t));
   // Immediately followed by displayed_mana_pool[][].
   ASSERT(stack_size >= 0);
+#endif
 
 #define BACKUP_CMD_A(data)	memcpy(backup0_##data, data, sizeof(data))
 #define BACKUP_CMD_S(data)	backup0_##data = data
@@ -210,9 +222,13 @@ void backup_data_for_ai_0(void)
 void restore_data_for_ai_0(void)
 {
   // 0x498df0
+#ifdef MANALINKEH_STATIC
+  restore_ai_search_state();
+#else
   memcpy_suppress_size_warning(&must_attack, (void*)0x526a30, 0x1cd00);
   STATIC_ASSERT(sizeof(card_data_t) == 72, sizeof_card_data_t_must_be_72);
   memcpy(&cards_data[g_card_count], (void*)0x543730, 16 * sizeof(card_data_t));
+#endif
 #define BACKUP_CMD_A(data)	memcpy(data, backup0_##data, sizeof(data))
 #define BACKUP_CMD_S(data)	data = backup0_##data
   BACKUP_AND_SAVE_LIST

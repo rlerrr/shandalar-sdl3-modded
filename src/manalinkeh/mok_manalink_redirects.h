@@ -35,7 +35,6 @@
 #define can_activate_mana_source_for_stop_prompt manalinkeh_is_a_tappable_mana_source /* 0x0043a280 -> 0x0200ba65 */
 #define activate_mana_source_card manalinkeh_tap_card_for_mana /* 0x0043a2d0 -> 0x0200ba6a */
 #define upkeep_phase manalinkeh_upkeep_phase
-#define ai_decision_phase manalinkeh_ai_decision_phase
 #define launch_mcu manalinkeh_launch_mcu
 #define ante_drawn_card manalinkeh_ante_top_card_of_library /* 0x00458070 -> 0x0200b484 */
 #define get_hunting_subtype_name manalinkeh_get_card_or_subtype_name /* 0x004671a0 -> 0x02001d4e */
@@ -63,10 +62,12 @@
 #define card_desperate_sentry manalinkeh_card_desperate_sentry
 #define get_special_counters_name manalinkeh_get_special_counters_name
 #define sub_495BE0 manalinkeh_sub_495BE0
-#define save_ai_search_state manalinkeh_backup_data_for_ai_0 /* 0x00498d90 -> 0x0200b3e4 */
-#define restore_ai_search_state manalinkeh_restore_data_for_ai_0 /* 0x00498df0 -> 0x0200b3e9 */
-#define save_combat_simulation_state manalinkeh_backup_data_for_ai /* 0x00498e30 -> 0x0200b3da */
-#define restore_combat_simulation_state manalinkeh_restore_data_for_ai /* 0x00498e70 -> 0x0200b3df */
+/*
+ * Do not redirect the host's AI snapshots to Manalink's original routines.
+ * Those routines copy a contiguous block to hard-coded scratch addresses in
+ * magic.exe.  Static and WebAssembly builds have no such address layout; the
+ * host implementation snapshots the corresponding named state instead.
+ */
 #define tap_card_and_dispatch_event manalinkeh_tap_card /* 0x004a3170 -> 0x0200b920 */
 #define damage_creature manalinkeh_damage_creature
 #define choose_blockers_ai manalinkeh_ai_assign_blockers /* 0x004b18e0 -> 0x0200187b */

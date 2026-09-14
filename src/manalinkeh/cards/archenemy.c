@@ -1287,7 +1287,7 @@ static void set_scheme_in_motion(int player, int card, int csvid)
   int iid = get_internal_card_id_from_csv_id(csvid);
   ASSERT(iid > 0 && "invalid scheme csvid");
   CardFunction fn = cards_data[iid].code_pointer;
-  ASSERT(fn && fn != (CardFunction)0x401000 && "invalid scheme function");
+  ASSERT(fn && fn != MANALINKEH_CARD_DUMMY && "invalid scheme function");
   int old_event_result = event_result;
   event_result = csvid;
   fn(player, card, EVENT_SET_IN_MOTION);

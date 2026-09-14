@@ -12,6 +12,15 @@
 extern "C" {
 #endif
 
+int card_multiblocker_hook(int player, int card, event_t event);
+#ifdef MANALINKEH_STATIC
+#define MANALINKEH_CARD_MULTIBLOCKER ((CardFunction)card_multiblocker_hook)
+#define MANALINKEH_CARD_DUMMY ((CardFunction)card_dummy)
+#else
+#define MANALINKEH_CARD_MULTIBLOCKER ((CardFunction)0x401010)
+#define MANALINKEH_CARD_DUMMY ((CardFunction)0x401000)
+#endif
+
 #include <stdlib.h>
 #include <stdio.h>
 

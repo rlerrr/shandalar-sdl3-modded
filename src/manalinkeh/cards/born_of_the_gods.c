@@ -1373,7 +1373,7 @@ int card_tromokratis(int player, int card, event_t event)
 		  for (c = 0; c < active_cards_count[p]; ++c)
 			if ((aff = in_play(p, c)))
 			  {
-				if (cards_data[aff->internal_card_id].code_pointer == (CardFunction)0x401010)
+				if (cards_data[aff->internal_card_id].code_pointer == MANALINKEH_CARD_MULTIBLOCKER)
 				  {
 					if (aff->damage_source_player == p && is_legal_block(p, c, player, card))
 					  {

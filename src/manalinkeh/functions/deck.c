@@ -75,7 +75,7 @@ int calc_initial_attack_rating_by_iid(int player, int iid)
   if (abils & KEYWORD_REGENERATION)
 	rating = 3 * rating / 2;
 
-  if (cards_data[iid].code_pointer == (CardFunction)0x4CA0F0)	// original card_ball_lightning()
+  if (cards_data[iid].id == CARD_ID_BALL_LIGHTNING)
 	rating = 1;
 
   rating *= g_deck_rating_multipliers[player];	// Seems to always be 12
@@ -129,7 +129,7 @@ static int calc_initial_attack_rating(int player, int card)
 #endif
 	  rating *= 3;
 	}
-  else if (cards_data[iid].code_pointer == (CardFunction)0x4CA0F0)	// original card_ball_lightning()
+  else if (cards_data[iid].id == CARD_ID_BALL_LIGHTNING)
 	rating = 1;
 
   rating *= g_deck_rating_multipliers[player];	// Seems to always be 12
@@ -1175,7 +1175,11 @@ static void kill_card_impl(int player, int card, kill_t kill_mode, int flags)
 	{
 	  instance->state |= STATE_IN_PLAY;
 	  instance->unknown0x14 = TRIGGER_GRAVEYARD_ORDER;
+#ifdef MANALINKEH_STATIC
+	  pending_killed_card_handler = process_killed_card;
+#else
 	  pending_killed_card_handler = 0x477B30;	// kill_card_guts()
+#endif
 	}
   else
 	process_killed_card(player, card);	// kill_card_guts()

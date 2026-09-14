@@ -278,7 +278,7 @@ validate_target_impl(int player, int card,	// Beware - these will both be -1 whe
 	  if (illegal_type && target_match_type(tgt_instance, tgt_player, tgt_card, special, illegal_type))
 		FAILURE(gs_target_error_type);//",type"
 
-	  if (cards_data[tgt_instance->internal_card_id].code_pointer == (CardFunction)0x401010	// multiblocker shadow
+	  if (cards_data[tgt_instance->internal_card_id].code_pointer == MANALINKEH_CARD_MULTIBLOCKER	// multiblocker shadow
 		  && !(special & TARGET_SPECIAL_ALLOW_MULTIBLOCKER))
 		FAILURE(gs_target_error_type);//",type"
 
@@ -944,7 +944,7 @@ select_target_impl(int player, int card,
 			  if (tmp_tgt.card < 0
 				  || (instance = get_card_instance(tmp_tgt.player, tmp_tgt.card))->internal_card_id < 0
 				  || (special & TARGET_SPECIAL_ALLOW_MULTIBLOCKER)
-				  || cards_at_7c7000[instance->internal_card_id]->code_pointer != (CardFunction)0x401010)	// multiblocker card
+				  || cards_at_7c7000[instance->internal_card_id]->code_pointer != MANALINKEH_CARD_MULTIBLOCKER)	// multiblocker card
 				{
 				  char err_reason[208];
 

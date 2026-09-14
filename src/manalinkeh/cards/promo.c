@@ -95,7 +95,9 @@ int card_arena(int player, int card, event_t event){
 
 				instance->state |= STATE_TAPPED;
 				if (trace_mode & 2){
+#ifndef MANALINKEH_STATIC
 					((int (*)(int, int))(0x4720E0))(player, 0);	// networking
+#endif
 					new_pick_target(&td_opp, "ARENA", 1, 0);
 				} else {
 					if (!ai_choice_for_arena(player, card, &instance->targets[1])){
@@ -125,7 +127,9 @@ int card_arena(int player, int card, event_t event){
 					new_pick_target(&td_opp, "ARENA", 1, 0);
 
 					if (trace_mode & 2){
+#ifndef MANALINKEH_STATIC
 						((int (*)(int, int))(0x4720E0))(1 - player, 0);	// networking
+#endif
 					}
 				}
 			}

@@ -1491,9 +1491,6 @@ void start_ai_decision_search(int decision_code, int time_scale)
 
 // FUNCTION: MAGIC 0x004e430e
 // FUNCTION: SHANDALAR 0x004c357e
-#ifdef SHANDALAR_USE_MANALINKEH
-void save_ai_search_state(void);
-#else
 void save_ai_search_state(void)
 {
   g_saved_recorded_action_count = 0;
@@ -1556,13 +1553,9 @@ void save_ai_search_state(void)
   refresh_ai_random_table();
 #endif
 }
-#endif /* !SHANDALAR_USE_MANALINKEH: save_ai_search_state */
 
 // FUNCTION: MAGIC 0x004e4632
 // FUNCTION: SHANDALAR 0x004c38a2
-#ifdef SHANDALAR_USE_MANALINKEH
-void restore_ai_search_state(void);
-#else
 void restore_ai_search_state(void)
 {
   memcpy(global_card_instances, g_ai_search_backup.card_instances, sizeof(g_ai_search_backup.card_instances));
@@ -1615,7 +1608,6 @@ void restore_ai_search_state(void)
   memcpy(g_player_special_effect_flags, g_ai_search_backup.player_special_effect_flags_copy, sizeof(g_ai_search_backup.player_special_effect_flags_copy));
   FUN_00464bb0();
 }
-#endif /* !SHANDALAR_USE_MANALINKEH: restore_ai_search_state */
 
 // FUNCTION: MAGIC 0x004a7ccf
 // FUNCTION: SHANDALAR 0x00559e52
@@ -3051,9 +3043,6 @@ void setup_combat_damage_simulation(int player)
 
 // FUNCTION: MAGIC 0x004e4913
 // FUNCTION: SHANDALAR 0x004c3b83
-#ifdef SHANDALAR_USE_MANALINKEH
-void save_combat_simulation_state(void);
-#else
 void save_combat_simulation_state(void)
 {
   memcpy(combat_sim_saved_card_instances, global_card_instances, sizeof(combat_sim_saved_card_instances));
@@ -3096,13 +3085,9 @@ void save_combat_simulation_state(void)
   memcpy(combat_sim_saved_unk_008b44d0, g_lich_active, sizeof(combat_sim_saved_unk_008b44d0));
   memcpy(combat_sim_saved_unk_007a79b0, g_player_special_effect_flags, sizeof(combat_sim_saved_unk_007a79b0));
 }
-#endif /* !SHANDALAR_USE_MANALINKEH: save_combat_simulation_state */
 
 // FUNCTION: MAGIC 0x004e4bc4
 // FUNCTION: SHANDALAR 0x004c3e34
-#ifdef SHANDALAR_USE_MANALINKEH
-void restore_combat_simulation_state(void);
-#else
 void restore_combat_simulation_state(void)
 {
   memcpy(global_card_instances, combat_sim_saved_card_instances, sizeof(combat_sim_saved_card_instances));
@@ -3145,7 +3130,6 @@ void restore_combat_simulation_state(void)
   memcpy(g_lich_active, combat_sim_saved_unk_008b44d0, sizeof(combat_sim_saved_unk_008b44d0));
   memcpy(g_player_special_effect_flags, combat_sim_saved_unk_007a79b0, sizeof(combat_sim_saved_unk_007a79b0));
 }
-#endif /* !SHANDALAR_USE_MANALINKEH: restore_combat_simulation_state */
 
 // FUNCTION: MAGIC 0x005129d1
 // FUNCTION: SHANDALAR 0x00421578

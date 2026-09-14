@@ -246,7 +246,7 @@ int damage_creature(int tgt_player, int tgt_card, int32_t amt, int src_player, i
 	{
 	  card_instance_t* tgt_inst = get_card_instance(tgt_player, tgt_card);
 	  if ((tgt_inst->token_status & STATUS_SPECIAL_BLOCKER)
-		  && cards_data[tgt_inst->internal_card_id].code_pointer == (CardFunction)0x401010)	// card_multiblocker()
+		  && cards_data[tgt_inst->internal_card_id].code_pointer == MANALINKEH_CARD_MULTIBLOCKER)	// card_multiblocker()
 		{
 		  tgt_player = tgt_inst->damage_source_player;
 		  tgt_card = tgt_inst->damage_source_card;

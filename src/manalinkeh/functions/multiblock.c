@@ -2,17 +2,15 @@
 
 #include "manalink.h"
 
-#define card_multiblocker	((CardFunction)(0x401010))
-
 static int is_multiblocker_card(int player, int card)
 {
-  return cards_at_7c7000[get_card_instance(player, card)->internal_card_id]->code_pointer == card_multiblocker;
+  return cards_at_7c7000[get_card_instance(player, card)->internal_card_id]->code_pointer == MANALINKEH_CARD_MULTIBLOCKER;
 }
 
 static int is_multiblocker_card_copying(int player, int card, int orig_player, int orig_card)
 {
   card_instance_t* instance = get_card_instance(player, card);
-  return (cards_at_7c7000[instance->internal_card_id]->code_pointer == card_multiblocker
+  return (cards_at_7c7000[instance->internal_card_id]->code_pointer == MANALINKEH_CARD_MULTIBLOCKER
 		  && instance->damage_source_player == orig_player && instance->damage_source_card == orig_card);
 }
 
@@ -32,7 +30,7 @@ static int create_multiblocker(int player, int card, int num_blockable)
 	  if (iid > 0)
 		{
 		  card_data_t* cd = cards_at_7c7000[iid];
-		  cd->code_pointer = card_multiblocker;
+		  cd->code_pointer = MANALINKEH_CARD_MULTIBLOCKER;
 		  cd->extra_ability = 0;
 		  cd->id = 907;
 		  cd->reserved2 = 0;

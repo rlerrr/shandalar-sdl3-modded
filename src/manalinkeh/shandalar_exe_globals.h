@@ -20,7 +20,11 @@ extern char TENTATIVE_next_spell_always_castable; /* MOK 0x004ef160 */
 extern int g_current_casting_internal_card_id; /* MOK 0x004ef19c */
 extern int g_stop_phase; /* MOK 0x004ef1ac */
 extern int g_stop_phase_player; /* MOK 0x004ef1b0 */
+#ifdef MANALINKEH_STATIC
+extern int (__cdecl *pending_killed_card_handler)(int, int); /* MOK 0x004ef1b4 */
+#else
 extern int pending_killed_card_handler; /* MOK 0x004ef1b4 */
+#endif
 extern char byte_55CF20[]; /* MOK 0x0055cf20 */
 extern CRITICAL_SECTION global_critical_section_for_drawing; /* MOK 0x0056b950 */
 extern char gs_prompt_defendwhom_illegal_block[]; /* MOK 0x005b8580 */

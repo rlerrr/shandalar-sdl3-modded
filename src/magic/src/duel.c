@@ -1644,9 +1644,6 @@ int end_turn_phase(unsigned int player)
 
 // FUNCTION: MAGIC 0x00450468
 // FUNCTION: SHANDALAR 0x00408dcc
-#ifdef SHANDALAR_USE_MANALINKEH
-int ai_decision_phase(unsigned int player, int *next_state, int *phase_mode, int *phase_value);
-#else
 int ai_decision_phase(unsigned int player, int *next_state, int *phase_mode, int *phase_value)
 {
   char debug_text[100];
@@ -1841,7 +1838,6 @@ int ai_decision_phase(unsigned int player, int *next_state, int *phase_mode, int
   }
   return 0;
 }
-#endif /* !SHANDALAR_USE_MANALINKEH: ai_decision_phase */
 
 // FUNCTION: MAGIC 0x004b559a
 // FUNCTION: SHANDALAR 0x0056bd9d

@@ -12960,11 +12960,17 @@ int artifact_animation(int player, int card, int t_player, int t_card, int mode,
 }
 
 int is_hardcoded_card(int player, int card){	// unused
+#ifdef MANALINKEH_STATIC
+	(void)player;
+	(void)card;
+	return 0;
+#else
 	card_instance_t *instance = get_card_instance(player, card);
 	if( (int)(cards_data[instance->internal_card_id].code_pointer) < 0x2001006 ){
 		return 1;
 	}
 	return 0;
+#endif
 }
 
 int prevent_damage_until_eot_legacy(int player, int card, event_t event){

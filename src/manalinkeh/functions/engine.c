@@ -349,6 +349,7 @@ int upkeep_phase(int player)
 	g_phase_stop_suppressed = (g_stop_phase != -1 && (g_stop_phase != 4 || g_stop_phase_player != player));
 
   // Begin additions
+#ifndef MANALINKEH_STATIC
   /* Normally ai speculation runs until end of turn and ai_decision_phase() returns a code to make switch_phase() go back to where speculation started, but
    * main_phase() seems to assume no speculation takes place before it. */
   if (ai_is_speculating != 1 && !(trace_mode & 2))
@@ -364,6 +365,7 @@ int upkeep_phase(int player)
 	  g_duel_state_008a8de4 = 0;
 	  ai_modifier = 0;
 	}
+#endif
  // End additions
 
   current_phase = PHASE_BEGIN_UPKEEP;
@@ -387,11 +389,13 @@ int upkeep_phase(int player)
   mana_burn();
 
   // Begin additions
+#ifndef MANALINKEH_STATIC
   int phase_code_to_go_to, becomes_second_arg_of_main_phase_and_discard_phase, becomes_third_arg_of_main_phase;
   hack_ai_decision_phase_upkeep = 1;
   ai_decision_phase(player, &phase_code_to_go_to, &becomes_second_arg_of_main_phase_and_discard_phase, &becomes_third_arg_of_main_phase);
   if (phase_code_to_go_to == 4)
 	goto speculate_more;
+#endif
   // End additions
 
   return is_anyone_dead();
@@ -1811,7 +1815,11 @@ int put_card_on_stack3(int player, int card)
 
   process_damage_prevention();	// resolve_damage_cards_and_prevent_damage()
   event_flags &= ~EF_RERUN_DAMAGE_PREVENTION;
+#ifdef MANALINKEH_STATIC
+  pending_killed_card_handler = process_killed_card;
+#else
   pending_killed_card_handler = 0x477B30;	// = &kill_card_guts()
+#endif
   regenerate_or_graveyard_triggers();	// regenerate_or_graveyard_triggers()
   process_damage_prevention();	// resolve_damage_cards_and_prevent_damage() (again!)
   g_current_casting_internal_card_id = -1;			// card_on_stack_iid

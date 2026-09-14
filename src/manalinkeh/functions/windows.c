@@ -21,7 +21,14 @@ static const int territoryclass_offset_card_hwnd_length = 4;
 
 #define str_Damage							gs_cardtitle_damage_008cfd30
 #define str_MultiBlock_Creature				gs_multiblock_creature_008cf040
+#ifdef MANALINKEH_STATIC
+static const char strs_Colorless_Black_Blue_Green_Red_White[6][20] =
+{
+  "Colorless", "Black", "Blue", "Green", "Red", "White"
+};
+#else
 #define strs_Colorless_Black_Blue_Green_Red_White	((char(*)[20])0x608e10)
+#endif
 
 // from Drawcardlib.dll
 #define DLLIMPORT __attribute__((dllimport))
@@ -672,8 +679,7 @@ LRESULT __stdcall wndproc_CardClass_hook(HWND hwnd, UINT msg, WPARAM wparam, LPA
 
       case WM_LBUTTONDOWN:
 		{
-		  int attachedto_cast_to_int = GetWindowLong(hwnd, cardclass_offset_unk1);
-		  HWND attachedto = (HWND)attachedto_cast_to_int;
+		  HWND attachedto = (HWND)GetWindowLongPtr(hwnd, cardclass_offset_unk1);
 		  Sleep(GetDoubleClickTime() - (GetMessageTime() - GetTickCount()));
 
 		  MSG ignore;
@@ -690,9 +696,9 @@ LRESULT __stdcall wndproc_CardClass_hook(HWND hwnd, UINT msg, WPARAM wparam, LPA
 			  else
 				for (;;)
 				  {
-					int next_cast_to_int = GetWindowLong(attachedto, cardclass_offset_unk1);
-					if (next_cast_to_int)
-					  attachedto = (HWND)next_cast_to_int;
+					HWND next = (HWND)GetWindowLongPtr(attachedto, cardclass_offset_unk1);
+					if (next)
+					  attachedto = next;
 					else
 					  break;
 				  }
@@ -734,8 +740,7 @@ LRESULT __stdcall wndproc_CardClass_hook(HWND hwnd, UINT msg, WPARAM wparam, LPA
 		if (card == -1 && player != -1)
 		  return 0;
 
-		int stashed_instance_cast_to_int = GetWindowLong(hwnd, cardclass_offset_instance_copy);
-		card_instance_t* stashed = (card_instance_t *)stashed_instance_cast_to_int;
+		card_instance_t* stashed = (card_instance_t *)GetWindowLongPtr(hwnd, cardclass_offset_instance_copy);
 		memcpy_displayed_card_instance_t(&actual, player, card);
 		if (!card_instances_should_be_displayed_identically(stashed, &actual)
 			|| (option_ShowAbilitiesOnCards && !card_instances_will_have_same_icons(stashed, &actual)))
@@ -1464,9 +1469,16 @@ int set_smallcard_size(int mainwindow_width)
 
 void update_hand_window(HWND hwnd)
 {
-  int num_cards = GetWindowLong(hwnd, 4);
-  int cw = GetWindowLong(hwnd, 0);
-  HWND* card_hwnds = (HWND *)cw;
+  int num_cards;
+  HWND* card_hwnds;
+
+  /* This entry can be reached before set_smallcard_size() in the static host.
+   * Ensure defaults such as SETTING_HAND_SIZE are installed before using
+   * them to decide how many card windows should be visible. */
+  read_settings();
+
+  num_cards = GetWindowLong(hwnd, 4);
+  card_hwnds = (HWND *)GetWindowLongPtr(hwnd, 0);
 
   int v19, v22, v2, v3;
   calculate_hand_window_layout(smallcard_width, smallcard_height,
@@ -1785,7 +1797,7 @@ void make_smallcard_visible(int player, int card)
   for (i = 0; i < 2; ++i)
     {
       HWND terr = territory_hwnds[i];
-      HWND* cards = (HWND*)(int)(GetWindowLong(terr, territoryclass_offset_card_hwnds));
+      HWND* cards = (HWND*)GetWindowLongPtr(terr, territoryclass_offset_card_hwnds);
       int numcards = GetWindowLong(terr, territoryclass_offset_card_hwnd_length);
 	  int j;
       for (j = 0; j < numcards; ++j)
