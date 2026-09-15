@@ -1637,7 +1637,7 @@ static const char* wav_filenames[WAV_HIGHEST + 1] =
 
 int play_sound_effect(wav_t soundnum)
 {
-  if (ai_is_speculating == 1)
+  if (MANALINKEH_IS_AI_SPECULATING())
     return 0;
 
   typedef struct	// very little idea what any of these fields do.
@@ -1789,7 +1789,7 @@ int launch_mcu(void)
 
 void make_smallcard_visible(int player, int card)
 {
-  if (ai_is_speculating == 1 || !in_play(player, card))
+  if (MANALINKEH_IS_AI_SPECULATING() || !in_play(player, card))
     return;
 
   HWND territory_hwnds[2] = { hwnd_TerritoryClass_player, hwnd_TerritoryClass_opponent };

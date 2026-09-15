@@ -208,9 +208,6 @@ void update_hand_window_title(char *title, HWND hwnd, int card_count)
 
 // FUNCTION: MAGIC 0x004bd131
 // FUNCTION: SHANDALAR 0x00470468
-#ifdef SHANDALAR_USE_MANALINKEH
-void resize_duel_hand_window(HWND hwnd);
-#else
 void resize_duel_hand_window(HWND hwnd)
 {
   int side_margin;
@@ -325,7 +322,6 @@ void resize_duel_hand_window(HWND hwnd)
                  SWP_NOMOVE | SWP_NOZORDER);
   }
 }
-#endif /* !SHANDALAR_USE_MANALINKEH: resize_duel_hand_window */
 
 // FUNCTION: MAGIC 0x004bbc18
 // FUNCTION: SHANDALAR 0x0046ef58

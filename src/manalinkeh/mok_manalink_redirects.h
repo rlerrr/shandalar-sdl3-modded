@@ -54,7 +54,6 @@
 #define remove_card_from_graveyard manalinkeh_remove_card_from_grave /* 0x00477f30 -> 0x0200bb2d */
 #define shuffle_duel_library manalinkeh_shuffle_for_exe /* 0x00479bf0 -> 0x02001d17 */
 #define find_internal_card_id_by_csv_id manalinkeh_get_internal_card_id_from_csv_id /* 0x00479df0 -> 0x0200b77c */
-#define resize_duel_hand_window manalinkeh_update_hand_window /* 0x0047d2f0 -> 0x0200e24c */
 #define real_target_available manalinkeh_real_target_available
 #define C_real_validate_target manalinkeh_real_validate_target /* 0x0047db90 -> 0x0200a9f8 */
 #define C_real_select_target manalinkeh_real_select_target /* 0x0047e9d0 -> 0x0200a9f3 */

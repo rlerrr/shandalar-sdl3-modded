@@ -89,14 +89,6 @@ void shandalar_set_poison_counter(int player, unsigned char value)
   g_poison_counters[player] = value;
 }
 
-#undef resize_duel_hand_window
-void manalinkeh_update_hand_window(HWND hwnd);
-
-void resize_duel_hand_window(void* hwnd)
-{
-  manalinkeh_update_hand_window((HWND)hwnd);
-}
-
 char manalinkeh_legacy_effect_name[51];
 char* set_legacy_effect_name_addr = manalinkeh_legacy_effect_name;
 
@@ -472,7 +464,7 @@ int shandalar_show_deck_exe(int player, const int* cards, int count,
 
 void shandalar_refresh_unless_ai_speculating(void)
 {
-  if (g_ai_speculation_depth != 1)
+  if (g_duel_ai_mode_state != 1 && g_ai_speculation_depth <= 0)
     request_duel_display_refresh_if_human(-1, -1, 0, 0);
 }
 
@@ -480,6 +472,8 @@ int shandalar_redisplay_all(int unused_player, int unused_card)
 {
   (void)unused_player;
   (void)unused_card;
+  if (g_duel_ai_mode_state == 1 || g_ai_speculation_depth > 0)
+    return 0;
   return (int)refresh_duel_display_cache();
 }
 

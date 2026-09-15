@@ -29,6 +29,9 @@ extern int g_active_cards_count[2];
 extern int g_affected_card;
 extern int g_affected_card_controller;
 extern int g_ai_speculation_depth;
+#ifdef MANALINKEH_STATIC
+extern int g_duel_ai_mode_state;
+#endif
 extern int g_ai_trace_enabled;
 extern int g_current_phase;
 extern int g_current_turn;
@@ -217,6 +220,12 @@ extern int shandalar_check_mana_multi(int player);
 #define affected_card g_affected_card
 #define affected_card_controller g_affected_card_controller
 #define ai_is_speculating g_ai_speculation_depth
+#ifdef MANALINKEH_STATIC
+#define MANALINKEH_IS_AI_SPECULATING() \
+  (g_duel_ai_mode_state == 1 || g_ai_speculation_depth > 0)
+#else
+#define MANALINKEH_IS_AI_SPECULATING() (ai_is_speculating == 1)
+#endif
 #define ai_modifier g_ai_modifier
 #define current_phase g_current_phase
 #define current_turn g_current_turn

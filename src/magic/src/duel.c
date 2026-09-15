@@ -1267,6 +1267,22 @@ int draw_phase(unsigned int player)
     draw_count = g_event_result;
     if (draw_count > 0)
     {
+#ifdef SHANDALAR_USE_MANALINKEH
+      // TODO: this real?
+      /* The original executable represented a local draw as a synthetic card
+       * that the response machinery subsequently activated.  That indirection
+       * depends on the original executable's response dispatcher; in the
+       * static Manalink target it leaves the "Draw a card" objects in hand.
+       * Offline draws need no network placeholder, so perform them directly. */
+      if ((g_duel_network_flags & 2) == 0)
+      {
+        for (draw_index = 0; draw_count > draw_index; draw_index = draw_index + 1)
+        {
+          draw_card_for_player(player);
+        }
+      }
+      else
+#endif
       if ((player == g_other_player) && ((g_duel_network_flags & 2) == 0))
       {
         for (draw_index = 0; draw_count > draw_index; draw_index = draw_index + 1)

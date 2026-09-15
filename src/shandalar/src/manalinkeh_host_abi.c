@@ -39,7 +39,8 @@ void manalinkeh_hostabi_process_damage_prevention(void)
 
 void manalinkeh_hostabi_request_duel_display_refresh(void)
 {
-  request_duel_display_refresh(-1, -1, 0, 0);
+  if (g_duel_ai_mode_state != 1 && g_ai_speculation_depth <= 0)
+    request_duel_display_refresh(-1, -1, 0, 0);
 }
 
 int manalinkeh_hostabi_should_skip_phase(void)
