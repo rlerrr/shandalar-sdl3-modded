@@ -22,7 +22,7 @@ extern int g_showlist_smallcard_height;
 extern int g_duel_window_userdata_player_offset;
 extern int g_duel_window_userdata_card_offset;
 extern int g_duel_selected_card_window;
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 extern int g_duel_modal_action_active;
 extern target_selection_request_t g_duel_action_request_copy;
 extern HWND g_duel_toggleable_status_window_hwnd;

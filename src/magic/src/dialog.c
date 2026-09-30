@@ -34,7 +34,7 @@ STATIC_ASSERT(sizeof(dialog_stack_entry_t) == 0xac, dialog_stack_entry_t_wrong_s
 #define DISPLAYED_PLAYER_CARD_INSTANCE(player_, card_) global_displayed_card_instances[(player_)][(card_)]
 #define DISPLAYED_PLAYER_CARD_ROW(player_) global_displayed_card_instances[(player_)]
 
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 extern int g_showlist_smallcard_width;
 extern int g_showlist_smallcard_height;
 

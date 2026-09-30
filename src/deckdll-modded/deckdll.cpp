@@ -20,11 +20,31 @@
 
 #include "deckdll.h"
 #include "File.h"
+extern "C" {
+#include "platform/cheat_options.h"
+}
 
 extern "C" HWND global_decksurface_hwnd;
 extern "C" HWND global_horzlist_hwnd;
 extern "C" HWND deckdll_global_main_hwnd;
 extern "C" HWND cardlistfilter_hwnd;
+
+static void (*host_begin_deckbuilder)(void);
+static void (*host_end_deckbuilder)(void);
+static int (*debug_card_picker)(HWND);
+static int (*debug_card_sort_key)(int);
+
+void deck_set_host_pump_hooks(void (*begin)(void), void (*end)(void))
+{
+  host_begin_deckbuilder = begin;
+  host_end_deckbuilder = end;
+}
+
+void deck_set_debug_card_picker(int (*pick_card)(HWND), int (*card_sort_key)(int))
+{
+  debug_card_picker = pick_card;
+  debug_card_sort_key = card_sort_key;
+}
 
 //[[[ types and enums
 OP_BITWISE(color_test_t);
@@ -1769,8 +1789,8 @@ process_cue_cards(MSG* msg)
 
 /* stdcall version, perversely required to be at _DeckBuilderMain instead of _DeckBuilderMain@12, which makes it inconvenient and error-prone call correctly
  * external to the dll except from assembly */
-WPARAM WINAPI
-DeckBuilderMain(HWND parent_hwnd, int db_flags_1, int db_flags_2)
+static WPARAM
+run_deckbuilder(HWND parent_hwnd, int db_flags_1, int db_flags_2)
 {
   if (!global_db_read)
     {
@@ -1928,8 +1948,19 @@ DeckBuilderMain(HWND parent_hwnd, int db_flags_1, int db_flags_2)
   return msg.wParam;
 }
 
-WPARAM
-deckbuilder_main(HWND parent_hwnd, int db_flags_1, int db_flags_2)
+WPARAM WINAPI
+DeckBuilderMain(HWND parent_hwnd, int db_flags_1, int db_flags_2)
+{
+  bool host_active = (db_flags_1 & static_cast<int>(DBFlags1::SHANDALAR)) && host_begin_deckbuilder;
+  if (host_active)
+    host_begin_deckbuilder();
+  WPARAM result = run_deckbuilder(parent_hwnd, db_flags_1, db_flags_2);
+  if (host_active && host_end_deckbuilder)
+    host_end_deckbuilder();
+  return result;
+}
+
+WPARAM deckbuilder_main(HWND parent_hwnd, int db_flags_1, int db_flags_2)
 {
   return DeckBuilderMain(parent_hwnd, db_flags_1, db_flags_2);
 }
@@ -5064,6 +5095,47 @@ ask_about_saving_deck(void)
   return rval != IDCANCEL;
 }
 
+static void add_debug_card_to_deck(HWND owner)
+{
+  if (!debug_card_picker || !debug_card_sort_key ||
+      !shandalar_cheat_enabled(SHANDALAR_CHEAT_ENABLE_DEBUG_MENU))
+    return;
+  if (global_deck_num_entries >= global_cardsowned_size)
+    {
+      MessageBox(owner, "Your collection is full.", "Add card", MB_ICONINFORMATION);
+      return;
+    }
+  int iid = debug_card_picker(owner);
+  if (iid < 0)
+    return;
+  csvid_t csvid(CardIDFromType(iid));
+  if (!csvid.ok() || csvid.raw >= global_available_slots)
+    return;
+  if (global_edited_deck_num_entries >= 300)
+    {
+      int i;
+      for (i = 0; i < global_edited_deck_num_entries; ++i)
+        if (global_edited_deck[i].DeckEntry_csvid == csvid)
+          break;
+      if (i == global_edited_deck_num_entries)
+        return;
+    }
+  int pos = 0;
+  while (pos < global_deck_num_entries &&
+         debug_card_sort_key(global_deck[pos].GDE_iid.raw) >= debug_card_sort_key(iid))
+    ++pos;
+  memmove(&global_deck[pos + 1], &global_deck[pos],
+          (global_deck_num_entries - pos) * sizeof(global_deck[0]));
+  global_deck[pos] = {csvid, iid_t(iid), 0, 1 << global_current_deck};
+  ++global_deck_num_entries;
+  insert_cards_into_deck(csvid, 1, global_edited_deck);
+  global_deck_was_edited = true;
+  count_packs();
+  SendMessage(global_decksurface_hwnd, WM_USER + 1, 0, 0);
+  filter_cards_in_lists(global_listbox_hwnd, global_horzlist_hwnd);
+  refresh_numofcards_text();
+}
+
 static HWND
 find_wanted_window(HWND hwnd, csvid_t csvid)
 {
@@ -6462,6 +6534,9 @@ wndproc_MainClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
 	SetFocus(global_horzlist_hwnd);
 	load_text("Menus", "DECKINFO");
+        if ((global_db_flags_1 & DBFlags1::SHANDALAR) && debug_card_picker &&
+            shandalar_cheat_enabled(SHANDALAR_CHEAT_ENABLE_DEBUG_MENU))
+          AppendMenu(popup, MF_ENABLED, RES_MAINMENU_DEBUG_ADD_CARD, "Add card...");
 	SetWindowText(button_deckinfo, text_lines[0]);
 	EnumChildWindows(hwnd, enumfunc_change_buttonclass_wndproc, 0);
 	refresh_numofcards_text();
@@ -6822,6 +6897,10 @@ wndproc_MainClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	    case RES_MAINMENU_NEWDECK:
 	      SendMessage(global_decksurface_hwnd, WM_COMMAND, RES_MENU_NEWDECK, 0);
 	      break;
+
+            case RES_MAINMENU_DEBUG_ADD_CARD:
+              add_debug_card_to_deck(hwnd);
+              break;
 
 	    case RES_MAINMENU_LOADDECK:
 	      if ((!global_deck_was_edited || ask_about_saving_deck())

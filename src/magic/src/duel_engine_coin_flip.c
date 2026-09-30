@@ -26,7 +26,7 @@ extern HINSTANCE g_app_instance;
 extern int g_manalink_is_host;
 extern HWND g_show_card_list_last_preview_hwnd;
 extern HPALETTE global_cart_art_hpalette;
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 extern HANDLE global_mutex_GameInit;
 
 void delete_and_close_object(HANDLE obj);

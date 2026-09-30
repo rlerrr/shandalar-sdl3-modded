@@ -36,7 +36,8 @@ extern int g_ai_trace_enabled;
 extern int g_current_phase;
 extern int g_current_turn;
 extern int g_damage_card_internal_card_id;
-extern int g_duel_generated_internal_card_id_0b;
+extern int g_stack_proxy_internal_card_id;
+extern char g_text_lines[249][300];
 extern int g_event_player;
 extern int g_activation_event_flags;
 extern int g_ai_modifier;
@@ -81,6 +82,7 @@ extern int g_creature_power_by_color[2][8];
 extern int g_duel_generated_internal_card_id_06;
 extern int g_duel_generated_internal_card_id_0a;
 extern int g_duel_generated_internal_card_id_0f;
+extern int g_raw_mana_available_hex[2][51];
 extern int g_control_aura_special_internal_card_id;
 extern int g_duel_generated_internal_card_id_2c;
 extern int gs_words_to_hack_count_008cd924;
@@ -230,8 +232,13 @@ extern int shandalar_check_mana_multi(int player);
 #define current_phase g_current_phase
 #define current_turn g_current_turn
 #define damage_card g_damage_card_internal_card_id
-#define activation_card g_duel_generated_internal_card_id_0b
+/* Share the host's activation proxy ID so resolution, cancellation, and the
+ * duel UI recognize and remove the copies created by Manalink. */
+#define activation_card g_stack_proxy_internal_card_id
 #define cards_data global_cards_data
+#define raw_mana_available_hex g_raw_mana_available_hex
+#define text_lines g_text_lines
+#define wndproc_CardClass wndproc_MAGICGAME_CardClass
 #define cards_at_7c7000 (shandalar_cards_at_7c7000())
 #define cards_ptr (shandalar_cards_ptr())
 #define raw_card_instances global_card_instances

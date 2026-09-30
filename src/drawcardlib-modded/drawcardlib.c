@@ -6,6 +6,12 @@
 
 char card_coded[30000/8];
 char* set_legacy_effect_name_addr;
+static card_instance_t (*host_displayed_cards)[151];
+
+void DrawCardModded_SetDisplayedCards(card_instance_t (*cards)[151])
+{
+  host_displayed_cards = cards;
+}
 
 #ifdef SHANDALAR_SDL_WIN32_COMPAT
 card_instance_t* get_displayed_card_instance_manalink(int player, int card)
@@ -118,6 +124,11 @@ void* get_displayed_card_instance_manalink_exe = (void*)(0x401ab0);	// for get_d
 typedef int (*intFn_int)(int);
 intFn_int get_internal_card_id_from_csv_id_exe = (intFn_int)(0x479df0);
 
+void DrawCardModded_SetInternalIdLookup(intFn_int lookup)
+{
+  get_internal_card_id_from_csv_id_exe = lookup;
+}
+
 void
 popup(const char* title, const char* fmt, ...)
 {
@@ -136,6 +147,11 @@ popup(const char* title, const char* fmt, ...)
 card_instance_t*
 get_displayed_card_instance(int player, int card)
 {
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+  if (host_displayed_cards && player >= 0 && player < 2 && card >= 0 && card < 151)
+    return &host_displayed_cards[player][card];
+  return NULL;
+#else
   if (parent == PARENT_MANALINK)
 	return get_displayed_card_instance_manalink(player, card);
   else if (parent == PARENT_SHANDALAR)
@@ -146,6 +162,7 @@ get_displayed_card_instance(int player, int card)
 	  abort();
 	  return NULL;
 	}
+#endif
 }
 
 card_ptr_t*
@@ -249,7 +266,11 @@ del_screendc(void)
 	{
 	  DeleteDC(screendc);
 	  screendc = 0;
-	  if (parent == PARENT_OTHER)
+	  if (parent == PARENT_OTHER
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+          || host_displayed_cards
+#endif
+         )
 		{
 		  DeleteCriticalSection(critical_section_for_drawing);
 		  DeleteCriticalSection(critical_section_for_display);
@@ -267,6 +288,7 @@ initialize(void)
 #  define EXE_VOID_PTR(addr)	((void*)(addr))	// as distinguished from EXE_PTR_VOID, which is another pointer to a pointer to void
 #endif
 
+#ifndef SHANDALAR_SDL_WIN32_COMPAT
   HMODULE parent_mod = GetModuleHandle(0);
   if (GetProcAddress(parent_mod, "szDeckName"))
 	{
@@ -284,6 +306,7 @@ initialize(void)
 	  spare_hdc = EXE_VOID_PTR(0x585920);
 	}
   else
+#endif
 	{
 	  parent = PARENT_OTHER;
 	  static CRITICAL_SECTION local_critical_section1, local_critical_section2;
@@ -335,6 +358,9 @@ initialize_for_shandalar(card_data_t* real_cards_data, card_ptr_t* real_cards_pt
   // This can't be done by quering Shandlar.dll during parent detection above, since it won't have replaced them yet.
   cards_data_exe = real_cards_data;
   cards_ptr_shandalar_exe = real_cards_ptr;
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+  parent = PARENT_SHANDALAR;
+#endif
 }
 
 BOOL WINAPI
@@ -1850,6 +1876,12 @@ gdip_blt(HDC hdc, const RECT* dest_rect, PicHandleNames frame, int src_x, int sr
 const card_data_t*
 get_card_data_from_csvid(uint32_t csvid)
 {
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+  if (!cards_ptr_shandalar_exe)
+    return NULL;
+  int iid = get_internal_card_id_from_csv_id_exe((int)csvid);
+  return iid >= 0 ? &cards_data_exe[iid] : NULL;
+#else
   if (parent != PARENT_MANALINK && parent != PARENT_SHANDALAR)
 	return NULL;
 
@@ -1879,4 +1911,5 @@ get_card_data_from_csvid(uint32_t csvid)
 	return NULL;
   else
 	return &cards_data_exe[csvid_to_iid[csvid]];
+#endif
 }

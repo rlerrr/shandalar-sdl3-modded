@@ -5,7 +5,7 @@
 #include "../global_state.h"
 #include "../global_strings.h"
 
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 extern int combat_eval_abilities;
 
 int check_duel_finished(void);

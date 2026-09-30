@@ -248,7 +248,7 @@ int global_available_slots;
 // GLOBAL: DECKDLL 0x10147220
 // GLOBAL: MAGIC 0x008d0350
 // GLOBAL: SHANDALAR 0x008e44a0
-card_ptr_t global_raw_cards_storage[2000];
+card_ptr_t global_raw_cards_storage[SHANDALAR_CARD_DATABASE_CAPACITY];
 
 // GLOBAL: SHANDALAR 0x007a82e4
 // GLOBAL: MAGIC 0x00791558
@@ -263,7 +263,7 @@ char *global_base_txt;
 // GLOBAL: MAGIC 0x00777e60
 // GLOBAL: SHANDALAR 0x0078ebf0
 // GLOBAL: SHANDALAR 0x00583994
-name_table_entry_t global_legacy_names[2000];
+name_table_entry_t global_legacy_names[SHANDALAR_CARD_DATABASE_CAPACITY];
 
 // FUNCTION: DECKDLL 0x1001a940
 // FUNCTION: MAGIC 0x00452cf0
@@ -292,7 +292,7 @@ int read_db_guts(char *cards_dat_filename)
 
   if (fread(&global_available_slots, sizeof(uint32_t), 1, cards_dat) != 1 ||
       fread(&text_size, sizeof(text_size), 1, cards_dat) != 1 ||
-      global_available_slots < 0 || global_available_slots > 2000 || text_size == 0)
+      global_available_slots < 0 || global_available_slots > SHANDALAR_CARD_DATABASE_CAPACITY || text_size == 0)
   {
     fclose(cards_dat);
     return 0;
@@ -588,7 +588,11 @@ int ReadLegacyCsv(const char *filename)
     line = global_rarities_csv_raw;
     line = strchr(line, '\n') + 1;
 
-    for (card_index = 0; card_index < global_available_slots; ++card_index)
+    /* Legacy descriptions only cover the original cards even when Cards.dat
+     * contains the larger modded database. Leave later entries empty. */
+    for (card_index = 0; card_index < global_available_slots &&
+                         line < global_rarities_csv_raw + size && *line;
+         ++card_index)
     {
       next = line;
 

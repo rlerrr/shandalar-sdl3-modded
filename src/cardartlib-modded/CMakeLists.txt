@@ -15,7 +15,13 @@ target_compile_definitions(cardart_modded PRIVATE
   SHANDALAR_MODDED_LIBS
   SHANDALAR_MODDED_PIC_LOADER
   DllMain=CardArtModded_DllMain
+  assert=modded_pic_assert
+  assert_noabort=modded_pic_assert_noabort
 )
+if(SHANDALAR_BUILD_SHANDALAR)
+  # The shared PIC decoder must update the adventure's indexed-color palette.
+  target_compile_definitions(cardart_modded PRIVATE SHANDALAR)
+endif()
 if(MSVC)
   target_compile_options(cardart_modded PRIVATE /Zc:__cplusplus)
 endif()

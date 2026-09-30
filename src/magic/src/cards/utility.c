@@ -7,6 +7,29 @@ int create_damage_effect_copy_for_target_player(int player, int card);
 int titanias_leg_kill_invalid_animation(int source_player, int source_card, int test_player, int test_card, int internal_card_id);
 int card_sandals_of_abdallah(int player, int card, event_t event);
 
+/* The modded CSV reserves two effects absent from the original host table. */
+int card_no_blocking(int player, int card, event_t event)
+{
+  card_instance_t *instance = &PLAYER_CARD_INSTANCE(player, card);
+  if (event == EVENT_BLOCK_LEGALITY &&
+      g_affected_card_controller == instance->damage_target_player &&
+      g_affected_card == instance->damage_target_card)
+    ++g_event_result;
+  if (event == EVENT_CLEANUP && !(instance->token_status & STATUS_PERMANENT))
+    kill_card(player, card, KILL_BURY);
+  return 0;
+}
+
+int card_permanent_color(int player, int card, event_t event)
+{
+  card_instance_t *instance = &PLAYER_CARD_INSTANCE(player, card);
+  if (event == EVENT_SET_COLOR &&
+      g_affected_card_controller == instance->damage_target_player &&
+      g_affected_card == instance->damage_target_card)
+    g_event_result = instance->info_slot;
+  return 0;
+}
+
 // FUNCTION: MAGIC 0x004efd03
 // FUNCTION: SHANDALAR 0x004a9dc3
 int card_power_up(int player, int card, event_t event)

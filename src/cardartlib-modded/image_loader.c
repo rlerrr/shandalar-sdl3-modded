@@ -6,7 +6,7 @@
 
 #include "platform/gdi_compat.h"
 
-HBITMAP load_pic(char *filename);
+HBITMAP load_legacy_pic(char *filename);
 
 static HBITMAP convert_legacy_bitmap(HBITMAP source)
 {
@@ -91,11 +91,20 @@ HANDLE LoadImage(const char *path, HPALETTE palette, int unused_width,
   if (loaded)
     goto convert_surface;
 
+  /* SDL_image's configured formats do not include BMP in every build.  SDL
+     itself supplies that decoder, including for BMPs named .pic. */
+  io = shandalar_open_file_io(path, "rb");
+  if (io) {
+    loaded = SDL_LoadBMP_IO(io, true);
+    if (loaded)
+      goto convert_surface;
+  }
+
   {
     const char *extension = strrchr(path, '.');
     if (extension && (SDL_strcasecmp(extension, ".pic") == 0 ||
                       SDL_strcasecmp(extension, ".pcx") == 0))
-      return convert_legacy_bitmap(load_pic((char *)path));
+      return convert_legacy_bitmap(load_legacy_pic((char *)path));
   }
   return NULL;
 

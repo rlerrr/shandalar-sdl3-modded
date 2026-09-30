@@ -13,6 +13,13 @@ target_compile_definitions(deckdll_modded PRIVATE
   SHANDALAR_SDL_WIN32_COMPAT
   SHANDALAR_MODDED_LIBS
   SHANDALAR_MODDED_DECKDLL
+  Gold=deckdll_modded_Gold
+  Scards=deckdll_modded_Scards
+  _PlayerFace=deckdll_modded_PlayerFace
+  _OpponFace=deckdll_modded_OpponFace
+  DrawCardBack=DrawCardModdedBack
+  DrawSmallCard=DrawCardModdedSmallCard
+  DrawSmallCardTitle=DrawCardModdedSmallCardTitle
 )
 if(MSVC)
   target_compile_options(deckdll_modded PRIVATE /Zc:__cplusplus)

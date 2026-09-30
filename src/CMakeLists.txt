@@ -11,7 +11,7 @@ if(SHANDALAR_BUILD_SHANDALAR OR SHANDALAR_BUILD_DECK)
   add_subdirectory(deckdll)
 endif()
 
-if(SHANDALAR_BUILD_DECK)
+if(SHANDALAR_BUILD_SHANDALAR OR SHANDALAR_BUILD_DECK)
   add_subdirectory(cardartlib-modded)
   add_subdirectory(drawcardlib-modded)
   add_subdirectory(deckdll-modded)

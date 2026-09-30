@@ -22,7 +22,7 @@ extern HWND global_main_hwnd;
 #define CLASS_EXPANDED_GRAVEYARD "ExpandedGraveyard"
 #define CLASS_GRAVEYARD_CARDS "GraveyardCards"
 
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 extern char global_base_directory[];
 extern int g_duel_cached_graveyard_player_0[500];
 extern int g_duel_cached_graveyard_player_1[500];

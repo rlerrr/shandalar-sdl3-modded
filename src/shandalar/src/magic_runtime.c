@@ -22,8 +22,6 @@
 #include <string.h>
 #include <time.h>
 
-char global_cardart_path[0x110];
-char global_duel_dat_path[0x110];
 char szDeckName[0x104];
 
 extern int DrawTextFormattedVa(FacemakerWindowBounds *dst, int text_color, int draw_shadow,
@@ -42,6 +40,8 @@ extern int pick_internal_card_from_list_dialog_for_owner(
 extern char global_base_directory[0x105];
 extern int g_selected_wizard_color;
 extern int g_name_entry_cursor;
+extern char manalinkeh_legacy_effect_name[51];
+extern char *set_legacy_effect_name_addr;
 static EncodedImage *g_name_entry_portrait_sprite;
 static int g_deckbuilder_attached;
 static int g_card_libraries_initialized;
@@ -49,6 +49,22 @@ static int g_card_libraries_initialized;
 static int shandalar_deck_minimum_size(void)
 {
   return shandalar_minimum_deck_size(g_shandalar_difficulty);
+}
+
+BOOL WINAPI CardArtModded_DllMain(HINSTANCE instance, DWORD reason, LPVOID reserved);
+BOOL WINAPI DrawCardModded_DllMain(HINSTANCE instance, DWORD reason, LPVOID reserved);
+void initialize_for_shandalar(card_data_t *cards_data, card_ptr_t *cards);
+void Cardartlib_initialize_for_shandalar(card_data_t *cards_data, card_ptr_t *cards);
+void DrawCardModded_SetDisplayedCards(card_instance_t (*cards)[151]);
+void DrawCardModded_SetInternalIdLookup(int (*lookup)(int));
+int CardTypeFromID(int csvid);
+
+void shandalar_initialize_modded_card_database(void)
+{
+  initialize_for_shandalar(global_cards_data, global_raw_cards_storage);
+  DrawCardModded_SetDisplayedCards(global_displayed_card_instances);
+  DrawCardModded_SetInternalIdLookup(CardTypeFromID);
+  Cardartlib_initialize_for_shandalar(global_cards_data, global_raw_cards_storage);
 }
 
 int CardIDFromType(unsigned int type);
@@ -296,10 +312,11 @@ int shandalar_runtime_init(const char *asset_root)
   shandalar_win32_set_module_path(module_path);
   shandalar_set_default_font_root(root);
   if (!g_card_libraries_initialized) {
-    if (!CardArtLib_InitializeFromRoot(root))
+    set_legacy_effect_name_addr = manalinkeh_legacy_effect_name;
+    if (!CardArtModded_DllMain((HINSTANCE)1, DLL_PROCESS_ATTACH, NULL))
       return 0;
-    if (!DrawCardLib_InitializeFromRoot(root)) {
-      CardArtLib_Shutdown();
+    if (!DrawCardModded_DllMain((HINSTANCE)1, DLL_PROCESS_ATTACH, NULL)) {
+      CardArtModded_DllMain((HINSTANCE)1, DLL_PROCESS_DETACH, NULL);
       return 0;
     }
     g_card_libraries_initialized = 1;
@@ -328,8 +345,8 @@ void shandalar_runtime_shutdown(void)
     g_deckbuilder_attached = 0;
   }
   if (g_card_libraries_initialized) {
-    DrawCardLib_Shutdown();
-    CardArtLib_Shutdown();
+    DrawCardModded_DllMain((HINSTANCE)1, DLL_PROCESS_DETACH, NULL);
+    CardArtModded_DllMain((HINSTANCE)1, DLL_PROCESS_DETACH, NULL);
     g_card_libraries_initialized = 0;
   }
 }

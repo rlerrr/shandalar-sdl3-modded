@@ -4,7 +4,7 @@
 #include "../game_support.h"
 #include "../global_strings.h"
 
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 
 int aswan_jaguar_paired_monster(int raw_code);
 int aswan_jaguar_find_library_monster(int player, int start_slot);

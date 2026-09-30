@@ -38,7 +38,7 @@ extern HWND g_duel_tooltip_window;
 extern int g_showlist_smallcard_width;
 extern int g_showlist_smallcard_height;
 extern int global_available_slots;
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 extern CRITICAL_SECTION g_card_render_lock;
 void checked_DeleteDC_DeleteObject(HDC dc, HGDIOBJ obj);
 void set_duel_prompt_context(HWND hwnd, char *prompt, unsigned int mode);

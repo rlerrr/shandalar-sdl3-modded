@@ -375,7 +375,11 @@ LoadPicFile(int loadFlags, undefined4 unused_arg2, undefined4 unused_arg3, char 
 // FUNCTION: DECKDLL 0x1002d1a1
 // FUNCTION: MAGIC 0x004856b5
 // FUNCTION: SHANDALAR 0x004c8b20
+#ifdef SHANDALAR_MODDED_PIC_LOADER
+HBITMAP load_legacy_pic(char *filename)
+#else
 HBITMAP load_pic(char *filename)
+#endif
 {
   HBITMAP iVar1;
 
@@ -386,6 +390,17 @@ HBITMAP load_pic(char *filename)
   }
   return iVar1;
 }
+
+#ifdef SHANDALAR_MODDED_PIC_LOADER
+HANDLE LoadImage(const char *path, HPALETTE palette, int width, int height);
+
+HBITMAP load_pic(char *filename)
+{
+  /* Modded .pic files may contain BMP or PNG data.  LoadImage sniffs their
+     contents before falling back to the proprietary decoder. */
+  return (HBITMAP)LoadImage(filename, NULL, 0, 0);
+}
+#endif
 
 // MATCHING
 // FUNCTION: DRAWCARDLIB 0x1000b745
@@ -447,6 +462,9 @@ int RpBitsRefill(void)
 void RpBits_ApplyPalette(RpBitsPalettePacket *palette_data)
 {
 #if defined(FACEMAKER) || defined(SHANDALAR)
+  if ((palette_data->signature != 0x304d && palette_data->signature != 0x314d) ||
+      palette_data->block_size + 2u > sizeof(*palette_data))
+    return;
   int packet_size_bytes = (int)(short)(palette_data->block_size + 2);
   unsigned int first_index;
   unsigned int last_index;

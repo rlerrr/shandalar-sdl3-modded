@@ -3,6 +3,7 @@
 #include "magic/src/global_other.h"
 #include "magic/src/global_strings.h"
 #include "magic/src/network.h"
+#include "magic/src/carddata_generated.h"
 #include "deckdll/src/card_db.h"
 #include <string.h>
 
@@ -90,7 +91,7 @@ void shandalar_set_poison_counter(int player, unsigned char value)
 }
 
 char manalinkeh_legacy_effect_name[51];
-char* set_legacy_effect_name_addr = manalinkeh_legacy_effect_name;
+extern char* set_legacy_effect_name_addr;
 
 /* Legacy-only state with no direct SDL global owner yet. */
 int trace_mode;
@@ -170,18 +171,19 @@ char gs_prompt_grabmana_2[] = "%s X: %d (maximum %d)";
 char gs_prompt_grabmana_0[] = "%s";
 char global_all_purpose_buffer[1024];
 
-extern card_data_t global_cards_data[722];
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT];
+extern card_ptr_t global_raw_cards_storage[];
+extern int global_available_slots;
 
 card_data_t** shandalar_cards_at_7c7000(void)
 {
-  static card_data_t* pointers[722];
+  static card_data_t* pointers[SHANDALAR_CARD_DATA_COUNT];
   static int initialized;
   int index;
 
   if (!initialized)
   {
-    for (index = 0; index < 722; ++index)
+    for (index = 0; index < SHANDALAR_CARD_DATA_COUNT; ++index)
       pointers[index] = &global_cards_data[index];
     initialized = 1;
   }
@@ -190,13 +192,13 @@ card_data_t** shandalar_cards_at_7c7000(void)
 
 card_ptr_t** shandalar_cards_ptr(void)
 {
-  static card_ptr_t* pointers[2000];
+  static card_ptr_t* pointers[SHANDALAR_CARD_DATABASE_CAPACITY];
   static int initialized;
   int index;
 
   if (!initialized)
   {
-    for (index = 0; index < 2000; ++index)
+    for (index = 0; index < SHANDALAR_CARD_DATABASE_CAPACITY; ++index)
       pointers[index] = &global_raw_cards_storage[index];
     initialized = 1;
   }
@@ -561,7 +563,7 @@ const char* shandalar_legacy_title(int card_id)
 {
   const char* title;
 
-  if (card_id < 0 || card_id >= 2000)
+  if (card_id < 0 || card_id >= global_available_slots)
     return "";
   title = global_legacy_names[card_id].legacy_title;
   return title != NULL ? title : "";
@@ -571,7 +573,7 @@ const char* shandalar_effect_title(int card_id)
 {
   const char* title;
 
-  if (card_id < 0 || card_id >= 2000)
+  if (card_id < 0 || card_id >= global_available_slots)
     return "";
   title = global_legacy_names[card_id].effect_title;
   return title != NULL ? title : "";

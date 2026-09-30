@@ -2,6 +2,11 @@
 #include "magic/src/global_state.h"
 #include "drawcardlib/src/autoproto.h"
 
+int DrawCardModdedBack(HDC, const RECT*, unsigned int, int, int, int, int);
+int DrawCardModdedSmallCard(HDC, const RECT*, const card_ptr_t*, int, int, int, int);
+int DrawCardModdedSmallCardTitle(HDC, const RECT*, const char*, int, int,
+                                const card_ptr_t*, int, int);
+
 int draw_standard_counters(HDC dc, RECT* rect, int power, int m1m1,
                            int p1p1, int loyalty, int charge);
 int draw_masked_bitmap_left_half_to_rect(HDC dc, RECT* rect, HBITMAP bitmap);
@@ -63,19 +68,14 @@ int manalinkeh_hostabi_show_duel_card_preview(int internal_card_id, int player,
 
 int manalinkeh_hostabi_DrawCardBack(HDC dc, const RECT* rect, int mode)
 {
-  (void)mode;
-  DrawCardBack(dc, (RECT*)rect);
-  return 0;
+  return DrawCardModdedBack(dc, rect, mode, 0, 0, 0, 0);
 }
 
 int manalinkeh_hostabi_DrawSmallCard(HDC dc, const RECT* rect,
                                      const card_ptr_t* card, int version,
                                      int mode, int player, int card_index)
 {
-  (void)player;
-  (void)card_index;
-  DrawSmallCard(dc, (RECT*)rect, (card_ptr_t*)card, version, mode);
-  return 0;
+  return DrawCardModdedSmallCard(dc, rect, card, version, mode, player, card_index);
 }
 
 int manalinkeh_hostabi_DrawSmallCardTitle(HDC dc, const RECT* rect,
@@ -84,12 +84,8 @@ int manalinkeh_hostabi_DrawSmallCardTitle(HDC dc, const RECT* rect,
                                           const card_ptr_t* card, int player,
                                           int card_index)
 {
-  (void)card;
-  (void)player;
-  (void)card_index;
-  DrawSmallCardTitle(dc, (RECT*)rect, (char*)title, color,
-                     controlled_by_owner);
-  return 0;
+  return DrawCardModdedSmallCardTitle(dc, rect, title, color,
+                                     controlled_by_owner, card, player, card_index);
 }
 
 void manalinkeh_hostabi_draw_masked_bitmap_left_half_to_rect(HDC dc,

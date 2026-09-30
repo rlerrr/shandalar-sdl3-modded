@@ -685,11 +685,11 @@ static BOOL pump_shandalar_win32_ui(BOOL wait)
 int main(int argc, char **argv)
 {
   char cmd_line[1] = "";
-  const char *asset_root = argc > 1 ? argv[1] : "C:/Magic/Program";
+  const char *asset_root = argc > 1 ? argv[1] : SHANDALAR_NATIVE_ASSET_ROOT;
   const char *icon_path = SDL_getenv("SHANDALAR_WINDOW_ICON");
   int result;
 #ifdef __EMSCRIPTEN__
-  asset_root = argc > 1 ? argv[1] : "/assets";
+  asset_root = argc > 1 ? argv[1] : "/assets_modded";
 #endif
   SDL_SetHint(SDL_HINT_APP_ID, "shandalar");
   if (!SDL_Init(SDL_INIT_VIDEO))

@@ -32,9 +32,9 @@ typedef struct
   char *legacy_text;
 } name_table_entry_t;
 
-extern name_table_entry_t global_legacy_names[2000];
+extern name_table_entry_t global_legacy_names[];
 extern char *global_base_txt;
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 
 void FreeRaritiesCsvRaw(void);
 int read_db_guts(char *cards_dat_filename);

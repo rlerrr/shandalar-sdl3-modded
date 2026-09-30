@@ -80,7 +80,7 @@ void DrawQueuedWorldSprites(void);
 void DestroyCachedCardArt(void);
 
 /* Card rendering (drawcardlib) */
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 
 /* Other helpers referenced by clue detail screen */
 void BlitGraphicsRectScaledFrom320x240(FacemakerWindowBounds *dst, int dst_x, int dst_y, int width, int height,

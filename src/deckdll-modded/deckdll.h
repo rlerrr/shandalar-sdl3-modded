@@ -47,6 +47,8 @@ extern "C"
   BOOL WINAPI DllMain(HINSTANCE dll, DWORD reason, LPVOID reserved);
   WPARAM WINAPI DeckBuilderMain(HWND parent_hwnd, int db_flags_1, int db_flags_2);
   WPARAM deckbuilder_main(HWND parent_hwnd, int db_flags_1, int db_flags_2);
+  void deck_set_host_pump_hooks(void (*begin)(void), void (*end)(void));
+  void deck_set_debug_card_picker(int (*pick_card)(HWND), int (*card_sort_key)(int));
   void Deckdll_initialize_for_shandalar_sa(const card_ptr_t* i_raw_cards_ptr,
 					   int i_available_slots,
 					   char* i_card_coded,

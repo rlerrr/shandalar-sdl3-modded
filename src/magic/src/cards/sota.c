@@ -4,7 +4,7 @@
 #include "../global_duel_ui_ids.h"
 #include "../global_strings.h"
 
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 
 int coin_flip(int player, char *dialog_title, int show_dialog_if_animation_is_off);
 int move_ante_to_graveyard(int player, int ante_index);

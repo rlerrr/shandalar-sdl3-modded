@@ -1,6 +1,8 @@
 #ifndef __GLOBAL_DUEL_UI_IDS_H__
 #define __GLOBAL_DUEL_UI_IDS_H__
 
+#include "carddata_generated.h"
+
 // Single-header-library style
 #ifdef GLOBAL_DUEL_UI_IDS_IMPL
 #define GLOBAL_DUEL_UI_IDS_EXTERN
@@ -12,7 +14,7 @@
 #ifdef GLOBAL_DUEL_UI_IDS_IMPL
 // GLOBAL: MAGIC 0x0056e470
 // GLOBAL: SHANDALAR 0x005a0d18
-GLOBAL_DUEL_UI_IDS_EXTERN unsigned int g_card_data_bytes = 0xCB10;
+GLOBAL_DUEL_UI_IDS_EXTERN unsigned int g_card_data_bytes = SHANDALAR_CARD_DATA_COUNT * 0x48u;
 #else
 GLOBAL_DUEL_UI_IDS_EXTERN unsigned int g_card_data_bytes;
 #endif

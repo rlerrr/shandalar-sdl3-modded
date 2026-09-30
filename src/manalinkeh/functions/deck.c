@@ -366,8 +366,14 @@ static int get_internal_card_id_from_csv_id_impl(int csvid)
 	  memset(csvid_to_iid, -1, sizeof(int32_t) * max_csvid);
 
 	  int i;
-	  for (i = 0; i < max_csvid && cards_data[i].id != (uint16_t)(-1); ++i)
-		csvid_to_iid[cards_data[i].id] = i;
+	  for (i = 0; i < g_card_count + 16; ++i)
+		{
+		  int id = cards_data[i].id;
+		  if (id == -1 || id == 65535)
+			break;
+		  if (id >= 0 && id < max_csvid && csvid_to_iid[id] == -1)
+			csvid_to_iid[id] = i;
+		}
 	}
 
   if (csvid_to_iid[csvid] == -1)
@@ -377,7 +383,7 @@ static int get_internal_card_id_from_csv_id_impl(int csvid)
 	  ASSERT(end < max_csvid);
 	  int i;
 	  for (i = 0; i < end; ++i)
-		if (cards_data[i].id != csvid)
+		if (cards_data[i].id == csvid)
 		  {
 			csvid_to_iid[csvid] = i;
 			break;

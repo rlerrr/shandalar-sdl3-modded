@@ -1,6 +1,14 @@
 @echo off
 setlocal
 
+if "%SHANDALAR_MODDED_ASSET_DIR%"=="" (
+  if exist "%~dp0assets_modded\cards.dat" (
+    set "SHANDALAR_MODDED_ASSET_DIR=%~dp0assets_modded"
+  ) else (
+    set "SHANDALAR_MODDED_ASSET_DIR=C:/dev/shandalar"
+  )
+)
+
 call "C:\Program Files\Microsoft Visual Studio\18\Community\Common7\Tools\VsDevCmd.bat" -arch=x86 -host_arch=x64
 if errorlevel 1 exit /b %errorlevel%
 
@@ -43,6 +51,7 @@ cmake -S . -B "%BUILD_DIR%" -G Ninja ^
   -DCMAKE_MODULE_LINKER_FLAGS=/machine:x86 ^
   -DCMAKE_STATIC_LINKER_FLAGS=/machine:x86 ^
   -DSHANDALAR_ASSET_DIR="C:/Magic/Program" ^
+  -DSHANDALAR_MODDED_ASSET_DIR="%SHANDALAR_MODDED_ASSET_DIR%" ^
   -DSHANDALAR_BUILD_FACEMAKER=%BUILD_FACEMAKER% ^
   -DSHANDALAR_BUILD_SHANDALAR=%BUILD_SHANDALAR% ^
   -DSHANDALAR_BUILD_DECK=%BUILD_DECK% ^

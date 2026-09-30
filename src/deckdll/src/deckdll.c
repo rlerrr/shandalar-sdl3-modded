@@ -409,7 +409,7 @@ char text_lines[225][128];
 
 extern int global_available_slots;
 
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 
 // GLOBAL: DECKDLL 0x10145330
 OrigRarities global_origrarities[1000];

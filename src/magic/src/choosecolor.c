@@ -59,7 +59,7 @@ typedef struct magical_hack_dialog_context_struct
 } magical_hack_dialog_context_t;
 
 extern HINSTANCE g_app_instance;
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 
 HBITMAP load_pic(char *filename);
 void delete_and_close_object(HANDLE obj);

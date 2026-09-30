@@ -113,19 +113,25 @@ void LoadCardRaritiesAndCsvOffsets(void)
   FILE *entry_index;
   int scan_result;
 
-  for (location_block_start_index = 0; location_block_start_index < 0x4e2; location_block_start_index = location_block_start_index + 1)
+  for (location_block_start_index = 0; location_block_start_index < SHANDALAR_CARD_DATABASE_CAPACITY; location_block_start_index = location_block_start_index + 1)
   {
     g_master_csv_offsets[location_block_start_index] = -1;
   }
 
   entry_index = fopen("concise.csv", "rt");
-  inner_index = 0;
+  if (!entry_index)
+    return;
 
-  for (location_block_start_index = 0; location_block_start_index < g_card_count; location_block_start_index = location_block_start_index + 1)
+  /* Concise.csv describes the original campaign cards in its own order. Join
+   * by CSV ID; the imported engine table has a different order and size. */
+  while (fscanf(entry_index, "%d %d %ld\n", &icon_width_scaled, &icon_height_scaled, &selected_state_sprite) == 3)
   {
-    inner_index = global_cards_data[location_block_start_index].id;
-    scan_result = fscanf(entry_index, "%d %d %ld\n", &icon_width_scaled, &icon_height_scaled, &selected_state_sprite);
-    global_cards_data[location_block_start_index].rarity = (unsigned char)icon_height_scaled;
+    inner_index = icon_width_scaled;
+    if (inner_index < 0 || inner_index >= SHANDALAR_CARD_DATABASE_CAPACITY)
+      continue;
+    location_block_start_index = FindCardIndexByCsvid(inner_index);
+    if (location_block_start_index >= 0)
+      global_cards_data[location_block_start_index].rarity = (unsigned char)icon_height_scaled;
     g_master_csv_offsets[inner_index] = selected_state_sprite;
   }
 

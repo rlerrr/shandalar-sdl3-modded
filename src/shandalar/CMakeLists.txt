@@ -1,5 +1,26 @@
 include("${SHANDALAR_SRC_ROOT}/magic/duel_sources.cmake")
 
+# The adventure/duel still uses the original bitmap, font, database, and sound
+# helpers. Keep those utilities without pulling in the original deckbuilder
+# or card renderers.
+add_library(shandalar_ui_support STATIC
+  ../deckdll/src/buttonclass.c
+  ../deckdll/src/card_db.c
+  ../deckdll/src/drm.c
+  ../deckdll/src/magsnd_sdl_adapter.c
+  ../deckdll/src/shared_resources.c
+  ../drawcardlib/src/drawing.c
+)
+target_include_directories(shandalar_ui_support PUBLIC "${SHANDALAR_SRC_ROOT}")
+target_compile_definitions(shandalar_ui_support PRIVATE
+  MODERN_FIXES
+  create_fonts=deckdll_create_fonts
+  destroy_create_fonts_resources=deckdll_destroy_create_fonts_resources
+  is_card_available_in_installed_expansion=shandalar_support_card_available
+  card_coded=shandalar_support_card_coded
+)
+target_link_libraries(shandalar_ui_support PUBLIC drawcard_modded magsnd_static)
+
 set(shandalar_version_header
   "${CMAKE_CURRENT_BINARY_DIR}/generated/shandalar_build_version.h"
 )
@@ -39,6 +60,7 @@ add_executable(shandalar
   src/adventureListPicker.c
   src/iniFile.c
   src/magic_runtime.c
+  src/modded_card_rendering.c
   src/manalinkeh_host_abi.c
   src/manalinkeh_host_bridge.c
   src/shandalar_global_strings.c
@@ -72,6 +94,7 @@ target_compile_definitions(shandalar PRIVATE
   MODERN_FIXES
   SHANDALAR
   SHANDALAR_USE_MANALINKEH
+  SHANDALAR_NATIVE_ASSET_ROOT="${SHANDALAR_MODDED_ASSET_DIR}"
   LoadPcxIntoPageNoPalette=ShandalarLoadPcxIntoPageNoPalette
 )
 if(MSVC)
@@ -102,9 +125,10 @@ target_link_libraries(shandalar PRIVATE
   facemaker_legacy_ui
   deck_imgui_interaction
   legacy_win32_imgui_bridge
-  deck_legacy_ui
-  cardart_static
-  drawcard_shandalar
+  deckdll_modded
+  cardart_modded
+  drawcard_modded
+  shandalar_ui_support
   magsnd_static
   statwin_static
   SDL3::SDL3
@@ -129,7 +153,7 @@ if(EMSCRIPTEN)
     "-sFETCH=1"
     "-lidbfs.js"
   )
-  if(SHANDALAR_ASSET_DIR)
+  if(SHANDALAR_MODDED_ASSET_DIR)
     set(shandalar_opening_preload_assets
       advButtons.txt
       MENUBAK.PIC
@@ -176,12 +200,27 @@ if(EMSCRIPTEN)
       dbox.spr
       begin.spr
     )
-    download_assets(assets "${SHANDALAR_ASSET_DIR}" ${shandalar_opening_preload_assets})
+    include("${SHANDALAR_SRC_ROOT}/deck/DeckModdedStartupAssets.cmake")
+    list(APPEND shandalar_opening_preload_assets
+      ${deck_modded_startup_assets}
+      rarity.dat
+      Deckbuilder.csv
+      MENUS.TXT
+      menusx1.txt
+      CUECARDS.TXT
+      MP_UIStrings.txt
+    )
+    list(REMOVE_DUPLICATES shandalar_opening_preload_assets)
+    download_assets(assets_modded "${SHANDALAR_MODDED_ASSET_DIR}" ${shandalar_opening_preload_assets})
+    set(shandalar_preload_response "")
     foreach(shandalar_preload_entry IN LISTS shandalar_opening_preload_assets)
-      target_link_options(shandalar PRIVATE
-        "SHELL:--preload-file ${SHANDALAR_ASSET_DIR}/${shandalar_preload_entry}@/assets/${shandalar_preload_entry}"
+      string(APPEND shandalar_preload_response
+        "--preload-file\n\"${SHANDALAR_MODDED_ASSET_DIR}/${shandalar_preload_entry}@/assets_modded/${shandalar_preload_entry}\"\n"
       )
     endforeach()
+    set(shandalar_preload_response_file "${CMAKE_CURRENT_BINARY_DIR}/shandalar-preload.rsp")
+    file(GENERATE OUTPUT "${shandalar_preload_response_file}" CONTENT "${shandalar_preload_response}")
+    target_link_options(shandalar PRIVATE "@${shandalar_preload_response_file}")
   endif()
 endif()
 

@@ -77,7 +77,7 @@ COLORREF g_showlist_visible_row_count;
 int g_showlist_scroll_max;
 
 extern HPALETTE global_cart_art_hpalette;
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 extern CRITICAL_SECTION g_card_render_lock;
 extern HDC g_shared_offscreen_dc;
 extern HINSTANCE g_app_instance;

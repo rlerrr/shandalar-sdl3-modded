@@ -1,6 +1,9 @@
 #ifndef DEFS_H
 #define DEFS_H
 
+/* CSV IDs in the modded card database are signed 16-bit values. */
+#define SHANDALAR_CARD_DATABASE_CAPACITY 32768
+
 // Type declarations.  Should contain no function or extern data declarations.
 
 #include "inttypes.h"

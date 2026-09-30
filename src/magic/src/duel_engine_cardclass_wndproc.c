@@ -111,7 +111,7 @@ extern int g_duel_cached_active_cards_count_player_0;
 extern int g_duel_cached_active_cards_count_player_1;
 extern char global_base_directory[];
 extern int global_available_slots;
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 extern BITMAPINFO g_duel_backbuffer_bmi;
 extern int g_duel_modal_action_active;
 extern target_selection_request_t g_duel_action_request_copy;

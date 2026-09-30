@@ -3,7 +3,7 @@
 #include "../game_support.h"
 #include "../global_strings.h"
 
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 
 // FUNCTION: SHANDALAR 0x004882b5
 unsigned int get_urza_land_types_in_play(int player)

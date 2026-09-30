@@ -25,6 +25,7 @@ temp/
 .cache/
 .vs/
 out/
+/assets_modded/
 /build*/
 /AppDir/
 /tools-appimage/

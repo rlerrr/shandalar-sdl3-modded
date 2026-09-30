@@ -2345,7 +2345,7 @@ void replace_card_hack_color(int player, int card, int color_from, unsigned char
 // FUNCTION: SHANDALAR 0x004b50c0
 int card_magical_hack(int player, int card, event_t event)
 {
-  extern card_ptr_t global_raw_cards_storage[2000];
+  extern card_ptr_t global_raw_cards_storage[];
   struct
   {
     unsigned int available_colors;
@@ -2552,7 +2552,7 @@ void replace_card_sleight_color(int player, int card, int color_from, unsigned c
 // FUNCTION: SHANDALAR 0x004b5b0c
 int card_sleight_of_mind(int player, int card, event_t event)
 {
-  extern card_ptr_t global_raw_cards_storage[2000];
+  extern card_ptr_t global_raw_cards_storage[];
   struct
   {
     unsigned int selected_colors;

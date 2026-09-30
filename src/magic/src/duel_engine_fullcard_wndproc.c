@@ -24,7 +24,7 @@ static int g_full_card_press_timer_active;
 static int g_full_card_long_press_triggered;
 
 extern int global_available_slots;
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 extern char global_base_directory[];
 extern CRITICAL_SECTION g_card_render_lock;
 

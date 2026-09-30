@@ -2584,7 +2584,7 @@ int card_black_mana_battery(int player, int card, event_t event)
 // FUNCTION: SHANDALAR 0x005179e0
 int mana_battery(int player, int card, event_t event, color_t color)
 {
-  extern card_ptr_t global_raw_cards_storage[2000];
+  extern card_ptr_t global_raw_cards_storage[];
   struct
   {
     unsigned int counters_to_use;

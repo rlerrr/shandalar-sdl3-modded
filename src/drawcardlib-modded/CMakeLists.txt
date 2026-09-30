@@ -15,6 +15,11 @@ target_compile_definitions(drawcard_modded PRIVATE
   SHANDALAR_SDL_WIN32_COMPAT
   SHANDALAR_MODDED_LIBS
   DllMain=DrawCardModded_DllMain
+  draw_standard_counters=modded_draw_standard_counters
+  DrawCardBack=DrawCardModdedBack
+  DrawSmallCardTitle=DrawCardModdedSmallCardTitle
+  DrawSmallCard=DrawCardModdedSmallCard
+  DestroyAllCardBackgrounds=DrawCardModdedDestroyAllCardBackgrounds
 )
 target_link_libraries(drawcard_modded PUBLIC
   cardart_modded

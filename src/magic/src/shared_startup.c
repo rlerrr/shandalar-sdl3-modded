@@ -17,7 +17,7 @@
 #include "shared_startup.h"
 
 extern int global_available_slots;
-extern card_ptr_t global_raw_cards_storage[2000];
+extern card_ptr_t global_raw_cards_storage[];
 extern card_data_t global_cards_data[];
 extern BITMAPINFO g_duel_backbuffer_bmi;
 extern char *s_duel_options_registry_path_00588100;
@@ -283,6 +283,13 @@ int setup_paths_and_load_text_etc(char *message_buffer)
   strcpy(path, global_base_directory);
   strcat(path, "\\CARDS.DAT");
   global_available_slots = read_db_guts(path);
+#ifdef SHANDALAR_USE_MANALINKEH
+  if (global_available_slots > 0)
+  {
+    extern void shandalar_initialize_modded_card_database(void);
+    shandalar_initialize_modded_card_database();
+  }
+#endif
   if (global_available_slots == 0)
   {
     ok = 0;
@@ -402,8 +409,9 @@ int CopyRawCardNamesAndRarities(void)
       global_cards_data[card_type].rarity = 1;
     }
 
-    strncpy(global_cards_data[card_type].name, global_raw_cards_storage[card_index].full_name, 0x23);
-    global_cards_data[card_type].name[0x22] = '\0';
+    strncpy(global_cards_data[card_type].name, global_raw_cards_storage[card_index].full_name,
+            sizeof(global_cards_data[card_type].name) - 1);
+    global_cards_data[card_type].name[sizeof(global_cards_data[card_type].name) - 1] = '\0';
   }
 
   return 1;
@@ -969,6 +977,7 @@ int LoadRarityCsvCardData(const char *filename)
     if (file_buffer != NULL)
     {
       ReadFile(file, file_buffer, file_size, &bytes_read, NULL);
+      file_buffer[bytes_read] = '\0';
       cursor = file_buffer;
       cursor = strchr(cursor, '\n') + 1;
       cursor = strchr(cursor, '\n') + 1;
@@ -1027,7 +1036,8 @@ int LoadRarityCsvCardData(const char *filename)
           cursor = strchr(cursor, '\n') + 1;
       }
 
-      for (field_index = 0; field_index < global_available_slots; ++field_index)
+      for (field_index = 0; field_index < global_available_slots &&
+           cursor < file_buffer + bytes_read && *cursor && strchr(cursor, '\n'); ++field_index)
       {
         raw_card = &global_raw_cards_storage[field_index];
 

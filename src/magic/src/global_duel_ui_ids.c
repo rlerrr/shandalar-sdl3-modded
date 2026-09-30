@@ -9,7 +9,7 @@ void InitializeDuelUiGlobalIds(void)
 {
   g_card_count = g_card_data_bytes / 0x48;
   g_card_count -= 0x10;
-  g_damage_card_internal_card_id = g_card_count - 0x2d;
+  g_damage_card_internal_card_id = SHANDALAR_DAMAGE_CARD_IID;
 
   LEGACY_EFFECT_PUMP = g_damage_card_internal_card_id + 1;
   g_duel_generated_internal_card_id_02 = g_damage_card_internal_card_id + 2;
@@ -54,7 +54,7 @@ void InitializeDuelUiGlobalIds(void)
   g_duel_generated_internal_card_id_29 = g_damage_card_internal_card_id + 0x29;
   g_duel_generated_internal_card_id_2a = g_damage_card_internal_card_id + 0x2a;
   g_control_aura_legacy_internal_card_id = g_damage_card_internal_card_id + 0x2b;
-  g_duel_generated_internal_card_id_2c = g_damage_card_internal_card_id + 0x2c;
+  g_duel_generated_internal_card_id_2c = SHANDALAR_TRANSMUTE_CARD_IID;
 
   g_damage_display_internal_card_id = 0x385;
   g_legacy_display_internal_card_id = 0x386;

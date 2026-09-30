@@ -70,6 +70,9 @@ static void load_names(void)
 {
 	// Precondition: idToName == NULL
 
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+	loadDat("Cards.dat");
+#else
 	HMODULE parent = GetModuleHandle(0);
 
 	if (GetProcAddress(parent, "szDeckName")) { //manalink
@@ -80,6 +83,7 @@ static void load_names(void)
 	} else { // shandalar
 		loadDat("Cards.dat");
 	}
+#endif
 }
 
 static std::string idToNameFun(int id, int version) {
@@ -106,6 +110,11 @@ static void count_images(void)
 
 	card_ptr_t* card_ptrs = NULL;
 
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+	card_ptrs = cards_ptr_shandalar_dll;
+	if (!card_ptrs)
+		return;
+#else
 	HMODULE parent = GetModuleHandle(0);
 
 	if (GetProcAddress(parent, "szDeckName")) { //manalink
@@ -118,6 +127,7 @@ static void count_images(void)
 			return;
 		card_ptrs = cards_ptr_shandalar_dll;
 	}
+#endif
 
 	if (idToName == NULL)
 		load_names();
@@ -131,7 +141,8 @@ static void count_images(void)
 		card_ptrs[i].num_pics = 1;	// Always assume at least one image; it would have been corrected to 1 if initially set to 0 anyway
 	}
 
-	for (fs::directory_iterator dirit(fs::path("./CardArtManalink")), end; dirit != end; ++dirit){
+	std::error_code art_directory_error;
+	for (fs::directory_iterator dirit(fs::path("./CardArtManalink"), art_directory_error), end; dirit != end; ++dirit){
 		try {
 			if (!is_regular_file(dirit->status()))
 				continue;
