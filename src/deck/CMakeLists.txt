@@ -110,6 +110,8 @@
 
       set(deck_modded_preload_response "")
       foreach(deck_preload_asset IN LISTS deck_preload_assets)
+        set_property(TARGET deck-modded APPEND PROPERTY LINK_DEPENDS
+          "${SHANDALAR_MODDED_ASSET_DIR}/${deck_preload_asset}")
         string(APPEND deck_modded_preload_response
           "--preload-file\n\"${SHANDALAR_MODDED_ASSET_DIR}/${deck_preload_asset}@/assets_modded/${deck_preload_asset}\"\n"
         )
@@ -120,6 +122,7 @@
       file(GENERATE OUTPUT "${deck_modded_preload_response_file}"
         CONTENT "${deck_modded_preload_response}"
       )
+      set_property(TARGET deck-modded APPEND PROPERTY LINK_DEPENDS "${deck_modded_preload_response_file}")
       target_link_options(deck-modded PRIVATE
         "@${deck_modded_preload_response_file}"
       )

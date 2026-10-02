@@ -4,12 +4,17 @@ A port of the 1997 video game [Magic: the Gathering](https://en.wikipedia.org/wi
 This repository does **not** contain any game assets. An existing copy of the game is required.
 
 On this branch, Shandalar uses the modded deckdll, cardartlib, and drawcardlib.
-Builds prefer the repo's local `assets_modded` folder, falling back to
+Builds prefer the sibling `../assets_modded` folder (`C:/dev/assets_modded`), falling back to
 `C:/dev/shandalar` when it is absent. The browser mounts that data at
 `/assets_modded`, matching deck-modded. `SHANDALAR_MODDED_ASSET_DIR` selects
 the native default and the data packaged by the browser build; a command-line
-asset root overrides the native runtime default. Local game assets are ignored
-by Git.
+asset root overrides the native runtime default. Keep game assets outside the
+repository.
+
+The Shandalar browser bundle includes deck-modded's startup renderer frames,
+opening-menu resources, duel icons, fonts, and database/prompt tables.
+Adventure artwork, music, portraits, resolution-specific sprites, and individual
+images in `CardArtManalink` load on demand through the existing asset fetcher.
 
 The engine card table is generated from the 2020 `ct_all.csv` and `Manalink.csv`;
 see [the importer instructions](tools/README.md). Use the matching `Cards.dat`

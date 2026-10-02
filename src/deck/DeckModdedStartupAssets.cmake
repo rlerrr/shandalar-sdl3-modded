@@ -293,6 +293,7 @@ set(deck_modded_startup_assets
   cardart/token/cardov_r.png
   cardart/token/cardov_w.png
   cardart/scheme/cardbk_colorless.png
+  cardart/scheme/cardbk_special.png
   cardart/scheme/cardov_colorless.png
   cardart/plane/cardbk_colorless.png
   cardart/plane/cardov_colorless.png

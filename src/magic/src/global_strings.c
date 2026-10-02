@@ -9,11 +9,15 @@
 int load_text(const char *file_name, const char *section_name)
 {
   FILE *f;
-  char line[300];
+  char line[300] = "";
   char path[128];
   char section_line[300]; // ebp - 0x134
   unsigned int num_text;
   int i;
+
+  /* Manalink callers pass NULL to select the host's default UI strings. */
+  if (file_name == NULL)
+    file_name = global_ui_strings_filename;
 
   strcpy(section_line, "@");
   strcat(section_line, section_name);

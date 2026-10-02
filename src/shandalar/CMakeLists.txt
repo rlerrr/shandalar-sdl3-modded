@@ -209,19 +209,63 @@ if(EMSCRIPTEN)
       menusx1.txt
       CUECARDS.TXT
       MP_UIStrings.txt
+      Legacy.csv
+      Rarity.csv
+      prompts.txt
+      Text.res
+      cardart/damage.pic
+      cardart/cardcounters.pic
+      cardart/abilities.pic
+      cardart/manastripes.pic
+      cardart/summon.pic
+      cardart/dying.pic
+      cardart/target.pic
+      cardart/canttarget.pic
+      cardart/willuntap.pic
+      DuelSounds/DRAW.WAV
+      DuelSounds/DISCARD.WAV
+      DuelSounds/BUTTON.WAV
+      DuelSounds/CANCEL.WAV
     )
-    list(REMOVE_DUPLICATES shandalar_opening_preload_assets)
+    # Keep every eagerly loaded renderer frame in the shared deck manifest.
+    # Adventure art, music, portraits, and resolution-specific sprites use
+    # legacy_io's on-demand fetching rather than enlarging the startup bundle.
+    # Windows source paths are case-insensitive; the browser VFS isn't. Avoid
+    # packaging the same file twice under different directory/file spellings.
+    set(shandalar_unique_preload_assets "")
+    set(shandalar_preload_keys "")
+    foreach(shandalar_asset IN LISTS shandalar_opening_preload_assets)
+      string(TOLOWER "${shandalar_asset}" shandalar_asset_key)
+      if(NOT shandalar_asset_key MATCHES "(^|/)(thumbs\\.db|desktop\\.ini)$|\\.(exe|dll|pdb|bat|cmd)$"
+          AND NOT shandalar_asset_key IN_LIST shandalar_preload_keys)
+        list(APPEND shandalar_preload_keys "${shandalar_asset_key}")
+        list(APPEND shandalar_unique_preload_assets "${shandalar_asset}")
+      endif()
+    endforeach()
+    set(shandalar_opening_preload_assets ${shandalar_unique_preload_assets})
     download_assets(assets_modded "${SHANDALAR_MODDED_ASSET_DIR}" ${shandalar_opening_preload_assets})
     set(shandalar_preload_response "")
     foreach(shandalar_preload_entry IN LISTS shandalar_opening_preload_assets)
+      set_property(TARGET shandalar APPEND PROPERTY LINK_DEPENDS
+        "${SHANDALAR_MODDED_ASSET_DIR}/${shandalar_preload_entry}")
       string(APPEND shandalar_preload_response
         "--preload-file\n\"${SHANDALAR_MODDED_ASSET_DIR}/${shandalar_preload_entry}@/assets_modded/${shandalar_preload_entry}\"\n"
       )
     endforeach()
     set(shandalar_preload_response_file "${CMAKE_CURRENT_BINARY_DIR}/shandalar-preload.rsp")
     file(GENERATE OUTPUT "${shandalar_preload_response_file}" CONTENT "${shandalar_preload_response}")
+    set_property(TARGET shandalar APPEND PROPERTY LINK_DEPENDS "${shandalar_preload_response_file}")
     target_link_options(shandalar PRIVATE "@${shandalar_preload_response_file}")
   endif()
 endif()
 
 install(TARGETS shandalar RUNTIME DESTINATION .)
+
+if(SHANDALAR_BUILD_TESTS AND WIN32)
+  add_executable(global_strings_test
+    ../magic/tests/global_strings_test.c
+    ../magic/src/global_strings.c
+  )
+  target_link_libraries(global_strings_test PRIVATE shandalar_platform)
+  add_test(NAME global_strings_test COMMAND global_strings_test)
+endif()

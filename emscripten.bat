@@ -8,8 +8,8 @@ if "%EMSDK%"=="" (
 
 if "%SHANDALAR_ASSET_DIR%"=="" set "SHANDALAR_ASSET_DIR=C:/Magic/Program"
 if "%SHANDALAR_MODDED_ASSET_DIR%"=="" (
-  if exist "%~dp0assets_modded\cards.dat" (
-    set "SHANDALAR_MODDED_ASSET_DIR=%~dp0assets_modded"
+  if exist "%~dp0..\assets_modded\cards.dat" (
+    set "SHANDALAR_MODDED_ASSET_DIR=%~dp0..\assets_modded"
   ) else (
     set "SHANDALAR_MODDED_ASSET_DIR=C:/dev/shandalar"
   )

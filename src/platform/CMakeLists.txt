@@ -61,6 +61,13 @@ if(SHANDALAR_BUILD_DECK OR SHANDALAR_BUILD_SHANDALAR)
 endif()
 
 if(SHANDALAR_BUILD_TESTS)
+  if(EMSCRIPTEN)
+    add_executable(legacy_io_path_test tests/legacy_io_path_test.c legacy_io.c)
+    target_include_directories(legacy_io_path_test PRIVATE "${SHANDALAR_SRC_ROOT}")
+    target_link_options(legacy_io_path_test PRIVATE "-sASYNCIFY=1" "-sFORCE_FILESYSTEM=1")
+    add_test(NAME legacy_io_path_test COMMAND node "$<TARGET_FILE:legacy_io_path_test>")
+  endif()
+
   add_executable(gdi_compat_test tests/gdi_compat_test.c)
   target_link_libraries(gdi_compat_test PRIVATE shandalar_platform)
   add_test(NAME gdi_compat_test COMMAND gdi_compat_test)
