@@ -536,7 +536,7 @@ int card_poison_snake(int player, int card, event_t event)
     }
     if (event == EVENT_RESOLVE_TRIGGER)
     {
-      ++g_poison_counters[PLAYER_CARD_INSTANCE(player, card).damage_source_player];
+      ++player_counters[PLAYER_CARD_INSTANCE(player, card).damage_source_player].poison_;
       PLAYER_CARD_INSTANCE(player, card).damage_source_player = -1;
       check_duel_finished();
     }

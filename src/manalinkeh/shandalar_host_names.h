@@ -37,7 +37,7 @@ extern int g_current_phase;
 extern int g_current_turn;
 extern int g_damage_card_internal_card_id;
 extern int g_stack_proxy_internal_card_id;
-extern char g_text_lines[249][300];
+extern char g_text_lines[300][300];
 extern int g_event_player;
 extern int g_activation_event_flags;
 extern int g_ai_modifier;

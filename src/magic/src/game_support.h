@@ -9,6 +9,19 @@
 extern card_data_t global_cards_data[];
 extern const unsigned char wizard_card_color_preference_table[18];
 
+/* Calls injected inside MOK engine functions, in addition to its JMP stubs. */
+int manalinkeh_untap_phase(int player);
+void manalinkeh_untap_card(int player, int card);
+void manalinkeh_create_card_instance(int player, unsigned int internal_card_id, int card);
+int manalinkeh_get_attack_power(int player, int card);
+void manalinkeh_initialize_ability_tooltip_names(void);
+int manalinkeh_set_smallcard_size(int mainwindow_width);
+void manalinkeh_legacy_name(char *title, int player, int card);
+void manalinkeh_effect_card_text_replace_pipe_n(char *text, int power, int toughness);
+void manalinkeh_after_load_game(void);
+void manalinkeh_paint_player_counters(HDC dc, int width, int height, int packed_counters);
+LRESULT CALLBACK manalinkeh_wndproc_LifeClass_hook(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam);
+
 typedef struct
 {
   int player;
@@ -77,11 +90,7 @@ int destroy_other_auras_on_same_permanent(int player, int card, int internal_car
 int divide_creatures_into_two_piles(int who_is_being_divided, int player, int card);
 int sacrifice_permanents_for_lich_damage(int player, int amount, int unused_player);
 int can_attack(int player, int card);
-#ifdef SHANDALAR_USE_MANALINKEH
 void push_card_onto_stack(int player, int card, int event, int extra, int prompt);
-#else
-int push_card_onto_stack(int player, int card, int event, int extra, int prompt);
-#endif
 void redirect_pending_damage_to_player(int target_player, int target_card, int damage_target_player, int unk_unused);
 int has_vigilance(int player, int card);
 char *get_hunting_subtype_name(int value);
@@ -130,11 +139,7 @@ int is_basic_land_internal_card_id_of_color(int internal_card_id, color_t color)
 int card_has_basic_land_type(int player, int card, int land_color);
 int ante_drawn_card(int player);
 void remove_card_from_graveyard(int player, int graveyard_index);
-#ifdef SHANDALAR_USE_MANALINKEH
 int clear_card_attachments(int player, int card);
-#else
-void clear_card_attachments(int player, int card);
-#endif
 void exit_duel_thread(int player);
 int show_deck(int player, int *cards, int count, char *title, int require_selection, char *prompt);
 int discard_card_from_hand(int player, int card);
@@ -429,7 +434,7 @@ int get_recorded_action_count(void);
 unsigned int get_card_color_after_hacks(int player, int card);
 int card_matches_excluded_land_type(int player, int card, int excluded_internal_card_id);
 int process_killed_card(int player, int card);
-void move_card_to_exile(int player, int internal_card_id);
+void move_card_to_exile(int owner, int card, int controller);
 void initialize_card_instance(int player, int internal_card_id, int card);
 void send_library_contents(int deck_owner);
 void receive_library_contents(int deck_owner);
@@ -440,26 +445,14 @@ void get_landwalk_evasion_masks(unsigned int *out_landwalk_mask, unsigned int *o
 int card_activation_uses_x(int player, int card);
 void resolve_mana_burn(void);
 int can_activate_mana_source_for_stop_prompt(int player, int card);
-#ifdef SHANDALAR_USE_MANALINKEH
 void activate_mana_source_card(int player, int card);
-#else
-int activate_mana_source_card(int player, int card);
-#endif
 int put_card_on_stack(int player, int card, int mode);
 int resolve_card_on_stack(int player, int card);
 int activate(int who_activates, int player, int card);
 int resolve_activated_ability(int player, int card);
-#ifdef SHANDALAR_USE_MANALINKEH
 void resolve_card_immediately(int player, int card, int arg_3);
-#else
-int resolve_card_immediately(int player, int card, int arg_3);
-#endif
 int count_colored_cards_in_hand(int player);
-#ifdef SHANDALAR_USE_MANALINKEH
 void refresh_stack_proxy_card(int prompt_flag);
-#else
-int refresh_stack_proxy_card(int prompt_flag);
-#endif
 int set_stack_damage_targets(void);
 void reset_trigger_dispatch_state(void);
 int allow_response(int response_player, int phase, char *prompt, int event_code);

@@ -1018,7 +1018,7 @@ void RunLairExplorationEvent(int color)
     {
       card_or_deck_index = internal_rand(500);
     } while (deck[card_or_deck_index] == -1);
-  } while ((GetCardRarity(deck[card_or_deck_index] & 0xfff) <= 1) ||
+  } while ((GetCardRarity(deck[card_or_deck_index] & ADVENTURE_DECK_CARD_ID_MASK) <= 1) ||
            (GetCardAvailabilityMask(card_or_deck_index) == 0));
 
   reward_card = reward_cards[3];
@@ -1229,7 +1229,7 @@ retry:
       break;
     case 0x11:
       sprintf(g_ui_message_buffer, gs_lair_0077e180[0xf],
-              global_cards_data[deck[card_or_deck_index] & 0xfffU].name);
+              global_cards_data[deck[card_or_deck_index] & ADVENTURE_DECK_CARD_ID_MASK].name);
       strcat(g_ui_message_buffer, gs_lair_0077e180[0x10]);
       if (RunTextMenuAt(g_ui_message_buffer, 100, 100) == 1)
       {
@@ -1596,8 +1596,8 @@ int RunWorldLairMonsterEncounter(int slot_index, int monster_color)
         deck_or_card_index = internal_rand(500);
       } while (deck[deck_or_card_index] == -1);
     } while (((deck[deck_or_card_index] & 0x4000) != 0) ||
-             (((int)deck[deck_or_card_index] & 0xfff) <= 4));
-    global_ante_cards[0][loop_index] = deck[deck_or_card_index] & 0xfff;
+             (((int)deck[deck_or_card_index] & ADVENTURE_DECK_CARD_ID_MASK) <= 4));
+    global_ante_cards[0][loop_index] = deck[deck_or_card_index] & ADVENTURE_DECK_CARD_ID_MASK;
   }
   font_slot = 2;
   preduel_background_paths[0] = "prdblk.pic";
@@ -2029,8 +2029,8 @@ int RunWorldLairMonsterEncounter(int slot_index, int monster_color)
           deck_or_card_index = internal_rand(500);
         } while (deck[deck_or_card_index] == -1);
       } while (((deck[deck_or_card_index] & 0x4000) != 0) ||
-               (((int)deck[deck_or_card_index] & 0xfff) <= 4));
-      global_ante_cards[0][0] = deck[deck_or_card_index] & 0xfff;
+               (((int)deck[deck_or_card_index] & ADVENTURE_DECK_CARD_ID_MASK) <= 4));
+      global_ante_cards[0][0] = deck[deck_or_card_index] & ADVENTURE_DECK_CARD_ID_MASK;
       world_magic_ante_used = 1;
       victory_count = 0;
       goto LAB_004f3a77;
@@ -2605,7 +2605,7 @@ LAB_4F4BB2:
           temp_deck[slot_index] = deck[slot_index];
           if (temp_deck[slot_index] != 0xffffffff)
           {
-            temp_deck[slot_index] = temp_deck[slot_index] & 0xfff;
+            temp_deck[slot_index] = temp_deck[slot_index] & ADVENTURE_DECK_CARD_ID_MASK;
           }
         }
         selected_card_id = show_deck(g_active_player, (int *)temp_deck, 500,

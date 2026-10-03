@@ -194,7 +194,6 @@ int raw_do_dialog(int bigcard_player,
 char *get_displayed_card_name(int player, int card)
 {
   card_id_t transformed_card_id;
-  char temporary_name[52];
   int source_card_data;
   int source_player;
   unsigned int choice;
@@ -255,8 +254,8 @@ char *get_displayed_card_name(int player, int card)
 
     if (csvid == g_effect_display_internal_card_id && 0 < (int)PLAYER_CARD_INSTANCE(player, card).eot_toughness)
     {
-      strcpy(temporary_name, g_dialog_card_title_buffer);
-      extract_numbered_text_choice(g_dialog_card_title_buffer, temporary_name, PLAYER_CARD_INSTANCE(player, card).eot_toughness);
+      /* MOK 0x4397fd also supports callback-generated legacy names. */
+      manalinkeh_legacy_name(g_dialog_card_title_buffer, player, card);
     }
 
     transformed_card_id = get_card_id(source_player, source_card_data);
@@ -836,6 +835,7 @@ int raw_do_dialog(int bigcard_player,
 // FUNCTION: SHANDALAR 0x004509c9
 unsigned int refresh_duel_display_cache(void)
 {
+  int packed_counters[2];
   int stack_card;
   int stack_player;
   int target_index;
@@ -859,13 +859,14 @@ unsigned int refresh_duel_display_cache(void)
   }
   g_duel_cached_life_player_0 = g_life[0];
   g_duel_cached_life_player_1 = g_life[1];
-  if (g_poison_counters[0] != g_duel_cached_state_007abce0 ||
-      g_duel_cached_state_007abce4 != g_poison_counters[1])
+  memcpy(packed_counters, player_counters, sizeof(packed_counters));
+  if (packed_counters[0] != g_duel_cached_state_007abce0 ||
+      g_duel_cached_state_007abce4 != packed_counters[1])
   {
     needs_refresh = 1;
   }
-  g_duel_cached_state_007abce0 = g_poison_counters[0];
-  g_duel_cached_state_007abce4 = g_poison_counters[1];
+  g_duel_cached_state_007abce0 = packed_counters[0];
+  g_duel_cached_state_007abce4 = packed_counters[1];
   if (g_lich_active[0] != g_duel_cached_unk_008b44d0_player_0 ||
       g_lich_active[1] != g_duel_cached_unk_008b44d0_player_1)
   {
@@ -1169,14 +1170,12 @@ void draw_displayed_card_overlaid_full_card(HDC dc, RECT *rect, int player, int 
 void draw_special_effect_full_card(HDC dc, RECT *rect, card_id_t card_id, int player, int card)
 {
   unsigned int final_display_flags;
-  char transformed_rules_text[400];
   int appended_text;
   int displayed_power;
   char value_text[100];
   int displayed_toughness;
   unsigned int display_flags;
   card_id_t transformed_card_id;
-  char temporary_name[52];
   int single_color;
   unsigned int display_info;
   int displayed_player_and_card[2];
@@ -1229,8 +1228,8 @@ void draw_special_effect_full_card(HDC dc, RECT *rect, card_id_t card_id, int pl
 
   if (card_id == g_effect_display_internal_card_id && get_displayed_card_eot_toughness(player, card) > 0)
   {
-    strcpy(temporary_name, g_card_title_buffer_00709100);
-    extract_numbered_text_choice(g_card_title_buffer_00709100, temporary_name, get_displayed_card_eot_toughness(player, card));
+    /* MOK 0x4d1da7 uses the same name hook for the full-card display. */
+    manalinkeh_legacy_name(g_card_title_buffer_00709100, player, card);
   }
 
   transformed_card_id = get_displayed_card_id(displayed_player_and_card[0], displayed_player_and_card[1]);
@@ -1309,18 +1308,8 @@ void draw_special_effect_full_card(HDC dc, RECT *rect, card_id_t card_id, int pl
   replace_text_token(g_card_rules_text_buffer_00708da8, "|S", 1, "");
 
   get_displayed_card_counter_power_toughness(player, card, &displayed_power, &displayed_toughness);
-  sprintf(value_text, "+%d/+%d", displayed_power, displayed_toughness);
-  replace_text_token(g_card_rules_text_buffer_00708da8, "+|n/+|n", 0, value_text);
-  sprintf(value_text, "+0/+%d", displayed_toughness);
-  replace_text_token(g_card_rules_text_buffer_00708da8, "+0/+|n", 0, value_text);
-  sprintf(value_text, "+%d/+0", displayed_power);
-  replace_text_token(g_card_rules_text_buffer_00708da8, "+|n/+0", 0, value_text);
-  sprintf(value_text, "%d/-0", displayed_power);
-  replace_text_token(g_card_rules_text_buffer_00708da8, "-|n/-0", 0, value_text);
-  sprintf(value_text, "+%d/%d", displayed_power, displayed_toughness);
-  replace_text_token(g_card_rules_text_buffer_00708da8, "+|n/-|n", 0, value_text);
-  sprintf(value_text, "%d", displayed_toughness);
-  replace_text_token(g_card_rules_text_buffer_00708da8, "|n", 0, value_text);
+  /* MOK 0x4d216e replaces repeated tokens and handles negative modifiers. */
+  manalinkeh_effect_card_text_replace_pipe_n(g_card_rules_text_buffer_00708da8, displayed_power, displayed_toughness);
 
   if (card_data.id == 0x21b)
   {
@@ -1371,8 +1360,8 @@ void draw_special_effect_full_card(HDC dc, RECT *rect, card_id_t card_id, int pl
 
   if (card_id == g_effect_display_internal_card_id && get_displayed_card_eot_toughness(player, card) > 0)
   {
-    strcpy(transformed_rules_text, g_card_rules_text_buffer_00708da8);
-    extract_numbered_text_choice(g_card_rules_text_buffer_00708da8, transformed_rules_text, get_displayed_card_eot_toughness(player, card));
+    /* MOK 0x4d24a4 supports callback-generated legacy rules text. */
+    manalinkeh_legacy_name(g_card_rules_text_buffer_00708da8, player, card);
   }
 
   if (card_id == g_damage_display_internal_card_id)

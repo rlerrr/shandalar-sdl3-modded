@@ -171,39 +171,14 @@ int CardIDFromType(unsigned int type)
   }
   else
   {
-    type &= 0xfff;
+    type &= ADVENTURE_DECK_CARD_ID_MASK;
     return global_cards_data[type].id;
   }
 }
 
 // FUNCTION: MAGIC 0x004a5929
 // FUNCTION: SHANDALAR 0x00557aa9
-#ifdef SHANDALAR_USE_MANALINKEH
 int CardTypeFromID(int csvid);
-#else
-int CardTypeFromID(int csvid)
-{
-  int result;
-  int internal_card_id;
-
-  if (csvid == -1)
-  {
-    return -1;
-  }
-  else
-  {
-    result = -1;
-    for (internal_card_id = 0; global_cards_data[internal_card_id].id != -1 && result == -1; ++internal_card_id)
-    {
-      if (global_cards_data[internal_card_id].id == csvid)
-      {
-        result = internal_card_id;
-      }
-    }
-    return result;
-  }
-}
-#endif /* !SHANDALAR_USE_MANALINKEH: CardTypeFromID */
 
 // FUNCTION: MAGIC 0x004a59ea
 // FUNCTION: SHANDALAR 0x00557b6a
@@ -283,13 +258,11 @@ int setup_paths_and_load_text_etc(char *message_buffer)
   strcpy(path, global_base_directory);
   strcat(path, "\\CARDS.DAT");
   global_available_slots = read_db_guts(path);
-#ifdef SHANDALAR_USE_MANALINKEH
   if (global_available_slots > 0)
   {
     extern void shandalar_initialize_modded_card_database(void);
     shandalar_initialize_modded_card_database();
   }
-#endif
   if (global_available_slots == 0)
   {
     ok = 0;

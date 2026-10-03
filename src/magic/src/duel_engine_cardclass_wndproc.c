@@ -1954,73 +1954,7 @@ void draw_dying_overlay(HDC dc, RECT *rect)
 
 // FUNCTION: MAGIC 0x0055d54e
 // FUNCTION: SHANDALAR 0x00573868
-#ifdef SHANDALAR_USE_MANALINKEH
 int get_card_special_counter_icon(card_id_t card_id);
-#else
-int get_card_special_counter_icon(card_id_t card_id)
-{
-  int result;
-
-  if (card_id == CARD_ID_ARMAGEDDON_CLOCK)
-    result = 0;
-  else if (card_id == CARD_ID_BLACK_MANA_BATTERY)
-    result = 1;
-  else if (card_id == CARD_ID_BLUE_MANA_BATTERY)
-    result = 2;
-  else if (card_id == CARD_ID_GREEN_MANA_BATTERY)
-    result = 3;
-  else if (card_id == CARD_ID_RED_MANA_BATTERY)
-    result = 4;
-  else if (card_id == CARD_ID_WHITE_MANA_BATTERY)
-    result = 5;
-  else if (card_id == CARD_ID_CLOCKWORK_AVIAN)
-    result = 6;
-  else if (card_id == CARD_ID_CLOCKWORK_BEAST)
-    result = 6;
-  else if (card_id == CARD_ID_THRONE_OF_BONE)
-    result = 7;
-  else if (card_id == CARD_ID_CRYSTAL_ROD)
-    result = 8;
-  else if (card_id == CARD_ID_WOODEN_SPHERE)
-    result = 9;
-  else if (card_id == CARD_ID_IRON_STAR)
-    result = 10;
-  else if (card_id == CARD_ID_IVORY_CUP)
-    result = 11;
-  else if (card_id == CARD_ID_FUNGUSAUR)
-    result = 12;
-  else if (card_id == CARD_ID_WHIRLING_DERVISH)
-    result = 12;
-  else if (card_id == CARD_ID_LIVING_ARTIFACT)
-    result = 13;
-  else if (card_id == CARD_ID_OSAI_VULTURES)
-    result = 14;
-  else if (card_id == CARD_ID_SCAVENGING_GHOUL)
-    result = 15;
-  else if (card_id == CARD_ID_SENGIR_VAMPIRE)
-    result = 16;
-  else if (card_id == CARD_ID_NECROPOLIS_OF_AZAR)
-    result = 17;
-  else if (card_id == CARD_ID_TRISKELION)
-    result = 18;
-  else if (card_id == CARD_ID_TETRAVUS)
-    result = 19;
-  else if (card_id == CARD_ID_TIME_VAULT)
-    result = 6;
-  else if (card_id == CARD_ID_CYCLONE)
-    result = 23;
-  else if (card_id == CARD_ID_CITANUL_DRUID)
-    result = 12;
-  else if (card_id == CARD_ID_ROCK_HYDRA)
-    result = 20;
-  else if (card_id == CARD_ID_KHABAL_GHOUL)
-    result = 16;
-  else
-    result = -1;
-
-  return result;
-}
-#endif /* !SHANDALAR_USE_MANALINKEH: get_card_special_counter_icon */
 
 // FUNCTION: MAGIC 0x0055a986
 // FUNCTION: SHANDALAR 0x00570cbe
@@ -2153,7 +2087,7 @@ void draw_special_effect_small_card(HDC dc, RECT *rect, card_id_t card_id, unsig
 
   DrawSmallCard(dc, rect, &card_data, display_version, 1);
   draw_manastripes(dc, rect, player, card);
-  DrawSmallCardTitle(dc, rect, card_data.full_name, get_displayed_card_title_flags(player, card),
+  DrawSmallCardTitleForCard(dc, rect, &card_data, card_data.full_name, get_displayed_card_title_flags(player, card),
                      is_displayed_card_owned_by_opponent(player, card) == player);
   if (card_id == g_damage_display_internal_card_id)
   {
@@ -2240,7 +2174,7 @@ void draw_activation_small_card(HDC dc, RECT *rect, card_id_t card_id, int playe
 
     DrawSmallCard(dc, rect, &card_data, display_version, 1);
     draw_manastripes(dc, rect, attached_player, attached_card);
-    DrawSmallCardTitle(dc, rect, card_data.name, get_displayed_card_title_flags(player, card),
+    DrawSmallCardTitleForCard(dc, rect, &card_data, card_data.name, get_displayed_card_title_flags(player, card),
                        is_displayed_card_owned_by_opponent(player, card) == player);
   }
 }
@@ -2381,7 +2315,7 @@ void draw_cardclass_small_card(HDC dc, RECT *rect, unsigned int player, int card
                                        &counter_loyalty, &counter_charge);
   draw_standard_counters(dc, &counter_rect, counter_power, counter_m1m1,
                          counter_p1p1, counter_loyalty, counter_charge);
-  DrawSmallCardTitle(dc, rect, card_data.name, get_displayed_card_title_flags(player, card),
+  DrawSmallCardTitleForCard(dc, rect, &card_data, card_data.name, get_displayed_card_title_flags(player, card),
                      is_displayed_card_owned_by_opponent(player, card) == player);
   if (player == 0 && (get_displayed_card_state(player, card) & 0x40000) != 0)
   {
@@ -2689,38 +2623,7 @@ int can_card_join_banding_group(int player, int card, int unused_player, int unu
 
 // FUNCTION: MAGIC 0x0044184b
 // FUNCTION: SHANDALAR 0x0040d0cb
-#ifdef SHANDALAR_USE_MANALINKEH
 int can_block_attacker_with_landwalk_checks(int blocker_player, int blocker_card, int attacker_player, int attacker_card);
-#else
-int can_block_attacker_with_landwalk_checks(int blocker_player, int blocker_card, int attacker_player, int attacker_card)
-{
-  int result;
-  int attacker_abilities;
-  unsigned int selected;
-  unsigned int tmp2;
-  unsigned int tmp1;
-
-  attacker_abilities = C_get_abilities(attacker_player, attacker_card, 0x34, -1);
-  get_landwalk_evasion_masks(&tmp1, &tmp2);
-
-  if (blocker_player == 1)
-  {
-    selected = tmp1;
-  }
-  else
-  {
-    selected = tmp2;
-  }
-
-  result = can_block_attacker_with_abilities(blocker_player,
-                                             blocker_card,
-                                             attacker_player,
-                                             attacker_card,
-                                             (unsigned int)attacker_abilities,
-                                             selected);
-  return result;
-}
-#endif /* !SHANDALAR_USE_MANALINKEH: can_block_attacker_with_landwalk_checks */
 
 // FUNCTION: MAGIC 0x00441b94
 // FUNCTION: SHANDALAR 0x0040d414
@@ -2928,9 +2831,6 @@ LRESULT CALLBACK wndproc_MAGICGAME_CardClass(HWND hwnd, UINT msg, WPARAM wparam,
   int msg_404_compare_result;
   card_instance_t msg_404_snapshot;
   char pad_062c_to_0633[12];
-  HDC msg_432_title_dc;
-  RECT msg_432_title_rect;
-  card_id_t msg_432_card_id;
   card_instance_t msg_432_snapshot;
   unsigned int temp_mouse;
   unsigned int can_target_again;
@@ -3183,33 +3083,9 @@ LRESULT CALLBACK wndproc_MAGICGAME_CardClass(HWND hwnd, UINT msg, WPARAM wparam,
       }
       else if (snapshot->unknown0x70 != msg_432_snapshot.unknown0x70)
       {
-        msg_432_card_id = get_displayed_card_id(player, card);
-        if ((get_displayed_card_ui_flags(player, card) & 2) != 0)
-        {
-          InvalidateRect(hwnd, (RECT *)0, 0);
-        }
-        else if (msg_432_card_id == g_activation_display_internal_card_id ||
-                 msg_432_card_id == g_card_back_display_internal_card_id ||
-                 msg_432_card_id == g_effect_display_internal_card_id ||
-                 msg_432_card_id == g_damage_display_internal_card_id ||
-                 msg_432_card_id == g_legacy_display_internal_card_id ||
-                 msg_432_card_id == g_hunting_display_internal_card_id ||
-                 msg_432_card_id == g_multiblock_display_internal_card_id)
-        {
-          InvalidateRect(hwnd, (RECT *)0, 0);
-        }
-        else if (msg_432_card_id != -1)
-        {
-          msg_432_title_dc = GetDC(hwnd);
-          ApplyCardArtPaletteToDc(msg_432_title_dc);
-          GetClientRect(hwnd, &msg_432_title_rect);
-          DrawSmallCardTitle(msg_432_title_dc, &msg_432_title_rect,
-                             global_raw_cards_storage[msg_432_card_id].name,
-                             get_displayed_card_title_flags(player, card),
-                             (unsigned int)(is_displayed_card_owned_by_opponent(player, card) - player) < 1);
-          ReleaseDC(hwnd, msg_432_title_dc);
-          snapshot->unknown0x70 = msg_432_snapshot.unknown0x70;
-        }
+        /* Repaint with the frame and current display color used by WM_PAINT,
+           clearing the old title before applying the new highlight. */
+        InvalidateRect(hwnd, (RECT *)0, 0);
       }
     }
     return 0;

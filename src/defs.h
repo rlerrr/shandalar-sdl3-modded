@@ -4,6 +4,10 @@
 /* CSV IDs in the modded card database are signed 16-bit values. */
 #define SHANDALAR_CARD_DATABASE_CAPACITY 32768
 
+/* Adventure deck flags start at bit 14 (market) and bit 15 (selection).
+ * Original campaign cards can have Manalink internal IDs above 4095. */
+#define ADVENTURE_DECK_CARD_ID_MASK 0x3fff
+
 // Type declarations.  Should contain no function or extern data declarations.
 
 #include "inttypes.h"
@@ -1830,9 +1834,10 @@ typedef struct
 {
 	uint8_t poison_;	 // Do not access directly; in Manalink, use POISON_COUNTERS() to access, poison() to add, and raw_set_poison() to remove
 	uint8_t experience_; // Do not access directly; in Manalink, use EXPERIENCE_COUNTERS() to access, add_experience() to add, and raw_set_experience() to remove
-	uint8_t unused1;
+	uint8_t energy_;
 	uint8_t unused2;
 
+#define ENERGY_COUNTERS(p) (player_counters[(p)].energy_ + 0)
 #define POISON_COUNTERS(p) (player_counters[(p)].poison_ + 0)
 #define EXPERIENCE_COUNTERS(p) (player_counters[(p)].experience_ + 0)
 } PlayerCounters;

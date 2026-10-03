@@ -4384,7 +4384,7 @@ void remove_card_from_shandalar_deck_by_id(unsigned int card_id)
 
   for (deck_slot = 0; deck_slot < 500; ++deck_slot)
   {
-    if (((unsigned int)deck[deck_slot] & 0xfff) == card_id)
+    if (((unsigned int)deck[deck_slot] & ADVENTURE_DECK_CARD_ID_MASK) == card_id)
     {
       for (shift_slot = deck_slot + 1; shift_slot < 500; ++shift_slot)
       {

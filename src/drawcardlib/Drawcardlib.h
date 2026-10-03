@@ -10,6 +10,7 @@ extern "C" {
 #endif
 
     void DrawSmallCardTitle(HDC dc, RECT *rect, char* name, int colorMode, int transparentBackground);
+    void DrawSmallCardTitleForCard(HDC dc, RECT *rect, const card_ptr_t *card, const char *name, int colorMode, int controlledByOwner);
     void DrawSmallCard(HDC dc,RECT *rect, card_ptr_t *card, uint version, int reloadIfWrongSize);
     uint CalcDrawManaText(HDC dc,RECT *rect,char* text);
     uint DrawManaText(HDC dc,RECT *rect,char *text,int drawSymbols);

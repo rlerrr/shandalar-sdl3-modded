@@ -19,11 +19,7 @@ int prompt_stop_phase_anyway(phase_t phase);
 char *get_displayed_card_name(int player, int card);
 int process_killed_card(int player, int card);
 int is_combat_damage_ability_in_step(int damage_step, int abilities);
-#ifdef SHANDALAR_USE_MANALINKEH
 void adjust_two_headed_giant_damage(int player, int card, int amount);
-#else
-int adjust_two_headed_giant_damage(int player, int card, int amount);
-#endif
 void clear_combat_damage_assignment_matrix(void);
 void assign_attacker_combat_damage(int player, int index, int has_trample, int *damage_ids, int damage_step, int mode, int *best_low, int *best_high);
 void assign_blocker_combat_damage(int player, int index, int multiple_attackers, int *damage_ids, int damage_step, int mode, int *best_low, int *best_high);
@@ -82,81 +78,17 @@ int combat_damage_blocker_damage[16];
 
 // FUNCTION: MAGIC 0x00515bba
 // FUNCTION: SHANDALAR 0x0042476a
-#ifdef SHANDALAR_USE_MANALINKEH
 void adjust_two_headed_giant_damage(int player, int card, int amount);
-#else
-int adjust_two_headed_giant_damage(int player, int card, int amount)
-{
-  card_instance_t *instance;
-  int index;
-  card_function_pointer code_pointer;
-  int found_trampler;
-  int damage_source_card;
-  int damage_source_player;
-  int damage_player;
-
-  damage_player = player;
-  found_trampler = 0;
-  code_pointer = global_cards_data[PLAYER_CARD_INSTANCE(player, card).internal_card_id].code_pointer;
-  damage_source_player = (int)(char)PLAYER_CARD_INSTANCE(player, card).damage_source_player;
-  damage_source_card = PLAYER_CARD_INSTANCE(player, card).damage_source_card;
-
-  if (code_pointer == card_two_headed_giant_of_foriys || code_pointer == card_two_headed_giant_of_foriys_legacy)
-  {
-    found_trampler = 1;
-  }
-
-  for (index = 0; index < g_active_cards_count[damage_player] && found_trampler == 0; index = index + 1)
-  {
-    if (PLAYER_CARD_INSTANCE(damage_player, index).internal_card_id == g_duel_generated_internal_card_id_29 &&
-        PLAYER_CARD_INSTANCE(damage_player, index).damage_target_player == player &&
-        PLAYER_CARD_INSTANCE(damage_player, index).damage_target_card == card)
-    {
-      found_trampler = 1;
-    }
-  }
-
-  if (found_trampler != 0)
-  {
-    if (code_pointer != card_two_headed_giant_of_foriys_legacy)
-    {
-      for (index = 0; index < g_active_cards_count[damage_player]; index = index + 1)
-      {
-        instance = &PLAYER_CARD_INSTANCE(damage_player, index);
-        if (global_cards_data[instance->internal_card_id].code_pointer == card_two_headed_giant_of_foriys_legacy &&
-            instance->damage_source_player == player &&
-            instance->damage_source_card == card)
-        {
-          instance->power = amount;
-          instance->info_slot -= 1;
-        }
-      }
-    }
-    else
-    {
-      for (index = 0; index < g_active_cards_count[damage_player]; index = index + 1)
-      {
-        instance = &PLAYER_CARD_INSTANCE(damage_player, index);
-        if (index != card &&
-            global_cards_data[instance->internal_card_id].code_pointer == card_two_headed_giant_of_foriys_legacy &&
-            instance->damage_source_player == damage_source_player &&
-            instance->damage_source_card == damage_source_card)
-        {
-          instance->power = amount;
-          instance->info_slot -= 1;
-        }
-      }
-    }
-  }
-
-  return 0;
-}
-#endif /* !SHANDALAR_USE_MANALINKEH: adjust_two_headed_giant_damage */
 
 // FUNCTION: MAGIC 0x00515ee6
 // FUNCTION: SHANDALAR 0x00424a96
 int is_combat_damage_ability_in_step(int damage_step, int abilities)
 {
+  /* MOK 0x4b39e3: double strike participates in both damage steps. */
+  if ((abilities & KEYWORD_DOUBLE_STRIKE) != 0)
+  {
+    return 1;
+  }
   if (damage_step == 0 && (abilities & 0x100) != 0)
   {
     return 1;
@@ -638,7 +570,8 @@ void resolve_combat_damage(int player)
 
           if (is_combat_damage_ability_in_step(damage_step, combat_damage_attacker_abilities[combat_damage_attacker_count]) != 0)
           {
-            attacker_damage_remaining = C_get_abilities(player, scan_card, 0x32, -1);
+            /* MOK 0x4b2554: effects can substitute toughness for attack power. */
+            attacker_damage_remaining = manalinkeh_get_attack_power(player, scan_card);
             if (attacker_damage_remaining < 0)
             {
               attacker_damage_remaining = 0;
@@ -681,10 +614,11 @@ void resolve_combat_damage(int player)
 
           combat_damage_blocker_damage[ai_blocker_count] = blocker_damage_remaining = 0;
 
-          if ((PLAYER_CARD_INSTANCE(defending_player, scan_card).state & STATE_TAPPED) == 0 &&
+          if (
               is_combat_damage_ability_in_step(damage_step, combat_damage_blocker_abilities[ai_blocker_count]) != 0)
           {
-            blocker_damage_remaining = C_get_abilities(defending_player, scan_card, 0x32, card);
+            /* MOK 0x4b2649 omits the tapped check; 0x4b2667 uses this hook. */
+            blocker_damage_remaining = manalinkeh_get_attack_power(defending_player, scan_card);
             if (blocker_damage_remaining < 0)
             {
               blocker_damage_remaining = 0;

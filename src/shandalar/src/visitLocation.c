@@ -30,7 +30,6 @@ extern HWND g_main_window_hwnd;
 extern int g_card_count;
 extern int g_current_quest_giver_town_index;
 extern int g_duel_selection_pending;
-extern char g_text_lines[249][300];
 extern int card_dummy(int player, int card, event_t event);
 
 // GLOBAL: SHANDALAR 0x0073ea68
@@ -1461,7 +1460,7 @@ int DeckContainsCsvid(int csvid)
 
   for (i = 0; i < 500; i++)
   {
-    if (global_cards_data[deck[i] & 0xfff].id == csvid)
+    if (global_cards_data[deck[i] & ADVENTURE_DECK_CARD_ID_MASK].id == csvid)
     {
       return 1;
     }
@@ -1519,7 +1518,7 @@ int FindHintPairIndexForOfferCard(int card_internal_id)
         {
           for (deck_scan_index = 0; deck_scan_index < 500; deck_scan_index = deck_scan_index + 1)
           {
-            deck_card_internal_id = deck[deck_scan_index] & 0xfff;
+            deck_card_internal_id = deck[deck_scan_index] & ADVENTURE_DECK_CARD_ID_MASK;
 
             if (((unsigned char)global_cards_data[deck_card_internal_id].type & 1) != 0)
             {
@@ -2329,7 +2328,7 @@ int ExitIfNoUsableDeckCards(void)
   usable_card_count = 0;
   for (deck_slot = 0; deck_slot < 500; deck_slot = deck_slot + 1)
   {
-    if ((deck[deck_slot] != -1) && ((deck[deck_slot] & 0x4000) == 0) && (4 < (deck[deck_slot] & 0xfff)))
+    if ((deck[deck_slot] != -1) && ((deck[deck_slot] & 0x4000) == 0) && (4 < (deck[deck_slot] & ADVENTURE_DECK_CARD_ID_MASK)))
     {
       usable_card_count = usable_card_count + 1;
     }
@@ -2730,7 +2729,7 @@ void RemoveCardFromDeckById(unsigned int card_id)
 
   for (deck_slot = 0; deck_slot < 0x1f4; deck_slot = deck_slot + 1)
   {
-    if (((unsigned int)deck[deck_slot] & 0xfff) == card_id)
+    if (((unsigned int)deck[deck_slot] & ADVENTURE_DECK_CARD_ID_MASK) == card_id)
     {
       RemoveDeckSlot(deck_slot);
       break;
@@ -3447,7 +3446,7 @@ LAB_00531ee7:
       deck_card_ids[deck_scan_index] = deck[deck_scan_index];
       if (deck_card_ids[deck_scan_index] != 0xffffffff)
       {
-        deck_card_ids[deck_scan_index] = deck_card_ids[deck_scan_index] & 0xfff;
+        deck_card_ids[deck_scan_index] = deck_card_ids[deck_scan_index] & ADVENTURE_DECK_CARD_ID_MASK;
       }
     }
 
@@ -3847,7 +3846,7 @@ loop:
     owned_copies = 0;
     for (deck_slot = 0; deck_slot < 500; deck_slot = deck_slot + 1)
     {
-      if (((unsigned int)deck[deck_slot] & 0xfffU) == (unsigned int)card_index)
+      if (((unsigned int)deck[deck_slot] & ADVENTURE_DECK_CARD_ID_MASK) == (unsigned int)card_index)
       {
         owned_copies = owned_copies + 1;
       }
@@ -4293,10 +4292,10 @@ int VisitTownSlot(int town_index)
           found_deck_slot = duel_deck_seed % 500;
           duel_deck_seed = duel_deck_seed + 7;
         } while (deck[found_deck_slot] == -1);
-      } while ((deck[found_deck_slot] & 0x4000) != 0 || ((deck[found_deck_slot] & 0xfff) <= 4));
+      } while ((deck[found_deck_slot] & 0x4000) != 0 || ((deck[found_deck_slot] & ADVENTURE_DECK_CARD_ID_MASK) <= 4));
 
-      global_ante_cards[0][duel_ante_slot] = deck[found_deck_slot] & 0xfff;
-      DrawAdventureCard(deck[found_deck_slot] & 0xfff, duel_ante_slot * 0x28 + 0x60, duel_ante_slot * 3 + 0x80, 1,
+      global_ante_cards[0][duel_ante_slot] = deck[found_deck_slot] & ADVENTURE_DECK_CARD_ID_MASK;
+      DrawAdventureCard(deck[found_deck_slot] & ADVENTURE_DECK_CARD_ID_MASK, duel_ante_slot * 0x28 + 0x60, duel_ante_slot * 3 + 0x80, 1,
                         gs_visit_0077c4f0[0]);
     }
 
@@ -4527,7 +4526,7 @@ int VisitTownSlot(int town_index)
                                                          (1 << (g_current_quest_destination & 3)));
       g_amulet_inventory[g_current_quest_color - 1] += 1;
 
-      sprintf(g_ui_message_buffer, gs_visit_0077c4f0[0x13], global_cards_data[deck[found_deck_slot - 1] & 0xfff].name);
+      sprintf(g_ui_message_buffer, gs_visit_0077c4f0[0x13], global_cards_data[deck[found_deck_slot - 1] & ADVENTURE_DECK_CARD_ID_MASK].name);
 
       sprintf(g_ui_message_buffer + strlen(g_ui_message_buffer), gs_visit_0077c4f0[0x14], gs_amuletnames_0077d090[g_current_quest_color]);
 

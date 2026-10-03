@@ -20,6 +20,14 @@ import. Zero addresses are uncoded and excluded from the playable engine table;
 vanilla cards use `card_dummy`.
 The sixteen sentinel records remain available for runtime card copies.
 
+`carddata_campaign_metadata.json` retains expansion eligibility and the
+campaign-only extra flags from the original Shandalar table at `0x594208`,
+keyed by CSV ID. Manalink's copies of these fields are unused and usually zero;
+importing those zeros would leave the campaign without eligible starter lands.
+The importer merges this metadata without changing card order or handlers.
+Campaign cards must fit the adventure deck's 14-bit ID field; bits 14 and 15
+remain the market and selection flags.
+
 ## `convert_statwin_assets.ps1`
 
 Converts the original Statwin media into the `Statwin_SDL` layout consumed by

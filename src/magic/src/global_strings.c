@@ -2,11 +2,14 @@
 #include "global_strings.h"
 #include "global_state.h"
 #include <stdio.h>
+#include <string.h>
 #include "cardartlib/src/assert.h"
 
-// FUNCTION: SHANDALAR 0x0056ca10
-// FUNCTION: MAGIC 0x004ec830
-int load_text(const char *file_name, const char *section_name)
+/* The static bridge owns the legacy table filled by Manalink's UI hook. */
+extern char ability_tooltip_names_exe[17][50];
+void manalinkeh_initialize_ability_tooltip_names(void);
+
+static int load_text_file(const char *file_name, const char *section_name)
 {
   FILE *f;
   char line[300] = "";
@@ -14,10 +17,6 @@ int load_text(const char *file_name, const char *section_name)
   char section_line[300]; // ebp - 0x134
   unsigned int num_text;
   int i;
-
-  /* Manalink callers pass NULL to select the host's default UI strings. */
-  if (file_name == NULL)
-    file_name = global_ui_strings_filename;
 
   strcpy(section_line, "@");
   strcat(section_line, section_name);
@@ -42,9 +41,13 @@ int load_text(const char *file_name, const char *section_name)
     }
   }
 
-  fscanf(f, "%d", &num_text);
+  if (fscanf(f, "%u", &num_text) != 1)
+  {
+    fclose(f);
+    return -1;
+  }
   fgets(line, 300, f);
-  if (num_text > 225)
+  if (num_text > sizeof(g_text_lines) / sizeof(g_text_lines[0]))
   {
     fclose(f);
     return -1;
@@ -57,11 +60,38 @@ int load_text(const char *file_name, const char *section_name)
       fclose(f);
       return -1;
     }
-    g_text_lines[i][strlen(g_text_lines[i]) - 1] = 0;
+    g_text_lines[i][strcspn(g_text_lines[i], "\r\n")] = 0;
   }
 
   fclose(f);
   return num_text;
+}
+
+/* MOK reads its extended/default sections from Text.res. Explicit filenames
+ * retain the engine's legacy UIStrings.txt behavior. */
+// FUNCTION: SHANDALAR 0x0056ca10
+// FUNCTION: MAGIC 0x004ec830
+int load_text(const char *file_name, const char *section_name)
+{
+  int result;
+
+  memset(g_text_lines, 0, sizeof(g_text_lines));
+  if (file_name != NULL)
+  {
+    result = load_text_file(file_name, section_name);
+  }
+  else
+  {
+    result = load_text_file("Text.res", section_name);
+    if (result < 0)
+    {
+      memset(g_text_lines, 0, sizeof(g_text_lines));
+      result = load_text_file(global_ui_strings_filename, section_name);
+    }
+  }
+  if (result < 0)
+    memset(g_text_lines, 0, sizeof(g_text_lines));
+  return result;
 }
 
 // FUNCTION: MAGIC 0x004eca6d
@@ -160,12 +190,21 @@ void load_global_ui_strings(char *filename)
     ++loaded_count;
   }
 
-  load_text(filename, "ABILITYWORDS");
-  loaded_count = 0;
-  for (color_index = 0; color_index < 0x11; ++color_index)
+  loaded_count = load_text(NULL, "ABILITYWORDS");
+  /* MOK 0x464a3f maps the expanded ability list to the legacy tooltip slots. */
+  if (loaded_count == 17)
   {
-    strcpy(gs_ability_word_008b4de0[color_index], g_text_lines[loaded_count]);
-    ++loaded_count;
+    /* Older assets already have the executable's original 17-slot ordering. */
+    for (color_index = 0; color_index < 17; ++color_index)
+    {
+      strncpy(gs_ability_word_008b4de0[color_index], g_text_lines[color_index], 49);
+      gs_ability_word_008b4de0[color_index][49] = '\0';
+    }
+  }
+  else if (loaded_count >= 75)
+  {
+    manalinkeh_initialize_ability_tooltip_names();
+    memcpy(gs_ability_word_008b4de0, ability_tooltip_names_exe, sizeof(gs_ability_word_008b4de0));
   }
 
   loaded_count = load_text(filename, "HUNTING_SUBTYPENAMES");

@@ -13034,7 +13034,12 @@ void get_an_additional_combat_phase(void){
 void legacy_name(char* title, int player, int card)	// 0x200aa02
 {
 	card_instance_t* instance = get_displayed_card_instance(player, card);
+#ifdef MANALINKEH_STATIC
+	extern int shandalar_is_legacy_effect_text_buffer(const char*);
+	int event = shandalar_is_legacy_effect_text_buffer(title) ? EVENT_SET_LEGACY_EFFECT_TEXT : EVENT_SET_LEGACY_EFFECT_NAME;
+#else
 	int event = ((int)title == 0x6089b4) ? EVENT_SET_LEGACY_EFFECT_TEXT : EVENT_SET_LEGACY_EFFECT_NAME;
+#endif
 	// These aren't technically the same as EVENT_SET_LEGACY_EFFECT_NAME and EVENT_SET_LEGACY_EFFECT_TEXT, but the numbers are chosen to coincide
 	int call_fn = instance->eot_toughness & event;
 	int alternative = BYTE0(instance->eot_toughness);

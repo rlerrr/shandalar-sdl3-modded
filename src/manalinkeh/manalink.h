@@ -136,7 +136,7 @@ extern int *rfg_ptr[];
 extern char strs_hunting_subtypenames[250][300];
 extern int tapped_for_mana_color;	// Set to COLOR_COLORLESS..COLOR_ARTIFACT in the exe, or -1 for none.  In particular, it's cleared by tap_card() when called on a card with EA_MANA_SOURCE set.  Only ever compared to -1 except in Mana Flare.  If >= 0, then the current effect or card on the stack will resolve immediately and can't be responded to.  Should only be set >0 if a card is actually tapping to produce mana, not just producing mana in general; use -2 for non-respondable non-tapping mana production.  See also cant_be_responded_to.
 extern int tapped_for_mana[COLOR_ARTIFACT + 1];	// If more than a single mana of a single color was tapped for, set tapped_for_mana_color to 0x100 and set the amounts in this.  Not an exe variable, but works closely with tapped_for_mana_color, which is.
-extern char text_lines[249][300];
+extern char text_lines[300][300];
 extern int total_power_of_creatures_by_color[2][8];	// 0x00739D60
 extern int total_toughness_of_creatures_by_color[2][8];	// 0x0073A230
 extern int trigger_cause;

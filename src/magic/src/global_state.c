@@ -542,7 +542,7 @@ unsigned int save_or_load_ver1(void)
   result &= save_or_load_data(&g_ai_search_flags, 4);
   result &= save_or_load_data(&g_duel_message_text, 100);
   result &= save_or_load_data(g_life, 8);
-  result &= save_or_load_data(g_poison_counters, 8);
+  result &= save_or_load_data(player_counters, sizeof(player_counters));
   result &= save_or_load_data(&g_player_duel_state_00938e38, 8);
   result &= save_or_load_data(g_global_stats_bonus, 0x10);
   result &= save_or_load_data(&g_current_player, 4);
@@ -746,7 +746,7 @@ unsigned int save_or_load_ver2(void)
   result &= save_or_load_data(&g_ai_search_flags, 4);
   result &= save_or_load_data(&g_duel_message_text, 100);
   result &= save_or_load_data(g_life, 8);
-  result &= save_or_load_data(g_poison_counters, 8);
+  result &= save_or_load_data(player_counters, sizeof(player_counters));
   result &= save_or_load_data(g_lich_active, 8);
   result &= save_or_load_data(&g_player_duel_state_00938e38, 8);
   result &= save_or_load_data(g_global_stats_bonus, 0x10);
@@ -1418,5 +1418,7 @@ unsigned int load_duel_run_mode_3_save(char *path)
     result = 0;
   }
 
+  /* MOK 0x4a0841 reapplies rules-engine settings after the load attempt. */
+  manalinkeh_after_load_game();
   return result;
 }

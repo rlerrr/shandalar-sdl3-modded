@@ -134,7 +134,7 @@ int get_displayed_life_total(int player)
 
 // FUNCTION: MAGIC 0x00449cb2
 // FUNCTION: SHANDALAR 0x00453833
-int get_displayed_poison_total(int player)
+int get_displayed_player_counters(int player)
 {
   int result;
 
@@ -192,7 +192,7 @@ int register_MAGICGAME_LifeClass(LPCSTR class_name)
 
   result = 1;
   wndclass.style = 0xb;
-  wndclass.lpfnWndProc = wndproc_MAGICGAME_LifeClass;
+  wndclass.lpfnWndProc = manalinkeh_wndproc_LifeClass_hook;
   wndclass.cbClsExtra = 0;
   wndclass.cbWndExtra = g_magicgame_life_window_extra_bytes;
   wndclass.hInstance = g_app_instance;
@@ -266,17 +266,11 @@ LRESULT CALLBACK wndproc_MAGICGAME_LifeClass(HWND hwnd, UINT msg, WPARAM wparam,
   char poison_path[264];
   char lich_path[264];
   HDC dc;
-  int poison_height;
   PAINTSTRUCT paint;
-  int poison_width;
   int saved_dc;
-  int poison_y;
-  int poison_index;
-  int poison_total;
-  int poison_x;
+  int packed_player_counters;
   int life_total;
   char life_text[12];
-  RECT poison_rect;
   int lich_state;
   RECT client_rect;
   MSG peek_msg;
@@ -284,12 +278,10 @@ LRESULT CALLBACK wndproc_MAGICGAME_LifeClass(HWND hwnd, UINT msg, WPARAM wparam,
   char help_path[264];
   DWORD help_context;
   unsigned int command_player;
-  int updated_poison_total;
+  int updated_player_counters;
   int updated_life_total;
   int updated_lich_state;
-  char cuecard_text[100];
-  char cuecard_opponent_name[100];
-  int cached_poison_total;
+  int cached_player_counters;
   HBITMAP background_bitmap;
   int cached_life_total;
   int cached_lich_state;
@@ -297,55 +289,7 @@ LRESULT CALLBACK wndproc_MAGICGAME_LifeClass(HWND hwnd, UINT msg, WPARAM wparam,
   switch (msg)
   {
   case 0x437:
-    cached_poison_total = GetWindowLongA(hwnd, g_life_window_poison_window_long_offset);
-    cached_lich_state = GetWindowLongA(hwnd, g_life_window_lich_window_long_offset);
-    if (hwnd == g_duel_life_status_window_1_hwnd)
-    {
-      if (cached_lich_state != 0)
-      {
-        if (cached_poison_total != 0)
-        {
-          strcpy(cuecard_text, gs_cuecard_your_life_points_and_poison_lich_008cf4f0);
-        }
-        else
-        {
-          strcpy(cuecard_text, gs_cuecard_your_life_points_lich_007a7810);
-        }
-      }
-      else if (cached_poison_total != 0)
-      {
-        strcpy(cuecard_text, gs_cuecard_your_life_points_and_poison_008a9ba0);
-      }
-      else
-      {
-        strcpy(cuecard_text, gs_cuecard_your_life_points_009394a0);
-      }
-    }
-    else
-    {
-      copy_opponent_name_prefix(cuecard_opponent_name);
-      if (cached_lich_state != 0)
-      {
-        if (cached_poison_total != 0)
-        {
-          sprintf(cuecard_text, gs_cuecard_opponent_life_points_and_poison_lich_008b2890, cuecard_opponent_name);
-        }
-        else
-        {
-          sprintf(cuecard_text, gs_cuecard_opponent_life_points_lich_0091d1b0, cuecard_opponent_name);
-        }
-      }
-      else if (cached_poison_total != 0)
-      {
-        sprintf(cuecard_text, gs_cuecard_opponent_life_points_and_poison_009252f0, cuecard_opponent_name);
-      }
-      else
-      {
-        sprintf(cuecard_text, gs_cuecard_opponent_life_points_008b30a0, cuecard_opponent_name);
-      }
-    }
-    strcpy((char *)wparam, cuecard_text);
-    return 1;
+    return manalinkeh_wndproc_LifeClass_hook(hwnd, msg, wparam, lparam);
 
   case 0x432:
     cached_life_total = GetWindowLongA(hwnd, g_life_window_life_window_long_offset);
@@ -358,14 +302,14 @@ LRESULT CALLBACK wndproc_MAGICGAME_LifeClass(HWND hwnd, UINT msg, WPARAM wparam,
       updated_life_total = get_displayed_life_total(1);
     }
 
-    cached_poison_total = GetWindowLongA(hwnd, g_life_window_poison_window_long_offset);
+    cached_player_counters = GetWindowLongA(hwnd, g_life_window_poison_window_long_offset);
     if (hwnd == g_duel_life_status_window_1_hwnd)
     {
-      updated_poison_total = get_displayed_poison_total(0);
+      updated_player_counters = get_displayed_player_counters(0);
     }
     else
     {
-      updated_poison_total = get_displayed_poison_total(1);
+      updated_player_counters = get_displayed_player_counters(1);
     }
 
     cached_lich_state = GetWindowLongA(hwnd, g_life_window_lich_window_long_offset);
@@ -382,7 +326,7 @@ LRESULT CALLBACK wndproc_MAGICGAME_LifeClass(HWND hwnd, UINT msg, WPARAM wparam,
     {
       InvalidateRect(hwnd, (RECT *)0, 0);
     }
-    if (cached_poison_total != updated_poison_total)
+    if (cached_player_counters != updated_player_counters)
     {
       InvalidateRect(hwnd, (RECT *)0, 0);
     }
@@ -441,8 +385,8 @@ LRESULT CALLBACK wndproc_MAGICGAME_LifeClass(HWND hwnd, UINT msg, WPARAM wparam,
   case WM_CREATE:
     cached_life_total = 0;
     SetWindowLongA(hwnd, g_life_window_life_window_long_offset, cached_life_total);
-    cached_poison_total = 0;
-    SetWindowLongA(hwnd, g_life_window_poison_window_long_offset, cached_poison_total);
+    cached_player_counters = 0;
+    SetWindowLongA(hwnd, g_life_window_poison_window_long_offset, cached_player_counters);
     cached_lich_state = 0;
     SetWindowLongA(hwnd, g_life_window_lich_window_long_offset, cached_lich_state);
     background_bitmap = (HBITMAP)0;
@@ -472,7 +416,7 @@ LRESULT CALLBACK wndproc_MAGICGAME_LifeClass(HWND hwnd, UINT msg, WPARAM wparam,
 
   case WM_PAINT:
     cached_life_total = GetWindowLongA(hwnd, g_life_window_life_window_long_offset);
-    cached_poison_total = GetWindowLongA(hwnd, g_life_window_poison_window_long_offset);
+    cached_player_counters = GetWindowLongA(hwnd, g_life_window_poison_window_long_offset);
     cached_lich_state = GetWindowLongA(hwnd, g_life_window_lich_window_long_offset);
     if (hwnd == g_duel_life_status_window_1_hwnd)
     {
@@ -485,11 +429,11 @@ LRESULT CALLBACK wndproc_MAGICGAME_LifeClass(HWND hwnd, UINT msg, WPARAM wparam,
     wsprintfA(life_text, "%d", life_total);
     if (hwnd == g_duel_life_status_window_1_hwnd)
     {
-      poison_total = get_displayed_poison_total(0);
+      packed_player_counters = get_displayed_player_counters(0);
     }
     else
     {
-      poison_total = get_displayed_poison_total(1);
+      packed_player_counters = get_displayed_player_counters(1);
     }
     if (hwnd == g_duel_life_status_window_1_hwnd)
     {
@@ -503,7 +447,7 @@ LRESULT CALLBACK wndproc_MAGICGAME_LifeClass(HWND hwnd, UINT msg, WPARAM wparam,
     {
       InvalidateRect(hwnd, (RECT *)0, 0);
     }
-    if (cached_poison_total != poison_total)
+    if (cached_player_counters != packed_player_counters)
     {
       InvalidateRect(hwnd, (RECT *)0, 0);
     }
@@ -535,21 +479,7 @@ LRESULT CALLBACK wndproc_MAGICGAME_LifeClass(HWND hwnd, UINT msg, WPARAM wparam,
       g_life_poison_bitmap = load_pic(poison_path);
     }
 
-    poison_width = client_rect.right / 4;
-    poison_height = client_rect.bottom / 3;
-    poison_x = 0;
-    poison_y = 0;
-    for (poison_index = 0; poison_index < poison_total; poison_index++)
-    {
-      SetRect(&poison_rect, poison_x, poison_y, poison_x + poison_width, poison_y + poison_height);
-      draw_masked_bitmap_left_half_to_rect(dc, &poison_rect, g_life_poison_bitmap);
-      poison_x += poison_width;
-      if (client_rect.right < poison_x + poison_width)
-      {
-        poison_x = 0;
-        poison_y += poison_height;
-      }
-    }
+    manalinkeh_paint_player_counters(dc, client_rect.right, client_rect.bottom, packed_player_counters);
 
     if (lich_state == 0)
     {
@@ -584,8 +514,8 @@ LRESULT CALLBACK wndproc_MAGICGAME_LifeClass(HWND hwnd, UINT msg, WPARAM wparam,
       EndPaint(hwnd, &paint);
       cached_life_total = life_total;
       SetWindowLongA(hwnd, g_life_window_life_window_long_offset, cached_life_total);
-      cached_poison_total = poison_total;
-      SetWindowLongA(hwnd, g_life_window_poison_window_long_offset, cached_poison_total);
+      cached_player_counters = packed_player_counters;
+      SetWindowLongA(hwnd, g_life_window_poison_window_long_offset, cached_player_counters);
       cached_lich_state = lich_state;
       SetWindowLongA(hwnd, g_life_window_lich_window_long_offset, cached_lich_state);
     }

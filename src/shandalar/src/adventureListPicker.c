@@ -227,7 +227,7 @@ int show_deck(int player, int *cards, int count, char *title, int require_select
     }
     for (i = 0; visible_count > i; i = i + 1)
     {
-      DrawAdventureCard(cards[card_indices[i]] & 0xfff, card_draw_x[i], card_draw_y[i], 0, "");
+      DrawAdventureCard(cards[card_indices[i]] & ADVENTURE_DECK_CARD_ID_MASK, card_draw_x[i], card_draw_y[i], 0, "");
     }
 
   get_input:
@@ -256,7 +256,7 @@ int show_deck(int player, int *cards, int count, char *title, int require_select
       if ((selected_index != -1) &&
           (cards[selected_index] != cards[hover_index]))
       {
-        DrawAdventureCard(cards[selected_index] & 0xfff, 8, 0x40, 1, "");
+        DrawAdventureCard(cards[selected_index] & ADVENTURE_DECK_CARD_ID_MASK, 8, 0x40, 1, "");
         hover_index = selected_index;
       }
 
@@ -314,7 +314,7 @@ int show_deck(int player, int *cards, int count, char *title, int require_select
                                 modal_w,
                                 modal_h,
                                 buy_button_sprite);
-      DrawAdventureCardSized(cards[selected_index] & 0xfff, 0x7a, 0x29, 0x4b, 0x70, 1, "");
+      DrawAdventureCardSized(cards[selected_index] & ADVENTURE_DECK_CARD_ID_MASK, 0x7a, 0x29, 0x4b, 0x70, 1, "");
 
       g_page0_window_bounds->font_slot = 1;
       DrawScaledTextNoShadow(g_ui_message_buffer, 0x76, 0x20, 0x1b);

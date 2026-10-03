@@ -25,6 +25,15 @@ void DrawSmallCardTitle(HDC dc, RECT *rect, char *title, int color, int transpar
   DrawCardModdedSmallCardTitle(dc, rect, title, color, transparent & ~8, NULL, -1, -1);
 }
 
+void DrawSmallCardTitleForCard(HDC dc, RECT *rect, const card_ptr_t *card,
+                               const char *title, int color, int controlled_by_owner)
+{
+  /* Use the same card data and frame selection as DrawSmallCard.  The short
+     title API falls back to the base layout, which can shift the second title. */
+  DrawCardModdedSmallCardTitle(dc, rect, title, color, controlled_by_owner | 8,
+                              card, -1, -1);
+}
+
 void DrawSmallCard(HDC dc, RECT *rect, card_ptr_t *card, uint version, int reload)
 {
   DrawCardModdedSmallCard(dc, rect, card, version, reload, -1, -1);

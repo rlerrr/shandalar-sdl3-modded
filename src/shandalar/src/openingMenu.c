@@ -6,6 +6,7 @@
 #include "shandalar.h"
 #include "shandalar_internal.h"
 #include "magic/src/global_state.h"
+#include "magic/src/global_strings.h"
 #include "facemaker/src/facemaker_types.h"
 #include "drawcardlib/src/pic.h"
 #include "shandalar_build_version.h"
@@ -19,7 +20,6 @@
 
 extern char *gs_loadsave_0077d1b0[3];
 extern HWND g_main_window_hwnd;
-extern char g_text_lines[249][300];
 
 static TrueColorSprite *g_name_entry_done_button_sprites[3];
 static TrueColorSprite *g_loadsave_cancel_button_sprites[3];

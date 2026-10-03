@@ -517,10 +517,10 @@ int RunCastleDungeonBoard(int dungeon_index)
                 do
                 {
                   event_code = deck[internal_rand(500)];
-                  candidate_card_id = event_code & 0xfff;
+                  candidate_card_id = event_code & ADVENTURE_DECK_CARD_ID_MASK;
                 } while (candidate_card_id < 6);
               } while ((event_code & 0x4000) != 0);
-              event_code &= 0xfff;
+              event_code &= ADVENTURE_DECK_CARD_ID_MASK;
               if ((global_cards_data[event_code].type & 0x42) == 0)
                 goto LAB_00444355;
               g_next_duel_card_id = event_code;
@@ -752,7 +752,7 @@ int RunDungeonMonsterDuel(int dungeon_index, int monster_slot, int final_battle)
 
   for (deck_index = 0; deck_index < 500; deck_index = deck_index + 1)
   {
-    card_id = deck[deck_index] & 0xfff;
+    card_id = deck[deck_index] & ADVENTURE_DECK_CARD_ID_MASK;
     if ((g_castle_dungeon_slots[dungeon_index].rules_bitmap & 0x80) != 0)
     {
       g_duel_state_00742fc0 = 0;
@@ -844,8 +844,8 @@ int RunDungeonMonsterDuel(int dungeon_index, int monster_slot, int final_battle)
     {
       work_index = internal_rand(500);
     } while (deck[work_index] == -1);
-  } while (((deck[work_index] & 0x4000) != 0) || ((deck[work_index] & 0xfff) <= 4));
-  global_ante_cards[0][0] = deck[work_index] & 0xfff;
+  } while (((deck[work_index] & 0x4000) != 0) || ((deck[work_index] & ADVENTURE_DECK_CARD_ID_MASK) <= 4));
+  global_ante_cards[0][0] = deck[work_index] & ADVENTURE_DECK_CARD_ID_MASK;
   if ((0 < g_next_duel_card_id) && (g_next_duel_card_id <= 5))
   {
     g_next_duel_card_id = -1;

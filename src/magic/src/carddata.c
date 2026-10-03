@@ -11589,21 +11589,21 @@ int card_no_blocking(int, int, event_t);
 int card_permanent_color(int, int, event_t);
 
 card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
-  { 0, "Swamp", {0}, 239, 0x01, 13, 2, { 0, 0, 0 }, 0, 0, 0, 0, card_swamp, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 10 }, /* 0: Swamp */
-  { 0, "Island", {0}, 126, 0x01, 13, 4, { 0, 0, 0 }, 0, 0, 0, 0, card_island, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 10 }, /* 1: Island */
-  { 0, "Forest", {0}, 91, 0x01, 13, 8, { 0, 0, 0 }, 0, 0, 0, 0, card_forest, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 10 }, /* 2: Forest */
-  { 0, "Mountain", {0}, 164, 0x01, 13, 16, { 0, 0, 0 }, 0, 0, 0, 0, card_mountain, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 10 }, /* 3: Mountain */
-  { 0, "Plains", {0}, 188, 0x01, 13, 32, { 0, 0, 0 }, 0, 0, 0, 0, card_plains, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 10 }, /* 4: Plains */
-  { 0, "Badlands", {0}, 9, 0x01, 12, 18, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 15 }, /* 5: Badlands */
-  { 0, "Bayou", {0}, 12, 0x01, 12, 10, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 15 }, /* 6: Bayou */
-  { 0, "Plateau", {0}, 189, 0x01, 12, 48, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 10 }, /* 7: Plateau */
-  { 0, "Savannah", {0}, 212, 0x01, 12, 40, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 15 }, /* 8: Savannah */
-  { 0, "Scrubland", {0}, 216, 0x01, 12, 34, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 15 }, /* 9: Scrubland */
-  { 0, "Taiga", {0}, 241, 0x01, 12, 24, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 15 }, /* 10: Taiga */
-  { 0, "Tropical Island", {0}, 252, 0x01, 12, 12, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 15 }, /* 11: Tropical Island */
-  { 0, "Tundra", {0}, 254, 0x01, 12, 36, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 15 }, /* 12: Tundra */
-  { 0, "Underground Sea", {0}, 258, 0x01, 12, 6, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 15 }, /* 13: Underground Sea */
-  { 0, "Volcanic Island", {0}, 266, 0x01, 12, 20, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 15 }, /* 14: Volcanic Island */
+  { 0, "Swamp", {0}, 239, 0x01, 13, 2, { 0, 0, 0 }, 0, 0, 0, 0, card_swamp, 0x00000000u, 0x00001000u, 0, 1, 1, 0, 10 }, /* 0: Swamp */
+  { 0, "Island", {0}, 126, 0x01, 13, 4, { 0, 0, 0 }, 0, 0, 0, 0, card_island, 0x00000000u, 0x00001000u, 0, 1, 1, 0, 10 }, /* 1: Island */
+  { 0, "Forest", {0}, 91, 0x01, 13, 8, { 0, 0, 0 }, 0, 0, 0, 0, card_forest, 0x00000000u, 0x00001000u, 0, 1, 1, 0, 10 }, /* 2: Forest */
+  { 0, "Mountain", {0}, 164, 0x01, 13, 16, { 0, 0, 0 }, 0, 0, 0, 0, card_mountain, 0x00000000u, 0x00001000u, 0, 1, 1, 0, 10 }, /* 3: Mountain */
+  { 0, "Plains", {0}, 188, 0x01, 13, 32, { 0, 0, 0 }, 0, 0, 0, 0, card_plains, 0x00000000u, 0x00001000u, 0, 1, 1, 0, 10 }, /* 4: Plains */
+  { 0, "Badlands", {0}, 9, 0x01, 12, 18, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 2, 2, 15 }, /* 5: Badlands */
+  { 0, "Bayou", {0}, 12, 0x01, 12, 10, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 2, 2, 15 }, /* 6: Bayou */
+  { 0, "Plateau", {0}, 189, 0x01, 12, 48, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 2, 2, 10 }, /* 7: Plateau */
+  { 0, "Savannah", {0}, 212, 0x01, 12, 40, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 2, 2, 15 }, /* 8: Savannah */
+  { 0, "Scrubland", {0}, 216, 0x01, 12, 34, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 2, 2, 15 }, /* 9: Scrubland */
+  { 0, "Taiga", {0}, 241, 0x01, 12, 24, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 2, 2, 15 }, /* 10: Taiga */
+  { 0, "Tropical Island", {0}, 252, 0x01, 12, 12, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 2, 2, 15 }, /* 11: Tropical Island */
+  { 0, "Tundra", {0}, 254, 0x01, 12, 36, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 2, 2, 15 }, /* 12: Tundra */
+  { 0, "Underground Sea", {0}, 258, 0x01, 12, 6, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 2, 2, 15 }, /* 13: Underground Sea */
+  { 0, "Volcanic Island", {0}, 266, 0x01, 12, 20, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer, 0x00000000u, 0x00001000u, 0, 1, 2, 2, 15 }, /* 14: Volcanic Island */
   { 0, "* Archenemy", {0}, 14673, 0x80, -1, 0, { 0, 99, 3 }, 0, 0, 0, 0, manalinkeh_card_archenemy, 0x00000000u, 0x40000001u, 0, 1, 0, 0, 0 }, /* 15: * Archenemy */
   { 0, "* Draft", {0}, 14674, 0x84, -1, 1, { 0, 99, 3 }, 0, 0, 0, 0, manalinkeh_card_draft, 0x00000000u, 0x40000001u, 0, 1, 0, 0, 0 }, /* 16: * Draft */
   { 0, "* Elder Dragon Hi", {0}, 14675, 0x80, -1, 0, { 0, 99, 3 }, 0, 0, 0, 0, manalinkeh_card_edh, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 0 }, /* 17: * Elder Dragon Highlander */
@@ -11762,7 +11762,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Abhorrent Overlor", {0}, 13366, 0x02, -1, 2, { 2, 5, 0 }, 6, 6, 0, 0, manalinkeh_card_abhorrent_overlord, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 170: Abhorrent Overlord */
   { 0, "Abjure", {0}, 2923, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_abjure, 0x00000000u, 0x00002000u, 0, 15, 0, 1, 50 }, /* 171: Abjure */
   { 0, "Abolish", {0}, 4791, 0x10, -1, 32, { 2, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_abolish, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 172: Abolish */
-  { 0, "Abomination", {0}, 551, 0x02, -1, 2, { 2, 3, 0 }, 2, 6, 0, 0, manalinkeh_card_abomination, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 173: Abomination */
+  { 0, "Abomination", {0}, 551, 0x02, -1, 2, { 2, 3, 0 }, 2, 6, 0, 0, manalinkeh_card_abomination, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 173: Abomination */
   { 0, "Abomination of Gu", {0}, 14204, 0x02, -1, 14, { 3, 3, 1 }, 3, 4, 1, 0, manalinkeh_card_abomination_of_gudul, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 174: Abomination of Gudul */
   { 0, "Aboroth", {0}, 2924, 0x02, -1, 8, { 2, 4, 0 }, 9, 9, 0, 0, manalinkeh_card_aboroth, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 175: Aboroth */
   { 0, "Aboshan, Cephalid", {0}, 5462, 0x02, 14, 4, { 2, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_aboshan_cephalid_emperor, 0x00000000u, 0x00000001u, 0, 57, 0, 0, 20 }, /* 176: Aboshan, Cephalid Emperor */
@@ -11771,7 +11771,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Absolver Thrull", {0}, 8018, 0x02, -1, 32, { 1, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_absolver_thrull, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 179: Absolver Thrull */
   { 0, "Absorb", {0}, 1375, 0x20, -1, 36, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_absorb, 0x00000000u, 0x00002000u, 0, 15, 0, 1, 95 }, /* 180: Absorb */
   { 0, "Absorb Vis", {0}, 10105, 0x08, -1, 2, { 1, 6, 4 }, 0, 0, 0, 0, manalinkeh_card_absorb_vis, 0x00000000u, 0x00000000u, 0, 249, 0, 0, 40 }, /* 181: Absorb Vis */
-  { 0, "Abu Ja'far", {0}, 391, 0x02, -1, 32, { 1, 0, 0 }, 0, 1, 0, 0, manalinkeh_card_abu_jafar, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 5 }, /* 182: Abu Ja'far */
+  { 0, "Abu Ja'far", {0}, 391, 0x02, -1, 32, { 1, 0, 0 }, 0, 1, 0, 0, manalinkeh_card_abu_jafar, 0x00000000u, 0x00000400u, 0, 8, 8, 3, 5 }, /* 182: Abu Ja'far */
   { 0, "Abuna Acolyte", {0}, 11194, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_abuna_acolyte, 0x00000000u, 0x00000005u, 0, 248, 0, 2, 9 }, /* 183: Abuna Acolyte */
   { 0, "Abuna's Chant", {0}, 6998, 0x10, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_abunas_chant, 0x00000000u, 0x00000004u, 0, 15, 0, 0, 60 }, /* 184: Abuna's Chant */
   { 0, "Abundance", {0}, 3686, 0x04, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_abundance, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 50 }, /* 185: Abundance */
@@ -11799,7 +11799,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Accumulated Knowl", {0}, 4660, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_accumulated_knowledge, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 15 }, /* 207: Accumulated Knowledge */
   { 0, "Accursed Centaur", {0}, 6037, 0x02, 2, 2, { 1, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_accursed_centaur, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 208: Accursed Centaur */
   { 0, "Accursed Spirit", {0}, 13254, 0x02, -1, 2, { 1, 3, 0 }, 3, 2, 0, 0, manalinkeh_card_bladetusk_boar, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 209: Accursed Spirit */
-  { 0, "Acid Rain", {0}, 552, 0x08, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_acid_rain, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 80 }, /* 210: Acid Rain */
+  { 0, "Acid Rain", {0}, 552, 0x08, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_acid_rain, 0x00000000u, 0x00000000u, 0, 9, 16, 2, 80 }, /* 210: Acid Rain */
   { 0, "Acid Web Spider", {0}, 11196, 0x02, -1, 8, { 2, 3, 0 }, 3, 5, 0, 0, manalinkeh_card_acid_web_spider, 0x00000400u, 0x00000000u, 0, 9, 0, 2, 50 }, /* 211: Acid Web Spider */
   { 0, "Acidic Dagger", {0}, 2387, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_acidic_dagger, 0x00000000u, 0x00000001u, 0, 57, 0, 0, 80 }, /* 212: Acidic Dagger */
   { 0, "Acidic Slime", {0}, 10379, 0x02, -1, 8, { 2, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_acidic_slime, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 50 }, /* 213: Acidic Slime */
@@ -11887,7 +11887,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Agrus Kos, Wojek ", {0}, 7765, 0x02, 14, 48, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_agrus_kos_wojek_veteran, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 295: Agrus Kos, Wojek Veteran */
   { 0, "Ainok Bond-Kin", {0}, 14211, 0x02, -1, 32, { 1, 1, 1 }, 2, 1, 1, 0, manalinkeh_card_ainok_bon_kin, 0x00000000u, 0x00000001u, 0, 193, 0, 0, 20 }, /* 296: Ainok Bond-Kin */
   { 0, "Ainok Tracker", {0}, 14212, 0x02, -1, 16, { 1, 5, 1 }, 3, 3, 1, 0, manalinkeh_card_ainok_tracker, 0x00000100u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 297: Ainok Tracker */
-  { 0, "Air Elemental", {0}, 0, 0x02, -1, 4, { 2, 3, 0 }, 4, 4, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 70 }, /* 298: Air Elemental */
+  { 0, "Air Elemental", {0}, 0, 0x02, -1, 4, { 2, 3, 0 }, 4, 4, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 1, 1, 70 }, /* 298: Air Elemental */
   { 0, "Air Servant", {0}, 11085, 0x02, -1, 4, { 1, 4, 0 }, 4, 3, 0, 0, manalinkeh_card_air_servant, 0x00000020u, 0x00000001u, 0, 57, 0, 3, 59 }, /* 299: Air Servant */
   { 0, "Airborne Aid", {0}, 6039, 0x08, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_airborne_aid, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 300: Airborne Aid */
   { 0, "Aisling Leprechau", {0}, 557, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_aisling_leprechaun, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 301: Aisling Leprechaun */
@@ -11921,31 +11921,31 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Akroma's Devoted", {0}, 6333, 0x02, -1, 32, { 1, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_akromas_devoted, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 329: Akroma's Devoted */
   { 0, "Akroma's Memorial", {0}, 1607, 0x40, 14, 1, { 0, 7, 0 }, 0, 0, 0, 0, manalinkeh_card_akromas_memorial, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 100 }, /* 330: Akroma's Memorial */
   { 0, "Akroma's Vengeanc", {0}, 6042, 0x08, -1, 32, { 2, 4, 4 }, 0, 0, 0, 0, manalinkeh_card_akromas_vengeance, 0x00000000u, 0x00000000u, 0, 248, 0, 0, 80 }, /* 331: Akroma's Vengeance */
-  { 0, "Akron Legionnaire", {0}, 558, 0x02, -1, 32, { 2, 6, 0 }, 8, 4, 0, 0, manalinkeh_card_akron_legionnaire, 0x00000000u, 0x04000000u, 0, 8, 0, 1, 70 }, /* 332: Akron Legionnaire */
+  { 0, "Akron Legionnaire", {0}, 558, 0x02, -1, 32, { 2, 6, 0 }, 8, 4, 0, 0, manalinkeh_card_akron_legionnaire, 0x00000000u, 0x04000000u, 0, 8, 16, 1, 70 }, /* 332: Akron Legionnaire */
   { 0, "Aku Djinn", {0}, 2669, 0x02, 6, 2, { 2, 3, 0 }, 5, 6, 0, 0, manalinkeh_card_aku_djinn, 0x00000080u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 333: Aku Djinn */
   { 0, "Akuta, Born of As", {0}, 7600, 0x02, 14, 2, { 2, 2, 5 }, 3, 2, 0, 0, manalinkeh_card_akuta_born_from_ashes, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 334: Akuta, Born of Ash */
   { 0, "Al-abara's Carpet", {0}, 559, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_al_abaras_carpet, 0x00000000u, 0x00000001u, 0, 105, 0, 1, 40 }, /* 335: Al-abara's Carpet */
   { 0, "Alabaster Dragon", {0}, 2927, 0x02, -1, 32, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_alabaster_dragon, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 336: Alabaster Dragon */
   { 0, "Alabaster Kirin", {0}, 14213, 0x02, -1, 32, { 1, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_serra_angel, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 337: Alabaster Kirin */
   { 0, "Alabaster Mage", {0}, 11773, 0x02, -1, 32, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_alabaster_mage, 0x00000000u, 0x00000001u, 0, 49, 0, 2, 9 }, /* 338: Alabaster Mage */
-  { 0, "Alabaster Potion", {0}, 560, 0x10, -1, 32, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_alabaster_potion, 0x00000000u, 0x00000004u, 0, 15, 0, 1, 40 }, /* 339: Alabaster Potion */
+  { 0, "Alabaster Potion", {0}, 560, 0x10, -1, 32, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_alabaster_potion, 0x00000000u, 0x00000004u, 0, 15, 1, 1, 40 }, /* 339: Alabaster Potion */
   { 0, "Alabaster Wall", {0}, 1699, 0x02, -1, 32, { 1, 2, 0 }, 0, 4, 0, 0, manalinkeh_card_samite_healer, 0x00800000u, 0x00000005u, 0, 248, 0, 2, 25 }, /* 340: Alabaster Wall */
   { 0, "Alaborn Grenadier", {0}, 3662, 0x02, -1, 32, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_serra_angel, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 341: Alaborn Grenadier */
   { 0, "Alaborn Musketeer", {0}, 3663, 0x02, -1, 32, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000400u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 342: Alaborn Musketeer */
   { 0, "Alaborn Zealot", {0}, 3666, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_alaborn_zealot, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 343: Alaborn Zealot */
-  { 0, "Aladdin", {0}, 392, 0x02, -1, 16, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_aladdin, 0x00000000u, 0x00000001u, 0, 248, 0, 3, 55 }, /* 344: Aladdin */
-  { 0, "Aladdin's Lamp", {0}, 393, 0x40, -1, 1, { 0, 10, 0 }, 0, 0, 0, 0, manalinkeh_card_aladdins_lamp, 0x00000000u, 0x00020001u, 0, 249, 0, 254, 5 }, /* 345: Aladdin's Lamp */
-  { 0, "Aladdin's Ring", {0}, 396, 0x40, -1, 1, { 0, 8, 0 }, 0, 0, 0, 0, manalinkeh_card_aladdins_ring, 0x00000000u, 0x00000001u, 0, 17, 0, 255, 40 }, /* 346: Aladdin's Ring */
+  { 0, "Aladdin", {0}, 392, 0x02, -1, 16, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_aladdin, 0x00000000u, 0x00000401u, 0, 248, 8, 3, 55 }, /* 344: Aladdin */
+  { 0, "Aladdin's Lamp", {0}, 393, 0x40, -1, 1, { 0, 10, 0 }, 0, 0, 0, 0, manalinkeh_card_aladdins_lamp, 0x00000000u, 0x00020001u, 0, 249, 1, 254, 5 }, /* 345: Aladdin's Lamp */
+  { 0, "Aladdin's Ring", {0}, 396, 0x40, -1, 1, { 0, 8, 0 }, 0, 0, 0, 0, manalinkeh_card_aladdins_ring, 0x00000000u, 0x00000001u, 0, 17, 1, 255, 40 }, /* 346: Aladdin's Ring */
   { 0, "Albino Troll", {0}, 3691, 0x02, -1, 8, { 1, 1, 1 }, 3, 3, 1, 0, manalinkeh_card_albino_troll, 0x00000200u, 0x00000001u, 0, 248, 0, 2, 75 }, /* 347: Albino Troll */
   { 0, "Alchemist's Appre", {0}, 12300, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_alchemists_apprentice, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 348: Alchemist's Apprentice */
   { 0, "Alchemist's Refug", {0}, 12301, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_alchemists_refuge, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 349: Alchemist's Refuge */
-  { 0, "Alchor's Tomb", {0}, 561, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_alchors_tomb, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 40 }, /* 350: Alchor's Tomb */
+  { 0, "Alchor's Tomb", {0}, 561, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_alchors_tomb, 0x00000000u, 0x00000001u, 0, 248, 16, 1, 40 }, /* 350: Alchor's Tomb */
   { 0, "Aleatory", {0}, 2392, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_aleatory, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 351: Aleatory */
   { 0, "Alert Shu Infantr", {0}, 4213, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_serra_angel, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 352: Alert Shu Infantry */
   { 0, "Alexi, Zephyr Mag", {0}, 4794, 0x02, 14, 4, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_alexi_zephyr_mage, 0x00000000u, 0x00020001u, 0, 248, 0, 0, 20 }, /* 353: Alexi, Zephyr Mage */
   { 0, "Algae Gharial", {0}, 1669, 0x02, -1, 8, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_scavenger_drake, 0x00020000u, 0x00000020u, 0, 8, 0, 3, 50 }, /* 354: Algae Gharial */
-  { 0, "Ali Baba", {0}, 394, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_ali_baba, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 25 }, /* 355: Ali Baba */
-  { 0, "Ali from Cairo", {0}, 395, 0x02, -1, 16, { 2, 2, 4 }, 0, 1, 0, 0, manalinkeh_card_ali_from_cairo, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 75 }, /* 356: Ali from Cairo */
+  { 0, "Ali Baba", {0}, 394, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_ali_baba, 0x00000000u, 0x00000401u, 0, 24, 1, 0, 25 }, /* 355: Ali Baba */
+  { 0, "Ali from Cairo", {0}, 395, 0x02, -1, 16, { 2, 2, 4 }, 0, 1, 0, 0, manalinkeh_card_ali_from_cairo, 0x00000000u, 0x00000580u, 0, 8, 4, 3, 75 }, /* 356: Ali from Cairo */
   { 0, "Alive // Well", {0}, 13111, 0x08, -1, 40, { 1, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_alive_well, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 357: Alive // Well */
   { 0, "All Hallow's Eve", {0}, 562, 0x08, -1, 2, { 2, 2, 1 }, 0, 0, 0, 0, manalinkeh_card_all_hallows_eve, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 60 }, /* 358: All Hallow's Eve */
   { 0, "All Is Dust", {0}, 10866, 0x08, -1, 1, { 0, 7, 0 }, 0, 0, 0, 0, manalinkeh_card_all_is_dust, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 95 }, /* 359: All Is Dust */
@@ -11981,15 +11981,15 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ambush Commander", {0}, 6474, 0x02, -1, 8, { 2, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_ambush_commander, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 50 }, /* 389: Ambush Commander */
   { 0, "Ambush Party", {0}, 2171, 0x02, -1, 16, { 1, 4, 0 }, 3, 1, 0, 0, manalinkeh_card_ambush_party, 0x00000100u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 390: Ambush Party */
   { 0, "Ambush Viper", {0}, 11872, 0x12, -1, 8, { 1, 1, 1 }, 2, 1, 1, 0, manalinkeh_card_winged_coatl, 0x00000000u, 0x00000000u, 0, 66, 0, 2, 20 }, /* 391: Ambush Viper */
-  { 0, "Amnesia", {0}, 292, 0x08, -1, 4, { 3, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_amnesia, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 100 }, /* 392: Amnesia */
+  { 0, "Amnesia", {0}, 292, 0x08, -1, 4, { 3, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_amnesia, 0x00000000u, 0x00000000u, 0, 9, 8, 2, 100 }, /* 392: Amnesia */
   { 0, "Amoeboid Changeli", {0}, 9059, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_amoeboid_changeling, 0x00080000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 393: Amoeboid Changeling */
   { 0, "Amok", {0}, 3338, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_amok, 0x00000000u, 0x00000001u, 0, 65, 0, 2, 50 }, /* 394: Amok */
   { 0, "Amphin Cutthroat", {0}, 11774, 0x02, -1, 4, { 1, 3, 0 }, 2, 4, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 395: Amphin Cutthroat */
   { 0, "Amphin Pathmage", {0}, 14070, 0x02, -1, 4, { 1, 3, 0 }, 3, 2, 0, 0, manalinkeh_card_amphin_pathmage, 0x00000000u, 0x00000001u, 0, 57, 0, 0, 20 }, /* 396: Amphin Pathmage */
-  { 0, "Amrou Kithkin", {0}, 563, 0x02, -1, 32, { 2, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_amrou_kithkin, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 397: Amrou Kithkin */
+  { 0, "Amrou Kithkin", {0}, 563, 0x02, -1, 32, { 2, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_amrou_kithkin, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 397: Amrou Kithkin */
   { 0, "Amrou Scout", {0}, 8475, 0x02, -1, 32, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_defiant_falcon, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 398: Amrou Scout */
   { 0, "Amrou Seekers", {0}, 8476, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_amrou_seekers, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 399: Amrou Seekers */
-  { 0, "Amulet of Kroog", {0}, 466, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_amulet_of_kroog, 0x00000000u, 0x00000005u, 0, 241, 0, 2, 5 }, /* 400: Amulet of Kroog */
+  { 0, "Amulet of Kroog", {0}, 466, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_amulet_of_kroog, 0x00000000u, 0x00000405u, 0, 241, 1, 2, 5 }, /* 400: Amulet of Kroog */
   { 0, "Amulet of Quoz", {0}, 1851, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_amulet_of_quoz, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 40 }, /* 401: Amulet of Quoz */
   { 0, "Amulet of Unmakin", {0}, 2394, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_amulet_of_unmaking, 0x00000000u, 0x00000001u, 0, 145, 0, 0, 80 }, /* 402: Amulet of Unmaking */
   { 0, "Amulet of Vigor", {0}, 10720, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_amulet_of_vigor, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 75 }, /* 403: Amulet of Vigor */
@@ -12008,7 +12008,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ancestor's Prophe", {0}, 6043, 0x02, -1, 32, { 1, 4, 0 }, 1, 5, 0, 0, manalinkeh_card_ancestors_prophet, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 416: Ancestor's Prophet */
   { 0, "Ancestral Knowled", {0}, 2929, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ancestral_knowledge, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 100 }, /* 417: Ancestral Knowledge */
   { 0, "Ancestral Mask", {0}, 4383, 0x04, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ancestral_mask, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 418: Ancestral Mask */
-  { 0, "Ancestral Recall", {0}, 1, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ancestral_recall, 0x00000000u, 0x00000040u, 0, 15, 0, 3, 200 }, /* 419: Ancestral Recall */
+  { 0, "Ancestral Recall", {0}, 1, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ancestral_recall, 0x00000000u, 0x000001c0u, 0, 15, 2, 3, 200 }, /* 419: Ancestral Recall */
   { 0, "Ancestral Tribute", {0}, 5467, 0x08, -1, 32, { 2, 5, 9 }, 0, 0, 0, 0, manalinkeh_card_ancestral_tribute, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 420: Ancestral Tribute */
   { 0, "Ancestral Vision", {0}, 8477, 0x08, -1, 4, { 0, 0, 0 }, 0, 0, 1, 0, manalinkeh_card_ancestral_vision, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 90 }, /* 421: Ancestral Vision */
   { 0, "Ancient Amphithea", {0}, 9060, 0x01, -1, 48, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ancient_amphitheater, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 10 }, /* 422: Ancient Amphitheater */
@@ -12054,19 +12054,19 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Angelic Renewal", {0}, 2930, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_angelic_renewal, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 50 }, /* 462: Angelic Renewal */
   { 0, "Angelic Shield", {0}, 4930, 0x04, -1, 36, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_angelic_shield, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 60 }, /* 463: Angelic Shield */
   { 0, "Angelic Skirmishe", {0}, 12882, 0x02, -1, 32, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_angelic_skirmisher, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 70 }, /* 464: Angelic Skirmisher */
-  { 0, "Angelic Voices", {0}, 564, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_angelic_voices, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 5 }, /* 465: Angelic Voices */
+  { 0, "Angelic Voices", {0}, 564, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_angelic_voices, 0x00000000u, 0x00000000u, 0, 1, 16, 3, 5 }, /* 465: Angelic Voices */
   { 0, "Angelic Wall", {0}, 3668, 0x02, -1, 32, { 1, 1, 0 }, 0, 4, 0, 0, card_dummy, 0x00800020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 466: Angelic Wall */
   { 0, "Angelsong", {0}, 9914, 0x10, -1, 32, { 1, 1, 4 }, 0, 0, 0, 0, manalinkeh_card_angelsong, 0x00000000u, 0x00000000u, 0, 244, 0, 0, 40 }, /* 467: Angelsong */
   { 0, "Anger", {0}, 5900, 0x02, -1, 16, { 1, 3, 2 }, 2, 2, 0, 0, manalinkeh_card_anger, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 468: Anger */
   { 0, "Anger of the Gods", {0}, 13373, 0x08, -1, 16, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_anger_of_the_gods, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 469: Anger of the Gods */
-  { 0, "Angry Mob", {0}, 293, 0x02, -1, 32, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_angry_mob, 0x00000080u, 0x00000000u, 0, 24, 0, 255, 5 }, /* 470: Angry Mob */
+  { 0, "Angry Mob", {0}, 293, 0x02, -1, 32, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_angry_mob, 0x00000080u, 0x00000000u, 0, 24, 1, 255, 5 }, /* 470: Angry Mob */
   { 0, "Angus Mackenzie", {0}, 565, 0x02, 14, 44, { 3, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_angus_mackenzie, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 5 }, /* 471: Angus Mackenzie */
   { 0, "Animal Boneyard", {0}, 5468, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_animal_boneyard, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 40 }, /* 472: Animal Boneyard */
   { 0, "Animar, Soul of E", {0}, 11751, 0x02, 14, 28, { 3, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_animar_soul_of_elements, 0x00008800u, 0x40000000u, 0, 1, 0, 3, 150 }, /* 473: Animar, Soul of Elements */
-  { 0, "Animate Artifact", {0}, 2, 0x04, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_animate_artifact, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 474: Animate Artifact */
-  { 0, "Animate Dead", {0}, 3, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_animate_dead, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 20 }, /* 475: Animate Dead */
-  { 0, "Animate Wall", {0}, 4, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_animate_wall, 0x00000000u, 0x00000000u, 0, 1, 0, 254, 40 }, /* 476: Animate Wall */
-  { 0, "Ankh of Mishra", {0}, 5, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ankh_of_mishra, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 477: Ankh of Mishra */
+  { 0, "Animate Artifact", {0}, 2, 0x04, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_animate_artifact, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 5 }, /* 474: Animate Artifact */
+  { 0, "Animate Dead", {0}, 3, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_animate_dead, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 20 }, /* 475: Animate Dead */
+  { 0, "Animate Wall", {0}, 4, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_animate_wall, 0x00000000u, 0x00000000u, 0, 1, 1, 254, 40 }, /* 476: Animate Wall */
+  { 0, "Ankh of Mishra", {0}, 5, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ankh_of_mishra, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 477: Ankh of Mishra */
   { 0, "Ankle Shanker", {0}, 14217, 0x02, 3, 50, { 3, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_ankle_shanker, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 478: Ankle Shanker */
   { 0, "Annex", {0}, 1325, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_conquer, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 479: Annex */
   { 0, "Annihilate", {0}, 4931, 0x10, -1, 2, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_annihilate, 0x00000000u, 0x00000000u, 0, 13, 0, 0, 80 }, /* 480: Annihilate */
@@ -12097,7 +12097,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Apothecary Initia", {0}, 9468, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_ivory_cup, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 505: Apothecary Initiate */
   { 0, "Appetite for Brai", {0}, 12307, 0x08, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_appetite_for_brains, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 506: Appetite for Brains */
   { 0, "Apprentice Necrom", {0}, 4092, 0x02, -1, 2, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_apprentice_necromancer, 0x00000000u, 0x00000001u, 0, 17, 0, 1, 100 }, /* 507: Apprentice Necromancer */
-  { 0, "Apprentice Wizard", {0}, 300, 0x02, -1, 4, { 2, 1, 0 }, 0, 1, 0, 0, manalinkeh_card_apprentice_wizard, 0x00000000u, 0x00011001u, 0, 248, 0, 0, 21 }, /* 508: Apprentice Wizard */
+  { 0, "Apprentice Wizard", {0}, 300, 0x02, -1, 4, { 2, 1, 0 }, 0, 1, 0, 0, manalinkeh_card_apprentice_wizard, 0x00000000u, 0x00011001u, 0, 248, 1, 0, 21 }, /* 508: Apprentice Wizard */
   { 0, "Aquamoeba", {0}, 5768, 0x02, -1, 4, { 1, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_aquamoeba, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 20 }, /* 509: Aquamoeba */
   { 0, "Aquastrand Spider", {0}, 8166, 0x02, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_aquastrand_spider, 0x00000000u, 0x00000021u, 0, 49, 0, 0, 50 }, /* 510: Aquastrand Spider */
   { 0, "Aqueous Form", {0}, 13376, 0x04, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_aqueous_form, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 511: Aqueous Form */
@@ -12167,28 +12167,28 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ardent Militia", {0}, 955, 0x02, -1, 32, { 1, 4, 0 }, 2, 5, 0, 0, manalinkeh_card_serra_angel, 0x00000000u, 0x00000000u, 0, 72, 0, 1, 5 }, /* 575: Ardent Militia */
   { 0, "Ardent Plea", {0}, 10238, 0x04, -1, 36, { 2, 1, 1 }, 0, 0, 0, 0, manalinkeh_card_ardent_plea, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 576: Ardent Plea */
   { 0, "Ardent Recruit", {0}, 11415, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_ardent_recruit, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 15 }, /* 577: Ardent Recruit */
-  { 0, "Arena", {0}, 899, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_arena, 0x00000000u, 0x00000001u, 0, 241, 0, 3, 5 }, /* 578: Arena */
+  { 0, "Arena", {0}, 899, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_arena, 0x00000000u, 0x00000801u, 0, 241, 128, 3, 5 }, /* 578: Arena */
   { 0, "Arena Athlete", {0}, 13378, 0x02, -1, 16, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_arena_athlete, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 579: Arena Athlete */
   { 0, "Arena of the Anci", {0}, 569, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_arena_of_the_ancients, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 580: Arena of the Ancients */
   { 0, "Arenson's Aura", {0}, 1857, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_arensons_aura, 0x00000000u, 0x00004003u, 0, 241, 0, 0, 45 }, /* 581: Arenson's Aura */
   { 0, "Argent Sphinx", {0}, 11199, 0x02, -1, 4, { 2, 2, 0 }, 4, 3, 0, 0, manalinkeh_card_argent_sphynx, 0x00000020u, 0x00000001u, 0, 72, 0, 1, 70 }, /* 582: Argent Sphinx */
   { 0, "Argentum Armor", {0}, 11200, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_argentum_armor, 0x00000000u, 0x00000001u, 0, 17, 0, 3, 100 }, /* 583: Argentum Armor */
-  { 0, "Argivian Archaeol", {0}, 467, 0x02, -1, 32, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_argivian_archaeologist, 0x00000000u, 0x00000001u, 0, 24, 0, 3, 35 }, /* 584: Argivian Archaeologist */
-  { 0, "Argivian Blacksmi", {0}, 468, 0x02, -1, 32, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_argivian_blacksmith, 0x00000000u, 0x00000005u, 0, 248, 0, 255, 5 }, /* 585: Argivian Blacksmith */
+  { 0, "Argivian Archaeol", {0}, 467, 0x02, -1, 32, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_argivian_archaeologist, 0x00000000u, 0x00000401u, 0, 24, 32, 3, 35 }, /* 584: Argivian Archaeologist */
+  { 0, "Argivian Blacksmi", {0}, 468, 0x02, -1, 32, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_argivian_blacksmith, 0x00000000u, 0x00000405u, 0, 248, 32, 255, 5 }, /* 585: Argivian Blacksmith */
   { 0, "Argivian Find", {0}, 2933, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_argivian_find, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 35 }, /* 586: Argivian Find */
   { 0, "Argivian Restorat", {0}, 2934, 0x08, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_argivian_restoration, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 75 }, /* 587: Argivian Restoration */
   { 0, "Argothian Elder", {0}, 3697, 0x02, -1, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_argothian_elder, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 588: Argothian Elder */
   { 0, "Argothian Enchant", {0}, 1227, 0x02, -1, 8, { 1, 1, 0 }, 0, 1, 0, 0, manalinkeh_card_argothian_enchantress, 0x00020000u, 0x00000000u, 0, 8, 0, 255, 35 }, /* 589: Argothian Enchantress */
-  { 0, "Argothian Pixies", {0}, 469, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_argothian_pixies, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 35 }, /* 590: Argothian Pixies */
-  { 0, "Argothian Treefol", {0}, 470, 0x02, -1, 8, { 2, 3, 0 }, 3, 5, 0, 0, manalinkeh_card_argothian_treefolk, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 591: Argothian Treefolk */
+  { 0, "Argothian Pixies", {0}, 469, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_argothian_pixies, 0x00000000u, 0x00000400u, 0, 8, 8, 2, 35 }, /* 590: Argothian Pixies */
+  { 0, "Argothian Treefol", {0}, 470, 0x02, -1, 8, { 2, 3, 0 }, 3, 5, 0, 0, manalinkeh_card_argothian_treefolk, 0x00000000u, 0x00000400u, 0, 8, 32, 1, 20 }, /* 591: Argothian Treefolk */
   { 0, "Argothian Wurm", {0}, 3699, 0x02, -1, 8, { 1, 3, 0 }, 6, 6, 0, 0, manalinkeh_card_argothian_wurm, 0x00000080u, 0x00000000u, 0, 8, 0, 3, 100 }, /* 592: Argothian Wurm */
   { 0, "Arid Mesa", {0}, 10496, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_arid_mesa, 0x00000000u, 0x00000001u, 0, 152, 0, 0, 10 }, /* 593: Arid Mesa */
   { 0, "Ark of Blight", {0}, 6477, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ark_of_blight, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 60 }, /* 594: Ark of Blight */
   { 0, "Arm with Aether", {0}, 11561, 0x08, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_arm_with_aether, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 20 }, /* 595: Arm with Aether */
   { 0, "Armada Wurm", {0}, 12652, 0x02, -1, 40, { 4, 2, 0 }, 5, 5, 0, 0, manalinkeh_card_armada_wurm, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 596: Armada Wurm */
   { 0, "Armadillo Cloak", {0}, 1319, 0x04, -1, 40, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_armadillo_cloack, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 50 }, /* 597: Armadillo Cloak */
-  { 0, "Armageddon", {0}, 6, 0x08, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_armageddon, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 60 }, /* 598: Armageddon */
-  { 0, "Armageddon Clock", {0}, 471, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_armageddon_clock, 0x00000000u, 0x00000021u, 0, 24, 0, 255, 100 }, /* 599: Armageddon Clock */
+  { 0, "Armageddon", {0}, 6, 0x08, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_armageddon, 0x00000000u, 0x00000000u, 0, 1, 1, 3, 60 }, /* 598: Armageddon */
+  { 0, "Armageddon Clock", {0}, 471, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_armageddon_clock, 0x00000000u, 0x00000021u, 0, 24, 1, 255, 100 }, /* 599: Armageddon Clock */
   { 0, "Armament Corps", {0}, 14219, 0x02, -1, 42, { 3, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_armament_corps, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 600: Armament Corps */
   { 0, "Armament Master", {0}, 10497, 0x02, -1, 32, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_armament_master, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 75 }, /* 601: Armament Master */
   { 0, "Armament of Nyx", {0}, 13842, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_armament_of_nyx, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 602: Armament of Nyx */
@@ -12211,7 +12211,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Armory of Iroas", {0}, 13843, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_armory_of_iroas, 0x00000000u, 0x00000001u, 0, 145, 0, 0, 60 }, /* 619: Armory of Iroas */
   { 0, "Arms Dealer", {0}, 4385, 0x02, 3, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_arms_dealer, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 620: Arms Dealer */
   { 0, "Army Ants", {0}, 2671, 0x02, -1, 18, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_army_ants, 0x00000000u, 0x00000001u, 0, 72, 0, 3, 75 }, /* 621: Army Ants */
-  { 0, "Army of Allah", {0}, 397, 0x10, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_army_of_allah, 0x00000000u, 0x00000000u, 0, 4, 0, 3, 65 }, /* 622: Army of Allah */
+  { 0, "Army of Allah", {0}, 397, 0x10, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_army_of_allah, 0x00000000u, 0x00000400u, 0, 4, 4, 3, 65 }, /* 622: Army of Allah */
   { 0, "Army of the Damne", {0}, 11876, 0x08, -1, 2, { 3, 5, 9 }, 0, 0, 1, 0, manalinkeh_card_army_of_the_damned, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 150 }, /* 623: Army of the Damned */
   { 0, "Arnjlot's Ascent", {0}, 1859, 0x04, -1, 4, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_arnjlots_ascent, 0x00000000u, 0x00000001u, 0, 49, 0, 0, 40 }, /* 624: Arnjlot's Ascent */
   { 0, "Arrest", {0}, 4386, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_arrest, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 625: Arrest */
@@ -12222,10 +12222,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Arrows of Justice", {0}, 12884, 0x10, -1, 48, { 1, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_arrows_of_justice, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 630: Arrows of Justice */
   { 0, "Arsenal Thresher", {0}, 10239, 0x42, -1, 38, { 2, 2, 1 }, 2, 2, 1, 0, manalinkeh_card_arsenal_thresher, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 631: Arsenal Thresher */
   { 0, "Artful Dodge", {0}, 12135, 0x08, -1, 4, { 1, 0, 9 }, 0, 0, 0, 0, manalinkeh_card_artful_dodge, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 15 }, /* 632: Artful Dodge */
-  { 0, "Artifact Blast", {0}, 472, 0x20, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_artifact_blast, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 633: Artifact Blast */
+  { 0, "Artifact Blast", {0}, 472, 0x20, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_artifact_blast, 0x00000000u, 0x00000400u, 0, 15, 32, 0, 40 }, /* 633: Artifact Blast */
   { 0, "Artifact Mutation", {0}, 4935, 0x10, -1, 24, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_artifact_mutation, 0x00000000u, 0x00000000u, 0, 3, 0, 0, 80 }, /* 634: Artifact Mutation */
-  { 0, "Artifact Possessi", {0}, 516, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_artifact_possession, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 635: Artifact Possession */
-  { 0, "Artifact Ward", {0}, 473, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_artifact_ward, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 636: Artifact Ward */
+  { 0, "Artifact Possessi", {0}, 516, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_artifact_possession, 0x00000000u, 0x00000400u, 0, 1, 32, 1, 5 }, /* 635: Artifact Possession */
+  { 0, "Artifact Ward", {0}, 473, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_artifact_ward, 0x00000000u, 0x00000000u, 0, 1, 32, 0, 60 }, /* 636: Artifact Ward */
   { 0, "Artificer's Hex", {0}, 13259, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_arteficers_hex, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 637: Artificer's Hex */
   { 0, "Artificer's Intui", {0}, 7006, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_artificiers_intuition, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 638: Artificer's Intuition */
   { 0, "Artillerize", {0}, 11562, 0x10, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_artillerize, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 40 }, /* 639: Artillerize */
@@ -12244,22 +12244,22 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ashen-Skin Zubera", {0}, 7158, 0x02, -1, 2, { 1, 1, 13 }, 1, 2, 0, 0, manalinkeh_card_ashen_skin_zubera, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 652: Ashen-Skin Zubera */
   { 0, "Ashenmoor Gouger", {0}, 1415, 0x02, -1, 18, { 3, 0, 1 }, 4, 4, 1, 0, manalinkeh_card_ashenmoor_gouger, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 55 }, /* 653: Ashenmoor Gouger */
   { 0, "Ashenmoor Liege", {0}, 9471, 0x02, -1, 18, { 3, 1, 1 }, 4, 1, 3, 0, manalinkeh_card_ashenmoor_liege, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 654: Ashenmoor Liege */
-  { 0, "Ashes to Ashes", {0}, 294, 0x08, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ashes_ot_ashes, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 80 }, /* 655: Ashes to Ashes */
+  { 0, "Ashes to Ashes", {0}, 294, 0x08, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ashes_ot_ashes, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 80 }, /* 655: Ashes to Ashes */
   { 0, "Ashiok, Nightmare", {0}, 13382, 0x04, 14, 6, { 2, 1, 9 }, 0, 0, 0, 0, manalinkeh_card_ashiok_nightmare_weaver, 0x00000000u, 0x00400001u, 0, 17, 0, 0, 60 }, /* 656: Ashiok, Nightmare Weaver */
   { 0, "Ashiok's Adept", {0}, 13667, 0x02, -1, 2, { 1, 2, 0 }, 1, 3, 0, 0, manalinkeh_card_ashioks_adept, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 657: Ashiok's Adept */
   { 0, "Ashling the Pilgr", {0}, 9063, 0x02, 14, 16, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_ashling_the_pilgrim, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 20 }, /* 658: Ashling the Pilgrim */
   { 0, "Ashling, the Exti", {0}, 9735, 0x02, 14, 2, { 2, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_ashling_the_extinguisher, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 659: Ashling, the Extinguisher */
   { 0, "Ashling's Preroga", {0}, 9064, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ashlings_prerogative, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 660: Ashling's Prerogative */
   { 0, "Ashmouth Hound", {0}, 11877, 0x02, -1, 16, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_ashmouth_hound, 0x00000000u, 0x00000008u, 0, 8, 0, 1, 25 }, /* 661: Ashmouth Hound */
-  { 0, "Ashnod's Altar", {0}, 474, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_ashnods_altar, 0x00000000u, 0x00001000u, 0, 241, 0, 255, 10 }, /* 662: Ashnod's Altar */
-  { 0, "Ashnod's Battle G", {0}, 475, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ashnods_battle_gear, 0x00000000u, 0x00000001u, 0, 65, 0, 1, 5 }, /* 663: Ashnod's Battle Gear */
+  { 0, "Ashnod's Altar", {0}, 474, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_ashnods_altar, 0x00000000u, 0x00001400u, 0, 241, 8, 255, 10 }, /* 662: Ashnod's Altar */
+  { 0, "Ashnod's Battle G", {0}, 475, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ashnods_battle_gear, 0x00000000u, 0x00000401u, 0, 65, 1, 1, 5 }, /* 663: Ashnod's Battle Gear */
   { 0, "Ashnod's Cylix", {0}, 2256, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ashnods_cylix, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 664: Ashnod's Cylix */
-  { 0, "Ashnod's Transmog", {0}, 476, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ashnods_transmogrant, 0x00000000u, 0x00000001u, 0, 241, 0, 2, 5 }, /* 665: Ashnod's Transmogrant */
+  { 0, "Ashnod's Transmog", {0}, 476, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ashnods_transmogrant, 0x00000000u, 0x00000401u, 0, 241, 8, 2, 5 }, /* 665: Ashnod's Transmogrant */
   { 0, "Asmira, Holy Aven", {0}, 1409, 0x02, 14, 40, { 2, 2, 14 }, 2, 3, 0, 0, manalinkeh_card_asmira_holy_avenger, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 20 }, /* 666: Asmira, Holy Avenger */
   { 0, "Aspect of Gorgon", {0}, 13844, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_aspect_of_gorgon, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 667: Aspect of Gorgon */
   { 0, "Aspect of Hydra", {0}, 13668, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_aspect_of_hydra, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 668: Aspect of Hydra */
   { 0, "Aspect of Mongoos", {0}, 8480, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_aspect_of_the_mangoose, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 669: Aspect of Mongoose */
-  { 0, "Aspect of Wolf", {0}, 7, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_aspect_of_the_wolf, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 10 }, /* 670: Aspect of Wolf */
+  { 0, "Aspect of Wolf", {0}, 7, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_aspect_of_the_wolf, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 10 }, /* 670: Aspect of Wolf */
   { 0, "Asphodel Wanderer", {0}, 13383, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_asphodel_wanderer, 0x00000200u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 671: Asphodel Wanderer */
   { 0, "Asphyxiate", {0}, 13669, 0x08, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_asphyxiate, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 672: Asphyxiate */
   { 0, "Assassin", {0}, 18691, 0x02, -1, 2, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_assassin_token, 0x00000000u, 0x00000000u, 0, 0, 0, 0, 0 }, /* 673: Assassin */
@@ -12271,16 +12271,16 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Assault Suit", {0}, 14442, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_assault_suit, 0x00000000u, 0x04000001u, 0, 17, 0, 0, 40 }, /* 679: Assault Suit */
   { 0, "Assault Zeppelid", {0}, 1365, 0x02, -1, 12, { 2, 2, 0 }, 3, 3, 0, 0, card_dummy, 0x000000a0u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 680: Assault Zeppelid */
   { 0, "Assemble the Legi", {0}, 12885, 0x04, -1, 48, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_assemble_the_legion, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 681: Assemble the Legion */
-  { 0, "Assembly-Worker", {0}, 910, 0x43, -1, 1, { 0, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_assembly_worker, 0x00000000u, 0x00001001u, 0, 73, 0, 0, 21 }, /* 682: Assembly-Worker */
+  { 0, "Assembly-Worker", {0}, 910, 0x43, -1, 1, { 0, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_assembly_worker, 0x00000000u, 0x00001001u, 0, 73, 1, 0, 21 }, /* 682: Assembly-Worker */
   { 0, "Assert Authority", {0}, 6613, 0x20, -1, 4, { 2, 5, 0 }, 0, 0, 1, 0, manalinkeh_card_assert_autority, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 683: Assert Authority */
   { 0, "Astral Cornucopia", {0}, 13670, 0x40, -1, 62, { 0, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_astral_cornucopia, 0x00000000u, 0x00001002u, 0, 248, 0, 0, 10 }, /* 684: Astral Cornucopia */
   { 0, "Astral Slide", {0}, 6053, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_astral_slide, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 685: Astral Slide */
   { 0, "Astral Steel", {0}, 6478, 0x10, -1, 32, { 1, 2, 12 }, 0, 0, 0, 0, manalinkeh_card_astral_steel, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 686: Astral Steel */
-  { 0, "Aswan Jaguar", {0}, 868, 0x02, -1, 8, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_aswan_jaguar, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 50 }, /* 687: Aswan Jaguar */
+  { 0, "Aswan Jaguar", {0}, 868, 0x02, -1, 8, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_aswan_jaguar, 0x00000000u, 0x00000001u, 0, 248, 64, 1, 50 }, /* 687: Aswan Jaguar */
   { 0, "Atalya, Samite Ma", {0}, 4937, 0x02, 14, 32, { 2, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_atalya_samite_master, 0x00000000u, 0x00000005u, 0, 248, 0, 0, 50 }, /* 688: Atalya, Samite Master */
   { 0, "Athreos, God of P", {0}, 13845, 0x04, 14, 34, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_athreos_god_of_passage, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 689: Athreos, God of Passage */
   { 0, "Athreos, God of P", {0}, 13846, 0x06, 14, 34, { 2, 1, 0 }, 5, 4, 0, 0, manalinkeh_card_athreos_god_of_passage, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 690: Athreos, God of Passage Incarnate */
-  { 0, "Atog", {0}, 477, 0x02, -1, 16, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_atog2, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 691: Atog */
+  { 0, "Atog", {0}, 477, 0x02, -1, 16, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_atog2, 0x00000000u, 0x00000019u, 0, 72, 32, 0, 50 }, /* 691: Atog */
   { 0, "Atogatog", {0}, 5471, 0x02, 14, 62, { 5, 0, 0 }, 5, 5, 0, 0, manalinkeh_card_atogatog, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 692: Atogatog */
   { 0, "Attended Knight", {0}, 12541, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_attended_knight, 0x00000100u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 693: Attended Knight */
   { 0, "Attrition", {0}, 4094, 0x04, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_attrition, 0x00000000u, 0x00000001u, 0, 201, 0, 2, 100 }, /* 694: Attrition */
@@ -12383,20 +12383,20 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Azorius Keyrune", {0}, 12664, 0x40, -1, 36, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_azorius_keyrune, 0x00000000u, 0x00001001u, 0, 49, 0, 0, 10 }, /* 791: Azorius Keyrune */
   { 0, "Azorius Ploy", {0}, 8174, 0x10, -1, 36, { 3, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_azorius_ploy, 0x00000000u, 0x00000004u, 0, 4, 0, 0, 40 }, /* 792: Azorius Ploy */
   { 0, "Azorius Signet", {0}, 1722, 0x40, -1, 36, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_azorius_signet, 0x00000000u, 0x00011001u, 0, 249, 0, 0, 10 }, /* 793: Azorius Signet */
-  { 0, "Azure Drake", {0}, 573, 0x02, -1, 4, { 1, 3, 0 }, 2, 4, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 794: Azure Drake */
+  { 0, "Azure Drake", {0}, 573, 0x02, -1, 4, { 1, 3, 0 }, 2, 4, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 16, 1, 50 }, /* 794: Azure Drake */
   { 0, "Azure Mage", {0}, 11781, 0x02, -1, 4, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_azure_mage, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 51 }, /* 795: Azure Mage */
   { 0, "Azusa, Lost but S", {0}, 7161, 0x02, 14, 8, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_azusa_lost_but_seeking, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 796: Azusa, Lost but Seeking */
   { 0, "Back from the Bri", {0}, 11880, 0x04, -1, 4, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_back_from_the_brink, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 150 }, /* 797: Back from the Brink */
   { 0, "Back to Basics", {0}, 3701, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_back_to_basics, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 90 }, /* 798: Back to Basics */
   { 0, "Back to Nature", {0}, 11096, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_tranquillity, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 90 }, /* 799: Back to Nature */
   { 0, "Backdraft", {0}, 574, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_backdraft, 0x00000000u, 0x00000004u, 0, 0, 0, 0, 40 }, /* 800: Backdraft */
-  { 0, "Backfire", {0}, 575, 0x04, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_backfire, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 801: Backfire */
+  { 0, "Backfire", {0}, 575, 0x04, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_backfire, 0x00000000u, 0x00000000u, 0, 8, 1, 255, 5 }, /* 801: Backfire */
   { 0, "Backlash", {0}, 4941, 0x10, -1, 18, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_backlash, 0x00000000u, 0x00000000u, 0, 3, 0, 0, 60 }, /* 802: Backlash */
-  { 0, "Bad Moon", {0}, 8, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_bad_moon, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 30 }, /* 803: Bad Moon */
+  { 0, "Bad Moon", {0}, 8, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_bad_moon, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 30 }, /* 803: Bad Moon */
   { 0, "Bad River", {0}, 2401, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_bad_river, 0x00000000u, 0x00000001u, 0, 153, 0, 0, 10 }, /* 804: Bad River */
   { 0, "Baku Altar", {0}, 7438, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_baku_altar, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 40 }, /* 805: Baku Altar */
   { 0, "Bala Ged Thief", {0}, 10500, 0x02, -1, 2, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_bala_ged_thief, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 58 }, /* 806: Bala Ged Thief */
-  { 0, "Balance", {0}, 10, 0x08, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_balance, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 200 }, /* 807: Balance */
+  { 0, "Balance", {0}, 10, 0x08, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_balance, 0x00000000u, 0x00000100u, 0, 9, 1, 3, 200 }, /* 807: Balance */
   { 0, "Balance of Power", {0}, 977, 0x08, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_balance_of_power, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 65 }, /* 808: Balance of Power */
   { 0, "Balancing Act", {0}, 5478, 0x08, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_balancing_act, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 65 }, /* 809: Balancing Act */
   { 0, "Balduvian Barbari", {0}, 978, 0x02, -1, 16, { 2, 1, 0 }, 3, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 810: Balduvian Barbarians */
@@ -12415,7 +12415,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Baleful Eidolon B", {0}, 13385, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_baleful_eidolon, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 823: Baleful Eidolon Bestowed */
   { 0, "Baleful Force", {0}, 13606, 0x02, -1, 2, { 3, 5, 0 }, 7, 7, 0, 0, manalinkeh_card_baleful_force, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 824: Baleful Force */
   { 0, "Baleful Strix", {0}, 12516, 0x42, -1, 6, { 2, 0, 1 }, 1, 1, 0, 0, manalinkeh_card_baleful_strix, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 825: Baleful Strix */
-  { 0, "Ball Lightning", {0}, 295, 0x02, -1, 16, { 3, 0, 0 }, 6, 1, 0, 0, manalinkeh_card_ball_lightning, 0x00000080u, 0x00000000u, 0, 1, 0, 1, 50 }, /* 826: Ball Lightning */
+  { 0, "Ball Lightning", {0}, 295, 0x02, -1, 16, { 3, 0, 0 }, 6, 1, 0, 0, manalinkeh_card_ball_lightning, 0x00000080u, 0x00000000u, 0, 1, 1, 1, 50 }, /* 826: Ball Lightning */
   { 0, "Ballyrush Bannere", {0}, 9323, 0x02, -1, 32, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_bullyrush_banneret, 0x00000000u, 0x40000000u, 0, 8, 0, 0, 20 }, /* 827: Ballyrush Banneret */
   { 0, "Balm of Restorati", {0}, 1751, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_balm_of_restoration, 0x00000000u, 0x00000005u, 0, 249, 0, 2, 5 }, /* 828: Balm of Restoration */
   { 0, "Baloth Cage Trap", {0}, 10501, 0x10, -1, 8, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_baloth_cage_trap, 0x00000000u, 0x00000000u, 0, 2, 0, 1, 50 }, /* 829: Baloth Cage Trap */
@@ -12438,7 +12438,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Banishing Stroke", {0}, 12311, 0x10, -1, 32, { 1, 5, 15 }, 0, 0, 0, 0, manalinkeh_card_banishing_stroke, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 846: Banishing Stroke */
   { 0, "Banishment Decree", {0}, 11416, 0x10, -1, 32, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_banishment_decree, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 40 }, /* 847: Banishment Decree */
   { 0, "Banners Raised", {0}, 12312, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_banners_rised, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 848: Banners Raised */
-  { 0, "Banshee", {0}, 296, 0x02, -1, 2, { 2, 2, 0 }, 0, 1, 0, 0, manalinkeh_card_banshee2, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 50 }, /* 849: Banshee */
+  { 0, "Banshee", {0}, 296, 0x02, -1, 2, { 2, 2, 0 }, 0, 1, 0, 0, manalinkeh_card_banshee2, 0x00000000u, 0x00000001u, 0, 248, 8, 2, 50 }, /* 849: Banshee */
   { 0, "Banshee's Blade", {0}, 6619, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_banshees_blade, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 40 }, /* 850: Banshee's Blade */
   { 0, "Bant Battlemage", {0}, 9917, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_bant_battlemage, 0x00000000u, 0x00000001u, 0, 120, 0, 0, 20 }, /* 851: Bant Battlemage */
   { 0, "Bant Charm", {0}, 9918, 0x10, -1, 44, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_bant_charm, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 852: Bant Charm */
@@ -12447,7 +12447,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Bar the Door", {0}, 12137, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_bar_the_door, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 25 }, /* 855: Bar the Door */
   { 0, "Barbarian Guides", {0}, 1867, 0x02, -1, 16, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_barbarian_guides, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 20 }, /* 856: Barbarian Guides */
   { 0, "Barbarian Ring", {0}, 5483, 0x01, -1, 16, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_barbarian_ring, 0x00000000u, 0x00001001u, 0, 249, 0, 1, 10 }, /* 857: Barbarian Ring */
-  { 0, "Barbary Apes", {0}, 576, 0x02, -1, 8, { 1, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 50 }, /* 858: Barbary Apes */
+  { 0, "Barbary Apes", {0}, 576, 0x02, -1, 8, { 1, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 16, 255, 50 }, /* 858: Barbary Apes */
   { 0, "Barbed Battlegear", {0}, 11206, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_barbed_battlegear, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 10 }, /* 859: Barbed Battlegear */
   { 0, "Barbed Foliage", {0}, 2402, 0x04, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_barbed_foliage, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 75 }, /* 860: Barbed Foliage */
   { 0, "Barbed Lightning", {0}, 6859, 0x10, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_barbed_lighting, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 861: Barbed Lightning */
@@ -12458,7 +12458,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Barishi", {0}, 2938, 0x02, -1, 8, { 2, 2, 0 }, 4, 3, 0, 0, manalinkeh_card_barishi, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 866: Barishi */
   { 0, "Barkshell Blessin", {0}, 9475, 0x10, -1, 40, { 1, 0, 19 }, 0, 0, 3, 0, manalinkeh_card_barkshell_blessing, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 867: Barkshell Blessing */
   { 0, "Barktooth Warbear", {0}, 577, 0x02, 14, 18, { 3, 4, 0 }, 6, 5, 0, 0, manalinkeh_card_barktooth_warbeard, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 868: Barktooth Warbeard */
-  { 0, "Barl's Cage", {0}, 297, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_barls_cage, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 40 }, /* 869: Barl's Cage */
+  { 0, "Barl's Cage", {0}, 297, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_barls_cage, 0x00000000u, 0x00000001u, 0, 241, 8, 0, 40 }, /* 869: Barl's Cage */
   { 0, "Baron Sengir", {0}, 1632, 0x02, 14, 2, { 3, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_baron_sengir, 0x00000020u, 0x00000001u, 0, 249, 0, 3, 100 }, /* 870: Baron Sengir */
   { 0, "Barony Vampire", {0}, 11097, 0x02, -1, 2, { 1, 2, 0 }, 3, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 25 }, /* 871: Barony Vampire */
   { 0, "Barrage of Boulde", {0}, 14224, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_barrage_of_boulders, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 872: Barrage of Boulders */
@@ -12476,7 +12476,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Basal Sliver", {0}, 8484, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_basal_sliver, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 50 }, /* 884: Basal Sliver */
   { 0, "Basal Thrull", {0}, 1752, 0x02, -1, 2, { 2, 0, 0 }, 1, 2, 0, 0, manalinkeh_card_basal_thrull, 0x00000000u, 0x00001000u, 0, 8, 0, 1, 21 }, /* 885: Basal Thrull */
   { 0, "Basalt Golem", {0}, 2405, 0x42, -1, 1, { 0, 5, 0 }, 2, 4, 0, 0, manalinkeh_card_basalt_golem, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 886: Basalt Golem */
-  { 0, "Basalt Monolith", {0}, 11, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_basalt_monolith, 0x00000000u, 0x00001001u, 0, 241, 0, 1, 15 }, /* 887: Basalt Monolith */
+  { 0, "Basalt Monolith", {0}, 11, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_basalt_monolith, 0x00000000u, 0x00001001u, 0, 241, 2, 1, 15 }, /* 887: Basalt Monolith */
   { 0, "Basandra, Battle ", {0}, 11752, 0x02, 14, 48, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_basandra_battle_seraph, 0x00000020u, 0x41000001u, 0, 17, 0, 0, 70 }, /* 888: Basandra, Battle Seraph */
   { 0, "Bash to Bits", {0}, 5484, 0x10, -1, 16, { 1, 3, 9 }, 0, 0, 0, 0, manalinkeh_card_bash_to_bits, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 889: Bash to Bits */
   { 0, "Basilica Guards", {0}, 12890, 0x02, -1, 32, { 1, 2, 0 }, 1, 4, 0, 0, manalinkeh_card_syndic_of_tithes, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 890: Basilica Guards */
@@ -12490,7 +12490,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Battered Golem", {0}, 7012, 0x42, -1, 1, { 0, 3, 0 }, 3, 2, 0, 0, manalinkeh_card_battered_golem, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 898: Battered Golem */
   { 0, "Batterhorn", {0}, 12666, 0x02, -1, 16, { 1, 4, 0 }, 4, 3, 0, 0, manalinkeh_card_batterhorn, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 899: Batterhorn */
   { 0, "Battering Krasis", {0}, 13119, 0x02, -1, 8, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_cloudfin_raptor, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 900: Battering Krasis */
-  { 0, "Battering Ram", {0}, 478, 0x42, -1, 1, { 0, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_battering_ram, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 901: Battering Ram */
+  { 0, "Battering Ram", {0}, 478, 0x42, -1, 1, { 0, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_battering_ram, 0x00000000u, 0x00000400u, 0, 8, 1, 1, 5 }, /* 901: Battering Ram */
   { 0, "Battering Sliver", {0}, 1379, 0x02, -1, 16, { 1, 5, 0 }, 4, 4, 0, 0, manalinkeh_card_horned_sliver, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 35 }, /* 902: Battering Sliver */
   { 0, "Batterskull", {0}, 11564, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_batterskull, 0x00000000u, 0x00000001u, 0, 17, 0, 3, 100 }, /* 903: Batterskull */
   { 0, "Battle Cry", {0}, 1870, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_battle_cry, 0x00000000u, 0x00000000u, 0, 2, 0, 0, 60 }, /* 904: Battle Cry */
@@ -12517,7 +12517,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Batwing Brume", {0}, 9740, 0x10, -1, 34, { 1, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_batwing_brume, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 925: Batwing Brume */
   { 0, "Bayou Dragonfly", {0}, 3087, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, card_dummy, 0x00000021u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 926: Bayou Dragonfly */
   { 0, "Bazaar Krovod", {0}, 12667, 0x02, -1, 32, { 1, 4, 0 }, 2, 5, 0, 0, manalinkeh_card_bazaar_krovod, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 927: Bazaar Krovod */
-  { 0, "Bazaar of Baghdad", {0}, 398, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_bazaar_of_baghdad, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 5 }, /* 928: Bazaar of Baghdad */
+  { 0, "Bazaar of Baghdad", {0}, 398, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_bazaar_of_baghdad, 0x00000000u, 0x00000001u, 0, 241, 4, 0, 5 }, /* 928: Bazaar of Baghdad */
   { 0, "Bazaar of Wonders", {0}, 2407, 0x04, 16, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_bazaar_of_wonders, 0x00000000u, 0x40000000u, 0, 8, 0, 0, 40 }, /* 929: Bazaar of Wonders */
   { 0, "Bazaar Trader", {0}, 10729, 0x02, -1, 16, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_bazaar_trader, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 930: Bazaar Trader */
   { 0, "Beacon Behemoth", {0}, 10114, 0x02, -1, 8, { 2, 3, 0 }, 5, 3, 0, 0, manalinkeh_card_beacon_behemoth, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 50 }, /* 931: Beacon Behemoth */
@@ -12541,7 +12541,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Beastbreaker of B", {0}, 10878, 0x02, -1, 8, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_beastbreaker_of_bala_ged, 0x00000000u, 0x00000001u, 0, 152, 0, 0, 50 }, /* 949: Beastbreaker of Bala Ged */
   { 0, "Beastmaster Ascen", {0}, 10504, 0x04, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_beastmaster_ascension, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 100 }, /* 950: Beastmaster Ascension */
   { 0, "Beastmaster's Mag", {0}, 8023, 0x04, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_beastmasters_magemark, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 951: Beastmaster's Magemark */
-  { 0, "Beasts of Bogarda", {0}, 579, 0x02, -1, 16, { 1, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_beasts_of_bogardan, 0x00004000u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 952: Beasts of Bogardan */
+  { 0, "Beasts of Bogarda", {0}, 579, 0x02, -1, 16, { 1, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_beasts_of_bogardan, 0x00004000u, 0x00000000u, 0, 8, 16, 2, 50 }, /* 952: Beasts of Bogardan */
   { 0, "Beck // Call", {0}, 13120, 0x08, -1, 44, { 2, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_beck_call, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 953: Beck // Call */
   { 0, "Beckon Apparition", {0}, 9741, 0x10, -1, 34, { 1, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_beckon_apparition, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 954: Beckon Apparition */
   { 0, "Become Immense", {0}, 14226, 0x10, -1, 8, { 1, 5, 1 }, 0, 0, 1, 0, manalinkeh_card_become_immense, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 955: Become Immense */
@@ -12566,7 +12566,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Benalish Cavalry", {0}, 8486, 0x02, -1, 32, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_benalish_cavalry, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 974: Benalish Cavalry */
   { 0, "Benalish Commande", {0}, 8744, 0x02, -1, 32, { 1, 3, 1 }, 16384, 16384, 1, 0, manalinkeh_card_benalish_commander, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 975: Benalish Commander */
   { 0, "Benalish Heralds", {0}, 4945, 0x02, -1, 32, { 1, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_benalish_heralds, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 50 }, /* 976: Benalish Heralds */
-  { 0, "Benalish Hero", {0}, 13, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000040u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 977: Benalish Hero */
+  { 0, "Benalish Hero", {0}, 13, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000040u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 977: Benalish Hero */
   { 0, "Benalish Infantry", {0}, 2940, 0x02, -1, 32, { 1, 2, 0 }, 1, 3, 0, 0, card_dummy, 0x00000040u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 978: Benalish Infantry */
   { 0, "Benalish Knight", {0}, 1231, 0x12, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_ashcoat_bear, 0x00000100u, 0x00000000u, 0, 2, 0, 3, 25 }, /* 979: Benalish Knight */
   { 0, "Benalish Veteran", {0}, 11782, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_benalish_veteran, 0x00000000u, 0x00000018u, 0, 9, 0, 0, 39 }, /* 980: Benalish Veteran */
@@ -12575,7 +12575,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Benevolent Unicor", {0}, 2408, 0x02, -1, 32, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_benevolent_unicorn, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 100 }, /* 983: Benevolent Unicorn */
   { 0, "Benthic Djinn", {0}, 2409, 0x02, 6, 6, { 2, 2, 0 }, 5, 3, 0, 0, manalinkeh_card_benthic_djinn, 0x00000002u, 0x00000000u, 0, 1, 0, 2, 75 }, /* 984: Benthic Djinn */
   { 0, "Benthic Giant", {0}, 13388, 0x02, -1, 4, { 1, 5, 0 }, 4, 5, 0, 0, manalinkeh_card_aven_fleetwing, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 985: Benthic Giant */
-  { 0, "Berserk", {0}, 14, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_berserk, 0x00000000u, 0x00000000u, 0, 4, 0, 3, 200 }, /* 986: Berserk */
+  { 0, "Berserk", {0}, 14, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_berserk, 0x00000000u, 0x00000100u, 0, 4, 2, 3, 200 }, /* 986: Berserk */
   { 0, "Berserkers of Blo", {0}, 10387, 0x02, -1, 16, { 1, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_berserkers_of_blood_ridge, 0x00000000u, 0x01000000u, 0, 24, 0, 1, 50 }, /* 987: Berserkers of Blood Ridge */
   { 0, "Beseech the Queen", {0}, 9478, 0x08, -1, 2, { 0, 6, 0 }, 0, 0, 1, 0, manalinkeh_card_beseech_the_queen, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 988: Beseech the Queen */
   { 0, "Bestial Fury", {0}, 2262, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_bestial_fury, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 989: Bestial Fury */
@@ -12596,9 +12596,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Biovisionary", {0}, 12894, 0x02, -1, 12, { 2, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_biovisionary, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 1004: Biovisionary */
   { 0, "Birchlore Rangers", {0}, 6066, 0x02, -1, 8, { 1, 0, 1 }, 1, 1, 1, 0, manalinkeh_card_birchlore_rangers, 0x00000000u, 0x00001002u, 0, 249, 0, 2, 21 }, /* 1005: Birchlore Rangers */
   { 0, "Bird", {0}, 18696, 0x02, -1, 32, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_bird_token, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 0 }, /* 1006: Bird */
-  { 0, "Bird Maiden", {0}, 399, 0x02, -1, 16, { 1, 2, 0 }, 1, 2, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 1007: Bird Maiden */
+  { 0, "Bird Maiden", {0}, 399, 0x02, -1, 16, { 1, 2, 0 }, 1, 2, 0, 0, card_dummy, 0x00000020u, 0x00000400u, 0, 8, 1, 1, 5 }, /* 1007: Bird Maiden */
   { 0, "Bird Soldier", {0}, 18697, 0x02, -1, 32, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_rhino_token, 0x00000020u, 0x00000000u, 0, 0, 0, 0, 0 }, /* 1008: Bird Soldier */
-  { 0, "Birds of Paradise", {0}, 15, 0x02, -1, 8, { 1, 0, 0 }, 0, 1, 0, 0, manalinkeh_card_generic_noncombat_1_mana_producing_creature, 0x00000020u, 0x00001000u, 0, 248, 0, 2, 21 }, /* 1009: Birds of Paradise */
+  { 0, "Birds of Paradise", {0}, 15, 0x02, -1, 8, { 1, 0, 0 }, 0, 1, 0, 0, manalinkeh_card_generic_noncombat_1_mana_producing_creature, 0x00000020u, 0x00001000u, 0, 248, 1, 2, 21 }, /* 1009: Birds of Paradise */
   { 0, "Birthing Pod", {0}, 11566, 0x40, -1, 8, { 1, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_birthing_pod, 0x00000000u, 0x00000001u, 0, 121, 0, 2, 100 }, /* 1010: Birthing Pod */
   { 0, "Bite of the Black", {0}, 14016, 0x08, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_bite_of_the_black_rose, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 1011: Bite of the Black Rose */
   { 0, "Bitter Feud", {0}, 14444, 0x04, -1, 16, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_furnace_of_rath, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 1012: Bitter Feud */
@@ -12609,15 +12609,15 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Bituminous Blast", {0}, 10244, 0x10, -1, 18, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_bituminous_blast, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 80 }, /* 1017: Bituminous Blast */
   { 0, "Black", {0}, 19801, 0x80, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_back_to_95, 0x00000000u, 0x00000001u, 0, 1, 0, 2, 0 }, /* 1018: Black */
   { 0, "Black Cat", {0}, 12139, 0x02, -1, 2, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_black_cat, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 25 }, /* 1019: Black Cat */
-  { 0, "Black Knight", {0}, 16, 0x02, -1, 2, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_black_knight, 0x00000100u, 0x00000000u, 0, 8, 0, 1, 80 }, /* 1020: Black Knight */
-  { 0, "Black Lotus", {0}, 17, 0x40, -1, 62, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_black_lotus, 0x00000000u, 0x00001000u, 0, 9, 0, 3, 200 }, /* 1021: Black Lotus */
-  { 0, "Black Mana Batter", {0}, 580, 0x40, -1, 2, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_black_mana_battery, 0x00000000u, 0x00001021u, 0, 72, 0, 255, 5 }, /* 1022: Black Mana Battery */
+  { 0, "Black Knight", {0}, 16, 0x02, -1, 2, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_black_knight, 0x00000100u, 0x00000000u, 0, 8, 1, 1, 80 }, /* 1020: Black Knight */
+  { 0, "Black Lotus", {0}, 17, 0x40, -1, 62, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_black_lotus, 0x00000000u, 0x00001180u, 0, 9, 2, 3, 200 }, /* 1021: Black Lotus */
+  { 0, "Black Mana Batter", {0}, 580, 0x40, -1, 2, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_black_mana_battery, 0x00000000u, 0x00001021u, 0, 72, 1, 255, 5 }, /* 1022: Black Mana Battery */
   { 0, "Black Market", {0}, 4395, 0x04, -1, 2, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_black_market, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 1023: Black Market */
   { 0, "Black Oak of Odun", {0}, 13672, 0x02, 2, 2, { 1, 2, 0 }, 0, 5, 0, 0, manalinkeh_card_black_oak_of_odunos, 0x00800000u, 0x00000019u, 0, 72, 0, 0, 20 }, /* 1024: Black Oak of Odunos */
   { 0, "Black Scarab", {0}, 1873, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_black_scarab, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 1025: Black Scarab */
   { 0, "Black Sun's Zenit", {0}, 11417, 0x08, -1, 2, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_black_suns_zenith, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 100 }, /* 1026: Black Sun's Zenith */
-  { 0, "Black Vise", {0}, 18, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_black_vise, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 200 }, /* 1027: Black Vise */
-  { 0, "Black Ward", {0}, 19, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_black_ward, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 1028: Black Ward */
+  { 0, "Black Vise", {0}, 18, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_black_vise, 0x00000000u, 0x00000200u, 0, 8, 1, 2, 200 }, /* 1027: Black Vise */
+  { 0, "Black Ward", {0}, 19, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_black_ward, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 60 }, /* 1028: Black Ward */
   { 0, "Blackcleave Cliff", {0}, 11209, 0x01, -1, 18, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_generic_som_tapland, 0x00000000u, 0x00001000u, 0, 1, 0, 3, 25 }, /* 1029: Blackcleave Cliffs */
   { 0, "Blackcleave Gobli", {0}, 11210, 0x02, 3, 2, { 1, 3, 0 }, 2, 1, 0, 0, manalinkeh_card_ambush_party, 0x20000000u, 0x00000000u, 0, 1, 0, 255, 9 }, /* 1030: Blackcleave Goblin */
   { 0, "Blade of the Bloo", {0}, 10505, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_blade_of_the_bloodchief, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 30 }, /* 1031: Blade of the Bloodchief */
@@ -12644,7 +12644,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Blastoderm", {0}, 4673, 0x02, -1, 8, { 2, 2, 0 }, 5, 5, 0, 0, manalinkeh_card_blastoderm, 0x00020000u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 1052: Blastoderm */
   { 0, "Blaze", {0}, 980, 0x08, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_blaze, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 80 }, /* 1053: Blaze */
   { 0, "Blaze Commando", {0}, 13123, 0x02, -1, 48, { 2, 3, 0 }, 5, 3, 0, 0, manalinkeh_card_blaze_commando, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 1054: Blaze Commando */
-  { 0, "Blaze of Glory", {0}, 20, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, card_blaze_of_glory, 0x00000000u, 0x00000000u, 0, 2, 0, 3, 5 }, /* 1055: Blaze of Glory */
+  { 0, "Blaze of Glory", {0}, 20, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, card_blaze_of_glory, 0x00000000u, 0x00000000u, 0, 2, 2, 3, 5 }, /* 1055: Blaze of Glory */
   { 0, "Blazing Archon", {0}, 7772, 0x02, -1, 32, { 3, 6, 0 }, 5, 6, 0, 0, manalinkeh_card_blazing_archon, 0x00000020u, 0x04000000u, 0, 8, 0, 0, 100 }, /* 1056: Blazing Archon */
   { 0, "Blazing Effigy", {0}, 581, 0x02, -1, 16, { 1, 1, 0 }, 0, 3, 0, 0, manalinkeh_card_blazing_effigy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1057: Blazing Effigy */
   { 0, "Blazing Shoal", {0}, 7441, 0x10, -1, 16, { 2, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_blazing_shoal, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 1058: Blazing Shoal */
@@ -12655,10 +12655,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Blessed Reversal", {0}, 958, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_blessed_reversal, 0x00000000u, 0x00000000u, 0, 2, 0, 3, 5 }, /* 1063: Blessed Reversal */
   { 0, "Blessed Wind", {0}, 4801, 0x08, -1, 32, { 2, 7, 0 }, 0, 0, 0, 0, manalinkeh_card_blessed_wind, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 1064: Blessed Wind */
   { 0, "Blessed Wine", {0}, 1874, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_blessed_wine, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 1065: Blessed Wine */
-  { 0, "Blessing", {0}, 21, 0x04, -1, 32, { 2, 0, 0 }, 0, 0, 0, 0, card_blessing, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 50 }, /* 1066: Blessing */
+  { 0, "Blessing", {0}, 21, 0x04, -1, 32, { 2, 0, 0 }, 0, 0, 0, 0, card_blessing, 0x00000000u, 0x00000001u, 0, 65, 1, 0, 50 }, /* 1066: Blessing */
   { 0, "Blessing of the N", {0}, 8177, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_blessing_of_the_nephilim, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 1067: Blessing of the Nephilim */
   { 0, "Blessings of Natu", {0}, 12315, 0x08, -1, 8, { 1, 4, 15 }, 0, 0, 0, 0, manalinkeh_card_blessing_of_nature, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 1068: Blessings of Nature */
-  { 0, "Blight", {0}, 582, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_blight2, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 1069: Blight */
+  { 0, "Blight", {0}, 582, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_blight2, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 5 }, /* 1069: Blight */
   { 0, "Blight Mamba", {0}, 11214, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_gorilla_chieftain, 0x20000200u, 0x00000001u, 0, 248, 0, 1, 39 }, /* 1070: Blight Mamba */
   { 0, "Blight Sickle", {0}, 9481, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_blight_sickle, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 40 }, /* 1071: Blight Sickle */
   { 0, "Blightcaster", {0}, 13264, 0x02, -1, 2, { 1, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_blightcaster, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1072: Blightcaster */
@@ -12702,8 +12702,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Blood Frenzy", {0}, 3090, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_blood_frenzy, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 1110: Blood Frenzy */
   { 0, "Blood Host", {0}, 14075, 0x02, -1, 2, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_blood_host, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 1111: Blood Host */
   { 0, "Blood Knight", {0}, 1298, 0x02, -1, 16, { 2, 0, 0 }, 2, 2, 0, 0, card_dummy, 0x00008100u, 0x00000000u, 0, 8, 0, 0, 75 }, /* 1112: Blood Knight */
-  { 0, "Blood Lust", {0}, 583, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_blood_lust, 0x00000000u, 0x00000000u, 0, 4, 0, 3, 45 }, /* 1113: Blood Lust */
-  { 0, "Blood Moon", {0}, 299, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_blood_moon, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 60 }, /* 1114: Blood Moon */
+  { 0, "Blood Lust", {0}, 583, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_blood_lust, 0x00000000u, 0x00000200u, 0, 4, 1, 3, 45 }, /* 1113: Blood Lust */
+  { 0, "Blood Moon", {0}, 299, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_blood_moon, 0x00000000u, 0x00000000u, 0, 9, 8, 3, 60 }, /* 1114: Blood Moon */
   { 0, "Blood Oath", {0}, 4399, 0x10, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_blood_oath, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 1115: Blood Oath */
   { 0, "Blood of the Mart", {0}, 301, 0x10, -1, 32, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_blood_of_the_martyr, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 1116: Blood of the Martyr */
   { 0, "Blood Ogre", {0}, 11783, 0x02, -1, 16, { 1, 2, 13 }, 2, 2, 1, 0, manalinkeh_card_bloodrage_vampire, 0x00000100u, 0x00000000u, 0, 9, 0, 1, 50 }, /* 1117: Blood Ogre */
@@ -12756,11 +12756,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Blossoming Wreath", {0}, 2945, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_blossoming_wreath, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 1164: Blossoming Wreath */
   { 0, "Blowfly Infestati", {0}, 9485, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_blowfly_infestation, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 1165: Blowfly Infestation */
   { 0, "Blue", {0}, 19802, 0x80, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_back_to_95, 0x00000000u, 0x00000001u, 0, 1, 0, 2, 0 }, /* 1166: Blue */
-  { 0, "Blue Elemental Bl", {0}, 22, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_blue_elemental_blast, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 80 }, /* 1167: Blue Elemental Blast */
-  { 0, "Blue Mana Battery", {0}, 584, 0x40, -1, 4, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_blue_mana_battery, 0x00000000u, 0x00001021u, 0, 72, 0, 255, 5 }, /* 1168: Blue Mana Battery */
+  { 0, "Blue Elemental Bl", {0}, 22, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_blue_elemental_blast, 0x00000000u, 0x00002000u, 0, 15, 1, 0, 80 }, /* 1167: Blue Elemental Blast */
+  { 0, "Blue Mana Battery", {0}, 584, 0x40, -1, 4, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_blue_mana_battery, 0x00000000u, 0x00001021u, 0, 72, 1, 255, 5 }, /* 1168: Blue Mana Battery */
   { 0, "Blue Scarab", {0}, 1876, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_blue_scarab, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 1169: Blue Scarab */
   { 0, "Blue Sun's Zenith", {0}, 11422, 0x10, -1, 4, { 3, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_blue_suns_zenith, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 100 }, /* 1170: Blue Sun's Zenith */
-  { 0, "Blue Ward", {0}, 23, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_blue_ward, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 1171: Blue Ward */
+  { 0, "Blue Ward", {0}, 23, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_blue_ward, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 60 }, /* 1171: Blue Ward */
   { 0, "Blunt the Assault", {0}, 11216, 0x10, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_blunt_the_assault, 0x00000000u, 0x00000000u, 0, 4, 0, 2, 5 }, /* 1172: Blunt the Assault */
   { 0, "Blur Sliver", {0}, 13266, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_blur_sliver, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 1173: Blur Sliver */
   { 0, "Blurred Mongoose", {0}, 4952, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_blurred_mangoose, 0x00020000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1174: Blurred Mongoose */
@@ -12771,14 +12771,14 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Body Double", {0}, 8747, 0x02, -1, 4, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_body_double, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1179: Body Double */
   { 0, "Body Snatcher", {0}, 4098, 0x02, -1, 2, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_body_snatcher, 0x00000000u, 0x00000000u, 0, 24, 0, 2, 75 }, /* 1180: Body Snatcher */
   { 0, "Bog Down", {0}, 5204, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_bog_down, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 1181: Bog Down */
-  { 0, "Bog Imp", {0}, 336, 0x02, -1, 2, { 1, 1, 0 }, 1, 1, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 1182: Bog Imp */
+  { 0, "Bog Imp", {0}, 336, 0x02, -1, 2, { 1, 1, 0 }, 1, 1, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 1182: Bog Imp */
   { 0, "Bog Raiders", {0}, 3709, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 1183: Bog Raiders */
-  { 0, "Bog Rats", {0}, 350, 0x02, 7, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_bog_rats, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 1184: Bog Rats */
+  { 0, "Bog Rats", {0}, 350, 0x02, 7, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_bog_rats, 0x00000000u, 0x00000000u, 0, 8, 8, 1, 5 }, /* 1184: Bog Rats */
   { 0, "Bog Serpent", {0}, 8748, 0x02, -1, 2, { 1, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_bog_serpent, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 1185: Bog Serpent */
   { 0, "Bog Smugglers", {0}, 4401, 0x02, -1, 2, { 2, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 1186: Bog Smugglers */
   { 0, "Bog Tatters", {0}, 10512, 0x02, -1, 2, { 1, 4, 0 }, 4, 2, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 0, 0, 30 }, /* 1187: Bog Tatters */
   { 0, "Bog Witch", {0}, 4402, 0x02, -1, 2, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_bog_witch, 0x00000000u, 0x00001001u, 0, 248, 0, 0, 21 }, /* 1188: Bog Witch */
-  { 0, "Bog Wraith", {0}, 24, 0x02, -1, 2, { 1, 3, 0 }, 3, 3, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 1189: Bog Wraith */
+  { 0, "Bog Wraith", {0}, 24, 0x02, -1, 2, { 1, 3, 0 }, 3, 3, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 1, 1, 50 }, /* 1189: Bog Wraith */
   { 0, "Bogardan Hellkite", {0}, 1539, 0x12, -1, 16, { 2, 6, 0 }, 5, 5, 0, 0, manalinkeh_card_bogardan_hellkite, 0x00000020u, 0x00000000u, 0, 2, 0, 3, 70 }, /* 1190: Bogardan Hellkite */
   { 0, "Bogardan Phoenix", {0}, 2674, 0x02, -1, 16, { 3, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_bogardan_phoenix, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1191: Bogardan Phoenix */
   { 0, "Bogbrew Witch", {0}, 13267, 0x02, -1, 2, { 1, 3, 0 }, 1, 3, 0, 0, manalinkeh_card_bogbrew_witch, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 20 }, /* 1192: Bogbrew Witch */
@@ -12803,7 +12803,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Bonds of Faith", {0}, 11889, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_bonds_of_faith, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 49 }, /* 1211: Bonds of Faith */
   { 0, "Bonds of Quicksil", {0}, 11217, 0x14, -1, 4, { 1, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_bonds_of_quicksilver, 0x00000000u, 0x00000000u, 0, 4, 0, 1, 40 }, /* 1212: Bonds of Quicksilver */
   { 0, "Bone Dancer", {0}, 2948, 0x02, 2, 2, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_bone_dancer, 0x00000000u, 0x00000001u, 0, 72, 0, 2, 75 }, /* 1213: Bone Dancer */
-  { 0, "Bone Flute", {0}, 302, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_bone_flute, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 40 }, /* 1214: Bone Flute */
+  { 0, "Bone Flute", {0}, 302, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_bone_flute, 0x00000000u, 0x00000001u, 0, 72, 8, 0, 40 }, /* 1214: Bone Flute */
   { 0, "Bone Harvest", {0}, 2415, 0x10, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_bone_harvest, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 50 }, /* 1215: Bone Harvest */
   { 0, "Bone Mask", {0}, 2416, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_bone_mask, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 40 }, /* 1216: Bone Mask */
   { 0, "Bone Saw", {0}, 10117, 0x40, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_bone_saw, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 40 }, /* 1217: Bone Saw */
@@ -12820,9 +12820,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Boneyard Wurm", {0}, 11890, 0x02, -1, 8, { 1, 1, 0 }, 16384, 16384, 0, 0, manalinkeh_card_revenant, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 1228: Boneyard Wurm */
   { 0, "Bonfire of the Da", {0}, 12318, 0x08, -1, 16, { 1, 0, 15 }, 0, 0, 0, 0, manalinkeh_card_bonfire_of_the_damned, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 1229: Bonfire of the Damned */
   { 0, "Book Burning", {0}, 5913, 0x08, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_book_burning, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 1230: Book Burning */
-  { 0, "Book of Rass", {0}, 353, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_book_of_rass, 0x00000000u, 0x00000001u, 0, 241, 0, 254, 100 }, /* 1231: Book of Rass */
+  { 0, "Book of Rass", {0}, 353, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_book_of_rass, 0x00000000u, 0x00000001u, 0, 241, 8, 254, 100 }, /* 1231: Book of Rass */
   { 0, "Boom // Bust", {0}, 8749, 0x08, -1, 16, { 1, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_boom_bust, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 1232: Boom // Bust */
-  { 0, "Boomerang", {0}, 585, 0x10, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_boomerang, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 40 }, /* 1233: Boomerang */
+  { 0, "Boomerang", {0}, 585, 0x10, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_boomerang, 0x00000000u, 0x00000000u, 0, 15, 16, 2, 40 }, /* 1233: Boomerang */
   { 0, "Boon of Erebos", {0}, 13391, 0x10, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_boon_of_erebos, 0x00000000u, 0x00000004u, 0, 15, 0, 0, 60 }, /* 1234: Boon of Erebos */
   { 0, "Boon Reflection", {0}, 9489, 0x04, -1, 32, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_cradle_of_vitality, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 1235: Boon Reflection */
   { 0, "Boon Satyr", {0}, 13392, 0x16, -1, 8, { 2, 1, 1 }, 4, 2, 1, 0, manalinkeh_card_boon_satyr, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 1236: Boon Satyr */
@@ -12855,7 +12855,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "B\366sium Strip", {0}, 2943, 0x40, -1, 1, { 0, 3, 1 }, 0, 0, 0, 0, manalinkeh_card_bosium_strip, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 60 }, /* 1263: Bösium Strip */
   { 0, "Bosk Banneret", {0}, 9328, 0x02, -1, 8, { 1, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_bosk_banneret, 0x00000000u, 0x40000000u, 0, 1, 0, 2, 50 }, /* 1264: Bosk Banneret */
   { 0, "Bottle Gnomes", {0}, 1705, 0x42, -1, 1, { 0, 3, 0 }, 1, 3, 0, 0, manalinkeh_card_bottle_gnomes, 0x00000000u, 0x00000001u, 0, 72, 0, 1, 55 }, /* 1265: Bottle Gnomes */
-  { 0, "Bottle of Suleima", {0}, 400, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_bottle_of_suleiman, 0x00000000u, 0x00000001u, 0, 24, 0, 3, 5 }, /* 1266: Bottle of Suleiman */
+  { 0, "Bottle of Suleima", {0}, 400, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_bottle_of_suleiman, 0x00000000u, 0x00000801u, 0, 24, 1, 3, 5 }, /* 1266: Bottle of Suleiman */
   { 0, "Bottomless Pit", {0}, 3341, 0x04, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_bottomless_pit, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 1267: Bottomless Pit */
   { 0, "Bottomless Vault", {0}, 1753, 0x01, -1, 2, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_bottomless_vault, 0x00000000u, 0x00001021u, 0, 248, 0, 255, 50 }, /* 1268: Bottomless Vault */
   { 0, "Boulderfall", {0}, 13395, 0x10, -1, 16, { 2, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_boulderfall, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 1269: Boulderfall */
@@ -12876,10 +12876,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Brain Maggot", {0}, 13853, 0x06, -1, 2, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_brain_maggot, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 1284: Brain Maggot */
   { 0, "Brain Pry", {0}, 8181, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_brain_pry, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 1285: Brain Pry */
   { 0, "Brain Weevil", {0}, 11891, 0x02, -1, 2, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_brain_weevil, 0x00000000u, 0x00000041u, 0, 17, 0, 1, 20 }, /* 1286: Brain Weevil */
-  { 0, "Braingeyser", {0}, 25, 0x08, -1, 4, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_braingeyser, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 200 }, /* 1287: Braingeyser */
+  { 0, "Braingeyser", {0}, 25, 0x08, -1, 4, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_braingeyser, 0x00000000u, 0x00000100u, 0, 1, 2, 2, 200 }, /* 1287: Braingeyser */
   { 0, "Brainspoil", {0}, 7783, 0x08, -1, 2, { 2, 3, 4 }, 0, 0, 0, 0, manalinkeh_card_brainspoil, 0x00000000u, 0x00000000u, 0, 137, 0, 0, 60 }, /* 1288: Brainspoil */
   { 0, "Brainstorm", {0}, 1547, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_brainstorm, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 60 }, /* 1289: Brainstorm */
-  { 0, "Brainwash", {0}, 303, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_brainwash, 0x00000000u, 0x04400000u, 0, 8, 0, 0, 40 }, /* 1290: Brainwash */
+  { 0, "Brainwash", {0}, 303, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_brainwash, 0x00000000u, 0x04400000u, 0, 8, 1, 0, 40 }, /* 1290: Brainwash */
   { 0, "Bramble Elemental", {0}, 7784, 0x02, -1, 8, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_bramble_elemental, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 1291: Bramble Elemental */
   { 0, "Bramblecrush", {0}, 11892, 0x08, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_bramblecrush, 0x00000000u, 0x00000000u, 0, 9, 0, 255, 80 }, /* 1292: Bramblecrush */
   { 0, "Bramblesnap", {0}, 10882, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_bramblesnap, 0x00000080u, 0x00000019u, 0, 72, 0, 1, 25 }, /* 1293: Bramblesnap */
@@ -12888,7 +12888,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Brand of Ill Omen", {0}, 1878, 0x04, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_brand_of_ill_omen, 0x00000000u, 0x40000000u, 0, 8, 0, 0, 100 }, /* 1296: Brand of Ill Omen */
   { 0, "Branded Brawlers", {0}, 4804, 0x02, -1, 16, { 1, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_branded_brawlers, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 1297: Branded Brawlers */
   { 0, "Brass Herald", {0}, 984, 0x42, -1, 1, { 0, 6, 0 }, 2, 2, 0, 0, manalinkeh_card_brass_herald, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 20 }, /* 1298: Brass Herald */
-  { 0, "Brass Man", {0}, 930, 0x42, -1, 1, { 0, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_brass_man, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 1299: Brass Man */
+  { 0, "Brass Man", {0}, 930, 0x42, -1, 1, { 0, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_brass_man, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 1299: Brass Man */
   { 0, "Brass Squire", {0}, 11424, 0x42, -1, 1, { 0, 3, 0 }, 1, 3, 0, 0, manalinkeh_card_brass_squire, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 39 }, /* 1300: Brass Squire */
   { 0, "Brass-Talon Chime", {0}, 2675, 0x42, -1, 1, { 0, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_brass_talon_chimera, 0x00000100u, 0x00000001u, 0, 65, 0, 0, 50 }, /* 1301: Brass-Talon Chimera */
   { 0, "Brassclaw Orcs", {0}, 1754, 0x02, -1, 16, { 1, 2, 0 }, 3, 2, 0, 0, manalinkeh_card_brassclaw_orcs, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 15 }, /* 1302: Brassclaw Orcs */
@@ -12950,7 +12950,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Bronze Bombshell", {0}, 8182, 0x42, -1, 1, { 0, 4, 0 }, 4, 1, 0, 0, manalinkeh_card_bronze_bombshell, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 1358: Bronze Bombshell */
   { 0, "Bronze Horse", {0}, 588, 0x42, -1, 1, { 0, 7, 0 }, 4, 4, 0, 0, manalinkeh_card_bronze_horse, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 1359: Bronze Horse */
   { 0, "Bronze Sable", {0}, 13398, 0x42, -1, 1, { 0, 2, 0 }, 2, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 1360: Bronze Sable */
-  { 0, "Bronze Tablet", {0}, 479, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, card_bronze_tablet, 0x00000000u, 0x00000001u, 0, 249, 0, 2, 150 }, /* 1361: Bronze Tablet */
+  { 0, "Bronze Tablet", {0}, 479, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, card_bronze_tablet, 0x00000000u, 0x00000001u, 0, 249, 1, 2, 150 }, /* 1361: Bronze Tablet */
   { 0, "Bronzebeak Moa", {0}, 13132, 0x02, -1, 40, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_bronzebeak_moa, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1362: Bronzebeak Moa */
   { 0, "Brood Keeper", {0}, 14079, 0x02, -1, 16, { 1, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_brood_keeper, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1363: Brood Keeper */
   { 0, "Brood Sliver", {0}, 6345, 0x02, -1, 8, { 1, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_brood_sliver, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 1364: Brood Sliver */
@@ -12958,7 +12958,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Broodmate Dragon", {0}, 1442, 0x02, -1, 26, { 3, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_broodmate_dragon, 0x00000020u, 0x00000000u, 0, 8, 0, 3, 75 }, /* 1366: Broodmate Dragon */
   { 0, "Broodstar", {0}, 6629, 0x02, -1, 4, { 2, 8, 1 }, 16384, 16384, 1, 0, manalinkeh_card_broodstar, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 1367: Broodstar */
   { 0, "Broodwarden", {0}, 10885, 0x02, -1, 8, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_broodwarden, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 1368: Broodwarden */
-  { 0, "Brothers of Fire", {0}, 304, 0x02, -1, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_brothers_of_fire, 0x00000000u, 0x00000001u, 0, 241, 0, 1, 50 }, /* 1369: Brothers of Fire */
+  { 0, "Brothers of Fire", {0}, 304, 0x02, -1, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_brothers_of_fire, 0x00000000u, 0x00000001u, 0, 241, 1, 1, 50 }, /* 1369: Brothers of Fire */
   { 0, "Brothers Yamazaki", {0}, 7170, 0x02, 14, 16, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_brothers_yamazaki, 0x00000000u, 0x00000018u, 0, 9, 0, 0, 50 }, /* 1370: Brothers Yamazaki */
   { 0, "Browbeat", {0}, 5917, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_browbeat, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 65 }, /* 1371: Browbeat */
   { 0, "Brown Ouphe", {0}, 1881, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_brown_ouphe, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 1372: Brown Ouphe */
@@ -13003,7 +13003,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Burnished Hart", {0}, 13399, 0x42, -1, 1, { 0, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_burnished_hart, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 1411: Burnished Hart */
   { 0, "Burnt Offering", {0}, 1883, 0x20, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_burnt_offering, 0x00000000u, 0x00001000u, 0, 15, 0, 1, 10 }, /* 1412: Burnt Offering */
   { 0, "Burr Grafter", {0}, 7174, 0x02, -1, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_burr_grafter, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 50 }, /* 1413: Burr Grafter */
-  { 0, "Burrowing", {0}, 26, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_burrowing, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 40 }, /* 1414: Burrowing */
+  { 0, "Burrowing", {0}, 26, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_burrowing, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 40 }, /* 1414: Burrowing */
   { 0, "Burst Lightning", {0}, 10515, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_burst_lightning, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 75 }, /* 1415: Burst Lightning */
   { 0, "Burst of Speed", {0}, 10393, 0x08, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_burst_of_speed, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 1416: Burst of Speed */
   { 0, "Burst of Strength", {0}, 12904, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_burst_of_strength, 0x00000000u, 0x00000000u, 0, 6, 0, 0, 40 }, /* 1417: Burst of Strength */
@@ -13033,7 +13033,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Calcite Snapper", {0}, 10737, 0x02, -1, 4, { 2, 1, 0 }, 1, 4, 0, 0, manalinkeh_card_calcite_snapper, 0x00020000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 1441: Calcite Snapper */
   { 0, "Caldera Hellion", {0}, 9929, 0x02, -1, 16, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_caldera_hellion, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 50 }, /* 1442: Caldera Hellion */
   { 0, "Caldera Lake", {0}, 3095, 0x01, -1, 21, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_tempest_painland, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 15 }, /* 1443: Caldera Lake */
-  { 0, "Call from the Gra", {0}, 860, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_call_from_the_grave, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 1444: Call from the Grave */
+  { 0, "Call from the Gra", {0}, 860, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_call_from_the_grave, 0x00000000u, 0x00000800u, 0, 1, 64, 0, 60 }, /* 1444: Call from the Grave */
   { 0, "Call of the Concl", {0}, 12673, 0x08, -1, 40, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_call_of_the_conclave, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 1445: Call of the Conclave */
   { 0, "Call of the Herd", {0}, 5501, 0x08, -1, 8, { 1, 2, 9 }, 0, 0, 1, 0, manalinkeh_card_call_of_the_herd, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 70 }, /* 1446: Call of the Herd */
   { 0, "Call of the Night", {0}, 12905, 0x08, -1, 6, { 2, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_call_of_the_nightwing, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 1447: Call of the Nightwing */
@@ -13053,9 +13053,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Calming Verse", {0}, 4806, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_calming_verses, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 1461: Calming Verse */
   { 0, "Caltrops", {0}, 4105, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_caltrops, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 75 }, /* 1462: Caltrops */
   { 0, "Camarid", {0}, 18701, 0x02, -1, 4, { 0, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 0 }, /* 1463: Camarid */
-  { 0, "Camel", {0}, 401, 0x02, -1, 32, { 1, 0, 0 }, 0, 1, 0, 0, card_camel, 0x00000040u, 0x00000000u, 0, 8, 0, 254, 5 }, /* 1464: Camel */
+  { 0, "Camel", {0}, 401, 0x02, -1, 32, { 1, 0, 0 }, 0, 1, 0, 0, card_camel, 0x00000040u, 0x00000400u, 0, 8, 4, 254, 5 }, /* 1464: Camel */
   { 0, "Cancel", {0}, 1312, 0x20, -1, 4, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_counterspell, 0x00000000u, 0x00002000u, 0, 15, 0, 1, 60 }, /* 1465: Cancel */
-  { 0, "Candelabra of Taw", {0}, 480, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_candelabra_of_tawnos, 0x00000000u, 0x00020001u, 0, 17, 0, 2, 5 }, /* 1466: Candelabra of Tawnos */
+  { 0, "Candelabra of Taw", {0}, 480, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_candelabra_of_tawnos, 0x00000000u, 0x00020501u, 0, 17, 32, 2, 5 }, /* 1466: Candelabra of Tawnos */
   { 0, "Candles of Leng", {0}, 8494, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_candles_of_leng, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 1467: Candles of Leng */
   { 0, "Candles' Glow", {0}, 7180, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_candles_glow, 0x00000000u, 0x00000004u, 0, 15, 0, 0, 40 }, /* 1468: Candles' Glow */
   { 0, "Canker Abominatio", {0}, 9747, 0x02, -1, 10, { 2, 2, 1 }, 6, 6, 1, 0, manalinkeh_card_canker_abomination, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 1469: Canker Abomination */
@@ -13099,10 +13099,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Carnival Hellstee", {0}, 12674, 0x02, -1, 18, { 2, 4, 0 }, 5, 4, 0, 0, manalinkeh_card_carnival_hellsteed, 0x00000100u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 1507: Carnival Hellsteed */
   { 0, "Carnival of Souls", {0}, 4109, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_carnival_of_souls, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 5 }, /* 1508: Carnival of Souls */
   { 0, "Carnivorous Moss-", {0}, 14081, 0x02, -1, 8, { 2, 4, 0 }, 4, 5, 0, 0, manalinkeh_card_carnivorous_moss_beast, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 1509: Carnivorous Moss-Beast */
-  { 0, "Carnivorous Plant", {0}, 305, 0x02, -1, 8, { 1, 3, 0 }, 4, 5, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 1510: Carnivorous Plant */
+  { 0, "Carnivorous Plant", {0}, 305, 0x02, -1, 8, { 1, 3, 0 }, 4, 5, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 1, 0, 20 }, /* 1510: Carnivorous Plant */
   { 0, "Carnophage", {0}, 3465, 0x02, 2, 2, { 1, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_carnophage, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 1511: Carnophage */
   { 0, "Carrion", {0}, 2424, 0x10, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_carrion, 0x00000000u, 0x00000000u, 0, 12, 0, 255, 70 }, /* 1512: Carrion */
-  { 0, "Carrion Ants", {0}, 589, 0x02, -1, 2, { 2, 2, 0 }, 0, 1, 0, 0, manalinkeh_card_carrion_ants, 0x00000000u, 0x00000019u, 0, 200, 0, 1, 50 }, /* 1513: Carrion Ants */
+  { 0, "Carrion Ants", {0}, 589, 0x02, -1, 2, { 2, 2, 0 }, 0, 1, 0, 0, manalinkeh_card_carrion_ants, 0x00000000u, 0x00000019u, 0, 200, 1, 1, 50 }, /* 1513: Carrion Ants */
   { 0, "Carrion Beetles", {0}, 3718, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_carrion_beetles, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 1514: Carrion Beetles */
   { 0, "Carrion Call", {0}, 11220, 0x10, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_carrion_call, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 40 }, /* 1515: Carrion Call */
   { 0, "Carrion Crow", {0}, 14082, 0x02, 2, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_carrion_crow, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 1516: Carrion Crow */
@@ -13118,11 +13118,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Cascade Bluffs", {0}, 9749, 0x01, -1, 21, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_cascade_bluffs, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 1526: Cascade Bluffs */
   { 0, "Cast into Darknes", {0}, 13854, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_cast_into_darkness, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 1527: Cast into Darkness */
   { 0, "Castigate", {0}, 8032, 0x08, -1, 34, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_castigate, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 1528: Castigate */
-  { 0, "Castle", {0}, 28, 0x04, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_castle, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 65 }, /* 1529: Castle */
+  { 0, "Castle", {0}, 28, 0x04, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_castle, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 65 }, /* 1529: Castle */
   { 0, "Cat", {0}, 18704, 0x02, -1, 32, { 0, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_cat_token, 0x00000000u, 0x00000000u, 0, 0, 0, 0, 0 }, /* 1530: Cat */
   { 0, "Cat Soldier", {0}, 18706, 0x02, -1, 32, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_rhino_token, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 1531: Cat Soldier */
   { 0, "Cat Warrior", {0}, 18707, 0x02, -1, 8, { 0, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_rhino_token, 0x00000000u, 0x00000000u, 0, 0, 0, 0, 0 }, /* 1532: Cat Warrior */
-  { 0, "Cat Warriors", {0}, 590, 0x02, -1, 8, { 2, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000004u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 1533: Cat Warriors */
+  { 0, "Cat Warriors", {0}, 590, 0x02, -1, 8, { 2, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000004u, 0x00000000u, 0, 8, 16, 1, 5 }, /* 1533: Cat Warriors */
   { 0, "Cataclysm", {0}, 3468, 0x08, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cataclysm, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 100 }, /* 1534: Cataclysm */
   { 0, "Catacomb Dragon", {0}, 2425, 0x02, -1, 2, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_catacomb_dragon, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 80 }, /* 1535: Catacomb Dragon */
   { 0, "Catacomb Slug", {0}, 12675, 0x02, -1, 2, { 1, 4, 0 }, 2, 6, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 1536: Catacomb Slug */
@@ -13153,7 +13153,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Cautery Sliver", {0}, 8754, 0x02, -1, 48, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_cautery_sliver, 0x00000000u, 0x00000005u, 0, 241, 0, 0, 20 }, /* 1561: Cautery Sliver */
   { 0, "Cavalry Master", {0}, 8497, 0x02, -1, 32, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_cavalry_master, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 1562: Cavalry Master */
   { 0, "Cavalry Pegasus", {0}, 13400, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_cavalry_pegasus, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 1563: Cavalry Pegasus */
-  { 0, "Cave People", {0}, 306, 0x02, -1, 16, { 2, 1, 0 }, 1, 4, 0, 0, manalinkeh_card_cave_people, 0x00000000u, 0x00000019u, 0, 24, 0, 1, 5 }, /* 1564: Cave People */
+  { 0, "Cave People", {0}, 306, 0x02, -1, 16, { 2, 1, 0 }, 1, 4, 0, 0, manalinkeh_card_cave_people, 0x00000000u, 0x00000019u, 0, 24, 1, 1, 5 }, /* 1564: Cave People */
   { 0, "Cave-In", {0}, 4417, 0x08, -1, 16, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_cave_in, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 1565: Cave-In */
   { 0, "Cavern Harpy", {0}, 5206, 0x02, -1, 6, { 2, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_cavern_harpy, 0x00000020u, 0x00000001u, 0, 232, 0, 0, 50 }, /* 1566: Cavern Harpy */
   { 0, "Cavern Lampad", {0}, 13401, 0x06, -1, 2, { 1, 3, 1 }, 2, 2, 1, 0, manalinkeh_card_cavern_lampad, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 1567: Cavern Lampad */
@@ -13171,7 +13171,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Celestial Force", {0}, 11722, 0x02, -1, 32, { 3, 5, 0 }, 7, 7, 0, 0, manalinkeh_card_celestial_force, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 1579: Celestial Force */
   { 0, "Celestial Kirin", {0}, 7612, 0x02, 14, 32, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_celestial_kirin, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1580: Celestial Kirin */
   { 0, "Celestial Mantle", {0}, 10519, 0x04, -1, 32, { 3, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_celestial_mantle, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 150 }, /* 1581: Celestial Mantle */
-  { 0, "Celestial Prism", {0}, 29, 0x40, -1, 62, { 0, 3, 0 }, 0, 0, 0, 0, card_celestial_prism, 0x00000000u, 0x00011001u, 0, 249, 0, 0, 5 }, /* 1582: Celestial Prism */
+  { 0, "Celestial Prism", {0}, 29, 0x40, -1, 62, { 0, 3, 0 }, 0, 0, 0, 0, card_celestial_prism, 0x00000000u, 0x00011001u, 0, 249, 1, 0, 5 }, /* 1582: Celestial Prism */
   { 0, "Celestial Purge", {0}, 10120, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_celestial_purge, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 80 }, /* 1583: Celestial Purge */
   { 0, "Celestial Sword", {0}, 1886, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_celestial_sword, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 40 }, /* 1584: Celestial Sword */
   { 0, "Cellar Door", {0}, 11899, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cellar_door, 0x00000000u, 0x00000001u, 0, 248, 0, 254, 9 }, /* 1585: Cellar Door */
@@ -13246,7 +13246,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Change of Heart", {0}, 3348, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_change_of_heart, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 50 }, /* 1654: Change of Heart */
   { 0, "Changeling Berser", {0}, 9096, 0x02, -1, 16, { 1, 3, 0 }, 5, 3, 0, 0, manalinkeh_card_changeling_berserker, 0x00080000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 1655: Changeling Berserker */
   { 0, "Changeling Hero", {0}, 9097, 0x02, -1, 32, { 1, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_changeling_hero, 0x00080000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1656: Changeling Hero */
-  { 0, "Channel", {0}, 30, 0x08, -1, 8, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_channel, 0x00000000u, 0x00001000u, 0, 15, 0, 2, 200 }, /* 1657: Channel */
+  { 0, "Channel", {0}, 30, 0x08, -1, 8, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_channel, 0x00000000u, 0x00001000u, 0, 15, 1, 2, 200 }, /* 1657: Channel */
   { 0, "Channel the Suns", {0}, 1504, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_channel_the_suns, 0x00000000u, 0x00001000u, 0, 9, 0, 2, 15 }, /* 1658: Channel the Suns */
   { 0, "Chant of the Skif", {0}, 12149, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_chant_of_skifsang, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 25 }, /* 1659: Chant of the Skifsang */
   { 0, "Chant of Vitu-Gha", {0}, 7791, 0x10, -1, 32, { 2, 6, 1 }, 0, 0, 1, 0, manalinkeh_card_chant_of_vitu_ghazi, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 1660: Chant of Vitu-Ghazi */
@@ -13254,7 +13254,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Chaos Imps", {0}, 12678, 0x02, -1, 16, { 2, 4, 0 }, 6, 5, 0, 0, manalinkeh_card_chaos_imps, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1662: Chaos Imps */
   { 0, "Chaos Orb", {0}, 1748, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_chaos_orb, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 40 }, /* 1663: Chaos Orb */
   { 0, "Chaos Warp", {0}, 11739, 0x10, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_chaos_warp, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 75 }, /* 1664: Chaos Warp */
-  { 0, "Chaoslace", {0}, 32, 0x20, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_chaoslace, 0x00000000u, 0x00002000u, 0, 15, 0, 254, 40 }, /* 1665: Chaoslace */
+  { 0, "Chaoslace", {0}, 32, 0x20, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_chaoslace, 0x00000000u, 0x00002000u, 0, 15, 1, 254, 40 }, /* 1665: Chaoslace */
   { 0, "Chaosphere", {0}, 2428, 0x04, 16, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_chaosphere, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 1666: Chaosphere */
   { 0, "Chapel Geist", {0}, 11901, 0x02, -1, 32, { 2, 1, 0 }, 2, 3, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 55 }, /* 1667: Chapel Geist */
   { 0, "Char", {0}, 1253, 0x10, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_psionic_blast, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 1668: Char */
@@ -13341,22 +13341,22 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Circle of Afflict", {0}, 8756, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_affliction, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 1749: Circle of Affliction */
   { 0, "Circle of Despair", {0}, 2433, 0x04, -1, 34, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_despair, 0x00000000u, 0x00000005u, 0, 249, 0, 2, 150 }, /* 1750: Circle of Despair */
   { 0, "Circle of Flame", {0}, 11792, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_flame, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 1 }, /* 1751: Circle of Flame */
-  { 0, "Circle of Protect", {0}, 481, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_artifacts, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 5 }, /* 1752: Circle of Protection: Artifacts */
-  { 0, "Circle of Protect", {0}, 33, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_black, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 5 }, /* 1753: Circle of Protection: Black */
-  { 0, "Circle of Protect", {0}, 34, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_blue, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 40 }, /* 1754: Circle of Protection: Blue */
-  { 0, "Circle of Protect", {0}, 35, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_green, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 5 }, /* 1755: Circle of Protection: Green */
-  { 0, "Circle of Protect", {0}, 36, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_red, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 50 }, /* 1756: Circle of Protection: Red */
-  { 0, "Circle of Protect", {0}, 37, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_white, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 40 }, /* 1757: Circle of Protection: White */
+  { 0, "Circle of Protect", {0}, 481, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_artifacts, 0x00000000u, 0x00000405u, 0, 249, 1, 0, 5 }, /* 1752: Circle of Protection: Artifacts */
+  { 0, "Circle of Protect", {0}, 33, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_black, 0x00000000u, 0x00000005u, 0, 249, 1, 0, 5 }, /* 1753: Circle of Protection: Black */
+  { 0, "Circle of Protect", {0}, 34, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_blue, 0x00000000u, 0x00000005u, 0, 249, 1, 0, 40 }, /* 1754: Circle of Protection: Blue */
+  { 0, "Circle of Protect", {0}, 35, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_green, 0x00000000u, 0x00000005u, 0, 249, 1, 0, 5 }, /* 1755: Circle of Protection: Green */
+  { 0, "Circle of Protect", {0}, 36, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_red, 0x00000000u, 0x00000005u, 0, 249, 1, 0, 50 }, /* 1756: Circle of Protection: Red */
+  { 0, "Circle of Protect", {0}, 37, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_circle_of_protection_white, 0x00000000u, 0x00000005u, 0, 249, 1, 0, 40 }, /* 1757: Circle of Protection: White */
   { 0, "Circling Vultures", {0}, 2954, 0x02, -1, 2, { 1, 0, 4 }, 3, 2, 0, 0, manalinkeh_card_circling_vultures, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 80 }, /* 1758: Circling Vultures */
   { 0, "Circu, Dimir Lobo", {0}, 7794, 0x02, 14, 6, { 2, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_circu_dimir_lobotomist, 0x00000000u, 0x40000000u, 0, 9, 0, 0, 50 }, /* 1759: Circu, Dimir Lobotomist */
   { 0, "Citadel of Pain", {0}, 4810, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_citadel_of_pain, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 1760: Citadel of Pain */
-  { 0, "Citanul Druid", {0}, 482, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_citanul_druid, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 1761: Citanul Druid */
+  { 0, "Citanul Druid", {0}, 482, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_citanul_druid, 0x00000000u, 0x00000400u, 0, 8, 32, 1, 5 }, /* 1761: Citanul Druid */
   { 0, "Citanul Flute", {0}, 3724, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_citanul_flute, 0x00000000u, 0x00020001u, 0, 17, 0, 2, 75 }, /* 1762: Citanul Flute */
   { 0, "Citanul Hierophan", {0}, 3725, 0x02, -1, 8, { 1, 3, 0 }, 3, 2, 0, 0, manalinkeh_card_citanul_hierophants, 0x00000000u, 0x00001002u, 0, 248, 0, 2, 75 }, /* 1763: Citanul Hierophants */
   { 0, "Citanul Woodreade", {0}, 8757, 0x02, -1, 8, { 1, 2, 0 }, 1, 4, 0, 0, manalinkeh_card_citanul_woodreaders, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 1764: Citanul Woodreaders */
   { 0, "Citizen", {0}, 18709, 0x02, -1, 32, { 0, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 1765: Citizen */
   { 0, "City in a Bottle", {0}, 402, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_city_in_a_bottle, 0x00000000u, 0x40000000u, 0, 8, 0, 0, 40 }, /* 1766: City in a Bottle */
-  { 0, "City of Brass", {0}, 403, 0x01, -1, 62, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_city_of_brass, 0x00000000u, 0x00001000u, 0, 241, 0, 1, 15 }, /* 1767: City of Brass */
+  { 0, "City of Brass", {0}, 403, 0x01, -1, 62, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_city_of_brass, 0x00000000u, 0x00001600u, 0, 241, 8, 1, 15 }, /* 1767: City of Brass */
   { 0, "City of Shadows", {0}, 307, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_city_of_shadows, 0x00000000u, 0x00001021u, 0, 249, 0, 255, 42 }, /* 1768: City of Shadows */
   { 0, "City of Traitors", {0}, 3471, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_city_of_traitors, 0x00000000u, 0x00001000u, 0, 241, 0, 3, 10 }, /* 1769: City of Traitors */
   { 0, "Civic Guildmage", {0}, 2434, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_civic_guildmage, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 1770: Civic Guildmage */
@@ -13369,9 +13369,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Clarion Ultimatum", {0}, 9934, 0x08, -1, 44, { 7, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_clarion_ultimatum, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 1777: Clarion Ultimatum */
   { 0, "Claustrophobia", {0}, 11905, 0x04, -1, 4, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_claustrophobia, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 49 }, /* 1778: Claustrophobia */
   { 0, "Claws of Gix", {0}, 3726, 0x40, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_claws_of_gix, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 25 }, /* 1779: Claws of Gix */
-  { 0, "Clay Statue", {0}, 483, 0x42, -1, 1, { 0, 4, 0 }, 3, 1, 0, 0, manalinkeh_card_clay_statue, 0x00000200u, 0x00000001u, 0, 248, 0, 2, 50 }, /* 1780: Clay Statue */
+  { 0, "Clay Statue", {0}, 483, 0x42, -1, 1, { 0, 4, 0 }, 3, 1, 0, 0, manalinkeh_card_clay_statue, 0x00000200u, 0x00000401u, 0, 248, 1, 2, 50 }, /* 1780: Clay Statue */
   { 0, "Cleanfall", {0}, 7181, 0x08, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cleanfall, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 1781: Cleanfall */
-  { 0, "Cleanse", {0}, 596, 0x08, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cleanse, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 5 }, /* 1782: Cleanse */
+  { 0, "Cleanse", {0}, 596, 0x08, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cleanse, 0x00000000u, 0x00000000u, 0, 9, 16, 2, 5 }, /* 1782: Cleanse */
   { 0, "Cleansing", {0}, 367, 0x08, -1, 32, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_cleansing2, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 1783: Cleansing */
   { 0, "Cleansing Beam", {0}, 7795, 0x10, -1, 16, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_cleansing_beam, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 1784: Cleansing Beam */
   { 0, "Cleansing Meditat", {0}, 5793, 0x08, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_cleansing_meditation, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 1785: Cleansing Meditation */
@@ -13392,8 +13392,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Cloaked Siren", {0}, 13856, 0x12, -1, 4, { 1, 3, 0 }, 3, 2, 0, 0, manalinkeh_card_ashcoat_bear, 0x00000020u, 0x00000000u, 0, 2, 0, 0, 50 }, /* 1800: Cloaked Siren */
   { 0, "Clock of Omens", {0}, 7028, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_clock_of_omens, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 40 }, /* 1801: Clock of Omens */
   { 0, "Clockspinning", {0}, 8504, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_clockspinning, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 1802: Clockspinning */
-  { 0, "Clockwork Avian", {0}, 484, 0x42, -1, 1, { 0, 5, 0 }, 0, 4, 0, 0, manalinkeh_card_clockwork_avian, 0x00000020u, 0x00020021u, 0, 24, 0, 2, 55 }, /* 1803: Clockwork Avian */
-  { 0, "Clockwork Beast", {0}, 38, 0x42, -1, 1, { 0, 6, 0 }, 0, 4, 0, 0, manalinkeh_card_clockwork_beast, 0x00000000u, 0x00020021u, 0, 24, 0, 1, 50 }, /* 1804: Clockwork Beast */
+  { 0, "Clockwork Avian", {0}, 484, 0x42, -1, 1, { 0, 5, 0 }, 0, 4, 0, 0, manalinkeh_card_clockwork_avian, 0x00000020u, 0x00020421u, 0, 24, 1, 2, 55 }, /* 1803: Clockwork Avian */
+  { 0, "Clockwork Beast", {0}, 38, 0x42, -1, 1, { 0, 6, 0 }, 0, 4, 0, 0, manalinkeh_card_clockwork_beast, 0x00000000u, 0x00020021u, 0, 24, 1, 1, 50 }, /* 1804: Clockwork Beast */
   { 0, "Clockwork Beetle", {0}, 6633, 0x42, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_clockwork_beetle, 0x00000000u, 0x00000020u, 0, 8, 0, 0, 20 }, /* 1805: Clockwork Beetle */
   { 0, "Clockwork Dragon", {0}, 6635, 0x42, -1, 1, { 0, 7, 0 }, 0, 0, 0, 0, manalinkeh_card_clockwork_dragon, 0x00000020u, 0x00000039u, 0, 72, 0, 0, 70 }, /* 1806: Clockwork Dragon */
   { 0, "Clockwork Hydra", {0}, 8505, 0x42, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_clockwork_hydra, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 1807: Clockwork Hydra */
@@ -13424,7 +13424,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Clout of the Domi", {0}, 9754, 0x04, -1, 20, { 1, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_clout_of_the_dominus, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 1832: Clout of the Dominus */
   { 0, "Cloven Casting", {0}, 10251, 0x04, -1, 20, { 2, 5, 1 }, 0, 0, 0, 0, manalinkeh_card_cloven_casting, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 1833: Cloven Casting */
   { 0, "Clutch of the Und", {0}, 7798, 0x10, -1, 6, { 3, 1, 4 }, 0, 0, 0, 0, manalinkeh_card_clutch_of_the_undercity, 0x00000000u, 0x00000000u, 0, 143, 0, 0, 40 }, /* 1834: Clutch of the Undercity */
-  { 0, "Coal Golem", {0}, 308, 0x42, -1, 1, { 0, 5, 0 }, 3, 3, 0, 0, manalinkeh_card_coal_golem, 0x00000000u, 0x00011001u, 0, 249, 0, 1, 21 }, /* 1835: Coal Golem */
+  { 0, "Coal Golem", {0}, 308, 0x42, -1, 1, { 0, 5, 0 }, 3, 3, 0, 0, manalinkeh_card_coal_golem, 0x00000000u, 0x00011001u, 0, 249, 8, 1, 21 }, /* 1835: Coal Golem */
   { 0, "Coal Stoker", {0}, 8507, 0x02, -1, 16, { 1, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_coal_stoker, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1836: Coal Stoker */
   { 0, "Coalition Relic", {0}, 8906, 0x40, -1, 62, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_coalition_relic, 0x00000000u, 0x00001001u, 0, 65, 0, 3, 65 }, /* 1837: Coalition Relic */
   { 0, "Coalition Victory", {0}, 4964, 0x08, -1, 62, { 5, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_coalition_victory, 0x00000000u, 0x00000000u, 0, 88, 0, 1, 100 }, /* 1838: Coalition Victory */
@@ -13437,7 +13437,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Cobblebrute", {0}, 12684, 0x02, -1, 16, { 1, 3, 0 }, 5, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 1845: Cobblebrute */
   { 0, "Cobbled Wings", {0}, 11909, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cobbled_wings, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 40 }, /* 1846: Cobbled Wings */
   { 0, "Cobra Trap", {0}, 10522, 0x10, -1, 8, { 2, 4, 1 }, 0, 0, 1, 0, manalinkeh_card_cobra_trap, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 50 }, /* 1847: Cobra Trap */
-  { 0, "Cockatrice", {0}, 40, 0x02, -1, 8, { 2, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_thicket_basilisk, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 1848: Cockatrice */
+  { 0, "Cockatrice", {0}, 40, 0x02, -1, 8, { 2, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_thicket_basilisk, 0x00000020u, 0x00000000u, 0, 8, 1, 1, 50 }, /* 1848: Cockatrice */
   { 0, "Cocoon", {0}, 598, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_cocoon, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 1849: Cocoon */
   { 0, "Codex Shredder", {0}, 12685, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_codex_shredder, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 1850: Codex Shredder */
   { 0, "Coerced Confessio", {0}, 12910, 0x08, -1, 6, { 1, 4, 1 }, 0, 0, 1, 0, manalinkeh_card_coerced_confession, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 1851: Coerced Confession */
@@ -13461,7 +13461,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Colossal Might", {0}, 10252, 0x10, -1, 24, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_colossal_might, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 1869: Colossal Might */
   { 0, "Colossal Whale", {0}, 13274, 0x02, -1, 4, { 2, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_colossal_whale, 0x00000002u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 1870: Colossal Whale */
   { 0, "Colossus of Akros", {0}, 13410, 0x42, -1, 1, { 0, 8, 0 }, 10, 10, 0, 0, manalinkeh_card_colossus_of_akros, 0x00800000u, 0x00000019u, 0, 24, 0, 0, 70 }, /* 1871: Colossus of Akros */
-  { 0, "Colossus of Sardi", {0}, 485, 0x42, -1, 1, { 0, 9, 0 }, 9, 9, 0, 0, manalinkeh_card_colossus_of_sardia, 0x00000080u, 0x00000001u, 0, 24, 0, 255, 20 }, /* 1872: Colossus of Sardia */
+  { 0, "Colossus of Sardi", {0}, 485, 0x42, -1, 1, { 0, 9, 0 }, 9, 9, 0, 0, manalinkeh_card_colossus_of_sardia, 0x00000080u, 0x00000401u, 0, 24, 1, 255, 20 }, /* 1872: Colossus of Sardia */
   { 0, "Combat Medic", {0}, 1756, 0x02, -1, 32, { 1, 2, 0 }, 0, 2, 0, 0, manalinkeh_card_combat_medic, 0x00000000u, 0x00000005u, 0, 249, 0, 1, 30 }, /* 1873: Combat Medic */
   { 0, "Combust", {0}, 11107, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_combust, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 45 }, /* 1874: Combust */
   { 0, "Comet Storm", {0}, 10744, 0x10, -1, 16, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_comet_storm, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 1875: Comet Storm */
@@ -13502,9 +13502,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Conquer", {0}, 1560, 0x04, -1, 16, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_conquer, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 1910: Conquer */
   { 0, "Conquering Mantic", {0}, 10890, 0x02, -1, 16, { 2, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_conquering_manticore, 0x00000020u, 0x00000000u, 0, 1, 0, 0, 70 }, /* 1911: Conquering Manticore */
   { 0, "Conqueror's Pledg", {0}, 10523, 0x08, -1, 32, { 3, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_conquerors_pledge, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 1912: Conqueror's Pledge */
-  { 0, "Consecrate Land", {0}, 41, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_consecrated_land, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 40 }, /* 1913: Consecrate Land */
+  { 0, "Consecrate Land", {0}, 41, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_consecrated_land, 0x00000000u, 0x00000000u, 0, 1, 2, 2, 40 }, /* 1913: Consecrate Land */
   { 0, "Consecrated Sphin", {0}, 11429, 0x02, -1, 4, { 2, 4, 0 }, 4, 6, 0, 0, manalinkeh_card_consecrated_sphinx, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 100 }, /* 1914: Consecrated Sphinx */
-  { 0, "Conservator", {0}, 42, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_conservator, 0x00000000u, 0x00000005u, 0, 241, 0, 2, 5 }, /* 1915: Conservator */
+  { 0, "Conservator", {0}, 42, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_conservator, 0x00000000u, 0x00000005u, 0, 241, 1, 2, 5 }, /* 1915: Conservator */
   { 0, "Consign to Dust", {0}, 13858, 0x10, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_consign_to_dust, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 1916: Consign to Dust */
   { 0, "Constant Mists", {0}, 3350, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_constant_mists, 0x00000000u, 0x00000000u, 0, 4, 0, 2, 55 }, /* 1917: Constant Mists */
   { 0, "Constricting Sliv", {0}, 14086, 0x02, -1, 32, { 1, 5, 0 }, 3, 3, 0, 0, manalinkeh_card_constricting_sliver, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 1918: Constricting Sliver */
@@ -13526,14 +13526,14 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Contemplation", {0}, 3351, 0x04, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_contemplation, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 1934: Contemplation */
   { 0, "Contested Cliffs", {0}, 6092, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_contested_cliffs, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 1935: Contested Cliffs */
   { 0, "Contested War Zon", {0}, 11430, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_contested_war_zone, 0x00000000u, 0x00001001u, 0, 65, 0, 1, 19 }, /* 1936: Contested War Zone */
-  { 0, "Contract from Bel", {0}, 43, 0x08, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, card_contract_from_below, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 100 }, /* 1937: Contract from Below */
-  { 0, "Control Magic", {0}, 44, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_control_magic, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 80 }, /* 1938: Control Magic */
+  { 0, "Contract from Bel", {0}, 43, 0x08, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, card_contract_from_below, 0x00000000u, 0x00000000u, 0, 9, 2, 1, 100 }, /* 1937: Contract from Below */
+  { 0, "Control Magic", {0}, 44, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_control_magic, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 80 }, /* 1938: Control Magic */
   { 0, "Control of the Co", {0}, 4303, 0x08, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_goblin_lore, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 1939: Control of the Court */
   { 0, "Controvert", {0}, 8351, 0x30, -1, 4, { 2, 2, 20 }, 0, 0, 0, 0, manalinkeh_card_counterspell, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 1940: Controvert */
   { 0, "Conundrum Sphinx", {0}, 11108, 0x02, -1, 4, { 2, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_conundrum_sphinx, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 1941: Conundrum Sphinx */
   { 0, "Convalescence", {0}, 3472, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_convalescence, 0x00000000u, 0x00000000u, 0, 136, 0, 1, 50 }, /* 1942: Convalescence */
   { 0, "Convalescent Care", {0}, 6093, 0x04, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_convalescent_care, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 1943: Convalescent Care */
-  { 0, "Conversion", {0}, 45, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_conversion2, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 1944: Conversion */
+  { 0, "Conversion", {0}, 45, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_conversion2, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 60 }, /* 1944: Conversion */
   { 0, "Conversion Chambe", {0}, 11583, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_conversion_chamber, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 20 }, /* 1945: Conversion Chamber */
   { 0, "Convolute", {0}, 7806, 0x20, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_convolute, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 40 }, /* 1946: Convolute */
   { 0, "Convulsing Licid", {0}, 3354, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_convulsing_licid, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 20 }, /* 1947: Convulsing Licid */
@@ -13542,15 +13542,15 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Copper Carapace", {0}, 11431, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_copper_carapace, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 20 }, /* 1950: Copper Carapace */
   { 0, "Copper Gnomes", {0}, 3731, 0x42, -1, 1, { 0, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_copper_gnomes, 0x00000000u, 0x00000001u, 0, 40, 0, 0, 50 }, /* 1951: Copper Gnomes */
   { 0, "Copper Myr", {0}, 1211, 0x42, -1, 1, { 0, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_generic_noncombat_1_mana_producing_creature, 0x00000000u, 0x00001000u, 0, 248, 0, 1, 21 }, /* 1952: Copper Myr */
-  { 0, "Copper Tablet", {0}, 46, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_copper_tablet, 0x00000000u, 0x00000041u, 0, 241, 0, 0, 15 }, /* 1953: Copper Tablet */
+  { 0, "Copper Tablet", {0}, 46, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_copper_tablet, 0x00000000u, 0x000000c1u, 0, 241, 2, 0, 15 }, /* 1953: Copper Tablet */
   { 0, "Copperhorn Scout", {0}, 11228, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_copperhorn_scout, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 9 }, /* 1954: Copperhorn Scout */
   { 0, "Copperline Gorge", {0}, 11229, 0x01, -1, 24, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_generic_som_tapland, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 25 }, /* 1955: Copperline Gorge */
-  { 0, "Copy Artifact", {0}, 47, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_copy_artifact, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 1956: Copy Artifact */
+  { 0, "Copy Artifact", {0}, 47, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_copy_artifact, 0x00000000u, 0x00000100u, 0, 1, 2, 0, 20 }, /* 1956: Copy Artifact */
   { 0, "Copy Enchantment", {0}, 7807, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_copy_enchantment, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 1957: Copy Enchantment */
   { 0, "Coral Atoll", {0}, 2683, 0x01, -1, 5, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_coral_atoll, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 10 }, /* 1958: Coral Atoll */
   { 0, "Coral Barrier", {0}, 14087, 0x02, -1, 4, { 1, 2, 0 }, 1, 3, 0, 0, manalinkeh_card_coral_barrier, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 1959: Coral Barrier */
   { 0, "Coral Eel", {0}, 1001, 0x02, -1, 4, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 1960: Coral Eel */
-  { 0, "Coral Helm", {0}, 486, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_coral_helm, 0x00000000u, 0x00000001u, 0, 65, 0, 2, 5 }, /* 1961: Coral Helm */
+  { 0, "Coral Helm", {0}, 486, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_coral_helm, 0x00000000u, 0x00000401u, 0, 65, 1, 2, 5 }, /* 1961: Coral Helm */
   { 0, "Coral Merfolk", {0}, 3732, 0x02, 1, 4, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 9 }, /* 1962: Coral Merfolk */
   { 0, "Coral Trickster", {0}, 8509, 0x02, 1, 4, { 1, 1, 1 }, 2, 1, 1, 0, manalinkeh_card_coral_trickster, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 1963: Coral Trickster */
   { 0, "Coralhelm Command", {0}, 10894, 0x02, -1, 4, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_coralhelm_commander, 0x00000000u, 0x00000001u, 0, 153, 0, 1, 40 }, /* 1964: Coralhelm Commander */
@@ -13575,7 +13575,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Corrupted Resolve", {0}, 11585, 0x20, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_corrupted_resolve, 0x00000000u, 0x00002000u, 0, 15, 0, 1, 1 }, /* 1983: Corrupted Resolve */
   { 0, "Corrupting Licid", {0}, 3355, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_corrupting_licid, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 50 }, /* 1984: Corrupting Licid */
   { 0, "Cosi's Trickster", {0}, 10524, 0x02, 2, 4, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_cosis_trickster, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1985: Cosi's Trickster */
-  { 0, "Cosmic Horror", {0}, 600, 0x02, -1, 2, { 3, 3, 0 }, 7, 7, 0, 0, manalinkeh_card_cosmic_horror, 0x00000100u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 1986: Cosmic Horror */
+  { 0, "Cosmic Horror", {0}, 600, 0x02, -1, 2, { 3, 3, 0 }, 7, 7, 0, 0, manalinkeh_card_cosmic_horror, 0x00000100u, 0x00000000u, 0, 8, 1, 255, 5 }, /* 1986: Cosmic Horror */
   { 0, "Cosmic Larva", {0}, 7032, 0x02, -1, 16, { 2, 1, 0 }, 7, 6, 0, 0, manalinkeh_card_cosmic_larva, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1987: Cosmic Larva */
   { 0, "Council Guardian", {0}, 14025, 0x02, -1, 32, { 1, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_council_guardian, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 1988: Council Guardian */
   { 0, "Council of the Ab", {0}, 13137, 0x02, -1, 36, { 2, 2, 0 }, 2, 4, 0, 0, manalinkeh_card_council_of_the_absolute, 0x00000000u, 0x40000000u, 0, 9, 0, 0, 50 }, /* 1989: Council of the Absolute */
@@ -13585,7 +13585,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Counterbore", {0}, 9500, 0x20, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_counterbore, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 80 }, /* 1993: Counterbore */
   { 0, "Counterlash", {0}, 12154, 0x20, -1, 4, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_counterlash, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 75 }, /* 1994: Counterlash */
   { 0, "Countermand", {0}, 13859, 0x20, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_countermand, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 80 }, /* 1995: Countermand */
-  { 0, "Counterspell", {0}, 48, 0x20, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_counterspell, 0x00000000u, 0x00002000u, 0, 15, 0, 1, 95 }, /* 1996: Counterspell */
+  { 0, "Counterspell", {0}, 48, 0x20, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_counterspell, 0x00000000u, 0x00002200u, 0, 15, 1, 1, 95 }, /* 1996: Counterspell */
   { 0, "Countersquall", {0}, 10128, 0x20, -1, 6, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_countersquall, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 80 }, /* 1997: Countersquall */
   { 0, "Countryside Crush", {0}, 9338, 0x02, -1, 16, { 2, 1, 0 }, 3, 3, 0, 0, manalinkeh_card_countryside_crusher, 0x00000000u, 0x00000020u, 0, 8, 0, 2, 80 }, /* 1998: Countryside Crusher */
   { 0, "Courier Hawk", {0}, 7808, 0x02, -1, 32, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_serra_angel, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 1999: Courier Hawk */
@@ -13621,13 +13621,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Craterhoof Behemo", {0}, 12334, 0x02, -1, 8, { 3, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_craterhoof_behemoth, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 100 }, /* 2029: Craterhoof Behemoth */
   { 0, "Craterize", {0}, 12555, 0x08, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_ice_storm, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 2030: Craterize */
   { 0, "Craw Giant", {0}, 601, 0x02, -1, 8, { 4, 3, 0 }, 6, 4, 0, 0, manalinkeh_card_craw_giant, 0x00000080u, 0x00000000u, 0, 8, 0, 3, 35 }, /* 2031: Craw Giant */
-  { 0, "Craw Wurm", {0}, 49, 0x02, -1, 8, { 2, 4, 0 }, 6, 4, 0, 0, manalinkeh_card_craw_wurm, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 2032: Craw Wurm */
+  { 0, "Craw Wurm", {0}, 49, 0x02, -1, 8, { 2, 4, 0 }, 6, 4, 0, 0, manalinkeh_card_craw_wurm, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 35 }, /* 2032: Craw Wurm */
   { 0, "Crawlspace", {0}, 3978, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_crawlspace, 0x00000000u, 0x04000000u, 0, 8, 0, 0, 75 }, /* 2033: Crawlspace */
   { 0, "Crazed Armodon", {0}, 3111, 0x02, 10, 8, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_crazed_armodon, 0x00000000u, 0x00000009u, 0, 72, 0, 0, 20 }, /* 2034: Crazed Armodon */
   { 0, "Crazed Goblin", {0}, 6868, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_berserkers_of_blood_ridge, 0x00000000u, 0x01000000u, 0, 8, 0, 0, 20 }, /* 2035: Crazed Goblin */
   { 0, "Creakwood Liege", {0}, 9759, 0x02, -1, 10, { 3, 1, 1 }, 2, 2, 1, 0, manalinkeh_card_creakwood_liege, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 75 }, /* 2036: Creakwood Liege */
   { 0, "Cream of the Crop", {0}, 9339, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_cream_of_the_crop, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 70 }, /* 2037: Cream of the Crop */
-  { 0, "Creature Bond", {0}, 50, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_creature_bond, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 2038: Creature Bond */
+  { 0, "Creature Bond", {0}, 50, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_creature_bond, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 5 }, /* 2038: Creature Bond */
   { 0, "Creeperhulk", {0}, 14449, 0x02, -1, 8, { 2, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_creeperhulk, 0x00000080u, 0x00000001u, 0, 65, 0, 0, 70 }, /* 2039: Creeperhulk */
   { 0, "Creeping Corrosio", {0}, 11434, 0x08, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_creeping_corrosion, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 2040: Creeping Corrosion */
   { 0, "Creeping Mold", {0}, 1003, 0x08, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_creeping_mold, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 80 }, /* 2041: Creeping Mold */
@@ -13641,9 +13641,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Crib Swap", {0}, 9103, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_crib_swap, 0x00080000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 2049: Crib Swap */
   { 0, "Crime // Punishme", {0}, 8189, 0x08, -1, 42, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_crime_punishment, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 2050: Crime // Punishment */
   { 0, "Crimson Hellkite", {0}, 2439, 0x02, -1, 16, { 3, 6, 0 }, 6, 6, 0, 0, manalinkeh_card_crimson_hellkite, 0x00000020u, 0x00020001u, 0, 248, 0, 2, 100 }, /* 2051: Crimson Hellkite */
-  { 0, "Crimson Kobolds", {0}, 603, 0x02, -1, 16, { 0, 0, 0 }, 0, 1, 0, 0, card_crimson_kobolds, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 2052: Crimson Kobolds */
+  { 0, "Crimson Kobolds", {0}, 603, 0x02, -1, 16, { 0, 0, 0 }, 0, 1, 0, 0, card_crimson_kobolds, 0x00000000u, 0x00000000u, 0, 8, 16, 255, 5 }, /* 2052: Crimson Kobolds */
   { 0, "Crimson Mage", {0}, 11793, 0x02, -1, 16, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_crimson_mage, 0x00000000u, 0x00000001u, 0, 121, 0, 2, 39 }, /* 2053: Crimson Mage */
-  { 0, "Crimson Manticore", {0}, 604, 0x02, -1, 16, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_crimson_manticore, 0x00000020u, 0x00000001u, 0, 104, 0, 1, 30 }, /* 2054: Crimson Manticore */
+  { 0, "Crimson Manticore", {0}, 604, 0x02, -1, 16, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_crimson_manticore, 0x00000020u, 0x00000001u, 0, 104, 1, 1, 30 }, /* 2054: Crimson Manticore */
   { 0, "Crimson Muckwader", {0}, 12556, 0x02, -1, 16, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_crimson_muckwader, 0x00000200u, 0x00000001u, 0, 241, 0, 0, 20 }, /* 2055: Crimson Muckwader */
   { 0, "Crippling Blight", {0}, 12557, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_crippling_blight, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 2056: Crippling Blight */
   { 0, "Crippling Chill", {0}, 12335, 0x10, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_crippling_chill, 0x00000000u, 0x00000000u, 0, 3, 0, 0, 40 }, /* 2057: Crippling Chill */
@@ -13652,7 +13652,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Cromat", {0}, 5349, 0x02, 14, 62, { 5, 0, 0 }, 5, 5, 0, 0, manalinkeh_card_cromat, 0x00000200u, 0x00000019u, 0, 248, 0, 0, 70 }, /* 2060: Cromat */
   { 0, "Crookclaw Transmu", {0}, 8511, 0x12, -1, 4, { 1, 3, 0 }, 3, 1, 0, 0, manalinkeh_card_crookclaw_transmuter, 0x00000020u, 0x00000000u, 0, 2, 0, 0, 20 }, /* 2061: Crookclaw Transmuter */
   { 0, "Crooked Scales", {0}, 4443, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_crooked_scales, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 40 }, /* 2062: Crooked Scales */
-  { 0, "Crookshank Kobold", {0}, 605, 0x02, -1, 16, { 0, 0, 0 }, 0, 1, 0, 0, card_crimson_kobolds, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 2063: Crookshank Kobolds */
+  { 0, "Crookshank Kobold", {0}, 605, 0x02, -1, 16, { 0, 0, 0 }, 0, 1, 0, 0, card_crimson_kobolds, 0x00000000u, 0x00000000u, 0, 8, 16, 255, 5 }, /* 2063: Crookshank Kobolds */
   { 0, "Crop Rotation", {0}, 1542, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_crop_rotation, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 10 }, /* 2064: Crop Rotation */
   { 0, "Crosis, the Purge", {0}, 4970, 0x02, 14, 22, { 3, 3, 0 }, 6, 6, 0, 0, manalinkeh_card_crosis_the_purger, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 2065: Crosis, the Purger */
   { 0, "Crosis's Catacomb", {0}, 5209, 0x01, -1, 22, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_crosis_catacombs, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 10 }, /* 2066: Crosis's Catacombs */
@@ -13684,11 +13684,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Cruel Sadist", {0}, 14090, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_cruel_sadist, 0x00000000u, 0x00020019u, 0, 248, 0, 0, 20 }, /* 2092: Cruel Sadist */
   { 0, "Cruel Tutor", {0}, 1515, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cruel_tutor, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 2093: Cruel Tutor */
   { 0, "Cruel Ultimatum", {0}, 1503, 0x08, -1, 22, { 7, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_cruel_ultimatum, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 2094: Cruel Ultimatum */
-  { 0, "Crumble", {0}, 487, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_crumble, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 2095: Crumble */
+  { 0, "Crumble", {0}, 487, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_crumble, 0x00000000u, 0x00000400u, 0, 15, 1, 0, 40 }, /* 2095: Crumble */
   { 0, "Crumbling Colossu", {0}, 11795, 0x42, -1, 1, { 0, 5, 0 }, 7, 4, 0, 0, manalinkeh_card_crumbling_colossus, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 2096: Crumbling Colossus */
   { 0, "Crumbling Necropo", {0}, 1202, 0x01, -1, 22, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer_tapped, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 10 }, /* 2097: Crumbling Necropolis */
   { 0, "Crumbling Sanctua", {0}, 4444, 0x40, -1, 0, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_crumbling_sanctuary, 0x00000000u, 0x00000004u, 0, 8, 0, 0, 40 }, /* 2098: Crumbling Sanctuary */
-  { 0, "Crusade", {0}, 51, 0x04, -1, 32, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_crusade, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 30 }, /* 2099: Crusade */
+  { 0, "Crusade", {0}, 51, 0x04, -1, 32, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_crusade, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 30 }, /* 2099: Crusade */
   { 0, "Crusader of Odric", {0}, 12558, 0x02, -1, 32, { 1, 2, 0 }, 16384, 16384, 0, 0, manalinkeh_card_scion_of_the_wild, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2100: Crusader of Odric */
   { 0, "Crush", {0}, 11435, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_crush, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 40 }, /* 2101: Crush */
   { 0, "Crush of Wurms", {0}, 5927, 0x08, -1, 8, { 3, 6, 9 }, 0, 0, 0, 0, manalinkeh_card_crush_of_wurms, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 2102: Crush of Wurms */
@@ -13713,7 +13713,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Crystal Chimes", {0}, 3737, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_crystal_chimes, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 2121: Crystal Chimes */
   { 0, "Crystal Golem", {0}, 2442, 0x42, -1, 1, { 0, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_crystal_golem, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 25 }, /* 2122: Crystal Golem */
   { 0, "Crystal Quarry", {0}, 5525, 0x01, -1, 63, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_crystal_quarry, 0x00000000u, 0x00011001u, 0, 249, 0, 0, 10 }, /* 2123: Crystal Quarry */
-  { 0, "Crystal Rod", {0}, 52, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_crystal_rod, 0x00000000u, 0x00000000u, 0, 241, 0, 1, 5 }, /* 2124: Crystal Rod */
+  { 0, "Crystal Rod", {0}, 52, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_crystal_rod, 0x00000000u, 0x00000000u, 0, 241, 1, 1, 5 }, /* 2124: Crystal Rod */
   { 0, "Crystal Shard", {0}, 6643, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_crystal_shard, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 40 }, /* 2125: Crystal Shard */
   { 0, "Crystal Vein", {0}, 2443, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_crystal_vein, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 2126: Crystal Vein */
   { 0, "Crystalline Nauti", {0}, 13861, 0x06, -1, 4, { 1, 2, 0 }, 4, 4, 1, 0, manalinkeh_card_crystalline_nautilus, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 2127: Crystalline Nautilus */
@@ -13732,7 +13732,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Cunning Lethemanc", {0}, 9943, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_cunning_lethemancer, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 2140: Cunning Lethemancer */
   { 0, "Cunning Sparkmage", {0}, 10750, 0x02, -1, 16, { 1, 2, 0 }, 0, 1, 0, 0, manalinkeh_card_cunning_sparkmage, 0x00000000u, 0x00000001u, 0, 249, 0, 2, 55 }, /* 2141: Cunning Sparkmage */
   { 0, "Cunning Wish", {0}, 5928, 0x10, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cunning_wish, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 150 }, /* 2142: Cunning Wish */
-  { 0, "Cuombajj Witches", {0}, 404, 0x02, -1, 2, { 2, 0, 0 }, 1, 3, 0, 0, manalinkeh_card_cuombajj_witches, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 30 }, /* 2143: Cuombajj Witches */
+  { 0, "Cuombajj Witches", {0}, 404, 0x02, -1, 2, { 2, 0, 0 }, 1, 3, 0, 0, manalinkeh_card_cuombajj_witches, 0x00000000u, 0x00000001u, 0, 248, 8, 0, 30 }, /* 2143: Cuombajj Witches */
   { 0, "Curfew", {0}, 3738, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_curfew, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 2144: Curfew */
   { 0, "Curiosity", {0}, 1005, 0x04, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_curiosity, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 100 }, /* 2145: Curiosity */
   { 0, "Curse Artifact", {0}, 932, 0x04, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_curse_artifact, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 15 }, /* 2146: Curse Artifact */
@@ -13758,18 +13758,18 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Curse of Wizardry", {0}, 10897, 0x04, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_curse_of_wizardry, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 2166: Curse of Wizardry */
   { 0, "Cursebreak", {0}, 12336, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_cursebreak, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 2167: Cursebreak */
   { 0, "Cursecatcher", {0}, 9507, 0x02, -1, 4, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_cursecatcher, 0x00000000u, 0x00002001u, 0, 248, 0, 1, 5 }, /* 2168: Cursecatcher */
-  { 0, "Cursed Land", {0}, 53, 0x04, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cursed_land, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 70 }, /* 2169: Cursed Land */
-  { 0, "Cursed Rack", {0}, 488, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_cursed_rack, 0x00000000u, 0x00000000u, 0, 1, 0, 254, 5 }, /* 2170: Cursed Rack */
+  { 0, "Cursed Land", {0}, 53, 0x04, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cursed_land, 0x00000000u, 0x00000001u, 0, 17, 1, 2, 70 }, /* 2169: Cursed Land */
+  { 0, "Cursed Rack", {0}, 488, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_cursed_rack, 0x00000000u, 0x00000400u, 0, 1, 1, 254, 5 }, /* 2170: Cursed Rack */
   { 0, "Cursed Ronin", {0}, 7188, 0x02, -1, 2, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_cursed_ronin, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 2171: Cursed Ronin */
   { 0, "Cursed Scroll", {0}, 3113, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_cursed_scroll, 0x00000000u, 0x00000001u, 0, 249, 0, 2, 100 }, /* 2172: Cursed Scroll */
   { 0, "Custodi Soulbinde", {0}, 14027, 0x02, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_custodi_soulbinders, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 20 }, /* 2173: Custodi Soulbinders */
   { 0, "Custodi Squire", {0}, 14028, 0x02, -1, 32, { 1, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_custodi_squire, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 2174: Custodi Squire */
   { 0, "Customs Depot", {0}, 4445, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_custom_depot, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 2175: Customs Depot */
   { 0, "Cutthroat Maneuve", {0}, 13415, 0x10, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_cutthroat_maneuver, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 2176: Cutthroat Maneuver */
-  { 0, "Cyclone", {0}, 405, 0x04, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cyclone, 0x00000000u, 0x00000021u, 0, 25, 0, 2, 80 }, /* 2177: Cyclone */
+  { 0, "Cyclone", {0}, 405, 0x04, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cyclone, 0x00000000u, 0x00000021u, 0, 25, 8, 2, 80 }, /* 2177: Cyclone */
   { 0, "Cyclonic Rift", {0}, 12695, 0x10, -1, 4, { 1, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_cyclonic_rift, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 2178: Cyclonic Rift */
-  { 0, "Cyclopean Mummy", {0}, 606, 0x02, 2, 2, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_cyclopean_mummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 2179: Cyclopean Mummy */
-  { 0, "Cyclopean Tomb", {0}, 54, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_cyclopean_tomb, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 5 }, /* 2180: Cyclopean Tomb */
+  { 0, "Cyclopean Mummy", {0}, 606, 0x02, 2, 2, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_cyclopean_mummy, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 20 }, /* 2179: Cyclopean Mummy */
+  { 0, "Cyclopean Tomb", {0}, 54, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_cyclopean_tomb, 0x00000000u, 0x00000101u, 0, 24, 2, 2, 5 }, /* 2180: Cyclopean Tomb */
   { 0, "Cyclops Gladiator", {0}, 11111, 0x02, -1, 16, { 3, 1, 0 }, 4, 4, 0, 0, manalinkeh_card_cyclops_gladiator, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 2181: Cyclops Gladiator */
   { 0, "Cyclops of Eterna", {0}, 13863, 0x06, -1, 16, { 2, 4, 0 }, 5, 3, 0, 0, manalinkeh_card_cyclops_of_eternal_fury, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 2182: Cyclops of Eternal Fury */
   { 0, "Cyclops of One-Ey", {0}, 13684, 0x02, -1, 16, { 2, 2, 0 }, 5, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 2183: Cyclops of One-Eyed Pass */
@@ -13781,7 +13781,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Cytoplast Root-Ki", {0}, 8192, 0x02, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_cytoplast_root_kin, 0x00000000u, 0x00000021u, 0, 72, 0, 2, 100 }, /* 2189: Cytoplast Root-Kin */
   { 0, "Cytoshape", {0}, 8193, 0x10, -1, 12, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_cytoshape, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 2190: Cytoshape */
   { 0, "Cytospawn Shamble", {0}, 8194, 0x02, -1, 8, { 1, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_cytospawn_shambler, 0x00000000u, 0x00000021u, 0, 72, 0, 0, 50 }, /* 2191: Cytospawn Shambler */
-  { 0, "D'Avenant Archer", {0}, 607, 0x02, -1, 32, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_davenant_archer, 0x00000000u, 0x00000001u, 0, 104, 0, 1, 25 }, /* 2192: D'Avenant Archer */
+  { 0, "D'Avenant Archer", {0}, 607, 0x02, -1, 32, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_davenant_archer, 0x00000000u, 0x00000001u, 0, 104, 16, 1, 25 }, /* 2192: D'Avenant Archer */
   { 0, "Dack Fayden", {0}, 14007, 0x04, 14, 20, { 2, 1, 9 }, 0, 0, 0, 0, manalinkeh_card_dack_fayden, 0x00000000u, 0x00400001u, 0, 153, 0, 0, 0 }, /* 2193: Dack Fayden */
   { 0, "Dack's Duplicate", {0}, 14029, 0x02, -1, 20, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_dacks_duplicant, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 2194: Dack's Duplicate */
   { 0, "Dack's Emblem", {0}, 14008, 0x80, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dack_faydens_emblem, 0x00000000u, 0x00000000u, 0, 0, 0, 0, 0 }, /* 2195: Dack's Emblem */
@@ -13795,12 +13795,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Damia, Sage of St", {0}, 11753, 0x02, 14, 14, { 3, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_damia_sage_of_stone, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 2203: Damia, Sage of Stone */
   { 0, "Damnation", {0}, 1275, 0x08, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_wrath_of_god, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 95 }, /* 2204: Damnation */
   { 0, "Dampen Thought", {0}, 7190, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_dampen_thought, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 2205: Dampen Thought */
-  { 0, "Damping Field", {0}, 489, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_damping_field, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 2206: Damping Field */
+  { 0, "Damping Field", {0}, 489, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_damping_field, 0x00000000u, 0x00000400u, 0, 8, 32, 0, 5 }, /* 2206: Damping Field */
   { 0, "Damping Matrix", {0}, 6645, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_damping_matrix, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 2207: Damping Matrix */
   { 0, "Dance of Many", {0}, 309, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dance_of_many, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 77 }, /* 2208: Dance of Many */
   { 0, "Dance of the Dead", {0}, 1897, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_dance_of_the_dead, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 25 }, /* 2209: Dance of the Dead */
-  { 0, "Dancing Scimitar", {0}, 931, 0x42, -1, 1, { 0, 4, 0 }, 1, 5, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 35 }, /* 2210: Dancing Scimitar */
-  { 0, "Dand\342n", {0}, 406, 0x02, -1, 4, { 2, 0, 0 }, 4, 1, 0, 0, manalinkeh_card_dandan, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 2211: Dandân */
+  { 0, "Dancing Scimitar", {0}, 931, 0x42, -1, 1, { 0, 4, 0 }, 1, 5, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 1, 2, 35 }, /* 2210: Dancing Scimitar */
+  { 0, "Dand\342n", {0}, 406, 0x02, -1, 4, { 2, 0, 0 }, 4, 1, 0, 0, manalinkeh_card_dandan, 0x00000000u, 0x00000400u, 0, 8, 8, 1, 5 }, /* 2211: Dandân */
   { 0, "Dangerous Wager", {0}, 12337, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_dangerous_wager, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 2212: Dangerous Wager */
   { 0, "Daretti, Scrap Sa", {0}, 14451, 0x04, 14, 16, { 1, 3, 9 }, 0, 0, 0, 0, manalinkeh_card_daretti_scrap_savant, 0x00000000u, 0x00400001u, 0, 153, 0, 0, 60 }, /* 2213: Daretti, Scrap Savant */
   { 0, "Daretti's Emblem", {0}, 14452, 0x80, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_daretti_emblem, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 2214: Daretti's Emblem */
@@ -13821,7 +13821,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Dark Impostor", {0}, 12338, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_dark_imposter, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 50 }, /* 2229: Dark Impostor */
   { 0, "Dark Prophecy", {0}, 13277, 0x04, -1, 2, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dark_prophecy, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 2230: Dark Prophecy */
   { 0, "Dark Revenant", {0}, 12697, 0x02, -1, 2, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_dark_revenant, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2231: Dark Revenant */
-  { 0, "Dark Ritual", {0}, 55, 0x20, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dark_ritual, 0x00000000u, 0x00001000u, 0, 15, 0, 2, 65 }, /* 2232: Dark Ritual */
+  { 0, "Dark Ritual", {0}, 55, 0x20, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dark_ritual, 0x00000000u, 0x00001200u, 0, 15, 1, 2, 65 }, /* 2232: Dark Ritual */
   { 0, "Dark Sphere", {0}, 369, 0x40, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dark_sphere, 0x00000000u, 0x00000005u, 0, 241, 0, 2, 70 }, /* 2233: Dark Sphere */
   { 0, "Dark Supplicant", {0}, 6358, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_dark_supplicant, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 20 }, /* 2234: Dark Supplicant */
   { 0, "Dark Suspicions", {0}, 5214, 0x04, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_dark_suspicions, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 2235: Dark Suspicions */
@@ -13832,8 +13832,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Darkest Hour", {0}, 3740, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_darkest_hour, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 2240: Darkest Hour */
   { 0, "Darkheart Sliver", {0}, 8760, 0x02, -1, 10, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_darkheart_sliver, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 50 }, /* 2241: Darkheart Sliver */
   { 0, "Darkling Stalker", {0}, 3114, 0x02, -1, 2, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_darkling_stalker, 0x00000200u, 0x00000019u, 0, 248, 0, 0, 50 }, /* 2242: Darkling Stalker */
-  { 0, "Darkness", {0}, 609, 0x10, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fog, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 5 }, /* 2243: Darkness */
-  { 0, "Darkpact", {0}, 56, 0x08, -1, 2, { 3, 0, 0 }, 0, 0, 0, 0, card_darkpact, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 2244: Darkpact */
+  { 0, "Darkness", {0}, 609, 0x10, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fog, 0x00000000u, 0x00000000u, 0, 4, 16, 0, 5 }, /* 2243: Darkness */
+  { 0, "Darkpact", {0}, 56, 0x08, -1, 2, { 3, 0, 0 }, 0, 0, 0, 0, card_darkpact, 0x00000000u, 0x00000000u, 0, 8, 2, 1, 5 }, /* 2244: Darkpact */
   { 0, "Darkslick Drake", {0}, 11234, 0x02, -1, 4, { 2, 2, 0 }, 2, 4, 0, 0, manalinkeh_card_darkslick_drake, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 2245: Darkslick Drake */
   { 0, "Darkslick Shores", {0}, 11235, 0x01, -1, 6, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_generic_som_tapland, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 25 }, /* 2246: Darkslick Shores */
   { 0, "Darksteel Axe", {0}, 11236, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_darksteel_axe, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 45 }, /* 2247: Darksteel Axe */
@@ -13920,7 +13920,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Death Rattle", {0}, 8913, 0x10, -1, 2, { 1, 5, 1 }, 0, 0, 1, 0, manalinkeh_card_death_rattle, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 2328: Death Rattle */
   { 0, "Death Spark", {0}, 2270, 0x10, -1, 16, { 1, 0, 5 }, 0, 0, 1, 0, manalinkeh_card_death_spark, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 25 }, /* 2329: Death Spark */
   { 0, "Death Speakers", {0}, 1634, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000800u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 2330: Death Speakers */
-  { 0, "Death Ward", {0}, 57, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_death_ward, 0x00000000u, 0x00000004u, 0, 15, 0, 0, 65 }, /* 2331: Death Ward */
+  { 0, "Death Ward", {0}, 57, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_death_ward, 0x00000000u, 0x00000004u, 0, 15, 1, 0, 65 }, /* 2331: Death Ward */
   { 0, "Death Wind", {0}, 12340, 0x10, -1, 2, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_death_wind, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 2332: Death Wind */
   { 0, "Death Wish", {0}, 5929, 0x08, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_death_wish, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 2333: Death Wish */
   { 0, "Death-Hood Cobra", {0}, 11587, 0x02, -1, 8, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_death_hood_cobra, 0x00000000u, 0x00000001u, 0, 104, 0, 1, 39 }, /* 2334: Death-Hood Cobra */
@@ -13937,8 +13937,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Deathforge Shaman", {0}, 10753, 0x02, -1, 16, { 1, 4, 0 }, 4, 3, 0, 0, manalinkeh_card_deathforge_shaman, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 2345: Deathforge Shaman */
   { 0, "Deathgaze Cockatr", {0}, 13279, 0x02, -1, 2, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_deadly_recluse, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 2346: Deathgaze Cockatrice */
   { 0, "Deathgazer", {0}, 1010, 0x02, -1, 2, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_deathgazer, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 2347: Deathgazer */
-  { 0, "Deathgrip", {0}, 58, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_deathgrip, 0x00000000u, 0x00004002u, 0, 241, 0, 0, 60 }, /* 2348: Deathgrip */
-  { 0, "Deathlace", {0}, 59, 0x20, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_deathlace, 0x00000000u, 0x00002000u, 0, 15, 0, 254, 40 }, /* 2349: Deathlace */
+  { 0, "Deathgrip", {0}, 58, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_deathgrip, 0x00000000u, 0x00004002u, 0, 241, 1, 0, 60 }, /* 2348: Deathgrip */
+  { 0, "Deathlace", {0}, 59, 0x20, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_deathlace, 0x00000000u, 0x00002000u, 0, 15, 1, 254, 40 }, /* 2349: Deathlace */
   { 0, "Deathless Angel", {0}, 10901, 0x02, -1, 32, { 2, 4, 0 }, 5, 7, 0, 0, manalinkeh_card_deathless_angel, 0x00000020u, 0x00000001u, 0, 89, 0, 2, 75 }, /* 2350: Deathless Angel */
   { 0, "Deathmark", {0}, 8357, 0x08, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_deathmark, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 40 }, /* 2351: Deathmark */
   { 0, "Deathpact Angel", {0}, 12920, 0x02, -1, 34, { 3, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_deathpact_angel, 0x00000020u, 0x00000001u, 0, 136, 0, 0, 70 }, /* 2352: Deathpact Angel */
@@ -14016,15 +14016,15 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Demon of Wailing ", {0}, 14453, 0x02, -1, 2, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_demone_of_wailing_agonies, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 2424: Demon of Wailing Agonies */
   { 0, "Demon's Horn", {0}, 1735, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_demons_horn2, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 2425: Demon's Horn */
   { 0, "Demonfire", {0}, 8197, 0x08, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_demonfire, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 2426: Demonfire */
-  { 0, "Demonic Attorney", {0}, 60, 0x08, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, card_demonic_attorney, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 2427: Demonic Attorney */
+  { 0, "Demonic Attorney", {0}, 60, 0x08, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, card_demonic_attorney, 0x00000000u, 0x00000000u, 0, 8, 2, 1, 5 }, /* 2427: Demonic Attorney */
   { 0, "Demonic Collusion", {0}, 8519, 0x08, -1, 2, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_demonic_collusion, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 2428: Demonic Collusion */
   { 0, "Demonic Consultat", {0}, 1898, 0x10, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_demonic_consultation, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 2429: Demonic Consultation */
   { 0, "Demonic Dread", {0}, 10258, 0x08, -1, 18, { 2, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_demonic_dread, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 15 }, /* 2430: Demonic Dread */
-  { 0, "Demonic Hordes", {0}, 61, 0x02, -1, 2, { 3, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_demonic_hordes, 0x00000000u, 0x00000001u, 0, 136, 0, 3, 70 }, /* 2431: Demonic Hordes */
+  { 0, "Demonic Hordes", {0}, 61, 0x02, -1, 2, { 3, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_demonic_hordes, 0x00000000u, 0x00000001u, 0, 136, 2, 3, 70 }, /* 2431: Demonic Hordes */
   { 0, "Demonic Rising", {0}, 12343, 0x04, -1, 2, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_demonic_rising, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 2432: Demonic Rising */
   { 0, "Demonic Taskmaste", {0}, 12344, 0x02, -1, 2, { 1, 2, 0 }, 4, 3, 0, 0, manalinkeh_card_demonic_taskmaster, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2433: Demonic Taskmaster */
   { 0, "Demonic Torment", {0}, 611, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_demonic_torment, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 2434: Demonic Torment */
-  { 0, "Demonic Tutor", {0}, 62, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_demonic_tutor, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 150 }, /* 2435: Demonic Tutor */
+  { 0, "Demonic Tutor", {0}, 62, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_demonic_tutor, 0x00000000u, 0x00000100u, 0, 1, 2, 2, 150 }, /* 2435: Demonic Tutor */
   { 0, "Demonlord of Ashm", {0}, 12345, 0x02, -1, 2, { 2, 2, 0 }, 5, 4, 0, 0, manalinkeh_card_demonlord_of_ashmouth, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 2436: Demonlord of Ashmouth */
   { 0, "Demonmail Hauberk", {0}, 11927, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_demonmail_hauberk, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 20 }, /* 2437: Demonmail Hauberk */
   { 0, "Demonspine Whip", {0}, 10259, 0x40, -1, 18, { 2, 0, 1 }, 0, 0, 0, 0, manalinkeh_card_demonspine_whip, 0x00000000u, 0x00020001u, 0, 81, 0, 0, 40 }, /* 2438: Demonspine Whip */
@@ -14051,9 +14051,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Desecration Eleme", {0}, 7036, 0x02, -1, 2, { 1, 3, 0 }, 8, 8, 0, 0, manalinkeh_card_desecration_elemental, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 2459: Desecration Elemental */
   { 0, "Desecration Plagu", {0}, 13868, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_desecration_plague, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 2460: Desecration Plague */
   { 0, "Desecrator Hag", {0}, 9763, 0x02, -1, 10, { 2, 2, 1 }, 2, 2, 1, 0, manalinkeh_card_desecrator_hag, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 2461: Desecrator Hag */
-  { 0, "Desert", {0}, 407, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_desert2, 0x00000000u, 0x00001001u, 0, 241, 0, 1, 40 }, /* 2462: Desert */
-  { 0, "Desert Nomads", {0}, 408, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_desert_nomads, 0x00000000u, 0x00000000u, 0, 8, 0, 254, 5 }, /* 2463: Desert Nomads */
-  { 0, "Desert Twister", {0}, 409, 0x08, -1, 8, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_desert_twister, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 80 }, /* 2464: Desert Twister */
+  { 0, "Desert", {0}, 407, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_desert2, 0x00000000u, 0x00001401u, 0, 241, 4, 1, 40 }, /* 2462: Desert */
+  { 0, "Desert Nomads", {0}, 408, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_desert_nomads, 0x00000000u, 0x00000000u, 0, 8, 4, 254, 5 }, /* 2463: Desert Nomads */
+  { 0, "Desert Twister", {0}, 409, 0x08, -1, 8, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_desert_twister, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 80 }, /* 2464: Desert Twister */
   { 0, "Deserted Temple", {0}, 5539, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_deserted_temple, 0x00000000u, 0x00001001u, 0, 249, 0, 2, 10 }, /* 2465: Deserted Temple */
   { 0, "Deserter", {0}, 18715, 0x02, -1, 0, { 0, 0, 0 }, 0, 1, 0, 0, manalinkeh_card_rhino_token, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 2466: Deserter */
   { 0, "Deserter's Quarte", {0}, 13869, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_deserters_quarters, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 40 }, /* 2467: Deserter's Quarters */
@@ -14074,7 +14074,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Destructive Revel", {0}, 13422, 0x10, -1, 24, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_destructive_revelry, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 2482: Destructive Revelry */
   { 0, "Destructive Urge", {0}, 3743, 0x04, -1, 16, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_destructive_urge, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 2483: Destructive Urge */
   { 0, "Detention Sphere", {0}, 12704, 0x04, -1, 36, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_detention_sphere, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 2484: Detention Sphere */
-  { 0, "Detonate", {0}, 490, 0x08, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_detonate, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 2485: Detonate */
+  { 0, "Detonate", {0}, 490, 0x08, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_detonate, 0x00000000u, 0x00000400u, 0, 9, 1, 0, 80 }, /* 2485: Detonate */
   { 0, "Detritivore", {0}, 8766, 0x02, -1, 16, { 2, 2, 1 }, 16384, 16384, 1, 0, manalinkeh_card_detritivore, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 2486: Detritivore */
   { 0, "Deus of Calamity", {0}, 9512, 0x02, -1, 24, { 5, 0, 1 }, 6, 6, 1, 0, manalinkeh_card_deus_of_calamity, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 2487: Deus of Calamity */
   { 0, "Devastating Dream", {0}, 5801, 0x08, -1, 16, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_devestating_dreams, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 40 }, /* 2488: Devastating Dreams */
@@ -14089,7 +14089,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Devoted Retainer", {0}, 7194, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_devoted_retainer, 0x00000000u, 0x00000018u, 0, 8, 0, 0, 50 }, /* 2497: Devoted Retainer */
   { 0, "Devour Flesh", {0}, 12923, 0x10, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_devour_flesh, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 2498: Devour Flesh */
   { 0, "Devour in Shadow", {0}, 7037, 0x10, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_devour_in_shadows, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 2499: Devour in Shadow */
-  { 0, "Devouring Deep", {0}, 612, 0x02, -1, 4, { 1, 2, 0 }, 1, 2, 0, 0, card_dummy, 0x00000002u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 2500: Devouring Deep */
+  { 0, "Devouring Deep", {0}, 612, 0x02, -1, 4, { 1, 2, 0 }, 1, 2, 0, 0, card_dummy, 0x00000002u, 0x00000000u, 0, 8, 16, 0, 5 }, /* 2500: Devouring Deep */
   { 0, "Devouring Greed", {0}, 7195, 0x08, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_devouring_greed, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 2501: Devouring Greed */
   { 0, "Devouring Light", {0}, 7813, 0x10, -1, 32, { 2, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_devouring_light, 0x00000000u, 0x00000000u, 0, 6, 0, 0, 60 }, /* 2502: Devouring Light */
   { 0, "Devouring Strossu", {0}, 4979, 0x02, -1, 2, { 3, 5, 0 }, 9, 9, 0, 0, manalinkeh_card_devouring_strossus, 0x000002a0u, 0x00000001u, 0, 248, 0, 0, 70 }, /* 2503: Devouring Strossus */
@@ -14102,14 +14102,14 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Devout Witness", {0}, 4454, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_devout_witness, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 2510: Devout Witness */
   { 0, "Diabolic Edict", {0}, 1483, 0x10, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_diabolic_edict, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 95 }, /* 2511: Diabolic Edict */
   { 0, "Diabolic Intent", {0}, 5218, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_diabolic_intent, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 2512: Diabolic Intent */
-  { 0, "Diabolic Machine", {0}, 376, 0x42, -1, 1, { 0, 7, 0 }, 4, 4, 0, 0, manalinkeh_card_diabolic_machine, 0x00000200u, 0x00000001u, 0, 248, 0, 1, 20 }, /* 2513: Diabolic Machine */
+  { 0, "Diabolic Machine", {0}, 376, 0x42, -1, 1, { 0, 7, 0 }, 4, 4, 0, 0, manalinkeh_card_diabolic_machine, 0x00000200u, 0x00000001u, 0, 248, 1, 1, 20 }, /* 2513: Diabolic Machine */
   { 0, "Diabolic Revelati", {0}, 12559, 0x08, -1, 2, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_diabolic_revelation, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 2514: Diabolic Revelation */
   { 0, "Diabolic Servitud", {0}, 3744, 0x04, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_diabolic_servitude, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 50 }, /* 2515: Diabolic Servitude */
   { 0, "Diabolic Tutor", {0}, 1017, 0x08, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_demonic_tutor, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 100 }, /* 2516: Diabolic Tutor */
   { 0, "Diabolic Vision", {0}, 1900, 0x08, -1, 6, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_diabolic_vision, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 15 }, /* 2517: Diabolic Vision */
   { 0, "Diamond Faerie", {0}, 8359, 0x02, -1, 44, { 3, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_diamond_faerie, 0x00000020u, 0x00000001u, 0, 65, 0, 0, 50 }, /* 2518: Diamond Faerie */
   { 0, "Diamond Kaleidosc", {0}, 2690, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_diamond_kaleidoscope, 0x00000000u, 0x00001001u, 0, 41, 0, 1, 75 }, /* 2519: Diamond Kaleidoscope */
-  { 0, "Diamond Valley", {0}, 410, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_diamond_valley, 0x00000000u, 0x00000001u, 0, 241, 0, 3, 5 }, /* 2520: Diamond Valley */
+  { 0, "Diamond Valley", {0}, 410, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_diamond_valley, 0x00000000u, 0x00000801u, 0, 241, 4, 3, 5 }, /* 2520: Diamond Valley */
   { 0, "Diaochan, Artful ", {0}, 4306, 0x02, 14, 16, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_diaochan_artful_beauty, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 20 }, /* 2521: Diaochan, Artful Beauty */
   { 0, "Dichotomancy", {0}, 8767, 0x08, -1, 4, { 2, 7, 1 }, 0, 0, 1, 0, manalinkeh_card_dichotomancy, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 2522: Dichotomancy */
   { 0, "Dictate of Erebos", {0}, 13871, 0x14, -1, 2, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_dictate_of_erebos, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 80 }, /* 2523: Dictate of Erebos */
@@ -14138,7 +14138,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Dimir Machination", {0}, 7819, 0x08, -1, 2, { 1, 2, 4 }, 0, 0, 0, 0, manalinkeh_card_dimir_machinations, 0x00000000u, 0x00000000u, 0, 136, 0, 0, 60 }, /* 2546: Dimir Machinations */
   { 0, "Dimir Signet", {0}, 1719, 0x40, -1, 6, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_dimir_signet, 0x00000000u, 0x00011001u, 0, 249, 0, 0, 10 }, /* 2547: Dimir Signet */
   { 0, "Din of the Firehe", {0}, 9514, 0x08, -1, 18, { 3, 5, 1 }, 0, 0, 1, 0, manalinkeh_card_din_of_the_fireherd, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 2548: Din of the Fireherd */
-  { 0, "Dingus Egg", {0}, 63, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_dingus_egg, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 40 }, /* 2549: Dingus Egg */
+  { 0, "Dingus Egg", {0}, 63, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_dingus_egg, 0x00000000u, 0x00000000u, 0, 9, 1, 2, 40 }, /* 2549: Dingus Egg */
   { 0, "Dingus Staff", {0}, 2961, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_dingus_staff, 0x00000000u, 0x00000000u, 0, 9, 0, 255, 50 }, /* 2550: Dingus Staff */
   { 0, "Dinrova Horror", {0}, 12928, 0x02, -1, 6, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_dinrova_horror, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 2551: Dinrova Horror */
   { 0, "Diplomatic Immuni", {0}, 1321, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_diplomatic_immunity, 0x00020000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 2552: Diplomatic Immunity */
@@ -14163,11 +14163,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Discordant Spirit", {0}, 2450, 0x02, -1, 18, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_discordant_spirit, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 100 }, /* 2571: Discordant Spirit */
   { 0, "Disdainful Stroke", {0}, 14254, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_disdainful_stroke, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 2572: Disdainful Stroke */
   { 0, "Diseased Vermin", {0}, 2272, 0x02, 7, 2, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_diseased_vermin, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2573: Diseased Vermin */
-  { 0, "Disenchant", {0}, 64, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_disenchant, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 65 }, /* 2574: Disenchant */
+  { 0, "Disenchant", {0}, 64, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_disenchant, 0x00000000u, 0x00000000u, 0, 15, 1, 3, 65 }, /* 2574: Disenchant */
   { 0, "Disentomb", {0}, 10403, 0x08, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_raise_dead, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 65 }, /* 2575: Disentomb */
   { 0, "Disfigure", {0}, 10530, 0x10, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_disfigure, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 15 }, /* 2576: Disfigure */
   { 0, "Disharmony", {0}, 613, 0x10, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_disharmony, 0x00000000u, 0x00000000u, 0, 3, 0, 0, 60 }, /* 2577: Disharmony */
-  { 0, "Disintegrate", {0}, 65, 0x08, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_disintegrate, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 100 }, /* 2578: Disintegrate */
+  { 0, "Disintegrate", {0}, 65, 0x08, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_disintegrate, 0x00000000u, 0x00000000u, 0, 1, 1, 3, 100 }, /* 2578: Disintegrate */
   { 0, "Dismal Backwater", {0}, 14255, 0x01, -1, 6, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_akoum_refuge, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 10 }, /* 2579: Dismal Backwater */
   { 0, "Dismantle", {0}, 6878, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_dismantle, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 2580: Dismantle */
   { 0, "Dismantling Blow", {0}, 4980, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_dismantling_blow, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 2581: Dismantling Blow */
@@ -14183,7 +14183,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Disperse", {0}, 9344, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_disperse, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 9 }, /* 2591: Disperse */
   { 0, "Dispersing Orb", {0}, 6118, 0x04, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_dispersing_orb, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 40 }, /* 2592: Dispersing Orb */
   { 0, "Disrupt", {0}, 2962, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_disrupt, 0x00000000u, 0x00002000u, 0, 15, 0, 2, 40 }, /* 2593: Disrupt */
-  { 0, "Disrupting Scepte", {0}, 66, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_disrupting_scepter, 0x00000000u, 0x00000041u, 0, 17, 0, 1, 100 }, /* 2594: Disrupting Scepter */
+  { 0, "Disrupting Scepte", {0}, 66, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_disrupting_scepter, 0x00000000u, 0x00000041u, 0, 17, 1, 1, 100 }, /* 2594: Disrupting Scepter */
   { 0, "Disrupting Shoal", {0}, 7458, 0x20, -1, 4, { 2, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_disrupting_shoal, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 2595: Disrupting Shoal */
   { 0, "Disruptive Pitmag", {0}, 6119, 0x02, -1, 4, { 1, 2, 1 }, 1, 1, 1, 0, manalinkeh_card_disruptive_pitmage, 0x00000000u, 0x00000003u, 0, 248, 0, 0, 50 }, /* 2596: Disruptive Pitmage */
   { 0, "Disruptive Studen", {0}, 3749, 0x02, -1, 4, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_disruptive_student, 0x00000000u, 0x00004002u, 0, 241, 0, 1, 50 }, /* 2597: Disruptive Student */
@@ -14202,17 +14202,17 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Divine Deflection", {0}, 12352, 0x10, -1, 32, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_divine_deflection, 0x00000000u, 0x00000004u, 0, 15, 0, 0, 40 }, /* 2610: Divine Deflection */
   { 0, "Divine Favor", {0}, 11798, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_divine_favor, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 9 }, /* 2611: Divine Favor */
   { 0, "Divine Light", {0}, 5358, 0x08, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sivvis_rouse, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 2612: Divine Light */
-  { 0, "Divine Offering", {0}, 615, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_divine_offering, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 2613: Divine Offering */
+  { 0, "Divine Offering", {0}, 615, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_divine_offering, 0x00000000u, 0x00000000u, 0, 15, 16, 0, 80 }, /* 2613: Divine Offering */
   { 0, "Divine Reckoning", {0}, 11933, 0x08, -1, 32, { 2, 2, 9 }, 0, 0, 1, 0, manalinkeh_card_divine_reckoning, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 75 }, /* 2614: Divine Reckoning */
   { 0, "Divine Retributio", {0}, 2453, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_divine_retribution, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 2615: Divine Retribution */
   { 0, "Divine Sacrament", {0}, 5544, 0x04, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_divine_sacrament, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 2616: Divine Sacrament */
-  { 0, "Divine Transforma", {0}, 616, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_divine_transformation, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 2617: Divine Transformation */
+  { 0, "Divine Transforma", {0}, 616, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_divine_transformation, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 5 }, /* 2617: Divine Transformation */
   { 0, "Divine Verdict", {0}, 10406, 0x10, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_divine_verdict, 0x00000000u, 0x00000000u, 0, 6, 0, 0, 60 }, /* 2618: Divine Verdict */
   { 0, "Diviner Spirit", {0}, 13615, 0x02, -1, 4, { 1, 4, 0 }, 2, 4, 0, 0, manalinkeh_card_diviner_spirit, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2619: Diviner Spirit */
   { 0, "Diviner's Wand", {0}, 9346, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_diviners_wand, 0x00000000u, 0x00000001u, 0, 153, 0, 0, 60 }, /* 2620: Diviner's Wand */
   { 0, "Diving Griffin", {0}, 1019, 0x02, -1, 32, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_serra_angel, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 20 }, /* 2621: Diving Griffin */
   { 0, "Divinity of Pride", {0}, 9764, 0x02, -1, 34, { 5, 0, 1 }, 4, 4, 1, 0, manalinkeh_card_divinity_of_pride, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 2622: Divinity of Pride */
-  { 0, "Djinn", {0}, 890, 0x42, -1, 1, { 0, 0, 0 }, 5, 5, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 0 }, /* 2623: Djinn */
+  { 0, "Djinn", {0}, 890, 0x42, -1, 1, { 0, 0, 0 }, 5, 5, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 9, 1, 0, 0 }, /* 2623: Djinn */
   { 0, "Djinn Illuminatus", {0}, 8043, 0x02, 6, 20, { 2, 5, 1 }, 3, 5, 1, 0, manalinkeh_card_djinn_illuminatus, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 70 }, /* 2624: Djinn Illuminatus */
   { 0, "Djinn of Infinite", {0}, 13616, 0x02, 6, 4, { 2, 4, 0 }, 2, 7, 0, 0, manalinkeh_card_djinn_of_infinite_deceits, 0x00000020u, 0x00000001u, 0, 152, 0, 0, 50 }, /* 2625: Djinn of Infinite Deceits */
   { 0, "Djinn of Wishes", {0}, 10407, 0x02, 6, 4, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_djinn_of_wishes, 0x00000020u, 0x00000001u, 0, 249, 0, 3, 79 }, /* 2626: Djinn of Wishes */
@@ -14256,7 +14256,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Draco", {0}, 5222, 0x42, -1, 1, { 0, 16, 1 }, 9, 9, 1, 0, manalinkeh_card_draco, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 2664: Draco */
   { 0, "Draconian Cylix", {0}, 1762, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_draconian_cylix, 0x00000000u, 0x00000001u, 0, 249, 0, 1, 30 }, /* 2665: Draconian Cylix */
   { 0, "Dracoplasm", {0}, 3124, 0x02, -1, 20, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dracoplasm, 0x00000020u, 0x00000009u, 0, 72, 0, 2, 75 }, /* 2666: Dracoplasm */
-  { 0, "Drafna's Restorat", {0}, 491, 0x08, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_drafnas_restoration, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 5 }, /* 2667: Drafna's Restoration */
+  { 0, "Drafna's Restorat", {0}, 491, 0x08, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_drafnas_restoration, 0x00000000u, 0x00000400u, 0, 1, 32, 3, 5 }, /* 2667: Drafna's Restoration */
   { 0, "Drag Down", {0}, 10133, 0x10, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_drag_down, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 2668: Drag Down */
   { 0, "Dragon", {0}, 18719, 0x02, -1, 16, { 0, 0, 0 }, 16384, 16384, 0, 0, manalinkeh_card_dragon_token, 0x00000020u, 0x00000009u, 0, 72, 0, 0, 0 }, /* 2669: Dragon */
   { 0, "Dragon Arch", {0}, 5360, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_dragon_arc, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 60 }, /* 2670: Dragon Arch */
@@ -14264,7 +14264,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Dragon Breath", {0}, 6510, 0x04, -1, 16, { 1, 1, 18 }, 0, 0, 0, 0, manalinkeh_card_dragon_breath, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 60 }, /* 2672: Dragon Breath */
   { 0, "Dragon Broodmothe", {0}, 10263, 0x02, -1, 24, { 4, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_dragon_broodmother, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 2673: Dragon Broodmother */
   { 0, "Dragon Egg", {0}, 13282, 0x02, -1, 16, { 1, 2, 0 }, 0, 2, 0, 0, manalinkeh_card_dragon_egg, 0x00800000u, 0x00000001u, 0, 136, 0, 0, 50 }, /* 2674: Dragon Egg */
-  { 0, "Dragon Engine", {0}, 492, 0x42, -1, 1, { 0, 3, 0 }, 1, 3, 0, 0, manalinkeh_card_dragon_engine, 0x00000000u, 0x00000009u, 0, 72, 0, 1, 55 }, /* 2675: Dragon Engine */
+  { 0, "Dragon Engine", {0}, 492, 0x42, -1, 1, { 0, 3, 0 }, 1, 3, 0, 0, manalinkeh_card_dragon_engine, 0x00000000u, 0x00000009u, 0, 72, 1, 1, 55 }, /* 2675: Dragon Engine */
   { 0, "Dragon Fangs", {0}, 6511, 0x04, -1, 8, { 1, 1, 18 }, 0, 0, 0, 0, manalinkeh_card_dragons_fangs, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 2676: Dragon Fangs */
   { 0, "Dragon Fodder", {0}, 1448, 0x08, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_dragon_fodder, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 2677: Dragon Fodder */
   { 0, "Dragon Grip", {0}, 14257, 0x14, -1, 16, { 1, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_dragon_grip, 0x00000000u, 0x00000000u, 0, 5, 0, 0, 60 }, /* 2678: Dragon Grip */
@@ -14278,7 +14278,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Dragon Spirit", {0}, 18720, 0x02, 14, 4, { 0, 0, 0 }, 5, 5, 0, 0, manalinkeh_card_dragon_spirit, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 2686: Dragon Spirit */
   { 0, "Dragon Throne of ", {0}, 14258, 0x40, 14, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_dragon_throne_of_tarkir, 0x00000000u, 0x00000001u, 0, 217, 0, 0, 60 }, /* 2687: Dragon Throne of Tarkir */
   { 0, "Dragon Tyrant", {0}, 6515, 0x02, -1, 16, { 2, 8, 0 }, 6, 6, 0, 0, manalinkeh_card_dragon_tyrant, 0x400001a0u, 0x00000009u, 0, 72, 0, 2, 100 }, /* 2688: Dragon Tyrant */
-  { 0, "Dragon Whelp", {0}, 67, 0x02, -1, 16, { 2, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_dragon_whelp, 0x00000020u, 0x00000009u, 0, 72, 0, 1, 75 }, /* 2689: Dragon Whelp */
+  { 0, "Dragon Whelp", {0}, 67, 0x02, -1, 16, { 2, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_dragon_whelp, 0x00000020u, 0x00000009u, 0, 72, 1, 1, 75 }, /* 2689: Dragon Whelp */
   { 0, "Dragon Wings", {0}, 6519, 0x04, -1, 4, { 1, 1, 18 }, 0, 0, 0, 0, manalinkeh_card_dragons_wings, 0x00000000u, 0x00000000u, 0, 241, 0, 0, 60 }, /* 2690: Dragon Wings */
   { 0, "Dragon-Style Twin", {0}, 14261, 0x02, -1, 16, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_jeskai_windscout, 0x40000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 2691: Dragon-Style Twins */
   { 0, "Dragon's Claw", {0}, 1736, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_dragons_claw2, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 2692: Dragon's Claw */
@@ -14291,8 +14291,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Dragonsoul Knight", {0}, 10134, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_dragonsoul_knight, 0x00000100u, 0x00008019u, 0, 120, 0, 0, 20 }, /* 2699: Dragonsoul Knight */
   { 0, "Dragonspeaker Sha", {0}, 6516, 0x02, -1, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_dragonspeaker_shaman, 0x00000000u, 0x40000000u, 0, 1, 0, 2, 50 }, /* 2700: Dragonspeaker Shaman */
   { 0, "Dragonstorm", {0}, 6518, 0x08, -1, 16, { 1, 8, 12 }, 0, 0, 0, 0, manalinkeh_card_dragonstorm, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 60 }, /* 2701: Dragonstorm */
-  { 0, "Drain Life", {0}, 68, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_drain_life, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 60 }, /* 2702: Drain Life */
-  { 0, "Drain Power", {0}, 69, 0x08, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_drain_power, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 2703: Drain Power */
+  { 0, "Drain Life", {0}, 68, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_drain_life, 0x00000000u, 0x00000000u, 0, 8, 1, 2, 60 }, /* 2702: Drain Life */
+  { 0, "Drain Power", {0}, 69, 0x08, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_drain_power, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 5 }, /* 2703: Drain Power */
   { 0, "Draining Whelk", {0}, 8522, 0x22, -1, 4, { 2, 4, 0 }, 1, 1, 0, 0, manalinkeh_card_draining_whelk, 0x00000020u, 0x00002000u, 0, 2, 0, 0, 50 }, /* 2704: Draining Whelk */
   { 0, "Drainpipe Vermin", {0}, 12708, 0x02, 7, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_drainpipe_vermin, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 2705: Drainpipe Vermin */
   { 0, "Drake", {0}, 18721, 0x02, -1, 4, { 0, 0, 0 }, 2, 2, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 0 }, /* 2706: Drake */
@@ -14357,7 +14357,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Dromar's Charm", {0}, 5226, 0x30, -1, 38, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dromar_charm, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 2765: Dromar's Charm */
   { 0, "Droning Bureaucra", {0}, 8044, 0x02, -1, 32, { 1, 3, 0 }, 1, 4, 0, 0, manalinkeh_card_droning_bureaucrats, 0x00000000u, 0x00020001u, 0, 24, 0, 0, 20 }, /* 2766: Droning Bureaucrats */
   { 0, "Drooling Groodion", {0}, 7830, 0x02, -1, 10, { 3, 3, 0 }, 4, 3, 0, 0, manalinkeh_card_drooling_groodion, 0x00000000u, 0x00000001u, 0, 73, 0, 0, 70 }, /* 2767: Drooling Groodion */
-  { 0, "Drop of Honey", {0}, 411, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_drop_of_honey, 0x00000000u, 0x00000001u, 0, 24, 0, 3, 50 }, /* 2768: Drop of Honey */
+  { 0, "Drop of Honey", {0}, 411, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_drop_of_honey, 0x00000000u, 0x00000001u, 0, 24, 4, 3, 50 }, /* 2768: Drop of Honey */
   { 0, "Dross Golem", {0}, 6881, 0x42, -1, 1, { 0, 5, 0 }, 3, 2, 1, 0, manalinkeh_card_dross_golem, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 2769: Dross Golem */
   { 0, "Dross Harvester", {0}, 6652, 0x02, -1, 2, { 2, 1, 0 }, 4, 4, 0, 0, manalinkeh_card_dross_harvester, 0x00008000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 2770: Dross Harvester */
   { 0, "Dross Hopper", {0}, 11242, 0x02, -1, 2, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_dross_hopper, 0x00000000u, 0x00000001u, 0, 72, 0, 3, 9 }, /* 2771: Dross Hopper */
@@ -14366,12 +14366,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Drove of Elves", {0}, 9519, 0x02, -1, 8, { 1, 3, 0 }, 16384, 16384, 0, 0, manalinkeh_card_drove_of_elves, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2774: Drove of Elves */
   { 0, "Drown in Filth", {0}, 13145, 0x08, -1, 10, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_drown_in_filth, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 2775: Drown in Filth */
   { 0, "Drown in Sorrow", {0}, 13687, 0x08, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_drown_in_sorrow, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 2776: Drown in Sorrow */
-  { 0, "Drowned", {0}, 370, 0x02, 2, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_drudge_skeletons, 0x00000200u, 0x00000001u, 0, 248, 0, 0, 5 }, /* 2777: Drowned */
+  { 0, "Drowned", {0}, 370, 0x02, 2, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_drudge_skeletons, 0x00000200u, 0x00000001u, 0, 248, 8, 0, 5 }, /* 2777: Drowned */
   { 0, "Drowned Catacomb", {0}, 10411, 0x01, -1, 6, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_drowned_catacomb, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 50 }, /* 2778: Drowned Catacomb */
   { 0, "Drowned Rusalka", {0}, 8045, 0x02, -1, 4, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_drowned_rusalka, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 2779: Drowned Rusalka */
   { 0, "Drowner Initiate", {0}, 9520, 0x02, 1, 4, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_drowner_initiate, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2780: Drowner Initiate */
   { 0, "Drudge Beetle", {0}, 12712, 0x02, -1, 8, { 1, 1, 17 }, 2, 2, 0, 0, manalinkeh_card_drudge_beetle, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 2781: Drudge Beetle */
-  { 0, "Drudge Skeletons", {0}, 70, 0x02, -1, 2, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_drudge_skeletons, 0x00000200u, 0x00000001u, 0, 248, 0, 2, 5 }, /* 2782: Drudge Skeletons */
+  { 0, "Drudge Skeletons", {0}, 70, 0x02, -1, 2, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_drudge_skeletons, 0x00000200u, 0x00000001u, 0, 248, 1, 2, 5 }, /* 2782: Drudge Skeletons */
   { 0, "Drudge Spell", {0}, 1636, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_drudge_spell, 0x00000000u, 0x00000001u, 0, 41, 0, 2, 50 }, /* 2783: Drudge Spell */
   { 0, "Druid Lyrist", {0}, 5547, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_elvish_lyrist, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 2784: Druid Lyrist */
   { 0, "Druid of the Anim", {0}, 9953, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_generic_noncombat_1_mana_producing_creature, 0x00000000u, 0x00001000u, 0, 248, 0, 0, 21 }, /* 2785: Druid of the Anima */
@@ -14403,7 +14403,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Duplicant", {0}, 6655, 0x42, -1, 1, { 0, 6, 0 }, 2, 4, 0, 0, manalinkeh_card_duplicant, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 2811: Duplicant */
   { 0, "Duress", {0}, 3755, 0x08, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_duress, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 65 }, /* 2812: Duress */
   { 0, "Durkwood Baloth", {0}, 8529, 0x02, -1, 8, { 2, 4, 1 }, 5, 5, 1, 0, manalinkeh_card_durkwood_baloth, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2813: Durkwood Baloth */
-  { 0, "Durkwood Boars", {0}, 618, 0x02, -1, 8, { 1, 4, 0 }, 4, 4, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 2814: Durkwood Boars */
+  { 0, "Durkwood Boars", {0}, 618, 0x02, -1, 8, { 1, 4, 0 }, 4, 4, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 35 }, /* 2814: Durkwood Boars */
   { 0, "Dusk Imp", {0}, 1020, 0x02, -1, 2, { 1, 2, 0 }, 2, 1, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 2815: Dusk Imp */
   { 0, "Dusk Urchins", {0}, 9521, 0x02, -1, 2, { 1, 2, 0 }, 4, 3, 0, 0, manalinkeh_card_dusk_urchins, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 2816: Dusk Urchins */
   { 0, "Duskdale Wurm", {0}, 9775, 0x02, -1, 8, { 2, 5, 0 }, 7, 7, 0, 0, card_dummy, 0x00000080u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 2817: Duskdale Wurm */
@@ -14426,7 +14426,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Dwarven Blastmine", {0}, 6125, 0x02, -1, 16, { 1, 1, 4 }, 1, 1, 1, 0, manalinkeh_card_dwarven_blastminer, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 30 }, /* 2834: Dwarven Blastminer */
   { 0, "Dwarven Bloodboil", {0}, 5931, 0x02, 4, 16, { 3, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_dwarven_bloodboiler, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 50 }, /* 2835: Dwarven Bloodboiler */
   { 0, "Dwarven Catapult", {0}, 1764, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dwarven_catapult, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 50 }, /* 2836: Dwarven Catapult */
-  { 0, "Dwarven Demolitio", {0}, 71, 0x02, 4, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_dwarven_demolition_team, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 20 }, /* 2837: Dwarven Demolition Team */
+  { 0, "Dwarven Demolitio", {0}, 71, 0x02, 4, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_dwarven_demolition_team, 0x00000000u, 0x00000001u, 0, 24, 2, 0, 20 }, /* 2837: Dwarven Demolition Team */
   { 0, "Dwarven Driller", {0}, 5932, 0x02, 4, 16, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_dwarven_driller, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 80 }, /* 2838: Dwarven Driller */
   { 0, "Dwarven Grunt", {0}, 5549, 0x02, 4, 16, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000008u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2839: Dwarven Grunt */
   { 0, "Dwarven Hold", {0}, 1765, 0x01, -1, 16, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dwarven_hold, 0x00000000u, 0x00001023u, 0, 248, 0, 255, 30 }, /* 2840: Dwarven Hold */
@@ -14439,8 +14439,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Dwarven Soldier", {0}, 1768, 0x02, 4, 16, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_dwarven_soldier, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 15 }, /* 2847: Dwarven Soldier */
   { 0, "Dwarven Song", {0}, 619, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dwarven_song, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 2848: Dwarven Song */
   { 0, "Dwarven Thaumatur", {0}, 2966, 0x02, 4, 16, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_dwarven_thaumaturgist, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 2849: Dwarven Thaumaturgist */
-  { 0, "Dwarven Warriors", {0}, 72, 0x02, 4, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_dwarven_warriors, 0x00000000u, 0x00000001u, 0, 56, 0, 2, 20 }, /* 2850: Dwarven Warriors */
-  { 0, "Dwarven Weaponsmi", {0}, 493, 0x02, 4, 16, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_dwarven_weaponsmith, 0x00000000u, 0x00000001u, 0, 24, 0, 1, 5 }, /* 2851: Dwarven Weaponsmith */
+  { 0, "Dwarven Warriors", {0}, 72, 0x02, 4, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_dwarven_warriors, 0x00000000u, 0x00000001u, 0, 56, 1, 2, 20 }, /* 2850: Dwarven Warriors */
+  { 0, "Dwarven Weaponsmi", {0}, 493, 0x02, 4, 16, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_dwarven_weaponsmith, 0x00000000u, 0x00000001u, 0, 24, 32, 1, 5 }, /* 2851: Dwarven Weaponsmith */
   { 0, "Dwell on the Past", {0}, 5802, 0x08, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_dwell_on_the_past, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 2852: Dwell on the Past */
   { 0, "Dying Wish", {0}, 12936, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_dying_wish, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 2853: Dying Wish */
   { 0, "Dynacharge", {0}, 12715, 0x10, -1, 16, { 1, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_dynacharge, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 2854: Dynacharge */
@@ -14448,13 +14448,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Early Frost", {0}, 7042, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_early_frost, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 2856: Early Frost */
   { 0, "Early Harvest", {0}, 2459, 0x10, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_early_harvest, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 10 }, /* 2857: Early Harvest */
   { 0, "Earnest Fellowshi", {0}, 5553, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_earnest_fellowship, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 2858: Earnest Fellowship */
-  { 0, "Earth Elemental", {0}, 73, 0x02, -1, 16, { 2, 3, 0 }, 4, 5, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 2859: Earth Elemental */
+  { 0, "Earth Elemental", {0}, 73, 0x02, -1, 16, { 2, 3, 0 }, 4, 5, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 75 }, /* 2859: Earth Elemental */
   { 0, "Earth Rift", {0}, 5554, 0x08, -1, 16, { 1, 3, 9 }, 0, 0, 0, 0, manalinkeh_card_earth_rift, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 2860: Earth Rift */
   { 0, "Earth Servant", {0}, 11117, 0x02, -1, 16, { 1, 5, 0 }, 4, 4, 0, 0, manalinkeh_card_earth_servant, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 2861: Earth Servant */
-  { 0, "Earthbind", {0}, 74, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_earthbind, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 2862: Earthbind */
+  { 0, "Earthbind", {0}, 74, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_earthbind, 0x00000000u, 0x00000000u, 0, 1, 2, 255, 5 }, /* 2862: Earthbind */
   { 0, "Earthcraft", {0}, 3128, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_earthcraft, 0x00000000u, 0x00000001u, 0, 25, 0, 2, 90 }, /* 2863: Earthcraft */
   { 0, "Earthen Goo", {0}, 8362, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_earthen_goo, 0x00000080u, 0x00000000u, 0, 8, 0, 2, 70 }, /* 2864: Earthen Goo */
-  { 0, "Earthquake", {0}, 75, 0x08, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_earthquake, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 40 }, /* 2865: Earthquake */
+  { 0, "Earthquake", {0}, 75, 0x08, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_earthquake, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 40 }, /* 2865: Earthquake */
   { 0, "Earthshaker", {0}, 7200, 0x02, -1, 16, { 2, 4, 0 }, 4, 5, 0, 0, manalinkeh_card_earthshaker, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 2866: Earthshaker */
   { 0, "Earwig Squad", {0}, 9349, 0x02, 3, 2, { 2, 3, 13 }, 5, 3, 1, 0, manalinkeh_card_earwig_squad, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2867: Earwig Squad */
   { 0, "Eastern Paladin", {0}, 1021, 0x02, 2, 2, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_eastern_paladin, 0x00000000u, 0x00000001u, 0, 168, 0, 1, 35 }, /* 2868: Eastern Paladin */
@@ -14467,7 +14467,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ebon Praetor", {0}, 1769, 0x02, -1, 2, { 2, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_ebon_praetor, 0x00000180u, 0x00000001u, 0, 24, 0, 1, 50 }, /* 2875: Ebon Praetor */
   { 0, "Ebon Stronghold", {0}, 1770, 0x01, -1, 2, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ebon_stronghold, 0x00000000u, 0x00001000u, 0, 8, 0, 2, 10 }, /* 2876: Ebon Stronghold */
   { 0, "Ebonblade Reaper", {0}, 6126, 0x02, -1, 2, { 1, 2, 0 }, 1, 1, 1, 0, manalinkeh_card_ebonblade_reaper, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2877: Ebonblade Reaper */
-  { 0, "Ebony Horse", {0}, 412, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_ebony_horse, 0x00000000u, 0x00000001u, 0, 65, 0, 255, 5 }, /* 2878: Ebony Horse */
+  { 0, "Ebony Horse", {0}, 412, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_ebony_horse, 0x00000000u, 0x00000001u, 0, 65, 1, 255, 5 }, /* 2878: Ebony Horse */
   { 0, "Ebony Owl Netsuke", {0}, 7629, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ebony_owl_netsuke, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 2879: Ebony Owl Netsuke */
   { 0, "Ebony Treefolk", {0}, 5363, 0x02, -1, 10, { 2, 1, 0 }, 3, 3, 0, 0, manalinkeh_card_ebony_treefolk, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 2880: Ebony Treefolk */
   { 0, "Echo Chamber", {0}, 3129, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_echo_chamber, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 50 }, /* 2881: Echo Chamber */
@@ -14495,16 +14495,16 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Eiganjo Free-Ride", {0}, 7630, 0x02, -1, 32, { 1, 3, 0 }, 3, 4, 0, 0, manalinkeh_card_eiganjo_free_riders, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2903: Eiganjo Free-Riders */
   { 0, "Eight-and-a-Half-", {0}, 7203, 0x02, 14, 32, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_eight_and_a_half_tails, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 50 }, /* 2904: Eight-and-a-Half-Tails */
   { 0, "Ekundu Griffin", {0}, 1674, 0x02, -1, 32, { 1, 3, 0 }, 2, 2, 0, 0, card_dummy, 0x00000120u, 0x00000000u, 0, 8, 0, 0, 25 }, /* 2905: Ekundu Griffin */
-  { 0, "El-Hajj\342j", {0}, 413, 0x02, -1, 2, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_el_hajjaj, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 2906: El-Hajjâj */
+  { 0, "El-Hajj\342j", {0}, 413, 0x02, -1, 2, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_el_hajjaj, 0x00000000u, 0x00000400u, 0, 8, 1, 255, 5 }, /* 2906: El-Hajjâj */
   { 0, "Eladamri, Lord of", {0}, 1463, 0x02, 14, 8, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_eladamri_lord_of_leaves, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 5 }, /* 2907: Eladamri, Lord of Leaves */
   { 0, "Eladamri's Call", {0}, 1524, 0x10, -1, 40, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_eladamris_call, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 5 }, /* 2908: Eladamri's Call */
   { 0, "Eladamri's Vineya", {0}, 3130, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_eladamris_vineyard, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 150 }, /* 2909: Eladamri's Vineyard */
   { 0, "Elbrus, the Bindi", {0}, 12169, 0x40, 14, 1, { 0, 7, 0 }, 0, 0, 0, 0, manalinkeh_card_elbrus_the_binding_blade, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 35 }, /* 2910: Elbrus, the Binding Blade */
   { 0, "Elder Cathar", {0}, 11936, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_elder_cathar, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 39 }, /* 2911: Elder Cathar */
-  { 0, "Elder Land Wurm", {0}, 620, 0x02, -1, 32, { 3, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_elder_land_wurm, 0x00800080u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 2912: Elder Land Wurm */
+  { 0, "Elder Land Wurm", {0}, 620, 0x02, -1, 32, { 3, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_elder_land_wurm, 0x00800080u, 0x00000000u, 0, 8, 1, 255, 5 }, /* 2912: Elder Land Wurm */
   { 0, "Elder of Laurels", {0}, 11937, 0x02, -1, 8, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_elder_of_laurels, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 79 }, /* 2913: Elder of Laurels */
   { 0, "Elder Pine of Juk", {0}, 7631, 0x02, -1, 8, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_elder_pine_of_jukai, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2914: Elder Pine of Jukai */
-  { 0, "Elder Spawn", {0}, 621, 0x02, -1, 4, { 3, 4, 0 }, 6, 6, 0, 0, manalinkeh_card_elder_spawn, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 2915: Elder Spawn */
+  { 0, "Elder Spawn", {0}, 621, 0x02, -1, 4, { 3, 4, 0 }, 6, 6, 0, 0, manalinkeh_card_elder_spawn, 0x00000000u, 0x00000000u, 0, 8, 16, 1, 5 }, /* 2915: Elder Spawn */
   { 0, "Elderscale Wurm", {0}, 12565, 0x02, -1, 8, { 3, 4, 0 }, 7, 7, 0, 0, manalinkeh_card_elderscale_wurm, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 2916: Elderscale Wurm */
   { 0, "Eldrazi Conscript", {0}, 10916, 0x04, -1, 1, { 0, 8, 0 }, 0, 0, 0, 0, manalinkeh_card_eldrazi_conscription, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 100 }, /* 2917: Eldrazi Conscription */
   { 0, "Eldrazi Monument", {0}, 10531, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_eldrazi_monument, 0x00000000u, 0x00000001u, 0, 249, 0, 1, 150 }, /* 2918: Eldrazi Monument */
@@ -14525,7 +14525,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Elephant", {0}, 18729, 0x02, 10, 8, { 0, 0, 0 }, 3, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 0 }, /* 2933: Elephant */
   { 0, "Elephant Ambush", {0}, 5555, 0x10, -1, 8, { 2, 2, 9 }, 0, 0, 0, 0, manalinkeh_card_elephants_ambush, 0x00000000u, 0x00000000u, 0, 2, 0, 0, 40 }, /* 2934: Elephant Ambush */
   { 0, "Elephant Grass", {0}, 2695, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_elephant_grass, 0x00000000u, 0x04400000u, 0, 8, 0, 2, 80 }, /* 2935: Elephant Grass */
-  { 0, "Elephant Graveyar", {0}, 414, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_elephant_graveyard, 0x00000000u, 0x00001001u, 0, 241, 0, 3, 5 }, /* 2936: Elephant Graveyard */
+  { 0, "Elephant Graveyar", {0}, 414, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_elephant_graveyard, 0x00000000u, 0x00001801u, 0, 241, 4, 3, 5 }, /* 2936: Elephant Graveyard */
   { 0, "Elephant Guide", {0}, 5935, 0x04, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_elephant_guide, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 2937: Elephant Guide */
   { 0, "Elesh Norn, Grand", {0}, 11595, 0x02, 14, 32, { 2, 5, 0 }, 4, 7, 0, 0, manalinkeh_card_elesh_norn, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 100 }, /* 2938: Elesh Norn, Grand Cenobite */
   { 0, "Elf", {0}, 18730, 0x02, -1, 8, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_elf_druid, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 0 }, /* 2939: Elf */
@@ -14553,13 +14553,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Elusive Krasis", {0}, 12937, 0x02, -1, 12, { 2, 1, 0 }, 0, 4, 0, 0, manalinkeh_card_elusive_krasis, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2961: Elusive Krasis */
   { 0, "Elven Fortress", {0}, 1771, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_elven_fortress, 0x00000000u, 0x00000011u, 0, 56, 0, 1, 30 }, /* 2962: Elven Fortress */
   { 0, "Elven Lyre", {0}, 1772, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_elven_lyre, 0x00000000u, 0x00000001u, 0, 65, 0, 1, 15 }, /* 2963: Elven Lyre */
-  { 0, "Elven Riders", {0}, 622, 0x02, -1, 8, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_elven_riders, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 35 }, /* 2964: Elven Riders */
+  { 0, "Elven Riders", {0}, 622, 0x02, -1, 8, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_elven_riders, 0x00000000u, 0x00000000u, 0, 8, 1, 2, 35 }, /* 2964: Elven Riders */
   { 0, "Elven Rite", {0}, 3365, 0x08, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_elven_rite, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 2965: Elven Rite */
   { 0, "Elven Warhounds", {0}, 3131, 0x02, -1, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_elven_warhounds, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 2966: Elven Warhounds */
-  { 0, "Elves of Deep Sha", {0}, 313, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_elves_of_the_deep_shadow, 0x00000000u, 0x00001000u, 0, 248, 0, 0, 21 }, /* 2967: Elves of Deep Shadow */
+  { 0, "Elves of Deep Sha", {0}, 313, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_elves_of_the_deep_shadow, 0x00000000u, 0x00001000u, 0, 248, 8, 0, 21 }, /* 2967: Elves of Deep Shadow */
   { 0, "Elvish Aberration", {0}, 6521, 0x02, -1, 8, { 1, 5, 4 }, 4, 5, 0, 0, manalinkeh_card_elvish_aberration, 0x00000000u, 0x00001000u, 0, 248, 0, 0, 50 }, /* 2968: Elvish Aberration */
   { 0, "Elvish Archdruid", {0}, 10413, 0x02, -1, 8, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_elvish_archdruid, 0x00000000u, 0x00001000u, 0, 249, 0, 2, 59 }, /* 2969: Elvish Archdruid */
-  { 0, "Elvish Archers", {0}, 76, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000100u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 2970: Elvish Archers */
+  { 0, "Elvish Archers", {0}, 76, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000100u, 0x00000000u, 0, 8, 1, 1, 50 }, /* 2970: Elvish Archers */
   { 0, "Elvish Bard", {0}, 2274, 0x02, -1, 8, { 2, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_taunting_elf, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 2971: Elvish Bard */
   { 0, "Elvish Berserker", {0}, 3484, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_elvish_berserk, 0x00000000u, 0x00000018u, 0, 8, 0, 1, 25 }, /* 2972: Elvish Berserker */
   { 0, "Elvish Branchbend", {0}, 9116, 0x02, -1, 8, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_elvish_branchbender, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 20 }, /* 2973: Elvish Branchbender */
@@ -14597,7 +14597,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Emblem of the War", {0}, 8920, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_emblem_of_the_warmind, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 3005: Emblem of the Warmind */
   { 0, "Embodiment of Spr", {0}, 14265, 0x02, -1, 4, { 1, 0, 0 }, 0, 3, 0, 0, manalinkeh_card_embodiment_of_spring, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 3006: Embodiment of Spring */
   { 0, "Emerald Charm", {0}, 2698, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_emerald_charm, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 3007: Emerald Charm */
-  { 0, "Emerald Dragonfly", {0}, 623, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_emerald_dragonfly, 0x00000020u, 0x00000001u, 0, 88, 0, 2, 5 }, /* 3008: Emerald Dragonfly */
+  { 0, "Emerald Dragonfly", {0}, 623, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_emerald_dragonfly, 0x00000020u, 0x00000001u, 0, 88, 16, 2, 5 }, /* 3008: Emerald Dragonfly */
   { 0, "Emerald Medallion", {0}, 3132, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_emerald_medallion, 0x00000000u, 0x40000000u, 0, 9, 0, 0, 150 }, /* 3009: Emerald Medallion */
   { 0, "Emerge Unscathed", {0}, 10918, 0x10, -1, 32, { 1, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_emerge_unschated, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 50 }, /* 3010: Emerge Unscathed */
   { 0, "Emeria Angel", {0}, 10534, 0x02, -1, 32, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_emeria_angel, 0x00000020u, 0x00000000u, 0, 9, 0, 2, 100 }, /* 3011: Emeria Angel */
@@ -14639,9 +14639,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Energy Bolt", {0}, 2465, 0x08, -1, 48, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_energy_bolt, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 100 }, /* 3047: Energy Bolt */
   { 0, "Energy Chamber", {0}, 7045, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_energy_chamber, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 3048: Energy Chamber */
   { 0, "Energy Field", {0}, 3760, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_energy_field, 0x00000000u, 0x00040000u, 0, 8, 0, 1, 100 }, /* 3049: Energy Field */
-  { 0, "Energy Flux", {0}, 494, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_energy_flux, 0x00000000u, 0x00000000u, 0, 8, 0, 254, 30 }, /* 3050: Energy Flux */
+  { 0, "Energy Flux", {0}, 494, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_energy_flux, 0x00000000u, 0x00000400u, 0, 8, 1, 254, 30 }, /* 3050: Energy Flux */
   { 0, "Energy Storm", {0}, 1914, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_energy_storm, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 3051: Energy Storm */
-  { 0, "Energy Tap", {0}, 626, 0x08, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_energy_tap, 0x00000000u, 0x00001000u, 0, 9, 0, 255, 10 }, /* 3052: Energy Tap */
+  { 0, "Energy Tap", {0}, 626, 0x08, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_energy_tap, 0x00000000u, 0x00001000u, 0, 9, 1, 255, 10 }, /* 3052: Energy Tap */
   { 0, "Engineered Explos", {0}, 7046, 0x40, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_engineered_explosives, 0x00000000u, 0x00000001u, 0, 249, 0, 2, 90 }, /* 3053: Engineered Explosives */
   { 0, "Engineered Plague", {0}, 3987, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_engineered_plague, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 100 }, /* 3054: Engineered Plague */
   { 0, "Engulfing Flames", {0}, 5558, 0x10, -1, 16, { 1, 0, 9 }, 0, 0, 0, 0, manalinkeh_card_engulfing_flames, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 3055: Engulfing Flames */
@@ -14695,10 +14695,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Erebos, God of th", {0}, 13431, 0x06, 14, 2, { 1, 3, 0 }, 5, 7, 0, 0, manalinkeh_card_erebos_god_of_the_dead, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 70 }, /* 3103: Erebos, God of the Dead Incarnate */
   { 0, "Erebos's Emissary", {0}, 13432, 0x06, -1, 2, { 1, 3, 1 }, 3, 3, 1, 0, manalinkeh_card_ereboss_emissary, 0x00000000u, 0x00000019u, 0, 73, 0, 0, 60 }, /* 3104: Erebos's Emissary */
   { 0, "Erebos's Emissary", {0}, 13433, 0x04, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_ereboss_emissary, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 60 }, /* 3105: Erebos's Emissary Bestowed */
-  { 0, "Erg Raiders", {0}, 415, 0x02, -1, 2, { 1, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_erg_raiders, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 55 }, /* 3106: Erg Raiders */
-  { 0, "Erhnam Djinn", {0}, 416, 0x02, 6, 8, { 1, 3, 0 }, 4, 5, 0, 0, manalinkeh_card_erhnam_djinn, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 75 }, /* 3107: Erhnam Djinn */
+  { 0, "Erg Raiders", {0}, 415, 0x02, -1, 2, { 1, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_erg_raiders, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 55 }, /* 3106: Erg Raiders */
+  { 0, "Erhnam Djinn", {0}, 416, 0x02, 6, 8, { 1, 3, 0 }, 4, 5, 0, 0, manalinkeh_card_erhnam_djinn, 0x00000000u, 0x00000001u, 0, 24, 4, 2, 75 }, /* 3107: Erhnam Djinn */
   { 0, "Eron the Relentle", {0}, 1638, 0x02, 14, 16, { 2, 3, 0 }, 5, 2, 0, 0, manalinkeh_card_eron_the_relentless, 0x00000200u, 0x00000001u, 0, 241, 0, 1, 70 }, /* 3108: Eron the Relentless */
-  { 0, "Erosion", {0}, 314, 0x04, -1, 4, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_erosion, 0x00000000u, 0x00000001u, 0, 24, 0, 254, 60 }, /* 3109: Erosion */
+  { 0, "Erosion", {0}, 314, 0x04, -1, 4, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_erosion, 0x00000000u, 0x00000001u, 0, 24, 1, 254, 60 }, /* 3109: Erosion */
   { 0, "Errant Doomsayers", {0}, 8534, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_errant_doomsayer, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 50 }, /* 3110: Errant Doomsayers */
   { 0, "Errant Ephemeron", {0}, 8535, 0x02, -1, 4, { 1, 6, 1 }, 4, 4, 1, 0, manalinkeh_card_errant_ephemeron, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 3111: Errant Ephemeron */
   { 0, "Erratic Explosion", {0}, 6134, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_erratic_explosion, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 3112: Erratic Explosion */
@@ -14729,9 +14729,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Etched Oracle", {0}, 7049, 0x42, -1, 1, { 0, 4, 0 }, 0, 0, 1, 0, manalinkeh_card_etched_oracle, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 50 }, /* 3137: Etched Oracle */
   { 0, "Eternal Dominion", {0}, 7636, 0x08, -1, 4, { 3, 7, 0 }, 0, 0, 0, 0, manalinkeh_card_eternal_dominion, 0x00000000u, 0x40000000u, 0, 1, 0, 0, 100 }, /* 3138: Eternal Dominion */
   { 0, "Eternal Dragon", {0}, 6522, 0x02, -1, 32, { 2, 5, 4 }, 5, 5, 0, 0, manalinkeh_card_eternal_dragon, 0x00000020u, 0x00000000u, 0, 248, 0, 2, 70 }, /* 3139: Eternal Dragon */
-  { 0, "Eternal Flame", {0}, 315, 0x08, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_eternal_flame, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 40 }, /* 3140: Eternal Flame */
+  { 0, "Eternal Flame", {0}, 315, 0x08, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_eternal_flame, 0x00000000u, 0x00000000u, 0, 9, 8, 1, 40 }, /* 3140: Eternal Flame */
   { 0, "Eternal Thirst", {0}, 14096, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_eternal_thirst, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 3141: Eternal Thirst */
-  { 0, "Eternal Warrior", {0}, 628, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_eternal_warrior, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 3142: Eternal Warrior */
+  { 0, "Eternal Warrior", {0}, 628, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_eternal_warrior, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 5 }, /* 3142: Eternal Warrior */
   { 0, "Eternal Witness", {0}, 1223, 0x02, -1, 8, { 2, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_eternal_witness, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 3143: Eternal Witness */
   { 0, "Eternity Snare", {0}, 8536, 0x04, -1, 4, { 1, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_eternity_snare, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 3144: Eternity Snare */
   { 0, "Eternity Vessel", {0}, 10536, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_eternity_vessel, 0x00000000u, 0x00000020u, 0, 8, 0, 1, 150 }, /* 3145: Eternity Vessel */
@@ -14757,7 +14757,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Evernight Shade", {0}, 12364, 0x02, -1, 2, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_evernight_shade, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 20 }, /* 3165: Evernight Shade */
   { 0, "Evershrike", {0}, 9779, 0x02, -1, 34, { 2, 3, 10 }, 2, 2, 1, 0, manalinkeh_card_evershrike, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 3166: Evershrike */
   { 0, "Evil Eye of Orms-", {0}, 630, 0x02, -1, 2, { 1, 4, 0 }, 3, 6, 0, 0, manalinkeh_card_evil_eye_of_orms_by_gore, 0x00000000u, 0x04000000u, 0, 8, 0, 0, 50 }, /* 3167: Evil Eye of Orms-by-Gore */
-  { 0, "Evil Presence", {0}, 77, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_evil_presence, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 3168: Evil Presence */
+  { 0, "Evil Presence", {0}, 77, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_evil_presence, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 5 }, /* 3168: Evil Presence */
   { 0, "Evil Twin", {0}, 11941, 0x02, -1, 6, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_evil_twin, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 59 }, /* 3169: Evil Twin */
   { 0, "Evincar's Justice", {0}, 1429, 0x08, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_evincars_justice, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 5 }, /* 3170: Evincar's Justice */
   { 0, "Eviscerator", {0}, 3989, 0x02, -1, 2, { 2, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_eviscerator, 0x00008000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 3171: Eviscerator */
@@ -14779,7 +14779,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Exhume", {0}, 3762, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_exhume, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 65 }, /* 3187: Exhume */
   { 0, "Exile", {0}, 2279, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_exile, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 50 }, /* 3188: Exile */
   { 0, "Exile into Darkne", {0}, 7638, 0x08, -1, 2, { 1, 4, 5 }, 0, 0, 0, 0, manalinkeh_card_exile_into_darkness, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 3189: Exile into Darkness */
-  { 0, "Exorcist", {0}, 316, 0x02, -1, 32, { 2, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_exorcist, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 5 }, /* 3190: Exorcist */
+  { 0, "Exorcist", {0}, 316, 0x02, -1, 32, { 2, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_exorcist, 0x00000000u, 0x00000001u, 0, 248, 8, 2, 5 }, /* 3190: Exorcist */
   { 0, "Exotic Orchard", {0}, 1614, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fellwar_stone, 0x00000000u, 0x08001000u, 0, 241, 0, 0, 15 }, /* 3191: Exotic Orchard */
   { 0, "Expedition Map", {0}, 10537, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_expedition_map, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 15 }, /* 3192: Expedition Map */
   { 0, "Expendable Troops", {0}, 3990, 0x02, -1, 32, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_expendable_troops, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 3193: Expendable Troops */
@@ -14802,7 +14802,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Extractor Demon", {0}, 10141, 0x02, -1, 2, { 2, 4, 9 }, 5, 5, 1, 0, manalinkeh_card_extractor_demon, 0x00000020u, 0x00000000u, 0, 9, 0, 2, 100 }, /* 3210: Extractor Demon */
   { 0, "Extruder", {0}, 4122, 0x42, -1, 1, { 0, 4, 0 }, 4, 3, 0, 0, manalinkeh_card_extruder, 0x00000000u, 0x00000001u, 0, 65, 0, 2, 50 }, /* 3211: Extruder */
   { 0, "Exuberant Firesto", {0}, 9966, 0x02, -1, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_exuberant_firestoker, 0x00000000u, 0x00001000u, 0, 248, 0, 0, 21 }, /* 3212: Exuberant Firestoker */
-  { 0, "Eye for an Eye", {0}, 417, 0x10, -1, 32, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_eye_for_an_eye, 0x00000000u, 0x00000004u, 0, 15, 0, 0, 65 }, /* 3213: Eye for an Eye */
+  { 0, "Eye for an Eye", {0}, 417, 0x10, -1, 32, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_eye_for_an_eye, 0x00000000u, 0x00000004u, 0, 15, 1, 0, 65 }, /* 3213: Eye for an Eye */
   { 0, "Eye Gouge", {0}, 13701, 0x10, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_eye_gouge, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 3214: Eye Gouge */
   { 0, "Eye of Doom", {0}, 13617, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_eye_of_doom, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 3215: Eye of Doom */
   { 0, "Eye of Nowhere", {0}, 1295, 0x08, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_eye_of_nowhere, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 40 }, /* 3216: Eye of Nowhere */
@@ -14827,7 +14827,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Faerie", {0}, 18735, 0x02, -1, 4, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_rhino_token, 0x00000020u, 0x00000000u, 0, 0, 0, 0, 0 }, /* 3235: Faerie */
   { 0, "Faerie Conclave", {0}, 3991, 0x01, -1, 4, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_faerie_conclave, 0x00000000u, 0x00001001u, 0, 56, 0, 2, 50 }, /* 3236: Faerie Conclave */
   { 0, "Faerie Conclave A", {0}, 3992, 0x03, -1, 4, { 0, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_faerie_conclave_animated, 0x00000020u, 0x00001000u, 0, 9, 0, 1, 50 }, /* 3237: Faerie Conclave Animated */
-  { 0, "Faerie Dragon", {0}, 865, 0x02, -1, 8, { 2, 2, 0 }, 1, 3, 0, 0, manalinkeh_card_faerie_dragon, 0x00000020u, 0x00000001u, 0, 249, 0, 0, 20 }, /* 3238: Faerie Dragon */
+  { 0, "Faerie Dragon", {0}, 865, 0x02, -1, 8, { 2, 2, 0 }, 1, 3, 0, 0, manalinkeh_card_faerie_dragon, 0x00000020u, 0x00000001u, 0, 249, 64, 0, 20 }, /* 3238: Faerie Dragon */
   { 0, "Faerie Harbinger", {0}, 9128, 0x12, -1, 4, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_faerie_harbinger, 0x00000020u, 0x00000000u, 0, 2, 0, 0, 20 }, /* 3239: Faerie Harbinger */
   { 0, "Faerie Impostor", {0}, 12722, 0x02, -1, 4, { 1, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_faerie_impostor, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3240: Faerie Impostor */
   { 0, "Faerie Invaders", {0}, 12567, 0x12, -1, 4, { 1, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_faerie_invaders, 0x00000020u, 0x00000000u, 0, 2, 0, 0, 50 }, /* 3241: Faerie Invaders */
@@ -14851,7 +14851,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Falkenrath Tortur", {0}, 12177, 0x02, -1, 2, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_falkenrath_torturer, 0x00000000u, 0x00000001u, 0, 72, 0, 2, 35 }, /* 3259: Falkenrath Torturer */
   { 0, "Fall of the Gavel", {0}, 12723, 0x20, -1, 36, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_fall_of_the_gavel, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 40 }, /* 3260: Fall of the Gavel */
   { 0, "Fall of the Hamme", {0}, 13702, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_fall_of_the_hammer, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 3261: Fall of the Hammer */
-  { 0, "Fallen Angel", {0}, 631, 0x02, -1, 2, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_fallen_angel, 0x00000020u, 0x00000019u, 0, 72, 0, 3, 55 }, /* 3262: Fallen Angel */
+  { 0, "Fallen Angel", {0}, 631, 0x02, -1, 2, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_fallen_angel, 0x00000020u, 0x00000019u, 0, 72, 16, 3, 55 }, /* 3262: Fallen Angel */
   { 0, "Fallen Askari", {0}, 2702, 0x02, -1, 2, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_fallen_askari, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 25 }, /* 3263: Fallen Askari */
   { 0, "Fallen Ferromance", {0}, 11599, 0x02, -1, 16, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_fallen_ferromancer, 0x20000000u, 0x00000001u, 0, 248, 0, 3, 50 }, /* 3264: Fallen Ferromancer */
   { 0, "Falling Star", {0}, 632, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_fallen_star, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 3265: Falling Star */
@@ -14879,13 +14879,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Farbog Boneflinge", {0}, 12178, 0x02, -1, 2, { 1, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_farbog_boneflinger, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 35 }, /* 3287: Farbog Boneflinger */
   { 0, "Farbog Explorer", {0}, 12367, 0x02, -1, 32, { 1, 2, 0 }, 2, 3, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3288: Farbog Explorer */
   { 0, "Farhaven Elf", {0}, 1615, 0x02, -1, 8, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_farhaven_elf, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 35 }, /* 3289: Farhaven Elf */
-  { 0, "Farmstead", {0}, 79, 0x04, -1, 32, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_farmstead, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 5 }, /* 3290: Farmstead */
+  { 0, "Farmstead", {0}, 79, 0x04, -1, 32, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_farmstead, 0x00000000u, 0x00000001u, 0, 248, 2, 2, 5 }, /* 3290: Farmstead */
   { 0, "Farrel's Mantle", {0}, 1776, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_farrels_mantle, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 45 }, /* 3291: Farrel's Mantle */
   { 0, "Farrel's Zealot", {0}, 1777, 0x02, -1, 32, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_farrels_zealot, 0x00000000u, 0x00000000u, 0, 248, 0, 3, 30 }, /* 3292: Farrel's Zealot */
   { 0, "Farrelite Priest", {0}, 1778, 0x02, -1, 32, { 2, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_farrelite_priest, 0x00000000u, 0x00011001u, 0, 249, 0, 0, 21 }, /* 3293: Farrelite Priest */
   { 0, "Farseek", {0}, 1507, 0x08, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_farseek, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 60 }, /* 3294: Farseek */
   { 0, "Farsight Mask", {0}, 6662, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_farsight_mask, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 3295: Farsight Mask */
-  { 0, "Fastbond", {0}, 80, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fastbond, 0x00000000u, 0x00000001u, 0, 1, 0, 2, 100 }, /* 3296: Fastbond */
+  { 0, "Fastbond", {0}, 80, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fastbond, 0x00000000u, 0x00000001u, 0, 1, 2, 2, 100 }, /* 3296: Fastbond */
   { 0, "Fasting", {0}, 317, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fasting, 0x00000000u, 0x00000000u, 0, 248, 0, 255, 23 }, /* 3297: Fasting */
   { 0, "Fatal Frenzy", {0}, 8780, 0x10, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_fatal_frenzy, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 3298: Fatal Frenzy */
   { 0, "Fatal Fumes", {0}, 13148, 0x10, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_fatal_fumes, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 3299: Fatal Fumes */
@@ -14909,7 +14909,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Favor of the Wood", {0}, 12179, 0x04, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_favor_of_the_woods, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 25 }, /* 3317: Favor of the Woods */
   { 0, "Favorable Winds", {0}, 12368, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_favourable_winds, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 3318: Favorable Winds */
   { 0, "Favored Hoplite", {0}, 13439, 0x02, -1, 32, { 1, 0, 0 }, 1, 2, 0, 0, manalinkeh_card_favored_hoplite, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3319: Favored Hoplite */
-  { 0, "Fear", {0}, 81, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fear, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 20 }, /* 3320: Fear */
+  { 0, "Fear", {0}, 81, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fear, 0x00000000u, 0x00000000u, 0, 1, 1, 2, 20 }, /* 3320: Fear */
   { 0, "Fearsome Temper", {0}, 13710, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_fearsome_temper, 0x00000000u, 0x00000001u, 0, 33, 0, 0, 60 }, /* 3321: Fearsome Temper */
   { 0, "Feast of Blood", {0}, 10539, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_feast_of_blood, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 75 }, /* 3322: Feast of Blood */
   { 0, "Feast of Dreams", {0}, 13884, 0x10, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_feast_of_dreams, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 3323: Feast of Dreams */
@@ -14921,11 +14921,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Fecundity", {0}, 1033, 0x04, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_fecundity, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 5 }, /* 3329: Fecundity */
   { 0, "Feed the Clan", {0}, 14269, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_feed_the_clan, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 3330: Feed the Clan */
   { 0, "Feed the Pack", {0}, 12180, 0x04, -1, 8, { 1, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_feed_the_pack, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 3331: Feed the Pack */
-  { 0, "Feedback", {0}, 82, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_feedback, 0x00000000u, 0x00000001u, 0, 24, 0, 255, 5 }, /* 3332: Feedback */
+  { 0, "Feedback", {0}, 82, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_feedback, 0x00000000u, 0x00000001u, 0, 24, 1, 255, 5 }, /* 3332: Feedback */
   { 0, "Feeling of Dread", {0}, 11945, 0x10, -1, 32, { 1, 1, 9 }, 0, 0, 1, 0, manalinkeh_card_feeling_of_dread, 0x00000000u, 0x00000000u, 0, 3, 0, 0, 20 }, /* 3333: Feeling of Dread */
   { 0, "Feint", {0}, 633, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_feint, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 3334: Feint */
   { 0, "Feldon of the Thi", {0}, 14458, 0x02, 14, 16, { 2, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_feldon_of_the_third_path, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 20 }, /* 3335: Feldon of the Third Path */
-  { 0, "Feldon's Cane", {0}, 495, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_feldons_cane, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 15 }, /* 3336: Feldon's Cane */
+  { 0, "Feldon's Cane", {0}, 495, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_feldons_cane, 0x00000000u, 0x00000501u, 0, 17, 8, 0, 15 }, /* 3336: Feldon's Cane */
   { 0, "Felhide Brawler", {0}, 13711, 0x02, -1, 2, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_felhide_brawler, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 3337: Felhide Brawler */
   { 0, "Felhide Minotaur", {0}, 13440, 0x02, -1, 2, { 1, 2, 0 }, 2, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 3338: Felhide Minotaur */
   { 0, "Felhide Petrifier", {0}, 13885, 0x02, -1, 2, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_felhide_petrifier, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 3339: Felhide Petrifier */
@@ -14934,7 +14934,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Felidar Umbra", {0}, 12523, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_felidar_umbra, 0x00000000u, 0x00000001u, 0, 89, 0, 0, 60 }, /* 3342: Felidar Umbra */
   { 0, "Fell Shepherd", {0}, 13618, 0x02, -1, 2, { 2, 5, 14 }, 8, 6, 0, 0, manalinkeh_card_fell_shepherd, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 100 }, /* 3343: Fell Shepherd */
   { 0, "Fell the Mighty", {0}, 14459, 0x08, -1, 32, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_fell_the_mighty, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 3344: Fell the Mighty */
-  { 0, "Fellwar Stone", {0}, 318, 0x40, -1, 0, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_fellwar_stone, 0x00000000u, 0x08001000u, 0, 248, 0, 255, 15 }, /* 3345: Fellwar Stone */
+  { 0, "Fellwar Stone", {0}, 318, 0x40, -1, 0, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_fellwar_stone, 0x00000000u, 0x08001000u, 0, 248, 1, 255, 15 }, /* 3345: Fellwar Stone */
   { 0, "Femeref Archers", {0}, 2473, 0x02, -1, 8, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_femeref_archers, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 3346: Femeref Archers */
   { 0, "Femeref Enchantre", {0}, 2703, 0x02, -1, 40, { 2, 0, 0 }, 1, 2, 0, 0, manalinkeh_card_femeref_enchantress, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 50 }, /* 3347: Femeref Enchantress */
   { 0, "Femeref Knight", {0}, 2475, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_femeref_knight, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 50 }, /* 3348: Femeref Knight */
@@ -15003,18 +15003,18 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Fire Bowman", {0}, 4310, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_firestarter, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 20 }, /* 3411: Fire Bowman */
   { 0, "Fire Diamond", {0}, 2480, 0x40, -1, 16, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_fire_diamond, 0x00000000u, 0x00001000u, 0, 248, 0, 1, 25 }, /* 3412: Fire Diamond */
   { 0, "Fire Dragon", {0}, 2880, 0x02, -1, 16, { 3, 6, 0 }, 6, 6, 0, 0, manalinkeh_card_fire_dragon, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 100 }, /* 3413: Fire Dragon */
-  { 0, "Fire Drake", {0}, 320, 0x02, -1, 16, { 2, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_fire_drake, 0x00000020u, 0x00000009u, 0, 72, 0, 0, 20 }, /* 3414: Fire Drake */
-  { 0, "Fire Elemental", {0}, 83, 0x02, -1, 16, { 2, 3, 0 }, 5, 4, 0, 0, manalinkeh_card_fire_elemental, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 3415: Fire Elemental */
+  { 0, "Fire Drake", {0}, 320, 0x02, -1, 16, { 2, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_fire_drake, 0x00000020u, 0x00000009u, 0, 72, 8, 0, 20 }, /* 3414: Fire Drake */
+  { 0, "Fire Elemental", {0}, 83, 0x02, -1, 16, { 2, 3, 0 }, 5, 4, 0, 0, manalinkeh_card_fire_elemental, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 75 }, /* 3415: Fire Elemental */
   { 0, "Fire Imp", {0}, 2881, 0x02, -1, 16, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_fire_imp, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 3416: Fire Imp */
   { 0, "Fire Servant", {0}, 11121, 0x02, -1, 16, { 2, 3, 0 }, 4, 3, 0, 0, manalinkeh_card_fire_servant, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 59 }, /* 3417: Fire Servant */
-  { 0, "Fire Sprites", {0}, 635, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_fire_sprites, 0x00000020u, 0x00011001u, 0, 248, 0, 1, 21 }, /* 3418: Fire Sprites */
+  { 0, "Fire Sprites", {0}, 635, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_fire_sprites, 0x00000020u, 0x00011001u, 0, 248, 16, 1, 21 }, /* 3418: Fire Sprites */
   { 0, "Fire Whip", {0}, 2973, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_fire_whip, 0x00000000u, 0x00000001u, 0, 249, 0, 1, 75 }, /* 3419: Fire Whip */
   { 0, "Fire-Field Ogre", {0}, 9970, 0x02, -1, 22, { 3, 1, 9 }, 4, 2, 0, 0, manalinkeh_card_fire_field_ogre, 0x00000100u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 3420: Fire-Field Ogre */
   { 0, "Fire-Lit Thicket", {0}, 9532, 0x01, -1, 25, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fire_lit_thicket, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 3421: Fire-Lit Thicket */
-  { 0, "Fireball", {0}, 84, 0x08, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_fireball, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 100 }, /* 3422: Fireball */
+  { 0, "Fireball", {0}, 84, 0x08, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_fireball, 0x00000000u, 0x00000000u, 0, 1, 1, 2, 100 }, /* 3422: Fireball */
   { 0, "Fireblast", {0}, 2705, 0x10, -1, 16, { 2, 4, 1 }, 0, 0, 1, 0, manalinkeh_card_fireblast, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 80 }, /* 3423: Fireblast */
   { 0, "Firebolt", {0}, 5566, 0x08, -1, 16, { 1, 0, 9 }, 0, 0, 0, 0, manalinkeh_card_firebolt, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 3424: Firebolt */
-  { 0, "Firebreathing", {0}, 85, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_firebreathing, 0x00000000u, 0x00020001u, 0, 65, 0, 1, 20 }, /* 3425: Firebreathing */
+  { 0, "Firebreathing", {0}, 85, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_firebreathing, 0x00000000u, 0x00020001u, 0, 65, 1, 1, 20 }, /* 3425: Firebreathing */
   { 0, "Firecat Blitz", {0}, 5941, 0x08, -1, 16, { 2, 0, 9 }, 0, 0, 0, 0, manalinkeh_card_firecat_blitz, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 3426: Firecat Blitz */
   { 0, "Firedrinker Satyr", {0}, 13442, 0x02, -1, 16, { 1, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_firedrinker_satyr, 0x00000000u, 0x00000009u, 0, 72, 0, 0, 20 }, /* 3427: Firedrinker Satyr */
   { 0, "Firefist Striker", {0}, 12942, 0x02, -1, 16, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_firefist_striker, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3428: Firefist Striker */
@@ -15037,8 +15037,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "First Response", {0}, 14100, 0x04, -1, 32, { 1, 3, 13 }, 0, 0, 0, 0, manalinkeh_card_first_response, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 3445: First Response */
   { 0, "First Volley", {0}, 7463, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_first_volley, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 20 }, /* 3446: First Volley */
   { 0, "Fish", {0}, 18738, 0x02, -1, 0, { 0, 0, 0 }, 3, 3, 0, 0, manalinkeh_card_fish_token, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 3447: Fish */
-  { 0, "Fishliver Oil", {0}, 418, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_fishliver_oil, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 3448: Fishliver Oil */
-  { 0, "Fissure", {0}, 321, 0x10, -1, 16, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_fissure, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 95 }, /* 3449: Fissure */
+  { 0, "Fishliver Oil", {0}, 418, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_fishliver_oil, 0x00000000u, 0x00000400u, 0, 1, 8, 0, 5 }, /* 3448: Fishliver Oil */
+  { 0, "Fissure", {0}, 321, 0x10, -1, 16, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_fissure, 0x00000000u, 0x00000000u, 0, 15, 1, 1, 95 }, /* 3449: Fissure */
   { 0, "Fist of Suns", {0}, 7056, 0x40, -1, 1, { 0, 3, 1 }, 0, 0, 0, 0, manalinkeh_card_fist_of_suns, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 3450: Fist of Suns */
   { 0, "Fists of Ironwood", {0}, 7842, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_fists_of_ironwood, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 3451: Fists of Ironwood */
   { 0, "Fists of the Anvi", {0}, 1743, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_fists_of_the_anvil, 0x00000000u, 0x00000000u, 0, 4, 0, 3, 65 }, /* 3452: Fists of the Anvil */
@@ -15080,7 +15080,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Flash Counter", {0}, 637, 0x20, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_flash_counter, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 5 }, /* 3488: Flash Counter */
   { 0, "Flash Flood", {0}, 638, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_flash_flood, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 3489: Flash Flood */
   { 0, "Flash of Insight", {0}, 5943, 0x10, -1, 4, { 1, 1, 9 }, 0, 0, 0, 0, manalinkeh_card_flash_of_insight, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 3490: Flash of Insight */
-  { 0, "Flashfires", {0}, 86, 0x08, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_flashfires, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 3491: Flashfires */
+  { 0, "Flashfires", {0}, 86, 0x08, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_flashfires, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 60 }, /* 3491: Flashfires */
   { 0, "Flashfreeze", {0}, 8364, 0x20, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_flashfreeze, 0x00000000u, 0x00002000u, 0, 15, 0, 1, 40 }, /* 3492: Flashfreeze */
   { 0, "Flayer Husk", {0}, 11442, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_flayer_husk, 0x00000000u, 0x00000001u, 0, 153, 0, 2, 25 }, /* 3493: Flayer Husk */
   { 0, "Flayer of the Hat", {0}, 12183, 0x02, -1, 16, { 1, 5, 0 }, 4, 2, 0, 0, manalinkeh_card_flayer_of_the_hatebound, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 3494: Flayer of the Hatebound */
@@ -15112,7 +15112,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Flickering Spirit", {0}, 8548, 0x02, -1, 32, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_flickering_spirit, 0x00000020u, 0x00000001u, 0, 104, 0, 0, 20 }, /* 3520: Flickering Spirit */
   { 0, "Flickering Ward", {0}, 3147, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_flickering_ward, 0x00000000u, 0x00000001u, 0, 241, 0, 1, 25 }, /* 3521: Flickering Ward */
   { 0, "Flickerwisp", {0}, 9788, 0x02, -1, 32, { 2, 1, 0 }, 3, 1, 0, 0, manalinkeh_card_flickerwhisp, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 3522: Flickerwisp */
-  { 0, "Flight", {0}, 87, 0x04, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_flight2, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 20 }, /* 3523: Flight */
+  { 0, "Flight", {0}, 87, 0x04, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_flight2, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 20 }, /* 3523: Flight */
   { 0, "Flight of Fancy", {0}, 7847, 0x04, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_flight_of_fancy, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 3524: Flight of Fancy */
   { 0, "Flight Spellbomb", {0}, 11255, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_flight_spellbomb, 0x00000000u, 0x00000001u, 0, 49, 0, 2, 20 }, /* 3525: Flight Spellbomb */
   { 0, "Fling", {0}, 3368, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_fling, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 5 }, /* 3526: Fling */
@@ -15120,7 +15120,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Flitterstep Eidol", {0}, 13714, 0x06, -1, 4, { 1, 1, 0 }, 1, 1, 1, 0, manalinkeh_card_flitterstep_eidolon, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 3528: Flitterstep Eidolon */
   { 0, "Flitterstep Eidol", {0}, 13715, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_flitterstep_eidolon, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 3529: Flitterstep Eidolon Bestowed */
   { 0, "Floating-Dream Zu", {0}, 7209, 0x02, -1, 4, { 1, 1, 13 }, 1, 2, 0, 0, manalinkeh_card_floating_dream_zubera, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 3530: Floating-Dream Zubera */
-  { 0, "Flood", {0}, 935, 0x04, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_flood2, 0x00000000u, 0x00000001u, 0, 57, 0, 1, 5 }, /* 3531: Flood */
+  { 0, "Flood", {0}, 935, 0x04, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_flood2, 0x00000000u, 0x00000001u, 0, 57, 1, 1, 5 }, /* 3531: Flood */
   { 0, "Flood Plain", {0}, 2483, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_flood_plain, 0x00000000u, 0x00000001u, 0, 153, 0, 0, 10 }, /* 3532: Flood Plain */
   { 0, "Flooded Grove", {0}, 9789, 0x01, -1, 13, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_flooded_grove, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 3533: Flooded Grove */
   { 0, "Flooded Shoreline", {0}, 2707, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_flooded_shoreline, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 75 }, /* 3534: Flooded Shoreline */
@@ -15147,12 +15147,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Flusterstorm", {0}, 11727, 0x20, -1, 4, { 1, 0, 12 }, 0, 0, 0, 0, manalinkeh_card_flusterstorm, 0x00000000u, 0x00002000u, 0, 15, 0, 254, 75 }, /* 3555: Flusterstorm */
   { 0, "Flux", {0}, 2976, 0x08, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_flux, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 25 }, /* 3556: Flux */
   { 0, "Fluxcharger", {0}, 13149, 0x02, -1, 20, { 2, 2, 0 }, 1, 5, 0, 0, manalinkeh_card_fluxcharger, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3557: Fluxcharger */
-  { 0, "Flying Carpet", {0}, 419, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_flying_carpet, 0x00000000u, 0x00000001u, 0, 49, 0, 0, 50 }, /* 3558: Flying Carpet */
+  { 0, "Flying Carpet", {0}, 419, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_flying_carpet, 0x00000000u, 0x00000001u, 0, 49, 1, 0, 50 }, /* 3558: Flying Carpet */
   { 0, "Flying Crane Tech", {0}, 14271, 0x10, -1, 52, { 3, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_flying_crane_technique, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 3559: Flying Crane Technique */
-  { 0, "Flying Men", {0}, 420, 0x02, -1, 4, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 3560: Flying Men */
+  { 0, "Flying Men", {0}, 420, 0x02, -1, 4, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000020u, 0x00000400u, 0, 8, 4, 0, 50 }, /* 3560: Flying Men */
   { 0, "Fodder Cannon", {0}, 1038, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_fodder_cannon, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 5 }, /* 3561: Fodder Cannon */
   { 0, "Fodder Launch", {0}, 9143, 0x08, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_fodder_launch, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 3562: Fodder Launch */
-  { 0, "Fog", {0}, 88, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fog, 0x00000000u, 0x00000000u, 0, 4, 0, 2, 5 }, /* 3563: Fog */
+  { 0, "Fog", {0}, 88, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fog, 0x00000000u, 0x00000000u, 0, 4, 1, 2, 5 }, /* 3563: Fog */
   { 0, "Fog Bank", {0}, 3772, 0x02, -1, 4, { 1, 1, 0 }, 0, 2, 0, 0, manalinkeh_card_fog_bank, 0x00800020u, 0x00000000u, 0, 8, 0, 3, 75 }, /* 3564: Fog Bank */
   { 0, "Fog Elemental", {0}, 2977, 0x02, -1, 4, { 1, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_fog_elemental, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 35 }, /* 3565: Fog Elemental */
   { 0, "Fog of Gnats", {0}, 3993, 0x02, -1, 2, { 2, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_drudge_skeletons, 0x00000220u, 0x00000001u, 0, 248, 0, 2, 50 }, /* 3566: Fog of Gnats */
@@ -15176,15 +15176,15 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Forbidding Watcht", {0}, 3994, 0x01, -1, 32, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_forbidding_watchtower, 0x00000000u, 0x00001001u, 0, 56, 0, 1, 50 }, /* 3584: Forbidding Watchtower */
   { 0, "Forbidding Watcht", {0}, 3995, 0x03, -1, 32, { 0, 0, 0 }, 1, 5, 0, 0, manalinkeh_card_forbidding_watchtower_animated, 0x00000000u, 0x00001000u, 0, 9, 0, 1, 50 }, /* 3585: Forbidding Watchtower Animated */
   { 0, "Force Away", {0}, 14272, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_force_away, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 3586: Force Away */
-  { 0, "Force of Nature", {0}, 89, 0x02, -1, 8, { 4, 2, 0 }, 8, 8, 0, 0, manalinkeh_card_force_of_nature, 0x00000080u, 0x00000001u, 0, 24, 0, 1, 75 }, /* 3587: Force of Nature */
+  { 0, "Force of Nature", {0}, 89, 0x02, -1, 8, { 4, 2, 0 }, 8, 8, 0, 0, manalinkeh_card_force_of_nature, 0x00000080u, 0x00000001u, 0, 24, 1, 1, 75 }, /* 3587: Force of Nature */
   { 0, "Force of Savagery", {0}, 8928, 0x02, -1, 8, { 1, 2, 0 }, 8, 0, 0, 0, card_dummy, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3588: Force of Savagery */
   { 0, "Force of Will", {0}, 2285, 0x20, -1, 4, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_force_of_will, 0x00000000u, 0x00002000u, 0, 15, 0, 1, 80 }, /* 3589: Force of Will */
-  { 0, "Force Spike", {0}, 640, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_force_spike, 0x00000000u, 0x00002000u, 0, 15, 0, 254, 5 }, /* 3590: Force Spike */
+  { 0, "Force Spike", {0}, 640, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_force_spike, 0x00000000u, 0x00002000u, 0, 15, 16, 254, 5 }, /* 3590: Force Spike */
   { 0, "Forced Adaptation", {0}, 12945, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_forced_adaption, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 3591: Forced Adaptation */
   { 0, "Forced Fruition", {0}, 9145, 0x04, -1, 4, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_forced_fruition, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 3592: Forced Fruition */
   { 0, "Forced March", {0}, 4470, 0x08, -1, 2, { 3, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_forced_march, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 3593: Forced March */
   { 0, "Forced Worship", {0}, 11601, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_forced_worship, 0x00000000u, 0x00000001u, 0, 40, 0, 1, 49 }, /* 3594: Forced Worship */
-  { 0, "Forcefield", {0}, 90, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_forcefield, 0x00000000u, 0x00000005u, 0, 65, 0, 2, 80 }, /* 3595: Forcefield */
+  { 0, "Forcefield", {0}, 90, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_forcefield, 0x00000000u, 0x00000105u, 0, 65, 2, 2, 80 }, /* 3595: Forcefield */
   { 0, "Forcemage Advocat", {0}, 5946, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_forcemage_advocate, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 3596: Forcemage Advocate */
   { 0, "Foresee", {0}, 8929, 0x08, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_foresee, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 60 }, /* 3597: Foresee */
   { 0, "Forest Bear", {0}, 4331, 0x02, -1, 8, { 1, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 3598: Forest Bear */
@@ -15199,14 +15199,14 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Foriysian Brigade", {0}, 1397, 0x02, -1, 32, { 1, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_two_headed_giant_of_foriys, 0x00000000u, 0x00100000u, 0, 8, 0, 0, 35 }, /* 3607: Foriysian Brigade */
   { 0, "Foriysian Interce", {0}, 8551, 0x12, -1, 32, { 1, 3, 0 }, 0, 5, 0, 0, manalinkeh_card_foriysian_interceptor, 0x00800000u, 0x00100000u, 0, 2, 0, 0, 20 }, /* 3608: Foriysian Interceptor */
   { 0, "Foriysian Totem", {0}, 8552, 0x40, -1, 16, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_foriysian_totem, 0x00000000u, 0x00109001u, 0, 57, 0, 0, 10 }, /* 3609: Foriysian Totem */
-  { 0, "Fork", {0}, 92, 0x20, -1, 16, { 2, 0, 1 }, 0, 0, 0, 0, manalinkeh_card_fork, 0x00000000u, 0x00002000u, 0, 255, 0, 1, 40 }, /* 3610: Fork */
+  { 0, "Fork", {0}, 92, 0x20, -1, 16, { 2, 0, 1 }, 0, 0, 0, 0, manalinkeh_card_fork, 0x00000000u, 0x00002100u, 0, 255, 2, 1, 40 }, /* 3610: Fork */
   { 0, "Forked Bolt", {0}, 10930, 0x08, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_forked_bolt, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 3611: Forked Bolt */
   { 0, "Forked-Branch Gar", {0}, 7466, 0x02, -1, 8, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_forked_branch_garami, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 3612: Forked-Branch Garami */
   { 0, "Forlorn Pseudamma", {0}, 13718, 0x02, 2, 2, { 1, 3, 0 }, 2, 1, 0, 0, manalinkeh_card_forlorn_pseudamma, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 3613: Forlorn Pseudamma */
   { 0, "Form of the Drago", {0}, 6531, 0x04, -1, 16, { 3, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_form_of_the_dragon, 0x00000000u, 0x04000000u, 0, 8, 0, 0, 60 }, /* 3614: Form of the Dragon */
   { 0, "Forsaken Drifters", {0}, 13719, 0x02, 2, 2, { 1, 3, 0 }, 4, 2, 0, 0, manalinkeh_card_forsaken_drifters, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3615: Forsaken Drifters */
   { 0, "Forsaken Wastes", {0}, 2486, 0x04, 16, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_forsaken_wastes, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 150 }, /* 3616: Forsaken Wastes */
-  { 0, "Fortified Area", {0}, 642, 0x04, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_fortified_area, 0x00000000u, 0x00000000u, 0, 1, 0, 254, 40 }, /* 3617: Fortified Area */
+  { 0, "Fortified Area", {0}, 642, 0x04, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_fortified_area, 0x00000000u, 0x00000000u, 0, 1, 1, 254, 40 }, /* 3617: Fortified Area */
   { 0, "Fortify", {0}, 8553, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_fortify, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 3618: Fortify */
   { 0, "Fortress Crab", {0}, 11950, 0x02, -1, 4, { 1, 3, 0 }, 1, 6, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 30 }, /* 3619: Fortress Crab */
   { 0, "Fortress Cyclops", {0}, 12946, 0x02, -1, 48, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_fortress_cyclops, 0x00000000u, 0x00000018u, 0, 8, 0, 0, 50 }, /* 3620: Fortress Cyclops */
@@ -15215,7 +15215,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Foul Spirit", {0}, 3599, 0x02, -1, 2, { 1, 2, 0 }, 3, 2, 0, 0, manalinkeh_card_foul_spirit, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3623: Foul Spirit */
   { 0, "Foundry Champion", {0}, 12947, 0x02, -1, 48, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_foundry_champion, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 70 }, /* 3624: Foundry Champion */
   { 0, "Foundry Street De", {0}, 12948, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_foundry_street_denizen, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3625: Foundry Street Denizen */
-  { 0, "Fountain of Youth", {0}, 324, 0x40, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fountain_of_youth, 0x00000000u, 0x00000001u, 0, 129, 0, 2, 15 }, /* 3626: Fountain of Youth */
+  { 0, "Fountain of Youth", {0}, 324, 0x40, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fountain_of_youth, 0x00000000u, 0x00000001u, 0, 129, 8, 2, 15 }, /* 3626: Fountain of Youth */
   { 0, "Fractured Powerst", {0}, 12524, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_fractured_powerstone, 0x00000000u, 0x00001001u, 0, 145, 0, 0, 10 }, /* 3627: Fractured Powerstone */
   { 0, "Fracturing Gust", {0}, 9538, 0x10, -1, 40, { 3, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_fracturing_gust, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 3628: Fracturing Gust */
   { 0, "Frankenstein's Mo", {0}, 325, 0x02, 2, 2, { 2, -1, 0 }, 0, 1, 0, 0, manalinkeh_card_frankensteins_monster, 0x00000000u, 0x00000020u, 0, 8, 0, 1, 43 }, /* 3629: Frankenstein's Monster */
@@ -15255,7 +15255,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Frostling", {0}, 7468, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_frostling, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 20 }, /* 3663: Frostling */
   { 0, "Frostweb Spider", {0}, 8368, 0x02, -1, 8, { 1, 2, 0 }, 1, 3, 0, 0, manalinkeh_card_frostweb_spider, 0x00000400u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 3664: Frostweb Spider */
   { 0, "Frozen Aether", {0}, 1740, 0x04, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_kismet, 0x00000000u, 0x00000000u, 0, 8, 0, 254, 5 }, /* 3665: Frozen Aether */
-  { 0, "Frozen Shade", {0}, 93, 0x02, -1, 2, { 1, 2, 0 }, 0, 1, 0, 0, manalinkeh_card_nantuko_shade, 0x00000000u, 0x00000019u, 0, 72, 0, 1, 5 }, /* 3666: Frozen Shade */
+  { 0, "Frozen Shade", {0}, 93, 0x02, -1, 2, { 1, 2, 0 }, 0, 1, 0, 0, manalinkeh_card_nantuko_shade, 0x00000000u, 0x00000019u, 0, 72, 1, 1, 5 }, /* 3666: Frozen Shade */
   { 0, "Frozen Solid", {0}, 8369, 0x04, -1, 4, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_frozen_solid, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 3667: Frozen Solid */
   { 0, "Fuel for the Caus", {0}, 11446, 0x20, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_fuel_for_the_cause, 0x00000000u, 0x00002000u, 0, 15, 0, 1, 9 }, /* 3668: Fuel for the Cause */
   { 0, "Fugitive Wizard", {0}, 1040, 0x02, -1, 4, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 3669: Fugitive Wizard */
@@ -15271,7 +15271,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Fungal Shambler", {0}, 5372, 0x02, -1, 14, { 3, 4, 0 }, 6, 4, 0, 0, manalinkeh_card_fungal_shambler, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 3679: Fungal Shambler */
   { 0, "Fungal Sprouting", {0}, 12572, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_fungal_sprouting, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 3680: Fungal Sprouting */
   { 0, "Fungus Sliver", {0}, 8556, 0x02, -1, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_fungus_sliver, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 3681: Fungus Sliver */
-  { 0, "Fungusaur", {0}, 94, 0x02, -1, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_fungusaur, 0x00000000u, 0x00000020u, 0, 8, 0, 0, 5 }, /* 3682: Fungusaur */
+  { 0, "Fungusaur", {0}, 94, 0x02, -1, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_fungusaur, 0x00000000u, 0x00000020u, 0, 8, 1, 0, 5 }, /* 3682: Fungusaur */
   { 0, "Furious Resistanc", {0}, 12951, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_furious_resistance, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 3683: Furious Resistance */
   { 0, "Furnace Celebrati", {0}, 11258, 0x04, -1, 16, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_furnace_celebration, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 1 }, /* 3684: Furnace Celebration */
   { 0, "Furnace Dragon", {0}, 6893, 0x02, -1, 16, { 3, 6, 0 }, 5, 5, 1, 0, manalinkeh_card_furnace_dragon, 0x00000020u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 3685: Furnace Dragon */
@@ -15292,13 +15292,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Gabriel Angelfire", {0}, 644, 0x02, 14, 40, { 4, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_gabriel_angelfire, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 3700: Gabriel Angelfire */
   { 0, "Gaddock Teeg", {0}, 9146, 0x02, 14, 40, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_gaddock_teeg, 0x00000000u, 0x40000000u, 0, 1, 0, 2, 5 }, /* 3701: Gaddock Teeg */
   { 0, "Gaea's Anthem", {0}, 1371, 0x04, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_gaeas_anthem, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 100 }, /* 3702: Gaea's Anthem */
-  { 0, "Gaea's Avenger", {0}, 496, 0x02, -1, 8, { 2, 1, 0 }, 16385, 16385, 0, 0, manalinkeh_card_gaeas_avenger, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 3703: Gaea's Avenger */
+  { 0, "Gaea's Avenger", {0}, 496, 0x02, -1, 8, { 2, 1, 0 }, 16385, 16385, 0, 0, manalinkeh_card_gaeas_avenger, 0x00000000u, 0x00000400u, 0, 8, 32, 255, 5 }, /* 3703: Gaea's Avenger */
   { 0, "Gaea's Blessing", {0}, 2979, 0x08, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_gaeas_blessing, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 3704: Gaea's Blessing */
   { 0, "Gaea's Bounty", {0}, 3774, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_gaeas_bounty, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 3705: Gaea's Bounty */
   { 0, "Gaea's Cradle", {0}, 1513, 0x01, 15, 8, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_gaeas_cradle, 0x00000000u, 0x00001000u, 0, 241, 0, 2, 100 }, /* 3706: Gaea's Cradle */
   { 0, "Gaea's Embrace", {0}, 3775, 0x04, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_gaeas_embrace, 0x00000200u, 0x00000001u, 0, 241, 0, 2, 75 }, /* 3707: Gaea's Embrace */
   { 0, "Gaea's Herald", {0}, 1043, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_gaeas_herald, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 1 }, /* 3708: Gaea's Herald */
-  { 0, "Gaea's Liege", {0}, 95, 0x02, -1, 8, { 3, 3, 0 }, 16384, 16384, 0, 0, manalinkeh_card_gaeas_liege, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 5 }, /* 3709: Gaea's Liege */
+  { 0, "Gaea's Liege", {0}, 95, 0x02, -1, 8, { 3, 3, 0 }, 16384, 16384, 0, 0, manalinkeh_card_gaeas_liege, 0x00000000u, 0x00000001u, 0, 24, 1, 0, 5 }, /* 3709: Gaea's Liege */
   { 0, "Gaea's Revenge", {0}, 11123, 0x02, -1, 8, { 2, 5, 0 }, 8, 5, 0, 0, manalinkeh_card_gaeas_revenge, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 100 }, /* 3710: Gaea's Revenge */
   { 0, "Gaea's Skyfolk", {0}, 1244, 0x02, 1, 12, { 2, 0, 0 }, 2, 2, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 3711: Gaea's Skyfolk */
   { 0, "Gaea's Touch", {0}, 334, 0x04, -1, 8, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_gaeas_touch, 0x00000000u, 0x00001002u, 0, 241, 0, 2, 64 }, /* 3712: Gaea's Touch */
@@ -15338,8 +15338,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Garruk's Packlead", {0}, 11126, 0x02, -1, 8, { 1, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_garruks_packleader, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 3746: Garruk's Packleader */
   { 0, "Garza Zol, Plague", {0}, 8371, 0x02, 14, 22, { 3, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_garza_zol_plague_queen, 0x00000020u, 0x00000000u, 0, 1, 0, 1, 100 }, /* 3747: Garza Zol, Plague Queen */
   { 0, "Garza's Assassin", {0}, 8372, 0x02, -1, 2, { 3, 0, 20 }, 2, 2, 0, 0, manalinkeh_card_garzas_assassin, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 50 }, /* 3748: Garza's Assassin */
-  { 0, "Gaseous Form", {0}, 645, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_gaseous_form, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 3749: Gaseous Form */
-  { 0, "Gate to Phyrexia", {0}, 497, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_gate_to_phyrexia, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 30 }, /* 3750: Gate to Phyrexia */
+  { 0, "Gaseous Form", {0}, 645, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_gaseous_form, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 40 }, /* 3749: Gaseous Form */
+  { 0, "Gate to Phyrexia", {0}, 497, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_gate_to_phyrexia, 0x00000000u, 0x00000401u, 0, 24, 32, 2, 30 }, /* 3750: Gate to Phyrexia */
   { 0, "Gate to the Aethe", {0}, 6670, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_gate_to_aether, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 3751: Gate to the Aether */
   { 0, "Gatecreeper Vine", {0}, 12727, 0x02, -1, 8, { 1, 1, 0 }, 0, 2, 0, 0, manalinkeh_card_gatecreeper_vine, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 10 }, /* 3752: Gatecreeper Vine */
   { 0, "Gatekeeper of Mal", {0}, 10542, 0x02, -1, 2, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_gatekeeper_of_malakir, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 90 }, /* 3753: Gatekeeper of Malakir */
@@ -15351,7 +15351,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Gatherer of Grace", {0}, 8053, 0x02, -1, 8, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_gatherer_of_graces, 0x00000200u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 3759: Gatherer of Graces */
   { 0, "Gatstaf Howler", {0}, 11959, 0x02, -1, 8, { 0, 0, 12 }, 3, 3, 0, 0, manalinkeh_card_gastaf_howler, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 0 }, /* 3760: Gatstaf Howler */
   { 0, "Gatstaf Shepherd", {0}, 11958, 0x02, -1, 8, { 1, 1, 12 }, 2, 2, 0, 0, manalinkeh_card_gastaf_shepherd, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 3761: Gatstaf Shepherd */
-  { 0, "Gauntlet of Might", {0}, 96, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 2, 0, manalinkeh_card_gauntlet_of_might, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 5 }, /* 3762: Gauntlet of Might */
+  { 0, "Gauntlet of Might", {0}, 96, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 2, 0, manalinkeh_card_gauntlet_of_might, 0x00000000u, 0x00000080u, 0, 1, 2, 3, 5 }, /* 3762: Gauntlet of Might */
   { 0, "Gauntlet of Power", {0}, 1694, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_gauntlet_of_power, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 100 }, /* 3763: Gauntlet of Power */
   { 0, "Gauntlets of Chao", {0}, 646, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_gauntlets_of_chaos, 0x00000000u, 0x00000001u, 0, 56, 0, 3, 60 }, /* 3764: Gauntlets of Chaos */
   { 0, "Gavony Ironwright", {0}, 12186, 0x02, -1, 32, { 1, 2, 0 }, 1, 4, 0, 0, manalinkeh_card_gavony_ironwright, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 25 }, /* 3765: Gavony Ironwright */
@@ -15368,7 +15368,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Gelatinous Genesi", {0}, 10932, 0x08, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_gelatinous_genesis, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 60 }, /* 3776: Gelatinous Genesis */
   { 0, "Gelectrode", {0}, 8054, 0x02, -1, 20, { 2, 1, 0 }, 0, 1, 0, 0, manalinkeh_card_gelectrode, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 3777: Gelectrode */
   { 0, "Gelid Shackles", {0}, 8373, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_gelid_shackles, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 40 }, /* 3778: Gelid Shackles */
-  { 0, "Gem Bazaar", {0}, 870, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_gem_bazaar, 0x00000000u, 0x00001000u, 0, 1, 0, 255, 15 }, /* 3779: Gem Bazaar */
+  { 0, "Gem Bazaar", {0}, 870, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_gem_bazaar, 0x00000000u, 0x00001800u, 0, 1, 64, 255, 15 }, /* 3779: Gem Bazaar */
   { 0, "Gem of Becoming", {0}, 12573, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_gem_of_becoming, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 10 }, /* 3780: Gem of Becoming */
   { 0, "Gemhide Sliver", {0}, 8559, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_gemhide_sliver, 0x00000000u, 0x00001002u, 0, 249, 0, 2, 30 }, /* 3781: Gemhide Sliver */
   { 0, "Gemini Engine", {0}, 6894, 0x42, -1, 1, { 0, 6, 0 }, 3, 4, 0, 0, manalinkeh_card_gemini_engine, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 3782: Gemini Engine */
@@ -15412,7 +15412,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ghastly Discovery", {0}, 9542, 0x08, -1, 4, { 1, 2, 19 }, 0, 0, 0, 0, manalinkeh_card_ghastly_discovery, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 3820: Ghastly Discovery */
   { 0, "Ghastly Remains", {0}, 6384, 0x02, 2, 2, { 3, 0, 5 }, 0, 0, 0, 0, manalinkeh_card_ghastly_remains, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 3821: Ghastly Remains */
   { 0, "Ghave, Guru of Sp", {0}, 11755, 0x02, 14, 42, { 3, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ghave_guru_of_spores, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 70 }, /* 3822: Ghave, Guru of Spores */
-  { 0, "Ghazb\341n Ogre", {0}, 421, 0x02, -1, 8, { 1, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_ghazban_ogre, 0x00000000u, 0x00000001u, 0, 24, 0, 255, 5 }, /* 3823: Ghazbán Ogre */
+  { 0, "Ghazb\341n Ogre", {0}, 421, 0x02, -1, 8, { 1, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_ghazban_ogre, 0x00000000u, 0x00000401u, 0, 24, 8, 255, 5 }, /* 3823: Ghazbán Ogre */
   { 0, "Ghitu Encampment", {0}, 3997, 0x01, -1, 16, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ghitu_encampment, 0x00000000u, 0x00001001u, 0, 56, 0, 2, 50 }, /* 3824: Ghitu Encampment */
   { 0, "Ghitu Encampment ", {0}, 3998, 0x03, -1, 16, { 0, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_ghitu_encampment_animated, 0x00000100u, 0x00001000u, 0, 9, 0, 2, 50 }, /* 3825: Ghitu Encampment Animated */
   { 0, "Ghitu Fire", {0}, 5004, 0x18, -1, 16, { 1, -1, 1 }, 0, 0, 1, 0, manalinkeh_card_ghitu_fire, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 3826: Ghitu Fire */
@@ -15421,7 +15421,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ghor-Clan Rampage", {0}, 12953, 0x02, -1, 24, { 2, 2, 4 }, 4, 4, 0, 0, manalinkeh_card_ghor_clan_rampager, 0x00000080u, 0x00000000u, 0, 72, 0, 0, 50 }, /* 3829: Ghor-Clan Rampager */
   { 0, "Ghost Council of ", {0}, 8057, 0x02, 14, 34, { 4, 0, 0 }, 4, 4, 0, 0, manalinkeh_card_ghost_council_of_orzhova, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 70 }, /* 3830: Ghost Council of Orzhova */
   { 0, "Ghost Quarter", {0}, 8212, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ghost_quarter, 0x00000000u, 0x00001001u, 0, 241, 0, 1, 25 }, /* 3831: Ghost Quarter */
-  { 0, "Ghost Ship", {0}, 326, 0x02, -1, 4, { 2, 2, 0 }, 2, 4, 0, 0, manalinkeh_card_ghost_ship, 0x00000220u, 0x00000001u, 0, 248, 0, 2, 55 }, /* 3832: Ghost Ship */
+  { 0, "Ghost Ship", {0}, 326, 0x02, -1, 4, { 2, 2, 0 }, 2, 4, 0, 0, manalinkeh_card_ghost_ship, 0x00000220u, 0x00000001u, 0, 248, 1, 2, 55 }, /* 3832: Ghost Ship */
   { 0, "Ghost Warden", {0}, 1296, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_wyluli_wolf, 0x00000000u, 0x00000001u, 0, 72, 0, 1, 50 }, /* 3833: Ghost Warden */
   { 0, "Ghost-Lit Nourish", {0}, 7644, 0x02, -1, 8, { 1, 2, 4 }, 2, 1, 0, 0, manalinkeh_card_ghost_lit_nourisher, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 50 }, /* 3834: Ghost-Lit Nourisher */
   { 0, "Ghost-Lit Raider", {0}, 7645, 0x02, -1, 16, { 1, 2, 4 }, 2, 1, 0, 0, manalinkeh_card_ghost_lit_raider, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 3835: Ghost-Lit Raider */
@@ -15437,7 +15437,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ghostly Possessio", {0}, 11965, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ghostly_possession, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 3845: Ghostly Possession */
   { 0, "Ghostly Prison", {0}, 7214, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_propaganda, 0x00000000u, 0x00400000u, 0, 8, 0, 0, 60 }, /* 3846: Ghostly Prison */
   { 0, "Ghostly Touch", {0}, 12379, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ghostly_touch, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 3847: Ghostly Touch */
-  { 0, "Ghosts of the Dam", {0}, 647, 0x02, -1, 2, { 2, 1, 0 }, 0, 2, 0, 0, manalinkeh_card_ghosts_of_the_damned, 0x00000000u, 0x00000001u, 0, 72, 0, 254, 5 }, /* 3848: Ghosts of the Damned */
+  { 0, "Ghosts of the Dam", {0}, 647, 0x02, -1, 2, { 2, 1, 0 }, 0, 2, 0, 0, manalinkeh_card_ghosts_of_the_damned, 0x00000000u, 0x00000001u, 0, 72, 16, 254, 5 }, /* 3848: Ghosts of the Damned */
   { 0, "Ghosts of the Inn", {0}, 7855, 0x02, -1, 32, { 2, 5, 0 }, 4, 5, 0, 0, manalinkeh_card_ghosts_of_the_innocent, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 3849: Ghosts of the Innocent */
   { 0, "Ghostway", {0}, 8058, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ghostway, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 3850: Ghostway */
   { 0, "Ghoulcaller Gisa", {0}, 14463, 0x02, 14, 2, { 2, 3, 0 }, 3, 4, 0, 0, manalinkeh_card_ghoulcaller_gisa, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 70 }, /* 3851: Ghoulcaller Gisa */
@@ -15448,20 +15448,20 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ghoultree", {0}, 12189, 0x02, -1, 8, { 1, 7, 1 }, 10, 10, 1, 0, manalinkeh_card_ghoultreee, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 75 }, /* 3856: Ghoultree */
   { 0, "Giant", {0}, 18742, 0x02, -1, 16, { 0, 0, 0 }, 4, 4, 0, 0, manalinkeh_card_rhino_token, 0x00000000u, 0x00000000u, 0, 0, 0, 0, 0 }, /* 3857: Giant */
   { 0, "Giant Adephage", {0}, 12954, 0x02, -1, 8, { 2, 5, 0 }, 7, 7, 0, 0, manalinkeh_card_giant_adephage, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 3858: Giant Adephage */
-  { 0, "Giant Badger", {0}, 898, 0x02, -1, 8, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_giant_badger, 0x00000000u, 0x00000018u, 0, 8, 0, 2, 20 }, /* 3859: Giant Badger */
+  { 0, "Giant Badger", {0}, 898, 0x02, -1, 8, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_giant_badger, 0x00000000u, 0x00000018u, 0, 8, 128, 2, 20 }, /* 3859: Giant Badger */
   { 0, "Giant Cockroach", {0}, 1044, 0x02, -1, 2, { 1, 3, 0 }, 4, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3860: Giant Cockroach */
   { 0, "Giant Dustwasp", {0}, 8786, 0x02, -1, 8, { 2, 3, 1 }, 3, 3, 1, 0, manalinkeh_card_giant_dustwasp, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3861: Giant Dustwasp */
-  { 0, "Giant Growth", {0}, 97, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_giant_growth, 0x00000000u, 0x00000000u, 0, 4, 0, 3, 65 }, /* 3862: Giant Growth */
+  { 0, "Giant Growth", {0}, 97, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_giant_growth, 0x00000000u, 0x00000200u, 0, 4, 1, 3, 65 }, /* 3862: Giant Growth */
   { 0, "Giant Harbinger", {0}, 9150, 0x02, -1, 16, { 1, 4, 0 }, 3, 4, 0, 0, manalinkeh_card_giant_harbinger, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 3863: Giant Harbinger */
   { 0, "Giant Scorpion", {0}, 10544, 0x02, -1, 2, { 1, 2, 0 }, 1, 3, 0, 0, manalinkeh_card_deadly_recluse, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 15 }, /* 3864: Giant Scorpion */
   { 0, "Giant Shark", {0}, 327, 0x02, -1, 4, { 1, 5, 0 }, 4, 4, 0, 0, manalinkeh_card_giant_shark, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 45 }, /* 3865: Giant Shark */
   { 0, "Giant Slug", {0}, 648, 0x02, -1, 2, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_giant_slug, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 3866: Giant Slug */
   { 0, "Giant Solifuge", {0}, 8059, 0x02, -1, 24, { 2, 2, 1 }, 4, 1, 1, 0, manalinkeh_card_giant_solifuge, 0x00020080u, 0x00000000u, 0, 1, 0, 1, 50 }, /* 3867: Giant Solifuge */
-  { 0, "Giant Spider", {0}, 98, 0x02, -1, 8, { 1, 3, 0 }, 2, 4, 0, 0, card_dummy, 0x00000400u, 0x00000000u, 0, 8, 0, 2, 35 }, /* 3868: Giant Spider */
-  { 0, "Giant Strength", {0}, 649, 0x04, -1, 16, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_giant_strenght, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 3869: Giant Strength */
-  { 0, "Giant Tortoise", {0}, 422, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_giant_tortoise, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 3870: Giant Tortoise */
+  { 0, "Giant Spider", {0}, 98, 0x02, -1, 8, { 1, 3, 0 }, 2, 4, 0, 0, card_dummy, 0x00000400u, 0x00000000u, 0, 8, 1, 2, 35 }, /* 3868: Giant Spider */
+  { 0, "Giant Strength", {0}, 649, 0x04, -1, 16, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_giant_strenght, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 5 }, /* 3869: Giant Strength */
+  { 0, "Giant Tortoise", {0}, 422, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_giant_tortoise, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 20 }, /* 3870: Giant Tortoise */
   { 0, "Giant Trap Door S", {0}, 1948, 0x02, -1, 24, { 2, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_giant_trap_door_spider, 0x00000000u, 0x00000001u, 0, 72, 0, 1, 25 }, /* 3871: Giant Trap Door Spider */
-  { 0, "Giant Turtle", {0}, 650, 0x02, -1, 8, { 2, 1, 0 }, 2, 4, 0, 0, manalinkeh_card_giant_turtle, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 3872: Giant Turtle */
+  { 0, "Giant Turtle", {0}, 650, 0x02, -1, 8, { 2, 1, 0 }, 2, 4, 0, 0, manalinkeh_card_giant_turtle, 0x00000000u, 0x00000000u, 0, 8, 16, 0, 5 }, /* 3872: Giant Turtle */
   { 0, "Giant Warrior", {0}, 18743, 0x02, -1, 24, { 0, 0, 0 }, 5, 5, 0, 0, manalinkeh_card_rhino_token, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 3873: Giant Warrior */
   { 0, "Giant's Ire", {0}, 9151, 0x08, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_giants_ire, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 3874: Giant's Ire */
   { 0, "Giantbaiting", {0}, 9543, 0x08, -1, 24, { 1, 2, 19 }, 0, 0, 1, 0, manalinkeh_card_giantbaiting, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 3875: Giantbaiting */
@@ -15505,7 +15505,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Glare of Heresy", {0}, 13449, 0x08, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_glare_of_heresy, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 3913: Glare of Heresy */
   { 0, "Glare of Subdual", {0}, 7856, 0x04, -1, 40, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_glare_of_subdual, 0x00000000u, 0x00000001u, 0, 49, 0, 0, 40 }, /* 3914: Glare of Subdual */
   { 0, "Glaring Spotlight", {0}, 12958, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_glaring_spotlight, 0x00000000u, 0x00000001u, 0, 57, 0, 0, 60 }, /* 3915: Glaring Spotlight */
-  { 0, "Glasses of Urza", {0}, 99, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_glasses_of_urza, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 5 }, /* 3916: Glasses of Urza */
+  { 0, "Glasses of Urza", {0}, 99, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_glasses_of_urza, 0x00000000u, 0x00000001u, 0, 17, 1, 0, 5 }, /* 3916: Glasses of Urza */
   { 0, "Glaze Fiend", {0}, 9975, 0x42, -1, 2, { 1, 1, 1 }, 0, 1, 0, 0, manalinkeh_card_glaze_fiend, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3917: Glaze Fiend */
   { 0, "Gleam of Battle", {0}, 13152, 0x04, -1, 48, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_gleam_of_battle, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 3918: Gleam of Battle */
   { 0, "Gleam of Resistan", {0}, 10148, 0x10, -1, 32, { 1, 4, 4 }, 0, 0, 0, 0, manalinkeh_card_gleam_of_resistence, 0x00000000u, 0x00000000u, 0, 244, 0, 0, 60 }, /* 3919: Gleam of Resistance */
@@ -15533,7 +15533,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Glitterfang", {0}, 7649, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_viashino_cutthroath, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 3941: Glitterfang */
   { 0, "Glittering Wish", {0}, 8934, 0x08, -1, 40, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_glittering_wish, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 3942: Glittering Wish */
   { 0, "Global Ruin", {0}, 5005, 0x08, -1, 32, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_global_ruin, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 3943: Global Ruin */
-  { 0, "Gloom", {0}, 100, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_gloom2, 0x00000000u, 0xc0000000u, 0, 9, 0, 0, 60 }, /* 3944: Gloom */
+  { 0, "Gloom", {0}, 100, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_gloom2, 0x00000000u, 0xc0000000u, 0, 9, 1, 0, 60 }, /* 3944: Gloom */
   { 0, "Gloom Surgeon", {0}, 12382, 0x02, -1, 2, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_gloom_surgeon, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3945: Gloom Surgeon */
   { 0, "Gloomdrifter", {0}, 5814, 0x02, 2, 2, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_gloomdrifter, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 3946: Gloomdrifter */
   { 0, "Gloomwidow", {0}, 9548, 0x02, -1, 8, { 1, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_skywinder_drake, 0x00000400u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3947: Gloomwidow */
@@ -15567,9 +15567,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Goblin", {0}, 18746, 0x02, 3, 16, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_token, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 3975: Goblin */
   { 0, "Goblin Arsonist", {0}, 10937, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_arsonist, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3976: Goblin Arsonist */
   { 0, "Goblin Artillery", {0}, 10421, 0x02, 3, 16, { 2, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_orcish_artillery, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 3977: Goblin Artillery */
-  { 0, "Goblin Artisans", {0}, 498, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_artisans, 0x00000000u, 0x00004002u, 0, 248, 0, 255, 5 }, /* 3978: Goblin Artisans */
+  { 0, "Goblin Artisans", {0}, 498, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_artisans, 0x00000000u, 0x00004002u, 0, 248, 32, 255, 5 }, /* 3978: Goblin Artisans */
   { 0, "Goblin Assault", {0}, 9976, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_goblin_assault, 0x00000000u, 0x01000000u, 0, 8, 0, 0, 60 }, /* 3979: Goblin Assault */
-  { 0, "Goblin Balloon Br", {0}, 101, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_balloon_brigade, 0x00000000u, 0x00000001u, 0, 56, 0, 1, 5 }, /* 3980: Goblin Balloon Brigade */
+  { 0, "Goblin Balloon Br", {0}, 101, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_balloon_brigade, 0x00000000u, 0x00000001u, 0, 56, 1, 1, 5 }, /* 3980: Goblin Balloon Brigade */
   { 0, "Goblin Bangchucke", {0}, 11811, 0x02, 3, 16, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_bangchuckers, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 100 }, /* 3981: Goblin Bangchuckers */
   { 0, "Goblin Battle Jes", {0}, 12574, 0x02, 3, 16, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_battle_jester, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 3982: Goblin Battle Jester */
   { 0, "Goblin Bomb", {0}, 2983, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_goblin_bomb, 0x00000000u, 0x00000001u, 0, 248, 0, 3, 100 }, /* 3983: Goblin Bomb */
@@ -15587,7 +15587,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Goblin Clearcutte", {0}, 6389, 0x02, 3, 16, { 1, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_goblin_clearcutter, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 21 }, /* 3995: Goblin Clearcutter */
   { 0, "Goblin Cohort", {0}, 7477, 0x02, 3, 16, { 1, 0, 12 }, 2, 2, 0, 0, manalinkeh_card_mogg_conscripts, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3996: Goblin Cohort */
   { 0, "Goblin Deathraide", {0}, 9977, 0x02, 3, 18, { 2, 0, 0 }, 3, 1, 0, 0, card_dummy, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 3997: Goblin Deathraiders */
-  { 0, "Goblin Digging Te", {0}, 936, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_digging_team, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 5 }, /* 3998: Goblin Digging Team */
+  { 0, "Goblin Digging Te", {0}, 936, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_digging_team, 0x00000000u, 0x00000001u, 0, 24, 8, 0, 5 }, /* 3998: Goblin Digging Team */
   { 0, "Goblin Diplomats", {0}, 13295, 0x02, 3, 16, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_goblin_diplomats, 0x00000000u, 0x01000001u, 0, 24, 0, 0, 20 }, /* 3999: Goblin Diplomats */
   { 0, "Goblin Electroman", {0}, 12729, 0x02, 3, 20, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_electromancer, 0x00000000u, 0x40000000u, 0, 8, 0, 0, 50 }, /* 4000: Goblin Electromancer */
   { 0, "Goblin Elite Infa", {0}, 2490, 0x02, 3, 16, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_elite_infantry, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4001: Goblin Elite Infantry */
@@ -15602,9 +15602,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Goblin Grenade", {0}, 1783, 0x08, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_goblin_grenade, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 5 }, /* 4010: Goblin Grenade */
   { 0, "Goblin Grenadiers", {0}, 2984, 0x02, 3, 16, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_grenadiers, 0x00000000u, 0x00000001u, 0, 72, 0, 1, 50 }, /* 4011: Goblin Grenadiers */
   { 0, "Goblin Guide", {0}, 10547, 0x02, 3, 16, { 1, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_guide, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 50 }, /* 4012: Goblin Guide */
-  { 0, "Goblin Hero", {0}, 330, 0x02, 3, 16, { 1, 2, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 4013: Goblin Hero */
+  { 0, "Goblin Hero", {0}, 330, 0x02, 3, 16, { 1, 2, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 8, 0, 5 }, /* 4013: Goblin Hero */
   { 0, "Goblin Kaboomist", {0}, 14108, 0x02, 3, 16, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_goblin_kaboomist, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4014: Goblin Kaboomist */
-  { 0, "Goblin King", {0}, 102, 0x02, 3, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_king, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 4015: Goblin King */
+  { 0, "Goblin King", {0}, 102, 0x02, 3, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_king, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 5 }, /* 4015: Goblin King */
   { 0, "Goblin Kites", {0}, 1784, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_goblin_kites, 0x00000000u, 0x00000001u, 0, 56, 0, 1, 30 }, /* 4016: Goblin Kites */
   { 0, "Goblin Lackey", {0}, 3779, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_lackey, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 4017: Goblin Lackey */
   { 0, "Goblin Legionnair", {0}, 5377, 0x02, 3, 48, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_legionnaire, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 50 }, /* 4018: Goblin Legionnaire */
@@ -15618,7 +15618,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Goblin Patrol", {0}, 3782, 0x02, 3, 16, { 1, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_goblin_patrol, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4026: Goblin Patrol */
   { 0, "Goblin Piker", {0}, 10423, 0x02, 3, 16, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 4027: Goblin Piker */
   { 0, "Goblin Piledriver", {0}, 6156, 0x02, 3, 16, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_goblin_piledriver, 0x00001000u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 4028: Goblin Piledriver */
-  { 0, "Goblin Polka Band", {0}, 866, 0x02, 3, 16, { 2, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_polka_band, 0x00000000u, 0x00020001u, 0, 24, 0, 0, 5 }, /* 4029: Goblin Polka Band */
+  { 0, "Goblin Polka Band", {0}, 866, 0x02, 3, 16, { 2, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_polka_band, 0x00000000u, 0x00020001u, 0, 24, 64, 0, 5 }, /* 4029: Goblin Polka Band */
   { 0, "Goblin Pyromancer", {0}, 6157, 0x02, 3, 16, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_pyromancer, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 4030: Goblin Pyromancer */
   { 0, "Goblin Rabblemast", {0}, 14109, 0x02, 3, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_rabblemaster, 0x00000000u, 0x01000000u, 0, 9, 0, 0, 50 }, /* 4031: Goblin Rabblemaster */
   { 0, "Goblin Raider", {0}, 1049, 0x02, 3, 16, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_vampire_interloper, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 4032: Goblin Raider */
@@ -15627,7 +15627,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Goblin Recruiter", {0}, 2712, 0x02, 3, 16, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_recruiter, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 4035: Goblin Recruiter */
   { 0, "Goblin Replica", {0}, 6675, 0x42, -1, 1, { 0, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_replica, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 20 }, /* 4036: Goblin Replica */
   { 0, "Goblin Ringleader", {0}, 5378, 0x02, 3, 16, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_goblin_ringleader, 0x00000000u, 0x00000001u, 0, 241, 0, 3, 5 }, /* 4037: Goblin Ringleader */
-  { 0, "Goblin Rock Sled", {0}, 937, 0x02, 3, 16, { 1, 1, 0 }, 3, 1, 0, 0, manalinkeh_card_goblin_rock_sled, 0x00000080u, 0x00000000u, 0, 8, 0, 255, 20 }, /* 4038: Goblin Rock Sled */
+  { 0, "Goblin Rock Sled", {0}, 937, 0x02, 3, 16, { 1, 1, 0 }, 3, 1, 0, 0, manalinkeh_card_goblin_rock_sled, 0x00000080u, 0x00000000u, 0, 8, 1, 255, 20 }, /* 4038: Goblin Rock Sled */
   { 0, "Goblin Rogue", {0}, 18747, 0x02, 3, 2, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_rhino_token, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 4039: Goblin Rogue */
   { 0, "Goblin Roughrider", {0}, 10765, 0x02, -1, 16, { 1, 2, 0 }, 3, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 4040: Goblin Roughrider */
   { 0, "Goblin Ruinblaste", {0}, 10548, 0x02, 3, 16, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_goblin_ruinblaster, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 50 }, /* 4041: Goblin Ruinblaster */
@@ -15659,7 +15659,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Goblin Warrens", {0}, 1786, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_goblin_warrens, 0x00000000u, 0x00000001u, 0, 136, 0, 1, 50 }, /* 4067: Goblin Warrens */
   { 0, "Goblin Welder", {0}, 4003, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_welder, 0x00000000u, 0x00000001u, 0, 8, 0, 1, 20 }, /* 4068: Goblin Welder */
   { 0, "Goblin Wizard", {0}, 331, 0x02, 3, 16, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_goblin_wizard, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 41 }, /* 4069: Goblin Wizard */
-  { 0, "Goblins of the Fl", {0}, 332, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, card_goblins_of_the_flarg, 0x00000008u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 4070: Goblins of the Flarg */
+  { 0, "Goblins of the Fl", {0}, 332, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, card_goblins_of_the_flarg, 0x00000008u, 0x00000000u, 0, 8, 8, 0, 5 }, /* 4070: Goblins of the Flarg */
   { 0, "Goblinslide", {0}, 14276, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_goblinslide, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 4071: Goblinslide */
   { 0, "God-Favored Gener", {0}, 13724, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_god_favored_general, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4072: God-Favored General */
   { 0, "Godhead of Awe", {0}, 9551, 0x02, -1, 36, { 5, 0, 1 }, 4, 4, 1, 0, manalinkeh_card_godhead_of_awe, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 4073: Godhead of Awe */
@@ -15732,11 +15732,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Grand Coliseum", {0}, 6162, 0x01, -1, 63, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_tempest_painland, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 10 }, /* 4140: Grand Coliseum */
   { 0, "Grandmother Sengi", {0}, 1640, 0x02, 14, 2, { 1, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_grandmother_sengir, 0x00000000u, 0x00000019u, 0, 232, 0, 1, 50 }, /* 4141: Grandmother Sengir */
   { 0, "Granger Guildmage", {0}, 2494, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_granger_guildmage, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 50 }, /* 4142: Granger Guildmage */
-  { 0, "Granite Gargoyle", {0}, 103, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_granite_gargoyle, 0x00000020u, 0x00000011u, 0, 72, 0, 3, 35 }, /* 4143: Granite Gargoyle */
+  { 0, "Granite Gargoyle", {0}, 103, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_granite_gargoyle, 0x00000020u, 0x00000011u, 0, 72, 2, 3, 35 }, /* 4143: Granite Gargoyle */
   { 0, "Granite Shard", {0}, 6680, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_granite_shard, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 40 }, /* 4144: Granite Shard */
   { 0, "Granulate", {0}, 7064, 0x08, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_granulate, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 4145: Granulate */
   { 0, "Grapeshot", {0}, 8566, 0x08, -1, 16, { 1, 1, 12 }, 0, 0, 0, 0, manalinkeh_card_grapeshot, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 4146: Grapeshot */
-  { 0, "Grapeshot Catapul", {0}, 500, 0x42, -1, 1, { 0, 4, 0 }, 2, 3, 0, 0, manalinkeh_card_grapeshot_catapult, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 35 }, /* 4147: Grapeshot Catapult */
+  { 0, "Grapeshot Catapul", {0}, 500, 0x42, -1, 1, { 0, 4, 0 }, 2, 3, 0, 0, manalinkeh_card_grapeshot_catapult, 0x00000000u, 0x00000401u, 0, 248, 1, 1, 35 }, /* 4147: Grapeshot Catapult */
   { 0, "Grappler Spider", {0}, 10767, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000400u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4148: Grappler Spider */
   { 0, "Grasp of Darkness", {0}, 11274, 0x10, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_grasp_of_darkness, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 60 }, /* 4149: Grasp of Darkness */
   { 0, "Grasp of Phantoms", {0}, 11970, 0x08, -1, 4, { 1, 3, 9 }, 0, 0, 1, 0, manalinkeh_card_grasp_of_phantoms, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 40 }, /* 4150: Grasp of Phantoms */
@@ -15766,10 +15766,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Gravitational Shi", {0}, 10939, 0x04, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_gravitational_shift, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 4174: Gravitational Shift */
   { 0, "Gravity Sphere", {0}, 657, 0x04, 16, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_gravity_sphere, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 4175: Gravity Sphere */
   { 0, "Gray Merchant of ", {0}, 13451, 0x02, 2, 2, { 2, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_gray_merchant_of_asphodel, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4176: Gray Merchant of Asphodel */
-  { 0, "Gray Ogre", {0}, 104, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_grey_ogre, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 4177: Gray Ogre */
+  { 0, "Gray Ogre", {0}, 104, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_grey_ogre, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 4177: Gray Ogre */
   { 0, "Graypelt Refuge", {0}, 10553, 0x01, -1, 40, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_akoum_refuge, 0x00000000u, 0x00001000u, 0, 1, 0, 1, 15 }, /* 4178: Graypelt Refuge */
   { 0, "Grazing Gladehart", {0}, 10554, 0x02, -1, 8, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_grazing_gladehart, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 4179: Grazing Gladehart */
-  { 0, "Great Defender", {0}, 658, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_great_defender, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 5 }, /* 4180: Great Defender */
+  { 0, "Great Defender", {0}, 658, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_great_defender, 0x00000000u, 0x00000000u, 0, 15, 16, 1, 5 }, /* 4180: Great Defender */
   { 0, "Great Furnace", {0}, 1218, 0x41, 8, 16, { 0, 0, 0 }, 0, 0, 0, 0, card_mountain, 0x00000000u, 0x00001000u, 0, 1, 0, 1, 5 }, /* 4181: Great Furnace */
   { 0, "Great Hart", {0}, 13727, 0x02, -1, 32, { 1, 3, 0 }, 2, 4, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 4182: Great Hart */
   { 0, "Great Sable Stag", {0}, 10425, 0x02, -1, 8, { 2, 1, 10 }, 3, 3, 2, 0, manalinkeh_card_terra_stomper, 0x00001800u, 0x00000000u, 0, 8, 0, 1, 80 }, /* 4183: Great Sable Stag */
@@ -15783,16 +15783,16 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Greater Good", {0}, 3788, 0x04, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_greater_good, 0x00000000u, 0x00000001u, 0, 153, 0, 0, 70 }, /* 4191: Greater Good */
   { 0, "Greater Harvester", {0}, 6898, 0x02, -1, 2, { 3, 2, 0 }, 5, 6, 0, 0, manalinkeh_card_greater_harvester, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 4192: Greater Harvester */
   { 0, "Greater Mossdog", {0}, 7870, 0x02, -1, 8, { 1, 3, 6 }, 3, 3, 0, 0, manalinkeh_card_greater_mossdog, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4193: Greater Mossdog */
-  { 0, "Greater Realm of ", {0}, 660, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_greater_realm_of_protection, 0x00000000u, 0x00000005u, 0, 249, 0, 1, 40 }, /* 4194: Greater Realm of Preservation */
+  { 0, "Greater Realm of ", {0}, 660, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_greater_realm_of_protection, 0x00000000u, 0x00000005u, 0, 249, 16, 1, 40 }, /* 4194: Greater Realm of Preservation */
   { 0, "Greater Werewolf", {0}, 2210, 0x02, -1, 2, { 1, 4, 0 }, 2, 4, 0, 0, manalinkeh_card_greater_werewolf, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4195: Greater Werewolf */
   { 0, "Greatsword", {0}, 11815, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_greatsword, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 40 }, /* 4196: Greatsword */
-  { 0, "Greed", {0}, 661, 0x04, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_greed, 0x00000000u, 0x00000001u, 0, 17, 0, 254, 45 }, /* 4197: Greed */
+  { 0, "Greed", {0}, 661, 0x04, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_greed, 0x00000000u, 0x00000001u, 0, 17, 1, 254, 45 }, /* 4197: Greed */
   { 0, "Greel, Mind Raker", {0}, 4835, 0x02, 14, 2, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_greel_mind_raker, 0x00000000u, 0x00020001u, 0, 136, 0, 0, 50 }, /* 4198: Greel, Mind Raker */
   { 0, "Green", {0}, 19803, 0x80, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_back_to_95, 0x00000000u, 0x00000001u, 0, 1, 0, 2, 0 }, /* 4199: Green */
-  { 0, "Green Mana Batter", {0}, 662, 0x40, -1, 8, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_green_mana_battery, 0x00000000u, 0x00001021u, 0, 72, 0, 255, 5 }, /* 4200: Green Mana Battery */
+  { 0, "Green Mana Batter", {0}, 662, 0x40, -1, 8, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_green_mana_battery, 0x00000000u, 0x00001021u, 0, 72, 1, 255, 5 }, /* 4200: Green Mana Battery */
   { 0, "Green Scarab", {0}, 1960, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_green_scarab, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 4201: Green Scarab */
   { 0, "Green Sun's Zenit", {0}, 11454, 0x08, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_green_suns_zenith, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 100 }, /* 4202: Green Sun's Zenith */
-  { 0, "Green Ward", {0}, 105, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_green_ward, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 4203: Green Ward */
+  { 0, "Green Ward", {0}, 105, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_green_ward, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 60 }, /* 4203: Green Ward */
   { 0, "Greener Pastures", {0}, 3789, 0x04, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_greener_pastures, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 4204: Greener Pastures */
   { 0, "Greenhilt Trainee", {0}, 11610, 0x02, -1, 8, { 1, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_greenhilt_trainee, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 25 }, /* 4205: Greenhilt Trainee */
   { 0, "Greenseeker", {0}, 8569, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_greenseeker, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 10 }, /* 4206: Greenseeker */
@@ -15848,7 +15848,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Grixis Slavedrive", {0}, 10153, 0x02, 2, 2, { 1, 5, 9 }, 4, 4, 0, 0, manalinkeh_card_grixis_slavedriver, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 4256: Grixis Slavedriver */
   { 0, "Grizzled Leotau", {0}, 10287, 0x02, -1, 40, { 2, 0, 0 }, 1, 5, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 4257: Grizzled Leotau */
   { 0, "Grizzled Outcasts", {0}, 11975, 0x02, -1, 8, { 1, 4, 12 }, 4, 4, 0, 0, manalinkeh_card_gastaf_shepherd, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 39 }, /* 4258: Grizzled Outcasts */
-  { 0, "Grizzly Bears", {0}, 106, 0x02, -1, 8, { 1, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 4259: Grizzly Bears */
+  { 0, "Grizzly Bears", {0}, 106, 0x02, -1, 8, { 1, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 20 }, /* 4259: Grizzly Bears */
   { 0, "Grizzly Fate", {0}, 5955, 0x08, -1, 8, { 2, 3, 9 }, 0, 0, 0, 0, manalinkeh_card_grizzly_fate, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 4260: Grizzly Fate */
   { 0, "Ground Assault", {0}, 12962, 0x08, -1, 24, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ground_assault, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 4261: Ground Assault */
   { 0, "Ground Rift", {0}, 8571, 0x08, -1, 16, { 1, 0, 12 }, 0, 0, 0, 0, manalinkeh_card_ground_rift, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 4262: Ground Rift */
@@ -15879,8 +15879,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Guan Yu, Sainted ", {0}, 4218, 0x02, 14, 32, { 2, 3, 0 }, 3, 5, 0, 0, manalinkeh_card_guan_yu_sainted_warrior, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4287: Guan Yu, Sainted Warrior */
   { 0, "Guan Yu's 1,000-L", {0}, 4219, 0x08, -1, 32, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_guan_yus_1000_li_march, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 4288: Guan Yu's 1,000-Li March */
   { 0, "Guard Gomazoa", {0}, 10944, 0x02, -1, 4, { 1, 2, 0 }, 1, 3, 0, 0, manalinkeh_card_guard_gomazoa, 0x00800020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4289: Guard Gomazoa */
-  { 0, "Guardian Angel", {0}, 107, 0x10, -1, 32, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_guardian_angel, 0x00000000u, 0x00000005u, 0, 255, 0, 1, 5 }, /* 4290: Guardian Angel */
-  { 0, "Guardian Beast", {0}, 423, 0x02, -1, 2, { 1, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_guardian_beast, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 5 }, /* 4291: Guardian Beast */
+  { 0, "Guardian Angel", {0}, 107, 0x10, -1, 32, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_guardian_angel, 0x00000000u, 0x00000005u, 0, 255, 2, 1, 5 }, /* 4290: Guardian Angel */
+  { 0, "Guardian Beast", {0}, 423, 0x02, -1, 2, { 1, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_guardian_beast, 0x00000000u, 0x00000000u, 0, 8, 4, 3, 5 }, /* 4291: Guardian Beast */
   { 0, "Guardian Idol", {0}, 7066, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_guardian_idol, 0x00000000u, 0x00001001u, 0, 56, 0, 0, 10 }, /* 4292: Guardian Idol */
   { 0, "Guardian Lions", {0}, 12576, 0x02, -1, 32, { 1, 4, 0 }, 1, 6, 0, 0, manalinkeh_card_serra_angel, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4293: Guardian Lions */
   { 0, "Guardian of the A", {0}, 13298, 0x42, -1, 1, { 0, 7, 0 }, 7, 7, 0, 0, manalinkeh_card_guardian_of_the_ages, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4294: Guardian of the Ages */
@@ -15986,7 +15986,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Harvest Wurm", {0}, 2987, 0x02, -1, 8, { 1, 1, 0 }, 3, 2, 0, 0, manalinkeh_card_harvest_wurm, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 4394: Harvest Wurm */
   { 0, "Harvester of Soul", {0}, 12391, 0x02, -1, 2, { 2, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_harvester_of_souls, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 70 }, /* 4395: Harvester of Souls */
   { 0, "Harvestguard Alse", {0}, 13906, 0x06, -1, 32, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_harvestguard_alseids, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 4396: Harvestguard Alseids */
-  { 0, "Hasran Ogress", {0}, 424, 0x02, -1, 2, { 2, 0, 0 }, 3, 2, 0, 0, manalinkeh_card_hasran_ogress, 0x00000000u, 0x00000000u, 0, 8, 0, 254, 5 }, /* 4397: Hasran Ogress */
+  { 0, "Hasran Ogress", {0}, 424, 0x02, -1, 2, { 2, 0, 0 }, 3, 2, 0, 0, manalinkeh_card_hasran_ogress, 0x00000000u, 0x00000400u, 0, 8, 8, 254, 5 }, /* 4397: Hasran Ogress */
   { 0, "Hatching Plans", {0}, 8071, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_hatching_plans, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 4398: Hatching Plans */
   { 0, "Hateflayer", {0}, 9801, 0x02, -1, 16, { 2, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_hateflayer, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 70 }, /* 4399: Hateflayer */
   { 0, "Hatred", {0}, 3498, 0x10, -1, 2, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_hatred, 0x00000000u, 0x00000008u, 0, 4, 0, 3, 100 }, /* 4400: Hatred */
@@ -15999,7 +15999,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Haunting Echoes", {0}, 5577, 0x08, -1, 2, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_haunting_echoes, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 1 }, /* 4407: Haunting Echoes */
   { 0, "Haunting Hymn", {0}, 8574, 0x10, -1, 2, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_haunting_hymn, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 4408: Haunting Hymn */
   { 0, "Haunting Misery", {0}, 2988, 0x08, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_haunting_misery, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 4409: Haunting Misery */
-  { 0, "Haunting Wind", {0}, 501, 0x04, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_haunting_wind, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 4410: Haunting Wind */
+  { 0, "Haunting Wind", {0}, 501, 0x04, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_haunting_wind, 0x00000000u, 0x00000400u, 0, 1, 32, 1, 5 }, /* 4410: Haunting Wind */
   { 0, "Havengul Lich", {0}, 12200, 0x02, -1, 6, { 2, 3, 1 }, 4, 4, 1, 0, manalinkeh_card_havengul_lich, 0x00000000u, 0x00000001u, 0, 24, 0, 3, 75 }, /* 4411: Havengul Lich */
   { 0, "Havengul Runebind", {0}, 12201, 0x02, -1, 4, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_havengul_runebinder, 0x00000000u, 0x00000001u, 0, 72, 0, 3, 75 }, /* 4412: Havengul Runebinder */
   { 0, "Havengul Skaab", {0}, 12393, 0x02, 2, 4, { 1, 5, 0 }, 4, 5, 0, 0, manalinkeh_card_havengul_skaab, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4413: Havengul Skaab */
@@ -16015,12 +16015,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "He Who Hungers", {0}, 7229, 0x02, 14, 2, { 1, 4, 0 }, 3, 2, 0, 0, manalinkeh_card_he_who_hungers, 0x00000020u, 0x00000001u, 0, 136, 0, 0, 50 }, /* 4423: He Who Hungers */
   { 0, "Head Games", {0}, 6177, 0x08, -1, 2, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_head_games, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 4424: Head Games */
   { 0, "Headhunter", {0}, 6178, 0x02, -1, 2, { 1, 1, 1 }, 1, 1, 1, 0, manalinkeh_card_headhunter, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4425: Headhunter */
-  { 0, "Headless Horseman", {0}, 667, 0x02, 2, 2, { 1, 2, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 4426: Headless Horseman */
+  { 0, "Headless Horseman", {0}, 667, 0x02, 2, 2, { 1, 2, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 16, 0, 5 }, /* 4426: Headless Horseman */
   { 0, "Headless Skaab", {0}, 12202, 0x02, -1, 4, { 1, 2, 0 }, 3, 6, 1, 0, manalinkeh_card_headless_skaab, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 4427: Headless Skaab */
   { 0, "Healer of the Pri", {0}, 12578, 0x02, -1, 32, { 1, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_healer_of_the_pride, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4428: Healer of the Pride */
   { 0, "Healer's Headdres", {0}, 7067, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_healers_headdress, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 40 }, /* 4429: Healer's Headdress */
   { 0, "Healing Leaves", {0}, 8789, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_healing_salve, 0x00000000u, 0x00000004u, 0, 15, 0, 3, 40 }, /* 4430: Healing Leaves */
-  { 0, "Healing Salve", {0}, 108, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_healing_salve, 0x00000000u, 0x00000004u, 0, 15, 0, 3, 65 }, /* 4431: Healing Salve */
+  { 0, "Healing Salve", {0}, 108, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_healing_salve, 0x00000000u, 0x00000204u, 0, 15, 1, 3, 65 }, /* 4431: Healing Salve */
   { 0, "Heap Doll", {0}, 9559, 0x42, -1, 1, { 0, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_heap_doll, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 4432: Heap Doll */
   { 0, "Heart of Bogardan", {0}, 2989, 0x04, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_heart_of_bogardan, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 4433: Heart of Bogardan */
   { 0, "Heart of Ramos", {0}, 4485, 0x40, -1, 16, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_heart_of_ramos, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 10 }, /* 4434: Heart of Ramos */
@@ -16069,7 +16069,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Heliod's Pilgrim", {0}, 14111, 0x02, -1, 32, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_heliod_pilgrim, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 4477: Heliod's Pilgrim */
   { 0, "Helium Squirter", {0}, 8220, 0x02, -1, 4, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_helium_squirter, 0x00000000u, 0x00000021u, 0, 56, 0, 0, 50 }, /* 4478: Helium Squirter */
   { 0, "Helix Pinnacle", {0}, 9804, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_helix_pinnacle, 0x00020000u, 0x00020001u, 0, 136, 0, 0, 100 }, /* 4479: Helix Pinnacle */
-  { 0, "Hell Swarm", {0}, 669, 0x10, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_hell_swarm, 0x00000000u, 0x00000000u, 0, 4, 0, 1, 5 }, /* 4480: Hell Swarm */
+  { 0, "Hell Swarm", {0}, 669, 0x10, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_hell_swarm, 0x00000000u, 0x00000000u, 0, 4, 16, 1, 5 }, /* 4480: Hell Swarm */
   { 0, "Hell-Bent Raider", {0}, 5819, 0x02, -1, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_hell_bent_rider, 0x00000100u, 0x00000001u, 0, 241, 0, 0, 50 }, /* 4481: Hell-Bent Raider */
   { 0, "Hell's Caretaker", {0}, 670, 0x02, -1, 2, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_hells_caretaker, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 20 }, /* 4482: Hell's Caretaker */
   { 0, "Hell's Thunder", {0}, 9985, 0x02, -1, 16, { 2, 1, 9 }, 4, 4, 1, 0, manalinkeh_card_hell_thunder, 0x00000020u, 0x00000000u, 0, 1, 0, 2, 60 }, /* 4483: Hell's Thunder */
@@ -16091,7 +16091,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Hellrider", {0}, 12205, 0x02, -1, 16, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_hellrider, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 50 }, /* 4499: Hellrider */
   { 0, "Hellspark Element", {0}, 10156, 0x02, -1, 16, { 1, 1, 9 }, 3, 1, 1, 0, manalinkeh_card_hellspark_elemental, 0x00000080u, 0x00000000u, 0, 1, 0, 1, 50 }, /* 4500: Hellspark Elemental */
   { 0, "Helm of Awakening", {0}, 2719, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_helm_of_awakening, 0x00000000u, 0x40000000u, 0, 1, 0, 2, 5 }, /* 4501: Helm of Awakening */
-  { 0, "Helm of Chatzuk", {0}, 109, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_helm_of_chatzuk, 0x00000000u, 0x00000001u, 0, 49, 0, 2, 5 }, /* 4502: Helm of Chatzuk */
+  { 0, "Helm of Chatzuk", {0}, 109, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_helm_of_chatzuk, 0x00000000u, 0x00000001u, 0, 49, 1, 2, 5 }, /* 4502: Helm of Chatzuk */
   { 0, "Helm of Kaldra", {0}, 7069, 0x40, 14, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_helm_of_kaldra, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 60 }, /* 4503: Helm of Kaldra */
   { 0, "Helm of Obedience", {0}, 2297, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_helm_of_obedience, 0x00000000u, 0x00000001u, 0, 40, 0, 254, 9 }, /* 4504: Helm of Obedience */
   { 0, "Helm of Possessio", {0}, 3170, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_helm_of_possession, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 75 }, /* 4505: Helm of Possession */
@@ -16134,7 +16134,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Hidden Herd", {0}, 3797, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_hidden_herd, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 4542: Hidden Herd */
   { 0, "Hidden Herd Anima", {0}, 3798, 0x02, -1, 8, { 0, 0, 0 }, 3, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 4543: Hidden Herd Animated */
   { 0, "Hidden Horror", {0}, 2991, 0x02, -1, 2, { 2, 1, 0 }, 4, 4, 0, 0, manalinkeh_card_hidden_horror, 0x00000000u, 0x00000000u, 0, 24, 0, 2, 75 }, /* 4544: Hidden Horror */
-  { 0, "Hidden Path", {0}, 335, 0x04, -1, 8, { 4, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_hidden_path, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 60 }, /* 4545: Hidden Path */
+  { 0, "Hidden Path", {0}, 335, 0x04, -1, 8, { 4, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_hidden_path, 0x00000000u, 0x00000000u, 0, 1, 8, 2, 60 }, /* 4545: Hidden Path */
   { 0, "Hidden Predators", {0}, 3799, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_hidden_predators, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 4546: Hidden Predators */
   { 0, "Hidden Predators ", {0}, 3800, 0x02, -1, 8, { 0, 0, 0 }, 4, 4, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 4547: Hidden Predators Animated */
   { 0, "Hidden Spider", {0}, 3801, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_hidden_spider, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 4548: Hidden Spider */
@@ -16159,7 +16159,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Highspire Mantis", {0}, 14285, 0x02, -1, 48, { 2, 2, 0 }, 3, 3, 0, 0, card_dummy, 0x000000a0u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4567: Highspire Mantis */
   { 0, "Higure, the Still", {0}, 7485, 0x02, 14, 4, { 2, 3, 4 }, 3, 4, 0, 0, manalinkeh_card_higure_the_still_wind, 0x00000000u, 0x00000001u, 0, 25, 0, 2, 100 }, /* 4568: Higure, the Still Wind */
   { 0, "Hikari, Twilight ", {0}, 7232, 0x02, 14, 32, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_hikari_twilight_guardian, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4569: Hikari, Twilight Guardian */
-  { 0, "Hill Giant", {0}, 110, 0x02, -1, 16, { 1, 3, 0 }, 3, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 4570: Hill Giant */
+  { 0, "Hill Giant", {0}, 110, 0x02, -1, 16, { 1, 3, 0 }, 3, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 4570: Hill Giant */
   { 0, "Hillcomber Giant", {0}, 9168, 0x02, -1, 32, { 2, 2, 0 }, 3, 3, 0, 0, card_dummy, 0x00000008u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4571: Hillcomber Giant */
   { 0, "Hinder", {0}, 7233, 0x20, -1, 4, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_hinder, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 80 }, /* 4572: Hinder */
   { 0, "Hindering Light", {0}, 9986, 0x20, -1, 36, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_hindering_light, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 40 }, /* 4573: Hindering Light */
@@ -16194,12 +16194,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Hollowhenge Scave", {0}, 11986, 0x02, -1, 8, { 2, 3, 0 }, 4, 5, 2, 0, manalinkeh_card_hollowhenge_scavenger, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 39 }, /* 4602: Hollowhenge Scavenger */
   { 0, "Hollowhenge Spiri", {0}, 12211, 0x12, -1, 32, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_hollowhenge_spirit, 0x00000020u, 0x00000000u, 0, 6, 0, 0, 50 }, /* 4603: Hollowhenge Spirit */
   { 0, "Hollowsage", {0}, 9563, 0x02, 1, 2, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_hollowsage, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4604: Hollowsage */
-  { 0, "Holy Armor", {0}, 111, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, card_holy_armor, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 5 }, /* 4605: Holy Armor */
-  { 0, "Holy Day", {0}, 672, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fog, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 5 }, /* 4606: Holy Day */
+  { 0, "Holy Armor", {0}, 111, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, card_holy_armor, 0x00000000u, 0x00000001u, 0, 65, 1, 0, 5 }, /* 4605: Holy Armor */
+  { 0, "Holy Day", {0}, 672, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_fog, 0x00000000u, 0x00000000u, 0, 4, 16, 0, 5 }, /* 4606: Holy Day */
   { 0, "Holy Justiciar", {0}, 12397, 0x02, -1, 32, { 1, 3, 0 }, 2, 1, 0, 0, manalinkeh_card_holy_justicar, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 50 }, /* 4607: Holy Justiciar */
-  { 0, "Holy Light", {0}, 375, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_holy_light, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 4608: Holy Light */
+  { 0, "Holy Light", {0}, 375, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_holy_light, 0x00000000u, 0x00000000u, 0, 15, 8, 0, 40 }, /* 4608: Holy Light */
   { 0, "Holy Mantle", {0}, 12977, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_holy_mantle, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 4609: Holy Mantle */
-  { 0, "Holy Strength", {0}, 112, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_holy_strenght, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 4610: Holy Strength */
+  { 0, "Holy Strength", {0}, 112, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_holy_strenght, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 5 }, /* 4610: Holy Strength */
   { 0, "Homarid", {0}, 1792, 0x02, -1, 4, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_homarid, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 15 }, /* 4611: Homarid */
   { 0, "Homarid Shaman", {0}, 1793, 0x02, -1, 4, { 2, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_homarid_shaman, 0x00000000u, 0x00000001u, 0, 57, 0, 0, 30 }, /* 4612: Homarid Shaman */
   { 0, "Homarid Spawning ", {0}, 1794, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_homarid_spawning_bed, 0x00000000u, 0x00000001u, 0, 33, 0, 2, 80 }, /* 4613: Homarid Spawning Bed */
@@ -16246,7 +16246,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Horned Sliver", {0}, 1383, 0x02, -1, 8, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_horned_sliver, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 35 }, /* 4654: Horned Sliver */
   { 0, "Horned Troll", {0}, 1056, 0x02, -1, 8, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_wall_of_brambles, 0x00000200u, 0x00000001u, 0, 248, 0, 1, 20 }, /* 4655: Horned Troll */
   { 0, "Horned Turtle", {0}, 1057, 0x02, -1, 4, { 1, 2, 0 }, 1, 4, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 4656: Horned Turtle */
-  { 0, "Hornet Cobra", {0}, 674, 0x02, -1, 8, { 2, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000100u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 4657: Hornet Cobra */
+  { 0, "Hornet Cobra", {0}, 674, 0x02, -1, 8, { 2, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000100u, 0x00000000u, 0, 8, 16, 1, 20 }, /* 4657: Hornet Cobra */
   { 0, "Hornet Nest", {0}, 14112, 0x02, -1, 8, { 1, 2, 0 }, 0, 2, 0, 0, manalinkeh_card_hornet_nest, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4658: Hornet Nest */
   { 0, "Hornet Queen", {0}, 11746, 0x02, -1, 8, { 3, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_hornet_queen, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 4659: Hornet Queen */
   { 0, "Hornet Sting", {0}, 11131, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_hornet_sting, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 40 }, /* 4660: Hornet Sting */
@@ -16267,12 +16267,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Hover Barrier", {0}, 12747, 0x02, -1, 4, { 1, 2, 0 }, 0, 6, 0, 0, card_dummy, 0x00800020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4675: Hover Barrier */
   { 0, "Hoverguard Sweepe", {0}, 7071, 0x02, -1, 4, { 2, 6, 0 }, 5, 6, 0, 0, manalinkeh_card_hoverguard_sweepers, 0x00000020u, 0x00000000u, 0, 1, 0, 0, 70 }, /* 4676: Hoverguard Sweepers */
   { 0, "Hovermyr", {0}, 11615, 0x42, -1, 1, { 0, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_serra_angel, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 20 }, /* 4677: Hovermyr */
-  { 0, "Howl from Beyond", {0}, 113, 0x10, -1, 2, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_howl_from_beyond, 0x00000000u, 0x00000000u, 0, 5, 0, 3, 105 }, /* 4678: Howl from Beyond */
+  { 0, "Howl from Beyond", {0}, 113, 0x10, -1, 2, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_howl_from_beyond, 0x00000000u, 0x00000000u, 0, 5, 1, 3, 105 }, /* 4678: Howl from Beyond */
   { 0, "Howl of the Horde", {0}, 14290, 0x08, -1, 16, { 1, 2, 1 }, 0, 0, 0, 0, manalinkeh_card_howl_of_the_horde, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 4679: Howl of the Horde */
   { 0, "Howl of the Night", {0}, 9565, 0x08, -1, 8, { 1, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_howl_of_the_night_pack, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 4680: Howl of the Night Pack */
   { 0, "Howlgeist", {0}, 12400, 0x02, -1, 8, { 1, 5, 0 }, 4, 2, 0, 0, manalinkeh_card_howlgeist, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 4681: Howlgeist */
   { 0, "Howling Banshee", {0}, 10431, 0x02, -1, 2, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_howling_banshee, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 4682: Howling Banshee */
-  { 0, "Howling Mine", {0}, 114, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_howling_mine, 0x00000000u, 0x00000000u, 0, 8, 0, 254, 5 }, /* 4683: Howling Mine */
+  { 0, "Howling Mine", {0}, 114, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_howling_mine, 0x00000000u, 0x00000000u, 0, 8, 1, 254, 5 }, /* 4683: Howling Mine */
   { 0, "Howling Wolf", {0}, 4497, 0x02, -1, 8, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_howling_wolf, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4684: Howling Wolf */
   { 0, "Howlpack Alpha", {0}, 12018, 0x02, -1, 8, { 0, 0, 0 }, 3, 3, 0, 0, manalinkeh_card_howlpack_alpha, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 75 }, /* 4685: Howlpack Alpha */
   { 0, "Howlpack of Estwa", {0}, 12122, 0x02, -1, 8, { 0, 0, 0 }, 4, 6, 0, 0, manalinkeh_card_howlpack_of_estwald, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 0 }, /* 4686: Howlpack of Estwald */
@@ -16311,10 +16311,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Hunting Pack", {0}, 6541, 0x10, -1, 8, { 2, 5, 12 }, 0, 0, 0, 0, manalinkeh_card_hunting_pack, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 4719: Hunting Pack */
   { 0, "Hunting Triad", {0}, 9368, 0x08, -1, 8, { 1, 3, 4 }, 0, 0, 0, 0, manalinkeh_card_hunting_triad, 0x00000000u, 0x00000000u, 0, 72, 0, 0, 60 }, /* 4720: Hunting Triad */
   { 0, "Huntmaster of the", {0}, 12213, 0x02, -1, 24, { 2, 2, 12 }, 2, 2, 0, 0, manalinkeh_card_huntmaster_of_the_fells, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 75 }, /* 4721: Huntmaster of the Fells */
-  { 0, "Hurkyl's Recall", {0}, 502, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_hurkyls_recall, 0x00000000u, 0x00000000u, 0, 15, 0, 254, 5 }, /* 4722: Hurkyl's Recall */
-  { 0, "Hurloon Minotaur", {0}, 115, 0x02, -1, 16, { 2, 1, 0 }, 2, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 4723: Hurloon Minotaur */
-  { 0, "Hurr Jackal", {0}, 425, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_hurr_jackal, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 5 }, /* 4724: Hurr Jackal */
-  { 0, "Hurricane", {0}, 116, 0x08, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_hurricane, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 40 }, /* 4725: Hurricane */
+  { 0, "Hurkyl's Recall", {0}, 502, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_hurkyls_recall, 0x00000000u, 0x00000000u, 0, 15, 1, 254, 5 }, /* 4722: Hurkyl's Recall */
+  { 0, "Hurloon Minotaur", {0}, 115, 0x02, -1, 16, { 2, 1, 0 }, 2, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 4723: Hurloon Minotaur */
+  { 0, "Hurr Jackal", {0}, 425, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_hurr_jackal, 0x00000000u, 0x00000001u, 0, 248, 1, 1, 5 }, /* 4724: Hurr Jackal */
+  { 0, "Hurricane", {0}, 116, 0x08, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_hurricane, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 40 }, /* 4725: Hurricane */
   { 0, "Hush", {0}, 3809, 0x08, -1, 8, { 1, 3, 4 }, 0, 0, 0, 0, manalinkeh_card_hush, 0x00000000u, 0x00000000u, 0, 241, 0, 0, 60 }, /* 4726: Hush */
   { 0, "Hushwing Gryff", {0}, 14115, 0x12, -1, 32, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_ashcoat_bear, 0x00000020u, 0x00000000u, 0, 2, 0, 1, 20 }, /* 4727: Hushwing Gryff */
   { 0, "Hussar Patrol", {0}, 12748, 0x12, -1, 36, { 2, 2, 0 }, 2, 4, 0, 0, manalinkeh_card_hussar_patrol, 0x00000000u, 0x00000000u, 0, 2, 0, 0, 20 }, /* 4728: Hussar Patrol */
@@ -16327,11 +16327,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Hymn of Rebirth", {0}, 1972, 0x08, -1, 40, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_hymn_of_rebirth, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 15 }, /* 4735: Hymn of Rebirth */
   { 0, "Hymn to Tourach", {0}, 1456, 0x08, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_hymn_to_tourach, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 100 }, /* 4736: Hymn to Tourach */
   { 0, "Hypergenesis", {0}, 8577, 0x08, -1, 8, { 0, 0, 0 }, 0, 0, 3, 0, manalinkeh_card_hypergenesis, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 90 }, /* 4737: Hypergenesis */
-  { 0, "Hyperion Blacksmi", {0}, 677, 0x02, -1, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_hyperion_blacksmith, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 5 }, /* 4738: Hyperion Blacksmith */
+  { 0, "Hyperion Blacksmi", {0}, 677, 0x02, -1, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_hyperion_blacksmith, 0x00000000u, 0x00000001u, 0, 248, 16, 0, 5 }, /* 4738: Hyperion Blacksmith */
   { 0, "Hypersonic Dragon", {0}, 12749, 0x02, -1, 20, { 2, 3, 1 }, 4, 4, 0, 0, manalinkeh_card_hypersonic_dragon, 0x00000020u, 0x00000001u, 0, 241, 0, 0, 70 }, /* 4739: Hypersonic Dragon */
   { 0, "Hypnotic Siren", {0}, 13912, 0x06, -1, 4, { 1, 0, 0 }, 1, 1, 1, 0, manalinkeh_card_hypnotic_siren, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 4740: Hypnotic Siren */
   { 0, "Hypnotic Siren Be", {0}, 13913, 0x04, -1, 4, { 1, 0, 0 }, 0, 0, 1, 0, manalinkeh_card_hypnotic_siren, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 4741: Hypnotic Siren Bestowed */
-  { 0, "Hypnotic Specter", {0}, 117, 0x02, -1, 2, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_hypnotic_specter, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 4742: Hypnotic Specter */
+  { 0, "Hypnotic Specter", {0}, 117, 0x02, -1, 2, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_hypnotic_specter, 0x00000020u, 0x00000000u, 0, 8, 1, 2, 75 }, /* 4742: Hypnotic Specter */
   { 0, "Hypnox", {0}, 5822, 0x02, -1, 2, { 3, 8, 1 }, 8, 8, 0, 0, manalinkeh_card_hypnox, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 100 }, /* 4743: Hypnox */
   { 0, "Hypochondria", {0}, 5823, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_hypochondria, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 60 }, /* 4744: Hypochondria */
   { 0, "Hysterical Blindn", {0}, 11987, 0x10, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_hysterical_blindness, 0x00000000u, 0x00000000u, 0, 7, 0, 2, 9 }, /* 4745: Hysterical Blindness */
@@ -16350,7 +16350,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Icatian Store", {0}, 1804, 0x01, -1, 32, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_icatian_store, 0x00000000u, 0x00001023u, 0, 248, 0, 255, 35 }, /* 4758: Icatian Store */
   { 0, "Icatian Town", {0}, 1447, 0x08, -1, 32, { 1, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_icatian_town, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 4759: Icatian Town */
   { 0, "Ice Cage", {0}, 10432, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ice_cage, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 45 }, /* 4760: Ice Cage */
-  { 0, "Ice Storm", {0}, 118, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ice_storm, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 5 }, /* 4761: Ice Storm */
+  { 0, "Ice Storm", {0}, 118, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ice_storm, 0x00000000u, 0x00000200u, 0, 1, 2, 3, 5 }, /* 4761: Ice Storm */
   { 0, "Iceberg", {0}, 1975, 0x04, -1, 4, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_iceberg, 0x00000000u, 0x00001003u, 0, 137, 0, 0, 10 }, /* 4762: Iceberg */
   { 0, "Icefall", {0}, 8386, 0x08, -1, 16, { 2, 2, 20 }, 0, 0, 0, 0, manalinkeh_card_icefall, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 4763: Icefall */
   { 0, "Icefeather Aven", {0}, 14291, 0x02, -1, 12, { 2, 0, 1 }, 2, 2, 1, 0, manalinkeh_card_icefeather_aven, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4764: Icefeather Aven */
@@ -16364,13 +16364,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ichorclaw Myr", {0}, 11282, 0x42, -1, 1, { 0, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_ichorclaw_myr, 0x20000000u, 0x00000018u, 0, 8, 0, 0, 15 }, /* 4772: Ichorclaw Myr */
   { 0, "Ichorid", {0}, 5824, 0x02, -1, 2, { 1, 3, 5 }, 3, 1, 1, 0, manalinkeh_card_ichorid, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 20 }, /* 4773: Ichorid */
   { 0, "Icy Blast", {0}, 14292, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_icy_blast, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 4774: Icy Blast */
-  { 0, "Icy Manipulator", {0}, 119, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_icy_manipulator, 0x00000000u, 0x00000001u, 0, 57, 0, 3, 40 }, /* 4775: Icy Manipulator */
+  { 0, "Icy Manipulator", {0}, 119, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_icy_manipulator, 0x00000000u, 0x00000201u, 0, 57, 2, 3, 40 }, /* 4775: Icy Manipulator */
   { 0, "Icy Prison", {0}, 1977, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_icy_prison, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 75 }, /* 4776: Icy Prison */
   { 0, "Ideas Unbound", {0}, 7659, 0x08, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ideas_unbound, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 40 }, /* 4777: Ideas Unbound */
   { 0, "Identity Crisis", {0}, 10288, 0x08, -1, 34, { 4, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_identity_crisis, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 4778: Identity Crisis */
   { 0, "Idle Thoughts", {0}, 9808, 0x04, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_idle_thoughts, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 4779: Idle Thoughts */
   { 0, "Idyllic Tutor", {0}, 1517, 0x08, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_idyllic_tutor, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 5 }, /* 4780: Idyllic Tutor */
-  { 0, "Ifh-B\355ff Efreet", {0}, 426, 0x02, 5, 8, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_ifh_biff_efreet, 0x00000020u, 0x10000001u, 0, 136, 0, 2, 5 }, /* 4781: Ifh-Bíff Efreet */
+  { 0, "Ifh-B\355ff Efreet", {0}, 426, 0x02, 5, 8, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_ifh_biff_efreet, 0x00000020u, 0x10000801u, 0, 136, 4, 2, 5 }, /* 4781: Ifh-Bíff Efreet */
   { 0, "Igneous Pouncer", {0}, 10289, 0x02, -1, 18, { 2, 4, 4 }, 5, 1, 0, 0, manalinkeh_card_igneous_pouncer, 0x00000000u, 0x00000000u, 0, 241, 0, 0, 50 }, /* 4782: Igneous Pouncer */
   { 0, "Ignition Team", {0}, 14040, 0x02, 3, 16, { 2, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_ignition_team, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 60 }, /* 4783: Ignition Team */
   { 0, "Ihsan's Shade", {0}, 1374, 0x02, 14, 2, { 3, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_ihsans_shade, 0x00008000u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 4784: Ihsan's Shade */
@@ -16392,7 +16392,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Immaculate Magist", {0}, 9178, 0x02, -1, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_immaculate_magistrate, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 4800: Immaculate Magistrate */
   { 0, "Immerwolf", {0}, 12215, 0x02, -1, 24, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_immerwolf, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 35 }, /* 4801: Immerwolf */
   { 0, "Immolating Soulea", {0}, 11617, 0x42, -1, 1, { 0, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_immolating_souleater, 0x00000000u, 0x00000009u, 0, 72, 0, 2, 35 }, /* 4802: Immolating Souleater */
-  { 0, "Immolation", {0}, 679, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_immolation, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 40 }, /* 4803: Immolation */
+  { 0, "Immolation", {0}, 679, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_immolation, 0x00000000u, 0x00000000u, 0, 9, 1, 1, 40 }, /* 4803: Immolation */
   { 0, "Immortal Coil", {0}, 9988, 0x40, -1, 2, { 2, 2, 1 }, 0, 0, 0, 0, manalinkeh_card_immortal_coil, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 100 }, /* 4804: Immortal Coil */
   { 0, "Immortal Servitud", {0}, 12983, 0x08, -1, 34, { 3, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_immortal_servitude, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 4805: Immortal Servitude */
   { 0, "Impact Resonance", {0}, 14466, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_impact_resonance, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 4806: Impact Resonance */
@@ -16450,12 +16450,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Infernal Contract", {0}, 1501, 0x08, -1, 2, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_infernal_contract, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 5 }, /* 4858: Infernal Contract */
   { 0, "Infernal Genesis", {0}, 4840, 0x04, -1, 2, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_infernal_genesis, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 4859: Infernal Genesis */
   { 0, "Infernal Kirin", {0}, 7662, 0x02, 14, 2, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_infernal_kirin, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 4860: Infernal Kirin */
-  { 0, "Infernal Medusa", {0}, 683, 0x02, -1, 2, { 2, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_infernal_medusa, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 25 }, /* 4861: Infernal Medusa */
+  { 0, "Infernal Medusa", {0}, 683, 0x02, -1, 2, { 2, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_infernal_medusa, 0x00000000u, 0x00000000u, 0, 8, 16, 3, 25 }, /* 4861: Infernal Medusa */
   { 0, "Infernal Offering", {0}, 14468, 0x08, -1, 2, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_infernal_offering, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 4862: Infernal Offering */
   { 0, "Infernal Plunge", {0}, 11988, 0x08, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_infernal_plunge, 0x00000000u, 0x00001000u, 0, 9, 0, 2, 10 }, /* 4863: Infernal Plunge */
   { 0, "Infernal Tribute", {0}, 2993, 0x04, -1, 2, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_infernal_tribute, 0x00000000u, 0x00000001u, 0, 200, 0, 0, 60 }, /* 4864: Infernal Tribute */
   { 0, "Infernal Tutor", {0}, 8225, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_infernal_tutor, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 4865: Infernal Tutor */
-  { 0, "Inferno", {0}, 337, 0x10, -1, 16, { 2, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_inferno2, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 40 }, /* 4866: Inferno */
+  { 0, "Inferno", {0}, 337, 0x10, -1, 16, { 2, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_inferno2, 0x00000000u, 0x00000000u, 0, 15, 1, 1, 40 }, /* 4866: Inferno */
   { 0, "Inferno Fist", {0}, 14118, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_inferno_fist, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 60 }, /* 4867: Inferno Fist */
   { 0, "Inferno Titan", {0}, 11134, 0x02, -1, 16, { 2, 4, 0 }, 6, 6, 0, 0, manalinkeh_card_inferno_titan, 0x00000000u, 0x00000009u, 0, 72, 0, 2, 200 }, /* 4868: Inferno Titan */
   { 0, "Inferno Trap", {0}, 10569, 0x10, -1, 16, { 1, 3, 13 }, 0, 0, 1, 0, manalinkeh_card_inferno_trap, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 50 }, /* 4869: Inferno Trap */
@@ -16479,7 +16479,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Inner-Flame Acoly", {0}, 9183, 0x02, -1, 16, { 2, 1, 1 }, 2, 2, 1, 0, manalinkeh_card_inner_flame_acolyte, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 4887: Inner-Flame Acolyte */
   { 0, "Inner-Flame Ignit", {0}, 9184, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_inner_flame_igniter, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 20 }, /* 4888: Inner-Flame Igniter */
   { 0, "Innocent Blood", {0}, 5584, 0x08, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_innocent_blood, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 40 }, /* 4889: Innocent Blood */
-  { 0, "Inquisition", {0}, 374, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_inquisition2, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 5 }, /* 4890: Inquisition */
+  { 0, "Inquisition", {0}, 374, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_inquisition2, 0x00000000u, 0x00000000u, 0, 9, 8, 2, 5 }, /* 4890: Inquisition */
   { 0, "Inquisition of Ko", {0}, 10958, 0x08, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_inquisition_of_kozilek, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 35 }, /* 4891: Inquisition of Kozilek */
   { 0, "Inquisitor Exarch", {0}, 11619, 0x02, -1, 32, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_inquisitor_exarch, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 50 }, /* 4892: Inquisitor Exarch */
   { 0, "Inquisitor's Flai", {0}, 11989, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_inquisitors_flail, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 30 }, /* 4893: Inquisitor's Flail */
@@ -16494,7 +16494,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Inspired Charge", {0}, 11135, 0x10, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_inspired_charge, 0x00000000u, 0x00000000u, 0, 4, 0, 3, 60 }, /* 4902: Inspired Charge */
   { 0, "Inspired Sprite", {0}, 9370, 0x12, -1, 4, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_inspired_sprite, 0x00000020u, 0x00000001u, 0, 130, 0, 0, 20 }, /* 4903: Inspired Sprite */
   { 0, "Instigator Gang", {0}, 11990, 0x02, -1, 16, { 1, 3, 12 }, 2, 3, 0, 0, manalinkeh_card_instigator_gang, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 50 }, /* 4904: Instigator Gang */
-  { 0, "Instill Energy", {0}, 121, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_instill_energy, 0x00000000u, 0x10000001u, 0, 241, 0, 0, 5 }, /* 4905: Instill Energy */
+  { 0, "Instill Energy", {0}, 121, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_instill_energy, 0x00000000u, 0x10000001u, 0, 241, 1, 0, 5 }, /* 4905: Instill Energy */
   { 0, "Instill Infection", {0}, 11286, 0x10, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_instill_infection, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 40 }, /* 4906: Instill Infection */
   { 0, "Insurrection", {0}, 6185, 0x08, -1, 16, { 3, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_insurrection, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 4907: Insurrection */
   { 0, "Intangible Virtue", {0}, 11992, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_intangible_virtue, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 50 }, /* 4908: Intangible Virtue */
@@ -16522,7 +16522,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Invigorate", {0}, 4503, 0x10, -1, 8, { 1, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_invigorate, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 4930: Invigorate */
   { 0, "Invigorating Boon", {0}, 6186, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_invigorating_boon, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 4931: Invigorating Boon */
   { 0, "Invincible Hymn", {0}, 9990, 0x08, -1, 32, { 2, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_invincible_hymn, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 4932: Invincible Hymn */
-  { 0, "Invisibility", {0}, 122, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_invisibility, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 4933: Invisibility */
+  { 0, "Invisibility", {0}, 122, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_invisibility, 0x00000000u, 0x00000000u, 0, 1, 2, 1, 5 }, /* 4933: Invisibility */
   { 0, "Invisible Stalker", {0}, 11994, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_invisible_stalker, 0x01000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 4934: Invisible Stalker */
   { 0, "Invoke Prejudice", {0}, 685, 0x04, -1, 4, { 4, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_invoke_prejudice, 0x00000000u, 0x00004003u, 0, 248, 0, 0, 100 }, /* 4935: Invoke Prejudice */
   { 0, "Invoke the Firemi", {0}, 8076, 0x08, -1, 20, { 3, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_invoke_the_firemind, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 4936: Invoke the Firemind */
@@ -16537,19 +16537,19 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Iroas, God of Vic", {0}, 13916, 0x06, 14, 48, { 2, 2, 0 }, 7, 4, 0, 0, manalinkeh_card_iroas_god_of_victory, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 100 }, /* 4945: Iroas, God of Victory Incarnate */
   { 0, "Iron Maiden", {0}, 4010, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_iron_maiden, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 4946: Iron Maiden */
   { 0, "Iron Myr", {0}, 1212, 0x42, -1, 1, { 0, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_generic_noncombat_1_mana_producing_creature, 0x00000000u, 0x00001000u, 0, 248, 0, 1, 21 }, /* 4947: Iron Myr */
-  { 0, "Iron Star", {0}, 123, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_iron_star, 0x00000000u, 0x00000000u, 0, 241, 0, 1, 5 }, /* 4948: Iron Star */
+  { 0, "Iron Star", {0}, 123, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_iron_star, 0x00000000u, 0x00000000u, 0, 241, 1, 1, 5 }, /* 4948: Iron Star */
   { 0, "Iron-Heart Chimer", {0}, 2725, 0x42, -1, 1, { 0, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_iron_heart_chimera, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 50 }, /* 4949: Iron-Heart Chimera */
-  { 0, "Ironclaw Orcs", {0}, 124, 0x02, 9, 16, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_ironclaw_orcs, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 35 }, /* 4950: Ironclaw Orcs */
+  { 0, "Ironclaw Orcs", {0}, 124, 0x02, 9, 16, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_ironclaw_orcs, 0x00000000u, 0x00000080u, 0, 8, 1, 0, 35 }, /* 4950: Ironclaw Orcs */
   { 0, "Ironfang", {0}, 12120, 0x02, -1, 16, { 0, 0, 0 }, 3, 1, 0, 0, manalinkeh_card_howlpack_of_estwald, 0x00000100u, 0x00000000u, 0, 8, 0, 1, 0 }, /* 4951: Ironfang */
   { 0, "Ironfist Crusher", {0}, 6187, 0x02, -1, 32, { 1, 4, 1 }, 2, 4, 1, 0, manalinkeh_card_ironfist_crusher, 0x00000000u, 0x00100000u, 0, 8, 0, 0, 50 }, /* 4952: Ironfist Crusher */
-  { 0, "Ironroot Treefolk", {0}, 125, 0x02, -1, 8, { 1, 4, 0 }, 3, 5, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 4953: Ironroot Treefolk */
+  { 0, "Ironroot Treefolk", {0}, 125, 0x02, -1, 8, { 1, 4, 0 }, 3, 5, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 20 }, /* 4953: Ironroot Treefolk */
   { 0, "Ironshell Beetle", {0}, 5961, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_timberland_guide, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 4954: Ironshell Beetle */
   { 0, "Irrigation Ditch", {0}, 5017, 0x01, -1, 32, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_irrigation_ditch, 0x00000000u, 0x00001002u, 0, 241, 0, 2, 10 }, /* 4955: Irrigation Ditch */
   { 0, "Isamaru, Hound of", {0}, 1239, 0x02, 14, 32, { 1, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_barktooth_warbeard, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 4956: Isamaru, Hound of Konda */
   { 0, "Isao, Enlightened", {0}, 7495, 0x02, 14, 8, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_isao_enlightned_bushi, 0x00000000u, 0x00000019u, 0, 241, 0, 0, 50 }, /* 4957: Isao, Enlightened Bushi */
-  { 0, "Island Fish Jasco", {0}, 427, 0x02, -1, 4, { 3, 4, 0 }, 6, 8, 0, 0, manalinkeh_card_island_fish_jasconius, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 4958: Island Fish Jasconius */
-  { 0, "Island of Wak-Wak", {0}, 428, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_island_of_wak_wak, 0x00000000u, 0x00000001u, 0, 241, 0, 3, 40 }, /* 4959: Island of Wak-Wak */
-  { 0, "Island Sanctuary", {0}, 127, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_island_sanctuary, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 4960: Island Sanctuary */
+  { 0, "Island Fish Jasco", {0}, 427, 0x02, -1, 4, { 3, 4, 0 }, 6, 8, 0, 0, manalinkeh_card_island_fish_jasconius, 0x00000000u, 0x00000000u, 0, 8, 1, 255, 5 }, /* 4958: Island Fish Jasconius */
+  { 0, "Island of Wak-Wak", {0}, 428, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_island_of_wak_wak, 0x00000000u, 0x00000001u, 0, 241, 4, 3, 40 }, /* 4959: Island of Wak-Wak */
+  { 0, "Island Sanctuary", {0}, 127, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_island_sanctuary, 0x00000000u, 0x00000000u, 0, 8, 1, 255, 5 }, /* 4960: Island Sanctuary */
   { 0, "Isleback Spawn", {0}, 9575, 0x02, -1, 4, { 2, 5, 0 }, 4, 8, 0, 0, manalinkeh_card_isleback_spawn, 0x00020000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 4961: Isleback Spawn */
   { 0, "Isochron Scepter", {0}, 6690, 0x40, -1, 1, { 0, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_isochron_scepter, 0x00000000u, 0x00000003u, 0, 249, 0, 1, 60 }, /* 4962: Isochron Scepter */
   { 0, "Isolated Chapel", {0}, 11995, 0x01, -1, 34, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_isolated_chapel, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 25 }, /* 4963: Isolated Chapel */
@@ -16561,12 +16561,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ith, High Arcanis", {0}, 8582, 0x02, 14, 36, { 2, 5, 1 }, 3, 5, 1, 0, manalinkeh_card_ith_high_arcanist, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 50 }, /* 4969: Ith, High Arcanist */
   { 0, "Ivory Charm", {0}, 2513, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ivory_charm, 0x00000000u, 0x00000004u, 0, 15, 0, 0, 60 }, /* 4970: Ivory Charm */
   { 0, "Ivory Crane Netsu", {0}, 7667, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ivory_crane_netsuke, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 4971: Ivory Crane Netsuke */
-  { 0, "Ivory Cup", {0}, 128, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ivory_cup, 0x00000000u, 0x00000000u, 0, 241, 0, 1, 5 }, /* 4972: Ivory Cup */
+  { 0, "Ivory Cup", {0}, 128, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ivory_cup, 0x00000000u, 0x00000000u, 0, 241, 1, 1, 5 }, /* 4972: Ivory Cup */
   { 0, "Ivory Gargoyle", {0}, 2300, 0x02, -1, 32, { 1, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_ivory_gargoyle, 0x00000020u, 0x00000001u, 0, 136, 0, 0, 25 }, /* 4973: Ivory Gargoyle */
   { 0, "Ivory Giant", {0}, 8583, 0x02, -1, 32, { 2, 5, 1 }, 3, 4, 1, 0, manalinkeh_card_ivory_giant, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 4974: Ivory Giant */
-  { 0, "Ivory Guardians", {0}, 686, 0x02, -1, 32, { 2, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_ivory_guardians, 0x00004000u, 0x00000000u, 0, 8, 0, 2, 30 }, /* 4975: Ivory Guardians */
+  { 0, "Ivory Guardians", {0}, 686, 0x02, -1, 32, { 2, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_ivory_guardians, 0x00004000u, 0x00000000u, 0, 8, 16, 2, 30 }, /* 4975: Ivory Guardians */
   { 0, "Ivory Mask", {0}, 1064, 0x04, -1, 32, { 2, 2, 1 }, 0, 0, 0, 0, manalinkeh_card_ivory_mask, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 4976: Ivory Mask */
-  { 0, "Ivory Tower", {0}, 503, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ivory_tower, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 150 }, /* 4977: Ivory Tower */
+  { 0, "Ivory Tower", {0}, 503, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ivory_tower, 0x00000000u, 0x00000100u, 0, 8, 1, 2, 150 }, /* 4977: Ivory Tower */
   { 0, "Ivorytusk Fortres", {0}, 14293, 0x02, 10, 42, { 3, 2, 0 }, 5, 7, 0, 0, manalinkeh_card_ivorytusk_fortress, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 4978: Ivorytusk Fortress */
   { 0, "Ivy Dancer", {0}, 7889, 0x02, -1, 8, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_ivy_dancer, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 20 }, /* 4979: Ivy Dancer */
   { 0, "Ivy Elemental", {0}, 5585, 0x02, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_ivy_elemental, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 4980: Ivy Elemental */
@@ -16603,15 +16603,15 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Jade Idol", {0}, 7255, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_jade_idol, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 5011: Jade Idol */
   { 0, "Jade Leech", {0}, 5018, 0x02, -1, 8, { 2, 2, 0 }, 5, 5, 0, 0, manalinkeh_card_jade_leech, 0x00000000u, 0x40000000u, 0, 8, 0, 0, 20 }, /* 5012: Jade Leech */
   { 0, "Jade Mage", {0}, 11822, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_jade_mage, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 70 }, /* 5013: Jade Mage */
-  { 0, "Jade Monolith", {0}, 129, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_jade_monolith, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 5 }, /* 5014: Jade Monolith */
-  { 0, "Jade Statue", {0}, 130, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_jade_statue, 0x00000000u, 0x00c00001u, 0, 33, 0, 2, 5 }, /* 5015: Jade Statue */
+  { 0, "Jade Monolith", {0}, 129, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_jade_monolith, 0x00000000u, 0x00000005u, 0, 249, 1, 0, 5 }, /* 5014: Jade Monolith */
+  { 0, "Jade Statue", {0}, 130, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_jade_statue, 0x00000000u, 0x00c00001u, 0, 33, 2, 2, 5 }, /* 5015: Jade Statue */
   { 0, "Jagged Poppet", {0}, 8227, 0x02, -1, 18, { 2, 1, 0 }, 3, 4, 0, 0, manalinkeh_card_jagged_poppet, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 5016: Jagged Poppet */
   { 0, "Jagged-Scar Arche", {0}, 9186, 0x02, -1, 8, { 2, 1, 0 }, 16384, 16384, 0, 0, manalinkeh_card_jagged_scar_archers, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 5017: Jagged-Scar Archers */
   { 0, "Jalira, Master Po", {0}, 14121, 0x02, 14, 4, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_jalira_master_polymorphogist, 0x00000000u, 0x00000001u, 0, 120, 0, 0, 50 }, /* 5018: Jalira, Master Polymorphist */
-  { 0, "Jalum Tome", {0}, 504, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_jalum_tome, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 100 }, /* 5019: Jalum Tome */
+  { 0, "Jalum Tome", {0}, 504, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_jalum_tome, 0x00000000u, 0x00000401u, 0, 248, 8, 0, 100 }, /* 5019: Jalum Tome */
   { 0, "Jamuraan Lion", {0}, 2726, 0x02, -1, 32, { 1, 2, 0 }, 3, 1, 0, 0, manalinkeh_card_jamuraa_lion, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 20 }, /* 5020: Jamuraan Lion */
-  { 0, "Jandor's Ring", {0}, 429, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_jandors_ring, 0x00000000u, 0x00000001u, 0, 249, 0, 1, 40 }, /* 5021: Jandor's Ring */
-  { 0, "Jandor's Saddleba", {0}, 430, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_jandors_saddlebags, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 5 }, /* 5022: Jandor's Saddlebags */
+  { 0, "Jandor's Ring", {0}, 429, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_jandors_ring, 0x00000000u, 0x00000001u, 0, 249, 4, 1, 40 }, /* 5021: Jandor's Ring */
+  { 0, "Jandor's Saddleba", {0}, 430, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_jandors_saddlebags, 0x00000000u, 0x00000001u, 0, 17, 1, 0, 5 }, /* 5022: Jandor's Saddlebags */
   { 0, "Jar of Eyeballs", {0}, 12221, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_jar_of_eyeballs, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 25 }, /* 5023: Jar of Eyeballs */
   { 0, "Jarad, Golgari Li", {0}, 12758, 0x02, 14, 10, { 4, 0, 9 }, 2, 2, 0, 0, manalinkeh_card_jarad_golgari_lich_lord, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 100 }, /* 5024: Jarad, Golgari Lich Lord */
   { 0, "Jarad's Orders", {0}, 12759, 0x08, -1, 10, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_jarads_orders, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 5025: Jarad's Orders */
@@ -16621,7 +16621,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Jasmine Seer", {0}, 4146, 0x02, -1, 32, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_jasmine_seer, 0x00000000u, 0x00000001u, 0, 72, 0, 1, 50 }, /* 5029: Jasmine Seer */
   { 0, "Jawbone Skulkin", {0}, 9814, 0x42, -1, 1, { 0, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_jawbone_skulkin, 0x00000000u, 0x00000001u, 0, 25, 0, 0, 20 }, /* 5030: Jawbone Skulkin */
   { 0, "Jaya Ballard, Tas", {0}, 8585, 0x02, 14, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_jaya_ballard_task_mage, 0x00000000u, 0x00000001u, 0, 248, 0, 3, 100 }, /* 5031: Jaya Ballard, Task Mage */
-  { 0, "Jayemdae Tome", {0}, 131, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_jayemdae_tome, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 150 }, /* 5032: Jayemdae Tome */
+  { 0, "Jayemdae Tome", {0}, 131, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_jayemdae_tome, 0x00000000u, 0x00000001u, 0, 17, 1, 2, 150 }, /* 5032: Jayemdae Tome */
   { 0, "Jazal Goldmane", {0}, 14470, 0x02, 14, 32, { 2, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_jazal_goldmane, 0x00000100u, 0x00000001u, 0, 73, 0, 0, 70 }, /* 5033: Jazal Goldmane */
   { 0, "Jedit Ojanen", {0}, 689, 0x02, 14, 36, { 3, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_barktooth_warbeard, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 55 }, /* 5034: Jedit Ojanen */
   { 0, "Jedit Ojanen of E", {0}, 8795, 0x02, 14, 8, { 3, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_jedit_ojanen_of_efrava, 0x00000004u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 5035: Jedit Ojanen of Efrava */
@@ -16643,7 +16643,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Jester's Scepter", {0}, 8388, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_jesters_scepter, 0x00000000u, 0x00004003u, 0, 249, 0, 1, 100 }, /* 5051: Jester's Scepter */
   { 0, "Jet Medallion", {0}, 3180, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_jet_medallion, 0x00000000u, 0x40000000u, 0, 9, 0, 1, 75 }, /* 5052: Jet Medallion */
   { 0, "Jetting Glasskite", {0}, 7498, 0x02, -1, 4, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_jetting_glasskite, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 5053: Jetting Glasskite */
-  { 0, "Jeweled Bird", {0}, 431, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_jeweled_bird, 0x00000000u, 0x00000001u, 0, 249, 0, 2, 100 }, /* 5054: Jeweled Bird */
+  { 0, "Jeweled Bird", {0}, 431, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_jeweled_bird, 0x00000000u, 0x00000001u, 0, 249, 4, 2, 100 }, /* 5054: Jeweled Bird */
   { 0, "Jhessian Infiltra", {0}, 1747, 0x02, -1, 12, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_latch_seeker, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 5055: Jhessian Infiltrator */
   { 0, "Jhessian Lookout", {0}, 9991, 0x02, -1, 4, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 5056: Jhessian Lookout */
   { 0, "Jhessian Zombies", {0}, 10293, 0x02, 2, 6, { 2, 4, 4 }, 2, 4, 0, 0, manalinkeh_card_jhessian_zombies, 0x00000000u, 0x00000000u, 0, 248, 0, 0, 50 }, /* 5057: Jhessian Zombies */
@@ -16651,7 +16651,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Jhoira's Timebug", {0}, 8587, 0x42, -1, 1, { 0, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_jhoiras_timebug, 0x00000000u, 0x00000005u, 0, 72, 0, 0, 10 }, /* 5059: Jhoira's Timebug */
   { 0, "Jhoira's Toolbox", {0}, 4012, 0x42, -1, 1, { 0, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_jhoira_toolbox, 0x00000200u, 0x00000001u, 0, 249, 0, 1, 75 }, /* 5060: Jhoira's Toolbox */
   { 0, "Jhovall Queen", {0}, 4507, 0x02, -1, 32, { 2, 4, 0 }, 4, 7, 0, 0, manalinkeh_card_serra_angel, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 5061: Jhovall Queen */
-  { 0, "Jihad", {0}, 432, 0x04, -1, 32, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_jihad, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 20 }, /* 5062: Jihad */
+  { 0, "Jihad", {0}, 432, 0x04, -1, 32, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_jihad, 0x00000000u, 0x00000400u, 0, 1, 4, 3, 20 }, /* 5062: Jihad */
   { 0, "Jilt", {0}, 5388, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_jilt, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 5063: Jilt */
   { 0, "Jin-Gitaxias, Cor", {0}, 11623, 0x12, 14, 4, { 2, 8, 1 }, 5, 4, 1, 0, manalinkeh_card_jin_gitaxias_core_augur, 0x00000000u, 0x00000000u, 0, 2, 0, 3, 150 }, /* 5064: Jin-Gitaxias, Core Augur */
   { 0, "Jinxed Idol", {0}, 3181, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_jinxed_idol, 0x00000000u, 0x00000001u, 0, 249, 0, 255, 60 }, /* 5065: Jinxed Idol */
@@ -16679,14 +16679,14 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Journeyer's Kite", {0}, 7256, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_journeyers_kite, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 60 }, /* 5087: Journeyer's Kite */
   { 0, "Joven", {0}, 1643, 0x02, 14, 16, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_joven, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 5088: Joven */
   { 0, "Joven's Ferrets", {0}, 2216, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_jovens_ferrets, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 5089: Joven's Ferrets */
-  { 0, "Jovial Evil", {0}, 692, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_jovial_evil, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 40 }, /* 5090: Jovial Evil */
+  { 0, "Jovial Evil", {0}, 692, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_jovial_evil, 0x00000000u, 0x00000000u, 0, 9, 16, 3, 40 }, /* 5090: Jovial Evil */
   { 0, "Judge of Currents", {0}, 9187, 0x02, 1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_judge_of_the_currents, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 5091: Judge of Currents */
   { 0, "Judge's Familiar", {0}, 12760, 0x02, -1, 36, { 1, 0, 1 }, 1, 1, 1, 0, manalinkeh_card_judges_familiar, 0x00000020u, 0x00000002u, 0, 248, 0, 0, 50 }, /* 5092: Judge's Familiar */
   { 0, "Jugan, the Rising", {0}, 7258, 0x02, 14, 8, { 3, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_jugan_rising_star, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 70 }, /* 5093: Jugan, the Rising Star */
-  { 0, "Juggernaut", {0}, 132, 0x42, -1, 1, { 0, 4, 0 }, 5, 3, 0, 0, manalinkeh_card_juggernaut, 0x00000000u, 0x01000000u, 0, 8, 0, 1, 55 }, /* 5094: Juggernaut */
+  { 0, "Juggernaut", {0}, 132, 0x42, -1, 1, { 0, 4, 0 }, 5, 3, 0, 0, manalinkeh_card_juggernaut, 0x00000000u, 0x01000000u, 0, 8, 2, 1, 55 }, /* 5094: Juggernaut */
   { 0, "Juju Bubble", {0}, 2727, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_juju_bubble, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 25 }, /* 5095: Juju Bubble */
   { 0, "Jukai Messenger", {0}, 7259, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000004u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 5096: Jukai Messenger */
-  { 0, "Jump", {0}, 133, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_jump, 0x00000000u, 0x00000000u, 0, 3, 0, 0, 5 }, /* 5097: Jump */
+  { 0, "Jump", {0}, 133, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_jump, 0x00000000u, 0x00000000u, 0, 3, 1, 0, 5 }, /* 5097: Jump */
   { 0, "Jund Battlemage", {0}, 9992, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_jund_battlemage, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 20 }, /* 5098: Jund Battlemage */
   { 0, "Jund Charm", {0}, 9993, 0x10, -1, 26, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_jund_charm, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 5099: Jund Charm */
   { 0, "Jund Hackblade", {0}, 10294, 0x02, 3, 26, { 2, 0, 1 }, 2, 1, 1, 0, manalinkeh_card_jund_hackblade, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 5100: Jund Hackblade */
@@ -16703,11 +16703,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Junk Diver", {0}, 4147, 0x42, -1, 1, { 0, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_junk_diver, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 35 }, /* 5111: Junk Diver */
   { 0, "Junkyo Bell", {0}, 7260, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_junkyo_bell, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 5112: Junkyo Bell */
   { 0, "Juntu Stakes", {0}, 5019, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_juntu_stakes, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 5113: Juntu Stakes */
-  { 0, "Jun\372n Efreet", {0}, 433, 0x02, 5, 2, { 2, 1, 0 }, 3, 3, 0, 0, manalinkeh_card_junun_efreet, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 5114: Junún Efreet */
+  { 0, "Jun\372n Efreet", {0}, 433, 0x02, 5, 2, { 2, 1, 0 }, 3, 3, 0, 0, manalinkeh_card_junun_efreet, 0x00000020u, 0x00000c00u, 0, 8, 1, 2, 50 }, /* 5114: Junún Efreet */
   { 0, "Jushi Apprentice", {0}, 7261, 0x02, -1, 4, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_jushi_apprentice, 0x00000000u, 0x00000001u, 0, 200, 0, 0, 50 }, /* 5115: Jushi Apprentice */
   { 0, "Juvenile Gloomwid", {0}, 9577, 0x02, -1, 8, { 2, 0, 0 }, 1, 3, 0, 0, manalinkeh_card_juvenile_gloomwidow, 0x00000400u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 5116: Juvenile Gloomwidow */
   { 0, "Juxtapose", {0}, 693, 0x08, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_juxtapose, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 5117: Juxtapose */
-  { 0, "Juz\341m Djinn", {0}, 434, 0x02, 6, 2, { 2, 2, 0 }, 5, 5, 0, 0, manalinkeh_card_juzam_djinn, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 75 }, /* 5118: Juzám Djinn */
+  { 0, "Juz\341m Djinn", {0}, 434, 0x02, 6, 2, { 2, 2, 0 }, 5, 5, 0, 0, manalinkeh_card_juzam_djinn, 0x00000000u, 0x00000c01u, 0, 24, 4, 2, 75 }, /* 5118: Juzám Djinn */
   { 0, "Jwar Isle Refuge", {0}, 10575, 0x01, -1, 6, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_akoum_refuge, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 15 }, /* 5119: Jwar Isle Refuge */
   { 0, "Jwari Scuttler", {0}, 10963, 0x02, -1, 4, { 1, 2, 0 }, 2, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 5120: Jwari Scuttler */
   { 0, "Jwari Shapeshifte", {0}, 10784, 0x02, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_jwari_shapeshifter, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 5121: Jwari Shapeshifter */
@@ -16747,7 +16747,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Karametra's Acoly", {0}, 13468, 0x02, -1, 8, { 1, 3, 0 }, 1, 4, 0, 0, manalinkeh_card_karametras_acolyte, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 21 }, /* 5155: Karametra's Acolyte */
   { 0, "Karametra's Favor", {0}, 13740, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_karametras_favor, 0x00000000u, 0x00001003u, 0, 241, 0, 0, 40 }, /* 5156: Karametra's Favor */
   { 0, "Kargan Dragonlord", {0}, 10965, 0x02, -1, 16, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_kargan_dragonlord, 0x00000000u, 0x00000009u, 0, 216, 0, 2, 80 }, /* 5157: Kargan Dragonlord */
-  { 0, "Karma", {0}, 134, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_karma, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 60 }, /* 5158: Karma */
+  { 0, "Karma", {0}, 134, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_karma, 0x00000000u, 0x00000001u, 0, 24, 1, 0, 60 }, /* 5158: Karma */
   { 0, "Karmic Guide", {0}, 4013, 0x02, -1, 32, { 2, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_karmic_guide, 0x00000820u, 0x00000000u, 0, 9, 0, 2, 50 }, /* 5159: Karmic Guide */
   { 0, "Karn Liberated", {0}, 11625, 0x04, 14, 1, { 0, 7, 9 }, 0, 0, 1, 0, manalinkeh_card_karn_liberated, 0x00000000u, 0x00400001u, 0, 25, 0, 3, 150 }, /* 5160: Karn Liberated */
   { 0, "Karn, Silver Gole", {0}, 3813, 0x42, 14, 1, { 0, 5, 0 }, 4, 4, 0, 0, manalinkeh_card_karn_silver_golem, 0x00000000u, 0x00000011u, 0, 120, 0, 2, 100 }, /* 5161: Karn, Silver Golem */
@@ -16797,7 +16797,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Keeper of the Min", {0}, 3505, 0x02, -1, 4, { 2, 0, 0 }, 1, 2, 0, 0, manalinkeh_card_keeper_of_the_mind, 0x00000000u, 0x00000001u, 0, 136, 0, 2, 50 }, /* 5205: Keeper of the Mind */
   { 0, "Keeper of the Nin", {0}, 6404, 0x02, -1, 4, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_keeper_of_the_nine_gales, 0x00000020u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 5206: Keeper of the Nine Gales */
   { 0, "Keeper of Tresser", {0}, 2302, 0x02, -1, 2, { 1, 5, 0 }, 6, 6, 0, 0, manalinkeh_card_keeper_of_tresserhorn, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 5207: Keeper of Tresserhorn */
-  { 0, "Keepers of the Fa", {0}, 696, 0x02, -1, 32, { 2, 1, 0 }, 2, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 5208: Keepers of the Faith */
+  { 0, "Keepers of the Fa", {0}, 696, 0x02, -1, 32, { 2, 1, 0 }, 2, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 16, 0, 5 }, /* 5208: Keepers of the Faith */
   { 0, "Keepsake Gorgon", {0}, 13469, 0x02, -1, 2, { 2, 3, 0 }, 2, 5, 0, 0, manalinkeh_card_keepsake_gorgon, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 5209: Keepsake Gorgon */
   { 0, "Kei Takahashi", {0}, 697, 0x02, 14, 40, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_kei_takahashi, 0x00000000u, 0x00000005u, 0, 248, 0, 1, 20 }, /* 5210: Kei Takahashi */
   { 0, "Keiga, the Tide S", {0}, 7275, 0x02, 14, 4, { 1, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_keiga, 0x00000020u, 0x00000000u, 0, 8, 0, 3, 90 }, /* 5211: Keiga, the Tide Star */
@@ -16807,7 +16807,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Keldon Megaliths", {0}, 8954, 0x01, -1, 16, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_keldon_megaliths, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 5215: Keldon Megaliths */
   { 0, "Keldon Necropolis", {0}, 5029, 0x01, 15, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_keldon_necropolis, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 5216: Keldon Necropolis */
   { 0, "Keldon Vandals", {0}, 4149, 0x02, -1, 16, { 1, 2, 0 }, 4, 1, 0, 0, manalinkeh_card_keldon_vandals, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 5217: Keldon Vandals */
-  { 0, "Keldon Warlord", {0}, 135, 0x02, -1, 16, { 2, 2, 0 }, 16384, 16384, 0, 0, manalinkeh_card_keldon_warlord, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 70 }, /* 5218: Keldon Warlord */
+  { 0, "Keldon Warlord", {0}, 135, 0x02, -1, 16, { 2, 2, 0 }, 16384, 16384, 0, 0, manalinkeh_card_keldon_warlord, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 70 }, /* 5218: Keldon Warlord */
   { 0, "Kelp", {0}, 18774, 0x02, -1, 4, { 0, 0, 0 }, 0, 1, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 9, 0, 0, 0 }, /* 5219: Kelp */
   { 0, "Kemba, Kha Regent", {0}, 11288, 0x02, 14, 32, { 2, 1, 0 }, 2, 4, 0, 0, manalinkeh_card_kemba_kha_regent, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 5220: Kemba, Kha Regent */
   { 0, "Kemba's Legion", {0}, 11466, 0x02, -1, 32, { 2, 5, 0 }, 4, 6, 0, 0, manalinkeh_card_kembas_legion, 0x00000000u, 0x00100000u, 0, 8, 0, 0, 50 }, /* 5221: Kemba's Legion */
@@ -16824,7 +16824,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Kessig Wolf Run", {0}, 11998, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_kessig_wolf_run, 0x00000000u, 0x00021001u, 0, 73, 0, 2, 19 }, /* 5232: Kessig Wolf Run */
   { 0, "Keymaster Rogue", {0}, 12986, 0x02, -1, 4, { 1, 3, 0 }, 3, 2, 0, 0, manalinkeh_card_keymaster_rogue, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 5233: Keymaster Rogue */
   { 0, "Kezzerdrix", {0}, 3182, 0x02, -1, 2, { 2, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_kezzerdrix, 0x00000100u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 5234: Kezzerdrix */
-  { 0, "Khab\341l Ghoul", {0}, 435, 0x02, 2, 2, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_khabal_ghoul, 0x00000000u, 0x00000020u, 0, 8, 0, 3, 55 }, /* 5235: Khabál Ghoul */
+  { 0, "Khab\341l Ghoul", {0}, 435, 0x02, 2, 2, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_khabal_ghoul, 0x00000000u, 0x00000420u, 0, 8, 4, 3, 55 }, /* 5235: Khabál Ghoul */
   { 0, "Khalni Garden", {0}, 10787, 0x01, -1, 8, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_khalni_garden, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 5 }, /* 5236: Khalni Garden */
   { 0, "Khalni Gem", {0}, 10582, 0x40, -1, 62, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_khalni_gem, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 5 }, /* 5237: Khalni Gem */
   { 0, "Khalni Heart Expe", {0}, 10583, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_khalni_heart_expedition, 0x00000000u, 0x00000001u, 0, 137, 0, 0, 100 }, /* 5238: Khalni Heart Expedition */
@@ -16839,7 +16839,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Kiku's Shadow", {0}, 7677, 0x08, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_kikus_shadow, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 5247: Kiku's Shadow */
   { 0, "Kill Shot", {0}, 14306, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_rebuke, 0x00000000u, 0x00000000u, 0, 6, 0, 0, 80 }, /* 5248: Kill Shot */
   { 0, "Kill Switch", {0}, 4703, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_kill_switch, 0x00000000u, 0x00000001u, 0, 17, 0, 255, 70 }, /* 5249: Kill Switch */
-  { 0, "Killer Bees", {0}, 698, 0x02, -1, 8, { 2, 1, 0 }, 0, 1, 0, 0, manalinkeh_card_killer_bees, 0x00000020u, 0x00000019u, 0, 72, 0, 2, 55 }, /* 5250: Killer Bees */
+  { 0, "Killer Bees", {0}, 698, 0x02, -1, 8, { 2, 1, 0 }, 0, 1, 0, 0, manalinkeh_card_killer_bees, 0x00000020u, 0x00000019u, 0, 72, 1, 2, 55 }, /* 5250: Killer Bees */
   { 0, "Killer Instinct", {0}, 8079, 0x04, -1, 24, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_killer_instinct, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 5251: Killer Instinct */
   { 0, "Killer Whale", {0}, 1228, 0x02, -1, 4, { 2, 3, 0 }, 3, 5, 0, 0, manalinkeh_card_gust_skimmer, 0x00000000u, 0x00000001u, 0, 56, 0, 1, 35 }, /* 5252: Killer Whale */
   { 0, "Killing Glare", {0}, 12987, 0x10, -1, 2, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_killing_glare, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 5253: Killing Glare */
@@ -16853,7 +16853,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Kindle", {0}, 3183, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_kindle, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 25 }, /* 5261: Kindle */
   { 0, "Kindled Fury", {0}, 9371, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_kindled_fury, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 5262: Kindled Fury */
   { 0, "King Macar, the G", {0}, 13919, 0x02, 14, 2, { 2, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_king_macar_the_gold_cursed, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 5263: King Macar, the Gold-Cursed */
-  { 0, "King Suleiman", {0}, 436, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_king_suleiman, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 20 }, /* 5264: King Suleiman */
+  { 0, "King Suleiman", {0}, 436, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_king_suleiman, 0x00000000u, 0x00000c01u, 0, 24, 4, 2, 20 }, /* 5264: King Suleiman */
   { 0, "King's Assassin", {0}, 2826, 0x02, -1, 2, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_kings_assassin, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 50 }, /* 5265: King's Assassin */
   { 0, "Kingpin's Pet", {0}, 12988, 0x02, -1, 34, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_syndic_of_tithes, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 5266: Kingpin's Pet */
   { 0, "Kinsbaile Borderg", {0}, 9372, 0x02, -1, 32, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_kinsbaile_borderguard, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 5267: Kinsbaile Borderguard */
@@ -16864,12 +16864,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Kiora's Emblem", {0}, 13742, 0x80, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_kioras_emblem, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 5272: Kiora's Emblem */
   { 0, "Kiora's Follower", {0}, 13743, 0x02, 1, 12, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_kioras_follower, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 5273: Kiora's Follower */
   { 0, "Kira, Great Glass", {0}, 7504, 0x02, 14, 4, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_kira_great_glass_spinner, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 5274: Kira, Great Glass-Spinner */
-  { 0, "Kird Ape", {0}, 437, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_kird_ape, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 5275: Kird Ape */
+  { 0, "Kird Ape", {0}, 437, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_kird_ape, 0x00000000u, 0x00000000u, 0, 8, 4, 1, 20 }, /* 5275: Kird Ape */
   { 0, "Kird Chieftain", {0}, 14125, 0x02, -1, 16, { 1, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_kird_chieftain, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 50 }, /* 5276: Kird Chieftain */
   { 0, "Kiri-Onna", {0}, 7678, 0x02, -1, 4, { 1, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_kiri_onna, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 5277: Kiri-Onna */
   { 0, "Kirtar's Desire", {0}, 5590, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_kirtars_desire, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 5278: Kirtar's Desire */
   { 0, "Kirtar's Wrath", {0}, 5591, 0x08, -1, 32, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_kirtars_wrath, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 5279: Kirtar's Wrath */
-  { 0, "Kismet", {0}, 699, 0x04, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_kismet, 0x00000000u, 0x00000000u, 0, 8, 0, 254, 15 }, /* 5280: Kismet */
+  { 0, "Kismet", {0}, 699, 0x04, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_kismet, 0x00000000u, 0x00000000u, 0, 8, 1, 254, 15 }, /* 5280: Kismet */
   { 0, "Kiss of the Amesh", {0}, 1324, 0x08, -1, 36, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_kiss_of_the_amesha, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 120 }, /* 5281: Kiss of the Amesha */
   { 0, "Kitchen Finks", {0}, 9579, 0x02, -1, 40, { 2, 1, 1 }, 3, 2, 1, 0, manalinkeh_card_kitchen_finks, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 55 }, /* 5282: Kitchen Finks */
   { 0, "Kite Shield", {0}, 11823, 0x40, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_kite_shield, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 20 }, /* 5283: Kite Shield */
@@ -16918,7 +16918,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Knight-Captain of", {0}, 10002, 0x02, -1, 32, { 1, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_knight_captain_of_eos, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 50 }, /* 5326: Knight-Captain of Eos */
   { 0, "Knighthood", {0}, 4015, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_knighthood, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 50 }, /* 5327: Knighthood */
   { 0, "Knightly Valor", {0}, 12762, 0x04, -1, 32, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_knightly_valor, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 5328: Knightly Valor */
-  { 0, "Knights of Thorn", {0}, 338, 0x02, -1, 32, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_galinas_knight, 0x00000040u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 5329: Knights of Thorn */
+  { 0, "Knights of Thorn", {0}, 338, 0x02, -1, 32, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_galinas_knight, 0x00000040u, 0x00000000u, 0, 8, 8, 2, 50 }, /* 5329: Knights of Thorn */
   { 0, "Knollspine Dragon", {0}, 9583, 0x02, -1, 16, { 2, 5, 13 }, 7, 5, 0, 0, manalinkeh_card_knollspine_dragon, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 5330: Knollspine Dragon */
   { 0, "Knollspine Invoca", {0}, 9584, 0x04, -1, 16, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_knollspine_invocation, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 40 }, /* 5331: Knollspine Invocation */
   { 0, "Knotvine Mystic", {0}, 10163, 0x02, -1, 56, { 3, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_knotvine_mystic, 0x00000000u, 0x00011001u, 0, 248, 0, 0, 21 }, /* 5332: Knotvine Mystic */
@@ -16927,10 +16927,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Knowledge Exploit", {0}, 9375, 0x08, -1, 4, { 2, 5, 13 }, 0, 0, 1, 0, manalinkeh_card_knowledge_exploitation, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 5335: Knowledge Exploitation */
   { 0, "Knowledge Vault", {0}, 700, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_knowledge_vault, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 5336: Knowledge Vault */
   { 0, "Knucklebone Witch", {0}, 9195, 0x02, 3, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_knucklebone_witch, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 5337: Knucklebone Witch */
-  { 0, "Kobold Drill Serg", {0}, 701, 0x02, -1, 16, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_kobold_drill_sergeant, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 5 }, /* 5338: Kobold Drill Sergeant */
-  { 0, "Kobold Overlord", {0}, 702, 0x02, -1, 16, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_kobold_overlord, 0x00000100u, 0x00000000u, 0, 1, 0, 3, 5 }, /* 5339: Kobold Overlord */
-  { 0, "Kobold Taskmaster", {0}, 703, 0x02, -1, 16, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_kobold_taskmaster, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 5 }, /* 5340: Kobold Taskmaster */
-  { 0, "Kobolds of Kher K", {0}, 704, 0x02, -1, 16, { 0, 0, 0 }, 0, 1, 0, 0, card_crimson_kobolds, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 5341: Kobolds of Kher Keep */
+  { 0, "Kobold Drill Serg", {0}, 701, 0x02, -1, 16, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_kobold_drill_sergeant, 0x00000000u, 0x00000000u, 0, 1, 16, 2, 5 }, /* 5338: Kobold Drill Sergeant */
+  { 0, "Kobold Overlord", {0}, 702, 0x02, -1, 16, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_kobold_overlord, 0x00000100u, 0x00000000u, 0, 1, 16, 3, 5 }, /* 5339: Kobold Overlord */
+  { 0, "Kobold Taskmaster", {0}, 703, 0x02, -1, 16, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_kobold_taskmaster, 0x00000000u, 0x00000000u, 0, 1, 16, 2, 5 }, /* 5340: Kobold Taskmaster */
+  { 0, "Kobolds of Kher K", {0}, 704, 0x02, -1, 16, { 0, 0, 0 }, 0, 1, 0, 0, card_crimson_kobolds, 0x00000000u, 0x00000000u, 0, 8, 16, 255, 5 }, /* 5341: Kobolds of Kher Keep */
   { 0, "Kodama of the Nor", {0}, 7284, 0x02, 14, 8, { 3, 2, 0 }, 6, 4, 0, 0, manalinkeh_card_kodama_of_the_north_tree, 0x00020080u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 5342: Kodama of the North Tree */
   { 0, "Kodama of the Sou", {0}, 7285, 0x02, 14, 8, { 2, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_kodama_of_the_south_tree, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 5343: Kodama of the South Tree */
   { 0, "Kodama's Might", {0}, 7286, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_kodamas_might, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 5344: Kodama's Might */
@@ -16955,7 +16955,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Kor Soldier", {0}, 18779, 0x02, -1, 32, { 0, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 5363: Kor Soldier */
   { 0, "Kor Spiritdancer", {0}, 10972, 0x02, -1, 32, { 1, 1, 0 }, 0, 2, 0, 0, manalinkeh_card_kor_spiritdancer, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 5364: Kor Spiritdancer */
   { 0, "Korlash, Heir to ", {0}, 8956, 0x02, 14, 2, { 2, 2, 0 }, 16384, 16384, 0, 0, manalinkeh_card_korlash_heir_to_blackblade, 0x00000200u, 0x00000001u, 0, 248, 0, 0, 70 }, /* 5365: Korlash, Heir to Blackblade */
-  { 0, "Kormus Bell", {0}, 136, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_kormus_bell, 0x00000000u, 0x00000000u, 0, 1, 0, 254, 40 }, /* 5366: Kormus Bell */
+  { 0, "Kormus Bell", {0}, 136, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_kormus_bell, 0x00000000u, 0x00000000u, 0, 1, 1, 254, 40 }, /* 5366: Kormus Bell */
   { 0, "Korozda Gorgon", {0}, 13163, 0x02, -1, 10, { 2, 3, 0 }, 2, 5, 0, 0, manalinkeh_card_korozda_gorgon, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 50 }, /* 5367: Korozda Gorgon */
   { 0, "Korozda Guildmage", {0}, 12763, 0x02, -1, 10, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_korozda_guildmage, 0x00000000u, 0x00000001u, 0, 120, 0, 0, 50 }, /* 5368: Korozda Guildmage */
   { 0, "Korozda Monitor", {0}, 12764, 0x02, -1, 8, { 2, 2, 17 }, 3, 3, 0, 0, manalinkeh_card_korozda_monitor, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 5369: Korozda Monitor */
@@ -17009,7 +17009,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Kruphix, God of H", {0}, 13923, 0x06, 14, 12, { 2, 3, 0 }, 4, 7, 0, 0, manalinkeh_card_kruphix_god_of_horizons, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 5417: Kruphix, God of Horizons Incarnate */
   { 0, "Kruphix's Insight", {0}, 13924, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_kruphixs_insight, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 5418: Kruphix's Insight */
   { 0, "Kry Shield", {0}, 705, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_kry_shield, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 60 }, /* 5419: Kry Shield */
-  { 0, "Kudzu", {0}, 137, 0x04, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_kudzu, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 5420: Kudzu */
+  { 0, "Kudzu", {0}, 137, 0x04, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_kudzu, 0x00000000u, 0x00000000u, 0, 1, 2, 0, 5 }, /* 5420: Kudzu */
   { 0, "Kukemssa Pirates", {0}, 2524, 0x02, -1, 4, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_kukemssa_pirates, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 75 }, /* 5421: Kukemssa Pirates */
   { 0, "Kuldotha Flamefie", {0}, 11469, 0x02, -1, 16, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_kuldotha_flamefiend, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 59 }, /* 5422: Kuldotha Flamefiend */
   { 0, "Kuldotha Forgemas", {0}, 11291, 0x42, -1, 1, { 0, 5, 0 }, 3, 5, 0, 0, manalinkeh_card_kuldotha_forgemaster, 0x00000000u, 0x00000001u, 0, 168, 0, 0, 50 }, /* 5423: Kuldotha Forgemaster */
@@ -17043,13 +17043,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Lairwatch Giant", {0}, 9197, 0x02, -1, 32, { 1, 5, 0 }, 5, 3, 0, 0, manalinkeh_card_lairwatch_giant, 0x00000000u, 0x00100000u, 0, 8, 0, 0, 50 }, /* 5451: Lairwatch Giant */
   { 0, "Lake of the Dead", {0}, 2309, 0x01, -1, 2, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lake_of_the_dead, 0x00000000u, 0x00001000u, 0, 9, 0, 1, 80 }, /* 5452: Lake of the Dead */
   { 0, "Lambholt Elder", {0}, 12223, 0x02, -1, 8, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_gastaf_shepherd, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 35 }, /* 5453: Lambholt Elder */
-  { 0, "Lance", {0}, 138, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lance, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 5 }, /* 5454: Lance */
+  { 0, "Lance", {0}, 138, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lance, 0x00000000u, 0x00000000u, 0, 1, 2, 2, 5 }, /* 5454: Lance */
   { 0, "Lancers en-Kor", {0}, 3388, 0x02, -1, 32, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_nomads_en_kor, 0x00000080u, 0x00000005u, 0, 248, 0, 0, 50 }, /* 5455: Lancers en-Kor */
   { 0, "Land Equilibrium", {0}, 709, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_land_equilibrium, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 5 }, /* 5456: Land Equilibrium */
   { 0, "Land Grant", {0}, 4517, 0x08, -1, 8, { 1, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_land_grant, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 15 }, /* 5457: Land Grant */
-  { 0, "Land Leeches", {0}, 339, 0x02, -1, 8, { 2, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000100u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 5458: Land Leeches */
+  { 0, "Land Leeches", {0}, 339, 0x02, -1, 8, { 2, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000100u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 5458: Land Leeches */
   { 0, "Land Mine", {0}, 18781, 0x40, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_land_mine, 0x00000000u, 0x00000001u, 0, 104, 0, 0, 0 }, /* 5459: Land Mine */
-  { 0, "Land Tax", {0}, 710, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_land_tax, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 100 }, /* 5460: Land Tax */
+  { 0, "Land Tax", {0}, 710, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_land_tax, 0x00000000u, 0x00000001u, 0, 24, 1, 2, 100 }, /* 5460: Land Tax */
   { 0, "Landbind Ritual", {0}, 10592, 0x08, -1, 32, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_landbind_ritual, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 15 }, /* 5461: Landbind Ritual */
   { 0, "Lantern Kami", {0}, 7294, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 5462: Lantern Kami */
   { 0, "Lantern Spirit", {0}, 12003, 0x02, -1, 4, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_lantern_spirit, 0x00000020u, 0x00000001u, 0, 72, 0, 1, 39 }, /* 5463: Lantern Spirit */
@@ -17133,9 +17133,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Lesser Gargadon", {0}, 1068, 0x02, -1, 16, { 2, 2, 0 }, 6, 4, 0, 0, manalinkeh_card_lesser_gargadon, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 5541: Lesser Gargadon */
   { 0, "Lesser Werewolf", {0}, 712, 0x02, -1, 2, { 1, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_lesser_werewolf, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 25 }, /* 5542: Lesser Werewolf */
   { 0, "Lethargy Trap", {0}, 10594, 0x10, -1, 4, { 1, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_lethargy_trap, 0x00000000u, 0x00000000u, 0, 4, 0, 1, 50 }, /* 5543: Lethargy Trap */
-  { 0, "Leviathan", {0}, 340, 0x02, -1, 4, { 4, 5, 0 }, 10, 10, 0, 0, manalinkeh_card_leviathan, 0x00000080u, 0x00400000u, 0, 8, 0, 0, 5 }, /* 5544: Leviathan */
+  { 0, "Leviathan", {0}, 340, 0x02, -1, 4, { 4, 5, 0 }, 10, 10, 0, 0, manalinkeh_card_leviathan, 0x00000080u, 0x00400000u, 0, 8, 1, 0, 5 }, /* 5544: Leviathan */
   { 0, "Levitation", {0}, 1606, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_levitation, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 5545: Levitation */
-  { 0, "Ley Druid", {0}, 139, 0x02, -1, 8, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_ley_druid, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 5 }, /* 5546: Ley Druid */
+  { 0, "Ley Druid", {0}, 139, 0x02, -1, 8, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_ley_druid, 0x00000000u, 0x00000001u, 0, 248, 1, 0, 5 }, /* 5546: Ley Druid */
   { 0, "Leyline of Antici", {0}, 11139, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_vedalken_orrery, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 60 }, /* 5547: Leyline of Anticipation */
   { 0, "Leyline of Lifefo", {0}, 8081, 0x04, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_leyline_of_lifeforce, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 5548: Leyline of Lifeforce */
   { 0, "Leyline of Lightn", {0}, 8082, 0x04, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_leyline_of_lightning, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 5549: Leyline of Lightning */
@@ -17149,10 +17149,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Lhurgoyf", {0}, 1069, 0x02, -1, 8, { 2, 2, 0 }, 16384, 16385, 0, 0, manalinkeh_card_lhurgoyf, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 5557: Lhurgoyf */
   { 0, "Liability", {0}, 4521, 0x04, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_liability, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 5558: Liability */
   { 0, "Liberate", {0}, 5030, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_liberate, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 5559: Liberate */
-  { 0, "Library of Alexan", {0}, 438, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_library_of_alexandria, 0x00000000u, 0x00001001u, 0, 241, 0, 2, 200 }, /* 5560: Library of Alexandria */
+  { 0, "Library of Alexan", {0}, 438, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_library_of_alexandria, 0x00000000u, 0x00001101u, 0, 241, 4, 2, 200 }, /* 5560: Library of Alexandria */
   { 0, "Library of Lat-Na", {0}, 2311, 0x08, -1, 4, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_library_of_lat_nam, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 5561: Library of Lat-Nam */
-  { 0, "Library of Leng", {0}, 140, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_library_of_leng, 0x00000000u, 0x00000000u, 0, 8, 0, 254, 5 }, /* 5562: Library of Leng */
-  { 0, "Lich", {0}, 141, 0x04, -1, 2, { 4, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lich, 0x00000000u, 0x00200000u, 0, 1, 0, 2, 100 }, /* 5563: Lich */
+  { 0, "Library of Leng", {0}, 140, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_library_of_leng, 0x00000000u, 0x00000000u, 0, 8, 1, 254, 5 }, /* 5562: Library of Leng */
+  { 0, "Lich", {0}, 141, 0x04, -1, 2, { 4, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lich, 0x00000000u, 0x00200400u, 0, 1, 2, 2, 100 }, /* 5563: Lich */
   { 0, "Lich Lord of Unx", {0}, 10303, 0x02, 2, 6, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_lich_lord_of_unx, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 70 }, /* 5564: Lich Lord of Unx */
   { 0, "Lich's Tomb", {0}, 6911, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_lichs_tomb, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 5565: Lich's Tomb */
   { 0, "Liege of the Holl", {0}, 2999, 0x02, -1, 8, { 2, 2, 0 }, 3, 4, 0, 0, manalinkeh_card_liege_of_hollows, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 5566: Liege of the Hollows */
@@ -17161,22 +17161,22 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Lieutenant Kirtar", {0}, 5599, 0x02, 14, 32, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_liutenant_kirtar, 0x00000020u, 0x00000001u, 0, 72, 0, 0, 50 }, /* 5569: Lieutenant Kirtar */
   { 0, "Life // Death", {0}, 5395, 0x08, -1, 10, { 1, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_life_death, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 5570: Life // Death */
   { 0, "Life Burst", {0}, 5600, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_life_burst, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 5571: Life Burst */
-  { 0, "Life Chisel", {0}, 713, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_life_chisel, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 40 }, /* 5572: Life Chisel */
+  { 0, "Life Chisel", {0}, 713, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_life_chisel, 0x00000000u, 0x00000001u, 0, 24, 16, 2, 40 }, /* 5572: Life Chisel */
   { 0, "Life from the Loa", {0}, 7894, 0x08, -1, 8, { 1, 1, 6 }, 0, 0, 2, 0, manalinkeh_card_life_from_the_loam, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 5573: Life from the Loam */
   { 0, "Life Matrix", {0}, 714, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_life_matrix, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 60 }, /* 5574: Life Matrix */
   { 0, "Life's Finale", {0}, 11629, 0x08, -1, 2, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_lifes_finale, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 99 }, /* 5575: Life's Finale */
   { 0, "Life's Legacy", {0}, 14129, 0x08, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_lifes_legacy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 5576: Life's Legacy */
   { 0, "Lifebane Zombie", {0}, 13308, 0x02, 2, 2, { 2, 1, 0 }, 3, 1, 0, 0, manalinkeh_card_lifebane_zombie, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 5577: Lifebane Zombie */
-  { 0, "Lifeblood", {0}, 715, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_lifeblood, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 40 }, /* 5578: Lifeblood */
+  { 0, "Lifeblood", {0}, 715, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_lifeblood, 0x00000000u, 0x00000000u, 0, 1, 16, 1, 40 }, /* 5578: Lifeblood */
   { 0, "Lifeblood Hydra", {0}, 14471, 0x02, -1, 8, { 3, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_lifeblood_hydra, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 5579: Lifeblood Hydra */
-  { 0, "Lifeforce", {0}, 142, 0x04, -1, 8, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lifeforce, 0x00000000u, 0x00004002u, 0, 241, 0, 0, 60 }, /* 5580: Lifeforce */
+  { 0, "Lifeforce", {0}, 142, 0x04, -1, 8, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lifeforce, 0x00000000u, 0x00004002u, 0, 241, 1, 0, 60 }, /* 5580: Lifeforce */
   { 0, "Lifegift", {0}, 7509, 0x04, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_lifegift, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 5581: Lifegift */
-  { 0, "Lifelace", {0}, 143, 0x20, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lifelace, 0x00000000u, 0x00002000u, 0, 15, 0, 254, 40 }, /* 5582: Lifelace */
+  { 0, "Lifelace", {0}, 143, 0x20, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lifelace, 0x00000000u, 0x00002000u, 0, 15, 1, 254, 40 }, /* 5582: Lifelace */
   { 0, "Lifeline", {0}, 3816, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_lifeline, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 75 }, /* 5583: Lifeline */
   { 0, "Lifelink", {0}, 10439, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lifelink, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 9 }, /* 5584: Lifelink */
   { 0, "Lifesmith", {0}, 11296, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_lifesmith, 0x00000000u, 0x00000000u, 0, 241, 0, 1, 20 }, /* 5585: Lifesmith */
   { 0, "Lifespinner", {0}, 7510, 0x02, -1, 8, { 1, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_lifespinner, 0x00000000u, 0x00000001u, 0, 200, 0, 0, 50 }, /* 5586: Lifespinner */
-  { 0, "Lifetap", {0}, 144, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lifetap, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 5587: Lifetap */
+  { 0, "Lifetap", {0}, 144, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lifetap, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 40 }, /* 5587: Lifetap */
   { 0, "Light from Within", {0}, 9818, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_light_from_within, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 5588: Light from Within */
   { 0, "Light of Sanction", {0}, 7895, 0x04, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_light_of_sanction, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 5589: Light of Sanction */
   { 0, "Lighthouse Chrono", {0}, 10980, 0x02, -1, 4, { 1, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_lighthouse_chronologist, 0x00000000u, 0x00000001u, 0, 152, 0, 0, 50 }, /* 5590: Lighthouse Chronologist */
@@ -17185,7 +17185,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Lightning Angel", {0}, 1225, 0x02, -1, 52, { 3, 1, 0 }, 3, 4, 0, 0, manalinkeh_card_bull_cerodon, 0x00000020u, 0x00000000u, 0, 1, 0, 2, 55 }, /* 5593: Lightning Angel */
   { 0, "Lightning Axe", {0}, 8594, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 1, 0, manalinkeh_card_lightning_axe, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 5594: Lightning Axe */
   { 0, "Lightning Blast", {0}, 1070, 0x10, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_lightning_blast, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 95 }, /* 5595: Lightning Blast */
-  { 0, "Lightning Bolt", {0}, 145, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lightning_bolt, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 105 }, /* 5596: Lightning Bolt */
+  { 0, "Lightning Bolt", {0}, 145, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_lightning_bolt, 0x00000000u, 0x00000200u, 0, 15, 1, 3, 105 }, /* 5596: Lightning Bolt */
   { 0, "Lightning Cloud", {0}, 2740, 0x04, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_lightning_cloud, 0x00000000u, 0x00000000u, 0, 241, 0, 1, 100 }, /* 5597: Lightning Cloud */
   { 0, "Lightning Coils", {0}, 6705, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_lightning_coils, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 5598: Lightning Coils */
   { 0, "Lightning Crafter", {0}, 9378, 0x02, 3, 16, { 1, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_lightning_crafter, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 5599: Lightning Crafter */
@@ -17230,21 +17230,21 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Livewire Lash", {0}, 11298, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_livewire_lash, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 40 }, /* 5638: Livewire Lash */
   { 0, "Living Airship", {0}, 5396, 0x02, -1, 4, { 1, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_living_airship, 0x00000220u, 0x00000001u, 1, 248, 0, 0, 50 }, /* 5639: Living Airship */
   { 0, "Living Armor", {0}, 341, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_living_armor, 0x00000000u, 0x00000001u, 0, 241, 0, 1, 38 }, /* 5640: Living Armor */
-  { 0, "Living Artifact", {0}, 146, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_living_artifact, 0x00000000u, 0x00000021u, 0, 17, 0, 0, 5 }, /* 5641: Living Artifact */
+  { 0, "Living Artifact", {0}, 146, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_living_artifact, 0x00000000u, 0x00000021u, 0, 17, 1, 0, 5 }, /* 5641: Living Artifact */
   { 0, "Living Death", {0}, 3191, 0x08, -1, 2, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_living_death, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 65 }, /* 5642: Living Death */
   { 0, "Living End", {0}, 8596, 0x08, -1, 2, { 0, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_living_end, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 5643: Living End */
   { 0, "Living Hive", {0}, 6707, 0x02, -1, 8, { 2, 6, 0 }, 6, 6, 0, 0, manalinkeh_card_living_hive, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 5644: Living Hive */
-  { 0, "Living Lands", {0}, 147, 0x04, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_living_lands, 0x00000000u, 0x00000000u, 0, 1, 0, 254, 40 }, /* 5645: Living Lands */
+  { 0, "Living Lands", {0}, 147, 0x04, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_living_lands, 0x00000000u, 0x00000000u, 0, 1, 1, 254, 40 }, /* 5645: Living Lands */
   { 0, "Living Plane", {0}, 716, 0x04, 16, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_living_plane, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 5646: Living Plane */
   { 0, "Living Totem", {0}, 14130, 0x02, -1, 8, { 1, 3, 1 }, 2, 3, 1, 0, manalinkeh_card_living_totem, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 5647: Living Totem */
   { 0, "Living Tsunami", {0}, 10595, 0x02, -1, 4, { 2, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_living_tsunami, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 5648: Living Tsunami */
-  { 0, "Living Wall", {0}, 148, 0x42, -1, 1, { 0, 4, 0 }, 0, 6, 0, 0, manalinkeh_card_living_wall, 0x00800200u, 0x00000001u, 0, 248, 0, 3, 55 }, /* 5649: Living Wall */
+  { 0, "Living Wall", {0}, 148, 0x42, -1, 1, { 0, 4, 0 }, 0, 6, 0, 0, manalinkeh_card_living_wall, 0x00800200u, 0x00000001u, 0, 248, 2, 3, 55 }, /* 5649: Living Wall */
   { 0, "Living Wish", {0}, 5971, 0x08, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_living_wish, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 149 }, /* 5650: Living Wish */
   { 0, "Livonya Silone", {0}, 717, 0x02, 14, 24, { 4, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_livonya_silone, 0x00000100u, 0x00000000u, 0, 8, 0, 1, 70 }, /* 5651: Livonya Silone */
   { 0, "Lizard Warrior", {0}, 2890, 0x02, -1, 16, { 1, 3, 0 }, 4, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 5652: Lizard Warrior */
   { 0, "Llanowar Behemoth", {0}, 1073, 0x02, -1, 8, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_bramblesnap, 0x00000000u, 0x00000019u, 0, 72, 0, 2, 35 }, /* 5653: Llanowar Behemoth */
   { 0, "Llanowar Dead", {0}, 1595, 0x02, 2, 10, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_generic_combat_1_mana_producing_creature, 0x00000000u, 0x00001000u, 0, 248, 0, 0, 21 }, /* 5654: Llanowar Dead */
-  { 0, "Llanowar Elves", {0}, 149, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_elvish_mystic, 0x00000000u, 0x00001000u, 0, 248, 0, 2, 35 }, /* 5655: Llanowar Elves */
+  { 0, "Llanowar Elves", {0}, 149, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_elvish_mystic, 0x00000000u, 0x00001000u, 0, 248, 1, 2, 35 }, /* 5655: Llanowar Elves */
   { 0, "Llanowar Empath", {0}, 8960, 0x02, -1, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_llanowar_empath, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 5656: Llanowar Empath */
   { 0, "Llanowar Knight", {0}, 1303, 0x02, -1, 40, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_white_knight, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 5657: Llanowar Knight */
   { 0, "Llanowar Mentor", {0}, 8961, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_llanowar_mentor, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 60 }, /* 5658: Llanowar Mentor */
@@ -17274,11 +17274,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Longshot Squad", {0}, 14312, 0x02, -1, 8, { 1, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_longshot_squad, 0x00000000u, 0x00000001u, 0, 129, 0, 0, 50 }, /* 5682: Longshot Squad */
   { 0, "Looming Shade", {0}, 1075, 0x02, -1, 2, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_nantuko_shade, 0x00000000u, 0x00000019u, 0, 72, 0, 1, 35 }, /* 5683: Looming Shade */
   { 0, "Looter il-Kor", {0}, 8598, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_looter_il_kor, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 5684: Looter il-Kor */
-  { 0, "Lord of Atlantis", {0}, 150, 0x02, 1, 4, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_lord_of_atlantis, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 5685: Lord of Atlantis */
+  { 0, "Lord of Atlantis", {0}, 150, 0x02, 1, 4, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_lord_of_atlantis, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 5 }, /* 5685: Lord of Atlantis */
   { 0, "Lord of Extinctio", {0}, 10305, 0x02, -1, 10, { 2, 3, 0 }, 16384, 16384, 0, 0, manalinkeh_card_lord_of_extinction, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 79 }, /* 5686: Lord of Extinction */
   { 0, "Lord of Lineage", {0}, 11888, 0x02, -1, 2, { 0, 0, 0 }, 5, 5, 0, 0, manalinkeh_card_lord_of_lineage, 0x00000020u, 0x00000001u, 0, 41, 0, 3, 100 }, /* 5687: Lord of Lineage */
   { 0, "Lord of Shattersk", {0}, 10985, 0x02, -1, 16, { 1, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_lord_of_shatterskull_pass, 0x00000000u, 0x00000001u, 0, 152, 0, 0, 50 }, /* 5688: Lord of Shatterskull Pass */
-  { 0, "Lord of the Pit", {0}, 151, 0x02, -1, 2, { 3, 4, 0 }, 7, 7, 0, 0, manalinkeh_card_lord_of_the_pit, 0x000000a0u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 5689: Lord of the Pit */
+  { 0, "Lord of the Pit", {0}, 151, 0x02, -1, 2, { 3, 4, 0 }, 7, 7, 0, 0, manalinkeh_card_lord_of_the_pit, 0x000000a0u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 5689: Lord of the Pit */
   { 0, "Lord of the Undea", {0}, 1076, 0x02, 2, 2, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_lord_of_the_undead, 0x00000000u, 0x00000001u, 0, 129, 0, 2, 5 }, /* 5690: Lord of the Undead */
   { 0, "Lord of the Unrea", {0}, 11824, 0x02, -1, 4, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_lord_of_the_unreal, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 55 }, /* 5691: Lord of the Unreal */
   { 0, "Lord of the Void", {0}, 12995, 0x02, -1, 2, { 3, 4, 0 }, 7, 7, 0, 0, manalinkeh_card_lord_of_the_void, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 5692: Lord of the Void */
@@ -17293,7 +17293,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Lost in the Mist", {0}, 12005, 0x20, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_lost_in_the_mist, 0x00000000u, 0x00002000u, 0, 15, 0, 1, 8 }, /* 5701: Lost in the Mist */
   { 0, "Lost in the Woods", {0}, 12226, 0x04, -1, 8, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_lost_in_the_woods, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 75 }, /* 5702: Lost in the Woods */
   { 0, "Lost Leonin", {0}, 11630, 0x02, -1, 32, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x20000000u, 0x00000000u, 0, 8, 0, 255, 22 }, /* 5703: Lost Leonin */
-  { 0, "Lost Soul", {0}, 719, 0x02, -1, 2, { 2, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 5704: Lost Soul */
+  { 0, "Lost Soul", {0}, 719, 0x02, -1, 2, { 2, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 5704: Lost Soul */
   { 0, "Lotleth Troll", {0}, 12767, 0x02, 2, 10, { 2, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_lotleth_troll, 0x00000280u, 0x00000019u, 0, 248, 0, 0, 50 }, /* 5705: Lotleth Troll */
   { 0, "Lotus Bloom", {0}, 8599, 0x40, -1, 62, { 0, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_lotus_bloom, 0x00000000u, 0x00001000u, 0, 9, 0, 3, 50 }, /* 5706: Lotus Bloom */
   { 0, "Lotus Blossom", {0}, 3820, 0x40, -1, 62, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_lotus_blossom, 0x00000000u, 0x00001000u, 0, 241, 0, 3, 50 }, /* 5707: Lotus Blossom */
@@ -17334,7 +17334,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Lumithread Field", {0}, 8967, 0x04, -1, 32, { 1, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_lumithread_field, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 5742: Lumithread Field */
   { 0, "Lunar Mystic", {0}, 12415, 0x02, -1, 4, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_lunar_mystic, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 5743: Lunar Mystic */
   { 0, "Lunge", {0}, 4525, 0x10, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_lunge, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 5744: Lunge */
-  { 0, "Lure", {0}, 152, 0x04, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_lure, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 20 }, /* 5745: Lure */
+  { 0, "Lure", {0}, 152, 0x04, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_lure, 0x00000000u, 0x00000000u, 0, 1, 1, 2, 20 }, /* 5745: Lure */
   { 0, "Lure of Prey", {0}, 2531, 0x10, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_lure_of_prey, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 50 }, /* 5746: Lure of Prey */
   { 0, "Lurebound Scarecr", {0}, 9591, 0x42, -1, 1, { 0, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_lurebound_scarecrow, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 5747: Lurebound Scarecrow */
   { 0, "Lurker", {0}, 342, 0x02, -1, 8, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_lurker, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 34 }, /* 5748: Lurker */
@@ -17374,7 +17374,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Magebane Armor", {0}, 10442, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_magebane_armor, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 60 }, /* 5782: Magebane Armor */
   { 0, "Mageta the Lion", {0}, 4851, 0x02, 14, 32, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_mageta_the_lion, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 5783: Mageta the Lion */
   { 0, "Maggot Carrier", {0}, 1077, 0x02, 2, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_maggot_carrier, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 5784: Maggot Carrier */
-  { 0, "Magical Hack", {0}, 153, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_magical_hack, 0x00000000u, 0x00002000u, 0, 3, 0, 255, 40 }, /* 5785: Magical Hack */
+  { 0, "Magical Hack", {0}, 153, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_magical_hack, 0x00000000u, 0x00002000u, 0, 3, 1, 255, 40 }, /* 5785: Magical Hack */
   { 0, "Magister of Worth", {0}, 14009, 0x02, -1, 34, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_magister_of_worth, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 5786: Magister of Worth */
   { 0, "Magister Sphinx", {0}, 10167, 0x42, -1, 38, { 3, 4, 1 }, 5, 5, 0, 0, manalinkeh_card_magister_sphinx, 0x00000020u, 0x00000000u, 0, 9, 0, 2, 20 }, /* 5787: Magister Sphinx */
   { 0, "Magistrate's Scep", {0}, 4527, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_magistrates_scepter, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 60 }, /* 5788: Magistrate's Scepter */
@@ -17391,7 +17391,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Magmatic Force", {0}, 11741, 0x02, -1, 16, { 3, 5, 0 }, 7, 7, 0, 0, manalinkeh_card_magmatic_force, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 5799: Magmatic Force */
   { 0, "Magmaw", {0}, 10988, 0x02, -1, 16, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_magmaw, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 5800: Magmaw */
   { 0, "Magnetic Mine", {0}, 11475, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_magnetic_mine, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 1 }, /* 5801: Magnetic Mine */
-  { 0, "Magnetic Mountain", {0}, 439, 0x04, -1, 16, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_magnetic_mountain, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 5802: Magnetic Mountain */
+  { 0, "Magnetic Mountain", {0}, 439, 0x04, -1, 16, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_magnetic_mountain, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 40 }, /* 5802: Magnetic Mountain */
   { 0, "Magnetic Theft", {0}, 7087, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_magnetic_theft, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 5803: Magnetic Theft */
   { 0, "Magnivore", {0}, 5607, 0x02, -1, 16, { 2, 2, 0 }, 16384, 16384, 0, 0, manalinkeh_card_magnivore, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 5804: Magnivore */
   { 0, "Magosi, the Water", {0}, 10601, 0x01, -1, 4, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_magosi_the_waterveil, 0x00000000u, 0x00001003u, 0, 137, 0, 0, 5 }, /* 5805: Magosi, the Waterveil */
@@ -17411,7 +17411,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Magus of the Tabe", {0}, 1287, 0x02, -1, 32, { 1, 3, 0 }, 2, 6, 0, 0, manalinkeh_card_magus_of_the_tabernacle, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 5819: Magus of the Tabernacle */
   { 0, "Magus of the Unse", {0}, 2025, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_magus_of_the_unseen, 0x00000000u, 0x00000001u, 0, 24, 0, 1, 100 }, /* 5820: Magus of the Unseen */
   { 0, "Magus of the Vine", {0}, 8971, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_magus_of_the_vineyard, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 70 }, /* 5821: Magus of the Vineyard */
-  { 0, "Mahamoti Djinn", {0}, 154, 0x02, 6, 4, { 2, 4, 0 }, 5, 6, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 5822: Mahamoti Djinn */
+  { 0, "Mahamoti Djinn", {0}, 154, 0x02, 6, 4, { 2, 4, 0 }, 5, 6, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 1, 2, 75 }, /* 5822: Mahamoti Djinn */
   { 0, "Make a Wish", {0}, 12009, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_make_a_wish, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 20 }, /* 5823: Make a Wish */
   { 0, "Makeshift Mannequ", {0}, 9206, 0x10, -1, 2, { 1, 3, 0 }, 0, 0, 1, 0, manalinkeh_card_makeshift_mannequin, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 75 }, /* 5824: Makeshift Mannequin */
   { 0, "Makeshift Mauler", {0}, 12010, 0x02, 2, 4, { 1, 3, 1 }, 4, 5, 1, 0, manalinkeh_card_makeshift_mauler, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 30 }, /* 5825: Makeshift Mauler */
@@ -17430,23 +17430,23 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Man-o'-War", {0}, 1613, 0x02, -1, 4, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_man_o_war, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 55 }, /* 5838: Man-o'-War */
   { 0, "Mana Bloom", {0}, 12770, 0x04, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_bloom, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 60 }, /* 5839: Mana Bloom */
   { 0, "Mana Breach", {0}, 3509, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_breach, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 5840: Mana Breach */
-  { 0, "Mana Clash", {0}, 343, 0x08, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_clash, 0x00000000u, 0x00000000u, 0, 8, 0, 254, 40 }, /* 5841: Mana Clash */
+  { 0, "Mana Clash", {0}, 343, 0x08, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_clash, 0x00000000u, 0x00000000u, 0, 8, 1, 254, 40 }, /* 5841: Mana Clash */
   { 0, "Mana Confluence", {0}, 13929, 0x01, -1, 62, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_confluence, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 10 }, /* 5842: Mana Confluence */
-  { 0, "Mana Crypt", {0}, 894, 0x40, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_crypt, 0x00000000u, 0x00001001u, 0, 241, 0, 254, 10 }, /* 5843: Mana Crypt */
+  { 0, "Mana Crypt", {0}, 894, 0x40, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_crypt, 0x00000000u, 0x00001801u, 0, 241, 128, 254, 10 }, /* 5843: Mana Crypt */
   { 0, "Mana Drain", {0}, 720, 0x20, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_drain, 0x00000000u, 0x00002000u, 0, 15, 0, 1, 95 }, /* 5844: Mana Drain */
   { 0, "Mana Echoes", {0}, 6202, 0x04, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_echoes, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 15 }, /* 5845: Mana Echoes */
-  { 0, "Mana Flare", {0}, 155, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_flare, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 20 }, /* 5846: Mana Flare */
+  { 0, "Mana Flare", {0}, 155, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_flare, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 20 }, /* 5846: Mana Flare */
   { 0, "Mana Geyser", {0}, 7088, 0x08, -1, 16, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_geyser, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 40 }, /* 5847: Mana Geyser */
   { 0, "Mana Leak", {0}, 1078, 0x20, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_leak, 0x00000000u, 0x00002000u, 0, 15, 0, 254, 95 }, /* 5848: Mana Leak */
   { 0, "Mana Matrix", {0}, 721, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_matrix, 0x00000000u, 0x40000000u, 0, 1, 0, 2, 5 }, /* 5849: Mana Matrix */
   { 0, "Mana Reflection", {0}, 9593, 0x04, -1, 8, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_reflection, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 5850: Mana Reflection */
   { 0, "Mana Severance", {0}, 3197, 0x08, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_severance, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 25 }, /* 5851: Mana Severance */
-  { 0, "Mana Short", {0}, 156, 0x10, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_short, 0x00000000u, 0x00000000u, 0, 15, 0, 255, 60 }, /* 5852: Mana Short */
+  { 0, "Mana Short", {0}, 156, 0x10, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_short, 0x00000000u, 0x00000000u, 0, 15, 1, 255, 60 }, /* 5852: Mana Short */
   { 0, "Mana Tithe", {0}, 8803, 0x20, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_force_spike, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 40 }, /* 5853: Mana Tithe */
-  { 0, "Mana Vault", {0}, 157, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_vault, 0x00000000u, 0x00001000u, 0, 241, 0, 2, 5 }, /* 5854: Mana Vault */
+  { 0, "Mana Vault", {0}, 157, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_vault, 0x00000000u, 0x00001000u, 0, 241, 1, 2, 5 }, /* 5854: Mana Vault */
   { 0, "Mana Vortex", {0}, 344, 0x04, -1, 4, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_mana_vortex, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 74 }, /* 5855: Mana Vortex */
   { 0, "Mana-Charged Drag", {0}, 11742, 0x02, -1, 16, { 2, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_mana_charged_dragon, 0x000000a0u, 0x00000009u, 0, 72, 0, 0, 100 }, /* 5856: Mana-Charged Dragon */
-  { 0, "Manabarbs", {0}, 158, 0x04, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_manabarbs, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 5857: Manabarbs */
+  { 0, "Manabarbs", {0}, 158, 0x04, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_manabarbs, 0x00000000u, 0x00000000u, 0, 8, 1, 255, 5 }, /* 5857: Manabarbs */
   { 0, "Manabond", {0}, 3510, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_manabond, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 5858: Manabond */
   { 0, "Manaforge Cinder", {0}, 9594, 0x02, -1, 18, { 1, 0, 1 }, 1, 1, 1, 0, manalinkeh_card_manaforge_cinder, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 21 }, /* 5859: Manaforge Cinder */
   { 0, "Manalith", {0}, 11826, 0x40, -1, 62, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_emerald, 0x00000000u, 0x00001000u, 0, 241, 0, 2, 15 }, /* 5860: Manalith */
@@ -17510,10 +17510,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Marsh Crocodile", {0}, 5258, 0x02, -1, 6, { 2, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_marsh_crocodile, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 5918: Marsh Crocodile */
   { 0, "Marsh Flats", {0}, 10606, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_marsh_flats, 0x00000000u, 0x00000001u, 0, 65, 0, 2, 10 }, /* 5919: Marsh Flats */
   { 0, "Marsh Flitter", {0}, 9207, 0x02, -1, 2, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_marsh_flitter, 0x00000020u, 0x00000001u, 0, 72, 0, 0, 50 }, /* 5920: Marsh Flitter */
-  { 0, "Marsh Gas", {0}, 365, 0x10, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_marsh_gas, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 5 }, /* 5921: Marsh Gas */
+  { 0, "Marsh Gas", {0}, 365, 0x10, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_marsh_gas, 0x00000000u, 0x00000000u, 0, 15, 1, 1, 5 }, /* 5921: Marsh Gas */
   { 0, "Marsh Goblins", {0}, 366, 0x02, 3, 18, { 2, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 5922: Marsh Goblins */
   { 0, "Marsh Threader", {0}, 10797, 0x02, -1, 32, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 5923: Marsh Threader */
-  { 0, "Marsh Viper", {0}, 939, 0x02, -1, 8, { 1, 3, 0 }, 1, 2, 0, 0, manalinkeh_card_marsh_viper, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 5924: Marsh Viper */
+  { 0, "Marsh Viper", {0}, 939, 0x02, -1, 8, { 1, 3, 0 }, 1, 2, 0, 0, manalinkeh_card_marsh_viper, 0x00000000u, 0x00000000u, 0, 8, 1, 255, 5 }, /* 5924: Marsh Viper */
   { 0, "Marshal's Anthem", {0}, 10798, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_marshals_anthem, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 75 }, /* 5925: Marshal's Anthem */
   { 0, "Marshaling Cry", {0}, 8972, 0x08, -1, 32, { 2, 1, 4 }, 0, 0, 0, 0, manalinkeh_card_marshaling_cry, 0x00000000u, 0x00000000u, 0, 241, 0, 0, 60 }, /* 5926: Marshaling Cry */
   { 0, "Marshmist Titan", {0}, 13748, 0x02, -1, 2, { 1, 6, 0 }, 4, 5, 1, 0, manalinkeh_card_marshmist_titan, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 5927: Marshmist Titan */
@@ -17528,9 +17528,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Martyr of Spores", {0}, 8413, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_martyr_of_spores, 0x00000000u, 0x00000001u, 0, 73, 0, 0, 50 }, /* 5936: Martyr of Spores */
   { 0, "Martyr's Bond", {0}, 11724, 0x04, -1, 32, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_martyrs_bond, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 100 }, /* 5937: Martyr's Bond */
   { 0, "Martyr's Cause", {0}, 4018, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_martyrs_cause, 0x00000000u, 0x00000005u, 0, 249, 0, 1, 75 }, /* 5938: Martyr's Cause */
-  { 0, "Martyr's Cry", {0}, 345, 0x08, -1, 32, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_martyrs_cry, 0x00000000u, 0x00000000u, 0, 9, 0, 255, 80 }, /* 5939: Martyr's Cry */
+  { 0, "Martyr's Cry", {0}, 345, 0x08, -1, 32, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_martyrs_cry, 0x00000000u, 0x00000000u, 0, 9, 8, 255, 80 }, /* 5939: Martyr's Cry */
   { 0, "Martyred Rusalka", {0}, 8088, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_martyred_rusalka, 0x00000000u, 0x00000001u, 0, 25, 0, 0, 20 }, /* 5940: Martyred Rusalka */
-  { 0, "Martyrs of Korlis", {0}, 505, 0x02, -1, 32, { 2, 3, 0 }, 1, 6, 0, 0, manalinkeh_card_martyrs_of_korlis, 0x00000000u, 0x00040000u, 0, 9, 0, 255, 20 }, /* 5941: Martyrs of Korlis */
+  { 0, "Martyrs of Korlis", {0}, 505, 0x02, -1, 32, { 2, 3, 0 }, 1, 6, 0, 0, manalinkeh_card_martyrs_of_korlis, 0x00000000u, 0x00040400u, 0, 9, 32, 255, 20 }, /* 5941: Martyrs of Korlis */
   { 0, "Mask of Avacyn", {0}, 12014, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mask_of_avacyn, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 40 }, /* 5942: Mask of Avacyn */
   { 0, "Mask of Memory", {0}, 6720, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mask_of_memory, 0x00000000u, 0x00000001u, 0, 153, 0, 0, 40 }, /* 5943: Mask of Memory */
   { 0, "Mask of Riddles", {0}, 10314, 0x40, -1, 6, { 2, 0, 1 }, 0, 0, 0, 0, manalinkeh_card_mask_of_riddles, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 60 }, /* 5944: Mask of Riddles */
@@ -17591,7 +17591,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Meditate", {0}, 1558, 0x10, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_meditate, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 105 }, /* 5999: Meditate */
   { 0, "Meditation Puzzle", {0}, 14133, 0x10, -1, 32, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_meditation_puzzle, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 6000: Meditation Puzzle */
   { 0, "Medomai the Agele", {0}, 13482, 0x02, 14, 36, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_medomai_the_ageless, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 6001: Medomai the Ageless */
-  { 0, "Meekstone", {0}, 159, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_meekstone, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 6002: Meekstone */
+  { 0, "Meekstone", {0}, 159, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_meekstone, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 60 }, /* 6002: Meekstone */
   { 0, "Megantic Sliver", {0}, 13314, 0x02, -1, 8, { 1, 5, 0 }, 3, 3, 0, 0, manalinkeh_card_megantic_sliver, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 70 }, /* 6003: Megantic Sliver */
   { 0, "Megatherium", {0}, 4529, 0x02, -1, 8, { 1, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_megatherium, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 6004: Megatherium */
   { 0, "Megatog", {0}, 6722, 0x02, -1, 16, { 2, 4, 0 }, 3, 4, 0, 0, manalinkeh_card_megatog, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 6005: Megatog */
@@ -17633,18 +17633,18 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Mercenary Knight", {0}, 2827, 0x02, -1, 2, { 1, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_hidden_horror, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 6041: Mercenary Knight */
   { 0, "Merchant of Secre", {0}, 1083, 0x02, -1, 4, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_carven_caryatid, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 5 }, /* 6042: Merchant of Secrets */
   { 0, "Merchant Scroll", {0}, 1084, 0x08, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_merchant_scroll, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 6043: Merchant Scroll */
-  { 0, "Merchant Ship", {0}, 440, 0x02, -1, 4, { 1, 0, 0 }, 0, 2, 0, 0, manalinkeh_card_merchant_ship, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 6044: Merchant Ship */
+  { 0, "Merchant Ship", {0}, 440, 0x02, -1, 4, { 1, 0, 0 }, 0, 2, 0, 0, manalinkeh_card_merchant_ship, 0x00000000u, 0x00000400u, 0, 8, 4, 2, 5 }, /* 6044: Merchant Ship */
   { 0, "Merciless Evictio", {0}, 13003, 0x08, -1, 34, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_merciless_eviction, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 6045: Merciless Eviction */
   { 0, "Merciless Predato", {0}, 12054, 0x02, -1, 16, { 0, 0, 0 }, 3, 2, 0, 0, manalinkeh_card_howlpack_of_estwald, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 0 }, /* 6046: Merciless Predator */
   { 0, "Mercurial Chemist", {0}, 12772, 0x02, -1, 20, { 2, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_mercurial_chemister, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 6047: Mercurial Chemister */
   { 0, "Mercurial Pretend", {0}, 14134, 0x02, -1, 4, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_mercurial_pretender, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 6048: Mercurial Pretender */
   { 0, "Mercy Killing", {0}, 9600, 0x10, -1, 40, { 1, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_mercy_killing, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 6049: Mercy Killing */
   { 0, "Merfolk", {0}, 18785, 0x02, 1, 4, { 0, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 6050: Merfolk */
-  { 0, "Merfolk Assassin", {0}, 940, 0x02, 1, 4, { 2, 0, 0 }, 1, 2, 0, 0, manalinkeh_card_merfolk_assassin, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 20 }, /* 6051: Merfolk Assassin */
+  { 0, "Merfolk Assassin", {0}, 940, 0x02, 1, 4, { 2, 0, 0 }, 1, 2, 0, 0, manalinkeh_card_merfolk_assassin, 0x00000000u, 0x00000001u, 0, 248, 8, 1, 20 }, /* 6051: Merfolk Assassin */
   { 0, "Merfolk Looter", {0}, 1565, 0x02, 1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_merfolk_looter, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 5 }, /* 6052: Merfolk Looter */
   { 0, "Merfolk Mesmerist", {0}, 11828, 0x02, 1, 4, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_merfolk_mesmerist, 0x00000000u, 0x00000001u, 0, 248, 0, 254, 9 }, /* 6053: Merfolk Mesmerist */
   { 0, "Merfolk of the De", {0}, 13004, 0x12, 1, 12, { 2, 4, 1 }, 4, 2, 1, 0, manalinkeh_card_merfolk_of_the_depths, 0x00000000u, 0x00000000u, 0, 2, 0, 0, 20 }, /* 6054: Merfolk of the Depths */
-  { 0, "Merfolk of the Pe", {0}, 160, 0x02, 1, 4, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 6055: Merfolk of the Pearl Trident */
+  { 0, "Merfolk of the Pe", {0}, 160, 0x02, 1, 4, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 6055: Merfolk of the Pearl Trident */
   { 0, "Merfolk Seastalke", {0}, 10607, 0x02, 1, 4, { 1, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_merfolk_seastalkers, 0x00000002u, 0x00000001u, 0, 57, 0, 1, 50 }, /* 6056: Merfolk Seastalkers */
   { 0, "Merfolk Sovereign", {0}, 10445, 0x02, 1, 4, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_merfolk_sovereign, 0x00000000u, 0x00000001u, 0, 25, 0, 2, 50 }, /* 6057: Merfolk Sovereign */
   { 0, "Merfolk Spy", {0}, 11148, 0x02, 1, 4, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_merfolk_spy, 0x00000002u, 0x00000000u, 0, 8, 0, 0, 4 }, /* 6058: Merfolk Spy */
@@ -17661,7 +17661,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Merrow Witsniper", {0}, 9384, 0x02, 1, 4, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_merrow_witsniper, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 6069: Merrow Witsniper */
   { 0, "Merseine", {0}, 1807, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_merseine, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 50 }, /* 6070: Merseine */
   { 0, "Mesa Enchantress", {0}, 8807, 0x02, -1, 32, { 2, 1, 0 }, 0, 2, 0, 0, manalinkeh_card_verduran_enchantress, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 20 }, /* 6071: Mesa Enchantress */
-  { 0, "Mesa Pegasus", {0}, 161, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, card_dummy, 0x00000060u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 6072: Mesa Pegasus */
+  { 0, "Mesa Pegasus", {0}, 161, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, card_dummy, 0x00000060u, 0x00000000u, 0, 8, 1, 1, 20 }, /* 6072: Mesa Pegasus */
   { 0, "Mesmeric Fiend", {0}, 5837, 0x02, -1, 2, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_mesmeric_fiend, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 6073: Mesmeric Fiend */
   { 0, "Mesmeric Orb", {0}, 6723, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mesmeric_orb, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 6074: Mesmeric Orb */
   { 0, "Mesmeric Sliver", {0}, 8974, 0x02, -1, 4, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_mesmeric_sliver, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 6075: Mesmeric Sliver */
@@ -17694,10 +17694,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Might of the Mass", {0}, 10993, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_might_of_the_masses, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 6102: Might of the Masses */
   { 0, "Might of the Neph", {0}, 8235, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_might_of_the_nephilim, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 6103: Might of the Nephilim */
   { 0, "Might Sliver", {0}, 1378, 0x02, -1, 8, { 1, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_might_sliver, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 35 }, /* 6104: Might Sliver */
-  { 0, "Mightstone", {0}, 506, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_mightstone, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 6105: Mightstone */
+  { 0, "Mightstone", {0}, 506, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_mightstone, 0x00000000u, 0x00000000u, 0, 1, 32, 1, 5 }, /* 6105: Mightstone */
   { 0, "Mighty Emergence", {0}, 10014, 0x04, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mighty_emergence, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 6106: Mighty Emergence */
   { 0, "Mighty Leap", {0}, 11149, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_mighty_leap, 0x00000000u, 0x00000000u, 0, 7, 0, 1, 60 }, /* 6107: Mighty Leap */
-  { 0, "Mijae Djinn", {0}, 442, 0x02, 6, 16, { 3, 0, 0 }, 6, 3, 0, 0, manalinkeh_card_mijae_djinn, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 25 }, /* 6108: Mijae Djinn */
+  { 0, "Mijae Djinn", {0}, 442, 0x02, 6, 16, { 3, 0, 0 }, 6, 3, 0, 0, manalinkeh_card_mijae_djinn, 0x00000000u, 0x00000c00u, 0, 8, 4, 1, 25 }, /* 6108: Mijae Djinn */
   { 0, "Mikaeus, the Luna", {0}, 12022, 0x02, 14, 32, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_mikaeus_the_lunarch, 0x00000000u, 0x00000019u, 0, 88, 0, 2, 75 }, /* 6109: Mikaeus, the Lunarch */
   { 0, "Mikaeus, the Unha", {0}, 12232, 0x02, 14, 2, { 3, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_mikaeus_the_unhallowed, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 100 }, /* 6110: Mikaeus, the Unhallowed */
   { 0, "Mikokoro, Center ", {0}, 7694, 0x01, 15, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mikokoro_center_of_the_sea, 0x00000000u, 0x00001001u, 0, 153, 0, 0, 10 }, /* 6111: Mikokoro, Center of the Sea */
@@ -17705,14 +17705,14 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Militia's Pride", {0}, 9211, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_militias_pride, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 6113: Militia's Pride */
   { 0, "Millennial Gargoy", {0}, 13007, 0x42, -1, 1, { 0, 4, 0 }, 2, 2, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 6114: Millennial Gargoyle */
   { 0, "Millikin", {0}, 5611, 0x42, -1, 1, { 0, 2, 0 }, 0, 1, 0, 0, manalinkeh_card_millikin, 0x00000000u, 0x00001000u, 0, 248, 0, 0, 21 }, /* 6115: Millikin */
-  { 0, "Millstone", {0}, 507, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_millstone, 0x00000000u, 0x00000001u, 0, 248, 0, 254, 6 }, /* 6116: Millstone */
+  { 0, "Millstone", {0}, 507, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_millstone, 0x00000000u, 0x00000001u, 0, 248, 1, 254, 6 }, /* 6116: Millstone */
   { 0, "Mimeofacture", {0}, 8089, 0x08, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_mimeofacture, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 6117: Mimeofacture */
   { 0, "Mimic Vat", {0}, 11305, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_mimic_vat, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 100 }, /* 6118: Mimic Vat */
   { 0, "Miming Slime", {0}, 13008, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_miming_slime, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 6119: Miming Slime */
   { 0, "Minamo Scrollkeep", {0}, 7695, 0x02, -1, 4, { 1, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_minamo_scrollkeeper, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 6120: Minamo Scrollkeeper */
   { 0, "Minamo, School at", {0}, 7304, 0x01, 15, 4, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_minamo_school_at_waters_edge, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 6121: Minamo, School at Water's Edge */
   { 0, "Mind Bend", {0}, 1086, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mind_bend, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 40 }, /* 6122: Mind Bend */
-  { 0, "Mind Bomb", {0}, 346, 0x08, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mind_bomb, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 6123: Mind Bomb */
+  { 0, "Mind Bomb", {0}, 346, 0x08, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mind_bomb, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 60 }, /* 6123: Mind Bomb */
   { 0, "Mind Burst", {0}, 5612, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_mind_burst, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 6124: Mind Burst */
   { 0, "Mind Control", {0}, 10446, 0x04, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_control_magic, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 45 }, /* 6125: Mind Control */
   { 0, "Mind Funeral", {0}, 10317, 0x08, -1, 6, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_mind_funeral, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 70 }, /* 6126: Mind Funeral */
@@ -17727,7 +17727,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Mind Slash", {0}, 1088, 0x04, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_mind_slash, 0x00000000u, 0x00000041u, 0, 17, 0, 1, 1 }, /* 6135: Mind Slash */
   { 0, "Mind Sludge", {0}, 1089, 0x08, -1, 2, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_mind_sludge, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 60 }, /* 6136: Mind Sludge */
   { 0, "Mind Stone", {0}, 3009, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mind_stone, 0x00000000u, 0x00001001u, 0, 137, 0, 2, 15 }, /* 6137: Mind Stone */
-  { 0, "Mind Twist", {0}, 162, 0x08, -1, 2, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_mind_twist, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 100 }, /* 6138: Mind Twist */
+  { 0, "Mind Twist", {0}, 162, 0x08, -1, 2, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_mind_twist, 0x00000000u, 0x00000100u, 0, 1, 1, 3, 100 }, /* 6138: Mind Twist */
   { 0, "Mind Unbound", {0}, 11829, 0x04, -1, 4, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_mind_unbound, 0x00000000u, 0x00000040u, 0, 1, 0, 2, 60 }, /* 6139: Mind Unbound */
   { 0, "Mind's Desire", {0}, 6552, 0x08, -1, 4, { 2, 4, 1 }, 0, 0, 1, 0, manalinkeh_card_minds_desire, 0x00000000u, 0x00000001u, 0, 8, 0, 1, 150 }, /* 6140: Mind's Desire */
   { 0, "Mind's Eye", {0}, 6724, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_minds_eye, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 6141: Mind's Eye */
@@ -17769,7 +17769,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Minotaur Explorer", {0}, 5615, 0x02, -1, 16, { 1, 1, 0 }, 3, 3, 0, 0, manalinkeh_card_minotaur_explorer, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 6177: Minotaur Explorer */
   { 0, "Minotaur Skullcle", {0}, 13485, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_minotaur_skullcleaver, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 6178: Minotaur Skullcleaver */
   { 0, "Minotaur Warrior", {0}, 2891, 0x02, -1, 16, { 1, 2, 0 }, 2, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 6179: Minotaur Warrior */
-  { 0, "Miracle Worker", {0}, 941, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_miracle_worker, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 50 }, /* 6180: Miracle Worker */
+  { 0, "Miracle Worker", {0}, 941, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_miracle_worker, 0x00000000u, 0x00000001u, 0, 248, 8, 1, 50 }, /* 6180: Miracle Worker */
   { 0, "Miraculous Recove", {0}, 2743, 0x10, -1, 32, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_miracolous_recovery, 0x00000000u, 0x00000000u, 0, 10, 0, 1, 35 }, /* 6181: Miraculous Recovery */
   { 0, "Mirari", {0}, 5616, 0x40, 14, 1, { 0, 5, 1 }, 0, 0, 1, 0, manalinkeh_card_mirari2, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 150 }, /* 6182: Mirari */
   { 0, "Mirari's Wake", {0}, 5975, 0x04, -1, 40, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_miraris_wake, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 100 }, /* 6183: Mirari's Wake */
@@ -17800,10 +17800,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Misfortune", {0}, 2317, 0x08, -1, 26, { 3, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_misfortune, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 6208: Misfortune */
   { 0, "Misguided Rage", {0}, 6554, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_misguided_rage, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 6209: Misguided Rage */
   { 0, "Mishra, Artificer", {0}, 8607, 0x02, 14, 22, { 3, 1, 0 }, 4, 4, 0, 0, manalinkeh_card_mishra_artificer_prodigy, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 70 }, /* 6210: Mishra, Artificer Prodigy */
-  { 0, "Mishra's Factory", {0}, 508, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mishras_factory, 0x00000000u, 0x00001001u, 0, 113, 0, 2, 35 }, /* 6211: Mishra's Factory */
+  { 0, "Mishra's Factory", {0}, 508, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mishras_factory, 0x00000000u, 0x00001401u, 0, 113, 1, 2, 35 }, /* 6211: Mishra's Factory */
   { 0, "Mishra's Helix", {0}, 3828, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_mishras_helix, 0x00000000u, 0x00020001u, 0, 152, 0, 0, 75 }, /* 6212: Mishra's Helix */
-  { 0, "Mishra's War Mach", {0}, 509, 0x42, -1, 1, { 0, 7, 0 }, 5, 5, 0, 0, manalinkeh_card_mishras_war_machine, 0x00000040u, 0x00000001u, 0, 24, 0, 1, 50 }, /* 6213: Mishra's War Machine */
-  { 0, "Mishra's Workshop", {0}, 510, 0x01, -1, 64, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mishras_workshop, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 100 }, /* 6214: Mishra's Workshop */
+  { 0, "Mishra's War Mach", {0}, 509, 0x42, -1, 1, { 0, 7, 0 }, 5, 5, 0, 0, manalinkeh_card_mishras_war_machine, 0x00000040u, 0x00000401u, 0, 24, 1, 1, 50 }, /* 6213: Mishra's War Machine */
+  { 0, "Mishra's Workshop", {0}, 510, 0x01, -1, 64, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mishras_workshop, 0x00000000u, 0x00001500u, 0, 1, 32, 2, 100 }, /* 6214: Mishra's Workshop */
   { 0, "Misstep", {0}, 4537, 0x08, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_misstep, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 6215: Misstep */
   { 0, "Mist Dragon", {0}, 2546, 0x02, -1, 4, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_mist_dragon, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 100 }, /* 6216: Mist Dragon */
   { 0, "Mist of Stagnatio", {0}, 5977, 0x04, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_mist_of_stagnation, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 6217: Mist of Stagnation */
@@ -17828,7 +17828,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Mnemonic Sliver", {0}, 3205, 0x02, -1, 4, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_mnemonic_sliver, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 6236: Mnemonic Sliver */
   { 0, "Mnemonic Wall", {0}, 10994, 0x02, -1, 4, { 1, 4, 0 }, 0, 4, 0, 0, manalinkeh_card_archaeomancer, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 6237: Mnemonic Wall */
   { 0, "Moan of the Unhal", {0}, 12025, 0x08, -1, 2, { 2, 2, 9 }, 0, 0, 1, 0, manalinkeh_card_moans_of_the_unhallowed, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 6238: Moan of the Unhallowed */
-  { 0, "Moat", {0}, 726, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_moat, 0x00000000u, 0x04000000u, 0, 9, 0, 3, 15 }, /* 6239: Moat */
+  { 0, "Moat", {0}, 726, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_moat, 0x00000000u, 0x04000000u, 0, 9, 16, 3, 15 }, /* 6239: Moat */
   { 0, "Mob Justice", {0}, 3395, 0x08, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_mob_justice, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 6240: Mob Justice */
   { 0, "Mobilization", {0}, 6212, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_mobilization, 0x00000000u, 0x00000001u, 0, 49, 0, 0, 60 }, /* 6241: Mobilization */
   { 0, "Mogg Bombers", {0}, 3396, 0x02, 3, 16, { 1, 3, 0 }, 3, 4, 0, 0, manalinkeh_card_mogg_bombers, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 6242: Mogg Bombers */
@@ -17847,7 +17847,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Mogis's Marauder", {0}, 13487, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_mogiss_marauder, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 6255: Mogis's Marauder */
   { 0, "Mogis's Warhound", {0}, 13932, 0x06, -1, 16, { 1, 1, 0 }, 2, 2, 1, 0, manalinkeh_card_mogiss_warhound, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 6256: Mogis's Warhound */
   { 0, "Mogis's Warhound ", {0}, 13933, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 1, 0, manalinkeh_card_mogiss_warhound, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 6257: Mogis's Warhound Bestowed */
-  { 0, "Mold Demon", {0}, 727, 0x02, -1, 2, { 2, 5, 0 }, 6, 6, 0, 0, manalinkeh_card_mold_demon, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 6258: Mold Demon */
+  { 0, "Mold Demon", {0}, 727, 0x02, -1, 2, { 2, 5, 0 }, 6, 6, 0, 0, manalinkeh_card_mold_demon, 0x00000000u, 0x00000000u, 0, 8, 16, 2, 50 }, /* 6258: Mold Demon */
   { 0, "Mold Shambler", {0}, 10613, 0x02, -1, 8, { 1, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_mold_shambler, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 75 }, /* 6259: Mold Shambler */
   { 0, "Molder", {0}, 8609, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_molder2, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 6260: Molder */
   { 0, "Molder Beast", {0}, 11306, 0x02, -1, 8, { 1, 4, 0 }, 5, 3, 0, 0, manalinkeh_card_molder_beast, 0x00000080u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 6261: Molder Beast */
@@ -17882,7 +17882,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Monk Realist", {0}, 3831, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_monk_realist, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 30 }, /* 6290: Monk Realist */
   { 0, "Monkey Cage", {0}, 4540, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_monkey_cage, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 6291: Monkey Cage */
   { 0, "Monomania", {0}, 11830, 0x08, -1, 2, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_monomania, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 20 }, /* 6292: Monomania */
-  { 0, "Mons's Goblin Rai", {0}, 163, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 6293: Mons's Goblin Raiders */
+  { 0, "Mons's Goblin Rai", {0}, 163, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 6293: Mons's Goblin Raiders */
   { 0, "Monstrify", {0}, 9826, 0x08, -1, 8, { 1, 3, 10 }, 0, 0, 0, 0, manalinkeh_card_monstrify, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 6294: Monstrify */
   { 0, "Monstrous Carabid", {0}, 10319, 0x02, -1, 18, { 2, 3, 4 }, 4, 4, 0, 0, manalinkeh_card_monstrous_carabid, 0x00000000u, 0x01000000u, 0, 248, 0, 0, 50 }, /* 6295: Monstrous Carabid */
   { 0, "Monstrous Growth", {0}, 1091, 0x08, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_monstrous_growth, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 5 }, /* 6296: Monstrous Growth */
@@ -17899,10 +17899,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Moonsilver Spear", {0}, 12428, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_moonsilver_spear, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 80 }, /* 6307: Moonsilver Spear */
   { 0, "Moonveil Dragon", {0}, 12235, 0x02, -1, 16, { 3, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_moonveil_dragon, 0x00000020u, 0x00000009u, 0, 65, 0, 3, 100 }, /* 6308: Moonveil Dragon */
   { 0, "Moor Fiend", {0}, 1704, 0x02, -1, 2, { 1, 3, 0 }, 3, 3, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 6309: Moor Fiend */
-  { 0, "Moorish Cavalry", {0}, 443, 0x02, -1, 32, { 2, 2, 0 }, 3, 3, 0, 0, card_dummy, 0x00000080u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 6310: Moorish Cavalry */
+  { 0, "Moorish Cavalry", {0}, 443, 0x02, -1, 32, { 2, 2, 0 }, 3, 3, 0, 0, card_dummy, 0x00000080u, 0x00000400u, 0, 8, 4, 2, 5 }, /* 6310: Moorish Cavalry */
   { 0, "Moorland Haunt", {0}, 12030, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_moorland_haunt, 0x00000000u, 0x00001001u, 0, 41, 0, 2, 19 }, /* 6311: Moorland Haunt */
   { 0, "Moorland Inquisit", {0}, 12429, 0x02, -1, 32, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_moorland_inquisitor, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 50 }, /* 6312: Moorland Inquisitor */
-  { 0, "Morale", {0}, 347, 0x10, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_morale, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 65 }, /* 6313: Morale */
+  { 0, "Morale", {0}, 347, 0x10, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_morale, 0x00000000u, 0x00000000u, 0, 4, 1, 0, 65 }, /* 6313: Morale */
   { 0, "Morality Shift", {0}, 5978, 0x08, -1, 2, { 2, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_morality_shift, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 6314: Morality Shift */
   { 0, "Moratorium Stone", {0}, 8091, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_moratorium_stone, 0x00000000u, 0x00000001u, 0, 152, 0, 0, 80 }, /* 6315: Moratorium Stone */
   { 0, "Morbid Plunder", {0}, 11485, 0x08, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_morbid_plunder, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 9 }, /* 6316: Morbid Plunder */
@@ -17934,7 +17934,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Mortus Strider", {0}, 13012, 0x02, -1, 6, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_endless_cockroaches, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 6342: Mortus Strider */
   { 0, "Mosquito Guard", {0}, 9389, 0x02, -1, 32, { 1, 0, 4 }, 1, 1, 0, 0, manalinkeh_card_mosquito_guard, 0x00000100u, 0x00000000u, 0, 72, 0, 0, 20 }, /* 6343: Mosquito Guard */
   { 0, "Moss Diamond", {0}, 2547, 0x40, -1, 8, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_moss_diamond, 0x00000000u, 0x00001000u, 0, 248, 0, 1, 25 }, /* 6344: Moss Diamond */
-  { 0, "Moss Monster", {0}, 728, 0x02, -1, 8, { 2, 3, 0 }, 3, 6, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 6345: Moss Monster */
+  { 0, "Moss Monster", {0}, 728, 0x02, -1, 8, { 2, 3, 0 }, 3, 6, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 16, 255, 5 }, /* 6345: Moss Monster */
   { 0, "Mossbridge Troll", {0}, 9610, 0x02, -1, 8, { 2, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_mossbridge_troll, 0x00000200u, 0x00000001u, 0, 72, 0, 0, 100 }, /* 6346: Mossbridge Troll */
   { 0, "Mossfire Egg", {0}, 5622, 0x40, -1, 24, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_mossfire_egg, 0x00000000u, 0x00011001u, 0, 249, 0, 0, 10 }, /* 6347: Mossfire Egg */
   { 0, "Mossfire Valley", {0}, 5623, 0x01, -1, 24, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mossfire_valley, 0x00000000u, 0x00011000u, 0, 9, 0, 0, 10 }, /* 6348: Mossfire Valley */
@@ -17944,18 +17944,18 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Mother of Runes", {0}, 4022, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_mother_of_runes, 0x00000000u, 0x00000001u, 0, 56, 0, 3, 100 }, /* 6352: Mother of Runes */
   { 0, "Mountain Bandit", {0}, 4315, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_ambush_party, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 6353: Mountain Bandit */
   { 0, "Mountain Valley", {0}, 2548, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mountain_valley, 0x00000000u, 0x00000001u, 0, 153, 0, 0, 10 }, /* 6354: Mountain Valley */
-  { 0, "Mountain Yeti", {0}, 730, 0x02, -1, 16, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_black_knight, 0x00000008u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 6355: Mountain Yeti */
+  { 0, "Mountain Yeti", {0}, 730, 0x02, -1, 16, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_black_knight, 0x00000008u, 0x00000000u, 0, 8, 16, 1, 50 }, /* 6355: Mountain Yeti */
   { 0, "Mounted Archers", {0}, 3212, 0x02, -1, 32, { 1, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_mounted_archers, 0x00000400u, 0x00100001u, 0, 40, 0, 0, 50 }, /* 6356: Mounted Archers */
   { 0, "Mourning Thrull", {0}, 8092, 0x02, -1, 34, { 1, 1, 1 }, 1, 1, 1, 0, manalinkeh_card_mourning_thrull, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 6357: Mourning Thrull */
   { 0, "Mournwhelk", {0}, 9216, 0x02, -1, 2, { 1, 6, 1 }, 3, 3, 1, 0, manalinkeh_card_mournwhelk, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 6358: Mournwhelk */
   { 0, "Mouth of Ronom", {0}, 8415, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mouth_of_ronom, 0x00000000u, 0x00001001u, 0, 241, 0, 2, 75 }, /* 6359: Mouth of Ronom */
   { 0, "Mox Diamond", {0}, 1546, 0x40, -1, 62, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_diamond, 0x00000000u, 0x00001000u, 0, 9, 0, 3, 15 }, /* 6360: Mox Diamond */
-  { 0, "Mox Emerald", {0}, 165, 0x40, -1, 8, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_emerald, 0x00000000u, 0x00001000u, 0, 9, 0, 3, 200 }, /* 6361: Mox Emerald */
-  { 0, "Mox Jet", {0}, 166, 0x40, -1, 2, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_emerald, 0x00000000u, 0x00001000u, 0, 9, 0, 3, 200 }, /* 6362: Mox Jet */
+  { 0, "Mox Emerald", {0}, 165, 0x40, -1, 8, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_emerald, 0x00000000u, 0x00001180u, 0, 9, 2, 3, 200 }, /* 6361: Mox Emerald */
+  { 0, "Mox Jet", {0}, 166, 0x40, -1, 2, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_emerald, 0x00000000u, 0x00001180u, 0, 9, 2, 3, 200 }, /* 6362: Mox Jet */
   { 0, "Mox Opal", {0}, 11311, 0x40, 14, 62, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_opal, 0x00000000u, 0x00001000u, 0, 9, 0, 3, 15 }, /* 6363: Mox Opal */
-  { 0, "Mox Pearl", {0}, 167, 0x40, -1, 32, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_emerald, 0x00000000u, 0x00001000u, 0, 9, 0, 3, 200 }, /* 6364: Mox Pearl */
-  { 0, "Mox Ruby", {0}, 168, 0x40, -1, 16, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_emerald, 0x00000000u, 0x00001000u, 0, 9, 0, 3, 200 }, /* 6365: Mox Ruby */
-  { 0, "Mox Sapphire", {0}, 169, 0x40, -1, 4, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_emerald, 0x00000000u, 0x00001000u, 0, 9, 0, 3, 200 }, /* 6366: Mox Sapphire */
+  { 0, "Mox Pearl", {0}, 167, 0x40, -1, 32, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_emerald, 0x00000000u, 0x00001180u, 0, 9, 2, 3, 200 }, /* 6364: Mox Pearl */
+  { 0, "Mox Ruby", {0}, 168, 0x40, -1, 16, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_emerald, 0x00000000u, 0x00001180u, 0, 9, 2, 3, 200 }, /* 6365: Mox Ruby */
+  { 0, "Mox Sapphire", {0}, 169, 0x40, -1, 4, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_mox_emerald, 0x00000000u, 0x00001180u, 0, 9, 2, 3, 200 }, /* 6366: Mox Sapphire */
   { 0, "Mtenda Griffin", {0}, 2549, 0x02, -1, 32, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_mtenda_griffin, 0x00000020u, 0x00000001u, 0, 24, 0, 0, 50 }, /* 6367: Mtenda Griffin */
   { 0, "Mtenda Herder", {0}, 2550, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_jolraels_centaur, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 6368: Mtenda Herder */
   { 0, "Mtenda Lion", {0}, 2551, 0x02, -1, 8, { 1, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_mtenda_lion, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 6369: Mtenda Lion */
@@ -17978,7 +17978,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Murderous Cut", {0}, 14333, 0x10, -1, 2, { 1, 4, 1 }, 0, 0, 1, 0, manalinkeh_card_murderous_cut, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 6386: Murderous Cut */
   { 0, "Murderous Redcap", {0}, 9613, 0x02, 3, 18, { 2, 2, 1 }, 2, 2, 1, 0, manalinkeh_card_murderous_redcap, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 50 }, /* 6387: Murderous Redcap */
   { 0, "Murderous Spoils", {0}, 6919, 0x10, -1, 2, { 1, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_murderous_spoils, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 6388: Murderous Spoils */
-  { 0, "Murk Dwellers", {0}, 371, 0x02, 2, 2, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_murk_dwellers, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 6389: Murk Dwellers */
+  { 0, "Murk Dwellers", {0}, 371, 0x02, 2, 2, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_murk_dwellers, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 6389: Murk Dwellers */
   { 0, "Murkfiend Liege", {0}, 9828, 0x02, -1, 12, { 3, 2, 1 }, 4, 4, 1, 0, manalinkeh_card_murkfiend_liege, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 6390: Murkfiend Liege */
   { 0, "Murmuring Bosk", {0}, 9392, 0x01, 12, 42, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_murmuring_bosk, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 10 }, /* 6391: Murmuring Bosk */
   { 0, "Murmuring Phantas", {0}, 13183, 0x02, -1, 4, { 1, 1, 0 }, 0, 5, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 6392: Murmuring Phantasm */
@@ -18043,10 +18043,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Mythic Proportion", {0}, 6213, 0x04, -1, 8, { 3, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_mythic_proportions, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 6451: Mythic Proportions */
   { 0, "Nacatl Outlander", {0}, 10178, 0x02, -1, 24, { 2, 0, 0 }, 2, 2, 0, 0, card_dummy, 0x00001000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 6452: Nacatl Outlander */
   { 0, "Nacatl Savage", {0}, 10179, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00010000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 6453: Nacatl Savage */
-  { 0, "Nafs Asp", {0}, 444, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_nafs_asp, 0x00000000u, 0x00000020u, 0, 8, 0, 1, 5 }, /* 6454: Nafs Asp */
+  { 0, "Nafs Asp", {0}, 444, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_nafs_asp, 0x00000000u, 0x00000020u, 0, 8, 1, 1, 5 }, /* 6454: Nafs Asp */
   { 0, "Nagao, Bound by H", {0}, 7315, 0x02, 14, 32, { 1, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_nagao_bound_by_honor, 0x00000000u, 0x00000018u, 0, 8, 0, 0, 50 }, /* 6455: Nagao, Bound by Honor */
   { 0, "Nahiri, the Litho", {0}, 14476, 0x04, 14, 32, { 2, 3, 9 }, 0, 0, 0, 0, manalinkeh_card_nahiri_the_lithomancer, 0x00000000u, 0x00400001u, 0, 17, 0, 0, 60 }, /* 6456: Nahiri, the Lithomancer */
-  { 0, "Nalathni Dragon", {0}, 895, 0x02, -1, 16, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_dragon_whelp, 0x00000060u, 0x00000009u, 0, 72, 0, 2, 50 }, /* 6457: Nalathni Dragon */
+  { 0, "Nalathni Dragon", {0}, 895, 0x02, -1, 16, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_dragon_whelp, 0x00000060u, 0x00000809u, 0, 72, 128, 2, 50 }, /* 6457: Nalathni Dragon */
   { 0, "Nameless Inversio", {0}, 9218, 0x10, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_nameless_inversion, 0x00080000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 6458: Nameless Inversion */
   { 0, "Nameless One", {0}, 6214, 0x02, -1, 4, { 1, 3, 1 }, 16384, 16384, 1, 0, manalinkeh_card_nameless_one, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 6459: Nameless One */
   { 0, "Nameless Race", {0}, 378, 0x02, -1, 2, { 1, 3, 0 }, 16384, 16384, 0, 0, manalinkeh_card_nameless_race, 0x00000080u, 0x00000000u, 0, 8, 0, 1, 41 }, /* 6460: Nameless Race */
@@ -18073,7 +18073,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Natural Balance", {0}, 2552, 0x08, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_natural_balance, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 100 }, /* 6481: Natural Balance */
   { 0, "Natural End", {0}, 12431, 0x10, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_natural_end, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 6482: Natural End */
   { 0, "Natural Order", {0}, 2748, 0x08, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_natural_order, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 100 }, /* 6483: Natural Order */
-  { 0, "Natural Selection", {0}, 170, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_natural_selection, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 6484: Natural Selection */
+  { 0, "Natural Selection", {0}, 170, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_natural_selection, 0x00000000u, 0x00000000u, 0, 1, 2, 0, 5 }, /* 6484: Natural Selection */
   { 0, "Naturalize", {0}, 1096, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_disenchant, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 95 }, /* 6485: Naturalize */
   { 0, "Nature's Blessing", {0}, 2321, 0x04, -1, 40, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_natures_blessing, 0x00000000u, 0x00000001u, 0, 73, 0, 1, 50 }, /* 6486: Nature's Blessing */
   { 0, "Nature's Chosen", {0}, 2322, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_natures_chosen, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 40 }, /* 6487: Nature's Chosen */
@@ -18116,7 +18116,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Necroplasm", {0}, 7910, 0x02, -1, 2, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_necroplasm, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 6524: Necroplasm */
   { 0, "Necropolis", {0}, 348, 0x42, -1, 1, { 0, 5, 0 }, 0, 1, 0, 0, manalinkeh_card_necropolis, 0x00800000u, 0x00000011u, 0, 72, 0, 3, 46 }, /* 6525: Necropolis */
   { 0, "Necropolis Fiend", {0}, 14337, 0x02, -1, 2, { 2, 7, 1 }, 4, 5, 1, 0, manalinkeh_card_necropolis_fiend, 0x00000020u, 0x00000001u, 0, 248, 0, 0, 70 }, /* 6526: Necropolis Fiend */
-  { 0, "Necropolis of Aza", {0}, 871, 0x04, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_necropolis_of_azar, 0x00000000u, 0x00000021u, 0, 33, 0, 0, 40 }, /* 6527: Necropolis of Azar */
+  { 0, "Necropolis of Aza", {0}, 871, 0x04, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_necropolis_of_azar, 0x00000000u, 0x00000821u, 0, 33, 64, 0, 40 }, /* 6527: Necropolis of Azar */
   { 0, "Necropolis Regent", {0}, 12776, 0x02, -1, 2, { 3, 3, 0 }, 6, 5, 0, 0, manalinkeh_card_necropolis_regent, 0x00000020u, 0x00000001u, 0, 25, 0, 0, 100 }, /* 6528: Necropolis Regent */
   { 0, "Necropotence", {0}, 2050, 0x04, -1, 2, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_necropotence, 0x00000000u, 0x00000001u, 0, 17, 0, 254, 5 }, /* 6529: Necropotence */
   { 0, "Necropouncer", {0}, 11645, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_necropouncer, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 30 }, /* 6530: Necropouncer */
@@ -18155,7 +18155,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Nesting Wurm", {0}, 4722, 0x02, -1, 8, { 2, 4, 0 }, 4, 3, 0, 0, manalinkeh_card_squadron_hawk, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 6563: Nesting Wurm */
   { 0, "Netcaster Spider", {0}, 14140, 0x02, -1, 8, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_netcaster_spider, 0x00000400u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 6564: Netcaster Spider */
   { 0, "Nether Horror", {0}, 11153, 0x02, -1, 2, { 1, 3, 0 }, 4, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 6 }, /* 6565: Nether Horror */
-  { 0, "Nether Shadow", {0}, 171, 0x02, -1, 2, { 2, 0, 5 }, 1, 1, 0, 0, manalinkeh_card_nshadow, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 6566: Nether Shadow */
+  { 0, "Nether Shadow", {0}, 171, 0x02, -1, 2, { 2, 0, 5 }, 1, 1, 0, 0, manalinkeh_card_nshadow, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 5 }, /* 6566: Nether Shadow */
   { 0, "Nether Spirit", {0}, 4543, 0x02, -1, 2, { 2, 1, 5 }, 2, 2, 0, 0, manalinkeh_card_nether_spirit, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 6567: Nether Spirit */
   { 0, "Nether Traitor", {0}, 8616, 0x02, -1, 2, { 2, 0, 2 }, 1, 1, 0, 0, manalinkeh_card_nether_traitor, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 6568: Nether Traitor */
   { 0, "Nether Void", {0}, 732, 0x04, 16, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_nether_void, 0x00000000u, 0x40000000u, 0, 8, 0, 2, 8 }, /* 6569: Nether Void */
@@ -18163,7 +18163,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Nettle Sentinel", {0}, 9831, 0x02, -1, 8, { 1, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_nettle_sentinel, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 59 }, /* 6571: Nettle Sentinel */
   { 0, "Nettle Swine", {0}, 12435, 0x02, -1, 8, { 1, 3, 0 }, 4, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 6572: Nettle Swine */
   { 0, "Nettletooth Djinn", {0}, 1411, 0x02, 6, 8, { 1, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_juzam_djinn, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 55 }, /* 6573: Nettletooth Djinn */
-  { 0, "Nettling Imp", {0}, 172, 0x02, -1, 2, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_nettling_imp, 0x00000000u, 0x01000001u, 0, 24, 0, 2, 5 }, /* 6574: Nettling Imp */
+  { 0, "Nettling Imp", {0}, 172, 0x02, -1, 2, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_nettling_imp, 0x00000000u, 0x01000001u, 0, 24, 2, 2, 5 }, /* 6574: Nettling Imp */
   { 0, "Neurok Commando", {0}, 11491, 0x02, -1, 4, { 2, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_neurok_commando, 0x00020000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 6575: Neurok Commando */
   { 0, "Neurok Familiar", {0}, 6740, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_neurok_familiar, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 6576: Neurok Familiar */
   { 0, "Neurok Invisimanc", {0}, 11321, 0x02, -1, 4, { 2, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_neurok_invisimancer, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 59 }, /* 6577: Neurok Invisimancer */
@@ -18172,7 +18172,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Neverending Torme", {0}, 7701, 0x08, -1, 2, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_neverending_torment, 0x00000000u, 0x40000000u, 0, 8, 0, 0, 60 }, /* 6580: Neverending Torment */
   { 0, "Nevermaker", {0}, 9396, 0x02, -1, 4, { 1, 3, 1 }, 2, 3, 1, 0, manalinkeh_card_nevermaker, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 6581: Nevermaker */
   { 0, "Nevermore", {0}, 12034, 0x04, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_nevermore, 0x00000000u, 0x40000000u, 0, 9, 0, 2, 1 }, /* 6582: Nevermore */
-  { 0, "Nevinyrral's Disk", {0}, 173, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_nevinyrrals_disk, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 100 }, /* 6583: Nevinyrral's Disk */
+  { 0, "Nevinyrral's Disk", {0}, 173, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_nevinyrrals_disk, 0x00000000u, 0x00000001u, 0, 248, 1, 2, 100 }, /* 6583: Nevinyrral's Disk */
   { 0, "New Benalia", {0}, 8982, 0x01, -1, 32, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_new_benalia, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 10 }, /* 6584: New Benalia */
   { 0, "New Frontiers", {0}, 5636, 0x08, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_new_frontiers, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 6585: New Frontiers */
   { 0, "New Prahv Guildma", {0}, 12777, 0x02, -1, 36, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_new_prahv_guildmage, 0x00000000u, 0x00000001u, 0, 57, 0, 0, 50 }, /* 6586: New Prahv Guildmage */
@@ -18199,7 +18199,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Nightguard Patrol", {0}, 7912, 0x02, -1, 32, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_serra_angel, 0x00000100u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 6607: Nightguard Patrol */
   { 0, "Nighthowler", {0}, 13490, 0x06, -1, 2, { 2, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_nighthowler, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 6608: Nighthowler */
   { 0, "Nighthowler Besto", {0}, 13491, 0x04, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_nighthowler, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 6609: Nighthowler Bestowed */
-  { 0, "Nightmare", {0}, 174, 0x02, -1, 2, { 1, 5, 0 }, 16384, 16384, 0, 0, manalinkeh_card_nightmare2, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 55 }, /* 6610: Nightmare */
+  { 0, "Nightmare", {0}, 174, 0x02, -1, 2, { 1, 5, 0 }, 16384, 16384, 0, 0, manalinkeh_card_nightmare2, 0x00000020u, 0x00000000u, 0, 8, 1, 2, 55 }, /* 6610: Nightmare */
   { 0, "Nightmare Incursi", {0}, 9832, 0x08, -1, 2, { 1, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_nightmare_incursion, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 6611: Nightmare Incursion */
   { 0, "Nightmare Lash", {0}, 6743, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_nightmare_lash, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 40 }, /* 6612: Nightmare Lash */
   { 0, "Nightmare Void", {0}, 7913, 0x08, -1, 2, { 1, 3, 6 }, 0, 0, 0, 0, manalinkeh_card_nightmare_void, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 6613: Nightmare Void */
@@ -18275,7 +18275,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Norin the Wary", {0}, 8618, 0x02, 14, 16, { 1, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_norin_the_wary, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 5 }, /* 6683: Norin the Wary */
   { 0, "Norn's Annex", {0}, 11646, 0x40, -1, 32, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_norns_annex, 0x00000000u, 0x00400000u, 0, 8, 0, 2, 75 }, /* 6684: Norn's Annex */
   { 0, "North Star", {0}, 734, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_north_star, 0x00000000u, 0x00000003u, 0, 8, 0, 0, 100 }, /* 6685: North Star */
-  { 0, "Northern Paladin", {0}, 175, 0x02, -1, 32, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_northern_paladin, 0x00000000u, 0x00000001u, 0, 24, 0, 1, 35 }, /* 6686: Northern Paladin */
+  { 0, "Northern Paladin", {0}, 175, 0x02, -1, 32, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_northern_paladin, 0x00000000u, 0x00000001u, 0, 24, 1, 1, 35 }, /* 6686: Northern Paladin */
   { 0, "Norwood Priestess", {0}, 3638, 0x02, -1, 8, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_norwood_priestess, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 50 }, /* 6687: Norwood Priestess */
   { 0, "Norwood Ranger", {0}, 1099, 0x02, -1, 8, { 1, 0, 0 }, 1, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 6688: Norwood Ranger */
   { 0, "Nostalgic Dreams", {0}, 5848, 0x08, -1, 8, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_nostalgic_dreams, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 9 }, /* 6689: Nostalgic Dreams */
@@ -18335,7 +18335,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Oak Street Innkee", {0}, 12781, 0x02, -1, 8, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_oak_street_innkeeper, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 6743: Oak Street Innkeeper */
   { 0, "Oakgnarl Warrior", {0}, 9229, 0x02, -1, 8, { 2, 5, 0 }, 5, 7, 0, 0, manalinkeh_card_serra_angel, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 6744: Oakgnarl Warrior */
   { 0, "Oakheart Dryads", {0}, 13941, 0x06, -1, 8, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_oakheart_dryads, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 6745: Oakheart Dryads */
-  { 0, "Oasis", {0}, 445, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_oasis, 0x00000000u, 0x00000005u, 0, 241, 0, 1, 5 }, /* 6746: Oasis */
+  { 0, "Oasis", {0}, 445, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_oasis, 0x00000000u, 0x00000005u, 0, 241, 1, 1, 5 }, /* 6746: Oasis */
   { 0, "Oath of Druids", {0}, 3522, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_oath_of_druids, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 6747: Oath of Druids */
   { 0, "Oath of Ghouls", {0}, 3523, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_oath_of_ghouls, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 6748: Oath of Ghouls */
   { 0, "Oath of Lieges", {0}, 3524, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_oath_of_lieges, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 6749: Oath of Lieges */
@@ -18354,7 +18354,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Obelisk of Grixis", {0}, 10025, 0x40, -1, 22, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_obelisk_of_bant, 0x00000000u, 0x00001000u, 0, 241, 0, 0, 10 }, /* 6762: Obelisk of Grixis */
   { 0, "Obelisk of Jund", {0}, 10026, 0x40, -1, 26, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_obelisk_of_bant, 0x00000000u, 0x00001000u, 0, 241, 0, 0, 10 }, /* 6763: Obelisk of Jund */
   { 0, "Obelisk of Naya", {0}, 10027, 0x40, -1, 56, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_obelisk_of_bant, 0x00000000u, 0x00001000u, 0, 241, 0, 0, 10 }, /* 6764: Obelisk of Naya */
-  { 0, "Obelisk of Undoin", {0}, 511, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_obelisk_of_undoing, 0x00000000u, 0x00000001u, 0, 241, 0, 1, 15 }, /* 6765: Obelisk of Undoing */
+  { 0, "Obelisk of Undoin", {0}, 511, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_obelisk_of_undoing, 0x00000000u, 0x00000401u, 0, 241, 8, 1, 15 }, /* 6765: Obelisk of Undoing */
   { 0, "Obelisk of Urd", {0}, 14146, 0x40, -1, 1, { 0, 6, 1 }, 0, 0, 1, 0, manalinkeh_card_obelisk_of_urd, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 6766: Obelisk of Urd */
   { 0, "Oblation", {0}, 6218, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_oblation, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 6767: Oblation */
   { 0, "Obliterate", {0}, 1100, 0x08, -1, 16, { 2, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_obliterate, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 80 }, /* 6768: Obliterate */
@@ -18364,7 +18364,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Observant Alseid", {0}, 13501, 0x06, -1, 32, { 1, 2, 1 }, 2, 2, 1, 0, manalinkeh_card_observant_alseid, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 6772: Observant Alseid */
   { 0, "Observant Alseid ", {0}, 13502, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_observant_alseid, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 6773: Observant Alseid Bestowed */
   { 0, "Obsessive Search", {0}, 5849, 0x10, -1, 4, { 1, 0, 11 }, 0, 0, 0, 0, manalinkeh_card_obsessive_search, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 6774: Obsessive Search */
-  { 0, "Obsianus Golem", {0}, 176, 0x42, -1, 1, { 0, 6, 0 }, 4, 6, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 55 }, /* 6775: Obsianus Golem */
+  { 0, "Obsianus Golem", {0}, 176, 0x42, -1, 1, { 0, 6, 0 }, 4, 6, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 55 }, /* 6775: Obsianus Golem */
   { 0, "Obsidian Battle-A", {0}, 9400, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_obsidian_battle_axe, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 50 }, /* 6776: Obsidian Battle-Axe */
   { 0, "Obsidian Firehear", {0}, 10624, 0x02, -1, 16, { 3, 1, 0 }, 4, 4, 0, 0, manalinkeh_card_obsidian_fireheart, 0x00000000u, 0x00000001u, 0, 136, 0, 3, 50 }, /* 6777: Obsidian Fireheart */
   { 0, "Obstinate Baloth", {0}, 11155, 0x02, -1, 8, { 2, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_staunch_defenders, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 70 }, /* 6778: Obstinate Baloth */
@@ -18393,7 +18393,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Okiba-Gang Shinob", {0}, 7528, 0x02, 7, 2, { 2, 3, 4 }, 3, 2, 0, 0, manalinkeh_card_okiba_gang_shinobi, 0x00000000u, 0x00000000u, 0, 72, 0, 2, 50 }, /* 6801: Okiba-Gang Shinobi */
   { 0, "Okina, Temple to ", {0}, 7329, 0x01, 15, 8, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_okina_temple_to_the_grandfathers, 0x00000000u, 0x00001001u, 0, 65, 0, 0, 10 }, /* 6802: Okina, Temple to the Grandfathers */
   { 0, "Okk", {0}, 1102, 0x02, 3, 16, { 1, 1, 0 }, 4, 4, 0, 0, manalinkeh_card_okk, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 6803: Okk */
-  { 0, "Old Man of the Se", {0}, 446, 0x02, 6, 4, { 2, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_old_man_of_the_sea, 0x00000000u, 0x00000001u, 0, 24, 0, 3, 5 }, /* 6804: Old Man of the Sea */
+  { 0, "Old Man of the Se", {0}, 446, 0x02, 6, 4, { 2, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_old_man_of_the_sea, 0x00000000u, 0x00000001u, 0, 24, 4, 3, 5 }, /* 6804: Old Man of the Sea */
   { 0, "Olivia Voldaren", {0}, 12038, 0x02, 14, 18, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_olivia_voldaren, 0x00000020u, 0x00000019u, 0, 249, 0, 3, 100 }, /* 6805: Olivia Voldaren */
   { 0, "Oloro, Ageless As", {0}, 13628, 0x02, 14, 38, { 3, 3, 0 }, 4, 5, 0, 0, manalinkeh_card_oloro_ageless_ascetic, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 6806: Oloro, Ageless Ascetic */
   { 0, "Omen", {0}, 2854, 0x08, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_omen2, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 6807: Omen */
@@ -18409,7 +18409,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Oni of Wild Place", {0}, 7710, 0x02, -1, 16, { 1, 5, 0 }, 6, 5, 0, 0, manalinkeh_card_oni_of_the_wild_places, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 6817: Oni of Wild Places */
   { 0, "Oni Possession", {0}, 7330, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_oni_possession, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 6818: Oni Possession */
   { 0, "Onslaught", {0}, 3528, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_onslaught, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 60 }, /* 6819: Onslaught */
-  { 0, "Onulet", {0}, 512, 0x42, -1, 1, { 0, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_onulet, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 15 }, /* 6820: Onulet */
+  { 0, "Onulet", {0}, 512, 0x42, -1, 1, { 0, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_onulet, 0x00000000u, 0x00000000u, 0, 8, 1, 2, 15 }, /* 6820: Onulet */
   { 0, "Onyx Goblet", {0}, 10028, 0x40, -1, 2, { 1, 2, 1 }, 0, 0, 0, 0, manalinkeh_card_onyx_goblet, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 6821: Onyx Goblet */
   { 0, "Onyx Mage", {0}, 11831, 0x02, -1, 2, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_onyx_mage, 0x00000000u, 0x00000001u, 0, 49, 0, 2, 45 }, /* 6822: Onyx Mage */
   { 0, "Oona, Queen of th", {0}, 9619, 0x02, 14, 6, { 3, 3, 1 }, 5, 5, 1, 0, manalinkeh_card_oona_queen_of_the_fae, 0x00000020u, 0x00020001u, 0, 56, 0, 3, 150 }, /* 6823: Oona, Queen of the Fae */
@@ -18459,13 +18459,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Orc General", {0}, 349, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_orc_general, 0x00000000u, 0x00000001u, 0, 72, 0, 3, 32 }, /* 6867: Orc General */
   { 0, "Orchard Spirit", {0}, 12040, 0x02, -1, 8, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_orchard_spirit, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 6868: Orchard Spirit */
   { 0, "Orchard Warden", {0}, 9403, 0x02, -1, 8, { 2, 4, 0 }, 4, 6, 0, 0, manalinkeh_card_orchard_warden, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 6869: Orchard Warden */
-  { 0, "Orcish Artillery", {0}, 177, 0x02, -1, 16, { 2, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_orcish_artillery, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 30 }, /* 6870: Orcish Artillery */
+  { 0, "Orcish Artillery", {0}, 177, 0x02, -1, 16, { 2, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_orcish_artillery, 0x00000000u, 0x00000001u, 0, 248, 1, 0, 30 }, /* 6870: Orcish Artillery */
   { 0, "Orcish Cannonade", {0}, 8622, 0x10, -1, 16, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_orcish_cannonade, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 6871: Orcish Cannonade */
   { 0, "Orcish Captain", {0}, 1811, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_orcish_captain, 0x00000000u, 0x00000009u, 0, 73, 0, 3, 30 }, /* 6872: Orcish Captain */
-  { 0, "Orcish Catapult", {0}, 869, 0x10, -1, 16, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_orcish_catapult, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 6873: Orcish Catapult */
+  { 0, "Orcish Catapult", {0}, 869, 0x10, -1, 16, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_orcish_catapult, 0x00000000u, 0x00000800u, 0, 15, 64, 0, 40 }, /* 6873: Orcish Catapult */
   { 0, "Orcish Lumberjack", {0}, 2059, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_orcish_lumberjack, 0x00000000u, 0x00001003u, 0, 248, 0, 2, 21 }, /* 6874: Orcish Lumberjack */
-  { 0, "Orcish Mechanics", {0}, 513, 0x02, 9, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_orcish_mechanic, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 25 }, /* 6875: Orcish Mechanics */
-  { 0, "Orcish Oriflamme", {0}, 178, 0x04, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_orcish_oriflamme, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 35 }, /* 6876: Orcish Oriflamme */
+  { 0, "Orcish Mechanics", {0}, 513, 0x02, 9, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_orcish_mechanic, 0x00000000u, 0x00000401u, 0, 136, 32, 0, 25 }, /* 6875: Orcish Mechanics */
+  { 0, "Orcish Oriflamme", {0}, 178, 0x04, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_orcish_oriflamme, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 35 }, /* 6876: Orcish Oriflamme */
   { 0, "Orcish Settlers", {0}, 3021, 0x02, -1, 16, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_orcish_settlers, 0x00000000u, 0x00020001u, 0, 248, 0, 1, 50 }, /* 6877: Orcish Settlers */
   { 0, "Orcish Spy", {0}, 1104, 0x02, 9, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_orcish_spy, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 5 }, /* 6878: Orcish Spy */
   { 0, "Orcish Veteran", {0}, 1812, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_orcish_veteran, 0x00000000u, 0x00000001u, 0, 88, 0, 1, 30 }, /* 6879: Orcish Veteran */
@@ -18496,7 +18496,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Orim's Thunder", {0}, 5411, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_orims_thunder, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 6904: Orim's Thunder */
   { 0, "Oriss, Samite Gua", {0}, 8987, 0x02, 14, 32, { 2, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_oriss_samite_guardian, 0x00000000u, 0x00000001u, 0, 88, 0, 0, 50 }, /* 6905: Oriss, Samite Guardian */
   { 0, "Ornitharch", {0}, 13775, 0x02, -1, 32, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_ornitharch, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 6906: Ornitharch */
-  { 0, "Ornithopter", {0}, 514, 0x42, -1, 1, { 0, 0, 0 }, 0, 2, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 6907: Ornithopter */
+  { 0, "Ornithopter", {0}, 514, 0x42, -1, 1, { 0, 0, 0 }, 0, 2, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 6907: Ornithopter */
   { 0, "Orochi Eggwatcher", {0}, 7334, 0x02, -1, 8, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_orochi_eggwatcher, 0x00000000u, 0x00000001u, 0, 104, 0, 0, 50 }, /* 6908: Orochi Eggwatcher */
   { 0, "Orochi Hatchery", {0}, 7336, 0x40, -1, 1, { 0, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_orochi_hatchery, 0x00000000u, 0x00000001u, 0, 40, 0, 0, 40 }, /* 6909: Orochi Hatchery */
   { 0, "Orochi Leafcaller", {0}, 7337, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_orochi_leafcaller, 0x00000000u, 0x00011000u, 0, 249, 0, 0, 21 }, /* 6910: Orochi Leafcaller */
@@ -18512,11 +18512,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Orzhov Pontiff", {0}, 8100, 0x02, -1, 34, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_orzhov_pontiff, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 6920: Orzhov Pontiff */
   { 0, "Orzhov Signet", {0}, 1721, 0x40, -1, 34, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_orzhov_signet, 0x00000000u, 0x00011001u, 0, 249, 0, 0, 10 }, /* 6921: Orzhov Signet */
   { 0, "Orzhova, the Chur", {0}, 8101, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_orzhova_the_church_of_deals, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 6922: Orzhova, the Church of Deals */
-  { 0, "Osai Vultures", {0}, 736, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_osai_vultures, 0x00000020u, 0x00000039u, 0, 72, 0, 1, 5 }, /* 6923: Osai Vultures */
+  { 0, "Osai Vultures", {0}, 736, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_osai_vultures, 0x00000020u, 0x00000039u, 0, 72, 1, 1, 5 }, /* 6923: Osai Vultures */
   { 0, "Ostracize", {0}, 4029, 0x08, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ostracize, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 6924: Ostracize */
   { 0, "Otherworld Atlas", {0}, 12437, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_otherworld_atlas, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 60 }, /* 6925: Otherworld Atlas */
   { 0, "Otherworldly Jour", {0}, 7340, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_otherworldly_journey, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 6926: Otherworldly Journey */
-  { 0, "Oubliette", {0}, 447, 0x04, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_oubliette, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 80 }, /* 6927: Oubliette */
+  { 0, "Oubliette", {0}, 447, 0x04, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_oubliette, 0x00000000u, 0x00000400u, 0, 9, 4, 2, 80 }, /* 6927: Oubliette */
   { 0, "Oust", {0}, 11011, 0x08, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_oust, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 65 }, /* 6928: Oust */
   { 0, "Outrider en-Kor", {0}, 8623, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_outrider_en_kor, 0x00000000u, 0x00000005u, 0, 248, 0, 0, 50 }, /* 6929: Outrider en-Kor */
   { 0, "Outwit", {0}, 12438, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_outwit, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 40 }, /* 6930: Outwit */
@@ -18575,7 +18575,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Palladium Myr", {0}, 11331, 0x42, -1, 1, { 0, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_palladium_myr, 0x00000000u, 0x00001000u, 0, 241, 0, 2, 59 }, /* 6983: Palladium Myr */
   { 0, "Pallid Mycoderm", {0}, 8819, 0x02, -1, 32, { 1, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_pallid_mycoderm, 0x00000000u, 0x00000001u, 0, 120, 0, 0, 20 }, /* 6984: Pallid Mycoderm */
   { 0, "Pandemonium", {0}, 3529, 0x04, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_pandemonium, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 100 }, /* 6985: Pandemonium */
-  { 0, "Pandora's Box", {0}, 863, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_pandoras_box, 0x00000000u, 0x00000001u, 0, 24, 0, 254, 40 }, /* 6986: Pandora's Box */
+  { 0, "Pandora's Box", {0}, 863, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_pandoras_box, 0x00000000u, 0x00000801u, 0, 24, 64, 254, 40 }, /* 6986: Pandora's Box */
   { 0, "Pang Tong, \042Young", {0}, 4225, 0x02, 14, 32, { 2, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_pang_tong_young_phoenix, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 20 }, /* 6987: Pang Tong, "Young Phoenix" */
   { 0, "Pangosaur", {0}, 4549, 0x02, -1, 8, { 2, 2, 0 }, 6, 6, 0, 0, manalinkeh_card_pangosaur, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 6988: Pangosaur */
   { 0, "Panic Attack", {0}, 1105, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_panic_attack, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 6989: Panic Attack */
@@ -18599,7 +18599,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Parallectric Feed", {0}, 8103, 0x30, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_parallectric_feedback, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 40 }, /* 7007: Parallectric Feedback */
   { 0, "Parallel Evolutio", {0}, 5852, 0x08, -1, 8, { 2, 3, 9 }, 0, 0, 0, 0, manalinkeh_card_parallel_evolution, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 7008: Parallel Evolution */
   { 0, "Parallel Lives", {0}, 12041, 0x04, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_parallel_lives, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 1 }, /* 7009: Parallel Lives */
-  { 0, "Paralyze", {0}, 179, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_paralyze, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 50 }, /* 7010: Paralyze */
+  { 0, "Paralyze", {0}, 179, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_paralyze, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 50 }, /* 7010: Paralyze */
   { 0, "Paralyzing Grasp", {0}, 10630, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_paralyzing_grasp, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 7011: Paralyzing Grasp */
   { 0, "Paranoid Delusion", {0}, 13027, 0x08, -1, 6, { 2, 0, 1 }, 0, 0, 0, 0, manalinkeh_card_paranoid_delusion, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 7012: Paranoid Delusions */
   { 0, "Parapet", {0}, 2754, 0x14, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_parapet, 0x00000000u, 0x00000000u, 0, 5, 0, 0, 60 }, /* 7013: Parapet */
@@ -18648,7 +18648,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Pearl Lake Ancien", {0}, 14340, 0x12, -1, 4, { 2, 5, 0 }, 6, 7, 0, 0, manalinkeh_card_pearl_lake_ancient, 0x00000000u, 0x00000001u, 0, 242, 0, 0, 70 }, /* 7056: Pearl Lake Ancient */
   { 0, "Pearl Medallion", {0}, 3225, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_pearl_medallion, 0x00000000u, 0x40000000u, 0, 9, 0, 2, 75 }, /* 7057: Pearl Medallion */
   { 0, "Pearl Shard", {0}, 6754, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_pearl_shard, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 40 }, /* 7058: Pearl Shard */
-  { 0, "Pearled Unicorn", {0}, 180, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 7059: Pearled Unicorn */
+  { 0, "Pearled Unicorn", {0}, 180, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 7059: Pearled Unicorn */
   { 0, "Peat Bog", {0}, 4550, 0x01, -1, 2, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_peat_bog, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 7060: Peat Bog */
   { 0, "Peek", {0}, 5652, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_peek, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 7061: Peek */
   { 0, "Peel from Reality", {0}, 7920, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_peel_from_reality, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 7062: Peel from Reality */
@@ -18671,7 +18671,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Penumbra Bobcat", {0}, 5413, 0x02, -1, 8, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_penumbra_bobcat, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 7079: Penumbra Bobcat */
   { 0, "Penumbra Spider", {0}, 8630, 0x02, -1, 8, { 2, 2, 0 }, 2, 4, 0, 0, manalinkeh_card_penumbra_spider, 0x00000400u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 7080: Penumbra Spider */
   { 0, "Penumbra Wurm", {0}, 5415, 0x02, -1, 8, { 2, 5, 0 }, 6, 6, 0, 0, manalinkeh_card_penumbra_wurm, 0x00000080u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 7081: Penumbra Wurm */
-  { 0, "People of the Woo", {0}, 323, 0x02, -1, 8, { 2, 0, 0 }, 1, 16384, 0, 0, manalinkeh_card_people_of_the_woods, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 7082: People of the Woods */
+  { 0, "People of the Woo", {0}, 323, 0x02, -1, 8, { 2, 0, 0 }, 1, 16384, 0, 0, manalinkeh_card_people_of_the_woods, 0x00000000u, 0x00000000u, 0, 8, 8, 2, 5 }, /* 7082: People of the Woods */
   { 0, "Peppersmoke", {0}, 9233, 0x10, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_peppersmoke, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 7083: Peppersmoke */
   { 0, "Peregrination", {0}, 13777, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_peregrination, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 7084: Peregrination */
   { 0, "Peregrine Drake", {0}, 1343, 0x02, -1, 4, { 1, 4, 0 }, 2, 3, 0, 0, manalinkeh_card_peregrine_drake, 0x00000020u, 0x00000000u, 0, 9, 0, 1, 20 }, /* 7085: Peregrine Drake */
@@ -18685,12 +18685,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Permafrost Trap", {0}, 10807, 0x10, -1, 4, { 2, 2, 13 }, 0, 0, 0, 0, manalinkeh_card_permafrost_trap, 0x00000000u, 0x00000000u, 0, 3, 0, 0, 40 }, /* 7093: Permafrost Trap */
   { 0, "Pernicious Deed", {0}, 5416, 0x04, -1, 10, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_pernicious_deed, 0x00000000u, 0x00020001u, 0, 241, 0, 1, 80 }, /* 7094: Pernicious Deed */
   { 0, "Persecute", {0}, 1108, 0x08, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_persecute, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 75 }, /* 7095: Persecute */
-  { 0, "Personal Incarnat", {0}, 181, 0x02, -1, 32, { 3, 3, 0 }, 6, 6, 0, 0, manalinkeh_card_personal_incarnation, 0x00000000u, 0x00000005u, 0, 248, 0, 1, 75 }, /* 7096: Personal Incarnation */
+  { 0, "Personal Incarnat", {0}, 181, 0x02, -1, 32, { 3, 3, 0 }, 6, 6, 0, 0, manalinkeh_card_personal_incarnation, 0x00000000u, 0x00000005u, 0, 248, 1, 1, 75 }, /* 7096: Personal Incarnation */
   { 0, "Personal Sanctuar", {0}, 11833, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_personal_sanctuary, 0x00000000u, 0x00000000u, 0, 241, 0, 0, 40 }, /* 7097: Personal Sanctuary */
   { 0, "Personal Tutor", {0}, 1520, 0x08, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_personal_tutor, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 30 }, /* 7098: Personal Tutor */
   { 0, "Pest", {0}, 18800, 0x42, -1, 1, { 0, 0, 0 }, 0, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 0 }, /* 7099: Pest */
   { 0, "Pestermite", {0}, 9234, 0x12, -1, 4, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_pestermite, 0x00000020u, 0x00000000u, 0, 2, 0, 1, 59 }, /* 7100: Pestermite */
-  { 0, "Pestilence", {0}, 182, 0x04, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_pestilence, 0x00000000u, 0x00000001u, 0, 241, 0, 1, 60 }, /* 7101: Pestilence */
+  { 0, "Pestilence", {0}, 182, 0x04, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_pestilence, 0x00000000u, 0x00000001u, 0, 241, 1, 1, 60 }, /* 7101: Pestilence */
   { 0, "Pestilence Demon", {0}, 11018, 0x02, -1, 2, { 3, 5, 0 }, 7, 6, 0, 0, manalinkeh_card_pestilence_demon, 0x00000020u, 0x00000001u, 0, 241, 0, 3, 125 }, /* 7102: Pestilence Demon */
   { 0, "Pestilence Rats", {0}, 2064, 0x02, 7, 2, { 1, 2, 0 }, 16384, 3, 0, 0, manalinkeh_card_pestilence_rats, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 7103: Pestilence Rats */
   { 0, "Pestilent Souleat", {0}, 11652, 0x42, -1, 1, { 0, 5, 0 }, 3, 3, 0, 0, manalinkeh_card_pestilent_souleater, 0x00000000u, 0x00000001u, 0, 72, 0, 2, 39 }, /* 7104: Pestilent Souleater */
@@ -18705,14 +18705,14 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Phantasmal Bear", {0}, 11834, 0x02, -1, 4, { 1, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_skulking_ghost, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 7113: Phantasmal Bear */
   { 0, "Phantasmal Dragon", {0}, 11835, 0x02, -1, 4, { 2, 2, 0 }, 5, 5, 0, 0, manalinkeh_card_skulking_ghost, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 7114: Phantasmal Dragon */
   { 0, "Phantasmal Fiend", {0}, 2326, 0x02, -1, 2, { 1, 3, 0 }, 1, 5, 0, 0, manalinkeh_card_phantasmal_fiend, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 7115: Phantasmal Fiend */
-  { 0, "Phantasmal Forces", {0}, 183, 0x02, -1, 4, { 1, 3, 0 }, 4, 1, 0, 0, manalinkeh_card_phantasmal_forces, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 7116: Phantasmal Forces */
+  { 0, "Phantasmal Forces", {0}, 183, 0x02, -1, 4, { 1, 3, 0 }, 4, 1, 0, 0, manalinkeh_card_phantasmal_forces, 0x00000020u, 0x00000000u, 0, 8, 1, 1, 75 }, /* 7116: Phantasmal Forces */
   { 0, "Phantasmal Image", {0}, 11836, 0x02, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_phantasmal_image, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 75 }, /* 7117: Phantasmal Image */
-  { 0, "Phantasmal Terrai", {0}, 184, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_phantasmal_terrain, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 7118: Phantasmal Terrain */
+  { 0, "Phantasmal Terrai", {0}, 184, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_phantasmal_terrain, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 20 }, /* 7118: Phantasmal Terrain */
   { 0, "Phantatog", {0}, 5655, 0x02, -1, 36, { 2, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_phantatog, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 7119: Phantatog */
   { 0, "Phantom Beast", {0}, 11157, 0x02, -1, 4, { 1, 3, 0 }, 4, 5, 0, 0, manalinkeh_card_phantom_beast, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 35 }, /* 7120: Phantom Beast */
   { 0, "Phantom Centaur", {0}, 5984, 0x02, -1, 8, { 2, 2, 0 }, 2, 0, 0, 0, manalinkeh_card_phantom_centaur, 0x00000800u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 7121: Phantom Centaur */
   { 0, "Phantom General", {0}, 12786, 0x02, -1, 32, { 1, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_phantom_general, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 7122: Phantom General */
-  { 0, "Phantom Monster", {0}, 185, 0x02, -1, 4, { 1, 3, 0 }, 3, 3, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 3, 75 }, /* 7123: Phantom Monster */
+  { 0, "Phantom Monster", {0}, 185, 0x02, -1, 4, { 1, 3, 0 }, 3, 3, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 1, 3, 75 }, /* 7123: Phantom Monster */
   { 0, "Phantom Nantuko", {0}, 5986, 0x02, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_phantom_nantuko, 0x00000080u, 0x00000001u, 0, 72, 0, 0, 50 }, /* 7124: Phantom Nantuko */
   { 0, "Phantom Nishoba", {0}, 5987, 0x02, -1, 40, { 2, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_phantom_nishoba, 0x00000080u, 0x00000000u, 0, 8, 0, 3, 100 }, /* 7125: Phantom Nishoba */
   { 0, "Phantom Nomad", {0}, 5988, 0x02, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_phantom_nomad, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 7126: Phantom Nomad */
@@ -18752,7 +18752,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Phyrexian Furnace", {0}, 3026, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_phyrexian_furnace, 0x00000000u, 0x00000001u, 0, 152, 0, 0, 15 }, /* 7160: Phyrexian Furnace */
   { 0, "Phyrexian Gargant", {0}, 5417, 0x02, -1, 2, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_phyrexian_gargantua, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 7161: Phyrexian Gargantua */
   { 0, "Phyrexian Ghoul", {0}, 3852, 0x02, 2, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_nantuko_husk, 0x00000000u, 0x00000019u, 0, 72, 0, 2, 35 }, /* 7162: Phyrexian Ghoul */
-  { 0, "Phyrexian Gremlin", {0}, 515, 0x02, -1, 2, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_phyrexian_gremlins, 0x00000000u, 0x00000001u, 0, 24, 0, 1, 20 }, /* 7163: Phyrexian Gremlins */
+  { 0, "Phyrexian Gremlin", {0}, 515, 0x02, -1, 2, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_phyrexian_gremlins, 0x00000000u, 0x00000401u, 0, 24, 32, 1, 20 }, /* 7163: Phyrexian Gremlins */
   { 0, "Phyrexian Hulk", {0}, 1112, 0x42, -1, 1, { 0, 6, 0 }, 5, 4, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 39 }, /* 7164: Phyrexian Hulk */
   { 0, "Phyrexian Hydra", {0}, 11498, 0x02, -1, 8, { 2, 3, 0 }, 7, 7, 0, 0, manalinkeh_card_phyrexian_hydra, 0x20000000u, 0x00000000u, 0, 8, 0, 3, 100 }, /* 7165: Phyrexian Hydra */
   { 0, "Phyrexian Infiltr", {0}, 5060, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_phyrexian_infiltrator, 0x00000000u, 0x00000001u, 0, 57, 0, 0, 50 }, /* 7166: Phyrexian Infiltrator */
@@ -18787,9 +18787,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Phytotitan", {0}, 14153, 0x02, -1, 8, { 2, 4, 0 }, 7, 2, 0, 0, manalinkeh_card_phytotitan, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 7195: Phytotitan */
   { 0, "Pianna, Nomad Cap", {0}, 5657, 0x02, 14, 32, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_pianna_nomad_captain, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 7196: Pianna, Nomad Captain */
   { 0, "Pierce Strider", {0}, 11503, 0x42, -1, 1, { 0, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_pierce_strider, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 59 }, /* 7197: Pierce Strider */
-  { 0, "Piety", {0}, 448, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_piety2, 0x00000000u, 0x00000000u, 0, 4, 0, 255, 40 }, /* 7198: Piety */
+  { 0, "Piety", {0}, 448, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_piety2, 0x00000000u, 0x00000400u, 0, 4, 1, 255, 40 }, /* 7198: Piety */
   { 0, "Piety Charm", {0}, 6224, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_piety_charm, 0x00000000u, 0x00000000u, 0, 5, 0, 0, 60 }, /* 7199: Piety Charm */
-  { 0, "Pikemen", {0}, 942, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, card_dummy, 0x00000140u, 0x00000000u, 0, 8, 0, 2, 25 }, /* 7200: Pikemen */
+  { 0, "Pikemen", {0}, 942, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, card_dummy, 0x00000140u, 0x00000000u, 0, 8, 1, 2, 25 }, /* 7200: Pikemen */
   { 0, "Pilfered Plans", {0}, 13191, 0x08, -1, 6, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_pilfered_plans, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 7201: Pilfered Plans */
   { 0, "Pilgrim's Eye", {0}, 10808, 0x42, -1, 1, { 0, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_pilgrims_eye, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 10 }, /* 7202: Pilgrim's Eye */
   { 0, "Pili-Pala", {0}, 9625, 0x42, -1, 1, { 0, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_pili_pala, 0x00000020u, 0x00001001u, 0, 8, 0, 0, 21 }, /* 7203: Pili-Pala */
@@ -18809,25 +18809,25 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Pious Kitsune", {0}, 7347, 0x02, -1, 32, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_pious_kitsune, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 7217: Pious Kitsune */
   { 0, "Piracy Charm", {0}, 8821, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_piracy_charm, 0x00000000u, 0x00000000u, 0, 7, 0, 1, 60 }, /* 7218: Piracy Charm */
   { 0, "Piranha Marsh", {0}, 10632, 0x01, -1, 2, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_piranha_marsh, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 15 }, /* 7219: Piranha Marsh */
-  { 0, "Pirate Ship", {0}, 186, 0x02, -1, 4, { 1, 4, 0 }, 4, 3, 0, 0, manalinkeh_card_pirate_ship, 0x00000000u, 0x00000001u, 0, 248, 0, 3, 20 }, /* 7220: Pirate Ship */
+  { 0, "Pirate Ship", {0}, 186, 0x02, -1, 4, { 1, 4, 0 }, 4, 3, 0, 0, manalinkeh_card_pirate_ship, 0x00000000u, 0x00000001u, 0, 248, 1, 3, 20 }, /* 7220: Pirate Ship */
   { 0, "Piston Sledge", {0}, 11504, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_piston_sledge, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 20 }, /* 7221: Piston Sledge */
   { 0, "Pistus Strike", {0}, 11505, 0x10, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_pistus_strike, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 49 }, /* 7222: Pistus Strike */
   { 0, "Pit Fight", {0}, 13028, 0x10, -1, 24, { 1, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_pit_fight, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 7223: Pit Fight */
   { 0, "Pit Keeper", {0}, 8634, 0x02, -1, 2, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_pit_keeper, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 7224: Pit Keeper */
-  { 0, "Pit Scorpion", {0}, 742, 0x02, -1, 2, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_pit_scorpion, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 7225: Pit Scorpion */
+  { 0, "Pit Scorpion", {0}, 742, 0x02, -1, 2, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_pit_scorpion, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 7225: Pit Scorpion */
   { 0, "Pit Spawn", {0}, 3534, 0x02, -1, 2, { 3, 4, 0 }, 6, 4, 0, 0, manalinkeh_card_pit_spawn, 0x00000100u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 7226: Pit Spawn */
   { 0, "Pit Trap", {0}, 2066, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_pit_trap, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 50 }, /* 7227: Pit Trap */
   { 0, "Pitchburn Devils", {0}, 12044, 0x02, -1, 16, { 1, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_pitchburn_devils, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 7228: Pitchburn Devils */
   { 0, "Pitfall Trap", {0}, 10633, 0x10, -1, 32, { 1, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_pitfall_trap, 0x00000000u, 0x00000000u, 0, 6, 0, 2, 75 }, /* 7229: Pitfall Trap */
   { 0, "Pith Driller", {0}, 11659, 0x42, -1, 2, { 1, 4, 1 }, 2, 4, 1, 0, manalinkeh_card_pith_driller, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 39 }, /* 7230: Pith Driller */
   { 0, "Pithing Needle", {0}, 7715, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_pithing_needle, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 40 }, /* 7231: Pithing Needle */
-  { 0, "Pixie Queen", {0}, 743, 0x02, -1, 8, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_pixie_queen, 0x00000020u, 0x00000001u, 0, 56, 0, 2, 20 }, /* 7232: Pixie Queen */
+  { 0, "Pixie Queen", {0}, 743, 0x02, -1, 8, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_pixie_queen, 0x00000020u, 0x00000001u, 0, 56, 16, 2, 20 }, /* 7232: Pixie Queen */
   { 0, "Plagiarize", {0}, 5860, 0x10, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_plagiarize, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 7233: Plagiarize */
   { 0, "Plague Beetle", {0}, 1114, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 7234: Plague Beetle */
   { 0, "Plague Boiler", {0}, 7925, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_plague_boiler, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 80 }, /* 7235: Plague Boiler */
   { 0, "Plague Myr", {0}, 11506, 0x42, -1, 1, { 0, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_generic_noncombat_1_mana_producing_creature, 0x20000000u, 0x00001000u, 0, 248, 0, 255, 50 }, /* 7236: Plague Myr */
   { 0, "Plague of Vermin", {0}, 9626, 0x08, -1, 2, { 1, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_plague_of_vermin, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 7237: Plague of Vermin */
-  { 0, "Plague Rats", {0}, 187, 0x02, 7, 2, { 1, 2, 0 }, 16384, 16384, 0, 0, manalinkeh_card_plague_rats, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 7238: Plague Rats */
+  { 0, "Plague Rats", {0}, 187, 0x02, 7, 2, { 1, 2, 0 }, 16384, 16384, 0, 0, manalinkeh_card_plague_rats, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 5 }, /* 7238: Plague Rats */
   { 0, "Plague Sliver", {0}, 8635, 0x02, -1, 2, { 2, 2, 0 }, 5, 5, 0, 0, manalinkeh_card_plague_sliver, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 7239: Plague Sliver */
   { 0, "Plague Spitter", {0}, 5065, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_plague_spitter, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 7240: Plague Spitter */
   { 0, "Plague Spores", {0}, 5066, 0x08, -1, 18, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_plague_spores, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 7241: Plague Spores */
@@ -18868,7 +18868,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Plumeveil", {0}, 9627, 0x12, -1, 36, { 3, 0, 1 }, 4, 4, 1, 0, manalinkeh_card_merfolk_of_the_depths, 0x00800020u, 0x00000000u, 0, 2, 0, 2, 55 }, /* 7276: Plumeveil */
   { 0, "Plummet", {0}, 11159, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_wing_snare, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 40 }, /* 7277: Plummet */
   { 0, "Plunge into Darkn", {0}, 7101, 0x10, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_plunge_into_darkness, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 7278: Plunge into Darkness */
-  { 0, "Poison Snake", {0}, 887, 0x42, -1, 1, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_pit_scorpion, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 0 }, /* 7279: Poison Snake */
+  { 0, "Poison Snake", {0}, 887, 0x42, -1, 1, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_pit_scorpion, 0x00000000u, 0x00000000u, 0, 9, 16, 0, 0 }, /* 7279: Poison Snake */
   { 0, "Polar Kraken", {0}, 2067, 0x02, -1, 4, { 3, 8, 0 }, 11, 11, 0, 0, manalinkeh_card_polar_kraken, 0x00000080u, 0x00000000u, 0, 8, 0, 3, 150 }, /* 7280: Polar Kraken */
   { 0, "Polis Crusher", {0}, 13515, 0x02, -1, 24, { 2, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_polis_crusher, 0x00020080u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 7281: Polis Crusher */
   { 0, "Political Tricker", {0}, 2562, 0x08, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_political_trickery, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 7282: Political Trickery */
@@ -18901,16 +18901,16 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Pouncing Jaguar", {0}, 3858, 0x02, -1, 8, { 1, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_pouncing_jaguar, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 7309: Pouncing Jaguar */
   { 0, "Powder Keg", {0}, 4172, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_powder_keg, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 100 }, /* 7310: Powder Keg */
   { 0, "Power Artifact", {0}, 517, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_power_artifact, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 10 }, /* 7311: Power Artifact */
-  { 0, "Power Leak", {0}, 190, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_power_leak, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 5 }, /* 7312: Power Leak */
+  { 0, "Power Leak", {0}, 190, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_power_leak, 0x00000000u, 0x00000000u, 0, 8, 1, 255, 5 }, /* 7312: Power Leak */
   { 0, "Power Matrix", {0}, 4553, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_power_matrix, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 60 }, /* 7313: Power Matrix */
   { 0, "Power of Fire", {0}, 9630, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_hermetic_study, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 40 }, /* 7314: Power of Fire */
-  { 0, "Power Sink", {0}, 191, 0x20, -1, 4, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_power_sink, 0x00000000u, 0x00022000u, 0, 15, 0, 3, 65 }, /* 7315: Power Sink */
-  { 0, "Power Struggle", {0}, 867, 0x04, -1, 4, { 3, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_power_struggle, 0x00000000u, 0x00000001u, 0, 24, 0, 254, 40 }, /* 7316: Power Struggle */
-  { 0, "Power Surge", {0}, 192, 0x04, -1, 16, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_power_surge, 0x00000000u, 0x00000021u, 0, 24, 0, 0, 5 }, /* 7317: Power Surge */
-  { 0, "Powerleech", {0}, 518, 0x04, -1, 8, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_powerleech, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 7318: Powerleech */
+  { 0, "Power Sink", {0}, 191, 0x20, -1, 4, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_power_sink, 0x00000000u, 0x00022000u, 0, 15, 1, 3, 65 }, /* 7315: Power Sink */
+  { 0, "Power Struggle", {0}, 867, 0x04, -1, 4, { 3, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_power_struggle, 0x00000000u, 0x00000801u, 0, 24, 64, 254, 40 }, /* 7316: Power Struggle */
+  { 0, "Power Surge", {0}, 192, 0x04, -1, 16, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_power_surge, 0x00000000u, 0x00000021u, 0, 24, 1, 0, 5 }, /* 7317: Power Surge */
+  { 0, "Powerleech", {0}, 518, 0x04, -1, 8, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_powerleech, 0x00000000u, 0x00000400u, 0, 1, 32, 255, 5 }, /* 7318: Powerleech */
   { 0, "Powerstone Minefi", {0}, 5420, 0x04, -1, 48, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_powerstone_minefield, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 7319: Powerstone Minefield */
   { 0, "Pox", {0}, 2069, 0x08, -1, 2, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_pox, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 40 }, /* 7320: Pox */
-  { 0, "Pradesh Gypsies", {0}, 745, 0x02, -1, 8, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_pradesh_gypsies, 0x00000000u, 0x00000001u, 0, 72, 0, 1, 20 }, /* 7321: Pradesh Gypsies */
+  { 0, "Pradesh Gypsies", {0}, 745, 0x02, -1, 8, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_pradesh_gypsies, 0x00000000u, 0x00000001u, 0, 72, 1, 1, 20 }, /* 7321: Pradesh Gypsies */
   { 0, "Praetor's Counsel", {0}, 11508, 0x08, -1, 8, { 3, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_praetors_counsel, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 60 }, /* 7322: Praetor's Counsel */
   { 0, "Praetor's Grasp", {0}, 11662, 0x08, -1, 2, { 2, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_praetors_grasp, 0x00000000u, 0x00000001u, 0, 25, 0, 2, 9 }, /* 7323: Praetor's Grasp */
   { 0, "Prahv, Spires of ", {0}, 8257, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_prahv_spires_of_order, 0x00000000u, 0x00001001u, 0, 73, 0, 0, 10 }, /* 7324: Prahv, Spires of Order */
@@ -18948,11 +18948,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Priest of Iroas", {0}, 13519, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_priest_of_iroas, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 20 }, /* 7356: Priest of Iroas */
   { 0, "Priest of Titania", {0}, 3860, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_priest_of_titania, 0x00000000u, 0x00001000u, 0, 248, 0, 2, 21 }, /* 7357: Priest of Titania */
   { 0, "Priest of Urabras", {0}, 11663, 0x02, -1, 16, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_priest_of_urabrask, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 30 }, /* 7358: Priest of Urabrask */
-  { 0, "Priest of Yawgmot", {0}, 549, 0x02, -1, 2, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_priest_of_yawgmoth, 0x00000000u, 0x00001002u, 0, 248, 0, 2, 21 }, /* 7359: Priest of Yawgmoth */
+  { 0, "Priest of Yawgmot", {0}, 549, 0x02, -1, 2, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_priest_of_yawgmoth, 0x00000000u, 0x00001402u, 0, 248, 32, 2, 21 }, /* 7359: Priest of Yawgmoth */
   { 0, "Priests of Norn", {0}, 11509, 0x02, -1, 32, { 1, 2, 0 }, 1, 4, 0, 0, manalinkeh_card_serra_angel, 0x20000000u, 0x00000000u, 0, 8, 0, 255, 59 }, /* 7360: Priests of Norn */
   { 0, "Primal Bellow", {0}, 10636, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_primal_bellow, 0x00000000u, 0x00000000u, 0, 4, 0, 3, 75 }, /* 7361: Primal Bellow */
   { 0, "Primal Boost", {0}, 6226, 0x10, -1, 8, { 1, 2, 4 }, 0, 0, 0, 0, manalinkeh_card_primal_boost, 0x00000000u, 0x00000000u, 0, 68, 0, 0, 60 }, /* 7362: Primal Boost */
-  { 0, "Primal Clay", {0}, 519, 0x42, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_primal_clay, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 7363: Primal Clay */
+  { 0, "Primal Clay", {0}, 519, 0x42, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_primal_clay, 0x00000000u, 0x00000400u, 0, 8, 1, 2, 5 }, /* 7363: Primal Clay */
   { 0, "Primal Cocoon", {0}, 11161, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_primal_cocoon, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 3 }, /* 7364: Primal Cocoon */
   { 0, "Primal Command", {0}, 9237, 0x08, -1, 8, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_primal_command, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 7365: Primal Command */
   { 0, "Primal Forcemage", {0}, 8639, 0x02, -1, 8, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_primal_forcemage, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 5 }, /* 7366: Primal Forcemage */
@@ -18979,7 +18979,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Princess Lucrezia", {0}, 748, 0x02, 14, 6, { 3, 3, 0 }, 5, 4, 0, 0, manalinkeh_card_princess_lucrezia, 0x00000000u, 0x00001000u, 0, 241, 0, 2, 50 }, /* 7387: Princess Lucrezia */
   { 0, "Prism", {0}, 18804, 0x42, -1, 1, { 0, 0, 0 }, 0, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 0 }, /* 7388: Prism */
   { 0, "Prismatic Boon", {0}, 2565, 0x10, -1, 36, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_prismatic_boon, 0x00000000u, 0x00000000u, 0, 4, 0, 3, 50 }, /* 7389: Prismatic Boon */
-  { 0, "Prismatic Dragon", {0}, 861, 0x02, -1, 32, { 2, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_prismatic_dragon, 0x00000020u, 0x00000001u, 0, 24, 0, 1, 5 }, /* 7390: Prismatic Dragon */
+  { 0, "Prismatic Dragon", {0}, 861, 0x02, -1, 32, { 2, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_prismatic_dragon, 0x00000020u, 0x00000801u, 0, 24, 64, 1, 5 }, /* 7390: Prismatic Dragon */
   { 0, "Prismatic Lens", {0}, 8640, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_prismatic_lens, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 7391: Prismatic Lens */
   { 0, "Prismatic Omen", {0}, 9632, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_prismatic_omen, 0x00000000u, 0x00001002u, 0, 249, 0, 2, 50 }, /* 7392: Prismatic Omen */
   { 0, "Prismatic Strands", {0}, 5991, 0x10, -1, 32, { 1, 2, 9 }, 0, 0, 0, 0, manalinkeh_card_prismatic_strands, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 7393: Prismatic Strands */
@@ -18992,7 +18992,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Probe", {0}, 5071, 0x08, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_probe, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 7400: Probe */
   { 0, "Proclamation of R", {0}, 8259, 0x08, -1, 32, { 1, 2, 16 }, 0, 0, 0, 0, manalinkeh_card_proclamation_of_rebirth, 0x00000000u, 0x00000000u, 0, 24, 0, 0, 60 }, /* 7401: Proclamation of Rebirth */
   { 0, "Prodigal Pyromanc", {0}, 1361, 0x02, -1, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_prodigal_sorcerer, 0x00000000u, 0x00000001u, 0, 248, 0, 3, 50 }, /* 7402: Prodigal Pyromancer */
-  { 0, "Prodigal Sorcerer", {0}, 193, 0x02, -1, 4, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_prodigal_sorcerer, 0x00000000u, 0x00000001u, 0, 248, 0, 3, 50 }, /* 7403: Prodigal Sorcerer */
+  { 0, "Prodigal Sorcerer", {0}, 193, 0x02, -1, 4, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_prodigal_sorcerer, 0x00000000u, 0x00000001u, 0, 248, 1, 3, 50 }, /* 7403: Prodigal Sorcerer */
   { 0, "Profane Command", {0}, 9238, 0x08, -1, 2, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_profane_command, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 75 }, /* 7404: Profane Command */
   { 0, "Profane Memento", {0}, 14156, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_profane_memento, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 7405: Profane Memento */
   { 0, "Profane Prayers", {0}, 6227, 0x08, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_profane_prayers, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 7406: Profane Prayers */
@@ -19022,8 +19022,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Prowess of the Fa", {0}, 9240, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_prowess_of_the_fair, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 7430: Prowess of the Fair */
   { 0, "Prowler's Helm", {0}, 13522, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_prowlers_helm, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 60 }, /* 7431: Prowler's Helm */
   { 0, "Prowling Nightsta", {0}, 3605, 0x02, -1, 2, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_prowling_nightstalker, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 7432: Prowling Nightstalker */
-  { 0, "Psionic Blast", {0}, 194, 0x10, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_psionic_blast, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 95 }, /* 7433: Psionic Blast */
-  { 0, "Psionic Entity", {0}, 749, 0x02, -1, 4, { 1, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_psionic_entity, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 5 }, /* 7434: Psionic Entity */
+  { 0, "Psionic Blast", {0}, 194, 0x10, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_psionic_blast, 0x00000000u, 0x00000280u, 0, 15, 2, 0, 95 }, /* 7433: Psionic Blast */
+  { 0, "Psionic Entity", {0}, 749, 0x02, -1, 4, { 1, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_psionic_entity, 0x00000000u, 0x00000001u, 0, 136, 1, 0, 5 }, /* 7434: Psionic Entity */
   { 0, "Psionic Sliver", {0}, 8641, 0x02, -1, 4, { 1, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_psionic_sliver, 0x00000000u, 0x00000001u, 0, 248, 0, 3, 70 }, /* 7435: Psionic Sliver */
   { 0, "Psychatog", {0}, 5664, 0x02, -1, 6, { 2, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_psychatog, 0x00000000u, 0x00000019u, 0, 72, 0, 1, 79 }, /* 7436: Psychatog */
   { 0, "Psychic Allergy", {0}, 352, 0x04, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_psychic_allergy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 86 }, /* 7437: Psychic Allergy */
@@ -19038,7 +19038,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Psychic Spiral", {0}, 12788, 0x10, -1, 4, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_psychic_spiral, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 7446: Psychic Spiral */
   { 0, "Psychic Strike", {0}, 13032, 0x20, -1, 6, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_psychic_strike, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 7447: Psychic Strike */
   { 0, "Psychic Transfer", {0}, 2568, 0x08, -1, 4, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_psychic_transfer, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 7448: Psychic Transfer */
-  { 0, "Psychic Venom", {0}, 195, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_psychic_venom, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 10 }, /* 7449: Psychic Venom */
+  { 0, "Psychic Venom", {0}, 195, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_psychic_venom, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 10 }, /* 7449: Psychic Venom */
   { 0, "Psychic Vortex", {0}, 3027, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_psychic_vortex, 0x00000000u, 0x00000000u, 0, 248, 0, 3, 75 }, /* 7450: Psychic Vortex */
   { 0, "Psychogenic Probe", {0}, 6763, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 7451: Psychogenic Probe */
   { 0, "Psychosis Crawler", {0}, 11510, 0x42, -1, 1, { 0, 5, 0 }, 16384, 16384, 0, 0, manalinkeh_card_psychosis_crawler, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 39 }, /* 7452: Psychosis Crawler */
@@ -19072,7 +19072,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Puppeteer", {0}, 1120, 0x02, -1, 4, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_puppeteer, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 35 }, /* 7480: Puppeteer */
   { 0, "Puppeteer Clique", {0}, 9637, 0x02, -1, 2, { 2, 3, 0 }, 3, 2, 0, 0, manalinkeh_card_puppeteer_clique, 0x00000020u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 7481: Puppeteer Clique */
   { 0, "Pure // Simple", {0}, 8264, 0x08, -1, 56, { 2, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_pure_simple, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 7482: Pure // Simple */
-  { 0, "Purelace", {0}, 196, 0x20, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_purelace, 0x00000000u, 0x00000000u, 0, 15, 0, 254, 40 }, /* 7483: Purelace */
+  { 0, "Purelace", {0}, 196, 0x20, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_purelace, 0x00000000u, 0x00000000u, 0, 15, 1, 254, 40 }, /* 7483: Purelace */
   { 0, "Puresteel Paladin", {0}, 11667, 0x02, -1, 32, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_puresteel_paladin, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 75 }, /* 7484: Puresteel Paladin */
   { 0, "Purgatory", {0}, 2569, 0x04, -1, 34, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_purgatory, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 150 }, /* 7485: Purgatory */
   { 0, "Purge the Profane", {0}, 13033, 0x08, -1, 34, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_purge_the_profane, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 7486: Purge the Profane */
@@ -19097,7 +19097,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Pygmy Hippo", {0}, 2758, 0x02, -1, 12, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_pygmy_hippo, 0x00000000u, 0x00000001u, 0, 72, 0, 1, 75 }, /* 7505: Pygmy Hippo */
   { 0, "Pygmy Razorback", {0}, 4866, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 7506: Pygmy Razorback */
   { 0, "Pygmy Troll", {0}, 3539, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_pygmy_troll, 0x00000200u, 0x00000019u, 0, 248, 0, 1, 35 }, /* 7507: Pygmy Troll */
-  { 0, "Pyramids", {0}, 449, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_pyramids, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 5 }, /* 7508: Pyramids */
+  { 0, "Pyramids", {0}, 449, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_pyramids, 0x00000000u, 0x00000001u, 0, 248, 4, 1, 5 }, /* 7508: Pyramids */
   { 0, "Pyre Charger", {0}, 9640, 0x02, -1, 16, { 2, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_pyre_charger, 0x00000000u, 0x00000009u, 0, 65, 0, 0, 20 }, /* 7509: Pyre Charger */
   { 0, "Pyre Zombie", {0}, 5077, 0x02, -1, 18, { 2, 1, 5 }, 2, 1, 0, 0, manalinkeh_card_pyre_zombie, 0x00000000u, 0x00000001u, 0, 249, 0, 1, 70 }, /* 7510: Pyre Zombie */
   { 0, "Pyreheart Wolf", {0}, 12243, 0x02, -1, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_pyreheart_wolf, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 7511: Pyreheart Wolf */
@@ -19116,7 +19116,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Pyromania", {0}, 5867, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_pyromania, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 40 }, /* 7524: Pyromania */
   { 0, "Pyromatics", {0}, 8111, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_pyromatics, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 7525: Pyromatics */
   { 0, "Pyrostatic Pillar", {0}, 6564, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_pyrostatic_pillar, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 7526: Pyrostatic Pillar */
-  { 0, "Pyrotechnics", {0}, 752, 0x08, -1, 16, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_pyrotechnics, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 80 }, /* 7527: Pyrotechnics */
+  { 0, "Pyrotechnics", {0}, 752, 0x08, -1, 16, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_pyrotechnics, 0x00000000u, 0x00000000u, 0, 9, 1, 3, 80 }, /* 7527: Pyrotechnics */
   { 0, "Pyrrhic Revival", {0}, 9849, 0x08, -1, 34, { 3, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_phyrric_revival, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 7528: Pyrrhic Revival */
   { 0, "Pyxis of Pandemon", {0}, 13528, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_pyxis_of_pandemonium, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 7529: Pyxis of Pandemonium */
   { 0, "Qasali Ambusher", {0}, 10035, 0x12, -1, 40, { 2, 1, 1 }, 2, 3, 1, 0, manalinkeh_card_qasali_ambusher, 0x00000400u, 0x00000000u, 0, 10, 0, 0, 20 }, /* 7530: Qasali Ambusher */
@@ -19157,7 +19157,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Qumulox", {0}, 1626, 0x02, -1, 4, { 2, 6, 1 }, 5, 4, 1, 0, manalinkeh_card_frogmite, 0x00000020u, 0x00000000u, 0, 9, 0, 1, 35 }, /* 7565: Qumulox */
   { 0, "Rabble-Rouser", {0}, 8113, 0x02, 3, 16, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_rabble_rouser, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 7566: Rabble-Rouser */
   { 0, "Rabid Rats", {0}, 3409, 0x02, 7, 2, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_rabid_rats, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 7567: Rabid Rats */
-  { 0, "Rabid Wombat", {0}, 755, 0x02, -1, 8, { 2, 2, 0 }, 0, 1, 0, 0, manalinkeh_card_rabid_wombat, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 5 }, /* 7568: Rabid Wombat */
+  { 0, "Rabid Wombat", {0}, 755, 0x02, -1, 8, { 2, 2, 0 }, 0, 1, 0, 0, manalinkeh_card_rabid_wombat, 0x00000000u, 0x00000000u, 0, 8, 16, 3, 5 }, /* 7568: Rabid Wombat */
   { 0, "Racecourse Fury", {0}, 12791, 0x04, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_racecourse_fury, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 40 }, /* 7569: Racecourse Fury */
   { 0, "Rack and Ruin", {0}, 4042, 0x10, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_rack_and_ruin, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 50 }, /* 7570: Rack and Ruin */
   { 0, "Rackling", {0}, 4739, 0x42, -1, 1, { 0, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_wheel_of_torture, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 7571: Rackling */
@@ -19166,10 +19166,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Radiant, Archange", {0}, 4045, 0x02, 14, 32, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_radiant_archangel, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 7574: Radiant, Archangel */
   { 0, "Radiant's Dragoon", {0}, 4043, 0x02, -1, 32, { 1, 3, 0 }, 2, 5, 0, 0, manalinkeh_card_radiants_dragoons, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 7575: Radiant's Dragoons */
   { 0, "Radiant's Judgmen", {0}, 4044, 0x10, -1, 32, { 1, 2, 4 }, 0, 0, 0, 0, manalinkeh_card_radiants_judgement, 0x00000000u, 0x00000000u, 0, 255, 0, 0, 80 }, /* 7576: Radiant's Judgment */
-  { 0, "Radjan Spirit", {0}, 756, 0x02, -1, 8, { 1, 3, 0 }, 3, 2, 0, 0, manalinkeh_card_radjan_spirit, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 5 }, /* 7577: Radjan Spirit */
+  { 0, "Radjan Spirit", {0}, 756, 0x02, -1, 8, { 1, 3, 0 }, 3, 2, 0, 0, manalinkeh_card_radjan_spirit, 0x00000000u, 0x00000001u, 0, 248, 1, 2, 5 }, /* 7577: Radjan Spirit */
   { 0, "Rafiq of the Many", {0}, 10037, 0x02, 14, 44, { 3, 1, 0 }, 3, 3, 0, 0, manalinkeh_card_rafiq_of_the_many, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 100 }, /* 7578: Rafiq of the Many */
   { 0, "Rag Dealer", {0}, 7351, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_carrion_beetles, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 7579: Rag Dealer */
-  { 0, "Rag Man", {0}, 943, 0x02, -1, 2, { 2, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_rag_man, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 25 }, /* 7580: Rag Man */
+  { 0, "Rag Man", {0}, 943, 0x02, -1, 2, { 2, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_rag_man, 0x00000000u, 0x00000001u, 0, 24, 1, 0, 25 }, /* 7580: Rag Man */
   { 0, "Ragamuffyn", {0}, 8265, 0x02, 2, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_raggamuffyn, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 7581: Ragamuffyn */
   { 0, "Rage Extractor", {0}, 11668, 0x40, -1, 16, { 1, 4, 1 }, 0, 0, 1, 0, manalinkeh_card_rage_extractor, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 1 }, /* 7582: Rage Extractor */
   { 0, "Rage Forger", {0}, 9411, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_rage_forger, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 7583: Rage Forger */
@@ -19179,13 +19179,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Rage Thrower", {0}, 12047, 0x02, -1, 16, { 1, 5, 0 }, 4, 2, 0, 0, manalinkeh_card_rage_thrower, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 30 }, /* 7587: Rage Thrower */
   { 0, "Rageblood Shaman", {0}, 13530, 0x02, -1, 16, { 2, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_rageblood_shaman, 0x00000080u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 7588: Rageblood Shaman */
   { 0, "Ragemonger", {0}, 13787, 0x02, -1, 18, { 2, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_ragemonger, 0x00000000u, 0x40000000u, 0, 9, 0, 0, 50 }, /* 7589: Ragemonger */
-  { 0, "Raging Bull", {0}, 757, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 7590: Raging Bull */
+  { 0, "Raging Bull", {0}, 757, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 16, 0, 5 }, /* 7590: Raging Bull */
   { 0, "Raging Goblin", {0}, 1122, 0x02, 3, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_ambush_party, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 7591: Raging Goblin */
   { 0, "Raging Kavu", {0}, 5081, 0x12, -1, 24, { 2, 1, 0 }, 3, 1, 0, 0, manalinkeh_card_raging_kavu, 0x00000000u, 0x00000000u, 0, 3, 0, 0, 50 }, /* 7592: Raging Kavu */
   { 0, "Raging Poltergeis", {0}, 12444, 0x02, -1, 16, { 1, 4, 0 }, 6, 1, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 7593: Raging Poltergeist */
   { 0, "Raging Ravine", {0}, 10815, 0x01, -1, 24, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_raging_ravine, 0x00000000u, 0x00001001u, 0, 56, 0, 2, 50 }, /* 7594: Raging Ravine */
   { 0, "Raging Ravine Ani", {0}, 10816, 0x03, -1, 24, { 0, 0, 0 }, 3, 3, 0, 0, manalinkeh_card_raging_ravine_animated, 0x00000000u, 0x00001001u, 0, 120, 0, 2, 21 }, /* 7595: Raging Ravine Animated */
-  { 0, "Raging River", {0}, 197, 0x04, -1, 16, { 2, 0, 0 }, 0, 0, 0, 0, card_raging_river, 0x00000000u, 0x02080000u, 0, 1, 0, 3, 5 }, /* 7596: Raging River */
+  { 0, "Raging River", {0}, 197, 0x04, -1, 16, { 2, 0, 0 }, 0, 0, 0, 0, card_raging_river, 0x00000000u, 0x02080000u, 0, 1, 2, 3, 5 }, /* 7596: Raging River */
   { 0, "Ragnar", {0}, 758, 0x02, 14, 44, { 3, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_ragnar, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 5 }, /* 7597: Ragnar */
   { 0, "Raid Bombardment", {0}, 11024, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_raid_bombardment, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 7598: Raid Bombardment */
   { 0, "Raiders' Spoils", {0}, 14344, 0x04, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_raiders_spoil, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 7599: Raiders' Spoils */
@@ -19201,13 +19201,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Rain of Tears", {0}, 1265, 0x08, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ice_storm, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 7609: Rain of Tears */
   { 0, "Rain of Thorns", {0}, 12445, 0x08, -1, 8, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_rain_of_thorns, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 7610: Rain of Thorns */
   { 0, "Rainbow Efreet", {0}, 2764, 0x02, 5, 4, { 1, 3, 0 }, 3, 1, 0, 0, manalinkeh_card_rainbow_efreet, 0x00000020u, 0x00000001u, 0, 248, 0, 1, 50 }, /* 7611: Rainbow Efreet */
-  { 0, "Rainbow Knights", {0}, 862, 0x02, -1, 32, { 2, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_rainbow_knights, 0x00000000u, 0x00000009u, 0, 88, 0, 1, 20 }, /* 7612: Rainbow Knights */
+  { 0, "Rainbow Knights", {0}, 862, 0x02, -1, 32, { 2, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_rainbow_knights, 0x00000000u, 0x00000809u, 0, 88, 64, 1, 20 }, /* 7612: Rainbow Knights */
   { 0, "Rainbow Vale", {0}, 1815, 0x01, -1, 62, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_rainbow_vale, 0x00000000u, 0x00001000u, 0, 1, 0, 1, 15 }, /* 7613: Rainbow Vale */
-  { 0, "Raise Dead", {0}, 198, 0x08, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_raise_dead, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 65 }, /* 7614: Raise Dead */
+  { 0, "Raise Dead", {0}, 198, 0x08, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_raise_dead, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 65 }, /* 7614: Raise Dead */
   { 0, "Raise the Alarm", {0}, 1450, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_raise_the_alarm, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 65 }, /* 7615: Raise the Alarm */
   { 0, "Raised by Wolves", {0}, 13788, 0x04, -1, 8, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_raised_by_wolves, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 7616: Raised by Wolves */
   { 0, "Raka Sanctuary", {0}, 5426, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_raka_sanctuary, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 7617: Raka Sanctuary */
-  { 0, "Rakalite", {0}, 520, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_rakalite, 0x00000000u, 0x00000005u, 0, 241, 0, 254, 5 }, /* 7618: Rakalite */
+  { 0, "Rakalite", {0}, 520, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_rakalite, 0x00000000u, 0x00000405u, 0, 241, 8, 254, 5 }, /* 7618: Rakalite */
   { 0, "Rakavolver", {0}, 5427, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_rakavolver, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 7619: Rakavolver */
   { 0, "Rakdos Augermage", {0}, 8267, 0x02, -1, 18, { 3, 0, 0 }, 3, 2, 0, 0, manalinkeh_card_rakdos_augermage, 0x00000100u, 0x00000001u, 0, 136, 0, 0, 50 }, /* 7620: Rakdos Augermage */
   { 0, "Rakdos Cackler", {0}, 12792, 0x02, -1, 18, { 1, 0, 1 }, 1, 1, 1, 0, manalinkeh_card_rakdos_cackler, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 7621: Rakdos Cackler */
@@ -19332,7 +19332,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Reaping the Rewar", {0}, 3542, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_reaping_the_rewards, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 7740: Reaping the Rewards */
   { 0, "Reassembling Skel", {0}, 11165, 0x02, -1, 2, { 1, 1, 10 }, 1, 1, 2, 0, manalinkeh_card_reassembling_skeleton, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 20 }, /* 7741: Reassembling Skeleton */
   { 0, "Rebellion of the ", {0}, 9243, 0x04, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_rebellion_of_the_flamekin, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 7742: Rebellion of the Flamekin */
-  { 0, "Rebirth", {0}, 763, 0x08, -1, 8, { 3, 3, 0 }, 0, 0, 0, 0, card_rebirth, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 65 }, /* 7743: Rebirth */
+  { 0, "Rebirth", {0}, 763, 0x08, -1, 8, { 3, 3, 0 }, 0, 0, 0, 0, card_rebirth, 0x00000000u, 0x00000000u, 0, 9, 1, 0, 65 }, /* 7743: Rebirth */
   { 0, "Reborn Hope", {0}, 10332, 0x08, -1, 40, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_reborn_hope, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 7744: Reborn Hope */
   { 0, "Rebuff the Wicked", {0}, 8831, 0x20, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_rebuff_the_wicked, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 7745: Rebuff the Wicked */
   { 0, "Rebuild", {0}, 4049, 0x10, -1, 4, { 1, 2, 4 }, 0, 0, 0, 0, manalinkeh_card_rebuild, 0x00000000u, 0x00000000u, 0, 255, 0, 0, 60 }, /* 7746: Rebuild */
@@ -19353,17 +19353,17 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Reclamation Sage", {0}, 14159, 0x02, -1, 8, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_reclamation_sage, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 7761: Reclamation Sage */
   { 0, "Recoil", {0}, 1554, 0x10, -1, 6, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_recoil, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 45 }, /* 7762: Recoil */
   { 0, "Recollect", {0}, 1245, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_regrowth, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 60 }, /* 7763: Recollect */
-  { 0, "Reconstruction", {0}, 521, 0x08, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_reconstruction, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 7764: Reconstruction */
+  { 0, "Reconstruction", {0}, 521, 0x08, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_reconstruction, 0x00000000u, 0x00000000u, 0, 1, 32, 255, 5 }, /* 7764: Reconstruction */
   { 0, "Recoup", {0}, 5670, 0x08, -1, 16, { 1, 1, 9 }, 0, 0, 0, 0, manalinkeh_card_recoup, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 7765: Recoup */
   { 0, "Recurring Insight", {0}, 11028, 0x08, -1, 4, { 2, 4, 1 }, 0, 0, 0, 0, manalinkeh_card_recurring_insight, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 7766: Recurring Insight */
   { 0, "Recurring Nightma", {0}, 3546, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_recurring_nightmare, 0x00000000u, 0x00000001u, 0, 145, 0, 3, 5 }, /* 7767: Recurring Nightmare */
   { 0, "Recycle", {0}, 3243, 0x04, -1, 8, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_recycle, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 7768: Recycle */
   { 0, "Red", {0}, 19804, 0x80, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_back_to_95, 0x00000000u, 0x00000001u, 0, 1, 0, 2, 0 }, /* 7769: Red */
-  { 0, "Red Elemental Bla", {0}, 199, 0x20, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_red_elemental_blast, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 80 }, /* 7770: Red Elemental Blast */
-  { 0, "Red Mana Battery", {0}, 765, 0x40, -1, 16, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_red_mana_battery, 0x00000000u, 0x00001021u, 0, 72, 0, 255, 5 }, /* 7771: Red Mana Battery */
+  { 0, "Red Elemental Bla", {0}, 199, 0x20, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_red_elemental_blast, 0x00000000u, 0x00002000u, 0, 15, 1, 0, 80 }, /* 7770: Red Elemental Blast */
+  { 0, "Red Mana Battery", {0}, 765, 0x40, -1, 16, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_red_mana_battery, 0x00000000u, 0x00001021u, 0, 72, 1, 255, 5 }, /* 7771: Red Mana Battery */
   { 0, "Red Scarab", {0}, 2079, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_red_scarab, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 7772: Red Scarab */
   { 0, "Red Sun's Zenith", {0}, 11515, 0x08, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_red_suns_zenith, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 100 }, /* 7773: Red Sun's Zenith */
-  { 0, "Red Ward", {0}, 200, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_red_ward, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 7774: Red Ward */
+  { 0, "Red Ward", {0}, 200, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_red_ward, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 60 }, /* 7774: Red Ward */
   { 0, "Redeem", {0}, 1127, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_redeem, 0x00000000u, 0x00000004u, 0, 15, 0, 3, 40 }, /* 7775: Redeem */
   { 0, "Redeem the Lost", {0}, 9414, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_redeem_the_lost, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 7776: Redeem the Lost */
   { 0, "Reduce to Dreams", {0}, 7543, 0x08, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_reduce_to_dreams, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 7777: Reduce to Dreams */
@@ -19380,9 +19380,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Regal Force", {0}, 9854, 0x02, -1, 8, { 3, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_regal_force, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 59 }, /* 7788: Regal Force */
   { 0, "Regal Unicorn", {0}, 2909, 0x02, -1, 32, { 1, 2, 0 }, 2, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 7789: Regal Unicorn */
   { 0, "Regathan Firecat", {0}, 13325, 0x02, -1, 16, { 1, 2, 0 }, 4, 1, 0, 0, card_dummy, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 5 }, /* 7790: Regathan Firecat */
-  { 0, "Regeneration", {0}, 201, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_regeneration, 0x00000000u, 0x00000001u, 0, 241, 0, 1, 5 }, /* 7791: Regeneration */
+  { 0, "Regeneration", {0}, 201, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_regeneration, 0x00000000u, 0x00000001u, 0, 241, 1, 1, 5 }, /* 7791: Regeneration */
   { 0, "Regress", {0}, 1285, 0x10, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_boomerang, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 60 }, /* 7792: Regress */
-  { 0, "Regrowth", {0}, 202, 0x08, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_regrowth, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 150 }, /* 7793: Regrowth */
+  { 0, "Regrowth", {0}, 202, 0x08, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_regrowth, 0x00000000u, 0x00000100u, 0, 1, 2, 2, 150 }, /* 7793: Regrowth */
   { 0, "Reign of Chaos", {0}, 2581, 0x08, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_reign_of_chaos, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 7794: Reign of Chaos */
   { 0, "Reign of the Pit", {0}, 14052, 0x08, -1, 2, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_reign_of_the_pit, 0x00000000u, 0x00000001u, 0, 49, 0, 0, 20 }, /* 7795: Reign of the Pit */
   { 0, "Reincarnation", {0}, 766, 0x10, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_reincarnation, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 60 }, /* 7796: Reincarnation */
@@ -19399,8 +19399,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Relentless Assaul", {0}, 1129, 0x08, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_relentless_assault, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 200 }, /* 7807: Relentless Assault */
   { 0, "Relentless Rats", {0}, 7107, 0x02, 7, 2, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_relentless_rats, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 5 }, /* 7808: Relentless Rats */
   { 0, "Relentless Skaabs", {0}, 12247, 0x02, -1, 4, { 2, 3, 1 }, 4, 4, 1, 0, manalinkeh_card_relentless_skaabs, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 7809: Relentless Skaabs */
-  { 0, "Relic Barrier", {0}, 767, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_relic_barrier, 0x00000000u, 0x00000001u, 0, 17, 0, 255, 5 }, /* 7810: Relic Barrier */
-  { 0, "Relic Bind", {0}, 768, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_relic_bind2, 0x00000000u, 0x00000000u, 0, 9, 0, 255, 60 }, /* 7811: Relic Bind */
+  { 0, "Relic Barrier", {0}, 767, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_relic_barrier, 0x00000000u, 0x00000001u, 0, 17, 16, 255, 5 }, /* 7810: Relic Barrier */
+  { 0, "Relic Bind", {0}, 768, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_relic_bind2, 0x00000000u, 0x00000000u, 0, 9, 1, 255, 60 }, /* 7811: Relic Bind */
   { 0, "Relic Crush", {0}, 10647, 0x10, -1, 8, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_relic_crush, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 30 }, /* 7812: Relic Crush */
   { 0, "Relic of Progenit", {0}, 10041, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_relic_of_progenitus, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 7813: Relic of Progenitus */
   { 0, "Relic Putrescence", {0}, 11346, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_relic_putrescence, 0x00000000u, 0x00000000u, 0, 9, 0, 255, 1 }, /* 7814: Relic Putrescence */
@@ -19413,7 +19413,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Remote Farm", {0}, 4568, 0x01, -1, 32, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_remote_farm, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 7821: Remote Farm */
   { 0, "Remote Isle", {0}, 3870, 0x01, -1, 4, { 0, 0, 4 }, 0, 0, 0, 0, manalinkeh_card_drifting_meadow, 0x00000000u, 0x00001000u, 0, 248, 0, 0, 10 }, /* 7822: Remote Isle */
   { 0, "Remove Enchantmen", {0}, 769, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_remove_enchantments, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 7823: Remove Enchantments */
-  { 0, "Remove Soul", {0}, 770, 0x20, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_remove_soul, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 80 }, /* 7824: Remove Soul */
+  { 0, "Remove Soul", {0}, 770, 0x20, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_remove_soul, 0x00000000u, 0x00002200u, 0, 15, 16, 0, 80 }, /* 7824: Remove Soul */
   { 0, "Rend Flesh", {0}, 7356, 0x10, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_rend_flesh, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 7825: Rend Flesh */
   { 0, "Render Silent", {0}, 13204, 0x10, -1, 36, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_render_silent, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 80 }, /* 7826: Render Silent */
   { 0, "Rending Vines", {0}, 7725, 0x10, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_rending_vines, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 7827: Rending Vines */
@@ -19427,7 +19427,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Repeal", {0}, 8114, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_repeal, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 50 }, /* 7835: Repeal */
   { 0, "Repel Intruders", {0}, 9647, 0x20, -1, 36, { 1, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_repel_intruders, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 40 }, /* 7836: Repel Intruders */
   { 0, "Repentance", {0}, 3246, 0x08, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_repentance, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 7837: Repentance */
-  { 0, "Repentant Blacksm", {0}, 450, 0x02, -1, 32, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_galinas_knight, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 7838: Repentant Blacksmith */
+  { 0, "Repentant Blacksm", {0}, 450, 0x02, -1, 32, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_galinas_knight, 0x00000000u, 0x00000400u, 0, 8, 8, 1, 50 }, /* 7838: Repentant Blacksmith */
   { 0, "Repentant Vampire", {0}, 5673, 0x02, -1, 2, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_repentant_vampire, 0x00000020u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 7839: Repentant Vampire */
   { 0, "Repercussion", {0}, 4179, 0x04, -1, 16, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_repercussion, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 75 }, /* 7840: Repercussion */
   { 0, "Replenish", {0}, 4180, 0x08, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_replenish, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 9 }, /* 7841: Replenish */
@@ -19441,7 +19441,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Research // Devel", {0}, 8274, 0x10, -1, 28, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_development_research, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 7849: Research // Development */
   { 0, "Research Assistan", {0}, 14160, 0x02, -1, 4, { 1, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_research_assistant, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 7850: Research Assistant */
   { 0, "Research the Deep", {0}, 9417, 0x08, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_research_the_deep, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 7851: Research the Deep */
-  { 0, "Reset", {0}, 771, 0x10, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_reset, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 5 }, /* 7852: Reset */
+  { 0, "Reset", {0}, 771, 0x10, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_reset, 0x00000000u, 0x00000000u, 0, 15, 16, 0, 5 }, /* 7852: Reset */
   { 0, "Reshape", {0}, 6944, 0x08, -1, 4, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_reshape, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 7853: Reshape */
   { 0, "Resistance Fighte", {0}, 2767, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_resistance_fighter, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 20 }, /* 7854: Resistance Fighter */
   { 0, "Resolute Archange", {0}, 14161, 0x02, -1, 32, { 2, 5, 0 }, 4, 4, 0, 0, manalinkeh_card_resolute_archangel, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 7855: Resolute Archangel */
@@ -19460,7 +19460,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Restoration Angel", {0}, 12448, 0x12, -1, 32, { 1, 3, 0 }, 3, 4, 0, 0, manalinkeh_card_restoration_angel, 0x00000020u, 0x00000000u, 0, 6, 0, 0, 70 }, /* 7868: Restoration Angel */
   { 0, "Restore", {0}, 13635, 0x08, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_restore2, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 7869: Restore */
   { 0, "Restore Balance", {0}, 8646, 0x08, -1, 32, { 0, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_restore_balance, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 7870: Restore Balance */
-  { 0, "Resurrection", {0}, 203, 0x08, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_breath_of_life, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 65 }, /* 7871: Resurrection */
+  { 0, "Resurrection", {0}, 203, 0x08, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_breath_of_life, 0x00000000u, 0x00000000u, 0, 1, 2, 3, 65 }, /* 7871: Resurrection */
   { 0, "Retaliator Griffi", {0}, 10333, 0x02, -1, 56, { 3, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_retaliator_griffin, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 7872: Retaliator Griffin */
   { 0, "Retether", {0}, 8834, 0x08, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_retether, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 7873: Retether */
   { 0, "Rethink", {0}, 4869, 0x30, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_rethink, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 7874: Rethink */
@@ -19492,8 +19492,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Reverent Mantra", {0}, 4571, 0x10, -1, 32, { 1, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_reverent_mantra, 0x00000000u, 0x00000000u, 0, 7, 0, 0, 60 }, /* 7900: Reverent Mantra */
   { 0, "Reverent Silence", {0}, 4746, 0x08, -1, 8, { 1, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_reverent_silence, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 7901: Reverent Silence */
   { 0, "Reversal of Fortu", {0}, 7109, 0x08, -1, 16, { 2, 4, 1 }, 0, 0, 0, 0, manalinkeh_card_reversal_of_fortune, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 7902: Reversal of Fortune */
-  { 0, "Reverse Damage", {0}, 204, 0x10, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_reverse_damage, 0x00000000u, 0x00000004u, 0, 15, 0, 2, 60 }, /* 7903: Reverse Damage */
-  { 0, "Reverse Polarity", {0}, 522, 0x10, -1, 32, { 2, 0, 13 }, 0, 0, 0, 0, manalinkeh_card_reverse_polarity, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 7904: Reverse Polarity */
+  { 0, "Reverse Damage", {0}, 204, 0x10, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_reverse_damage, 0x00000000u, 0x00000004u, 0, 15, 1, 2, 60 }, /* 7903: Reverse Damage */
+  { 0, "Reverse Polarity", {0}, 522, 0x10, -1, 32, { 2, 0, 13 }, 0, 0, 0, 0, manalinkeh_card_reverse_polarity, 0x00000000u, 0x00000400u, 0, 15, 32, 0, 60 }, /* 7904: Reverse Polarity */
   { 0, "Revive", {0}, 1130, 0x08, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_revive, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 5 }, /* 7905: Revive */
   { 0, "Revive the Fallen", {0}, 9419, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_revive_the_fallen, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 7906: Revive the Fallen */
   { 0, "Reviving Melody", {0}, 13960, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_reviving_melody, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 7907: Reviving Melody */
@@ -19530,12 +19530,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Riftwing Cloudska", {0}, 8649, 0x02, -1, 4, { 2, 3, 1 }, 2, 2, 1, 0, manalinkeh_card_riftwing_cloudskate, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 7938: Riftwing Cloudskate */
   { 0, "Righteous Aura", {0}, 2769, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_righteous_aura, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 40 }, /* 7939: Righteous Aura */
   { 0, "Righteous Authori", {0}, 12802, 0x04, -1, 36, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_righteous_autority, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 7940: Righteous Authority */
-  { 0, "Righteous Avenger", {0}, 774, 0x02, -1, 32, { 1, 4, 0 }, 3, 1, 0, 0, card_dummy, 0x00000010u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 7941: Righteous Avengers */
+  { 0, "Righteous Avenger", {0}, 774, 0x02, -1, 32, { 1, 4, 0 }, 3, 1, 0, 0, card_dummy, 0x00000010u, 0x00000000u, 0, 8, 16, 0, 5 }, /* 7941: Righteous Avengers */
   { 0, "Righteous Blow", {0}, 12451, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_righteous_blow, 0x00000000u, 0x00000000u, 0, 2, 0, 0, 40 }, /* 7942: Righteous Blow */
   { 0, "Righteous Charge", {0}, 3674, 0x08, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_righteous_charge, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 7943: Righteous Charge */
   { 0, "Righteous Fury", {0}, 3675, 0x08, -1, 32, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_righteous_fury, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 90 }, /* 7944: Righteous Fury */
   { 0, "Righteous War", {0}, 2770, 0x04, -1, 34, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_righteous_war, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 50 }, /* 7945: Righteous War */
-  { 0, "Righteousness", {0}, 205, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_righteousness, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 7946: Righteousness */
+  { 0, "Righteousness", {0}, 205, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_righteousness, 0x00000000u, 0x00000000u, 0, 4, 1, 0, 60 }, /* 7946: Righteousness */
   { 0, "Riku of Two Refle", {0}, 11760, 0x02, 14, 28, { 3, 2, 1 }, 2, 2, 1, 0, manalinkeh_card_riku_of_two_reflections, 0x00000000u, 0x00000000u, 0, 248, 0, 2, 150 }, /* 7947: Riku of Two Reflections */
   { 0, "Rime Transfusion", {0}, 8427, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_rime_transfusion, 0x00000000u, 0x00020001u, 0, 65, 0, 1, 25 }, /* 7948: Rime Transfusion */
   { 0, "Rimebound Dead", {0}, 8428, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_rimebound_dead, 0x00000200u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 7949: Rimebound Dead */
@@ -19546,7 +19546,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ring of Gix", {0}, 4051, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_ring_of_gix, 0x00000000u, 0x00000001u, 0, 57, 0, 2, 45 }, /* 7954: Ring of Gix */
   { 0, "Ring of Immortals", {0}, 775, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_ring_of_immortals, 0x00000000u, 0x00004002u, 0, 241, 0, 0, 60 }, /* 7955: Ring of Immortals */
   { 0, "Ring of Kalonia", {0}, 12607, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ring_of_kalonia, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 40 }, /* 7956: Ring of Kalonia */
-  { 0, "Ring of Ma'r\373f", {0}, 451, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_ring_of_ma_ruf, 0x00000000u, 0x00000001u, 0, 249, 0, 3, 5 }, /* 7957: Ring of Ma'rûf */
+  { 0, "Ring of Ma'r\373f", {0}, 451, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_ring_of_ma_ruf, 0x00000000u, 0x00000001u, 0, 249, 4, 3, 5 }, /* 7957: Ring of Ma'rûf */
   { 0, "Ring of Renewal", {0}, 1816, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_ring_of_renewal, 0x00000000u, 0x00000001u, 0, 241, 0, 1, 50 }, /* 7958: Ring of Renewal */
   { 0, "Ring of Three Wis", {0}, 13326, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_ring_of_three_wishes, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 60 }, /* 7959: Ring of Three Wishes */
   { 0, "Ring of Thune", {0}, 12608, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ring_of_thune, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 40 }, /* 7960: Ring of Thune */
@@ -19560,7 +19560,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Riot Spikes", {0}, 8275, 0x04, -1, 18, { 1, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_riot_spikes, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 7968: Riot Spikes */
   { 0, "Rip-Clan Crasher", {0}, 1367, 0x02, -1, 24, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_ambush_party, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 20 }, /* 7969: Rip-Clan Crasher */
   { 0, "Ripscale Predator", {0}, 13038, 0x02, -1, 16, { 2, 4, 1 }, 6, 5, 1, 0, manalinkeh_card_ripscale_predators, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 7970: Ripscale Predator */
-  { 0, "Riptide", {0}, 355, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_riptide2, 0x00000000u, 0x00000000u, 0, 3, 0, 0, 40 }, /* 7971: Riptide */
+  { 0, "Riptide", {0}, 355, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_riptide2, 0x00000000u, 0x00000000u, 0, 3, 8, 0, 40 }, /* 7971: Riptide */
   { 0, "Riptide Chimera", {0}, 13961, 0x06, -1, 4, { 1, 2, 0 }, 3, 4, 0, 0, manalinkeh_card_riptide_chimera, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 7972: Riptide Chimera */
   { 0, "Riptide Director", {0}, 6428, 0x02, -1, 4, { 2, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_riptide_director, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 7973: Riptide Director */
   { 0, "Riptide Laborator", {0}, 6239, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_riptide_laboratory, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 7974: Riptide Laboratory */
@@ -19619,13 +19619,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Robber Fly", {0}, 4579, 0x02, -1, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_robber_fly, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8027: Robber Fly */
   { 0, "Roc", {0}, 18810, 0x02, -1, 32, { 0, 0, 0 }, 3, 3, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 0 }, /* 8028: Roc */
   { 0, "Roc Egg", {0}, 11168, 0x02, -1, 32, { 1, 2, 0 }, 0, 3, 0, 0, manalinkeh_card_roc_egg, 0x00800000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 8029: Roc Egg */
-  { 0, "Roc of Kher Ridge", {0}, 206, 0x02, -1, 16, { 1, 3, 0 }, 3, 3, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 70 }, /* 8030: Roc of Kher Ridges */
-  { 0, "Rock Hydra", {0}, 207, 0x02, -1, 16, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_rock_hydra, 0x00000000u, 0x00000015u, 0, 248, 0, 3, 70 }, /* 8031: Rock Hydra */
+  { 0, "Roc of Kher Ridge", {0}, 206, 0x02, -1, 16, { 1, 3, 0 }, 3, 3, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 2, 2, 70 }, /* 8030: Roc of Kher Ridges */
+  { 0, "Rock Hydra", {0}, 207, 0x02, -1, 16, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_rock_hydra, 0x00000000u, 0x00000015u, 0, 248, 2, 3, 70 }, /* 8031: Rock Hydra */
   { 0, "Rock Slide", {0}, 2771, 0x10, -1, 16, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_rock_slide, 0x00000000u, 0x00000000u, 0, 6, 0, 3, 50 }, /* 8032: Rock Slide */
-  { 0, "Rocket Launcher", {0}, 523, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_rocket_launcher, 0x00000000u, 0x00000001u, 0, 136, 0, 1, 5 }, /* 8033: Rocket Launcher */
+  { 0, "Rocket Launcher", {0}, 523, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_rocket_launcher, 0x00000000u, 0x00000001u, 0, 136, 32, 1, 5 }, /* 8033: Rocket Launcher */
   { 0, "Rockslide Element", {0}, 1372, 0x02, -1, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_scavenger_drake, 0x00000100u, 0x00000020u, 0, 8, 0, 3, 35 }, /* 8034: Rockslide Elemental */
   { 0, "Rocky Tar Pit", {0}, 2587, 0x01, -1, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_rocky_tar_pit, 0x00000000u, 0x00000001u, 0, 153, 0, 0, 10 }, /* 8035: Rocky Tar Pit */
-  { 0, "Rod of Ruin", {0}, 208, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_rod_of_ruin, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 70 }, /* 8036: Rod of Ruin */
+  { 0, "Rod of Ruin", {0}, 208, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_rod_of_ruin, 0x00000000u, 0x00000001u, 0, 248, 1, 2, 70 }, /* 8036: Rod of Ruin */
   { 0, "Rofellos, Llanowa", {0}, 1533, 0x02, 14, 8, { 2, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_rofellos_llanowar_emissary, 0x00000000u, 0x00001000u, 0, 248, 0, 2, 50 }, /* 8037: Rofellos, Llanowar Emissary */
   { 0, "Rofellos's Gift", {0}, 4182, 0x08, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_rofellos_gift, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 8038: Rofellos's Gift */
   { 0, "Rogue Elephant", {0}, 3033, 0x02, 10, 8, { 1, 0, 0 }, 3, 3, 0, 0, manalinkeh_card_rogue_elephant, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 8039: Rogue Elephant */
@@ -19676,7 +19676,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Rousing of Souls", {0}, 14053, 0x08, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_rousing_of_souls, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 20 }, /* 8084: Rousing of Souls */
   { 0, "Rout", {0}, 5097, 0x18, -1, 32, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_rout, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 97 }, /* 8085: Rout */
   { 0, "Rowen", {0}, 2772, 0x04, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_rowen, 0x00000000u, 0x00000000u, 0, 9, 0, 255, 75 }, /* 8086: Rowen */
-  { 0, "Royal Assassin", {0}, 209, 0x02, -1, 2, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_royal_assassin, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 75 }, /* 8087: Royal Assassin */
+  { 0, "Royal Assassin", {0}, 209, 0x02, -1, 2, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_royal_assassin, 0x00000000u, 0x00000001u, 0, 248, 1, 2, 75 }, /* 8087: Royal Assassin */
   { 0, "Rubbleback Rhino", {0}, 12808, 0x02, -1, 8, { 1, 4, 0 }, 3, 4, 0, 0, manalinkeh_card_aven_fleetwing, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8088: Rubbleback Rhino */
   { 0, "Rubblebelt Maaka", {0}, 13211, 0x02, -1, 16, { 1, 3, 4 }, 3, 3, 0, 0, manalinkeh_card_rubblebelt_maaka, 0x00000000u, 0x00000000u, 0, 72, 0, 0, 50 }, /* 8089: Rubblebelt Maaka */
   { 0, "Rubblebelt Raider", {0}, 13039, 0x02, -1, 24, { 3, 1, 1 }, 3, 3, 1, 0, manalinkeh_card_rubblebelt_raiders, 0x00000000u, 0x00000018u, 0, 8, 0, 1, 50 }, /* 8090: Rubblebelt Raiders */
@@ -19692,8 +19692,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Ruination Wurm", {0}, 13041, 0x02, -1, 24, { 2, 4, 0 }, 7, 6, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 8100: Ruination Wurm */
   { 0, "Ruinous Minotaur", {0}, 10650, 0x02, -1, 16, { 2, 1, 0 }, 5, 2, 0, 0, manalinkeh_card_ruinous_minotaur, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 30 }, /* 8101: Ruinous Minotaur */
   { 0, "Ruins of Trokair", {0}, 1818, 0x01, -1, 32, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ruins_of_trokair, 0x00000000u, 0x00001000u, 0, 8, 0, 2, 10 }, /* 8102: Ruins of Trokair */
-  { 0, "Rukh", {0}, 892, 0x02, -1, 16, { 0, 0, 0 }, 4, 4, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 0 }, /* 8103: Rukh */
-  { 0, "Rukh Egg", {0}, 452, 0x02, -1, 16, { 1, 3, 0 }, 0, 3, 0, 0, manalinkeh_card_rukh_egg, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 50 }, /* 8104: Rukh Egg */
+  { 0, "Rukh", {0}, 892, 0x02, -1, 16, { 0, 0, 0 }, 4, 4, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 9, 1, 0, 0 }, /* 8103: Rukh */
+  { 0, "Rukh Egg", {0}, 452, 0x02, -1, 16, { 1, 3, 0 }, 0, 3, 0, 0, manalinkeh_card_rukh_egg, 0x00000000u, 0x00000000u, 0, 8, 4, 3, 50 }, /* 8104: Rukh Egg */
   { 0, "Rule of Law", {0}, 6771, 0x04, -1, 32, { 1, 2, 12 }, 0, 0, 0, 0, manalinkeh_card_arcane_laboratory, 0x00000000u, 0x40000000u, 0, 8, 0, 0, 40 }, /* 8105: Rule of Law */
   { 0, "Rules Engine", {0}, 19800, 0x80, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_rules_engine, 0x00000000u, 0x50000001u, 0, 241, 0, 2, 0 }, /* 8106: Rules Engine */
   { 0, "Rumbling Baloth", {0}, 13328, 0x02, -1, 8, { 2, 2, 0 }, 4, 4, 0, 0, card_dummy, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 5 }, /* 8107: Rumbling Baloth */
@@ -19752,7 +19752,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sacred Nectar", {0}, 1137, 0x08, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_sacred_nectar, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 5 }, /* 8160: Sacred Nectar */
   { 0, "Sacred Rites", {0}, 5680, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sacred_rites, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 8161: Sacred Rites */
   { 0, "Sacred Wolf", {0}, 11170, 0x02, -1, 8, { 1, 2, 0 }, 3, 1, 0, 0, manalinkeh_card_aven_fleetwing, 0x01000000u, 0x00000000u, 0, 8, 0, 1, 59 }, /* 8162: Sacred Wolf */
-  { 0, "Sacrifice", {0}, 210, 0x20, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sacrifice, 0x00000000u, 0x00001000u, 0, 15, 0, 1, 40 }, /* 8163: Sacrifice */
+  { 0, "Sacrifice", {0}, 210, 0x20, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sacrifice, 0x00000000u, 0x00001000u, 0, 15, 2, 1, 40 }, /* 8163: Sacrifice */
   { 0, "Sadistic Glee", {0}, 3258, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sadistic_glee, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 25 }, /* 8164: Sadistic Glee */
   { 0, "Sadistic Hypnotis", {0}, 5681, 0x02, -1, 2, { 2, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_sadistic_hypnotist, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 8165: Sadistic Hypnotist */
   { 0, "Sadistic Sacramen", {0}, 10652, 0x08, -1, 2, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sadistic_sacrament, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 100 }, /* 8166: Sadistic Sacrament */
@@ -19764,7 +19764,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Saffi Eriksdotter", {0}, 8650, 0x02, 14, 40, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_saffi_eriksdotter, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 60 }, /* 8172: Saffi Eriksdotter */
   { 0, "Sage of Fables", {0}, 9424, 0x02, 1, 4, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_sage_of_fables, 0x00000000u, 0x00000001u, 0, 201, 0, 0, 20 }, /* 8173: Sage of Fables */
   { 0, "Sage of Hours", {0}, 13967, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_sage_of_hours, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 50 }, /* 8174: Sage of Hours */
-  { 0, "Sage of Lat-Nam", {0}, 524, 0x02, -1, 4, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_sage_of_lat_nam, 0x00000000u, 0x00000001u, 0, 24, 0, 255, 5 }, /* 8175: Sage of Lat-Nam */
+  { 0, "Sage of Lat-Nam", {0}, 524, 0x02, -1, 4, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_sage_of_lat_nam, 0x00000000u, 0x00000401u, 0, 24, 32, 255, 5 }, /* 8175: Sage of Lat-Nam */
   { 0, "Sage of the Inwar", {0}, 14358, 0x02, 6, 52, { 3, 2, 0 }, 3, 4, 0, 0, manalinkeh_card_sage_of_the_inward_eye, 0x00000020u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 8176: Sage of the Inward Eye */
   { 0, "Sage Owl", {0}, 1138, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_spire_owl, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 8177: Sage Owl */
   { 0, "Sage-Eye Harrier", {0}, 14359, 0x02, -1, 32, { 1, 4, 1 }, 1, 5, 1, 0, manalinkeh_card_sage_eye_harrier, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8178: Sage-Eye Harrier */
@@ -19789,7 +19789,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Salvage Scout", {0}, 11352, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_salvage_scout, 0x00000000u, 0x00000001u, 0, 153, 0, 0, 20 }, /* 8197: Salvage Scout */
   { 0, "Salvage Slasher", {0}, 10196, 0x42, -1, 2, { 1, 1, 1 }, 1, 1, 0, 0, manalinkeh_card_salvage_slasher, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8198: Salvage Slasher */
   { 0, "Salvage Titan", {0}, 10051, 0x42, -1, 2, { 2, 4, 9 }, 6, 4, 1, 0, manalinkeh_card_salvage_titan, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8199: Salvage Titan */
-  { 0, "Samite Healer", {0}, 211, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_samite_healer, 0x00000000u, 0x00000005u, 0, 248, 0, 2, 20 }, /* 8200: Samite Healer */
+  { 0, "Samite Healer", {0}, 211, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_samite_healer, 0x00000000u, 0x00000005u, 0, 248, 1, 2, 20 }, /* 8200: Samite Healer */
   { 0, "Samurai Enforcers", {0}, 7365, 0x02, -1, 32, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_samurai_enforcers, 0x00000000u, 0x00000018u, 0, 8, 0, 0, 70 }, /* 8201: Samurai Enforcers */
   { 0, "Samurai of the Pa", {0}, 7366, 0x02, -1, 32, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_samurai_of_the_pale_courtain, 0x00000000u, 0x00000018u, 0, 8, 0, 0, 50 }, /* 8202: Samurai of the Pale Curtain */
   { 0, "Sanctified Charge", {0}, 14166, 0x10, -1, 32, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_sanctified_charge, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 8203: Sanctified Charge */
@@ -19802,7 +19802,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sand Silos", {0}, 1819, 0x01, -1, 4, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sand_silos, 0x00000000u, 0x00001023u, 0, 248, 0, 255, 30 }, /* 8210: Sand Silos */
   { 0, "Sand Squid", {0}, 4589, 0x02, -1, 4, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_sand_squid, 0x00000002u, 0x00000001u, 0, 24, 0, 0, 20 }, /* 8211: Sand Squid */
   { 0, "Sand Warrior", {0}, 889, 0x02, -1, 56, { 0, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 8212: Sand Warrior */
-  { 0, "Sandals of Abdall", {0}, 453, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_sandals_of_abdallah, 0x00000000u, 0x00000001u, 0, 49, 0, 2, 40 }, /* 8213: Sandals of Abdallah */
+  { 0, "Sandals of Abdall", {0}, 453, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_sandals_of_abdallah, 0x00000000u, 0x00000401u, 0, 49, 4, 2, 40 }, /* 8213: Sandals of Abdallah */
   { 0, "Sandbar Crocodile", {0}, 2592, 0x02, -1, 4, { 1, 4, 0 }, 6, 5, 0, 0, manalinkeh_card_sandbar_crocodile, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8214: Sandbar Crocodile */
   { 0, "Sands of Delirium", {0}, 12613, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_sands_of_delirium, 0x00000000u, 0x00020001u, 0, 136, 0, 0, 60 }, /* 8215: Sands of Delirium */
   { 0, "Sands of Time", {0}, 2773, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_sands_of_time, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 8216: Sands of Time */
@@ -19810,7 +19810,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sandsteppe Citade", {0}, 14363, 0x01, -1, 42, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_mana_producer_tapped, 0x00000000u, 0x00001000u, 0, 8, 0, 0, 10 }, /* 8218: Sandsteppe Citadel */
   { 0, "Sandstone Needle", {0}, 4590, 0x01, -1, 16, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sandstone_needle, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 10 }, /* 8219: Sandstone Needle */
   { 0, "Sandstone Warrior", {0}, 1678, 0x02, -1, 16, { 2, 2, 0 }, 1, 3, 0, 0, manalinkeh_card_furnace_whelp, 0x00000100u, 0x00000009u, 0, 72, 0, 2, 50 }, /* 8220: Sandstone Warrior */
-  { 0, "Sandstorm", {0}, 454, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sandstorm, 0x00000000u, 0x00000000u, 0, 6, 0, 1, 40 }, /* 8221: Sandstorm */
+  { 0, "Sandstorm", {0}, 454, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sandstorm, 0x00000000u, 0x00000400u, 0, 6, 1, 1, 40 }, /* 8221: Sandstorm */
   { 0, "Sangromancer", {0}, 11518, 0x02, -1, 2, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_sangromancer, 0x00000020u, 0x00000000u, 0, 9, 0, 2, 50 }, /* 8222: Sangromancer */
   { 0, "Sangrophage", {0}, 8653, 0x02, 2, 2, { 2, 0, 0 }, 3, 3, 0, 0, manalinkeh_card_sangrophage, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8223: Sangrophage */
   { 0, "Sanguimancy", {0}, 13793, 0x08, -1, 2, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_sanguimancy, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 8224: Sanguimancy */
@@ -19848,7 +19848,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Satyr Piper", {0}, 13539, 0x02, -1, 8, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_satyr_piper, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 20 }, /* 8256: Satyr Piper */
   { 0, "Satyr Rambler", {0}, 13540, 0x02, -1, 16, { 1, 1, 0 }, 2, 1, 0, 0, card_dummy, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 8257: Satyr Rambler */
   { 0, "Satyr Wayfinder", {0}, 13796, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_satyr_wayfinder, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 8258: Satyr Wayfinder */
-  { 0, "Savaen Elves", {0}, 944, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_savaen_elves, 0x00000000u, 0x00000001u, 0, 249, 0, 1, 5 }, /* 8259: Savaen Elves */
+  { 0, "Savaen Elves", {0}, 944, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_savaen_elves, 0x00000000u, 0x00000001u, 0, 249, 8, 1, 5 }, /* 8259: Savaen Elves */
   { 0, "Savage Beating", {0}, 6948, 0x10, -1, 16, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_savage_beating, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 8260: Savage Beating */
   { 0, "Savage Conception", {0}, 9863, 0x08, -1, 8, { 2, 3, 10 }, 0, 0, 0, 0, manalinkeh_card_savage_conception, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 8261: Savage Conception */
   { 0, "Savage Knucklebla", {0}, 14367, 0x02, -1, 28, { 3, 0, 0 }, 4, 4, 0, 0, manalinkeh_card_savage_knucklebone, 0x00000000u, 0x00000019u, 0, 81, 0, 0, 50 }, /* 8262: Savage Knuckleblade */
@@ -19860,7 +19860,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Savage Thallid", {0}, 8655, 0x02, -1, 8, { 2, 3, 0 }, 5, 2, 0, 0, manalinkeh_card_savage_thallid, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 8268: Savage Thallid */
   { 0, "Savage Twister", {0}, 2594, 0x08, -1, 24, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_savage_twister, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 75 }, /* 8269: Savage Twister */
   { 0, "Savageborn Hydra", {0}, 13215, 0x02, -1, 24, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_savageborn_hydra, 0x40000000u, 0x00000001u, 0, 24, 0, 0, 50 }, /* 8270: Savageborn Hydra */
-  { 0, "Savannah Lions", {0}, 213, 0x02, -1, 32, { 1, 0, 0 }, 2, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 8271: Savannah Lions */
+  { 0, "Savannah Lions", {0}, 213, 0x02, -1, 32, { 1, 0, 0 }, 2, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 2, 75 }, /* 8271: Savannah Lions */
   { 0, "Saving Grasp", {0}, 12251, 0x10, -1, 4, { 1, 0, 9 }, 0, 0, 0, 0, manalinkeh_card_saving_grasp, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 25 }, /* 8272: Saving Grasp */
   { 0, "Savor the Moment", {0}, 9665, 0x08, -1, 4, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_savor_the_moment, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 8273: Savor the Moment */
   { 0, "Savra, Queen of t", {0}, 7943, 0x02, 14, 10, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_savra_queen_of_the_golgari, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 70 }, /* 8274: Savra, Queen of the Golgari */
@@ -19890,14 +19890,14 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Scarwood Bandits", {0}, 945, 0x02, -1, 8, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_scarwood_bandits, 0x00000004u, 0x00000001u, 0, 248, 0, 3, 51 }, /* 8298: Scarwood Bandits */
   { 0, "Scarwood Goblins", {0}, 946, 0x02, 3, 24, { 2, 0, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 8299: Scarwood Goblins */
   { 0, "Scarwood Hag", {0}, 322, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_scarwood_hag, 0x00000000u, 0x00000001u, 0, 24, 0, 1, 36 }, /* 8300: Scarwood Hag */
-  { 0, "Scathe Zombies", {0}, 214, 0x02, 2, 2, { 1, 2, 0 }, 2, 2, 0, 0, card_scathe_zombies, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 5 }, /* 8301: Scathe Zombies */
+  { 0, "Scathe Zombies", {0}, 214, 0x02, 2, 2, { 1, 2, 0 }, 2, 2, 0, 0, card_scathe_zombies, 0x00000000u, 0x00000001u, 0, 248, 1, 0, 5 }, /* 8301: Scathe Zombies */
   { 0, "Scatter Arc", {0}, 13046, 0x20, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_scatter_arc, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 8302: Scatter Arc */
   { 0, "Scatter the Seeds", {0}, 7944, 0x10, -1, 8, { 2, 3, 0 }, 0, 0, 1, 0, manalinkeh_card_scatter_the_seeds, 0x00000000u, 0x00000000u, 0, 2, 0, 0, 40 }, /* 8303: Scatter the Seeds */
   { 0, "Scattering Stroke", {0}, 9249, 0x20, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_scattering_stroke, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 8304: Scattering Stroke */
   { 0, "Scattershot Arche", {0}, 10198, 0x02, -1, 8, { 1, 0, 0 }, 1, 2, 0, 0, manalinkeh_card_scattershot_archer, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 8305: Scattershot Archer */
   { 0, "Scavenger Drake", {0}, 1373, 0x02, -1, 2, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_scavenger_drake, 0x00000020u, 0x00000020u, 0, 8, 0, 3, 35 }, /* 8306: Scavenger Drake */
-  { 0, "Scavenger Folk", {0}, 947, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_scavenger_folk, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 8307: Scavenger Folk */
-  { 0, "Scavenging Ghoul", {0}, 215, 0x02, 2, 2, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_scavenging_ghoul, 0x00000200u, 0x00000021u, 0, 248, 0, 0, 5 }, /* 8308: Scavenging Ghoul */
+  { 0, "Scavenger Folk", {0}, 947, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_scavenger_folk, 0x00000000u, 0x00000001u, 0, 248, 8, 0, 50 }, /* 8307: Scavenger Folk */
+  { 0, "Scavenging Ghoul", {0}, 215, 0x02, 2, 2, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_scavenging_ghoul, 0x00000200u, 0x00000021u, 0, 248, 1, 0, 5 }, /* 8308: Scavenging Ghoul */
   { 0, "Scavenging Ooze", {0}, 11748, 0x02, -1, 8, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_scavenging_ooze, 0x00000000u, 0x00000019u, 0, 72, 0, 1, 50 }, /* 8309: Scavenging Ooze */
   { 0, "Scent of Brine", {0}, 4183, 0x30, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_scent_of_brine, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 40 }, /* 8310: Scent of Brine */
   { 0, "Scent of Cinder", {0}, 4184, 0x08, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_scent_of_cinder, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 8311: Scent of Cinder */
@@ -19960,7 +19960,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Scroll Rack", {0}, 3268, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_scroll_rack, 0x00000000u, 0x00000001u, 0, 153, 0, 2, 80 }, /* 8368: Scroll Rack */
   { 0, "Scroll Thief", {0}, 11171, 0x02, -1, 4, { 1, 2, 0 }, 1, 3, 0, 0, manalinkeh_card_thieving_magpie, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 25 }, /* 8369: Scroll Thief */
   { 0, "Scryb Ranger", {0}, 8659, 0x12, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_scryb_ranger, 0x00001020u, 0x00000001u, 0, 226, 0, 2, 40 }, /* 8370: Scryb Ranger */
-  { 0, "Scryb Sprites", {0}, 217, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 8371: Scryb Sprites */
+  { 0, "Scryb Sprites", {0}, 217, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 1, 2, 5 }, /* 8371: Scryb Sprites */
   { 0, "Scrying Sheets", {0}, 8439, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_scrying_sheets, 0x00000000u, 0x00001001u, 0, 129, 0, 2, 100 }, /* 8372: Scrying Sheets */
   { 0, "Sculpting Steel", {0}, 1306, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_sculpting_steel, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 45 }, /* 8373: Sculpting Steel */
   { 0, "Scute Mob", {0}, 10655, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_scute_mob, 0x00000000u, 0x00000020u, 0, 8, 0, 1, 100 }, /* 8374: Scute Mob */
@@ -19976,7 +19976,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sea God's Revenge", {0}, 13543, 0x08, -1, 4, { 1, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_sea_gods_revenge, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 8384: Sea God's Revenge */
   { 0, "Sea Kings' Blessi", {0}, 779, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sea_kings_blessing, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 8385: Sea Kings' Blessing */
   { 0, "Sea Monster", {0}, 1139, 0x02, -1, 4, { 2, 4, 0 }, 6, 6, 0, 0, manalinkeh_card_hammerhead_shark, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 8386: Sea Monster */
-  { 0, "Sea Serpent", {0}, 218, 0x02, -1, 4, { 1, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_sea_serpent, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 8387: Sea Serpent */
+  { 0, "Sea Serpent", {0}, 218, 0x02, -1, 4, { 1, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_sea_serpent, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 8387: Sea Serpent */
   { 0, "Sea Sprite", {0}, 2238, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, card_dummy, 0x00004020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8388: Sea Sprite */
   { 0, "Seachrome Coast", {0}, 11356, 0x01, -1, 36, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_generic_som_tapland, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 25 }, /* 8389: Seachrome Coast */
   { 0, "Seacoast Drake", {0}, 13331, 0x02, -1, 4, { 1, 1, 0 }, 1, 3, 0, 0, card_dummy, 0x00000020u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 8390: Seacoast Drake */
@@ -20019,7 +20019,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Security Blockade", {0}, 12813, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_security_blockade, 0x00000000u, 0x00000005u, 0, 249, 0, 0, 40 }, /* 8427: Security Blockade */
   { 0, "Sedge Scorpion", {0}, 13545, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_deadly_recluse, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8428: Sedge Scorpion */
   { 0, "Sedge Sliver", {0}, 8661, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_sedge_sliver, 0x00000000u, 0x00000001u, 0, 249, 0, 1, 20 }, /* 8429: Sedge Sliver */
-  { 0, "Sedge Troll", {0}, 219, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_sedge_troll, 0x00000200u, 0x00000001u, 0, 248, 0, 1, 50 }, /* 8430: Sedge Troll */
+  { 0, "Sedge Troll", {0}, 219, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_sedge_troll, 0x00000200u, 0x00000001u, 0, 248, 2, 1, 50 }, /* 8430: Sedge Troll */
   { 0, "Sedraxis Alchemis", {0}, 10203, 0x02, 2, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_sedraxis_alchemist, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 8431: Sedraxis Alchemist */
   { 0, "Sedraxis Specter", {0}, 10057, 0x02, -1, 22, { 3, 0, 9 }, 3, 2, 1, 0, manalinkeh_card_sedraxis_specter, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 80 }, /* 8432: Sedraxis Specter */
   { 0, "Sedris, the Trait", {0}, 10058, 0x02, 14, 22, { 3, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_sedris_the_traitor_king, 0x00000000u, 0x00000001u, 0, 25, 0, 3, 100 }, /* 8433: Sedris, the Traitor King */
@@ -20033,13 +20033,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Seeds of Innocenc", {0}, 2600, 0x08, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_seeds_of_innocence, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 75 }, /* 8441: Seeds of Innocence */
   { 0, "Seeds of Strength", {0}, 7949, 0x10, -1, 40, { 2, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_seeds_of_strength, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 8442: Seeds of Strength */
   { 0, "Seek the Horizon", {0}, 7738, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_seek_the_horizon, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 8443: Seek the Horizon */
-  { 0, "Seeker", {0}, 781, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_seeker2, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 8444: Seeker */
+  { 0, "Seeker", {0}, 781, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_seeker2, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 5 }, /* 8444: Seeker */
   { 0, "Seeker of Skybrea", {0}, 3269, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_seeker_of_skybreak, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 8445: Seeker of Skybreak */
   { 0, "Seeker of the Way", {0}, 14375, 0x02, -1, 32, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_seeker_of_the_way, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8446: Seeker of the Way */
   { 0, "Seer's Sundial", {0}, 10827, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_seer_sundial, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 10 }, /* 8447: Seer's Sundial */
   { 0, "Seething Anger", {0}, 1433, 0x08, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_seething_anger, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 5 }, /* 8448: Seething Anger */
   { 0, "Seething Song", {0}, 1422, 0x20, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_seething_song, 0x00000000u, 0x00001000u, 0, 15, 0, 2, 15 }, /* 8449: Seething Song */
-  { 0, "Segovian Leviatha", {0}, 782, 0x02, -1, 4, { 1, 4, 0 }, 3, 3, 0, 0, card_dummy, 0x00000002u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 8450: Segovian Leviathan */
+  { 0, "Segovian Leviatha", {0}, 782, 0x02, -1, 4, { 1, 4, 0 }, 3, 3, 0, 0, card_dummy, 0x00000002u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 8450: Segovian Leviathan */
   { 0, "Seht's Tiger", {0}, 9012, 0x12, -1, 32, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_sehts_tiger, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 50 }, /* 8451: Seht's Tiger */
   { 0, "Seismic Assault", {0}, 1142, 0x04, -1, 16, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_seismic_assault, 0x00000000u, 0x00000001u, 0, 249, 0, 1, 100 }, /* 8452: Seismic Assault */
   { 0, "Seismic Mage", {0}, 4601, 0x02, -1, 16, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_seismic_mage, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 50 }, /* 8453: Seismic Mage */
@@ -20076,7 +20076,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sengir Autocrat", {0}, 1647, 0x02, -1, 2, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_sengir_autocrat, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 75 }, /* 8484: Sengir Autocrat */
   { 0, "Sengir Bats", {0}, 2240, 0x02, -1, 2, { 2, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_sengir_bats, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8485: Sengir Bats */
   { 0, "Sengir Nosferatu", {0}, 8662, 0x02, -1, 2, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_sengir_nosferatu, 0x00000020u, 0x00000001u, 0, 248, 0, 0, 70 }, /* 8486: Sengir Nosferatu */
-  { 0, "Sengir Vampire", {0}, 220, 0x02, -1, 2, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_sengir_vampire, 0x00000020u, 0x00000020u, 0, 8, 0, 2, 75 }, /* 8487: Sengir Vampire */
+  { 0, "Sengir Vampire", {0}, 220, 0x02, -1, 2, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_sengir_vampire, 0x00000020u, 0x00000220u, 0, 8, 1, 2, 75 }, /* 8487: Sengir Vampire */
   { 0, "Sensation Gorger", {0}, 9429, 0x02, 3, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_sensation_gorger, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8488: Sensation Gorger */
   { 0, "Sensei Golden-Tai", {0}, 7369, 0x02, 14, 32, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_sensei_golden_tail, 0x00000000u, 0x00000019u, 0, 41, 0, 0, 50 }, /* 8489: Sensei Golden-Tail */
   { 0, "Sensei's Divining", {0}, 1543, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_senseis_divining_top, 0x00000000u, 0x00000001u, 0, 17, 0, 3, 5 }, /* 8490: Sensei's Divining Top */
@@ -20093,8 +20093,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Seraph of the Mas", {0}, 14169, 0x02, -1, 32, { 2, 5, 1 }, 16384, 16384, 1, 0, manalinkeh_card_seraph_of_the_masses, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8501: Seraph of the Masses */
   { 0, "Seraph of the Swo", {0}, 13334, 0x02, -1, 32, { 1, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_seraph_of_the_sword, 0x00000020u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 8502: Seraph of the Sword */
   { 0, "Seraph Sanctuary", {0}, 12463, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_seraphs_sanctuary, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 8503: Seraph Sanctuary */
-  { 0, "Serendib Djinn", {0}, 455, 0x02, 6, 4, { 2, 2, 0 }, 5, 6, 0, 0, manalinkeh_card_serendib_djinn, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 8504: Serendib Djinn */
-  { 0, "Serendib Efreet", {0}, 456, 0x02, 5, 4, { 1, 2, 0 }, 3, 4, 0, 0, manalinkeh_card_juzam_djinn, 0x00000020u, 0x00000001u, 0, 24, 0, 2, 75 }, /* 8505: Serendib Efreet */
+  { 0, "Serendib Djinn", {0}, 455, 0x02, 6, 4, { 2, 2, 0 }, 5, 6, 0, 0, manalinkeh_card_serendib_djinn, 0x00000020u, 0x00000c00u, 0, 8, 4, 2, 50 }, /* 8504: Serendib Djinn */
+  { 0, "Serendib Efreet", {0}, 456, 0x02, 5, 4, { 1, 2, 0 }, 3, 4, 0, 0, manalinkeh_card_juzam_djinn, 0x00000020u, 0x00000c01u, 0, 24, 4, 2, 75 }, /* 8505: Serendib Efreet */
   { 0, "Serendib Sorcerer", {0}, 8844, 0x02, -1, 4, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_sorceress_queen, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 8506: Serendib Sorcerer */
   { 0, "Serene Heart", {0}, 2601, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_serene_heart, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 75 }, /* 8507: Serene Heart */
   { 0, "Serene Master", {0}, 13637, 0x02, -1, 32, { 1, 1, 0 }, 0, 2, 0, 0, manalinkeh_card_serene_master, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8508: Serene Master */
@@ -20103,11 +20103,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Serenity", {0}, 3036, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_serenity, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 100 }, /* 8511: Serenity */
   { 0, "Serf", {0}, 18815, 0x02, -1, 2, { 0, 0, 0 }, 0, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 8512: Serf */
   { 0, "Serpent Assassin", {0}, 2832, 0x02, -1, 2, { 2, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_serpent_assassin, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 8513: Serpent Assassin */
-  { 0, "Serpent Generator", {0}, 784, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_serpent_generator, 0x00000000u, 0x00000001u, 0, 241, 0, 3, 20 }, /* 8514: Serpent Generator */
+  { 0, "Serpent Generator", {0}, 784, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_serpent_generator, 0x00000000u, 0x00000001u, 0, 241, 16, 3, 20 }, /* 8514: Serpent Generator */
   { 0, "Serpent Warrior", {0}, 1143, 0x02, -1, 2, { 1, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_necrogen_scudder, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 8515: Serpent Warrior */
   { 0, "Serpent's Gift", {0}, 12616, 0x10, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_serpents_gift, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 8516: Serpent's Gift */
   { 0, "Serra Advocate", {0}, 1334, 0x02, -1, 32, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_serra_advocate, 0x00000020u, 0x00000001u, 0, 40, 0, 1, 20 }, /* 8517: Serra Advocate */
-  { 0, "Serra Angel", {0}, 221, 0x02, -1, 32, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_serra_angel, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 8518: Serra Angel */
+  { 0, "Serra Angel", {0}, 221, 0x02, -1, 32, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_serra_angel, 0x00000020u, 0x00000200u, 0, 8, 1, 2, 75 }, /* 8518: Serra Angel */
   { 0, "Serra Ascendant", {0}, 11172, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_serra_ascendant, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 8519: Serra Ascendant */
   { 0, "Serra Avatar", {0}, 3890, 0x02, -1, 32, { 3, 4, 2 }, 16384, 16384, 2, 0, manalinkeh_card_serra_avatar, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 70 }, /* 8520: Serra Avatar */
   { 0, "Serra Avenger", {0}, 8663, 0x02, -1, 32, { 2, 0, 0 }, 3, 3, 1, 0, manalinkeh_card_serra_avenger, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8521: Serra Avenger */
@@ -20141,7 +20141,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sewer Nemesis", {0}, 11734, 0x02, -1, 2, { 1, 3, 0 }, 16384, 16384, 0, 0, manalinkeh_card_sewer_nemesis, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8549: Sewer Nemesis */
   { 0, "Sewer Rats", {0}, 2602, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_sewer_rats, 0x00000000u, 0x00000009u, 0, 72, 0, 1, 25 }, /* 8550: Sewer Rats */
   { 0, "Sewer Shambler", {0}, 12819, 0x02, 2, 2, { 1, 2, 17 }, 2, 1, 0, 0, manalinkeh_card_sewer_shambler, 0x00000001u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8551: Sewer Shambler */
-  { 0, "Sewers of Estark", {0}, 896, 0x10, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_sewers_of_estark, 0x00000000u, 0x00000000u, 0, 6, 0, 1, 5 }, /* 8552: Sewers of Estark */
+  { 0, "Sewers of Estark", {0}, 896, 0x10, -1, 2, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_sewers_of_estark, 0x00000000u, 0x00000000u, 0, 6, 128, 1, 5 }, /* 8552: Sewers of Estark */
   { 0, "Shackles", {0}, 3556, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_shackles, 0x00000000u, 0x00000001u, 0, 120, 0, 0, 60 }, /* 8553: Shackles */
   { 0, "Shade of Trokair", {0}, 8846, 0x02, -1, 32, { 1, 3, 1 }, 1, 2, 1, 0, manalinkeh_card_shade_of_trokair, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 20 }, /* 8554: Shade of Trokair */
   { 0, "Shadow Alley Deni", {0}, 13050, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_shadow_alley_denizen, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8555: Shadow Alley Denizen */
@@ -20166,13 +20166,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Shambling Remains", {0}, 10204, 0x02, 2, 18, { 2, 1, 9 }, 4, 3, 0, 0, manalinkeh_card_shambling_remains, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8574: Shambling Remains */
   { 0, "Shambling Shell", {0}, 7957, 0x02, 2, 10, { 2, 1, 6 }, 3, 1, 0, 0, manalinkeh_card_shambling_shell, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 50 }, /* 8575: Shambling Shell */
   { 0, "Shambling Swarm", {0}, 5875, 0x02, -1, 2, { 3, 1, 0 }, 3, 3, 0, 0, manalinkeh_card_shambling_swarm, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8576: Shambling Swarm */
-  { 0, "Shanodin Dryads", {0}, 222, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000004u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 8577: Shanodin Dryads */
+  { 0, "Shanodin Dryads", {0}, 222, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000004u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 8577: Shanodin Dryads */
   { 0, "Shape Anew", {0}, 11359, 0x08, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_shape_anew, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 40 }, /* 8578: Shape Anew */
   { 0, "Shape of the Wiit", {0}, 8441, 0x04, -1, 8, { 3, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_shape_of_the_wiitigo, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 8579: Shape of the Wiitigo */
   { 0, "Shaper Guildmage", {0}, 2606, 0x02, -1, 4, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_shaper_guildmage, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 8580: Shaper Guildmage */
   { 0, "Shaper Parasite", {0}, 8847, 0x02, -1, 4, { 2, 1, 1 }, 2, 3, 1, 0, manalinkeh_card_shaper_parasite, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8581: Shaper Parasite */
   { 0, "Shapesharer", {0}, 9254, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_shapesharer, 0x00080000u, 0x00000001u, 0, 56, 0, 0, 50 }, /* 8582: Shapesharer */
-  { 0, "Shapeshifter", {0}, 525, 0x42, -1, 1, { 0, 6, 0 }, 16384, 16391, 0, 0, manalinkeh_card_shapeshifter2, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 5 }, /* 8583: Shapeshifter */
+  { 0, "Shapeshifter", {0}, 525, 0x42, -1, 1, { 0, 6, 0 }, 16384, 16391, 0, 0, manalinkeh_card_shapeshifter2, 0x00000000u, 0x00000001u, 0, 24, 1, 2, 5 }, /* 8583: Shapeshifter */
   { 0, "Shapeshifter Toke", {0}, 18817, 0x02, -1, 1, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_rhino_token, 0x00080000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 8584: Shapeshifter Token */
   { 0, "Shapeshifter's Ma", {0}, 9014, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_shapeshifters_marrow, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 8585: Shapeshifter's Marrow */
   { 0, "Shard Convergence", {0}, 10205, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_shard_convergence, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 8586: Shard Convergence */
@@ -20185,7 +20185,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Shared Triumph", {0}, 6257, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_shared_triumph, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 8593: Shared Triumph */
   { 0, "Sharpened Pitchfo", {0}, 12068, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_sharpened_pitchfork, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 40 }, /* 8594: Sharpened Pitchfork */
   { 0, "Sharuum the Hegem", {0}, 10061, 0x42, 14, 38, { 3, 3, 1 }, 5, 5, 0, 0, manalinkeh_card_sharuum_the_hegemon, 0x00000020u, 0x00000000u, 0, 8, 0, 3, 20 }, /* 8595: Sharuum the Hegemon */
-  { 0, "Shatter", {0}, 223, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_shatter, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 65 }, /* 8596: Shatter */
+  { 0, "Shatter", {0}, 223, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_shatter, 0x00000000u, 0x00000000u, 0, 15, 1, 1, 65 }, /* 8596: Shatter */
   { 0, "Shattered Angel", {0}, 11676, 0x02, -1, 32, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_shattered_angel, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 59 }, /* 8597: Shattered Angel */
   { 0, "Shattered Crypt", {0}, 3039, 0x08, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_shattered_crypt, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 50 }, /* 8598: Shattered Crypt */
   { 0, "Shattered Percept", {0}, 12258, 0x08, -1, 16, { 1, 2, 9 }, 0, 0, 0, 0, manalinkeh_card_shattered_perception, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 15 }, /* 8599: Shattered Perception */
@@ -20194,7 +20194,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Shattering Pulse", {0}, 1434, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_shattering_pulse, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 80 }, /* 8602: Shattering Pulse */
   { 0, "Shattering Spree", {0}, 8125, 0x08, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_shattering_spree, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 8603: Shattering Spree */
   { 0, "Shatterskull Gian", {0}, 10661, 0x02, -1, 16, { 2, 2, 0 }, 4, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 30 }, /* 8604: Shatterskull Giant */
-  { 0, "Shatterstorm", {0}, 526, 0x08, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_shatterstorm, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 60 }, /* 8605: Shatterstorm */
+  { 0, "Shatterstorm", {0}, 526, 0x08, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_shatterstorm, 0x00000000u, 0x00000000u, 0, 1, 32, 1, 60 }, /* 8605: Shatterstorm */
   { 0, "Shauku, Endbringe", {0}, 2608, 0x02, 14, 2, { 2, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_shauku_endbringer, 0x00000020u, 0x00000001u, 0, 248, 0, 2, 100 }, /* 8606: Shauku, Endbringer */
   { 0, "Shelkin Brownie", {0}, 785, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_shelkin_brownie, 0x00000000u, 0x00000003u, 0, 184, 0, 0, 20 }, /* 8607: Shelkin Brownie */
   { 0, "Shell Skulkin", {0}, 9867, 0x42, -1, 1, { 0, 4, 0 }, 3, 2, 0, 0, manalinkeh_card_shell_skulkin, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 8608: Shell Skulkin */
@@ -20214,7 +20214,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Shield of the Ava", {0}, 14172, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_shield_of_the_avatar, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 40 }, /* 8622: Shield of the Avatar */
   { 0, "Shield of the Ove", {0}, 9673, 0x04, -1, 40, { 1, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_shield_of_the_oversoul, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 8623: Shield of the Oversoul */
   { 0, "Shield Sphere", {0}, 2346, 0x42, -1, 1, { 0, 0, 0 }, 0, 6, 0, 0, manalinkeh_card_shield_sphere, 0x00800000u, 0x00000000u, 0, 1, 0, 0, 25 }, /* 8624: Shield Sphere */
-  { 0, "Shield Wall", {0}, 786, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_shield_wall, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 5 }, /* 8625: Shield Wall */
+  { 0, "Shield Wall", {0}, 786, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_shield_wall, 0x00000000u, 0x00000000u, 0, 15, 16, 1, 5 }, /* 8625: Shield Wall */
   { 0, "Shielded Passage", {0}, 13054, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_shielded_passage, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 8626: Shielded Passage */
   { 0, "Shieldmate's Bles", {0}, 10663, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_shieldmates_blessing, 0x00000000u, 0x00000004u, 0, 15, 0, 1, 5 }, /* 8627: Shieldmate's Blessing */
   { 0, "Shields of Velis ", {0}, 9256, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_shields_of_velis_vel, 0x00080000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 8628: Shields of Velis Vel */
@@ -20236,7 +20236,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Shipwreck Singer", {0}, 13550, 0x02, -1, 6, { 2, 0, 0 }, 1, 2, 0, 0, manalinkeh_card_shipwreck_singer, 0x00000020u, 0x00000001u, 0, 88, 0, 0, 20 }, /* 8644: Shipwreck Singer */
   { 0, "Shisato, Whisperi", {0}, 7375, 0x02, 14, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_shisato_whispering_hunter, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8645: Shisato, Whispering Hunter */
   { 0, "Shiv's Embrace", {0}, 3896, 0x04, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_shivs_embrace, 0x00000000u, 0x00000001u, 0, 65, 0, 1, 9 }, /* 8646: Shiv's Embrace */
-  { 0, "Shivan Dragon", {0}, 224, 0x02, -1, 16, { 2, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_furnace_whelp, 0x00000020u, 0x00000009u, 0, 72, 0, 2, 75 }, /* 8647: Shivan Dragon */
+  { 0, "Shivan Dragon", {0}, 224, 0x02, -1, 16, { 2, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_furnace_whelp, 0x00000020u, 0x00000009u, 0, 72, 1, 2, 75 }, /* 8647: Shivan Dragon */
   { 0, "Shivan Gorge", {0}, 3897, 0x01, 15, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_shivan_gorge, 0x00000000u, 0x00001001u, 0, 137, 0, 0, 10 }, /* 8648: Shivan Gorge */
   { 0, "Shivan Harvest", {0}, 5115, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_shivan_harvest, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 60 }, /* 8649: Shivan Harvest */
   { 0, "Shivan Hellkite", {0}, 3898, 0x02, -1, 16, { 2, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_shivan_hellkite, 0x00000020u, 0x00000001u, 0, 248, 0, 2, 100 }, /* 8650: Shivan Hellkite */
@@ -20364,15 +20364,15 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Simic Signet", {0}, 1724, 0x40, -1, 12, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_simic_signet, 0x00000000u, 0x00011001u, 0, 249, 0, 0, 10 }, /* 8772: Simic Signet */
   { 0, "Simic Sky Swallow", {0}, 1232, 0x02, -1, 12, { 2, 5, 0 }, 6, 6, 0, 0, card_dummy, 0x000200a0u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 8773: Simic Sky Swallower */
   { 0, "Simoon", {0}, 2776, 0x10, -1, 24, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_simoon, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 8774: Simoon */
-  { 0, "Simulacrum", {0}, 225, 0x10, -1, 2, { 1, 1, 13 }, 0, 0, 0, 0, manalinkeh_card_simulacrum, 0x00000000u, 0x00000004u, 0, 15, 0, 1, 65 }, /* 8775: Simulacrum */
+  { 0, "Simulacrum", {0}, 225, 0x10, -1, 2, { 1, 1, 13 }, 0, 0, 0, 0, manalinkeh_card_simulacrum, 0x00000000u, 0x00000004u, 0, 15, 1, 1, 65 }, /* 8775: Simulacrum */
   { 0, "Sin Collector", {0}, 13221, 0x02, -1, 34, { 2, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_sin_collector, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 8776: Sin Collector */
-  { 0, "Sindbad", {0}, 458, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_sindbad, 0x00000000u, 0x00000001u, 0, 24, 0, 2, 20 }, /* 8777: Sindbad */
+  { 0, "Sindbad", {0}, 458, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_sindbad, 0x00000000u, 0x00000401u, 0, 24, 1, 2, 20 }, /* 8777: Sindbad */
   { 0, "Sinew Sliver", {0}, 1386, 0x02, -1, 32, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_muscle_sliver, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 35 }, /* 8778: Sinew Sliver */
   { 0, "Singing Bell Stri", {0}, 14382, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_singing_bell_strike, 0x00000000u, 0x00000001u, 0, 49, 0, 0, 40 }, /* 8779: Singing Bell Strike */
-  { 0, "Singing Tree", {0}, 459, 0x02, -1, 8, { 1, 3, 0 }, 0, 3, 0, 0, manalinkeh_card_singing_tree, 0x00000000u, 0x00000001u, 0, 248, 0, 3, 40 }, /* 8780: Singing Tree */
+  { 0, "Singing Tree", {0}, 459, 0x02, -1, 8, { 1, 3, 0 }, 0, 3, 0, 0, manalinkeh_card_singing_tree, 0x00000000u, 0x00000001u, 0, 248, 4, 3, 40 }, /* 8780: Singing Tree */
   { 0, "Sinister Possessi", {0}, 13222, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sinister_possession, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 8781: Sinister Possession */
   { 0, "Sink into Takenum", {0}, 7747, 0x08, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_sink_into_takenuma, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 8782: Sink into Takenuma */
-  { 0, "Sinkhole", {0}, 226, 0x08, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ice_storm, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 5 }, /* 8783: Sinkhole */
+  { 0, "Sinkhole", {0}, 226, 0x08, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_ice_storm, 0x00000000u, 0x00000200u, 0, 1, 2, 2, 5 }, /* 8783: Sinkhole */
   { 0, "Sins of the Past", {0}, 7960, 0x08, -1, 2, { 2, 4, 1 }, 0, 0, 1, 0, manalinkeh_card_sins_of_the_past, 0x00000000u, 0x00000001u, 0, 137, 0, 0, 80 }, /* 8784: Sins of the Past */
   { 0, "Sip of Hemlock", {0}, 13553, 0x08, -1, 2, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_sip_of_hemlock, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 8785: Sip of Hemlock */
   { 0, "Sir Shandlar of E", {0}, 789, 0x02, 14, 40, { 2, 4, 0 }, 4, 7, 0, 0, manalinkeh_card_barktooth_warbeard, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 55 }, /* 8786: Sir Shandlar of Eberyn */
@@ -20380,9 +20380,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Siren of the Fang", {0}, 13805, 0x02, -1, 4, { 2, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_siren_of_the_fanged_coast, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 8788: Siren of the Fanged Coast */
   { 0, "Siren of the Sile", {0}, 13806, 0x02, 2, 6, { 2, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_siren_of_the_silent_song, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8789: Siren of the Silent Song */
   { 0, "Siren Song Lyre", {0}, 13807, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_siren_song_lyre, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 20 }, /* 8790: Siren Song Lyre */
-  { 0, "Siren's Call", {0}, 227, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sirens_call, 0x00000000u, 0x01000000u, 0, 1, 0, 1, 5 }, /* 8791: Siren's Call */
+  { 0, "Siren's Call", {0}, 227, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sirens_call, 0x00000000u, 0x01000000u, 0, 1, 1, 1, 5 }, /* 8791: Siren's Call */
   { 0, "Sisters of Stone ", {0}, 7961, 0x02, 14, 10, { 4, 4, 0 }, 7, 5, 0, 0, manalinkeh_card_sisters_of_stone_death, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 100 }, /* 8792: Sisters of Stone Death */
-  { 0, "Sisters of the Fl", {0}, 360, 0x02, -1, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_generic_combat_1_mana_producing_creature, 0x00000000u, 0x00001000u, 0, 248, 0, 0, 21 }, /* 8793: Sisters of the Flame */
+  { 0, "Sisters of the Fl", {0}, 360, 0x02, -1, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_generic_combat_1_mana_producing_creature, 0x00000000u, 0x00001000u, 0, 248, 1, 0, 21 }, /* 8793: Sisters of the Flame */
   { 0, "Sivitri Scarzam", {0}, 790, 0x02, 14, 6, { 2, 5, 0 }, 6, 4, 0, 0, manalinkeh_card_barktooth_warbeard, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 8794: Sivitri Scarzam */
   { 0, "Sivvi's Ruse", {0}, 4763, 0x10, -1, 32, { 2, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_sivvis_rouse, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 8795: Sivvi's Ruse */
   { 0, "Sivvi's Valor", {0}, 4764, 0x10, -1, 32, { 1, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_sivvis_valor, 0x00000000u, 0x00000004u, 0, 15, 0, 0, 40 }, /* 8796: Sivvi's Valor */
@@ -20495,7 +20495,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sleep", {0}, 10470, 0x08, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_sleep, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 45 }, /* 8903: Sleep */
   { 0, "Sleeper's Robe", {0}, 1335, 0x04, -1, 6, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sleepers_robe, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 50 }, /* 8904: Sleeper's Robe */
   { 0, "Sleight of Hand", {0}, 3620, 0x08, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sleight_of_hand, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 8905: Sleight of Hand */
-  { 0, "Sleight of Mind", {0}, 228, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sleight_of_mind, 0x00000000u, 0x00002000u, 0, 3, 0, 255, 40 }, /* 8906: Sleight of Mind */
+  { 0, "Sleight of Mind", {0}, 228, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sleight_of_mind, 0x00000000u, 0x00002000u, 0, 3, 1, 255, 40 }, /* 8906: Sleight of Mind */
   { 0, "Slice and Dice", {0}, 6268, 0x08, -1, 16, { 2, 4, 4 }, 0, 0, 0, 0, manalinkeh_card_slice_and_dice, 0x00000000u, 0x00000000u, 0, 249, 0, 0, 60 }, /* 8907: Slice and Dice */
   { 0, "Slice in Twain", {0}, 11363, 0x10, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_slice_in_twain, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 40 }, /* 8908: Slice in Twain */
   { 0, "Slime Molding", {0}, 12825, 0x08, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_slime_molding, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 8909: Slime Molding */
@@ -20530,7 +20530,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Smite the Monstro", {0}, 12078, 0x10, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_smite_the_monstrous, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 45 }, /* 8938: Smite the Monstrous */
   { 0, "Smog Elemental", {0}, 13069, 0x02, -1, 2, { 2, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_smog_elemental, 0x00000020u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 8939: Smog Elemental */
   { 0, "Smogsteed Rider", {0}, 8137, 0x02, -1, 2, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_smogsteed_rider, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 8940: Smogsteed Rider */
-  { 0, "Smoke", {0}, 229, 0x04, -1, 16, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_smoke, 0x00000000u, 0x00000000u, 0, 1, 0, 254, 40 }, /* 8941: Smoke */
+  { 0, "Smoke", {0}, 229, 0x04, -1, 16, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_smoke, 0x00000000u, 0x00000000u, 0, 1, 1, 254, 40 }, /* 8941: Smoke */
   { 0, "Smoke Teller", {0}, 14383, 0x02, -1, 8, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_smoke_teller, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 20 }, /* 8942: Smoke Teller */
   { 0, "Smokestack", {0}, 3908, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_smokestack, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 8943: Smokestack */
   { 0, "Smolder Initiate", {0}, 9678, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_smolder_initiate, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 8944: Smolder Initiate */
@@ -20556,7 +20556,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Snuff Out", {0}, 4610, 0x10, -1, 2, { 1, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_snuff_out, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 8964: Snuff Out */
   { 0, "Soaring Seacliff", {0}, 10667, 0x01, -1, 4, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_soaring_seacliff, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 15 }, /* 8965: Soaring Seacliff */
   { 0, "Sol Grail", {0}, 2347, 0x40, -1, 62, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_sol_grail, 0x00000000u, 0x00001000u, 0, 241, 0, 0, 10 }, /* 8966: Sol Grail */
-  { 0, "Sol Ring", {0}, 230, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_sol_ring, 0x00000000u, 0x00001000u, 0, 241, 0, 2, 200 }, /* 8967: Sol Ring */
+  { 0, "Sol Ring", {0}, 230, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_sol_ring, 0x00000000u, 0x00001100u, 0, 241, 2, 2, 200 }, /* 8967: Sol Ring */
   { 0, "Sol'kanar the Swa", {0}, 791, 0x02, 14, 22, { 3, 2, 0 }, 5, 5, 0, 0, manalinkeh_card_sol_kanar_the_swamp_king, 0x00000001u, 0x00000000u, 0, 8, 0, 2, 70 }, /* 8968: Sol'kanar the Swamp King */
   { 0, "Solar Blast", {0}, 6273, 0x10, -1, 16, { 1, 3, 4 }, 0, 0, 0, 0, manalinkeh_card_solar_blast, 0x00000000u, 0x00000000u, 0, 255, 0, 0, 60 }, /* 8969: Solar Blast */
   { 0, "Solar Tide", {0}, 6786, 0x08, -1, 32, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_solar_tide, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 8970: Solar Tide */
@@ -20606,7 +20606,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Soratami Seer", {0}, 7388, 0x02, -1, 4, { 1, 4, 0 }, 2, 3, 0, 0, manalinkeh_card_soratami_seer, 0x00000020u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 9014: Soratami Seer */
   { 0, "Soraya the Falcon", {0}, 1649, 0x02, 14, 32, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_soraya_the_falconer, 0x00000000u, 0x00000001u, 0, 49, 0, 0, 5 }, /* 9015: Soraya the Falconer */
   { 0, "Sorcerer's Strong", {0}, 11173, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_sorcerers_strongbox, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 100 }, /* 9016: Sorcerer's Strongbox */
-  { 0, "Sorceress Queen", {0}, 460, 0x02, -1, 2, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_sorceress_queen, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 40 }, /* 9017: Sorceress Queen */
+  { 0, "Sorceress Queen", {0}, 460, 0x02, -1, 2, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_sorceress_queen, 0x00000000u, 0x00000001u, 0, 248, 1, 2, 40 }, /* 9017: Sorceress Queen */
   { 0, "Sorin Markov", {0}, 10668, 0x04, 14, 2, { 3, 3, 9 }, 0, 0, 1, 0, manalinkeh_card_sorin_markov, 0x00000000u, 0x00400041u, 0, 17, 0, 2, 150 }, /* 9018: Sorin Markov */
   { 0, "Sorin, Lord of In", {0}, 12265, 0x04, 14, 34, { 2, 2, 9 }, 0, 0, 0, 0, manalinkeh_card_sorin_lord_of_innistrad, 0x00000000u, 0x00400001u, 0, 17, 0, 0, 100 }, /* 9019: Sorin, Lord of Innistrad */
   { 0, "Sorin, Solemn Vis", {0}, 14385, 0x04, 14, 34, { 2, 2, 9 }, 0, 0, 0, 0, manalinkeh_card_sorin_solemn_visitor, 0x00000000u, 0x00400001u, 0, 17, 0, 0, 70 }, /* 9020: Sorin, Solemn Visitor */
@@ -20623,7 +20623,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Soul Foundry", {0}, 6788, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_soul_foundry, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 60 }, /* 9031: Soul Foundry */
   { 0, "Soul Link", {0}, 5434, 0x04, -1, 34, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_soul_link, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 9032: Soul Link */
   { 0, "Soul Manipulation", {0}, 10348, 0x20, -1, 6, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_soul_manipulation, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 80 }, /* 9033: Soul Manipulation */
-  { 0, "Soul Net", {0}, 231, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_soul_net, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 9034: Soul Net */
+  { 0, "Soul Net", {0}, 231, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_soul_net, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 5 }, /* 9034: Soul Net */
   { 0, "Soul of Innistrad", {0}, 14176, 0x02, -1, 2, { 2, 4, 9 }, 6, 6, 0, 0, manalinkeh_card_soul_of_innistrad, 0x00000000u, 0x00000001u, 0, 153, 0, 0, 100 }, /* 9035: Soul of Innistrad */
   { 0, "Soul of New Phyre", {0}, 14177, 0x42, -1, 1, { 0, 6, 9 }, 6, 6, 0, 0, manalinkeh_card_soul_of_new_phyrexia, 0x00000080u, 0x00000001u, 0, 73, 0, 0, 100 }, /* 9036: Soul of New Phyrexia */
   { 0, "Soul of Ravnica", {0}, 14178, 0x02, -1, 4, { 2, 4, 9 }, 6, 6, 0, 0, manalinkeh_card_soul_of_ravnica, 0x00000020u, 0x00000001u, 0, 153, 0, 0, 100 }, /* 9037: Soul of Ravnica */
@@ -20673,7 +20673,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sparkspitter", {0}, 9024, 0x02, -1, 16, { 1, 2, 0 }, 1, 3, 0, 0, manalinkeh_card_sparkspitter, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 50 }, /* 9081: Sparkspitter */
   { 0, "Sparring Collar", {0}, 7124, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_sparring_collar, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 60 }, /* 9082: Sparring Collar */
   { 0, "Spatial Binding", {0}, 2618, 0x04, -1, 6, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_spatial_binding, 0x00000000u, 0x00000001u, 0, 137, 0, 0, 40 }, /* 9083: Spatial Binding */
-  { 0, "Spawn of Azar", {0}, 900, 0x02, -1, 2, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_beast_token, 0x00000001u, 0x00000000u, 0, 9, 0, 0, 0 }, /* 9084: Spawn of Azar */
+  { 0, "Spawn of Azar", {0}, 900, 0x02, -1, 2, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_beast_token, 0x00000001u, 0x00000000u, 0, 9, 1, 0, 0 }, /* 9084: Spawn of Azar */
   { 0, "Spawn of Rix Maad", {0}, 12831, 0x02, -1, 18, { 2, 3, 0 }, 5, 3, 0, 0, manalinkeh_card_dark_reveler, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 9085: Spawn of Rix Maadi */
   { 0, "Spawn of Thraxes", {0}, 13980, 0x02, -1, 16, { 2, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_spawn_of_thraxes, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 70 }, /* 9086: Spawn of Thraxes */
   { 0, "Spawnbroker", {0}, 7964, 0x02, -1, 4, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_spawnbroker, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 9087: Spawnbroker */
@@ -20702,7 +20702,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Spectral Rider", {0}, 12083, 0x02, -1, 32, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_spectral_rider, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 55 }, /* 9110: Spectral Rider */
   { 0, "Spectral Searchli", {0}, 7965, 0x40, -1, 62, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_spectral_searchlight, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 9111: Spectral Searchlight */
   { 0, "Spectral Sliver", {0}, 6443, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_spectral_sliver, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 50 }, /* 9112: Spectral Sliver */
-  { 0, "Spell Blast", {0}, 232, 0x20, -1, 4, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_spell_blast, 0x00000000u, 0x00002000u, 0, 15, 0, 3, 5 }, /* 9113: Spell Blast */
+  { 0, "Spell Blast", {0}, 232, 0x20, -1, 4, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_spell_blast, 0x00000000u, 0x00002000u, 0, 15, 1, 3, 5 }, /* 9113: Spell Blast */
   { 0, "Spell Burst", {0}, 1435, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_spell_burst, 0x00000000u, 0x00002000u, 0, 15, 0, 3, 60 }, /* 9114: Spell Burst */
   { 0, "Spell Crumple", {0}, 11730, 0x20, -1, 4, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_spell_crumple, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 9115: Spell Crumple */
   { 0, "Spell Pierce", {0}, 10670, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_spell_pierce, 0x00000000u, 0x00002000u, 0, 15, 0, 254, 75 }, /* 9116: Spell Pierce */
@@ -20760,7 +20760,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Spiketail Hatchli", {0}, 1155, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_spiketail_hatchling, 0x00000020u, 0x00002001u, 0, 248, 0, 0, 5 }, /* 9168: Spiketail Hatchling */
   { 0, "Spin Engine", {0}, 11529, 0x42, -1, 1, { 0, 3, 0 }, 3, 1, 0, 0, manalinkeh_card_spin_engine, 0x00000000u, 0x00000001u, 0, 56, 0, 2, 20 }, /* 9169: Spin Engine */
   { 0, "Spin into Myth", {0}, 9027, 0x10, -1, 4, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_spin_into_myth, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 9170: Spin into Myth */
-  { 0, "Spinal Villain", {0}, 793, 0x02, -1, 16, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_spinal_villain, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 5 }, /* 9171: Spinal Villain */
+  { 0, "Spinal Villain", {0}, 793, 0x02, -1, 16, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_spinal_villain, 0x00000000u, 0x00000001u, 0, 248, 16, 1, 5 }, /* 9171: Spinal Villain */
   { 0, "Spindrift Drake", {0}, 3433, 0x02, -1, 4, { 1, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_spindrift_drake, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 9172: Spindrift Drake */
   { 0, "Spine of Ish Sah", {0}, 11530, 0x40, -1, 1, { 0, 7, 0 }, 0, 0, 0, 0, manalinkeh_card_spine_of_ish_sah, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 50 }, /* 9173: Spine of Ish Sah */
   { 0, "Spinebiter", {0}, 11689, 0x02, -1, 8, { 2, 4, 0 }, 3, 4, 0, 0, manalinkeh_card_thorn_elemental, 0x20000000u, 0x00000001u, 0, 72, 0, 3, 50 }, /* 9174: Spinebiter */
@@ -20787,21 +20787,21 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Spirit Cairn", {0}, 6009, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_spirit_cairn, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9195: Spirit Cairn */
   { 0, "Spirit en-Dal", {0}, 9028, 0x02, -1, 32, { 1, 2, 16 }, 2, 1, 0, 0, manalinkeh_card_spirit_en_dal, 0x00000000u, 0x00000000u, 0, 24, 0, 0, 50 }, /* 9196: Spirit en-Dal */
   { 0, "Spirit en-Kor", {0}, 3435, 0x02, -1, 32, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_nomads_en_kor, 0x00000020u, 0x00000005u, 0, 248, 0, 0, 50 }, /* 9197: Spirit en-Kor */
-  { 0, "Spirit Link", {0}, 794, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_spirit_link, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 50 }, /* 9198: Spirit Link */
+  { 0, "Spirit Link", {0}, 794, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_spirit_link, 0x00000000u, 0x00000000u, 0, 9, 1, 3, 50 }, /* 9198: Spirit Link */
   { 0, "Spirit Mantle", {0}, 11848, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_spirit_mantle, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 60 }, /* 9199: Spirit Mantle */
   { 0, "Spirit Mirror", {0}, 3296, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_spirit_mirror, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 100 }, /* 9200: Spirit Mirror */
   { 0, "Spirit of Resista", {0}, 5126, 0x04, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_spirit_of_resistance, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9201: Spirit of Resistance */
   { 0, "Spirit of the Hea", {0}, 9876, 0x02, -1, 32, { 2, 4, 1 }, 4, 5, 0, 0, manalinkeh_card_spirit_of_the_hearth, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 9202: Spirit of the Hearth */
   { 0, "Spirit of the Lab", {0}, 13811, 0x06, -1, 32, { 1, 1, 0 }, 3, 1, 0, 0, manalinkeh_card_spirit_of_the_labyrinth, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9203: Spirit of the Labyrinth */
   { 0, "Spirit of the Nig", {0}, 1299, 0x02, 14, 2, { 3, 6, 0 }, 6, 5, 0, 0, manalinkeh_card_spirit_of_the_night, 0x000008a0u, 0x00000000u, 0, 1, 0, 3, 75 }, /* 9204: Spirit of the Night */
-  { 0, "Spirit Shackle", {0}, 795, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_spirit_shackle, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 40 }, /* 9205: Spirit Shackle */
+  { 0, "Spirit Shackle", {0}, 795, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_spirit_shackle, 0x00000000u, 0x00000000u, 0, 9, 1, 1, 40 }, /* 9205: Spirit Shackle */
   { 0, "Spirit Shield", {0}, 1822, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_spirit_shield, 0x00000000u, 0x00000001u, 0, 65, 0, 2, 15 }, /* 9206: Spirit Shield */
   { 0, "Spirit Warrior", {0}, 18830, 0x02, -1, 0, { 0, 0, 0 }, 16384, 16384, 0, 0, manalinkeh_card_rhino_token, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 9207: Spirit Warrior */
   { 0, "Spiritmonger", {0}, 5435, 0x02, -1, 10, { 2, 3, 0 }, 6, 6, 0, 0, manalinkeh_card_spiritmonger, 0x00000200u, 0x00000001u, 0, 248, 0, 2, 100 }, /* 9208: Spiritmonger */
   { 0, "Spiritual Asylum", {0}, 4772, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_spiritual_asylum, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 9209: Spiritual Asylum */
   { 0, "Spiritual Focus", {0}, 4615, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_spiritual_focus, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 9210: Spiritual Focus */
   { 0, "Spiritual Guardia", {0}, 2912, 0x02, -1, 32, { 2, 3, 0 }, 3, 4, 0, 0, manalinkeh_card_lone_missionary, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 9211: Spiritual Guardian */
-  { 0, "Spiritual Sanctua", {0}, 796, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_spiritual_sanctury, 0x00000000u, 0x00000001u, 0, 17, 0, 1, 15 }, /* 9212: Spiritual Sanctuary */
+  { 0, "Spiritual Sanctua", {0}, 796, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_spiritual_sanctury, 0x00000000u, 0x00000001u, 0, 17, 16, 1, 15 }, /* 9212: Spiritual Sanctuary */
   { 0, "Spiritual Visit", {0}, 7755, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_spiritual_visit, 0x00000000u, 0x00000000u, 0, 2, 0, 0, 40 }, /* 9213: Spiritual Visit */
   { 0, "Spite // Malice", {0}, 5127, 0x30, -1, 6, { 1, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_malice_spite, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 80 }, /* 9214: Spite // Malice */
   { 0, "Spite of Mogis", {0}, 13983, 0x08, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_spite_of_mogis, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 9215: Spite of Mogis */
@@ -20863,7 +20863,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Squelch", {0}, 7393, 0x20, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_interdict, 0x00000000u, 0x00002000u, 0, 15, 0, 1, 60 }, /* 9271: Squelch */
   { 0, "Squelching Leeche", {0}, 13985, 0x02, -1, 2, { 2, 2, 0 }, 16384, 16384, 0, 0, manalinkeh_card_nightmare2, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 9272: Squelching Leeches */
   { 0, "Squid", {0}, 18832, 0x02, -1, 4, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_rhino_token, 0x00000000u, 0x00000000u, 0, 0, 0, 0, 0 }, /* 9273: Squid */
-  { 0, "Squire", {0}, 948, 0x02, -1, 32, { 1, 1, 0 }, 1, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 254, 5 }, /* 9274: Squire */
+  { 0, "Squire", {0}, 948, 0x02, -1, 32, { 1, 1, 0 }, 1, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 8, 254, 5 }, /* 9274: Squire */
   { 0, "Squirrel", {0}, 18833, 0x02, -1, 8, { 0, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 9275: Squirrel */
   { 0, "Squirrel Mob", {0}, 5713, 0x02, -1, 8, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_squirrel_mob, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 9276: Squirrel Mob */
   { 0, "Squirrel Nest", {0}, 5714, 0x04, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_squirrel_nest, 0x00000000u, 0x00000001u, 0, 56, 0, 2, 50 }, /* 9277: Squirrel Nest */
@@ -20879,7 +20879,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Staff of the Mind", {0}, 13342, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_staff_of_the_mind_magus, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9287: Staff of the Mind Magus */
   { 0, "Staff of the Sun ", {0}, 13343, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_staff_of_the_sun_magus, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9288: Staff of the Sun Magus */
   { 0, "Staff of the Wild", {0}, 13344, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_staff_of_the_wild_magus, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9289: Staff of the Wild Magus */
-  { 0, "Staff of Zegon", {0}, 527, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_staff_of_zegon, 0x00000000u, 0x00000001u, 0, 33, 0, 1, 40 }, /* 9290: Staff of Zegon */
+  { 0, "Staff of Zegon", {0}, 527, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_staff_of_zegon, 0x00000000u, 0x00000401u, 0, 33, 32, 1, 40 }, /* 9290: Staff of Zegon */
   { 0, "Staggershock", {0}, 11053, 0x10, -1, 16, { 1, 2, 1 }, 0, 0, 0, 0, manalinkeh_card_staggershock, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 9291: Staggershock */
   { 0, "Stain the Mind", {0}, 14184, 0x08, -1, 2, { 1, 4, 1 }, 0, 0, 1, 0, manalinkeh_card_stain_the_mind, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 9292: Stain the Mind */
   { 0, "Stalker Hag", {0}, 1421, 0x02, -1, 10, { 3, 0, 1 }, 3, 2, 1, 0, manalinkeh_card_oversoul_of_dusk, 0x00000005u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 9293: Stalker Hag */
@@ -20908,7 +20908,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Starlit Sanctum", {0}, 6283, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_starlit_sanctum, 0x00000000u, 0x00001001u, 0, 201, 0, 0, 10 }, /* 9316: Starlit Sanctum */
   { 0, "Starstorm", {0}, 6284, 0x10, -1, 16, { 2, -1, 4 }, 0, 0, 0, 0, manalinkeh_card_starstorm, 0x00000000u, 0x00000000u, 0, 255, 0, 2, 70 }, /* 9317: Starstorm */
   { 0, "Starved Rusalka", {0}, 8140, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_starved_rusalka, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 9318: Starved Rusalka */
-  { 0, "Stasis", {0}, 233, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_stasis, 0x00000000u, 0x00000000u, 0, 1, 0, 254, 40 }, /* 9319: Stasis */
+  { 0, "Stasis", {0}, 233, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_stasis, 0x00000000u, 0x00000000u, 0, 1, 1, 254, 40 }, /* 9319: Stasis */
   { 0, "Stasis Cell", {0}, 7966, 0x04, -1, 4, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_stasis_cell, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 40 }, /* 9320: Stasis Cell */
   { 0, "Stasis Cocoon", {0}, 7129, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_stasis_cocoon, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 9321: Stasis Cocoon */
   { 0, "Statecraft", {0}, 4622, 0x04, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_statecraft, 0x00000000u, 0x40000004u, 0, 1, 0, 0, 40 }, /* 9322: Statecraft */
@@ -20919,7 +20919,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Stave Off", {0}, 11849, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_stave_off, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 1 }, /* 9327: Stave Off */
   { 0, "Steadfast Guard", {0}, 4623, 0x02, -1, 32, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_serra_angel, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 9328: Steadfast Guard */
   { 0, "Steady Progress", {0}, 11368, 0x10, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_steady_progress, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 9 }, /* 9329: Steady Progress */
-  { 0, "Steal Artifact", {0}, 234, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_steal_artifact, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 9330: Steal Artifact */
+  { 0, "Steal Artifact", {0}, 234, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_steal_artifact, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 40 }, /* 9330: Steal Artifact */
   { 0, "Stealer of Secret", {0}, 12837, 0x02, -1, 4, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_stealer_of_secrets, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 9331: Stealer of Secrets */
   { 0, "Steam Augury", {0}, 13561, 0x10, -1, 20, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_steam_augury, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 9332: Steam Augury */
   { 0, "Steam Blast", {0}, 3917, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_steam_blast, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 50 }, /* 9333: Steam Blast */
@@ -20967,11 +20967,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Stomp and Howl", {0}, 8298, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_stomp_and_howl, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 9375: Stomp and Howl */
   { 0, "Stomping Ground", {0}, 1710, 0x01, 12, 24, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_generic_shockland, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 10 }, /* 9376: Stomping Ground */
   { 0, "Stone Calendar", {0}, 363, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_stone_calendar, 0x00000000u, 0x40000000u, 0, 1, 0, 2, 5 }, /* 9377: Stone Calendar */
-  { 0, "Stone Giant", {0}, 235, 0x02, -1, 16, { 2, 2, 0 }, 3, 4, 0, 0, manalinkeh_card_stone_giant, 0x00000000u, 0x00000001u, 0, 56, 0, 1, 50 }, /* 9378: Stone Giant */
+  { 0, "Stone Giant", {0}, 235, 0x02, -1, 16, { 2, 2, 0 }, 3, 4, 0, 0, manalinkeh_card_stone_giant, 0x00000000u, 0x00000001u, 0, 56, 1, 1, 50 }, /* 9378: Stone Giant */
   { 0, "Stone Golem", {0}, 11177, 0x42, -1, 1, { 0, 5, 0 }, 4, 4, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 9 }, /* 9379: Stone Golem */
-  { 0, "Stone Rain", {0}, 236, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ice_storm, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 9380: Stone Rain */
+  { 0, "Stone Rain", {0}, 236, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_ice_storm, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 5 }, /* 9380: Stone Rain */
   { 0, "Stone-Seeder Hier", {0}, 7968, 0x02, -1, 8, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_stoneseeder_hierophant, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 9381: Stone-Seeder Hierophant */
-  { 0, "Stone-Throwing De", {0}, 461, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000100u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 9382: Stone-Throwing Devils */
+  { 0, "Stone-Throwing De", {0}, 461, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000100u, 0x00000400u, 0, 8, 4, 0, 5 }, /* 9382: Stone-Throwing Devils */
   { 0, "Stone-Tongue Basi", {0}, 5720, 0x02, -1, 8, { 3, 4, 0 }, 4, 5, 0, 0, manalinkeh_card_stone_tongue_basilisk, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 9383: Stone-Tongue Basilisk */
   { 0, "Stonebrow, Krosan", {0}, 8679, 0x02, 14, 24, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_stonebrow_krosan_hero, 0x00000080u, 0x00000000u, 0, 9, 0, 0, 70 }, /* 9384: Stonebrow, Krosan Hero */
   { 0, "Stonecloaker", {0}, 8856, 0x12, -1, 32, { 1, 2, 0 }, 3, 2, 0, 0, manalinkeh_card_stonecloaker, 0x00000020u, 0x00000000u, 0, 15, 0, 0, 50 }, /* 9385: Stonecloaker */
@@ -20995,7 +20995,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Storm Entity", {0}, 9032, 0x02, -1, 16, { 1, 1, 12 }, 1, 1, 0, 0, manalinkeh_card_storm_entity, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 9403: Storm Entity */
   { 0, "Storm Front", {0}, 3305, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_storm_front, 0x00000000u, 0x00000001u, 0, 57, 0, 1, 50 }, /* 9404: Storm Front */
   { 0, "Storm Herd", {0}, 8143, 0x08, -1, 32, { 2, 8, 0 }, 0, 0, 0, 0, manalinkeh_card_storm_herd, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9405: Storm Herd */
-  { 0, "Storm Seeker", {0}, 798, 0x10, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_storm_seeker, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 65 }, /* 9406: Storm Seeker */
+  { 0, "Storm Seeker", {0}, 798, 0x10, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_storm_seeker, 0x00000000u, 0x00000000u, 0, 15, 16, 3, 65 }, /* 9406: Storm Seeker */
   { 0, "Storm Shaman", {0}, 1679, 0x02, -1, 16, { 1, 2, 0 }, 0, 4, 0, 0, manalinkeh_card_furnace_whelp, 0x00000000u, 0x00000009u, 0, 72, 0, 2, 50 }, /* 9407: Storm Shaman */
   { 0, "Storm World", {0}, 799, 0x04, 16, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_storm_world, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9408: Storm World */
   { 0, "Stormbind", {0}, 2123, 0x04, -1, 24, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_stormbind, 0x00000000u, 0x00000001u, 0, 241, 0, 1, 80 }, /* 9409: Stormbind */
@@ -21025,7 +21025,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Stratadon", {0}, 5313, 0x42, -1, 1, { 0, 10, 1 }, 5, 5, 1, 0, manalinkeh_card_stratadon, 0x00000080u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 9433: Stratadon */
   { 0, "Stratus Walk", {0}, 13815, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_stratus_walk, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 9434: Stratus Walk */
   { 0, "Straw Golem", {0}, 3045, 0x42, -1, 1, { 0, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_straw_golem, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 9435: Straw Golem */
-  { 0, "Stream of Life", {0}, 237, 0x08, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_stream_of_life, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 5 }, /* 9436: Stream of Life */
+  { 0, "Stream of Life", {0}, 237, 0x08, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_stream_of_life, 0x00000000u, 0x00000000u, 0, 9, 1, 3, 5 }, /* 9436: Stream of Life */
   { 0, "Street Spasm", {0}, 12839, 0x10, -1, 16, { 1, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_street_spasm, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 9437: Street Spasm */
   { 0, "Street Sweeper", {0}, 12840, 0x42, -1, 1, { 0, 6, 0 }, 4, 6, 0, 0, manalinkeh_card_street_sweeper, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 9438: Street Sweeper */
   { 0, "Street Wraith", {0}, 9033, 0x02, -1, 2, { 2, 3, 4 }, 3, 4, 0, 0, manalinkeh_card_street_wraith, 0x00000001u, 0x00000000u, 0, 248, 0, 0, 35 }, /* 9439: Street Wraith */
@@ -21038,7 +21038,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Strength of the T", {0}, 10842, 0x10, -1, 8, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_strength_of_the_tajuru, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 9446: Strength of the Tajuru */
   { 0, "Strider Harness", {0}, 11372, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_strider_harness, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 40 }, /* 9447: Strider Harness */
   { 0, "Striking Sliver", {0}, 13347, 0x02, -1, 16, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_striking_sliver, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 9448: Striking Sliver */
-  { 0, "Strip Mine", {0}, 528, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_strip_mine, 0x00000000u, 0x00001001u, 0, 241, 0, 1, 5 }, /* 9449: Strip Mine */
+  { 0, "Strip Mine", {0}, 528, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_strip_mine, 0x00000000u, 0x00001401u, 0, 241, 1, 1, 5 }, /* 9449: Strip Mine */
   { 0, "Striped Bears", {0}, 1665, 0x02, -1, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_carven_caryatid, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 50 }, /* 9450: Striped Bears */
   { 0, "Stroke of Genius", {0}, 3919, 0x10, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_stroke_of_genius, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 55 }, /* 9451: Stroke of Genius */
   { 0, "Stromgald Crusade", {0}, 1701, 0x02, 2, 2, { 2, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_stromgald_crusader, 0x00008000u, 0x00000009u, 0, 120, 0, 2, 75 }, /* 9452: Stromgald Crusader */
@@ -21062,7 +21062,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sturdy Hatchling", {0}, 9884, 0x02, -1, 12, { 1, 3, 1 }, 6, 6, 1, 0, manalinkeh_card_sturdy_hatchling, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 9470: Sturdy Hatchling */
   { 0, "Sturmgeist", {0}, 12093, 0x02, -1, 4, { 2, 3, 0 }, 16384, 16384, 0, 0, manalinkeh_card_sturmgeist, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 9471: Sturmgeist */
   { 0, "Stymied Hopes", {0}, 13564, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_stymied_hopes, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 40 }, /* 9472: Stymied Hopes */
-  { 0, "Su-Chi", {0}, 529, 0x42, -1, 1, { 0, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_su_chi, 0x00000000u, 0x00001000u, 0, 8, 0, 1, 70 }, /* 9473: Su-Chi */
+  { 0, "Su-Chi", {0}, 529, 0x42, -1, 1, { 0, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_su_chi, 0x00000000u, 0x00001400u, 0, 8, 32, 1, 70 }, /* 9473: Su-Chi */
   { 0, "Subdue", {0}, 800, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_subdue, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 9474: Subdue */
   { 0, "Sublime Archangel", {0}, 12624, 0x02, -1, 32, { 2, 2, 0 }, 4, 3, 0, 0, manalinkeh_card_sublime_archangel, 0x00000020u, 0x00000000u, 0, 1, 0, 0, 70 }, /* 9475: Sublime Archangel */
   { 0, "Subterranean Sham", {0}, 8686, 0x02, -1, 16, { 1, 3, 0 }, 2, 3, 0, 0, manalinkeh_card_subterranean_shambler, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 9476: Subterranean Shambler */
@@ -21114,14 +21114,14 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sundering Titan", {0}, 6968, 0x42, -1, 1, { 0, 8, 0 }, 7, 10, 0, 0, manalinkeh_card_sundering_titan, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 100 }, /* 9522: Sundering Titan */
   { 0, "Sundering Vitae", {0}, 7971, 0x10, -1, 8, { 1, 2, 1 }, 0, 0, 1, 0, manalinkeh_card_sundering_vitae, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 9523: Sundering Vitae */
   { 0, "Sunforger", {0}, 7972, 0x40, -1, 1, { 0, 3, 1 }, 0, 0, 0, 0, manalinkeh_card_sunforger, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 60 }, /* 9524: Sunforger */
-  { 0, "Sunglasses of Urz", {0}, 238, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, card_sunglasses_of_urza, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 9525: Sunglasses of Urza */
+  { 0, "Sunglasses of Urz", {0}, 238, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, card_sunglasses_of_urza, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 5 }, /* 9525: Sunglasses of Urza */
   { 0, "Sungrace Pegasus", {0}, 14188, 0x02, -1, 32, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_child_of_night, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 9526: Sungrace Pegasus */
   { 0, "Sungrass Egg", {0}, 5721, 0x40, -1, 41, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_sungrass_egg, 0x00000000u, 0x00011001u, 0, 249, 0, 0, 10 }, /* 9527: Sungrass Egg */
   { 0, "Sungrass Prairie", {0}, 5722, 0x01, -1, 40, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sungrass_prairie, 0x00000000u, 0x00011001u, 0, 249, 0, 0, 10 }, /* 9528: Sungrass Prairie */
   { 0, "Sunhome Enforcer", {0}, 7973, 0x02, -1, 48, { 2, 2, 0 }, 2, 4, 0, 0, manalinkeh_card_sunhome_enforcer, 0x00000000u, 0x00000009u, 0, 72, 0, 0, 50 }, /* 9529: Sunhome Enforcer */
   { 0, "Sunhome Guildmage", {0}, 13076, 0x02, -1, 48, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_sunhome_guildmage, 0x00000000u, 0x00000001u, 0, 89, 0, 0, 50 }, /* 9530: Sunhome Guildmage */
   { 0, "Sunhome, Fortress", {0}, 7974, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sunhome_fortress_of_the_legion, 0x00000000u, 0x00001001u, 0, 81, 0, 0, 10 }, /* 9531: Sunhome, Fortress of the Legion */
-  { 0, "Sunken City", {0}, 364, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sunken_city, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 9532: Sunken City */
+  { 0, "Sunken City", {0}, 364, 0x04, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sunken_city, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 5 }, /* 9532: Sunken City */
   { 0, "Sunken Hope", {0}, 5314, 0x04, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_sunken_hope, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9533: Sunken Hope */
   { 0, "Sunken Ruins", {0}, 9688, 0x01, -1, 7, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sunken_ruins, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 9534: Sunken Ruins */
   { 0, "Sunlance", {0}, 8859, 0x08, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_sunlance, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 9535: Sunlance */
@@ -21204,7 +21204,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sword of the Paru", {0}, 8145, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_sword_of_the_paruns, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 60 }, /* 9612: Sword of the Paruns */
   { 0, "Sword of Vengeanc", {0}, 11180, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_sword_of_vengeance, 0x00000000u, 0x00000021u, 0, 25, 0, 2, 65 }, /* 9613: Sword of Vengeance */
   { 0, "Sword of War and ", {0}, 11695, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_sword_of_war_and_peace, 0x00000000u, 0x00000001u, 0, 25, 0, 2, 100 }, /* 9614: Sword of War and Peace */
-  { 0, "Swords to Plowsha", {0}, 240, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_swords_to_plowshares, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 95 }, /* 9615: Swords to Plowshares */
+  { 0, "Swords to Plowsha", {0}, 240, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_swords_to_plowshares, 0x00000000u, 0x00000000u, 0, 15, 1, 2, 95 }, /* 9615: Swords to Plowshares */
   { 0, "Swordwise Centaur", {0}, 13818, 0x02, -1, 8, { 2, 0, 0 }, 3, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 9616: Swordwise Centaur */
   { 0, "Sydri, Galvanic G", {0}, 13642, 0x02, 14, 38, { 3, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_sydri_galvanic_genius, 0x00000000u, 0x00000001u, 0, 113, 0, 0, 50 }, /* 9617: Sydri, Galvanic Genius */
   { 0, "Sygg, River Cutth", {0}, 9690, 0x02, 14, 6, { 2, 0, 13 }, 1, 3, 1, 0, manalinkeh_card_sygg_river_cutthroat, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 9618: Sygg, River Cutthroat */
@@ -21213,7 +21213,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Sylvan Caryatid", {0}, 13566, 0x02, -1, 8, { 1, 1, 0 }, 0, 3, 0, 0, manalinkeh_card_sylvan_caryatid, 0x00800000u, 0x00001000u, 0, 248, 0, 0, 21 }, /* 9621: Sylvan Caryatid */
   { 0, "Sylvan Echoes", {0}, 9280, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_rebellion_of_the_flamekin, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 9622: Sylvan Echoes */
   { 0, "Sylvan Hierophant", {0}, 3046, 0x02, -1, 8, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_sylvan_hierophant, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 9623: Sylvan Hierophant */
-  { 0, "Sylvan Library", {0}, 803, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_sylvan_library, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 100 }, /* 9624: Sylvan Library */
+  { 0, "Sylvan Library", {0}, 803, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_sylvan_library, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 100 }, /* 9624: Sylvan Library */
   { 0, "Sylvan Messenger", {0}, 5442, 0x02, -1, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_sylvan_messenger, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 9625: Sylvan Messenger */
   { 0, "Sylvan Might", {0}, 5723, 0x10, -1, 8, { 1, 1, 9 }, 0, 0, 0, 0, manalinkeh_card_sylvan_might, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 9626: Sylvan Might */
   { 0, "Sylvan Offering", {0}, 14489, 0x08, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_sylvan_offering, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 9627: Sylvan Offering */
@@ -21242,9 +21242,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Syphon Life", {0}, 9887, 0x08, -1, 2, { 2, 1, 10 }, 0, 0, 0, 0, manalinkeh_card_syphon_life, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9650: Syphon Life */
   { 0, "Syphon Mind", {0}, 6291, 0x08, -1, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_syphon_mind, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 9651: Syphon Mind */
   { 0, "Syphon Sliver", {0}, 13349, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_syphon_sliver, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 9652: Syphon Sliver */
-  { 0, "Syphon Soul", {0}, 805, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_syphon_soul, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 9653: Syphon Soul */
+  { 0, "Syphon Soul", {0}, 805, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_syphon_soul, 0x00000000u, 0x00000000u, 0, 9, 16, 0, 60 }, /* 9653: Syphon Soul */
   { 0, "Szadek, Lord of S", {0}, 7980, 0x02, 14, 6, { 4, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_szadeck_lord_of_secrets, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 9654: Szadek, Lord of Secrets */
-  { 0, "Tablet of Epityr", {0}, 530, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_tablet_of_epityr, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 9655: Tablet of Epityr */
+  { 0, "Tablet of Epityr", {0}, 530, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_tablet_of_epityr, 0x00000000u, 0x00000400u, 0, 1, 32, 0, 5 }, /* 9655: Tablet of Epityr */
   { 0, "Tablet of the Gui", {0}, 12846, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_tablet_of_the_guilds, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9656: Tablet of the Guilds */
   { 0, "Tahngarth, Talruu", {0}, 5318, 0x02, 14, 16, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_tahngarth_talruum_hero, 0x00000000u, 0x00000001u, 0, 232, 0, 2, 70 }, /* 9657: Tahngarth, Talruum Hero */
   { 0, "Taigam's Scheming", {0}, 14400, 0x08, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_taigams_scheming, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9658: Taigam's Scheming */
@@ -21312,9 +21312,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Taunting Elf", {0}, 4197, 0x02, -1, 8, { 1, 0, 0 }, 0, 1, 0, 0, manalinkeh_card_taunting_elf, 0x00000000u, 0x01000000u, 0, 8, 0, 3, 75 }, /* 9720: Taunting Elf */
   { 0, "Taurean Mauler", {0}, 9447, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_tauren_mauler, 0x00080000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 9721: Taurean Mauler */
   { 0, "Tavern Swindler", {0}, 12847, 0x02, -1, 2, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_tavern_swindler, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 100 }, /* 9722: Tavern Swindler */
-  { 0, "Tawnos's Coffin", {0}, 531, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_tawnoss_coffin, 0x00000000u, 0x00000001u, 0, 241, 0, 3, 80 }, /* 9723: Tawnos's Coffin */
-  { 0, "Tawnos's Wand", {0}, 532, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_tawnos_wand, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 5 }, /* 9724: Tawnos's Wand */
-  { 0, "Tawnos's Weaponry", {0}, 533, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_tawnos_weaponry, 0x00000000u, 0x00000001u, 0, 65, 0, 2, 5 }, /* 9725: Tawnos's Weaponry */
+  { 0, "Tawnos's Coffin", {0}, 531, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_tawnoss_coffin, 0x00000000u, 0x00000401u, 0, 241, 32, 3, 80 }, /* 9723: Tawnos's Coffin */
+  { 0, "Tawnos's Wand", {0}, 532, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_tawnos_wand, 0x00000000u, 0x00000001u, 0, 17, 1, 2, 5 }, /* 9724: Tawnos's Wand */
+  { 0, "Tawnos's Weaponry", {0}, 533, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_tawnos_weaponry, 0x00000000u, 0x00000401u, 0, 65, 1, 2, 5 }, /* 9725: Tawnos's Weaponry */
   { 0, "Tectonic Break", {0}, 4629, 0x08, -1, 16, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_tectonic_break, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9726: Tectonic Break */
   { 0, "Tectonic Edge", {0}, 10846, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_tectonic_edge, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 9727: Tectonic Edge */
   { 0, "Tectonic Instabil", {0}, 5141, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_tectonic_instability, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9728: Tectonic Instability */
@@ -21351,7 +21351,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Telling Time", {0}, 7982, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_telling_time, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 9759: Telling Time */
   { 0, "Tempered Steel", {0}, 11382, 0x04, -1, 32, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_tempered_steel, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 80 }, /* 9760: Tempered Steel */
   { 0, "Tempest Drake", {0}, 2795, 0x02, -1, 36, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_serra_angel, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 9761: Tempest Drake */
-  { 0, "Tempest Efreet", {0}, 810, 0x02, 5, 16, { 3, 1, 0 }, 3, 3, 0, 0, card_tempest_efreet, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 9 }, /* 9762: Tempest Efreet */
+  { 0, "Tempest Efreet", {0}, 810, 0x02, 5, 16, { 3, 1, 0 }, 3, 3, 0, 0, card_tempest_efreet, 0x00000000u, 0x00000001u, 0, 248, 1, 0, 9 }, /* 9762: Tempest Efreet */
   { 0, "Tempest of Light", {0}, 1237, 0x10, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_tranquillity, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 80 }, /* 9763: Tempest of Light */
   { 0, "Tempest Owl", {0}, 10685, 0x02, -1, 4, { 1, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_tempest_owl, 0x00000020u, 0x00000000u, 0, 9, 0, 1, 30 }, /* 9764: Tempest Owl */
   { 0, "Temple Acolyte", {0}, 3677, 0x02, -1, 32, { 1, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_temple_acolyte, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 9765: Temple Acolyte */
@@ -21410,15 +21410,15 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Terravore", {0}, 5728, 0x02, -1, 8, { 2, 1, 0 }, 16384, 16384, 0, 0, manalinkeh_card_terravore, 0x00000080u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 9818: Terravore */
   { 0, "Terrifying Presen", {0}, 12484, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_terrifying_presence, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 9819: Terrifying Presence */
   { 0, "Territorial Balot", {0}, 10687, 0x02, -1, 8, { 1, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_steppe_lynx, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 30 }, /* 9820: Territorial Baloth */
-  { 0, "Terror", {0}, 242, 0x10, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_terror, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 95 }, /* 9821: Terror */
+  { 0, "Terror", {0}, 242, 0x10, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_terror, 0x00000000u, 0x00000000u, 0, 15, 1, 3, 95 }, /* 9821: Terror */
   { 0, "Terror of Kruin P", {0}, 12001, 0x02, -1, 16, { 0, 0, 0 }, 3, 3, 0, 0, manalinkeh_card_terror_of_kruin_pass, 0x40000000u, 0x00000000u, 0, 8, 0, 1, 0 }, /* 9822: Terror of Kruin Pass */
   { 0, "Terrus Wurm", {0}, 12850, 0x02, 2, 2, { 1, 6, 17 }, 5, 5, 0, 0, manalinkeh_card_terrus_wurm, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 9823: Terrus Wurm */
   { 0, "Test of Endurance", {0}, 1537, 0x04, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_test_of_endurance, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 9824: Test of Endurance */
   { 0, "Test of Faith", {0}, 6980, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_test_of_faith, 0x00000000u, 0x00000004u, 0, 15, 0, 0, 60 }, /* 9825: Test of Faith */
   { 0, "Tethered Griffin", {0}, 4199, 0x02, -1, 32, { 1, 0, 0 }, 2, 3, 0, 0, manalinkeh_card_tethered_griffin, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 9826: Tethered Griffin */
   { 0, "Tethmos High Prie", {0}, 13994, 0x02, -1, 32, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_tethmos_high_priest, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 9827: Tethmos High Priest */
-  { 0, "Tetravite", {0}, 891, 0x42, -1, 1, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_tetravite, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 0 }, /* 9828: Tetravite */
-  { 0, "Tetravus", {0}, 534, 0x42, -1, 1, { 0, 6, 0 }, 1, 1, 0, 0, manalinkeh_card_tetravus, 0x00000020u, 0x00000021u, 0, 24, 0, 2, 70 }, /* 9829: Tetravus */
+  { 0, "Tetravite", {0}, 891, 0x42, -1, 1, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_tetravite, 0x00000020u, 0x00000000u, 0, 9, 1, 0, 0 }, /* 9828: Tetravite */
+  { 0, "Tetravus", {0}, 534, 0x42, -1, 1, { 0, 6, 0 }, 1, 1, 0, 0, manalinkeh_card_tetravus, 0x00000020u, 0x00000021u, 0, 24, 1, 2, 70 }, /* 9829: Tetravus */
   { 0, "Tetsuo Umezawa", {0}, 811, 0x02, 14, 22, { 3, 0, 0 }, 3, 3, 0, 0, manalinkeh_card_tetsuo_umezawa, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 75 }, /* 9830: Tetsuo Umezawa */
   { 0, "Teysa, Envoy of G", {0}, 13232, 0x02, 14, 34, { 2, 5, 0 }, 4, 4, 0, 0, manalinkeh_card_teysa_envoy_of_ghosts, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 9831: Teysa, Envoy of Ghosts */
   { 0, "Teysa, Orzhov Sci", {0}, 8146, 0x02, 14, 34, { 2, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_teysa_orzhov_scion, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 50 }, /* 9832: Teysa, Orzhov Scion */
@@ -21448,13 +21448,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Thaumatog", {0}, 5730, 0x02, -1, 40, { 2, 1, 0 }, 1, 2, 0, 0, manalinkeh_card_thaumatog, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 9856: Thaumatog */
   { 0, "Thawing Glaciers", {0}, 2368, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_thawing_glaciers, 0x00000000u, 0x00000001u, 0, 72, 0, 2, 50 }, /* 9857: Thawing Glaciers */
   { 0, "The Abyss", {0}, 812, 0x04, 16, 2, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_the_abyss, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 80 }, /* 9858: The Abyss */
-  { 0, "The Brute", {0}, 813, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_the_brute, 0x00000000u, 0x00000001u, 0, 241, 0, 255, 5 }, /* 9859: The Brute */
+  { 0, "The Brute", {0}, 813, 0x04, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_the_brute, 0x00000000u, 0x00000001u, 0, 241, 1, 255, 5 }, /* 9859: The Brute */
   { 0, "The Chain Veil", {0}, 14189, 0x40, 14, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_the_chain_veil, 0x00000000u, 0x00000001u, 0, 153, 0, 0, 60 }, /* 9860: The Chain Veil */
   { 0, "The Fallen", {0}, 372, 0x02, 2, 2, { 3, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_the_fallen, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 40 }, /* 9861: The Fallen */
-  { 0, "The Hive", {0}, 243, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_the_hive, 0x00000000u, 0x00000001u, 0, 17, 0, 2, 50 }, /* 9862: The Hive */
+  { 0, "The Hive", {0}, 243, 0x40, -1, 1, { 0, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_the_hive, 0x00000000u, 0x00000001u, 0, 17, 1, 2, 50 }, /* 9862: The Hive */
   { 0, "The Lady of the M", {0}, 814, 0x02, 14, 24, { 2, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_barktooth_warbeard, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 35 }, /* 9863: The Lady of the Mountain */
   { 0, "The Mimeoplasm", {0}, 11758, 0x02, 14, 14, { 3, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_the_mimeoplasm, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 75 }, /* 9864: The Mimeoplasm */
-  { 0, "The Rack", {0}, 535, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_the_rack, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 60 }, /* 9865: The Rack */
+  { 0, "The Rack", {0}, 535, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_the_rack, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 60 }, /* 9865: The Rack */
   { 0, "The Tabernacle at", {0}, 806, 0x01, 15, 0, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_the_tabernacle_at_pendrell_vale, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 5 }, /* 9866: The Tabernacle at Pendrell Vale */
   { 0, "The Unspeakable", {0}, 7405, 0x02, 14, 4, { 3, 6, 0 }, 6, 7, 0, 0, manalinkeh_card_the_unspeakable, 0x000000a0u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 9867: The Unspeakable */
   { 0, "The Wretched", {0}, 815, 0x02, -1, 2, { 2, 3, 0 }, 2, 5, 0, 0, manalinkeh_card_the_wretched, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 9868: The Wretched */
@@ -21470,7 +21470,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Thermopod", {0}, 8461, 0x02, -1, 16, { 1, 4, 0 }, 4, 3, 0, 0, manalinkeh_card_thermopod, 0x00000000u, 0x00001002u, 0, 25, 0, 0, 50 }, /* 9878: Thermopod */
   { 0, "Thespian's Stage", {0}, 13080, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_thespians_stage, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 9879: Thespian's Stage */
   { 0, "Thick-Skinned Gob", {0}, 8701, 0x02, 3, 16, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_thick_skinned_goblin, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 50 }, /* 9880: Thick-Skinned Goblin */
-  { 0, "Thicket Basilisk", {0}, 244, 0x02, -1, 8, { 2, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_thicket_basilisk, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 55 }, /* 9881: Thicket Basilisk */
+  { 0, "Thicket Basilisk", {0}, 244, 0x02, -1, 8, { 2, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_thicket_basilisk, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 55 }, /* 9881: Thicket Basilisk */
   { 0, "Thicket Elemental", {0}, 5147, 0x02, -1, 8, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_thicket_elemental, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 9882: Thicket Elemental */
   { 0, "Thief of Hope", {0}, 7406, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_thief_of_hope, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 9883: Thief of Hope */
   { 0, "Thieves' Fortune", {0}, 9448, 0x10, -1, 4, { 1, 2, 13 }, 0, 0, 1, 0, manalinkeh_card_thieves_fortune, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 9884: Thieves' Fortune */
@@ -21512,7 +21512,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Thoughtcast", {0}, 1741, 0x08, -1, 4, { 1, 4, 1 }, 0, 0, 1, 0, manalinkeh_card_thoughtcast, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 120 }, /* 9920: Thoughtcast */
   { 0, "Thoughtcutter Age", {0}, 10086, 0x42, -1, 6, { 2, 0, 1 }, 1, 1, 0, 0, manalinkeh_card_thoughtcutter_agent, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 9921: Thoughtcutter Agent */
   { 0, "Thoughtflare", {0}, 12851, 0x10, -1, 20, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_thoughtflare, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 9922: Thoughtflare */
-  { 0, "Thoughtlace", {0}, 245, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_thoughtlace, 0x00000000u, 0x00002000u, 0, 15, 0, 254, 40 }, /* 9923: Thoughtlace */
+  { 0, "Thoughtlace", {0}, 245, 0x20, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_thoughtlace, 0x00000000u, 0x00002000u, 0, 15, 1, 254, 40 }, /* 9923: Thoughtlace */
   { 0, "Thoughtpicker Wit", {0}, 7985, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_thoughtpicker_witch, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 9924: Thoughtpicker Witch */
   { 0, "Thoughtrender Lam", {0}, 13997, 0x06, -1, 2, { 2, 4, 0 }, 5, 3, 0, 0, manalinkeh_card_thoughtrender_lamia, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 9925: Thoughtrender Lamia */
   { 0, "Thoughts of Ruin", {0}, 7758, 0x08, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_thoughts_of_ruin, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 40 }, /* 9926: Thoughts of Ruin */
@@ -21548,7 +21548,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Thrive", {0}, 4902, 0x08, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_thrive, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 9956: Thrive */
   { 0, "Throat Slitter", {0}, 7580, 0x02, 7, 2, { 1, 4, 4 }, 2, 2, 0, 0, manalinkeh_card_throat_slitter, 0x00000000u, 0x00000000u, 0, 72, 0, 1, 50 }, /* 9957: Throat Slitter */
   { 0, "Thromok the Insat", {0}, 12535, 0x02, 14, 24, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_thromok_the_insatiable, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 9958: Thromok the Insatiable */
-  { 0, "Throne of Bone", {0}, 246, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_throne_of_bone, 0x00000000u, 0x00000000u, 0, 241, 0, 1, 5 }, /* 9959: Throne of Bone */
+  { 0, "Throne of Bone", {0}, 246, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_throne_of_bone, 0x00000000u, 0x00000000u, 0, 241, 1, 1, 5 }, /* 9959: Throne of Bone */
   { 0, "Throne of Empires", {0}, 11857, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_throne_of_empires, 0x00000000u, 0x00000001u, 0, 49, 0, 2, 75 }, /* 9960: Throne of Empires */
   { 0, "Throne of Geth", {0}, 11383, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_throne_of_geth, 0x00000000u, 0x00000001u, 0, 249, 0, 254, 40 }, /* 9961: Throne of Geth */
   { 0, "Throttle", {0}, 14408, 0x10, -1, 2, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_grasp_of_darkness, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 9962: Throttle */
@@ -21565,7 +21565,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Thumbscrews", {0}, 3314, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_thumbscrew, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 9973: Thumbscrews */
   { 0, "Thunder Brute", {0}, 13823, 0x02, -1, 16, { 2, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_thunder_brute, 0x00000080u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 9974: Thunder Brute */
   { 0, "Thunder Dragon", {0}, 4375, 0x02, -1, 16, { 2, 5, 0 }, 5, 5, 0, 0, manalinkeh_card_thunder_dragon, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 9975: Thunder Dragon */
-  { 0, "Thunder Spirit", {0}, 816, 0x02, -1, 32, { 2, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000120u, 0x00000000u, 0, 8, 0, 2, 55 }, /* 9976: Thunder Spirit */
+  { 0, "Thunder Spirit", {0}, 816, 0x02, -1, 32, { 2, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000120u, 0x00000000u, 0, 8, 16, 2, 55 }, /* 9976: Thunder Spirit */
   { 0, "Thunder Strike", {0}, 11183, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_thunder_strike, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 15 }, /* 9977: Thunder Strike */
   { 0, "Thunder Totem", {0}, 8704, 0x40, -1, 32, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_thunder_totem, 0x00000000u, 0x00009001u, 0, 49, 0, 0, 10 }, /* 9978: Thunder Totem */
   { 0, "Thunder-Thrash El", {0}, 10087, 0x02, -1, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_thunder_thrash_elder, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 9979: Thunder-Thrash Elder */
@@ -21603,7 +21603,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Tigereye Cameo", {0}, 5151, 0x40, -1, 40, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_bloodstone_cameo, 0x00000000u, 0x00001000u, 0, 241, 0, 0, 10 }, /* 10011: Tigereye Cameo */
   { 0, "Tilling Treefolk", {0}, 9892, 0x02, -1, 8, { 1, 2, 0 }, 1, 3, 0, 0, manalinkeh_card_tilling_treefolk, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10012: Tilling Treefolk */
   { 0, "Timber Protector", {0}, 9291, 0x02, -1, 8, { 1, 4, 0 }, 4, 6, 0, 0, manalinkeh_card_timber_protector, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 100 }, /* 10013: Timber Protector */
-  { 0, "Timber Wolves", {0}, 247, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000040u, 0x00000000u, 0, 8, 0, 2, 5 }, /* 10014: Timber Wolves */
+  { 0, "Timber Wolves", {0}, 247, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000040u, 0x00000000u, 0, 8, 1, 2, 5 }, /* 10014: Timber Wolves */
   { 0, "Timberland Guide", {0}, 12489, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_timberland_guide, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 20 }, /* 10015: Timberland Guide */
   { 0, "Timbermare", {0}, 8864, 0x02, 2, 8, { 1, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_timbermare, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 50 }, /* 10016: Timbermare */
   { 0, "Timbermaw Larva", {0}, 10688, 0x02, -1, 8, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_timbermaw_larva, 0x00000000u, 0x00000018u, 0, 8, 0, 1, 75 }, /* 10017: Timbermaw Larva */
@@ -21611,7 +21611,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Timberwatch Elf", {0}, 6450, 0x02, -1, 8, { 1, 2, 0 }, 1, 2, 0, 0, manalinkeh_card_timberwatch_elf, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 10019: Timberwatch Elf */
   { 0, "Time Bomb", {0}, 2133, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_time_bomb, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 100 }, /* 10020: Time Bomb */
   { 0, "Time Ebb", {0}, 3315, 0x08, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_time_ebb, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 10021: Time Ebb */
-  { 0, "Time Elemental", {0}, 817, 0x02, -1, 4, { 1, 2, 0 }, 0, 2, 0, 0, manalinkeh_card_time_elemental, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 5 }, /* 10022: Time Elemental */
+  { 0, "Time Elemental", {0}, 817, 0x02, -1, 4, { 1, 2, 0 }, 0, 2, 0, 0, manalinkeh_card_time_elemental, 0x00000000u, 0x00000001u, 0, 248, 1, 2, 5 }, /* 10022: Time Elemental */
   { 0, "Time of Heroes", {0}, 11063, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_time_of_heroes, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 10023: Time of Heroes */
   { 0, "Time of Need", {0}, 7411, 0x08, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_time_of_need, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 10024: Time of Need */
   { 0, "Time Reversal", {0}, 11184, 0x08, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_time_reversal, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 100 }, /* 10025: Time Reversal */
@@ -21619,12 +21619,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Time Spiral", {0}, 1342, 0x08, -1, 4, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_time_spiral, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 120 }, /* 10027: Time Spiral */
   { 0, "Time Stretch", {0}, 1424, 0x08, -1, 4, { 2, 8, 0 }, 0, 0, 0, 0, manalinkeh_card_time_stretch, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 60 }, /* 10028: Time Stretch */
   { 0, "Time to Feed", {0}, 13577, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_time_to_feed, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 10029: Time to Feed */
-  { 0, "Time Vault", {0}, 248, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_time_vault, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 5 }, /* 10030: Time Vault */
-  { 0, "Time Walk", {0}, 249, 0x08, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_time_walk, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 200 }, /* 10031: Time Walk */
+  { 0, "Time Vault", {0}, 248, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_time_vault, 0x00000000u, 0x00000101u, 0, 136, 2, 0, 5 }, /* 10030: Time Vault */
+  { 0, "Time Walk", {0}, 249, 0x08, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_time_walk, 0x00000000u, 0x00000100u, 0, 8, 2, 3, 200 }, /* 10031: Time Walk */
   { 0, "Time Warp", {0}, 1281, 0x08, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_time_warp, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 150 }, /* 10032: Time Warp */
   { 0, "Timely Hordemate", {0}, 14409, 0x02, -1, 32, { 1, 3, 13 }, 3, 2, 0, 0, manalinkeh_card_timely_hordemate, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10033: Timely Hordemate */
   { 0, "Timely Reinforcem", {0}, 11858, 0x08, -1, 32, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_timely_reinforcements, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 60 }, /* 10034: Timely Reinforcements */
-  { 0, "Timetwister", {0}, 250, 0x08, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_timetwister, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 200 }, /* 10035: Timetwister */
+  { 0, "Timetwister", {0}, 250, 0x08, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_timetwister, 0x00000000u, 0x00000100u, 0, 1, 2, 1, 200 }, /* 10035: Timetwister */
   { 0, "Tin Street Hoolig", {0}, 8149, 0x02, 3, 16, { 1, 1, 1 }, 2, 1, 3, 0, manalinkeh_card_tin_street_hooligan, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 10036: Tin Street Hooligan */
   { 0, "Tin Street Market", {0}, 13082, 0x04, -1, 16, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_tin_street_market, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 10037: Tin Street Market */
   { 0, "Tin-Wing Chimera", {0}, 2798, 0x42, -1, 1, { 0, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_tin_wing_chimera, 0x00000020u, 0x00000001u, 0, 65, 0, 0, 50 }, /* 10038: Tin-Wing Chimera */
@@ -21641,7 +21641,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Titania, Protecto", {0}, 14493, 0x02, 14, 8, { 2, 3, 0 }, 5, 3, 0, 0, manalinkeh_card_titania_protector_of_argoth, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10049: Titania, Protector of Argoth */
   { 0, "Titania's Boon", {0}, 3927, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_titanias_boon, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 10050: Titania's Boon */
   { 0, "Titania's Chosen", {0}, 3928, 0x02, -1, 8, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_titanias_chosen, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10051: Titania's Chosen */
-  { 0, "Titania's Song", {0}, 536, 0x04, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_titanias_song, 0x00000000u, 0x00000000u, 0, 9, 0, 255, 5 }, /* 10052: Titania's Song */
+  { 0, "Titania's Song", {0}, 536, 0x04, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_titanias_song, 0x00000000u, 0x00000000u, 0, 9, 1, 255, 5 }, /* 10052: Titania's Song */
   { 0, "Titanic Growth", {0}, 11859, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_monstrous_growth, 0x00000000u, 0x00000000u, 0, 4, 0, 3, 40 }, /* 10053: Titanic Growth */
   { 0, "Titanic Ultimatum", {0}, 10089, 0x08, -1, 56, { 7, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_titanic_ultimatum, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 10054: Titanic Ultimatum */
   { 0, "Tithe", {0}, 2799, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_tithe, 0x00000000u, 0x00000000u, 0, 15, 0, 255, 5 }, /* 10055: Tithe */
@@ -21716,7 +21716,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Toxic Deluge", {0}, 13650, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_toxic_deluge, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 10124: Toxic Deluge */
   { 0, "Toxic Nim", {0}, 11700, 0x02, 2, 2, { 2, 4, 0 }, 4, 1, 0, 0, manalinkeh_card_drudge_skeletons, 0x20000200u, 0x00000001u, 0, 248, 0, 0, 59 }, /* 10125: Toxic Nim */
   { 0, "Toxin Sliver", {0}, 6452, 0x02, -1, 2, { 1, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_toxin_sliver, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 100 }, /* 10126: Toxin Sliver */
-  { 0, "Tracker", {0}, 380, 0x02, -1, 8, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_tracker2, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 35 }, /* 10127: Tracker */
+  { 0, "Tracker", {0}, 380, 0x02, -1, 8, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_tracker2, 0x00000000u, 0x00000001u, 0, 248, 8, 2, 35 }, /* 10127: Tracker */
   { 0, "Tracker's Instinc", {0}, 12281, 0x08, -1, 8, { 1, 1, 9 }, 0, 0, 0, 0, manalinkeh_card_trackers_instict, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 15 }, /* 10128: Tracker's Instincts */
   { 0, "Trade Caravan", {0}, 2247, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_trade_caravan, 0x00000000u, 0x00000001u, 0, 24, 0, 0, 20 }, /* 10129: Trade Caravan */
   { 0, "Trade Routes", {0}, 1175, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_trade_routes, 0x00000000u, 0x00000001u, 0, 249, 0, 1, 40 }, /* 10130: Trade Routes */
@@ -21738,14 +21738,14 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Tranquil Domain", {0}, 2639, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_tranquil_domain, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 50 }, /* 10146: Tranquil Domain */
   { 0, "Tranquil Grove", {0}, 3059, 0x04, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_tranquil_grove, 0x00000000u, 0x00000001u, 0, 129, 0, 2, 75 }, /* 10147: Tranquil Grove */
   { 0, "Tranquil Thicket", {0}, 6300, 0x01, -1, 8, { 0, 0, 4 }, 0, 0, 0, 0, manalinkeh_card_tranquil_thicket, 0x00000000u, 0x00001000u, 0, 248, 0, 0, 10 }, /* 10148: Tranquil Thicket */
-  { 0, "Tranquility", {0}, 251, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_tranquillity, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 80 }, /* 10149: Tranquility */
+  { 0, "Tranquility", {0}, 251, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_tranquillity, 0x00000000u, 0x00000000u, 0, 1, 1, 2, 80 }, /* 10149: Tranquility */
   { 0, "Transcendence", {0}, 5893, 0x04, -1, 32, { 3, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_transcendence, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 10150: Transcendence */
   { 0, "Transcendent Mast", {0}, 11067, 0x02, -1, 32, { 2, 1, 0 }, 3, 3, 0, 0, manalinkeh_card_transcendent_master, 0x00000000u, 0x00000001u, 0, 152, 0, 0, 50 }, /* 10151: Transcendent Master */
   { 0, "Transguild Promen", {0}, 12855, 0x01, -1, 62, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_transguild_promenade, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 10152: Transguild Promenade */
   { 0, "Transluminant", {0}, 7990, 0x02, -1, 8, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_transluminant, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 10153: Transluminant */
   { 0, "Transmogrifying L", {0}, 3578, 0x42, -1, 1, { 0, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_trasmogrifying_licid, 0x00000000u, 0x00000001u, 0, 8, 0, 0, 50 }, /* 10154: Transmogrifying Licid */
   { 0, "Transmutation", {0}, 823, 0x10, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_transmutation, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 40 }, /* 10155: Transmutation */
-  { 0, "Transmute Artifac", {0}, 537, 0x08, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_transmute_artifact, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 5 }, /* 10156: Transmute Artifact */
+  { 0, "Transmute Artifac", {0}, 537, 0x08, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_transmute_artifact, 0x00000000u, 0x00000400u, 0, 1, 32, 2, 5 }, /* 10156: Transmute Artifact */
   { 0, "Trap Essence", {0}, 14414, 0x10, -1, 28, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_trap_essence, 0x00000000u, 0x00002000u, 0, 15, 0, 0, 60 }, /* 10157: Trap Essence */
   { 0, "Trapfinder's Tric", {0}, 10691, 0x08, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_trapfinders_trick, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 15 }, /* 10158: Trapfinder's Trick */
   { 0, "Trapmaker's Snare", {0}, 10692, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_trapmakers_snare, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 20 }, /* 10159: Trapmaker's Snare */
@@ -21809,7 +21809,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Triplicate Spirit", {0}, 14190, 0x08, -1, 32, { 2, 4, 1 }, 0, 0, 1, 0, manalinkeh_card_triplicated_spirit, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 10217: Triplicate Spirits */
   { 0, "Triskelavite", {0}, 18844, 0x42, 3, 1, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_mogg_fanatic, 0x00000020u, 0x00000001u, 0, 248, 0, 1, 0 }, /* 10218: Triskelavite */
   { 0, "Triskelavus", {0}, 8710, 0x42, -1, 1, { 0, 7, 0 }, 1, 1, 0, 0, manalinkeh_card_triskelavus, 0x00000020u, 0x00000021u, 0, 49, 0, 2, 100 }, /* 10219: Triskelavus */
-  { 0, "Triskelion", {0}, 538, 0x42, -1, 1, { 0, 6, 0 }, 1, 1, 0, 0, manalinkeh_card_triskelion, 0x00000000u, 0x00000021u, 0, 248, 0, 2, 75 }, /* 10220: Triskelion */
+  { 0, "Triskelion", {0}, 538, 0x42, -1, 1, { 0, 6, 0 }, 1, 1, 0, 0, manalinkeh_card_triskelion, 0x00000000u, 0x00000421u, 0, 248, 1, 2, 75 }, /* 10220: Triskelion */
   { 0, "Triton Cavalry", {0}, 13999, 0x02, 1, 4, { 1, 3, 0 }, 2, 4, 0, 0, manalinkeh_card_triton_cavalry, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 20 }, /* 10221: Triton Cavalry */
   { 0, "Triton Fortune Hu", {0}, 13583, 0x02, 1, 4, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_triton_fortune_hunter, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10222: Triton Fortune Hunter */
   { 0, "Triton Shorestalk", {0}, 14000, 0x02, 1, 4, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_latch_seeker, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10223: Triton Shorestalker */
@@ -21840,7 +21840,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Tsabo Tavoc", {0}, 5161, 0x02, 14, 18, { 2, 5, 0 }, 7, 4, 0, 0, manalinkeh_card_tsabo_tavoc, 0x00000100u, 0x00000001u, 0, 248, 0, 2, 100 }, /* 10248: Tsabo Tavoc */
   { 0, "Tsabo's Decree", {0}, 5163, 0x10, -1, 2, { 1, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_tsabos_decree, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 10249: Tsabo's Decree */
   { 0, "Tsabo's Web", {0}, 5164, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_tsabos_web, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 10250: Tsabo's Web */
-  { 0, "Tsunami", {0}, 253, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_tsunami, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 10251: Tsunami */
+  { 0, "Tsunami", {0}, 253, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_tsunami, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 60 }, /* 10251: Tsunami */
   { 0, "Tukatongue Thalli", {0}, 10218, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_tukatongue_thallid, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10252: Tukatongue Thallid */
   { 0, "Tuknir Deathlock", {0}, 825, 0x02, 14, 24, { 4, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_tuknir_deathlock, 0x00000020u, 0x00000001u, 0, 40, 0, 2, 25 }, /* 10253: Tuknir Deathlock */
   { 0, "Tuktuk Grunts", {0}, 10694, 0x02, 3, 16, { 1, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_tuktuk_grunts, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 2 }, /* 10254: Tuktuk Grunts */
@@ -21848,8 +21848,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Tuktuk the Explor", {0}, 11068, 0x02, 14, 16, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_tuktuk_the_explorer, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 70 }, /* 10256: Tuktuk the Explorer */
   { 0, "Tuktuk the Return", {0}, 18845, 0x42, 14, 0, { 0, 0, 0 }, 5, 5, 0, 0, manalinkeh_card_tuktuk_the_returned, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 10257: Tuktuk the Returned */
   { 0, "Tumble Magnet", {0}, 11392, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_tumble_magnet, 0x00000000u, 0x00000001u, 0, 49, 0, 2, 50 }, /* 10258: Tumble Magnet */
-  { 0, "Tundra Wolves", {0}, 826, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000100u, 0x00000000u, 0, 8, 0, 1, 25 }, /* 10259: Tundra Wolves */
-  { 0, "Tunnel", {0}, 255, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_tunnel, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 10260: Tunnel */
+  { 0, "Tundra Wolves", {0}, 826, 0x02, -1, 32, { 1, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000100u, 0x00000000u, 0, 8, 1, 1, 25 }, /* 10259: Tundra Wolves */
+  { 0, "Tunnel", {0}, 255, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_tunnel, 0x00000000u, 0x00000000u, 0, 1, 1, 255, 5 }, /* 10260: Tunnel */
   { 0, "Tunnel Ignus", {0}, 11393, 0x02, -1, 16, { 1, 1, 13 }, 2, 1, 1, 0, manalinkeh_card_tunnel_ignus, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 9 }, /* 10261: Tunnel Ignus */
   { 0, "Tunnel Vision", {0}, 7992, 0x08, -1, 4, { 1, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_tunnel_vision, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 10262: Tunnel Vision */
   { 0, "Turbulent Dreams", {0}, 5894, 0x08, -1, 4, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_turbulent_dreams, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 10263: Turbulent Dreams */
@@ -21868,7 +21868,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Turtleshell Chang", {0}, 9294, 0x02, -1, 4, { 1, 3, 0 }, 1, 4, 0, 0, manalinkeh_card_turtleshell_changeling, 0x00080000u, 0x00000019u, 0, 72, 0, 0, 20 }, /* 10276: Turtleshell Changeling */
   { 0, "Tusked Colossodon", {0}, 14416, 0x02, -1, 8, { 2, 4, 0 }, 6, 5, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 10277: Tusked Colossodon */
   { 0, "Tuskguard Captain", {0}, 14417, 0x02, -1, 8, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_tuskguard_captain, 0x00000000u, 0x00000001u, 0, 129, 0, 0, 50 }, /* 10278: Tuskguard Captain */
-  { 0, "Twiddle", {0}, 256, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_twiddle, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 10279: Twiddle */
+  { 0, "Twiddle", {0}, 256, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_twiddle, 0x00000000u, 0x00000000u, 0, 15, 1, 0, 40 }, /* 10279: Twiddle */
   { 0, "Twilight Drover", {0}, 7993, 0x02, -1, 32, { 1, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_twilight_drover, 0x00000000u, 0x00000001u, 0, 41, 0, 0, 50 }, /* 10280: Twilight Drover */
   { 0, "Twilight Mire", {0}, 9894, 0x01, -1, 11, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_twilight_mire, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 10281: Twilight Mire */
   { 0, "Twilight Shepherd", {0}, 9707, 0x02, -1, 32, { 3, 3, 14 }, 5, 5, 0, 0, manalinkeh_card_twilight_shepherd, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 10282: Twilight Shepherd */
@@ -21884,10 +21884,10 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Twisted Justice", {0}, 7994, 0x08, -1, 6, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_twisted_justice, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 10292: Twisted Justice */
   { 0, "Two-Headed Cerber", {0}, 13586, 0x02, -1, 16, { 2, 1, 0 }, 1, 2, 0, 0, card_dummy, 0x40000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10293: Two-Headed Cerberus */
   { 0, "Two-Headed Dragon", {0}, 1178, 0x02, -1, 16, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_two_headed_dragon, 0x00000020u, 0x00100009u, 0, 72, 0, 3, 75 }, /* 10294: Two-Headed Dragon */
-  { 0, "Two-Headed Giant ", {0}, 257, 0x02, -1, 16, { 1, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_two_headed_giant_of_foriys, 0x00000080u, 0x00100000u, 0, 8, 0, 3, 55 }, /* 10295: Two-Headed Giant of Foriys */
+  { 0, "Two-Headed Giant ", {0}, 257, 0x02, -1, 16, { 1, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_two_headed_giant_of_foriys, 0x00000080u, 0x00100000u, 0, 8, 2, 3, 55 }, /* 10295: Two-Headed Giant of Foriys */
   { 0, "Tymaret, the Murd", {0}, 13587, 0x02, 14, 18, { 2, 0, 9 }, 2, 2, 0, 0, manalinkeh_card_tymaret_the_murder_king, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 10296: Tymaret, the Murder King */
   { 0, "Typhoid Rats", {0}, 12106, 0x02, -1, 2, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_deadly_recluse, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 10297: Typhoid Rats */
-  { 0, "Typhoon", {0}, 827, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_typhoon, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 40 }, /* 10298: Typhoon */
+  { 0, "Typhoon", {0}, 827, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_typhoon, 0x00000000u, 0x00000000u, 0, 9, 16, 2, 40 }, /* 10298: Typhoon */
   { 0, "Tyrannize", {0}, 9708, 0x08, -1, 18, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_tyrannize, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 60 }, /* 10299: Tyrannize */
   { 0, "Tyrant of Discord", {0}, 12495, 0x02, -1, 16, { 3, 4, 0 }, 7, 7, 0, 0, manalinkeh_card_tyrant_of_discord, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 100 }, /* 10300: Tyrant of Discord */
   { 0, "Tyrant's Choice", {0}, 14060, 0x08, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_tyrants_choice, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 10 }, /* 10301: Tyrant's Choice */
@@ -21921,7 +21921,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Unburial Rites", {0}, 12110, 0x08, -1, 2, { 1, 4, 9 }, 0, 0, 1, 0, manalinkeh_card_unburial_rites, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 35 }, /* 10329: Unburial Rites */
   { 0, "Uncanny Speed", {0}, 12497, 0x10, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_uncanny_speed, 0x00000000u, 0x00000000u, 0, 5, 0, 0, 40 }, /* 10330: Uncanny Speed */
   { 0, "Unchecked Growth", {0}, 7588, 0x10, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_unchecked_growth, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 10331: Unchecked Growth */
-  { 0, "Uncle Istvan", {0}, 382, 0x02, -1, 2, { 3, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_uncle_istvan, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10332: Uncle Istvan */
+  { 0, "Uncle Istvan", {0}, 382, 0x02, -1, 2, { 3, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_uncle_istvan, 0x00000000u, 0x00000000u, 0, 8, 1, 0, 20 }, /* 10332: Uncle Istvan */
   { 0, "Uncontrollable An", {0}, 7415, 0x14, -1, 16, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_uncontrollable_anger, 0x00000000u, 0x01000000u, 0, 4, 0, 0, 40 }, /* 10333: Uncontrollable Anger */
   { 0, "Uncovered Clues", {0}, 13239, 0x08, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_uncovered_clues, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 10334: Uncovered Clues */
   { 0, "Undead Alchemist", {0}, 12111, 0x02, 2, 4, { 1, 3, 0 }, 4, 2, 0, 0, manalinkeh_card_undead_alchemist, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 50 }, /* 10335: Undead Alchemist */
@@ -21955,7 +21955,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Unhallowed Pact", {0}, 12499, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_unhallowed_pact, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 10363: Unhallowed Pact */
   { 0, "Unholy Fiend", {0}, 11908, 0x02, -1, 2, { 0, 0, 0 }, 3, 3, 0, 0, manalinkeh_card_unholy_fiend, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 0 }, /* 10364: Unholy Fiend */
   { 0, "Unholy Grotto", {0}, 6307, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_unholy_grotto, 0x00000000u, 0x00001001u, 0, 153, 0, 0, 10 }, /* 10365: Unholy Grotto */
-  { 0, "Unholy Strength", {0}, 259, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_unholy_strenght, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 60 }, /* 10366: Unholy Strength */
+  { 0, "Unholy Strength", {0}, 259, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_unholy_strenght, 0x00000000u, 0x00000000u, 0, 1, 1, 2, 60 }, /* 10366: Unholy Strength */
   { 0, "Unifying Theory", {0}, 5745, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_unifying_theory, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 10367: Unifying Theory */
   { 0, "Unknown Shores", {0}, 13589, 0x01, -1, 63, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_prismatic_lens, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 10368: Unknown Shores */
   { 0, "Unlikely Alliance", {0}, 2373, 0x04, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_unlikely_alliance, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 40 }, /* 10369: Unlikely Alliance */
@@ -21971,13 +21971,13 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Unscythe, Killer ", {0}, 10364, 0x40, 14, 22, { 4, 0, 1 }, 0, 0, 0, 0, manalinkeh_card_unscythe_killer_of_kings, 0x00000000u, 0x00000001u, 0, 153, 0, 0, 60 }, /* 10379: Unscythe, Killer of Kings */
   { 0, "Unspeakable Symbo", {0}, 6599, 0x04, -1, 2, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_unspeakable_symbol, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 40 }, /* 10380: Unspeakable Symbol */
   { 0, "Unstable Footing", {0}, 10699, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_unstable_footing, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 50 }, /* 10381: Unstable Footing */
-  { 0, "Unstable Mutation", {0}, 462, 0x04, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_unstable_mutation, 0x00000000u, 0x00000001u, 0, 17, 0, 1, 5 }, /* 10382: Unstable Mutation */
+  { 0, "Unstable Mutation", {0}, 462, 0x04, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_unstable_mutation, 0x00000000u, 0x00000201u, 0, 17, 1, 1, 5 }, /* 10382: Unstable Mutation */
   { 0, "Unstable Obelisk", {0}, 14495, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_unstable_obelisk, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 10 }, /* 10383: Unstable Obelisk */
   { 0, "Unstable Shapeshi", {0}, 3321, 0x02, -1, 4, { 1, 3, 0 }, 0, 1, 0, 0, manalinkeh_card_unstable_shapeshifter, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 25 }, /* 10384: Unstable Shapeshifter */
   { 0, "Unstoppable Ash", {0}, 9451, 0x02, -1, 8, { 1, 3, 0 }, 5, 5, 0, 0, manalinkeh_card_unstoppable_ash, 0x00000080u, 0x00000000u, 0, 9, 0, 0, 70 }, /* 10385: Unstoppable Ash */
-  { 0, "Unsummon", {0}, 260, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_unsummon, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 5 }, /* 10386: Unsummon */
+  { 0, "Unsummon", {0}, 260, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_unsummon, 0x00000000u, 0x00000000u, 0, 15, 1, 1, 5 }, /* 10386: Unsummon */
   { 0, "Untamed Might", {0}, 11397, 0x10, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_untamed_might, 0x00000000u, 0x00000000u, 0, 4, 0, 3, 40 }, /* 10387: Untamed Might */
-  { 0, "Untamed Wilds", {0}, 831, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_untamed_wilds, 0x00000000u, 0x00000000u, 0, 9, 0, 255, 10 }, /* 10388: Untamed Wilds */
+  { 0, "Untamed Wilds", {0}, 831, 0x08, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_untamed_wilds, 0x00000000u, 0x00000000u, 0, 9, 1, 255, 10 }, /* 10388: Untamed Wilds */
   { 0, "Unwilling Recruit", {0}, 9899, 0x08, -1, 16, { 3, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_unwilling_recruit, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 10389: Unwilling Recruit */
   { 0, "Unwinding Clock", {0}, 11703, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_unwinding_clock, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 5 }, /* 10390: Unwinding Clock */
   { 0, "Unyaro Bee Sting", {0}, 1692, 0x08, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_shock2, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 80 }, /* 10391: Unyaro Bee Sting */
@@ -22007,20 +22007,20 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Uril, the Miststa", {0}, 10365, 0x02, 14, 56, { 3, 2, 0 }, 5, 5, 0, 0, manalinkeh_card_uril_the_miststalker, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10415: Uril, the Miststalker */
   { 0, "Ursapine", {0}, 7996, 0x02, -1, 8, { 2, 3, 0 }, 3, 3, 0, 0, manalinkeh_card_ursapine, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 50 }, /* 10416: Ursapine */
   { 0, "Urza's Armor", {0}, 1179, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_armor, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 40 }, /* 10417: Urza's Armor */
-  { 0, "Urza's Avenger", {0}, 539, 0x42, -1, 1, { 0, 6, 0 }, 4, 4, 0, 0, manalinkeh_card_urzas_avenger, 0x00000000u, 0x00000001u, 0, 56, 0, 2, 70 }, /* 10418: Urza's Avenger */
+  { 0, "Urza's Avenger", {0}, 539, 0x42, -1, 1, { 0, 6, 0 }, 4, 4, 0, 0, manalinkeh_card_urzas_avenger, 0x00000000u, 0x00000401u, 0, 56, 1, 2, 70 }, /* 10418: Urza's Avenger */
   { 0, "Urza's Bauble", {0}, 2142, 0x40, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_bauble, 0x00000000u, 0x00000001u, 0, 248, 0, 254, 5 }, /* 10419: Urza's Bauble */
   { 0, "Urza's Blueprints", {0}, 4079, 0x40, -1, 1, { 0, 6, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_blueprints, 0x00000000u, 0x00000001u, 0, 248, 0, 2, 100 }, /* 10420: Urza's Blueprints */
-  { 0, "Urza's Chalice", {0}, 540, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_chalice, 0x00000000u, 0x00000000u, 0, 241, 0, 0, 5 }, /* 10421: Urza's Chalice */
+  { 0, "Urza's Chalice", {0}, 540, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_chalice, 0x00000000u, 0x00000000u, 0, 241, 32, 0, 5 }, /* 10421: Urza's Chalice */
   { 0, "Urza's Factory", {0}, 8717, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_factory, 0x00000000u, 0x00001001u, 0, 41, 0, 0, 10 }, /* 10422: Urza's Factory */
   { 0, "Urza's Filter", {0}, 5172, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_filter, 0x00000000u, 0x40000000u, 0, 8, 0, 0, 10 }, /* 10423: Urza's Filter */
   { 0, "Urza's Guilt", {0}, 5326, 0x08, -1, 6, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_guilt, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 10424: Urza's Guilt */
   { 0, "Urza's Incubator", {0}, 4206, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_incubator, 0x00000000u, 0x40000000u, 0, 9, 0, 0, 10 }, /* 10425: Urza's Incubator */
-  { 0, "Urza's Mine", {0}, 541, 0x01, 8, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_mine_card_urzas_power_plant, 0x00000000u, 0x00001000u, 0, 1, 0, 1, 10 }, /* 10426: Urza's Mine */
-  { 0, "Urza's Miter", {0}, 542, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_miter, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 10427: Urza's Miter */
-  { 0, "Urza's Power Plan", {0}, 543, 0x01, 8, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_mine_card_urzas_power_plant, 0x00000000u, 0x00001000u, 0, 1, 0, 1, 10 }, /* 10428: Urza's Power Plant */
+  { 0, "Urza's Mine", {0}, 541, 0x01, 8, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_mine_card_urzas_power_plant, 0x00000000u, 0x00001400u, 0, 1, 8, 1, 10 }, /* 10426: Urza's Mine */
+  { 0, "Urza's Miter", {0}, 542, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_miter, 0x00000000u, 0x00000400u, 0, 1, 32, 255, 5 }, /* 10427: Urza's Miter */
+  { 0, "Urza's Power Plan", {0}, 543, 0x01, 8, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_mine_card_urzas_power_plant, 0x00000000u, 0x00001400u, 0, 1, 8, 1, 10 }, /* 10428: Urza's Power Plant */
   { 0, "Urza's Rage", {0}, 5173, 0x10, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_rage, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 10429: Urza's Rage */
-  { 0, "Urza's Tower", {0}, 544, 0x01, 8, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_tower, 0x00000000u, 0x00001000u, 0, 1, 0, 1, 10 }, /* 10430: Urza's Tower */
-  { 0, "Uthden Troll", {0}, 261, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_uthden_troll, 0x00000200u, 0x00000001u, 0, 248, 0, 2, 50 }, /* 10431: Uthden Troll */
+  { 0, "Urza's Tower", {0}, 544, 0x01, 8, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_urzas_tower, 0x00000000u, 0x00001400u, 0, 1, 8, 1, 10 }, /* 10430: Urza's Tower */
+  { 0, "Uthden Troll", {0}, 261, 0x02, -1, 16, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_uthden_troll, 0x00000200u, 0x00000001u, 0, 248, 1, 2, 50 }, /* 10431: Uthden Troll */
   { 0, "Utopia Mycon", {0}, 9045, 0x02, -1, 8, { 1, 0, 0 }, 0, 2, 0, 0, manalinkeh_card_utopia_mycon, 0x00000000u, 0x00001003u, 0, 249, 0, 0, 21 }, /* 10432: Utopia Mycon */
   { 0, "Utopia Sprawl", {0}, 8310, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_utopia_sprawl, 0x00000000u, 0x00001000u, 0, 1, 0, 1, 15 }, /* 10433: Utopia Sprawl */
   { 0, "Utopia Tree", {0}, 1200, 0x02, -1, 8, { 1, 1, 0 }, 0, 2, 0, 0, manalinkeh_card_utopia_tree, 0x00000000u, 0x00001000u, 0, 248, 0, 2, 35 }, /* 10434: Utopia Tree */
@@ -22039,7 +22039,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Valor Made Real", {0}, 8312, 0x10, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_valor_made_real, 0x00000000u, 0x00100000u, 0, 2, 0, 0, 40 }, /* 10447: Valor Made Real */
   { 0, "Vampire", {0}, 18848, 0x02, -1, 2, { 0, 0, 0 }, 16384, 16384, 0, 0, manalinkeh_card_vampire, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 10448: Vampire */
   { 0, "Vampire Aristocra", {0}, 10479, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_nantuko_husk, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 10449: Vampire Aristocrat */
-  { 0, "Vampire Bats", {0}, 835, 0x02, -1, 2, { 1, 0, 0 }, 0, 1, 0, 0, manalinkeh_card_vampire_bats, 0x00000020u, 0x00000009u, 0, 72, 0, 1, 35 }, /* 10450: Vampire Bats */
+  { 0, "Vampire Bats", {0}, 835, 0x02, -1, 2, { 1, 0, 0 }, 0, 1, 0, 0, manalinkeh_card_vampire_bats, 0x00000020u, 0x00000009u, 0, 72, 1, 1, 35 }, /* 10450: Vampire Bats */
   { 0, "Vampire Hexmage", {0}, 10701, 0x02, -1, 2, { 2, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_vampire_hexmage, 0x00000100u, 0x00000001u, 0, 248, 0, 1, 50 }, /* 10451: Vampire Hexmage */
   { 0, "Vampire Hounds", {0}, 3580, 0x02, -1, 2, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_vampire_hounds, 0x00000000u, 0x00000019u, 0, 72, 0, 1, 50 }, /* 10452: Vampire Hounds */
   { 0, "Vampire Interlope", {0}, 12114, 0x02, -1, 2, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_vampire_interloper, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 22 }, /* 10453: Vampire Interloper */
@@ -22113,7 +22113,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Vengeful Rebirth", {0}, 10371, 0x08, -1, 24, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_vengeful_rebirth, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 10521: Vengeful Rebirth */
   { 0, "Vengeful Vampire", {0}, 12286, 0x02, -1, 2, { 2, 4, 0 }, 3, 2, 0, 0, manalinkeh_card_nearheath_stalker, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 35 }, /* 10522: Vengeful Vampire */
   { 0, "Vengevine", {0}, 11075, 0x02, -1, 8, { 2, 2, 12 }, 4, 3, 0, 0, manalinkeh_card_vengevine, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 50 }, /* 10523: Vengevine */
-  { 0, "Venom", {0}, 383, 0x04, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_venom, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 10524: Venom */
+  { 0, "Venom", {0}, 383, 0x04, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_venom, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 40 }, /* 10524: Venom */
   { 0, "Venom Sliver", {0}, 14195, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_venom_sliver, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 10525: Venom Sliver */
   { 0, "Venser, Shaper Sa", {0}, 9049, 0x22, 14, 4, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_venser_shaper_savant, 0x00000000u, 0x00002000u, 0, 15, 0, 2, 25 }, /* 10526: Venser, Shaper Savant */
   { 0, "Venser, the Sojou", {0}, 11402, 0x04, 14, 36, { 2, 3, 9 }, 0, 0, 1, 0, manalinkeh_card_venser_the_sojourner, 0x00000000u, 0x00400001u, 0, 17, 0, 3, 100 }, /* 10527: Venser, the Sojourner */
@@ -22129,17 +22129,17 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Verdant Successio", {0}, 5747, 0x04, -1, 8, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_verdant_succession, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 10537: Verdant Succession */
   { 0, "Verdeloth the Anc", {0}, 5174, 0x02, 14, 8, { 2, 4, 0 }, 4, 7, 0, 0, manalinkeh_card_verdeloth_the_ancient, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 70 }, /* 10538: Verdeloth the Ancient */
   { 0, "Verduran Emissary", {0}, 5175, 0x02, -1, 8, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_verduran_emissary, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 10539: Verduran Emissary */
-  { 0, "Verduran Enchantr", {0}, 262, 0x02, -1, 8, { 2, 1, 0 }, 0, 2, 0, 0, manalinkeh_card_verduran_enchantress, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 20 }, /* 10540: Verduran Enchantress */
+  { 0, "Verduran Enchantr", {0}, 262, 0x02, -1, 8, { 2, 1, 0 }, 0, 2, 0, 0, manalinkeh_card_verduran_enchantress, 0x00000000u, 0x00000000u, 0, 8, 1, 255, 20 }, /* 10540: Verduran Enchantress */
   { 0, "Vermiculos", {0}, 6824, 0x02, -1, 2, { 1, 4, 0 }, 1, 1, 0, 0, manalinkeh_card_vermiculos, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10541: Vermiculos */
   { 0, "Vernal Bloom", {0}, 1182, 0x04, -1, 8, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_vernal_bloom, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 100 }, /* 10542: Vernal Bloom */
   { 0, "Vertigo Spawn", {0}, 8156, 0x02, -1, 4, { 1, 1, 0 }, 0, 3, 0, 0, manalinkeh_card_vertigo_spawn, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10543: Vertigo Spawn */
   { 0, "Vessel of Endless", {0}, 12502, 0x40, -1, 63, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_vessel_of_endless_rest, 0x00000000u, 0x00001000u, 0, 241, 0, 0, 10 }, /* 10544: Vessel of Endless Rest */
   { 0, "Vesuva", {0}, 8720, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_vesuva, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 10 }, /* 10545: Vesuva */
-  { 0, "Vesuvan Doppelgan", {0}, 263, 0x02, -1, 4, { 2, 3, 1 }, 0, 0, 0, 0, manalinkeh_card_vesuvan_doppelganger, 0x00000000u, 0x00000001u, 0, 17, 0, 3, 50 }, /* 10546: Vesuvan Doppelganger */
+  { 0, "Vesuvan Doppelgan", {0}, 263, 0x02, -1, 4, { 2, 3, 1 }, 0, 0, 0, 0, manalinkeh_card_vesuvan_doppelganger, 0x00000000u, 0x00000001u, 0, 17, 2, 3, 50 }, /* 10546: Vesuvan Doppelganger */
   { 0, "Vesuvan Shapeshif", {0}, 8721, 0x02, -1, 4, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_vesuvan_shapeshifter, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 75 }, /* 10547: Vesuvan Shapeshifter */
   { 0, "Veteran Armorer", {0}, 1494, 0x02, -1, 32, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_veteran_armorer, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 75 }, /* 10548: Veteran Armorer */
   { 0, "Veteran Armorsmit", {0}, 10481, 0x02, -1, 32, { 2, 0, 0 }, 2, 3, 0, 0, manalinkeh_card_veteran_armorsmith, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 55 }, /* 10549: Veteran Armorsmith */
-  { 0, "Veteran Bodyguard", {0}, 264, 0x02, -1, 32, { 2, 3, 0 }, 2, 5, 0, 0, manalinkeh_card_veteran_bodyguard, 0x00000000u, 0x00040000u, 0, 9, 0, 1, 20 }, /* 10550: Veteran Bodyguard */
+  { 0, "Veteran Bodyguard", {0}, 264, 0x02, -1, 32, { 2, 3, 0 }, 2, 5, 0, 0, manalinkeh_card_veteran_bodyguard, 0x00000000u, 0x00040000u, 0, 9, 2, 1, 20 }, /* 10550: Veteran Bodyguard */
   { 0, "Veteran Brawlers", {0}, 4907, 0x02, -1, 16, { 1, 1, 0 }, 4, 4, 0, 0, manalinkeh_card_branded_brawlers, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10551: Veteran Brawlers */
   { 0, "Veteran Cavalier", {0}, 4367, 0x02, -1, 32, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_serra_angel, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10552: Veteran Cavalier */
   { 0, "Veteran Explorer", {0}, 3063, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_veteran_explorer, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 35 }, /* 10553: Veteran Explorer */
@@ -22220,7 +22220,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Viseling", {0}, 4786, 0x42, -1, 1, { 0, 4, 0 }, 2, 2, 0, 0, manalinkeh_card_iron_maiden, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10628: Viseling */
   { 0, "Vish Kal, Blood A", {0}, 11765, 0x02, 14, 34, { 3, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_vish_kal_blood_arbiter, 0x00000020u, 0x00000019u, 0, 73, 0, 3, 150 }, /* 10629: Vish Kal, Blood Arbiter */
   { 0, "Vision Skeins", {0}, 8318, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_vision_skeins, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 10630: Vision Skeins */
-  { 0, "Visions", {0}, 837, 0x08, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_visions2, 0x00000000u, 0x00000000u, 0, 9, 0, 255, 5 }, /* 10631: Visions */
+  { 0, "Visions", {0}, 837, 0x08, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_visions2, 0x00000000u, 0x00000000u, 0, 9, 1, 255, 5 }, /* 10631: Visions */
   { 0, "Visions of Beyond", {0}, 11865, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_visions_of_beyond, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 1 }, /* 10632: Visions of Beyond */
   { 0, "Vital Splicer", {0}, 11711, 0x02, -1, 8, { 1, 3, 0 }, 1, 1, 0, 0, manalinkeh_card_vital_splicer, 0x00000000u, 0x00000001u, 0, 249, 0, 1, 50 }, /* 10633: Vital Splicer */
   { 0, "Vitalize", {0}, 3064, 0x10, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_vitalize, 0x00000000u, 0x00000000u, 0, 3, 0, 0, 60 }, /* 10634: Vitalize */
@@ -22269,7 +22269,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Volatile Rig", {0}, 12869, 0x42, -1, 1, { 0, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_volatile_rig, 0x00000080u, 0x01000000u, 0, 8, 0, 0, 100 }, /* 10677: Volatile Rig */
   { 0, "Volcanic Awakenin", {0}, 8726, 0x08, -1, 16, { 2, 4, 12 }, 0, 0, 0, 0, manalinkeh_card_volcanic_awakening, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 10678: Volcanic Awakening */
   { 0, "Volcanic Dragon", {0}, 1671, 0x02, -1, 16, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_ambush_party, 0x00000020u, 0x00000000u, 0, 1, 0, 1, 55 }, /* 10679: Volcanic Dragon */
-  { 0, "Volcanic Eruption", {0}, 265, 0x08, -1, 4, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_volcanic_eruption, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 10680: Volcanic Eruption */
+  { 0, "Volcanic Eruption", {0}, 265, 0x08, -1, 4, { 3, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_volcanic_eruption, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 60 }, /* 10680: Volcanic Eruption */
   { 0, "Volcanic Fallout", {0}, 10228, 0x10, -1, 16, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_volcanic_fallout, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 95 }, /* 10681: Volcanic Fallout */
   { 0, "Volcanic Geyser", {0}, 1257, 0x10, -1, 16, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_blaze, 0x00000000u, 0x00000000u, 0, 1, 0, 3, 80 }, /* 10682: Volcanic Geyser */
   { 0, "Volcanic Hammer", {0}, 1187, 0x08, -1, 16, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_lightning_bolt, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 80 }, /* 10683: Volcanic Hammer */
@@ -22335,32 +22335,32 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Walker of the Gro", {0}, 9456, 0x02, -1, 8, { 2, 6, 1 }, 7, 7, 1, 0, manalinkeh_card_walker_of_the_grove, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 10743: Walker of the Grove */
   { 0, "Walking Atlas", {0}, 10860, 0x42, -1, 1, { 0, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_sakura_tribe_scout, 0x00000000u, 0x00000001u, 0, 200, 0, 0, 20 }, /* 10744: Walking Atlas */
   { 0, "Walking Corpse", {0}, 12124, 0x02, 2, 2, { 1, 1, 0 }, 2, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 31 }, /* 10745: Walking Corpse */
-  { 0, "Walking Dead", {0}, 839, 0x02, 2, 2, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_drudge_skeletons, 0x00000200u, 0x00000001u, 0, 248, 0, 1, 5 }, /* 10746: Walking Dead */
+  { 0, "Walking Dead", {0}, 839, 0x02, 2, 2, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_drudge_skeletons, 0x00000200u, 0x00000001u, 0, 248, 16, 1, 5 }, /* 10746: Walking Dead */
   { 0, "Walking Sponge", {0}, 4084, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_walking_sponge, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 20 }, /* 10747: Walking Sponge */
   { 0, "Wall", {0}, 18851, 0x02, -1, 0, { 0, 0, 0 }, 5, 5, 0, 0, manalinkeh_card_rhino_token, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 10748: Wall */
-  { 0, "Wall of Air", {0}, 267, 0x02, -1, 4, { 2, 1, 0 }, 1, 5, 0, 0, card_dummy, 0x00800020u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 10749: Wall of Air */
+  { 0, "Wall of Air", {0}, 267, 0x02, -1, 4, { 2, 1, 0 }, 1, 5, 0, 0, card_dummy, 0x00800020u, 0x00000000u, 0, 8, 1, 1, 20 }, /* 10749: Wall of Air */
   { 0, "Wall of Blossoms", {0}, 1250, 0x02, -1, 8, { 1, 1, 0 }, 0, 4, 0, 0, manalinkeh_card_carven_caryatid, 0x00800000u, 0x00000000u, 0, 9, 0, 1, 35 }, /* 10750: Wall of Blossoms */
-  { 0, "Wall of Bone", {0}, 268, 0x02, -1, 2, { 1, 2, 0 }, 1, 4, 0, 0, manalinkeh_card_drudge_skeletons, 0x00800200u, 0x00000001u, 0, 248, 0, 1, 20 }, /* 10751: Wall of Bone */
-  { 0, "Wall of Brambles", {0}, 269, 0x02, -1, 8, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_wall_of_brambles, 0x00800200u, 0x00000001u, 0, 248, 0, 1, 20 }, /* 10752: Wall of Brambles */
+  { 0, "Wall of Bone", {0}, 268, 0x02, -1, 2, { 1, 2, 0 }, 1, 4, 0, 0, manalinkeh_card_drudge_skeletons, 0x00800200u, 0x00000001u, 0, 248, 1, 1, 20 }, /* 10751: Wall of Bone */
+  { 0, "Wall of Brambles", {0}, 269, 0x02, -1, 8, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_wall_of_brambles, 0x00800200u, 0x00000001u, 0, 248, 1, 1, 20 }, /* 10752: Wall of Brambles */
   { 0, "Wall of Corpses", {0}, 2654, 0x02, -1, 2, { 1, 1, 0 }, 0, 2, 0, 0, manalinkeh_card_wall_of_corpses, 0x00800000u, 0x00000001u, 0, 72, 0, 0, 50 }, /* 10753: Wall of Corpses */
   { 0, "Wall of Deceit", {0}, 6458, 0x02, -1, 4, { 1, 1, 1 }, 0, 5, 1, 0, manalinkeh_card_wall_of_deceit, 0x00800000u, 0x00000001u, 0, 136, 0, 0, 20 }, /* 10754: Wall of Deceit */
   { 0, "Wall of Denial", {0}, 10374, 0x02, -1, 36, { 2, 1, 0 }, 0, 8, 0, 0, card_dummy, 0x00820020u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 10755: Wall of Denial */
-  { 0, "Wall of Dust", {0}, 841, 0x02, -1, 16, { 1, 2, 0 }, 1, 4, 0, 0, manalinkeh_card_wall_of_dust, 0x00800000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 10756: Wall of Dust */
-  { 0, "Wall of Earth", {0}, 842, 0x02, -1, 16, { 1, 1, 0 }, 0, 6, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 10757: Wall of Earth */
+  { 0, "Wall of Dust", {0}, 841, 0x02, -1, 16, { 1, 2, 0 }, 1, 4, 0, 0, manalinkeh_card_wall_of_dust, 0x00800000u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 10756: Wall of Dust */
+  { 0, "Wall of Earth", {0}, 842, 0x02, -1, 16, { 1, 1, 0 }, 0, 6, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 16, 0, 5 }, /* 10757: Wall of Earth */
   { 0, "Wall of Essence", {0}, 3454, 0x02, -1, 32, { 1, 1, 0 }, 0, 4, 0, 0, manalinkeh_card_wall_of_essence, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 25 }, /* 10758: Wall of Essence */
-  { 0, "Wall of Fire", {0}, 270, 0x02, -1, 16, { 2, 1, 0 }, 0, 5, 0, 0, manalinkeh_card_furnace_whelp, 0x00800000u, 0x00000009u, 0, 72, 0, 0, 20 }, /* 10759: Wall of Fire */
+  { 0, "Wall of Fire", {0}, 270, 0x02, -1, 16, { 2, 1, 0 }, 0, 5, 0, 0, manalinkeh_card_furnace_whelp, 0x00800000u, 0x00000009u, 0, 72, 1, 0, 20 }, /* 10759: Wall of Fire */
   { 0, "Wall of Frost", {0}, 10485, 0x02, -1, 4, { 2, 1, 0 }, 0, 7, 0, 0, manalinkeh_card_wall_of_frost, 0x00800000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 10760: Wall of Frost */
   { 0, "Wall of Glare", {0}, 4208, 0x02, -1, 32, { 1, 1, 0 }, 0, 5, 0, 0, manalinkeh_card_palace_guard, 0x00800000u, 0x00100000u, 0, 8, 0, 0, 20 }, /* 10761: Wall of Glare */
-  { 0, "Wall of Heat", {0}, 843, 0x02, -1, 16, { 1, 2, 0 }, 2, 6, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 10762: Wall of Heat */
+  { 0, "Wall of Heat", {0}, 843, 0x02, -1, 16, { 1, 2, 0 }, 2, 6, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 16, 1, 5 }, /* 10762: Wall of Heat */
   { 0, "Wall of Hope", {0}, 6459, 0x02, -1, 32, { 1, 0, 0 }, 0, 3, 0, 0, manalinkeh_card_wall_of_hope, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10763: Wall of Hope */
-  { 0, "Wall of Ice", {0}, 271, 0x02, -1, 8, { 1, 2, 0 }, 0, 7, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 10764: Wall of Ice */
+  { 0, "Wall of Ice", {0}, 271, 0x02, -1, 8, { 1, 2, 0 }, 0, 7, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 1, 1, 20 }, /* 10764: Wall of Ice */
   { 0, "Wall of Kelp", {0}, 1652, 0x02, -1, 4, { 2, 0, 0 }, 0, 3, 0, 0, manalinkeh_card_wall_of_kelp, 0x00800000u, 0x00000001u, 0, 56, 0, 2, 35 }, /* 10765: Wall of Kelp */
-  { 0, "Wall of Light", {0}, 844, 0x02, -1, 32, { 1, 2, 0 }, 1, 5, 0, 0, manalinkeh_card_white_knight, 0x00800000u, 0x00000000u, 0, 8, 0, 2, 20 }, /* 10766: Wall of Light */
+  { 0, "Wall of Light", {0}, 844, 0x02, -1, 32, { 1, 2, 0 }, 1, 5, 0, 0, manalinkeh_card_white_knight, 0x00800000u, 0x00000000u, 0, 8, 16, 2, 20 }, /* 10766: Wall of Light */
   { 0, "Wall of Limbs", {0}, 14198, 0x02, 2, 2, { 1, 2, 0 }, 0, 3, 0, 0, manalinkeh_card_wall_of_limbs, 0x00800000u, 0x00200001u, 0, 248, 0, 0, 20 }, /* 10767: Wall of Limbs */
   { 0, "Wall of Mulch", {0}, 6314, 0x02, -1, 8, { 1, 1, 0 }, 0, 4, 0, 0, manalinkeh_card_wall_of_mulch, 0x00800000u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 10768: Wall of Mulch */
   { 0, "Wall of Nets", {0}, 3582, 0x02, -1, 32, { 2, 1, 0 }, 0, 7, 0, 0, manalinkeh_card_wall_of_nets, 0x00800000u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 10769: Wall of Nets */
   { 0, "Wall of Omens", {0}, 11078, 0x02, -1, 32, { 1, 1, 0 }, 0, 4, 0, 0, manalinkeh_card_carven_caryatid, 0x00800000u, 0x00000000u, 0, 9, 0, 1, 35 }, /* 10770: Wall of Omens */
-  { 0, "Wall of Oppositio", {0}, 845, 0x02, -1, 16, { 2, 3, 0 }, 0, 6, 0, 0, manalinkeh_card_wall_of_opposition, 0x00800000u, 0x00000019u, 0, 72, 0, 2, 25 }, /* 10771: Wall of Opposition */
+  { 0, "Wall of Oppositio", {0}, 845, 0x02, -1, 16, { 2, 3, 0 }, 0, 6, 0, 0, manalinkeh_card_wall_of_opposition, 0x00800000u, 0x00000019u, 0, 72, 16, 2, 25 }, /* 10771: Wall of Opposition */
   { 0, "Wall of Putrid Fl", {0}, 846, 0x02, -1, 2, { 1, 2, 0 }, 2, 4, 0, 0, manalinkeh_card_wall_of_putrid_flesh, 0x00808000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10772: Wall of Putrid Flesh */
   { 0, "Wall of Razors", {0}, 3455, 0x02, -1, 16, { 1, 1, 0 }, 4, 1, 0, 0, card_dummy, 0x00800100u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10773: Wall of Razors */
   { 0, "Wall of Resistanc", {0}, 2655, 0x02, -1, 32, { 1, 1, 0 }, 0, 3, 0, 0, manalinkeh_card_wall_of_resistance, 0x00800020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10774: Wall of Resistance */
@@ -22369,33 +22369,33 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Wall of Shadows", {0}, 847, 0x02, -1, 2, { 2, 1, 0 }, 0, 1, 0, 0, manalinkeh_card_wall_of_shadows, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10777: Wall of Shadows */
   { 0, "Wall of Shards", {0}, 8469, 0x02, -1, 32, { 1, 1, 0 }, 1, 8, 0, 0, manalinkeh_card_wall_of_shards, 0x00800020u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 10778: Wall of Shards */
   { 0, "Wall of Souls", {0}, 3456, 0x02, -1, 2, { 1, 1, 0 }, 0, 4, 0, 0, manalinkeh_card_wall_of_souls, 0x00800000u, 0x00000000u, 0, 8, 0, 1, 25 }, /* 10779: Wall of Souls */
-  { 0, "Wall of Spears", {0}, 545, 0x42, -1, 1, { 0, 3, 0 }, 2, 3, 0, 0, card_dummy, 0x00800100u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 10780: Wall of Spears */
-  { 0, "Wall of Stone", {0}, 272, 0x02, -1, 16, { 2, 1, 0 }, 0, 8, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 10781: Wall of Stone */
-  { 0, "Wall of Swords", {0}, 273, 0x02, -1, 32, { 1, 3, 0 }, 3, 5, 0, 0, card_dummy, 0x00800020u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 10782: Wall of Swords */
+  { 0, "Wall of Spears", {0}, 545, 0x42, -1, 1, { 0, 3, 0 }, 2, 3, 0, 0, card_dummy, 0x00800100u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 10780: Wall of Spears */
+  { 0, "Wall of Stone", {0}, 272, 0x02, -1, 16, { 2, 1, 0 }, 0, 8, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 1, 1, 20 }, /* 10781: Wall of Stone */
+  { 0, "Wall of Swords", {0}, 273, 0x02, -1, 32, { 1, 3, 0 }, 3, 5, 0, 0, card_dummy, 0x00800020u, 0x00000000u, 0, 8, 1, 1, 35 }, /* 10782: Wall of Swords */
   { 0, "Wall of Tanglecor", {0}, 11409, 0x42, -1, 1, { 0, 2, 0 }, 0, 6, 0, 0, manalinkeh_card_wall_of_tanglecord, 0x00800000u, 0x00000000u, 0, 248, 0, 3, 39 }, /* 10783: Wall of Tanglecord */
   { 0, "Wall of Tears", {0}, 3457, 0x02, -1, 4, { 1, 1, 0 }, 0, 4, 0, 0, manalinkeh_card_wall_of_tears, 0x00800000u, 0x00000000u, 0, 8, 0, 1, 25 }, /* 10784: Wall of Tears */
-  { 0, "Wall of Tombstone", {0}, 848, 0x02, -1, 2, { 1, 1, 0 }, 0, 1, 0, 0, manalinkeh_card_wall_of_tombstones, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 10785: Wall of Tombstones */
+  { 0, "Wall of Tombstone", {0}, 848, 0x02, -1, 2, { 1, 1, 0 }, 0, 1, 0, 0, manalinkeh_card_wall_of_tombstones, 0x00800000u, 0x00000000u, 0, 8, 16, 0, 5 }, /* 10785: Wall of Tombstones */
   { 0, "Wall of Torches", {0}, 11866, 0x02, -1, 16, { 1, 1, 0 }, 4, 1, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 0, 1, 9 }, /* 10786: Wall of Torches */
   { 0, "Wall of Vapor", {0}, 849, 0x02, -1, 4, { 1, 3, 0 }, 0, 1, 0, 0, manalinkeh_card_wall_of_vapor, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10787: Wall of Vapor */
   { 0, "Wall of Vines", {0}, 11189, 0x02, -1, 8, { 1, 0, 0 }, 0, 3, 0, 0, card_dummy, 0x00800400u, 0x00000000u, 0, 8, 0, 0, 6 }, /* 10788: Wall of Vines */
-  { 0, "Wall of Water", {0}, 274, 0x02, -1, 4, { 2, 1, 0 }, 0, 5, 0, 0, manalinkeh_card_wall_of_water, 0x00800000u, 0x00000009u, 0, 72, 0, 1, 20 }, /* 10789: Wall of Water */
-  { 0, "Wall of Wonder", {0}, 850, 0x02, -1, 4, { 2, 2, 0 }, 1, 5, 0, 0, manalinkeh_card_wall_of_wonder, 0x00800000u, 0x00000009u, 0, 56, 0, 3, 5 }, /* 10790: Wall of Wonder */
-  { 0, "Wall of Wood", {0}, 275, 0x02, -1, 8, { 1, 0, 0 }, 0, 3, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 10791: Wall of Wood */
+  { 0, "Wall of Water", {0}, 274, 0x02, -1, 4, { 2, 1, 0 }, 0, 5, 0, 0, manalinkeh_card_wall_of_water, 0x00800000u, 0x00000009u, 0, 72, 1, 1, 20 }, /* 10789: Wall of Water */
+  { 0, "Wall of Wonder", {0}, 850, 0x02, -1, 4, { 2, 2, 0 }, 1, 5, 0, 0, manalinkeh_card_wall_of_wonder, 0x00800000u, 0x00000009u, 0, 56, 16, 3, 5 }, /* 10790: Wall of Wonder */
+  { 0, "Wall of Wood", {0}, 275, 0x02, -1, 8, { 1, 0, 0 }, 0, 3, 0, 0, card_dummy, 0x00800000u, 0x00000000u, 0, 8, 1, 0, 5 }, /* 10791: Wall of Wood */
   { 0, "Wand of Denial", {0}, 2809, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_wand_of_denial, 0x00000000u, 0x00000001u, 0, 136, 0, 254, 50 }, /* 10792: Wand of Denial */
   { 0, "Wand of Ith", {0}, 384, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_wand_of_ith, 0x00000000u, 0x00000001u, 0, 152, 0, 0, 5 }, /* 10793: Wand of Ith */
   { 0, "Wand of the Eleme", {0}, 6994, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_wand_of_the_elements, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 40 }, /* 10794: Wand of the Elements */
   { 0, "Wandering Graybea", {0}, 9457, 0x02, -1, 32, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_wandering_graybeard, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10795: Wandering Graybeard */
   { 0, "Wandering Wolf", {0}, 12507, 0x02, -1, 8, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_wandering_wolf, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10796: Wandering Wolf */
-  { 0, "Wanderlust", {0}, 276, 0x04, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_wanderlust, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 40 }, /* 10797: Wanderlust */
+  { 0, "Wanderlust", {0}, 276, 0x04, -1, 8, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_wanderlust, 0x00000000u, 0x00000000u, 0, 8, 1, 2, 40 }, /* 10797: Wanderlust */
   { 0, "Wanderwine Hub", {0}, 9304, 0x01, -1, 36, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_wanderwine_hub, 0x00000000u, 0x00001000u, 0, 1, 0, 0, 10 }, /* 10798: Wanderwine Hub */
   { 0, "Wanderwine Prophe", {0}, 9305, 0x02, -1, 4, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_wanderwine_prophet, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10799: Wanderwine Prophets */
-  { 0, "War Barge", {0}, 385, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_war_barge, 0x00000000u, 0x00000001u, 0, 241, 0, 0, 5 }, /* 10800: War Barge */
+  { 0, "War Barge", {0}, 385, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_war_barge, 0x00000000u, 0x00000001u, 0, 241, 8, 0, 5 }, /* 10800: War Barge */
   { 0, "War Behemoth", {0}, 14424, 0x02, -1, 32, { 1, 5, 1 }, 3, 6, 1, 0, manalinkeh_card_war_behemoth, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10801: War Behemoth */
   { 0, "War Dance", {0}, 3953, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_war_dance, 0x00000000u, 0x00000001u, 0, 72, 0, 0, 40 }, /* 10802: War Dance */
   { 0, "War Elemental", {0}, 6835, 0x02, -1, 16, { 3, 0, 13 }, 1, 1, 0, 0, manalinkeh_card_war_elemental, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 10803: War Elemental */
-  { 0, "War Elephant", {0}, 463, 0x02, 10, 32, { 1, 3, 0 }, 2, 2, 0, 0, card_dummy, 0x000000c0u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 10804: War Elephant */
+  { 0, "War Elephant", {0}, 463, 0x02, 10, 32, { 1, 3, 0 }, 2, 2, 0, 0, card_dummy, 0x000000c0u, 0x00000400u, 0, 8, 8, 1, 5 }, /* 10804: War Elephant */
   { 0, "War Falcon", {0}, 12637, 0x02, -1, 32, { 1, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_war_falcon, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10805: War Falcon */
-  { 0, "War Mammoth", {0}, 277, 0x02, 11, 8, { 1, 3, 0 }, 3, 3, 0, 0, card_dummy, 0x00000080u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 10806: War Mammoth */
+  { 0, "War Mammoth", {0}, 277, 0x02, 11, 8, { 1, 3, 0 }, 3, 3, 0, 0, card_dummy, 0x00000080u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 10806: War Mammoth */
   { 0, "War Priest of Thu", {0}, 11190, 0x02, -1, 32, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_war_priest_of_thune, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 20 }, /* 10807: War Priest of Thune */
   { 0, "War Report", {0}, 11715, 0x10, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_war_report, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 2 }, /* 10808: War Report */
   { 0, "War Tax", {0}, 4652, 0x04, -1, 4, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_war_tax, 0x00000000u, 0x00400001u, 0, 24, 0, 0, 40 }, /* 10809: War Tax */
@@ -22417,7 +22417,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Warmind Infantry", {0}, 13098, 0x02, -1, 16, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_warmind_infantry, 0x00000000u, 0x00000008u, 0, 8, 0, 0, 20 }, /* 10825: Warmind Infantry */
   { 0, "Warmonger Hellkit", {0}, 14498, 0x02, -1, 16, { 2, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_warmonge_hellkite, 0x00000020u, 0x00000001u, 0, 65, 0, 0, 70 }, /* 10826: Warmonger Hellkite */
   { 0, "Warmonger's Chari", {0}, 11079, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_warmongers_chariot, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 60 }, /* 10827: Warmonger's Chariot */
-  { 0, "Warp Artifact", {0}, 278, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_warp_artifact, 0x00000000u, 0x00000001u, 0, 24, 0, 255, 40 }, /* 10828: Warp Artifact */
+  { 0, "Warp Artifact", {0}, 278, 0x04, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_warp_artifact, 0x00000000u, 0x00000001u, 0, 24, 1, 255, 40 }, /* 10828: Warp Artifact */
   { 0, "Warp World", {0}, 8009, 0x08, -1, 16, { 3, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_warp_world, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 10829: Warp World */
   { 0, "Warpath Ghoul", {0}, 10486, 0x02, 2, 2, { 1, 2, 0 }, 3, 2, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 20 }, /* 10830: Warpath Ghoul */
   { 0, "Warped Devotion", {0}, 1188, 0x04, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_warped_devotion, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 5 }, /* 10831: Warped Devotion */
@@ -22434,7 +22434,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Warstorm Surge", {0}, 11867, 0x04, -1, 16, { 1, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_warstorm_surge, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 5 }, /* 10842: Warstorm Surge */
   { 0, "Warthog", {0}, 2810, 0x02, -1, 8, { 2, 1, 0 }, 3, 2, 0, 0, card_dummy, 0x00000001u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10843: Warthog */
   { 0, "Wash Out", {0}, 5188, 0x08, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_wash_out, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 10844: Wash Out */
-  { 0, "Wasp", {0}, 885, 0x42, -1, 1, { 0, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 9, 0, 0, 0 }, /* 10845: Wasp */
+  { 0, "Wasp", {0}, 885, 0x42, -1, 1, { 0, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 9, 1, 0, 0 }, /* 10845: Wasp */
   { 0, "Wasp Lancer", {0}, 1418, 0x02, -1, 6, { 3, 0, 1 }, 3, 2, 1, 0, manalinkeh_card_oversoul_of_dusk, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 10846: Wasp Lancer */
   { 0, "Waste Not", {0}, 14012, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_waste_not, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 0 }, /* 10847: Waste Not */
   { 0, "Wasteland", {0}, 3329, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_wasteland, 0x00000000u, 0x00001001u, 0, 241, 0, 1, 15 }, /* 10848: Wasteland */
@@ -22442,9 +22442,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Watcher of the Ro", {0}, 14427, 0x02, -1, 32, { 1, 2, 1 }, 2, 1, 1, 0, manalinkeh_card_watcher_of_the_roost, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10850: Watcher of the Roost */
   { 0, "Watcher Sliver", {0}, 1391, 0x02, -1, 32, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_watcher_sliver, 0x00000000u, 0x00000000u, 0, 9, 0, 1, 35 }, /* 10851: Watcher Sliver */
   { 0, "Watchwolf", {0}, 1297, 0x02, -1, 40, { 2, 0, 0 }, 3, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 70 }, /* 10852: Watchwolf */
-  { 0, "Water Elemental", {0}, 279, 0x02, -1, 4, { 2, 3, 0 }, 5, 4, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 5 }, /* 10853: Water Elemental */
+  { 0, "Water Elemental", {0}, 279, 0x02, -1, 4, { 2, 3, 0 }, 5, 4, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 1, 1, 5 }, /* 10853: Water Elemental */
   { 0, "Water Servant", {0}, 11192, 0x02, -1, 4, { 2, 2, 0 }, 3, 4, 0, 0, manalinkeh_card_water_servant, 0x00000000u, 0x00000019u, 0, 56, 0, 1, 58 }, /* 10854: Water Servant */
-  { 0, "Water Wurm", {0}, 951, 0x02, -1, 4, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_water_wurm, 0x00000000u, 0x00000000u, 0, 8, 0, 254, 5 }, /* 10855: Water Wurm */
+  { 0, "Water Wurm", {0}, 951, 0x02, -1, 4, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_water_wurm, 0x00000000u, 0x00000000u, 0, 8, 8, 254, 5 }, /* 10855: Water Wurm */
   { 0, "Watercourser", {0}, 12639, 0x02, -1, 4, { 1, 2, 0 }, 2, 3, 0, 0, manalinkeh_card_watercourser, 0x00000000u, 0x00000009u, 0, 72, 0, 0, 20 }, /* 10856: Watercourser */
   { 0, "Waterfront Bounce", {0}, 4655, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_waterfront_bouncer, 0x00000000u, 0x00000001u, 0, 56, 0, 0, 20 }, /* 10857: Waterfront Bouncer */
   { 0, "Waterspout Djinn", {0}, 2811, 0x02, 6, 4, { 2, 2, 0 }, 4, 4, 0, 0, manalinkeh_card_waterspout_djinn, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10858: Waterspout Djinn */
@@ -22462,8 +22462,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Wayfarer's Bauble", {0}, 1467, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_wayfarers_bauble, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 15 }, /* 10870: Wayfarer's Bauble */
   { 0, "Wayfaring Temple", {0}, 12871, 0x02, -1, 40, { 2, 1, 0 }, 16384, 16384, 0, 0, manalinkeh_card_wayfaring_temple, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10871: Wayfaring Temple */
   { 0, "Wayward Angel", {0}, 5751, 0x02, -1, 32, { 2, 4, 0 }, 4, 4, 0, 0, manalinkeh_card_wayward_angel, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 60 }, /* 10872: Wayward Angel */
-  { 0, "Weakness", {0}, 280, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_weakness, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 40 }, /* 10873: Weakness */
-  { 0, "Weakstone", {0}, 546, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_weakstone, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 10874: Weakstone */
+  { 0, "Weakness", {0}, 280, 0x04, -1, 2, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_weakness, 0x00000000u, 0x00000000u, 0, 9, 1, 2, 40 }, /* 10873: Weakness */
+  { 0, "Weakstone", {0}, 546, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_weakstone, 0x00000000u, 0x00000400u, 0, 8, 32, 0, 5 }, /* 10874: Weakstone */
   { 0, "Weapon Surge", {0}, 13248, 0x10, -1, 16, { 1, 0, 0 }, 0, 0, 1, 0, manalinkeh_card_weapon_surge, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 60 }, /* 10875: Weapon Surge */
   { 0, "Wear // Tear", {0}, 13231, 0x10, -1, 48, { 1, 1, 1 }, 0, 0, 1, 0, manalinkeh_card_wear_tear, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 10876: Wear // Tear */
   { 0, "Wear Away", {0}, 7428, 0x10, -1, 8, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_wear_away, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 80 }, /* 10877: Wear Away */
@@ -22473,7 +22473,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Weatherseed Totem", {0}, 8729, 0x40, -1, 8, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_weatherseed_totem, 0x00000000u, 0x00009001u, 0, 49, 0, 0, 10 }, /* 10881: Weatherseed Totem */
   { 0, "Weatherseed Treef", {0}, 4086, 0x02, -1, 8, { 3, 2, 0 }, 5, 3, 0, 0, manalinkeh_card_endless_cockroaches, 0x00000080u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 10882: Weatherseed Treefolk */
   { 0, "Weave Fate", {0}, 14429, 0x10, -1, 4, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_divination, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 10883: Weave Fate */
-  { 0, "Web", {0}, 281, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_web, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 5 }, /* 10884: Web */
+  { 0, "Web", {0}, 281, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_web, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 5 }, /* 10884: Web */
   { 0, "Wee Dragonauts", {0}, 8157, 0x02, -1, 20, { 2, 1, 0 }, 1, 3, 0, 0, manalinkeh_card_wee_dragonauts, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10885: Wee Dragonauts */
   { 0, "Wei Ambush Force", {0}, 4284, 0x02, -1, 2, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_lurking_nightstalker, 0x00000000u, 0x00000008u, 0, 8, 0, 0, 20 }, /* 10886: Wei Ambush Force */
   { 0, "Wei Assassins", {0}, 4285, 0x02, -1, 2, { 2, 3, 0 }, 3, 2, 0, 0, manalinkeh_card_wei_assassins, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 10887: Wei Assassins */
@@ -22501,14 +22501,14 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Whale", {0}, 18854, 0x02, -1, 0, { 0, 0, 0 }, 6, 6, 0, 0, manalinkeh_card_whale_token, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 10909: Whale */
   { 0, "Whalebone Glider", {0}, 2153, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_whalebone_glider, 0x00000000u, 0x00000001u, 0, 49, 0, 0, 60 }, /* 10910: Whalebone Glider */
   { 0, "Wheel of Fate", {0}, 8730, 0x08, -1, 16, { 0, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_wheel_of_fate, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 10911: Wheel of Fate */
-  { 0, "Wheel of Fortune", {0}, 282, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_wheel_of_fortune, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 150 }, /* 10912: Wheel of Fortune */
+  { 0, "Wheel of Fortune", {0}, 282, 0x08, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_wheel_of_fortune, 0x00000000u, 0x00000100u, 0, 1, 2, 1, 150 }, /* 10912: Wheel of Fortune */
   { 0, "Wheel of Sun and ", {0}, 9715, 0x04, -1, 40, { 2, 0, 1 }, 0, 0, 1, 0, manalinkeh_card_wheel_of_sun_and_moon, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 10913: Wheel of Sun and Moon */
   { 0, "Wheel of Torture", {0}, 4087, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_wheel_of_torture, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 10914: Wheel of Torture */
   { 0, "Whelming Wave", {0}, 13831, 0x08, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_whelming_wave, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 10915: Whelming Wave */
   { 0, "Where Ancients Tr", {0}, 10102, 0x04, -1, 16, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_where_ancients_tread, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 10916: Where Ancients Tread */
   { 0, "Whetstone", {0}, 3955, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_whetstone, 0x00000000u, 0x00000001u, 0, 136, 0, 0, 40 }, /* 10917: Whetstone */
   { 0, "Whims of the Fate", {0}, 13832, 0x08, -1, 16, { 1, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_whims_of_the_fates, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 10918: Whims of the Fates */
-  { 0, "Whimsy", {0}, 864, 0x08, -1, 4, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_whimsy, 0x00000000u, 0x00000000u, 0, 9, 0, 254, 5 }, /* 10919: Whimsy */
+  { 0, "Whimsy", {0}, 864, 0x08, -1, 4, { 2, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_whimsy, 0x00000000u, 0x00000000u, 0, 9, 64, 254, 5 }, /* 10919: Whimsy */
   { 0, "Whip of Erebos", {0}, 13598, 0x44, 14, 2, { 2, 2, 1 }, 0, 0, 0, 0, manalinkeh_card_whip_of_erebos, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 60 }, /* 10920: Whip of Erebos */
   { 0, "Whip Sergeant", {0}, 4914, 0x02, -1, 16, { 1, 2, 0 }, 2, 1, 0, 0, manalinkeh_card_whip_sergeant, 0x00000000u, 0x00000001u, 0, 17, 0, 0, 20 }, /* 10921: Whip Sergeant */
   { 0, "Whip Vine", {0}, 2381, 0x02, -1, 8, { 1, 2, 0 }, 1, 4, 0, 0, manalinkeh_card_whip_vine, 0x00800400u, 0x00000001u, 0, 72, 0, 0, 20 }, /* 10922: Whip Vine */
@@ -22517,7 +22517,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Whiplash Trap", {0}, 10710, 0x10, -1, 4, { 2, 3, 1 }, 0, 0, 1, 0, manalinkeh_card_whiplash_trap, 0x00000000u, 0x00000000u, 0, 15, 0, 1, 30 }, /* 10925: Whiplash Trap */
   { 0, "Whippoorwill", {0}, 386, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_whippoorwill, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 43 }, /* 10926: Whippoorwill */
   { 0, "Whirling Catapult", {0}, 2382, 0x40, -1, 1, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_whirling_catapult, 0x00000000u, 0x00000001u, 0, 248, 0, 0, 40 }, /* 10927: Whirling Catapult */
-  { 0, "Whirling Dervish", {0}, 851, 0x02, -1, 8, { 2, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_whirling_dervish, 0x00000800u, 0x00000000u, 0, 8, 0, 0, 35 }, /* 10928: Whirling Dervish */
+  { 0, "Whirling Dervish", {0}, 851, 0x02, -1, 8, { 2, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_whirling_dervish, 0x00000800u, 0x00000000u, 0, 8, 1, 0, 35 }, /* 10928: Whirling Dervish */
   { 0, "Whirlwind", {0}, 3956, 0x08, -1, 8, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_whirlwind2, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 10929: Whirlwind */
   { 0, "Whirlwind Adept", {0}, 14431, 0x02, 6, 4, { 1, 4, 0 }, 4, 2, 0, 0, manalinkeh_card_whirlwind_adept, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10930: Whirlwind Adept */
   { 0, "Whispering Madnes", {0}, 13101, 0x08, -1, 6, { 2, 2, 1 }, 0, 0, 0, 0, manalinkeh_card_whispering_madness, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 10931: Whispering Madness */
@@ -22526,12 +22526,12 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Whispers of the M", {0}, 1436, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_whispers_of_the_muse, 0x00000000u, 0x00000000u, 0, 15, 0, 3, 150 }, /* 10934: Whispers of the Muse */
   { 0, "Whispersilk Cloak", {0}, 6996, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_whispersilk_cloak, 0x00000000u, 0x00000021u, 0, 17, 0, 2, 65 }, /* 10935: Whispersilk Cloak */
   { 0, "White", {0}, 19805, 0x80, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_back_to_95, 0x00000000u, 0x00000001u, 0, 1, 0, 2, 0 }, /* 10936: White */
-  { 0, "White Knight", {0}, 283, 0x02, -1, 32, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_white_knight, 0x00000100u, 0x00000000u, 0, 8, 0, 1, 70 }, /* 10937: White Knight */
-  { 0, "White Mana Batter", {0}, 852, 0x40, -1, 32, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_white_mana_battery, 0x00000000u, 0x00001021u, 0, 72, 0, 255, 5 }, /* 10938: White Mana Battery */
+  { 0, "White Knight", {0}, 283, 0x02, -1, 32, { 2, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_white_knight, 0x00000100u, 0x00000000u, 0, 8, 1, 1, 70 }, /* 10937: White Knight */
+  { 0, "White Mana Batter", {0}, 852, 0x40, -1, 32, { 0, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_white_mana_battery, 0x00000000u, 0x00001021u, 0, 72, 1, 255, 5 }, /* 10938: White Mana Battery */
   { 0, "White Scarab", {0}, 2154, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_white_scarab, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 10939: White Scarab */
   { 0, "White Shield Crus", {0}, 1700, 0x02, -1, 32, { 2, 0, 0 }, 2, 1, 0, 0, manalinkeh_card_white_shield_crusader, 0x00000800u, 0x00000009u, 0, 72, 0, 1, 75 }, /* 10940: White Shield Crusader */
   { 0, "White Sun's Zenit", {0}, 11556, 0x10, -1, 32, { 3, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_white_suns_zenith, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 100 }, /* 10941: White Sun's Zenith */
-  { 0, "White Ward", {0}, 284, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_white_ward, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 60 }, /* 10942: White Ward */
+  { 0, "White Ward", {0}, 284, 0x04, -1, 32, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_white_ward, 0x00000000u, 0x00000000u, 0, 1, 1, 0, 60 }, /* 10942: White Ward */
   { 0, "Whitemane Lion", {0}, 8880, 0x12, -1, 32, { 1, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_whitemane_lion, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 20 }, /* 10943: Whitemane Lion */
   { 0, "Whitesun's Passag", {0}, 11410, 0x10, -1, 32, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_whitesuns_passage, 0x00000000u, 0x00000000u, 0, 15, 0, 2, 9 }, /* 10944: Whitesun's Passage */
   { 0, "Whitewater Naiads", {0}, 14004, 0x06, -1, 4, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_whitewater_naiads, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 10945: Whitewater Naiads */
@@ -22549,7 +22549,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Wild Dogs", {0}, 3957, 0x02, -1, 8, { 1, 0, 4 }, 2, 1, 0, 0, manalinkeh_card_wild_dogs, 0x00000000u, 0x00000000u, 0, 248, 0, 2, 75 }, /* 10957: Wild Dogs */
   { 0, "Wild Evocation", {0}, 11193, 0x04, -1, 16, { 1, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_wild_evocation, 0x00000000u, 0x00000000u, 0, 1, 0, 254, 20 }, /* 10958: Wild Evocation */
   { 0, "Wild Griffin", {0}, 1676, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10959: Wild Griffin */
-  { 0, "Wild Growth", {0}, 285, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 2, 0, manalinkeh_card_wild_growth, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 15 }, /* 10960: Wild Growth */
+  { 0, "Wild Growth", {0}, 285, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 2, 0, manalinkeh_card_wild_growth, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 15 }, /* 10960: Wild Growth */
   { 0, "Wild Guess", {0}, 12640, 0x08, -1, 16, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_wild_guess, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 40 }, /* 10961: Wild Guess */
   { 0, "Wild Hunger", {0}, 12291, 0x10, -1, 8, { 1, 2, 9 }, 0, 0, 0, 0, manalinkeh_card_wild_hunger, 0x00000000u, 0x00000000u, 0, 4, 0, 0, 15 }, /* 10962: Wild Hunger */
   { 0, "Wild Mammoth", {0}, 4789, 0x02, 10, 8, { 1, 2, 0 }, 3, 4, 0, 0, manalinkeh_card_wild_mammoth, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10963: Wild Mammoth */
@@ -22569,7 +22569,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Wildwood Geist", {0}, 12509, 0x02, -1, 8, { 1, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_wildwood_geist, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10977: Wildwood Geist */
   { 0, "Wildwood Rebirth", {0}, 13103, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_raise_dead, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 10978: Wildwood Rebirth */
   { 0, "Will-Forged Golem", {0}, 14200, 0x42, -1, 1, { 0, 6, 1 }, 4, 4, 1, 0, manalinkeh_card_siege_wurm, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 10979: Will-Forged Golem */
-  { 0, "Will-o'-the-Wisp", {0}, 286, 0x02, -1, 2, { 1, 0, 0 }, 0, 1, 0, 0, manalinkeh_card_drudge_skeletons, 0x00000220u, 0x00000001u, 0, 248, 0, 2, 70 }, /* 10980: Will-o'-the-Wisp */
+  { 0, "Will-o'-the-Wisp", {0}, 286, 0x02, -1, 2, { 1, 0, 0 }, 0, 1, 0, 0, manalinkeh_card_drudge_skeletons, 0x00000220u, 0x00000001u, 0, 248, 1, 2, 70 }, /* 10980: Will-o'-the-Wisp */
   { 0, "Willow Faerie", {0}, 2250, 0x02, -1, 8, { 1, 1, 0 }, 1, 2, 0, 0, card_dummy, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 20 }, /* 10981: Willow Faerie */
   { 0, "Willow Priestess", {0}, 1654, 0x02, -1, 8, { 2, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_willow_priestess, 0x00000000u, 0x00000001u, 0, 248, 0, 1, 75 }, /* 10982: Willow Priestess */
   { 0, "Willow Satyr", {0}, 853, 0x02, -1, 8, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_willow_satyr, 0x00000000u, 0x00000001u, 0, 24, 0, 1, 5 }, /* 10983: Willow Satyr */
@@ -22589,9 +22589,9 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Windreaper Falcon", {0}, 1666, 0x02, -1, 24, { 2, 1, 0 }, 1, 1, 0, 0, card_dummy, 0x00001020u, 0x00000000u, 0, 9, 0, 0, 35 }, /* 10997: Windreaper Falcon */
   { 0, "Windreaver", {0}, 8325, 0x02, -1, 36, { 2, 3, 0 }, 1, 3, 0, 0, manalinkeh_card_windreaver, 0x00000020u, 0x00000019u, 0, 248, 0, 0, 50 }, /* 10998: Windreaver */
   { 0, "Windrider Eel", {0}, 10712, 0x02, -1, 4, { 1, 3, 0 }, 2, 2, 0, 0, manalinkeh_card_steppe_lynx, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 50 }, /* 10999: Windrider Eel */
-  { 0, "Winds of Change", {0}, 854, 0x08, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_winds_of_change, 0x00000000u, 0x00000000u, 0, 9, 0, 255, 5 }, /* 11000: Winds of Change */
+  { 0, "Winds of Change", {0}, 854, 0x08, -1, 16, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_winds_of_change, 0x00000000u, 0x00000000u, 0, 9, 1, 255, 5 }, /* 11000: Winds of Change */
   { 0, "Winds of Rath", {0}, 3334, 0x08, -1, 32, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_winds_of_rath, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 11001: Winds of Rath */
-  { 0, "Windseeker Centau", {0}, 897, 0x02, -1, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_serra_angel, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 20 }, /* 11002: Windseeker Centaur */
+  { 0, "Windseeker Centau", {0}, 897, 0x02, -1, 16, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_serra_angel, 0x00000000u, 0x00000800u, 0, 8, 128, 2, 20 }, /* 11002: Windseeker Centaur */
   { 0, "Windstorm", {0}, 10487, 0x10, -1, 8, { 1, -1, 0 }, 0, 0, 0, 0, manalinkeh_card_windstorm, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 11003: Windstorm */
   { 0, "Windswept Heath", {0}, 1472, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_windswept_heath, 0x00000000u, 0x00000001u, 0, 145, 0, 2, 10 }, /* 11004: Windswept Heath */
   { 0, "Wine of Blood and", {0}, 7763, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_wine_of_blood_and_iron, 0x00000000u, 0x00000001u, 0, 65, 0, 0, 40 }, /* 11005: Wine of Blood and Iron */
@@ -22605,8 +22605,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Wingmate Roc", {0}, 14433, 0x02, -1, 32, { 2, 3, 13 }, 3, 4, 0, 0, manalinkeh_card_wingmate_roc, 0x00000020u, 0x04000000u, 0, 8, 0, 0, 50 }, /* 11013: Wingmate Roc */
   { 0, "Wings of Velis Ve", {0}, 9313, 0x10, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_wings_of_velis_vel, 0x00080000u, 0x00000000u, 0, 3, 0, 0, 60 }, /* 11014: Wings of Velis Vel */
   { 0, "Wingsteed Rider", {0}, 13600, 0x02, -1, 32, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_fabled_hero, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 11015: Wingsteed Rider */
-  { 0, "Winter Blast", {0}, 855, 0x08, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_winter_blast, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 40 }, /* 11016: Winter Blast */
-  { 0, "Winter Orb", {0}, 287, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_winter_orb, 0x00000000u, 0x00000000u, 0, 8, 0, 255, 40 }, /* 11017: Winter Orb */
+  { 0, "Winter Blast", {0}, 855, 0x08, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_winter_blast, 0x00000000u, 0x00000000u, 0, 1, 1, 2, 40 }, /* 11016: Winter Blast */
+  { 0, "Winter Orb", {0}, 287, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_winter_orb, 0x00000000u, 0x00000000u, 0, 8, 1, 255, 40 }, /* 11017: Winter Orb */
   { 0, "Winter's Grasp", {0}, 1252, 0x08, -1, 8, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_ice_storm, 0x00000000u, 0x00000000u, 0, 1, 0, 255, 5 }, /* 11018: Winter's Grasp */
   { 0, "Winterflame", {0}, 14434, 0x10, -1, 20, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_winterflame, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 60 }, /* 11019: Winterflame */
   { 0, "Wipe Away", {0}, 8731, 0x10, -1, 4, { 2, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_wipe_away, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 11020: Wipe Away */
@@ -22624,7 +22624,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Wit's End", {0}, 8326, 0x08, -1, 2, { 2, 5, 0 }, 0, 0, 0, 0, manalinkeh_card_wits_end, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 80 }, /* 11032: Wit's End */
   { 0, "Witch Engine", {0}, 3960, 0x02, -1, 2, { 1, 5, 0 }, 4, 4, 0, 0, manalinkeh_card_witch_engine, 0x00000001u, 0x00000001u, 0, 248, 0, 0, 21 }, /* 11033: Witch Engine */
   { 0, "Witch Hunt", {0}, 13654, 0x04, -1, 16, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_witch_hunt, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 40 }, /* 11034: Witch Hunt */
-  { 0, "Witch Hunter", {0}, 387, 0x02, -1, 32, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_witch_hunter, 0x00000000u, 0x00000001u, 0, 248, 0, 3, 50 }, /* 11035: Witch Hunter */
+  { 0, "Witch Hunter", {0}, 387, 0x02, -1, 32, { 2, 2, 0 }, 1, 1, 0, 0, manalinkeh_card_witch_hunter, 0x00000000u, 0x00000001u, 0, 248, 8, 3, 50 }, /* 11035: Witch Hunter */
   { 0, "Witch-Maw Nephili", {0}, 8160, 0x02, -1, 46, { 4, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_witch_maw_nephilim, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 11036: Witch-Maw Nephilim */
   { 0, "Witch's Familiar", {0}, 14201, 0x02, -1, 2, { 1, 2, 0 }, 2, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 5 }, /* 11037: Witch's Familiar */
   { 0, "Witchbane Orb", {0}, 12125, 0x40, -1, 1, { 0, 4, 1 }, 0, 0, 0, 0, manalinkeh_card_witchbane_orb, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 3 }, /* 11038: Witchbane Orb */
@@ -22662,7 +22662,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Woodborn Behemoth", {0}, 13362, 0x02, -1, 8, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_woodborn_behemoth, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 11070: Woodborn Behemoth */
   { 0, "Wooded Bastion", {0}, 9725, 0x01, -1, 41, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_wooded_bastion, 0x00000000u, 0x00001000u, 0, 9, 0, 0, 10 }, /* 11071: Wooded Bastion */
   { 0, "Wooded Foothills", {0}, 1473, 0x01, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_wooded_foothills, 0x00000000u, 0x00000001u, 0, 145, 0, 0, 10 }, /* 11072: Wooded Foothills */
-  { 0, "Wooden Sphere", {0}, 288, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_wooden_sphere, 0x00000000u, 0x00000000u, 0, 241, 0, 1, 5 }, /* 11073: Wooden Sphere */
+  { 0, "Wooden Sphere", {0}, 288, 0x40, -1, 1, { 0, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_wooden_sphere, 0x00000000u, 0x00000000u, 0, 241, 1, 1, 5 }, /* 11073: Wooden Sphere */
   { 0, "Wooden Stake", {0}, 12126, 0x40, -1, 1, { 0, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_wooden_stake, 0x00000000u, 0x00000001u, 0, 153, 0, 2, 20 }, /* 11074: Wooden Stake */
   { 0, "Woodfall Primus", {0}, 9726, 0x02, -1, 8, { 3, 5, 0 }, 6, 6, 0, 0, manalinkeh_card_woodfall_primus, 0x00000080u, 0x00000000u, 0, 9, 0, 3, 80 }, /* 11075: Woodfall Primus */
   { 0, "Woodland Cemetery", {0}, 12127, 0x01, -1, 10, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_woodland_cemetery, 0x00000000u, 0x00001000u, 0, 1, 0, 2, 25 }, /* 11076: Woodland Cemetery */
@@ -22677,7 +22677,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Woolly Razorback", {0}, 8471, 0x02, -1, 32, { 2, 2, 0 }, 7, 7, 0, 0, manalinkeh_card_woolly_razorback, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 11085: Woolly Razorback */
   { 0, "Woolly Spider", {0}, 2162, 0x02, -1, 8, { 2, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_woolly_spider, 0x00000400u, 0x00000000u, 0, 8, 0, 1, 15 }, /* 11086: Woolly Spider */
   { 0, "Woolly Thoctar", {0}, 1369, 0x02, -1, 56, { 3, 0, 0 }, 5, 4, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 75 }, /* 11087: Woolly Thoctar */
-  { 0, "Word of Binding", {0}, 388, 0x08, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_word_of_binding, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 5 }, /* 11088: Word of Binding */
+  { 0, "Word of Binding", {0}, 388, 0x08, -1, 2, { 2, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_word_of_binding, 0x00000000u, 0x00000000u, 0, 1, 1, 1, 5 }, /* 11088: Word of Binding */
   { 0, "Word of Seizing", {0}, 8732, 0x10, -1, 16, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_word_of_seizing, 0x00000000u, 0x00000000u, 0, 7, 0, 0, 60 }, /* 11089: Word of Seizing */
   { 0, "Word of Undoing", {0}, 2164, 0x10, -1, 4, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_word_of_undoing, 0x00000000u, 0x00000000u, 0, 15, 0, 0, 40 }, /* 11090: Word of Undoing */
   { 0, "Words of War", {0}, 6327, 0x04, -1, 16, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_words_of_war, 0x00000000u, 0x00000001u, 0, 249, 0, 1, 60 }, /* 11091: Words of War */
@@ -22698,7 +22698,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Worldspine Wurm", {0}, 12873, 0x02, -1, 8, { 3, 8, 0 }, 15, 15, 0, 0, manalinkeh_card_worldspine_wurm, 0x00000080u, 0x00000000u, 0, 8, 0, 0, 100 }, /* 11106: Worldspine Wurm */
   { 0, "Worm", {0}, 18858, 0x02, -1, 10, { 0, 0, 0 }, 1, 1, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 1, 0, 1, 0 }, /* 11107: Worm */
   { 0, "Worm Harvest", {0}, 9907, 0x08, -1, 10, { 3, 2, 10 }, 0, 0, 1, 0, manalinkeh_card_worm_harvest, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 80 }, /* 11108: Worm Harvest */
-  { 0, "Wormwood Treefolk", {0}, 389, 0x02, -1, 8, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_wormwood_treefolk, 0x00000000u, 0x00000001u, 0, 56, 0, 3, 55 }, /* 11109: Wormwood Treefolk */
+  { 0, "Wormwood Treefolk", {0}, 389, 0x02, -1, 8, { 2, 3, 0 }, 4, 4, 0, 0, manalinkeh_card_wormwood_treefolk, 0x00000000u, 0x00000001u, 0, 56, 8, 3, 55 }, /* 11109: Wormwood Treefolk */
   { 0, "Worn Powerstone", {0}, 3962, 0x40, -1, 1, { 0, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_worn_powerstone, 0x00000000u, 0x00001000u, 0, 248, 0, 1, 75 }, /* 11110: Worn Powerstone */
   { 0, "Worship", {0}, 1192, 0x04, -1, 32, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_worship, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 100 }, /* 11111: Worship */
   { 0, "Wort, Boggart Aun", {0}, 9317, 0x02, 14, 18, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_wort_boggart_auntie, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 11112: Wort, Boggart Auntie */
@@ -22708,7 +22708,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Wrack with Madnes", {0}, 12295, 0x08, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_wrack_with_madness, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 25 }, /* 11116: Wrack with Madness */
   { 0, "Wrap in Flames", {0}, 11082, 0x08, -1, 16, { 1, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_wrap_in_flames, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 40 }, /* 11117: Wrap in Flames */
   { 0, "Wrap in Vigor", {0}, 9054, 0x10, -1, 8, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_wrap_in_vigor, 0x00000000u, 0x00000004u, 0, 15, 0, 0, 60 }, /* 11118: Wrap in Vigor */
-  { 0, "Wrath of God", {0}, 290, 0x08, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_wrath_of_god, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 95 }, /* 11119: Wrath of God */
+  { 0, "Wrath of God", {0}, 290, 0x08, -1, 32, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_wrath_of_god, 0x00000000u, 0x00000000u, 0, 8, 1, 2, 95 }, /* 11119: Wrath of God */
   { 0, "Wrath of Marit La", {0}, 1193, 0x04, -1, 4, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_wrath_of_marit_lage, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 40 }, /* 11120: Wrath of Marit Lage */
   { 0, "Wreak Havoc", {0}, 8162, 0x08, -1, 24, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_wreak_havok, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 80 }, /* 11121: Wreak Havoc */
   { 0, "Wreath of Geists", {0}, 12129, 0x04, -1, 8, { 1, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_wreath_of_geists, 0x00000000u, 0x00000000u, 0, 1, 0, 2, 9 }, /* 11122: Wreath of Geists */
@@ -22728,7 +22728,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Wurmcoil Engine", {0}, 11413, 0x42, -1, 1, { 0, 6, 0 }, 6, 6, 0, 0, manalinkeh_card_wurmcoil_engine, 0x00000000u, 0x00000000u, 0, 8, 0, 3, 50 }, /* 11136: Wurmcoil Engine */
   { 0, "Wurmweaver Coil", {0}, 8163, 0x04, -1, 8, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_wurmweaver_coil, 0x00000000u, 0x00000001u, 0, 49, 0, 0, 80 }, /* 11137: Wurmweaver Coil */
   { 0, "Wydwen, the Bitin", {0}, 9319, 0x12, 14, 6, { 2, 2, 0 }, 3, 3, 0, 0, manalinkeh_card_wydwen_the_biting_gale, 0x00000020u, 0x00000001u, 0, 242, 0, 2, 5 }, /* 11138: Wydwen, the Biting Gale */
-  { 0, "Wyluli Wolf", {0}, 464, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_wyluli_wolf, 0x00000000u, 0x00000001u, 0, 40, 0, 1, 20 }, /* 11139: Wyluli Wolf */
+  { 0, "Wyluli Wolf", {0}, 464, 0x02, -1, 8, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_wyluli_wolf, 0x00000000u, 0x00000001u, 0, 40, 4, 1, 20 }, /* 11139: Wyluli Wolf */
   { 0, "Xanthic Statue", {0}, 3070, 0x40, -1, 1, { 0, 8, 0 }, 0, 0, 0, 0, manalinkeh_card_xanthic_statue, 0x00000000u, 0x00000001u, 0, 56, 0, 2, 100 }, /* 11140: Xanthic Statue */
   { 0, "Xantid Swarm", {0}, 6607, 0x02, -1, 8, { 1, 0, 0 }, 0, 1, 0, 0, manalinkeh_card_xantid_swarm, 0x00000020u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 11141: Xantid Swarm */
   { 0, "Xathrid Demon", {0}, 10488, 0x02, -1, 2, { 3, 3, 0 }, 7, 7, 0, 0, manalinkeh_card_xathrid_demon, 0x000000a0u, 0x00000000u, 0, 8, 0, 0, 70 }, /* 11142: Xathrid Demon */
@@ -22738,7 +22738,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Xenagos, God of R", {0}, 13833, 0x04, 14, 24, { 2, 3, 0 }, 0, 0, 0, 0, manalinkeh_card_xenagos_god_of_revels, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 100 }, /* 11146: Xenagos, God of Revels */
   { 0, "Xenagos, God of R", {0}, 13834, 0x06, 14, 24, { 2, 3, 0 }, 6, 5, 0, 0, manalinkeh_card_xenagos_god_of_revels, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 100 }, /* 11147: Xenagos, God of Revels Incarnate */
   { 0, "Xenagos, the Reve", {0}, 13602, 0x04, 14, 24, { 2, 2, 9 }, 0, 0, 0, 0, manalinkeh_card_xenagos_the_reveler, 0x00000000u, 0x00401001u, 0, 17, 0, 0, 60 }, /* 11148: Xenagos, the Reveler */
-  { 0, "Xenic Poltergeist", {0}, 547, 0x02, -1, 2, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_xenic_poltergeist, 0x00000000u, 0x00000001u, 0, 248, 0, 255, 5 }, /* 11149: Xenic Poltergeist */
+  { 0, "Xenic Poltergeist", {0}, 547, 0x02, -1, 2, { 2, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_xenic_poltergeist, 0x00000000u, 0x00000401u, 0, 248, 1, 255, 5 }, /* 11149: Xenic Poltergeist */
   { 0, "Xenograft", {0}, 11719, 0x04, -1, 4, { 1, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_xenograft, 0x00000000u, 0x00000000u, 0, 9, 0, 3, 1 }, /* 11150: Xenograft */
   { 0, "Xiahou Dun, the O", {0}, 4291, 0x02, 14, 2, { 2, 2, 0 }, 3, 2, 0, 0, manalinkeh_card_xiahou_dun_the_one_eyed, 0x00000000u, 0x00000001u, 0, 241, 0, 1, 80 }, /* 11151: Xiahou Dun, the One-Eyed */
   { 0, "Xira Arien", {0}, 858, 0x02, 14, 26, { 3, 0, 0 }, 1, 2, 0, 0, manalinkeh_card_xira_arien, 0x00000020u, 0x00000001u, 0, 24, 0, 0, 75 }, /* 11152: Xira Arien */
@@ -22757,11 +22757,11 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Yavimaya Hollow", {0}, 4211, 0x01, 15, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_card_yavimaya_hollow, 0x00000000u, 0x00001001u, 0, 249, 0, 0, 75 }, /* 11165: Yavimaya Hollow */
   { 0, "Yavimaya Scion", {0}, 4089, 0x02, -1, 8, { 1, 4, 0 }, 4, 4, 0, 0, card_dummy, 0x00010000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 11166: Yavimaya Scion */
   { 0, "Yavimaya Wurm", {0}, 4090, 0x02, -1, 8, { 2, 4, 0 }, 6, 4, 0, 0, card_dummy, 0x00000080u, 0x00000000u, 0, 8, 0, 2, 50 }, /* 11167: Yavimaya Wurm */
-  { 0, "Yawgmoth Demon", {0}, 548, 0x02, -1, 2, { 2, 4, 0 }, 6, 6, 0, 0, manalinkeh_card_yawgmoths_demon, 0x00000120u, 0x00000000u, 0, 8, 0, 2, 20 }, /* 11168: Yawgmoth Demon */
+  { 0, "Yawgmoth Demon", {0}, 548, 0x02, -1, 2, { 2, 4, 0 }, 6, 6, 0, 0, manalinkeh_card_yawgmoths_demon, 0x00000120u, 0x00000400u, 0, 8, 8, 2, 20 }, /* 11168: Yawgmoth Demon */
   { 0, "Yawgmoth's Agenda", {0}, 5196, 0x04, -1, 2, { 2, 3, 12 }, 0, 0, 0, 0, manalinkeh_card_yawgmoths_agenda, 0x00000000u, 0x40000001u, 0, 136, 0, 0, 60 }, /* 11169: Yawgmoth's Agenda */
   { 0, "Yawgmoth's Bargai", {0}, 4212, 0x04, -1, 2, { 2, 4, 0 }, 0, 0, 0, 0, manalinkeh_card_yawgmoths_bargain, 0x00000000u, 0x00000001u, 0, 17, 0, 254, 5 }, /* 11170: Yawgmoth's Bargain */
   { 0, "Yawgmoth's Will", {0}, 3964, 0x08, -1, 2, { 1, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_yawgmoths_will, 0x00000000u, 0x00000001u, 0, 9, 0, 0, 65 }, /* 11171: Yawgmoth's Will */
-  { 0, "Ydwen Efreet", {0}, 465, 0x02, 5, 16, { 3, 0, 0 }, 3, 6, 0, 0, manalinkeh_card_ydwen_efreet, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 55 }, /* 11172: Ydwen Efreet */
+  { 0, "Ydwen Efreet", {0}, 465, 0x02, 5, 16, { 3, 0, 0 }, 3, 6, 0, 0, manalinkeh_card_ydwen_efreet, 0x00000000u, 0x00000800u, 0, 8, 4, 1, 55 }, /* 11172: Ydwen Efreet */
   { 0, "Yeva, Nature's He", {0}, 12643, 0x12, 14, 8, { 2, 2, 1 }, 4, 4, 0, 0, manalinkeh_card_yeva_natures_herald, 0x00000000u, 0x00000001u, 0, 50, 0, 0, 70 }, /* 11173: Yeva, Nature's Herald */
   { 0, "Yeva's Forcemage", {0}, 12644, 0x02, -1, 8, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_yeva_forcemage, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 11174: Yeva's Forcemage */
   { 0, "Yew Spirit", {0}, 12513, 0x02, -1, 8, { 1, 4, 0 }, 3, 3, 0, 0, manalinkeh_card_yew_spirit, 0x00000000u, 0x00000019u, 0, 72, 0, 0, 50 }, /* 11175: Yew Spirit */
@@ -22770,7 +22770,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Yomiji, Who Bars ", {0}, 7595, 0x02, 14, 32, { 2, 5, 0 }, 4, 4, 0, 0, manalinkeh_card_yomiji_who_bars_the_way, 0x00000000u, 0x00000000u, 0, 9, 0, 0, 70 }, /* 11178: Yomiji, Who Bars the Way */
   { 0, "Yore-Tiller Nephi", {0}, 8164, 0x02, -1, 54, { 4, 0, 0 }, 2, 2, 0, 0, manalinkeh_card_yore_tiller_nephilim, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 11179: Yore-Tiller Nephilim */
   { 0, "Yosei, the Mornin", {0}, 7432, 0x02, 14, 32, { 2, 4, 0 }, 5, 5, 0, 0, manalinkeh_card_yosei, 0x00000020u, 0x00000000u, 0, 8, 0, 2, 90 }, /* 11180: Yosei, the Morning Star */
-  { 0, "Yotian Soldier", {0}, 550, 0x42, -1, 1, { 0, 3, 0 }, 1, 4, 0, 0, manalinkeh_card_serra_angel, 0x00000000u, 0x00000000u, 0, 8, 0, 2, 20 }, /* 11181: Yotian Soldier */
+  { 0, "Yotian Soldier", {0}, 550, 0x42, -1, 1, { 0, 3, 0 }, 1, 4, 0, 0, manalinkeh_card_serra_angel, 0x00000000u, 0x00000400u, 0, 8, 1, 2, 20 }, /* 11181: Yotian Soldier */
   { 0, "Young Pyromancer", {0}, 13364, 0x02, -1, 16, { 1, 1, 0 }, 2, 1, 0, 0, manalinkeh_card_young_pyromancer, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 50 }, /* 11182: Young Pyromancer */
   { 0, "Young Wolf", {0}, 12296, 0x02, -1, 8, { 1, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_nearheath_stalker, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 25 }, /* 11183: Young Wolf */
   { 0, "Yuki-Onna", {0}, 7764, 0x02, -1, 16, { 1, 3, 0 }, 3, 1, 0, 0, manalinkeh_card_yuki_onna, 0x00000000u, 0x00000000u, 0, 1, 0, 0, 50 }, /* 11184: Yuki-Onna */
@@ -22788,7 +22788,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Zephid", {0}, 3965, 0x02, -1, 4, { 2, 4, 0 }, 3, 4, 0, 0, card_dummy, 0x00020020u, 0x00000000u, 0, 8, 0, 2, 100 }, /* 11196: Zephid */
   { 0, "Zephid's Embrace", {0}, 1338, 0x04, -1, 4, { 2, 2, 0 }, 0, 0, 0, 0, manalinkeh_card_zephid_embrace, 0x00000000u, 0x00000000u, 0, 9, 0, 2, 75 }, /* 11197: Zephid's Embrace */
   { 0, "Zephyr Charge", {0}, 13365, 0x04, -1, 4, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_zephyr_charge, 0x00000000u, 0x00000001u, 0, 49, 0, 0, 60 }, /* 11198: Zephyr Charge */
-  { 0, "Zephyr Falcon", {0}, 859, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_serra_angel, 0x00000020u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 11199: Zephyr Falcon */
+  { 0, "Zephyr Falcon", {0}, 859, 0x02, -1, 4, { 1, 1, 0 }, 1, 1, 0, 0, manalinkeh_card_serra_angel, 0x00000020u, 0x00000000u, 0, 8, 1, 1, 35 }, /* 11199: Zephyr Falcon */
   { 0, "Zhalfirin Command", {0}, 2665, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_zhalfirin_commander, 0x00000000u, 0x00000001u, 0, 73, 0, 1, 50 }, /* 11200: Zhalfirin Commander */
   { 0, "Zhalfirin Crusade", {0}, 2814, 0x02, -1, 32, { 2, 1, 0 }, 2, 2, 0, 0, manalinkeh_card_zhalfirin_crusader, 0x00000000u, 0x00000015u, 0, 248, 0, 2, 75 }, /* 11201: Zhalfirin Crusader */
   { 0, "Zhalfirin Knight", {0}, 2666, 0x02, -1, 32, { 1, 2, 0 }, 2, 2, 0, 0, manalinkeh_card_zhalfirin_knight, 0x00000000u, 0x00000001u, 0, 88, 0, 1, 30 }, /* 11202: Zhalfirin Knight */
@@ -22813,7 +22813,7 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "Zombie Giant", {0}, 18861, 0x02, -1, 2, { 0, 0, 0 }, 5, 5, 0, 0, manalinkeh_card_zombie, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 11221: Zombie Giant */
   { 0, "Zombie Goliath", {0}, 10491, 0x02, 2, 2, { 1, 4, 0 }, 4, 3, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 0, 8, 0, 1, 35 }, /* 11222: Zombie Goliath */
   { 0, "Zombie Infestatio", {0}, 5760, 0x04, -1, 2, { 1, 1, 0 }, 0, 0, 0, 0, manalinkeh_card_zombie_infestation, 0x00000000u, 0x00000001u, 0, 169, 0, 1, 90 }, /* 11223: Zombie Infestation */
-  { 0, "Zombie Master", {0}, 291, 0x02, 2, 2, { 2, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_zombie_master2, 0x00000000u, 0x00000001u, 0, 249, 0, 0, 5 }, /* 11224: Zombie Master */
+  { 0, "Zombie Master", {0}, 291, 0x02, 2, 2, { 2, 1, 0 }, 2, 3, 0, 0, manalinkeh_card_zombie_master2, 0x00000000u, 0x00000001u, 0, 249, 1, 0, 5 }, /* 11224: Zombie Master */
   { 0, "Zombie Outlander", {0}, 1691, 0x02, 2, 6, { 2, 0, 0 }, 2, 2, 0, 0, card_dummy, 0x00002000u, 0x00000000u, 0, 9, 0, 0, 50 }, /* 11225: Zombie Outlander */
   { 0, "Zombie Scavengers", {0}, 3071, 0x02, 2, 2, { 1, 2, 0 }, 3, 1, 0, 0, manalinkeh_card_zombie_scavengers, 0x00000200u, 0x00000001u, 0, 248, 0, 1, 50 }, /* 11226: Zombie Scavengers */
   { 0, "Zombie Wizard", {0}, 18864, 0x02, 2, 6, { 0, 0, 0 }, 1, 1, 0, 0, manalinkeh_card_rhino_token, 0x00000000u, 0x00000000u, 0, 8, 0, 0, 0 }, /* 11227: Zombie Wizard */

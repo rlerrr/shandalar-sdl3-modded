@@ -957,8 +957,8 @@ void layout_duel_child_windows(HWND hwnd, int layout)
   int right_battlefield_x;
 
   GetClientRect(hwnd, &rect);
-  g_showlist_smallcard_width = rect.right / 8;
-  g_showlist_smallcard_height = g_showlist_smallcard_width;
+  /* MOK 0x494d3d applies SETTING_SMALLCARD_SIZE to both dimensions. */
+  manalinkeh_set_smallcard_size(rect.right);
   g_duel_selected_card_window = (g_showlist_smallcard_height * 0x21) / 0x118;
 
   if (layout == 1)
@@ -2520,7 +2520,7 @@ int get_primary_color_from_duel_deck(int player)
     {
       if ((deck[card_index] != -1) && ((deck[card_index] & 0xc000) == 0))
       {
-        internal_card_id = deck[card_index] & 0xfff;
+        internal_card_id = deck[card_index] & ADVENTURE_DECK_CARD_ID_MASK;
         color = global_cards_data[internal_card_id].color;
         card_count = 1;
         if ((color & COLOR_TEST_BLACK) != 0)

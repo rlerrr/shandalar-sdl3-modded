@@ -649,24 +649,7 @@ int card_twiddle(int player, int card, event_t event)
 
 // FUNCTION: MAGIC 0x004f7783
 // FUNCTION: SHANDALAR 0x004b183c
-#ifdef SHANDALAR_USE_MANALINKEH
 int tap_card_and_dispatch_event(int player, int card);
-#else
-int tap_card_and_dispatch_event(int player, int card)
-{
-  if ((PLAYER_CARD_INSTANCE(player, card).state & STATE_TAPPED) == 0)
-  {
-    PLAYER_CARD_INSTANCE(player, card).state |= STATE_TAPPED;
-    if ((global_cards_data[PLAYER_CARD_INSTANCE(player, card).internal_card_id].extra_ability & 0x1000) != 0)
-    {
-      g_produced_mana_color = -1;
-    }
-    dispatch_event(player, card, EVENT_TAP_CARD);
-  }
-
-  return 0;
-}
-#endif /* !SHANDALAR_USE_MANALINKEH: tap_card_and_dispatch_event */
 
 // FUNCTION: MAGIC 0x004f7857
 // FUNCTION: SHANDALAR 0x004b1910

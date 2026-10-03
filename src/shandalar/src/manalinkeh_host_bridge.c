@@ -47,16 +47,6 @@ extern int g_life_window_life_window_long_offset;
 extern int g_life_window_poison_window_long_offset;
 extern int g_life_window_lich_window_long_offset;
 typedef int (*manalinkeh_card_function_t)(int player, int card, event_t event);
-typedef struct manalinkeh_player_counters_storage
-{
-  unsigned char poison;
-  unsigned char experience;
-  unsigned char energy;
-  unsigned char unused;
-} manalinkeh_player_counters_storage_t;
-
-manalinkeh_player_counters_storage_t player_counters[2];
-
 /*
  * Mok routed both CardTypeFromID(int) and
  * find_internal_card_id_by_csv_id(card_id_t) to the same Manalink entry.
@@ -82,16 +72,22 @@ int call_card_fn_impl(manalinkeh_card_function_t address, void* instance,
 
 int shandalar_get_poison_counter(int player)
 {
-  return g_poison_counters[player];
+  return player_counters[player].poison_;
 }
 
 void shandalar_set_poison_counter(int player, unsigned char value)
 {
-  g_poison_counters[player] = value;
+  player_counters[player].poison_ = value;
 }
 
 char manalinkeh_legacy_effect_name[51];
 extern char* set_legacy_effect_name_addr;
+extern char g_card_rules_text_buffer_00708da8[400];
+
+int shandalar_is_legacy_effect_text_buffer(const char *text)
+{
+  return text == g_card_rules_text_buffer_00708da8;
+}
 
 /* Legacy-only state with no direct SDL global owner yet. */
 int trace_mode;

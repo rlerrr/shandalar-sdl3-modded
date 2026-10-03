@@ -30,56 +30,7 @@ int card_data_card(int player, int card, event_t event)
 
 // FUNCTION: MAGIC 0x0053aa74
 // FUNCTION: SHANDALAR 0x00488cc4
-#ifdef SHANDALAR_USE_MANALINKEH
 unsigned int get_protections_from(int player, int card);
-#else
-unsigned int get_protections_from(int player, int card)
-{
-  struct
-  {
-    unsigned int type;
-    unsigned int illegal_abilities;
-  } s;
-
-  s.illegal_abilities = 0;
-
-  if (PLAYER_CARD_INSTANCE(player, card).internal_card_id == -1 ||
-      PLAYER_CARD_INSTANCE(player, card).internal_card_id == g_stack_proxy_internal_card_id)
-  {
-    s.type = global_cards_data[PLAYER_CARD_INSTANCE(player, card).original_internal_card_id].type;
-  }
-  else
-  {
-    s.type = global_cards_data[PLAYER_CARD_INSTANCE(player, card).internal_card_id].type;
-  }
-
-  if ((s.type & TYPE_SORCERY) != 0)
-  {
-    s.illegal_abilities |= KEYWORD_PROT_SORCERIES;
-  }
-  if ((s.type & TYPE_INSTANT) != 0)
-  {
-    s.illegal_abilities |= KEYWORD_PROT_INSTANTS;
-  }
-  if ((s.type & TYPE_INTERRUPT) != 0)
-  {
-    s.illegal_abilities |= KEYWORD_PROT_INTERRUPTS;
-  }
-  if ((s.type & TYPE_ENCHANTMENT) != 0)
-  {
-    s.illegal_abilities |= KEYWORD_PROT_ENCHANTMENTS;
-  }
-  if ((s.type & TYPE_ARTIFACT) != 0)
-  {
-    s.illegal_abilities |= KEYWORD_PROT_ARTIFACTS;
-  }
-
-  return (0x800 << (unsigned char)(single_color_test_bit_to_color_t(
-                                       PLAYER_CARD_INSTANCE(player, card).color) -
-                                   1)) |
-         s.illegal_abilities;
-}
-#endif /* !SHANDALAR_USE_MANALINKEH: get_protections_from */
 
 // FUNCTION: MAGIC 0x0053ac18
 // FUNCTION: SHANDALAR 0x00488e68
@@ -904,7 +855,7 @@ int card_marsh_viper(int player, int card, event_t event)
     }
     if (event == EVENT_RESOLVE_TRIGGER)
     {
-      g_poison_counters[(int)PLAYER_CARD_INSTANCE(player, card).damage_source_player] += 2;
+      player_counters[(int)PLAYER_CARD_INSTANCE(player, card).damage_source_player].poison_ += 2;
       PLAYER_CARD_INSTANCE(player, card).damage_source_player = -1;
       check_duel_finished();
     }
@@ -944,7 +895,7 @@ int card_pit_scorpion(int player, int card, event_t event)
     }
     if (event == EVENT_RESOLVE_TRIGGER)
     {
-      ++g_poison_counters[(int)PLAYER_CARD_INSTANCE(player, card).damage_source_player];
+      ++player_counters[(int)PLAYER_CARD_INSTANCE(player, card).damage_source_player].poison_;
       PLAYER_CARD_INSTANCE(player, card).damage_source_player = -1;
       check_duel_finished();
     }

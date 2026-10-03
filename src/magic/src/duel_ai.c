@@ -108,7 +108,7 @@ typedef struct
   int basic_lands[2][8];
   int raw_mana_hex[2][51];
   int life_totals[2];
-  int poison_counters[2];
+  PlayerCounters player_counters[2];
   unsigned int card_types[2];
   int graveyard_type_flags[2];
   int duel_summary_copy[24];
@@ -311,7 +311,7 @@ static int combat_sim_saved_raw_mana_available_hex[2][51];
 static int combat_sim_saved_life[2];
 // GLOBAL: MAGIC 0x006a4e60
 // GLOBAL: SHANDALAR 0x005b1148
-static int combat_sim_saved_poison_counters[2];
+static PlayerCounters combat_sim_saved_player_counters[2];
 // GLOBAL: MAGIC 0x006a4e88
 // GLOBAL: SHANDALAR 0x005b1170
 static unsigned int combat_sim_saved_card_types_in_play[2];
@@ -1504,7 +1504,7 @@ void save_ai_search_state(void)
   memcpy(g_ai_search_backup.basic_lands, g_basiclandtypes_controlled, sizeof(g_ai_search_backup.basic_lands));
   memcpy(g_ai_search_backup.raw_mana_hex, g_raw_mana_available_hex, sizeof(g_ai_search_backup.raw_mana_hex));
   memcpy(g_ai_search_backup.life_totals, g_life, sizeof(g_ai_search_backup.life_totals));
-  memcpy(g_ai_search_backup.poison_counters, g_poison_counters, sizeof(g_ai_search_backup.poison_counters));
+  memcpy(g_ai_search_backup.player_counters, player_counters, sizeof(g_ai_search_backup.player_counters));
   memcpy(g_ai_search_backup.card_types, g_card_types_in_play, sizeof(g_ai_search_backup.card_types));
   memcpy(g_ai_search_backup.graveyard_type_flags, g_graveyard_card_types, sizeof(g_ai_search_backup.graveyard_type_flags));
   memcpy(g_ai_search_backup.duel_summary_copy, &g_duel_summary, sizeof(g_ai_search_backup.duel_summary_copy));
@@ -1568,7 +1568,7 @@ void restore_ai_search_state(void)
   memcpy(g_basiclandtypes_controlled, g_ai_search_backup.basic_lands, sizeof(g_ai_search_backup.basic_lands));
   memcpy(g_raw_mana_available_hex, g_ai_search_backup.raw_mana_hex, sizeof(g_ai_search_backup.raw_mana_hex));
   memcpy(g_life, g_ai_search_backup.life_totals, sizeof(g_ai_search_backup.life_totals));
-  memcpy(g_poison_counters, g_ai_search_backup.poison_counters, sizeof(g_ai_search_backup.poison_counters));
+  memcpy(player_counters, g_ai_search_backup.player_counters, sizeof(g_ai_search_backup.player_counters));
   memcpy(g_card_types_in_play, g_ai_search_backup.card_types, sizeof(g_ai_search_backup.card_types));
   memcpy(g_graveyard_card_types, g_ai_search_backup.graveyard_type_flags, sizeof(g_ai_search_backup.graveyard_type_flags));
   memcpy(&g_duel_summary, g_ai_search_backup.duel_summary_copy, sizeof(g_ai_search_backup.duel_summary_copy));
@@ -1611,23 +1611,7 @@ void restore_ai_search_state(void)
 
 // FUNCTION: MAGIC 0x004a7ccf
 // FUNCTION: SHANDALAR 0x00559e52
-#ifdef SHANDALAR_USE_MANALINKEH
 int get_ai_search_elapsed_time(void);
-#else
-int get_ai_search_elapsed_time(void)
-{
-  uint32_t current_time;
-  uint32_t start_time;
-  uint32_t elapsed_time;
-
-  current_time = (uint32_t)get_duel_thread_time_ms();
-  start_time = (uint32_t)g_ai_trace_enabled;
-  elapsed_time = current_time - start_time;
-
-  // Original denominator value is 5405
-  return (int)(((uint64_t)elapsed_time * 100u) / 1000);
-}
-#endif /* !SHANDALAR_USE_MANALINKEH: get_ai_search_elapsed_time */
 
 // FUNCTION: MAGIC 0x0050e79b
 // FUNCTION: SHANDALAR 0x0041d33b
@@ -2615,44 +2599,7 @@ int score_ai_blocker_candidate(int player, int card)
 
 // FUNCTION: MAGIC 0x00446281
 // FUNCTION: SHANDALAR 0x00411b19
-#ifdef SHANDALAR_USE_MANALINKEH
 unsigned int get_destroy_if_blocked_combat_flags(int attacker_player, int attacker_card, int blocker_player, int blocker_card);
-#else
-unsigned int get_destroy_if_blocked_combat_flags(int attacker_player, int attacker_card, int blocker_player, int blocker_card)
-{
-  unsigned int flags;
-
-  flags = 0;
-  if ((AI_CARD(attacker_player, attacker_card).destroys_if_blocked == 0) &&
-      (AI_CARD(blocker_player, blocker_card).destroys_if_blocked == 0))
-  {
-    return 0;
-  }
-
-  if ((AI_CARD(attacker_player, attacker_card).destroys_if_blocked &
-       AI_CARD(blocker_player, blocker_card).color & 0x3f) != 0)
-  {
-    flags |= 1;
-    if ((global_cards_data[AI_CARD_INTERNAL_ID(blocker_player, blocker_card)].subtype == 0) &&
-        ((AI_CARD(attacker_player, attacker_card).destroys_if_blocked & 0x80) == 0))
-    {
-      flags &= ~1;
-    }
-  }
-
-  if ((AI_CARD(attacker_player, attacker_card).color &
-       AI_CARD(blocker_player, blocker_card).destroys_if_blocked & 0x3f) != 0)
-  {
-    flags |= 2;
-    if ((global_cards_data[AI_CARD_INTERNAL_ID(attacker_player, attacker_card)].subtype == 0) &&
-        ((AI_CARD(blocker_player, blocker_card).destroys_if_blocked & 0x80) == 0))
-    {
-      flags &= ~2;
-    }
-  }
-  return flags;
-}
-#endif /* !SHANDALAR_USE_MANALINKEH: get_destroy_if_blocked_combat_flags */
 
 // FUNCTION: MAGIC 0x0050f53a
 // FUNCTION: SHANDALAR 0x0041e0d9
@@ -3055,7 +3002,7 @@ void save_combat_simulation_state(void)
   memcpy(combat_sim_saved_basiclandtypes_controlled, g_basiclandtypes_controlled, sizeof(combat_sim_saved_basiclandtypes_controlled));
   memcpy(combat_sim_saved_raw_mana_available_hex, g_raw_mana_available_hex, sizeof(combat_sim_saved_raw_mana_available_hex));
   memcpy(combat_sim_saved_life, g_life, sizeof(combat_sim_saved_life));
-  memcpy(combat_sim_saved_poison_counters, g_poison_counters, sizeof(combat_sim_saved_poison_counters));
+  memcpy(combat_sim_saved_player_counters, player_counters, sizeof(combat_sim_saved_player_counters));
   memcpy(combat_sim_saved_card_types_in_play, g_card_types_in_play, sizeof(combat_sim_saved_card_types_in_play));
   memcpy(combat_sim_saved_graveyard_card_types, g_graveyard_card_types, sizeof(combat_sim_saved_graveyard_card_types));
   memcpy(combat_sim_saved_duel_summary, &g_duel_summary, sizeof(combat_sim_saved_duel_summary));
@@ -3100,7 +3047,7 @@ void restore_combat_simulation_state(void)
   memcpy(g_basiclandtypes_controlled, combat_sim_saved_basiclandtypes_controlled, sizeof(combat_sim_saved_basiclandtypes_controlled));
   memcpy(g_raw_mana_available_hex, combat_sim_saved_raw_mana_available_hex, sizeof(combat_sim_saved_raw_mana_available_hex));
   memcpy(g_life, combat_sim_saved_life, sizeof(combat_sim_saved_life));
-  memcpy(g_poison_counters, combat_sim_saved_poison_counters, sizeof(combat_sim_saved_poison_counters));
+  memcpy(player_counters, combat_sim_saved_player_counters, sizeof(combat_sim_saved_player_counters));
   memcpy(g_card_types_in_play, combat_sim_saved_card_types_in_play, sizeof(combat_sim_saved_card_types_in_play));
   memcpy(g_graveyard_card_types, combat_sim_saved_graveyard_card_types, sizeof(combat_sim_saved_graveyard_card_types));
   memcpy(&g_duel_summary, combat_sim_saved_duel_summary, sizeof(combat_sim_saved_duel_summary));
@@ -3133,55 +3080,7 @@ void restore_combat_simulation_state(void)
 
 // FUNCTION: MAGIC 0x005129d1
 // FUNCTION: SHANDALAR 0x00421578
-#ifdef SHANDALAR_USE_MANALINKEH
 void choose_blockers_ai(int player);
-#else
-void choose_blockers_ai(int player)
-{
-  int saved_event_state;
-  int blocker_index;
-
-  saved_event_state = g_adventure_duel_internal_card_id;
-  g_adventure_duel_internal_card_id = 2;
-  setup_combat_damage_simulation(player);
-  g_ai_attacker_count = 0xffffd8f1;
-  for (blocker_index = 0; blocker_index < 0x10; blocker_index++)
-  {
-    ai_block_damage_orders[blocker_index] = 0;
-  }
-  enumerate_ai_block_assignments(player, 0);
-  if (g_duel_ai_mode_state == 1 || g_active_player == g_current_player)
-  {
-    for (blocker_index = 0; blocker_index < ai_blocker_count; blocker_index++)
-    {
-      if ((g_battlefield_extra_ability_flags & 0x800000) != 0)
-      {
-        push_affected_card_stack();
-        g_trigger_cause_controller = ai_blocker_player;
-        g_trigger_cause = ai_blocker_cards[blocker_index];
-        dispatch_trigger(1 - g_current_player, TRIGGER_PAY_TO_BLOCK, gs_pay_for_blocker_009263f0, 1);
-        pop_affected_card_stack();
-      }
-      if ((ai_block_assignments[blocker_index] != -1) && ((g_battlefield_extra_ability_flags & 0x100000) != 0))
-      {
-        g_trigger_cause_controller = ai_blocker_player;
-        g_trigger_cause = ai_blocker_cards[blocker_index];
-        dispatch_trigger_twice_once_with_each_player_as_reason(g_current_player, TRIGGER_BLOCKER_CHOSEN, gs_blocker_selected_00926210, 0);
-      }
-      global_card_instances[ai_blocker_player][ai_blocker_cards[blocker_index]].blocking = (unsigned char)ai_block_assignments[blocker_index];
-      if (g_duel_ai_mode_state != 1)
-      {
-        request_duel_display_refresh_if_human(ai_blocker_player, ai_blocker_cards[blocker_index], 5, 2);
-        if (ai_block_assignments[blocker_index] != -1)
-        {
-          play_sound_effect(0x15);
-        }
-      }
-    }
-  }
-  g_adventure_duel_internal_card_id = saved_event_state;
-}
-#endif /* !SHANDALAR_USE_MANALINKEH: choose_blockers_ai */
 
 // FUNCTION: MAGIC 0x00512bb2
 // FUNCTION: SHANDALAR 0x00421758
@@ -3508,7 +3407,12 @@ int cleanup_combat_state(int player)
 
   for (card = 0; card < ai_blocker_count; card++)
   {
-    global_card_instances[1 - player][ai_blocker_cards[card]].state &= ~STATE_BLOCKING;
+    /* MOK 0x4b3a52 preserves a record of creatures that blocked this combat. */
+    if ((global_card_instances[1 - player][ai_blocker_cards[card]].state & STATE_BLOCKING) != 0)
+    {
+      global_card_instances[1 - player][ai_blocker_cards[card]].state |= STATE_BLOCKED;
+      global_card_instances[1 - player][ai_blocker_cards[card]].state &= ~STATE_BLOCKING;
+    }
   }
   for (card = 0; card < g_active_cards_count[player]; card++)
   {

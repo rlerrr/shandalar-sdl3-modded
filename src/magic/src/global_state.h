@@ -1128,9 +1128,12 @@ GLOBAL_STATE_EXTERN int g_save_format_version;
 // GLOBAL: SHANDALAR 0x007beff0
 GLOBAL_STATE_EXTERN int g_produced_mana_color_valid;
 
+// GLOBAL: MOK 0x004ef530
 // GLOBAL: MAGIC 0x007abce0
 // GLOBAL: SHANDALAR 0x007bfee0
-GLOBAL_STATE_EXTERN int g_poison_counters[2];
+/* MOK packs poison, experience, energy, and a reserved byte per player. */
+GLOBAL_STATE_EXTERN PlayerCounters player_counters[2];
+typedef char player_counters_save_size_must_be_eight[(sizeof(player_counters) == 8) ? 1 : -1];
 
 // GLOBAL: MAGIC 0x00938e38
 // GLOBAL: SHANDALAR 0x0094cf68

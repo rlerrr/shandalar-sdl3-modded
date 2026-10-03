@@ -57,6 +57,10 @@ def generate(source_dir):
                    (ROOT / "src/manalinkeh/ManalinkEh.asm").read_text())}
     fallback = {int(address, 16): name for address, name in json.loads(
         (ROOT / "tools/carddata_legacy_handlers.json").read_text()).items()}
+    # Manalink leaves the campaign fields unused. Restore their original
+    # meanings by CSV ID without changing engine order or card handlers.
+    campaign = {int(csvid): values for csvid, values in json.loads(
+        (ROOT / "tools/carddata_campaign_metadata.json").read_text())["cards"].items()}
     rows, handlers, effect_ids = [], set(), {}
     for iid, row in enumerate(ct):
         card = None if row[2].startswith("#") else cards[row[2]]
@@ -69,15 +73,23 @@ def generate(source_dir):
             handlers.add(handler)
         if card is None:
             effect_ids[row[1]] = iid
+        campaign_fields = campaign.get(csvid) if card is not None else None
+        extra_abilities = bits(row, 67, 32)
+        expansion = number(row[108]) & 255
+        if campaign_fields is not None:
+            if iid > 0x3fff:
+                raise ValueError(f"campaign card {row[2]} exceeds adventure deck ID capacity")
+            expansion = campaign_fields[0]
+            extra_abilities = (extra_abilities & ~0xf80) | campaign_fields[1]
         fields = [str(255 if csvid == -1 else 0), c_string(row[1][:17]), "{0}",
                   str(csvid), f"0x{bits(row, 3, 8):02x}", str(number(row[11])),
                   str((bits(row, 12, 8) + 128) % 256 - 128),
                   "{ %d, %d, %d }" % (signed_byte(row[21]), signed_byte(row[20]), signed_byte(row[22])),
                   str(number(row[23])), str(number(row[24])),
                   str(bits(row, 25, 8)), str(number(row[33])), handler,
-                  f"0x{bits(row, 35, 32):08x}u", f"0x{bits(row, 67, 32):08x}u",
+                  f"0x{bits(row, 35, 32):08x}u", f"0x{extra_abilities:08x}u",
                   str(number(row[99]) & 255), str(bits(row, 100, 8)),
-                  str(number(row[108]) & 255), str(number(row[109]) & 255),
+                  str(expansion), str(number(row[109]) & 255),
                   str(number(card[ai_column]) if card is not None else 0)]
         rows.append("  { " + ", ".join(fields) + " }, /* %d: %s */" %
                     (iid, row[2].replace("*/", "* /")))

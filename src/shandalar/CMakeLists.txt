@@ -93,7 +93,6 @@ add_dependencies(shandalar shandalar_version_header_target)
 target_compile_definitions(shandalar PRIVATE
   MODERN_FIXES
   SHANDALAR
-  SHANDALAR_USE_MANALINKEH
   SHANDALAR_NATIVE_ASSET_ROOT="${SHANDALAR_MODDED_ASSET_DIR}"
   LoadPcxIntoPageNoPalette=ShandalarLoadPcxIntoPageNoPalette
 )
@@ -262,9 +261,75 @@ endif()
 install(TARGETS shandalar RUNTIME DESTINATION .)
 
 if(SHANDALAR_BUILD_TESTS AND WIN32)
+  find_package(Python3 REQUIRED COMPONENTS Interpreter)
+  set(campaign_test_source "${CMAKE_CURRENT_BINARY_DIR}/generated/campaign_functions.c")
+  add_custom_command(OUTPUT "${campaign_test_source}"
+    COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/select_campaign_functions.py"
+            "${SHANDALAR_SRC_ROOT}" "${campaign_test_source}"
+    DEPENDS tests/select_campaign_functions.py src/adventure_new_game.c src/shandalar.c
+            ../magic/src/carddata.c ../magic/src/duel.c ../magic/src/duel_card_state.c
+            ../magic/src/duel_engine_main_wndproc.c ../magic/src/shared_startup.c
+            ../magic/src/duel_ai_support.c
+    VERBATIM
+  )
+  add_executable(campaign_new_game_test tests/campaign_new_game_test.c "${campaign_test_source}")
+  target_include_directories(campaign_new_game_test PRIVATE "${SHANDALAR_SRC_ROOT}")
+  target_include_directories(campaign_new_game_test BEFORE PRIVATE "${SHANDALAR_SRC_ROOT}/magic/compat")
+  target_compile_definitions(campaign_new_game_test PRIVATE SHANDALAR MODERN_FIXES)
+  target_link_libraries(campaign_new_game_test PRIVATE shandalar_platform)
+  if(EXISTS "${SHANDALAR_MODDED_ASSET_DIR}/concise.csv")
+    add_test(NAME campaign_new_game_test COMMAND campaign_new_game_test "${SHANDALAR_MODDED_ASSET_DIR}")
+    set_tests_properties(campaign_new_game_test PROPERTIES TIMEOUT 20)
+  endif()
+  set(mok_test_engine_source "${CMAKE_CURRENT_BINARY_DIR}/generated/mok_test_engine.c")
+  add_custom_command(OUTPUT "${mok_test_engine_source}"
+    COMMAND "${Python3_EXECUTABLE}" "${SHANDALAR_SRC_ROOT}/magic/tests/select_engine_functions.py"
+            "${SHANDALAR_SRC_ROOT}/magic/src" "${mok_test_engine_source}"
+    DEPENDS ../magic/tests/select_engine_functions.py ../magic/src/duel.c
+            ../magic/src/duel_card_state.c ../magic/src/duel_stack.c
+            ../magic/src/duel_ai.c ../magic/src/duel_main_phase_combat_damage.c
+            ../magic/src/dialog.c ../magic/src/global_state.c
+            ../magic/src/duel_engine_lifeclass_wndproc.c
+    VERBATIM
+  )
+  add_executable(mok_engine_test ../magic/tests/mok_engine_test.c "${mok_test_engine_source}")
+  target_include_directories(mok_engine_test PRIVATE "${SHANDALAR_SRC_ROOT}")
+  target_include_directories(mok_engine_test BEFORE PRIVATE "${SHANDALAR_SRC_ROOT}/magic/compat")
+  target_compile_definitions(mok_engine_test PRIVATE SHANDALAR MODERN_FIXES)
+  target_link_libraries(mok_engine_test PRIVATE shandalar_platform)
+  target_compile_options(mok_engine_test PRIVATE
+    "/FI${SHANDALAR_SRC_ROOT}/manalinkeh/mok_manalink_redirects.h")
+  add_test(NAME mok_engine_test COMMAND mok_engine_test)
+
+  set(mok_legacy_text_source "${CMAKE_CURRENT_BINARY_DIR}/generated/mok_legacy_text.c")
+  add_custom_command(OUTPUT "${mok_legacy_text_source}"
+    COMMAND "${Python3_EXECUTABLE}" "${SHANDALAR_SRC_ROOT}/manalinkeh/tests/select_legacy_text_functions.py"
+            "${SHANDALAR_SRC_ROOT}/manalinkeh/functions/functions.c" "${mok_legacy_text_source}"
+    DEPENDS ../manalinkeh/tests/select_legacy_text_functions.py ../manalinkeh/functions/functions.c
+    VERBATIM
+  )
+  add_executable(mok_legacy_text_test ../manalinkeh/tests/mok_legacy_text_test.c "${mok_legacy_text_source}")
+  target_include_directories(mok_legacy_text_test PRIVATE "${SHANDALAR_SRC_ROOT}/manalinkeh")
+  target_compile_definitions(mok_legacy_text_test PRIVATE MANALINKEH_STATIC)
+  add_test(NAME mok_legacy_text_test COMMAND mok_legacy_text_test)
+
+  set(mok_ui_text_source "${CMAKE_CURRENT_BINARY_DIR}/generated/mok_ui_text.c")
+  add_custom_command(OUTPUT "${mok_ui_text_source}"
+    COMMAND "${Python3_EXECUTABLE}" "${SHANDALAR_SRC_ROOT}/manalinkeh/tests/select_ui_text_initializers.py"
+            "${SHANDALAR_SRC_ROOT}/manalinkeh/functions/windows.c"
+            "${SHANDALAR_SRC_ROOT}/manalinkeh/functions/has_creature_type.c" "${mok_ui_text_source}"
+    DEPENDS ../manalinkeh/tests/select_ui_text_initializers.py ../manalinkeh/functions/windows.c
+            ../manalinkeh/functions/has_creature_type.c
+    VERBATIM
+  )
+  set_source_files_properties("${mok_ui_text_source}" PROPERTIES
+    COMPILE_DEFINITIONS MANALINKEH_STATIC
+    INCLUDE_DIRECTORIES "${SHANDALAR_SRC_ROOT}/manalinkeh"
+  )
   add_executable(global_strings_test
     ../magic/tests/global_strings_test.c
     ../magic/src/global_strings.c
+    "${mok_ui_text_source}"
   )
   target_link_libraries(global_strings_test PRIVATE shandalar_platform)
   add_test(NAME global_strings_test COMMAND global_strings_test)
