@@ -2920,6 +2920,17 @@ typedef enum
 } player_t;
 
 /* Targeting system */
+/* Every target predicate has the full ABI, even if it ignores the source.
+ * WebAssembly checks the argument count on each indirect call. */
+typedef const char* (*target_predicate_t)(int who_chooses, int player, int card,
+                                        int targeting_player, int targeting_card);
+
+static inline int32_t target_predicate_extra(target_predicate_t predicate)
+{
+  STATIC_ASSERT(sizeof(int32_t) == sizeof(target_predicate_t), target_predicate_must_fit_extra);
+  return (int32_t)predicate;
+}
+
 typedef struct
 {
   int32_t who_chooses;
@@ -3028,7 +3039,7 @@ typedef enum
 	// The rest are all extensions to exe.
 	TARGET_SPECIAL_NOT_ME				= (1 << 14),	// (td->player, td->card) is an illegal target.  Unimplemented if real_target_available()/real_select_target()/real_validate_target() are called directly without a target_definition_t.
 #ifndef SHANDALAR
-	TARGET_SPECIAL_EXTRA_FUNCTION		= (1 << 15),	// Calls extra, which is a pointer to function with signature const char* function(int who_chooses, int player, int card, int targeting_player, int targeting_card).  (It can take fewer arguments if it doesn't need them.)  It should return NULL if a legal target, or an error message if illegal.
+	TARGET_SPECIAL_EXTRA_FUNCTION		= (1 << 15),	// Calls extra, registered through target_predicate_extra() with the full target_predicate_t signature. Returns NULL if legal, or an error message if illegal.
 #else
 	TARGET_SPECIAL_EXTRA_OR_SUBTYPE		= (1 << 15),	// extra works as another subtype field; matching either subtype or extra is sufficient to pass.  If TARGET_SPECIAL_REQUIRE_ALL_TYPES is also set, then requires both subtypes be set, not either.
 #endif

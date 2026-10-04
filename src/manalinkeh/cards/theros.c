@@ -483,7 +483,7 @@ int card_decorated_griffin(int player, int card, event_t event){
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_NONE);
 	td.preferred_controller = ANYBODY;	// damage cards attached to a player are internally controlled by that player
-	td.extra = (int)target_noncombat_damage;
+	td.extra = target_predicate_extra(target_noncombat_damage);
 	td.illegal_abilities = 0;
 	td.special = TARGET_SPECIAL_DAMAGE_PLAYER | TARGET_SPECIAL_EXTRA_FUNCTION;
 
@@ -1097,7 +1097,7 @@ int card_spear_of_heliod(int player, int card, event_t event)
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int)target_damaged_me_this_turn;
+	td.extra = target_predicate_extra(target_damaged_me_this_turn);
 
 	if (event == EVENT_RESOLVE_ACTIVATION)
 	{
@@ -3080,7 +3080,7 @@ int card_stormbreath_dragon(int player, int card, event_t event){
 	return monstrosity(player, card, event, MANACOST_XR(5, 2), 3);
 }
 
-static const char* can_use_titan_of_eternal_fire_ability(int who_chooses, int player, int card)
+static const char* can_use_titan_of_eternal_fire_ability(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	target_definition_t td1;
 	default_target_definition(player, card, &td1, TYPE_CREATURE);
@@ -3104,7 +3104,7 @@ int card_titan_of_eternal_fire(int player, int card, event_t event){
 	default_target_definition(player, card, &td, TYPE_CREATURE);
 	td.allowed_controller = td.preferred_controller = player;
 	td.required_subtype = SUBTYPE_HUMAN;
-	td.extra = (int32_t)can_use_titan_of_eternal_fire_ability;
+	td.extra = target_predicate_extra(can_use_titan_of_eternal_fire_ability);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	td.illegal_abilities = 0;
 
@@ -4662,12 +4662,12 @@ int card_steam_augury(int player, int card, event_t event)
 	return basic_spell(player, card, event);
 }
 
-const char* target_has_fate_counter(int who_chooses, int player, int card)
+const char* target_has_fate_counter(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   return count_counters(player, card, COUNTER_FATE) <= 0 ? "no fate counter" : NULL;
 }
 
-const char* target_not_has_fate_counter(int who_chooses, int player, int card)
+const char* target_not_has_fate_counter(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   return count_counters(player, card, COUNTER_FATE) > 0 ? "fate counter" : NULL;
 }
@@ -4698,7 +4698,7 @@ int card_triad_of_fates(int player, int card, event_t event)
 	  target_definition_t td_fated;
 	  default_target_definition(player, card, &td_fated, TYPE_CREATURE);
 	  td_fated.preferred_controller = player;
-	  td_fated.extra = (int)target_has_fate_counter;
+	  td_fated.extra = target_predicate_extra(target_has_fate_counter);
 	  td_fated.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	  target_definition_t td_destroyed;
@@ -4723,7 +4723,7 @@ int card_triad_of_fates(int player, int card, event_t event)
 		  default_target_definition(player, card, &td_destroyed, TYPE_CREATURE);
 		  td_destroyed.allowed_controller = player;
 		  td_destroyed.preferred_controller = player;
-		  td_destroyed.extra = (int)target_has_fate_counter;
+		  td_destroyed.extra = target_predicate_extra(target_has_fate_counter);
 		  td_destroyed.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		  td_destroyed.required_state = TARGET_STATE_DESTROYED;
 		  td_destroyed.allow_cancel = 0;
@@ -4731,7 +4731,7 @@ int card_triad_of_fates(int player, int card, event_t event)
 		  default_target_definition(player, card, &td_unfated, TYPE_CREATURE);
 		  td_unfated.allowed_controller = player;
 		  td_unfated.preferred_controller = player;
-		  td_unfated.extra = (int)target_not_has_fate_counter;
+		  td_unfated.extra = target_predicate_extra(target_not_has_fate_counter);
 		  td_unfated.special = TARGET_SPECIAL_EXTRA_FUNCTION | TARGET_SPECIAL_NOT_ME;
 		  td_unfated.allow_cancel = 0;
 

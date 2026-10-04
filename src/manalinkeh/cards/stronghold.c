@@ -1571,7 +1571,7 @@ int card_mox_diamond(int player, int card, event_t event)
 }
 
 static int en_kor_card = -1;
-static const char* is_damaging_me(int who_chooses, int player, int card){
+static const char* is_damaging_me(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t* dmg = get_card_instance(player, card);
 	if ( dmg->internal_card_id == damage_card && dmg->info_slot > 0 ){
 		if( dmg->damage_target_player == who_chooses && dmg->damage_target_card == en_kor_card ){
@@ -1592,7 +1592,7 @@ int en_kor_damage_prevention_ability(int player, int card, event_t event){
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_EFFECT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_damaging_me;
+	td.extra = target_predicate_extra(is_damaging_me);
 
 
 	target_definition_t td2;

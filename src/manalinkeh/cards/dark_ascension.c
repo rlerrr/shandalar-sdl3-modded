@@ -2913,7 +2913,7 @@ Fateful hour - If you have 5 or less life, tap all attacking creatures. Those cr
 	return 0;
 }
 
-static const char* is_artifact_or_creature_with_flying(int who_chooses, int player, int card)
+static const char* is_artifact_or_creature_with_flying(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( is_what(player, card, TYPE_ARTIFACT) ){
 		return NULL;
@@ -2941,7 +2941,7 @@ Choose one -
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT);
-	td.extra = (int32_t)is_artifact_or_creature_with_flying;
+	td.extra = target_predicate_extra(is_artifact_or_creature_with_flying);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);

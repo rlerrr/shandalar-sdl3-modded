@@ -339,11 +339,11 @@ int card_godsend(int player, int card, event_t event)
 		td.allowed_controller = 1-p;
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		if (current_turn == p){
-			td.extra = (int32_t)is_blocking_me;
+			td.extra = target_predicate_extra(is_blocking_me);
 			prompt = "Select a creature blocking creature equipped by Godsend.";
 		}
 		else{
-			td.extra = (int32_t)im_blocking_him;
+			td.extra = target_predicate_extra(im_blocking_him);
 			prompt = "Select a creature blocked by creature equipped by Godsend.";
 		}
 
@@ -466,7 +466,7 @@ int card_leonin_iconoclast(int player, int card, event_t event){
 		default_target_definition(player, card, &td, TYPE_CREATURE);
 		td.allowed_controller = 1 - player;
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td.extra = (int)target_is_enchantment;	// in addition to creature
+		td.extra = target_predicate_extra(target_is_enchantment);	// in addition to creature
 		td.allow_cancel = 0;
 
 		card_instance_t* instance = get_card_instance(player, card);
@@ -979,7 +979,7 @@ int card_daring_thief(int player, int card, event_t event){
 			td1.allowed_controller = 1-player;
 			td1.preferred_controller = 1-player;
 			td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-			td1.extra = (int32_t)must_share_type;
+			td1.extra = target_predicate_extra(must_share_type);
 
 			if( can_target(&td1) && new_pick_target(&td1, "TARGET_PERMANENT", 1, 0) ){
 				instance->number_of_targets = 2;
@@ -1847,7 +1847,7 @@ int card_extinguish_all_hope(int player, int card, event_t event)
 	return 0;
 }
 
-static const char* is_enchanted_or_enchantment_creature(int who_chooses, int player, int card)
+static const char* is_enchanted_or_enchantment_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( is_enchanted(player, card) || is_what(player, card, TYPE_ENCHANTMENT) ){
 		return NULL;
@@ -1866,7 +1866,7 @@ int card_feast_of_dreams(int player, int card, event_t event){
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE );
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_enchanted_or_enchantment_creature;
+	td.extra = target_predicate_extra(is_enchanted_or_enchantment_creature);
 
 	if(event == EVENT_RESOLVE_SPELL){
 		if( valid_target(&td) ){

@@ -693,7 +693,7 @@ int attack_if_able(int player, int card, event_t event){
 }
 
 static int can_block_target_player, can_block_target_card;
-static const char* can_block_target(int who_chooses, int player, int card)
+static const char* can_block_target(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   if (can_block_me(player, card, can_block_target_player, can_block_target_card))
 	return NULL;
@@ -709,7 +709,7 @@ int can_block(int player, int card){
 	td.allow_cancel = 0;
 	td.required_state = TARGET_STATE_ATTACKING;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)can_block_target;
+	td.extra = target_predicate_extra(can_block_target);
 	can_block_target_player = player;
 	can_block_target_card = card;
 	return can_target(&td);
@@ -724,7 +724,7 @@ void select_blocker(int player, int card, int player_who_chooses_blockers){
 	td.who_chooses = player_who_chooses_blockers;
 	td.required_state = TARGET_STATE_ATTACKING;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)can_block_target;
+	td.extra = target_predicate_extra(can_block_target);
 	can_block_target_player = player;
 	can_block_target_card = card;
 
@@ -782,7 +782,7 @@ static void lure_effect(int player, int card, event_t event, int luring_player, 
 	  td.required_subtype = subtype >= 0 ? subtype : -1;
 	  td.illegal_abilities = 0;
 	  td.special = TARGET_SPECIAL_EXTRA_FUNCTION | TARGET_SPECIAL_ALLOW_MULTIBLOCKER;
-	  td.extra = (int32_t)target_must_be_able_to_block_me;
+	  td.extra = target_predicate_extra(target_must_be_able_to_block_me);
 
 	  if (!can_target(&td))
 		return;

@@ -733,7 +733,7 @@ Exalted (Whenever a creature you control attacks alone, that creature gets +1/+1
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int)target_damaged_me_this_turn;
+	td.extra = target_predicate_extra(target_damaged_me_this_turn);
 
 	if (event == EVENT_RESOLVE_ACTIVATION)
 	{

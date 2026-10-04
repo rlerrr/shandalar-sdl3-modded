@@ -4236,7 +4236,7 @@ As ~ enters the battlefield, choose a color.
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_EFFECT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)colored_damage_source_that_damages_me;
+	td.extra = target_predicate_extra(colored_damage_source_that_damages_me);
 
 	card_instance_t *instance = get_card_instance(player, card);
 

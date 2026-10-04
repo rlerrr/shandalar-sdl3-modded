@@ -1114,7 +1114,7 @@ fx_dwarven_sea_clan(int player, int card, event_t event)
   default_target_definition(player, card, &td, TYPE_CREATURE);
   td.required_state = TARGET_STATE_IN_COMBAT;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int)target_controls_island;
+  td.extra = target_predicate_extra(target_controls_island);
   if ((trigger_condition == TRIGGER_END_COMBAT || event == EVENT_SHOULD_AI_PLAY) && affect_me(player, card) && valid_target(&td))
 	{
 	  if (event == EVENT_TRIGGER)
@@ -1147,7 +1147,7 @@ int card_dwarven_sea_clan(int player, int card, event_t event)
   default_target_definition(player, card, &td, TYPE_CREATURE);
   td.required_state = TARGET_STATE_IN_COMBAT;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int)target_controls_island;
+  td.extra = target_predicate_extra(target_controls_island);
 
   if (event == EVENT_RESOLVE_ACTIVATION)
 	{

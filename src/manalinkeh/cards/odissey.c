@@ -266,7 +266,7 @@ Tap an untapped Cephalid you control: Tap target permanent.
 	return 0;
 }
 
-static const char* instant_or_sorcery_is_damaging_me(int who_chooses, int player, int card)
+static const char* instant_or_sorcery_is_damaging_me(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	card_instance_t *instance = get_card_instance(player, card);
 	if(	instance->internal_card_id == damage_card ){
@@ -293,7 +293,7 @@ Enchantment
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, 0);
-	td.extra = (int32_t)instant_or_sorcery_is_damaging_me;
+	td.extra = target_predicate_extra(instant_or_sorcery_is_damaging_me);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);

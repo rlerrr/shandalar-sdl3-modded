@@ -981,7 +981,7 @@ int card_undead_slayer(int player, int card, event_t event)
   target_definition_t td;
   default_target_definition(player, card, &td, TYPE_PERMANENT);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int)target_is_skeleton_vampire_or_zombie;
+  td.extra = target_predicate_extra(target_is_skeleton_vampire_or_zombie);
 
   if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td))
 	{

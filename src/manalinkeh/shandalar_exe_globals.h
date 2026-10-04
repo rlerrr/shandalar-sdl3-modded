@@ -15,7 +15,8 @@ extern char gs_target_error_djinn_or_efreet[]; /* MOK 0x004ec75b */
 extern char gs_target_error_summoning_sickness[]; /* MOK 0x004ec769 */
 extern int g_opponent_initial_library_index; /* MOK 0x004ed85d */
 extern int g_selected_wizard_color; /* MOK 0x004ed861 */
-extern int g_recorded_action_count; /* MOK 0x004ed954 */
+extern int g_recorded_action_count; /* MOK 0x0060a578 */
+extern int g_ai_recorded_action_type; /* MOK 0x004ed954 */
 extern char TENTATIVE_next_spell_always_castable; /* MOK 0x004ef160 */
 extern int g_current_casting_internal_card_id; /* MOK 0x004ef19c */
 extern int g_stop_phase; /* MOK 0x004ef1ac */

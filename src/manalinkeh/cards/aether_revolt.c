@@ -140,7 +140,7 @@ Artifact Creature - Construct 0/3
 									&td, "Select another target creature you control.");
 }
 
-static const char* is_creature_or_vehicle(int who_chooses, int player, int card){
+static const char* is_creature_or_vehicle(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 
 	if( is_what(player, card, TYPE_CREATURE) || has_subtype(player, card, SUBTYPE_VEHICLE) )
 		return NULL;
@@ -200,7 +200,7 @@ Enchanted creature gets +2/+2 and has flying.
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_creature_or_vehicle;
+	td.extra = target_predicate_extra(is_creature_or_vehicle);
 
 	return targeted_aura_custom_prompt(player, card, event, &td, "Select target creature or Vehicle.");
 }

@@ -1006,7 +1006,7 @@ int card_serene_master(int player, int card, event_t event ){
 		td1.allowed_controller =  1-player;
 		td1.preferred_controller = 1-player;
 		td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td1.extra = (int32_t)serene_master_is_blocking_him;
+		td1.extra = target_predicate_extra(serene_master_is_blocking_him);
 		td1.allow_cancel = 0;
 
 		card_instance_t *instance = get_card_instance( player, card );

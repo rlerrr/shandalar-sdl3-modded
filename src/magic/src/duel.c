@@ -109,6 +109,7 @@ void save_soloduel(char *path);
 void save_gauntlet(char *path);
 void save_sealeddeck(char *path);
 
+// GLOBAL: MOK 0x0078f260
 // GLOBAL: MAGIC 0x009251d4
 // GLOBAL: SHANDALAR 0x00939304
 int g_duel_result;
@@ -1419,13 +1420,13 @@ int end_turn_phase(unsigned int player)
   {
     if (global_card_instances[player][card].internal_card_id != -1)
     {
-      global_card_instances[player][card].state &= ~(STATE_JUST_DRAWED | STATE_ATTACKING | STATE_BLOCKING | STATE_ATTACKED | STATE_ISBLOCKED | STATE_UNKNOWN8000);
+      global_card_instances[player][card].state &= ~(STATE_JUST_DRAWED | STATE_ATTACKING | STATE_BLOCKING | STATE_ATTACKED | STATE_ISBLOCKED | STATE_BLOCKED | STATE_UNKNOWN8000);
       global_card_instances[player][card].blocking = -1;
       global_card_instances[player][card].damage_on_card = 0;
     }
     if (global_card_instances[other_player][card].internal_card_id != -1)
     {
-      global_card_instances[other_player][card].state &= ~(STATE_JUST_DRAWED | STATE_ATTACKING | STATE_BLOCKING | STATE_ATTACKED | STATE_ISBLOCKED | STATE_UNKNOWN8000);
+      global_card_instances[other_player][card].state &= ~(STATE_JUST_DRAWED | STATE_ATTACKING | STATE_BLOCKING | STATE_ATTACKED | STATE_ISBLOCKED | STATE_BLOCKED | STATE_UNKNOWN8000);
       global_card_instances[other_player][card].blocking = -1;
       global_card_instances[other_player][card].damage_on_card = 0;
     }
@@ -1480,7 +1481,9 @@ int end_turn_phase(unsigned int player)
     }
   }
 
-  g_battlefield_extra_ability_flags = 0;
+  /* MOK 0x43d576: keep these events enabled for effects whose card-data
+   * entries do not advertise the corresponding extra ability. */
+  g_battlefield_extra_ability_flags = EA_FORCE_ATTACK | EA_CONTROLLED;
   return 0;
 }
 
@@ -2030,7 +2033,8 @@ int play_duel(int player, int creature_type)
   g_duel_special_land_card_ids[3] = 0x5b;
   g_duel_special_land_card_ids[4] = 0xa4;
   g_duel_special_land_card_ids[5] = 0xbc;
-  g_battlefield_extra_ability_flags = 0;
+  /* MOK 0x478b97 uses the same baseline as end_turn_phase(). */
+  g_battlefield_extra_ability_flags = EA_FORCE_ATTACK | EA_CONTROLLED;
   g_lich_active[0] = 0;
   g_lich_active[1] = 0;
   reset_duel_globals();

@@ -473,7 +473,7 @@ int card_endless_one(int player, int card, event_t event)
   return 0;
 }
 
-static const char* can_activate_colorless_creature(int who_chooses, int player, int card)
+static const char* can_activate_colorless_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( has_mana_for_activated_ability(player, card, MANACOST0) && ! is_tapped(player, card) && ! is_sick(player, card) &&
 		can_use_activated_abilities(player, card) && get_color(player, card) == 0 )
@@ -499,7 +499,7 @@ static int gruesome_slaughter_legacy(int player, int card, event_t event){
 	td.allowed_controller = td.preferred_controller = player;
 	td.illegal_abilities = 0;
 	td.illegal_state = TARGET_STATE_TAPPED;
-	td.extra = (int32_t)can_activate_colorless_creature;
+	td.extra = target_predicate_extra(can_activate_colorless_creature);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -562,7 +562,7 @@ int card_gruesome_slaughter(int player, int card, event_t event){
 		td.allowed_controller = td.preferred_controller = player;
 		td.illegal_abilities = 0;
 		td.illegal_state = TARGET_STATE_TAPPED;
-		td.extra = (int32_t)can_activate_colorless_creature;
+		td.extra = target_predicate_extra(can_activate_colorless_creature);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 		ai_modifier += (5*target_available(player, card, &td));
@@ -4068,7 +4068,7 @@ int card_brutal_expulsion(int player, int card, event_t event)
   td_spell_or_creature.illegal_type = TYPE_EFFECT;
   td_spell_or_creature.zone = TARGET_ZONE_IN_PLAY|TARGET_ZONE_ON_STACK;
   td_spell_or_creature.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td_spell_or_creature.extra = (int)(&target_is_creature_or_not_on_bf);
+  td_spell_or_creature.extra = target_predicate_extra(target_is_creature_or_not_on_bf);
 
   target_definition_t td_creature_or_planeswalker;
   default_target_definition(player, card, &td_creature_or_planeswalker, TYPE_CREATURE|TARGET_TYPE_PLANESWALKER);

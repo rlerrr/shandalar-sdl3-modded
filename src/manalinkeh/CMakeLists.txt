@@ -89,6 +89,37 @@ target_compile_definitions(manalinkeh_static PRIVATE
   MANALINKEH_STATIC
 )
 
+# An x86 stack tolerated incompatible callback prototypes; WASM traps on them.
+# Typed target registrations expose these checks before a browser reaches them.
+if(CMAKE_C_COMPILER_ID MATCHES "Clang")
+  target_compile_options(manalinkeh_static PRIVATE
+    "$<$<COMPILE_LANGUAGE:C>:-Werror=incompatible-function-pointer-types>"
+    -Werror=cast-function-type-strict
+  )
+endif()
+
+set(target_predicate_functions "${manalinkeh_generated_dir}/target_predicate_functions.inc")
+add_custom_command(OUTPUT "${target_predicate_functions}"
+  COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/select_target_predicate_functions.py"
+          "${CMAKE_CURRENT_SOURCE_DIR}" "${target_predicate_functions}"
+  DEPENDS tests/select_target_predicate_functions.py functions/targets.c cards/unlimited.c
+  VERBATIM
+)
+add_executable(target_predicate_test EXCLUDE_FROM_ALL tests/target_predicate_test.c
+               "${target_predicate_functions}")
+if(SHANDALAR_BUILD_TESTS)
+  set_property(TARGET target_predicate_test PROPERTY EXCLUDE_FROM_ALL FALSE)
+endif()
+target_include_directories(target_predicate_test PRIVATE
+  "${CMAKE_CURRENT_SOURCE_DIR}" "${manalinkeh_generated_dir}")
+if(EMSCRIPTEN)
+  set_target_properties(target_predicate_test PROPERTIES SUFFIX ".js")
+  target_link_options(target_predicate_test PRIVATE -sENVIRONMENT=node -sEXIT_RUNTIME=1)
+endif()
+if(SHANDALAR_BUILD_TESTS AND NOT EMSCRIPTEN)
+  add_test(NAME target_predicate_test COMMAND target_predicate_test)
+endif()
+
 # Keep legacy translation units from retaining every unrelated function when
 # the host requests only one of their MOK replacement entry points.
 if(MSVC)

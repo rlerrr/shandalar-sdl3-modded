@@ -287,12 +287,26 @@ if(SHANDALAR_BUILD_TESTS AND WIN32)
             "${SHANDALAR_SRC_ROOT}/magic/src" "${mok_test_engine_source}"
     DEPENDS ../magic/tests/select_engine_functions.py ../magic/src/duel.c
             ../magic/src/duel_card_state.c ../magic/src/duel_stack.c
-            ../magic/src/duel_ai.c ../magic/src/duel_main_phase_combat_damage.c
+            ../magic/src/duel_ai.c ../magic/src/duel_main_phase_combat_damage.c ../magic/src/duel_main_phase.c
             ../magic/src/dialog.c ../magic/src/global_state.c
             ../magic/src/duel_engine_lifeclass_wndproc.c
     VERBATIM
   )
-  add_executable(mok_engine_test ../magic/tests/mok_engine_test.c "${mok_test_engine_source}")
+  set(mok_ai_bridge_source "${CMAKE_CURRENT_BINARY_DIR}/generated/mok_ai_bridge.c")
+  add_custom_command(OUTPUT "${mok_ai_bridge_source}"
+    COMMAND "${Python3_EXECUTABLE}" "${SHANDALAR_SRC_ROOT}/manalinkeh/tests/select_ai_bridge_functions.py"
+            "${SHANDALAR_SRC_ROOT}/manalinkeh/functions" "${mok_ai_bridge_source}"
+    DEPENDS ../manalinkeh/tests/select_ai_bridge_functions.py
+            ../manalinkeh/functions/ai.c ../manalinkeh/functions/targets.c
+            ../manalinkeh/functions/events.c
+    VERBATIM
+  )
+  set_source_files_properties("${mok_ai_bridge_source}" PROPERTIES
+    COMPILE_DEFINITIONS MANALINKEH_STATIC
+    INCLUDE_DIRECTORIES "${SHANDALAR_SRC_ROOT}/manalinkeh"
+  )
+  add_executable(mok_engine_test ../magic/tests/mok_engine_test.c "${mok_test_engine_source}"
+                 "${mok_ai_bridge_source}")
   target_include_directories(mok_engine_test PRIVATE "${SHANDALAR_SRC_ROOT}")
   target_include_directories(mok_engine_test BEFORE PRIVATE "${SHANDALAR_SRC_ROOT}/magic/compat")
   target_compile_definitions(mok_engine_test PRIVATE SHANDALAR MODERN_FIXES)

@@ -1368,7 +1368,7 @@ int card_centaur_vinecrasher(int player, int card, event_t event){
 	return 0;
 }
 
-static const char* check_for_state_targetted(int who_chooses, int player, int card)
+static const char* check_for_state_targetted(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( ! check_state(player, card, STATE_TARGETTED) ){
 		return NULL;
@@ -1392,7 +1392,7 @@ static int ezuri_predation_effect(int player, int card, event_t event){
 					td.allowed_controller = 1-trigger_cause_controller;
 					td.allow_cancel = 0;
 					td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-					td.extra = (int)check_for_state_targetted;
+					td.extra = target_predicate_extra(check_for_state_targetted);
 
 					if( can_target(&td) && new_pick_target(&td, "Select target creature controlled by your opponent.", 0, GS_LITERAL_PROMPT))
 					{

@@ -670,7 +670,7 @@ int card_radiant_purge(int player, int card, event_t event)
   default_target_definition(player, card, &td, TYPE_CREATURE|TYPE_ENCHANTMENT);
   td.preferred_controller = player;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int)is_multicolored;
+  td.extra = target_predicate_extra(is_multicolored);
 
   if (event == EVENT_RESOLVE_SPELL)
 	{

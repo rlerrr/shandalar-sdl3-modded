@@ -3405,7 +3405,7 @@ Creatures of the chosen color without flying can't attack you. */
 	return global_enchantment(player, card, event);
 }
 
-static const char* targets_a_land_you_control(int who_chooses, int player, int card)
+static const char* targets_a_land_you_control(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   int i;
   card_instance_t* instance = get_card_instance(player, card);
@@ -3435,13 +3435,13 @@ Draw two cards. */
   target_definition_t td_effect;
   counter_activated_target_definition(player, card, &td_effect, 0);
   td_effect.allowed_controller = 1-player;
-  td_effect.extra = (int32_t)targets_a_land_you_control;
+  td_effect.extra = target_predicate_extra(targets_a_land_you_control);
   td_effect.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
   target_definition_t td_spell;
   counterspell_target_definition(player, card, &td_spell, 0);
   td_spell.allowed_controller = 1-player;
-  td_spell.extra = (int32_t)targets_a_land_you_control;
+  td_spell.extra = target_predicate_extra(targets_a_land_you_control);
   td_spell.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
   if (event == EVENT_CAN_CAST)

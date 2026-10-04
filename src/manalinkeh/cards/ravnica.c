@@ -4904,7 +4904,7 @@ Each player chooses three permanents he or she controls, then sacrifices the res
 	return basic_spell(player, card, event);
 }
 
-static const char* damage_dealt_to_a_creature_you_control(int who_chooses, int player, int card)
+static const char* damage_dealt_to_a_creature_you_control(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	card_instance_t* instance = get_card_instance(player, card);
 	if( instance->internal_card_id == damage_card && instance->damage_target_player == who_chooses &&
@@ -4935,7 +4935,7 @@ Flying, vigilance, haste
 	target_definition_t td;
 	default_target_definition(player, card, &td, 0);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int)damage_dealt_to_a_creature_you_control;
+	td.extra = target_predicate_extra(damage_dealt_to_a_creature_you_control);
 
 	target_definition_t td2;
 	default_target_definition(player, card, &td2, TYPE_CREATURE);
@@ -5777,14 +5777,14 @@ Legendary Creature - Gorgon 7/5
 	td2.allowed_controller =  1-player;
 	td2.preferred_controller = 1-player;
 	td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td2.extra = (int32_t)is_blocking_ssd;
+	td2.extra = target_predicate_extra(is_blocking_ssd);
 
 	target_definition_t td1;
 	default_target_definition(player, card, &td1, TYPE_CREATURE);
 	td1.allowed_controller =  1-player;
 	td1.preferred_controller = 1-player;
 	td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td1.extra = (int32_t)ssd_is_blocking_him;
+	td1.extra = target_predicate_extra(ssd_is_blocking_him);
 
 	card_instance_t *instance = get_card_instance( player, card );
 

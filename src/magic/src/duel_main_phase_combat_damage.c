@@ -365,76 +365,71 @@ void assign_blocker_combat_damage(int player, int blocker_index, int multiple_at
   }
   else
   {
-    if ((PLAYER_CARD_INSTANCE(defending_player, ai_blocker_cards[blocker_index]).state & STATE_TAPPED) != 0)
+    /* MOK 0x4b3ead goes directly to assignment: tapping a blocker does
+     * not remove it from combat or prevent its combat damage. */
+    shared_value.assignment_base = combat_damage_blocker_damage[blocker_index] + 1;
+    combination_count = 1;
+    for (assignment_index = 0; assignment_index < combat_damage_attacker_count; assignment_index = assignment_index + 1)
     {
+      combination_count *= shared_value.assignment_base;
+    }
+    restricted_assignments = combination_count > 0x100;
+
+    if (mode != 0)
+    {
+      damage_remaining = shared_value.assignment_base - 1;
+      assignment_code = combat_damage_best_assignment_codes[blocker_index];
+      for (attacker_index = 0; attacker_index < combat_damage_attacker_count; attacker_index = attacker_index + 1)
+      {
+        damage_to_assign = assignment_code % shared_value.assignment_base;
+        if (has_damage_card_targeting(defending_player, ai_blocker_cards[attacker_index]) != 0)
+        {
+          damage_to_assign = 0;
+        }
+        if (damage_to_assign != 0)
+        {
+          damage_card = damage_creature(player, combat_damage_attacker_cards[attacker_index], damage_to_assign,
+                                        defending_player, ai_blocker_cards[blocker_index]);
+          damage_ids[attacker_index] = damage_card;
+          if (damage_card != -1)
+          {
+            PLAYER_CARD_INSTANCE(defending_player, damage_card).token_status |= COMBAT_DAMAGE_FLAG_COMBAT;
+            if (damage_step == 0)
+            {
+              PLAYER_CARD_INSTANCE(defending_player, damage_card).token_status |= COMBAT_DAMAGE_FLAG_FIRST_STRIKE;
+            }
+          }
+        }
+        assignment_code /= shared_value.assignment_base;
+        damage_remaining -= damage_to_assign;
+      }
       assign_blocker_combat_damage(player, blocker_index + 1, multiple_attackers, damage_ids, damage_step, mode, best_low, best_high);
     }
     else
     {
-      shared_value.assignment_base = combat_damage_blocker_damage[blocker_index] + 1;
-      combination_count = 1;
-      for (assignment_index = 0; assignment_index < combat_damage_attacker_count; assignment_index = assignment_index + 1)
-      {
-        combination_count *= shared_value.assignment_base;
-      }
-      restricted_assignments = combination_count > 0x100;
-
-      if (mode != 0)
+      for (assignment_index = 0; assignment_index < combination_count; assignment_index = assignment_index + 1)
       {
         damage_remaining = shared_value.assignment_base - 1;
-        assignment_code = combat_damage_best_assignment_codes[blocker_index];
+        assignment_code = assignment_index;
         for (attacker_index = 0; attacker_index < combat_damage_attacker_count; attacker_index = attacker_index + 1)
         {
           damage_to_assign = assignment_code % shared_value.assignment_base;
-          if (has_damage_card_targeting(defending_player, ai_blocker_cards[attacker_index]) != 0)
-          {
-            damage_to_assign = 0;
-          }
-          if (damage_to_assign != 0)
-          {
-            damage_card = damage_creature(player, combat_damage_attacker_cards[attacker_index], damage_to_assign,
-                                          defending_player, ai_blocker_cards[blocker_index]);
-            damage_ids[attacker_index] = damage_card;
-            if (damage_card != -1)
-            {
-              PLAYER_CARD_INSTANCE(defending_player, damage_card).token_status |= COMBAT_DAMAGE_FLAG_COMBAT;
-              if (damage_step == 0)
-              {
-                PLAYER_CARD_INSTANCE(defending_player, damage_card).token_status |= COMBAT_DAMAGE_FLAG_FIRST_STRIKE;
-              }
-            }
-          }
-          assignment_code /= shared_value.assignment_base;
-          damage_remaining -= damage_to_assign;
-        }
-        assign_blocker_combat_damage(player, blocker_index + 1, multiple_attackers, damage_ids, damage_step, mode, best_low, best_high);
-      }
-      else
-      {
-        for (assignment_index = 0; assignment_index < combination_count; assignment_index = assignment_index + 1)
-        {
-          damage_remaining = shared_value.assignment_base - 1;
-          assignment_code = assignment_index;
-          for (attacker_index = 0; attacker_index < combat_damage_attacker_count; attacker_index = attacker_index + 1)
-          {
-            damage_to_assign = assignment_code % shared_value.assignment_base;
-            if (restricted_assignments != 0 && damage_to_assign > 1 && damage_to_assign < damage_remaining)
-            {
-              continue;
-            }
-
-            combat_damage_assignment_matrix[blocker_index][attacker_index] = damage_to_assign;
-            assignment_code /= shared_value.assignment_base;
-            damage_remaining -= damage_to_assign;
-          }
-          if (damage_remaining != 0)
+          if (restricted_assignments != 0 && damage_to_assign > 1 && damage_to_assign < damage_remaining)
           {
             continue;
           }
 
-          combat_damage_current_assignment_codes[blocker_index] = assignment_index;
-          assign_blocker_combat_damage(player, blocker_index + 1, multiple_attackers, damage_ids, damage_step, mode, best_low, best_high);
+          combat_damage_assignment_matrix[blocker_index][attacker_index] = damage_to_assign;
+          assignment_code /= shared_value.assignment_base;
+          damage_remaining -= damage_to_assign;
         }
+        if (damage_remaining != 0)
+        {
+          continue;
+        }
+
+        combat_damage_current_assignment_codes[blocker_index] = assignment_index;
+        assign_blocker_combat_damage(player, blocker_index + 1, multiple_attackers, damage_ids, damage_step, mode, best_low, best_high);
       }
     }
   }

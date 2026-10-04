@@ -97,7 +97,7 @@ int generic_licid(int player, int card, event_t event, int colorless, int black,
 	return 0;
 }
 
-const char* activating_sliver(int who_chooses, int player, int card){
+const char* activating_sliver(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if(	can_use_activated_abilities(player, card) ){
 		return NULL;
 	}
@@ -138,7 +138,7 @@ int sliver_shared_shade_ability(int player, int card, event_t event){
 		td.allowed_controller = player;
 		td.preferred_controller = player;
 		td.required_subtype = SUBTYPE_SLIVER;
-		td.extra = (int32_t)activating_sliver;
+		td.extra = target_predicate_extra(activating_sliver);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		td.illegal_abilities = 0;
 
@@ -221,7 +221,7 @@ int shared_sliver_activated_ability(int player, int card, event_t event, int mod
 	td.allowed_controller = player;
 	td.preferred_controller = player;
 	td.required_subtype = SUBTYPE_SLIVER;
-	td.extra = (int32_t)activating_sliver;
+	td.extra = target_predicate_extra(activating_sliver);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	td.illegal_state = (mode & GAA_UNTAPPED) ? TARGET_STATE_TAPPED | TARGET_STATE_SUMMONING_SICK : 0;
 	td.illegal_abilities = 0;
@@ -823,7 +823,7 @@ int card_choke(int player, int card, event_t event){
 	return 0;
 }
 
-const char* sliver_to_regenerate(int who_chooses, int player, int card){
+const char* sliver_to_regenerate(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if(	can_use_activated_abilities(player, card) ){
 		if( who_chooses == HUMAN || (who_chooses == AI && can_regenerate(player, card)) ){
 			return NULL;
@@ -856,7 +856,7 @@ int clot_sliver_shared_ability(int player, int card, event_t event){
 		td.required_state = TARGET_STATE_DESTROYED;
 		td.preferred_controller = player;
 		td.required_subtype = SUBTYPE_SLIVER;
-		td.extra = (int32_t)sliver_to_regenerate;
+		td.extra = target_predicate_extra(sliver_to_regenerate);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		td.illegal_abilities = 0;
 
@@ -2478,7 +2478,7 @@ int card_intuition(int player, int card, event_t event){
 	return basic_spell(player, card, event);
 }
 
-static const char* not_effect_from_monotype_planeswalker(int who_chooses, int player, int card)
+static const char* not_effect_from_monotype_planeswalker(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   /* This is the first card I've seen that can target all of artifact, creature, enchantment, and land, but not planeswalker.  Putting TARGET_TYPE_PLANESWALKER
    * into td.illegal_type is tempting, but won't work - it'll fail for an animated Gideon Jura, a planeswalker-artifact (by Memnarch), or planeswalker-
@@ -2511,7 +2511,7 @@ int card_interdict(int player, int card, event_t event)
 
   target_definition_t td;
   counter_activated_target_definition(player, card, &td, TYPE_ARTIFACT|TYPE_CREATURE|TYPE_ENCHANTMENT|TYPE_LAND);
-  td.extra = (int32_t)not_effect_from_monotype_planeswalker;
+  td.extra = target_predicate_extra(not_effect_from_monotype_planeswalker);
   td.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
   card_instance_t *instance = get_card_instance( player, card );
@@ -2665,7 +2665,7 @@ int card_knight_of_dusk(int player, int card, event_t event){
 	td2.allowed_controller =  1-player;
 	td2.preferred_controller = 1-player;
 	td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td2.extra = (int32_t)is_blocking_kod;
+	td2.extra = target_predicate_extra(is_blocking_kod);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -4278,7 +4278,7 @@ int card_starke_of_rath(int player, int card, event_t event)
   return generic_activated_ability(player, card, event, GAA_UNTAPPED|GAA_CAN_TARGET, MANACOST0, 0, &td, "PUTREFY");	// Select target artifact or creature
 }
 
-static const char* can_be_untapped(int who_chooses, int player, int card)
+static const char* can_be_untapped(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( ! check_special_flags2(player, card, SF2_COULD_NOT_UNTAP) ){
 		return NULL;
@@ -4313,7 +4313,7 @@ int card_static_orb(int player, int card, event_t event){
 			td.who_chooses = current_turn;
 			td.illegal_abilities = 0;
 			td.allow_cancel = 0;
-			td.extra = (int32_t)can_be_untapped;
+			td.extra = target_predicate_extra(can_be_untapped);
 			td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 			while( instance->info_slot < 2 && can_target(&td) ){
 					if( select_target(player, card, &td, "Select a permanent to untap", &(instance->targets[0])) ){

@@ -398,6 +398,8 @@ GLOBAL_STATE_EXTERN int g_stack_prompt_flags[32];
 
 // GLOBAL: MAGIC 0x008b497c
 // GLOBAL: SHANDALAR 0x008c8afc
+// GLOBAL: MOK 0x00737e1c
+/* Legacy name: controller whose triggers are being processed, not turn owner. */
 GLOBAL_STATE_EXTERN int g_current_turn;
 
 // GLOBAL: MAGIC 0x008b32b8

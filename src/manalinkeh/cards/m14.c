@@ -71,7 +71,7 @@ int card_ajanis_chosen(int player, int card, event_t event){
 		if( token.keep_track_of_tokens_generated > 0 && has_subtype(tcc, tca, SUBTYPE_AURA_CREATURE) ){
 			target_definition_t td;
 			default_target_definition(player, card, &td, TYPE_CREATURE);
-			td.extra = (int32_t)token_generated_by_ajanis_chosen;
+			td.extra = target_predicate_extra(token_generated_by_ajanis_chosen);
 			td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 			td.illegal_abilities = 0;
 

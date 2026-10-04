@@ -11195,7 +11195,7 @@ int granted_generic_activated_ability(int granting_player, int granting_card, in
 			if( is_equipping(granted_to_player, granted_to_card) )
 			{
 				td->special = TARGET_SPECIAL_EXTRA_FUNCTION;
-				td->extra = (int)already_equipping;
+				td->extra = target_predicate_extra(already_equipping);
 			}
 			#endif
 			mode |= GAA_CAN_TARGET;
@@ -14321,7 +14321,7 @@ int can_play_cards_as_though_they_had_flash(int player, int card, event_t event,
   if ((IS_AI(player) || event == EVENT_CAN_ACTIVATE) && td->extra == -1)
 	{
 	  td->special |= TARGET_SPECIAL_EXTRA_FUNCTION;
-	  td->extra = (int)has_mana_to_cast_target;
+	  td->extra = target_predicate_extra(has_mana_to_cast_target);
 	}
 
   hack_current_event = event;
@@ -14861,7 +14861,7 @@ static int is_karoo(int csvid){
 	}
 }
 
-static const char* is_not_karoo(int who_chooses, int player, int card){
+static const char* is_not_karoo(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( ! is_karoo(get_id(player, card)) ){
 		return NULL;
 	}
@@ -14888,7 +14888,7 @@ int karoo(int player, int card, event_t event, int color1, int color2, int ai_ca
 		td.allowed_controller = player;
 		td.preferred_controller = player;
 		td.allow_cancel = 0;
-		td.extra = (int32_t)is_not_karoo;
+		td.extra = target_predicate_extra(is_not_karoo);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 		if( can_target(&td) ){
@@ -14915,7 +14915,7 @@ int karoo(int player, int card, event_t event, int color1, int color2, int ai_ca
 
 		if( can_target(&td) ){
 			if( IS_AI(player) ){
-				td.extra = (int32_t)is_not_karoo;
+				td.extra = target_predicate_extra(is_not_karoo);
 				td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 			}
 			if( new_pick_target(&td, "Choose a land to bounce", 0, GS_LITERAL_PROMPT) ){
@@ -16859,7 +16859,7 @@ void ai_modifier_for_land_untappers(int player, int card, int target_pos){
 					cards_ptr[cards_data[iid].id]->ai_base_value : -48);
 }
 
-static const char* has_activated_ability(int who_chooses, int player, int card)
+static const char* has_activated_ability(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	int iid = get_card_instance(player, card)->internal_card_id;
 	if(	cards_data[iid].extra_ability & EA_ACT_ABILITY ){
@@ -16874,7 +16874,7 @@ int select_permanent_to_disable(int player, int card, target_definition_t *td, c
 	td->illegal_abilities = 0;
 	if( IS_AI(player) ){
 		td->special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td->extra = (int32_t)has_activated_ability;
+		td->extra = target_predicate_extra(has_activated_ability);
 	}
 
 	card_instance_t *instance = get_card_instance(player, card);

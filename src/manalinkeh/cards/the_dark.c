@@ -2187,7 +2187,7 @@ Each player may discard up to three cards. Mind Bomb deals damage to each player
 	return basic_spell(player, card, event);
 }
 
-static const char* aura_enchanting_creature(int who_chooses, int player, int card){
+static const char* aura_enchanting_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t *instance = get_card_instance(player, card);
 	if( instance->damage_target_player == who_chooses ){
 		if( is_what(instance->damage_target_player, instance->damage_target_card, TYPE_CREATURE) ){
@@ -2210,7 +2210,7 @@ int card_miracle_worker(int player, int card, event_t event){
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_ENCHANTMENT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)aura_enchanting_creature;
+	td.extra = target_predicate_extra(aura_enchanting_creature);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -2374,7 +2374,7 @@ int card_niall_silvain(int player, int card, event_t event){
 	return generic_activated_ability(player, card, event, GAA_UNTAPPED | GAA_CAN_TARGET, MANACOST_G(4), 0, &td, "TARGET_CREATURE") ? 99 : 0;
 }
 
-static const char* is_orc_or_goblin_and_can_be_sacrificed(int who_chooses, int player, int card)
+static const char* is_orc_or_goblin_and_can_be_sacrificed(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if(	can_sacrifice_this_as_cost(player, card) ){
 		if( has_subtype(player, card, SUBTYPE_ORC) || has_subtype(player, card, SUBTYPE_GOBLIN) ){
@@ -2399,7 +2399,7 @@ Creature — Orc Warrior 2/2
 	default_target_definition(player, card, &td, TYPE_CREATURE);
 	td.preferred_controller = td.allowed_controller = player;
 	td.illegal_abilities = 0;
-	td.extra = (int32_t)is_orc_or_goblin_and_can_be_sacrificed;
+	td.extra = target_predicate_extra(is_orc_or_goblin_and_can_be_sacrificed);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -2574,7 +2574,7 @@ int card_rag_man(int player, int card, event_t event){
 	return generic_activated_ability(player, card, event, GAA_UNTAPPED|GAA_CAN_ONLY_TARGET_OPPONENT, MANACOST_B(3), 0, &td, "TARGET_PLAYER");
 }
 
-static const char* spell_is_targeting_me(int who_chooses, int player, int card)
+static const char* spell_is_targeting_me(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	card_instance_t* eff = get_card_instance(player, card);
 	if( eff->number_of_targets == 0 || eff->number_of_targets > 1)
@@ -2600,7 +2600,7 @@ The new target must be a player. X is twice the converted mana cost of that spel
 
 	target_definition_t td_spell;
 	counterspell_target_definition(player, card, &td_spell, TYPE_SPELL);
-	td_spell.extra = (int32_t)spell_is_targeting_me;
+	td_spell.extra = target_predicate_extra(spell_is_targeting_me);
 	td_spell.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -2833,7 +2833,7 @@ At the beginning of your upkeep, you may sacrifice Safe Haven. If you do, return
 	return 0;
 }
 
-static const char* aura_enchanting_land(int who_chooses, int player, int card){
+static const char* aura_enchanting_land(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t *instance = get_card_instance(player, card);
 	if( instance->damage_target_player > -1 ){
 		if( is_what(instance->damage_target_player, instance->damage_target_card, TYPE_LAND) ){
@@ -2856,7 +2856,7 @@ int card_savaen_elves(int player, int card, event_t event){
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_ENCHANTMENT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)aura_enchanting_land;
+	td.extra = target_predicate_extra(aura_enchanting_land);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -3716,7 +3716,7 @@ int card_whippoorwill(int player, int card, event_t event){
 	return generic_activated_ability(player, card, event, GAA_UNTAPPED|GAA_CAN_TARGET, MANACOST_G(2), 0, &td, "TARGET_CREATURE");
 }
 
-static const char* dangerous_attacking_creature(int who_chooses, int player, int card){
+static const char* dangerous_attacking_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 
 	if ( is_attacking(player, card) && is_unblocked(player, card) && life[who_chooses]-get_power(player, card) < 6 ){
 		return NULL;
@@ -3743,7 +3743,7 @@ int card_witch_hunter(int player, int card, event_t event){
 	td1.allowed_controller = 1-player;
 	if( player == AI ){
 		td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td1.extra = (int32_t)dangerous_attacking_creature;
+		td1.extra = target_predicate_extra(dangerous_attacking_creature);
 	}
 
 	card_instance_t *instance = get_card_instance(player, card);

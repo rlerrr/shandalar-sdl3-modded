@@ -817,14 +817,14 @@ int card_cromat(int player, int card, event_t event){
 	td2.allowed_controller =  1-player;
 	td2.preferred_controller = 1-player;
 	td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td2.extra = (int32_t)is_blocking_crm;
+	td2.extra = target_predicate_extra(is_blocking_crm);
 
 	target_definition_t td1;
 	default_target_definition(player, card, &td1, TYPE_CREATURE);
 	td1.allowed_controller =  1-player;
 	td1.preferred_controller = 1-player;
 	td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td1.extra = (int32_t)crm_is_blocking_him;
+	td1.extra = target_predicate_extra(crm_is_blocking_him);
 
 	card_instance_t *instance = get_card_instance( player, card );
 

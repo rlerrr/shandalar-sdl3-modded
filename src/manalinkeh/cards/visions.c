@@ -3753,7 +3753,7 @@ int card_zhalfirin_crusader(int player, int card, event_t event){
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, 0);
-	td.extra = (int32_t)is_damage_to_zhalfirin_crusader;
+	td.extra = target_predicate_extra(is_damage_to_zhalfirin_crusader);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	target_definition_t td2;

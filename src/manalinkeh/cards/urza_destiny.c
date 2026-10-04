@@ -616,7 +616,7 @@ int card_flicker2(int player, int card, event_t event){
 	td.preferred_controller = player;
 	td.allow_cancel = 0;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int)target_is_not_token;
+	td.extra = target_predicate_extra(target_is_not_token);
 
 	card_instance_t *instance = get_card_instance(player, card);
 

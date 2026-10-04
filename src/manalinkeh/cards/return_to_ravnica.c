@@ -71,7 +71,7 @@ void populate(int player, int card)
 	  td.preferred_controller = player;
 	  td.allow_cancel = 0;
 	  td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	  td.extra = (int)target_is_token_too;
+	  td.extra = target_predicate_extra(target_is_token_too);
 
 	  target_t tgt;
 
@@ -2082,7 +2082,7 @@ int card_thrill_kill_assassin(int player, int card, event_t event){
 	return unleash(player, card, event);
 }
 
-const char* target_is_monocolored(int who_chooses, int player, int card){
+const char* target_is_monocolored(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if (num_bits_set(get_color(player, card) & COLOR_TEST_ANY_COLORED) == 1){
 		return NULL;
 	} else {
@@ -2098,7 +2098,7 @@ int card_ultimate_price(int player, int card, event_t event){
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE);
-	td.extra = (int32_t)target_is_monocolored;
+	td.extra = target_predicate_extra(target_is_monocolored);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -4362,7 +4362,7 @@ int card_jarad_golgari_lich_lord(int player, int card, event_t event){
 		td1.allowed_controller = player;
 		td1.preferred_controller = player;
 		td1.illegal_abilities = 0;
-		td1.extra = (int32_t)is_forest_or_swamp;
+		td1.extra = target_predicate_extra(is_forest_or_swamp);
 		td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 		card_instance_t *instance = get_card_instance(player, card);
@@ -5690,7 +5690,7 @@ int card_trostani_selesnyas_voice(int player, int card, event_t event){
 		base_target_definition(player, card, &td, TYPE_CREATURE);
 		td.allowed_controller = td.preferred_controller = player;
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td.extra = (int)target_is_token_too;
+		td.extra = target_predicate_extra(target_is_token_too);
 		if( can_target(&td) ){
 			ai_modifier += (current_turn == 1-player && current_phase < PHASE_DECLARE_BLOCKERS ? 48 : 24);
 		}
@@ -5743,7 +5743,7 @@ int card_vitu_ghazi_guildmage(int player, int card, event_t event){
 			base_target_definition(player, card, &td, TYPE_CREATURE);
 			td.allowed_controller = td.preferred_controller = player;
 			td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-			td.extra = (int)target_is_token_too;
+			td.extra = target_predicate_extra(target_is_token_too);
 			if( can_target(&td) ){
 				ai_modifier += (current_turn == 1-player && current_phase < PHASE_DECLARE_BLOCKERS ? 48 : 24);
 			}

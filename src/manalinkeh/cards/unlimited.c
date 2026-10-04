@@ -210,7 +210,7 @@ static int lace(int player, int card, event_t event, int color_test){
 }
 
 static int dmg_source_color = 0;
-static const char* colored_damage_source(int who_chooses, int player, int card){
+static const char* colored_damage_source(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t* dmg = get_card_instance(player, card);
 	if( dmg->internal_card_id != damage_card ){
 		return "must be a damage card";
@@ -245,7 +245,7 @@ static int cop(int player, int card, event_t event, int color_test){
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_EFFECT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)colored_damage_source;
+	td.extra = target_predicate_extra(colored_damage_source);
 	dmg_source_color = get_sleighted_color_test(player, card, color_test);
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -303,7 +303,7 @@ int basic_landtype_killer(int player, int card, event_t event, int basic_land_ty
 	return basic_spell(player, card, event);
 }
 
-static const char* can_be_untapped(int who_chooses, int player, int card)
+static const char* can_be_untapped(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( ! check_special_flags2(player, card, SF2_COULD_NOT_UNTAP) ){
 		return NULL;
@@ -327,7 +327,7 @@ void untap_only_one_permanent_type(int player, int card, event_t event, int affe
 		td.required_state = TARGET_STATE_TAPPED;
 		td.illegal_abilities = 0;
 		td.allow_cancel = 0;
-		td.extra = (int32_t)can_be_untapped;
+		td.extra = target_predicate_extra(can_be_untapped);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 		char buffer[100];
@@ -1123,7 +1123,7 @@ Enchanted land has indestructible and can't be enchanted by other Auras. */
 	return targeted_aura(player, card, event, &td, "TARGET_LAND");
 }
 
-static const char* damage_source_no_pwalker(int who_chooses, int player, int card){
+static const char* damage_source_no_pwalker(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t* dmg = get_card_instance(player, card);
 	if( dmg->internal_card_id != damage_card ){
 		return "must be a damage card";
@@ -1153,7 +1153,7 @@ Artifact
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_EFFECT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)damage_source_no_pwalker;
+	td.extra = target_predicate_extra(damage_source_no_pwalker);
 	
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -2325,7 +2325,7 @@ At the beginning of your upkeep, ~ deals 8 damage to you unless you pay |G|G|G|G
 	return 0;
 }
 
-static const char* combat_damage_from_an_unblocked_creature(int who_chooses, int player, int card)
+static const char* combat_damage_from_an_unblocked_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	card_instance_t *instance = get_card_instance(player, card);
 	if( instance->internal_card_id == damage_card && (instance->token_status & (STATUS_COMBAT_DAMAGE|STATUS_FIRST_STRIKE_DAMAGE)) ){
@@ -2352,7 +2352,7 @@ Artifact
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_EFFECT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)combat_damage_from_an_unblocked_creature;
+	td.extra = target_predicate_extra(combat_damage_from_an_unblocked_creature);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -2650,7 +2650,7 @@ Enchanted creature has protection from |Sgreen. This effect doesn't remove ~. */
 
 int aff_player = -1;
 int aff_card = -1;
-static const char* is_damage_to_aff_player_aff_card(int who_chooses, int player, int card){
+static const char* is_damage_to_aff_player_aff_card(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t* dmg = get_card_instance(player, card);
 	if( dmg->internal_card_id != damage_card ){
 		return "must be a damage card";
@@ -2678,7 +2678,7 @@ static int guardian_angel_legacy(int player, int card, event_t event){
 	target_definition_t td;
 	default_target_definition(player, card, &td, 0);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_damage_to_aff_player_aff_card;
+	td.extra = target_predicate_extra(is_damage_to_aff_player_aff_card);
 	aff_player = instance->targets[0].player;
 	aff_card = instance->targets[0].card;
 
@@ -4563,7 +4563,7 @@ When ~ dies, its owner loses half his or her life, rounded up. */
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_EFFECT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int)is_damaging_attached_creature;
+	td.extra = target_predicate_extra(is_damaging_attached_creature);
 	td.illegal_abilities = 0;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -5196,7 +5196,7 @@ int card_rock_hydra(int player, int card, event_t event)
 		  target_definition_t td;
 		  base_target_definition(player, card, &td, 0);
 		  td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		  td.extra = (int)target_must_be_damage_targeting_this_rock_hydra;
+		  td.extra = target_predicate_extra(target_must_be_damage_targeting_this_rock_hydra);
 
 		  instance->number_of_targets = 0;
 		  pick_target(&td, "ROCK_HYDRA");
@@ -5219,7 +5219,7 @@ int card_rock_hydra(int player, int card, event_t event)
 			  target_definition_t td;
 			  base_target_definition(instance->parent_controller, instance->parent_card, &td, 0);
 			  td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-			  td.extra = (int)target_must_be_damage_targeting_this_rock_hydra;
+			  td.extra = target_predicate_extra(target_must_be_damage_targeting_this_rock_hydra);
 
 			  if (valid_target(&td))
 				{
@@ -6752,7 +6752,7 @@ Destroy all creatures. They can't be regenerated. */
 	return basic_spell(player, card, event);
 }
 
-static const char* zombie_to_regenerate(int who_chooses, int player, int card)
+static const char* zombie_to_regenerate(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if(	can_use_activated_abilities(player, card) ){
 		if( who_chooses == HUMAN || (who_chooses == AI && can_regenerate(player, card)) ){
@@ -6782,7 +6782,7 @@ int zombie_master_shared_ability(int player, int card, event_t event){
 		td.required_state = TARGET_STATE_DESTROYED;
 		td.preferred_controller = player;
 		td.required_subtype = SUBTYPE_ZOMBIE;
-		td.extra = (int32_t)zombie_to_regenerate;
+		td.extra = target_predicate_extra(zombie_to_regenerate);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		td.illegal_abilities = 0;
 

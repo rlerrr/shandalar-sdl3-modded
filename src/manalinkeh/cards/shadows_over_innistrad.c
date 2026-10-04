@@ -4800,7 +4800,7 @@ int card_structural_distortion(int player, int card, event_t event){
  * As an additional cost to cast ~, discard a card.
  * Draw two cards. */
 
-static const char* is_an_attacking_wolf_or_werewolf(int who_chooses, int player, int card)
+static const char* is_an_attacking_wolf_or_werewolf(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( is_attacking(player, card) && (has_subtype(player, card, SUBTYPE_WEREWOLF) || has_subtype(player, card, SUBTYPE_WOLF)) ){
 		return NULL;
@@ -4820,7 +4820,7 @@ int card_ulrichs_kindred(int player, int card, event_t event){
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT);
-	td.extra = (int32_t)is_an_attacking_wolf_or_werewolf;
+	td.extra = target_predicate_extra(is_an_attacking_wolf_or_werewolf);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	td.preferred_controller = player;
 
@@ -4894,7 +4894,7 @@ int card_vessel_of_volatility(int player, int card, event_t event){
  * Haste
  * When ~ enters the battlefield, target creature can't block this turn. */
 
-static const char* is_creature_or_pwalker(int who_chooses, int player, int card)
+static const char* is_creature_or_pwalker(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( is_what(player, card, TYPE_CREATURE) || is_planeswalker(player, card) ){
 		return NULL;
@@ -4914,7 +4914,7 @@ int card_wolf_of_devils_breach(int player, int card, event_t event){
 	{
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_PERMANENT);
-		td.extra = (int32_t)is_creature_or_pwalker;
+		td.extra = target_predicate_extra(is_creature_or_pwalker);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 		card_instance_t *instance = get_card_instance(player, card);
@@ -6244,7 +6244,7 @@ int card_arlinn_embraced_by_the_moon(int player, int card, event_t event){
 	return planeswalker(player, card, event, 3);
 }
 
-static const char* can_activate(int who_chooses, int player, int card)
+static const char* can_activate(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( has_mana_for_activated_ability(player, card, MANACOST0) && ! is_tapped(player, card) && ! is_sick(player, card) &&
 		can_use_activated_abilities(player, card) )
@@ -6267,7 +6267,7 @@ int card_arlinn_embraced_by_the_moon_emblem(int player, int card, event_t event)
 	td.allowed_controller = td.preferred_controller = player;
 	td.illegal_abilities = 0;
 	td.illegal_state = TARGET_STATE_TAPPED;
-	td.extra = (int32_t)can_activate;
+	td.extra = target_predicate_extra(can_activate);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -6400,7 +6400,7 @@ int card_invocation_of_saint_traft(int player, int card, event_t event){
 	return targeted_aura(player, card, event, &td, "TARGET_CREATURE");
 }
 
-static const char* is_enchantment_or_tapped_artifact_creature(int who_chooses, int player, int card)
+static const char* is_enchantment_or_tapped_artifact_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( is_what(player, card, TYPE_ENCHANTMENT) || (is_tapped(player, card) && is_what(player, card, TYPE_CREATURE | TYPE_ARTIFACT))  ){
 		return NULL;
@@ -6438,7 +6438,7 @@ int card_nahiri_the_harbinger(int player, int card, event_t event){
 	if( IS_GAA_EVENT(event) ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_PERMANENT);
-		td.extra = (int32_t)is_enchantment_or_tapped_artifact_creature;
+		td.extra = target_predicate_extra(is_enchantment_or_tapped_artifact_creature);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 		card_instance_t *instance = get_card_instance( player, card);
@@ -6619,7 +6619,7 @@ int card_sorin_grim_nemesis(int player, int card, event_t event){
 	if( IS_GAA_EVENT(event) ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_PERMANENT);
-		td.extra = (int32_t)is_creature_or_pwalker;
+		td.extra = target_predicate_extra(is_creature_or_pwalker);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 		card_instance_t *instance = get_card_instance( player, card);

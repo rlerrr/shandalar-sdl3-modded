@@ -915,14 +915,14 @@ void tragic_arrogance_effect(int player, int card, int who_chooses){
 
 	target_definition_t td_unmarked_nonland;
 	base_target_definition(player, card, &td_unmarked_nonland, 0);
-	td_unmarked_nonland.extra = (int)target_is_unmarked_nonland;
+	td_unmarked_nonland.extra = target_predicate_extra(target_is_unmarked_nonland);
 	td_unmarked_nonland.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	td_unmarked_nonland.allowed_controller = td_unmarked_nonland.preferred_controller = 1-player;
 	td_unmarked_nonland.allow_cancel = 0;
 
 	target_definition_t td_marked_or_land;
 	base_target_definition(player, card, &td_marked_or_land, 0);
-	td_marked_or_land.extra = (int)target_is_marked_or_land;
+	td_marked_or_land.extra = target_predicate_extra(target_is_marked_or_land);
 	td_marked_or_land.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	td_marked_or_land.allowed_controller = td_marked_or_land.preferred_controller = player;
 	td_marked_or_land.allow_cancel = 0;
@@ -1666,7 +1666,7 @@ int card_psychic_rebuttal(int player, int card, event_t event)
 
   target_definition_t td;
   counterspell_target_definition(player, card, &td, 0);
-  td.extra = (int)(&target_targets_you);
+  td.extra = target_predicate_extra(target_targets_you);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
   if (event == EVENT_RESOLVE_SPELL)
@@ -2295,7 +2295,7 @@ int card_gilt_leaf_winnower(int player, int card, event_t event)
 	  target_definition_t td;
 	  default_target_definition(player, card, &td, TYPE_CREATURE);
 	  td.required_subtype = SUBTYPE_ELF;
-	  td.extra = (int)target_power_toughness_arent_equal;
+	  td.extra = target_predicate_extra(target_power_toughness_arent_equal);
 	  td.special = TARGET_SPECIAL_EXTRA_FUNCTION|TARGET_SPECIAL_ILLEGAL_SUBTYPE;
 
 	  if (can_target(&td) && new_pick_target(&td, "Select target non-Elf creature whose power and toughness aren't equal.", 0, GS_LITERAL_PROMPT))

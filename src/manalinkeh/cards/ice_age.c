@@ -133,7 +133,7 @@ int charge_snow_mana(int player, int card, int snow, int cless)
   base_target_definition(player, card, &td, TYPE_PERMANENT);
   td.allowed_controller = player;
   td.preferred_controller = player;
-  td.extra = (int32_t)target_is_activateable_snow_mana_source;
+  td.extra = target_predicate_extra(target_is_activateable_snow_mana_source);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
   char intro[300], mana_prompt[100], tap_prompt[150], prompt[450];
@@ -850,7 +850,7 @@ int card_balduvian_conjurer(int player, int card, event_t event)
 }
 
 static int balduvian_hydra_player = 0, balduvian_hydra_card = 0;
-static const char* target_is_damaging_balduvian_hydra(int who_chooses, int player, int card)
+static const char* target_is_damaging_balduvian_hydra(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   card_instance_t* instance = get_card_instance(player, card);
   if (instance->internal_card_id == damage_card
@@ -888,7 +888,7 @@ int card_balduvian_hydra(int player, int card, event_t event)
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, 0);
-	td.extra = (int32_t)target_is_damaging_balduvian_hydra;
+	td.extra = target_predicate_extra(target_is_damaging_balduvian_hydra);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	balduvian_hydra_player = player;
 	balduvian_hydra_card = card;
@@ -5187,7 +5187,7 @@ int card_necropotence(int player, int card, event_t event){
  * |T: Untap target |Sblue creature.
  * |T: Choose target non-Wall creature the active player has controlled continuously since the beginning of the turn. That creature attacks this turn if able. If it doesn't, destroy it at the beginning of the next end step. Activate this ability only before attackers are declared. */
 
-static const char* target_only_permanents_unless_in_hand(int who_chooses, int player, int card)
+static const char* target_only_permanents_unless_in_hand(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   // If e.g. the player targeted himself with a lose-life spell like Soul Feast, it'll still be on the battlefield.  Don't let him sac it!
   return in_hand(player, card) || is_what(player, card, TYPE_PERMANENT) ? NULL : gs_target_error_type;	// ",type"
@@ -5204,7 +5204,7 @@ void oath_of_lim_dul_lifeloss_trigger(int player, int card, int amount)
   td.illegal_abilities = 0;
   td.allow_cancel = 0;
   td.special = TARGET_SPECIAL_NOT_ME | TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)target_only_permanents_unless_in_hand;
+  td.extra = target_predicate_extra(target_only_permanents_unless_in_hand);
 
   target_t tgts[amount + 1];
   int i, num_tgts = 0;

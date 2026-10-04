@@ -151,6 +151,24 @@ static int target_match_type(card_instance_t* tgt_instance, int tgt_player, int 
   return 0;
 }
 
+static const char*
+invoke_target_predicate(int extra, int who_chooses, int tgt_player, int tgt_card,
+                        int player, int card)
+{
+  ASSERT(extra != -1 && extra != 0);
+  target_predicate_t predicate = (target_predicate_t)extra;
+  if (player != -1 && card != -1)
+  {
+    card_instance_t* instance = get_card_instance(player, card);
+    if (instance->internal_card_id == activation_card)
+    {
+      player = instance->parent_controller;
+      card = instance->parent_card;
+    }
+  }
+  return predicate(who_chooses, tgt_player, tgt_card, player, card);
+}
+
 static int
 validate_target_impl(int player, int card,	// Beware - these will both be -1 when called from the exe
 					 int tgt_player, int tgt_card, char* return_error_str,
@@ -319,23 +337,7 @@ validate_target_impl(int player, int card,	// Beware - these will both be -1 whe
 
 	  if (special & TARGET_SPECIAL_EXTRA_FUNCTION)
 		{
-		  ASSERT(extra != -1 && extra != 0);
-
-		  typedef const char* (*Predicate)(int, int, int, int, int);
-		  STATIC_ASSERT(sizeof(int32_t) == sizeof(Predicate), Predicate_type_must_fit_into_an_int32_t);
-
-		  Predicate predicate = (Predicate)extra;
-		  int p = player, c = card;
-		  if (p != -1 && c != -1)
-			{
-			  card_instance_t* instance = get_card_instance(p, c);
-			  if (instance->internal_card_id == activation_card)
-				{
-				  p = instance->parent_controller;
-				  c = instance->parent_card;
-				}
-			}
-		  const char* err = predicate(who_chooses, tgt_player, tgt_card, p, c);
+		  const char* err = invoke_target_predicate(extra, who_chooses, tgt_player, tgt_card, player, card);
 		  if (err)
 			FAIL_STR(err);
 		}
@@ -885,6 +887,52 @@ target_available_maybe_force(int player, int card,
 
 const char* hack_prepend_prompt = NULL;
 
+extern int g_shandalar_difficulty;
+
+/* Match main's target replay: candidates can change between trial and use. */
+static int replay_ai_target_choice(const target_t* candidates, int num_candidates)
+{
+  if (g_shandalar_difficulty == 0)
+    {
+      if (g_ai_recorded_choice == 99 || num_candidates <= g_ai_recorded_choice)
+        g_ai_recorded_choice = internal_rand(num_candidates);
+      return 1;
+    }
+
+  if (g_ai_recorded_choice != 99 && g_ai_recorded_action != -1 && (g_ai_recorded_action & 0x4000))
+    {
+      int p = (g_ai_recorded_action >> 8) & 1;
+      int c = g_ai_recorded_action & 0xff;
+      int i;
+      if (c == 0xff)
+        c = -1;
+      for (i = 0; i < num_candidates; ++i)
+        if (candidates[i].player == p && candidates[i].card == c)
+          {
+            g_ai_recorded_choice = i;
+            return 1;
+          }
+    }
+
+  spell_fizzled = 1;
+  return 0;
+}
+
+static int choose_ai_target(const target_t* candidates, int num_candidates)
+{
+  g_ai_recorded_action_type = 3;
+  if (ai_is_speculating == 1)
+    {
+      g_ai_recorded_choice = internal_rand(num_candidates);
+      g_ai_recorded_action = (candidates[g_ai_recorded_choice].player < 1 ? 0 : 0x100)
+                            | (candidates[g_ai_recorded_choice].card & 0xff) | 0x4000;
+      sub_498F20();
+      return 1;
+    }
+  sub_499050();
+  return replay_ai_target_choice(candidates, num_candidates);
+}
+
 static int
 select_target_impl(int player, int card,
 				   int who_chooses, int allowed_controller, int preferred_controller, int zone,
@@ -1078,22 +1126,8 @@ select_target_impl(int player, int card,
 	  if (num_candidates == 0)
 		return 0;
 
-	  g_recorded_action_count = 3;
-
-	  if (ai_is_speculating == 1)
-		{
-		  g_ai_recorded_choice = internal_rand(num_candidates);
-		  g_ai_recorded_action = (candidates[g_ai_recorded_choice].player < 1 ? 0 : 0x100) | (candidates[g_ai_recorded_choice].card & 0xff) | 0x4000;
-
-		  sub_498F20();
-		}
-	  else
-		{
-		  sub_499050();
-
-		  if (g_ai_recorded_choice == 99 || num_candidates <= g_ai_recorded_choice)
-			g_ai_recorded_choice = internal_rand(num_candidates);
-		}
+	  if (!choose_ai_target(candidates, num_candidates))
+		return 0;
 
 	  g_target_player_choice = candidates[g_ai_recorded_choice].player;
 	  *ret_tgt = candidates[g_ai_recorded_choice];

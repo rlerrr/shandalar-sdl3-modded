@@ -1433,7 +1433,7 @@ int card_neutralizing_blast(int player, int card, event_t event){
 	target_definition_t td;
 	counterspell_target_definition(player, card, &td, TYPE_ANY);
 	td.illegal_type = TYPE_LAND;
-	td.extra = (int32_t)is_multicolored;
+	td.extra = target_predicate_extra(is_multicolored);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	return counterspell(player, card, event, &td, 0);
@@ -2338,7 +2338,7 @@ Delve
 5/5
 */
 
-static const char* is_already_damaged(int who_chooses, int player, int card){
+static const char* is_already_damaged(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( get_card_instance(player, card)->damage_on_card > 0 ){
 		return NULL;
 	}
@@ -2359,7 +2359,7 @@ int card_hooded_assasin(int player, int card, event_t event){
 	if( event == EVENT_ETB_ABILITY ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_CREATURE );
-		td.extra = (int32_t)is_already_damaged;
+		td.extra = target_predicate_extra(is_already_damaged);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		td.allow_cancel = 0;
 
@@ -3784,7 +3784,7 @@ int card_map_the_wastes(int player, int card, event_t event){
 	return basic_spell(player, card, event);
 }
 
-static const char* is_artifact_or_enchantment_or_flying_creature(int who_chooses, int player, int card)
+static const char* is_artifact_or_enchantment_or_flying_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( is_what(player, card, TYPE_ARTIFACT | TYPE_ENCHANTMENT) ){
 		return NULL;
@@ -3807,7 +3807,7 @@ int card_return_to_the_earth(int player, int card, event_t event ){
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT);
-	td.extra = (int32_t)is_artifact_or_enchantment_or_flying_creature;
+	td.extra = target_predicate_extra(is_artifact_or_enchantment_or_flying_creature);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t* instance = get_card_instance(player, card);

@@ -6,9 +6,10 @@
 #include "magic/src/game_support.h"
 #include "magic/src/global_strings.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
-card_data_t global_cards_data[16];
+card_data_t global_cards_data[32];
 int ai_blocker_count;
 int ai_blocker_cards[16];
 int g_duel_ai_mode_state;
@@ -17,6 +18,7 @@ int g_stack_proxy_internal_card_id;
 int cleanup_combat_state(int player);
 int is_combat_damage_ability_in_step(int step, int abilities);
 int untap_phase_exe(unsigned int player);
+int end_turn_phase(unsigned int player);
 void rebuild_battlefield_summary(void);
 
 CRITICAL_SECTION g_duel_render_lock;
@@ -56,10 +58,64 @@ int save_or_load_data(void *data, unsigned int size)
 }
 
 static int failures;
+extern int ai_blocker_player, g_ai_attacker_count, g_ai_combat_best_score;
+extern int ai_candidate_block_assignments[16], ai_attacker_blocker_counts[16];
+extern int g_ai_attacker_power[16], g_ai_combat_blocking_card_indices[16];
+extern int combat_damage_attacker_cards[16];
+void ai_assign_blockers(int player);
+void mark_blocked_attackers(int player);
+void record_ai_action_selection(void);
+void replay_ai_action_selection(void);
+int mok_test_choose_ai_target(const target_t *, int);
+int trace_mode, forbid_attack;
+static int random_choice;
+static int blocker_chosen_events;
+static int run_death_dispatch;
+int internal_rand(int max) { return random_choice % max; }
+card_instance_t *get_card_instance(int player, int card)
+{ return &PLAYER_CARD_INSTANCE(player, card); }
+void setup_combat_damage_simulation(int player) { (void)player; }
+int score_current_ai_block_assignment(void)
+{
+  int i, score = 0;
+  for (i = 0; i < ai_blocker_count; ++i)
+    if (ai_candidate_block_assignments[i] == combat_damage_attacker_cards[0]) ++score;
+  return score;
+}
+void human_assign_blockers(int player) { (void)player; }
+void manalinkeh_hostabi_request_duel_display_refresh(void) {}
+int dispatch_trigger2(int p, trigger_t t, const char *s, int a, int c, int d)
+{ (void)p; (void)s; (void)a; (void)c; (void)d;
+  if (t == TRIGGER_BLOCKER_CHOSEN) ++blocker_chosen_events;
+  return 0; }
+int shandalar_record_ai_action_selection(void) { record_ai_action_selection(); return 0; }
+int shandalar_replay_ai_action_selection(void) { replay_ai_action_selection(); return 0; }
 static int created_player, created_card, created_iid;
 static int untapped_player, untapped_card;
 static int graveyard_events, leave_events, graveyard_moves;
 static int refreshes;
+static int damage_calls, damage_amount, damage_target_player, damage_target_card;
+static int damage_source_player, damage_source_card;
+extern int combat_damage_attacker_count;
+extern int combat_damage_attacker_cards[16], combat_damage_attacker_toughness[16];
+extern int combat_damage_blocker_damage[16], combat_damage_best_assignment_codes[16];
+extern int combat_damage_assignment_matrix[16][16];
+void assign_blocker_combat_damage(int, int, int, int *, int, int, int *, int *);
+
+int has_damage_card_targeting(int player, int card)
+{ (void)player; (void)card; return 0; }
+int manalinkeh_damage_creature(int target_player, int target_card, int amount,
+                              int source_player, int source_card)
+{
+  ++damage_calls;
+  damage_target_player = target_player;
+  damage_target_card = target_card;
+  damage_amount = amount;
+  damage_source_player = source_player;
+  damage_source_card = source_card;
+  PLAYER_CARD_INSTANCE(source_player, 10).token_status = 0;
+  return 10;
+}
 
 static void check(int condition, const char *message)
 {
@@ -109,6 +165,11 @@ int dispatch_trigger_twice_once_with_each_player_as_reason(int reason, trigger_t
 {
   (void)reason; (void)prompt; (void)arg;
   if (trigger == TRIGGER_LEAVE_PLAY) ++leave_events;
+  if (run_death_dispatch)
+  {
+    dispatch_trigger(reason, trigger, prompt, arg);
+    dispatch_trigger(1 - reason, trigger, prompt, arg);
+  }
   return 0;
 }
 int manalinkeh_dispatch_event_to_single_card(int player, int card, event_t event,
@@ -119,7 +180,49 @@ int manalinkeh_hostabi_dispatch_card_trigger_event(int player, int card, event_t
 void manalinkeh_kill_card_exe(int player, int card, kill_t mode)
 { (void)player; (void)card; (void)mode; }
 void process_damage_prevention(int player) { (void)player; }
-int regenerate_or_graveyard_triggers(void) { return 0; }
+int allow_response(int player, int phase, char *prompt, int event)
+{ (void)player; (void)phase; (void)prompt; (void)event; return 0; }
+int manalinkeh_compute_and_check_casting_cost(int p, int q, int c)
+{ (void)p; (void)q; (void)c; return 0; }
+int can_pay_untap_cost(int p, int c) { (void)p; (void)c; return 0; }
+int get_recorded_action_count(void) { return g_recorded_action_count; }
+int card_death_ward(int p, int c, event_t e) { (void)p; (void)c; (void)e; return 0; }
+int call_card_function_i(card_instance_t *i, int p, int c, event_t e)
+{ (void)i; (void)p; (void)c; (void)e; return 0; }
+card_instance_t *in_play(int p, int c)
+{ return is_in_play(p, c) ? &PLAYER_CARD_INSTANCE(p, c) : NULL; }
+
+/* Replace response UI/optional spell choices, keeping the engine's actual
+ * mandatory death candidate selection and killed-card callback. */
+int process_response_actions(int player, const char *prompt)
+{
+  unsigned int card = ~0U;
+  int c;
+  (void)prompt;
+  g_activation_dispatch_flags = 0;
+  if (!run_death_dispatch) return 0;
+  if (player == g_other_player)
+    card = choose_response_card(player);
+  else
+    for (c = 0; c < g_active_cards_count[player]; ++c)
+      if (PLAYER_CARD_INSTANCE(player, c).internal_card_id != -1 &&
+          get_card_response_action_type(player, c) == 2)
+      {
+        card = (unsigned int)c;
+        break;
+      }
+  if (card == ~0U) return 0;
+  if (pending_killed_card_handler &&
+      PLAYER_CARD_INSTANCE(player, card).unknown0x14 == (unsigned int)g_trigger_condition)
+    pending_killed_card_handler(player, card);
+  return 1;
+}
+
+void backtrace_and_abort(const char *message)
+{ fprintf(stderr, "%s\n", message); abort(); }
+void append_to_trace_txt(char *text) { (void)text; }
+void TENTATIVE_reassess_all_cards(int player, int present)
+{ (void)player; (void)present; }
 void show_duel_system_error(const char *message) { check(0, message); }
 int dispatch_event(int player, int card, event_t event)
 { (void)player; (void)card; (void)event; return 0; }
@@ -380,6 +483,244 @@ static void test_player_counters(void)
         "Starting a new duel must reset every player counter type");
 }
 
+static void test_end_of_turn(void)
+{
+  int turn_player, p;
+  const unsigned int transient = STATE_JUST_DRAWED | STATE_ATTACKING | STATE_BLOCKING |
+      STATE_ATTACKED | STATE_ISBLOCKED | STATE_BLOCKED | STATE_UNKNOWN8000;
+  const unsigned int persistent = STATE_IN_PLAY | STATE_TAPPED | STATE_SUMMONSICK |
+      STATE_OWNED_BY_OPPONENT | STATE_VIGILANCE;
+
+  for (turn_player = 0; turn_player < 2; ++turn_player)
+  {
+    reset();
+    g_card_count = 16;
+    g_active_player = 0;
+    g_other_player = 1;
+    g_active_cards_count[0] = g_active_cards_count[1] = 2;
+    for (p = 0; p < 2; ++p)
+    {
+      PLAYER_CARD_INSTANCE(p, 0).internal_card_id = 2;
+      PLAYER_CARD_INSTANCE(p, 0).state = persistent | transient;
+      PLAYER_CARD_INSTANCE(p, 0).blocking = 7;
+      PLAYER_CARD_INSTANCE(p, 0).damage_on_card = 5;
+      /* Empty slots remain untouched even if they contain old state. */
+      PLAYER_CARD_INSTANCE(p, 1).state = STATE_BLOCKED;
+      PLAYER_CARD_INSTANCE(p, 1).damage_on_card = 3;
+    }
+    global_cards_data[16].id = 101;
+    global_cards_data[17].id = 102;
+    PLAYER_CARD_INSTANCE(1, 0).dummy3 = 16;
+    g_battlefield_extra_ability_flags = EA_LICH | EA_SELECT_BLOCK;
+
+    check(end_turn_phase(turn_player) == 0, "End-of-turn cleanup must complete");
+    for (p = 0; p < 2; ++p)
+    {
+      check(PLAYER_CARD_INSTANCE(p, 0).state == persistent,
+            "Both players must lose this turn's combat history while retaining persistent state");
+      check(PLAYER_CARD_INSTANCE(p, 0).blocking == -1 &&
+            PLAYER_CARD_INSTANCE(p, 0).damage_on_card == 0,
+            "Both players must lose their blocking assignment and marked damage");
+      check(PLAYER_CARD_INSTANCE(p, 1).state == STATE_BLOCKED &&
+            PLAYER_CARD_INSTANCE(p, 1).damage_on_card == 3,
+            "Cleanup must not alter empty slots");
+    }
+    check(global_cards_data[16].id == 101 && global_cards_data[17].id == -1,
+          "Cleanup must retain referenced dynamic cards and reclaim unused ones");
+    check(g_battlefield_extra_ability_flags == (EA_FORCE_ATTACK | EA_CONTROLLED),
+          "Next turn must retain must-attack and control-change events without stale event flags");
+  }
+}
+
+static void test_tapped_blocker_assignment(void)
+{
+  int attacking_player, step, tapped, best_low, best_high;
+  int damage_ids[16];
+  for (attacking_player = 0; attacking_player < 2; ++attacking_player)
+  for (step = 0; step < 2; ++step)
+  for (tapped = 0; tapped < 2; ++tapped)
+  {
+    reset();
+    memset(combat_damage_assignment_matrix, 0, sizeof(combat_damage_assignment_matrix));
+    memset(combat_damage_best_assignment_codes, 0, sizeof(combat_damage_best_assignment_codes));
+    memset(damage_ids, -1, sizeof(damage_ids));
+    ai_blocker_count = combat_damage_attacker_count = 1;
+    ai_blocker_cards[0] = 5;
+    combat_damage_attacker_cards[0] = 3;
+    combat_damage_attacker_toughness[0] = 2;
+    combat_damage_blocker_damage[0] = 3;
+    PLAYER_CARD_INSTANCE(attacking_player, 3).attack_rating = 9;
+    PLAYER_CARD_INSTANCE(1 - attacking_player, 5).state = STATE_IN_PLAY | STATE_BLOCKING |
+        (tapped ? STATE_TAPPED : 0);
+    best_low = 100;
+    best_high = -1;
+    assign_blocker_combat_damage(attacking_player, 0, 0, damage_ids, step, 0, &best_low, &best_high);
+    check(best_high == 10 && combat_damage_best_assignment_codes[0] == 3,
+          "AI search must consider a tapped blocker's full damage just as an untapped blocker's");
+
+    damage_calls = 0;
+    assign_blocker_combat_damage(attacking_player, 0, 0, damage_ids, step, 1, &best_low, &best_high);
+    check(damage_calls == 1 && damage_amount == 3 && damage_ids[0] == 10 &&
+          damage_target_player == attacking_player && damage_target_card == 3 &&
+          damage_source_player == 1 - attacking_player && damage_source_card == 5,
+          "Applying the AI assignment must create damage from the blocker to its attacker");
+    check(PLAYER_CARD_INSTANCE(1 - attacking_player, 10).token_status ==
+          (0x40000 | (step == 0 ? 0x100000 : 0)),
+          "Blocker damage must keep its combat and first-strike flags");
+    check(!!(PLAYER_CARD_INSTANCE(1 - attacking_player, 5).state & STATE_TAPPED) == tapped,
+          "Assigning damage must preserve the blocker's tapped state");
+  }
+}
+
+static void test_ai_blocker_bridge(void)
+{
+  int count, i, allow, speculate;
+  for (count = 1; count <= 16; count *= 2)
+  for (allow = 0; allow < 2; ++allow)
+  for (speculate = 0; speculate < 2; ++speculate)
+  {
+    reset();
+    ai_blocker_player = 1;
+    ai_blocker_count = count;
+    combat_damage_attacker_count = 1;
+    combat_damage_attacker_cards[0] = 125;
+    g_ai_combat_best_score = 16;
+    g_ai_attacker_power[0] = allow ? (1 << count) - 1 : 0;
+    g_duel_ai_mode_state = speculate;
+    g_ai_speculation_depth = 0;
+    g_current_player = 0;
+    g_current_turn = 1;
+    g_battlefield_extra_ability_flags = EA_SELECT_BLOCK;
+    g_activation_event_flags = 0;
+    blocker_chosen_events = 0;
+    memset(ai_attacker_blocker_counts, 0, sizeof(ai_attacker_blocker_counts));
+    memset(g_ai_combat_blocking_card_indices, 0, sizeof(g_ai_combat_blocking_card_indices));
+    g_active_cards_count[0] = 126;
+    g_active_cards_count[1] = count + 1;
+    PLAYER_CARD_INSTANCE(0, 125).internal_card_id = 2;
+    PLAYER_CARD_INSTANCE(0, 125).state = STATE_IN_PLAY | STATE_ATTACKING;
+    for (i = 0; i < count; ++i)
+    {
+      ai_blocker_cards[i] = i + 1;
+      PLAYER_CARD_INSTANCE(1, i + 1).internal_card_id = 3;
+      PLAYER_CARD_INSTANCE(1, i + 1).state = STATE_IN_PLAY;
+      PLAYER_CARD_INSTANCE(1, i + 1).blocking = -1;
+    }
+    ai_assign_blockers(0);
+    check(blocker_chosen_events == (allow ? count : 0),
+          "Imported blocker triggers must use the battlefield event mask");
+    for (i = 0; i < count; ++i)
+      check(PLAYER_CARD_INSTANCE(1, i + 1).blocking == (allow ? 125 : -1) &&
+            !!(PLAYER_CARD_INSTANCE(1, i + 1).state & STATE_BLOCKING) == allow,
+            "Imported blockers must read the engine's chosen attacker, including choices beyond slot seven");
+    mark_blocked_attackers(0);
+    check(!!(PLAYER_CARD_INSTANCE(0, 125).state & STATE_ISBLOCKED) == allow,
+          "The combat engine must recognize the chosen attacker as blocked");
+  }
+}
+
+static void test_ai_target_replay(void)
+{
+  const target_t trial[] = {{0, 6}, {1, 12}};
+  const target_t changed[] = {{1, 12}, {0, 6}};
+  const target_t missing[] = {{0, 6}};
+  const target_t players[] = {{1, -1}, {0, 6}};
+  int difficulty;
+  reset();
+  random_choice = 1;
+  g_recorded_action_count = 0;
+  check(mok_test_choose_ai_target(trial, 2), "AI target speculation must select a candidate");
+  check(g_recorded_action_count == 1 && g_trial_recorded_action_types[0] == 3 &&
+        g_trial_recorded_action_targets[0] == 0x410c,
+        "Target recording must set the action type without overwriting the replay cursor");
+  for (difficulty = 1; difficulty <= 3; ++difficulty)
+  {
+    g_shandalar_difficulty = difficulty;
+    g_duel_ai_mode_state = 0;
+    g_recorded_action_count = 0;
+    g_recorded_action_targets[0] = g_trial_recorded_action_targets[0];
+    g_recorded_action_codes[0] = 1;
+    g_recorded_action_types[0] = 3;
+    g_spell_fizzled = 0;
+    check(mok_test_choose_ai_target(changed, 2) && g_ai_recorded_choice == 0 &&
+          g_recorded_action_count == 1,
+          "Replay must select the recorded player/card after candidate order changes");
+    g_recorded_action_count = 0;
+    check(!mok_test_choose_ai_target(missing, 1) && g_spell_fizzled,
+          "A missing recorded target must fizzle instead of hitting a different target");
+    g_recorded_action_count = 0;
+    g_recorded_action_targets[0] = 0x41ff;
+    g_spell_fizzled = 0;
+    check(mok_test_choose_ai_target(players, 2) && g_ai_recorded_choice == 0,
+          "Player-only targets must decode the no-card sentinel");
+  }
+  g_shandalar_difficulty = 0;
+  g_recorded_action_count = 0;
+  g_recorded_action_targets[0] = 0x410c;
+  check(mok_test_choose_ai_target(changed, 2) && g_ai_recorded_choice == 1,
+        "Lowest difficulty must retain main's original index-based replay behavior");
+  g_duel_ai_mode_state = 1;
+  random_choice = 0;
+  g_recorded_action_count = 0;
+  g_recorded_action_codes[0] = 0;
+  check(mok_test_choose_ai_target(players, 2) &&
+        g_trial_recorded_action_targets[0] == 0x41ff &&
+        g_trial_recorded_action_internal_card_ids[0] == -1,
+        "Recording a player target must not read nonexistent card slot 255");
+}
+
+static void test_combat_death_ordering(void)
+{
+  int turn, speculative, saved_owner, p, c;
+  for (turn = 0; turn < 2; ++turn)
+  for (speculative = 0; speculative < 2; ++speculative)
+  for (saved_owner = 0; saved_owner < 2; ++saved_owner)
+  {
+    reset();
+    g_active_player = 0;
+    g_other_player = 1;
+    g_current_player = turn;
+    g_current_turn = saved_owner;
+    g_event_player = 1 - saved_owner;
+    g_duel_ai_mode_state = speculative;
+    g_duel_network_flags = 0;
+    g_trigger_condition = -1;
+    g_nested_trigger_depth = 0;
+    g_regenerate_or_graveyard_triggers_in_progress = 0;
+    g_trigger_dispatch_depth = 0;
+    for (p = 0; p < 2; ++p)
+    {
+      g_active_cards_count[p] = p == turn ? 1 : 2;
+      g_duel_summary.creature_counts[p] = g_active_cards_count[p];
+      for (c = 0; c < g_active_cards_count[p]; ++c)
+      {
+        card_instance_t *inst = &PLAYER_CARD_INSTANCE(p, c);
+        inst->internal_card_id = inst->original_internal_card_id = 2;
+        inst->state = STATE_IN_PLAY | (p == turn ? STATE_ATTACKING : STATE_BLOCKING);
+        inst->damage_on_card = inst->toughness = p == turn ? 2 : 1;
+        inst->token_status = STATUS_DYING;
+        inst->kill_code = KILL_DESTROY;
+        inst->unknown0x14 = TRIGGER_GRAVEYARD_ORDER;
+      }
+    }
+    pending_killed_card_handler = process_killed_card;
+    run_death_dispatch = 1;
+    regenerate_or_graveyard_triggers();
+    run_death_dispatch = 0;
+    check(graveyard_moves == 3 && g_duel_summary.creatures_died == 3,
+          "A lethally damaged attacker and both blockers must reach the graveyard");
+    for (p = 0; p < 2; ++p)
+      for (c = 0; c < g_active_cards_count[p]; ++c)
+        check(PLAYER_CARD_INSTANCE(p, c).internal_card_id == -1 &&
+              PLAYER_CARD_INSTANCE(p, c).kill_code == 0,
+              "Death ordering must resolve pending deaths for both players");
+    check(g_current_turn == saved_owner && g_event_player == 1 - saved_owner,
+          "Trigger dispatch must restore its owner and preserve response event context");
+    check(!pending_killed_card_handler && !g_regenerate_or_graveyard_triggers_in_progress,
+          "The completed death window must clear its pending handler and recursion guard");
+  }
+}
+
 int main(void)
 {
   test_player_counters();
@@ -390,5 +731,10 @@ int main(void)
   test_death_events();
   test_stack_untap();
   test_untap_preparation();
+  test_end_of_turn();
+  test_tapped_blocker_assignment();
+  test_ai_blocker_bridge();
+  test_ai_target_replay();
+  test_combat_death_ordering();
   return failures ? 1 : 0;
 }

@@ -46,16 +46,17 @@ def write_header(path, base, count):
 #include <stddef.h>
 #include <stdint.h>
 
-typedef void (*manalinkeh_opaque_fn)(void);
+/* Address storage only. Cast to the entry's actual signature before calling. */
+typedef uintptr_t manalinkeh_veneer_address;
 
 #define MANALINKEH_VENEER_BASE 0x%08xu
 #define MANALINKEH_VENEER_STRIDE 5u
 #define MANALINKEH_VENEER_COUNT %du
 
-extern const manalinkeh_opaque_fn
+extern const manalinkeh_veneer_address
     manalinkeh_veneer_table[MANALINKEH_VENEER_COUNT];
 
-manalinkeh_opaque_fn manalinkeh_resolve_veneer(uint32_t legacy_address);
+manalinkeh_veneer_address manalinkeh_resolve_veneer(uint32_t legacy_address);
 
 #endif
 """
@@ -71,7 +72,7 @@ def write_source(path, entries):
     lines = [
         '#include "manalinkeh_veneer_table.h"',
         "",
-        "/* Deliberately opaque: the veneer list contains several signatures. */",
+        "/* Address registry: entries have different signatures and are never called here. */",
     ]
     lines.extend(f"extern void {name}(void);" for name in valid_names)
     stdcall_names = sorted(
@@ -87,7 +88,7 @@ def write_source(path, entries):
     lines.extend(
         [
             "",
-            "const manalinkeh_opaque_fn",
+            "const manalinkeh_veneer_address",
             "manalinkeh_veneer_table[MANALINKEH_VENEER_COUNT] = {",
         ]
     )
@@ -96,12 +97,12 @@ def write_source(path, entries):
         value = stdcall_match.group(1) if stdcall_match else name
         if not IDENTIFIER_RE.fullmatch(value):
             value = "0"
-        lines.append(f"  (manalinkeh_opaque_fn){value}, /* 0x{address:08x} */")
+        lines.append(f"  (manalinkeh_veneer_address){value}, /* 0x{address:08x} */")
     lines.extend(
         [
             "};",
             "",
-            "manalinkeh_opaque_fn",
+            "manalinkeh_veneer_address",
             "manalinkeh_resolve_veneer(uint32_t legacy_address)",
             "{",
             "  uint32_t offset;",

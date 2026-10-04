@@ -1554,8 +1554,8 @@ int generic_stealing_aura(int player, int card, event_t event, target_definition
 int sliver_with_shared_shade_ability(int player, int card, event_t event, int pow, int tou, int key, int s_key);
 int shared_sliver_activated_ability(int player, int card, event_t event, int mode, int cless, int black, int blue, int green, int red, int white,
 									uint32_t variable_costs, target_definition_t *td2, const char *prompt);
-const char* sliver_to_regenerate(int who_chooses, int player, int card);
-const char* activating_sliver(int who_chooses, int player, int card);
+const char* sliver_to_regenerate(int who_chooses, int player, int card, int unused_source_player, int unused_source_card);
+const char* activating_sliver(int who_chooses, int player, int card, int unused_source_player, int unused_source_card);
 int aura_attached_to_me(int player, int card, event_t event, resolve_trigger_t trigger_mode, test_definition_t *test2);
 int karoo(int player, int card, event_t event, int color1, int color2, int ai_card);
 int gain_control_and_attach_as_aura(int player, int card, event_t event, int t_player, int t_card);
@@ -1565,7 +1565,7 @@ int delving(int player, int card);
 int cast_spell_with_delve(int player, int card);
 int delve(int player, int card, event_t event);
 void whenever_a_card_is_put_into_a_graveyard_from_anywhere_exile_that_card(int player, int card, event_t event, int t_player, int type, test_definition_t *this_test);
-const char* target_is_monocolored(int who_chooses, int player, int card);
+const char* target_is_monocolored(int who_chooses, int player, int card, int unused_source_player, int unused_source_card);
 int is_plane_card(int id);
 void immortal_enchantment(int player, int card, event_t event);
 void pump_ability_by_test(int player, int card, int t_player, pump_ability_t *pump, test_definition_t *this_test);
@@ -1585,13 +1585,13 @@ void tutor_multiple_card_from_hand(int who_chooses, int t_player, int who_gets_t
 int prowess_mode(int player, int card, event_t event, int mode) __attribute__((warn_unused_result));
 int prowess(int player, int card, event_t event);
 int ferocious(int player, int card);
-const char* is_face_down_creature(int who_chooses, int player, int card);
+const char* is_face_down_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card);
 int can_block(int player, int card);
 void select_blocker(int player, int card, int player_who_chooses_blockers);
 void when_enchanted_permanent_dies_return_aura_to_hand(int player, int card, event_t event);
 void bolster(int player, int card, int num_counters);
 void dash(int player, int card, event_t event, int cless, int black, int blue, int green, int red, int white);
-const char* is_multicolored(int who_chooses, int player, int card);	// targeting lambda
+const char* is_multicolored(int who_chooses, int player, int card, int unused_source_player, int unused_source_card);	// targeting lambda
 void menace(int player, int card, event_t event);
 int fx_menace(int player, int card, event_t event);
 void minimize_nondraining_mana(void);

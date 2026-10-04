@@ -6278,7 +6278,7 @@ int card_slayer_of_the_wicked(int player, int card, event_t event)
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_PERMANENT);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td.extra = (int)target_is_vampire_werewolf_or_zombie;
+		td.extra = target_predicate_extra(target_is_vampire_werewolf_or_zombie);
 
 		card_instance_t* instance = get_card_instance(player, card);
 
@@ -6841,7 +6841,7 @@ Destroy target Spirit or enchantment. */
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT );
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_enchantment_or_spirit_permanent;
+	td.extra = target_predicate_extra(is_enchantment_or_spirit_permanent);
 
 	card_instance_t *instance = get_card_instance( player, card );
 
@@ -6884,7 +6884,7 @@ int card_victim_of_night(int player, int card, event_t event)
   target_definition_t td;
   default_target_definition(player, card, &td, TYPE_CREATURE);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int)target_is_not_vampire_werewolf_or_zombie;
+  td.extra = target_predicate_extra(target_is_not_vampire_werewolf_or_zombie);
 
   if (event == EVENT_RESOLVE_SPELL)
 	{

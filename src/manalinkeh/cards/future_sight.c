@@ -2,7 +2,7 @@
 
 // Functions
 
-static const char* exchangeable_aura(int who_chooses, int player, int card)
+static const char* exchangeable_aura(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( has_subtype(player, card, SUBTYPE_AURA_CREATURE) || has_subtype(player, card, SUBTYPE_AURA_PERMANENT) ){
 		return NULL;
@@ -24,7 +24,7 @@ static int aura_swap(int player, int card, event_t event, int cless, int black, 
 				target_definition_t td;
 				base_target_definition(player, card, &td, TYPE_ENCHANTMENT);
 				td.zone = TARGET_ZONE_HAND;
-				td.extra = (int32_t)exchangeable_aura;
+				td.extra = target_predicate_extra(exchangeable_aura);
 				td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 				td.illegal_abilities = 0;
 
@@ -40,7 +40,7 @@ static int aura_swap(int player, int card, event_t event, int cless, int black, 
 			target_definition_t td;
 			base_target_definition(player, card, &td, TYPE_ENCHANTMENT);
 			td.zone = TARGET_ZONE_HAND;
-			td.extra = (int32_t)exchangeable_aura;
+			td.extra = target_predicate_extra(exchangeable_aura);
 			td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 			td.illegal_abilities = 0;
 
@@ -797,7 +797,7 @@ Enchanted creature gets +3/+3 and has first strike, vigilance, and lifelink. (Da
   default_target_definition(player, card, &td, TYPE_CREATURE);
   td.preferred_controller = player;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)target_is_already_enchanted;
+  td.extra = target_predicate_extra(target_is_already_enchanted);
 
   card_instance_t* instance;
   if ((event == EVENT_POWER || event == EVENT_TOUGHNESS)
@@ -2584,7 +2584,7 @@ int card_rift_elemental(int player, int card, event_t event)
   td.preferred_controller = player;
   td.allowed_controller = player;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int)target_has_a_time_counter;
+  td.extra = target_predicate_extra(target_has_a_time_counter);
 
   card_instance_t *instance = get_card_instance(player, card);
 
@@ -3193,7 +3193,7 @@ int card_sporoloth_ancient(int player, int card, event_t event)
   base_target_definition(player, card, &td, TYPE_CREATURE);
   td.allowed_controller = td.preferred_controller = player;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int)target_has_2_spore_counters_and_can_activate;
+  td.extra = target_predicate_extra(target_has_2_spore_counters_and_can_activate);
 
   if (event == EVENT_CAN_ACTIVATE)
 	return !is_humiliated(player, card) && can_target(&td);

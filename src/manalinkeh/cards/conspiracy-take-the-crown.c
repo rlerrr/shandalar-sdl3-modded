@@ -393,7 +393,7 @@ int card_conspiracy_hymn_of_the_wilds(int player, int card, event_t event){
 	return vanguard_card(player, card, event, 7, 20, 11);
 }
 
-static const char* can_activate_this(int who_chooses, int player, int card)
+static const char* can_activate_this(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( generic_activated_ability(player, card, EVENT_CAN_ACTIVATE, 0, MANACOST0, 0, NULL, NULL) ){
 		return NULL;
@@ -422,7 +422,7 @@ int card_conspiracy_incendiary_dissent(int player, int card, event_t event){
 		target_definition_t td;
 		counterspell_target_definition(player, card, &td, TYPE_CREATURE);
 		td.allowed_controller = td.preferred_controller = player;
-		td.extra = (int32_t)can_activate_this;
+		td.extra = target_predicate_extra(can_activate_this);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 		card_instance_t *instance = get_card_instance(player, card);

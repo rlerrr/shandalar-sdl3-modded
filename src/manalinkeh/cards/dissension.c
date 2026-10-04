@@ -58,7 +58,7 @@ void protection_from_multicolored(int player, int card, event_t event){
 	}
 }
 
-const char* is_multicolored(int who_chooses, int player, int card){
+const char* is_multicolored(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( count_colors(player, card) > 1 ){
 		return NULL;
 	}
@@ -1366,7 +1366,7 @@ int card_error_trial(int player, int card, event_t event){
 
 		target_definition_t td2;
 		counterspell_target_definition(player, card, &td2, TYPE_SPELL);
-		td2.extra = (int32_t)is_multicolored;
+		td2.extra = target_predicate_extra(is_multicolored);
 		td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 		return generic_split_card(player, card, event, can_target(&td), 0, MANACOST_UB(1, 1), counterspell(player, card, EVENT_CAN_CAST, &td2, 0), 0, 0, NULL, NULL);
@@ -1384,7 +1384,7 @@ int card_error_trial(int player, int card, event_t event){
 	if( event == EVENT_PLAY_SECOND_HALF ){
 		target_definition_t td2;
 		counterspell_target_definition(player, card, &td2, TYPE_SPELL);
-		td2.extra = (int32_t)is_multicolored;
+		td2.extra = target_predicate_extra(is_multicolored);
 		td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		counterspell(player, card, EVENT_CAST_SPELL, &td2, 0);
 	}
@@ -1399,7 +1399,7 @@ int card_error_trial(int player, int card, event_t event){
 
 	target_definition_t td2;
 	counterspell_target_definition(player, card, &td2, TYPE_SPELL);
-	td2.extra = (int32_t)is_multicolored;
+	td2.extra = target_predicate_extra(is_multicolored);
 	td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	if(event == EVENT_RESOLVE_SPELL ){
@@ -3275,7 +3275,7 @@ Draw a card. */
 	default_target_definition(player, card, &td, TYPE_CREATURE );
 	td.preferred_controller = player;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int)is_multicolored;
+	td.extra = target_predicate_extra(is_multicolored);
 
 
 	if( event == EVENT_RESOLVE_SPELL ){
@@ -3302,7 +3302,7 @@ int card_pure_simple(int player, int card, event_t event){
 	if( event == EVENT_MODIFY_COST ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_PERMANENT );
-		td.extra = (int32_t)is_multicolored;
+		td.extra = target_predicate_extra(is_multicolored);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		return generic_split_card(player, card, event, can_target(&td), 0, MANACOST_XGW(1, 1, 1), 1, 0, 0, NULL, NULL);
 	}
@@ -3312,7 +3312,7 @@ int card_pure_simple(int player, int card, event_t event){
 	if( event == EVENT_PLAY_FIRST_HALF ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_PERMANENT );
-		td.extra = (int32_t)is_multicolored;
+		td.extra = target_predicate_extra(is_multicolored);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		new_pick_target(&td, "Select target multicolored permanent.", 0, 1 | GS_LITERAL_PROMPT);
 	}
@@ -3323,7 +3323,7 @@ int card_pure_simple(int player, int card, event_t event){
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT );
-	td.extra = (int32_t)is_multicolored;
+	td.extra = target_predicate_extra(is_multicolored);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	int priority_simple = 5;
@@ -3905,7 +3905,7 @@ int card_simic_basilisk(int player, int card, event_t event){
 									&td, "Select target creature with a +1/+1 counter.");
 }
 
-static const char* can_move_aura_same_controller(int who_chooses, int player, int card){
+static const char* can_move_aura_same_controller(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	int rvalue = 0;
 	set_special_flags(player, card, SF_MOVE_AURA_SAME_CONTROLLER);
 	rvalue = call_card_function(player, card, EVENT_CAN_MOVE_AURA);
@@ -3941,7 +3941,7 @@ int card_simic_guildmage(int player, int card, event_t event){
 	td1.required_subtype = SUBTYPE_AURA_CREATURE;
 	td1.preferred_controller = player;
 	td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td1.extra = (int)can_move_aura_same_controller;
+	td1.extra = target_predicate_extra(can_move_aura_same_controller);
 
 	card_instance_t *instance = get_card_instance( player, card );
 
@@ -4162,7 +4162,7 @@ Defender (This creature can't attack.)
 	return generic_activated_ability(player, card, event, GAA_SACRIFICE_ME | GAA_SPELL_ON_STACK, MANACOST_XU(1, 1), 0, &td, NULL);
 }
 
-static const char* cmc_is_2(int who_chooses, int player, int card){
+static const char* cmc_is_2(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( get_cmc(player, card) == 2){
 		return NULL;
 	}
@@ -4178,7 +4178,7 @@ Counter target spell with converted mana cost 2. */
 	target_definition_t td;
 	counterspell_target_definition(player, card, &td, TYPE_ANY);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int)cmc_is_2;
+	td.extra = target_predicate_extra(cmc_is_2);
 
 	return counterspell(player, card, event, &td, 0);
 }

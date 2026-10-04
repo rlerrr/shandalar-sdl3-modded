@@ -3181,7 +3181,7 @@ int card_piety_charm(int player, int card, event_t event)
 	  default_target_definition(player, card, &td_aura, TYPE_ENCHANTMENT);
 	  td_aura.required_subtype = SUBTYPE_AURA;
 	  td_aura.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	  td_aura.extra = (int)target_is_attached_to_creature;
+	  td_aura.extra = target_predicate_extra(target_is_attached_to_creature);
 
 	  target_definition_t td_soldier;
 	  default_target_definition(player, card, &td_soldier, TYPE_CREATURE);

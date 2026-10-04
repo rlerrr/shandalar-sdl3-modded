@@ -668,7 +668,7 @@ int card_chisei_heart_of_oceans(int player, int card, event_t event)
 	  td.preferred_controller = player;
 	  td.allowed_controller = player;
 	  td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	  td.extra = (int)target_must_have_counters;
+	  td.extra = target_predicate_extra(target_must_have_counters);
 
 	  card_instance_t* instance = get_card_instance(player, card);
 	  instance->number_of_targets = 0;
@@ -2002,7 +2002,7 @@ Whenever ~ deals combat damage to a player, that player discards two cards. */
 }
 
 static int opal_eye_card = -1;
-static const char* is_damaging_opal_eye(int who_chooses, int player, int card){
+static const char* is_damaging_opal_eye(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t *instance = get_card_instance(player, card);
 	if( is_what(player, card, TYPE_EFFECT) && instance->internal_card_id == damage_card ){
 		if( instance->damage_target_player == who_chooses && instance->damage_target_card == opal_eye_card ){
@@ -2033,7 +2033,7 @@ Bushido 1 (Whenever this creature blocks or becomes blocked, it gets +1/+1 until
 
 	target_definition_t td1;
 	default_target_definition(player, card, &td1, 0);
-	td1.extra = (int32_t)is_damaging_opal_eye;
+	td1.extra = target_predicate_extra(is_damaging_opal_eye);
 	td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	opal_eye_card = card;
 

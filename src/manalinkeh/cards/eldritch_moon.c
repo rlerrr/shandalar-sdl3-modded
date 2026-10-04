@@ -5537,7 +5537,7 @@ int card_ulvenwald_observer(int player, int card, event_t event){
 	return 0;
 }
 
-static const char* is_not_transformed(int who_chooses, int player, int card)
+static const char* is_not_transformed(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( ! check_special_flags3(player, card, SF3_CARD_IS_FLIPPED) ){
 		return NULL;
@@ -5561,7 +5561,7 @@ int card_waxing_moon(int player, int card, event_t event)
 	td.preferred_controller = player;
 	if( player == AI ){
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td.extra = (int32_t)is_not_transformed;
+		td.extra = target_predicate_extra(is_not_transformed);
 	}
 
 	card_instance_t *instance = get_card_instance( player, card);

@@ -876,7 +876,7 @@ Banding
 
 // azure drake --> vanilla
 
-static const char* damage_from_sorcery_source(int who_chooses, int player, int card){
+static const char* damage_from_sorcery_source(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t* dmg = get_card_instance(player, card);
 	if ( dmg->internal_card_id == damage_card ){
 		int good = dmg->targets[3].player & TYPE_SORCERY;
@@ -906,7 +906,7 @@ by one of those sorcery spells this turn, rounded down. */
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_EFFECT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)damage_from_sorcery_source;
+	td.extra = target_predicate_extra(damage_from_sorcery_source);
 	td.illegal_abilities = 0;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -1967,7 +1967,7 @@ Prevent all combat damage that would be dealt to ~ by enchanted creatures. */
   return 0;
 }
 
-static const char* ee_legal_target(int who_chooses, int player, int card){
+static const char* ee_legal_target(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t* instance = get_card_instance(player, card);
 	if( instance->damage_target_player > -1 ){
 		int type = get_type(instance->damage_target_player, instance->damage_target_card);
@@ -1994,7 +1994,7 @@ Attach target Aura attached to a creature or land to another permanent of that t
 	default_target_definition(player, card, &td, TYPE_ENCHANTMENT);
 	td.required_subtype = SUBTYPE_AURA;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int)ee_legal_target;
+	td.extra = target_predicate_extra(ee_legal_target);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -2048,7 +2048,7 @@ int is_land_destroyer(int player, int card){
 	return 0;
 }
 
-static const char* land_killer_spell(int who_chooses, int player, int card){
+static const char* land_killer_spell(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( is_land_destroyer(player, card) ){
 		card_instance_t *instance = get_card_instance(player, card);
 		int k;
@@ -2081,7 +2081,7 @@ Enchanted land has "|T: Counter target spell if it would destroy a land you cont
 		target_definition_t td1;
 		counterspell_target_definition(player, card, &td1, TYPE_SPELL);
 		td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td1.extra = (int)land_killer_spell;
+		td1.extra = target_predicate_extra(land_killer_spell);
 
 		if( event == EVENT_CAN_ACTIVATE ){
 			card_instance_t *enc = get_card_instance(p, c);
@@ -2701,7 +2701,7 @@ Giant Turtle can't attack if it attacked during your last turn. */
 }
 
 static int glyph_of_delusion_wall_card = 0;
-static const char* target_is_blocked_by_glyph_of_delusion_wall_card(int who_chooses, int player, int card)
+static const char* target_is_blocked_by_glyph_of_delusion_wall_card(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if (player == current_turn && is_blocking(glyph_of_delusion_wall_card, card)){
 		return NULL;
@@ -2743,7 +2743,7 @@ int card_glyph_of_delusion(int player, int card, event_t event){
 			glyph_of_delusion_wall_card = instance->targets[0].card;
 
 			// This part won't be validated on resolution, but it's supposed to be "blocked by target wall this turn" anyway.
-			td_blocked_by_wall.extra = (int32_t)target_is_blocked_by_glyph_of_delusion_wall_card;
+			td_blocked_by_wall.extra = target_predicate_extra(target_is_blocked_by_glyph_of_delusion_wall_card);
 			td_blocked_by_wall.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 			if (!can_target(&td_blocked_by_wall)){
@@ -3141,7 +3141,7 @@ Enchantment
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_EFFECT);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION | TARGET_SPECIAL_DAMAGE_PLAYER;
-		td.extra = (int32_t)red_black_damage_source;
+		td.extra = target_predicate_extra(red_black_damage_source);
 
 		card_instance_t *instance = get_card_instance(player, card);
 
@@ -4779,14 +4779,14 @@ int card_lesser_werewolf(int player, int card, event_t event){
 	td.allowed_controller =  1-player;
 	td.preferred_controller = 1-player;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_blocking_lw;
+	td.extra = target_predicate_extra(is_blocking_lw);
 
 	target_definition_t td1;
 	default_target_definition(player, card, &td1, TYPE_CREATURE);
 	td1.allowed_controller =  1-player;
 	td1.preferred_controller = 1-player;
 	td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td1.extra = (int32_t)lw_is_blocking_him;
+	td1.extra = target_predicate_extra(lw_is_blocking_him);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -5370,7 +5370,7 @@ Artifact
 	return 0;
 }
 
-static const char* is_damaging_me(int who_chooses, int player, int card){
+static const char* is_damaging_me(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t* dmg = get_card_instance(player, card);
 	if ( dmg->internal_card_id == damage_card ){
 		if( dmg->damage_target_player == who_chooses && dmg->damage_target_card == -1 ){
@@ -5395,7 +5395,7 @@ Artifact
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_EFFECT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_damaging_me;
+	td.extra = target_predicate_extra(is_damaging_me);
 
 	target_definition_t td1;
 	default_target_definition(player, card, &td1, TYPE_CREATURE);
@@ -6024,7 +6024,7 @@ Creatures with |H2swampwalk can be blocked as though they didn't have |H2swampwa
 }
 
 
-static const char* not_already_disabled_by_qtg(int who_chooses, int player, int card){
+static const char* not_already_disabled_by_qtg(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( ! check_special_flags2(player, card, SF2_QUARUM_TRENCH_GNOMES) ){
 		return NULL;
 	}
@@ -6046,7 +6046,7 @@ Creature — Gnome 1/1
 	td.required_subtype = SUBTYPE_PLAINS;
 	if( player == AI ){
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td.extra = (int32_t)not_already_disabled_by_qtg;
+		td.extra = target_predicate_extra(not_already_disabled_by_qtg);
 	}
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -6290,7 +6290,7 @@ int card_rasputin_dreamweaver(int player, int card, event_t event){
 	target_definition_t td;
 	base_target_definition(player, card, &td, 0);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int)target_must_be_damage_targeting_this_rasputin;
+	td.extra = target_predicate_extra(target_must_be_damage_targeting_this_rasputin);
 
 	card_instance_t *instance = get_card_instance( player, card);
 
@@ -6715,7 +6715,7 @@ All damage that would be dealt this turn by target sorcery spell is dealt to tha
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_ANY);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)damage_from_sorcery_source;
+	td.extra = target_predicate_extra(damage_from_sorcery_source);
 	td.illegal_abilities = 0;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -6734,7 +6734,7 @@ All damage that would be dealt this turn by target sorcery spell is dealt to tha
 
 // righteous avengers --> vanilla
 
-static const char* is_instant_or_aura_targetting_one_of_my_permanents(int who_chooses, int player, int card){
+static const char* is_instant_or_aura_targetting_one_of_my_permanents(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 
 	if( is_what(player, card, TYPE_INSTANT | TYPE_INTERRUPT) ||
 		( is_what(player, card, TYPE_ENCHANTMENT) && has_subtype(player, card, SUBTYPE_AURA)) )
@@ -6763,7 +6763,7 @@ int card_ring_of_immortals(int player, int card, event_t event){
 	target_definition_t td;
 	counterspell_target_definition(player, card, &td, TYPE_ANY);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_instant_or_aura_targetting_one_of_my_permanents;
+	td.extra = target_predicate_extra(is_instant_or_aura_targetting_one_of_my_permanents);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -6970,14 +6970,14 @@ Artifact Creature — Shapeshifter 1/1
 	td.allowed_controller =  1-player;
 	td.preferred_controller = 1-player;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_blocking_s;
+	td.extra = target_predicate_extra(is_blocking_s);
 
 	target_definition_t td1;
 	default_target_definition(player, card, &td1, TYPE_CREATURE);
 	td1.allowed_controller =  1-player;
 	td1.preferred_controller = 1-player;
 	td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td1.extra = (int32_t)s_is_blocking_him;
+	td1.extra = target_predicate_extra(s_is_blocking_him);
 
 	card_instance_t *instance = get_card_instance(player, card);
 

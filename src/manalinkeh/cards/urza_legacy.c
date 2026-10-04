@@ -408,7 +408,7 @@ int card_devout_harpist(int player, int card, event_t event)
   default_target_definition(player, card, &td, TYPE_ENCHANTMENT);
   td.required_subtype = SUBTYPE_AURA;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int)target_is_attached_to_creature;
+  td.extra = target_predicate_extra(target_is_attached_to_creature);
 
   if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td))
 	{
@@ -852,7 +852,7 @@ int card_iron_maiden(int player, int card, event_t event){
 	return 0;
 }
 
-static const char* dead_artifact_creature(int who_chooses, int player, int card){
+static const char* dead_artifact_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( is_what(player, card, TYPE_CREATURE) && is_what(player, card, TYPE_ARTIFACT) ){
 		if( get_card_instance(player, card)->kill_code == KILL_DESTROY ){
 			if( who_chooses == HUMAN ){
@@ -881,7 +881,7 @@ Artifact Creature - Insect 1/1
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE );
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)dead_artifact_creature;
+	td.extra = target_predicate_extra(dead_artifact_creature);
 
 	card_instance_t *instance = get_card_instance(player, card);
 

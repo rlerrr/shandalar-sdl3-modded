@@ -176,9 +176,10 @@ int ai_blocker_cards[16];
 // GLOBAL: SHANDALAR 0x005a7750
 int ai_block_damage_orders[16];
 
+// GLOBAL: MOK 0x0060775c
 // GLOBAL: MAGIC 0x00707de0
 // GLOBAL: SHANDALAR 0x005a77d8
-int ai_block_assignments[16];
+int g_ai_combat_blocking_card_indices[16];
 
 // GLOBAL: MAGIC 0x00708080
 // GLOBAL: SHANDALAR 0x005a7a78
@@ -845,10 +846,10 @@ void record_ai_action_selection(void)
   if (g_recorded_action_count < 0x100)
   {
     g_trial_recorded_action_targets[g_recorded_action_count] = g_ai_recorded_action;
+    /* MOK 0x498f59 treats 0xff as a player target, not card slot 255. */
     g_trial_recorded_action_internal_card_ids[g_recorded_action_count] =
-        (g_ai_recorded_action & 0xff) == 0xff
-            ? -1
-            : PLAYER_CARD_INSTANCE((g_ai_recorded_action & 0x100) >> 8, g_ai_recorded_action & 0xff).internal_card_id;
+        (g_ai_recorded_action & 0xff) == 0xff ? -1 :
+        PLAYER_CARD_INSTANCE((g_ai_recorded_action & 0x100) >> 8, g_ai_recorded_action & 0xff).internal_card_id;
     g_trial_recorded_action_types[g_recorded_action_count] = g_ai_recorded_action_type;
     g_trial_recorded_action_codes[g_recorded_action_count] = g_ai_recorded_choice;
     ++g_recorded_action_count;
@@ -3096,7 +3097,8 @@ void enumerate_ai_block_assignments(int player, int blocker_index)
     if (g_ai_attacker_count < score)
     {
       g_ai_attacker_count = score;
-      memcpy(ai_block_assignments, ai_candidate_block_assignments, 0x1c);
+      memcpy(g_ai_combat_blocking_card_indices, ai_candidate_block_assignments,
+             sizeof(g_ai_combat_blocking_card_indices));
       g_ai_current_blocker = g_ai_block_assignment_count;
     }
   }

@@ -675,7 +675,7 @@ int card_befoul(int player, int card, event_t event){
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_land_or_nonblack_creature;
+	td.extra = target_predicate_extra(is_land_or_nonblack_creature);
 
 	card_instance_t *instance = get_card_instance(player, card);
 

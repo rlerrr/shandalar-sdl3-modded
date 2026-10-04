@@ -162,7 +162,7 @@ static int check_for_equipment_targets_impl(int player, int card, target_definit
   if (is_equipping(player, card))
 	{
 	  td->special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	  td->extra = (int)already_equipping;
+	  td->extra = target_predicate_extra(already_equipping);
 	}
 #endif
 

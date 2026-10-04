@@ -111,7 +111,7 @@ Creature - Human Artificer 1/1
 	return 0;
 }
 
-static const char* is_damaging_artifact_creature(int who_chooses, int player, int card){
+static const char* is_damaging_artifact_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t *instance = get_card_instance(player, card);
 	if( instance->internal_card_id == damage_card ){
 		if( is_artifact_creature(instance->damage_target_player, instance->damage_target_card) ){
@@ -134,7 +134,7 @@ Creature - Human Artificer 2/2
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_EFFECT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_damaging_artifact_creature;
+	td.extra = target_predicate_extra(is_damaging_artifact_creature);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -640,7 +640,7 @@ Artifact
   return 0;
 }
 
-static const char* damage_from_artifact_source(int who_chooses, int player, int card){
+static const char* damage_from_artifact_source(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t* dmg = get_card_instance(player, card);
 	if( dmg->internal_card_id != damage_card ){
 		return "must be a damage card";
@@ -679,7 +679,7 @@ Enchantment
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_EFFECT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)damage_from_artifact_source;
+	td.extra = target_predicate_extra(damage_from_artifact_source);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -1261,7 +1261,7 @@ As long as ~ is untapped, all damage that would be dealt to you by artifacts is 
 			if( damage->damage_target_card == -1 && damage->damage_target_player == player &&
 				damage->info_slot > 0
 			  ){
-				if( damage_from_artifact_source(-1, affected_card_controller, affected_card) ){
+				if( damage_from_artifact_source(-1, affected_card_controller, affected_card, -1, -1) ){
 					damage->damage_target_card = card;
 				}
 			}
@@ -1477,7 +1477,7 @@ Land
   return 0;
 }
 
-static const char* permanent_you_control_and_own(int who_chooses, int player, int card){
+static const char* permanent_you_control_and_own(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( who_chooses == AI ){
 		if( check_state(player, card, STATE_OWNED_BY_OPPONENT) ){
 			return NULL;
@@ -1507,7 +1507,7 @@ Artifact
 	td1.allowed_controller = player;
 	td1.preferred_controller = player;
 	td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td1.extra = (int32_t)permanent_you_control_and_own;
+	td1.extra = target_predicate_extra(permanent_you_control_and_own);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -2451,7 +2451,7 @@ int card_tetravite(int player, int card, event_t event){
 }
 
 static int tetra_code = 0;
-static const char* is_my_tetravite(int unused, int player, int card){
+static const char* is_my_tetravite(int unused, int player, int card, int unused_source_player, int unused_source_card){
 	if( get_id(player, card) == CARD_ID_TETRAVITE && get_special_infos(player, card) == tetra_code ){
 		return NULL;
 	}
@@ -2562,7 +2562,7 @@ At the beginning of your upkeep, you may exile any number of tokens created with
 				target_definition_t td;
 				default_target_definition(player, card, &td, TYPE_CREATURE );
 				td.illegal_abilities = 0;
-				td.extra = (int32_t)is_my_tetravite;
+				td.extra = target_predicate_extra(is_my_tetravite);
 				td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 				tetra_code = get_special_infos(player, card);
 

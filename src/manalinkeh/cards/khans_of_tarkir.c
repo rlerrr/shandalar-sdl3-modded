@@ -110,7 +110,7 @@ static void boost_creatures_by_counters(int player, int card, event_t event, int
 	}
 }
 
-const char* is_face_down_creature(int who_chooses, int player, int card)
+const char* is_face_down_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if(	get_id(player, card) == CARD_ID_FACE_DOWN_CREATURE){
 		return NULL;
@@ -2104,7 +2104,7 @@ int card_rakshasas_secret(int player, int card, event_t event){
 	return generic_spell(player, card, event, GS_CAN_ONLY_TARGET_OPPONENT, &td, NULL, 1, NULL);
 }
 
-static const char* has_tou_lesser_than_available_p1_p1_counters(int who_chooses, int player, int card){
+static const char* has_tou_lesser_than_available_p1_p1_counters(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( (get_toughness(player, card) - get_card_instance(player, card)->damage_on_card) <=
 		count_counters_by_counter_and_card_type(player, COUNTER_P1_P1, TYPE_CREATURE)
 	 ){
@@ -2129,7 +2129,7 @@ int card_retribution_of_the_ancients(int player, int card, event_t event){
 	default_target_definition(player, card, &td, TYPE_CREATURE);
 	if( player == AI ){
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td.extra = (int32_t)has_tou_lesser_than_available_p1_p1_counters;
+		td.extra = target_predicate_extra(has_tou_lesser_than_available_p1_p1_counters);
 	}
 
 	target_definition_t tdc;
@@ -3417,7 +3417,7 @@ int card_smoke_teller(int player, int card, event_t event){
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE);
-	td.extra = (int32_t)is_face_down_creature;
+	td.extra = target_predicate_extra(is_face_down_creature);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td) ){
@@ -4945,7 +4945,7 @@ int card_sultai_charm(int player, int card, event_t event){
 
 	target_definition_t td1;
 	default_target_definition(player, card, &td1, TYPE_CREATURE);
-	td1.extra = (int32_t)target_is_monocolored;
+	td1.extra = target_predicate_extra(target_is_monocolored);
 	td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	target_definition_t td2;
@@ -5203,7 +5203,7 @@ int card_trap_essence(int player, int card, event_t event){
 	return 0;
 }
 
-const char* target_is_nonland(int who_chooses, int player, int card){
+const char* target_is_nonland(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( ! is_what(player, card, TYPE_LAND) ){
 		return NULL;
 	}
@@ -5222,7 +5222,7 @@ int card_utter_end(int player, int card, event_t event){
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT);
-	td.extra = (int32_t)target_is_nonland;
+	td.extra = target_predicate_extra(target_is_nonland);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -5674,7 +5674,7 @@ int card_dragon_throne_of_tarkir(int player, int card, event_t event){
 	return 0;
 }
 
-static const char* is_colorless_creature(int who_chooses, int player, int card)
+static const char* is_colorless_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( get_color (player, card) == 0 ){
 		return NULL;
@@ -5697,7 +5697,7 @@ int card_ghostfire_blade(int player, int card, event_t event){
 		td.allowed_controller = player;
 		td.preferred_controller = player;
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td.extra = (int32_t)is_colorless_creature;
+		td.extra = target_predicate_extra(is_colorless_creature);
 
 		if( can_target(&td) ){
 			return basic_equipment(player, card, event, 1);
@@ -5779,7 +5779,7 @@ int card_lens_of_clarity(int player, int card, event_t event){
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE);
-	td.extra = (int32_t)is_face_down_creature;
+	td.extra = target_predicate_extra(is_face_down_creature);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	td.allowed_controller = 1-player;
 

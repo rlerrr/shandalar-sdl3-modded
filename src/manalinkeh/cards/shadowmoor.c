@@ -3392,7 +3392,7 @@ int card_medicine_runner(int player, int card, event_t event)
 		 * counter to remove from permanents that *do* have them).  However, it also prevents it from using this ability to kill a Skulking
 		 * Ghost or activate another whenever-this-becomes-targeted trigger. I think this is an acceptable tradeoff. */
 			td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-			td.extra = (int)target_must_have_counters;
+			td.extra = target_predicate_extra(target_must_have_counters);
 		}
 
 		counter_t typ;
@@ -4846,7 +4846,7 @@ int card_repel_intruders(int player, int card, event_t event){
 	return 0;
 }
 
-static const char* can_be_activated(int who_chooses, int player, int card)
+static const char* can_be_activated(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( generic_activated_ability(player, card, EVENT_CAN_ACTIVATE, GAA_UNTAPPED, MANACOST0, 0, NULL, NULL) ){
 		return NULL;
@@ -4867,7 +4867,7 @@ Creature - Kithkin Cleric 2/2
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE);
 	td.allowed_controller = td.preferred_controller = player;
-	td.extra = (int32_t)can_be_activated;
+	td.extra = target_predicate_extra(can_be_activated);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	td.illegal_abilities = 0;
 	td.required_color = get_sleighted_color_test(player, card, COLOR_TEST_WHITE);

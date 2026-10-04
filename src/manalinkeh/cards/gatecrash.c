@@ -1671,7 +1671,7 @@ int card_illness_in_the_ranks(int player, int card, event_t event)
   return global_enchantment(player, card, event);
 }
 
-static const char* has_mana_to_target_this(int who_chooses, int player, int card)
+static const char* has_mana_to_target_this(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   if (has_mana_multi(who_chooses, MANACOST_XB(get_power(player, card), 1)))
 	return NULL;
@@ -1695,7 +1695,7 @@ Destroy target creature with power X or less. */
 	card_instance_t *instance = get_card_instance(player, card);
 
 	if( event == EVENT_CAN_CAST  ){
-		td.extra = (int32_t)has_mana_to_target_this;
+		td.extra = target_predicate_extra(has_mana_to_target_this);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		return generic_spell(player, card, event, GS_X_SPELL | GS_CAN_TARGET, &td, NULL,1, NULL);
 	}
@@ -2113,7 +2113,7 @@ int card_thrull_parasite(int player, int card, event_t event)
 	   * this is beneficial - perhaps it has a Death's Shadow or Quest for Renewal or Loxodon Peacekeeper, or the Thrull Parasite's been targeted by Asphyxiate,
 	   * or it could target a Skulking Ghost.  I think this is an acceptable tradeoff. */
 	  td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	  td.extra = (int)target_must_have_counters;
+	  td.extra = target_predicate_extra(target_must_have_counters);
 	}
 
   if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td))

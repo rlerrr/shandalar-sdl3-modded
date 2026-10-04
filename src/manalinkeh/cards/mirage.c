@@ -5285,7 +5285,7 @@ int card_ventifact_bottle(int player, int card, event_t event){
 	return 0;
 }
 
-static const char* targets_an_enchantment_in_play(int who_chooses, int player, int card)
+static const char* targets_an_enchantment_in_play(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	card_instance_t *instance = get_card_instance(player, card);
 	int i;
@@ -5321,7 +5321,7 @@ Sacrifice ~: Regenerate target creature.
 	target_definition_t td2;
 	counterspell_target_definition(player, card, &td2, TYPE_ANY);
 	td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td2.extra = (int32_t)targets_an_enchantment_in_play;
+	td2.extra = target_predicate_extra(targets_an_enchantment_in_play);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -5478,7 +5478,7 @@ Defender (This creature can't attack.)
 	default_target_definition(player, card, &td1, TYPE_CREATURE);
 	td1.allowed_controller = td1.preferred_controller = 1-player;
 	td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td1.extra = (int32_t)woc_is_blocking_him;
+	td1.extra = target_predicate_extra(woc_is_blocking_him);
 
 	card_instance_t *instance = get_card_instance(player, card);
 

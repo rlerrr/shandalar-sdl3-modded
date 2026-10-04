@@ -211,7 +211,7 @@ static int soulbond(int player, int card, event_t event){
 			td.allowed_controller = player;
 			td.illegal_abilities = 0;
 			td.special = TARGET_SPECIAL_NOT_ME | TARGET_SPECIAL_EXTRA_FUNCTION;
-			td.extra = (int32_t)target_is_unpaired;
+			td.extra = target_predicate_extra(target_is_unpaired);
 
 			if( can_target(&td) && pick_target(&td, "TARGET_CREATURE") ){
 				pair(player, card, instance->targets[0].player, instance->targets[0].card);
@@ -636,7 +636,7 @@ static int divine_deflection_effect(int player, int card, event_t event){
 	return 0;
 }
 
-static const char* damage_to_you_or_permanents_you_control(int who_chooses, int player, int card){
+static const char* damage_to_you_or_permanents_you_control(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t* dmg = get_card_instance(player, card);
 	if( dmg->internal_card_id != damage_card ){
 		return "must be a damage card";
@@ -662,7 +662,7 @@ int card_divine_deflection(int player, int card, event_t event){
 	target_definition_t td2;
 	default_target_definition(player, card, &td2, TYPE_EFFECT);
 	td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td2.extra = (int32_t)damage_to_you_or_permanents_you_control;
+	td2.extra = target_predicate_extra(damage_to_you_or_permanents_you_control);
 
 	card_instance_t *instance = get_card_instance(player, card);
 

@@ -1084,7 +1084,7 @@ int card_mindreaver(int player, int card, event_t event)
 #undef ABILITY
 }
 
-const char* target_is_creature_or_aura(int who_chooses, int player, int card)
+const char* target_is_creature_or_aura(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   if (is_what(player, card, TYPE_CREATURE) || has_subtype(player, card, SUBTYPE_AURA))
 	return NULL;
@@ -1105,7 +1105,7 @@ int card_nullify(int player, int card, event_t event)
 	target_definition_t td;
 	counterspell_target_definition(player, card, &td, TYPE_CREATURE | TYPE_ENCHANTMENT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)target_is_creature_or_aura;
+	td.extra = target_predicate_extra(target_is_creature_or_aura);
 
 	return counterspell(player, card, event, &td, 0);
 }

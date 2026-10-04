@@ -3437,7 +3437,7 @@ You may choose not to untap Whip Vine during your untap step.
 	td.allowed_controller = 1-player;
 	td.required_abilities = KEYWORD_FLYING;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)whip_vine_is_blocking_him;
+	td.extra = target_predicate_extra(whip_vine_is_blocking_him);
 
 	card_instance_t *instance = get_card_instance(player, card);
 

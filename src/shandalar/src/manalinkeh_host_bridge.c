@@ -100,7 +100,6 @@ int forbid_attack;
 int turn_count;
 int landsofcolor_controlled[2][8];
 int g_saved_ai_modifier;
-int g_ai_combat_blocking_card_indices[151];
 int g_ai_speculation_spell_fizzled;
 int g_deck_rating_multipliers[16];
 int opponent_skill;

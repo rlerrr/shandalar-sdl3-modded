@@ -1398,7 +1398,7 @@ Whenever Phage deals combat damage to a player, that player loses the game.
 	return 0;
 }
 
-static const char* is_destroyed_or_buried(int who_chooses, int player, int card)
+static const char* is_destroyed_or_buried(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	int kill_code = is_token(player, card) ? 0 : get_card_instance(player, card)->kill_code;
 	if( kill_code == KILL_DESTROY || kill_code == KILL_BURY ){
@@ -1416,7 +1416,7 @@ int card_planar_guide(int player, int card, event_t event){
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_destroyed_or_buried;
+	td.extra = target_predicate_extra(is_destroyed_or_buried);
 	td.illegal_abilities = 0;
 	td.preferred_controller = player;
 

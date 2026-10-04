@@ -1583,7 +1583,7 @@ At the beginning of each end step, put a +1/+1 counter on ~ for each creature th
 	return 0;
 }
 
-static const char* is_djinn_or_efreet(int who_chooses, int player, int card){
+static const char* is_djinn_or_efreet(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( has_subtype(player, card, SUBTYPE_DJINN) || has_subtype(player, card, SUBTYPE_EFREET) ){
 		return NULL;
 	}
@@ -1603,7 +1603,7 @@ Creature - Human 1/1
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_djinn_or_efreet; // So we could ditch TARGET_SPECIAL_DJINN_OR_EFREET
+	td.extra = target_predicate_extra(is_djinn_or_efreet); // So we could ditch TARGET_SPECIAL_DJINN_OR_EFREET
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -2018,7 +2018,7 @@ int card_pyramids(int player, int card, event_t event)
 	  default_target_definition(player, card, &td, TYPE_LAND);
 	  td.preferred_controller = player;
 	  td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	  td.extra = (int)target_is_destroyed;
+	  td.extra = target_predicate_extra(target_is_destroyed);
 
 	  prompt = "TARGET_LAND";
 	  mode = GAA_CAN_TARGET | GAA_DAMAGE_PREVENTION;	// Not GAA_REGENERATION, which is incompatible with targeting
@@ -2046,7 +2046,7 @@ int card_pyramids(int player, int card, event_t event)
 	  default_target_definition(player, card, &td, TYPE_ENCHANTMENT);
 	  td.required_subtype = SUBTYPE_AURA;
 	  td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	  td.extra = (int)target_is_attached_to_a_land;
+	  td.extra = target_predicate_extra(target_is_attached_to_a_land);
 
 	  prompt = "Select target Aura attached to a land.";
 	  mode = GAA_CAN_TARGET | GAA_LITERAL_PROMPT;

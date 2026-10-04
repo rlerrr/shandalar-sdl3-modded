@@ -589,7 +589,7 @@ int card_kozilek_butcher_of_truth(int player, int card, event_t event){
 	return 0;
 }
 
-static const char* targets_a_permanent_you_control(int who_chooses, int player, int card)
+static const char* targets_a_permanent_you_control(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   int i;
   card_instance_t* instance = get_card_instance(player, card);
@@ -626,12 +626,12 @@ int card_not_of_this_world(int player, int card, event_t event){
   */
   target_definition_t td_effect;
   counter_activated_target_definition(player, card, &td_effect, 0);
-  td_effect.extra = (int32_t)targets_a_permanent_you_control;
+  td_effect.extra = target_predicate_extra(targets_a_permanent_you_control);
   td_effect.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
   target_definition_t td_spell;
   counterspell_target_definition(player, card, &td_spell, 0);
-  td_spell.extra = (int32_t)targets_a_permanent_you_control;
+  td_spell.extra = target_predicate_extra(targets_a_permanent_you_control);
   td_spell.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
   card_instance_t* instance = get_card_instance(player, card);

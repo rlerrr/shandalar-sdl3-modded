@@ -2617,7 +2617,7 @@ int card_vampire_hexmage(int player, int card, event_t event)
 	   * permanents that *do* have them).  However, it also prevents it from using this ability to kill a Skulking Ghost or activate another whenever-this-
 	   * becomes-targeted trigger.  I think this is an acceptable tradeoff. */
 	  td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	  td.extra = (int)target_must_have_counters;
+	  td.extra = target_predicate_extra(target_must_have_counters);
 	}
 
   if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td))
@@ -3406,7 +3406,7 @@ static int effect_obsidian_fireheart(int player, int card, event_t event)
   return 0;
 }
 
-static const char* doesnt_have_a_blaze_counter(int who_chooses, int player, int card){
+static const char* doesnt_have_a_blaze_counter(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	return count_counters(player, card, COUNTER_BLAZE) ? "has a blaze counter" : NULL;
 }
 
@@ -3423,7 +3423,7 @@ int card_obsidian_fireheart(int player, int card, event_t event){
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_LAND );
-	td.extra = (int32_t)doesnt_have_a_blaze_counter;
+	td.extra = target_predicate_extra(doesnt_have_a_blaze_counter);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -5348,7 +5348,7 @@ int card_noble_vestige(int player, int card, event_t event){
 	target_definition_t td1;
 	default_target_definition(player, card, &td1, TYPE_ANY);
 	td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td1.extra = (int32_t)is_damage_to_player_or_planeswalker;
+	td1.extra = target_predicate_extra(is_damage_to_player_or_planeswalker);
 
 	card_instance_t *instance = get_card_instance(player, card);
 

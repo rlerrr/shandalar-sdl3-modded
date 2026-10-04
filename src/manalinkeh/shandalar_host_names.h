@@ -35,6 +35,8 @@ extern int g_duel_ai_mode_state;
 extern int g_ai_trace_enabled;
 extern int g_current_phase;
 extern int g_current_turn;
+extern int g_current_player;
+extern int g_battlefield_extra_ability_flags;
 extern int g_damage_card_internal_card_id;
 extern int g_stack_proxy_internal_card_id;
 extern char g_text_lines[300][300];
@@ -221,7 +223,7 @@ extern int shandalar_check_mana_multi(int player);
 #define active_cards_count g_active_cards_count
 #define affected_card g_affected_card
 #define affected_card_controller g_affected_card_controller
-#define ai_is_speculating g_ai_speculation_depth
+#define ai_is_speculating g_duel_ai_mode_state
 #ifdef MANALINKEH_STATIC
 #define MANALINKEH_IS_AI_SPECULATING() \
   (g_duel_ai_mode_state == 1 || g_ai_speculation_depth > 0)
@@ -230,7 +232,7 @@ extern int shandalar_check_mana_multi(int player);
 #endif
 #define ai_modifier g_ai_modifier
 #define current_phase g_current_phase
-#define current_turn g_current_turn
+#define current_turn g_current_player
 #define damage_card g_damage_card_internal_card_id
 /* Share the host's activation proxy ID so resolution, cancellation, and the
  * duel UI recognize and remove the copies created by Manalink. */
@@ -250,7 +252,7 @@ extern int shandalar_check_mana_multi(int player);
 #define creature_count (shandalar_creature_count())
 #define artifact_count (shandalar_artifact_count())
 #define enchantment_count (shandalar_enchantment_count())
-#define event_flags g_activation_event_flags
+#define event_flags g_battlefield_extra_ability_flags
 #define event_result g_event_result
 #define cancel g_spell_fizzled
 #define spell_fizzled g_spell_fizzled
@@ -272,7 +274,9 @@ extern int shandalar_check_mana_multi(int player);
 #define basiclandtypes_controlled g_basiclandtypes_controlled
 #define iid_draw_a_card g_draw_card_placeholder_internal_card_id
 #define ante_cards global_ante_cards
-#define reason_for_trigger_controller g_event_player
+/* MOK 0x00737e1c: trigger owner, despite the surviving host's legacy name.
+ * g_event_player (0x0060a534) is separate response/activation context. */
+#define reason_for_trigger_controller g_current_turn
 #define start_usertime_of_current_thread_in_ms g_ai_trace_enabled
 #define trigger_condition g_trigger_condition
 #define trigger_cause g_trigger_cause

@@ -2495,7 +2495,7 @@ int card_ion_storm(int player, int card, event_t event)
 	  td_counter.allowed_controller = player;
 	  td_counter.preferred_controller = player;
 	  td_counter.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	  td_counter.extra = (int)target_has_charge_or_1_1_counter;
+	  td_counter.extra = target_predicate_extra(target_has_charge_or_1_1_counter);
 
 	  target_definition_t td_dmg;
 	  default_target_definition(player, card, &td_dmg, TYPE_CREATURE|TARGET_TYPE_PLANESWALKER);

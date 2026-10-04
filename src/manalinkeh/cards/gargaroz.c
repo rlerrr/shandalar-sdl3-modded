@@ -2,7 +2,7 @@
 
 // Cards that couls change targets
 
-static const char* has_only_1_target_and_could_legally_change_target(int who_chooses, int player, int card)
+static const char* has_only_1_target_and_could_legally_change_target(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	card_instance_t* eff = get_card_instance(player, card);
 	if( eff->number_of_targets == 0 || eff->number_of_targets > 1)
@@ -17,7 +17,7 @@ int card_deflection(int player, int card, event_t event){
 	// Used externally
 	target_definition_t td_spell;
 	counterspell_target_definition(player, card, &td_spell, TYPE_SPELL);	// Aura spells also target
-	td_spell.extra = (int32_t)has_only_1_target_and_could_legally_change_target;
+	td_spell.extra = target_predicate_extra(has_only_1_target_and_could_legally_change_target);
 	td_spell.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance( player, card );
@@ -54,7 +54,7 @@ int card_divert(int player, int card, event_t event){
 
 	target_definition_t td_spell;
 	counterspell_target_definition(player, card, &td_spell, TYPE_SPELL);
-	td_spell.extra = (int32_t)has_only_1_target_and_could_legally_change_target;
+	td_spell.extra = target_predicate_extra(has_only_1_target_and_could_legally_change_target);
 	td_spell.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance( player, card );
@@ -86,7 +86,7 @@ int card_imps_michief(int player, int card, event_t event){
 
 	target_definition_t td_spell;
 	counterspell_target_definition(player, card, &td_spell, TYPE_SPELL);
-	td_spell.extra = (int32_t)has_only_1_target_and_could_legally_change_target;
+	td_spell.extra = target_predicate_extra(has_only_1_target_and_could_legally_change_target);
 	td_spell.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance( player, card );
@@ -139,7 +139,7 @@ int card_misdirection(int player, int card, event_t event){
 }
 
 int quicksilver_dragon_card = -1;
-static const char* has_only_1_target_and_could_legally_change_target_and_targets_me(int who_chooses, int player, int card)
+static const char* has_only_1_target_and_could_legally_change_target_and_targets_me(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	card_instance_t* eff = get_card_instance(player, card);
 	if( eff->number_of_targets == 0 || eff->number_of_targets > 1)
@@ -155,7 +155,7 @@ static const char* has_only_1_target_and_could_legally_change_target_and_targets
 int card_quicksilver_dragon(int player, int card, event_t event){
 	target_definition_t td_spell;
 	counterspell_target_definition(player, card, &td_spell, TYPE_SPELL);
-	td_spell.extra = (int32_t)has_only_1_target_and_could_legally_change_target_and_targets_me;
+	td_spell.extra = target_predicate_extra(has_only_1_target_and_could_legally_change_target_and_targets_me);
 	td_spell.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	quicksilver_dragon_card = card;
@@ -191,7 +191,7 @@ int card_quicksilver_dragon(int player, int card, event_t event){
 	return 0;
 }
 
-static const char* has_only_1_target_and_could_legally_change_target_and_targets_a_player(int who_chooses, int player, int card)
+static const char* has_only_1_target_and_could_legally_change_target_and_targets_a_player(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	card_instance_t* eff = get_card_instance(player, card);
 	if( eff->number_of_targets == 0 || eff->number_of_targets > 1)
@@ -208,7 +208,7 @@ int card_rebound(int player, int card, event_t event){
 
 	target_definition_t td_spell;
 	counterspell_target_definition(player, card, &td_spell, TYPE_SPELL);
-	td_spell.extra = (int32_t)has_only_1_target_and_could_legally_change_target_and_targets_a_player;
+	td_spell.extra = target_predicate_extra(has_only_1_target_and_could_legally_change_target_and_targets_a_player);
 	td_spell.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance( player, card );

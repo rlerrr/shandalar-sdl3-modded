@@ -2458,7 +2458,7 @@ int card_mindwrack_liege(int player, int card, event_t event){
 }
 
 static int mirror_sheen_player = 0;
-static const char* target_is_targeting_mirror_sheen_player(int who_chooses, int player, int card)
+static const char* target_is_targeting_mirror_sheen_player(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
   if (target_me(mirror_sheen_player, -1, player, card))
 	return NULL;
@@ -2483,7 +2483,7 @@ Enchantment
 	target_definition_t td;
 	counterspell_target_definition(player, card, &td, TYPE_INSTANT|TYPE_SORCERY);
 	td.preferred_controller = 2;
-	td.extra = (int32_t)target_is_targeting_mirror_sheen_player;
+	td.extra = target_predicate_extra(target_is_targeting_mirror_sheen_player);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	mirror_sheen_player = player;
 

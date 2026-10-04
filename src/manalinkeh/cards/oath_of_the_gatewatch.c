@@ -209,7 +209,7 @@ static int is_land_creature(int player, int card)
 	return 0;
 }
 
-static const char* is_land_creature_target(int who_chooses, int player, int card)
+static const char* is_land_creature_target(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( is_land_creature(player, card) ){
 		return NULL;
@@ -712,7 +712,7 @@ int card_warden_of_geometries(int player, int card, event_t event){
 	return mana_producing_creature(player, card, event, 12, COLOR_COLORLESS, 1);
 }
 
-static const char* pt_1_or_less(int who_chooses, int player, int card)
+static const char* pt_1_or_less(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( get_power(player, card) <= 1 || get_toughness(player, card) <= 1 ){
 		return NULL;
@@ -737,7 +737,7 @@ int card_warping_wail(int player, int card, event_t event){
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int)pt_1_or_less;
+	td.extra = target_predicate_extra(pt_1_or_less);
 
 	target_definition_t td2;
 	counterspell_target_definition(player, card, &td2, TYPE_SORCERY);
@@ -3453,7 +3453,7 @@ int card_consuming_sinkhole(int player, int card, event_t event){
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int)is_land_creature_target;
+	td.extra = target_predicate_extra(is_land_creature_target);
 
 	target_definition_t td2;
 	default_target_definition(player, card, &td2, TARGET_TYPE_PLANESWALKER);

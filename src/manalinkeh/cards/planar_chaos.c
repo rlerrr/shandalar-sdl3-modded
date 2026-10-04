@@ -560,7 +560,7 @@ int cautery_sliver_shared_ability(int player, int card, event_t event){
 		default_target_definition(player, card, &td, TYPE_PERMANENT);
 		td.preferred_controller = player;
 		td.required_subtype = SUBTYPE_SLIVER;
-		td.extra = (int32_t)activating_sliver;
+		td.extra = target_predicate_extra(activating_sliver);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		td.illegal_abilities = 0;
 
@@ -572,7 +572,7 @@ int cautery_sliver_shared_ability(int player, int card, event_t event){
 		target_definition_t td3;
 		base_target_definition(player, card, &td3, 0);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td.extra = (int32_t)is_damage_to_player_or_planeswalker_or_sliver_creature;
+		td.extra = target_predicate_extra(is_damage_to_player_or_planeswalker_or_sliver_creature);
 		td3.allow_cancel = 0;
 
 		if( event == EVENT_CAN_ACTIVATE && in_play(player, card) ){
@@ -1566,7 +1566,7 @@ int card_fungal_behemoth(int player, int card, event_t event)
 	return suspend(player, card, event, -1, MANACOST_XG(-1, 2), NULL, NULL);
 }
 
-static const char* is_permanent_or_suspend_legacy(int who_chooses, int player, int card){
+static const char* is_permanent_or_suspend_legacy(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( is_what(player, card, TYPE_PERMANENT) ){
 		return NULL;
 	}
@@ -1601,7 +1601,7 @@ int card_fury_charm(int player, int card, event_t event){
 	default_target_definition(player, card, &td2, TYPE_PERMANENT | TYPE_EFFECT);
 	td2.preferred_controller = ANYBODY;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_permanent_or_suspend_legacy;
+	td.extra = target_predicate_extra(is_permanent_or_suspend_legacy);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -1931,7 +1931,7 @@ int card_keldon_marauders(int player, int card, event_t event){
 	return 0;
 }
 
-static const char* must_damage_one_of_my_creatures(int who_chooses, int player, int card)
+static const char* must_damage_one_of_my_creatures(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	card_instance_t *instance = get_card_instance(player, card);
 	if( instance->internal_card_id == damage_card && instance->damage_target_card != -1 && instance->damage_target_player == who_chooses ){
@@ -1952,7 +1952,7 @@ All damage that would be dealt this turn to target creature you control by a sou
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_ANY);
-	td.extra = (int32_t)must_damage_one_of_my_creatures;
+	td.extra = target_predicate_extra(must_damage_one_of_my_creatures);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	target_definition_t td1;

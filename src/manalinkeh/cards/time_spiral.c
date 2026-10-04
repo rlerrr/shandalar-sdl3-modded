@@ -1025,9 +1025,9 @@ int card_clockspinning(int player, int card, event_t event)
 	/* Prevents the AI from considering addition or removal of counters from permanents without them (thus speculating more on which type of counter to add or
 	 * remove from permanents that *do* have them).  However, it also prevents it from using this spell to kill a Skulking Ghost or activate another whenever-
 	 * this-becomes-targeted trigger.  I think this is an acceptable tradeoff. */
-	td.extra = (int)target_must_be_permanent_or_suspend_and_have_counters;
+	td.extra = target_predicate_extra(target_must_be_permanent_or_suspend_and_have_counters);
   else
-	td.extra = (int)target_must_be_permanent_or_suspend;
+	td.extra = target_predicate_extra(target_must_be_permanent_or_suspend);
 
   if (event == EVENT_CAN_CAST)
 	return generic_spell(player, card, event, GS_CAN_TARGET, &td, NULL, 1, NULL);
@@ -3109,9 +3109,9 @@ int card_jhoiras_timebug(int player, int card, event_t event){
 	td.preferred_controller = player;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	if (IS_AI(player))
-	  td.extra = (int)target_must_be_permanent_or_suspend_and_have_time_counters;
+	  td.extra = target_predicate_extra(target_must_be_permanent_or_suspend_and_have_time_counters);
 	else
-	  td.extra = (int)target_must_be_permanent_or_suspend;
+	  td.extra = target_predicate_extra(target_must_be_permanent_or_suspend);
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -5431,7 +5431,7 @@ int sedge_sliver_shared_ability(int player, int card, event_t event){
 		td.required_state = TARGET_STATE_DESTROYED;
 		td.preferred_controller = player;
 		td.required_subtype = SUBTYPE_SLIVER;
-		td.extra = (int32_t)sliver_to_regenerate;
+		td.extra = target_predicate_extra(sliver_to_regenerate);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		td.illegal_abilities = 0;
 
@@ -6155,7 +6155,7 @@ Instant
 	return basic_spell(player, card, event);
 }
 
-static const char* is_saprofite(int who_chooses, int player, int card){
+static const char* is_saprofite(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( has_subtype(player, card, SUBTYPE_INSECT) || has_subtype(player, card, SUBTYPE_RAT) ||
 		has_subtype(player, card, SUBTYPE_SPIDER) || has_subtype(player, card, SUBTYPE_SQUIRREL) )
 	{
@@ -6178,7 +6178,7 @@ Land
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT);
 	td.preferred_controller = player;
-	td.extra = (int32_t)is_saprofite;
+	td.extra = target_predicate_extra(is_saprofite);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 	td.required_state = TARGET_STATE_DESTROYED;
 	if( player == AI ){

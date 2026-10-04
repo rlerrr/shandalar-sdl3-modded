@@ -56,7 +56,7 @@ static int can_crew(int player, int card){
 	return ! call_card_function(player, card, EVENT_CANT_CREW);
 }
 
-static const char* this_creature_can_crew_a_vehicle(int who_chooses, int player, int card)
+static const char* this_creature_can_crew_a_vehicle(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( can_crew(player, card) ){
 		return NULL;
@@ -92,7 +92,7 @@ int vehicle(int player, int card, event_t event, int crew)
 		td.allowed_controller = td.preferred_controller = player;
 		td.illegal_abilities = 0;
 		td.illegal_state = TARGET_STATE_TAPPED;
-		td.extra = (int32_t)this_creature_can_crew_a_vehicle;
+		td.extra = target_predicate_extra(this_creature_can_crew_a_vehicle);
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 		int sel_pow = 0;
@@ -878,7 +878,7 @@ then return that card to the battlefield under its owner's control.
 
 // Blue
 
-static const char* is_creature_or_vehicle(int who_chooses, int player, int card)
+static const char* is_creature_or_vehicle(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( is_what(player, card, TYPE_CREATURE) ){
 		return NULL;
@@ -905,7 +905,7 @@ Enchanted permanent gets -4/-0.
 			event_result -= 4;
 		}
 		if( event == EVENT_ABILITIES && affect_me(player, card) ){
-			if( is_creature_or_vehicle(-1, p, c) != NULL ){
+			if( is_creature_or_vehicle(-1, p, c, -1, -1) != NULL ){
 				kill_card(player, card, KILL_SACRIFICE);
 			}
 		}
@@ -920,7 +920,7 @@ Enchanted permanent gets -4/-0.
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)is_creature_or_vehicle;
+	td.extra = target_predicate_extra(is_creature_or_vehicle);
 
 	return targeted_aura_custom_prompt(player, card, event, &td, "Select target creature or Vehicle.");
 }
@@ -1034,7 +1034,7 @@ Counter target colorless spell.
 	return counterspell(player, card, event, &td, 0);
 }
 
-static const char* ai_helper_function_for_confiscation_coup(int who_chooses, int player, int card)
+static const char* ai_helper_function_for_confiscation_coup(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( get_cmc(player, card) <= ENERGY_COUNTERS(player)+4 ){
 		return NULL;
@@ -1057,7 +1057,7 @@ to that permanent's converted mana cost. If you do, gain control of it.
 	default_target_definition(player, card, &td, TYPE_CREATURE | TYPE_ARTIFACT);
 	if( player == AI ){
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td.extra = (int32_t)ai_helper_function_for_confiscation_coup;
+		td.extra = target_predicate_extra(ai_helper_function_for_confiscation_coup);
 	}
 
 	card_instance_t *instance = get_card_instance( player, card);
@@ -1574,7 +1574,7 @@ At the beginning of your upkeep, if you control the artifact with the highest co
 	return 0;
 }
 
-static const char* nonland_nontoken_permanent(int who_chooses, int player, int card){
+static const char* nonland_nontoken_permanent(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 
 	if( is_token(player, card) ){
 		return "can't target a token permanent";
@@ -1602,7 +1602,7 @@ Draw a card for each card returned to your hand this way.
 	default_target_definition(player, card, &td, TYPE_PERMANENT);
 	td.allowed_controller = td.preferred_controller = player;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)nonland_nontoken_permanent;
+	td.extra = target_predicate_extra(nonland_nontoken_permanent);
 	td.allow_cancel = 2; // "Done" button
 
 	card_instance_t *instance = get_card_instance( player, card);
@@ -2164,7 +2164,7 @@ As long as you control an artifact, Dhund Operative gets +1/+0 and has deathtouc
 
 // Diabolic Tutor: reprint ODY
 
-static const char* ai_helper_function_for_die_young(int who_chooses, int player, int card)
+static const char* ai_helper_function_for_die_young(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( get_toughness(player, card)-get_card_instance(player, card)->damage_on_card <= ENERGY_COUNTERS(player)+2 ){
 		return NULL;
@@ -2186,7 +2186,7 @@ The creature gets -1/-1 until end of turn for each |E paid this way.
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)ai_helper_function_for_die_young;
+	td.extra = target_predicate_extra(ai_helper_function_for_die_young);
 
 	card_instance_t *instance = get_card_instance( player, card);
 
@@ -3502,7 +3502,7 @@ Enchanted creature gets +2/+1 and has menace.
 	return generic_aura(player, card, event, player, 2, 1, 0, SP_KEYWORD_MENACE, 0, 0, 0);
 }
 
-static const char* ai_helper_function_for_harness_lightning(int who_chooses, int player, int card)
+static const char* ai_helper_function_for_harness_lightning(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( get_toughness(player, card)-get_card_instance(player, card)->damage_on_card <= ENERGY_COUNTERS(player)+2 ){
 		return NULL;
@@ -3524,7 +3524,7 @@ Harnessed Lightning deals that much damage to that creature.
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)ai_helper_function_for_harness_lightning;
+	td.extra = target_predicate_extra(ai_helper_function_for_harness_lightning);
 
 	if( event == EVENT_RESOLVE_SPELL ){
 		if( valid_target(&td) ){

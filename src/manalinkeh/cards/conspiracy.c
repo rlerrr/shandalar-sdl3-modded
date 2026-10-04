@@ -1725,7 +1725,7 @@ Dethrone (Whenever this creature attacks the player with the most life or tied f
 1/1
 */
 
-static const char* already_chosen(int who_chooses, int player, int card){
+static const char* already_chosen(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 
 	if( ! check_state(player, card, STATE_TARGETTED) ){
 		return NULL;
@@ -1765,7 +1765,7 @@ int card_grenzos_rebuttal(int player, int card, event_t event){
 						td.illegal_abilities = 0;
 						td.allow_cancel = 0;
 						td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-						td.extra = (int32_t)already_chosen;
+						td.extra = target_predicate_extra(already_chosen);
 						char buffer[100];
 						int pos = scnprintf(buffer, 100, " Select a");
 						if( k == 0 ){

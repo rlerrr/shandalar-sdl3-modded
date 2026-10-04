@@ -1059,7 +1059,7 @@ Search your library for an Arcane card, reveal that card, and put it into your h
 	return 0;
 }
 
-static const char* damage_to_legendary_creature(int who_chooses, int player, int card)
+static const char* damage_to_legendary_creature(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	card_instance_t *instance = get_card_instance(player, card);
 	if(	instance->internal_card_id == damage_card ){
@@ -1085,7 +1085,7 @@ int card_eiganjo_castle(int player, int card, event_t event){
 
 	target_definition_t td1;
 	default_target_definition(player, card, &td1, 0);
-	td1.extra = (int32_t)damage_to_legendary_creature;
+	td1.extra = target_predicate_extra(damage_to_legendary_creature);
 	td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance( player, card );

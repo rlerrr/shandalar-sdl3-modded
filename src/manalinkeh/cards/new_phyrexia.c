@@ -811,7 +811,7 @@ int card_hex_parasite(int player, int card, event_t event)
 	   * permanents that *do* have them).  However, it also prevents it from using this ability to kill a Skulking Ghost or activate another whenever-this-
 	   * becomes-targeted trigger.  I think this is an acceptable tradeoff. */
 	  td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	  td.extra = (int)target_must_have_counters;
+	  td.extra = target_predicate_extra(target_must_have_counters);
 	}
 
   if (event == EVENT_CAN_ACTIVATE)
@@ -1209,7 +1209,7 @@ int card_melira_sylvok_outcast(int player, int card, event_t event ){
 	return 0;
 }
 
-static const char* cmc_is_1(int who_chooses, int player, int card){
+static const char* cmc_is_1(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	if( get_cmc(player, card) == 1 ){
 		return NULL;
 	}
@@ -1229,7 +1229,7 @@ int card_mental_misstep(int player, int card, event_t event ){
 	target_definition_t td;
 	counterspell_target_definition(player, card, &td, TYPE_ANY);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)cmc_is_1;
+	td.extra = target_predicate_extra(cmc_is_1);
 
 	if( event == EVENT_CAN_CAST ){
 		return counterspell(player, card, event, &td, 0);
@@ -4316,7 +4316,7 @@ static const char* can_legally_change_target_to_me(int who_chooses, int player, 
 int card_spellskite(int player, int card, event_t event){
 	target_definition_t td_spell;
 	counterspell_target_definition(player, card, &td_spell, TYPE_SPELL);
-	td_spell.extra = (int32_t)can_legally_change_target_to_me;
+	td_spell.extra = target_predicate_extra(can_legally_change_target_to_me);
 	td_spell.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance( player, card );

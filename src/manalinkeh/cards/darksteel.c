@@ -624,7 +624,7 @@ int card_coretapper(int player, int card, event_t event)
 	  td.preferred_controller = player;
 	  if (IS_AI(player))
 		{
-		  td.extra = (int)target_must_natively_use_charge_counters;
+		  td.extra = target_predicate_extra(target_must_natively_use_charge_counters);
 		  td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 		}
 
@@ -866,7 +866,7 @@ int card_dismantle(int player, int card, event_t event){
 						ai_choice = 1;
 
 						// If can target an artifact that uses charge counters, pick it
-						td.extra = (int)target_must_natively_use_charge_counters;
+						td.extra = target_predicate_extra(target_must_natively_use_charge_counters);
 						td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 						if (!can_target(&td)){
@@ -1193,7 +1193,7 @@ Whenever Greater Harvester deals combat damage to a player, that player sacrific
 	return 0;
 }
 
-static const char* damage_from_spell(int who_chooses, int player, int card){
+static const char* damage_from_spell(int who_chooses, int player, int card, int unused_source_player, int unused_source_card){
 	card_instance_t *instance = get_card_instance(player, card);
 	if( instance->internal_card_id == damage_card ){
 		if( is_what(instance->damage_source_player, instance->damage_source_card, TYPE_SPELL) &&
@@ -1219,7 +1219,7 @@ Prevent all damage target spell would deal this turn. You gain life equal to the
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_EFFECT);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)damage_from_spell;
+	td.extra = target_predicate_extra(damage_from_spell);
 
 	card_instance_t *instance = get_card_instance(player, card);
 

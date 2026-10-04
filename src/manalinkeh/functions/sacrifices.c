@@ -235,7 +235,7 @@ static void get_sacrifice_prompt_text(char* prompt, int maxlen, int type, int in
 	scnprintf(prompt, maxlen, "Select %s permanent to sacrifice.", type_text(typetext, 100, type, TYPETEXT_INVERT));
 }
 
-static const char* can_sacrifice_this(int who_chooses, int player, int card)
+static const char* can_sacrifice_this(int who_chooses, int player, int card, int unused_source_player, int unused_source_card)
 {
 	if( ! check_special_flags2(player, card, SF2_CANNOT_BE_SACRIFICED) ){
 		return NULL;
@@ -252,7 +252,7 @@ int pick_creature_for_sacrifice(int player, int card, int cannot_cancel){
 	td.illegal_abilities = 0;
 	td.who_chooses = player;
 	td.allow_cancel = cannot_cancel ? 0 : 2;
-	td.extra = (int32_t)can_sacrifice_this;
+	td.extra = target_predicate_extra(can_sacrifice_this);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -290,7 +290,7 @@ int pick_permanent_for_sacrifice(int player, int card, int type, int cannot_canc
 	td.who_chooses = player;
 	td.allow_cancel = 1-cannot_cancel;
 	td.illegal_state = TARGET_STATE_DYING;
-	td.extra = (int32_t)can_sacrifice_this;
+	td.extra = target_predicate_extra(can_sacrifice_this);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -324,7 +324,7 @@ int pick_special_permanent_for_sacrifice(int player, int card, int cannot_cancel
 	td.who_chooses = player;
 	td.allow_cancel = 1-cannot_cancel;
 	td.illegal_state = TARGET_STATE_DYING;
-	td.extra = (int32_t)can_sacrifice_this;
+	td.extra = target_predicate_extra(can_sacrifice_this);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -367,7 +367,7 @@ static int new_sacrifice_impl(int player, int card, int t_player, sacrifice_t op
 	td.allow_cancel = (options & (SAC_NO_CANCEL | SAC_DONE)) ^ SAC_NO_CANCEL;	// exe expects 1 to show a cancel button, 2 to show a done button, 3 to show both.
 	td.illegal_state = TARGET_STATE_DYING;
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)passes_test_definition;
+	td.extra = target_predicate_extra(passes_test_definition);
 
 	if (test->not_me == 1){
 		td.special |= TARGET_SPECIAL_NOT_ME;
