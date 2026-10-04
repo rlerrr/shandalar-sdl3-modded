@@ -6,6 +6,7 @@
 #include <setjmp.h>
 #include "defs.h"
 #include "shandalar.h"
+#include "card_pool.h"
 #include "cardartlib/src/palette.h"
 #include "facemaker/src/facemaker_types.h"
 #include "drawcardlib/src/pic.h"

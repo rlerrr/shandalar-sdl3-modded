@@ -39,6 +39,8 @@ add_executable(shandalar
   src/adventure_input.c
   src/adventure_main_menu.c
   src/adventure_new_game.c
+  src/card_pool.c
+  src/campaign_card_pool.c
   src/adventure_save.c
   src/adventure_sound.c
   src/adventure_ui.c
@@ -200,6 +202,9 @@ if(EMSCRIPTEN)
       begin.spr
     )
     include("${SHANDALAR_SRC_ROOT}/deck/DeckModdedStartupAssets.cmake")
+    if(EXISTS "${SHANDALAR_MODDED_ASSET_DIR}/Shandalar.ini")
+      list(APPEND shandalar_opening_preload_assets Shandalar.ini)
+    endif()
     list(APPEND shandalar_opening_preload_assets
       ${deck_modded_startup_assets}
       rarity.dat
@@ -261,18 +266,24 @@ endif()
 install(TARGETS shandalar RUNTIME DESTINATION .)
 
 if(SHANDALAR_BUILD_TESTS AND WIN32)
+  add_executable(card_pool_test tests/card_pool_test.c src/card_pool.c)
+  target_include_directories(card_pool_test PRIVATE "${SHANDALAR_SRC_ROOT}")
+  target_link_libraries(card_pool_test PRIVATE shandalar_platform)
+  add_test(NAME card_pool_test COMMAND card_pool_test)
+  set_tests_properties(card_pool_test PROPERTIES TIMEOUT 20)
   find_package(Python3 REQUIRED COMPONENTS Interpreter)
   set(campaign_test_source "${CMAKE_CURRENT_BINARY_DIR}/generated/campaign_functions.c")
   add_custom_command(OUTPUT "${campaign_test_source}"
     COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/select_campaign_functions.py"
             "${SHANDALAR_SRC_ROOT}" "${campaign_test_source}"
-    DEPENDS tests/select_campaign_functions.py src/adventure_new_game.c src/shandalar.c
+    DEPENDS tests/select_campaign_functions.py src/adventure_new_game.c src/shandalar.c src/visitLocation.c
             ../magic/src/carddata.c ../magic/src/duel.c ../magic/src/duel_card_state.c
             ../magic/src/duel_engine_main_wndproc.c ../magic/src/shared_startup.c
             ../magic/src/duel_ai_support.c
     VERBATIM
   )
-  add_executable(campaign_new_game_test tests/campaign_new_game_test.c "${campaign_test_source}")
+  add_executable(campaign_new_game_test tests/campaign_new_game_test.c "${campaign_test_source}"
+                 src/card_pool.c src/campaign_card_pool.c ../deckdll/src/card_db.c)
   target_include_directories(campaign_new_game_test PRIVATE "${SHANDALAR_SRC_ROOT}")
   target_include_directories(campaign_new_game_test BEFORE PRIVATE "${SHANDALAR_SRC_ROOT}/magic/compat")
   target_compile_definitions(campaign_new_game_test PRIVATE SHANDALAR MODERN_FIXES)

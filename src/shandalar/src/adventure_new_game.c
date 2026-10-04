@@ -261,6 +261,56 @@ unsigned int PickRandomColorBitExcludingMask(unsigned int excluded_mask)
   return 1U << (entry_index & 0xff);
 }
 
+/* Scan a finite candidate pool instead of retrying forever when an INI rule
+ * removes an entire color/type/rarity category. */
+int PickConfiguredStarterCard(unsigned int color_mask, int kind, int rarity_limit,
+                              int allow_artifacts, int ignore_copy_limit)
+{
+  int iid, selected = -1, matches = 0;
+  for (iid = 0; iid < g_card_count - 0x39; ++iid) {
+    card_data_t *card = &global_cards_data[iid];
+    unsigned int colors = color_mask;
+    int rarity;
+    if (!CampaignCardForSale(iid)) continue;
+    if (kind == 0) {
+      if (iid >= 5) continue;
+    } else {
+      if (kind == 1 && !(card->type & (allow_artifacts ? 0x4e : 0x0e))) continue;
+      if (kind == 2 && !(card->type & 2)) continue;
+      if (kind == 3 && !(card->type & 0x0e)) continue;
+      if (kind == 1 && (card->type & 0x40) && !(card->type & 4)) colors = 1;
+      rarity = GetCardRarity(iid);
+      if (kind == 3 ? rarity < 3 : rarity > rarity_limit) continue;
+      if ((kind == 2 || g_shandalar_difficulty == 0) && (card->static_ability & 3)) continue;
+      if (!ignore_copy_limit && kind >= 2 && GetRemainingAllowedCardCopies(iid) <= 0) continue;
+    }
+    if (!IsCardColorCompatibleWithMask((int)(char)card->color, colors, kind == 3 ? 1 : 0)) continue;
+    if (internal_rand(++matches) == 0) selected = iid;
+  }
+  return selected;
+}
+
+int AddConfiguredStarterDeckCards(unsigned int color_mask, int land_count, int spell_count,
+                                  int creature_count, int add_rare, int allow_artifacts)
+{
+  int counts[3] = {land_count, spell_count, creature_count};
+  int kind, n, selected = -1;
+  for (kind = 0; kind < 3; ++kind) {
+    for (n = 0; n < counts[kind]; ++n) {
+      selected = PickConfiguredStarterCard(color_mask, kind, (n & 1) ? 1 : 2, allow_artifacts, 0);
+      if (selected < 0 && kind == 2)
+        selected = PickConfiguredStarterCard(color_mask, kind, (n & 1) ? 1 : 2, allow_artifacts, 1);
+      if (selected < 0) selected = PickConfiguredStarterCard(color_mask, 0, 1, 0, 1);
+      if (selected >= 0) AddCardToDeckSorted(selected);
+    }
+  }
+  if (add_rare) selected = PickConfiguredStarterCard(color_mask, 3, 4, 0, 0);
+  if (selected < 0) selected = PickConfiguredStarterCard(color_mask, 0, 1, 0, 1);
+  /* The original routine contributes one final card even without add_rare. */
+  if (selected >= 0) AddCardToDeckSorted(selected);
+  return 0;
+}
+
 // FUNCTION: SHANDALAR 0x004be0bf
 int AddRandomStarterDeckCards(unsigned int color_mask, int land_count, int spell_count, int creature_count, int add_rare, int allow_artifact_spells)
 {
@@ -271,6 +321,9 @@ int AddRandomStarterDeckCards(unsigned int color_mask, int land_count, int spell
   unsigned int added_count;
   int duplicate_attempt_count;
   int card_ok;
+
+  if (shandalar_card_pool_ready())
+    return AddConfiguredStarterDeckCards(color_mask, land_count, spell_count, creature_count, add_rare, allow_artifact_spells);
 
   for (added_count = 0; land_count > (int)added_count; added_count = added_count + 1)
   {
@@ -497,11 +550,11 @@ int GetRemainingAllowedCardCopies(unsigned int card_id)
     max_color_count = max_color_count + 1;
   }
 
-  if ((global_cards_data[card_id].extra_ability & 0x100) != 0)
+  if (CampaignCardIsTreasure(card_id))
   {
     max_color_count = (g_shandalar_difficulty <= max_color_count);
   }
-  else if ((global_cards_data[card_id].expansion & 0xc1) == 0)
+  else if (!shandalar_card_pool_ready() && (global_cards_data[card_id].expansion & 0xc1) == 0)
   {
     max_color_count = max_color_count / 2;
   }

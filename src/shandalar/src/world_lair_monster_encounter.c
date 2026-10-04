@@ -670,7 +670,7 @@ find_riddle_candidate:
   {
     selected_card = internal_rand(g_card_count - 0x39);
   } while (((global_cards_data[selected_card].type & 2) == 0 && riddle_type != 2) ||
-           (global_cards_data[selected_card].expansion & 0xc1) == 0);
+           (GetCardAvailabilityMask(selected_card) == 0));
 
   candidate_ok = false;
   switch (riddle_type)
@@ -812,7 +812,7 @@ find_riddle_candidate:
     {
       decoy_card = internal_rand(g_card_count - 0x39);
     } while (((global_cards_data[decoy_card].type & 2) == 0 && riddle_type != 2) ||
-             (global_cards_data[decoy_card].expansion & 0xc1) == 0);
+             (GetCardAvailabilityMask(decoy_card) == 0));
 
     candidate_ok = false;
     switch (riddle_type)
@@ -1002,7 +1002,7 @@ void RunLairExplorationEvent(int color)
       }
     } while ((GetCardRarity(card_or_deck_index) != reward_card) ||
              (GetRemainingAllowedCardCopies(card_or_deck_index) < 0) ||
-             ((global_cards_data[card_or_deck_index].extra_ability & 0x900) != 0) ||
+             (!shandalar_card_pool_ready() && (global_cards_data[card_or_deck_index].extra_ability & 0x900) != 0) ||
              (GetCardAvailabilityMask(card_or_deck_index) == 0));
 
     if ((reward_card == 1) && (internal_rand(2) != 0))
@@ -1019,7 +1019,7 @@ void RunLairExplorationEvent(int color)
       card_or_deck_index = internal_rand(500);
     } while (deck[card_or_deck_index] == -1);
   } while ((GetCardRarity(deck[card_or_deck_index] & ADVENTURE_DECK_CARD_ID_MASK) <= 1) ||
-           (GetCardAvailabilityMask(card_or_deck_index) == 0));
+           (GetCardAvailabilityMask(deck[card_or_deck_index] & ADVENTURE_DECK_CARD_ID_MASK) == 0));
 
   reward_card = reward_cards[3];
   EnsureAdvfac64Loaded(1);
@@ -1050,7 +1050,7 @@ retry:
         {
           reward_card = internal_rand(g_card_count - 0x39);
         } while (IsCardColorCompatibleWithMask((int)global_cards_data[reward_card].color, 1 << (byte)color, 1) == 0);
-      } while (((global_cards_data[reward_card].extra_ability & 0x100) != 0) ||
+      } while (CampaignCardIsTreasure(reward_card) ||
                (GetCardAvailabilityMask(reward_card) == 0));
     }
 
@@ -1573,7 +1573,7 @@ int RunWorldLairMonsterEncounter(int slot_index, int monster_color)
       {
         global_ante_cards[1][0] = DrawRandomCardFromInitialLibrary(g_opponent_initial_library_index);
       } while (global_ante_cards[1][0] <= 4);
-    } while ((((global_cards_data[global_ante_cards[1][0]].extra_ability & 0x100) != 0) ||
+    } while ((CampaignCardIsTreasure(global_ante_cards[1][0]) ||
               (GetCardAvailabilityMask(global_ante_cards[1][0]) == 0)) ||
              (global_cards_data[global_ante_cards[1][0]].id ==
               g_shandalar_monster_definitions[creature_type].deck_number));
@@ -1915,7 +1915,7 @@ int RunWorldLairMonsterEncounter(int slot_index, int monster_color)
         for (slot_index = 0; slot_index < 500; slot_index = slot_index + 1)
         {
           global_library[1][slot_index] = DrawRandomCardFromInitialLibrary(g_opponent_initial_library_index);
-          if ((global_cards_data[global_library[1][slot_index]].extra_ability & 0x100) != 0)
+          if (CampaignCardIsTreasure(global_library[1][slot_index]))
           {
             global_library[1][slot_index] = -1;
           }
@@ -2276,7 +2276,7 @@ LAB_4F4BB2:
           } while (IsCardColorCompatibleWithMask(1 << (byte)monster_color,
                                                  (int)global_cards_data[selected_card_id].color,
                                                  ((menu_option_count & 1) ? 1 : 3)) == 0);
-        } while (((GetRemainingAllowedCardCopies(selected_card_id) <= 0) || ((global_cards_data[selected_card_id].extra_ability & 0x900) != 0)) ||
+        } while (((GetRemainingAllowedCardCopies(selected_card_id) <= 0) || (!shandalar_card_pool_ready() && (global_cards_data[selected_card_id].extra_ability & 0x900) != 0)) ||
                  (GetCardAvailabilityMask(selected_card_id) == 0));
         if (((int)menu_option_count < 3) && (global_ante_cards[1][menu_option_count] != -1))
         {

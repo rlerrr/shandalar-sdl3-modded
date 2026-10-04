@@ -20,6 +20,7 @@
 #ifdef SHANDALAR
 #include "deckdll/src/magsnd.h"
 #include "shandalar/src/shandalar_global_strings.h"
+#include "shandalar/src/card_pool.h"
 #endif
 
 #ifndef SHANDALAR
@@ -2459,6 +2460,11 @@ int GetCardRarity(int internal_card_id)
 {
   char rarity_str[32];
   int rarity;
+
+#ifdef SHANDALAR
+  rarity = shandalar_card_pool_rarity(internal_card_id);
+  if (rarity >= 0) return rarity;
+#endif
 
   if (((global_cards_data[internal_card_id].extra_ability & 0x180U) != 0) || (global_cards_data[internal_card_id].expansion == '@'))
   {

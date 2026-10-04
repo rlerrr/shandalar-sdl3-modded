@@ -427,6 +427,14 @@ dictionary * iniparser_load(const char * ininame);
 /*--------------------------------------------------------------------------*/
 dictionary * iniparser_load_file(FILE * in, const char * ininame);
 
+/* Ordered variant for Shandalar.ini. Allows bare keys with empty values and
+ * visits every occurrence (including duplicate keys). Callers must discard
+ * collected entries if parsing returns NULL. Registry parsing stays strict. */
+typedef void (*iniparser_entry_callback)(void *context, const char *section,
+                                       const char *key, const char *value);
+dictionary * iniparser_load_file_entries(FILE *in, const char *ininame,
+                                       iniparser_entry_callback callback, void *context);
+
 /*-------------------------------------------------------------------------*/
 /**
   @brief    Free all memory associated to an ini dictionary

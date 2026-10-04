@@ -788,7 +788,8 @@ void InitializeCastleDungeonSlots(void)
   entry_index = 0;
   for (card_index = 0; card_index < g_card_count - 0x39; card_index = card_index + 1)
   {
-    if ((global_cards_data[card_index].extra_ability & 0x100) == 0)
+    if (shandalar_card_pool_treasure(card_index) == 0 ||
+        (shandalar_card_pool_treasure(card_index) < 0 && (global_cards_data[card_index].extra_ability & 0x100) == 0))
     {
       continue;
     }

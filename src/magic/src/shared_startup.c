@@ -15,6 +15,9 @@
 #include "magic/src/global_strings.h"
 #include "magic/src/global_state.h"
 #include "shared_startup.h"
+#ifdef SHANDALAR
+#include "shandalar/src/card_pool.h"
+#endif
 
 extern int global_available_slots;
 extern card_ptr_t global_raw_cards_storage[];
@@ -289,6 +292,9 @@ int setup_paths_and_load_text_etc(char *message_buffer)
   }
 
   CopyRawCardNamesAndRarities();
+#ifdef SHANDALAR
+  shandalar_card_pool_on_database_loaded(global_base_directory);
+#endif
 
   desktop_dc = GetDC(NULL);
   if (desktop_dc != NULL)

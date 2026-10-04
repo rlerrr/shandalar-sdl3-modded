@@ -305,9 +305,29 @@ int g_ui_fx_lcg_multipliers[0x14] = {5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 4
 
 int IsCardAvailable(csvid_t csvid, int expansion);
 
+static int PickConfiguredTownShopCard(int slot, unsigned int magic_mask, int basic_only)
+{
+  int iid, color, selected = -1, matches = 0;
+  for (iid = 0; iid < (basic_only ? 5 : g_card_count - 0x39); ++iid) {
+    int compatible = 0;
+    if (!CampaignCardForSale(iid) || GetCardRarity(iid) > slot % 3 + 1 ||
+        GetRemainingAllowedCardCopies(iid) <= 0) continue;
+    if ((slot & 1) && (global_cards_data[iid].type & 0x40)) continue;
+    for (color = 1; color < 6; ++color) {
+      if ((magic_mask & (1U << color)) &&
+          IsCardColorCompatibleWithMask(1 << color, (int)(signed char)global_cards_data[iid].color,
+                                        (color & 1) ? 1 : 3)) compatible = 1;
+    }
+    if (compatible && internal_rand(++matches) == 0) selected = iid;
+  }
+  return selected;
+}
+
 // FUNCTION: SHANDALAR 0x00428b05
 unsigned int GetCardAvailabilityMask(int card_index)
 {
+  int available = shandalar_card_pool_random(card_index);
+  if (available >= 0) return (unsigned int)available;
   unsigned int mask = IsCardAvailable(global_cards_data[card_index].id, 0);
 
   if (HasExpansion(2) != 0)
@@ -1876,6 +1896,10 @@ int RunTownServicesMenu(int town_index)
       }
 
       rand_mask = 1 << (unsigned char)internal_rand(7);
+      if (shandalar_card_pool_ready()) {
+        g_town_shop_card_ids[slot_i] = PickConfiguredTownShopCard(slot_i, tile_magic_mask, slot_i == scan_color);
+        continue;
+      }
       do
       {
         if (slot_i == scan_color)
@@ -1911,7 +1935,7 @@ int RunTownServicesMenu(int town_index)
         {
           ok = 0;
         }
-        if (((unsigned char)global_cards_data[distance].expansion & 0xc1) == 0)
+        if (!CampaignCardForSale(distance))
         {
           ok = 0;
         }
@@ -3534,7 +3558,8 @@ unsigned int RunCardBrowser(char *title, unsigned int color_mask, unsigned int t
   int all_colors_text_color;
   unsigned int filtered_count;
   int sorted_index;
-  unsigned int filtered_card_ids[300];
+  static unsigned int filtered_card_ids[SHANDALAR_CARD_DATABASE_CAPACITY];
+  int page_start = 0, page_size, page_count, navigation_y;
 
   /* [0..2] button colors, [3] menu context */
   int button_colors[4];                /* [ebp-0x150] */
@@ -3777,6 +3802,8 @@ loop:
 
   /* Card list geometry. */
   max_lines_per_col = (ScaleUiCoordinateFrom320(0x11e) / 2) / GetFontLineHeight(g_page0_window_bounds->font_slot);
+  max_lines_per_col = MAX(1, MIN(31, max_lines_per_col - 1));
+  page_size = max_lines_per_col * 2;
   draw_count = 0;
   x = ScaleUiCoordinateFrom320(0x66) / 2;
   y = ScaleUiCoordinateFrom320(0x99) / 2;
@@ -3807,12 +3834,13 @@ loop:
       continue;
     }
 
-    if (((global_cards_data[card_index].extra_ability & 0x900) != 0) && (g_reveal_all_world_info == 0))
+    if (!shandalar_card_pool_ready() && ((global_cards_data[card_index].extra_ability & 0x900) != 0) && (g_reveal_all_world_info == 0))
     {
       continue;
     }
 
-    if (GetCardAvailabilityMask(card_index) == 0)
+    if (shandalar_card_pool_choose(card_index) == 0 ||
+        (shandalar_card_pool_choose(card_index) < 0 && GetCardAvailabilityMask(card_index) == 0))
     {
       continue;
     }
@@ -3837,8 +3865,11 @@ loop:
   }
 
   qsort(filtered_card_ids, filtered_count, 4, (int(__cdecl *)(const void *, const void *))CompareCardNamesForQsort);
+  page_count = MAX(1, ((int)filtered_count + page_size - 1) / page_size);
+  if (page_start >= (int)filtered_count) page_start = 0;
+  if (!filtered_count) g_card_browser_hover_card = g_card_browser_selected_card = 0xffffffff;
 
-  for (sorted_index = 0; (int)filtered_count > sorted_index; sorted_index = sorted_index + 1)
+  for (sorted_index = page_start; (int)filtered_count > sorted_index && sorted_index < page_start + page_size; sorted_index = sorted_index + 1)
   {
     card_index = filtered_card_ids[sorted_index];
 
@@ -3892,6 +3923,14 @@ loop:
     }
   }
 
+  navigation_y = list_top_y + max_lines_per_col * list_line_h;
+  if (page_count > 1) {
+    DrawCenteredTextLineWithShadow("< Previous", ScaleUiCoordinateFrom320(0x66) / 2, navigation_y,
+                                  page_start ? 0x62 : 3);
+    DrawCenteredTextLineWithShadow("Next >", ScaleUiCoordinateFrom320(0x219) / 2, navigation_y,
+                                  page_start + page_size < (int)filtered_count ? 0x62 : 3);
+  }
+
   if (g_card_browser_hover_card != 0xffffffff)
   {
     g_card_browser_selected_card = g_card_browser_hover_card;
@@ -3937,6 +3976,14 @@ loop:
   ClearInputAndWaitForMouseRelease();
   HideMouseCursorNested();
 
+  if (page_count > 1 && y >= navigation_y && y < navigation_y + list_line_h) {
+    if (x < global_screen_width / 2) page_start = MAX(0, page_start - page_size);
+    else if (page_start + page_size < (int)filtered_count) page_start += page_size;
+    g_card_browser_hover_card = 0xffffffff;
+    needs_redraw = 1;
+    goto loop;
+  }
+
   /* OK click region returns the current selected card. */
   if (((ScaleUiCoordinateFrom320(0x66) / 2 < y) && (y < ScaleUiCoordinateFrom320(0x146) / 2)) &&
       ((ScaleUiCoordinateFrom320(0xf6) / 2 < x) && (x < ScaleUiCoordinateFrom320(0x18c) / 2)))
@@ -3975,6 +4022,7 @@ loop:
         if ((mouse_button_or_index >= 0) && (mouse_button_or_index < 6) && ((color_mask == 0) || ((1U << (unsigned char)mouse_button_or_index) == color_mask)))
         {
           g_card_browser_color_filter = mouse_button_or_index;
+          page_start = 0;
           g_card_browser_hover_card = 0xffffffff;
           needs_redraw = 1;
         }
@@ -3984,6 +4032,7 @@ loop:
         if ((ScaleUiCoordinate(0x1d6) < x) && (mouse_button_or_index >= 0) && (mouse_button_or_index < 6))
         {
           g_card_browser_type_filter = mouse_button_or_index;
+          page_start = 0;
           g_card_browser_hover_card = 0xffffffff;
           needs_redraw = 1;
         }
@@ -3996,7 +4045,7 @@ loop:
         /* Card list selection. */
         mouse_button_or_index = (y - list_top_y) / list_line_h;
         mouse_button_or_index = mouse_button_or_index + ((x / (global_screen_width / 2)) * max_lines_per_col);
-        if (mouse_button_or_index < draw_count)
+        if (mouse_button_or_index >= 0 && mouse_button_or_index < draw_count)
         {
           g_card_browser_hover_card = draw_index_to_card[mouse_button_or_index];
         }
@@ -4338,7 +4387,7 @@ int VisitTownSlot(int town_index)
       {
         global_ante_cards[1][0] = DrawRandomCardFromInitialLibrary(g_opponent_initial_library_index);
       } while (global_ante_cards[1][0] <= 4);
-    } while ((global_cards_data[global_ante_cards[1][0]].extra_ability & 0x100) != 0);
+    } while (CampaignCardIsTreasure(global_ante_cards[1][0]));
 
     DrawAdventureCard((int)global_ante_cards[1][0], 0xe0, 0x40, 1, gs_visit_0077c4f0[1]);
     DrawCreaturePortrait(duel_creature_tier_or_type, 0xa0, 0x20, 1, 2);

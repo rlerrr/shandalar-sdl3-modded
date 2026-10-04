@@ -51,7 +51,7 @@ static const char * strlwc(const char * in, char *out, unsigned len)
     if (in==NULL || out == NULL || len==0) return NULL ;
     i=0 ;
     while (in[i] != '\0' && i < len-1) {
-        out[i] = (char)tolower((int)in[i]);
+        out[i] = (char)tolower((unsigned char)in[i]);
         i++ ;
     }
     out[i] = '\0';
@@ -724,7 +724,8 @@ static line_status iniparser_line(
     const char * input_line,
     char * section,
     char * key,
-    char * value)
+    char * value,
+    int allow_bare_keys)
 {
     line_status sta ;
     char * line = NULL;
@@ -789,6 +790,12 @@ static line_status iniparser_line(
         strlwc(key, key, len);
         value[0]=0 ;
         sta = LINE_VALUE ;
+    } else if (allow_bare_keys && !strchr(line, '=')) {
+        line[strcspn(line, ";#")] = 0;
+        strstrip(line);
+        strlwc(line, key, strlen(line) + 1);
+        value[0] = 0;
+        sta = key[0] ? LINE_VALUE : LINE_COMMENT;
     } else {
         /* Generate syntax error */
         sta = LINE_ERROR ;
@@ -812,7 +819,8 @@ static line_status iniparser_line(
   The returned dictionary must be freed using iniparser_freedict().
  */
 /*--------------------------------------------------------------------------*/
-dictionary * iniparser_load_file(FILE * in, const char * ininame)
+dictionary * iniparser_load_file_entries(FILE *in, const char *ininame,
+                                       iniparser_entry_callback callback, void *context)
 {
     char line    [ASCIILINESZ+1] ;
     char section [ASCIILINESZ+1] ;
@@ -842,7 +850,7 @@ dictionary * iniparser_load_file(FILE * in, const char * ininame)
     while (fgets(line+last, ASCIILINESZ-last, in)!=NULL) {
         lineno++ ;
         len = (int)strlen(line)-1;
-        if (len<=0)
+        if (len<0)
             continue;
         /* Safety check against buffer overflows */
         if (line[len]!='\n' && !feof(in)) {
@@ -870,7 +878,7 @@ dictionary * iniparser_load_file(FILE * in, const char * ininame)
         } else {
             last=0 ;
         }
-        switch (iniparser_line(line, section, key, val)) {
+        switch (iniparser_line(line, section, key, val, callback != NULL)) {
             case LINE_EMPTY:
             case LINE_COMMENT:
             break ;
@@ -882,6 +890,8 @@ dictionary * iniparser_load_file(FILE * in, const char * ininame)
             case LINE_VALUE:
             sprintf(tmp, "%s:%s", section, key);
             mem_err = dictionary_set(dict, tmp, val);
+            if (callback && mem_err == 0)
+                callback(context, section, key, val);
             break ;
 
             case LINE_ERROR:
@@ -903,11 +913,16 @@ dictionary * iniparser_load_file(FILE * in, const char * ininame)
             break ;
         }
     }
-    if (errs) {
+    if (errs || mem_err < 0 || ferror(in)) {
         dictionary_del(dict);
         dict = NULL ;
     }
     return dict ;
+}
+
+dictionary * iniparser_load_file(FILE *in, const char *ininame)
+{
+    return iniparser_load_file_entries(in, ininame, NULL, NULL);
 }
 
 /*-------------------------------------------------------------------------*/
