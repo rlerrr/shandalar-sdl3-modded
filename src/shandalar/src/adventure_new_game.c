@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "platform/winuser_compat.h"
 #include "platform/cheat_options.h"
 
@@ -42,12 +43,12 @@ void LoadTownHintMetadata(void)
   int hint_index;
   int second_csvid;
   char line[256];
-  FILE *hints_file;
+  SDL_IOStream *hints_file;
   long body_offset;
 
-  hints_file = fopen("hints.txt", "rt");
+  hints_file = shandalar_open_file_io("hints.txt", "rt");
   hint_index = 0;
-  while (hint_index < 0x100 && fgets(line, sizeof(line), hints_file) != NULL)
+  while (hint_index < 0x100 && shandalar_io_gets(line, sizeof(line), hints_file) != NULL)
   {
     line[strcspn(line, "\n")] = '\0';
     if (line[0] == '.')
@@ -77,18 +78,18 @@ void LoadTownHintMetadata(void)
         g_hint_difficulty_masks[hint_index] = g_hint_difficulty_masks[hint_index] | 8;
       }
 
-      body_offset = ftell(hints_file);
-      while (fgets(line, sizeof(line), hints_file) != NULL)
+      body_offset = SDL_TellIO(hints_file);
+      while (shandalar_io_gets(line, sizeof(line), hints_file) != NULL)
       {
         line[strcspn(line, "\r\n")] = '\0';
         if (line[0] != '\0')
         {
           break;
         }
-        body_offset = ftell(hints_file);
+        body_offset = SDL_TellIO(hints_file);
       }
       g_hint_text_offsets[hint_index] = body_offset;
-      fseek(hints_file, body_offset, SEEK_SET);
+      shandalar_io_seek(hints_file, body_offset, SEEK_SET);
       hint_index = hint_index + 1;
     }
   }
@@ -100,7 +101,7 @@ void LoadTownHintMetadata(void)
     hint_index = hint_index + 1;
   } while (hint_index < 0x100);
 
-  fclose(hints_file);
+  shandalar_io_close(hints_file);
 }
 // FUNCTION: SHANDALAR 0x0041786e
 void LoadCardRaritiesAndCsvOffsets(void)
@@ -110,7 +111,7 @@ void LoadCardRaritiesAndCsvOffsets(void)
   long selected_state_sprite;
   int location_block_start_index;
   int inner_index;
-  FILE *entry_index;
+  SDL_IOStream *entry_index;
   int scan_result;
 
   for (location_block_start_index = 0; location_block_start_index < SHANDALAR_CARD_DATABASE_CAPACITY; location_block_start_index = location_block_start_index + 1)
@@ -118,13 +119,13 @@ void LoadCardRaritiesAndCsvOffsets(void)
     g_master_csv_offsets[location_block_start_index] = -1;
   }
 
-  entry_index = fopen("concise.csv", "rt");
+  entry_index = shandalar_open_file_io("concise.csv", "rt");
   if (!entry_index)
     return;
 
   /* Concise.csv describes the original campaign cards in its own order. Join
    * by CSV ID; the imported engine table has a different order and size. */
-  while (fscanf(entry_index, "%d %d %ld\n", &icon_width_scaled, &icon_height_scaled, &selected_state_sprite) == 3)
+  while (shandalar_io_scanf(entry_index, "%d %d %ld\n", &icon_width_scaled, &icon_height_scaled, &selected_state_sprite) == 3)
   {
     inner_index = icon_width_scaled;
     if (inner_index < 0 || inner_index >= SHANDALAR_CARD_DATABASE_CAPACITY)
@@ -135,7 +136,7 @@ void LoadCardRaritiesAndCsvOffsets(void)
     g_master_csv_offsets[inner_index] = selected_state_sprite;
   }
 
-  fclose(entry_index);
+  shandalar_io_close(entry_index);
 }
 // FUNCTION: SHANDALAR 0x004bdd0a
 void InitializeNewGameState(void)

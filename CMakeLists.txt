@@ -165,5 +165,23 @@ endif()
 include(cmake/DownloadAssets.cmake)
 
 if(SHANDALAR_BUILD_FACEMAKER OR SHANDALAR_BUILD_SHANDALAR OR SHANDALAR_BUILD_DECK)
+  # Keep miniz's generic CMake options and install rules out of our build.
+  FetchContent_Declare(shandalar_miniz
+    GIT_REPOSITORY https://github.com/richgel999/miniz.git
+    GIT_TAG 3.1.2
+    GIT_SHALLOW TRUE
+    SOURCE_SUBDIR shandalar-unused
+  )
+  FetchContent_MakeAvailable(shandalar_miniz)
+  file(CONFIGURE OUTPUT "${shandalar_miniz_BINARY_DIR}/miniz_export.h" CONTENT "#define MINIZ_EXPORT\n" @ONLY)
+  add_library(shandalar_miniz STATIC
+    "${shandalar_miniz_SOURCE_DIR}/miniz.c"
+    "${shandalar_miniz_SOURCE_DIR}/miniz_tinfl.c"
+    "${shandalar_miniz_SOURCE_DIR}/miniz_tdef.c"
+    "${shandalar_miniz_SOURCE_DIR}/miniz_zip.c"
+  )
+  target_include_directories(shandalar_miniz PUBLIC
+    "${shandalar_miniz_SOURCE_DIR}" "${shandalar_miniz_BINARY_DIR}")
+  target_compile_definitions(shandalar_miniz PUBLIC MINIZ_NO_STDIO MINIZ_NO_ZLIB_COMPATIBLE_NAMES)
   add_subdirectory(src)
 endif()

@@ -1,4 +1,5 @@
 #include "platform/winuser_compat.h"
+#include "platform/file_io.h"
 #ifndef _WIN32
 #include "platform/legacy_io.h"
 #endif
@@ -207,57 +208,87 @@ LONG ChangeDisplaySettingsA(DEVMODEA *dev_mode, DWORD flags)
   return 0;
 }
 
+typedef struct StreamHandle {
+  SDL_IOStream *io;
+  struct StreamHandle *next;
+} StreamHandle;
+static StreamHandle *g_stream_handles;
+
+static StreamHandle *find_stream_handle(HANDLE handle)
+{
+  StreamHandle *file;
+  for (file = g_stream_handles; file; file = file->next)
+    if ((HANDLE)file == handle) return file;
+  return NULL;
+}
+
+BOOL CloseHandle(HANDLE handle)
+{
+  StreamHandle **link = &g_stream_handles;
+  while (*link) {
+    StreamHandle *file = *link;
+    if ((HANDLE)file == handle) {
+      BOOL result = SDL_CloseIO(file->io);
+      *link = file->next;
+      free(file);
+      return result;
+    }
+    link = &file->next;
+  }
+  /* The other compatibility handles (e.g. DIB sections) are owned elsewhere. */
+  return TRUE;
+}
+
 HANDLE CreateFileA(LPCSTR filename, DWORD desired_access, DWORD share_mode,
                    LPSECURITY_ATTRIBUTES security_attributes,
                    DWORD creation_disposition, DWORD flags_and_attributes,
                    HANDLE template_file)
 {
-  FILE *file;
+  StreamHandle *file;
+  SDL_IOStream *io;
   (void)desired_access;
   (void)share_mode;
   (void)security_attributes;
   (void)creation_disposition;
   (void)flags_and_attributes;
   (void)template_file;
-#ifdef _WIN32
-  file = fopen(filename, "rb");
-#else
-  file = shandalar_fopen(filename, "rb");
-#endif
-  return file ? (HANDLE)file : INVALID_HANDLE_VALUE;
+  io = shandalar_open_file_io(filename, "rb");
+  if (!io) return INVALID_HANDLE_VALUE;
+  file = (StreamHandle *)malloc(sizeof(*file));
+  if (!file) { SDL_CloseIO(io); return INVALID_HANDLE_VALUE; }
+  file->io = io;
+  file->next = g_stream_handles;
+  g_stream_handles = file;
+  return (HANDLE)file;
 }
 
 DWORD GetFileSize(HANDLE file, DWORD *high_size)
 {
-  FILE *stream = (FILE *)file;
-  long current;
-  long end;
+  StreamHandle *stream = find_stream_handle(file);
+  Sint64 end;
   if (high_size)
     *high_size = 0;
-  if (!stream || stream == (FILE *)INVALID_HANDLE_VALUE)
+  if (!stream)
     return 0xffffffffu;
-  current = ftell(stream);
-  if (fseek(stream, 0, SEEK_END) != 0)
-    return 0xffffffffu;
-  end = ftell(stream);
-  fseek(stream, current, SEEK_SET);
+  end = SDL_GetIOSize(stream->io);
+  if (end >= 0 && high_size) *high_size = (DWORD)((Uint64)end >> 32);
   return end < 0 ? 0xffffffffu : (DWORD)end;
 }
 
 BOOL ReadFile(HANDLE file, LPVOID buffer, DWORD bytes_to_read,
               DWORD *bytes_read, LPOVERLAPPED overlapped)
 {
-  FILE *stream = (FILE *)file;
+  StreamHandle *stream = find_stream_handle(file);
   size_t count;
   (void)overlapped;
   if (bytes_read)
     *bytes_read = 0;
-  if (!stream || stream == (FILE *)INVALID_HANDLE_VALUE || !buffer)
+  if (!stream || (!buffer && bytes_to_read))
     return FALSE;
-  count = fread(buffer, 1, bytes_to_read, stream);
+  count = SDL_ReadIO(stream->io, buffer, bytes_to_read);
   if (bytes_read)
     *bytes_read = (DWORD)count;
-  return count == bytes_to_read || feof(stream);
+  return count == bytes_to_read || shandalar_io_eof(stream->io);
 }
 
 BOOL DeviceIoControl(HANDLE device, DWORD io_control_code, LPVOID in_buffer,

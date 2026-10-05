@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include <windows.h>
 #include <commdlg.h>
 #include <stdlib.h>
@@ -2398,22 +2399,22 @@ void ReadCsvFieldByCsvid(char *out, int csvid, int field, const char *csv_name)
   char delim[12];
   char token[512];
   char field_idx;
-  FILE *fp;
+  SDL_IOStream *fp;
   int fscanf_ret;
 
-  fp = fopen(csv_name, "rb");
+  fp = shandalar_open_file_io(csv_name, "rb");
   in_quotes = 0;
   field_idx = in_quotes;
   *out = '\0';
 
   if ((g_master_csv_offsets[csvid] != -1) && (strcmp(csv_name, "master.csv") == 0))
   {
-    fseek(fp, (long)g_master_csv_offsets[csvid], 0);
+    shandalar_io_seek(fp, (long)g_master_csv_offsets[csvid], 0);
   }
 
   do
   {
-    fscanf_ret = fscanf(fp, "%[^,\n] %[,\n]", token, delim);
+    fscanf_ret = shandalar_io_scanf(fp, "%[^,\n] %[,\n]", token, delim);
     if (fscanf_ret == 0)
     {
       break;
@@ -2451,7 +2452,7 @@ void ReadCsvFieldByCsvid(char *out, int csvid, int field, const char *csv_name)
 
   } while ((fscanf_ret != -1) && ((field_idx == '\0') || (current_id == csvid)));
 
-  fclose(fp);
+  shandalar_io_close(fp);
 }
 
 // FUNCTION: MAGIC 0x004b5de8

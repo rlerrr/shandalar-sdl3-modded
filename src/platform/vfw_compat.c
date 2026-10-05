@@ -217,8 +217,8 @@ HWND MCIWndCreateA(HWND parent, HINSTANCE instance, DWORD style,
   for (char *p = asset_name; *p; ++p)
     *p = (char)tolower((unsigned char)*p);
 
-  if (shandalar_assets_fetch_blocking(asset_name) != SHANDALAR_ASSET_READY ||
-      !shandalar_assets_join_path(asset_path, sizeof(asset_path), asset_name))
+  /* The stream layer checks the mod before fetching a missing base asset. */
+  if (!shandalar_assets_join_path(asset_path, sizeof(asset_path), asset_name))
     return NULL;
   io = shandalar_open_file_io(asset_path, "rb");
   if (!io)
@@ -244,8 +244,7 @@ HWND MCIWndCreateA(HWND parent, HINSTANCE instance, DWORD style,
                 sizeof(audio_name) - (size_t)(extension - audio_name));
   else
     SDL_strlcat(audio_name, ".wav", sizeof(audio_name));
-  if (shandalar_assets_fetch_blocking(audio_name) == SHANDALAR_ASSET_READY &&
-      shandalar_assets_join_path(audio_path, sizeof(audio_path), audio_name)) {
+  if (shandalar_assets_join_path(audio_path, sizeof(audio_path), audio_name)) {
     io = shandalar_open_file_io(audio_path, "rb");
     if (io)
       SDL_LoadWAV_IO(io, true, &state->audio_spec, &state->audio_buffer,

@@ -1,5 +1,6 @@
 #include "platform/gdi_compat.h"
 #include "platform/winuser_compat.h"
+#include "platform/file_io.h"
 
 #include <SDL3_ttf/SDL_ttf.h>
 #include <stdlib.h>
@@ -222,6 +223,7 @@ static void load_font_design_metrics(struct ShandalarFont *font, const unsigned 
 
   if (!font || !data || size < 12)
     return;
+
   table_count = read_be16(data + 4);
   if (table_count > (size - 12) / 16)
     return;
@@ -2415,7 +2417,7 @@ int GetPrivateProfileIntA(LPCSTR section, LPCSTR key, int default_value, LPCSTR 
 DWORD GetPrivateProfileStringA(LPCSTR section, LPCSTR key, LPCSTR default_value,
                                LPSTR returned_string, DWORD size, LPCSTR filename)
 {
-  FILE *file;
+  SDL_IOStream *file;
   char path[1024];
   char line[512];
   int in_section = 0;
@@ -2425,9 +2427,9 @@ DWORD GetPrivateProfileStringA(LPCSTR section, LPCSTR key, LPCSTR default_value,
   for (char *cursor = path; *cursor; ++cursor)
     if (*cursor == '\\')
       *cursor = '/';
-  file = fopen(path, "rb");
+  file = shandalar_open_file_io(path, "rb");
   if (file) {
-    while (fgets(line, sizeof(line), file)) {
+    while (shandalar_io_gets(line, sizeof(line), file)) {
       char *cursor = line;
       char *equals;
       char *value;
@@ -2465,10 +2467,10 @@ DWORD GetPrivateProfileStringA(LPCSTR section, LPCSTR key, LPCSTR default_value,
         end[-1] = '\0';
       }
       SDL_strlcpy(returned_string, value, size);
-      fclose(file);
+      SDL_CloseIO(file);
       return (DWORD)strlen(returned_string);
     }
-    fclose(file);
+    SDL_CloseIO(file);
   }
   SDL_strlcpy(returned_string, default_value ? default_value : "", size);
   return (DWORD)strlen(returned_string);
@@ -2503,7 +2505,6 @@ int wsprintfA(LPSTR buffer, LPCSTR format, ...)
 
 int lstrlenA(LPCSTR text) { return text ? (int)strlen(text) : 0; }
 
-BOOL CloseHandle(HANDLE handle) { (void)handle; return TRUE; }
 void *GlobalAlloc(UINT flags, size_t size) { (void)flags; return malloc(size); }
 void *GlobalLock(void *memory) { return memory; }
 BOOL GlobalUnlock(void *memory) { (void)memory; return TRUE; }

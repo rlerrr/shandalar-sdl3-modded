@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 // DeckDll: standalone and integrated deckbuilder.
 // deckdll.c: primary interface to Magic.exe/Shandalar.exe
 
@@ -48,7 +49,7 @@ typedef ptrdiff_t INT_PTR;
 typedef int (*Int_fn_int)(int);
 typedef void (*Void_fn_int_int)(int, int);
 void change_buttonclass_wndproc(HWND hwnd);
-static int read_deck_line(FILE *file, char *dest);
+static int read_deck_line(SDL_IOStream *file, char *dest);
 static int is_deck_card_line(char *line);
 static int is_deck_version_line(char *line);
 void draw_item(DRAWITEMSTRUCT *item, HBRUSH brush, HANDLE background,
@@ -442,7 +443,7 @@ int InitLicenseSecretsFromRegistry(void);
 
 /* Defined in filtermenus.c (original binary uses these in wndproc_MainClass). */
 extern int check_filters_debug_log_enabled;
-extern FILE *check_filters_debug_log_file;
+extern SDL_IOStream *check_filters_debug_log_file;
 
 LRESULT CALLBACK wndproc_CardClass(HWND, UINT, WPARAM, LPARAM);
 LRESULT CALLBACK wndproc_CardListFilterClass(HWND, UINT, WPARAM, LPARAM);
@@ -505,7 +506,7 @@ void deck_set_debug_card_picker(int (*pick_card)(HWND owner),
 // FUNCTION: DECKDLL 0x10028350
 int load_text(const char *file_name, const char *section_name)
 {
-  FILE *f;
+  SDL_IOStream *f;
   int i;
   char line[80];
   char path[128];
@@ -522,38 +523,38 @@ int load_text(const char *file_name, const char *section_name)
   if (!strchr(file_name, '.'))
     strcat(path, ".txt");
 
-  f = fopen(path, "rt");
+  f = shandalar_open_file_io(path, "rt");
   if (f == NULL)
     return -1;
 
   while (strcmp(section_line, line))
   {
-    if (!fgets(line, 80, f))
+    if (!shandalar_io_gets(line, 80, f))
     {
-      fclose(f);
+      shandalar_io_close(f);
       return -1;
     }
   }
 
-  fscanf(f, "%d", &num_text);
-  fgets(line, 80, f);
+  shandalar_io_scanf(f, "%d", &num_text);
+  shandalar_io_gets(line, 80, f);
   if (num_text > 225)
   {
-    fclose(f);
+    shandalar_io_close(f);
     return -1;
   }
 
   for (i = 0; i < (int)num_text; i++)
   {
-    if (!fgets(text_lines[i], 80, f))
+    if (!shandalar_io_gets(text_lines[i], 80, f))
     {
-      fclose(f);
+      shandalar_io_close(f);
       return -1;
     }
     text_lines[i][strlen(text_lines[i]) - 1] = 0;
   }
 
-  fclose(f);
+  shandalar_io_close(f);
   return num_text;
 }
 
@@ -2282,7 +2283,7 @@ dlgproc_LoadDeck(HWND hdlg, UINT msg, WPARAM wparam, LPARAM lparam)
   char deckname[200];      /* [ebp-0x2e4] */
   char prev_dir[0x108];    /* [ebp-0x21c] */
   WPARAM i;                /* [ebp-0x114] */
-  FILE *fp;                /* [ebp-0x110] */
+  SDL_IOStream *fp;                /* [ebp-0x110] */
   char *p;                 /* [ebp-0x10c] */
   char gaun_path[0x108];   /* [ebp-0x108] */
 
@@ -2321,31 +2322,31 @@ dlgproc_LoadDeck(HWND hdlg, UINT msg, WPARAM wparam, LPARAM lparam)
         strcpy(path, "playdeck\\");
         strcat(path, listbox_buf);
 
-        fp = fopen(path, "r");
-        if (fp != (FILE *)0)
+        fp = shandalar_open_file_io(path, "r");
+        if (fp != (SDL_IOStream *)0)
         {
-          if (fgetc(fp) != ';')
+          if (shandalar_io_text_getc(fp) != ';')
           {
-            fclose(fp);
+            shandalar_io_close(fp);
             continue;
           }
           deckname[0] = '\0';
           p = (char *)&deckname + strlen(deckname);
-          while ((*p = (char)fgetc(fp)) != '\n')
+          while ((*p = (char)shandalar_io_text_getc(fp)) != '\n')
           {
             p = p + 1;
           }
           *p = '\0';
-          fclose(fp);
+          shandalar_io_close(fp);
 
           strcpy(path, "playdeck\\");
           strcat(path, deckname);
           strcat(path, ".dck");
-          fp = fopen(path, "r");
-          if (fp != (FILE *)0)
+          fp = shandalar_open_file_io(path, "r");
+          if (fp != (SDL_IOStream *)0)
           {
             SendDlgItemMessageA(hdlg, RES_LOADDECK_DECKLIST, CB_ADDSTRING, 0, (LPARAM)deckname);
-            fclose(fp);
+            shandalar_io_close(fp);
           }
         }
       }
@@ -5612,30 +5613,30 @@ static void copy_deck_to_edit(void)
 static bool
 save_deck(const char *filename)
 {
-  FILE *f;    /* ebp - 0xc */
+  SDL_IOStream *f;    /* ebp - 0xc */
   int i;      /* ebp - 0x8 */
   int result; /* ebp - 0x4 */
 
-  f = fopen(filename, "wt");
+  f = shandalar_open_file_io(filename, "wt");
   if (f != 0)
   {
-    fprintf(f, ";%s\n", global_deckinfo.deckname);
-    fprintf(f, ";%s\n", global_deckinfo.description);
-    fprintf(f, ";%s\n", global_deckinfo.author);
-    fprintf(f, ";%s\n", global_deckinfo.email);
-    fprintf(f, ";%s\n", global_deckinfo.creation_date);
-    fprintf(f, ";%d\n", global_deckinfo.revision);
-    fprintf(f, ";%s\n", global_deckinfo.edition);
-    fprintf(f, ";%s\n", global_deckinfo.comments);
-    fprintf(f, "\n");
+    shandalar_io_printf(f, ";%s\n", global_deckinfo.deckname);
+    shandalar_io_printf(f, ";%s\n", global_deckinfo.description);
+    shandalar_io_printf(f, ";%s\n", global_deckinfo.author);
+    shandalar_io_printf(f, ";%s\n", global_deckinfo.email);
+    shandalar_io_printf(f, ";%s\n", global_deckinfo.creation_date);
+    shandalar_io_printf(f, ";%d\n", global_deckinfo.revision);
+    shandalar_io_printf(f, ";%s\n", global_deckinfo.edition);
+    shandalar_io_printf(f, ";%s\n", global_deckinfo.comments);
+    shandalar_io_printf(f, "\n");
 
     for (i = 0; i < global_edited_deck_num_entries; ++i)
-      fprintf(f, ".%d\t%d\t%s\n",
+      shandalar_io_printf(f, ".%d\t%d\t%s\n",
               global_edited_deck.entries[i].DeckEntry_csvid,
               global_edited_deck.entries[i].DeckEntry_Amount,
               global_edited_deck.entries[i].DeckEntry_FullName);
 
-    fclose(f);
+    shandalar_io_close(f);
     result = 1;
   }
   else
@@ -5656,13 +5657,13 @@ load_deck(char *filename)
   size_t len_author;    /* ebp - 0x210 */
   size_t len_deckname2; /* ebp - 0x20c */
   size_t len_deckname1; /* ebp - 0x208 */
-  FILE *f;              /* ebp - 0x204 */
+  SDL_IOStream *f;              /* ebp - 0x204 */
   char txt[500];        /* ebp - 0x200 */
   int ok;               /* ebp - 0xc */
   int num;              /* ebp - 0x8 */
   csvid_t csvid;        /* ebp - 0x4 */
 
-  f = fopen(filename, "rt");
+  f = shandalar_open_file_io(filename, "rt");
   if (f != 0)
   {
     memset(&global_edited_deck, 0, sizeof(global_edited_deck));
@@ -5673,56 +5674,56 @@ load_deck(char *filename)
       global_deck_num_entries = global_deck_num_entries_copy;
     }
 
-    fgets(txt, 0x1f, f);
+    shandalar_io_gets(txt, 0x1f, f);
     if (txt[0] != ';')
       return 0;
     len_deckname1 = strlen(txt);
     txt[len_deckname1 - 1] = 0;
     strncpy(global_deckinfo.deckname, &txt[1], 0x1f);
 
-    fgets(txt, 0x15, f);
+    shandalar_io_gets(txt, 0x15, f);
     if (txt[0] != ';')
       return 0;
     len_deckname2 = strlen(txt);
     txt[len_deckname2 - 1] = 0;
     strncpy(global_deckinfo.description, &txt[1], 0x15);
 
-    fgets(txt, 0x51, f);
+    shandalar_io_gets(txt, 0x51, f);
     if (txt[0] != ';')
       return 0;
     len_author = strlen(txt);
     txt[len_author - 1] = 0;
     strncpy(global_deckinfo.author, &txt[1], 0x51);
 
-    fgets(txt, 0x51, f);
+    shandalar_io_gets(txt, 0x51, f);
     if (txt[0] != ';')
       return 0;
     len_email = strlen(txt);
     txt[len_email - 1] = 0;
     strncpy(global_deckinfo.email, &txt[1], 0x51);
 
-    fgets(txt, 0x16, f);
+    shandalar_io_gets(txt, 0x16, f);
     if (txt[0] != ';')
       return 0;
     len_date = strlen(txt);
     txt[len_date - 1] = 0;
     strncpy(global_deckinfo.creation_date, &txt[1], 0x16);
 
-    fgets(txt, 0x10, f);
+    shandalar_io_gets(txt, 0x10, f);
     len_revision = strlen(txt);
     txt[len_revision - 1] = 0;
     if (txt[0] != ';')
       return 0;
     global_deckinfo.revision = atoi(&txt[1]);
 
-    fgets(txt, 0x10, f);
+    shandalar_io_gets(txt, 0x10, f);
     if (txt[0] != ';')
       return 0;
     len_edition = strlen(txt);
     txt[len_edition - 1] = 0;
     strncpy(global_deckinfo.edition, &txt[1], 0x10);
 
-    fgets(txt, 0x191, f);
+    shandalar_io_gets(txt, 0x191, f);
     if (txt[0] != ';')
       return 0;
     len_comments = strlen(txt);
@@ -5741,7 +5742,7 @@ load_deck(char *filename)
       }
     }
 
-    fclose(f);
+    shandalar_io_close(f);
     ok = 1;
   }
   else
@@ -5758,12 +5759,12 @@ load_deck(char *filename)
 }
 
 // FUNCTION: DECKDLL 0x1000edea
-static int read_deck_line(FILE *file, char *dest)
+static int read_deck_line(SDL_IOStream *file, char *dest)
 {
   int len;
   int ch;
 
-  for (len = 0; (ch = fgetc(file)) != '\n' && ch != -1;)
+  for (len = 0; (ch = shandalar_io_text_getc(file)) != '\n' && ch != -1;)
   {
     *dest = (char)ch;
     dest++;
@@ -5942,7 +5943,7 @@ wndproc_MainClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
   WPARAM wparam_copy; /* ebp - 0x7c */
 
   WORD wPicsInline;      /* ebp - 0x78 */
-  FILE *f;               /* ebp - 0x74 */
+  SDL_IOStream *f;               /* ebp - 0x74 */
   int *horz_list_addr;   /* ebp - 0x70 */
   int i;                 /* ebp - 0x6c */
   unsigned int artist_i; /* ebp - 0x68 */
@@ -6260,10 +6261,10 @@ wndproc_MainClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
       if (global_deckname_set)
       {
-        f = fopen(global_deck_filename, "rt");
+        f = shandalar_open_file_io(global_deck_filename, "rt");
         if (f != NULL)
         {
-          fclose(f);
+          shandalar_io_close(f);
 
           load_text("menus", "DECKEXISTS");
           sprintf(message, text_lines[0], global_deckinfo.deckname);
@@ -6389,7 +6390,7 @@ wndproc_MainClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
   case WM_CREATE:
     if (check_filters_debug_log_enabled != 0)
     {
-      check_filters_debug_log_file = fopen("CardIDs.TXT", "wt");
+      check_filters_debug_log_file = shandalar_open_file_io("CardIDs.TXT", "wt");
       if (check_filters_debug_log_file == NULL)
       {
         check_filters_debug_log_enabled = 0;
@@ -6670,7 +6671,7 @@ wndproc_MainClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
       free_sounds_and_music();
     if (check_filters_debug_log_file != NULL)
     {
-      fclose(check_filters_debug_log_file);
+      shandalar_io_close(check_filters_debug_log_file);
       check_filters_debug_log_file = NULL;
     }
     PostQuitMessage(0);

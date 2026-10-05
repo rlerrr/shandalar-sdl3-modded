@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "platform/winuser_compat.h"
 #include "platform/cheat_options.h"
 
@@ -592,7 +593,7 @@ void FreeAdvblocksFileBuffer(void)
 // FUNCTION: SHANDALAR 0x00562e0d
 char FindDriveWithAsset(char *filename)
 {
-  FILE *asset_file;
+  SDL_IOStream *asset_file;
   char drive_string[256] = "a:\\";
 
   for (; drive_string[0] <= (int)'z'; ++drive_string[0])
@@ -600,10 +601,10 @@ char FindDriveWithAsset(char *filename)
     if (GetDriveTypeA(drive_string) == 5)
     {
       strcat(drive_string, filename);
-      asset_file = fopen(drive_string, "rb");
-      if (asset_file != (FILE *)0)
+      asset_file = shandalar_open_file_io(drive_string, "rb");
+      if (asset_file != (SDL_IOStream *)0)
       {
-        fclose(asset_file);
+        shandalar_io_close(asset_file);
         return drive_string[0];
       }
       else
@@ -687,14 +688,14 @@ unsigned int LoadSoundWithDriveFallback(char *filename, int channel, Sound *soun
 // FUNCTION: SHANDALAR 0x00417dc6
 int FileExists(const char *filename)
 {
-  FILE *file;
+  SDL_IOStream *file;
 
-  file = fopen(filename, "rt");
-  if (file == (FILE *)0)
+  file = shandalar_open_file_io(filename, "rt");
+  if (file == (SDL_IOStream *)0)
   {
     return 0;
   }
 
-  fclose(file);
+  shandalar_io_close(file);
   return 1;
 }

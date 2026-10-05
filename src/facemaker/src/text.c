@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "platform/gdi_compat.h"
 #include <stdio.h>
 #include <stdlib.h>
@@ -16,7 +17,7 @@
 
 #pragma intrinsic(memcpy)
 
-extern int LoadBitmapFontFromFile(int font_id, FILE *file);
+extern int LoadBitmapFontFromFile(int font_id, SDL_IOStream *file);
 extern int SetFontStyleSize(int font_id, unsigned int style);
 extern int DrawTextFormatted(FacemakerWindowBounds *dst, int text_id, int draw_shadow, int scale_to_screen, int center_x, int center_y,
                              int x, int y, intptr_t *format_and_args);
@@ -105,17 +106,17 @@ char *PTR_s_File__s_could_not_be_opened__EXI_0040c0b0 = s_File__s_could_not_be_o
 #pragma optimize("gty", on)
 int LoadFontCollection(char *path)
 {
-    FILE *font_file;
+    SDL_IOStream *font_file;
     long font_offsets[16];
     int font_count;
     int font_index;
 
     font_count = 0;
-    font_file = fopen(path, g_file_read_mode);
-    assert((unsigned int)(font_file != (FILE *)0), s_D__NewMagic__sources__sidlib__text_c_0040d228, 0x83,
+    font_file = shandalar_open_file_io(path, g_file_read_mode);
+    assert((unsigned int)(font_file != (SDL_IOStream *)0), s_D__NewMagic__sources__sidlib__text_c_0040d228, 0x83,
            PTR_s_File__s_could_not_be_opened__EXI_0040c0b0, path);
 
-    fread(&font_count, 2, 1, font_file);
+    shandalar_io_read(&font_count, 2, 1, font_file);
     g_loaded_font_count = font_count;
     assert((unsigned int)(font_count < 0x10), s_D__NewMagic__sources__sidlib__text_c_0040d228, 0x8a,
            "Can not load more than %d fonts\n", 0x10);
@@ -125,7 +126,7 @@ int LoadFontCollection(char *path)
         do
         {
             font_offsets[font_index] = 0;
-            fread(&font_offsets[font_index], 2, 1, font_file);
+            shandalar_io_read(&font_offsets[font_index], 2, 1, font_file);
             font_index = font_index + 1;
         } while (font_index <= font_count);
     }
@@ -135,19 +136,19 @@ int LoadFontCollection(char *path)
     {
         do
         {
-            fseek(font_file, font_offsets[font_index], 0);
+            shandalar_io_seek(font_file, font_offsets[font_index], 0);
             LoadBitmapFontFromFile(font_index, font_file);
             font_index = font_index + 1;
         } while (font_index <= font_count);
     }
 
-    fclose(font_file);
+    shandalar_io_close(font_file);
     return font_count;
 }
 
 // FUNCTION: SHANDALAR 0x0057a5f0
 // FUNCTION: FACEMAKER 0x00407c20
-int LoadBitmapFontFromFile(int font_id, FILE *file)
+int LoadBitmapFontFromFile(int font_id, SDL_IOStream *file)
 {
     int row_bytes;
     int bitmap_size;
@@ -161,14 +162,14 @@ int LoadBitmapFontFromFile(int font_id, FILE *file)
     HBITMAP bitmap;
 
     font = &g_font_slots[font_id];
-    fseek(file, -8, 1);
-    fread(font, 1, 8, file);
+    shandalar_io_seek(file, -8, 1);
+    shandalar_io_read(font, 1, 8, file);
     glyph_count = ((unsigned int)font->last_char - (unsigned int)font->first_char) + 1;
     if (font->has_packed_widths == '\0')
     {
-        fseek(file, -8 - glyph_count, 1);
-        fread(FONT_GLYPH_ADVANCE(font) + (unsigned int)font->first_char, 1, glyph_count, file);
-        fseek(file, 8, 1);
+        shandalar_io_seek(file, -8 - glyph_count, 1);
+        shandalar_io_read(FONT_GLYPH_ADVANCE(font) + (unsigned int)font->first_char, 1, glyph_count, file);
+        shandalar_io_seek(file, 8, 1);
     }
 
     height = (unsigned int)font->point_size;
@@ -194,7 +195,7 @@ int LoadBitmapFontFromFile(int font_id, FILE *file)
     rows_remaining = height;
     while (rows_remaining != 0)
     {
-        fread(bitmap_data, 1, row_bytes, file);
+        shandalar_io_read(bitmap_data, 1, row_bytes, file);
         bitmap_data = bitmap_data + row_padding + row_bytes;
         rows_remaining = rows_remaining - 1;
     }

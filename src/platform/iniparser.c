@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 
 /*-------------------------------------------------------------------------*/
 /**
@@ -819,7 +820,7 @@ static line_status iniparser_line(
   The returned dictionary must be freed using iniparser_freedict().
  */
 /*--------------------------------------------------------------------------*/
-dictionary * iniparser_load_file_entries(FILE *in, const char *ininame,
+static dictionary * load_entries(FILE *in, SDL_IOStream *io, const char *ininame,
                                        iniparser_entry_callback callback, void *context)
 {
     char line    [ASCIILINESZ+1] ;
@@ -847,13 +848,14 @@ dictionary * iniparser_load_file_entries(FILE *in, const char *ininame,
     memset(val,     0, ASCIILINESZ);
     last=0 ;
 
-    while (fgets(line+last, ASCIILINESZ-last, in)!=NULL) {
+    while ((io ? shandalar_io_gets(line+last, ASCIILINESZ-last, io) :
+                 fgets(line+last, ASCIILINESZ-last, in)) != NULL) {
         lineno++ ;
         len = (int)strlen(line)-1;
         if (len<0)
             continue;
         /* Safety check against buffer overflows */
-        if (line[len]!='\n' && !feof(in)) {
+        if (line[len]!='\n' && !(io ? shandalar_io_eof(io) : feof(in))) {
             iniparser_error_callback(
               "iniparser: input line too long in %s (%d)\n",
               ininame,
@@ -913,11 +915,28 @@ dictionary * iniparser_load_file_entries(FILE *in, const char *ininame,
             break ;
         }
     }
-    if (errs || mem_err < 0 || ferror(in)) {
+    if (errs || mem_err < 0 || (io ? shandalar_io_error(io) : ferror(in))) {
         dictionary_del(dict);
         dict = NULL ;
     }
     return dict ;
+}
+
+dictionary *iniparser_load_file_entries(FILE *in, const char *name,
+                                      iniparser_entry_callback callback, void *context)
+{
+    return load_entries(in, NULL, name, callback, context);
+}
+
+dictionary *iniparser_load_io_entries(SDL_IOStream *io, const char *name,
+                                    iniparser_entry_callback callback, void *context)
+{
+    return load_entries(NULL, io, name, callback, context);
+}
+
+dictionary *iniparser_load_io(SDL_IOStream *io, const char *name)
+{
+    return iniparser_load_io_entries(io, name, NULL, NULL);
 }
 
 dictionary * iniparser_load_file(FILE *in, const char *ininame)
@@ -941,16 +960,16 @@ dictionary * iniparser_load_file(FILE *in, const char *ininame)
 /*--------------------------------------------------------------------------*/
 dictionary * iniparser_load(const char * ininame)
 {
-    FILE * in ;
+    SDL_IOStream * in ;
     dictionary * dict ;
 
-    if ((in=fopen(ininame, "r"))==NULL) {
+    if ((in=shandalar_open_file_io(ininame, "r"))==NULL) {
         iniparser_error_callback("iniparser: cannot open %s\n", ininame);
         return NULL ;
     }
 
-    dict = iniparser_load_file(in, ininame);
-    fclose(in);
+    dict = iniparser_load_io(in, ininame);
+    SDL_CloseIO(in);
 
     return dict ;
 }

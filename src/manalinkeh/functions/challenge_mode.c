@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "manalink.h"
 
 int challenge_round = 0;
@@ -965,9 +966,9 @@ int is_unlocked_by_challenge(int player, int unlock_level){
 	}
 	char buffer[200];
 	scnprintf(buffer, 200, "Faces//%s.jat", unlock_codes[unlock_level]);
-	FILE *file = fopen(buffer, "r");
+	SDL_IOStream *file = shandalar_open_file_io(buffer, "r");
 	if( file != NULL  ){
-		fclose(file);
+		shandalar_io_close(file);
 		unlocked[unlock_level] = 1;
 		return 1;
 	}
@@ -1001,14 +1002,14 @@ int is_unlocked(int player, int card, event_t event, int unlock_level){
 			}
 		}
 		scnprintf(c->name, strlen(c->name)+1,"%d #%d", challenge_set, challenge_number+1);
-		//fprintf(file1, "already known as locked %d\n", unlocked[unlock_level] );
+		//shandalar_io_printf(file1, "already known as locked %d\n", unlocked[unlock_level] );
 		return 0;
 	}
 
 	scnprintf(buffer, 200, "Faces//%s.jat", unlock_codes[unlock_level]);
-	FILE *file = fopen(buffer, "r");
+	SDL_IOStream *file = shandalar_open_file_io(buffer, "r");
 	if( file != NULL  ){
-		fclose(file);
+		shandalar_io_close(file);
 		unlocked[unlock_level] = 1;
 		return 1;
 	}
@@ -1021,10 +1022,10 @@ int is_unlocked(int player, int card, event_t event, int unlock_level){
 		scnprintf(buffer+pos, 200-pos, "%s", challenge_names[unlock_level] );
 		do_dialog(player, player, card , -1, -1, buffer, 0);
 	}
-	//fprintf(file1, "setting check to failed %d\n", unlocked[unlock_level] );
+	//shandalar_io_printf(file1, "setting check to failed %d\n", unlocked[unlock_level] );
 	unlocked[unlock_level] = 2;
 
-	//fclose(file1);
+	//shandalar_io_close(file1);
 	return 0;
 }
 
@@ -2438,9 +2439,9 @@ void challenge_mode_upkeep(int from_vanguard){
 		do_dialog(0,0,0,-1, -1, buffer, 0);
 
 		scnprintf(buffer, 200, "Faces//%s.jat", unlock_codes[unlock_id]);
-		FILE *file = fopen(buffer, "w");
-		fprintf(file, "%d", 1 );
-		fclose(file);
+		SDL_IOStream *file = shandalar_open_file_io(buffer, "w");
+		shandalar_io_printf(file, "%d", 1 );
+		shandalar_io_close(file);
 		if( ! ( challenge4 > -1 && challenge4 == 1 && challenge_round == 9 ) ){
 			lose_the_game(HUMAN);
 		}

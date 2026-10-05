@@ -3,14 +3,12 @@
 
 #include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
-#include <filesystem>
 #include "platform/file_io.h"
 
 #ifndef _MSC_VER
 #include <unistd.h>
 #endif
 
-namespace fs = std::filesystem;
 
 static std::unordered_map<std::string, SDL_Surface*> *cache;
 static char** idToName;
@@ -19,14 +17,6 @@ static CRITICAL_SECTION crit;
 static bool images_counted = false;
 
 static card_ptr_t* cards_ptr_shandalar_dll = NULL;
-
-static std::unique_ptr<wchar_t[]> stringToWChar(const std::string& s)
-{
-	int len = s.length() + 1;
-	std::unique_ptr<wchar_t[]> wcstring(new wchar_t[len]);
-	mbstowcs(wcstring.get(), s.c_str(), len);
-	return wcstring;
-}
 
 static void loadDat(const char* fname){
 	bool okchar[256] = {0};
@@ -41,15 +31,15 @@ static void loadDat(const char* fname){
 	okchar['\''] = true;
 	okchar['-'] = true;
 
-	FILE* f = fopen(fname, "rb");
+	SDL_IOStream* f = shandalar_open_file_io(fname, "rb");
 	size_t stringDataSize;
-	fread(&numberOfCards, 4, 1, f);
-	fread(&stringDataSize, 4, 1, f);
+	shandalar_io_read(&numberOfCards, 4, 1, f);
+	shandalar_io_read(&stringDataSize, 4, 1, f);
 	char* stringData = (char*)malloc(stringDataSize);
 	card_ptr_t* cardData = (card_ptr_t*)malloc(sizeof(card_ptr_t)*numberOfCards);
-	fread(cardData, sizeof(card_ptr_t), numberOfCards, f);
-	fread(stringData, 1, stringDataSize, f);
-	fclose(f);
+	shandalar_io_read(cardData, sizeof(card_ptr_t), numberOfCards, f);
+	shandalar_io_read(stringData, 1, stringDataSize, f);
+	shandalar_io_close(f);
 	idToName = (char**)calloc(numberOfCards, sizeof(char*));
 
 	for (unsigned int i = 0; i < numberOfCards; i++) {
@@ -141,13 +131,11 @@ static void count_images(void)
 		card_ptrs[i].num_pics = 1;	// Always assume at least one image; it would have been corrected to 1 if initially set to 0 anyway
 	}
 
-	std::error_code art_directory_error;
-	for (fs::directory_iterator dirit(fs::path("./CardArtManalink"), art_directory_error), end; dirit != end; ++dirit){
+	ShandalarFileList art_files;
+	if (!shandalar_list_files("CardArtManalink/*.jpg", &art_files)) return;
+	for (size_t index = 0; index < art_files.count; ++index) {
 		try {
-			if (!is_regular_file(dirit->status()))
-				continue;
-
-			std::string filename = dirit->path().filename().string();
+			std::string filename = art_files.names[index];
 
 			/* boost::regex would be more concise, but this is about 10% faster when not disk-bound, and more importantly, doesn't bloat the dll file size.
 			 * boost::filesystem already increases it from 328k to 1040k; adding boost::regex ballooned it to 1540k. */
@@ -180,8 +168,9 @@ static void count_images(void)
 			++num;	// "Grizzly Bears (3).jpg" is actually the fourth image
 			if (card_ptrs[csvid].num_pics < num)
 				card_ptrs[csvid].num_pics = num;
-		} catch (...) {}	// can't read dir, file stopped existing between iteration and status, etc. - we don't care, just skip it.
+		} catch (...) {}
 	}
+	shandalar_free_file_list(&art_files);
 }
 
 void Cardartlib_initialize_for_shandalar(card_data_t* real_cards_data, card_ptr_t* real_cards_ptr)
@@ -190,19 +179,6 @@ void Cardartlib_initialize_for_shandalar(card_data_t* real_cards_data, card_ptr_
 	(void)real_cards_data;
 	cards_ptr_shandalar_dll = real_cards_ptr;
 	count_images();	// during startup instead of waiting for first to display
-}
-
-static bool file_exists(const char *filename)
-{
-#ifndef _MSC_VER
-	if (access(filename, 4) == 0) // check read permission
-		return true;
-#else
-	std::unique_ptr<wchar_t[]> wFilename = stringToWChar(filename);
-	if (_waccess(wFilename.get(), 4) == 0) // check read permission
-		return true;
-#endif
-	return false;
 }
 
 int LoadBigArt(int id, int version, LONG width, int height) {

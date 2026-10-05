@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "platform/gdi_compat.h"
 #include "platform/legacy_io.h"
 #include "platform/winuser_compat.h"
@@ -75,7 +76,7 @@ extern DIBSurface *InitializeGraphicsSystemDefaultMode(void);
 extern void SetGraphicsPage(int page_number, DIBSurface *page);
 extern char s_D__NewMagic__sources__sidlib__lib_c_0040d0ec[];
 extern int LoadFontCollection(char *path);
-extern int LoadBitmapFontFromFile(int font_id, FILE *file);
+extern int LoadBitmapFontFromFile(int font_id, SDL_IOStream *file);
 extern void BlitGraphicsRect(FacemakerWindowBounds *dst, unsigned int dst_x, int dst_y, unsigned int width,
                              DWORD height, FacemakerWindowBounds *src, int src_x, int src_y);
 extern void PutGraphicsPixel(FacemakerWindowBounds *dst, int x, int y, int char_code);
@@ -528,7 +529,7 @@ int InitializeFaceMakerAssets(void)
     int tmp_y;
     int tmp_x;
     char pad_010[0x100];
-    FILE *file;
+    SDL_IOStream *file;
     int style_values[6];
     int loop_index;
     int face_slot_x;
@@ -547,20 +548,20 @@ int InitializeFaceMakerAssets(void)
   local.style_values[3] = 10;
   local.button_text_ids[0] = 2;
 
-  local.file = fopen("FaceButtons.txt", "rt");
-  fscanf(local.file, "%[^\n]%*c", g_save_dialog_title);
+  local.file = shandalar_open_file_io("FaceButtons.txt", "rt");
+  shandalar_io_scanf(local.file, "%[^\n]%*c", g_save_dialog_title);
   strip_trailing_newline(g_save_dialog_title);
-  fscanf(local.file, "%[^\n]%*c", g_default_face_filename);
+  shandalar_io_scanf(local.file, "%[^\n]%*c", g_default_face_filename);
   strip_trailing_newline(g_default_face_filename);
   for (local.loop_index = 0; local.loop_index < 4; local.loop_index = local.loop_index + 1)
   {
-    fscanf(local.file, "%[^\n]%*c", g_face_button_text_buffer + local.loop_index * 0x20);
+    shandalar_io_scanf(local.file, "%[^\n]%*c", g_face_button_text_buffer + local.loop_index * 0x20);
     strip_trailing_newline(g_face_button_text_buffer + local.loop_index * 0x20);
   }
 
-  fscanf(local.file, "%d %d,%d,%d,%d", local.button_text_ids, local.style_values,
+  shandalar_io_scanf(local.file, "%d %d,%d,%d,%d", local.button_text_ids, local.style_values,
          local.style_values + 1, local.style_values + 2, local.style_values + 3);
-  fclose(local.file);
+  shandalar_io_close(local.file);
 
   BeginSpriteEncodeSession();
   LoadPcxIntoPageNoPalette(2, "FaceArt/facebut1.pcx");
@@ -818,7 +819,7 @@ int LoadSelectedFaceSet(int selected_face_index)
 // FUNCTION: FACEMAKER 0x00402841
 int AcceptFaceSelection(FaceControl *control)
 {
-  FILE *recent_face_file;
+  SDL_IOStream *recent_face_file;
 
   if (g_face_composite_ready == 0 && g_use_desktop_palette == 0)
   {
@@ -829,12 +830,12 @@ int AcceptFaceSelection(FaceControl *control)
     ExportEncodedImage(2, 0, 0, 0x114, 0xaa, 0, g_face_output_path);
   }
 
-  recent_face_file = fopen(FacemakerRecentFacePath(), "wt");
-  if (recent_face_file != (FILE *)0)
+  recent_face_file = shandalar_open_file_io(FacemakerRecentFacePath(), "wt");
+  if (recent_face_file != (SDL_IOStream *)0)
   {
-    fprintf(recent_face_file, "%d, %s", g_selected_face_set_index,
+    shandalar_io_printf(recent_face_file, "%d, %s", g_selected_face_set_index,
             g_face_set_names[g_selected_face_set_index]);
-    fclose(recent_face_file);
+    shandalar_io_close(recent_face_file);
   }
   g_worker_should_exit = 1;
   return 0;
@@ -1154,7 +1155,7 @@ DWORD __cdecl FaceMakerWorkerThread(LPVOID unused)
     int face_slot_y;
     int face_slot_x;
     char face_art_path[260];
-    FILE *recent_face_file;
+    SDL_IOStream *recent_face_file;
     char recent_face_name[256];
     DIBSurface *page;
     int button_index;
@@ -1246,17 +1247,17 @@ DWORD __cdecl FaceMakerWorkerThread(LPVOID unused)
                           global_screen_height);
   InitializeFaceMakerAssets();
 
-  local.recent_face_file = fopen(FacemakerRecentFacePath(), "rt");
-  if (local.recent_face_file != (FILE *)0)
+  local.recent_face_file = shandalar_open_file_io(FacemakerRecentFacePath(), "rt");
+  if (local.recent_face_file != (SDL_IOStream *)0)
   {
-    fscanf(local.recent_face_file, "%d, %s", &g_selected_face_set_index,
+    shandalar_io_scanf(local.recent_face_file, "%d, %s", &g_selected_face_set_index,
            local.recent_face_name);
     if (_stricmp(g_face_set_names[g_selected_face_set_index],
                  local.recent_face_name) != 0)
     {
       g_selected_face_set_index = 0;
     }
-    fclose(local.recent_face_file);
+    shandalar_io_close(local.recent_face_file);
   }
 
   strcpy(local.face_art_path, "FaceArt/");
@@ -1459,12 +1460,12 @@ int LoadFaceSpriteSet(char *base_path, int *group_frame_counts, EncodedImage **g
     int use_pcx_tiles;
     int saw_separator;
     intptr_t pcx_find_handle;
-    struct _finddata_t find_data;
+    ShandalarFindData find_data;
     EncodedImage *current_sprite;
     char group_suffix_storage[2];
     char *group_suffix;
     int first_tile;
-    struct _finddata_t pcx_find_data;
+    ShandalarFindData pcx_find_data;
   } face_loader;
 
   face_loader.group_count = 0;
@@ -1478,11 +1479,11 @@ int LoadFaceSpriteSet(char *base_path, int *group_frame_counts, EncodedImage **g
   *group_entries = NULL;
   *face_loader.group_suffix = 'a';
   strcpy(face_loader.path_buffer, base_path);
-  face_loader.find_handle = _findfirst(face_loader.path_buffer, &face_loader.find_data);
+  face_loader.find_handle = shandalar_io_findfirst(face_loader.path_buffer, &face_loader.find_data);
   strcpy(face_loader.path_buffer, base_path);
   strcat(face_loader.path_buffer, "*.pcx");
   face_loader.pcx_find_handle =
-      _findfirst(face_loader.path_buffer, &face_loader.pcx_find_data);
+      shandalar_io_findfirst(face_loader.path_buffer, &face_loader.pcx_find_data);
   if ((face_loader.pcx_find_handle == -1) && (face_loader.find_handle == -1))
   {
     return face_loader.group_count;
@@ -1499,15 +1500,15 @@ int LoadFaceSpriteSet(char *base_path, int *group_frame_counts, EncodedImage **g
       {
         face_loader.use_pcx_tiles = 1;
       }
-    } while (_findnext(face_loader.pcx_find_handle, &face_loader.pcx_find_data) == 0);
+    } while (shandalar_io_findnext(face_loader.pcx_find_handle, &face_loader.pcx_find_data) == 0);
   }
   if (face_loader.pcx_find_handle != -1)
   {
-    _findclose(face_loader.pcx_find_handle);
+    shandalar_io_findclose(face_loader.pcx_find_handle);
   }
   if (face_loader.find_handle != -1)
   {
-    _findclose(face_loader.find_handle);
+    shandalar_io_findclose(face_loader.find_handle);
   }
   strcpy(face_loader.path_buffer, base_path);
   strcat(face_loader.path_buffer, ".pcx");
@@ -1569,13 +1570,13 @@ int LoadFaceSpriteSet(char *base_path, int *group_frame_counts, EncodedImage **g
     strcat(face_loader.path_buffer, ".pcx");
     ++*face_loader.group_suffix;
     face_loader.pcx_find_handle =
-        _findfirst(face_loader.path_buffer, &face_loader.pcx_find_data);
+        shandalar_io_findfirst(face_loader.path_buffer, &face_loader.pcx_find_data);
     if (face_loader.pcx_find_handle == -1)
     {
       break;
     }
     else
-      _findclose(face_loader.pcx_find_handle);
+      shandalar_io_findclose(face_loader.pcx_find_handle);
     LoadPcxIntoPageNoPalette(2, face_loader.path_buffer);
     ReplacePaletteIndexInRect(g_face_fullscreen_bounds, 0, 0, 0x22c, 0x158, 0x6d, 0);
   }

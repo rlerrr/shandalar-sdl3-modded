@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "manalink.h"
 
 extern int target_controller, target_card;
@@ -1316,29 +1317,29 @@ int choose_default_target(int player, int card, target_definition_t *td){
 		// read in which cards should auto target
 		if( read_auto_target_file == 0 ){
 			char buffer[500];
-			FILE *file = fopen("TargetsHuman.txt", "r");
+			SDL_IOStream *file = shandalar_open_file_io("TargetsHuman.txt", "r");
 			int count = 0;
-			while( fscanf(file, "%[.]", buffer) == 1 ){
-				fscanf(file, "%[0-9]", buffer);
+			while( shandalar_io_scanf(file, "%[.]", buffer) == 1 ){
+				shandalar_io_scanf(file, "%[0-9]", buffer);
 				int num = atoi(buffer);
 				auto_targets[count] = num;
 				auto_targets_target[count] = HUMAN;
-				fscanf(file, "%[^\n]", buffer);
-				fscanf(file, "%[\n]", buffer);
+				shandalar_io_scanf(file, "%[^\n]", buffer);
+				shandalar_io_scanf(file, "%[\n]", buffer);
 				count++;
 			}
-			fclose(file);
-			file = fopen("TargetsAI.txt", "r");
-			while( fscanf(file, "%[.]", buffer) == 1 ){
-				fscanf(file, "%[0-9]", buffer);
+			shandalar_io_close(file);
+			file = shandalar_open_file_io("TargetsAI.txt", "r");
+			while( shandalar_io_scanf(file, "%[.]", buffer) == 1 ){
+				shandalar_io_scanf(file, "%[0-9]", buffer);
 				int num = atoi(buffer);
 				auto_targets[count] = num;
 				auto_targets_target[count] = AI;
-				fscanf(file, "%[^\n]", buffer);
-				fscanf(file, "%[\n]", buffer);
+				shandalar_io_scanf(file, "%[^\n]", buffer);
+				shandalar_io_scanf(file, "%[\n]", buffer);
 				count++;
 			}
-			fclose(file);
+			shandalar_io_close(file);
 			auto_targets[count] = -1;
 			read_auto_target_file = 1;
 		}

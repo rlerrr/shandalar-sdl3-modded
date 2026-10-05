@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "platform/gdi_compat.h"
 #include "platform/legacy_io.h"
 #include <stdio.h>
@@ -12,7 +13,7 @@ extern void WriteGraphicsScanline(unsigned int *scanline_data, int page_number, 
 extern void ReadGraphicsScanline(unsigned int *out_scanline, int page_number, int src_x, int src_y,
                                  unsigned int byte_count);
 extern unsigned char gPcxScanlineBuffer[0x1000];
-extern void RpBits_Setup(int fileDescriptor);
+extern void RpBits_Setup(SDL_IOStream *fileDescriptor);
 extern void RpBits_ReadTables(unsigned short *palette);
 extern void RpBits_DecodeImage(void *dst, int count);
 extern char g_file_read_mode[];
@@ -689,7 +690,7 @@ void LoadPcxPalette(char *path, unsigned short *palette)
 void LoadPcxResource(int page_number, int x, int y, char *path, void *opaque)
 {
   char *ext;
-  int file_handle;
+  SDL_IOStream *file_handle;
   int line;
   RpBitsPalettePacket *palette;
   RpBitsPalettePacket palette_buffer;
@@ -697,8 +698,8 @@ void LoadPcxResource(int page_number, int x, int y, char *path, void *opaque)
   ext = strchr(path, '.');
   if (_stricmp(".pcx", ext) != 0)
   {
-    file_handle = _open(path, 0x8000);
-    assert((unsigned int)(file_handle != -1), s_D__NewMagic__sources__sidlib__Fileio_c_0040d29c, 0x88,
+    file_handle = shandalar_open_file_io(path, "rb");
+    assert((unsigned int)(file_handle != NULL), s_D__NewMagic__sources__sidlib__Fileio_c_0040d29c, 0x88,
            s_Error_Opening_File__s_0040d2c0, path);
 
     RpBits_Setup(file_handle);
@@ -715,13 +716,13 @@ void LoadPcxResource(int page_number, int x, int y, char *path, void *opaque)
       line = line + 1;
     }
 
-    assert((unsigned int)(_close(file_handle) == 0), s_D__NewMagic__sources__sidlib__Fileio_c_0040d29c, 0xa8,
+    assert((unsigned int)(shandalar_io_close(file_handle) == 0), s_D__NewMagic__sources__sidlib__Fileio_c_0040d29c, 0xa8,
            (char *)0);
     return;
   }
 
-  gPcxInFile = fopen(path, g_file_read_mode);
-  assert((unsigned int)(gPcxInFile != (FILE *)0), s_D__NewMagic__sources__sidlib__Fileio_c_0040d29c, 0xf7,
+  gPcxInFile = shandalar_open_file_io(path, g_file_read_mode);
+  assert((unsigned int)(gPcxInFile != (SDL_IOStream *)0), s_D__NewMagic__sources__sidlib__Fileio_c_0040d29c, 0xf7,
          s_Error_Opening_File__s_0040d2c0, path);
   gPcxPath = path;
   palette = (RpBitsPalettePacket *)opaque;
@@ -754,5 +755,5 @@ void LoadPcxResource(int page_number, int x, int y, char *path, void *opaque)
     WriteGraphicsScanline((unsigned int *)gPcxScanlineBuffer, page_number, x, y + line, global_pcxw_image_width);
     line = line + 1;
   }
-  fclose(gPcxInFile);
+  shandalar_io_close(gPcxInFile);
 }

@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "platform/winuser_compat.h"
 #include "platform/cheat_options.h"
 
@@ -122,7 +123,7 @@ char g_sound_drive_letter;
 // GLOBAL: SHANDALAR 0x0067a3b8
 char *g_advblocks_file_buffer;
 // GLOBAL: SHANDALAR 0x0078cf08
-FILE *g_advbuttons_ini_file;
+SDL_IOStream *g_advbuttons_ini_file;
 // GLOBAL: SHANDALAR 0x0078df10
 char g_ini_string_scratch[0x28];
 // GLOBAL: SHANDALAR 0x0078df38
@@ -1014,7 +1015,7 @@ DWORD WINAPI AdventureWorkerThread(LPVOID unused)
 
   (void)unused;
 
-  g_advbuttons_ini_file = fopen("advButtons.txt", "rt");
+  g_advbuttons_ini_file = shandalar_open_file_io("advButtons.txt", "rt");
   strcpy(g_ini_string_scratch, "");
   g_done_text_table_entry = LoadIniEscapedStringTable(g_advbuttons_ini_file, "done", g_ini_string_scratch)[0];
 

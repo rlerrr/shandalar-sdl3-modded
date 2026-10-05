@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "face_assets.h"
 
 #include "platform/legacy_io.h"
@@ -12,14 +13,14 @@ int facemaker_face_definitions_load(const char *path, FacemakerFaceDefinition *d
                                     int capacity)
 {
   char line[256];
-  FILE *file;
+  SDL_IOStream *file;
   int count = 0;
   if (!path || !definitions || capacity <= 0)
     return 0;
-  file = fopen(path, "rt");
+  file = shandalar_open_file_io(path, "rt");
   if (!file)
     return 0;
-  while (count < capacity && fgets(line, sizeof(line), file)) {
+  while (count < capacity && shandalar_io_gets(line, sizeof(line), file)) {
     char *first_comma = strchr(line, ',');
     char *second_comma;
     char *gender;
@@ -43,7 +44,7 @@ int facemaker_face_definitions_load(const char *path, FacemakerFaceDefinition *d
     definitions[count].gender = *gender;
     ++count;
   }
-  fclose(file);
+  shandalar_io_close(file);
   return count;
 }
 
@@ -51,7 +52,7 @@ int facemaker_sprite_blob_load_entries(const char *path, unsigned char **blob,
                                        size_t *blob_size, EncodedImage **entries,
                                        int entry_capacity)
 {
-  FILE *file;
+  SDL_IOStream *file;
   long file_size;
   unsigned char *cursor;
   unsigned char *end;
@@ -61,30 +62,30 @@ int facemaker_sprite_blob_load_entries(const char *path, unsigned char **blob,
     return 0;
   *blob = NULL;
   *blob_size = 0;
-  file = fopen(path, "rb");
+  file = shandalar_open_file_io(path, "rb");
   if (!file)
     return 0;
-  fseek(file, 0, SEEK_END);
-  file_size = ftell(file);
-  fseek(file, 0, SEEK_SET);
+  shandalar_io_seek(file, 0, SEEK_END);
+  file_size = SDL_TellIO(file);
+  shandalar_io_seek(file, 0, SEEK_SET);
   if (file_size <= 0) {
-    fclose(file);
+    shandalar_io_close(file);
     return 0;
   }
   *blob = (unsigned char *)malloc((size_t)file_size);
   if (!*blob) {
-    fclose(file);
+    shandalar_io_close(file);
     return 0;
   }
   *blob_size = (size_t)file_size;
-  if (fread(*blob, 1, *blob_size, file) != *blob_size) {
-    fclose(file);
+  if (shandalar_io_read(*blob, 1, *blob_size, file) != *blob_size) {
+    shandalar_io_close(file);
     free(*blob);
     *blob = NULL;
     *blob_size = 0;
     return 0;
   }
-  fclose(file);
+  shandalar_io_close(file);
 
   cursor = *blob;
   end = cursor + *blob_size;

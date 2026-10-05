@@ -1,6 +1,7 @@
 #include <SDL3/SDL.h>
 
 #include "platform/asset_manager.h"
+#include "platform/mod_overlay.h"
 #include "platform/gdi_compat.h"
 #include "platform/winuser_compat.h"
 #include "platform/winuser_sdl_compositor.h"
@@ -121,6 +122,10 @@ int main(int argc, char **argv)
 #ifdef __EMSCRIPTEN__
   asset_root = "/assets";
 #endif
+  if (!shandalar_mod_init_from_args(&argc, argv)) {
+    SDL_Log("facemaker: mod setup failed: %s", SDL_GetError());
+    return 1;
+  }
   for (i = 1; i < argc; ++i) {
     if (SDL_strcmp(argv[i], "--smoke") == 0)
       g_smoke_frames_remaining = 30;
@@ -164,6 +169,7 @@ int main(int argc, char **argv)
   SDL_StopTextInput(g_window);
   SDL_DestroyRenderer(g_renderer);
   SDL_DestroyWindow(g_window);
+  shandalar_mod_unload();
   SDL_Quit();
   return result;
 }

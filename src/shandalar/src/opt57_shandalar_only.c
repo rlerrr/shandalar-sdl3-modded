@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 // SHANDALAR-only optimized helpers from the 0x0057xxxx region.
 //
 // These live in SHANDALAR but not in FACEMAKER, even though SHANDALAR pulls in
@@ -139,21 +140,20 @@ void CopyGraphicsRect(FacemakerWindowBounds *src, int src_x, int src_y, unsigned
 // FUNCTION: SHANDALAR 0x0057b7a0
 int ReadSpriteEntryPointersWithLimit(EncodedImage **out_entry_ptrs, char *sprite_path, int max_entries)
 {
-  FILE *_File;
+  SDL_IOStream *_File;
   int iVar1;
   int _Size;
   int *_DstBuf;
   int iVar2;
 
   iVar2 = 0;
-  _File = fopen(sprite_path, "rb");
+  _File = shandalar_open_file_io(sprite_path, "rb");
   assert(_File != NULL, "D:\\NewMagic\\sources\\sidlib\\sprite.c", 0xc5,
          "Could not open Sprite File %s\n", sprite_path);
-  iVar1 = _fileno(_File);
-  _Size = _filelength(iVar1);
+  _Size = (int)SDL_GetIOSize(_File);
   _DstBuf = malloc(_Size);
-  fread(_DstBuf, 1, _Size, _File);
-  fclose(_File);
+  shandalar_io_read(_DstBuf, 1, _Size, _File);
+  shandalar_io_close(_File);
 
   iVar1 = *_DstBuf;
   if (iVar1 != -1)

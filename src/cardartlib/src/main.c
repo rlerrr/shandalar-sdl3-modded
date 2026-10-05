@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
@@ -107,7 +108,7 @@ int CardArtLib_InitializeFromRoot(const char *asset_root)
   int unused_header_value;
   int idx;
   int i;
-  FILE *cards_file;
+  SDL_IOStream *cards_file;
 
   if (!asset_root || !asset_root[0])
     return 0;
@@ -131,11 +132,11 @@ int CardArtLib_InitializeFromRoot(const char *asset_root)
     return 0;
 
   snprintf(cards_dat_path, sizeof(cards_dat_path), "%s/CARDS.DAT", asset_root);
-  cards_file = fopen(cards_dat_path, "rb");
+  cards_file = shandalar_open_file_io(cards_dat_path, "rb");
   if (cards_file) {
-    if (fread(&card_count, sizeof(card_count), 1, cards_file) != 1 ||
-        fread(&unused_header_value, sizeof(unused_header_value), 1, cards_file) != 1) {
-      fclose(cards_file);
+    if (shandalar_io_read(&card_count, sizeof(card_count), 1, cards_file) != 1 ||
+        shandalar_io_read(&unused_header_value, sizeof(unused_header_value), 1, cards_file) != 1) {
+      shandalar_io_close(cards_file);
       free(records);
       return 0;
     }
@@ -143,12 +144,12 @@ int CardArtLib_InitializeFromRoot(const char *asset_root)
       card_count = 0;
     if (card_count > 2000)
       card_count = 2000;
-    if (fread(records, sizeof(records[0]), (size_t)card_count, cards_file) != (size_t)card_count) {
-      fclose(cards_file);
+    if (shandalar_io_read(records, sizeof(records[0]), (size_t)card_count, cards_file) != (size_t)card_count) {
+      shandalar_io_close(cards_file);
       free(records);
       return 0;
     }
-    fclose(cards_file);
+    shandalar_io_close(cards_file);
   }
 
   for (idx = 0; idx < 2000; ++idx)

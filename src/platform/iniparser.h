@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 
 /*-------------------------------------------------------------------------*/
 /**
@@ -425,6 +426,7 @@ dictionary * iniparser_load(const char * ininame);
   The returned dictionary must be freed using iniparser_freedict().
  */
 /*--------------------------------------------------------------------------*/
+dictionary *iniparser_load_io(SDL_IOStream *in, const char *name);
 dictionary * iniparser_load_file(FILE * in, const char * ininame);
 
 /* Ordered variant for Shandalar.ini. Allows bare keys with empty values and
@@ -434,6 +436,8 @@ typedef void (*iniparser_entry_callback)(void *context, const char *section,
                                        const char *key, const char *value);
 dictionary * iniparser_load_file_entries(FILE *in, const char *ininame,
                                        iniparser_entry_callback callback, void *context);
+dictionary *iniparser_load_io_entries(SDL_IOStream *in, const char *name,
+                                     iniparser_entry_callback callback, void *context);
 
 /*-------------------------------------------------------------------------*/
 /**

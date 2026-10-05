@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "platform/gdi_compat.h"
 #include "platform/legacy_io.h"
 #include <stdio.h>
@@ -70,12 +71,12 @@ int global_pcxw_image_height = 0x00000000;
 // GLOBAL: DECKDLL 0x10113960
 // GLOBAL: FACEMAKER 0x0041f55c
 // GLOBAL: SHANDALAR 0x0097f994
-FILE *gPcxInFile;
+SDL_IOStream *gPcxInFile;
 
 // GLOBAL: DRAWCARDLIB 0x10127d34
 // GLOBAL: DECKDLL 0x10113964
 // GLOBAL: MAGIC 0x00777524
-FILE *gPcxOutFile;
+SDL_IOStream *gPcxOutFile;
 
 // GLOBAL: DRAWCARDLIB 0x10127d38
 // GLOBAL: DECKDLL 0x10113968
@@ -109,8 +110,8 @@ undefined1 *PcxLoad8bppImage(char *path, undefined1 *imagePixels, void *paletteO
   undefined1 *basePixels;
   int row;
 
-  gPcxInFile = fopen(path, "rb");
-  assert(gPcxInFile != (FILE *)0x0, PTR_s_D__Newmagic_sources_sidlib_Pcxw__10021ed0, 0x69,
+  gPcxInFile = shandalar_open_file_io(path, "rb");
+  assert(gPcxInFile != (SDL_IOStream *)0x0, PTR_s_D__Newmagic_sources_sidlib_Pcxw__10021ed0, 0x69,
          "Error Opening File %s\r\n", path);
   gPcxPath = path;
   PcxReadHeaderAndPalette(paletteOut);
@@ -152,7 +153,7 @@ undefined1 *PcxLoad8bppImage(char *path, undefined1 *imagePixels, void *paletteO
     }
     imagePixels = imagePixels + padBytes;
   }
-  fclose(gPcxInFile);
+  shandalar_io_close(gPcxInFile);
   return basePixels;
 }
 
@@ -160,15 +161,15 @@ undefined1 *PcxLoad8bppImage(char *path, undefined1 *imagePixels, void *paletteO
 // FUNCTION: DECKDLL 0x1001649a
 bool PcxReadHeaderAndPaletteFromPath(char *path, void *paletteOut)
 {
-  gPcxInFile = fopen(path, "rb");
-  assert(gPcxInFile != (FILE *)0x0, PTR_s_D__Newmagic_sources_sidlib_Pcxw__10021ed0, 0x9c,
+  gPcxInFile = shandalar_open_file_io(path, "rb");
+  assert(gPcxInFile != (SDL_IOStream *)0x0, PTR_s_D__Newmagic_sources_sidlib_Pcxw__10021ed0, 0x9c,
          "Error Opening File %s\r\n", path);
   gPcxPath = path;
 
   if (PcxReadHeaderAndPalette(paletteOut) == 0)
     return 0;
 
-  fclose(gPcxInFile);
+  shandalar_io_close(gPcxInFile);
   return 1;
 }
 
@@ -184,7 +185,7 @@ undefined4 PcxReadHeaderAndPalette(void *paletteOut)
 {
   int paletteIndex;
 
-  fread(&gPcxHeader, 0x80, 1, gPcxInFile);
+  shandalar_io_read(&gPcxHeader, 0x80, 1, gPcxInFile);
   assert(gPcxHeader.manufacturer == 0x0a, PTR_s_D__Newmagic_sources_sidlib_Pcxw__10021ed0, 0xad,
          "%s Not a pcx file\r\n", gPcxPath);
   assert(gPcxHeader.version == 5, PTR_s_D__Newmagic_sources_sidlib_Pcxw__10021ed0, 0xae,
@@ -197,18 +198,18 @@ undefined4 PcxReadHeaderAndPalette(void *paletteOut)
   }
   if ((gPcxHeader.nPlanes == 1) && (gPcxHeader.bitsPerPixel == 8))
   {
-    fseek(gPcxInFile, -0x300, 2);
-    fread(paletteOut, 1, 0x300, gPcxInFile);
-    fseek(gPcxInFile, 0x80, 0);
+    shandalar_io_seek(gPcxInFile, -0x300, 2);
+    shandalar_io_read(paletteOut, 1, 0x300, gPcxInFile);
+    shandalar_io_seek(gPcxInFile, 0x80, 0);
   }
   else if ((gPcxHeader.nPlanes == 4) && (gPcxHeader.bitsPerPixel == 1))
   {
-    fseek(gPcxInFile, 0x10, 2);
+    shandalar_io_seek(gPcxInFile, 0x10, 2);
     for (paletteIndex = 0; paletteIndex < 0x10; paletteIndex = paletteIndex + 1)
     {
-      fread((byte *)paletteOut + paletteIndex * 4, 1, 3, gPcxInFile);
+      shandalar_io_read((byte *)paletteOut + paletteIndex * 4, 1, 3, gPcxInFile);
     }
-    fseek(gPcxInFile, 0x80, 0);
+    shandalar_io_seek(gPcxInFile, 0x80, 0);
   }
   else
   {
@@ -235,11 +236,11 @@ undefined4 PcxReadScanlineRle(char *dstScanline)
   bytesRemaining = (int)(short)gPcxHeader.bytesPerLine;
   while (0 < bytesRemaining)
   {
-    b = (byte)fgetc(gPcxInFile);
+    b = (byte)shandalar_io_getc(gPcxInFile);
     if ((b & 0xc0) == 0xc0)
     {
       runCount = (int)(b & 0x3f);
-      b = (byte)fgetc(gPcxInFile);
+      b = (byte)shandalar_io_getc(gPcxInFile);
       if (1 < (uint)runCount)
       {
         for (repeatIndex = 0; repeatIndex < (uint)runCount; repeatIndex = repeatIndex + 1)
@@ -280,8 +281,8 @@ PcxSave8bppImage(undefined *srcPixels, char *path, void *palette, undefined4 unu
   byte paletteMarker;
 
   paletteMarker = '\f';
-  gPcxOutFile = fopen(path, "w+b");
-  assert((uint)(gPcxOutFile != (FILE *)0x0),
+  gPcxOutFile = shandalar_open_file_io(path, "w+b");
+  assert((uint)(gPcxOutFile != (SDL_IOStream *)0x0),
          PTR_s_D__Newmagic_sources_sidlib_Pcxw__10021ed0, 0x146,
          "Error Opening File %s\r\n", path);
   gPcxPath = path;
@@ -292,7 +293,7 @@ PcxSave8bppImage(undefined *srcPixels, char *path, void *palette, undefined4 unu
     PcxWriteScanlineRle((char *)scanline, width);
   }
   PcxWritePalette256(palette);
-  fclose(gPcxOutFile);
+  shandalar_io_close(gPcxOutFile);
   return 0;
 }
 
@@ -317,7 +318,7 @@ undefined4 PcxWriteHeader(int width, int height)
   gPcxHeader.paletteInfo = 1;
   gPcxHeader.hScreenSize = 0;
   gPcxHeader.vScreenSize = 0;
-  fwrite(&gPcxHeader, 0x80, 1, gPcxOutFile);
+  shandalar_io_write(&gPcxHeader, 0x80, 1, gPcxOutFile);
   return 0;
 }
 
@@ -349,14 +350,14 @@ undefined4 PcxWriteScanlineRle(char *srcScanline, int widthBytes)
       pos = pos + runCount;
       srcScanline = srcScanline + runCount;
       runCount = runCount | 0xc0;
-      fwrite(&runCount, 1, 1, gPcxOutFile);
-      fwrite(&value, 1, 1, gPcxOutFile);
+      shandalar_io_write(&runCount, 1, 1, gPcxOutFile);
+      shandalar_io_write(&value, 1, 1, gPcxOutFile);
     }
   }
   if (pos < (int)(short)gPcxHeader.bytesPerLine)
   {
     *(unsigned char *)&value = 0;
-    fwrite(&value, 1, 1, gPcxOutFile);
+    shandalar_io_write(&value, 1, 1, gPcxOutFile);
   }
   return 1;
 }
@@ -371,9 +372,9 @@ void PcxWriteRleByte(unsigned char value)
   buff[0] = 0xc1;
   if ((value & 0xc0) == 0xc0)
   {
-    fwrite(buff, 1, 1, gPcxOutFile);
+    shandalar_io_write(buff, 1, 1, gPcxOutFile);
   }
-  fwrite(&value, 1, 1, gPcxOutFile);
+  shandalar_io_write(&value, 1, 1, gPcxOutFile);
 }
 
 // FUNCTION: DRAWCARDLIB 0x100048c0
@@ -410,7 +411,7 @@ undefined4 PcxWritePalette256(void *palette)
   undefined1 paletteIndex[4];
 
   paletteIndex[0] = 0xc;
-  fwrite(paletteIndex, 1, 1, gPcxOutFile);
-  fwrite(palette, 3, 0x100, gPcxOutFile);
+  shandalar_io_write(paletteIndex, 1, 1, gPcxOutFile);
+  shandalar_io_write(palette, 3, 0x100, gPcxOutFile);
   return 0;
 }

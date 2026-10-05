@@ -16,6 +16,76 @@ opening-menu resources, duel icons, fonts, and database/prompt tables.
 Adventure artwork, music, portraits, resolution-specific sprites, and individual
 images in `CardArtManalink` load on demand through the existing asset fetcher.
 
+## ZIP mods
+
+Shandalar, Deck Builder, and Facemaker accept one optional mod ZIP at startup:
+
+```powershell
+.\shandalar.exe C:/dev/assets_modded --mod=C:/mods/art-pack.zip
+# Alternatively, set the environment variable before launching any app:
+$env:SHANDALAR_MOD_ZIP = 'C:/mods/art-pack.zip'
+```
+
+`--mod path.zip` also works. The command-line choice overrides the environment
+variable; specifying `--mod` more than once or an invalid ZIP fails startup.
+Relative ZIP paths are resolved before the app changes its working directory.
+
+ZIP entries should mirror paths **inside** the asset root, for example
+`CardArtManalink/MyCard.jpg`, `Sound/MySound.wav`, or `Statwin_SDL/MyImage.png`.
+Do not include an enclosing asset-root folder. Matching ignores ASCII case,
+accepts either slash style, and collapses `.` and repeated separators. Absolute
+paths, `..` components, encrypted/unsupported entries, and duplicate normalized
+paths are rejected. Stored and Deflate-compressed ZIPs are supported by the
+pinned [miniz library](https://github.com/richgel999/miniz/tree/3.1.2).
+
+The archive stays in memory. Read-only opens through
+`shandalar_open_file_io()` use ZIP entries first and fall back to the normal
+filesystem and browser asset fetcher for absent entries. Each open decompresses
+its entry into an independent, seekable SDL stream and frees those bytes on
+close. Writes and update modes (`r+`, etc.) use the normal filesystem.
+Corrupt overridden entries fail to open instead of falling back to base data.
+Asset readers use the overlay for deck/configuration/text files, card databases
+and catalogs, sprites, fonts, proprietary PIC/PCX images, and the SDL image,
+audio, and video loaders. Artwork and Facemaker file discovery merge ZIP and
+disk entries, matching wildcards and removing duplicates case-insensitively.
+Save files, registry storage, exports, and logs still use the normal filesystem.
+The ZIP does not rename assets or convert formats: legacy `Statwin/` resources
+still need the port's `Statwin_SDL/` layout, and companion PNGs are not
+automatically substituted for game-requested PIC filenames.
+
+For WebAssembly, set `Module.modZip` **before** loading the generated app script:
+
+```html
+<script>
+  var Module = {
+    modZip: './mods/art-pack.zip', // URL, File/Blob, or Uint8Array
+    userDataRoot: '/userdata/mods/art-pack', // optional browser save namespace
+    arguments: ['/assets_modded']
+  };
+</script>
+<script src="shandalar.js"></script>
+```
+
+The startup hook downloads/reads the ZIP into Emscripten's memory filesystem,
+waits for it to finish, then passes it to the same C overlay used on native.
+Download failures stop startup. A host with an existing MEMFS/preload setup can
+instead pass `--mod=/mods/art-pack.zip` through `Module.arguments`, or set
+`ENV.SHANDALAR_MOD_ZIP` in its `preRun` hook. Use one selection mechanism per
+launch. Native environment variables on the build machine are not carried into
+the browser.
+
+Browser hosts can set `Module.userDataRoot` to `/userdata/mods/<id>` before
+startup to isolate that campaign's saves, portraits, and registry settings in a
+separate IDBFS database. IDs use lowercase letters, digits, and single hyphens.
+Omitting it preserves the existing `/userdata` database. This setting applies
+to browser persistence; native save paths retain their existing behavior.
+
+`tools/package_mods.py SOURCE ASSET_DIR/mods` converts the known campaign RARs
+with 7-Zip, copies the existing ZIP, verifies archive contents, and writes
+`mods.json` with stable IDs and descriptions. It keeps the source archives and
+refuses to overwrite an existing package. The web host's mod picker is in the
+sibling `shandalar-dot-dev` repository.
+
 The engine card table is generated from the 2020 `ct_all.csv` and `Manalink.csv`;
 see [the importer instructions](tools/README.md). Use the matching `Cards.dat`
 and supporting resources from the same release.

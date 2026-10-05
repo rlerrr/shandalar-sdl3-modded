@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #ifndef SHANDALAR_INTERNAL_H
 #define SHANDALAR_INTERNAL_H
 
@@ -97,7 +98,7 @@ extern int g_sound_drive_initialized;
 extern char g_cached_cwd[0x100];
 extern char g_sound_drive_letter;
 extern char *g_advblocks_file_buffer;
-extern FILE *g_advbuttons_ini_file;
+extern SDL_IOStream *g_advbuttons_ini_file;
 extern char g_ini_string_scratch[0x28];
 extern char *g_done_text_table_entry;
 extern int g_legacy_mouse_active;
@@ -277,7 +278,7 @@ void FreeAdvblocksFileBuffer(void);
 void QueueKeyInputFromMessage(WPARAM wparam, LPARAM lparam);
 ATOM RegisterPaletteClass(HINSTANCE hinst);
 HWND CreatePalettePopupWindow(HINSTANCE hinst, HWND parent_hwnd);
-char **LoadIniEscapedStringTable(FILE *ini_file, char *section_name, char *scratch);
+char **LoadIniEscapedStringTable(SDL_IOStream *ini_file, char *section_name, char *scratch);
 int MeasureMultilineTextWidth(FacemakerWindowBounds *window_bounds, char *text);
 int SetFontStyleSize(int font_id, unsigned int style);
 void LoadPcxIntoPageNoPalette(char *path);

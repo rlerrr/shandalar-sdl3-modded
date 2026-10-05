@@ -12,23 +12,23 @@
 File::File(const char* filename, const char* mode, bool no_die_on_failed_open)
 {
   this->filename_ = filename;
-  this->f_ = fopen(filename_, mode);
+  this->f_ = shandalar_open_file_io(filename_, mode);
   if (!this->f_ && !no_die_on_failed_open)
-    fatal("Couldn't open \"%s\": %s", this->filename_, strerror(errno));
+    fatal("Couldn't open \"%s\": %s", this->filename_, SDL_GetError());
 }
 
 File::~File(void)
 {
-  if (this->f_ && fclose(this->f_))
-    fatal("Couldn't close \"%s\": %s", this->filename_, strerror(errno));
+  if (this->f_ && shandalar_io_close(this->f_))
+    fatal("Couldn't close \"%s\": %s", this->filename_, SDL_GetError());
 }
 
 void
 File::close(void)
 {
-  if (this->f_ && fclose(this->f_))
+  if (this->f_ && shandalar_io_close(this->f_))
     {
-      fatal("Couldn't close \"%s\": %s", this->filename_, strerror(errno));
+      fatal("Couldn't close \"%s\": %s", this->filename_, SDL_GetError());
       return;
     }
 
@@ -44,8 +44,8 @@ File::seek(long offset, int whence)
       return;
     }
 
-  if (fseek(this->f_, offset, whence))
-    fatal("Couldn't seek in \"%s\": %s", this->filename_, strerror(errno));
+  if (shandalar_io_seek(this->f_, offset, whence))
+    fatal("Couldn't seek in \"%s\": %s", this->filename_, SDL_GetError());
 }
 
 void
@@ -57,11 +57,11 @@ File::read(void* dest, size_t count, const char* dest_name)
       return;
     }
 
-  size_t bytes_read = fread(dest, 1, count, this->f_);
+  size_t bytes_read = shandalar_io_read(dest, 1, count, this->f_);
   if (bytes_read != count)
     {
-      const char* err = strerror(errno);
-      const char* eof = feof(this->f_) ? " (EOF)" : "";
+      const char* err = SDL_GetError();
+      const char* eof = shandalar_io_eof(this->f_) ? " (EOF)" : "";
       fatal("Read only %d bytes of %s; expected %d: %s%s", bytes_read, dest_name, count, err, eof);
     }
 }
@@ -75,13 +75,13 @@ File::fgets(char* dest, int sz)
       return;
     }
 
-  if (!::fgets(dest, sz, this->f_))
+  if (!shandalar_io_gets(dest, sz, this->f_))
     {
-      if (feof(this->f_))
+      if (shandalar_io_eof(this->f_))
 	*dest = 0;
       else
 	{
-	  const char* err = strerror(errno);
+	  const char* err = SDL_GetError();
 	  fatal("Couldn't read from %s: %s", this->filename_, err);
 	}
     }
@@ -122,11 +122,11 @@ File::write(void* src, size_t count, const char* src_name)
       return;
     }
 
-  size_t bytes_written = fwrite(src, 1, count, this->f_);
+  size_t bytes_written = shandalar_io_write(src, 1, count, this->f_);
   if (bytes_written != count)
     {
-      const char* err = strerror(errno);
-      const char* eof = feof(this->f_) ? " (EOF)" : "";
+      const char* err = SDL_GetError();
+      const char* eof = shandalar_io_eof(this->f_) ? " (EOF)" : "";
       fatal("Wrote only %d bytes of %s; expected %d: %s%s", bytes_written, src_name, count, err, eof);
     }
 }
@@ -142,12 +142,11 @@ File::printf(const char* fmt, ...)
 
   va_list args;
   va_start(args, fmt);
-  int rval = vfprintf(this->f_, fmt, args);
-  int en = errno;
+  int rval = shandalar_io_vprintf(this->f_, fmt, args);
   va_end(args);
 
   if (rval < 0)
-    fatal("Couldn't write to \"%s\": %s", this->filename_, strerror(en));
+    fatal("Couldn't write to \"%s\": %s", this->filename_, SDL_GetError());
 }
 
 void
@@ -159,6 +158,6 @@ File::flush(void)
       return;
     }
 
-  if (fflush(this->f_))
-    fatal("Couldn't flush \"%s\": %s", this->filename_, strerror(errno));
+  if (shandalar_io_flush(this->f_))
+    fatal("Couldn't flush \"%s\": %s", this->filename_, SDL_GetError());
 }

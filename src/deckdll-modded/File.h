@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #ifndef FILE_H	// -*- tab-width:8; c-basic-offset:2; -*-
 #define FILE_H 1
 
@@ -22,7 +23,7 @@ public:
   void flush(void);
 
 private:
-  FILE* f_;
+  SDL_IOStream* f_;
   const char* filename_;
 };
 

@@ -39,6 +39,25 @@ static LegacyFdMode *legacy_fd_modes;
 static void normalize_path_copy(char *out, size_t out_size, const char *path);
 
 #ifdef __EMSCRIPTEN__
+EM_JS(void, shandalar_wasm_user_data_get_root, (char *buffer, int capacity), {
+  var root = Module['userDataRoot'] || '/userdata';
+  if (root !== '/userdata' &&
+      (!root.startsWith('/userdata/mods/') || !/^[a-z0-9]+(-[a-z0-9]+)*$/.test(root.slice(15))))
+    throw new Error('Invalid mod user data namespace');
+  if (lengthBytesUTF8(root) >= capacity)
+    throw new Error('Mod user data namespace is too long');
+  Module.__shandalarUserDataRoot = root;
+  stringToUTF8(root, buffer, capacity);
+});
+
+static const char *user_data_root_path(void)
+{
+  static char root[128];
+  if (!root[0])
+    shandalar_wasm_user_data_get_root(root, sizeof(root));
+  return root;
+}
+
 EM_JS(int, shandalar_wasm_user_data_mount_poll, (), {
   if (typeof FS === 'undefined' || typeof IDBFS === 'undefined')
     return -1;
@@ -49,8 +68,9 @@ EM_JS(int, shandalar_wasm_user_data_mount_poll, (), {
   if (Module.__shandalarUserDataReady === undefined) {
     Module.__shandalarUserDataReady = 0;
     try {
-      try { FS.mkdir('/userdata'); } catch (e) {}
-      try { FS.mount(IDBFS, {}, '/userdata'); } catch (e) {
+      var root = Module.__shandalarUserDataRoot;
+      FS.mkdirTree(root);
+      try { FS.mount(IDBFS, {}, root); } catch (e) {
         if (!String(e).includes('already mounted'))
           throw e;
       }
@@ -92,6 +112,7 @@ EM_JS(int, shandalar_wasm_user_data_sync_poll, (), {
 static int ensure_user_data_ready(void)
 {
   int state;
+  user_data_root_path();
   do {
     state = shandalar_wasm_user_data_mount_poll();
     if (state == 0)
@@ -110,7 +131,7 @@ const char *shandalar_user_data_root(void)
 {
 #ifdef __EMSCRIPTEN__
   ensure_user_data_ready();
-  return "/userdata";
+  return user_data_root_path();
 #else
   const char *root = getenv("SHANDALAR_USER_DATA_DIR");
   if (root && root[0])
@@ -254,14 +275,17 @@ static int map_user_data_path(const char *path, char *out, size_t out_size)
   const char *drive;
   char name[260];
   size_t i;
+  size_t root_length;
 
   root = shandalar_user_data_root();
   if (strcmp(root, ".") == 0)
     return 0;
+  root_length = strlen(root);
   normalize_path_copy(normalized, sizeof(normalized), path);
-  if (strncmp(normalized, root, strlen(root)) == 0 &&
-      (normalized[strlen(root)] == '/' || normalized[strlen(root)] == '\0')) {
+  if (strncmp(normalized, root, root_length) == 0 &&
+      (normalized[root_length] == '/' || normalized[root_length] == '\0')) {
     snprintf(out, out_size, "%s", normalized);
+    ensure_user_data_ready();
     return 1;
   }
 

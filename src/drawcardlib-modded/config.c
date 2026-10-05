@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 // -*- tab-width:4; c-basic-offset:2; -*-
 // Drawcardlib: display card and mana cost graphics.
 // config.c: read Duel.dat, watermarks.csv, menus.txt, Rarity.dat
@@ -1010,22 +1011,22 @@ read_watermark_section(int first_time)
    * complete first.  So just read raw_expansions from rarity.dat for now. */
 
 #define BAIL(...) do { popup("drawcardlib.dll", __VA_ARGS__); return; } while (0)
-  FILE* rarity_dat;
-  if (!(rarity_dat = fopen("rarity.dat", "rb")))
+  SDL_IOStream* rarity_dat;
+  if (!(rarity_dat = shandalar_open_file_io("rarity.dat", "rb")))
 	BAIL("Could not open rarity.dat: %s", strerror(errno));
 
   int ignore;
-  if (fread(&ignore, 4, 1, rarity_dat) != 1)
+  if (shandalar_io_read(&ignore, 4, 1, rarity_dat) != 1)
 	BAIL("Could not read number of cards: %s", strerror(errno));
 
-  if (fread(&raw_expansions, 4, 1, rarity_dat) != 1)
+  if (shandalar_io_read(&raw_expansions, 4, 1, rarity_dat) != 1)
 	BAIL("Could not read number of expansions: %s", strerror(errno));
 
   if (raw_expansions < 9)
 	BAIL("number of expansions only %d, expected at least 9", raw_expansions);
 #undef BAIL
 
-  fclose(rarity_dat);
+  shandalar_io_close(rarity_dat);
 
   int idx = 0;
   char key[16];
@@ -1392,13 +1393,13 @@ read_watermarks_csv(void)
   }
 
 #define BAIL(...) do { popup("drawcardlib.dll", __VA_ARGS__); return; } while (0)
-  FILE* watermarks_csv;
-  if (!(watermarks_csv = fopen("watermarks.csv", "r")))
+  SDL_IOStream* watermarks_csv;
+  if (!(watermarks_csv = shandalar_open_file_io("watermarks.csv", "r")))
 	BAIL("Could not open watermarks.csv: %s", strerror(errno));
 
   char line[1024], *wmark, *p;
   int id = 0, linenum = 0, idx;
-  while (fgets(line, 1024, watermarks_csv))
+  while (shandalar_io_gets(line, 1024, watermarks_csv))
 	{
 	  ++linenum;
 	  if (linenum == 1 && !strncasecmp(line, "id;", 3))
@@ -1502,10 +1503,10 @@ read_watermarks_csv(void)
 	outer_continue:
 	  continue;
 	}
-  if (id >= 0 && !feof(watermarks_csv))
+  if (id >= 0 && !shandalar_io_eof(watermarks_csv))
 	BAIL("Could not read from watermarks.csv: %s", strerror(errno));
 
-  if (fclose(watermarks_csv))
+  if (shandalar_io_close(watermarks_csv))
 	BAIL("Could not close watermarks.csv: %s", strerror(errno));
 
 #undef BAIL
@@ -1517,11 +1518,11 @@ read_rarities(void)
 #define BAIL(...) do { popup("drawcardlib.dll", __VA_ARGS__); return; } while (0)
   rarities_read = 1;
 
-  FILE* rarity_dat;
-  if (!(rarity_dat = fopen("rarity.dat", "rb")))
+  SDL_IOStream* rarity_dat;
+  if (!(rarity_dat = shandalar_open_file_io("rarity.dat", "rb")))
 	BAIL("Could not open rarity.dat: %s", strerror(errno));
 
-  if (fread(&total_cards, 4, 1, rarity_dat) != 1)
+  if (shandalar_io_read(&total_cards, 4, 1, rarity_dat) != 1)
 	BAIL("Could not read number of cards: %s", strerror(errno));
 
 #ifndef SHANDALAR_SDL_WIN32_COMPAT
@@ -1530,7 +1531,7 @@ read_rarities(void)
 	BAIL("Mismatch between rarity.dat (%d) and cards.dat (%d)", total_cards, EXE_DWORD(0x7375ac));
 #endif
 
-  if (fread(&raw_expansions, 4, 1, rarity_dat) != 1)
+  if (shandalar_io_read(&raw_expansions, 4, 1, rarity_dat) != 1)
 	BAIL("Could not read number of expansions: %s", strerror(errno));
 
   if (raw_expansions < 9)
@@ -1544,10 +1545,10 @@ read_rarities(void)
 	BAIL("Could not calloc uint8_t* %d, %d", expansion_size, total_cards);
 
   int count;
-  if ((count = fread(raw_rarities, expansion_size, total_cards, rarity_dat)) != total_cards)
+  if ((count = shandalar_io_read(raw_rarities, expansion_size, total_cards, rarity_dat)) != total_cards)
 	BAIL("Could only read %d entries, expected %d: %s", count, total_cards, strerror(errno));
 
-  if (fclose(rarity_dat))
+  if (shandalar_io_close(rarity_dat))
 	BAIL("Could not close rarity.dat: %s", strerror(errno));
 
   if (!(rarities = (Rarities**)malloc(total_cards * sizeof(Rarities**))))
@@ -1669,8 +1670,8 @@ read_expansion_categories(void)
 	free(expansion_categories);
   expansion_categories = NULL;
 
-  FILE* menus_txt = NULL;
-  if (!(menus_txt = fopen("menus.txt", "r")))
+  SDL_IOStream* menus_txt = NULL;
+  if (!(menus_txt = shandalar_open_file_io("menus.txt", "r")))
 	BAIL("Could not open menus.txt: %s", strerror(errno));
 
   // Advance to @EXPANSIONCATEGORIES
@@ -1678,7 +1679,7 @@ read_expansion_categories(void)
   int strlen_expansioncategories = strlen(EXPANSIONCATEGORIES);
   int last_was_blank = 1;
   char line[1024];
-  while (fgets(line, 1024, menus_txt))
+  while (shandalar_io_gets(line, 1024, menus_txt))
 	{
 	  if (line[0] == '\0' || line[0] == '\n' || line[0] == '\r')
 		{
@@ -1701,7 +1702,7 @@ read_expansion_categories(void)
   {
 	// Number of entries
 	int num_entries;
-	if (!fgets(line, 1024, menus_txt) || (num_entries = atoi(line)) <= 0)
+	if (!shandalar_io_gets(line, 1024, menus_txt) || (num_entries = atoi(line)) <= 0)
 	  BAIL("Couldn't read number of entries after @EXPANSIONCATEGORIES in Menus.txt");
 
 	int alloc_size = sizeof(ExpansionCategory) * (raw_expansions + 1);
@@ -1714,7 +1715,7 @@ read_expansion_categories(void)
 	for (i = 0; i < num_entries && i < raw_expansions; ++i)
 	  {
 		ExpansionCategory expcat = EXPCAT_NONE;
-		if (!fgets(line, 1024, menus_txt)
+		if (!shandalar_io_gets(line, 1024, menus_txt)
 			|| line[0] == '\0' || line[0] == '\n' || line[0] == '\r')
 		  BAIL("Invalid number of entries after @EXPANSIONCATEGORIES: expected %d, found %d", num_entries, i);
 
@@ -1750,7 +1751,7 @@ read_expansion_categories(void)
   {
 	// Cleanup any partial initialization
 	if (menus_txt)
-	  fclose(menus_txt);
+	  shandalar_io_close(menus_txt);
 	if (expansion_categories)
 	  free(expansion_categories);
 

@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include <sys/stat.h>
 #include <errno.h>
 
@@ -34,19 +35,19 @@ static void read_rarities(int player, int card){
 		return;
 	}
 
-	FILE *f;
+	SDL_IOStream *f;
 	int total_cards = 0;
 
-	if( !( f = fopen("rarity.dat", "rb") ) ){
+	if( !( f = shandalar_open_file_io("rarity.dat", "rb") ) ){
 		do_dialog(HUMAN, player, card, -1, -1, "Rarity.dat missing", 0);
 		lose_the_game(HUMAN);
 	}
-	fread(&total_cards, 4, 1, f);
+	shandalar_io_read(&total_cards, 4, 1, f);
 	if( total_cards != available_slots) {
 		do_dialog(HUMAN, player, card, -1, -1, "Mismatch between Rarity.dat\nand cards.dat", 0);
 		lose_the_game(HUMAN);
 	}
-	fread(&expansions, 4, 1, f);
+	shandalar_io_read(&expansions, 4, 1, f);
 	if(!expansions) {
 		do_dialog(HUMAN, player, card, -1, -1, "Invalid Rarity.dat", 0);
 		lose_the_game(HUMAN);
@@ -57,8 +58,8 @@ static void read_rarities(int player, int card){
 		lose_the_game(HUMAN);
 	}
 	rarities[expansion_size * total_cards] = 0;
-	fread(rarities, expansion_size, total_cards, f);
-	fclose(f);
+	shandalar_io_read(rarities, expansion_size, total_cards, f);
+	shandalar_io_close(f);
 }
 
 static int check_rarity(int card_id, unsigned int expansion_id){
@@ -143,9 +144,9 @@ static void make_deck(int player){
 				break;
 			default:
 				{
-				FILE *file = fopen("draft_errors.txt", "a+");
-				fprintf(file,"Can't add land to deck.  Player = %d, ind = %d, color= %d\n", player, ind, colors[player][ind]  );
-				fclose(file);
+				SDL_IOStream *file = shandalar_open_file_io("draft_errors.txt", "a+");
+				shandalar_io_printf(file,"Can't add land to deck.  Player = %d, ind = %d, color= %d\n", player, ind, colors[player][ind]  );
+				shandalar_io_close(file);
 				break;
 				}
 		}
@@ -166,17 +167,17 @@ static const char* get_set_name(int setnum)
   static const char** all_set_names = NULL;
   if (!all_set_names)
 	{
-	  FILE* f = fopen("Menus.txt", "r");
+	  SDL_IOStream* f = shandalar_open_file_io("Menus.txt", "r");
 	  ASSERT(f && "Could not open Menus.txt");
 
 	  char buf[1000], *p;
 	  do
 		{
-		  p = fgets(buf, 1000, f);
+		  p = shandalar_io_gets(buf, 1000, f);
 		  ASSERT(p && "Could not find @EXPANSIONNAMES in Menus.txt");
 		} while (strcmp(buf, "@EXPANSIONNAMES\n"));
 
-	  p = fgets(buf, 1000, f);
+	  p = shandalar_io_gets(buf, 1000, f);
 	  ASSERT(p && "Could not read number of expansions from Menus.txt");
 
 	  num_valid_expansions = atoi(buf);
@@ -188,7 +189,7 @@ static const char* get_set_name(int setnum)
 	  int i;
 	  for (i = 0; i < num_valid_expansions; ++i)
 		{
-		  p = fgets(buf, 1000, f);
+		  p = shandalar_io_gets(buf, 1000, f);
 		  if (!p)
 			{
 			  popup("Fatal", "Could not read expansion name #%d from Menus.txt", i);
@@ -216,15 +217,15 @@ static void load_custom_set(int num_set, int set){
 
 		char buffer[500];
 		char buffer2[5];
-		FILE *file = fopen("DraftSets//sets.txt", "r");
+		SDL_IOStream *file = shandalar_open_file_io("DraftSets//sets.txt", "r");
 		int line=0;
 
 	   for(line=0; line<set-CUSTOM_SET; line++){	//find the name of the set to load, check header *1
-			fscanf(file, "%[^\n]", buffer);
-			fscanf(file, "%[\n]", buffer2);
+			shandalar_io_scanf(file, "%[^\n]", buffer);
+			shandalar_io_scanf(file, "%[\n]", buffer2);
 		}
 
-		fclose(file);
+		shandalar_io_close(file);
 		set_name[num_set] = strncpy(buffer, buffer, strlen(buffer) );
 
 		for(i=0;i<2000;i++){
@@ -233,15 +234,15 @@ static void load_custom_set(int num_set, int set){
 		// load this set from the file
 		char file_buffer[500];
 		snprintf(file_buffer, 500, "DraftSets//%s.dck", buffer);
-		FILE *file2 = fopen(file_buffer, "r");
+		SDL_IOStream *file2 = shandalar_open_file_io(file_buffer, "r");
 		for(i=0;i<8;i++){
-			fscanf(file2, "%[^\n]", buffer);
-			fscanf(file2, "%[\n]", buffer);
+			shandalar_io_scanf(file2, "%[^\n]", buffer);
+			shandalar_io_scanf(file2, "%[\n]", buffer);
 		}
 		// load  cards of this set
 		i=0;
-		while( fscanf(file2, "%[.]", buffer) == 1 ){
-			fscanf(file2, "%[0-9]", buffer);
+		while( shandalar_io_scanf(file2, "%[.]", buffer) == 1 ){
+			shandalar_io_scanf(file2, "%[0-9]", buffer);
 			int card_id = atoi(buffer);
 			if ( is_valid_card(card_id)>0 ){	//should not be needed if set is made from the deckbuilder, but we are in transition phase
 			in_set1[num_set][i].csvid = card_id;
@@ -249,11 +250,11 @@ static void load_custom_set(int num_set, int set){
 			set_rs[num_set][0]++;	//for custom sets [0] = total_cards
 			i++;
 			}
-			fscanf(file2, "%[^\n]", buffer);
-			fscanf(file2, "%[\n]", buffer);
+			shandalar_io_scanf(file2, "%[^\n]", buffer);
+			shandalar_io_scanf(file2, "%[\n]", buffer);
 		}
 
-		fclose(file2);
+		shandalar_io_close(file2);
 }
 #endif
 
@@ -298,9 +299,9 @@ static void load_set(int player, int card, int num_set, int set){
 					break;
 				default:	//UNUSED :
 					{
-						FILE *file = fopen("draft_errors.txt", "a+");
-						fprintf(file,"Can't add card to set=%d, CARD_ID = %d, Rarity= %d\n", set, card_id, rarity );
-						fclose(file);
+						SDL_IOStream *file = shandalar_open_file_io("draft_errors.txt", "a+");
+						shandalar_io_printf(file,"Can't add card to set=%d, CARD_ID = %d, Rarity= %d\n", set, card_id, rarity );
+						shandalar_io_close(file);
 						break;
 					}
 			}
@@ -418,7 +419,7 @@ static void make_pack(int pack_id, int enforce_rarity){
 #ifdef ROTISSERIE
 static void make_rotisserie_pack(void){
 	int set = sets[0];
-	//FILE *file = fopen("packs.txt", "a+");
+	//SDL_IOStream *file = shandalar_open_file_io("packs.txt", "a+");
 	int card;
 	for(card=0;card<500;card++){
 		rotisserie[card] = -1;
@@ -477,22 +478,22 @@ static void make_rotisserie_pack(void){
 			}
 			rotisserie[idx] = card;
 			count++;
-			//fprintf(file,"Card=%s Pack %d, position: %d\n", c->name, count, idx );
+			//shandalar_io_printf(file,"Card=%s Pack %d, position: %d\n", c->name, count, idx );
 		}
 	}
 
 	// print out the deck list
 	int i;
 	for(i=0;i<500;i++){
-		//fprintf(file,"Deck %d: %d\n", i, rotisserie[i] );
+		//shandalar_io_printf(file,"Deck %d: %d\n", i, rotisserie[i] );
 	}
 
-	//fclose(file);
+	//shandalar_io_close(file);
 }
 #endif
 
 static int get_best_card_in_pack(int player, int cards_left, int* pack){
-		FILE *file = fopen("picks.txt", "w");
+		SDL_IOStream *file = shandalar_open_file_io("picks.txt", "w");
 		// pick the card in the pack with the highest value, as long as it is
 		// in our colors
 		int i;
@@ -503,11 +504,11 @@ static int get_best_card_in_pack(int player, int cards_left, int* pack){
 		for(i=0;i<cards_left;i++){
 
 			int card = pack[i];
-			fprintf(file,"Looking at %d\n", i );
+			shandalar_io_printf(file,"Looking at %d\n", i );
 			card_ptr_t* c = cards_ptr[ card ];
 			card_data_t* card_d = &cards_data[ get_internal_card_id_from_csv_id( card ) ];
 			//card_data_t* card_d = &cards_data[ card ];
-			//fprintf(file,"it is %d\n", card );
+			//shandalar_io_printf(file,"it is %d\n", card );
 			// keep track of our backup pick
 			int score = c->ai_base_value - internal_rand(10);
 			if( score > max_score_backup ){
@@ -566,15 +567,15 @@ static int get_best_card_in_pack(int player, int cards_left, int* pack){
 		if( best_card == -1 ){
 			best_card = best_card_backup;
 		}
-		fprintf(file,"returning %d\n", best_card );
+		shandalar_io_printf(file,"returning %d\n", best_card );
 
-		fclose(file);
+		shandalar_io_close(file);
 		return best_card;
 }
 
 static void make_AI_picks(int pack, int pick){
 	// Remove a card out of each OTHER pack
-	FILE *file = fopen("packs.txt", "a+");
+	SDL_IOStream *file = shandalar_open_file_io("packs.txt", "a+");
 	int player;
 	for (player=1;player<8;player++){
 		int which_pack = ( player + pick ) % 8;
@@ -584,11 +585,11 @@ static void make_AI_picks(int pack, int pick){
 		else{
 			which_pack = pack * 8 + which_pack;
 		}
-		//fprintf(file,"player %d (pick %d)is picking out of pack %d:\n", player, 15*pack+pick, which_pack );
+		//shandalar_io_printf(file,"player %d (pick %d)is picking out of pack %d:\n", player, 15*pack+pick, which_pack );
 
 		int best_card = get_best_card_in_pack(player, 15-pick, packs[which_pack]);
 
-		//fprintf(file,"pick made\n" );
+		//shandalar_io_printf(file,"pick made\n" );
 
 		int card = packs[which_pack][best_card];
 		picks[player][15*pack+pick] = card;
@@ -600,7 +601,7 @@ static void make_AI_picks(int pack, int pick){
 		}
 		packs[which_pack][14] = -1;
 	}
-	fclose(file);
+	shandalar_io_close(file);
 }
 
 #ifdef ROTISSERIE
@@ -702,49 +703,49 @@ static void review_picks(int pack){
 static void build_deck(const char *deck_name, int player){
 
 	if(player == 0 ){
-		FILE *file2 = fopen("packs.txt", "w");
-		fprintf(file2,"Building deck for player %d:\n", player );
-		fclose(file2);
+		SDL_IOStream *file2 = shandalar_open_file_io("packs.txt", "w");
+		shandalar_io_printf(file2,"Building deck for player %d:\n", player );
+		shandalar_io_close(file2);
 	}
 
-	FILE *file2 = fopen("packs.txt", "a+");
-	fprintf(file2,"Building deck for player %d:\n", player );
+	SDL_IOStream *file2 = shandalar_open_file_io("packs.txt", "a+");
+	shandalar_io_printf(file2,"Building deck for player %d:\n", player );
 
 	// score the deck
 	int score = 0;
 	if( player > 0 ){
 		int i;
 		for(i=0;i<40;i++){
-			fprintf(file2, "CARD: %d, pick=%d ", i, picks[player][i] );
+			shandalar_io_printf(file2, "CARD: %d, pick=%d ", i, picks[player][i] );
 			card_ptr_t* c = cards_ptr[ picks[player][i] ];
 			if( picks[player][i]  < 1 ){
-				fprintf(file2,"Invalid pick found: %d, pick=%d\n", i, picks[player][i] );
+				shandalar_io_printf(file2,"Invalid pick found: %d, pick=%d\n", i, picks[player][i] );
 			}
 			score += c->ai_base_value;
-			fprintf(file2,"CARD SCORE: %d\n", c->ai_base_value );
+			shandalar_io_printf(file2,"CARD SCORE: %d\n", c->ai_base_value );
 		}
 	}
-	fprintf(file2,"Score: %d\n", score );
-	fclose(file2);
+	shandalar_io_printf(file2,"Score: %d\n", score );
+	shandalar_io_close(file2);
 
 	char buffer[50];
 	snprintf(buffer, 50, "Playdeck\\%s (%d).dck ", deck_name, score );
-	FILE *file = fopen(buffer, "w");
-	fprintf(file, ";%s (%d)\n;\n;Underdogs\n;no.spam@plea.se\n;11/09/2008\n;1\n;4th Edition\n;\n\n", deck_name, score);
+	SDL_IOStream *file = shandalar_open_file_io(buffer, "w");
+	shandalar_io_printf(file, ";%s (%d)\n;\n;Underdogs\n;no.spam@plea.se\n;11/09/2008\n;1\n;4th Edition\n;\n\n", deck_name, score);
 
 	snprintf(buffer, 50, "%s.dck ", deck_name );
-	FILE *file3 = fopen(buffer, "w");
-	fprintf(file3, ";%s\n;\n;Underdogs\n;no.spam@plea.se\n;11/09/2008\n;1\n;4th Edition\n;\n\n", deck_name);
+	SDL_IOStream *file3 = shandalar_open_file_io(buffer, "w");
+	shandalar_io_printf(file3, ";%s\n;\n;Underdogs\n;no.spam@plea.se\n;11/09/2008\n;1\n;4th Edition\n;\n\n", deck_name);
 
 	int i;
 	for(i=0;i<45;i++){
 		if( picks[player][i] > -1){
-			fprintf(file, ".%d\t1\t%s\n", picks[player][i], cards_ptr[ picks[player][i] ]->full_name  );
-			fprintf(file3, ".%d\t1\t%s\n", picks[player][i], cards_ptr[ picks[player][i] ]->full_name  );
+			shandalar_io_printf(file, ".%d\t1\t%s\n", picks[player][i], cards_ptr[ picks[player][i] ]->full_name  );
+			shandalar_io_printf(file3, ".%d\t1\t%s\n", picks[player][i], cards_ptr[ picks[player][i] ]->full_name  );
 		}
 	}
-	fclose(file);
-	fclose(file3);
+	shandalar_io_close(file);
+	shandalar_io_close(file3);
 }
 
 #define SETS_PER_MENU 12
@@ -896,9 +897,9 @@ int card_draft(int player, int card, event_t event){
 				for ( j =0; j< 3; j++) {
 					//check if set has coded sufficient cards to enforce rarity
 					if ( (set_rs[j][0] < 11) || (set_rs[j][1] < 3) || (set_rs[j][2] < 1) )  {
-						FILE *file = fopen("draft_errors.txt", "a+");
-						fprintf(file,"Not enough coded cards to enforce rarity for set %s (ID=%d), Commons=%d,	Uncommons=%d,	Rares=%d !\n", set_name[j], (sets[j] -ALIGN_IDS), set_rs[j][0], set_rs[j][1], set_rs[j][2] );	//-7 to be in accordance with expansions.h
-						fclose(file);
+						SDL_IOStream *file = shandalar_open_file_io("draft_errors.txt", "a+");
+						shandalar_io_printf(file,"Not enough coded cards to enforce rarity for set %s (ID=%d), Commons=%d,	Uncommons=%d,	Rares=%d !\n", set_name[j], (sets[j] -ALIGN_IDS), set_rs[j][0], set_rs[j][1], set_rs[j][2] );	//-7 to be in accordance with expansions.h
+						shandalar_io_close(file);
 						snprintf(buffer, 500, "Not enough coded cards to enforce rarity for set %s (ID=%d), Commons=%d,	Uncommons=%d,	Rares=%d !\n", set_name[j], (sets[j] -ALIGN_IDS), set_rs[j][0], set_rs[j][1], set_rs[j][2] );	//-7 to be in accordance with expansions.h
 						do_dialog(HUMAN, player, card, -1, -1, buffer, 0);
 						lose_the_game(AI);
@@ -907,12 +908,12 @@ int card_draft(int player, int card, event_t event){
 				}
 			}
 			else if( enforce_rarity == 2){	//SINGLETON
-				FILE *file = fopen("draft_errors.txt", "a+");
+				SDL_IOStream *file = shandalar_open_file_io("draft_errors.txt", "a+");
 				char buffer[500];
 				//check if sets have enough coded cards for SINGLETON
 				for ( j =0; j< 3; j++) {
 					if ( (set_rs[j][0] + set_rs[j][1] + set_rs[j][2]) < 120 )  {	// (num_players*15) = 90 or 120
-						fprintf(file,"Not enough coded cards (< 120) to enforce SINGLETON for set %s (ID=%d), Commons=%d,	Uncommons=%d,	Rares=%d !\n", set_name[j], (sets[j] -ALIGN_IDS), set_rs[j][0], set_rs[j][1], set_rs[j][2] );	//-7 to be in accordance with expansions.h
+						shandalar_io_printf(file,"Not enough coded cards (< 120) to enforce SINGLETON for set %s (ID=%d), Commons=%d,	Uncommons=%d,	Rares=%d !\n", set_name[j], (sets[j] -ALIGN_IDS), set_rs[j][0], set_rs[j][1], set_rs[j][2] );	//-7 to be in accordance with expansions.h
 						snprintf(buffer, 500,"Not enough coded cards (< 120) to enforce SINGLETON for set %s (ID=%d), Commons=%d,	Uncommons=%d,	Rares=%d !\n", set_name[j], (sets[j] -7), set_rs[j][0], set_rs[j][1], set_rs[j][2] );	//-7 to be in accordance with expansions.h
 						do_dialog(HUMAN, player, card, -1, -1, buffer, 0);
 						lose_the_game(AI);
@@ -921,14 +922,14 @@ int card_draft(int player, int card, event_t event){
 				}
 				if ( sets[1] == sets[0] ) {
 					if ( (set_rs[0][0] + set_rs[0][1] + set_rs[0][2]) < 240 )  {	//(num_players * 15*2) = 180 or 240
-						fprintf(file,"Not enough coded cards (< 240)  to enforce SINGLETON for set %s (ID=%d), where sets[0] == sets[1]  !\n", set_name[0], (sets[0] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
+						shandalar_io_printf(file,"Not enough coded cards (< 240)  to enforce SINGLETON for set %s (ID=%d), where sets[0] == sets[1]  !\n", set_name[0], (sets[0] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
 						snprintf(buffer, 500,"Not enough coded cards (< 240) to enforce SINGLETON for set %s (ID=%d), where set1 = set2 , Restart draft !", set_name[0], (sets[0] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
 						do_dialog(HUMAN, player, card, -1, -1, buffer, 0);
 						lose_the_game(AI);
 					}
 					if ( sets[2] == sets[1] ) {
 						if ( (set_rs[0][0] + set_rs[0][1] + set_rs[0][2]) < 360 )  {	//(num_players * 15*3) = 270 or 360
-							fprintf(file,"Not enough coded cards (< 360)  to enforce SINGLETON for set %s (ID=%d), where sets[0] == sets[1]== sets[2] !\n", set_name[0], (sets[0] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
+							shandalar_io_printf(file,"Not enough coded cards (< 360)  to enforce SINGLETON for set %s (ID=%d), where sets[0] == sets[1]== sets[2] !\n", set_name[0], (sets[0] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
 							snprintf(buffer, 500,"Not enough coded cards (< 360) to enforce SINGLETON for set %s (ID=%d), where set1 == set2== set3 , Restart draft !", set_name[0], (sets[0] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
 							do_dialog(HUMAN, player, card, -1, -1, buffer, 0);
 							lose_the_game(AI);
@@ -937,14 +938,14 @@ int card_draft(int player, int card, event_t event){
 				}
 				if ( sets[1] == sets[2] ) {
 					if ( (set_rs[1][0] + set_rs[1][1] + set_rs[1][2]) < 240 )  {	//(num_players * 15*2) = 180 or 240
-						fprintf(file,"Not enough coded cards (< 240)  to enforce SINGLETON for set %s (ID=%d), where sets[1] == sets[2]  !\n", set_name[1], (sets[1] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
+						shandalar_io_printf(file,"Not enough coded cards (< 240)  to enforce SINGLETON for set %s (ID=%d), where sets[1] == sets[2]  !\n", set_name[1], (sets[1] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
 						snprintf(buffer, 500,"Not enough coded cards (< 240) to enforce SINGLETON for set %s (ID=%d), where set2 == set3 , Restart draft !", set_name[1], (sets[1] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
 						do_dialog(HUMAN, player, card, -1, -1, buffer, 0);
 						lose_the_game(AI);
 					}
 				}
 
-				fclose(file);
+				shandalar_io_close(file);
 			}
 
 			if( enforce_rarity == 3 ){	//Rotisserie
@@ -970,12 +971,12 @@ int card_draft(int player, int card, event_t event){
 						pos += scnprintf(buffer + pos, 1000-pos, "\n ");
 					}
 					else{
-						//FILE *file = fopen("rot.txt", "a+");
+						//SDL_IOStream *file = shandalar_open_file_io("rot.txt", "a+");
 						//int pick =
 						make_AI_picks_rotisserie(current_player);
 						pos += scnprintf(buffer + pos, 1000-pos, "\n %d picks %s", current_player+1, cards_ptr[ picks[current_player][pick_count] ]->full_name );
-						//fprintf(file, "%d picks %s (%d)\n", current_player, cards_ptr[ picks[current_player][pick_count] ]->full_name, pick  );
-						//fclose(file);
+						//shandalar_io_printf(file, "%d picks %s (%d)\n", current_player, cards_ptr[ picks[current_player][pick_count] ]->full_name, pick  );
+						//shandalar_io_close(file);
 					}
 
 					if( current_player == pivot_player2 && direction == 1 ){

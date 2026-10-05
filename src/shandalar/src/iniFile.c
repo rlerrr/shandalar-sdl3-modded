@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -89,7 +90,7 @@ size_t StripIniCommentSuffix(char *line, size_t line_len)
 }
 
 // FUNCTION: SHANDALAR 0x004c83bb
-int ReadIniTrimmedLine(FILE *file, char *line_out)
+int ReadIniTrimmedLine(SDL_IOStream *file, char *line_out)
 {
   int trimmed_len;
   int unused;
@@ -103,7 +104,7 @@ int ReadIniTrimmedLine(FILE *file, char *line_out)
 
   while (1)
   {
-    if (fgets(line_out, 0x200, file) == (char *)0)
+    if (shandalar_io_gets(line_out, 0x200, file) == (char *)0)
     {
       *line_out = '\0';
       return 0;
@@ -139,7 +140,7 @@ int ReadIniTrimmedLine(FILE *file, char *line_out)
 }
 
 // FUNCTION: SHANDALAR 0x004c7f20
-int SeekIniLine(FILE *file, char *target_line)
+int SeekIniLine(SDL_IOStream *file, char *target_line)
 {
   // GLOBAL: SHANDALAR 0x005b7758
   static char seek_line_005b7758[0x200];
@@ -149,7 +150,7 @@ int SeekIniLine(FILE *file, char *target_line)
     return 0;
   }
 
-  fseek(file, 0, 0);
+  shandalar_io_seek(file, 0, 0);
 
   while (ReadIniTrimmedLine(file, seek_line_005b7758))
   {
@@ -161,7 +162,7 @@ int SeekIniLine(FILE *file, char *target_line)
 }
 
 // FUNCTION: SHANDALAR 0x004c7f85
-int ReadIniSectionEntry(FILE *file, char *line_out)
+int ReadIniSectionEntry(SDL_IOStream *file, char *line_out)
 {
   if (ReadIniTrimmedLine(file, line_out))
   {
@@ -196,7 +197,7 @@ char *BuildIniSectionHeader(char *section_name, char *unused)
 }
 
 // FUNCTION: SHANDALAR 0x004c8036
-char *FindIniHeaderEntry(FILE *file, char *headers_section_name, char *entry_name)
+char *FindIniHeaderEntry(SDL_IOStream *file, char *headers_section_name, char *entry_name)
 {
   // GLOBAL: SHANDALAR 0x005b7a58
   static char entry_line_005b7a58[0x200];
@@ -227,7 +228,7 @@ char *FindIniHeaderEntry(FILE *file, char *headers_section_name, char *entry_nam
 }
 
 // FUNCTION: SHANDALAR 0x004c80d8
-char **LoadIniEscapedStringTable(FILE *ini_file, char *section_name, char *scratch)
+char **LoadIniEscapedStringTable(SDL_IOStream *ini_file, char *section_name, char *scratch)
 {
   int entry_count_remaining;
   int entry_count;

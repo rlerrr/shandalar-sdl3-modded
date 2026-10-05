@@ -1,4 +1,5 @@
 #include "platform/asset_manager.h"
+#include "platform/mod_overlay.h"
 
 #include <ctype.h>
 #include <stdio.h>
@@ -197,6 +198,8 @@ static int asset_file_exists(const char *relative_path)
   char path[1024];
   if (!shandalar_assets_join_path(path, sizeof(path), relative_path))
     return 0;
+  if (shandalar_mod_contains(path))
+    return 1;
   if (validate_asset_file(path, relative_path))
     return 1;
 #ifdef __EMSCRIPTEN__

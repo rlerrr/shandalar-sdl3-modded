@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include <ctype.h>
 #include <limits.h>
 
@@ -267,10 +268,10 @@ void read_settings(void){
 
 		// if the config file exists, then read in the config settings
 		char buffer[200];
-		FILE* file = fopen("config.txt", "r");
+		SDL_IOStream* file = shandalar_open_file_io("config.txt", "r");
 		if( file != NULL ){
 			settings[SETTING_SETTING_FILE_READ] = 2;
-			while( fgets(buffer, 200, file) ){
+			while( shandalar_io_gets(buffer, 200, file) ){
 				const char* p;
 				// skip whitespace
 				for (p = buffer; *p && (*p == ' ' || *p == '\t' || *p == '\n' || *p == '\r'); ++p) {}
@@ -352,7 +353,7 @@ void read_settings(void){
 				}
 				popup("config.txt", "Unknown line in config.txt: \"%s\"", buffer);
 			}
-			fclose(file);
+			shandalar_io_close(file);
 		}
 	}
 }

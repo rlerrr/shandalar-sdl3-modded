@@ -9,6 +9,7 @@
 #include "deck/src/deck_imgui_interaction.h"
 #include "magic/src/global_state.h"
 #include "platform/asset_manager.h"
+#include "platform/mod_overlay.h"
 #include "platform/gdi_compat.h"
 #include "platform/winuser_compat.h"
 #include "platform/winuser_imgui_bridge.h"
@@ -685,9 +686,14 @@ static BOOL pump_shandalar_win32_ui(BOOL wait)
 int main(int argc, char **argv)
 {
   char cmd_line[1] = "";
-  const char *asset_root = argc > 1 ? argv[1] : SHANDALAR_NATIVE_ASSET_ROOT;
+  const char *asset_root;
   const char *icon_path = SDL_getenv("SHANDALAR_WINDOW_ICON");
   int result;
+  if (!shandalar_mod_init_from_args(&argc, argv)) {
+    SDL_Log("shandalar: mod setup failed: %s", SDL_GetError());
+    return 1;
+  }
+  asset_root = argc > 1 ? argv[1] : SHANDALAR_NATIVE_ASSET_ROOT;
 #ifdef __EMSCRIPTEN__
   asset_root = argc > 1 ? argv[1] : "/assets_modded";
 #endif
@@ -733,6 +739,7 @@ int main(int argc, char **argv)
   SDL_DestroyRenderer(g_renderer);
   SDL_DestroyWindow(g_window);
   shandalar_runtime_shutdown();
+  shandalar_mod_unload();
   SDL_Quit();
   return result;
 }

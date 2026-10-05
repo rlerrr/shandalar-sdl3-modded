@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "platform/gdi_compat.h"
 #include "platform/legacy_io.h"
 #include <stdio.h>
@@ -540,7 +541,7 @@ PaletteLog *ReadPalette(char *palette_text_path, char *palette_binary_path)
   char line[256];
   int palette_index;
   int green;
-  FILE *palette_file;
+  SDL_IOStream *palette_file;
   char *path_start;
   int red;
   uint blue;
@@ -549,8 +550,8 @@ PaletteLog *ReadPalette(char *palette_text_path, char *palette_binary_path)
   palette_index = 0;
   palette_data = &g_palette_log;
   palette_data->palVersion = 0x300;
-  palette_file = fopen(palette_text_path, "rt");
-  if (palette_file == (FILE *)0x0)
+  palette_file = shandalar_open_file_io(palette_text_path, "rt");
+  if (palette_file == (SDL_IOStream *)0x0)
   {
     return 0;
   }
@@ -561,10 +562,10 @@ PaletteLog *ReadPalette(char *palette_text_path, char *palette_binary_path)
   }
   g_paletteOctreeRoot = OctreeNode_Create();
 #ifdef MODERN_FIXES
-  while (fgets(line, 0xff, palette_file) != (char *)0x0)
+  while (shandalar_io_gets(line, 0xff, palette_file) != (char *)0x0)
   {
 #else
-  fgets(line, 0xff, palette_file);
+  shandalar_io_gets(line, 0xff, palette_file);
   while ((palette_file->_flag & 0x10) == 0)
   {
 #endif
@@ -587,7 +588,7 @@ PaletteLog *ReadPalette(char *palette_text_path, char *palette_binary_path)
       palette_data->palPalEntry[palette_index].peFlags = 1;
     }
 #ifndef MODERN_FIXES
-    fgets(line, 0xff, palette_file);
+    shandalar_io_gets(line, 0xff, palette_file);
 #endif
   }
   g_octree_depth_current = 0;
@@ -595,16 +596,16 @@ PaletteLog *ReadPalette(char *palette_text_path, char *palette_binary_path)
   g_octree_leaf_count = OctreeNode_FinalizeSubtree(g_paletteOctreeRoot);
   g_octree_depth_max = g_octree_depth_max + -1;
   palette_data->palNumEntries = 0x100;
-  fclose(palette_file);
-  palette_file = (FILE *)0x0;
+  shandalar_io_close(palette_file);
+  palette_file = (SDL_IOStream *)0x0;
   if (palette_binary_path != (char *)0x0)
   {
-    palette_file = fopen(palette_binary_path, "rb");
+    palette_file = shandalar_open_file_io(palette_binary_path, "rb");
   }
-  if (palette_file != (FILE *)0x0)
+  if (palette_file != (SDL_IOStream *)0x0)
   {
-    fread(&g_palette_log, 0x404, 1, palette_file);
-    fclose(palette_file);
+    shandalar_io_read(&g_palette_log, 0x404, 1, palette_file);
+    shandalar_io_close(palette_file);
   }
   palette_data->palPalEntry[0xff].peFlags = 0;
   palette_data->palPalEntry[0].peFlags = palette_data->palPalEntry[0xff].peFlags;

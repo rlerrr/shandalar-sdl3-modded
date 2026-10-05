@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "defs.h"
 #include "card_db.h"
 #include "platform/legacy_io.h"
@@ -9,36 +10,36 @@ char *CsvParseNextField(char **txt);
 
 static char *read_whole_file(const char *filename, size_t *out_size)
 {
-  FILE *file;
+  SDL_IOStream *file;
   long size;
   char *buffer;
 
   if (out_size)
     *out_size = 0;
-  file = fopen(filename, "rb");
+  file = shandalar_open_file_io(filename, "rb");
   if (!file)
     return NULL;
-  if (fseek(file, 0, SEEK_END) != 0) {
-    fclose(file);
+  if (shandalar_io_seek(file, 0, SEEK_END) != 0) {
+    shandalar_io_close(file);
     return NULL;
   }
-  size = ftell(file);
+  size = SDL_TellIO(file);
   if (size < 0) {
-    fclose(file);
+    shandalar_io_close(file);
     return NULL;
   }
-  rewind(file);
+  shandalar_io_rewind(file);
   buffer = (char *)malloc((size_t)size + 1);
   if (!buffer) {
-    fclose(file);
+    shandalar_io_close(file);
     return NULL;
   }
-  if (fread(buffer, 1, (size_t)size, file) != (size_t)size) {
+  if (shandalar_io_read(buffer, 1, (size_t)size, file) != (size_t)size) {
     free(buffer);
-    fclose(file);
+    shandalar_io_close(file);
     return NULL;
   }
-  fclose(file);
+  shandalar_io_close(file);
   buffer[size] = '\0';
   if (out_size)
     *out_size = (size_t)size;
@@ -284,17 +285,17 @@ int read_db_guts(char *cards_dat_filename)
   uint32_t text_size;
   card_disk_record_t *disk_records;
   int card_idx; /* ebp - 0x10 */
-  FILE *cards_dat;
+  SDL_IOStream *cards_dat;
 
-  cards_dat = fopen(cards_dat_filename, "rb");
+  cards_dat = shandalar_open_file_io(cards_dat_filename, "rb");
   if (cards_dat == NULL)
     return 0;
 
-  if (fread(&global_available_slots, sizeof(uint32_t), 1, cards_dat) != 1 ||
-      fread(&text_size, sizeof(text_size), 1, cards_dat) != 1 ||
+  if (shandalar_io_read(&global_available_slots, sizeof(uint32_t), 1, cards_dat) != 1 ||
+      shandalar_io_read(&text_size, sizeof(text_size), 1, cards_dat) != 1 ||
       global_available_slots < 0 || global_available_slots > SHANDALAR_CARD_DATABASE_CAPACITY || text_size == 0)
   {
-    fclose(cards_dat);
+    shandalar_io_close(cards_dat);
     return 0;
   }
 
@@ -305,21 +306,21 @@ int read_db_guts(char *cards_dat_filename)
     free(disk_records);
     free(global_base_txt);
     global_base_txt = NULL;
-    fclose(cards_dat);
+    shandalar_io_close(cards_dat);
     return 0;
   }
 
-  if (fread(disk_records, sizeof(*disk_records), (size_t)global_available_slots, cards_dat) !=
+  if (shandalar_io_read(disk_records, sizeof(*disk_records), (size_t)global_available_slots, cards_dat) !=
           (size_t)global_available_slots ||
-      fread(global_base_txt, 1, text_size, cards_dat) != text_size)
+      shandalar_io_read(global_base_txt, 1, text_size, cards_dat) != text_size)
   {
     free(disk_records);
     free(global_base_txt);
     global_base_txt = NULL;
-    fclose(cards_dat);
+    shandalar_io_close(cards_dat);
     return 0;
   }
-  fclose(cards_dat);
+  shandalar_io_close(cards_dat);
   global_base_txt[text_size] = '\0';
 
   for (card_idx = 0; card_idx < global_available_slots; card_idx += 1)

@@ -135,3 +135,6 @@ else()
     "-include" "${manalinkeh_namespace_header}"
   )
 endif()
+
+# Asset readers share the native/WASM stream overlay.
+target_link_libraries(manalinkeh_static PRIVATE shandalar_platform)

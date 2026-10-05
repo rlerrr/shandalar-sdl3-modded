@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "platform/winuser_compat.h"
 #include "platform/cheat_options.h"
 
@@ -2472,12 +2473,12 @@ int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library
   unsigned int current_color_filter;   /* ebp-0x204 */
   char line[500];                      /* ebp-0x200 */
   int deck_type;                       /* ebp-0xc */
-  FILE *f;                             /* ebp-0x8 */
+  SDL_IOStream *f;                             /* ebp-0x8 */
   int scan_ret;                        /* ebp-0x4 */
 
   strcpy(g_last_parsed_deck_path, deck_path);
-  f = fopen(deck_path, "rt\0");
-  if (f == (FILE *)0)
+  f = shandalar_open_file_io(deck_path, "rt\0");
+  if (f == (SDL_IOStream *)0)
   {
     return 0;
   }
@@ -2486,7 +2487,7 @@ int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library
   header_line_index = deck_type;
   entry_index = (unsigned int)header_line_index;
 
-  (void)fgets(line, sizeof(line), f);
+  (void)shandalar_io_gets(line, sizeof(line), f);
 
   current_color_filter = 0;
   current_speed_filter = -1;
@@ -2498,7 +2499,7 @@ int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library
 
   do
   {
-    scan_ret = (fgets(line, sizeof(line), f) != NULL) ? 1 : -1;
+    scan_ret = (shandalar_io_gets(line, sizeof(line), f) != NULL) ? 1 : -1;
     if (scan_ret == -1)
     {
       break;
@@ -2622,7 +2623,7 @@ int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library
   } while ((((int)entry_index < 200) && (total_cards < 500) && (scan_ret != -1)) &&
            ((csvid != 0) || (numcards != 0)));
 
-  fclose(f);
+  shandalar_io_close(f);
 
   if (total_cards < 0x28)
   {

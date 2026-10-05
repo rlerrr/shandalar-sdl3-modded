@@ -1,7 +1,9 @@
+#include "platform/file_io.h"
 #define GLOBAL_STRINGS_IMPL
 #include "global_strings.h"
 #include "global_state.h"
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 #include "cardartlib/src/assert.h"
 
@@ -11,7 +13,7 @@ void manalinkeh_initialize_ability_tooltip_names(void);
 
 static int load_text_file(const char *file_name, const char *section_name)
 {
-  FILE *f;
+  SDL_IOStream *f;
   char line[300] = "";
   char path[128];
   char section_line[300]; // ebp - 0x134
@@ -28,42 +30,42 @@ static int load_text_file(const char *file_name, const char *section_name)
   // if (!strchr(file_name, '.'))
   //   strcat(path, ".txt");
 
-  f = fopen(path, "rt");
+  f = shandalar_open_file_io(path, "rt");
   if (f == NULL)
     return -1;
 
   while (strcmp(section_line, line))
   {
-    if (!fgets(line, 300, f))
+    if (!shandalar_io_gets(line, 300, f))
     {
-      fclose(f);
+      shandalar_io_close(f);
       return -1;
     }
   }
 
-  if (fscanf(f, "%u", &num_text) != 1)
+  if (shandalar_io_scanf(f, "%u", &num_text) != 1)
   {
-    fclose(f);
+    shandalar_io_close(f);
     return -1;
   }
-  fgets(line, 300, f);
+  shandalar_io_gets(line, 300, f);
   if (num_text > sizeof(g_text_lines) / sizeof(g_text_lines[0]))
   {
-    fclose(f);
+    shandalar_io_close(f);
     return -1;
   }
 
   for (i = 0; i < (int)num_text; i++)
   {
-    if (!fgets(g_text_lines[i], 300, f))
+    if (!shandalar_io_gets(g_text_lines[i], 300, f))
     {
-      fclose(f);
+      shandalar_io_close(f);
       return -1;
     }
     g_text_lines[i][strcspn(g_text_lines[i], "\r\n")] = 0;
   }
 
-  fclose(f);
+  shandalar_io_close(f);
   return num_text;
 }
 

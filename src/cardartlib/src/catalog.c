@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "catalog.h"
 
 #include <stddef.h>
@@ -28,7 +29,7 @@ STATIC_ASSERT(sizeof(CatalogEntry) == 0xc, CatalogEntry_wrong_size);
 // SIZE 0x114
 typedef struct Catalog
 {
-  FILE *file;
+  SDL_IOStream *file;
   int entry_count;
   CatalogEntry *entries;
   CatalogEntry *cached_entry;
@@ -54,7 +55,7 @@ int Catalog_Open(const char *catalog_path)
   Catalog *catalog;
   int other_slot;
   int slot_index;
-  FILE *catalog_file;
+  SDL_IOStream *catalog_file;
 
   slot_index = -1;
 
@@ -73,14 +74,14 @@ int Catalog_Open(const char *catalog_path)
   catalog = &g_catalogs[slot_index];
   catalog->cached_entry = (CatalogEntry *)0x0;
   strcpy(catalog->path, catalog_path);
-  catalog->file = fopen(catalog_path, "rb");
+  catalog->file = shandalar_open_file_io(catalog_path, "rb");
   catalog_file = catalog->file;
-  if (catalog_file == (FILE *)0x0)
+  if (catalog_file == (SDL_IOStream *)0x0)
     return 0;
 
-  fread(&catalog->entry_count, 4, 1, catalog_file);
+  shandalar_io_read(&catalog->entry_count, 4, 1, catalog_file);
   catalog->entries = (CatalogEntry *)malloc(catalog->entry_count * sizeof(CatalogEntry));
-  fread(catalog->entries, sizeof(CatalogEntry), (size_t)catalog->entry_count, catalog_file);
+  shandalar_io_read(catalog->entries, sizeof(CatalogEntry), (size_t)catalog->entry_count, catalog_file);
   if (g_catalogDuplicateCheckEnabled != 0)
   {
     for (other_slot = 0; other_slot < 5; other_slot = other_slot + 1)
@@ -117,9 +118,9 @@ bool Catalog_Close(int handle)
   if (g_catalogs[--handle].file == 0)
     return 0;
   free(g_catalogs[handle].entries);
-  fclose(g_catalogs[handle].file);
+  shandalar_io_close(g_catalogs[handle].file);
   g_catalogs[handle].entries = (CatalogEntry *)0x0;
-  g_catalogs[handle].file = (FILE *)0x0;
+  g_catalogs[handle].file = (SDL_IOStream *)0x0;
   g_catalogs[handle].entry_count = 0;
   return 1;
 }
@@ -189,8 +190,8 @@ size_t Catalog_ReadEntry(int catalog_handle, const char *name, void **buffer)
   {
     *buffer = malloc(entry->size + 0x10);
   }
-  fseek(catalog->file, (long)entry->offset, 0);
-  return fread(*buffer, 1, entry->size, catalog->file);
+  shandalar_io_seek(catalog->file, (long)entry->offset, 0);
+  return shandalar_io_read(*buffer, 1, entry->size, catalog->file);
 }
 
 // MATCHING

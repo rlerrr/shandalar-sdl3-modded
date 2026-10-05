@@ -10,6 +10,7 @@
 #include "deck/src/deck_imgui_interaction.h"
 #include "platform/gdi_compat.h"
 #include "platform/asset_manager.h"
+#include "platform/mod_overlay.h"
 #include "platform/winuser_compat.h"
 #include "platform/winuser_imgui_bridge.h"
 
@@ -277,6 +278,10 @@ int main(int argc, char **argv)
   int i;
   WPARAM result;
 
+  if (!shandalar_mod_init_from_args(&argc, argv)) {
+    SDL_Log("deck: mod setup failed: %s", SDL_GetError());
+    return 1;
+  }
   for (i = 1; i < argc; ++i) {
     if (SDL_strcmp(argv[i], "--smoke") == 0)
       g_smoke_frames_remaining = 30;
@@ -388,6 +393,7 @@ int main(int argc, char **argv)
   SDL_StopTextInput(g_window);
   SDL_DestroyRenderer(g_renderer);
   SDL_DestroyWindow(g_window);
+  shandalar_mod_unload();
   SDL_Quit();
   return (int)result;
 }

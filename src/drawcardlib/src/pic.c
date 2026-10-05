@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "platform/gdi_compat.h"
 #include "platform/legacy_io.h"
 #include <stdio.h>
@@ -12,9 +13,9 @@
 typedef unsigned short ushort;
 
 /* Local helpers moved with load_pic(). */
-int OpenPcxFile(char *filename, int flags);
-void ClosePcxFile(int fileDescriptor);
-void RpBits_Setup(int fileDescriptor);
+SDL_IOStream *OpenPcxFile(char *filename, int flags);
+void ClosePcxFile(SDL_IOStream *fileDescriptor);
+void RpBits_Setup(SDL_IOStream *fileDescriptor);
 int RpBitsRefill(void);
 
 #if defined(FACEMAKER) || defined(SHANDALAR)
@@ -136,12 +137,12 @@ undefined4 global_pcx_lineNum;
 
 // GLOBAL: DRAWCARDLIB 0x100f23a0
 // GLOBAL: DECKDLL 0x10105328
-int global_pcxFileDescriptor;
+SDL_IOStream *global_pcxFileDescriptor;
 
 // GLOBAL: DRAWCARDLIB 0x100f23a4
 // GLOBAL: DECKDLL 0x1010532c
 // GLOBAL: SHANDALAR 0x005b7b6c
-undefined4 rpbits_file_descriptor;
+SDL_IOStream *rpbits_file_descriptor;
 
 // GLOBAL: DRAWCARDLIB 0x100f23a8
 // GLOBAL: DECKDLL 0x10105330
@@ -287,8 +288,8 @@ LoadPicFile(int loadFlags, undefined4 unused_arg2, undefined4 unused_arg3, char 
   if (_stricmp(".pcx", strchr(pcxFilename, '.')) == 0)
   {
     //.pcx file
-    gPcxInFile = fopen(pcxFilename, "rb");
-    if (gPcxInFile == (FILE *)0x0)
+    gPcxInFile = shandalar_open_file_io(pcxFilename, "rb");
+    if (gPcxInFile == (SDL_IOStream *)0x0)
     {
       return 0;
     }
@@ -329,14 +330,14 @@ LoadPicFile(int loadFlags, undefined4 unused_arg2, undefined4 unused_arg3, char 
       {
         PcxReadScanlineRle(dst_scanline);
       }
-      fclose(gPcxInFile);
+      shandalar_io_close(gPcxInFile);
     }
   }
   else
   {
     //.pic file (probably)
     global_pcxFileDescriptor = OpenPcxFile(pcxFilename, 0x8000);
-    if (global_pcxFileDescriptor != -1)
+    if (global_pcxFileDescriptor != NULL)
     {
       RpBits_Setup(global_pcxFileDescriptor);
       RpBits_ReadTables((ushort *)palette);
@@ -407,11 +408,12 @@ HBITMAP load_pic(char *filename)
 // FUNCTION: DECKDLL 0x1002d1e6
 // FUNCTION: MAGIC 0x004856fa
 // FUNCTION: SHANDALAR 0x004c8b65
-int OpenPcxFile(char *filename, int flags)
+SDL_IOStream *OpenPcxFile(char *filename, int flags)
 {
-  int iVar1;
+  SDL_IOStream *iVar1;
 
-  iVar1 = _open(filename, flags);
+  (void)flags;
+  iVar1 = shandalar_open_file_io(filename, "rb");
   g_last_picture_file_handle = 0xffffffff;
   return iVar1;
 }
@@ -420,18 +422,18 @@ int OpenPcxFile(char *filename, int flags)
 // FUNCTION: DECKDLL 0x1002d21a
 // FUNCTION: MAGIC 0x0048572e
 // FUNCTION: SHANDALAR 0x004c8b99
-void ClosePcxFile(int fileDescriptor)
+void ClosePcxFile(SDL_IOStream *fileDescriptor)
 {
-  if (fileDescriptor == (int)g_invalidPcxFileDescriptor)
+  if (fileDescriptor == NULL)
     return;
-  _close(fileDescriptor);
+  SDL_CloseIO(fileDescriptor);
 }
 
 // FUNCTION: DRAWCARDLIB 0x1000b7a2
 // FUNCTION: DECKDLL 0x1002d245
 // FUNCTION: MAGIC 0x00485759
 // FUNCTION: SHANDALAR 0x004c8bc5
-void RpBits_Setup(int fileDescriptor)
+void RpBits_Setup(SDL_IOStream *fileDescriptor)
 {
   rpbits_file_descriptor = fileDescriptor;
   rpbits_stream_ptr = (byte *)rpbits_stream_end;
@@ -447,7 +449,7 @@ int RpBitsRefill(void)
 {
   int iVar1;
 
-  iVar1 = _read(rpbits_file_descriptor, rpbits_buffer, 0x200);
+  iVar1 = (int)SDL_ReadIO(rpbits_file_descriptor, rpbits_buffer, 0x200);
   rpbits_stream_ptr = rpbits_buffer;
   return iVar1;
 }

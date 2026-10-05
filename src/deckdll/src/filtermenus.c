@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include <stddef.h>
 #include <stdlib.h>
 #include "filtermenus.h"
@@ -2521,7 +2522,7 @@ int global_num_artists;
 // GLOBAL: DECKDLL 0x101bc600
 int check_filters_debug_log_enabled;
 // GLOBAL: DECKDLL 0x10142640
-FILE *check_filters_debug_log_file;
+SDL_IOStream *check_filters_debug_log_file;
 
 // FUNCTION: DECKDLL 0x10010b1e
 static int
@@ -2682,7 +2683,7 @@ bool check_filters(csvid_t csvid)
   if (check_filters_debug_log_enabled != 0 && result != 0)
   {
     sprintf(txt, "%d\n", csvid);
-    fprintf(check_filters_debug_log_file, txt);
+    shandalar_io_printf(check_filters_debug_log_file, txt);
   }
 
   return result;

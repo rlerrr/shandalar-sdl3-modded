@@ -1,10 +1,12 @@
 #include "platform/file_io.h"
 
 #include "platform/legacy_io.h"
+#include "platform/mod_overlay.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <errno.h>
 
 typedef struct ShandalarFileIO {
   FILE *file;
@@ -74,15 +76,33 @@ SDL_IOStream *shandalar_open_file_io(const char *path, const char *mode)
   ShandalarFileIO *file_io;
   SDL_IOStream *io;
   SDL_IOStreamInterface interface;
+  char binary_mode[8];
+  size_t mode_length = 0;
 
   if (!path || !path[0] || !mode || !mode[0])
     return NULL;
 
+  if (mode[0] == 'r' && !strchr(mode, '+')) {
+    int found;
+    io = shandalar_mod_open(path, &found);
+    if (found)
+      return io;
+  }
+
   file_io = (ShandalarFileIO *)malloc(sizeof(*file_io));
   if (!file_io)
     return NULL;
-  file_io->file = fopen(path, mode);
+  /* Text normalization belongs to the line/token helpers, so byte offsets
+   * and binary decoders behave identically for disk and ZIP streams. */
+  for (const char *cursor = mode; *cursor; ++cursor) {
+    if (*cursor != 't' && *cursor != 'b' && mode_length < sizeof(binary_mode) - 2)
+      binary_mode[mode_length++] = *cursor;
+  }
+  binary_mode[mode_length++] = 'b';
+  binary_mode[mode_length] = 0;
+  file_io->file = fopen(path, binary_mode);
   if (!file_io->file) {
+    SDL_SetError("Could not open %s: %s", path, strerror(errno));
     free(file_io);
     return NULL;
   }

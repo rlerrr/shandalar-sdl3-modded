@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #ifndef SHANDALAR_SIDLIB_PCXW_H
 #define SHANDALAR_SIDLIB_PCXW_H
 
@@ -8,7 +9,7 @@
 /* Globals shared with callers (kept for decomp matching). */
 extern int global_pcxw_image_width;
 extern int global_pcxw_image_height;
-extern FILE *gPcxInFile;
+extern SDL_IOStream *gPcxInFile;
 extern char *gPcxPath;
 
 /* PCXW APIs */

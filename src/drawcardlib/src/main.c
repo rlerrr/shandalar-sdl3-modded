@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "platform/gdi_compat.h"
 #include <stdio.h>
 #include <stdarg.h>
@@ -1727,7 +1728,7 @@ int read_cfg(HINSTANCE hinst)
   uint32_t global_available_slots = 0;
   uint32_t record_size;
   int slotIndex;
-  FILE *cards_dat;
+  SDL_IOStream *cards_dat;
   uint32_t *record_table;
   int result;
 
@@ -1745,20 +1746,20 @@ int read_cfg(HINSTANCE hinst)
   }
   strcpy(cards_dat_filename, global_base_directory);
   strcat(cards_dat_filename, "\\CARDS.DAT");
-  cards_dat = fopen(cards_dat_filename, "rb");
-  if (cards_dat != (FILE *)0x0)
+  cards_dat = shandalar_open_file_io(cards_dat_filename, "rb");
+  if (cards_dat != (SDL_IOStream *)0x0)
   {
-    if (fread(&global_available_slots, 4, 1, cards_dat) == 1 &&
-        fread(&record_size, 4, 1, cards_dat) == 1)
+    if (shandalar_io_read(&global_available_slots, 4, 1, cards_dat) == 1 &&
+        shandalar_io_read(&record_size, 4, 1, cards_dat) == 1)
     {
       record_table = (uint32_t *)malloc((size_t)global_available_slots * 0x26 *
                                         sizeof(*record_table));
       if (record_table != NULL &&
-          fread(record_table, 0x26 * sizeof(*record_table), global_available_slots,
+          shandalar_io_read(record_table, 0x26 * sizeof(*record_table), global_available_slots,
                 cards_dat) == global_available_slots)
       {
         recordBuf = malloc(record_size);
-        if (recordBuf != (void *)0x0 && fread(recordBuf, 1, record_size, cards_dat) == record_size)
+        if (recordBuf != (void *)0x0 && shandalar_io_read(recordBuf, 1, record_size, cards_dat) == record_size)
         {
           for (slotIndex = 0; (int)global_available_slots > slotIndex;
                slotIndex = slotIndex + 1)
@@ -1785,7 +1786,7 @@ int read_cfg(HINSTANCE hinst)
     {
       result = 0;
     }
-    fclose(cards_dat);
+    shandalar_io_close(cards_dat);
   }
   else
   {

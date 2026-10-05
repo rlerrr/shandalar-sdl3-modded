@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #include "card_pool.h"
 #include "platform/iniparser.h"
 #include "platform/legacy_io.h"
@@ -57,17 +58,17 @@ static void collect(void *context, const char *section, const char *key, const c
   if (!entry->section || !entry->key || !entry->value) cfg->failed = 1;
 }
 
-static FILE *open_asset(const char *directory, const char *name, const char *mode)
+static SDL_IOStream *open_asset(const char *directory, const char *name, const char *mode)
 {
   char path[2048];
   if (snprintf(path, sizeof(path), "%s/%s", directory, name) >= (int)sizeof(path)) return NULL;
-  return fopen(path, mode);
+  return shandalar_open_file_io(path, mode);
 }
 
 static int read_config(Config *cfg, const char *directory, const char *name, int optional)
 {
   size_t begin = cfg->count, end, i;
-  FILE *file;
+  SDL_IOStream *file;
   dictionary *dict;
   char normalized[1024];
   size_t n = strlen(name);
@@ -84,8 +85,8 @@ static int read_config(Config *cfg, const char *directory, const char *name, int
     if (!optional) fprintf(stderr, "Shandalar.ini: cannot read included file %s\n", name);
     return optional;
   }
-  dict = iniparser_load_file_entries(file, name, collect, cfg);
-  fclose(file);
+  dict = iniparser_load_io_entries(file, name, collect, cfg);
+  shandalar_io_close(file);
   if (!dict || cfg->failed) { iniparser_freedict(dict); return 0; }
   iniparser_freedict(dict);
   end = cfg->count;
@@ -109,18 +110,18 @@ static void free_config(Config *cfg)
 
 static int read_set_names(const char *directory, char names[256][256])
 {
-  FILE *file = open_asset(directory, "Menus.txt", "r");
+  SDL_IOStream *file = open_asset(directory, "Menus.txt", "r");
   char line[1024];
   int count = 0, i;
   if (!file) return 0;
-  while (fgets(line, sizeof(line), file)) {
+  while (shandalar_io_gets(line, sizeof(line), file)) {
     line[strcspn(line, "\r\n")] = 0;
     if (equal(line, "@EXPANSIONNAMES")) {
-      if (!fgets(line, sizeof(line), file)) break;
+      if (!shandalar_io_gets(line, sizeof(line), file)) break;
       count = atoi(line);
       if (count < 9 || count > 256) { count = 0; break; }
       for (i = 0; i < count; ++i) {
-        if (!fgets(line, sizeof(line), file)) { count = 0; break; }
+        if (!shandalar_io_gets(line, sizeof(line), file)) { count = 0; break; }
         line[strcspn(line, "\r\n")] = 0;
         if (strlen(line) >= 256) { count = 0; break; }
         strcpy(names[i], line);
@@ -128,7 +129,7 @@ static int read_set_names(const char *directory, char names[256][256])
       break;
     }
   }
-  fclose(file);
+  shandalar_io_close(file);
   return count;
 }
 
@@ -139,19 +140,19 @@ static uint32_t read_u32(const unsigned char *p)
 
 static unsigned char *read_printings(const char *directory, int sets, size_t *records, size_t *stride)
 {
-  FILE *file = open_asset(directory, "Rarity.dat", "rb");
+  SDL_IOStream *file = open_asset(directory, "Rarity.dat", "rb");
   unsigned char header[8], *data = NULL;
   if (!file) return NULL;
-  if (fread(header, 1, 8, file) != 8 || read_u32(header + 4) < (unsigned)sets || read_u32(header + 4) > 256) goto done;
+  if (shandalar_io_read(header, 1, 8, file) != 8 || read_u32(header + 4) < (unsigned)sets || read_u32(header + 4) > 256) goto done;
   *records = read_u32(header);
   /* Some distributions have two trailing unnamed sets in Rarity.dat. The
    * binary header determines the stride; Menus.txt determines named ranges. */
   *stride = ((size_t)read_u32(header + 4) * 3 + 7) / 8;
   if (!*records || *records > 100000) goto done;
   data = malloc(*records * *stride);
-  if (data && fread(data, *stride, *records, file) != *records) { free(data); data = NULL; }
+  if (data && shandalar_io_read(data, *stride, *records, file) != *records) { free(data); data = NULL; }
 done:
-  fclose(file);
+  shandalar_io_close(file);
   return data;
 }
 

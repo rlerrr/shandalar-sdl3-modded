@@ -1,3 +1,4 @@
+#include "platform/file_io.h"
 #ifdef MODERN_FIXES
 #include "platform/winuser_compat.h"
 #else
@@ -24,11 +25,11 @@ int MeasureTextSpanWidth(FacemakerWindowBounds *window, char *text, int length);
 void AppendTownHintBodyText(int hint_index)
 {
   char hint_text[256];
-  FILE *hints_file;
+  SDL_IOStream *hints_file;
 
-  hints_file = fopen("hints.txt", "rt");
-  fseek(hints_file, g_hint_text_offsets[hint_index], 0);
-  while (fgets(hint_text, sizeof(hint_text), hints_file) != NULL)
+  hints_file = shandalar_open_file_io("hints.txt", "rt");
+  shandalar_io_seek(hints_file, g_hint_text_offsets[hint_index], 0);
+  while (shandalar_io_gets(hint_text, sizeof(hint_text), hints_file) != NULL)
   {
     hint_text[strcspn(hint_text, "\r\n")] = '\0';
     if (hint_text[0] == '\0')
@@ -38,7 +39,7 @@ void AppendTownHintBodyText(int hint_index)
     strcat(g_ui_message_buffer, hint_text);
     break;
   }
-  fclose(hints_file);
+  shandalar_io_close(hints_file);
 }
 
 // FUNCTION: SHANDALAR 0x00418a8f
