@@ -1,5 +1,6 @@
 #include "platform/mod_overlay.h"
 #include "platform/asset_manager.h"
+#include "platform/profile_cache.h"
 
 #include <SDL3/SDL.h>
 #include <miniz.h>
@@ -135,6 +136,7 @@ int shandalar_mod_load(const char *zip_path)
   g_zip_bytes = bytes;
   g_entries = entries;
   g_entry_count = count;
+  shandalar_profile_cache_clear();
   return 1;
 
 fail:
@@ -146,6 +148,7 @@ fail:
 
 void shandalar_mod_unload(void)
 {
+  shandalar_profile_cache_clear();
   if (!g_zip_bytes)
     return;
   mz_zip_reader_end(&g_zip);

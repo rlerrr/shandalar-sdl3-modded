@@ -11,9 +11,9 @@
 int main(int argc, char **argv)
 {
   const char *names[] = {"magic0.sve", "MAGICa.MAP", "magicf.fce", "saveDescs",
-                         "registry.ini", "FaceMostRecent.txt", "face.pic"};
+                         "registry.ini", "FaceMostRecent.txt", "face.pic", "MANALINK.INI"};
   const char *mapped[] = {"magic0.sve", "magica.map", "magicf.fce", "saveDescs",
-                          "registry.ini", "FaceMostRecent.txt", "face.pic"};
+                          "registry.ini", "FaceMostRecent.txt", "face.pic", "manalink.ini"};
   const char *root;
   char path[256], contents[16];
   size_t i;
@@ -28,6 +28,16 @@ int main(int argc, char **argv)
   });
   root = shandalar_user_data_root();
   CHECK(!strcmp(root, argv[1]));
+  {
+    const char defaults[] = "[DeckBuilder]\nSort=2\n";
+    SDL_IOStream *io;
+    CHECK(SDL_SaveFile("Manalink.ini", defaults, sizeof(defaults) - 1));
+    io = shandalar_open_file_io(".\\MANALINK.INI", "rb");
+    CHECK(io);
+    CHECK(SDL_CloseIO(io));
+    snprintf(path, sizeof(path), "%s/manalink.ini", root);
+    CHECK(SDL_GetPathInfo(path, NULL));
+  }
   for (i = 0; i < SDL_arraysize(names); ++i) {
     SDL_IOStream *io = shandalar_open_file_io(names[i], "wb");
     CHECK(io && SDL_WriteIO(io, "mod save", 8) == 8 && SDL_CloseIO(io));
@@ -40,6 +50,12 @@ int main(int argc, char **argv)
       snprintf(path, sizeof(path), "/userdata/%s", mapped[i]);
       CHECK(!SDL_GetPathInfo(path, NULL));
     }
+  }
+  {
+    size_t size;
+    char *defaults = SDL_LoadFile("Manalink.ini", &size);
+    CHECK(defaults && !strcmp(defaults, "[DeckBuilder]\nSort=2\n"));
+    SDL_free(defaults);
   }
   {
     int fd = _open("magic1.sve", _O_WRONLY | _O_CREAT | _O_TRUNC, _S_IREAD | _S_IWRITE);

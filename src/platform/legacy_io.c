@@ -267,7 +267,7 @@ static int is_hex_save_slot(char c)
   return (c >= '0' && c <= '9') || (c >= 'a' && c <= 'f');
 }
 
-static int map_user_data_path(const char *path, char *out, size_t out_size)
+int shandalar_user_data_path(const char *path, char *out, size_t out_size)
 {
   char normalized[1024];
   const char *root;
@@ -303,6 +303,8 @@ static int map_user_data_path(const char *path, char *out, size_t out_size)
     snprintf(out, out_size, "%s/saveDescs", root);
   } else if (ascii_equal_ignore_case(base, "registry.ini")) {
     snprintf(out, out_size, "%s/registry.ini", root);
+  } else if (ascii_equal_ignore_case(base, "Manalink.ini")) {
+    snprintf(out, out_size, "%s/manalink.ini", root);
   } else if (strlen(base) == 10 &&
              tolower((unsigned char)base[0]) == 'm' &&
              tolower((unsigned char)base[1]) == 'a' &&
@@ -333,6 +335,7 @@ static int map_user_data_path(const char *path, char *out, size_t out_size)
   return 1;
 }
 
+
 static void normalize_path_copy(char *out, size_t out_size, const char *path)
 {
   size_t i;
@@ -347,7 +350,7 @@ static void normalize_path_copy(char *out, size_t out_size, const char *path)
 
 void shandalar_map_file_path(const char *path, char *out, size_t out_size)
 {
-  if (!map_user_data_path(path, out, out_size))
+  if (!shandalar_user_data_path(path, out, out_size))
     normalize_path_copy(out, out_size, path);
 }
 
@@ -560,7 +563,7 @@ FILE *shandalar_fopen(const char *path, const char *mode)
 {
   char normalized[1024];
   FILE *file;
-  int user_data_file = map_user_data_path(path, normalized, sizeof(normalized));
+  int user_data_file = shandalar_user_data_path(path, normalized, sizeof(normalized));
   if (!user_data_file)
     normalize_path_copy(normalized, sizeof(normalized), path);
   if (!user_data_file && mode && mode[0] == 'r') {
@@ -613,7 +616,7 @@ int shandalar_open(const char *path, int flags, ...)
     mode = translate_legacy_open_mode(flags, (mode_t)va_arg(args, int));
     va_end(args);
   }
-  user_data_file = map_user_data_path(path, normalized, sizeof(normalized));
+  user_data_file = shandalar_user_data_path(path, normalized, sizeof(normalized));
   if (!user_data_file)
     normalize_path_copy(normalized, sizeof(normalized), path);
   if (!user_data_file && (translated_flags & O_CREAT) == 0) {

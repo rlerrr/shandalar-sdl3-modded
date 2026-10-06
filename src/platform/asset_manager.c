@@ -1,5 +1,6 @@
 #include "platform/asset_manager.h"
 #include "platform/mod_overlay.h"
+#include "platform/profile_cache.h"
 
 #include <ctype.h>
 #include <stdio.h>
@@ -142,6 +143,7 @@ static AssetRequest *alloc_request(const char *relative_path)
 
 void shandalar_assets_set_root(const char *root)
 {
+  shandalar_profile_cache_clear();
   snprintf(g_asset_root, sizeof(g_asset_root), "%s", (root && root[0]) ? root : ".");
   normalize_slashes(g_asset_root);
 #ifdef __EMSCRIPTEN__

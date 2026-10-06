@@ -2,6 +2,8 @@
 
 #include "platform/legacy_io.h"
 #include "platform/mod_overlay.h"
+#include "platform/asset_manager.h"
+#include <SDL3/SDL_filesystem.h>
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,11 +15,63 @@ typedef struct ShandalarFileIO {
   int writable;
 } ShandalarFileIO;
 
+#ifdef __EMSCRIPTEN__
+static void seed_user_config(const char *path)
+{
+  char asset_path[1024], resolved[1024];
+  const char *name = strrchr(path, '/');
+  SDL_IOStream *input, *output;
+  unsigned char bytes[4096];
+  size_t count;
+  int found, ok = 1;
+  if (!name || strcmp(name + 1, "manalink.ini") != 0 || SDL_GetPathInfo(path, NULL))
+    return;
+  /* Copy effective asset/ZIP defaults once. Subsequent opens use the saved
+   * config, even when the mod ships a file with the same name. */
+  if (!shandalar_assets_join_path(asset_path, sizeof(asset_path), "Manalink.ini"))
+    return;
+  input = shandalar_mod_open(asset_path, &found);
+  if (!found) {
+    if (!shandalar_resolve_existing_path(asset_path, resolved, sizeof(resolved))) {
+      if (shandalar_assets_fetch_blocking("Manalink.ini") != SHANDALAR_ASSET_READY)
+        return;
+      shandalar_resolve_existing_path(asset_path, resolved, sizeof(resolved));
+    }
+    input = SDL_IOFromFile(resolved, "rb");
+  }
+  if (!input)
+    return;
+  output = SDL_IOFromFile(path, "wb");
+  if (!output) {
+    SDL_CloseIO(input);
+    return;
+  }
+  while ((count = SDL_ReadIO(input, bytes, sizeof(bytes))) != 0) {
+    if (SDL_WriteIO(output, bytes, count) != count) {
+      ok = 0;
+      break;
+    }
+  }
+  ok = ok && SDL_GetIOStatus(input) != SDL_IO_STATUS_ERROR;
+  SDL_CloseIO(input);
+  if (!SDL_CloseIO(output))
+    ok = 0;
+  if (ok)
+    shandalar_user_data_sync();
+  else
+    SDL_RemovePath(path);
+}
+#endif
+
 static Sint64 SDLCALL file_io_seek(void *userdata, Sint64 offset,
                                    SDL_IOWhence whence)
 {
   ShandalarFileIO *file_io = (ShandalarFileIO *)userdata;
   int origin;
+  /* SDL_TellIO uses a zero-offset relative seek. Calling fseek here would
+   * discard stdio's read-ahead buffer on every text/scanner position query. */
+  if (whence == SDL_IO_SEEK_CUR && offset == 0)
+    return (Sint64)ftell(file_io->file);
   switch (whence) {
   case SDL_IO_SEEK_SET: origin = SEEK_SET; break;
   case SDL_IO_SEEK_CUR: origin = SEEK_CUR; break;
@@ -78,9 +132,20 @@ SDL_IOStream *shandalar_open_file_io(const char *path, const char *mode)
   SDL_IOStreamInterface interface;
   char binary_mode[8];
   size_t mode_length = 0;
+#ifdef __EMSCRIPTEN__
+  char user_path[1024];
+#endif
 
   if (!path || !path[0] || !mode || !mode[0])
     return NULL;
+
+#ifdef __EMSCRIPTEN__
+  if (shandalar_user_data_path(path, user_path, sizeof(user_path))) {
+    if (mode[0] == 'r' || mode[0] == 'a')
+      seed_user_config(user_path);
+    path = user_path;
+  }
+#endif
 
   if (mode[0] == 'r' && !strchr(mode, '+')) {
     int found;

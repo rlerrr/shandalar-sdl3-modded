@@ -66,6 +66,8 @@ long shandalar_filelength(int fd);
 int shandalar_resolve_existing_path(const char *path, char *out, size_t out_size);
 void shandalar_map_file_path(const char *path, char *out, size_t out_size);
 const char *shandalar_user_data_root(void);
+/* Resolve a legacy writable filename into the active browser namespace. */
+int shandalar_user_data_path(const char *path, char *out, size_t out_size);
 int shandalar_user_data_sync(void);
 
 #ifdef __cplusplus

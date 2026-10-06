@@ -1,4 +1,7 @@
 #include "platform/file_io.h"
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+#include "platform/profile_cache.h"
+#endif
 // -*- tab-width:4; c-basic-offset:2; -*-
 // Drawcardlib: display card and mana cost graphics.
 // config.c: read Duel.dat, watermarks.csv, menus.txt, Rarity.dat
@@ -1124,6 +1127,9 @@ int
 read_cfg(void)
 {
   int rval = 1;
+#ifdef SHANDALAR_SDL_WIN32_COMPAT
+  shandalar_profile_cache_clear();
+#endif
 
   if (!*base_dir)
 	{

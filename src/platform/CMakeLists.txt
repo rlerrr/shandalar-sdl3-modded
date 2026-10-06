@@ -9,6 +9,7 @@ add_library(shandalar_platform STATIC
   mod_overlay.c
   dictionary.c
   iniparser.c
+  profile_cache.c
   winbase_compat.c
   wincontrols_compat.c
   windialog_compat.c
@@ -72,6 +73,16 @@ if(SHANDALAR_BUILD_DECK OR SHANDALAR_BUILD_SHANDALAR)
 endif()
 
 if(SHANDALAR_BUILD_TESTS)
+  add_executable(profile_cache_test tests/profile_cache_test.c)
+  target_link_libraries(profile_cache_test PRIVATE shandalar_platform shandalar_miniz)
+  if(EMSCRIPTEN)
+    target_link_options(profile_cache_test PRIVATE "-sASYNCIFY=1" "-sFORCE_FILESYSTEM=1" "-sFETCH=1" "-sEXIT_RUNTIME=1" "-lidbfs.js")
+    add_test(NAME profile_cache_test COMMAND node "$<TARGET_FILE:profile_cache_test>")
+  else()
+    add_test(NAME profile_cache_test COMMAND profile_cache_test)
+  endif()
+  set_tests_properties(profile_cache_test PROPERTIES TIMEOUT 30)
+
   if(SHANDALAR_BUILD_DECK OR SHANDALAR_BUILD_SHANDALAR)
     add_executable(asset_stream_test
       tests/asset_stream_test.c

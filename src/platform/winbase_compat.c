@@ -1,5 +1,6 @@
 #include "platform/winuser_compat.h"
 #include "platform/file_io.h"
+#include "platform/profile_cache.h"
 #ifndef _WIN32
 #include "platform/legacy_io.h"
 #endif
@@ -535,7 +536,7 @@ static void normalize_path(char *out, size_t out_size, const char *path)
 BOOL WritePrivateProfileStringA(LPCSTR section, LPCSTR key, LPCSTR value, LPCSTR filename)
 {
   FILE *input;
-  FILE *output;
+  SDL_IOStream *output;
   char path[1024];
   char temp_path[1050];
   char line[1024];
@@ -547,9 +548,20 @@ BOOL WritePrivateProfileStringA(LPCSTR section, LPCSTR key, LPCSTR value, LPCSTR
   if (!section || !key || !filename)
     return FALSE;
   normalize_path(path, sizeof(path), filename);
+#ifdef __EMSCRIPTEN__
+  {
+    char user_path[1024];
+    if (shandalar_user_data_path(path, user_path, sizeof(user_path))) {
+      SDL_IOStream *defaults = shandalar_open_file_io(path, "rb");
+      if (defaults)
+        SDL_CloseIO(defaults);
+      SDL_strlcpy(path, user_path, sizeof(path));
+    }
+  }
+#endif
   SDL_snprintf(temp_path, sizeof(temp_path), "%s.tmp", path);
   input = fopen(path, "rb");
-  output = fopen(temp_path, "wb");
+  output = SDL_IOFromFile(temp_path, "wb");
   if (!output) {
     if (input)
       fclose(input);
@@ -566,7 +578,7 @@ BOOL WritePrivateProfileStringA(LPCSTR section, LPCSTR key, LPCSTR value, LPCSTR
     if (*cursor == '[') {
       char *close = strchr(cursor + 1, ']');
       if (in_section && !wrote_key && value) {
-        fprintf(output, "%s=%s\n", key, value);
+        shandalar_io_printf(output, "%s=%s\n", key, value);
         wrote_key = 1;
       }
       in_section = 0;
@@ -576,7 +588,7 @@ BOOL WritePrivateProfileStringA(LPCSTR section, LPCSTR key, LPCSTR value, LPCSTR
         if (in_section)
           found_section = 1;
       }
-      fputs(line, output);
+      SDL_WriteIO(output, line, strlen(line));
       continue;
     }
     if (in_section) {
@@ -588,28 +600,35 @@ BOOL WritePrivateProfileStringA(LPCSTR section, LPCSTR key, LPCSTR value, LPCSTR
         *end = '\0';
         if (SDL_strcasecmp(cursor, key) == 0) {
           if (!wrote_key && value)
-            fprintf(output, "%s=%s\n", key, value);
+            shandalar_io_printf(output, "%s=%s\n", key, value);
           wrote_key = 1;
           continue;
         }
       }
     }
-    fputs(line, output);
+    SDL_WriteIO(output, line, strlen(line));
   }
 
   if (input)
     fclose(input);
   if (!found_section) {
     if (value)
-      fprintf(output, "\n[%s]\n%s=%s\n", section, key, value);
+      shandalar_io_printf(output, "\n[%s]\n%s=%s\n", section, key, value);
   } else if (!wrote_key && value) {
-    fprintf(output, "%s=%s\n", key, value);
+    shandalar_io_printf(output, "%s=%s\n", key, value);
   }
-  if (fclose(output) == 0) {
+  if (SDL_CloseIO(output)) {
     remove(path);
     result = rename(temp_path, path) == 0;
   }
   if (!result)
     remove(temp_path);
+  else
+    shandalar_profile_cache_invalidate(path);
+#ifdef __EMSCRIPTEN__
+  /* The temporary file was closed before rename; persist the final name. */
+  if (result)
+    shandalar_user_data_sync();
+#endif
   return result;
 }
