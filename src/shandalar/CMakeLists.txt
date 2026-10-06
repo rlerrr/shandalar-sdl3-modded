@@ -265,6 +265,33 @@ endif()
 
 install(TARGETS shandalar RUNTIME DESTINATION .)
 
+find_package(Python3 REQUIRED COMPONENTS Interpreter)
+set(mok_legacy_effect_source "${CMAKE_CURRENT_BINARY_DIR}/generated/mok_legacy_effect.c")
+add_custom_command(OUTPUT "${mok_legacy_effect_source}"
+  COMMAND "${Python3_EXECUTABLE}" "${SHANDALAR_SRC_ROOT}/manalinkeh/tests/select_legacy_effect_functions.py"
+          "${SHANDALAR_SRC_ROOT}" "${mok_legacy_effect_source}"
+  DEPENDS ../manalinkeh/tests/select_legacy_effect_functions.py
+          ../manalinkeh/functions/functions.c ../manalinkeh/cards/fifth_dawn.c
+          src/manalinkeh_host_bridge.c ../magic/src/carddata.c
+  VERBATIM
+)
+add_executable(mok_legacy_effect_test EXCLUDE_FROM_ALL
+  ../manalinkeh/tests/mok_legacy_effect_test.c "${mok_legacy_effect_source}")
+target_include_directories(mok_legacy_effect_test PRIVATE
+  "${SHANDALAR_SRC_ROOT}/manalinkeh" "${SHANDALAR_SRC_ROOT}")
+target_compile_definitions(mok_legacy_effect_test PRIVATE MANALINKEH_STATIC)
+if(EMSCRIPTEN)
+  target_include_directories(mok_legacy_effect_test BEFORE PRIVATE "${SHANDALAR_SRC_ROOT}/magic/compat")
+  target_link_libraries(mok_legacy_effect_test PRIVATE shandalar_platform)
+  set_target_properties(mok_legacy_effect_test PROPERTIES SUFFIX ".js")
+  target_link_options(mok_legacy_effect_test PRIVATE -sENVIRONMENT=node -sEXIT_RUNTIME=1)
+elseif(SHANDALAR_BUILD_TESTS)
+  add_test(NAME mok_legacy_effect_test COMMAND mok_legacy_effect_test)
+endif()
+if(SHANDALAR_BUILD_TESTS)
+  set_property(TARGET mok_legacy_effect_test PROPERTY EXCLUDE_FROM_ALL FALSE)
+endif()
+
 if(SHANDALAR_BUILD_TESTS AND WIN32)
   add_executable(card_pool_test tests/card_pool_test.c src/card_pool.c)
   target_include_directories(card_pool_test PRIVATE "${SHANDALAR_SRC_ROOT}")

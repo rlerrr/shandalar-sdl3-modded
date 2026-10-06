@@ -1617,10 +1617,23 @@ int tutor(int player, int type, int (*func_ptr)(int, int),  int tutor_location  
 	return card_added;
 }
 
+int legacy_effect_custom(int player, int card, event_t event){
+	card_instance_t* instance = get_card_instance(player, card);
+	CardFunction handler = (CardFunction)(uintptr_t)(uint32_t)instance->info_slot;
+	return handler ? call_card_fn(handler, instance, player, card, event) : 0;
+}
+
 int legacy_effect_activated(int player, int card, event_t event){
 	card_instance_t* instance = get_card_instance(player, card);
+#ifdef MANALINKEH_STATIC
+	// Wasm function pointers are table indices, including values below 4096.
+	// Keep the original Nafs Asp record distinct from callback-based effects.
+	if (instance->internal_card_id == LEGACY_EFFECT_ACTIVATED){
+		return legacy_effect_custom(player, card, event);
+#else
 	if (instance->info_slot > 4096){
 		return ((int (*)(int, int, event_t))instance->info_slot)(player, card, event);
+#endif
 	} else {
 		// Original Nafs Asp legagy
 

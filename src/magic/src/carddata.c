@@ -11581,6 +11581,7 @@ extern int manalinkeh_effect_asterisk(int, int, event_t);
 extern int manalinkeh_effect_damage(int, int, event_t);
 extern int manalinkeh_generic_painland(int, int, event_t);
 extern int manalinkeh_legacy_effect_activated(int, int, event_t);
+extern int manalinkeh_legacy_effect_custom(int, int, event_t);
 extern int manalinkeh_mana_producer(int, int, event_t);
 extern int manalinkeh_mana_producer_tapped(int, int, event_t);
 extern int manalinkeh_tempest_painland(int, int, event_t);
@@ -28505,8 +28506,8 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 0, "No Blocking", {0}, 903, 0x80, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_no_blocking, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16913: #903 */
   { 0, "Perm Color", {0}, 903, 0x80, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_permanent_color, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16914: #903 */
   { 0, "TransmuteFX", {0}, 903, 0x80, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_transmute_FX, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16915: #903 */
-  { 255, "Dummy", {0}, -1, 0x00, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16916: #-1 */
-  { 255, "Dummy", {0}, -1, 0x00, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16917: #-1 */
+  { 0, "Custom Legacy", {0}, 903, 0x80, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_legacy_effect_custom, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16916: static host effect */
+  { 0, "Activated Legacy", {0}, 902, 0x80, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, manalinkeh_legacy_effect_activated, 0x00000000u, 0x00000001u, 255, 255, 0, 0, 0 }, /* 16917: static host effect */
   { 255, "Dummy", {0}, -1, 0x00, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16918: #-1 */
   { 255, "Dummy", {0}, -1, 0x00, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16919: #-1 */
   { 255, "Dummy", {0}, -1, 0x00, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16920: #-1 */
@@ -28521,4 +28522,6 @@ card_data_t global_cards_data[SHANDALAR_CARD_DATA_COUNT] = {
   { 255, "Dummy", {0}, -1, 0x00, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16929: #-1 */
   { 255, "Dummy", {0}, -1, 0x00, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16930: #-1 */
   { 255, "Dummy", {0}, -1, 0x00, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16931: #-1 */
+  { 255, "Dummy", {0}, -1, 0x00, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16932: #-1 */
+  { 255, "Dummy", {0}, -1, 0x00, -1, 1, { 0, 0, 0 }, 0, 0, 0, 0, card_dummy, 0x00000000u, 0x00000000u, 255, 15, 0, 0, 0 }, /* 16933: #-1 */
 };

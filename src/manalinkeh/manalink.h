@@ -192,6 +192,8 @@ extern int *charge_mana_addr_of_max_x_value;			// copy of max_x_value before act
 
 extern int LEGACY_EFFECT_CUSTOM;
 extern int LEGACY_EFFECT_ACTIVATED;
+int legacy_effect_custom(int player, int card, event_t event);
+int legacy_effect_activated(int player, int card, event_t event);
 extern int LEGACY_EFFECT_PUMP;
 extern int LEGACY_EFFECT_GENERIC;
 extern int LEGACY_EFFECT_ITH;

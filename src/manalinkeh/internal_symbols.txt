@@ -958,6 +958,7 @@ landwalk_disabling_card
 lead_the_stampede_effect
 leaves_play
 legacy_change_color
+legacy_effect_custom
 legacy_effect_pump_ability_until_eot
 legacy_negate_ability_and_special_ability
 legacy_permanents_destroyed_this_way_accumulate
