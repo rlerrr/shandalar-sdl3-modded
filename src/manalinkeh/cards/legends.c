@@ -1062,7 +1062,7 @@ When ~ dies, it deals X damage to target creature, where X is 3 plus the amount 
 	return 0;
 }
 
-int card_blight2(int player, int card, int event){
+int card_blight2(int player, int card, event_t event){
 /* CARD_ID_BLIGHT	582
 Blight	|B|B
 Enchantment - Aura

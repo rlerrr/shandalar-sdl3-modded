@@ -280,6 +280,8 @@ if(SHANDALAR_BUILD_TESTS AND WIN32)
             ../magic/src/carddata.c ../magic/src/duel.c ../magic/src/duel_card_state.c
             ../magic/src/duel_engine_main_wndproc.c ../magic/src/shared_startup.c
             ../magic/src/duel_ai_support.c
+            ../magic/src/cardlist.c
+            ../magic/src/duel_stack.c
     VERBATIM
   )
   add_executable(campaign_new_game_test tests/campaign_new_game_test.c "${campaign_test_source}"

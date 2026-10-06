@@ -2444,7 +2444,7 @@ int card_sporemound(int player, int card, event_t event){
 	return 0;
 }
 
-int card_vastwood_hydra(int player, int card, event_t event, int intitial_counters){
+int card_vastwood_hydra(int player, int card, event_t event){
 /* Vastwood Hydra	|X|G|G
  * Creature - Hydra 0/0
  * ~ enters the battlefield with X +1/+1 counters on it.
@@ -2474,7 +2474,7 @@ int card_vastwood_hydra(int player, int card, event_t event, int intitial_counte
 	return card_ivy_elemental(player, card, event);
 }
 
-int card_voracious_wurm(int player, int card, event_t event, int intitial_counters){
+int card_voracious_wurm(int player, int card, event_t event){
 	/* Voracious Wurm	|1|G
 	 * Creature - Wurm 2/2
 	 * ~ enters the battlefield with X +1/+1 counters on it, where X is the amount of life you've gained this turn. */
@@ -2617,7 +2617,7 @@ static int effect_lose_defender_gain_trample(int player, int card, event_t event
   return 0;
 }
 
-int card_guardian_of_the_ages(int player, int card, event_t event, int intitial_counters)
+int card_guardian_of_the_ages(int player, int card, event_t event)
 {
   /* Guardian of the Ages	|7
    * Artifact Creature - Golem 7/7

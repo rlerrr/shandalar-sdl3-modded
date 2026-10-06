@@ -112,6 +112,7 @@ int DrawRandomCardFromInitialLibrary(int library_index)
       return i;
     }
   }
+  return -1;
 }
 
 // FUNCTION: MAGIC 0x00464a57

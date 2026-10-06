@@ -3921,7 +3921,7 @@ int card_nut_collector(int player, int card, event_t event){
 	return 0;
 }
 
-int card_overeager_apprentice(int player, int card, event_t event, int color){
+int card_overeager_apprentice(int player, int card, event_t event){
 
 	if( event == EVENT_CAN_ACTIVATE ){
 		if( can_produce_mana(player, card) && hand_count[player] > 0 ){

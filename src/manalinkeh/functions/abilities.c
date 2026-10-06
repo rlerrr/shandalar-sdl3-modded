@@ -520,7 +520,13 @@ void fn_name(int player, int card, event_t event)					\
 }
 
 SP_ABILITY(cannot_block, SP_KEYWORD_CANNOT_BLOCK);
-SP_ABILITY_SUPPRESSABLE(deathtouch, SP_KEYWORD_DEATHTOUCH, PB_CANT_HAVE_OR_GAIN_DEATHTOUCH);
+static SP_ABILITY_SUPPRESSABLE(deathtouch_impl, SP_KEYWORD_DEATHTOUCH, PB_CANT_HAVE_OR_GAIN_DEATHTOUCH);
+// ct_all also uses this ability helper as Voracious Cobra's card handler.
+int deathtouch(int player, int card, event_t event)
+{
+  deathtouch_impl(player, card, event);
+  return 0;
+}
 SP_ABILITY(fear, SP_KEYWORD_FEAR);
 SP_ABILITY_SUPPRESSABLE(hexproof, SP_KEYWORD_HEXPROOF, PB_CANT_HAVE_OR_GAIN_HEXPROOF);
 SP_ABILITY(horsemanship2, SP_KEYWORD_HORSEMANSHIP);

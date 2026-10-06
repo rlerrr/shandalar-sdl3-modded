@@ -18,6 +18,7 @@
 #include "magic/src/duel_engine.h"
 #include "shandalar_global_strings.h"
 #include "deckdll/src/drm.h"
+#include "deckdll/src/card_db.h"
 #include "deckdll/src/magsnd.h"
 #include "facemaker/src/facemaker_types.h"
 #include "drawcardlib/src/pic.h"
@@ -1597,93 +1598,92 @@ int SellPrice(int card_index)
 // FUNCTION: SHANDALAR 0x004f1cce
 int CalculateCardShopPrice(int card_index)
 {
+  // Shandalar.dll's base_sell_price() (0x06055ac0) replaces the original formula.
+  const card_data_t *card = &global_cards_data[card_index];
+  const casting_cost_t *cost = &global_raw_cards_storage[card->id].req;
+  unsigned int type = card->type;
+  int mana_value;
+  int power;
+  int toughness;
   int base_value;
-  int creature_value;
   int price;
 
-  price = 0x28;
-  switch (global_cards_data[card_index].type)
+  // Hybrid requirements and the X sentinel are absent from the compact cc sum.
+  mana_value = cost->req_colorless + cost->req_black + cost->req_blue +
+               cost->req_green + cost->req_red + cost->req_white +
+               (signed char)cost->req_hybrid + (card->cc[1] == -1);
+  if (cost->req_colorless >= 40) mana_value -= 40;
+
+  // Match the DLL's type(iid), including interrupt and aura encodings.
+  if ((type & 0x30) && (type & 0x4f)) type &= ~0x30U;
+  if (type & 0x20) type |= 0x10;
+  if ((type & 4) && card->cc[2] == 9) type = (type & ~4U) | 0x10000;
+
+  price = 40;
+  if (type & TYPE_CREATURE)
   {
-  case 2:
-  case 66:
-    if (((int)global_cards_data[card_index].power & 0xffffbfff) + 2 != 0)
-    {
-      base_value = ((int)global_cards_data[card_index].power & 0xffffbfff) + 3;
-    }
-    else
-    {
-      base_value = (int)global_cards_data[card_index].power;
-    }
-
-    if (((int)global_cards_data[card_index].toughness & 0xffffbfff) + 2 != 0)
-    {
-      creature_value = ((int)global_cards_data[card_index].toughness & 0xffffbfff) + 3;
-    }
-    else
-    {
-      creature_value = (int)global_cards_data[card_index].toughness;
-    }
-
-    price = (global_cards_data[card_index].ai_base_value + base_value) * creature_value * 5;
-    if ((global_cards_data[card_index].static_ability & 0x1f) != 0)
+    power = card->power;
+    toughness = card->toughness;
+    if (power > 0) power = (short)(power & 0xbfff);
+    if (toughness > 0) toughness = (short)(toughness & 0xbfff);
+    base_value = power + 3 + card->ai_base_value;
+    if (base_value < 1) base_value = 1;
+    price = (base_value + card->ai_base_value) * (toughness + 3) * 5;
+    if ((card->static_ability & 0x1f) != 0)
     {
       price = (price * 3) / 2;
     }
-    if ((global_cards_data[card_index].static_ability & 0x200) != 0)
+    if ((card->static_ability & 0x200) != 0)
     {
       price = (price * 3) / 2;
     }
-    if (global_cards_data[card_index].code_pointer != card_dummy)
+    if (card->code_pointer != card_dummy)
     {
       price = (price * 3) / 2;
     }
-    if ((global_cards_data[card_index].static_ability & 0x1c0U) != 0)
+    if ((card->static_ability & 0x1c0U) != 0)
     {
       price = (price * 3) / 2;
     }
-    if ((global_cards_data[card_index].extra_ability & 8) != 0)
+    if ((card->extra_ability & 8) != 0)
     {
       price = price * 3;
     }
-    if ((global_cards_data[card_index].extra_ability & 0x10) != 0)
+    if ((card->extra_ability & 0x10) != 0)
     {
       price = price * 3;
     }
 
-    price = price / ((char)global_cards_data[card_index].cc[0] + abs((int)(char)global_cards_data[card_index].cc[1]) + 1);
-    break;
-
+    price /= mana_value + 1;
+  }
+  else switch (type)
+  {
   case 4:
-    price = (abs((int)(char)global_cards_data[card_index].cc[1]) + (char)global_cards_data[card_index].cc[0] + global_cards_data[card_index].ai_base_value + 1) * 25;
-    if ((global_cards_data[card_index].extra_ability & 3) != 0)
+  case 0x10000:
+    price = (mana_value + card->ai_base_value + 1) * 25;
+    if ((card->extra_ability & 3) != 0)
     {
       price *= 2;
     }
     break;
 
   case 8:
-    price = (abs((int)(char)global_cards_data[card_index].cc[1]) + (char)global_cards_data[card_index].cc[0] + global_cards_data[card_index].ai_base_value + 1) * 20;
+    price = (mana_value + card->ai_base_value + 1) * 20;
     break;
 
   case 64:
+  case 0x44:
   {
-    int artifact_price_divisor = global_cards_data[card_index].ai_base_value + abs((int)(char)global_cards_data[card_index].cc[1]) + 2;
-    // Mana Crypt has an AI value of -2 and no colored mana cost; price it like a zero-cost Mox.
-    if (artifact_price_divisor <= 0)
-      artifact_price_divisor = 5;
+    int artifact_price_divisor = mana_value + card->ai_base_value + 2;
+    if (artifact_price_divisor < 1) artifact_price_divisor = 1;
     price = 250 / artifact_price_divisor;
-
-    if (global_cards_data[card_index].extra_ability & 3)
-    {
-      // Nada
-    }
-
     break;
   }
   case 16:
   case 32:
-    price = global_cards_data[card_index].ai_base_value * 0x14 + (abs((int)(char)global_cards_data[card_index].cc[1]) + (char)global_cards_data[card_index].cc[0] + 1) * 40;
-    if ((char)global_cards_data[card_index].cc[1] == -1)
+  case 0x30:
+    price = card->ai_base_value * 20 + (mana_value + 1) * 40;
+    if (card->cc[1] == -1)
     {
       price = (price * 3) / 2;
     }
@@ -1693,13 +1693,17 @@ int CalculateCardShopPrice(int card_index)
   switch (GetCardRarity(card_index))
   {
   case 2:
-    price = ClampIntToRange(price * 2, 100, 9999);
+    // The DLL assigns a flat 100 to uncommons before the final ability bonuses.
+    price = 100;
     break;
   case 3:
     price = ClampIntToRange(price << 2, 200, 9999);
     break;
   case 4:
     price = ClampIntToRange(price << 3, 200, 9999);
+    break;
+  default:
+    price = ClampIntToRange(price, 5, 9999);
     break;
   }
 
@@ -2461,7 +2465,6 @@ void ClearAndLoadInitialLibraryFromDeckFile(char *deck_path, int library_index, 
 int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library_entries, unsigned int color_filter, int speed_filter)
 {
   unsigned int entry_index;            /* ebp-0x22c */
-  unsigned int last_basic_entry_index; /* ebp-0x228 */
   int unused_224;                      /* ebp-0x224 */
   int card_index;                      /* ebp-0x220 */
   int csvid;                           /* ebp-0x21c */
@@ -2475,6 +2478,7 @@ int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library
   int deck_type;                       /* ebp-0xc */
   SDL_IOStream *f;                             /* ebp-0x8 */
   int scan_ret;                        /* ebp-0x4 */
+  int card_name_offset;
 
   strcpy(g_last_parsed_deck_path, deck_path);
   f = shandalar_open_file_io(deck_path, "rt\0");
@@ -2491,7 +2495,6 @@ int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library
 
   current_color_filter = 0;
   current_speed_filter = -1;
-  last_basic_entry_index = 0xffffffff;
   unused_224 = 0;
   total_cards = 0;
   numcards = -1;
@@ -2519,7 +2522,8 @@ int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library
     {
       if (line[1] != 'v')
       {
-        sscanf(line + 1, "%d %d\0\0", &csvid, &numcards);
+        card_name_offset = 0;
+        sscanf(line + 1, "%d %d %n", &csvid, &numcards, &card_name_offset);
         total_cards = total_cards + numcards;
 
         if (((current_color_filter == 0) || ((color_filter & current_color_filter) != 0)) && ((current_speed_filter == -1) || (current_speed_filter == speed_filter)))
@@ -2535,11 +2539,6 @@ int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library
 
           if (card_index != -1)
           {
-            if (card_index <= 4)
-            {
-              last_basic_entry_index = entry_index;
-            }
-
             if (((unsigned char)global_cards_data[card_index].type & 1) != 0)
             {
               unused_224 = unused_224 + (int)entry_index;
@@ -2547,12 +2546,13 @@ int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library
           }
           else
           {
-            if ((last_basic_entry_index != 0xffffffff) &&
-                (library_entries[last_basic_entry_index].numcards > numcards))
-            {
-              library_entries[last_basic_entry_index].numcards =
-                  library_entries[last_basic_entry_index].numcards - (int)((entry_index & 1) + numcards) / 2;
-            }
+            /* Unimplemented CSV records are excluded from the engine table.
+             * Keep them out of the draw pool rather than producing an effect
+             * card (or a gap that terminates the library prematurely). */
+            library_entries[entry_index].numcards = 0;
+            SDL_Log("%s: skipping unsupported deck card \"%s\" (CSV ID %d)", deck_path,
+                    card_name_offset > 0 && line[card_name_offset + 1] != '\0'
+                        ? line + card_name_offset + 1 : "(unnamed)", csvid);
           }
         }
       }
@@ -3543,8 +3543,10 @@ int HandleCardBrowserDoneButton(AdvMenuControl *control)
 }
 
 // FUNCTION: SHANDALAR 0x00532aae
-int CompareCardNamesForQsort(const int *a, const int *b)
+int CompareCardNamesForQsort(const void *first, const void *second)
 {
+  const int *a = first;
+  const int *b = second;
   return strcoll(global_cards_data[*a].name, global_cards_data[*b].name);
 }
 
@@ -3865,7 +3867,7 @@ loop:
     filtered_count = filtered_count + 1;
   }
 
-  qsort(filtered_card_ids, filtered_count, 4, (int(__cdecl *)(const void *, const void *))CompareCardNamesForQsort);
+  qsort(filtered_card_ids, filtered_count, sizeof(filtered_card_ids[0]), CompareCardNamesForQsort);
   page_count = MAX(1, ((int)filtered_count + page_size - 1) / page_size);
   if (page_start >= (int)filtered_count) page_start = 0;
   if (!filtered_count) g_card_browser_hover_card = g_card_browser_selected_card = 0xffffffff;

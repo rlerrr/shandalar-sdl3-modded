@@ -51,7 +51,6 @@ def generate(source_dir):
     ct = [row for row in all_ct if int(row[34], 16) != 0]
     ml = read_csv(ml_path)
     cards = {row[1]: row for row in ml[1:] if row[0].isdigit()}
-    ai_column = ml[0].index("AI Base Value")
     veneers = {int(address, 16): "manalinkeh_" + name.rstrip(";")
                for name, address in VENEER_RE.findall(
                    (ROOT / "src/manalinkeh/ManalinkEh.asm").read_text())}
@@ -89,8 +88,9 @@ def generate(source_dir):
                   str(bits(row, 25, 8)), str(number(row[33])), handler,
                   f"0x{bits(row, 35, 32):08x}u", f"0x{extra_abilities:08x}u",
                   str(number(row[99]) & 255), str(bits(row, 100, 8)),
-                  str(expansion), str(number(row[109]) & 255),
-                  str(number(card[ai_column]) if card is not None else 0)]
+                  # Byte 0x43 is padding; ct2exe writes the signed engine rating
+                  # at 0x44. Manalink's AI Base Value belongs to Cards.dat instead.
+                  str(expansion), "0", str(number(row[109]))]
         rows.append("  { " + ", ".join(fields) + " }, /* %d: %s */" %
                     (iid, row[2].replace("*/", "* /")))
     sentinel = next(i for i, row in enumerate(ct) if row[2] == "#-1")

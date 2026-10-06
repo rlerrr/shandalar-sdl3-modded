@@ -476,7 +476,7 @@ Enchanted creature gets -1/-0. */
 	return 0;
 }
 
-int card_animate_wall(int player, int card, int event)
+int card_animate_wall(int player, int card, event_t event)
 {
 /* CARD_ID_ANIMATE_WALL	4
 Animate Wall	|W
@@ -2007,7 +2007,7 @@ Creature - Dwarf Warrior 1/1
 
 // Earth Elemental --> vanilla
 
-int card_earthbind(int player, int card, int event){
+int card_earthbind(int player, int card, event_t event){
 /* CARD_ID_EARTHBIND	74
 Earthbind	|R
 Enchantment - Aura
@@ -3525,7 +3525,7 @@ All |H1Swamps are 1/1 |Sblack creatures that are still lands. */
 	return 0;
 }
 
-int card_kudzu(int player, int card, int event){
+int card_kudzu(int player, int card, event_t event){
 /* CARD_ID_KUDZU	137
 Kudzu	|1|G|G
 Enchantment - Aura

@@ -28,6 +28,18 @@ int card_dummy(int p, int c, event_t e) { (void)p; (void)c; (void)e; return 0; }
 int campaign_test_handler(int p, int c, event_t e) { (void)p; (void)c; (void)e; return 1; }
 int CopyRawCardNamesAndRarities(void);
 int PickConfiguredTownShopCard(int, unsigned int, int);
+int g_showlist_card_window_extra_bytes = 12;
+HINSTANCE g_app_instance;
+HWND g_duel_window_hwnd;
+int campaign_test_cardlist_csvids[500], campaign_test_cardlist_count;
+char g_last_parsed_deck_path[0x110];
+int ParseDeckFileIntoInitialLibrary(char *, csvid_and_numcards *, unsigned int, int);
+int DrawRandomCardFromInitialLibrary(int);
+int CalculateCardShopPrice(int);
+LRESULT CALLBACK wndproc_ShowListCard(HWND h, UINT m, WPARAM w, LPARAM l)
+{ (void)h; (void)m; (void)w; (void)l; return 0; }
+INT_PTR CALLBACK dlgfunc_show_deck(HWND h, UINT m, WPARAM w, LPARAM l)
+{ (void)h; (void)m; (void)w; (void)l; return 0; }
 
 void AddJournalEntry(int type, int arg) { (void)type; (void)arg; }
 static void check(int condition, const char *message)
@@ -48,6 +60,77 @@ static void copy_fixture_asset(const char *directory, const char *name)
   if (out) fclose(out);
 }
 
+static void check_card_prices(void)
+{
+  // Golden values from the modded DLL's --show-prices export. Check before the
+  // campaign set policy overrides rarity. The export uses rare for Mana Crypt
+  // and Black Lotus, and lacks the port's restored classic campaign bonuses.
+  const struct { int csvid, price, rarity; } expected[] = {
+    {6, 640, 3}, {17, 200, 3}, {48, 100, 2}, {55, 120, 1},
+    {84, 100, 2}, {106, 58, 1}, {145, 140, 1}, {149, 120, 1},
+    {221, 100, 2}, {894, 1000, 3}, {968, 75, 1},
+    {1124, 80, 1}, {2049, 100, 2}, {11110, 100, 2}
+  };
+  unsigned int i;
+  for (i = 0; i < sizeof(expected) / sizeof(expected[0]); ++i) {
+    int iid = FindCardIndexByCsvid(expected[i].csvid);
+    int price = -1;
+    card_data_t saved;
+    if (iid >= 0) {
+      saved = global_cards_data[iid];
+      global_cards_data[iid].rarity = expected[i].rarity;
+      global_cards_data[iid].extra_ability &= ~0x780U;
+      price = CalculateCardShopPrice(iid);
+      global_cards_data[iid] = saved;
+    }
+    if (price != expected[i].price) {
+      fprintf(stderr, "Price for CSV %d (%s): expected %d, got %d\n",
+              expected[i].csvid, iid >= 0 ? global_raw_cards_storage[expected[i].csvid].full_name : "missing",
+              expected[i].price, price);
+      ++failures;
+    }
+  }
+  check(global_cards_data[FindCardIndexByCsvid(2049)].ai_base_value == 0,
+        "Nature's Lore must use the engine rating, not its Cards.dat AI score of 60");
+  check(global_cards_data[FindCardIndexByCsvid(106)].ai_base_value == 1,
+        "Grizzly Bears must retain its signed ct_all engine rating");
+  check(global_cards_data[FindCardIndexByCsvid(894)].ai_base_value == -2,
+        "Mana Crypt's negative engine rating must remain signed");
+  check(global_raw_cards_storage[2049].ai_base_value == 60,
+        "Correcting the engine rating must preserve Nature's Lore's separate AI score");
+  {
+    int iid = FindCardIndexByCsvid(106);
+    card_data_t saved = global_cards_data[iid];
+    casting_cost_t saved_cost = global_raw_cards_storage[106].req;
+    global_cards_data[iid].rarity = 1;
+    global_cards_data[iid].power |= 0x4000;
+    check(CalculateCardShopPrice(iid) == 58, "Power flags must not inflate creature prices");
+    global_raw_cards_storage[106].req.req_hybrid = 2;
+    check(CalculateCardShopPrice(iid) == 35, "Hybrid mana must count in the price divisor");
+    global_raw_cards_storage[106].req = saved_cost;
+    global_cards_data[iid].power = -2;
+    global_cards_data[iid].ai_base_value = -2;
+    check(CalculateCardShopPrice(iid) == 5, "Negative creature ratings must respect the minimum price");
+    global_cards_data[iid].power = global_cards_data[iid].toughness = 1000;
+    global_cards_data[iid].extra_ability = 0x600;
+    check(CalculateCardShopPrice(iid) == 29997, "Price bonuses apply after the 9999 base-price cap");
+    global_cards_data[iid] = saved;
+  }
+  {
+    int iid = FindCardIndexByCsvid(84);
+    card_data_t saved = global_cards_data[iid];
+    global_cards_data[iid].rarity = 1;
+    global_cards_data[iid].extra_ability = 0;
+    check(CalculateCardShopPrice(iid) == 100, "X must count once instead of adding the CARDS.DAT sentinel of 40");
+    global_cards_data[iid].type = 0x20;
+    check(CalculateCardShopPrice(iid) == 240, "X-cost interrupts must include the DLL's price multiplier");
+    global_cards_data[iid].type = 4;
+    global_cards_data[iid].cc[2] = 9;
+    check(CalculateCardShopPrice(iid) == 125, "Aura type encoding must use enchantment pricing");
+    global_cards_data[iid] = saved;
+  }
+}
+
 int main(int argc, char **argv)
 {
   const int expected_counts[4] = {36, 40, 46, 46};
@@ -61,6 +144,56 @@ int main(int argc, char **argv)
   snprintf(fixture_ini, sizeof(fixture_ini), "%s/Shandalar.ini", fixture_directory);
   if (argc != 2 || campaign_chdir(argv[1]) != 0) return 2;
   g_card_count = SHANDALAR_CARD_DATA_ACTIVE_COUNT;
+  memset(g_initial_library, 0, sizeof(g_initial_library));
+  g_initial_library[1][0].csvid = 4664; /* Animate Land: absent from imported engine table. */
+  g_initial_library[1][0].numcards = 1;
+  iid = DrawRandomCardFromInitialLibrary(1);
+  check(iid == -1, "An unsupported deck card must never become an arbitrary internal card");
+  fixture = fopen(fixture_ini, "w");
+  if (!fixture) return 2;
+  fputs("Druid regression\n\n.4664 1 Animate Land\n.91 5 Forest\n"
+        ".4431 1 Clear the Land\n.4766 2 Skyshroud Claim\n"
+        ".4100 1 Braidwood Sextant\n.3723 1 Citanul Centaurs\n"
+        ".1909 1 Elder Druid\n", fixture);
+  fclose(fixture);
+  memset(g_initial_library, 0, sizeof(g_initial_library));
+  ParseDeckFileIntoInitialLibrary(fixture_ini, g_initial_library[1], 0, -1);
+  count = 0;
+  for (slot = 0; slot < 200; ++slot) {
+    count += g_initial_library[1][slot].numcards;
+    if (g_initial_library[1][slot].numcards)
+      check(FindCardIndexByCsvid(g_initial_library[1][slot].csvid) >= 0,
+            "Unsupported Druid entries must be excluded from the draw pool");
+  }
+  check(count == 8 && g_initial_library[1][1].numcards == 5,
+        "Skipping unsupported entries must preserve every supported card and basic land");
+  for (slot = 0; slot < 8; ++slot) {
+    iid = DrawRandomCardFromInitialLibrary(1);
+    check(iid >= 0 && (global_cards_data[iid].id == CARD_ID_FOREST ||
+                      global_cards_data[iid].id == CARD_ID_SKYSHROUD_CLAIM ||
+                      global_cards_data[iid].id == CARD_ID_ELDER_DRUID),
+          "Every initialized library card must belong to the supported deck definition");
+  }
+  check(DrawRandomCardFromInitialLibrary(1) == -1, "The initialized library ends after its last real card");
+  {
+    const int csvids[] = {CARD_ID_FOREST, CARD_ID_SKYSHROUD_CLAIM,
+                         CARD_ID_WHIRLWIND, CARD_ID_VITALIZE,
+                         CARD_ID_ELDER_DRUID, CARD_ID_LIVING_LANDS,
+                         CARD_ID_SILVERGLADE_ELEMENTAL};
+    int cards[8];
+    for (slot = 0; slot < 7; ++slot) cards[slot] = FindCardIndexByCsvid(csvids[slot]);
+    cards[7] = -1;
+    check(show_cardlist(cards, NULL, NULL, 8, "Opponent library", 1, "") == 7,
+          "Library viewer must preserve the selected index");
+    check(campaign_test_cardlist_count == 7, "Library viewer stops at its sentinel");
+    for (slot = 0; slot < 7; ++slot)
+      check(campaign_test_cardlist_csvids[slot] == csvids[slot],
+            "Library viewer must show the actual card, including internal IDs above 4095");
+    cards[1] |= 0x10000;
+    show_cardlist(cards, NULL, NULL, 8, "Campaign cards", 0, "");
+    check(campaign_test_cardlist_csvids[1] == CARD_ID_SKYSHROUD_CLAIM,
+          "Library viewer must still strip campaign new-card flags");
+  }
   shandalar_card_pool_initialize(argv[1]);
   shandalar_card_pool_on_database_loaded(argv[1]);
   check(!shandalar_card_pool_ready(), "Opening-menu calls before CARDS.DAT loading must not cache an empty pool");
@@ -123,6 +256,7 @@ int main(int argc, char **argv)
 
   check(read_db_guts("cards.dat"), "Load real card names, types, flags, and rarity");
   CopyRawCardNamesAndRarities();
+  check_card_prices();
   shandalar_card_pool_on_database_loaded(argv[1]);
   check(shandalar_card_pool_ready() && shandalar_card_pool_sale(0),
         "Database-load callback initializes a nonempty campaign pool");

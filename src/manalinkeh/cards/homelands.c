@@ -2089,7 +2089,7 @@ int card_merchant_scroll(int player, int card, event_t event){
  * Flying
  * |1|W: ~ gets +0/+1 until end of turn. */
 
-int card_mystic_decree(int player, int card, event_t event, int amount){
+int card_mystic_decree(int player, int card, event_t event){
 	/* Mystic Decree	|2|U|U	0x200a458
 	 * World Enchantment
 	 * All creatures lose flying and |H2islandwalk. */
@@ -2426,7 +2426,7 @@ int card_roots(int player, int card, event_t event)
 	return targeted_aura(player, card, event, &td, "FLOOD");	// Select target creature without flying.
 }
 
-int card_roterothopter(int player, int card, event_t event, int amount)
+int card_roterothopter(int player, int card, event_t event)
 {
   /* Roterothopter	|1	0x200a467
    * Artifact Creature - Thopter 0/2

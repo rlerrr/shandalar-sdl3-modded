@@ -970,8 +970,8 @@ typedef struct
 	uint8_t rarity; /* 0x40 */					// unused in current Manalink
 	uint8_t act_phases; /* 0x41 */				// ct_all.csv:Activate after Combat..Play before Combat
 	uint8_t expansion; /* 0x42 */				// unused in current Manalink
-	uint8_t creature_rating; /* 0x43 */			// only -2 through 3 are accepted by ct2exe
-	int32_t ai_base_value; /* 0x44 */			// Cards.dat ai_base_value, widened from int16_t
+	uint8_t creature_rating; /* 0x43 */			// reserved padding in the engine record
+	int32_t ai_base_value; /* 0x44 */			// ct_all.csv Creature Rating Mod; separate from card_ptr_t's AI score
 } PACKED card_data_t;
 
 typedef enum

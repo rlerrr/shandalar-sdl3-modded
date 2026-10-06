@@ -963,7 +963,7 @@ int card_academy_elite(int player, int card, event_t event){
 }*/
 
 int fx_change_landtype(int player, int card, event_t event);
-int card_grixis_illusionist(int player, int card, event_t event, int clr, int pow, int tou, int key, int s_key){
+int card_grixis_illusionist(int player, int card, event_t event){
 	/*
 	  Grixis Illusionist |U REPRINT
 	  Creature - Human Wizard
@@ -2696,7 +2696,7 @@ int card_marchesa_the_black_rose(int player, int card, event_t event){
 	return 0;
 }
 
-int card_marchesas_smuggler(int player, int card, event_t event, int clr, int pow, int tou, int key, int s_key){
+int card_marchesas_smuggler(int player, int card, event_t event){
 	/*
 	  Marchesa's Smuggler |U|R
 	  Creature - Human Rogue

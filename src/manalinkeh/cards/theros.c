@@ -5191,7 +5191,7 @@ Artifact
   return 0;
 }
 
-int card_witches_eye(int player, int card, event_t event, int equip_cost){
+int card_witches_eye(int player, int card, event_t event){
 /* CARD_ID_WITCHES_EYE	13601
 Witches' Eye	|1
 Artifact - Equipment

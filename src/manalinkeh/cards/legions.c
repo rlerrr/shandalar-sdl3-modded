@@ -1006,7 +1006,7 @@ Whenever Hollow Specter deals combat damage to a player, you may pay {X}. If you
 	return 0;
 }
 
-int card_hunter_sliver(int player, int card, event_t event, int trigger_mode)
+int card_hunter_sliver(int player, int card, event_t event)
 {
 /* CARD_ID_HUNTER_SLIVER	6400
 Hunter Sliver	|1|R
