@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Death Ward",
+  "csvid": 57,
+  "cases": [
+    {
+      "name": "DeathWard_HealthyCreatureCannotBeShielded",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Death Ward", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Grizzly Bears", "ref": "target", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "can_cast", "ref": "source", "value": 0},
+        {"op": "assert_stack", "value": 0}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DeathWard_NoCreatureCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Death Ward", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 0},
+        {"op": "assert_stack", "value": 0}
+      ],
+      "seed": 123
+    }
+  ]
+}

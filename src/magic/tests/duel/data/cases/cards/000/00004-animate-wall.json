@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Animate Wall",
+  "csvid": 4,
+  "cases": [
+    {
+      "name": "AnimateWall_EnchantedWallCanAttack",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Animate Wall", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Wall of Stone", "ref": "wall", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "wall", "player": -1},
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "source", "property": "in_play", "value": 1},
+        {"op": "turn", "player": 0, "value": 1},
+        {"op": "attack", "ref": "wall", "value": 1}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AnimateWall_NonWallCannotBeEnchanted",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Animate Wall", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Grizzly Bears", "ref": "bear", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 0},
+        {"op": "assert_stack", "value": 0}
+      ],
+      "seed": 123
+    }
+  ]
+}

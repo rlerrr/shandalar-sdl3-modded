@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Resurrection",
+  "csvid": 203,
+  "cases": [
+    {
+      "name": "Resurrection_ReturnsCreatureToBattlefield",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Resurrection", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Grizzly Bears", "ref": "dead", "player": 0, "zone": "graveyard"}
+      ],
+      "steps": [
+        {"op": "choose_zone", "player": -1, "value": 0},
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_zone", "player": 0, "zone": "graveyard", "value": 1},
+        {"op": "assert_zone_contains", "player": 0, "zone": "graveyard", "value": 203},
+        {"op": "assert_zone", "player": 0, "zone": "battlefield", "value": 1},
+        {"op": "assert_zone_card", "player": 0, "zone": "battlefield", "index": 0, "value": 106}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Resurrection_EmptyGraveyardCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Resurrection", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "can_cast", "ref": "source", "value": 0},
+        {"op": "assert_stack", "value": 0}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Resurrection_ChoosesSecondCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Resurrection", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Grizzly Bears", "ref": "bear", "player": 0, "zone": "graveyard"},
+        {"name": "Llanowar Elves", "ref": "elves", "player": 0, "zone": "graveyard"}
+      ],
+      "steps": [
+        {"op": "choose_zone", "player": -1, "value": 1},
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_zone", "player": 0, "zone": "battlefield", "value": 1},
+        {"op": "assert_zone_card", "player": 0, "zone": "battlefield", "index": 0, "value": 149},
+        {"op": "assert_zone_contains", "player": 0, "zone": "graveyard", "value": 106}
+      ],
+      "seed": 123
+    }
+  ]
+}

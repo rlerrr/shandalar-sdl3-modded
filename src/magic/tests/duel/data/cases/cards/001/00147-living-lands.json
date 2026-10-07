@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "card": "Living Lands",
+  "csvid": 147,
+  "cases": [
+    {
+      "name": "LivingLands_ForestsBecomeOneOne",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Living Lands",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Mountain",
+          "ref": "mountain",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "forest",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "forest",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "forest",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "mountain",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "LivingLands_PersistsThroughCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Living Lands",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "forest",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "forest",
+          "property": "toughness",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "LivingLands_DestroyLeavesLandsInPlay",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Living Lands",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "forest",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_card",
+          "ref": "forest",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 147
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

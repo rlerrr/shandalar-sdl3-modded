@@ -1,0 +1,171 @@
+{
+    "card": "Invisibility",
+    "cases": [
+        {
+            "fixture": "empty_main",
+            "name": "Invisibility_NonWallCannotBlockWallCan",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Invisibility",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 0,
+                    "ref": "attacker",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 1,
+                    "ref": "plainblocker",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Wall of Stone",
+                    "player": 1,
+                    "ref": "wallblocker",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "choose_target",
+                    "player": -1,
+                    "ref": "attacker"
+                },
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "turn",
+                    "player": 0,
+                    "value": 1
+                },
+                {
+                    "op": "attack",
+                    "ref": "attacker",
+                    "value": 1
+                },
+                {
+                    "op": "block",
+                    "other": "attacker",
+                    "ref": "plainblocker",
+                    "value": 0
+                },
+                {
+                    "op": "block",
+                    "other": "attacker",
+                    "ref": "wallblocker",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "Invisibility_NoCreatureCannotCast",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Invisibility",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "assert_stack",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "Invisibility_DestroyAuraStillBlockable",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Invisibility",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 0,
+                    "ref": "attacker",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 1,
+                    "ref": "blocker",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "choose_target",
+                    "player": -1,
+                    "ref": "attacker"
+                },
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "destroy",
+                    "ref": "source"
+                },
+                {
+                    "op": "assert_zone_contains",
+                    "player": 0,
+                    "value": 122,
+                    "zone": "graveyard"
+                },
+                {
+                    "op": "turn",
+                    "player": 0,
+                    "value": 1
+                },
+                {
+                    "op": "attack",
+                    "ref": "attacker",
+                    "value": 1
+                },
+                {
+                    "op": "block",
+                    "other": "attacker",
+                    "ref": "blocker",
+                    "value": 1
+                }
+            ]
+        }
+    ],
+    "csvid": 122,
+    "version": 1
+}

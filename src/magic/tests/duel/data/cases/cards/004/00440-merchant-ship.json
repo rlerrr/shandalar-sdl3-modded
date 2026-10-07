@@ -1,0 +1,328 @@
+{
+  "version": 1,
+  "card": "Merchant Ship",
+  "csvid": 440,
+  "cases": [
+    {
+      "name": "MerchantShip_NoBlockersGainsTwo",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Island",
+          "ref": "our_island",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "their_island",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Merchant Ship",
+          "ref": "ship",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "ship",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 22
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MerchantShip_UnrelatedBlockersGainLifeOnlyOnce",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Island",
+          "ref": "our_island",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "their_island",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Merchant Ship",
+          "ref": "ship",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker1",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker2",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker1",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker2",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "ship",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "attacker1",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "attacker2",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "blocker1",
+          "other": "attacker1",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "block",
+          "ref": "blocker2",
+          "other": "attacker2",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 22
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MerchantShip_BlockedDoesNotGainLife",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Island",
+          "ref": "our_island",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "their_island",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Merchant Ship",
+          "ref": "ship",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "ship",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "ship",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "ship",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 440
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MerchantShip_DeclarationRestoresWithSnapshot",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Island",
+          "ref": "our_island",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "their_island",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Merchant Ship",
+          "ref": "ship",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "ship",
+          "value": 1
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 22
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 22
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

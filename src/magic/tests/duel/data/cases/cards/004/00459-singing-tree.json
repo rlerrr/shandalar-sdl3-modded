@@ -1,0 +1,170 @@
+{
+  "version": 1,
+  "card": "Singing Tree",
+  "csvid": 459,
+  "cases": [
+    {
+      "name": "SingingTree_NeutralizesAttacker",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Singing Tree",
+          "ref": "tree",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "tree",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "attacker",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "tree",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "tree",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "remove_from_combat",
+          "ref": "blocker"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SingingTree_SickCannotActivate",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Singing Tree",
+          "ref": "tree",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "tree",
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "tree",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SingingTree_TappedCannotActivate",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Singing Tree",
+          "ref": "tree",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "tree",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SingingTree_NoAttacker",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Singing Tree",
+          "ref": "tree",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "tree",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "tree",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "can_activate",
+          "ref": "tree",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

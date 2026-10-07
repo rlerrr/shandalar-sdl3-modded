@@ -144,15 +144,32 @@ the harness, so test authors can express those expectations correctly:
 - `choose_color` uses those same indices and queues a color decision before an
   activation. The harness rejects choices outside the offered color mask.
 - Fixtures refresh the engine's cached abilities and mana colors before querying
-  actions, and start outside mana payment. An explicit `untapped` setup state
-  describes an established permanent, including one that originally entered
-  tapped; casting that permanent still tests its normal entry behavior.
-- `block` checks legality and records the normal blocker assignment. Use
-  `combat_damage` afterward to test actual first strike, trample, and creature
-  deaths. Set `turn` to the attacking player before declaring attacks: combat
+   actions, and start outside mana payment. An explicit `untapped` setup state
+   describes an established permanent, including one that originally entered
+   tapped; casting that permanent still tests its normal entry behavior.
+   Summoning sickness restricts only creatures: a sick noncreature artifact
+   still activates its tap abilities (as in `MindStone_SickArtifactCanTapForMana`),
+   while a sick creature does not. Assert `can_activate 1` for the former and
+   `0` for the latter; do not copy one shape onto the other.
+- `block` checks legality and records a blocker assignment. After all assignments,
+  use `advance_combat` to finish the declaration and enter the after-blocking
+  response window. That transition dispatches `EVENT_DECLARE_BLOCKERS` once,
+  including when there are no blockers, marks blocked attackers, and refreshes
+  combat-dependent abilities and power/toughness through the real engine.
+  Cast responses, activate abilities, and inspect continuous bonuses in that
+  window; then use `combat_damage` for first strike, trample, and creature deaths.
+  Calling damage before the transition or repeating the transition in the same
+  combat fails the harness. End-of-combat
+  trigger resolution (for example that `Stoning` effect destroying its target)
+  still has no harness op: neither `combat_damage` nor `cleanup` fires
+  `TRIGGER_END_COMBAT`, so that half of the interaction remains pending. Set
+  `turn` to the attacking player before declaring attacks: combat
   damage resolves that player's attackers. Scripted attacks honor the separate
   attack sickness guard used by the main phase and AI, and tap ordinary attackers
-  through the engine and leave vigilant creatures untapped. The combat fixture
+  through the engine and leave vigilant creatures untapped. A sick creature
+  fails the scripted `attack` guard exactly as the main-phase UI guard fails
+  it, so granted haste is observable through `attack`: Instill Energy keeps a
+  failing case proving the hasted creature still cannot attack. The combat fixture
   preloads an attacking flag; an explicit `attack` step completes its declaration
   and tap obligation. This helper does not
   yet run the complete attack-cost or timing sequence. Mana activations finish
@@ -160,6 +177,11 @@ the harness, so test authors can express those expectations correctly:
   ordinary activations remain pending until `resolve`.
 - `choose_zone` indexes the full displayed zone, including cards that fail the
   selection restriction. A choice of `-1` declines an optional selection.
+- `record_state` records the current observable board and ordered zones;
+  `assert_recorded_state` compares a later result against it. These complement
+  `capture`/`restore` for repeatability checks without assuming which legal card
+  a random effect selects. `assert_hand_graveyard_total` checks the combined
+  count of a CSVID (`index`) in a player's hand and graveyard against `value`.
 - Queue target and zone choices before `cast`: handlers can request them while
   casting or resolving within that call. A queued choice remains available if
   the handler defers its request until `resolve`.
@@ -256,6 +278,28 @@ the three-mana Oracle expectation and the successful exile/ownership assertions;
 known failures track only the extra mana charge. Pit Fight similarly retains a
 permission check requiring two distinct creatures, rather than allowing its one
 friendly creature to satisfy both target definitions.
+
+Death Ward, Drudge Skeletons, and Living Wall are recorded in
+`data/legacy_exceptions.json`, not as bugs: Shandalar uses pre-Sixth Edition
+timing, where regeneration could only be used at destruction time in the
+damage-prevention window and proactive shields did not exist. Their cases assert
+the old-rules-correct rejections (no main-phase shield) as passing. Death
+Ward's pending file is explicitly a modern-rule shield reference, excluded by
+that exception. It is not a destruction-window script or a request to modernize
+the handler. Legacy destruction-window regeneration success remains untested.
+
+Hypnotic Specter's random discard uses the engine's seeded RNG. The dialog when
+the opponent discards is a notification after selection, acknowledged with
+`choose_dialog 0`; it does not select the discarded card. Cases cover both
+players, populated and empty hands, blocked combat, and repeated random selection
+after snapshot restoration and an AI backup/restore. Merchant Ship covers empty
+and multiple blocker declarations, blocked attacks, and snapshot restoration.
+Jade Statue's combat animation and Orcish Oriflamme's attacking bonus pass in the
+after-blocking response window. Obelisk remains activatable with an opposing
+creature present because it can legally target itself; its case proves the
+self-target return rather than asserting that the entire ability is unavailable.
+Healing Salve remains outside this batch: its life mode needs player-target
+scripting and its prevention mode requests a zone choice the harness does not map.
 
 
 ## Running the suite

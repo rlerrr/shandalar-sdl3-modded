@@ -227,6 +227,9 @@
           "op": "block"
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "combat_damage"
         },
         {
@@ -366,6 +369,9 @@
           "op": "block"
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "combat_damage"
         },
         {
@@ -502,6 +508,9 @@
           "ref": "black_blocker",
           "value": 0,
           "op": "block"
+        },
+        {
+          "op": "advance_combat"
         },
         {
           "op": "combat_damage"
@@ -758,6 +767,9 @@
           "ref": "protected",
           "other": "attacker",
           "value": 1
+        },
+        {
+          "op": "advance_combat"
         },
         {
           "op": "combat_damage"

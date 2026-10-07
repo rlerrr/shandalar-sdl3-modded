@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Pestilence",
+  "csvid": 182,
+  "cases": [
+    {
+      "name": "Pestilence_ActivationDamagesAll",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Pestilence", "ref": "source", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "friendly", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "enemy", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "friendly", "property": "damage", "value": 1},
+        {"op": "assert_card", "ref": "enemy", "property": "damage", "value": 1},
+        {"op": "assert_life", "player": 0, "value": 19},
+        {"op": "assert_life", "player": 1, "value": 19}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Pestilence_KillsOneToughnessCreatures",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Pestilence", "ref": "source", "player": 0, "zone": "battlefield"},
+        {"name": "Llanowar Elves", "ref": "small", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "small", "property": "in_play", "value": 0},
+        {"op": "assert_zone_contains", "player": 1, "zone": "graveyard", "value": 149}
+      ],
+      "seed": 123
+    }
+  ]
+}

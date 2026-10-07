@@ -1,0 +1,148 @@
+{
+    "card": "Fungusaur",
+    "cases": [
+        {
+            "fixture": "empty_main",
+            "name": "Fungusaur_CastAndStats",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Fungusaur",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "source",
+                    "value": 2
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "source",
+                    "value": 2
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "source",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "Fungusaur_GainsCounterWhenDealtDamage",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Fungusaur",
+                    "player": 0,
+                    "ref": "fungus",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Prodigal Sorcerer",
+                    "player": 0,
+                    "ref": "mage",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 1,
+                    "ref": "witness",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "choose_target",
+                    "player": -1,
+                    "ref": "fungus"
+                },
+                {
+                    "op": "activate",
+                    "ref": "mage",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "fungus",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "fungus",
+                    "value": 3
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "fungus",
+                    "value": 3
+                },
+                {
+                    "op": "assert_card",
+                    "property": "damage",
+                    "ref": "fungus",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "tapped",
+                    "ref": "mage",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "witness",
+                    "value": 1
+                },
+                {
+                    "op": "cleanup"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "fungus",
+                    "value": 3
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "fungus",
+                    "value": 3
+                },
+                {
+                    "op": "assert_card",
+                    "property": "damage",
+                    "ref": "fungus",
+                    "value": 0
+                }
+            ]
+        }
+    ],
+    "csvid": 94,
+    "version": 1
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Northern Paladin",
+  "csvid": 175,
+  "cases": [
+    {
+      "name": "NorthernPaladin_DestroysBlackPermanent",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Northern Paladin", "ref": "source", "player": 0, "zone": "battlefield"},
+        {"name": "Drudge Skeletons", "ref": "victim", "player": 1, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "witness", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "victim", "player": -1},
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "victim", "property": "in_play", "value": 0},
+        {"op": "assert_zone_contains", "player": 1, "zone": "graveyard", "value": 70},
+        {"op": "assert_card", "ref": "witness", "property": "in_play", "value": 1}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "NorthernPaladin_NoBlackPermanentCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Northern Paladin", "ref": "source", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "witness", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "can_activate", "ref": "source", "value": 0}
+      ],
+      "seed": 123
+    }
+  ]
+}

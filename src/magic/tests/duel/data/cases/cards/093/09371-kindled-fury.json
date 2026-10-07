@@ -51,6 +51,9 @@
           "value": 1
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "combat_damage"
         },
         {
@@ -207,6 +210,9 @@
           "ref": "blocker",
           "other": "attacker",
           "value": 1
+        },
+        {
+          "op": "advance_combat"
         },
         {
           "op": "combat_damage"

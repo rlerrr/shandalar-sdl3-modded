@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Fear",
+  "csvid": 81,
+  "cases": [
+    {
+      "name": "Fear_MakesCreatureUnblockableExceptArtifactBlack",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Fear", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Grizzly Bears", "ref": "attacker", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "blocker", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "attacker", "player": -1},
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "source", "property": "in_play", "value": 1},
+        {"op": "turn", "player": 0, "value": 1},
+        {"op": "attack", "ref": "attacker", "value": 1},
+        {"op": "block", "ref": "blocker", "other": "attacker", "value": 0}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Fear_NoCreatureCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Fear", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 0},
+        {"op": "assert_stack", "value": 0}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Fear_DestroyAuraStillBlockable",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Fear", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Grizzly Bears", "ref": "attacker", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "blocker", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "attacker", "player": -1},
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "destroy", "ref": "source"},
+        {"op": "assert_zone_contains", "player": 0, "zone": "graveyard", "value": 81},
+        {"op": "turn", "player": 0, "value": 1},
+        {"op": "attack", "ref": "attacker", "value": 1},
+        {"op": "block", "ref": "blocker", "other": "attacker", "value": 1}
+      ],
+      "seed": 123
+    }
+  ]
+}

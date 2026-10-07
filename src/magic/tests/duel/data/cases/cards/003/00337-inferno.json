@@ -1,0 +1,163 @@
+{
+  "version": 1,
+  "card": "Inferno",
+  "csvid": 337,
+  "cases": [
+    {
+      "name": "Inferno_KillsTwosHurtsForceAndPlayers",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Inferno",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear2",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Force of Nature",
+          "ref": "force",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear2",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 337
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_card",
+          "ref": "force",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "force",
+          "property": "damage",
+          "value": 6
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 14
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 14
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Inferno_ArtifactsAndLandsUnaffected",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Inferno",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "land",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "land",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 337
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 14
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 14
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

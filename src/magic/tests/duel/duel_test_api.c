@@ -32,6 +32,7 @@ extern int choose_ai_main_phase_action(int), can_attack(int, int);
 extern void run_duel_turn(unsigned int);
 extern int assign_blocker_to_attacker(int, int, int, int);
 extern void resolve_combat_damage(int);
+extern void mark_blocked_attackers(int);
 extern int turn_count, stack_phase[32];
 extern int unknown62BCEC, tapped_for_mana_color;
 extern void duel_rules_initialize_headless(void), manalinkeh_recalculate_rules_engine_and_deadbox(void);
@@ -265,7 +266,21 @@ int duel_test_block(DuelTestRef b,DuelTestRef a) {
   global_card_instances[b.player][b.card].blocking = (unsigned char)(parent == 0xff ? a.card : parent);
   return 1;
 }
-void duel_test_combat_damage(void) { resolve_combat_damage(g_current_turn); }
+void duel_test_advance_combat(void) {
+  if (g_current_phase != PHASE_DECLARE_BLOCKERS)
+    duel_host_fail("advance_combat requires blocker declaration");
+  /* Match resolve_combat_if_needed: a single event sees the complete board,
+     including an empty declaration, before opening the response window. */
+  C_dispatch_event_raw(EVENT_DECLARE_BLOCKERS);
+  mark_blocked_attackers(g_current_turn);
+  g_current_phase = PHASE_AFTER_BLOCKING;
+  manalinkeh_recalculate_all_cards_in_play();
+}
+void duel_test_combat_damage(void) {
+  if (g_current_phase != PHASE_AFTER_BLOCKING)
+    duel_host_fail("advance_combat before combat damage");
+  resolve_combat_damage(g_current_turn);
+}
 void duel_test_advance_turn(void) { duel_test_cleanup(); g_current_turn=1-g_current_turn; g_current_player=g_current_turn; g_current_phase=PHASE_MAIN1; ++turn_count; }
 DuelTestCard duel_test_inspect(DuelTestRef r)
 {

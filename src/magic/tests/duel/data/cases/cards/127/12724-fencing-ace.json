@@ -226,6 +226,9 @@
           "other": "striker"
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "combat_damage"
         },
         {
@@ -358,6 +361,9 @@
           "value": 1,
           "ref": "ace",
           "op": "attack"
+        },
+        {
+          "op": "advance_combat"
         },
         {
           "op": "combat_damage"

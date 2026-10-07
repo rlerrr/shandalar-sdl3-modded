@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Fire Elemental",
+  "csvid": 83,
+  "cases": [
+    {
+      "name": "FireElemental_CastAndStats",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Fire Elemental", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "source", "property": "power", "value": 5},
+        {"op": "assert_card", "ref": "source", "property": "toughness", "value": 4},
+        {"op": "assert_card", "ref": "source", "property": "in_play", "value": 1},
+        {"op": "attack", "ref": "source", "value": 0}
+      ],
+      "seed": 123
+    }
+  ]
+}

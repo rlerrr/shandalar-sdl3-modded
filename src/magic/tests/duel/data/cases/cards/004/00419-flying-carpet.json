@@ -1,0 +1,313 @@
+{
+  "version": 1,
+  "card": "Flying Carpet",
+  "csvid": 419,
+  "cases": [
+    {
+      "name": "FlyingCarpet_GrantsFlyingControlsBlocks",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Flying Carpet",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "guard",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Air Elemental",
+          "ref": "airblocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "guard",
+          "other": "target",
+          "value": 0
+        },
+        {
+          "op": "block",
+          "ref": "airblocker",
+          "other": "target",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "airblocker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "airblocker",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 106
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "FlyingCarpet_FlyingExpiresAfterCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Flying Carpet",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "guard",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "guard",
+          "other": "target",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "FlyingCarpet_SickSourceCanActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Flying Carpet",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "guard",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Air Elemental",
+          "ref": "airblocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "guard",
+          "other": "target",
+          "value": 0
+        },
+        {
+          "op": "block",
+          "ref": "airblocker",
+          "other": "target",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "FlyingCarpet_TappedSourceCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Flying Carpet",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "FlyingCarpet_NoCreatureCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Flying Carpet",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

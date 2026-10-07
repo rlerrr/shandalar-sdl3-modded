@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "card": "Dust to Dust",
+  "csvid": 311,
+  "cases": [
+    {
+      "name": "DusttoDust_ExileTwoEnemyArtifacts",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Dust to Dust"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "target",
+          "name": "Sol Ring"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "target2",
+          "name": "Sol Ring"
+        },
+        {
+          "player": 0,
+          "zone": "battlefield",
+          "ref": "own_ring",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "witness",
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "target2",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "target2",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "exile",
+          "index": 0,
+          "value": 230
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "exile",
+          "index": 1,
+          "value": 230
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 311
+        },
+        {
+          "op": "assert_card",
+          "ref": "own_ring",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DusttoDust_SingleArtifactCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Dust to Dust"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "only_artifact",
+          "name": "Sol Ring"
+        }
+      ],
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        },
+        {
+          "op": "assert_card",
+          "ref": "only_artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

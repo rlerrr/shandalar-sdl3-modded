@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "card": "Kormus Bell",
+  "csvid": 136,
+  "cases": [
+    {
+      "name": "KormusBell_SwampsBecomeOneOne",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Kormus Bell",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swamp",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Mountain",
+          "ref": "mountain",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "swamp",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "swamp",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "swamp",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "mountain",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "KormusBell_PersistsThroughCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Kormus Bell",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swamp",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "swamp",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "swamp",
+          "property": "toughness",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "KormusBell_DestroyLeavesLandsInPlay",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Kormus Bell",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swamp",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "swamp",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_card",
+          "ref": "swamp",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 136
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

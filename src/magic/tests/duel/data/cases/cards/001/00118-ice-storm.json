@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Ice Storm",
+  "csvid": 118,
+  "cases": [
+    {
+      "name": "IceStorm_DestroysTargetLand",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Ice Storm", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Mountain", "ref": "target", "player": 1, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "witness", "player": 1, "zone": "battlefield"},
+        {"name": "Mountain", "ref": "other_eligible", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "target", "player": -1},
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "target", "property": "in_play", "value": 0},
+        {"op": "assert_zone", "player": 1, "zone": "graveyard", "value": 1},
+        {"op": "assert_zone_card", "player": 1, "zone": "graveyard", "index": 0, "value": 164},
+        {"op": "assert_zone_contains", "player": 0, "zone": "graveyard", "value": 118},
+        {"op": "assert_card", "ref": "witness", "property": "in_play", "value": 1},
+        {"op": "assert_card", "ref": "other_eligible", "property": "in_play", "value": 1}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "IceStorm_NoLandCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Ice Storm", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Glorious Anthem", "ref": "invalid", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "can_cast", "ref": "source", "value": 0}
+      ],
+      "seed": 123
+    }
+  ]
+}

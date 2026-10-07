@@ -1,0 +1,271 @@
+{
+    "card": "Instill Energy",
+    "cases": [
+        {
+            "fixture": "empty_main",
+            "name": "InstillEnergy_HasteAllowsSickAttack",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Instill Energy",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 0,
+                    "ref": "target",
+                    "state": [
+                        "sick"
+                    ],
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "choose_target",
+                    "player": -1,
+                    "ref": "target"
+                },
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "turn",
+                    "player": 0,
+                    "value": 1
+                },
+                {
+                    "op": "attack",
+                    "ref": "target",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "InstillEnergy_UntapTappedCreature",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Instill Energy",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 0,
+                    "ref": "target",
+                    "state": [
+                        "tapped"
+                    ],
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "choose_target",
+                    "player": -1,
+                    "ref": "target"
+                },
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "tapped",
+                    "ref": "target",
+                    "value": 1
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "tapped",
+                    "ref": "target",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "InstillEnergy_OncePerTurn",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Instill Energy",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 0,
+                    "ref": "target",
+                    "state": [
+                        "tapped"
+                    ],
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "choose_target",
+                    "player": -1,
+                    "ref": "target"
+                },
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "tapped",
+                    "ref": "target",
+                    "value": 0
+                },
+                {
+                    "op": "turn",
+                    "player": 0,
+                    "value": 1
+                },
+                {
+                    "op": "attack",
+                    "ref": "target",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "tapped",
+                    "ref": "target",
+                    "value": 1
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "InstillEnergy_OpponentTurnCannotUntap",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Instill Energy",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 0,
+                    "ref": "target",
+                    "state": [
+                        "tapped"
+                    ],
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "choose_target",
+                    "player": -1,
+                    "ref": "target"
+                },
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "turn",
+                    "player": 1,
+                    "value": 1
+                },
+                {
+                    "op": "can_activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "assert_card",
+                    "property": "tapped",
+                    "ref": "target",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "InstillEnergy_NoCreatureCannotCast",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Instill Energy",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "assert_stack",
+                    "value": 0
+                }
+            ]
+        }
+    ],
+    "csvid": 121,
+    "version": 1
+}

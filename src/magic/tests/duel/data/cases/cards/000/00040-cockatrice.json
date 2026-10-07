@@ -1,0 +1,100 @@
+{
+  "card": "Cockatrice",
+  "cases": [
+    {
+      "fixture": "empty_main",
+      "name": "Cockatrice_CastAndStats",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Cockatrice",
+          "player": 0,
+          "ref": "source",
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "source",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "source",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "property": "in_play",
+          "ref": "source",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "fixture": "empty_main",
+      "name": "Cockatrice_FlyingEvadesGroundBlocker",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Cockatrice",
+          "player": 0,
+          "ref": "attacker",
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "player": 1,
+          "ref": "ground",
+          "zone": "battlefield"
+        },
+        {
+          "name": "Air Elemental",
+          "player": 1,
+          "ref": "flyer",
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "other": "attacker",
+          "ref": "ground",
+          "value": 0
+        },
+        {
+          "op": "block",
+          "other": "attacker",
+          "ref": "flyer",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        }
+      ]
+    }
+  ],
+  "csvid": 40,
+  "version": 1
+}

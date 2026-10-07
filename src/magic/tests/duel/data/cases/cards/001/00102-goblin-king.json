@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Goblin King",
+  "csvid": 102,
+  "cases": [
+    {
+      "name": "GoblinKing_BuffsOtherGoblins",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Goblin King", "ref": "lord", "player": 0, "zone": "battlefield"},
+        {"name": "Raging Goblin", "ref": "other", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "witness", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "assert_card", "ref": "other", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "other", "property": "toughness", "value": 2},
+        {"op": "assert_card", "ref": "lord", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "lord", "property": "toughness", "value": 2},
+        {"op": "assert_card", "ref": "witness", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "witness", "property": "toughness", "value": 2}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "GoblinKing_RemovedLosesBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Goblin King", "ref": "lord", "player": 0, "zone": "battlefield"},
+        {"name": "Raging Goblin", "ref": "other", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "assert_card", "ref": "other", "property": "power", "value": 2},
+        {"op": "destroy", "ref": "lord"},
+        {"op": "assert_card", "ref": "other", "property": "power", "value": 1},
+        {"op": "assert_card", "ref": "other", "property": "toughness", "value": 1}
+      ],
+      "seed": 123
+    }
+  ]
+}

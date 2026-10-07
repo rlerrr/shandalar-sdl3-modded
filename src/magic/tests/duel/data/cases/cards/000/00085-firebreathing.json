@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Firebreathing",
+  "csvid": 85,
+  "cases": [
+    {
+      "name": "Firebreathing_PumpAndExpire",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Firebreathing", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Grizzly Bears", "ref": "target", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "target", "player": -1},
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "source", "property": "in_play", "value": 1},
+        {"op": "assert_card", "ref": "target", "property": "power", "value": 2},
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "target", "property": "power", "value": 3},
+        {"op": "assert_card", "ref": "target", "property": "toughness", "value": 2},
+        {"op": "cleanup"},
+        {"op": "assert_card", "ref": "target", "property": "power", "value": 2}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Firebreathing_NoCreatureCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Firebreathing", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 0},
+        {"op": "assert_stack", "value": 0}
+      ],
+      "seed": 123
+    }
+  ]
+}

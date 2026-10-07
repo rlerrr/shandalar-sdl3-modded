@@ -331,6 +331,9 @@
           "other": "dragon"
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "combat_damage"
         },
         {

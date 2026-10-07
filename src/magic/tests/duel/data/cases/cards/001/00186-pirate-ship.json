@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Pirate Ship",
+  "csvid": 186,
+  "cases": [
+    {
+      "name": "PirateShip_PingsCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Pirate Ship", "ref": "source", "player": 0, "zone": "battlefield"},
+        {"name": "Island", "ref": "home", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "victim", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "victim", "player": -1},
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "victim", "property": "damage", "value": 1},
+        {"op": "assert_card", "ref": "victim", "property": "in_play", "value": 1}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PirateShip_CannotAttackWithoutIsland",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Pirate Ship", "ref": "ship", "player": 0, "zone": "battlefield"},
+        {"name": "Island", "ref": "home", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "turn", "player": 0, "value": 1},
+        {"op": "attack", "ref": "ship", "value": 0}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PirateShip_CanAttackWithIsland",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Pirate Ship", "ref": "ship", "player": 0, "zone": "battlefield"},
+        {"name": "Island", "ref": "home", "player": 0, "zone": "battlefield"},
+        {"name": "Island", "ref": "island", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "turn", "player": 0, "value": 1},
+        {"op": "attack", "ref": "ship", "value": 1}
+      ],
+      "seed": 123
+    }
+  ]
+}

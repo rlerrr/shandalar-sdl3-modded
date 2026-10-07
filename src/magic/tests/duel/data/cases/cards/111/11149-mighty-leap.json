@@ -142,6 +142,9 @@
           "other": "attacker"
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "combat_damage"
         },
         {

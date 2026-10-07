@@ -142,6 +142,9 @@
           "other": "attacker"
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "combat_damage"
         },
         {
@@ -235,6 +238,9 @@
           "value": 1,
           "ref": "guard",
           "other": "enemy"
+        },
+        {
+          "op": "advance_combat"
         },
         {
           "op": "combat_damage"

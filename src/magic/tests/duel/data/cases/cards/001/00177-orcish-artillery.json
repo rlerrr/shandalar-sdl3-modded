@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Orcish Artillery",
+  "csvid": 177,
+  "cases": [
+    {
+      "name": "OrcishArtillery_DamagesCreatureAndSelf",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Orcish Artillery", "ref": "source", "player": 0, "zone": "battlefield"},
+        {"name": "Air Elemental", "ref": "victim", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "victim", "player": -1},
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "victim", "property": "damage", "value": 2},
+        {"op": "assert_card", "ref": "victim", "property": "in_play", "value": 1},
+        {"op": "assert_life", "player": 0, "value": 17}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "OrcishArtillery_LethalDamage",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Orcish Artillery", "ref": "source", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "victim", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "victim", "player": -1},
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "victim", "property": "in_play", "value": 0},
+        {"op": "assert_zone_contains", "player": 1, "zone": "graveyard", "value": 106},
+        {"op": "assert_life", "player": 0, "value": 17}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "OrcishArtillery_SickCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Orcish Artillery", "ref": "source", "player": 0, "zone": "battlefield", "state": ["sick"]}
+      ],
+      "steps": [
+        {"op": "can_activate", "ref": "source", "value": 0},
+        {"op": "activate", "ref": "source", "value": 0}
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,4 +1,44 @@
 {
   "version": 1,
-  "exceptions": []
+  "exceptions": [
+    {
+      "card": "Death Ward",
+      "csvid": 57,
+      "oracle_id": "0544b707-ec67-43e3-a25d-fd7005ab673d",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Regenerate target creature: castable proactively, creating a shield that replaces the next destruction this turn.",
+      "shandalar_behavior": "The handler requires TARGET_STATE_DESTROYED, so only a creature already being destroyed is an eligible target. There were no proactive shields before the Sixth Edition rules changes; regeneration was used at destruction time in the damage-prevention window.",
+      "tests": [
+        "Behavior.DeathWard_HealthyCreatureCannotBeShielded",
+        "Behavior.DeathWard_NoCreatureCannotCast"
+      ],
+      "pending": "The active cases cover legacy main-phase rejections. data/pending_cases/cards/000/00057-death-ward.json is an excluded modern-rule shield reference, not a destruction-window scenario. Legacy regeneration success during destruction remains untested."
+    },
+    {
+      "card": "Drudge Skeletons",
+      "csvid": 70,
+      "oracle_id": "c180ed02-07f4-4538-9bea-8c249234a8e2",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{B}: Regenerate this creature at any time, creating a shield for later destruction.",
+      "shandalar_behavior": "The shared regeneration helper gates activation on the LCBP_REGENERATION window flag, which is only set while the engine prompts for regeneration effects during destruction. Main-phase activation is correctly rejected under pre-Sixth Edition timing, where regeneration could only be used at destruction time.",
+      "tests": [
+        "Behavior.DrudgeSkeletons_MainPhaseActivationCorrectlyRejected",
+        "Behavior.DrudgeSkeletons_NoShieldDies"
+      ],
+      "pending": "Destruction-window activation is not scriptable: the destroy helper completes the death pipeline without prompting the script."
+    },
+    {
+      "card": "Living Wall",
+      "csvid": 148,
+      "oracle_id": "4844312c-3c9d-4ca1-986d-4ad35e68454e",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{1}: Regenerate Living Wall at any time, creating a shield for later destruction.",
+      "shandalar_behavior": "Same shared regeneration window gate as Drudge Skeletons: main-phase activation is correctly rejected; regeneration applied at destruction time.",
+      "tests": [
+        "Behavior.LivingWall_MainPhaseActivationCorrectlyRejected",
+        "Behavior.LivingWall_CannotAttackCanBlock"
+      ],
+      "pending": "Destruction-window activation is not scriptable: the destroy helper completes the death pipeline without prompting the script."
+    }
+  ]
 }

@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "card": "Bog Rats",
+  "csvid": 350,
+  "cases": [
+    {
+      "name": "BogRats_CastStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Bog Rats",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BogRats_WallCannotBlockNonWallCan",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Bog Rats",
+          "ref": "rats",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Stone",
+          "ref": "wall",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "plainblocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "rats",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "wall",
+          "other": "rats",
+          "value": 0
+        },
+        {
+          "op": "block",
+          "ref": "plainblocker",
+          "other": "rats",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

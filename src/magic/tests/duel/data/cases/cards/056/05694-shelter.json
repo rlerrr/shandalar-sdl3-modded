@@ -62,6 +62,9 @@
           "value": 1
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "combat_damage"
         },
         {
@@ -232,6 +235,9 @@
           "ref": "protected",
           "other": "whiteAttacker",
           "value": 1
+        },
+        {
+          "op": "advance_combat"
         },
         {
           "op": "combat_damage"
@@ -492,6 +498,9 @@
           "ref": "protected",
           "other": "force",
           "value": 1
+        },
+        {
+          "op": "advance_combat"
         },
         {
           "op": "combat_damage"

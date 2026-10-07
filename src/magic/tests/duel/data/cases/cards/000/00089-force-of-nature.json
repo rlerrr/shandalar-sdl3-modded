@@ -1,0 +1,81 @@
+{
+    "card": "Force of Nature",
+    "cases": [
+        {
+            "fixture": "empty_main",
+            "name": "ForceOfNature_CastAndStats",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Force of Nature",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "source",
+                    "value": 8
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "source",
+                    "value": 8
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "source",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "ForceOfNature_OracleStats",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Force of Nature",
+                    "player": 0,
+                    "ref": "creature",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "creature",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "creature",
+                    "value": 8
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "creature",
+                    "value": 8
+                }
+            ]
+        }
+    ],
+    "csvid": 89,
+    "version": 1
+}

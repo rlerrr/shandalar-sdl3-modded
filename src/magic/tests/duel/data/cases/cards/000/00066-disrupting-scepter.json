@@ -1,0 +1,103 @@
+{
+    "card": "Disrupting Scepter",
+    "cases": [
+        {
+            "fixture": "empty_main",
+            "name": "DisruptingScepter_CanActivateOnOwnTurn",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Disrupting Scepter",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 1,
+                    "ref": "foehand",
+                    "zone": "hand"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "can_activate",
+                    "ref": "source",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "DisruptingScepter_TappedCannotActivate",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Disrupting Scepter",
+                    "player": 0,
+                    "ref": "source",
+                    "state": [
+                        "tapped"
+                    ],
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 1,
+                    "ref": "foehand",
+                    "zone": "hand"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "can_activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 0
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "DisruptingScepter_OpponentTurnCannotActivate",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Disrupting Scepter",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 1,
+                    "ref": "foehand",
+                    "zone": "hand"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "turn",
+                    "player": 1,
+                    "value": 1
+                },
+                {
+                    "op": "can_activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 0
+                }
+            ]
+        }
+    ],
+    "csvid": 66,
+    "version": 1
+}

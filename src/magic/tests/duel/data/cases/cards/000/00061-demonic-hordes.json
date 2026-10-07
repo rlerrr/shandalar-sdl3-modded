@@ -1,0 +1,249 @@
+{
+    "card": "Demonic Hordes",
+    "cases": [
+        {
+            "fixture": "empty_main",
+            "name": "DemonicHordes_CastAndStats",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Demonic Hordes",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "source",
+                    "value": 5
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "source",
+                    "value": 5
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "source",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "DemonicHordes_DestroysTargetLand",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Demonic Hordes",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Mountain",
+                    "player": 1,
+                    "ref": "target",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Mountain",
+                    "player": 0,
+                    "ref": "second_land",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 1,
+                    "ref": "witness",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "choose_target",
+                    "player": -1,
+                    "ref": "target"
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "target",
+                    "value": 0
+                },
+                {
+                    "op": "assert_zone",
+                    "player": 1,
+                    "value": 1,
+                    "zone": "graveyard"
+                },
+                {
+                    "op": "assert_zone_card",
+                    "index": 0,
+                    "player": 1,
+                    "value": 164,
+                    "zone": "graveyard"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "tapped",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "second_land",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "witness",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "DemonicHordes_TappedCannotActivate",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Demonic Hordes",
+                    "player": 0,
+                    "ref": "source",
+                    "state": [
+                        "tapped"
+                    ],
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Mountain",
+                    "player": 1,
+                    "ref": "target",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "can_activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "target",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "DemonicHordes_SickCannotActivate",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Demonic Hordes",
+                    "player": 0,
+                    "ref": "source",
+                    "state": [
+                        "sick"
+                    ],
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Mountain",
+                    "player": 1,
+                    "ref": "target",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "can_activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "target",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "DemonicHordes_NoLandCannotActivate",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Demonic Hordes",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 1,
+                    "ref": "witness",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "can_activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "witness",
+                    "value": 1
+                }
+            ]
+        }
+    ],
+    "csvid": 61,
+    "version": 1
+}

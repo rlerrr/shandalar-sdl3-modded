@@ -328,6 +328,67 @@
         "step 16 assert_mana",
         "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 7[\\s\\S]*?s.value[\\s\\S]*?Which is: 10"
       ]
+    },
+    "Behavior.InstillEnergy_HasteAllowsSickAttack": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Instill Energy",
+      "csvid": 121,
+      "oracle_id": "8695c3c1-fb4b-4429-ae33-ec186f68796b",
+      "reason": "Oracle haste lets the sick enchanted creature attack. Instill Energy only clears STATE_SUMMON_SICK (0x20000); nothing ever clears STATE_SUMMONSICK_NOATTACK (0x10000), whose own design note says it is temporarily removable with haste or Instill Energy. The attack guard therefore still rejects the hasted creature. Correct haste expectations remain intact. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 5 attack target",
+        "duel_test_attack\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.BallLightning_FreshCastAttack": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Ball Lightning",
+      "csvid": 295,
+      "oracle_id": "7485cf25-eb41-4397-be13-7f0b8c10c70a",
+      "reason": "Oracle haste lets the freshly cast Ball Lightning attack immediately. Same missing STATE_SUMMONSICK_NOATTACK removal as InstillEnergy_HasteAllowsSickAttack: native haste also never clears the no-attack sickness bit, so the attack guard rejects it. Correct haste expectations remain intact. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 3 attack source",
+        "duel_test_attack\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.NetherShadow_FreshCastAttack": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Nether Shadow",
+      "csvid": 171,
+      "oracle_id": "c358b9e2-524c-434b-b3fa-74d2aa6d1df7",
+      "reason": "Oracle haste lets the freshly cast Nether Shadow attack immediately. Same missing STATE_SUMMONSICK_NOATTACK removal as InstillEnergy_HasteAllowsSickAttack: native haste also never clears the no-attack sickness bit, so the attack guard rejects it. Correct haste expectations remain intact. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 3 attack source",
+        "duel_test_attack\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.RagingGoblin_FreshCastAttack": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Raging Goblin",
+      "csvid": 1122,
+      "oracle_id": "30997b43-fc13-41d3-8064-1ccc2cb6fd2b",
+      "reason": "Oracle haste lets the freshly cast Raging Goblin attack immediately. Same missing STATE_SUMMONSICK_NOATTACK removal as InstillEnergy_HasteAllowsSickAttack: native haste also never clears the no-attack sickness bit, so the attack guard rejects it. Correct haste expectations remain intact. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 3 attack source",
+        "duel_test_attack\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.ArmyOfAllah_AttackingBonus": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Army of Allah",
+      "csvid": 397,
+      "oracle_id": "3483946d-8645-4c22-b0ba-a65a44456324",
+      "reason": "Oracle gives attacking creatures +2/+0. The handler calls pump_creatures_until_eot with power 0 and toughness 2, so the attacker becomes 2/4 instead of 4/2: power and toughness are swapped at the call site. The idle witness correctly stays 2/2. Correct bonus expectations remain intact. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 5 assert_card attacker",
+        "step 6 assert_card attacker",
+        "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 2[\\s\\S]*?s.value[\\s\\S]*?Which is: 4"
+      ]
     }
   }
 }

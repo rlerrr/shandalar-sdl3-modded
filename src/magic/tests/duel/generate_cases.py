@@ -15,7 +15,8 @@ ZONES = {"hand": 0, "battlefield": 1, "library": 2, "graveyard": 3, "exile": 4}
 STATES = {"tapped": 1, "sick": 2, "attacking": 4, "untapped": 8}
 OPS = {"choose_target", "choose_zone", "choose_dialog", "choose_number", "choose_color", "choose_priority", "choose_trigger", "can_activate",
        "activate", "can_cast", "cast", "resolve", "cleanup", "remove_from_combat", "destroy", "attack", "block", "combat_damage",
-       "turn", "assert_card", "assert_zone", "assert_zone_card", "assert_zone_contains", "assert_zone_state",
+       "turn", "advance_combat", "assert_card", "assert_zone", "assert_zone_card", "assert_zone_contains", "assert_zone_state",
+       "assert_hand_graveyard_total", "record_state", "assert_recorded_state",
        "assert_mana", "assert_life", "assert_stack", "capture", "restore", "ai_roundtrip", "ai_turns"}
 PROPERTIES = {"csvid", "power", "toughness", "tapped", "sick", "attacking", "in_play", "in_hand", "damage"}
 REF_OPS = {"choose_target", "choose_trigger", "can_activate", "activate", "can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card"}
@@ -39,6 +40,7 @@ def build(data, output):
         raise ValueError("Move the legacy cases.json into individual files under data/cases/")
     cases = load_cases(data / "cases", by_name)
     names = set()
+    registered_csvids = {r["csvid"] for r in rows}
     chunks = ["// Generated from reviewed semantic fixtures and independent Oracle data.\n"]
 
     def setup(array_name, cards):
@@ -83,6 +85,7 @@ def build(data, output):
         expectations = o.get("selected_face", o)
         text = expectations.get("oracle_text", "")
         steps_c = []
+        recorded_state = False
         for step in case["steps"]:
             op = step["op"]
             if op not in OPS or (op in REF_OPS and step.get("ref") not in refs):
@@ -91,6 +94,15 @@ def build(data, output):
                 raise ValueError(f"Invalid observation in {name}: {step}")
             if "other" in step and step["other"] not in refs:
                 raise ValueError(f"Unknown reference: {step}")
+            if op == "assert_hand_graveyard_total" and (
+                step.get("player") not in (0, 1) or step.get("index") not in registered_csvids
+                or not isinstance(step.get("value"), int) or step["value"] < 0
+            ):
+                raise ValueError(f"Invalid hand/graveyard count in {name}: {step}")
+            if op == "record_state":
+                recorded_state = True
+            elif op == "assert_recorded_state" and not recorded_state:
+                raise ValueError(f"Record a result before comparing it in {name}")
             steps_c.append("{" + ",".join([quoted(op), quoted(step.get("ref", "")), quoted(step.get("other", "")),
               quoted(step.get("property", "")), str(step.get("player", 0)), str(step.get("value", 0)),
               str(ZONES.get(step.get("zone", "hand"), 0)), str(step.get("index", 0)), str(step.get("color", 0))]) + "}")

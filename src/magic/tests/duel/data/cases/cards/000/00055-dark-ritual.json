@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "card": "Dark Ritual",
+  "csvid": 55,
+  "cases": [
+    {
+      "name": "DarkRitual_AddsBlackMana",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Dark Ritual", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_mana", "player": 0, "color": 1, "value": 12},
+        {"op": "assert_zone_contains", "player": 0, "zone": "graveyard", "value": 55}
+      ],
+      "seed": 123
+    }
+  ]
+}

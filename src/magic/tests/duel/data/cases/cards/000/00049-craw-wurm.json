@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Craw Wurm",
+  "csvid": 49,
+  "cases": [
+    {
+      "name": "CrawWurm_CastAndStats",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Craw Wurm", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "source", "property": "power", "value": 6},
+        {"op": "assert_card", "ref": "source", "property": "toughness", "value": 4},
+        {"op": "assert_card", "ref": "source", "property": "in_play", "value": 1},
+        {"op": "attack", "ref": "source", "value": 0}
+      ],
+      "seed": 123
+    }
+  ]
+}

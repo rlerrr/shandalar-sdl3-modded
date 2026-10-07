@@ -63,6 +63,7 @@ class BehaviorTest:public testing::Test {
   SCOPED_TRACE(std::string(spec->card)+" Oracle "+spec->oracle_id+" "+spec->oracle_text);
   Refs refs; load_fixture(refs,spec->fixture,spec->seed); add_cards(refs,spec->cards,spec->count); duel_test_prepare_fixture();
   std::unique_ptr<DuelTestSnapshot,decltype(&duel_test_free_snapshot)> saved(nullptr,duel_test_free_snapshot);
+  std::string recorded_state;
   for(int i=0;i<spec->step_count;++i) {
     const auto &s=spec->steps[i];
     SCOPED_TRACE(std::string("step ")+std::to_string(i)+" "+s.op+" "+s.ref);
@@ -86,6 +87,7 @@ class BehaviorTest:public testing::Test {
     else if(op=="attack")EXPECT_EQ(!!duel_test_attack(ref),s.value);
     else if(op=="block")EXPECT_EQ(!!duel_test_block(ref,refs.at(s.other)),s.value);
     else if(op=="combat_damage")duel_test_combat_damage();
+    else if(op=="advance_combat")duel_test_advance_combat();
     else if(op=="turn")duel_test_set_turn(s.player,s.value);
     else if(op=="assert_card")EXPECT_EQ(property(duel_test_inspect(ref),s.property),s.value);
     else if(op=="assert_zone")EXPECT_EQ(duel_test_zone_count(s.player,s.zone),s.value);
@@ -99,6 +101,15 @@ class BehaviorTest:public testing::Test {
       for(int n=0;n<151;++n) { r.card=n; if(duel_test_inspect(r).in_play && found++==s.index)break; }
       ASSERT_LT(r.card,151); EXPECT_EQ(property(duel_test_inspect(r),s.property),s.value);
     }
+    else if(op=="assert_hand_graveyard_total") {
+      int count=0;
+      for(int zone:{DUEL_ZONE_HAND,DUEL_ZONE_GRAVEYARD})
+        for(int n=0;n<duel_test_zone_count(s.player,zone);++n)
+          count+=duel_test_zone_csvid(s.player,zone,n)==s.index;
+      EXPECT_EQ(count,s.value)<<"CSVID "<<s.index;
+    }
+    else if(op=="record_state")recorded_state=observable_state();
+    else if(op=="assert_recorded_state") { ASSERT_FALSE(recorded_state.empty()); EXPECT_EQ(observable_state(),recorded_state); }
     else if(op=="assert_mana")EXPECT_EQ(duel_test_mana(s.player,s.color),s.value);
     else if(op=="assert_life")EXPECT_EQ(duel_test_life(s.player),s.value);
     else if(op=="assert_stack")EXPECT_EQ(duel_test_stack_size(),s.value);

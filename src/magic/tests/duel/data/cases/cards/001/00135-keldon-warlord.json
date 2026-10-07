@@ -1,0 +1,137 @@
+{
+  "version": 1,
+  "card": "Keldon Warlord",
+  "csvid": 135,
+  "cases": [
+    {
+      "name": "KeldonWarlord_PowerToughnessEqualsNonWalls",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Keldon Warlord",
+          "ref": "warlord",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear1",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear2",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Stone",
+          "ref": "wall",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "warlord",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "warlord",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear1",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear1",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "toughness",
+          "value": 8
+        },
+        {
+          "op": "destroy",
+          "ref": "bear2"
+        },
+        {
+          "op": "assert_card",
+          "ref": "warlord",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "warlord",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "warlord",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear1",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 106
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "KeldonWarlord_CountsItselfAlone",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Keldon Warlord",
+          "ref": "warlord",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "warlord",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "warlord",
+          "property": "toughness",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

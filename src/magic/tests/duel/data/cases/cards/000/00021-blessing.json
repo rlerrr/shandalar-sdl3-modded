@@ -1,0 +1,215 @@
+{
+    "card": "Blessing",
+    "cases": [
+        {
+            "fixture": "empty_main",
+            "name": "Blessing_PumpAndExpire",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Blessing",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 0,
+                    "ref": "target",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "choose_target",
+                    "player": -1,
+                    "ref": "target"
+                },
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "target",
+                    "value": 2
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "target",
+                    "value": 2
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "target",
+                    "value": 3
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "target",
+                    "value": 3
+                },
+                {
+                    "op": "cleanup"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "target",
+                    "value": 2
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "target",
+                    "value": 2
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "Blessing_NoCreatureCannotCast",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Blessing",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "assert_stack",
+                    "value": 0
+                },
+                {
+                    "color": 5,
+                    "op": "assert_mana",
+                    "player": 0,
+                    "value": 10
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "Blessing_PumpSurvivesAuraDestruction",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Blessing",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 0,
+                    "ref": "target",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "choose_target",
+                    "player": -1,
+                    "ref": "target"
+                },
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "target",
+                    "value": 3
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "target",
+                    "value": 3
+                },
+                {
+                    "op": "destroy",
+                    "ref": "source"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "target",
+                    "value": 3
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "target",
+                    "value": 3
+                },
+                {
+                    "op": "assert_zone_contains",
+                    "player": 0,
+                    "value": 21,
+                    "zone": "graveyard"
+                },
+                {
+                    "op": "cleanup"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "target",
+                    "value": 2
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "target",
+                    "value": 2
+                }
+            ]
+        }
+    ],
+    "csvid": 21,
+    "version": 1
+}

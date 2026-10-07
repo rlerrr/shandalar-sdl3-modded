@@ -1,0 +1,151 @@
+{
+    "card": "Dragon Whelp",
+    "cases": [
+        {
+            "fixture": "empty_main",
+            "name": "DragonWhelp_RepeatedPumpAndCleanup",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Dragon Whelp",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "source",
+                    "value": 4
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "source",
+                    "value": 3
+                },
+                {
+                    "op": "assert_mana",
+                    "color": 4,
+                    "player": 0,
+                    "value": 8
+                },
+                {
+                    "op": "cleanup"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "source",
+                    "value": 2
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "source",
+                    "value": 3
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "DragonWhelp_FourPumpsTriggerEndStepSacrifice",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Dragon Whelp",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "power",
+                    "ref": "source",
+                    "value": 6
+                },
+                {
+                    "op": "assert_card",
+                    "property": "toughness",
+                    "ref": "source",
+                    "value": 3
+                },
+                {
+                    "op": "assert_mana",
+                    "color": 4,
+                    "player": 0,
+                    "value": 6
+                },
+                {
+                    "op": "cleanup"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "assert_zone_contains",
+                    "player": 0,
+                    "value": 67,
+                    "zone": "graveyard"
+                }
+            ]
+        }
+    ],
+    "csvid": 67,
+    "version": 1
+}

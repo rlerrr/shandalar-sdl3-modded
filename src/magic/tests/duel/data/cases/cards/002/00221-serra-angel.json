@@ -227,6 +227,9 @@
           "op": "block"
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "combat_damage"
         },
         {
@@ -345,6 +348,9 @@
           "value": 1,
           "ref": "angel",
           "op": "block"
+        },
+        {
+          "op": "advance_combat"
         },
         {
           "op": "combat_damage"

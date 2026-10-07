@@ -227,6 +227,9 @@
           "other": "striker"
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "combat_damage"
         },
         {
@@ -364,6 +367,9 @@
           "other": "striker",
           "ref": "bear",
           "op": "block"
+        },
+        {
+          "op": "advance_combat"
         },
         {
           "op": "combat_damage"

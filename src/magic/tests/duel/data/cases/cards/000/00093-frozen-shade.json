@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Frozen Shade",
+  "csvid": 93,
+  "cases": [
+    {
+      "name": "FrozenShade_RepeatedActivationAndCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Frozen Shade", "ref": "source", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "source", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "source", "property": "toughness", "value": 3},
+        {"op": "assert_mana", "player": 0, "color": 1, "value": 8},
+        {"op": "cleanup"},
+        {"op": "assert_card", "ref": "source", "property": "power", "value": 0},
+        {"op": "assert_card", "ref": "source", "property": "toughness", "value": 1}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "FrozenShade_TappedCanStillPump",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Frozen Shade", "ref": "source", "player": 0, "zone": "battlefield", "state": ["tapped"]}
+      ],
+      "steps": [
+        {"op": "can_activate", "ref": "source", "value": 1},
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "source", "property": "power", "value": 1},
+        {"op": "assert_card", "ref": "source", "property": "toughness", "value": 2}
+      ],
+      "seed": 123
+    }
+  ]
+}

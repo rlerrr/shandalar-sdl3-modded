@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Granite Gargoyle",
+  "csvid": 103,
+  "cases": [
+    {
+      "name": "GraniteGargoyle_PumpAndExpire",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Granite Gargoyle", "ref": "source", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "assert_card", "ref": "source", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "source", "property": "toughness", "value": 2},
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "source", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "source", "property": "toughness", "value": 3},
+        {"op": "assert_mana", "player": 0, "color": 4, "value": 9},
+        {"op": "cleanup"},
+        {"op": "assert_card", "ref": "source", "property": "toughness", "value": 2}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "GraniteGargoyle_FlyingControlsBlock",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Granite Gargoyle", "ref": "attacker", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "ground", "player": 1, "zone": "battlefield"},
+        {"name": "Air Elemental", "ref": "flyer", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "turn", "player": 0, "value": 1},
+        {"op": "attack", "ref": "attacker", "value": 1},
+        {"op": "block", "ref": "ground", "other": "attacker", "value": 0},
+        {"op": "block", "ref": "flyer", "other": "attacker", "value": 1}
+      ],
+      "seed": 123
+    }
+  ]
+}

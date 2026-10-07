@@ -1,0 +1,173 @@
+{
+    "card": "Flashfires",
+    "cases": [
+        {
+            "fixture": "empty_main",
+            "name": "Flashfires_DestroysAllPlains",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Flashfires",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                },
+                {
+                    "name": "Plains",
+                    "player": 0,
+                    "ref": "plains0",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Plains",
+                    "player": 1,
+                    "ref": "plains1",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Mountain",
+                    "player": 0,
+                    "ref": "mountain",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Forest",
+                    "player": 1,
+                    "ref": "forest",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 0,
+                    "ref": "witness",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "plains0",
+                    "value": 0
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "plains1",
+                    "value": 0
+                },
+                {
+                    "op": "assert_zone_contains",
+                    "player": 0,
+                    "value": 188,
+                    "zone": "graveyard"
+                },
+                {
+                    "op": "assert_zone_contains",
+                    "player": 1,
+                    "value": 188,
+                    "zone": "graveyard"
+                },
+                {
+                    "op": "assert_zone_contains",
+                    "player": 0,
+                    "value": 86,
+                    "zone": "graveyard"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "mountain",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "forest",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "witness",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "Flashfires_NoPlainsLeavesOthers",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Flashfires",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "hand"
+                },
+                {
+                    "name": "Mountain",
+                    "player": 0,
+                    "ref": "mountain",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Forest",
+                    "player": 1,
+                    "ref": "forest",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 0,
+                    "ref": "witness",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "cast",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "mountain",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "forest",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "witness",
+                    "value": 1
+                },
+                {
+                    "op": "assert_zone_contains",
+                    "player": 0,
+                    "value": 86,
+                    "zone": "graveyard"
+                }
+            ]
+        }
+    ],
+    "csvid": 86,
+    "version": 1
+}

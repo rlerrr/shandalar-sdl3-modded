@@ -33,6 +33,8 @@ void duel_test_remove_from_combat(DuelTestRef ref);
 void duel_test_destroy(DuelTestRef ref);
 int duel_test_attack(DuelTestRef ref);
 int duel_test_block(DuelTestRef blocker, DuelTestRef attacker);
+/* Complete blocker declaration and enter the after-blocking response window. */
+void duel_test_advance_combat(void);
 void duel_test_combat_damage(void);
 void duel_test_advance_turn(void);
 DuelTestCard duel_test_inspect(DuelTestRef ref);

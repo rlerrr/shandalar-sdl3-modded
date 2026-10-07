@@ -57,6 +57,9 @@
           "value": 1
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "combat_damage"
         },
         {

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Dwarven Warriors",
+  "csvid": 72,
+  "cases": [
+    {
+      "name": "DwarvenWarriors_GrantsUnblockable",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Dwarven Warriors", "ref": "source", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "attacker", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "blocker", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "attacker", "player": -1},
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "turn", "player": 0, "value": 1},
+        {"op": "attack", "ref": "attacker", "value": 1},
+        {"op": "block", "ref": "blocker", "other": "attacker", "value": 0}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DwarvenWarriors_SickCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Dwarven Warriors", "ref": "source", "player": 0, "zone": "battlefield", "state": ["sick"]}
+      ],
+      "steps": [
+        {"op": "can_activate", "ref": "source", "value": 0},
+        {"op": "activate", "ref": "source", "value": 0}
+      ],
+      "seed": 123
+    }
+  ]
+}

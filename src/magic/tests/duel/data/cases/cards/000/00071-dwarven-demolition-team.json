@@ -1,0 +1,160 @@
+{
+    "card": "Dwarven Demolition Team",
+    "cases": [
+        {
+            "fixture": "empty_main",
+            "name": "DwarvenDemolitionTeam_DestroysWallKeepsSecondWall",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Dwarven Demolition Team",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Wall of Stone",
+                    "player": 1,
+                    "ref": "target",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Wall of Air",
+                    "player": 1,
+                    "ref": "other_eligible",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 0,
+                    "ref": "witness",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "choose_target",
+                    "player": -1,
+                    "ref": "target"
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 1
+                },
+                {
+                    "op": "resolve"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "target",
+                    "value": 0
+                },
+                {
+                    "op": "assert_zone_contains",
+                    "player": 1,
+                    "value": 272,
+                    "zone": "graveyard"
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "other_eligible",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "witness",
+                    "value": 1
+                },
+                {
+                    "op": "assert_card",
+                    "property": "tapped",
+                    "ref": "source",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "DwarvenDemolitionTeam_NonWallCannotActivate",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Dwarven Demolition Team",
+                    "player": 0,
+                    "ref": "source",
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Grizzly Bears",
+                    "player": 1,
+                    "ref": "invalid",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "can_activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "invalid",
+                    "value": 1
+                }
+            ]
+        },
+        {
+            "fixture": "empty_main",
+            "name": "DwarvenDemolitionTeam_SickCannotActivate",
+            "seed": 123,
+            "setup": [
+                {
+                    "name": "Dwarven Demolition Team",
+                    "player": 0,
+                    "ref": "source",
+                    "state": [
+                        "sick"
+                    ],
+                    "zone": "battlefield"
+                },
+                {
+                    "name": "Wall of Stone",
+                    "player": 1,
+                    "ref": "target",
+                    "zone": "battlefield"
+                }
+            ],
+            "steps": [
+                {
+                    "op": "can_activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "activate",
+                    "ref": "source",
+                    "value": 0
+                },
+                {
+                    "op": "assert_card",
+                    "property": "in_play",
+                    "ref": "target",
+                    "value": 1
+                }
+            ]
+        }
+    ],
+    "csvid": 71,
+    "version": 1
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Castle",
+  "csvid": 28,
+  "cases": [
+    {
+      "name": "Castle_UntappedGetPlusZeroPlusTwo",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Castle", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Grizzly Bears", "ref": "untapped", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "tapped", "player": 0, "zone": "battlefield", "state": ["tapped"]}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "untapped", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "untapped", "property": "toughness", "value": 4},
+        {"op": "assert_card", "ref": "tapped", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "tapped", "property": "toughness", "value": 2}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Castle_RemovedLosesBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Castle", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Grizzly Bears", "ref": "target", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "target", "property": "toughness", "value": 4},
+        {"op": "destroy", "ref": "source"},
+        {"op": "assert_card", "ref": "target", "property": "toughness", "value": 2}
+      ],
+      "seed": 123
+    }
+  ]
+}

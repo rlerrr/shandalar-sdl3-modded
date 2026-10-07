@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "card": "Orcish Oriflamme",
+  "csvid": 178,
+  "cases": [
+    {
+      "name": "OrcishOriflamme_AttackingGetsPlusOnePlusZero",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Orcish Oriflamme",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "idle",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Drudge Skeletons",
+  "csvid": 70,
+  "cases": [
+    {
+      "name": "DrudgeSkeletons_MainPhaseActivationCorrectlyRejected",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Drudge Skeletons", "ref": "source", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "can_activate", "ref": "source", "value": 0},
+        {"op": "activate", "ref": "source", "value": 0},
+        {"op": "assert_mana", "player": 0, "color": 1, "value": 10}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DrudgeSkeletons_NoShieldDies",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Drudge Skeletons", "ref": "source", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "destroy", "ref": "source"},
+        {"op": "assert_card", "ref": "source", "property": "in_play", "value": 0},
+        {"op": "assert_zone_contains", "player": 0, "zone": "graveyard", "value": 70}
+      ],
+      "seed": 123
+    }
+  ]
+}

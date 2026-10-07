@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Death Ward",
+  "csvid": 57,
+  "reason": "Modern-rule reference only: this script casts a proactive regeneration shield before destruction. It is intentionally excluded under the documented pre-Sixth Edition regeneration timing exception, and is not a request to change the production handler. A legacy destruction-window success scenario still needs a harness decision inside that window. Not executed or counted as passing coverage.",
+  "cases": [
+    {
+      "name": "DeathWard_ModernRegenerationShieldReference",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Death Ward",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "destroy",
+          "ref": "target"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 57
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}
