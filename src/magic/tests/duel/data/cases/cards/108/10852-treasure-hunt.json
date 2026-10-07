@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "card": "Treasure Hunt",
+  "csvid": 10852,
+  "cases": [
+    {
+      "name": "TreasureHunt_AllCardsThroughFirstNonland",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Treasure Hunt",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "f",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "bolt",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "after",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 91
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 188
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 145
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 126
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 10852
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "TreasureHunt_TopCardNonlandStillRevealed",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Treasure Hunt",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "bolt",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "later",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 145
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 91
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

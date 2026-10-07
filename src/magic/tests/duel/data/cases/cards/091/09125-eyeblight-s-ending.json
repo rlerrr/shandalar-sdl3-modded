@@ -1,0 +1,213 @@
+{
+  "version": 1,
+  "card": "Eyeblight's Ending",
+  "csvid": 9125,
+  "cases": [
+    {
+      "name": "Eyeblight_s_Ending_DestroyOrExile_Grizzly_Bears",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Eyeblight's Ending"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "target",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "witness",
+          "player": 0,
+          "name": "Plains",
+          "zone": "battlefield"
+        },
+        {
+          "player": 0,
+          "zone": "battlefield",
+          "ref": "other_eligible",
+          "name": "Grizzly Bears"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 106
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 9125
+        },
+        {
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Eyeblight_s_Ending_SecondEligible_Savannah_Lions",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Eyeblight's Ending"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "target",
+          "name": "Savannah Lions"
+        },
+        {
+          "ref": "witness",
+          "player": 0,
+          "name": "Plains",
+          "zone": "battlefield"
+        },
+        {
+          "player": 0,
+          "zone": "battlefield",
+          "ref": "other_eligible",
+          "name": "Savannah Lions"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 213
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 9125
+        },
+        {
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Eyeblight_s_Ending_NoLegalTarget_Wood_Elves",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Eyeblight's Ending"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "invalid",
+          "name": "Wood Elves"
+        }
+      ],
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

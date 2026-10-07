@@ -1,0 +1,197 @@
+{
+  "version": 1,
+  "card": "Tragic Slip",
+  "csvid": 12282,
+  "cases": [
+    {
+      "name": "Tragic_Slip_ShrinksBearWithoutMorbid",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Tragic Slip",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone_contains",
+          "value": 12282
+        },
+        {
+          "value": 1,
+          "op": "assert_card",
+          "property": "in_play",
+          "ref": "target"
+        },
+        {
+          "value": 1,
+          "op": "assert_card",
+          "property": "power",
+          "ref": "target"
+        },
+        {
+          "value": 1,
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "target"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "value": 2,
+          "op": "assert_card",
+          "property": "power",
+          "ref": "target"
+        },
+        {
+          "value": 2,
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "target"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Tragic_Slip_MorbidKillsLargeCreature",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Tragic Slip",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Air Elemental",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "victim",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "destroy",
+          "ref": "victim"
+        },
+        {
+          "op": "assert_card",
+          "ref": "victim",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone_contains",
+          "value": 12282
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 4,
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,1007 @@
+{
+  "version": 1,
+  "fixtures": {
+    "empty_main": {
+      "cards": [],
+      "life": [
+        20,
+        20
+      ],
+      "mana": [
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ]
+      ],
+      "turn": 0
+    },
+    "stocked_zones": {
+      "cards": [
+        {
+          "ref": "p0_hand_0",
+          "player": 0,
+          "zone": "hand",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_hand_1",
+          "player": 0,
+          "zone": "hand",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p0_hand_2",
+          "player": 0,
+          "zone": "hand",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p0_hand_3",
+          "player": 0,
+          "zone": "hand",
+          "name": "Plains"
+        },
+        {
+          "ref": "p0_graveyard_0",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_graveyard_1",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p0_graveyard_2",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_graveyard_3",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "p0_exile_0",
+          "player": 0,
+          "zone": "exile",
+          "name": "Island"
+        },
+        {
+          "ref": "p0_exile_1",
+          "player": 0,
+          "zone": "exile",
+          "name": "Llanowar Elves"
+        },
+        {
+          "ref": "p0_library_0",
+          "player": 0,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_library_1",
+          "player": 0,
+          "zone": "library",
+          "name": "Plains"
+        },
+        {
+          "ref": "p0_library_2",
+          "player": 0,
+          "zone": "library",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_library_3",
+          "player": 0,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_library_4",
+          "player": 0,
+          "zone": "library",
+          "name": "Mountain"
+        },
+        {
+          "ref": "p0_library_5",
+          "player": 0,
+          "zone": "library",
+          "name": "Island"
+        },
+        {
+          "ref": "p0_library_6",
+          "player": 0,
+          "zone": "library",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p1_hand_0",
+          "player": 1,
+          "zone": "hand",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_hand_1",
+          "player": 1,
+          "zone": "hand",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p1_hand_2",
+          "player": 1,
+          "zone": "hand",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p1_hand_3",
+          "player": 1,
+          "zone": "hand",
+          "name": "Plains"
+        },
+        {
+          "ref": "p1_graveyard_0",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_graveyard_1",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p1_graveyard_2",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_graveyard_3",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "p1_exile_0",
+          "player": 1,
+          "zone": "exile",
+          "name": "Island"
+        },
+        {
+          "ref": "p1_exile_1",
+          "player": 1,
+          "zone": "exile",
+          "name": "Llanowar Elves"
+        },
+        {
+          "ref": "p1_library_0",
+          "player": 1,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_library_1",
+          "player": 1,
+          "zone": "library",
+          "name": "Plains"
+        },
+        {
+          "ref": "p1_library_2",
+          "player": 1,
+          "zone": "library",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_library_3",
+          "player": 1,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_library_4",
+          "player": 1,
+          "zone": "library",
+          "name": "Mountain"
+        },
+        {
+          "ref": "p1_library_5",
+          "player": 1,
+          "zone": "library",
+          "name": "Island"
+        },
+        {
+          "ref": "p1_library_6",
+          "player": 1,
+          "zone": "library",
+          "name": "Lightning Bolt"
+        }
+      ],
+      "life": [
+        20,
+        20
+      ],
+      "mana": [
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ]
+      ],
+      "turn": 0
+    },
+    "mixed_targets": {
+      "cards": [
+        {
+          "ref": "p0_hand_0",
+          "player": 0,
+          "zone": "hand",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_hand_1",
+          "player": 0,
+          "zone": "hand",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p0_hand_2",
+          "player": 0,
+          "zone": "hand",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p0_hand_3",
+          "player": 0,
+          "zone": "hand",
+          "name": "Plains"
+        },
+        {
+          "ref": "p0_graveyard_0",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_graveyard_1",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p0_graveyard_2",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_graveyard_3",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "p0_exile_0",
+          "player": 0,
+          "zone": "exile",
+          "name": "Island"
+        },
+        {
+          "ref": "p0_exile_1",
+          "player": 0,
+          "zone": "exile",
+          "name": "Llanowar Elves"
+        },
+        {
+          "ref": "p0_library_0",
+          "player": 0,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_library_1",
+          "player": 0,
+          "zone": "library",
+          "name": "Plains"
+        },
+        {
+          "ref": "p0_library_2",
+          "player": 0,
+          "zone": "library",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_library_3",
+          "player": 0,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_library_4",
+          "player": 0,
+          "zone": "library",
+          "name": "Mountain"
+        },
+        {
+          "ref": "p0_library_5",
+          "player": 0,
+          "zone": "library",
+          "name": "Island"
+        },
+        {
+          "ref": "p0_library_6",
+          "player": 0,
+          "zone": "library",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p1_hand_0",
+          "player": 1,
+          "zone": "hand",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_hand_1",
+          "player": 1,
+          "zone": "hand",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p1_hand_2",
+          "player": 1,
+          "zone": "hand",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p1_hand_3",
+          "player": 1,
+          "zone": "hand",
+          "name": "Plains"
+        },
+        {
+          "ref": "p1_graveyard_0",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_graveyard_1",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p1_graveyard_2",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_graveyard_3",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "p1_exile_0",
+          "player": 1,
+          "zone": "exile",
+          "name": "Island"
+        },
+        {
+          "ref": "p1_exile_1",
+          "player": 1,
+          "zone": "exile",
+          "name": "Llanowar Elves"
+        },
+        {
+          "ref": "p1_library_0",
+          "player": 1,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_library_1",
+          "player": 1,
+          "zone": "library",
+          "name": "Plains"
+        },
+        {
+          "ref": "p1_library_2",
+          "player": 1,
+          "zone": "library",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_library_3",
+          "player": 1,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_library_4",
+          "player": 1,
+          "zone": "library",
+          "name": "Mountain"
+        },
+        {
+          "ref": "p1_library_5",
+          "player": 1,
+          "zone": "library",
+          "name": "Island"
+        },
+        {
+          "ref": "p1_library_6",
+          "player": 1,
+          "zone": "library",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "friendly",
+          "player": 0,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Sol Ring"
+        }
+      ],
+      "life": [
+        20,
+        20
+      ],
+      "mana": [
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ]
+      ],
+      "turn": 0
+    },
+    "combat": {
+      "combat": true,
+      "cards": [
+        {
+          "ref": "p0_hand_0",
+          "player": 0,
+          "zone": "hand",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_hand_1",
+          "player": 0,
+          "zone": "hand",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p0_hand_2",
+          "player": 0,
+          "zone": "hand",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p0_hand_3",
+          "player": 0,
+          "zone": "hand",
+          "name": "Plains"
+        },
+        {
+          "ref": "p0_graveyard_0",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_graveyard_1",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p0_graveyard_2",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_graveyard_3",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "p0_exile_0",
+          "player": 0,
+          "zone": "exile",
+          "name": "Island"
+        },
+        {
+          "ref": "p0_exile_1",
+          "player": 0,
+          "zone": "exile",
+          "name": "Llanowar Elves"
+        },
+        {
+          "ref": "p0_library_0",
+          "player": 0,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_library_1",
+          "player": 0,
+          "zone": "library",
+          "name": "Plains"
+        },
+        {
+          "ref": "p0_library_2",
+          "player": 0,
+          "zone": "library",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_library_3",
+          "player": 0,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_library_4",
+          "player": 0,
+          "zone": "library",
+          "name": "Mountain"
+        },
+        {
+          "ref": "p0_library_5",
+          "player": 0,
+          "zone": "library",
+          "name": "Island"
+        },
+        {
+          "ref": "p0_library_6",
+          "player": 0,
+          "zone": "library",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p1_hand_0",
+          "player": 1,
+          "zone": "hand",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_hand_1",
+          "player": 1,
+          "zone": "hand",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p1_hand_2",
+          "player": 1,
+          "zone": "hand",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p1_hand_3",
+          "player": 1,
+          "zone": "hand",
+          "name": "Plains"
+        },
+        {
+          "ref": "p1_graveyard_0",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_graveyard_1",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p1_graveyard_2",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_graveyard_3",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "p1_exile_0",
+          "player": 1,
+          "zone": "exile",
+          "name": "Island"
+        },
+        {
+          "ref": "p1_exile_1",
+          "player": 1,
+          "zone": "exile",
+          "name": "Llanowar Elves"
+        },
+        {
+          "ref": "p1_library_0",
+          "player": 1,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_library_1",
+          "player": 1,
+          "zone": "library",
+          "name": "Plains"
+        },
+        {
+          "ref": "p1_library_2",
+          "player": 1,
+          "zone": "library",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_library_3",
+          "player": 1,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_library_4",
+          "player": 1,
+          "zone": "library",
+          "name": "Mountain"
+        },
+        {
+          "ref": "p1_library_5",
+          "player": 1,
+          "zone": "library",
+          "name": "Island"
+        },
+        {
+          "ref": "p1_library_6",
+          "player": 1,
+          "zone": "library",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "state": [
+            "attacking"
+          ]
+        },
+        {
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        }
+      ],
+      "life": [
+        20,
+        20
+      ],
+      "mana": [
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ]
+      ],
+      "turn": 0
+    },
+    "interactions": {
+      "cards": [
+        {
+          "ref": "p0_hand_0",
+          "player": 0,
+          "zone": "hand",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_hand_1",
+          "player": 0,
+          "zone": "hand",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p0_hand_2",
+          "player": 0,
+          "zone": "hand",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p0_hand_3",
+          "player": 0,
+          "zone": "hand",
+          "name": "Plains"
+        },
+        {
+          "ref": "p0_graveyard_0",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_graveyard_1",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p0_graveyard_2",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_graveyard_3",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "p0_exile_0",
+          "player": 0,
+          "zone": "exile",
+          "name": "Island"
+        },
+        {
+          "ref": "p0_exile_1",
+          "player": 0,
+          "zone": "exile",
+          "name": "Llanowar Elves"
+        },
+        {
+          "ref": "p0_library_0",
+          "player": 0,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_library_1",
+          "player": 0,
+          "zone": "library",
+          "name": "Plains"
+        },
+        {
+          "ref": "p0_library_2",
+          "player": 0,
+          "zone": "library",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_library_3",
+          "player": 0,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_library_4",
+          "player": 0,
+          "zone": "library",
+          "name": "Mountain"
+        },
+        {
+          "ref": "p0_library_5",
+          "player": 0,
+          "zone": "library",
+          "name": "Island"
+        },
+        {
+          "ref": "p0_library_6",
+          "player": 0,
+          "zone": "library",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p1_hand_0",
+          "player": 1,
+          "zone": "hand",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_hand_1",
+          "player": 1,
+          "zone": "hand",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p1_hand_2",
+          "player": 1,
+          "zone": "hand",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p1_hand_3",
+          "player": 1,
+          "zone": "hand",
+          "name": "Plains"
+        },
+        {
+          "ref": "p1_graveyard_0",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_graveyard_1",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p1_graveyard_2",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_graveyard_3",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "p1_exile_0",
+          "player": 1,
+          "zone": "exile",
+          "name": "Island"
+        },
+        {
+          "ref": "p1_exile_1",
+          "player": 1,
+          "zone": "exile",
+          "name": "Llanowar Elves"
+        },
+        {
+          "ref": "p1_library_0",
+          "player": 1,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_library_1",
+          "player": 1,
+          "zone": "library",
+          "name": "Plains"
+        },
+        {
+          "ref": "p1_library_2",
+          "player": 1,
+          "zone": "library",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_library_3",
+          "player": 1,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_library_4",
+          "player": 1,
+          "zone": "library",
+          "name": "Mountain"
+        },
+        {
+          "ref": "p1_library_5",
+          "player": 1,
+          "zone": "library",
+          "name": "Island"
+        },
+        {
+          "ref": "p1_library_6",
+          "player": 1,
+          "zone": "library",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "friendly",
+          "player": 0,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "anthem",
+          "player": 0,
+          "zone": "battlefield",
+          "name": "Glorious Anthem"
+        }
+      ],
+      "life": [
+        20,
+        20
+      ],
+      "mana": [
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ]
+      ],
+      "turn": 0
+    }
+  }
+}

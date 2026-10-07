@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "card": "Duress",
+  "csvid": 3755,
+  "cases": [
+    {
+      "name": "Duress_DiscardNoncreature",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Duress",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 3
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 4,
+          "value": 97
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Duress_ChooseOtherLegalCard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Duress",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy_creature",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "enemy_spell",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "enemy_land",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 97
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Duress_NoNoncreatureNonlandCard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Duress",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy_creature",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "enemy_land",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

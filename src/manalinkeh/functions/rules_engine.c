@@ -54,6 +54,37 @@ typedef struct
 
 STATIC_ASSERT(sizeof(rules_engine_globals_t) == sizeof(((card_instance_t*)(NULL))->targets), sizeof_rules_engine_globals_t_must_match_target_array);
 
+/* Caller-owned rule state accompanies card instances in headless/AI snapshots. */
+#define DUEL_RULE_STATE(X) X(vanguard_avatar) X(vcount) X(settings) X(actual_event) X(challenge) X(rules_engine_card) X(deadbox_card) X(starting_life_total) X(force_init_upkeep) X(hack_allow_sorcery_if_rules_engine_is_only_effect)
+size_t duel_rules_snapshot_size(void) {
+  size_t n=0;
+#define FIELD(v) n+=sizeof(v);
+  DUEL_RULE_STATE(FIELD)
+#undef FIELD
+  return n;
+}
+void duel_rules_snapshot_capture(void *destination) {
+  unsigned char *p=destination;
+#define FIELD(v) memcpy(p,&v,sizeof(v)); p+=sizeof(v);
+  DUEL_RULE_STATE(FIELD)
+#undef FIELD
+}
+void duel_rules_snapshot_restore(const void *source) {
+  const unsigned char *p=source;
+#define FIELD(v) memcpy(&v,p,sizeof(v)); p+=sizeof(v);
+  DUEL_RULE_STATE(FIELD)
+#undef FIELD
+}
+#undef DUEL_RULE_STATE
+void duel_rules_initialize_headless(void) {
+  memset(settings,0,sizeof(settings));
+  settings[SETTING_SETTING_FILE_READ]=1;
+  settings[SETTING_RULES_ENGINE]=1;
+  settings[SETTING_AI_USES_RULES_ENGINE]=1;
+  settings[SETTING_HAND_SIZE]=7;
+  settings[SETTING_MIN_PICS_TO_RANDOMIZE]=15;
+}
+
 int get_setting(int thing){
 	return settings[thing];
 }

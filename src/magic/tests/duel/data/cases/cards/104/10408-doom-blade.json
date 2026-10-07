@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "card": "Doom Blade",
+  "csvid": 10408,
+  "cases": [
+    {
+      "name": "DoomBlade_DestroyNonblackCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Doom Blade",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "victim",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "victim",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "victim",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 10408
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DoomBlade_BlackCreatureIsNotLegal",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Doom Blade",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Black Knight",
+          "ref": "black",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "black",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

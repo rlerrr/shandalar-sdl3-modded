@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "card": "Disentomb",
+  "csvid": 10403,
+  "cases": [
+    {
+      "name": "Disentomb_ReturnsCard106",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Disentomb",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "hand",
+          "index": 4,
+          "value": 106
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 10403
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 97
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 91
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "exile",
+          "value": 126
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "exile",
+          "value": 149
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Disentomb_ReturnsLlanowarElvesFromSecondEligibleIndex",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Disentomb",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "elves",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "growth",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Island",
+          "ref": "exiled_island",
+          "zone": "exile",
+          "player": 0
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "exiled_elf",
+          "zone": "exile",
+          "player": 0
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "hand",
+          "index": 0,
+          "value": 149
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 10403
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 97
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "exile",
+          "value": 126
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "exile",
+          "value": 149
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Disentomb_NoEligibleCardCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Disentomb",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

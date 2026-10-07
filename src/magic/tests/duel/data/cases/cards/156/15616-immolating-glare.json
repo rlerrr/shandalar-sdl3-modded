@@ -1,0 +1,161 @@
+{
+  "card": "Immolating Glare",
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 1,
+          "player": 1,
+          "op": "turn"
+        },
+        {
+          "ref": "attacker",
+          "value": 1,
+          "op": "attack"
+        },
+        {
+          "ref": "attacker",
+          "player": -1,
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "ref": "attacker",
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "ref": "witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "value": 1,
+          "player": 1,
+          "zone": "graveyard",
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 106,
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "value": 1,
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 15616,
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card"
+        }
+      ],
+      "setup": [
+        {
+          "ref": "source",
+          "player": 0,
+          "zone": "hand",
+          "name": "Immolating Glare"
+        },
+        {
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        }
+      ],
+      "name": "ImmolatingGlare_attack_removal",
+      "fixture": "empty_main"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Immolating Glare",
+          "ref": "source"
+        }
+      ],
+      "name": "ImmolatingGlare_NoEligibleTarget",
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "ref": "source",
+          "value": 0,
+          "op": "can_cast"
+        },
+        {
+          "value": 1,
+          "ref": "idle",
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "name": "ImmolatingGlare_NonattackerInvalid",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "name": "Immolating Glare",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "ref": "idle"
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "version": 1,
+  "csvid": 15616
+}

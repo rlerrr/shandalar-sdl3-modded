@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "card": "Murder",
+  "csvid": 12594,
+  "cases": [
+    {
+      "name": "Murder_KillBear",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Murder",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone_contains",
+          "value": 12594
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 4,
+          "value": 106
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Murder_IndestructibleSurvives",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Murder",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Darksteel Myr",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone_contains",
+          "value": 12594
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "steps": [
+        {
+          "player": -1,
+          "ref": "target",
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "op": "cast",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "graveyard",
+          "player": 1,
+          "value": 514
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "graveyard",
+          "player": 0,
+          "value": 12594
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 4,
+          "value": 514
+        }
+      ],
+      "fixture": "mixed_targets",
+      "seed": 123,
+      "setup": [
+        {
+          "ref": "source",
+          "zone": "hand",
+          "player": 0,
+          "name": "Murder"
+        },
+        {
+          "ref": "target",
+          "zone": "battlefield",
+          "player": 1,
+          "name": "Ornithopter"
+        }
+      ],
+      "name": "Murder_DestroysArtifactCreature"
+    }
+  ]
+}

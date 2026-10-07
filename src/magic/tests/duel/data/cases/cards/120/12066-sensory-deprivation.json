@@ -1,0 +1,178 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "friendly"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 12066,
+          "zone": "battlefield"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": -1
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": -1
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 2
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Sensory_Deprivation_BuffPersistsThroughCleanup",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Sensory Deprivation",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "enemy"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": -1
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "ref": "enemy",
+          "op": "destroy"
+        },
+        {
+          "op": "assert_card",
+          "property": "in_play",
+          "ref": "enemy",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 12066
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Sensory_Deprivation_AttachedEffectAndAuraGoesToGraveyard",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Sensory Deprivation",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "value": 0,
+          "op": "assert_stack"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "value": 12066
+        }
+      ],
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "ref": "source",
+          "name": "Sensory Deprivation"
+        }
+      ],
+      "fixture": "empty_main",
+      "seed": 123,
+      "name": "Sensory_Deprivation_NoCreatureTarget"
+    }
+  ],
+  "csvid": 12066,
+  "card": "Sensory Deprivation",
+  "version": 1
+}

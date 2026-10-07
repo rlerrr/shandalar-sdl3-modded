@@ -1,0 +1,159 @@
+{
+  "version": 1,
+  "card": "Dark Banishing",
+  "csvid": 1007,
+  "cases": [
+    {
+      "name": "DarkBanishing_DestroyNonblackCreature",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Dark Banishing",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1007
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DarkBanishing_DestroyArtifactCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dark Banishing",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Ornithopter",
+          "ref": "thopter",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "thopter",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "thopter",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1007
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 514
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DarkBanishing_NoLegalTargetBlackCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dark Banishing",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Black Knight",
+          "ref": "black_creature",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "black_creature",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

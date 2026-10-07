@@ -1,0 +1,177 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "friendly"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 12580,
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": -3
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 2
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Hydrosurge_friendly_EffectExpires",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Hydrosurge",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "enemy"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 12580,
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": -3
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "enemy",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "enemy",
+          "value": 2
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Hydrosurge_enemy_EffectExpires",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Hydrosurge",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "value": 0,
+          "op": "assert_stack"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "value": 12580
+        }
+      ],
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "ref": "source",
+          "name": "Hydrosurge"
+        }
+      ],
+      "fixture": "empty_main",
+      "seed": 123,
+      "name": "Hydrosurge_NoCreatureTarget"
+    }
+  ],
+  "csvid": 12580,
+  "card": "Hydrosurge",
+  "version": 1
+}

@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "card": "Bright Reprisal",
+  "csvid": 17361,
+  "reason": "Bound card_dummy handler rejects eligible casts; full resolution scripts are deferred until a real handler is available. Not executed or counted as passing coverage.",
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 1,
+          "player": 1,
+          "op": "turn"
+        },
+        {
+          "ref": "attacker",
+          "value": 1,
+          "op": "attack"
+        },
+        {
+          "ref": "attacker",
+          "player": -1,
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "ref": "attacker",
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "ref": "witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "value": 5,
+          "player": 1,
+          "zone": "graveyard",
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 106,
+          "player": 1,
+          "index": 4,
+          "op": "assert_zone_card"
+        },
+        {
+          "value": 5,
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 17361,
+          "player": 0,
+          "index": 4,
+          "op": "assert_zone_card"
+        },
+        {
+          "value": 5,
+          "player": 0,
+          "zone": "hand",
+          "op": "assert_zone"
+        },
+        {
+          "value": 6,
+          "player": 0,
+          "zone": "library",
+          "op": "assert_zone"
+        },
+        {
+          "zone": "library",
+          "value": 188,
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "hand",
+          "index": 4,
+          "value": 91
+        }
+      ],
+      "setup": [
+        {
+          "ref": "source",
+          "player": 0,
+          "zone": "hand",
+          "name": "Bright Reprisal"
+        },
+        {
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        }
+      ],
+      "name": "BrightReprisal_attack_removal",
+      "fixture": "stocked_zones"
+    }
+  ]
+}

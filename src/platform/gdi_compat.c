@@ -2310,11 +2310,15 @@ int SetDIBitsToDevice(HDC dc, int x, int y, DWORD width, DWORD height,
   return (int)height;
 }
 
+static void (*presentation_guard)(const char *);
+void shandalar_set_presentation_guard(void (*guard)(const char *)) { presentation_guard = guard; }
+void shandalar_require_presentation(const char *operation) { if (presentation_guard) presentation_guard(operation); }
 int MessageBoxA(HWND window, LPCSTR message, LPCSTR title, UINT flags)
 {
   UINT button_type = flags & 0x0f;
   const char *caption = title ? title : "Shandalar";
   const char *text = message ? message : "";
+  shandalar_require_presentation(message ? message : "unexpected MessageBox request");
   (void)window;
   fprintf(stderr, "%s: %s\n", caption, text);
 

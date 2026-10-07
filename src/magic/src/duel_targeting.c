@@ -1,3 +1,4 @@
+#include "duel_host.h"
 #include <stdlib.h>
 #include <stddef.h>
 #include <string.h>
@@ -15,6 +16,8 @@
 #include "magic/src/duel_runtime.h"
 #include "global_strings.h"
 #include "shared_startup.h"
+
+int choose_ai_main_phase_action(int player);
 
 int can_target(target_definition_t *td)
 {
@@ -293,6 +296,7 @@ int select_from_graveyard_with_dialog(int player,
 // FUNCTION: SHANDALAR 0x00558941
 int choose_a_number(int player, char *prompt, int maxnum)
 {
+  if (duel_host_scripted_input()) return duel_host_choose(DUEL_CHOICE_NUMBER, player, prompt, maxnum, NULL, NULL);
   int chosen;
 
   if (g_duel_ai_mode_state == 1)
@@ -322,6 +326,7 @@ int choose_a_number(int player, char *prompt, int maxnum)
 // FUNCTION: SHANDALAR 0x005589ed
 int choose_a_color(int player, const char *prompt, int use_color_names_instead_of_land, int ai_choice, unsigned int available_colors)
 {
+  if (duel_host_scripted_input()) return duel_host_choose(DUEL_CHOICE_COLOR, player, prompt, available_colors, NULL, NULL);
   int chosen_color;
 
   if (g_duel_ai_mode_state == 1)
@@ -586,6 +591,16 @@ int select_card_for_action(int player,
                            char *prompt,
                            int dialog_mode)
 {
+  if (duel_host_is_headless()) {
+    int selected = duel_host_scripted_input()
+      ? duel_host_choose(DUEL_CHOICE_PRIORITY, player, prompt, 0, NULL, NULL)
+      : choose_ai_main_phase_action(player);
+    if (selected == -2 || (!duel_host_scripted_input() && selected == -1)) { g_target_selection_status_code = -2; g_target_player_choice = player; return -1; }
+    if (selected < 0 || selected >= g_active_cards_count[player]) duel_host_fail("illegal priority choice");
+    g_target_selection_status_code = 0; g_target_player_choice = player;
+    return selected;
+  }
+
   unsigned int modal_required_type; /* ebp - 0x20c */
   int stack_card;                   /* ebp - 0x208 */
   int action_msg;                   /* ebp - 0x204 */

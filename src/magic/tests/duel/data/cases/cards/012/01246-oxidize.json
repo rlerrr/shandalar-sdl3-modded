@@ -1,0 +1,296 @@
+{
+  "version": 1,
+  "card": "Oxidize",
+  "csvid": 1246,
+  "cases": [
+    {
+      "name": "Oxidize_DestroyOrExile_Sol_Ring",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Oxidize"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "target",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "witness",
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield"
+        },
+        {
+          "player": 0,
+          "zone": "battlefield",
+          "ref": "other_eligible",
+          "name": "Sol Ring"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 1246
+        },
+        {
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Oxidize_SecondEligible_Ornithopter",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Oxidize"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "target",
+          "name": "Ornithopter"
+        },
+        {
+          "ref": "witness",
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield"
+        },
+        {
+          "player": 0,
+          "zone": "battlefield",
+          "ref": "other_eligible",
+          "name": "Ornithopter"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 514
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 1246
+        },
+        {
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Oxidize_NoLegalTarget_Glorious_Anthem",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Oxidize"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "invalid",
+          "name": "Glorious Anthem"
+        }
+      ],
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Oxidize_IndestructibleArtifactSurvives",
+      "fixture": "empty_main",
+      "seed": 123,
+      "steps": [
+        {
+          "player": -1,
+          "ref": "target",
+          "op": "choose_target"
+        },
+        {
+          "value": 1,
+          "ref": "source",
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 1,
+          "ref": "target",
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "value": 1,
+          "ref": "witness",
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "zone": "graveyard",
+          "value": 0,
+          "player": 1,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 1,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 1246,
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "setup": [
+        {
+          "name": "Oxidize",
+          "player": 0,
+          "ref": "source",
+          "zone": "hand"
+        },
+        {
+          "name": "Darksteel Myr",
+          "player": 1,
+          "ref": "target",
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "player": 0,
+          "ref": "witness",
+          "zone": "battlefield"
+        },
+        {
+          "name": "Darksteel Myr",
+          "player": 0,
+          "ref": "other_eligible",
+          "zone": "battlefield"
+        }
+      ]
+    }
+  ]
+}

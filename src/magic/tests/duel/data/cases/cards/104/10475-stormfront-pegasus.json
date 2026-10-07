@@ -1,0 +1,472 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "name": "StormfrontPegasus_CastFromHand",
+      "steps": [
+        {
+          "value": 1,
+          "ref": "source",
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "zone": "hand",
+          "value": 0,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "battlefield",
+          "value": 1,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "battlefield",
+          "value": 10475,
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "value": 1,
+          "zone": "battlefield",
+          "player": 0,
+          "index": 0,
+          "property": "sick",
+          "op": "assert_zone_state"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Stormfront Pegasus",
+          "ref": "source",
+          "zone": "hand",
+          "player": 0
+        }
+      ],
+      "fixture": "empty_main"
+    },
+    {
+      "name": "StormfrontPegasus_OracleStats",
+      "steps": [
+        {
+          "value": 1,
+          "ref": "creature",
+          "op": "assert_card",
+          "property": "in_play"
+        },
+        {
+          "value": 2,
+          "ref": "creature",
+          "op": "assert_card",
+          "property": "power"
+        },
+        {
+          "value": 1,
+          "ref": "creature",
+          "op": "assert_card",
+          "property": "toughness"
+        },
+        {
+          "zone": "battlefield",
+          "value": 1,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "battlefield",
+          "value": 10475,
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Stormfront Pegasus",
+          "ref": "creature",
+          "zone": "battlefield",
+          "player": 0
+        }
+      ],
+      "fixture": "empty_main"
+    },
+    {
+      "name": "StormfrontPegasus_FlyingBlockedByReach",
+      "steps": [
+        {
+          "value": 1,
+          "player": 0,
+          "op": "turn"
+        },
+        {
+          "value": 1,
+          "ref": "striker",
+          "op": "attack"
+        },
+        {
+          "other": "striker",
+          "value": 1,
+          "ref": "spider",
+          "op": "block"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "value": 1,
+          "ref": "spider",
+          "op": "assert_card",
+          "property": "in_play"
+        },
+        {
+          "value": 2,
+          "ref": "spider",
+          "op": "assert_card",
+          "property": "damage"
+        },
+        {
+          "value": 0,
+          "ref": "striker",
+          "op": "assert_card",
+          "property": "in_play"
+        },
+        {
+          "player": 0,
+          "value": 1,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "value": 10475,
+          "op": "assert_zone_card",
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "value": 0,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 0
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Stormfront Pegasus",
+          "ref": "striker",
+          "zone": "battlefield",
+          "player": 0
+        },
+        {
+          "name": "Giant Spider",
+          "ref": "spider",
+          "zone": "battlefield",
+          "player": 1
+        }
+      ],
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "value": 1,
+          "op": "turn",
+          "player": 0
+        },
+        {
+          "value": 1,
+          "ref": "pegasus",
+          "op": "attack"
+        },
+        {
+          "other": "pegasus",
+          "value": 0,
+          "ref": "ground",
+          "op": "block"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "property": "in_play",
+          "value": 1,
+          "ref": "pegasus",
+          "op": "assert_card"
+        },
+        {
+          "value": 18,
+          "op": "assert_life",
+          "player": 1
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 0
+        },
+        {
+          "player": 0,
+          "value": 0,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "value": 0,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "name": "StormfrontPegasus_FlyingDealsCombatDamage",
+      "setup": [
+        {
+          "zone": "battlefield",
+          "name": "Stormfront Pegasus",
+          "ref": "pegasus",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "ref": "ground",
+          "player": 1
+        }
+      ],
+      "fixture": "empty_main",
+      "seed": 123
+    }
+  ],
+  "csvid": 10475,
+  "card": "Stormfront Pegasus"
+}

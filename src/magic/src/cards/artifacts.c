@@ -1,3 +1,4 @@
+#include "magic/src/duel_host.h"
 #include <stdio.h>
 #include <string.h>
 #include "../cards.h"
@@ -209,7 +210,7 @@ int card_time_vault(int player, int card, event_t event)
   if (event == EVENT_RESOLVE_ACTIVATION)
   {
 
-    if (rand() % 5 < 1)
+    if (duel_host_random() % 5 < 1)
     {
       g_ai_modifier += 0x30;
     }

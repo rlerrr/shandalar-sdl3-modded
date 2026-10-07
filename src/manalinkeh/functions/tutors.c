@@ -1,3 +1,4 @@
+#include "magic/src/duel_host.h"
 // Interactive searching and manipulation of libraries/graveyards/exile.
 
 #include "manalink.h"
@@ -6,6 +7,11 @@ int show_deck_exe(int player, const int* deck, int num_cards, const char* prompt
 
 int show_deck(int player, const int* deck, int num_cards, const char* prompt, int suppress_done_label, /* const char* */int done_label)
 {
+	if (duel_host_is_headless()) {
+		int choice = duel_host_choose(DUEL_CHOICE_ZONE, player, prompt, num_cards, deck, NULL);
+		if (choice < -1 || choice >= num_cards) duel_host_fail("illegal deck display choice");
+		return choice;
+	}
 	call_sub_437E20_unless_ai_is_speculating();	// force redisplay
 	return show_deck_exe(player, deck, num_cards, prompt, suppress_done_label, done_label);
 }
@@ -31,8 +37,17 @@ int get_average_value_from_zone(int targ_player, const int *s_location, int zone
 
 const char* hack_override_show_deck_done_button_label = NULL;
 int select_card_from_zone(int player, int targ_player, const int *s_location, int zone_count, int must_select, int ai_selection_mode, int test_type, test_definition_t *this_test){
+  if (duel_host_scripted_input())
+  {
+    int selected = duel_host_choose(DUEL_CHOICE_ZONE, player, this_test->message, zone_count, s_location, NULL);
+    if (selected == -1 && !must_select) return -1;
+    if (selected < 0 || selected >= zone_count ||
+        !new_make_test(targ_player, s_location[selected], test_type, this_test))
+      duel_host_fail("illegal scripted zone selection");
+    return selected;
+  }
 	int selected = -1;
-	if( player != AI ){
+	if( player != AI && !(duel_host_is_headless() && !duel_host_scripted_input()) ){
 		while( 1 ){
 				const char* label = hack_override_show_deck_done_button_label;
 				if (!label){

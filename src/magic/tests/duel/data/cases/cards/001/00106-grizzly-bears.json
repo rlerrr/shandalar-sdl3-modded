@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Grizzly Bears",
+  "csvid": 106,
+  "cases": [
+    {
+      "name": "GrizzlyBears_FreshCastAttack",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,461 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "steps": [
+        {
+          "value": 1,
+          "ref": "source",
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 0,
+          "zone": "hand",
+          "op": "assert_zone",
+          "player": 0
+        },
+        {
+          "value": 1,
+          "zone": "battlefield",
+          "op": "assert_zone",
+          "player": 0
+        },
+        {
+          "player": 0,
+          "value": 12724,
+          "zone": "battlefield",
+          "op": "assert_zone_card",
+          "index": 0
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "value": 1,
+          "zone": "battlefield",
+          "player": 0,
+          "index": 0,
+          "property": "sick",
+          "op": "assert_zone_state"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "ref": "source",
+          "zone": "hand",
+          "name": "Fencing Ace",
+          "player": 0
+        }
+      ],
+      "name": "FencingAce_CastFromHand",
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "value": 1,
+          "property": "in_play",
+          "ref": "creature",
+          "op": "assert_card"
+        },
+        {
+          "value": 1,
+          "property": "power",
+          "ref": "creature",
+          "op": "assert_card"
+        },
+        {
+          "value": 1,
+          "property": "toughness",
+          "ref": "creature",
+          "op": "assert_card"
+        },
+        {
+          "player": 0,
+          "value": 12724,
+          "zone": "battlefield",
+          "op": "assert_zone_card",
+          "index": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "ref": "creature",
+          "zone": "battlefield",
+          "name": "Fencing Ace",
+          "player": 0
+        }
+      ],
+      "name": "FencingAce_OracleStats",
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "value": 1,
+          "op": "turn",
+          "player": 0
+        },
+        {
+          "value": 1,
+          "ref": "striker",
+          "op": "attack"
+        },
+        {
+          "value": 1,
+          "ref": "bear",
+          "op": "block",
+          "other": "striker"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "value": 0,
+          "property": "in_play",
+          "ref": "bear",
+          "op": "assert_card"
+        },
+        {
+          "value": 1,
+          "zone": "graveyard",
+          "op": "assert_zone",
+          "player": 1
+        },
+        {
+          "player": 1,
+          "value": 106,
+          "zone": "graveyard",
+          "op": "assert_zone_card",
+          "index": 0
+        },
+        {
+          "player": 0,
+          "value": 1,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "value": 12724,
+          "op": "assert_zone_card",
+          "zone": "graveyard"
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 0
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 1
+        },
+        {
+          "property": "in_play",
+          "value": 0,
+          "op": "assert_card",
+          "ref": "striker"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "ref": "striker",
+          "zone": "battlefield",
+          "name": "Fencing Ace",
+          "player": 0
+        },
+        {
+          "ref": "bear",
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "player": 1
+        }
+      ],
+      "name": "FencingAce_DoubleStrikeDealsBothDamageSteps",
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "value": 1,
+          "op": "turn",
+          "player": 0
+        },
+        {
+          "value": 1,
+          "ref": "ace",
+          "op": "attack"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "property": "in_play",
+          "value": 1,
+          "ref": "ace",
+          "op": "assert_card"
+        },
+        {
+          "value": 18,
+          "op": "assert_life",
+          "player": 1
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 0
+        },
+        {
+          "player": 0,
+          "value": 0,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "value": 0,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "name": "FencingAce_UnblockedDoubleStrikeDamage",
+      "setup": [
+        {
+          "zone": "battlefield",
+          "name": "Fencing Ace",
+          "ref": "ace",
+          "player": 0
+        }
+      ],
+      "fixture": "empty_main",
+      "seed": 123
+    }
+  ],
+  "csvid": 12724,
+  "card": "Fencing Ace"
+}

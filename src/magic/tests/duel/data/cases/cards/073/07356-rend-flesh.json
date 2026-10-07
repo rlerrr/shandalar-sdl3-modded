@@ -1,0 +1,157 @@
+{
+  "card": "Rend Flesh",
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "value": 1,
+          "op": "cast",
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "value": 106,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "value": 7356,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "witness"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 7356,
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 106,
+          "zone": "graveyard"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Rend Flesh",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "ref": "witness"
+        }
+      ],
+      "name": "RendFlesh_creature_removal",
+      "fixture": "empty_main"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Rend Flesh",
+          "ref": "source"
+        }
+      ],
+      "name": "RendFlesh_NoEligibleTarget",
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "ref": "source",
+          "value": 0,
+          "op": "can_cast"
+        },
+        {
+          "value": 1,
+          "ref": "spirit",
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "name": "RendFlesh_SpiritInvalid",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "name": "Rend Flesh",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "name": "Kami of Ancient Law",
+          "zone": "battlefield",
+          "ref": "spirit"
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "version": 1,
+  "csvid": 7356
+}

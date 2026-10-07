@@ -1,3 +1,4 @@
+#include "magic/src/duel_host.h"
 #include "platform/file_io.h"
 #include "manalink.h"
 
@@ -1145,6 +1146,22 @@ select_target_maybe_force(int player, int card,
 						  int illegal_state,
 						  const char* prompt, int allow_cancel, target_t* ret_tgt)
 {
+  if (duel_host_scripted_input())
+  {
+    int target_card;
+    int target_player = duel_host_choose(DUEL_CHOICE_TARGET, who_chooses, prompt, 0, NULL, &target_card);
+    if (target_player == -1 && (allow_cancel & 1)) return 0;
+    if (target_player < 0 || target_player > 1 || target_card < -1 || target_card >= 151 ||
+        !validate_target_impl(player, card, target_player, target_card, NULL,
+          who_chooses, allowed_controller, preferred_controller, zone,
+          required_type, illegal_type, required_abilities, illegal_abilities,
+          required_color, illegal_color, extra, required_subtype,
+          power_requirement, toughness_requirement, special, required_state, illegal_state))
+      duel_host_fail("illegal scripted target");
+    ret_tgt->player = target_player; ret_tgt->card = target_card;
+    return 1;
+  }
+
   int result = select_target_impl(player, card,
 								  who_chooses, allowed_controller, preferred_controller, zone,
 								  required_type, illegal_type, required_abilities, illegal_abilities,
@@ -1312,7 +1329,7 @@ int choose_default_target(int player, int card, target_definition_t *td){
 	card_instance_t *instance = get_card_instance(player, card);
 
 	// if there is only 1 target, then pick it
-	if( get_setting(SETTING_SMART_TARGET) ){
+	if( !duel_host_is_headless() && get_setting(SETTING_SMART_TARGET) ){
 
 		// read in which cards should auto target
 		if( read_auto_target_file == 0 ){

@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "card": "Pacifism",
+  "csvid": 968,
+  "cases": [
+    {
+      "name": "Pacifism_PreventsEnchantedCreatureAttacking",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Pacifism",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "ref": "control_attacker",
+          "zone": "battlefield",
+          "player": 0,
+          "name": "Grizzly Bears"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "attack",
+          "value": 1,
+          "ref": "control_attacker"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Pacifism_PreventsEnchantedCreatureBlocking",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Pacifism",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "ref": "control_blocker",
+          "zone": "battlefield",
+          "player": 1,
+          "name": "Grizzly Bears"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "blocker",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 0
+        },
+        {
+          "op": "block",
+          "other": "attacker",
+          "ref": "control_blocker",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Pacifism_NoCreatureCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Pacifism",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

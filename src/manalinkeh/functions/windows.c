@@ -1,3 +1,4 @@
+#include "magic/src/duel_host.h"
 // -*- c-basic-offset:2 -*-
 #include <windows.h>
 
@@ -1637,6 +1638,7 @@ static const char* wav_filenames[WAV_HIGHEST + 1] =
 
 int play_sound_effect(wav_t soundnum)
 {
+  if (duel_host_is_headless()) return 0;
   if (MANALINKEH_IS_AI_SPECULATING())
     return 0;
 

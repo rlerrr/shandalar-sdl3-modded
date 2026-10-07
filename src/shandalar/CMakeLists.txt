@@ -33,8 +33,7 @@ add_custom_target(shandalar_version_header_target
   VERBATIM
 )
 
-add_executable(shandalar
-  src/sdl_main.c
+add_library(shandalar_duel_engine STATIC
   src/shandalar.c
   src/adventure_input.c
   src/adventure_main_menu.c
@@ -73,7 +72,10 @@ add_executable(shandalar
   ../magic/src/global_strings.c
   ../magic/src/shared_startup.c
   ../magic/src/carddata.c
+  ../magic/src/duel_host.c
 )
+add_executable(shandalar src/sdl_main.c)
+target_link_libraries(shandalar PRIVATE shandalar_duel_engine)
 if(WIN32 AND NOT EMSCRIPTEN)
   set(shandalar_icon_resource "${CMAKE_CURRENT_BINARY_DIR}/shandalar_icon.rc")
   file(GENERATE OUTPUT "${shandalar_icon_resource}"
@@ -90,46 +92,47 @@ if(WIN32 AND NOT EMSCRIPTEN)
   set_source_files_properties("${shandalar_icon_object}" PROPERTIES GENERATED TRUE EXTERNAL_OBJECT TRUE)
   target_sources(shandalar PRIVATE "${shandalar_icon_object}")
 endif()
-add_dependencies(shandalar shandalar_version_header_target)
+add_dependencies(shandalar_duel_engine shandalar_version_header_target)
 
-target_compile_definitions(shandalar PRIVATE
+target_compile_definitions(shandalar_duel_engine PUBLIC
   MODERN_FIXES
   SHANDALAR
   SHANDALAR_NATIVE_ASSET_ROOT="${SHANDALAR_MODDED_ASSET_DIR}"
   LoadPcxIntoPageNoPalette=ShandalarLoadPcxIntoPageNoPalette
 )
 if(MSVC)
-  target_compile_options(shandalar PRIVATE
+  target_compile_options(shandalar_duel_engine PRIVATE
+    /Gy
     "/FI${SHANDALAR_SRC_ROOT}/manalinkeh/mok_manalink_redirects.h"
   )
 else()
-  target_compile_options(shandalar PRIVATE
+  target_compile_options(shandalar_duel_engine PRIVATE
     "SHELL:-include ${SHANDALAR_SRC_ROOT}/manalinkeh/mok_manalink_redirects.h"
   )
 endif()
 # Non-Windows libcs lack MSVC's extras (_itoa, _stricmp, ...).
 if(NOT WIN32)
-  target_compile_options(shandalar PRIVATE
+  target_compile_options(shandalar_duel_engine PRIVATE
     "SHELL:-include platform/legacy_io.h"
   )
 endif()
-target_include_directories(shandalar PRIVATE
+target_include_directories(shandalar_duel_engine PUBLIC
   "${SHANDALAR_SRC_ROOT}"
   "${CMAKE_CURRENT_SOURCE_DIR}"
   "${CMAKE_CURRENT_BINARY_DIR}/generated"
 )
-target_include_directories(shandalar BEFORE PRIVATE
+target_include_directories(shandalar_duel_engine BEFORE PUBLIC
   "${SHANDALAR_SRC_ROOT}/magic/compat"
 )
-target_link_libraries(shandalar PRIVATE
+target_link_libraries(shandalar_duel_engine PUBLIC
   manalinkeh_static
-  facemaker_legacy_ui
-  deck_imgui_interaction
-  legacy_win32_imgui_bridge
   deckdll_modded
   cardart_modded
   drawcard_modded
   shandalar_ui_support
+  facemaker_legacy_ui
+  deck_imgui_interaction
+  legacy_win32_imgui_bridge
   magsnd_static
   statwin_static
   SDL3::SDL3
@@ -264,6 +267,10 @@ if(EMSCRIPTEN)
 endif()
 
 install(TARGETS shandalar RUNTIME DESTINATION .)
+
+if(SHANDALAR_BUILD_TESTS AND SHANDALAR_BUILD_DUEL_TESTS)
+  add_subdirectory(../magic/tests/duel "${CMAKE_CURRENT_BINARY_DIR}/duel_tests")
+endif()
 
 find_package(Python3 REQUIRED COMPONENTS Interpreter)
 set(mok_legacy_effect_source "${CMAKE_CURRENT_BINARY_DIR}/generated/mok_legacy_effect.c")

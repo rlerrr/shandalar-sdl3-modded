@@ -1,0 +1,167 @@
+{
+  "version": 1,
+  "card": "Inspired Charge",
+  "csvid": 11135,
+  "cases": [
+    {
+      "name": "Inspired_Charge_OnlyMyTeam",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Inspired Charge",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 11135
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Inspired_Charge_ExpiresAtCleanup",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Inspired Charge",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Savannah Lions",
+          "ref": "extra",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "extra",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "extra",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "extra",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "extra",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 11135
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Inspired_Charge_NoCreatures",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Inspired Charge",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 11135
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

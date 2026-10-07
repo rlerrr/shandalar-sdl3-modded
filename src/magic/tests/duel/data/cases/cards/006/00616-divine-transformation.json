@@ -1,0 +1,182 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "friendly"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 616,
+          "zone": "battlefield"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 5
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Divine_Transformation_BuffPersistsThroughCleanup",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Divine Transformation",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "turn",
+          "value": 0,
+          "player": 1
+        },
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "enemy"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "ref": "enemy",
+          "op": "destroy"
+        },
+        {
+          "op": "assert_card",
+          "property": "in_play",
+          "ref": "enemy",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 6
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 616
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Divine_Transformation_AttachedEffectAndAuraGoesToGraveyard",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 1,
+          "name": "Divine Transformation",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "value": 0,
+          "op": "assert_stack"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "value": 616
+        }
+      ],
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "ref": "source",
+          "name": "Divine Transformation"
+        }
+      ],
+      "fixture": "empty_main",
+      "seed": 123,
+      "name": "Divine_Transformation_NoCreatureTarget"
+    }
+  ],
+  "csvid": 616,
+  "card": "Divine Transformation",
+  "version": 1
+}

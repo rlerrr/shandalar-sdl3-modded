@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Disenchant",
+  "csvid": 64,
+  "cases": [
+    {
+      "name": "Disenchant_DestroyArtifact",
+      "fixture": "mixed_targets",
+      "setup": [
+        {"name": "Disenchant", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "artifact", "player": -1},
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "artifact", "property": "in_play", "value": 0},
+        {"op": "assert_zone", "player": 1, "zone": "graveyard", "value": 5},
+        {"op": "assert_zone_contains", "player": 0, "zone": "graveyard", "value": 64},
+        {"op": "assert_mana", "player": 0, "color": 5, "value": 9}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Disenchant_DestroyEnchantment",
+      "fixture": "mixed_targets",
+      "setup": [
+        {"name": "Disenchant", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Glorious Anthem", "ref": "enchantment", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "enchantment", "player": -1},
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "enchantment", "property": "in_play", "value": 0},
+        {"op": "assert_zone", "player": 1, "zone": "graveyard", "value": 5}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Disenchant_NoArtifactOrEnchantmentTarget",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Disenchant", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 0},
+        {"op": "assert_stack", "value": 0},
+        {"op": "assert_mana", "player": 0, "color": 5, "value": 10}
+      ],
+      "seed": 123
+    }
+  ]
+}

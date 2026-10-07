@@ -1,0 +1,119 @@
+{
+  "card": "Bright Reprisal",
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 1,
+          "player": 1,
+          "op": "turn"
+        },
+        {
+          "ref": "attacker",
+          "value": 1,
+          "op": "attack"
+        },
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "ref": "source",
+          "player": 0,
+          "zone": "hand",
+          "name": "Bright Reprisal"
+        },
+        {
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        }
+      ],
+      "name": "BrightReprisal_EligibleCreatureCanBeCast",
+      "fixture": "stocked_zones"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Bright Reprisal",
+          "ref": "source"
+        }
+      ],
+      "name": "BrightReprisal_NoEligibleTarget",
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "ref": "source",
+          "value": 0,
+          "op": "can_cast"
+        },
+        {
+          "value": 1,
+          "ref": "idle",
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "name": "BrightReprisal_NonattackerInvalid",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "name": "Bright Reprisal",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "ref": "idle"
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "version": 1,
+  "csvid": 17361
+}

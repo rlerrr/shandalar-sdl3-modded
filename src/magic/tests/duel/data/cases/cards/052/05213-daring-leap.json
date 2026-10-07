@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "card": "Daring Leap",
+  "csvid": 5213,
+  "cases": [
+    {
+      "seed": 123,
+      "name": "DaringLeap_ExactStatsAndExpiration",
+      "fixture": "empty_main",
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 5213,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "value": 3,
+          "ref": "target",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 3,
+          "ref": "target",
+          "property": "toughness"
+        },
+        {
+          "op": "assert_card",
+          "value": 8,
+          "ref": "witness",
+          "property": "power"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "target",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "target",
+          "property": "toughness"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Daring Leap",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "ref": "target"
+        },
+        {
+          "player": 0,
+          "name": "Force of Nature",
+          "zone": "battlefield",
+          "ref": "witness"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "DaringLeap_FlyingControlsBlockLegality",
+      "fixture": "combat",
+      "steps": [
+        {
+          "op": "attack",
+          "value": 1,
+          "ref": "attacker"
+        },
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "attacker"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 5213,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "value": 3,
+          "ref": "attacker",
+          "property": "power"
+        },
+        {
+          "op": "block",
+          "value": 0,
+          "ref": "blocker",
+          "other": "attacker"
+        },
+        {
+          "op": "block",
+          "value": 1,
+          "ref": "airblocker",
+          "other": "attacker"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "attacker",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "airblocker",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 2
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Daring Leap",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "name": "Air Elemental",
+          "zone": "battlefield",
+          "ref": "airblocker"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "DaringLeap_FirstStrikeSavesSmallBlocker",
+      "fixture": "empty_main",
+      "steps": [
+        {
+          "player": 1,
+          "op": "turn",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "value": 1,
+          "ref": "enemy"
+        },
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "guard"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 5213,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "guard",
+          "property": "power"
+        },
+        {
+          "op": "block",
+          "value": 1,
+          "ref": "guard",
+          "other": "enemy"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "guard",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "enemy",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Daring Leap",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 0,
+          "name": "Raging Goblin",
+          "zone": "battlefield",
+          "ref": "guard"
+        },
+        {
+          "player": 1,
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "ref": "enemy"
+        }
+      ]
+    },
+    {
+      "name": "DaringLeap_FlyingExpiresBeforeCombat",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Daring Leap",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "guard",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "attacker"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5213
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "guard",
+          "other": "attacker",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

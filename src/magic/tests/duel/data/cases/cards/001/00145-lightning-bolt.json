@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Lightning Bolt",
+  "csvid": 145,
+  "cases": [
+    {
+      "name": "LightningBolt_Damage",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Lightning Bolt",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

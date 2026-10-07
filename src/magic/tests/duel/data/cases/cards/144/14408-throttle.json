@@ -1,0 +1,268 @@
+{
+  "version": 1,
+  "card": "Throttle",
+  "csvid": 14408,
+  "cases": [
+    {
+      "seed": 123,
+      "name": "Throttle_SurvivorExactStatsCleanup",
+      "fixture": "empty_main",
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 14408,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "value": 4,
+          "ref": "target",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 4,
+          "ref": "target",
+          "property": "toughness"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "witness",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "witness",
+          "property": "toughness"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "value": 8,
+          "ref": "target",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 8,
+          "ref": "target",
+          "property": "toughness"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Throttle",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "name": "Force of Nature",
+          "zone": "battlefield",
+          "ref": "target"
+        },
+        {
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "ref": "witness"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "Throttle_ZeroToughnessKillsIndestructibleMyr",
+      "fixture": "empty_main",
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 14408,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "target",
+          "property": "in_play"
+        },
+        {
+          "value": 11238,
+          "player": 1,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "witness",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "witness",
+          "property": "power"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Throttle",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "name": "Darksteel Myr",
+          "zone": "battlefield",
+          "ref": "target"
+        },
+        {
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "ref": "witness"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "Throttle_LethalDebuffMovesLions",
+      "fixture": "empty_main",
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 14408,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "target",
+          "property": "in_play"
+        },
+        {
+          "value": 213,
+          "player": 1,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "witness",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Throttle",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "name": "Savannah Lions",
+          "zone": "battlefield",
+          "ref": "target"
+        },
+        {
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "ref": "witness"
+        }
+      ]
+    }
+  ]
+}

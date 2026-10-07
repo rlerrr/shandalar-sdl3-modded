@@ -1,0 +1,223 @@
+{
+  "version": 1,
+  "card": "Natural End",
+  "csvid": 12431,
+  "cases": [
+    {
+      "name": "Natural_End_DestroyOrExile_Sol_Ring",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Natural End"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "target",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "witness",
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield"
+        },
+        {
+          "player": 0,
+          "zone": "battlefield",
+          "ref": "other_eligible",
+          "name": "Sol Ring"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 230
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 23
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 12431
+        },
+        {
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Natural_End_SecondEligible_Glorious_Anthem",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Natural End"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "target",
+          "name": "Glorious Anthem"
+        },
+        {
+          "ref": "witness",
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield"
+        },
+        {
+          "player": 0,
+          "zone": "battlefield",
+          "ref": "other_eligible",
+          "name": "Glorious Anthem"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 966
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 23
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 12431
+        },
+        {
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Natural_End_NoLegalTarget_Grizzly_Bears",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Natural End"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "invalid",
+          "name": "Grizzly Bears"
+        }
+      ],
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

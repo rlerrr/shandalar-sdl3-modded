@@ -13,6 +13,7 @@ typedef enum ShandalarAssetState {
 } ShandalarAssetState;
 
 void shandalar_assets_set_root(const char *root);
+void shandalar_assets_set_fetch_enabled(int enabled);
 const char *shandalar_assets_root(void);
 int shandalar_assets_join_path(char *out, unsigned int out_size, const char *relative_path);
 ShandalarAssetState shandalar_assets_prefetch(const char *relative_path);

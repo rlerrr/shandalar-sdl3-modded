@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "card": "Shock",
+  "csvid": 1147,
+  "cases": [
+    {
+      "name": "Shock_DamageCreature",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Shock",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Air Elemental",
+          "ref": "large_creature",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "large_creature",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "large_creature",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "large_creature",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1147
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Shock_LethalCreatureDamage",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Shock",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

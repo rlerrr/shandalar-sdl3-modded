@@ -1,0 +1,191 @@
+{
+  "version": 1,
+  "card": "Smother",
+  "csvid": 6270,
+  "cases": [
+    {
+      "name": "Smother_KillBear",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Smother",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone_contains",
+          "value": 6270
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 4,
+          "value": 106
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Smother_NoLegalTarget",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Smother",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Air Elemental",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "steps": [
+        {
+          "ref": "source",
+          "op": "can_cast",
+          "value": 1
+        },
+        {
+          "player": -1,
+          "ref": "target",
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "op": "cast",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "zone": "graveyard",
+          "player": 1,
+          "value": 4
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "graveyard",
+          "player": 0,
+          "value": 6270
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "fixture": "mixed_targets",
+      "seed": 123,
+      "setup": [
+        {
+          "ref": "source",
+          "zone": "hand",
+          "player": 0,
+          "name": "Smother"
+        },
+        {
+          "ref": "target",
+          "zone": "battlefield",
+          "player": 1,
+          "name": "Darksteel Myr"
+        }
+      ],
+      "name": "Smother_LegalManaValueThreeIndestructibleSurvives"
+    }
+  ]
+}

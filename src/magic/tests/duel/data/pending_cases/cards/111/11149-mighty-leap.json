@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "card": "Mighty Leap",
+  "csvid": 11149,
+  "reason": "Handler forbids opposing creatures. Full opponent-target resolution deferred; permission case retains Oracle expectation.",
+  "cases": [
+    {
+      "steps": [
+        {
+          "ref": "target",
+          "player": -1,
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "op": "cast",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "zone": "graveyard",
+          "player": 0,
+          "op": "assert_zone_contains",
+          "value": 11149
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "property": "power",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 10
+        },
+        {
+          "property": "toughness",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 10
+        },
+        {
+          "property": "power",
+          "ref": "witness",
+          "op": "assert_card",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "property": "power",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 8
+        },
+        {
+          "property": "toughness",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 8
+        }
+      ],
+      "seed": 123,
+      "fixture": "empty_main",
+      "name": "MightyLeap_AffectsOpponentsCreature",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Mighty Leap",
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "player": 1,
+          "name": "Force of Nature",
+          "ref": "target"
+        },
+        {
+          "zone": "battlefield",
+          "player": 0,
+          "name": "Grizzly Bears",
+          "ref": "witness"
+        }
+      ]
+    }
+  ]
+}

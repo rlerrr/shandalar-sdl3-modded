@@ -1,0 +1,129 @@
+{
+  "version": 1,
+  "card": "Demystify",
+  "csvid": 1016,
+  "cases": [
+    {
+      "name": "Demystify_DestroyOrExile_Glorious_Anthem",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Demystify"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "target",
+          "name": "Glorious Anthem"
+        },
+        {
+          "ref": "witness",
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield"
+        },
+        {
+          "player": 0,
+          "zone": "battlefield",
+          "ref": "other_eligible",
+          "name": "Glorious Anthem"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 966
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 1016
+        },
+        {
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Demystify_NoLegalTarget_Sol_Ring",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Demystify"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "invalid",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "witness",
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

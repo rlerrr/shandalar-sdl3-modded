@@ -62,8 +62,8 @@ extern unsigned int g_card_types_in_play[2];
 extern csvid_and_numcards g_initial_library[2][200];
 extern int g_attacking_card_controller;
 extern int g_attacking_card;
-extern int g_card_on_stack_controller;
-extern int g_card_on_stack;
+extern int g_current_spell_player;
+extern int g_current_spell_card;
 extern int TENTATIVE_timestamp_player[500];
 extern int TENTATIVE_timestamp_card[500];
 extern int g_life_gained;
@@ -289,8 +289,10 @@ extern int shandalar_check_mana_multi(int player);
 #define initial_library g_initial_library
 #define attacking_card_controller g_attacking_card_controller
 #define attacking_card g_attacking_card
-#define card_on_stack_controller g_card_on_stack_controller
-#define card_on_stack g_card_on_stack
+/* The host's g_card_on_stack pair is activation-handler context.  Manalink
+ * uses these names for the spell exposed by the response window. */
+#define card_on_stack_controller g_current_spell_player
+#define card_on_stack g_current_spell_card
 #define timestamp_player TENTATIVE_timestamp_player
 #define timestamp_card TENTATIVE_timestamp_card
 #define life_gained g_life_gained

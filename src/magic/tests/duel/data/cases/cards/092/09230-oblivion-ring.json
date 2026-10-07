@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Oblivion Ring",
+  "csvid": 9230,
+  "cases": [
+    {
+      "name": "OblivionRing_ExileAndReturn",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Oblivion Ring",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 3
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "battlefield",
+          "index": 1,
+          "value": 106
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

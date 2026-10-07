@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "card": "Evacuation",
+  "csvid": 1031,
+  "cases": [
+    {
+      "name": "Evacuation_ReturnCreaturesBothPlayersKeepArtifact",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Evacuation",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "own",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Air Elemental",
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "own",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 106
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1031
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Evacuation_NoCreaturesStillResolves",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Evacuation",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1031
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

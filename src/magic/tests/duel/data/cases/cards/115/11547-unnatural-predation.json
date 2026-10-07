@@ -1,0 +1,254 @@
+{
+  "version": 1,
+  "card": "Unnatural Predation",
+  "csvid": 11547,
+  "cases": [
+    {
+      "seed": 123,
+      "name": "UnnaturalPredation_ExactStatsAndExpiration",
+      "fixture": "empty_main",
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 11547,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "value": 3,
+          "ref": "target",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 3,
+          "ref": "target",
+          "property": "toughness"
+        },
+        {
+          "op": "assert_card",
+          "value": 8,
+          "ref": "witness",
+          "property": "power"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "target",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "target",
+          "property": "toughness"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Unnatural Predation",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "ref": "target"
+        },
+        {
+          "player": 0,
+          "name": "Force of Nature",
+          "zone": "battlefield",
+          "ref": "witness"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "UnnaturalPredation_TrampleDealsExcessDamage",
+      "fixture": "combat",
+      "steps": [
+        {
+          "op": "attack",
+          "value": 1,
+          "ref": "attacker"
+        },
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "attacker"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 11547,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "block",
+          "value": 1,
+          "ref": "blocker",
+          "other": "attacker"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "blocker",
+          "property": "in_play"
+        },
+        {
+          "player": 1,
+          "op": "assert_life",
+          "value": 19
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 2
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Unnatural Predation",
+          "zone": "hand",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "ref": "target",
+          "player": -1,
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "op": "cast",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "zone": "graveyard",
+          "player": 0,
+          "op": "assert_zone_contains",
+          "value": 11547
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "property": "power",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 9
+        },
+        {
+          "property": "toughness",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 9
+        },
+        {
+          "property": "power",
+          "ref": "witness",
+          "op": "assert_card",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "property": "power",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 8
+        },
+        {
+          "property": "toughness",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 8
+        }
+      ],
+      "seed": 123,
+      "fixture": "empty_main",
+      "name": "UnnaturalPredation_AffectsOpponentsCreature",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Unnatural Predation",
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "player": 1,
+          "name": "Force of Nature",
+          "ref": "target"
+        },
+        {
+          "zone": "battlefield",
+          "player": 0,
+          "name": "Grizzly Bears",
+          "ref": "witness"
+        }
+      ]
+    }
+  ]
+}

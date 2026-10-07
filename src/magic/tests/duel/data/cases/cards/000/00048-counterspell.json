@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Counterspell",
+  "csvid": 48,
+  "cases": [
+    {
+      "name": "Counterspell_CounterSpell",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Giant Growth",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Counterspell",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

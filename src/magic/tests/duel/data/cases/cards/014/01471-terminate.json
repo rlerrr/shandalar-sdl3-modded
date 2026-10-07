@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "card": "Terminate",
+  "csvid": 1471,
+  "cases": [
+    {
+      "name": "Terminate_DestroyBlackCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Terminate",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Black Knight",
+          "ref": "victim",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "victim",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "victim",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 16
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1471
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Terminate_NoCreatureTarget",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Terminate",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

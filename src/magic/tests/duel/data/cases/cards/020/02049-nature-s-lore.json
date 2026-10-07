@@ -1,0 +1,199 @@
+{
+  "version": 1,
+  "card": "Nature's Lore",
+  "csvid": 2049,
+  "cases": [
+    {
+      "name": "NaturesLore_Search",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Nature's Lore",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 6
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_state",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 0,
+          "property": "tapped",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "NaturesLore_ChooseDryadArbor",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Nature's Lore",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Dryad Arbor",
+          "ref": "dryad_arbor",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "plains",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 0,
+          "value": 8916
+        },
+        {
+          "op": "assert_zone_state",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 0,
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 91
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "NaturesLore_NoForest",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Nature's Lore",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "plains",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "mountain",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

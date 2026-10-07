@@ -688,6 +688,7 @@ BOOL SetCurrentDirectoryA(LPCSTR path);
 BOOL CopyFileA(LPCSTR existing_filename, LPCSTR new_filename, BOOL fail_if_exists);
 void Sleep(DWORD milliseconds);
 DWORD GetTickCount(void);
+void shandalar_set_time_hooks(DWORD (*clock)(void), void (*sleep)(DWORD));
 HANDLE GetCurrentProcess(void);
 HANDLE GetCurrentThread(void);
 BOOL GetThreadTimes(HANDLE thread, FILETIME *creation, FILETIME *exit,

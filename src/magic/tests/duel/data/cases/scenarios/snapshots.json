@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "name": "Snapshot_ActivationAcrossAIRestore",
+      "card": "Infantry Veteran",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Infantry Veteran",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "choose_target",
+          "ref": "attacker",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "choose_target",
+          "ref": "attacker",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "power",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

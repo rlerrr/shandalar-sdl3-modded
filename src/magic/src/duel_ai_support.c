@@ -1,3 +1,4 @@
+#include "magic/src/duel_host.h"
 #include <stdlib.h>
 #include <stddef.h>
 #include <string.h>
@@ -29,7 +30,7 @@ int network_random_boolean(int player)
 
   if (player == g_active_player)
   {
-    result = rand() % 2;
+    result = duel_host_random() % 2;
     g_network_result_packet.result = 1 - result;
     g_network_result_packet.packet_type = 0x18;
     TENTATIVE_send_network_result(player, 0x18);
@@ -119,7 +120,7 @@ int DrawRandomCardFromInitialLibrary(int library_index)
 // FUNCTION: SHANDALAR 0x00522508
 int internal_rand(int maximum)
 {
-  return (maximum > 1) ? rand() % maximum : 0;
+  return (maximum > 1) ? duel_host_random() % maximum : 0;
 }
 
 // FUNCTION: MAGIC 0x00464a84
@@ -130,7 +131,7 @@ int network_random(int player, int maximum)
   {
     if (maximum > 1)
     {
-      g_network_result_packet.result = rand() % maximum;
+      g_network_result_packet.result = duel_host_random() % maximum;
     }
     else
     {

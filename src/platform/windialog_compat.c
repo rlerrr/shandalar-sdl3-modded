@@ -141,6 +141,7 @@ HWND shandalar_win32_create_dialog(HINSTANCE instance, HWND parent, LPCSTR title
 INT_PTR DialogBoxParamA(HINSTANCE instance, LPCSTR template_name, HWND parent,
                         DLGPROC dialog_proc, LPARAM init_param)
 {
+  shandalar_require_presentation("unexpected DialogBox request");
   DialogState state;
   MSG message;
   DialogFactoryRegistration *registration;

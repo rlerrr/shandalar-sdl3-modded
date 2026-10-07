@@ -434,6 +434,9 @@ int SetDIBitsToDevice(HDC dc, int x, int y, DWORD width, DWORD height,
                       const void *bits, const BITMAPINFO *info, UINT usage);
 
 int MessageBoxA(HWND window, LPCSTR message, LPCSTR title, UINT flags);
+/* Optional host guard; headless engines reject presentation before creating UI. */
+void shandalar_set_presentation_guard(void (*guard)(const char *));
+void shandalar_require_presentation(const char *operation);
 #define MessageBox MessageBoxA
 HWND GetDesktopWindow(void);
 UINT GetModuleFileNameA(HMODULE module, LPSTR buffer, UINT size);

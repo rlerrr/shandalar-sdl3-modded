@@ -1,3 +1,4 @@
+#include "magic/src/duel_host.h"
 // -*- c-basic-offset:2 -*-
 // Low-level event, trigger, and card function handling.
 
@@ -40,6 +41,9 @@ extern int timestamp_card[500];
 extern int timestamp_player[500];
 void dispatch_event_raw(event_t event)
 {
+  if (duel_host_is_headless() && duel_host_capture().remaining_steps < 8)
+    fprintf(stderr,"EVENT budget exhausted: event=%x affected=(%d,%d) trigger=%x phase=%d stack=%d result=%d\n",event,affected_card_controller,affected_card,trigger_condition,current_phase,stack_size,event_result);
+  duel_host_checkpoint("execution budget exhausted during event dispatch");
   // 0x435a40
 
   minimize_nondraining_mana();	// Needs to happen quite frequently.  This'll do it.

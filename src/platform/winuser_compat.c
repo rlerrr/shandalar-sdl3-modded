@@ -322,6 +322,7 @@ HWND CreateWindowExA(DWORD ex_style, LPCSTR class_name, LPCSTR window_name,
                      DWORD style, int x, int y, int width, int height,
                      HWND parent, HMENU menu, HINSTANCE instance, LPVOID param)
 {
+  shandalar_require_presentation("unexpected CreateWindowEx request");
   CREATESTRUCTA create;
   RegisteredClass *registered = find_class(class_name);
   HWND window;

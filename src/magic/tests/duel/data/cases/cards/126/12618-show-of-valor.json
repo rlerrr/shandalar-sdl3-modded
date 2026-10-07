@@ -1,0 +1,177 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "friendly"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 12618,
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 6
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 2
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Show_of_Valor_friendly_EffectExpires",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Show of Valor",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "enemy"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 12618,
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "enemy",
+          "value": 6
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "enemy",
+          "value": 2
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Show_of_Valor_enemy_EffectExpires",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Show of Valor",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "value": 0,
+          "op": "assert_stack"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "value": 12618
+        }
+      ],
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "ref": "source",
+          "name": "Show of Valor"
+        }
+      ],
+      "fixture": "empty_main",
+      "seed": 123,
+      "name": "Show_of_Valor_NoCreatureTarget"
+    }
+  ],
+  "csvid": 12618,
+  "card": "Show of Valor",
+  "version": 1
+}

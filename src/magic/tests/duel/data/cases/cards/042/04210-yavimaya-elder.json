@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "card": "Yavimaya Elder",
+  "csvid": 4210,
+  "cases": [
+    {
+      "name": "YavimayaElder_SacrificeDrawAndLands",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Yavimaya Elder",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_trigger",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 0
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 4
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

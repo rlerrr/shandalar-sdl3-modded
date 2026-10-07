@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "card": "Giant Growth",
+  "csvid": 97,
+  "cases": [
+    {
+      "name": "GiantGrowth_PumpAndCleanup",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Giant Growth",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "friendly",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "toughness",
+          "value": 5
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "GiantGrowth_NoCreatureTarget",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Giant Growth",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

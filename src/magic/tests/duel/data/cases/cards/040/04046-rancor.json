@@ -1,0 +1,251 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "friendly"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 4046,
+          "zone": "battlefield"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 2
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Rancor_BuffPersistsThroughCleanup",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Rancor",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "enemy"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "ref": "enemy",
+          "op": "destroy"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "property": "in_play",
+          "ref": "enemy",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "value": 5,
+          "zone": "hand"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "value": 4046,
+          "zone": "hand"
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Rancor_ReturnsToOwnersHandWhenCreatureDies",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 1,
+          "name": "Rancor",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "friendly"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 4046,
+          "zone": "battlefield"
+        },
+        {
+          "ref": "friendly",
+          "op": "destroy"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 5,
+          "zone": "hand"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 4046
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Rancor_ReturnsToOwnersHand",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Rancor",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "value": 0,
+          "op": "assert_stack"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "value": 4046
+        }
+      ],
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "ref": "source",
+          "name": "Rancor"
+        }
+      ],
+      "fixture": "empty_main",
+      "seed": 123,
+      "name": "Rancor_NoCreatureTarget"
+    }
+  ],
+  "csvid": 4046,
+  "card": "Rancor",
+  "version": 1
+}

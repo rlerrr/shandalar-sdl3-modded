@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "card": "Claustrophobia",
+  "csvid": 11905,
+  "cases": [
+    {
+      "name": "Claustrophobia_TapsOnEntry",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Claustrophobia",
+          "ref": "aura",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "friendly",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "aura",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "tapped",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Claustrophobia_StaysTappedAtCleanup",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Claustrophobia",
+          "ref": "aura",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "friendly",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "aura",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

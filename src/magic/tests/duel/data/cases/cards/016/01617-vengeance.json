@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "card": "Vengeance",
+  "csvid": 1617,
+  "cases": [
+    {
+      "name": "Vengeance_DestroyOrExile_Grizzly_Bears",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Vengeance"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ],
+          "ref": "target",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "witness",
+          "player": 0,
+          "name": "Plains",
+          "zone": "battlefield"
+        },
+        {
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ],
+          "ref": "other_eligible",
+          "name": "Grizzly Bears"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 106
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 1617
+        },
+        {
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Vengeance_SecondEligible_Raging_Goblin",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Vengeance"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ],
+          "ref": "target",
+          "name": "Raging Goblin"
+        },
+        {
+          "ref": "witness",
+          "player": 0,
+          "name": "Plains",
+          "zone": "battlefield"
+        },
+        {
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ],
+          "ref": "other_eligible",
+          "name": "Raging Goblin"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 1122
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 1617
+        },
+        {
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Vengeance_NoLegalTarget_Grizzly_Bears",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "ref": "source",
+          "name": "Vengeance"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "ref": "invalid",
+          "name": "Grizzly Bears"
+        }
+      ],
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

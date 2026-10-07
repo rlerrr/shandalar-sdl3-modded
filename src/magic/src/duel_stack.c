@@ -11,6 +11,7 @@
 #include "deckdll/src/shared_resources.h"
 #include "drawcardlib/Drawcardlib.h"
 #include "duel_engine.h"
+#include "duel_host.h"
 #include "game_support.h"
 #include "magic/src/duel_runtime.h"
 #include "global_strings.h"
@@ -2640,6 +2641,15 @@ unsigned int choose_response_card(int player)
     return 0xffffffffU;
   }
 
+  if (duel_host_scripted_input())
+  {
+    int selected = duel_host_choose(DUEL_CHOICE_PRIORITY, player, "Opponent response", num_candidates, (const int*)candidates, NULL);
+    if (selected == -2) return 0xffffffffU;
+    for (int n = 0; n < num_candidates; ++n)
+      if (candidates[n] == (unsigned int)selected) return candidates[n];
+    duel_host_fail("illegal opponent response");
+  }
+
   candidates[num_candidates] = 0xffffffffU;
   ++num_candidates;
 
@@ -2663,10 +2673,10 @@ unsigned int choose_response_card(int player)
       }
     }
 
-    g_ai_recorded_action = candidates[g_ai_recorded_choice] == 0xffffffffU
-                               ? -1
-                               : ((PLAYER_CARD_INSTANCE(player, (int)candidates[g_ai_recorded_choice]).state & STATE_IN_PLAY) ? 0x2000 : 0x1000) |
-                                     candidates[g_ai_recorded_choice] | ((player != 0) ? 0x100 : 0);
+    if (candidates[g_ai_recorded_choice] == 0xffffffffU)
+      g_ai_recorded_action = -1;
+    else
+      g_ai_recorded_action = ((PLAYER_CARD_INSTANCE(player, (int)candidates[g_ai_recorded_choice]).state & STATE_IN_PLAY) ? 0x2000 : 0x1000) | candidates[g_ai_recorded_choice] | ((player != 0) ? 0x100 : 0);
 
     g_ai_recorded_action_type = 4;
     record_ai_action_selection();
@@ -2676,7 +2686,7 @@ unsigned int choose_response_card(int player)
     g_ai_recorded_action_type = 4;
     replay_ai_action_selection();
 
-    if (num_candidates <= g_ai_recorded_choice)
+    if (g_ai_recorded_choice < 0 || num_candidates <= g_ai_recorded_choice)
     {
       g_ai_recorded_choice = num_candidates - 1;
     }

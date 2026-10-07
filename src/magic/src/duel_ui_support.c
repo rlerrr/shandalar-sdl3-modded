@@ -1,3 +1,4 @@
+#include "duel_host.h"
 #include <stdlib.h>
 #include <stddef.h>
 #include <stdint.h>
@@ -127,6 +128,7 @@ int play_sound_effect(wav_t sound_id);
 // FUNCTION: SHANDALAR 0x00450813
 void request_duel_display_refresh(int player, int card, int unk1, int unk2)
 {
+  if (duel_host_is_headless()) return;
   (void)player;
   (void)card;
   (void)unk1;
@@ -179,6 +181,7 @@ void show_opponent_taunt_text_stub(char *text)
 // FUNCTION: SHANDALAR 0x00450925
 void show_duel_card_preview(unsigned int internal_card_id, int player, int card, int unk1, char *prompt, int unk2)
 {
+  if (duel_host_is_headless()) return;
   (void)unk1;
   (void)prompt;
   (void)unk2;
@@ -217,6 +220,7 @@ int reset_duel_tick_timer(void)
 // FUNCTION: SHANDALAR 0x00451c24
 void display_duel_prompt_text(char *text)
 {
+  if (duel_host_is_headless()) return;
   char *msg;
 
   if (text != NULL)
@@ -1197,7 +1201,7 @@ int update_duel_selection_display_if_human(int player, int phase)
 // FUNCTION: SHANDALAR 0x00558321
 void request_duel_display_refresh_if_human(int player, int card, int unk1, int unk2)
 {
-  if (g_duel_ai_mode_state == 1)
+  if (duel_host_is_headless() || g_duel_ai_mode_state == 1)
     return;
 
   request_duel_display_refresh(player, card, unk1, unk2);
@@ -1278,6 +1282,7 @@ void show_card_preview_if_human(unsigned int internal_card_id, int unk1, char *p
 // FUNCTION: SHANDALAR 0x00559dcd
 int get_duel_thread_time_ms(void)
 {
+  if (duel_host_is_headless()) return (int)duel_host_clock();
   /* AI searches need a monotonic wall clock.  The legacy implementation used
    * only FILETIME::dwLowDateTime, which wrapped before conversion every
    * 2^32 / 10000 ms (about 7 minutes) and could disable the search timeout. */
@@ -1295,7 +1300,7 @@ void update_duel_thread_time_marker(void)
 // FUNCTION: SHANDALAR 0x0056c7cb
 void show_opponent_taunt(char *text)
 {
-  if (g_duel_ai_mode_state == 1)
+  if (duel_host_is_headless() || g_duel_ai_mode_state == 1)
     return;
 
   HideMouseCursorNested();
@@ -1313,6 +1318,7 @@ void show_opponent_taunt(char *text)
 // FUNCTION: SHANDALAR 0x0056c804
 void show_duel_system_error(const char *err_msg)
 {
+  if (duel_host_is_headless()) duel_host_fail(err_msg);
 #ifdef SHANDALAR
   assert_noabort(0, "D:\\Newmagic\\multiplayer\\sid\\Minit.c", 0x76b, err_msg);
 #else

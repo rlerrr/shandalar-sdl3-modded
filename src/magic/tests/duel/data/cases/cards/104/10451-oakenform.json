@@ -1,0 +1,136 @@
+{
+  "version": 1,
+  "card": "Oakenform",
+  "csvid": 10451,
+  "cases": [
+    {
+      "name": "Oakenform_AttachesAndPersists",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Oakenform",
+          "ref": "aura",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "friendly",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "aura",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "toughness",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "toughness",
+          "value": 5
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Oakenform_ChosenCreature",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Oakenform",
+          "ref": "aura",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "chosen",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "chosen",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "aura",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "chosen",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "chosen",
+          "property": "toughness",
+          "value": 5
+        },
+        {
+          "op": "destroy",
+          "ref": "aura"
+        },
+        {
+          "op": "assert_card",
+          "ref": "chosen",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "chosen",
+          "property": "toughness",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

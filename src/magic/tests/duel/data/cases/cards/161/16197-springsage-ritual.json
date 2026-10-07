@@ -1,0 +1,285 @@
+{
+  "card": "Springsage Ritual",
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "value": 1,
+          "op": "cast",
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "value": 230,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "value": 16197,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "value": 24,
+          "op": "assert_life"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 16197,
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 230,
+          "zone": "graveyard"
+        },
+        {
+          "ref": "eligible_witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Springsage Ritual",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Sol Ring",
+          "ref": "target"
+        },
+        {
+          "ref": "eligible_witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Sol Ring"
+        }
+      ],
+      "name": "SpringsageRitual_artifact_removal",
+      "fixture": "empty_main"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Springsage Ritual",
+          "ref": "source"
+        }
+      ],
+      "name": "SpringsageRitual_NoEligibleTarget",
+      "fixture": "empty_main"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "ref": "enchantment",
+          "player": -1,
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "ref": "enchantment",
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "ref": "enchantment_witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "value": 1,
+          "player": 1,
+          "zone": "graveyard",
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 966,
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "value": 1,
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 16197,
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "value": 24,
+          "player": 0,
+          "op": "assert_life"
+        }
+      ],
+      "setup": [
+        {
+          "ref": "source",
+          "player": 0,
+          "zone": "hand",
+          "name": "Springsage Ritual"
+        },
+        {
+          "ref": "enchantment",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Glorious Anthem"
+        },
+        {
+          "ref": "enchantment_witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Glorious Anthem"
+        }
+      ],
+      "name": "SpringsageRitual_EnchantmentTargetGainLife",
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "player": -1,
+          "ref": "myr",
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 1,
+          "ref": "myr",
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "player": 0,
+          "value": 24,
+          "op": "assert_life"
+        },
+        {
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "value": 16197,
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 16197,
+          "zone": "graveyard"
+        },
+        {
+          "ref": "eligible_witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        }
+      ],
+      "name": "SpringsageRitual_DarksteelMyrSurvives",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "name": "Springsage Ritual",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "name": "Darksteel Myr",
+          "zone": "battlefield",
+          "ref": "myr"
+        },
+        {
+          "ref": "eligible_witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Darksteel Myr"
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "version": 1,
+  "csvid": 16197
+}

@@ -1,0 +1,457 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "name": "WallofAir_CastFromHand",
+      "steps": [
+        {
+          "value": 1,
+          "ref": "source",
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "zone": "hand",
+          "value": 0,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "battlefield",
+          "value": 1,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "battlefield",
+          "value": 267,
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "value": 1,
+          "zone": "battlefield",
+          "player": 0,
+          "index": 0,
+          "property": "sick",
+          "op": "assert_zone_state"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Wall of Air",
+          "ref": "source",
+          "zone": "hand",
+          "player": 0
+        }
+      ],
+      "fixture": "empty_main"
+    },
+    {
+      "name": "WallofAir_OracleStats",
+      "steps": [
+        {
+          "value": 1,
+          "ref": "creature",
+          "op": "assert_card",
+          "property": "in_play"
+        },
+        {
+          "value": 1,
+          "ref": "creature",
+          "op": "assert_card",
+          "property": "power"
+        },
+        {
+          "value": 5,
+          "ref": "creature",
+          "op": "assert_card",
+          "property": "toughness"
+        },
+        {
+          "zone": "battlefield",
+          "value": 1,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "battlefield",
+          "value": 267,
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Wall of Air",
+          "ref": "creature",
+          "zone": "battlefield",
+          "player": 0
+        }
+      ],
+      "fixture": "empty_main"
+    },
+    {
+      "name": "WallofAir_DefenderCannotAttack",
+      "steps": [
+        {
+          "value": 1,
+          "player": 0,
+          "op": "turn"
+        },
+        {
+          "value": 0,
+          "ref": "wall",
+          "op": "attack"
+        },
+        {
+          "value": 1,
+          "ref": "wall",
+          "op": "assert_card",
+          "property": "in_play"
+        },
+        {
+          "zone": "graveyard",
+          "value": 0,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "player": 1,
+          "value": 0,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 0
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Wall of Air",
+          "ref": "wall",
+          "zone": "battlefield",
+          "player": 0
+        }
+      ],
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "value": 1,
+          "op": "turn",
+          "player": 1
+        },
+        {
+          "value": 1,
+          "ref": "dragon",
+          "op": "attack"
+        },
+        {
+          "value": 1,
+          "ref": "wall",
+          "op": "block",
+          "other": "dragon"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "value": 0,
+          "property": "in_play",
+          "ref": "wall",
+          "op": "assert_card"
+        },
+        {
+          "value": 1,
+          "property": "in_play",
+          "ref": "dragon",
+          "op": "assert_card"
+        },
+        {
+          "value": 1,
+          "property": "damage",
+          "ref": "dragon",
+          "op": "assert_card"
+        },
+        {
+          "player": 0,
+          "value": 1,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "value": 267,
+          "op": "assert_zone_card",
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "value": 0,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 0
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "ref": "dragon",
+          "zone": "battlefield",
+          "name": "Shivan Dragon",
+          "player": 1
+        },
+        {
+          "ref": "wall",
+          "zone": "battlefield",
+          "name": "Wall of Air",
+          "player": 0
+        }
+      ],
+      "name": "WallOfAir_FlyingWallBlocksDragon",
+      "fixture": "empty_main"
+    }
+  ],
+  "csvid": 267,
+  "card": "Wall of Air"
+}

@@ -1,0 +1,193 @@
+{
+  "card": "Desecration Plague",
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "value": 1,
+          "op": "cast",
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "value": 966,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "value": 13868,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 13868,
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 966,
+          "zone": "graveyard"
+        },
+        {
+          "ref": "eligible_witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Desecration Plague",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Glorious Anthem",
+          "ref": "target"
+        },
+        {
+          "ref": "eligible_witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Glorious Anthem"
+        }
+      ],
+      "name": "DesecrationPlague_enchantment_removal",
+      "fixture": "empty_main"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Desecration Plague",
+          "ref": "source"
+        }
+      ],
+      "name": "DesecrationPlague_NoEligibleTarget",
+      "fixture": "empty_main"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "land"
+        },
+        {
+          "value": 1,
+          "op": "cast",
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "land"
+        },
+        {
+          "player": 1,
+          "value": 188,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 13868,
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 188,
+          "zone": "graveyard"
+        },
+        {
+          "ref": "eligible_witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Desecration Plague",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Plains",
+          "ref": "land"
+        },
+        {
+          "ref": "eligible_witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Plains"
+        }
+      ],
+      "name": "DesecrationPlague_LandAlternative",
+      "fixture": "empty_main"
+    }
+  ],
+  "version": 1,
+  "csvid": 13868
+}

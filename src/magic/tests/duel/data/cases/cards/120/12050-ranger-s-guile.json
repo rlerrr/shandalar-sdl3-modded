@@ -1,0 +1,239 @@
+{
+  "version": 1,
+  "card": "Ranger's Guile",
+  "csvid": 12050,
+  "cases": [
+    {
+      "name": "RangersGuile_OwnCreaturePumpAndExpire",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Ranger's Guile",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RangersGuile_CannotTargetOpponentCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Ranger's Guile",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RangersGuile_NoCreatureCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Ranger's Guile",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RangersGuile_HexproofExpiresAfterCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "ref": "source",
+          "zone": "hand",
+          "player": 0,
+          "name": "Ranger's Guile"
+        },
+        {
+          "ref": "target",
+          "zone": "battlefield",
+          "player": 0,
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "doom",
+          "zone": "hand",
+          "player": 1,
+          "name": "Doom Blade"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "cast",
+          "value": 0,
+          "ref": "doom"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "zone": "hand",
+          "player": 1,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "player": 1,
+          "value": 10408
+        },
+        {
+          "op": "assert_mana",
+          "value": 10,
+          "color": 1,
+          "player": 1
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "doom"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "target",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "graveyard",
+          "player": 0,
+          "value": 106
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

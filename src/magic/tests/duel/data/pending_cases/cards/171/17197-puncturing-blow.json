@@ -1,0 +1,231 @@
+{
+  "version": 1,
+  "card": "Puncturing Blow",
+  "csvid": 17197,
+  "reason": "Bound card_dummy handler rejects eligible casts; full resolution scripts are deferred until a real handler is available. Not executed or counted as passing coverage.",
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "value": 1,
+          "op": "cast",
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "value": 106,
+          "zone": "exile",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "value": 17197,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "witness"
+        },
+        {
+          "player": 1,
+          "value": 0,
+          "zone": "graveyard",
+          "op": "assert_zone"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 17197,
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "exile"
+        },
+        {
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 106,
+          "zone": "exile"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Puncturing Blow",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "ref": "witness"
+        }
+      ],
+      "name": "PuncturingBlow_creature_removal",
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "player": -1,
+          "ref": "force",
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 1,
+          "ref": "force",
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "value": 5,
+          "ref": "force",
+          "property": "damage",
+          "op": "assert_card"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "value": 1,
+          "ref": "force",
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "value": 0,
+          "ref": "force",
+          "property": "damage",
+          "op": "assert_card"
+        },
+        {
+          "player": 1,
+          "zone": "exile",
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "value": 17197,
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 17197,
+          "zone": "graveyard"
+        },
+        {
+          "ref": "force",
+          "op": "destroy"
+        },
+        {
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "force",
+          "value": 0
+        },
+        {
+          "player": 1,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 89,
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "op": "assert_zone",
+          "value": 0,
+          "zone": "exile"
+        },
+        {
+          "ref": "eligible_witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        }
+      ],
+      "name": "PuncturingBlow_ForceSurvivesCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "name": "Puncturing Blow",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "name": "Force of Nature",
+          "zone": "battlefield",
+          "ref": "force"
+        },
+        {
+          "ref": "eligible_witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Force of Nature"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

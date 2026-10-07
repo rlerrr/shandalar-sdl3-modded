@@ -1,3 +1,4 @@
+#include "magic/src/duel_host.h"
 #include <windows.h>
 #include <setjmp.h>
 #include <stdlib.h>
@@ -190,7 +191,7 @@ void refresh_ai_random_table(void)
 
   for (i = 0; i < 100; i++)
   {
-    g_ai_random_table[i] = rand();
+    g_ai_random_table[i] = duel_host_random();
   }
   FUN_00464bb0();
 }
@@ -334,6 +335,7 @@ void run_duel_turn(unsigned int player)
 
   while (next_state != -1)
   {
+    duel_host_checkpoint("execution budget exhausted during turn advancement");
     if (g_duel_ai_mode_state == 1)
       pump_ai_thinking_host();
 
@@ -1370,15 +1372,16 @@ void cleanup_phase(unsigned int player)
     if (is_in_play(player, card) != 0)
     {
       global_card_instances[player][card].damage_on_card = 0;
-      dispatch_event_to_single_card(player, card, 0x22, other_player, -1);
     }
     if (is_in_play(other_player, card) != 0)
     {
       global_card_instances[other_player][card].damage_on_card = 0;
-      dispatch_event_to_single_card(other_player, card, 0x22, player, -1);
     }
   }
 
+  /* Invisible legacy effects still need cleanup to expire temporary bonuses. */
+  dispatch_event(-1, -1, EVENT_CLEANUP);
+  reassess_all_cards_and_mana();
   if (g_opponent_starting_card_id_2 != -1)
   {
     (*global_cards_data[g_opponent_starting_card_id_2].code_pointer)(0, 0x94, 0x22);
@@ -2753,9 +2756,9 @@ DWORD WINAPI start_duel_thread(LPVOID unused)
 
   (void)unused;
   srand(GetTickCount());
-  for (counter = 0; counter < rand() % 50000; counter = counter + 1)
+  for (counter = 0; counter < duel_host_random() % 50000; counter = counter + 1)
   {
-    rand();
+    duel_host_random();
   }
 
   InitializeDuelUiGlobalIds();

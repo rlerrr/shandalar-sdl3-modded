@@ -1,0 +1,117 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "value": 1,
+          "ref": "attacker",
+          "op": "attack"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 11513,
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "attacker",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "blocker",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "attacker",
+          "value": 2
+        }
+      ],
+      "seed": 123,
+      "fixture": "combat",
+      "name": "Rally_the_Forces_AttackersOnlyAndCleanup",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Rally the Forces",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "value": 1,
+          "ref": "attacker",
+          "op": "attack"
+        },
+        {
+          "value": 1,
+          "ref": "source",
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "zone": "graveyard",
+          "value": 11513,
+          "player": 1,
+          "op": "assert_zone_contains"
+        },
+        {
+          "value": 3,
+          "ref": "attacker",
+          "property": "power",
+          "op": "assert_card"
+        },
+        {
+          "value": 2,
+          "ref": "blocker",
+          "property": "power",
+          "op": "assert_card"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "value": 2,
+          "ref": "attacker",
+          "property": "power",
+          "op": "assert_card"
+        }
+      ],
+      "seed": 123,
+      "fixture": "combat",
+      "name": "Rally_the_Forces_OpponentCastsDuringDeclaredAttack",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Rally the Forces",
+          "ref": "source",
+          "player": 1
+        }
+      ]
+    }
+  ],
+  "csvid": 11513,
+  "card": "Rally the Forces",
+  "version": 1
+}

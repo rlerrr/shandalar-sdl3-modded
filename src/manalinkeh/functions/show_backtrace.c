@@ -1,6 +1,7 @@
 // -*- c-basic-offset: 2 -*-
 #include <stdio.h>
 #include <stdlib.h>
+#include "magic/src/duel_host.h"
 
 #ifndef __EMSCRIPTEN__
 #include <windows.h>
@@ -16,6 +17,11 @@ void popup(const char* title, const char* fmt, ...);
 void
 show_backtrace(const char* title, const char* header)
 {
+  if (duel_host_is_headless()) {
+    fprintf(stderr, "DUEL_ENGINE_ERROR: %s: %s\n", title, header);
+    fflush(stderr);
+    abort();
+  }
 #ifndef __EMSCRIPTEN__
   PVOID frames[100];
 

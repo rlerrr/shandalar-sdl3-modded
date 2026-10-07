@@ -1,0 +1,193 @@
+{
+  "card": "Sunder from Within",
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "value": 1,
+          "op": "cast",
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "value": 230,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "value": 7757,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 7757,
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 230,
+          "zone": "graveyard"
+        },
+        {
+          "ref": "eligible_witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Sunder from Within",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Sol Ring",
+          "ref": "target"
+        },
+        {
+          "ref": "eligible_witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Sol Ring"
+        }
+      ],
+      "name": "SunderfromWithin_artifact_removal",
+      "fixture": "empty_main"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Sunder from Within",
+          "ref": "source"
+        }
+      ],
+      "name": "SunderfromWithin_NoEligibleTarget",
+      "fixture": "empty_main"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "land"
+        },
+        {
+          "value": 1,
+          "op": "cast",
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "land"
+        },
+        {
+          "player": 1,
+          "value": 188,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 7757,
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 188,
+          "zone": "graveyard"
+        },
+        {
+          "ref": "eligible_witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Sunder from Within",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Plains",
+          "ref": "land"
+        },
+        {
+          "ref": "eligible_witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Plains"
+        }
+      ],
+      "name": "SunderfromWithin_LandAlternative",
+      "fixture": "empty_main"
+    }
+  ],
+  "version": 1,
+  "csvid": 7757
+}

@@ -264,6 +264,50 @@ int save_or_load_supplement(int status)
   return status;
 }
 #undef BACKUP
+extern size_t duel_rules_snapshot_size(void);
+extern void duel_rules_snapshot_capture(void *), duel_rules_snapshot_restore(const void *);
+#define DUEL_EXTRA_STATE(X) X(player_bits) X(stack_phase) X(mana_paid)
+/* Caller-owned supplement, independent of the AI's two singleton backups. */
+size_t duel_manalink_snapshot_size(void)
+{
+  size_t size = 0;
+#define BACKUP_CMD_A(data) size += sizeof(data)
+#define BACKUP_CMD_S(data) size += sizeof(data)
+  BACKUP_AND_SAVE_LIST
+#undef BACKUP_CMD_A
+#undef BACKUP_CMD_S
+#define EXTRA(v) size += sizeof(v);
+  DUEL_EXTRA_STATE(EXTRA)
+#undef EXTRA
+  return size + duel_rules_snapshot_size();
+}
+void duel_manalink_snapshot_capture(void *destination)
+{
+  unsigned char *cursor = destination;
+#define BACKUP_CMD_A(data) do { memcpy(cursor, &data, sizeof(data)); cursor += sizeof(data); } while (0)
+#define BACKUP_CMD_S(data) BACKUP_CMD_A(data)
+  BACKUP_AND_SAVE_LIST
+#undef BACKUP_CMD_A
+#undef BACKUP_CMD_S
+#define EXTRA(v) memcpy(cursor,&v,sizeof(v)); cursor+=sizeof(v);
+  DUEL_EXTRA_STATE(EXTRA)
+#undef EXTRA
+  duel_rules_snapshot_capture(cursor);
+}
+void duel_manalink_snapshot_restore(const void *source)
+{
+  const unsigned char *cursor = source;
+#define BACKUP_CMD_A(data) do { memcpy(&data, cursor, sizeof(data)); cursor += sizeof(data); } while (0)
+#define BACKUP_CMD_S(data) BACKUP_CMD_A(data)
+  BACKUP_AND_SAVE_LIST
+#undef BACKUP_CMD_A
+#undef BACKUP_CMD_S
+#define EXTRA(v) memcpy(&v,cursor,sizeof(v)); cursor+=sizeof(v);
+  DUEL_EXTRA_STATE(EXTRA)
+#undef EXTRA
+  duel_rules_snapshot_restore(cursor);
+}
+#undef DUEL_EXTRA_STATE
 #undef BACKUP_AND_SAVE_LIST
 
 static int check_destroys_if_blocked_oneside(int lethal_player, int lethal_card, int other_player, int other_card)

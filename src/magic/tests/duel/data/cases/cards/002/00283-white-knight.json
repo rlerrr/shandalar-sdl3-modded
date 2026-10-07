@@ -1,0 +1,868 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "name": "WhiteKnight_CastFromHand",
+      "steps": [
+        {
+          "value": 1,
+          "ref": "source",
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "zone": "hand",
+          "value": 0,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "battlefield",
+          "value": 1,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "battlefield",
+          "value": 283,
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "value": 1,
+          "zone": "battlefield",
+          "player": 0,
+          "index": 0,
+          "property": "sick",
+          "op": "assert_zone_state"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "name": "White Knight",
+          "ref": "source",
+          "zone": "hand",
+          "player": 0
+        }
+      ],
+      "fixture": "empty_main"
+    },
+    {
+      "name": "WhiteKnight_OracleStats",
+      "steps": [
+        {
+          "value": 1,
+          "ref": "creature",
+          "op": "assert_card",
+          "property": "in_play"
+        },
+        {
+          "value": 2,
+          "ref": "creature",
+          "op": "assert_card",
+          "property": "power"
+        },
+        {
+          "value": 2,
+          "ref": "creature",
+          "op": "assert_card",
+          "property": "toughness"
+        },
+        {
+          "zone": "battlefield",
+          "value": 1,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "battlefield",
+          "value": 283,
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "name": "White Knight",
+          "ref": "creature",
+          "zone": "battlefield",
+          "player": 0
+        }
+      ],
+      "fixture": "empty_main"
+    },
+    {
+      "name": "WhiteKnight_FirstStrikeWinsEqualCombat",
+      "steps": [
+        {
+          "value": 1,
+          "player": 0,
+          "op": "turn"
+        },
+        {
+          "value": 1,
+          "ref": "knight",
+          "op": "attack"
+        },
+        {
+          "other": "knight",
+          "value": 1,
+          "ref": "bear",
+          "op": "block"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "value": 1,
+          "ref": "knight",
+          "op": "assert_card",
+          "property": "in_play"
+        },
+        {
+          "value": 0,
+          "ref": "bear",
+          "op": "assert_card",
+          "property": "in_play"
+        },
+        {
+          "zone": "graveyard",
+          "value": 1,
+          "player": 1,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 106,
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "property": "damage",
+          "value": 0,
+          "ref": "knight",
+          "op": "assert_card"
+        },
+        {
+          "player": 0,
+          "value": 0,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 0
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "name": "White Knight",
+          "ref": "knight",
+          "zone": "battlefield",
+          "player": 0
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "zone": "battlefield",
+          "player": 1
+        }
+      ],
+      "fixture": "empty_main"
+    },
+    {
+      "name": "WhiteKnight_BlocksAllowedGreenCreature",
+      "steps": [
+        {
+          "player": 1,
+          "value": 1,
+          "op": "turn"
+        },
+        {
+          "value": 1,
+          "op": "attack",
+          "ref": "attacker"
+        },
+        {
+          "ref": "protected",
+          "other": "attacker",
+          "value": 1,
+          "op": "block"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card",
+          "ref": "protected"
+        },
+        {
+          "property": "damage",
+          "value": 0,
+          "op": "assert_card",
+          "ref": "protected"
+        },
+        {
+          "property": "in_play",
+          "value": 0,
+          "op": "assert_card",
+          "ref": "attacker"
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1,
+          "op": "assert_zone"
+        },
+        {
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106,
+          "op": "assert_zone_card",
+          "index": 0
+        },
+        {
+          "player": 0,
+          "value": 20,
+          "op": "assert_life"
+        },
+        {
+          "player": 1,
+          "value": 20,
+          "op": "assert_life"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "zone": "battlefield",
+          "player": 0,
+          "name": "White Knight",
+          "ref": "protected"
+        },
+        {
+          "zone": "battlefield",
+          "player": 1,
+          "name": "Grizzly Bears",
+          "ref": "attacker"
+        }
+      ],
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "player": 0,
+          "value": 1,
+          "op": "turn"
+        },
+        {
+          "value": 1,
+          "ref": "attacker",
+          "op": "attack"
+        },
+        {
+          "other": "attacker",
+          "ref": "black_blocker",
+          "value": 0,
+          "op": "block"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "property": "in_play",
+          "value": 1,
+          "ref": "attacker",
+          "op": "assert_card"
+        },
+        {
+          "property": "in_play",
+          "value": 1,
+          "ref": "black_blocker",
+          "op": "assert_card"
+        },
+        {
+          "property": "damage",
+          "value": 0,
+          "ref": "black_blocker",
+          "op": "assert_card"
+        },
+        {
+          "player": 0,
+          "value": 20,
+          "op": "assert_life"
+        },
+        {
+          "player": 1,
+          "value": 18,
+          "op": "assert_life"
+        },
+        {
+          "zone": "graveyard",
+          "player": 0,
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "player": 1,
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "zone": "battlefield",
+          "player": 0,
+          "name": "White Knight",
+          "ref": "attacker"
+        },
+        {
+          "zone": "battlefield",
+          "player": 1,
+          "name": "Vampire Nighthawk",
+          "ref": "black_blocker"
+        }
+      ],
+      "name": "WhiteKnight_ProtectionFromBlack",
+      "fixture": "empty_main",
+      "seed": 123
+    },
+    {
+      "name": "WhiteKnight_ProtectionRejectsColoredSpellButAllowsGreen",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Doom Blade",
+          "ref": "forbidden",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "allowed",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "White Knight",
+          "ref": "protected",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "forbidden",
+          "value": 0
+        },
+        {
+          "op": "can_cast",
+          "ref": "allowed",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "protected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "WhiteKnight_ProtectionPreventsLargerAttackerDamage",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "White Knight",
+          "ref": "protected",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Bog Wraith",
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "protected",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "protected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "protected",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        }
+      ]
+    }
+  ],
+  "csvid": 283,
+  "card": "White Knight"
+}

@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "card": "Grasp of Darkness",
+  "csvid": 11274,
+  "cases": [
+    {
+      "name": "Grasp_of_Darkness_KillBear",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Grasp of Darkness",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone_contains",
+          "value": 11274
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 4,
+          "value": 106
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Grasp_of_Darkness_KillElemental",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Grasp of Darkness",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Air Elemental",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone_contains",
+          "value": 11274
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 4,
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "steps": [
+        {
+          "player": -1,
+          "ref": "target",
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "op": "cast",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "property": "power",
+          "op": "assert_card",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "property": "toughness",
+          "op": "assert_card",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "property": "power",
+          "op": "assert_card",
+          "ref": "target",
+          "value": 5
+        },
+        {
+          "property": "toughness",
+          "op": "assert_card",
+          "ref": "target",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "graveyard",
+          "player": 0,
+          "value": 11274
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "fixture": "mixed_targets",
+      "seed": 123,
+      "setup": [
+        {
+          "ref": "source",
+          "zone": "hand",
+          "player": 0,
+          "name": "Grasp of Darkness"
+        },
+        {
+          "ref": "target",
+          "zone": "battlefield",
+          "player": 1,
+          "name": "Shivan Dragon"
+        }
+      ],
+      "name": "Grasp_of_Darkness_ShivanDragonSurvivesAndExpires"
+    }
+  ]
+}

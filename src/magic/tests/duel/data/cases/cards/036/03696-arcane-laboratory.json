@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Arcane Laboratory",
+  "csvid": 3696,
+  "cases": [
+    {
+      "name": "ArcaneLaboratory_OneSpellPerTurn",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Arcane Laboratory",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "first",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "second",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "first",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "cast",
+          "ref": "second",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

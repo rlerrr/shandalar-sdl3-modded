@@ -1,0 +1,225 @@
+{
+  "version": 1,
+  "card": "Infantry Veteran",
+  "csvid": 2723,
+  "cases": [
+    {
+      "name": "InfantryVeteran_PumpAndCleanup",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Infantry Veteran",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "attacker",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "toughness",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "InfantryVeteran_NoAttacker",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Infantry Veteran",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "InfantryVeteran_Tapped",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Infantry Veteran",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "InfantryVeteran_Sick",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Infantry Veteran",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "InfantryVeteran_TargetLeavesCombat",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Infantry Veteran",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "attacker",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "remove_from_combat",
+          "ref": "attacker"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "InfantryVeteran_OpposingAttacker",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Infantry Veteran",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 1
+        },
+        {
+          "op": "remove_from_combat",
+          "ref": "attacker"
+        },
+        {
+          "op": "attack",
+          "ref": "blocker",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "blocker",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "power",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

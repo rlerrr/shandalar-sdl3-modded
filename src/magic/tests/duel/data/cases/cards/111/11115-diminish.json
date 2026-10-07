@@ -1,0 +1,275 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "friendly"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 11115,
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 2
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Diminish_friendly_EffectExpires",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Diminish",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "enemy"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 11115,
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "enemy",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "enemy",
+          "value": 2
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Diminish_enemy_EffectExpires",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Diminish",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "value": 0,
+          "op": "assert_stack"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "value": 11115
+        }
+      ],
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "ref": "source",
+          "name": "Diminish"
+        }
+      ],
+      "fixture": "empty_main",
+      "seed": 123,
+      "name": "Diminish_NoCreatureTarget"
+    },
+    {
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "ref": "source",
+          "name": "Diminish"
+        },
+        {
+          "zone": "hand",
+          "player": 0,
+          "ref": "growth",
+          "name": "Giant Growth"
+        }
+      ],
+      "steps": [
+        {
+          "player": -1,
+          "ref": "friendly",
+          "op": "choose_target"
+        },
+        {
+          "value": 1,
+          "ref": "growth",
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 5,
+          "ref": "friendly",
+          "property": "power",
+          "op": "assert_card"
+        },
+        {
+          "value": 97,
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": -1,
+          "ref": "friendly",
+          "op": "choose_target"
+        },
+        {
+          "value": 1,
+          "ref": "source",
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 4,
+          "ref": "friendly",
+          "property": "power",
+          "op": "assert_card"
+        },
+        {
+          "value": 4,
+          "ref": "friendly",
+          "property": "toughness",
+          "op": "assert_card"
+        },
+        {
+          "value": 2,
+          "ref": "enemy",
+          "property": "power",
+          "op": "assert_card"
+        },
+        {
+          "value": 11115,
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "value": 2,
+          "ref": "friendly",
+          "property": "power",
+          "op": "assert_card"
+        },
+        {
+          "value": 2,
+          "ref": "friendly",
+          "property": "toughness",
+          "op": "assert_card"
+        }
+      ],
+      "seed": 123,
+      "name": "Diminish_OverridesBasePowerWhileModifierRemains"
+    }
+  ],
+  "csvid": 11115,
+  "card": "Diminish",
+  "version": 1
+}

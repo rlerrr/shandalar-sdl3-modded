@@ -1,0 +1,217 @@
+{
+  "card": "Clear a Path",
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Clear a Path",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Wall of Wood",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "ref": "witness"
+        },
+        {
+          "ref": "eligible_witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Wall of Wood"
+        }
+      ],
+      "name": "ClearaPath_DefenderIsEligible",
+      "fixture": "empty_main"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Clear a Path",
+          "ref": "source"
+        }
+      ],
+      "name": "ClearaPath_NoEligibleTarget",
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "ref": "source",
+          "value": 0,
+          "op": "can_cast"
+        },
+        {
+          "value": 1,
+          "ref": "ordinary",
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0,
+          "op": "assert_zone"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "name": "ClearaPath_NonDefenderInvalid",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "player": 0,
+          "name": "Clear a Path",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "ref": "ordinary"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "value": 1,
+          "op": "cast",
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "value": 275,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "value": 13136,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "witness"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 13136,
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 275,
+          "zone": "graveyard"
+        },
+        {
+          "ref": "eligible_witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Clear a Path",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Wall of Wood",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "ref": "witness"
+        },
+        {
+          "ref": "eligible_witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Wall of Wood"
+        }
+      ],
+      "name": "ClearaPath_defender_removal",
+      "fixture": "empty_main"
+    }
+  ],
+  "version": 1,
+  "csvid": 13136
+}

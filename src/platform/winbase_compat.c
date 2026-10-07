@@ -147,11 +147,22 @@ BOOL CopyFileA(LPCSTR existing_filename, LPCSTR new_filename, BOOL fail_if_exist
   return SDL_CopyFile(source, destination) ? TRUE : FALSE;
 }
 
-void Sleep(DWORD milliseconds) { shandalar_win32_pump_for(milliseconds); }
+static DWORD (*host_clock)(void);
+static void (*host_sleep)(DWORD);
+void shandalar_set_time_hooks(DWORD (*clock)(void), void (*sleep)(DWORD))
+{
+  host_clock = clock;
+  host_sleep = sleep;
+}
+void Sleep(DWORD milliseconds)
+{
+  if (host_sleep) host_sleep(milliseconds);
+  else shandalar_win32_pump_for(milliseconds);
+}
 
 DWORD GetTickCount(void)
 {
-  return (DWORD)SDL_GetTicks();
+  return host_clock ? host_clock() : (DWORD)SDL_GetTicks();
 }
 
 HANDLE GetCurrentProcess(void)

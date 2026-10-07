@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "card": "Sylvan Scrying",
+  "csvid": 1521,
+  "cases": [
+    {
+      "name": "SylvanScrying_FindsBasicLandIntoHand",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Sylvan Scrying",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 6
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 188
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 106
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 91
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 126
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 145
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1521
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "hand",
+          "index": 4,
+          "value": 91
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SylvanScrying_FindsNonbasicLandIntoHand",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Sylvan Scrying",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Evolving Wilds",
+          "ref": "search_land",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 10925
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 91
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 188
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 106
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 126
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 145
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1521
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "hand",
+          "index": 4,
+          "value": 10925
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SylvanScrying_NoLandFindsNothing",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Sylvan Scrying",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "bolt",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "growth",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1521
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 145
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 97
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

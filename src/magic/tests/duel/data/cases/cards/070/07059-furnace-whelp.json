@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Furnace Whelp",
+  "csvid": 7059,
+  "cases": [
+    {
+      "name": "FurnaceWhelp_RepeatedActivation",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Furnace Whelp",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

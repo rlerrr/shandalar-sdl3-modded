@@ -1,0 +1,333 @@
+{
+  "version": 1,
+  "failures": {
+    "Behavior.RangersGuile_CannotTargetOpponentCreature": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Ranger's Guile",
+      "csvid": 12050,
+      "oracle_id": "694cb93a-bcc5-44b0-a76c-19ae4a4e5e0f",
+      "reason": "Oracle permits only a creature you control. With only an opposing Grizzly Bears present, EVENT_CAN_CAST incorrectly returns true: card_rangers_guile passes ANYBODY as the allowed controller to vanilla_instant_pump. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 0 can_cast source",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: true[\\s\\S]*?s.value[\\s\\S]*?Which is: 0"
+      ]
+    },
+    "Behavior.MysticalTutor_SearchEligibleCard": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Mystical Tutor",
+      "csvid": 1527,
+      "oracle_id": "fb81f95c-70f8-4eb7-8d15-15d0ae23ec03",
+      "reason": "Oracle puts the selected card on top after shuffling; it must not enter the hand. The shared put_on_top_of_deck wrapper passes a card slot to the core real_put_on_top_of_deck helper, which expects an internal card ID. The selected card stays in hand and a different card enters the library. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 4 assert_zone_card",
+        "duel_test_zone_csvid\\(s.player,s.zone,s.index\\)[\\s\\S]*?s.value[\\s\\S]*?Which is: 145",
+        "step 8 assert_zone",
+        "duel_test_zone_count\\(s.player,s.zone\\)[\\s\\S]*?Which is: 1[\\s\\S]*?s.value[\\s\\S]*?Which is: 0",
+        "Missing CSVID 145"
+      ]
+    },
+    "Behavior.MysticalTutor_WithExistingZones": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Mystical Tutor",
+      "csvid": 1527,
+      "oracle_id": "fb81f95c-70f8-4eb7-8d15-15d0ae23ec03",
+      "reason": "Oracle puts the selected card on top after shuffling; it must not enter the hand. The shared put_on_top_of_deck wrapper passes a card slot to the core real_put_on_top_of_deck helper, which expects an internal card ID. The selected card stays in hand and a different card enters the library. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 4 assert_zone_card",
+        "duel_test_zone_csvid\\(s.player,s.zone,s.index\\)[\\s\\S]*?s.value[\\s\\S]*?Which is: 145",
+        "step 11 assert_zone",
+        "duel_test_zone_count\\(s.player,s.zone\\)[\\s\\S]*?Which is: 5[\\s\\S]*?s.value[\\s\\S]*?Which is: 4"
+      ]
+    },
+    "Behavior.SylvanTutor_SearchEligibleCard": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Sylvan Tutor",
+      "csvid": 1522,
+      "oracle_id": "935e0cac-51ee-4cb7-a209-f085e0f099ed",
+      "reason": "Oracle puts the selected card on top after shuffling; it must not enter the hand. The shared put_on_top_of_deck wrapper passes a card slot to the core real_put_on_top_of_deck helper, which expects an internal card ID. The selected card stays in hand and a different card enters the library. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 4 assert_zone_card",
+        "duel_test_zone_csvid\\(s.player,s.zone,s.index\\)[\\s\\S]*?s.value[\\s\\S]*?Which is: 106",
+        "step 8 assert_zone",
+        "duel_test_zone_count\\(s.player,s.zone\\)[\\s\\S]*?Which is: 1[\\s\\S]*?s.value[\\s\\S]*?Which is: 0",
+        "Missing CSVID 106"
+      ]
+    },
+    "Behavior.SylvanTutor_WithExistingZones": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Sylvan Tutor",
+      "csvid": 1522,
+      "oracle_id": "935e0cac-51ee-4cb7-a209-f085e0f099ed",
+      "reason": "Oracle puts the selected card on top after shuffling; it must not enter the hand. The shared put_on_top_of_deck wrapper passes a card slot to the core real_put_on_top_of_deck helper, which expects an internal card ID. The selected card stays in hand and a different card enters the library. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 4 assert_zone_card",
+        "duel_test_zone_csvid\\(s.player,s.zone,s.index\\)[\\s\\S]*?s.value[\\s\\S]*?Which is: 106",
+        "step 11 assert_zone",
+        "duel_test_zone_count\\(s.player,s.zone\\)[\\s\\S]*?Which is: 5[\\s\\S]*?s.value[\\s\\S]*?Which is: 4"
+      ]
+    },
+    "Behavior.WorldlyTutor_SearchEligibleCard": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Worldly Tutor",
+      "csvid": 1523,
+      "oracle_id": "e8863518-0bfa-49c3-8c6e-6c9116a81051",
+      "reason": "Oracle puts the selected card on top after shuffling; it must not enter the hand. The shared put_on_top_of_deck wrapper passes a card slot to the core real_put_on_top_of_deck helper, which expects an internal card ID. The selected card stays in hand and a different card enters the library. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 4 assert_zone_card",
+        "duel_test_zone_csvid\\(s.player,s.zone,s.index\\)[\\s\\S]*?s.value[\\s\\S]*?Which is: 106",
+        "step 8 assert_zone",
+        "duel_test_zone_count\\(s.player,s.zone\\)[\\s\\S]*?Which is: 1[\\s\\S]*?s.value[\\s\\S]*?Which is: 0",
+        "Missing CSVID 106"
+      ]
+    },
+    "Behavior.WorldlyTutor_WithExistingZones": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Worldly Tutor",
+      "csvid": 1523,
+      "oracle_id": "e8863518-0bfa-49c3-8c6e-6c9116a81051",
+      "reason": "Oracle puts the selected card on top after shuffling; it must not enter the hand. The shared put_on_top_of_deck wrapper passes a card slot to the core real_put_on_top_of_deck helper, which expects an internal card ID. The selected card stays in hand and a different card enters the library. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 4 assert_zone_card",
+        "duel_test_zone_csvid\\(s.player,s.zone,s.index\\)[\\s\\S]*?s.value[\\s\\S]*?Which is: 106",
+        "step 11 assert_zone",
+        "duel_test_zone_count\\(s.player,s.zone\\)[\\s\\S]*?Which is: 5[\\s\\S]*?s.value[\\s\\S]*?Which is: 4"
+      ]
+    },
+    "Behavior.Hydrosurge_enemy_EffectExpires": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Hydrosurge",
+      "csvid": 12580,
+      "oracle_id": "4c2059d5-9a2e-4b89-a617-9125eb0cd570",
+      "reason": "The Oracle modifier on a 2/2 creature yields negative power. Manalink's shared get_abilities EVENT_POWER path clamps negative results to zero before returning them. These assertions track the computed-power discrepancy, not an absent modifier or proven combat-damage error. Correct negative-power expectations remain intact. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 0[\\s\\S]*?s.value[\\s\\S]*?Which is: -3",
+        "step 4 assert_card enemy"
+      ]
+    },
+    "Behavior.Hydrosurge_friendly_EffectExpires": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Hydrosurge",
+      "csvid": 12580,
+      "oracle_id": "4c2059d5-9a2e-4b89-a617-9125eb0cd570",
+      "reason": "The Oracle modifier on a 2/2 creature yields negative power. Manalink's shared get_abilities EVENT_POWER path clamps negative results to zero before returning them. These assertions track the computed-power discrepancy, not an absent modifier or proven combat-damage error. Correct negative-power expectations remain intact. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 0[\\s\\S]*?s.value[\\s\\S]*?Which is: -3",
+        "step 4 assert_card friendly"
+      ]
+    },
+    "Behavior.Natures_Spiral_ArtifactIsEligible": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Nature's Spiral",
+      "csvid": 10450,
+      "oracle_id": "565922d6-8152-411f-8d4d-dc7c8523a49b",
+      "reason": "Oracle permits any permanent card in your graveyard. The handler supplies TYPE_CREATURE to the graveyard recycler, rejecting lands, artifacts, enchantments, and planeswalkers. This isolated permission case retains the correct expectation; noncreature return resolution is still pending. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 0 can_cast source",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.Natures_Spiral_EnchantmentIsEligible": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Nature's Spiral",
+      "csvid": 10450,
+      "oracle_id": "565922d6-8152-411f-8d4d-dc7c8523a49b",
+      "reason": "Oracle permits any permanent card in your graveyard. The handler supplies TYPE_CREATURE to the graveyard recycler, rejecting lands, artifacts, enchantments, and planeswalkers. This isolated permission case retains the correct expectation; noncreature return resolution is still pending. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 0 can_cast source",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.Natures_Spiral_LandIsEligible": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Nature's Spiral",
+      "csvid": 10450,
+      "oracle_id": "565922d6-8152-411f-8d4d-dc7c8523a49b",
+      "reason": "Oracle permits any permanent card in your graveyard. The handler supplies TYPE_CREATURE to the graveyard recycler, rejecting lands, artifacts, enchantments, and planeswalkers. This isolated permission case retains the correct expectation; noncreature return resolution is still pending. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 0 can_cast source",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.Natures_Spiral_PlaneswalkerIsEligible": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Nature's Spiral",
+      "csvid": 10450,
+      "oracle_id": "565922d6-8152-411f-8d4d-dc7c8523a49b",
+      "reason": "Oracle permits any permanent card in your graveyard. The handler supplies TYPE_CREATURE to the graveyard recycler, rejecting lands, artifacts, enchantments, and planeswalkers. This isolated permission case retains the correct expectation; noncreature return resolution is still pending. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 0 can_cast source",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.Sensory_Deprivation_AttachedEffectAndAuraGoesToGraveyard": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Sensory Deprivation",
+      "csvid": 12066,
+      "oracle_id": "0006faf6-7a61-426c-9034-579f2cfcfa83",
+      "reason": "The Oracle modifier on a 2/2 creature yields negative power. Manalink's shared get_abilities EVENT_POWER path clamps negative results to zero before returning them. These assertions track the computed-power discrepancy, not an absent modifier or proven combat-damage error. Correct negative-power expectations remain intact. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 0[\\s\\S]*?s.value[\\s\\S]*?Which is: -1",
+        "step 3 assert_card enemy"
+      ]
+    },
+    "Behavior.Sensory_Deprivation_BuffPersistsThroughCleanup": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Sensory Deprivation",
+      "csvid": 12066,
+      "oracle_id": "0006faf6-7a61-426c-9034-579f2cfcfa83",
+      "reason": "The Oracle modifier on a 2/2 creature yields negative power. Manalink's shared get_abilities EVENT_POWER path clamps negative results to zero before returning them. These assertions track the computed-power discrepancy, not an absent modifier or proven combat-damage error. Correct negative-power expectations remain intact. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 0[\\s\\S]*?s.value[\\s\\S]*?Which is: -1",
+        "step 4 assert_card friendly",
+        "step 8 assert_card friendly"
+      ]
+    },
+    "Behavior.Shrink_enemy_EffectExpires": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Shrink",
+      "csvid": 2245,
+      "oracle_id": "252330b1-67cf-4d9e-a413-917ba61e731f",
+      "reason": "The Oracle modifier on a 2/2 creature yields negative power. Manalink's shared get_abilities EVENT_POWER path clamps negative results to zero before returning them. These assertions track the computed-power discrepancy, not an absent modifier or proven combat-damage error. Correct negative-power expectations remain intact. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 0[\\s\\S]*?s.value[\\s\\S]*?Which is: -3",
+        "step 4 assert_card enemy"
+      ]
+    },
+    "Behavior.Shrink_friendly_EffectExpires": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Shrink",
+      "csvid": 2245,
+      "oracle_id": "252330b1-67cf-4d9e-a413-917ba61e731f",
+      "reason": "The Oracle modifier on a 2/2 creature yields negative power. Manalink's shared get_abilities EVENT_POWER path clamps negative results to zero before returning them. These assertions track the computed-power discrepancy, not an absent modifier or proven combat-damage error. Correct negative-power expectations remain intact. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 0[\\s\\S]*?s.value[\\s\\S]*?Which is: -3",
+        "step 4 assert_card friendly"
+      ]
+    },
+    "Behavior.BrightReprisal_EligibleCreatureCanBeCast": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Bright Reprisal",
+      "csvid": 17361,
+      "oracle_id": "1de2c216-0921-45eb-9613-a68d18fbee77",
+      "reason": "The card database binds this card to card_dummy, which rejects casting even with an Oracle-eligible creature present. This permission case retains the correct expectation. Full resolution scenarios are preserved under data/pending_cases and are not counted as passing coverage. Confirmed natively and in Wasm; implementing the missing handler is deferred.",
+      "patterns": [
+        "step \\d+ can_cast source",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.LichsCaress_EligibleCreatureCanBeCast": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Lich's Caress",
+      "csvid": 18954,
+      "oracle_id": "01b3af6d-ab7d-4137-a94a-1cf2cbfd9d44",
+      "reason": "The card database binds this card to card_dummy, which rejects casting even with an Oracle-eligible creature present. This permission case retains the correct expectation. Full resolution scenarios are preserved under data/pending_cases and are not counted as passing coverage. Confirmed natively and in Wasm; implementing the missing handler is deferred.",
+      "patterns": [
+        "step \\d+ can_cast source",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.MightyLeap_OpposingCreatureIsEligible": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Mighty Leap",
+      "csvid": 11149,
+      "oracle_id": "593caa15-e1d1-477f-bbb4-124d7a7b81f3",
+      "reason": "Oracle allows any creature, including an opponent's. The handler passes player as vanilla_instant_pump's allowed controller, rejecting an opposing Force of Nature when it is the only creature. The correct permission expectation is retained; full opposing-target resolution remains pending. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step \\d+ can_cast source",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.PuncturingBlow_EligibleCreatureCanBeCast": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Puncturing Blow",
+      "csvid": 17197,
+      "oracle_id": "1128d2ab-0b6e-4912-8735-15521bc314e6",
+      "reason": "The card database binds this card to card_dummy, which rejects casting even with an Oracle-eligible creature present. This permission case retains the correct expectation. Full resolution scenarios are preserved under data/pending_cases and are not counted as passing coverage. Confirmed natively and in Wasm; implementing the missing handler is deferred.",
+      "patterns": [
+        "step \\d+ can_cast source",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.PitFight_RequiresAnotherCreature": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Pit Fight",
+      "csvid": 13028,
+      "oracle_id": "ef4b0ced-70a1-41d8-9aed-34e75f979c5f",
+      "reason": "Oracle requires another distinct target creature. With only one friendly Grizzly Bears present, EVENT_CAN_CAST incorrectly returns true: card_pit_fight checks its two target definitions independently and permits the same creature to satisfy both. Actual casting excludes the first chosen target, so its permission check disagrees with target selection. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 0 can_cast",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: true[\\s\\S]*?s.value[\\s\\S]*?Which is: 0"
+      ]
+    },
+    "Behavior.ThunderStrike_OpposingCreatureIsEligible": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Thunder Strike",
+      "csvid": 11183,
+      "oracle_id": "a5f25e80-7a6a-4629-8201-901e0fcd4a02",
+      "reason": "Oracle permits any target creature. The shared card_thunder_strike handler passes player as allowed controller to vanilla_instant_pump, incorrectly excluding opposing creatures. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 0 can_cast",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.SkillfulLunge_OpposingCreatureIsEligible": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Skillful Lunge",
+      "csvid": 12262,
+      "oracle_id": "bc730e60-b9c2-4c49-b97b-2878be105b04",
+      "reason": "Oracle permits any target creature. Skillful Lunge binds to card_thunder_strike, which passes player as allowed controller to vanilla_instant_pump, incorrectly excluding opposing creatures. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 0 can_cast",
+        "duel_test_can_cast\\(ref\\)[\\s\\S]*?Which is: false[\\s\\S]*?s.value[\\s\\S]*?Which is: 1"
+      ]
+    },
+    "Behavior.Unmake_ExileGreenCreature": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Unmake",
+      "csvid": 9897,
+      "oracle_id": "c551ba63-2a74-439d-8996-d566e2efbd5f",
+      "reason": "Oracle cost is three white/black hybrid mana. Selecting BBB should reduce black mana from 10 to 7 and leave white at 10; the real cast instead reduces black to 4. The core put_card_on_stack path charges its printed BBB cost before the handler charges the selected hybrid payment again. Exile and ownership assertions pass. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 16 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 4[\\s\\S]*?s.value[\\s\\S]*?Which is: 7"
+      ]
+    },
+    "Behavior.Unmake_ExileBlackCreature": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Unmake",
+      "csvid": 9897,
+      "oracle_id": "c551ba63-2a74-439d-8996-d566e2efbd5f",
+      "reason": "Oracle cost is three white/black hybrid mana. Selecting WWW should reduce white mana from 10 to 7 and leave black at 10; the real cast instead also reduces black to 7. The core put_card_on_stack path charges its printed BBB cost before the handler charges the selected hybrid payment again. Exile and ownership assertions pass. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "step 16 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 7[\\s\\S]*?s.value[\\s\\S]*?Which is: 10"
+      ]
+    }
+  }
+}

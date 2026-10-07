@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Terror",
+  "csvid": 242,
+  "cases": [
+    {
+      "name": "Terror_DestroyNonartifactNonblackCreature",
+      "fixture": "mixed_targets",
+      "setup": [
+        {"name": "Terror", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "choose_target", "ref": "enemy", "player": -1},
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "enemy", "property": "in_play", "value": 0},
+        {"op": "assert_zone", "player": 1, "zone": "graveyard", "value": 5},
+        {"op": "assert_zone_contains", "player": 0, "zone": "graveyard", "value": 242},
+        {"op": "assert_mana", "player": 0, "color": 1, "value": 9}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Terror_NoLegalCreatureTarget",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Terror", "ref": "source", "player": 0, "zone": "hand"},
+        {"name": "Black Knight", "ref": "black_creature", "player": 1, "zone": "battlefield"},
+        {"name": "Ornithopter", "ref": "artifact_creature", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 0},
+        {"op": "assert_stack", "value": 0},
+        {"op": "assert_card", "ref": "black_creature", "property": "in_play", "value": 1},
+        {"op": "assert_card", "ref": "artifact_creature", "property": "in_play", "value": 1},
+        {"op": "assert_mana", "player": 0, "color": 1, "value": 10}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Terror_NoCreatureTarget",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Terror", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 0},
+        {"op": "assert_stack", "value": 0},
+        {"op": "assert_mana", "player": 0, "color": 1, "value": 10}
+      ],
+      "seed": 123
+    }
+  ]
+}

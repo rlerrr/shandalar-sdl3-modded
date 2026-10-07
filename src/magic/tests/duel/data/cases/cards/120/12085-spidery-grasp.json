@@ -1,0 +1,421 @@
+{
+  "version": 1,
+  "card": "Spidery Grasp",
+  "csvid": 12085,
+  "cases": [
+    {
+      "seed": 123,
+      "name": "SpideryGrasp_ExactStatsAndExpiration",
+      "fixture": "empty_main",
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 12085,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "value": 4,
+          "ref": "target",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 6,
+          "ref": "target",
+          "property": "toughness"
+        },
+        {
+          "op": "assert_card",
+          "value": 8,
+          "ref": "witness",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "target",
+          "property": "tapped"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "target",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "target",
+          "property": "toughness"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "target",
+          "property": "tapped"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Spidery Grasp",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 0,
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "ref": "target",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "player": 0,
+          "name": "Force of Nature",
+          "zone": "battlefield",
+          "ref": "witness"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "SpideryGrasp_ReachUntapsAndBlocksFlyer",
+      "fixture": "empty_main",
+      "steps": [
+        {
+          "player": 0,
+          "op": "turn",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "value": 1,
+          "ref": "attacker"
+        },
+        {
+          "op": "block",
+          "value": 0,
+          "ref": "guard",
+          "other": "attacker"
+        },
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "guard"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 12085,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "guard",
+          "property": "tapped"
+        },
+        {
+          "op": "assert_card",
+          "value": 4,
+          "ref": "guard",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 6,
+          "ref": "guard",
+          "property": "toughness"
+        },
+        {
+          "op": "block",
+          "value": 1,
+          "ref": "guard",
+          "other": "attacker"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "guard",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Spidery Grasp",
+          "zone": "hand",
+          "ref": "source"
+        },
+        {
+          "player": 0,
+          "name": "Air Elemental",
+          "zone": "battlefield",
+          "ref": "attacker"
+        },
+        {
+          "player": 1,
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "ref": "guard",
+          "state": [
+            "tapped"
+          ]
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "ref": "target",
+          "player": -1,
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "op": "cast",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "zone": "graveyard",
+          "player": 0,
+          "op": "assert_zone_contains",
+          "value": 12085
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "property": "power",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 10
+        },
+        {
+          "property": "toughness",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 12
+        },
+        {
+          "property": "power",
+          "ref": "witness",
+          "op": "assert_card",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "property": "power",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 8
+        },
+        {
+          "property": "toughness",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 8
+        },
+        {
+          "property": "tapped",
+          "ref": "target",
+          "op": "assert_card",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "fixture": "empty_main",
+      "name": "SpideryGrasp_AffectsOpponentsCreature",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Spidery Grasp",
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "player": 1,
+          "name": "Force of Nature",
+          "ref": "target",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "zone": "battlefield",
+          "player": 0,
+          "name": "Grizzly Bears",
+          "ref": "witness"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "ref": "guard",
+          "player": -1,
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 12085,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "ref": "guard",
+          "value": 4,
+          "op": "assert_card",
+          "property": "power"
+        },
+        {
+          "ref": "guard",
+          "value": 6,
+          "op": "assert_card",
+          "property": "toughness"
+        },
+        {
+          "ref": "guard",
+          "value": 0,
+          "op": "assert_card",
+          "property": "tapped"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "ref": "guard",
+          "value": 2,
+          "op": "assert_card",
+          "property": "power"
+        },
+        {
+          "ref": "guard",
+          "value": 2,
+          "op": "assert_card",
+          "property": "toughness"
+        },
+        {
+          "value": 1,
+          "player": 0,
+          "op": "turn"
+        },
+        {
+          "ref": "flyer",
+          "value": 1,
+          "op": "attack"
+        },
+        {
+          "ref": "guard",
+          "other": "flyer",
+          "value": 0,
+          "op": "block"
+        }
+      ],
+      "name": "SpideryGrasp_ReachExpiresBeforeCombat",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "ref": "source",
+          "name": "Spidery Grasp",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "ref": "flyer",
+          "name": "Air Elemental",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "ref": "guard",
+          "name": "Grizzly Bears",
+          "player": 1,
+          "state": [
+            "tapped"
+          ],
+          "zone": "battlefield"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

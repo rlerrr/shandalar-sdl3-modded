@@ -1,0 +1,67 @@
+{
+  "card": "Lich's Caress",
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Lich's Caress",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "ref": "witness"
+        }
+      ],
+      "name": "LichsCaress_EligibleCreatureCanBeCast",
+      "fixture": "empty_main"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Lich's Caress",
+          "ref": "source"
+        }
+      ],
+      "name": "LichsCaress_NoEligibleTarget",
+      "fixture": "empty_main"
+    }
+  ],
+  "version": 1,
+  "csvid": 18954
+}

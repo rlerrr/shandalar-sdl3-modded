@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "card": "Shatter",
+  "csvid": 223,
+  "cases": [
+    {
+      "name": "Shatter_DestroyArtifact",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shatter",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "victim",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "victim",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "victim",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 223
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Shatter_NoArtifactTarget",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shatter",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "card": "Wrecking Ball",
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "player": -1,
+          "op": "choose_target",
+          "ref": "target"
+        },
+        {
+          "value": 1,
+          "op": "cast",
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "value": 106,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "player": 0,
+          "value": 1278,
+          "zone": "graveyard",
+          "op": "assert_zone_contains"
+        },
+        {
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "witness"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard"
+        },
+        {
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 1278,
+          "zone": "graveyard"
+        },
+        {
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card",
+          "value": 106,
+          "zone": "graveyard"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Wrecking Ball",
+          "ref": "source"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "ref": "target"
+        },
+        {
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "ref": "witness"
+        }
+      ],
+      "name": "WreckingBall_creature_removal",
+      "fixture": "empty_main"
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 0,
+          "op": "can_cast",
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Wrecking Ball",
+          "ref": "source"
+        }
+      ],
+      "name": "WreckingBall_NoEligibleTarget",
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "ref": "land",
+          "player": -1,
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "ref": "land",
+          "value": 0,
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "ref": "land_witness",
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "value": 1,
+          "player": 1,
+          "zone": "graveyard",
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 188,
+          "player": 1,
+          "index": 0,
+          "op": "assert_zone_card"
+        },
+        {
+          "value": 1,
+          "player": 0,
+          "zone": "graveyard",
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 1278,
+          "player": 0,
+          "index": 0,
+          "op": "assert_zone_card"
+        }
+      ],
+      "seed": 123,
+      "setup": [
+        {
+          "ref": "source",
+          "player": 0,
+          "zone": "hand",
+          "name": "Wrecking Ball"
+        },
+        {
+          "ref": "land",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Plains"
+        },
+        {
+          "ref": "land_witness",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Plains"
+        }
+      ],
+      "fixture": "empty_main",
+      "name": "WreckingBall_LandTarget"
+    }
+  ],
+  "version": 1,
+  "csvid": 1278
+}

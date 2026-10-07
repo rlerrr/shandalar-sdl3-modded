@@ -1,0 +1,172 @@
+{
+  "version": 1,
+  "card": "Unholy Strength",
+  "csvid": 259,
+  "cases": [
+    {
+      "name": "UnholyStrength_LegalAuraAddsTwoOne",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Unholy Strength",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "UnholyStrength_NoCreatureCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Unholy Strength",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "UnholyStrength_DestroyAuraRestoresCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "ref": "source",
+          "name": "Unholy Strength",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "target",
+          "name": "Grizzly Bears",
+          "player": 0
+        }
+      ],
+      "steps": [
+        {
+          "player": -1,
+          "ref": "target",
+          "op": "choose_target"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 1,
+          "ref": "source",
+          "property": "in_play",
+          "op": "assert_card"
+        },
+        {
+          "value": 4,
+          "ref": "target",
+          "property": "power",
+          "op": "assert_card"
+        },
+        {
+          "value": 3,
+          "ref": "target",
+          "property": "toughness",
+          "op": "assert_card"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "value": 4,
+          "ref": "target",
+          "property": "power",
+          "op": "assert_card"
+        },
+        {
+          "value": 3,
+          "ref": "target",
+          "property": "toughness",
+          "op": "assert_card"
+        },
+        {
+          "ref": "source",
+          "op": "destroy"
+        },
+        {
+          "value": 2,
+          "ref": "target",
+          "property": "power",
+          "op": "assert_card"
+        },
+        {
+          "value": 2,
+          "ref": "target",
+          "property": "toughness",
+          "op": "assert_card"
+        },
+        {
+          "zone": "graveyard",
+          "player": 0,
+          "value": 259,
+          "op": "assert_zone_contains"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

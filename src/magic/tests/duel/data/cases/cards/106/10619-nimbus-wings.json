@@ -1,0 +1,200 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "friendly"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 10619,
+          "zone": "battlefield"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "enemy",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "friendly",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "friendly",
+          "value": 4
+        }
+      ],
+      "seed": 123,
+      "fixture": "mixed_targets",
+      "name": "Nimbus_Wings_BuffPersistsThroughCleanup",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Nimbus Wings",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": -1,
+          "ref": "attacker"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 10619,
+          "zone": "battlefield"
+        },
+        {
+          "op": "assert_card",
+          "value": 3,
+          "ref": "attacker",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 4,
+          "ref": "attacker",
+          "property": "toughness"
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "value": 1,
+          "ref": "attacker"
+        },
+        {
+          "op": "block",
+          "value": 0,
+          "ref": "blocker",
+          "other": "attacker"
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 10619,
+          "zone": "graveyard"
+        },
+        {
+          "op": "block",
+          "value": 1,
+          "ref": "blocker",
+          "other": "attacker"
+        }
+      ],
+      "seed": 123,
+      "fixture": "empty_main",
+      "name": "Nimbus_Wings_FlyingBlocksUntilAuraRemoved",
+      "setup": [
+        {
+          "ref": "source",
+          "player": 0,
+          "zone": "hand",
+          "name": "Nimbus Wings"
+        },
+        {
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield",
+          "name": "Grizzly Bears"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "value": 0,
+          "op": "assert_stack"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "value": 10619
+        }
+      ],
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "ref": "source",
+          "name": "Nimbus Wings"
+        }
+      ],
+      "fixture": "empty_main",
+      "seed": 123,
+      "name": "Nimbus_Wings_NoCreatureTarget"
+    }
+  ],
+  "csvid": 10619,
+  "card": "Nimbus Wings",
+  "version": 1
+}

@@ -764,10 +764,9 @@ int choose_ai_main_phase_action(int player)
         }
         g_ai_search_force_pass = -1;
       }
-      g_ai_recorded_action = candidates[g_ai_recorded_choice] == 0xffffffffU
-                                 ? -1
-                                 : (((global_card_instances[player][candidates[g_ai_recorded_choice]].state & STATE_IN_PLAY) == 0) ? 0x1000 : 0x2000) |
-                                       candidates[g_ai_recorded_choice] | (player != 0 ? 0x100 : 0);
+      g_ai_recorded_action = candidates[g_ai_recorded_choice] == 0xffffffffU ? -1 :
+                            ((((global_card_instances[player][candidates[g_ai_recorded_choice]].state & STATE_IN_PLAY) == 0) ? 0x1000 : 0x2000) |
+                             candidates[g_ai_recorded_choice] | (player != 0 ? 0x100 : 0));
       g_ai_recorded_action_type = 2;
       record_ai_action_selection();
     }
@@ -1492,62 +1491,69 @@ void start_ai_decision_search(int decision_code, int time_scale)
 
 // FUNCTION: MAGIC 0x004e430e
 // FUNCTION: SHANDALAR 0x004c357e
-void save_ai_search_state(void)
+size_t duel_engine_ai_snapshot_size(void) { return sizeof(AiSearchBackup); }
+void duel_engine_capture_ai_snapshot(void *destination)
 {
-  g_saved_recorded_action_count = 0;
-  memcpy(g_ai_search_backup.card_instances, global_card_instances, sizeof(g_ai_search_backup.card_instances));
-  memcpy(g_ai_search_backup.extra_card_data, global_cards_data + g_card_count, sizeof(g_ai_search_backup.extra_card_data));
-  memcpy(g_ai_search_backup.library, global_library, sizeof(g_ai_search_backup.library));
-  memcpy(g_ai_search_backup.graveyard, global_graveyard_slots, sizeof(g_ai_search_backup.graveyard));
-  memcpy(g_ai_search_backup.exile, global_exile, sizeof(g_ai_search_backup.exile));
-  memcpy(g_ai_search_backup.special_mana, g_special_mana_pool, sizeof(g_ai_search_backup.special_mana));
-  memcpy(g_ai_search_backup.raw_mana, g_raw_mana_available, sizeof(g_ai_search_backup.raw_mana));
-  memcpy(g_ai_search_backup.basic_lands, g_basiclandtypes_controlled, sizeof(g_ai_search_backup.basic_lands));
-  memcpy(g_ai_search_backup.raw_mana_hex, g_raw_mana_available_hex, sizeof(g_ai_search_backup.raw_mana_hex));
-  memcpy(g_ai_search_backup.life_totals, g_life, sizeof(g_ai_search_backup.life_totals));
-  memcpy(g_ai_search_backup.player_counters, player_counters, sizeof(g_ai_search_backup.player_counters));
-  memcpy(g_ai_search_backup.card_types, g_card_types_in_play, sizeof(g_ai_search_backup.card_types));
-  memcpy(g_ai_search_backup.graveyard_type_flags, g_graveyard_card_types, sizeof(g_ai_search_backup.graveyard_type_flags));
-  memcpy(g_ai_search_backup.duel_summary_copy, &g_duel_summary, sizeof(g_ai_search_backup.duel_summary_copy));
-  memcpy(g_ai_search_backup.hand_counts, g_duel_summary.hand_counts, sizeof(g_ai_search_backup.hand_counts));
-  memcpy(g_ai_search_backup.creature_counts, g_duel_summary.creature_counts, sizeof(g_ai_search_backup.creature_counts));
-  memcpy(g_ai_search_backup.artifact_counts, g_duel_summary.artifact_counts, sizeof(g_ai_search_backup.artifact_counts));
-  memcpy(g_ai_search_backup.enchantment_counts, g_duel_summary.enchantment_counts, sizeof(g_ai_search_backup.enchantment_counts));
-  g_ai_search_backup.cards_drawn_value = g_duel_summary.cards_drawn;
-  g_ai_search_backup.creatures_died_this_turn_value = g_duel_summary.creatures_died;
-  g_ai_search_backup.land_entries_this_turn_value = g_duel_summary.land_entries;
-  memcpy(g_ai_search_backup.ante_cards, global_ante_cards, sizeof(g_ai_search_backup.ante_cards));
-  memcpy(g_ai_search_backup.timestamp_player, TENTATIVE_timestamp_player, sizeof(g_ai_search_backup.timestamp_player));
-  memcpy(g_ai_search_backup.timestamp_card, TENTATIVE_timestamp_card, sizeof(g_ai_search_backup.timestamp_card));
-  g_ai_search_backup.land_play_flags = g_land_can_be_played;
-  g_ai_search_backup.phase = g_current_phase;
-  g_ai_response_state = g_ai_search_backup.phase;
-  g_ai_search_backup.current_casting_internal_card_id_value = g_current_casting_internal_card_id;
-  g_ai_search_backup.combat_count = g_attacking_creature_count;
-  g_ai_search_backup.spell_fizzled_value = g_spell_fizzled;
-  memcpy(g_ai_search_backup.stack_events, g_stack_data, sizeof(g_ai_search_backup.stack_events));
-  memcpy(g_ai_search_backup.stack_cards, global_stack_cards, sizeof(g_ai_search_backup.stack_cards));
-  memcpy(g_ai_search_backup.stack_damage_targets, global_stack_damage_targets, sizeof(g_ai_search_backup.stack_damage_targets));
-  memcpy(g_ai_search_backup.active_counts, g_active_cards_count, sizeof(g_ai_search_backup.active_counts));
+  AiSearchBackup *backup = destination;
+
+  memcpy(backup->card_instances, global_card_instances, sizeof(backup->card_instances));
+  memcpy(backup->extra_card_data, global_cards_data + g_card_count, sizeof(backup->extra_card_data));
+  memcpy(backup->library, global_library, sizeof(backup->library));
+  memcpy(backup->graveyard, global_graveyard_slots, sizeof(backup->graveyard));
+  memcpy(backup->exile, global_exile, sizeof(backup->exile));
+  memcpy(backup->special_mana, g_special_mana_pool, sizeof(backup->special_mana));
+  memcpy(backup->raw_mana, g_raw_mana_available, sizeof(backup->raw_mana));
+  memcpy(backup->basic_lands, g_basiclandtypes_controlled, sizeof(backup->basic_lands));
+  memcpy(backup->raw_mana_hex, g_raw_mana_available_hex, sizeof(backup->raw_mana_hex));
+  memcpy(backup->life_totals, g_life, sizeof(backup->life_totals));
+  memcpy(backup->player_counters, player_counters, sizeof(backup->player_counters));
+  memcpy(backup->card_types, g_card_types_in_play, sizeof(backup->card_types));
+  memcpy(backup->graveyard_type_flags, g_graveyard_card_types, sizeof(backup->graveyard_type_flags));
+  memcpy(backup->duel_summary_copy, &g_duel_summary, sizeof(backup->duel_summary_copy));
+  memcpy(backup->hand_counts, g_duel_summary.hand_counts, sizeof(backup->hand_counts));
+  memcpy(backup->creature_counts, g_duel_summary.creature_counts, sizeof(backup->creature_counts));
+  memcpy(backup->artifact_counts, g_duel_summary.artifact_counts, sizeof(backup->artifact_counts));
+  memcpy(backup->enchantment_counts, g_duel_summary.enchantment_counts, sizeof(backup->enchantment_counts));
+  backup->cards_drawn_value = g_duel_summary.cards_drawn;
+  backup->creatures_died_this_turn_value = g_duel_summary.creatures_died;
+  backup->land_entries_this_turn_value = g_duel_summary.land_entries;
+  memcpy(backup->ante_cards, global_ante_cards, sizeof(backup->ante_cards));
+  memcpy(backup->timestamp_player, TENTATIVE_timestamp_player, sizeof(backup->timestamp_player));
+  memcpy(backup->timestamp_card, TENTATIVE_timestamp_card, sizeof(backup->timestamp_card));
+  backup->land_play_flags = g_land_can_be_played;
+  backup->phase = g_current_phase;
+  backup->current_casting_internal_card_id_value = g_current_casting_internal_card_id;
+  backup->combat_count = g_attacking_creature_count;
+  backup->spell_fizzled_value = g_spell_fizzled;
+  memcpy(backup->stack_events, g_stack_data, sizeof(backup->stack_events));
+  memcpy(backup->stack_cards, global_stack_cards, sizeof(backup->stack_cards));
+  memcpy(backup->stack_damage_targets, global_stack_damage_targets, sizeof(backup->stack_damage_targets));
+  memcpy(backup->active_counts, g_active_cards_count, sizeof(backup->active_counts));
   if (g_stack_size < 0)
   {
     _assert("ScWilly>=0", "D:\\Newmagic\\multiplayer\\sid\\Ai.c", 0x1cb);
   }
-  g_ai_search_backup.stack_count = g_stack_size;
-  g_ai_search_backup.pending_killed_card_handler_value = pending_killed_card_handler;
-  g_ai_search_backup.duel_state_0093a848_value = g_duel_state_0093a848;
-  memcpy(g_ai_search_backup.damage_matrix, g_damage_accumulators, sizeof(g_ai_search_backup.damage_matrix));
-  memcpy(g_ai_search_backup.cost_mod, g_mana_cost_modifiers_by_color, sizeof(g_ai_search_backup.cost_mod));
-  memcpy(g_ai_search_backup.mana_charge, g_mana_charge, sizeof(g_ai_search_backup.mana_charge));
-  g_ai_search_backup.x_value_copy = g_x_value;
-  g_ai_search_backup.max_x_value_copy = g_max_x_value;
-  g_ai_search_backup.extra_turn_player = g_duel_extra_turn_player;
-  g_ai_search_backup.duel_state_0093a848_value = g_duel_state_0093a848;
-  g_ai_search_backup.stop_phase_copy = g_stop_phase;
-  g_ai_search_backup.stop_phase_player_copy = g_stop_phase_player;
-  g_ai_search_backup.battlefield_flags = g_battlefield_extra_ability_flags;
-  memcpy(g_ai_search_backup.lich_active_copy, g_lich_active, sizeof(g_ai_search_backup.lich_active_copy));
-  memcpy(g_ai_search_backup.player_special_effect_flags_copy, g_player_special_effect_flags, sizeof(g_ai_search_backup.player_special_effect_flags_copy));
+  backup->stack_count = g_stack_size;
+  backup->pending_killed_card_handler_value = pending_killed_card_handler;
+  backup->duel_state_0093a848_value = g_duel_state_0093a848;
+  memcpy(backup->damage_matrix, g_damage_accumulators, sizeof(backup->damage_matrix));
+  memcpy(backup->cost_mod, g_mana_cost_modifiers_by_color, sizeof(backup->cost_mod));
+  memcpy(backup->mana_charge, g_mana_charge, sizeof(backup->mana_charge));
+  backup->x_value_copy = g_x_value;
+  backup->max_x_value_copy = g_max_x_value;
+  backup->extra_turn_player = g_duel_extra_turn_player;
+  backup->duel_state_0093a848_value = g_duel_state_0093a848;
+  backup->stop_phase_copy = g_stop_phase;
+  backup->stop_phase_player_copy = g_stop_phase_player;
+  backup->battlefield_flags = g_battlefield_extra_ability_flags;
+  memcpy(backup->lich_active_copy, g_lich_active, sizeof(backup->lich_active_copy));
+  memcpy(backup->player_special_effect_flags_copy, g_player_special_effect_flags, sizeof(backup->player_special_effect_flags_copy));
+}
+void save_ai_search_state(void)
+{
+  g_saved_recorded_action_count = 0;
+  duel_engine_capture_ai_snapshot(&g_ai_search_backup);
+  g_ai_response_state = g_ai_search_backup.phase;
 #ifndef SHANDALAR
   StopWorldLocationMusic();
 #else
@@ -1557,56 +1563,62 @@ void save_ai_search_state(void)
 
 // FUNCTION: MAGIC 0x004e4632
 // FUNCTION: SHANDALAR 0x004c38a2
+void duel_engine_restore_ai_snapshot(const void *source)
+{
+  const AiSearchBackup *backup = source;
+
+  memcpy(global_card_instances, backup->card_instances, sizeof(backup->card_instances));
+  memcpy(global_cards_data + g_card_count, backup->extra_card_data, sizeof(backup->extra_card_data));
+  memcpy(global_library, backup->library, sizeof(backup->library));
+  memcpy(global_graveyard_slots, backup->graveyard, sizeof(backup->graveyard));
+  memcpy(global_exile, backup->exile, sizeof(backup->exile));
+  memcpy(g_special_mana_pool, backup->special_mana, sizeof(backup->special_mana));
+  memcpy(g_raw_mana_available, backup->raw_mana, sizeof(backup->raw_mana));
+  memcpy(g_basiclandtypes_controlled, backup->basic_lands, sizeof(backup->basic_lands));
+  memcpy(g_raw_mana_available_hex, backup->raw_mana_hex, sizeof(backup->raw_mana_hex));
+  memcpy(g_life, backup->life_totals, sizeof(backup->life_totals));
+  memcpy(player_counters, backup->player_counters, sizeof(backup->player_counters));
+  memcpy(g_card_types_in_play, backup->card_types, sizeof(backup->card_types));
+  memcpy(g_graveyard_card_types, backup->graveyard_type_flags, sizeof(backup->graveyard_type_flags));
+  memcpy(&g_duel_summary, backup->duel_summary_copy, sizeof(backup->duel_summary_copy));
+  memcpy(g_duel_summary.hand_counts, backup->hand_counts, sizeof(backup->hand_counts));
+  memcpy(g_duel_summary.creature_counts, backup->creature_counts, sizeof(backup->creature_counts));
+  memcpy(g_duel_summary.artifact_counts, backup->artifact_counts, sizeof(backup->artifact_counts));
+  memcpy(g_duel_summary.enchantment_counts, backup->enchantment_counts, sizeof(backup->enchantment_counts));
+  g_duel_summary.cards_drawn = backup->cards_drawn_value;
+  g_duel_summary.creatures_died = backup->creatures_died_this_turn_value;
+  g_duel_summary.land_entries = backup->land_entries_this_turn_value;
+  memcpy(global_ante_cards, backup->ante_cards, sizeof(backup->ante_cards));
+  memcpy(TENTATIVE_timestamp_player, backup->timestamp_player, sizeof(backup->timestamp_player));
+  memcpy(TENTATIVE_timestamp_card, backup->timestamp_card, sizeof(backup->timestamp_card));
+  g_land_can_be_played = backup->land_play_flags;
+  g_current_phase = backup->phase;
+  g_current_casting_internal_card_id = backup->current_casting_internal_card_id_value;
+  g_attacking_creature_count = backup->combat_count;
+  g_spell_fizzled = backup->spell_fizzled_value;
+  memcpy(g_stack_data, backup->stack_events, sizeof(backup->stack_events));
+  memcpy(global_stack_cards, backup->stack_cards, sizeof(backup->stack_cards));
+  memcpy(global_stack_damage_targets, backup->stack_damage_targets, sizeof(backup->stack_damage_targets));
+  memcpy(g_active_cards_count, backup->active_counts, sizeof(backup->active_counts));
+  g_stack_size = backup->stack_count;
+  pending_killed_card_handler = backup->pending_killed_card_handler_value;
+  g_duel_state_0093a848 = backup->duel_state_0093a848_value;
+  memcpy(g_damage_accumulators, backup->damage_matrix, sizeof(backup->damage_matrix));
+  memcpy(g_mana_cost_modifiers_by_color, backup->cost_mod, sizeof(backup->cost_mod));
+  memcpy(g_mana_charge, backup->mana_charge, sizeof(backup->mana_charge));
+  g_x_value = backup->x_value_copy;
+  g_max_x_value = backup->max_x_value_copy;
+  g_duel_extra_turn_player = backup->extra_turn_player;
+  g_duel_state_0093a848 = backup->duel_state_0093a848_value;
+  g_stop_phase = backup->stop_phase_copy;
+  g_stop_phase_player = backup->stop_phase_player_copy;
+  g_battlefield_extra_ability_flags = backup->battlefield_flags;
+  memcpy(g_lich_active, backup->lich_active_copy, sizeof(backup->lich_active_copy));
+  memcpy(g_player_special_effect_flags, backup->player_special_effect_flags_copy, sizeof(backup->player_special_effect_flags_copy));
+}
 void restore_ai_search_state(void)
 {
-  memcpy(global_card_instances, g_ai_search_backup.card_instances, sizeof(g_ai_search_backup.card_instances));
-  memcpy(global_cards_data + g_card_count, g_ai_search_backup.extra_card_data, sizeof(g_ai_search_backup.extra_card_data));
-  memcpy(global_library, g_ai_search_backup.library, sizeof(g_ai_search_backup.library));
-  memcpy(global_graveyard_slots, g_ai_search_backup.graveyard, sizeof(g_ai_search_backup.graveyard));
-  memcpy(global_exile, g_ai_search_backup.exile, sizeof(g_ai_search_backup.exile));
-  memcpy(g_special_mana_pool, g_ai_search_backup.special_mana, sizeof(g_ai_search_backup.special_mana));
-  memcpy(g_raw_mana_available, g_ai_search_backup.raw_mana, sizeof(g_ai_search_backup.raw_mana));
-  memcpy(g_basiclandtypes_controlled, g_ai_search_backup.basic_lands, sizeof(g_ai_search_backup.basic_lands));
-  memcpy(g_raw_mana_available_hex, g_ai_search_backup.raw_mana_hex, sizeof(g_ai_search_backup.raw_mana_hex));
-  memcpy(g_life, g_ai_search_backup.life_totals, sizeof(g_ai_search_backup.life_totals));
-  memcpy(player_counters, g_ai_search_backup.player_counters, sizeof(g_ai_search_backup.player_counters));
-  memcpy(g_card_types_in_play, g_ai_search_backup.card_types, sizeof(g_ai_search_backup.card_types));
-  memcpy(g_graveyard_card_types, g_ai_search_backup.graveyard_type_flags, sizeof(g_ai_search_backup.graveyard_type_flags));
-  memcpy(&g_duel_summary, g_ai_search_backup.duel_summary_copy, sizeof(g_ai_search_backup.duel_summary_copy));
-  memcpy(g_duel_summary.hand_counts, g_ai_search_backup.hand_counts, sizeof(g_ai_search_backup.hand_counts));
-  memcpy(g_duel_summary.creature_counts, g_ai_search_backup.creature_counts, sizeof(g_ai_search_backup.creature_counts));
-  memcpy(g_duel_summary.artifact_counts, g_ai_search_backup.artifact_counts, sizeof(g_ai_search_backup.artifact_counts));
-  memcpy(g_duel_summary.enchantment_counts, g_ai_search_backup.enchantment_counts, sizeof(g_ai_search_backup.enchantment_counts));
-  g_duel_summary.cards_drawn = g_ai_search_backup.cards_drawn_value;
-  g_duel_summary.creatures_died = g_ai_search_backup.creatures_died_this_turn_value;
-  g_duel_summary.land_entries = g_ai_search_backup.land_entries_this_turn_value;
-  memcpy(global_ante_cards, g_ai_search_backup.ante_cards, sizeof(g_ai_search_backup.ante_cards));
-  memcpy(TENTATIVE_timestamp_player, g_ai_search_backup.timestamp_player, sizeof(g_ai_search_backup.timestamp_player));
-  memcpy(TENTATIVE_timestamp_card, g_ai_search_backup.timestamp_card, sizeof(g_ai_search_backup.timestamp_card));
-  g_land_can_be_played = g_ai_search_backup.land_play_flags;
-  g_current_phase = g_ai_search_backup.phase;
-  g_current_casting_internal_card_id = g_ai_search_backup.current_casting_internal_card_id_value;
-  g_attacking_creature_count = g_ai_search_backup.combat_count;
-  g_spell_fizzled = g_ai_search_backup.spell_fizzled_value;
-  memcpy(g_stack_data, g_ai_search_backup.stack_events, sizeof(g_ai_search_backup.stack_events));
-  memcpy(global_stack_cards, g_ai_search_backup.stack_cards, sizeof(g_ai_search_backup.stack_cards));
-  memcpy(global_stack_damage_targets, g_ai_search_backup.stack_damage_targets, sizeof(g_ai_search_backup.stack_damage_targets));
-  memcpy(g_active_cards_count, g_ai_search_backup.active_counts, sizeof(g_ai_search_backup.active_counts));
-  g_stack_size = g_ai_search_backup.stack_count;
-  pending_killed_card_handler = g_ai_search_backup.pending_killed_card_handler_value;
-  g_duel_state_0093a848 = g_ai_search_backup.duel_state_0093a848_value;
-  memcpy(g_damage_accumulators, g_ai_search_backup.damage_matrix, sizeof(g_ai_search_backup.damage_matrix));
-  memcpy(g_mana_cost_modifiers_by_color, g_ai_search_backup.cost_mod, sizeof(g_ai_search_backup.cost_mod));
-  memcpy(g_mana_charge, g_ai_search_backup.mana_charge, sizeof(g_ai_search_backup.mana_charge));
-  g_x_value = g_ai_search_backup.x_value_copy;
-  g_max_x_value = g_ai_search_backup.max_x_value_copy;
-  g_duel_extra_turn_player = g_ai_search_backup.extra_turn_player;
-  g_duel_state_0093a848 = g_ai_search_backup.duel_state_0093a848_value;
-  g_stop_phase = g_ai_search_backup.stop_phase_copy;
-  g_stop_phase_player = g_ai_search_backup.stop_phase_player_copy;
-  g_battlefield_extra_ability_flags = g_ai_search_backup.battlefield_flags;
-  memcpy(g_lich_active, g_ai_search_backup.lich_active_copy, sizeof(g_ai_search_backup.lich_active_copy));
-  memcpy(g_player_special_effect_flags, g_ai_search_backup.player_special_effect_flags_copy, sizeof(g_ai_search_backup.player_special_effect_flags_copy));
+  duel_engine_restore_ai_snapshot(&g_ai_search_backup);
   FUN_00464bb0();
 }
 

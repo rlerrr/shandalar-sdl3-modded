@@ -3,6 +3,7 @@
 #include <string.h>
 
 #include "defs.h"
+#include "magic/src/duel_host.h"
 #include "magic/src/game_support.h"
 #include "magic/src/global_duel_ui_ids.h"
 #include "magic/src/global_other.h"
@@ -368,6 +369,7 @@ resume_main_phase_response_window:
     }
   }
 restart_main_phase_action_loop:
+  duel_host_checkpoint("execution budget exhausted during main phase");
   *phase_value = 0;
   main_phase_resume_mode = 6;
   do

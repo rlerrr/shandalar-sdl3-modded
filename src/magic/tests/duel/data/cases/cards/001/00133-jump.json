@@ -1,0 +1,154 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "ref": "attacker",
+          "op": "attack",
+          "value": 1
+        },
+        {
+          "ref": "attacker",
+          "op": "choose_target",
+          "player": -1
+        },
+        {
+          "ref": "source",
+          "op": "cast",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "zone": "graveyard",
+          "op": "assert_zone_contains",
+          "value": 133,
+          "player": 0
+        },
+        {
+          "ref": "blocker",
+          "other": "attacker",
+          "op": "block",
+          "value": 0
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "ref": "blocker",
+          "other": "attacker",
+          "op": "block",
+          "value": 1
+        }
+      ],
+      "seed": 123,
+      "fixture": "combat",
+      "name": "Jump_FlyingAllowsBlockAfterCleanup",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Jump",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "ref": "attacker",
+          "op": "attack",
+          "value": 1
+        },
+        {
+          "ref": "attacker",
+          "op": "choose_target",
+          "player": -1
+        },
+        {
+          "ref": "source",
+          "op": "cast",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "zone": "graveyard",
+          "op": "assert_zone_contains",
+          "value": 133,
+          "player": 0
+        },
+        {
+          "ref": "attacker",
+          "property": "power",
+          "op": "assert_card",
+          "value": 2
+        },
+        {
+          "ref": "attacker",
+          "property": "toughness",
+          "op": "assert_card",
+          "value": 2
+        },
+        {
+          "ref": "blocker",
+          "other": "attacker",
+          "op": "block",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "fixture": "combat",
+      "name": "Jump_FlyingStopsGroundBlockWhileActive",
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "name": "Jump",
+          "ref": "source"
+        }
+      ]
+    },
+    {
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "value": 0,
+          "op": "assert_stack"
+        },
+        {
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "value": 133
+        }
+      ],
+      "setup": [
+        {
+          "zone": "hand",
+          "player": 0,
+          "ref": "source",
+          "name": "Jump"
+        }
+      ],
+      "fixture": "empty_main",
+      "seed": 123,
+      "name": "Jump_NoCreatureTarget"
+    }
+  ],
+  "csvid": 133,
+  "card": "Jump",
+  "version": 1
+}

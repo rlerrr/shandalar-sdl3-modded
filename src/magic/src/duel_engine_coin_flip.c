@@ -1,3 +1,4 @@
+#include "magic/src/duel_host.h"
 #include <windows.h>
 #include <stdio.h>
 #include <stdlib.h>
@@ -180,7 +181,7 @@ int coin_flip(int player, char *dialog_title, int show_dialog_if_animation_is_of
     if (g_manalink_is_host != 0)
     {
       g_network_result_packet.packet_type = 1;
-      animation_context.coin_result = rand() % 2;
+      animation_context.coin_result = duel_host_random() % 2;
       g_network_result_packet.result = animation_context.coin_result;
       TENTATIVE_send_network_result(player, 1);
     }
@@ -192,7 +193,7 @@ int coin_flip(int player, char *dialog_title, int show_dialog_if_animation_is_of
   }
   else
   {
-    animation_context.coin_result = rand() % 2;
+    animation_context.coin_result = duel_host_random() % 2;
   }
   animation_context.show_coin_flips = g_duel_interface_options.show_coin_flips;
   if (g_duel_interface_options.show_coin_flips != 0)

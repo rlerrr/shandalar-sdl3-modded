@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "card": "Lignify",
+  "csvid": 9200,
+  "cases": [
+    {
+      "name": "Lignify_SetsBaseStatsAndRemovesVeteranAbility",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Lignify",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Infantry Veteran",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Lignify_NoCreatureCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Lignify",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

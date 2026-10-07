@@ -1,3 +1,4 @@
+#include "duel_host.h"
 #include <stddef.h>
 #include <string.h>
 #include <stdio.h>
@@ -687,6 +688,10 @@ int do_dialog(int who_chooses,
               const char *options,
               int ai_choice)
 {
+  if (duel_host_scripted_input())
+    return duel_host_choose(DUEL_CHOICE_DIALOG, who_chooses, options, 0, NULL, NULL);
+
+
   int dialog_mode;
   int unused_padding;
   char displayed_options[600];
@@ -788,6 +793,7 @@ int raw_do_dialog(int bigcard_player,
                   char *prompt,
                   int dialog_mode)
 {
+  if (duel_host_is_headless()) return 0; /* Direct callers announce an opponent action. Choices use do_dialog(). */
   dialog_context_t context;
   INT_PTR dialog_result;
 

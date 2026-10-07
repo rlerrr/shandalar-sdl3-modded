@@ -26,6 +26,8 @@ typedef struct AssetRequest
 } AssetRequest;
 
 static char g_asset_root[512] = ".";
+static int g_fetch_enabled = 1;
+void shandalar_assets_set_fetch_enabled(int enabled) { g_fetch_enabled = enabled; }
 static char g_last_error[512];
 static AssetRequest g_requests[ASSET_REQUEST_LIMIT];
 
@@ -334,6 +336,7 @@ ShandalarAssetState shandalar_assets_prefetch(const char *relative_path)
       memset(request, 0, sizeof(*request));
     return SHANDALAR_ASSET_READY;
   }
+  if (!g_fetch_enabled) return SHANDALAR_ASSET_ERROR;
   if (!request)
     request = alloc_request(relative_path);
   if (!request)

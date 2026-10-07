@@ -1,4 +1,5 @@
 #include "manalink.h"
+#include "magic/src/duel_host.h"
 #include <windows.h>
 
 int discard_controller = 0;
@@ -6308,6 +6309,7 @@ void prevent_the_next_n_damage(int player, int card, int t_player, int t_card, i
 }
 
 void reveal_target_player_hand(int player ){
+	if (duel_host_is_headless()) return;
 
 	 int cards_array[60];
 	 int revealed = 0;
@@ -14747,6 +14749,11 @@ void popup(const char* title, const char* fmt, ...)
   vsnprintf(buf, 8000, fmt, args);
   va_end(args);
 
+  if (duel_host_is_headless()) {
+    fprintf(stderr, "DUEL_ENGINE_ERROR: %s: %s\n", title, buf);
+    fflush(stderr);
+    abort();
+  }
   MessageBox(0, buf, title, MB_ICONERROR|MB_TASKMODAL);
 }
 
