@@ -1,0 +1,269 @@
+{
+  "version": 1,
+  "card": "Beast of Burden",
+  "csvid": 964,
+  "cases": [
+    {
+      "name": "BeastOfBurden_CountsSelfAndCreaturesOnBothBattlefieldsOnly",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Wood",
+          "ref": "wall",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Beast of Burden",
+          "ref": "beast",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "graveBear",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "handBear",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BeastOfBurden_StatTracksBattlefieldCreatureEntryAndDeath",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Wood",
+          "ref": "wall",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Beast of Burden",
+          "ref": "beast",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "newBear",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "destroy",
+          "ref": "wall"
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "cast",
+          "ref": "newBear",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 3
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BeastOfBurden_BoardSnapshotSurvivesAiRoundtrip",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Wood",
+          "ref": "wall",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Beast of Burden",
+          "ref": "beast",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "island",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "destroy",
+          "ref": "wall"
+        },
+        {
+          "ref": "beast",
+          "property": "power",
+          "value": 2,
+          "op": "assert_card"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "hand",
+          "index": 0,
+          "value": 91
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

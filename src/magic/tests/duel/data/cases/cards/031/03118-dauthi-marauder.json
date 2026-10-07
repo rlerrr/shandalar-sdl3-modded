@@ -1,0 +1,162 @@
+{
+  "version": 1,
+  "card": "Dauthi Marauder",
+  "csvid": 3118,
+  "cases": [
+    {
+      "name": "DauthiMarauder_CastAndStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dauthi Marauder",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DauthiMarauder_NonshadowCannotBlock",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dauthi Marauder",
+          "ref": "marauder",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "plain",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "marauder",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "plain",
+          "other": "marauder",
+          "value": 0
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 17
+        },
+        {
+          "op": "assert_card",
+          "ref": "marauder",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DauthiMarauder_ShadowCreatureCanBlock",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dauthi Marauder",
+          "ref": "marauder",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Dauthi Horror",
+          "ref": "horror",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "marauder",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "horror",
+          "other": "marauder",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "marauder",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "horror",
+          "property": "in_play",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

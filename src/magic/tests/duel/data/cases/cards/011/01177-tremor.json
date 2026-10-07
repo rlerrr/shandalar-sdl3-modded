@@ -1,0 +1,208 @@
+{
+  "card": "Tremor",
+  "csvid": 1177,
+  "cases": [
+    {
+      "seed": 123,
+      "name": "Tremor_DamagesNonflyersAndKillsOneOne",
+      "steps": [
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "property": "damage",
+          "op": "assert_card",
+          "value": 1,
+          "ref": "friendly"
+        },
+        {
+          "property": "damage",
+          "op": "assert_card",
+          "value": 1,
+          "ref": "enemy"
+        },
+        {
+          "property": "damage",
+          "op": "assert_card",
+          "value": 0,
+          "ref": "flyer"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "friendly",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "enemy",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "flyer",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "elf",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "graveyard",
+          "player": 0,
+          "value": 149
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Tremor",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "player": 0,
+          "ref": "friendly"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "player": 1,
+          "ref": "enemy"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Air Elemental",
+          "player": 1,
+          "ref": "flyer"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Llanowar Elves",
+          "player": 0,
+          "ref": "elf"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "Tremor_FlyingCreaturesSurvive",
+      "steps": [
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "flyer0",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "flyer1",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone",
+          "zone": "graveyard",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "property": "damage",
+          "op": "assert_card",
+          "value": 0,
+          "ref": "flyer0"
+        },
+        {
+          "property": "damage",
+          "op": "assert_card",
+          "value": 0,
+          "ref": "flyer1"
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Tremor",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Air Elemental",
+          "player": 0,
+          "ref": "flyer0"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Ornithopter",
+          "player": 1,
+          "ref": "flyer1"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "Tremor_NoncreatureUnaffected",
+      "steps": [
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "ring",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "graveyard",
+          "player": 0,
+          "value": 1177
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Tremor",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Sol Ring",
+          "player": 1,
+          "ref": "ring"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

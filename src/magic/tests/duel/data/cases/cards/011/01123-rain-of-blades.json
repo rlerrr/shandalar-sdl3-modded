@@ -1,0 +1,268 @@
+{
+  "card": "Rain of Blades",
+  "version": 1,
+  "csvid": 1123,
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "op": "turn",
+          "value": 0,
+          "player": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "defender",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "fixture": "empty_main",
+      "name": "RainOfBlades_DamagesAttackerButNotIdleCreatures",
+      "setup": [
+        {
+          "zone": "hand",
+          "ref": "source",
+          "name": "Rain of Blades",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "attacker",
+          "name": "Raging Goblin",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "idle",
+          "name": "Grizzly Bears",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "defender",
+          "name": "Air Elemental",
+          "player": 1
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "value": 0,
+          "player": 0,
+          "op": "turn"
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "ref": "attacker1",
+          "value": 1,
+          "op": "attack"
+        },
+        {
+          "ref": "attacker2",
+          "value": 1,
+          "op": "attack"
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "ref": "attacker1",
+          "property": "in_play",
+          "value": 0,
+          "op": "assert_card"
+        },
+        {
+          "ref": "attacker2",
+          "property": "in_play",
+          "value": 0,
+          "op": "assert_card"
+        },
+        {
+          "ref": "idle",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        }
+      ],
+      "fixture": "empty_main",
+      "name": "RainOfBlades_DamagesEveryAttacker",
+      "setup": [
+        {
+          "name": "Rain of Blades",
+          "zone": "hand",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "name": "Raging Goblin",
+          "zone": "battlefield",
+          "player": 0,
+          "ref": "attacker1"
+        },
+        {
+          "name": "Llanowar Elves",
+          "zone": "battlefield",
+          "player": 0,
+          "ref": "attacker2"
+        },
+        {
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "player": 0,
+          "ref": "idle"
+        }
+      ]
+    },
+    {
+      "name": "RainOfBlades_DefenderDamagesOnlyAttackers",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "ref": "source",
+          "name": "Rain of Blades",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "ref": "attacker",
+          "name": "Grizzly Bears",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "ref": "idle",
+          "name": "Llanowar Elves",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "ref": "blocker",
+          "name": "Grizzly Bears",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "damage",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1123
+        }
+      ]
+    }
+  ]
+}

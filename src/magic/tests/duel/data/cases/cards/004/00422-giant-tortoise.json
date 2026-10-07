@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "card": "Giant Tortoise",
+  "csvid": 422,
+  "cases": [
+    {
+      "name": "GiantTortoise_CastEntersWithUntappedBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Giant Tortoise",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "GiantTortoise_TappedLosesToughnessBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Giant Tortoise",
+          "ref": "tortoise",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "tortoise",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "tortoise",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "tortoise",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "tortoise",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "tortoise",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "tortoise",
+          "property": "toughness",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -389,6 +389,131 @@
         "step 6 assert_card attacker",
         "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 2[\\s\\S]*?s.value[\\s\\S]*?Which is: 4"
       ]
+    },
+    "Behavior.DrafnasRestoration_ChosenSubset": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Drafna's Restoration",
+      "csvid": 491,
+      "oracle_id": "24a78116-d5e0-4e30-b192-d8bffe347a0c",
+      "reason": "The shared Manalink put_on_top_of_deck passes an active-card slot to core real_put_on_top_of_deck, which expects an internal card ID. Selected artifacts leave the graveyard but remain as hand instances, and unrelated card IDs are inserted on top of the library. Oracle requires the selected artifacts themselves in the owned library and no hand copies. Correct identity, ordering, ownership, and snapshot assertions remain intact; production fix deferred.",
+      "patterns": [
+        "step\\ 6\\ assert_zone_card",
+        "duel_test_zone_csvid[\\s\\S]*?Which is: 126[\\s\\S]*?s.value[\\s\\S]*?Which is: 230\\b",
+        "step\\ 15\\ assert_zone",
+        "duel_test_zone_count[\\s\\S]*?Which is: 1[\\s\\S]*?s.value[\\s\\S]*?Which is: 0\\b"
+      ]
+    },
+    "Behavior.DrafnasRestoration_MultipleInChosenOrder": {
+      "kind": "assertion",
+      "assertion_count": 6,
+      "card": "Drafna's Restoration",
+      "csvid": 491,
+      "oracle_id": "24a78116-d5e0-4e30-b192-d8bffe347a0c",
+      "reason": "The shared Manalink put_on_top_of_deck passes an active-card slot to core real_put_on_top_of_deck, which expects an internal card ID. Selected artifacts leave the graveyard but remain as hand instances, and unrelated card IDs are inserted on top of the library. Oracle requires the selected artifacts themselves in the owned library and no hand copies. Correct identity, ordering, ownership, and snapshot assertions remain intact; production fix deferred.",
+      "patterns": [
+        "step\\ 8\\ assert_zone_card",
+        "duel_test_zone_csvid[\\s\\S]*?Which is: 91[\\s\\S]*?s.value[\\s\\S]*?Which is: 514\\b",
+        "step\\ 9\\ assert_zone_card",
+        "duel_test_zone_csvid[\\s\\S]*?Which is: 126[\\s\\S]*?s.value[\\s\\S]*?Which is: 230\\b",
+        "step\\ 17\\ assert_zone",
+        "duel_test_zone_count[\\s\\S]*?Which is: 2[\\s\\S]*?s.value[\\s\\S]*?Which is: 0\\b",
+        "step\\ 30\\ assert_zone_card",
+        "step\\ 31\\ assert_zone_card",
+        "step\\ 39\\ assert_zone"
+      ]
+    },
+    "Behavior.DrafnasRestoration_MultipleReverseOrder": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Drafna's Restoration",
+      "csvid": 491,
+      "oracle_id": "24a78116-d5e0-4e30-b192-d8bffe347a0c",
+      "reason": "The shared Manalink put_on_top_of_deck passes an active-card slot to core real_put_on_top_of_deck, which expects an internal card ID. Selected artifacts leave the graveyard but remain as hand instances, and unrelated card IDs are inserted on top of the library. Oracle requires the selected artifacts themselves in the owned library and no hand copies. Correct identity, ordering, ownership, and snapshot assertions remain intact; production fix deferred.",
+      "patterns": [
+        "step\\ 7\\ assert_zone_card",
+        "duel_test_zone_csvid[\\s\\S]*?Which is: 91[\\s\\S]*?s.value[\\s\\S]*?Which is: 230\\b",
+        "step\\ 8\\ assert_zone_card",
+        "duel_test_zone_csvid[\\s\\S]*?Which is: 126[\\s\\S]*?s.value[\\s\\S]*?Which is: 514\\b",
+        "step\\ 16\\ assert_zone",
+        "duel_test_zone_count[\\s\\S]*?Which is: 2[\\s\\S]*?s.value[\\s\\S]*?Which is: 0\\b"
+      ]
+    },
+    "Behavior.DrafnasRestoration_OpponentsCardsStayInOwnedLibrary": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Drafna's Restoration",
+      "csvid": 491,
+      "oracle_id": "24a78116-d5e0-4e30-b192-d8bffe347a0c",
+      "reason": "The shared Manalink put_on_top_of_deck passes an active-card slot to core real_put_on_top_of_deck, which expects an internal card ID. Selected artifacts leave the graveyard but remain as hand instances, and unrelated card IDs are inserted on top of the library. Oracle requires the selected artifacts themselves in the owned library and no hand copies. Correct identity, ordering, ownership, and snapshot assertions remain intact; production fix deferred.",
+      "patterns": [
+        "step\\ 7\\ assert_zone_card",
+        "duel_test_zone_csvid[\\s\\S]*?Which is: 126[\\s\\S]*?s.value[\\s\\S]*?Which is: 514\\b",
+        "step\\ 8\\ assert_zone_card",
+        "duel_test_zone_csvid[\\s\\S]*?Which is: 239[\\s\\S]*?s.value[\\s\\S]*?Which is: 230\\b",
+        "step\\ 23\\ assert_zone",
+        "duel_test_zone_count[\\s\\S]*?Which is: 2[\\s\\S]*?s.value[\\s\\S]*?Which is: 0\\b"
+      ]
+    },
+    "Behavior.ManaShort_NoLandsStillRemovesMana": {
+      "kind": "assertion",
+      "assertion_count": 6,
+      "card": "Mana Short",
+      "csvid": 156,
+      "oracle_id": "48207d1c-448a-4e1b-974a-642dfea75933",
+      "reason": "Oracle empties all unspent mana of the targeted player, including when they control no lands. Land tapping works, but card_mana_short writes mana_pool, mapped to g_special_mana_pool, while payment and inspection use g_raw_mana_available. All six spendable pools remain unchanged apart from casting cost. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 4 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 5 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 6 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 7 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 8 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 9 assert_mana"
+      ]
+    },
+    "Behavior.ManaShort_TapsAllTargetLandsAndClearsPool": {
+      "kind": "assertion",
+      "assertion_count": 6,
+      "card": "Mana Short",
+      "csvid": 156,
+      "oracle_id": "48207d1c-448a-4e1b-974a-642dfea75933",
+      "reason": "Oracle empties all unspent mana of the targeted player, including when they control no lands. Land tapping works, but card_mana_short writes mana_pool, mapped to g_special_mana_pool, while payment and inspection use g_raw_mana_available. All six spendable pools remain unchanged apart from casting cost. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 6 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 7 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 8 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 9 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 10 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 11 assert_mana"
+      ]
+    },
+    "Behavior.ManaShort_TargetCaster": {
+      "kind": "assertion",
+      "assertion_count": 6,
+      "card": "Mana Short",
+      "csvid": 156,
+      "oracle_id": "48207d1c-448a-4e1b-974a-642dfea75933",
+      "reason": "Oracle empties all unspent mana of the targeted player, including when they control no lands. Land tapping works, but card_mana_short writes mana_pool, mapped to g_special_mana_pool, while payment and inspection use g_raw_mana_available. All six spendable pools remain unchanged apart from casting cost. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 8[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 5 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 7 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 9[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 8 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 9 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 10 assert_mana",
+        "duel_test_mana\\(s.player,s.color\\)[\\s\\S]*?Which is: 10[\\s\\S]*?s.value[\\s\\S]*?Which is: 0[\\s\\S]*?step 11 assert_mana"
+      ]
+    },
+    "Behavior.DwarvenThaumaturgist_SwitchesAsymmetricCreatureStats": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Dwarven Thaumaturgist",
+      "csvid": 2966,
+      "oracle_id": "019d0013-52fd-4261-9cc8-7efcee5a4616",
+      "reason": "Oracle limits the power/toughness switch to end of turn. Craw Wurm correctly becomes 4/6 on resolution but remains 4/6 after the real cleanup pipeline instead of returning to 6/4. The custom legacy survives cleanup: legacy_switch_power_and_toughness gates removal on affect_me(player, card), while cleanup dispatches globally with affected card (-1, -1). Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 4[\\s\\S]*?s.value[\\s\\S]*?Which is: 6[\\s\\S]*?step 13 assert_card target",
+        "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 6[\\s\\S]*?s.value[\\s\\S]*?Which is: 4[\\s\\S]*?step 14 assert_card target"
+      ]
     }
   }
 }

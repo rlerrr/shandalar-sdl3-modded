@@ -1,0 +1,587 @@
+{
+  "card": "Hibernation",
+  "csvid": 1054,
+  "cases": [
+    {
+      "seed": 123,
+      "name": "Hibernation_ReturnsGreenPermanentsFromBothPlayers",
+      "steps": [
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "elf",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "bear",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "ring",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "flyer",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "player": 0,
+          "value": 149
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "player": 1,
+          "value": 106
+        },
+        {
+          "ref": "forest",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "ref": "mountain",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "property": "in_play",
+          "op": "assert_card",
+          "value": 0,
+          "ref": "greenEnchant0"
+        },
+        {
+          "property": "in_play",
+          "op": "assert_card",
+          "value": 0,
+          "ref": "greenEnchant1"
+        },
+        {
+          "op": "assert_zone_contains",
+          "value": 142,
+          "zone": "hand",
+          "player": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "value": 142,
+          "zone": "hand",
+          "player": 1
+        },
+        {
+          "op": "assert_zone",
+          "value": 2,
+          "zone": "hand",
+          "player": 0
+        },
+        {
+          "op": "assert_zone",
+          "value": 2,
+          "zone": "hand",
+          "player": 1
+        },
+        {
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard",
+          "player": 0
+        },
+        {
+          "op": "assert_zone",
+          "value": 0,
+          "zone": "graveyard",
+          "player": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Hibernation",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Forest",
+          "player": 0,
+          "ref": "forest"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Llanowar Elves",
+          "player": 0,
+          "ref": "elf"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "player": 1,
+          "ref": "bear"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Sol Ring",
+          "player": 1,
+          "ref": "ring"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Mountain",
+          "player": 1,
+          "ref": "mountain"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Air Elemental",
+          "player": 0,
+          "ref": "flyer"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Lifeforce",
+          "ref": "greenEnchant0",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "name": "Lifeforce",
+          "ref": "greenEnchant1",
+          "player": 1
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "Hibernation_LeavesNonGreenPermanents",
+      "steps": [
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "ring",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "aura",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "flyer",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone",
+          "zone": "hand",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "zone": "hand",
+          "player": 1,
+          "value": 0
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Hibernation",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Sol Ring",
+          "player": 0,
+          "ref": "ring"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Glorious Anthem",
+          "player": 1,
+          "ref": "aura"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Air Elemental",
+          "player": 1,
+          "ref": "flyer"
+        }
+      ]
+    },
+    {
+      "name": "Hibernation_ReplaysAcrossSnapshotRestore",
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "elf",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "bear",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "ring",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "flyer",
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "player": 0,
+          "value": 149
+        },
+        {
+          "op": "assert_zone_contains",
+          "zone": "hand",
+          "player": 1,
+          "value": 106
+        },
+        {
+          "ref": "forest",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "ref": "mountain",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "property": "in_play",
+          "op": "assert_card",
+          "value": 0,
+          "ref": "greenEnchant0"
+        },
+        {
+          "property": "in_play",
+          "op": "assert_card",
+          "value": 0,
+          "ref": "greenEnchant1"
+        },
+        {
+          "op": "assert_zone_contains",
+          "value": 142,
+          "zone": "hand",
+          "player": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "value": 142,
+          "zone": "hand",
+          "player": 1
+        },
+        {
+          "op": "assert_zone",
+          "value": 3,
+          "zone": "hand",
+          "player": 0
+        },
+        {
+          "op": "assert_zone",
+          "value": 3,
+          "zone": "hand",
+          "player": 1
+        },
+        {
+          "op": "assert_zone",
+          "value": 2,
+          "zone": "graveyard",
+          "player": 0
+        },
+        {
+          "op": "assert_zone",
+          "value": 1,
+          "zone": "graveyard",
+          "player": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "library",
+          "value": 126
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 97
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "exile",
+          "value": 106
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "library",
+          "value": 126
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 97
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "exile",
+          "value": 106
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "greenEnchant0",
+          "value": 0,
+          "property": "in_play"
+        },
+        {
+          "op": "assert_card",
+          "ref": "greenEnchant1",
+          "value": 0,
+          "property": "in_play"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 142
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "hand",
+          "value": 142
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 3
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 3
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 123,
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Hibernation",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Forest",
+          "player": 0,
+          "ref": "forest"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Llanowar Elves",
+          "player": 0,
+          "ref": "elf"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "player": 1,
+          "ref": "bear"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Sol Ring",
+          "player": 1,
+          "ref": "ring"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Mountain",
+          "player": 1,
+          "ref": "mountain"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Air Elemental",
+          "player": 0,
+          "ref": "flyer"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Lifeforce",
+          "ref": "greenEnchant0",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "name": "Lifeforce",
+          "ref": "greenEnchant1",
+          "player": 1
+        },
+        {
+          "player": 0,
+          "zone": "hand",
+          "name": "Mountain",
+          "ref": "witness0hand"
+        },
+        {
+          "player": 0,
+          "zone": "library",
+          "name": "Island",
+          "ref": "witness0library"
+        },
+        {
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Giant Growth",
+          "ref": "witness0graveyard"
+        },
+        {
+          "player": 0,
+          "zone": "exile",
+          "name": "Grizzly Bears",
+          "ref": "witness0exile"
+        },
+        {
+          "player": 1,
+          "zone": "hand",
+          "name": "Mountain",
+          "ref": "witness1hand"
+        },
+        {
+          "player": 1,
+          "zone": "library",
+          "name": "Island",
+          "ref": "witness1library"
+        },
+        {
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Giant Growth",
+          "ref": "witness1graveyard"
+        },
+        {
+          "player": 1,
+          "zone": "exile",
+          "name": "Grizzly Bears",
+          "ref": "witness1exile"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

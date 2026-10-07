@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "card": "Lhurgoyf",
+  "csvid": 1069,
+  "cases": [
+    {
+      "name": "Lhurgoyf_EmptyGraveyardsZeroOne",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Lhurgoyf",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Lhurgoyf_CountsCreatureCardsAcrossBothPlayers",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Lhurgoyf",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "c0",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "c1",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "spell",
+          "player": 0,
+          "zone": "graveyard"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Lhurgoyf_RecalculatesWhenCreatureDies",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Lhurgoyf",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "dead",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "dead"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "steps": [
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "assert_card",
+          "property": "power"
+        },
+        {
+          "ref": "source",
+          "value": 2,
+          "op": "assert_card",
+          "property": "toughness"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "ref": "victim",
+          "op": "destroy"
+        },
+        {
+          "ref": "source",
+          "value": 2,
+          "op": "assert_card",
+          "property": "power"
+        },
+        {
+          "ref": "source",
+          "value": 3,
+          "op": "assert_card",
+          "property": "toughness"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "assert_card",
+          "property": "power"
+        },
+        {
+          "ref": "source",
+          "value": 2,
+          "op": "assert_card",
+          "property": "toughness"
+        },
+        {
+          "ref": "victim",
+          "value": 1,
+          "op": "assert_card",
+          "property": "in_play"
+        }
+      ],
+      "name": "Lhurgoyf_SnapshotRestoresGraveyardCount",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "ref": "source",
+          "zone": "battlefield",
+          "name": "Lhurgoyf",
+          "player": 0
+        },
+        {
+          "ref": "corpse",
+          "zone": "graveyard",
+          "name": "Grizzly Bears",
+          "player": 0
+        },
+        {
+          "ref": "noncreature",
+          "zone": "graveyard",
+          "name": "Lightning Bolt",
+          "player": 1
+        },
+        {
+          "ref": "victim",
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "player": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

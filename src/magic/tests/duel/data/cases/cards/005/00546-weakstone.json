@@ -1,0 +1,257 @@
+{
+  "version": 1,
+  "card": "Weakstone",
+  "csvid": 546,
+  "cases": [
+    {
+      "name": "Weakstone_OnlyAttackingCreatureLosesOnePower",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Weakstone",
+          "ref": "stone",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Hurloon Minotaur",
+          "ref": "staysHome",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "staysHome",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "staysHome",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "stone",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Weakstone_ReducedAttackPowerChangesCombatDamage",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Weakstone",
+          "ref": "stone",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "attacker",
+          "value": 0
+        },
+        {
+          "value": 106,
+          "op": "assert_zone_card",
+          "zone": "graveyard",
+          "player": 0,
+          "index": 0
+        },
+        {
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "blocker",
+          "value": 1
+        },
+        {
+          "property": "damage",
+          "op": "assert_card",
+          "ref": "blocker",
+          "value": 1
+        },
+        {
+          "value": 20,
+          "op": "assert_life",
+          "player": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Weakstone_LeavingCombatRestoresPower",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Weakstone",
+          "ref": "stone",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "remove_from_combat",
+          "ref": "attacker"
+        },
+        {
+          "property": "power",
+          "op": "assert_card",
+          "ref": "attacker",
+          "value": 2
+        },
+        {
+          "property": "tapped",
+          "op": "assert_card",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "stone",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

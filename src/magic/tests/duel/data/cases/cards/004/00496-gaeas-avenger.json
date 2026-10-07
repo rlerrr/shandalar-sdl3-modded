@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "card": "Gaea's Avenger",
+  "csvid": 496,
+  "cases": [
+    {
+      "name": "GaeasAvenger_TwoEnemyArtifacts",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gaea's Avenger",
+          "ref": "avenger",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "ring1",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "ring2",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "avenger",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "avenger",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "GaeasAvenger_OwnArtifactsNotCounted",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gaea's Avenger",
+          "ref": "avenger",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "ownring",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "ring",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "avenger",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "avenger",
+          "property": "toughness",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "GaeasAvenger_DestroyReducesBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gaea's Avenger",
+          "ref": "avenger",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "ring1",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "ring2",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "avenger",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "destroy",
+          "ref": "ring1"
+        },
+        {
+          "op": "assert_card",
+          "ref": "avenger",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "avenger",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_card",
+          "ref": "ring2",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "GaeasAvenger_NoArtifactsBaseStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gaea's Avenger",
+          "ref": "avenger",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "avenger",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "avenger",
+          "property": "toughness",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

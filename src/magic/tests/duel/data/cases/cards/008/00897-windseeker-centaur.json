@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "card": "Windseeker Centaur",
+  "csvid": 897,
+  "cases": [
+    {
+      "name": "WindseekerCentaur_CastAndStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Windseeker Centaur",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "WindseekerCentaur_VigilanceSkipsTapOnAttack",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Windseeker Centaur",
+          "ref": "centaur",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "ordinary",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "centaur",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "ordinary",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "centaur",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "centaur",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ordinary",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

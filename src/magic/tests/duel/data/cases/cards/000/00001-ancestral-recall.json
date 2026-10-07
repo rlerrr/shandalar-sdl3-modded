@@ -1,0 +1,282 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "value": 0,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 3,
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand"
+        },
+        {
+          "value": 91,
+          "player": 0,
+          "op": "assert_zone_card",
+          "zone": "hand",
+          "index": 0
+        },
+        {
+          "value": 126,
+          "player": 0,
+          "op": "assert_zone_card",
+          "zone": "hand",
+          "index": 1
+        },
+        {
+          "value": 106,
+          "player": 0,
+          "op": "assert_zone_card",
+          "zone": "hand",
+          "index": 2
+        },
+        {
+          "value": 1,
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "library"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Ancestral Recall",
+          "ref": "source",
+          "zone": "hand"
+        },
+        {
+          "player": 0,
+          "name": "Forest",
+          "ref": "a",
+          "zone": "library"
+        },
+        {
+          "player": 0,
+          "name": "Island",
+          "ref": "b",
+          "zone": "library"
+        },
+        {
+          "player": 0,
+          "name": "Grizzly Bears",
+          "ref": "c",
+          "zone": "library"
+        },
+        {
+          "player": 0,
+          "name": "Plains",
+          "ref": "d",
+          "zone": "library"
+        }
+      ],
+      "name": "AncestralRecall_DrawThreeForCaster",
+      "seed": 123,
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "value": 1,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 3,
+          "player": 1,
+          "op": "assert_zone",
+          "zone": "hand"
+        },
+        {
+          "value": 91,
+          "player": 1,
+          "op": "assert_zone_card",
+          "zone": "hand",
+          "index": 0
+        },
+        {
+          "value": 164,
+          "player": 1,
+          "op": "assert_zone_card",
+          "zone": "hand",
+          "index": 1
+        },
+        {
+          "value": 188,
+          "player": 1,
+          "op": "assert_zone_card",
+          "zone": "hand",
+          "index": 2
+        },
+        {
+          "value": 1,
+          "player": 1,
+          "op": "assert_zone",
+          "zone": "library"
+        },
+        {
+          "value": 0,
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Ancestral Recall",
+          "ref": "source",
+          "zone": "hand"
+        },
+        {
+          "player": 1,
+          "name": "Forest",
+          "ref": "a",
+          "zone": "library"
+        },
+        {
+          "player": 1,
+          "name": "Mountain",
+          "ref": "b",
+          "zone": "library"
+        },
+        {
+          "player": 1,
+          "name": "Plains",
+          "ref": "c",
+          "zone": "library"
+        },
+        {
+          "player": 1,
+          "name": "Island",
+          "ref": "d",
+          "zone": "library"
+        }
+      ],
+      "name": "AncestralRecall_TargetsOpponent",
+      "seed": 123,
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "value": 0,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 1,
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand"
+        },
+        {
+          "value": 164,
+          "player": 0,
+          "op": "assert_zone_card",
+          "zone": "hand",
+          "index": 0
+        },
+        {
+          "value": 0,
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "library"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Ancestral Recall",
+          "ref": "source",
+          "zone": "hand"
+        },
+        {
+          "player": 0,
+          "name": "Mountain",
+          "ref": "a",
+          "zone": "library"
+        }
+      ],
+      "name": "AncestralRecall_OnlyOneAvailable",
+      "seed": 123,
+      "fixture": "empty_main"
+    },
+    {
+      "name": "AncestralRecall_EmptyLibraryDrawsNone",
+      "steps": [
+        {
+          "value": 0,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "zone": "hand",
+          "value": 0,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "library",
+          "value": 0,
+          "player": 0,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 1,
+          "player": 0,
+          "op": "assert_zone_contains"
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Ancestral Recall",
+          "zone": "hand",
+          "player": 0,
+          "ref": "source"
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "version": 1,
+  "csvid": 1,
+  "card": "Ancestral Recall"
+}

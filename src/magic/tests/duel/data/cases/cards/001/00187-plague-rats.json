@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Plague Rats",
+  "csvid": 187,
+  "cases": [
+    {
+      "name": "PlagueRats_SingleRatIsOneOne",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Plague Rats", "ref": "rat1", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "assert_card", "ref": "rat1", "property": "power", "value": 1},
+        {"op": "assert_card", "ref": "rat1", "property": "toughness", "value": 1},
+        {"op": "assert_card", "ref": "rat1", "property": "in_play", "value": 1}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PlagueRats_TwoRatsAreTwoTwo",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Plague Rats", "ref": "rat1", "player": 0, "zone": "battlefield"},
+        {"name": "Plague Rats", "ref": "rat2", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "assert_card", "ref": "rat1", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "rat1", "property": "toughness", "value": 2},
+        {"op": "assert_card", "ref": "rat2", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "rat2", "property": "toughness", "value": 2}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PlagueRats_OnlyRatsCountAndRemovalReverts",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Plague Rats", "ref": "rat1", "player": 0, "zone": "battlefield"},
+        {"name": "Plague Rats", "ref": "rat2", "player": 0, "zone": "battlefield"},
+        {"name": "Plague Rats", "ref": "rat3", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "bear", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "assert_card", "ref": "rat1", "property": "power", "value": 3},
+        {"op": "assert_card", "ref": "rat1", "property": "toughness", "value": 3},
+        {"op": "assert_card", "ref": "rat2", "property": "power", "value": 3},
+        {"op": "assert_card", "ref": "rat2", "property": "toughness", "value": 3},
+        {"op": "assert_card", "ref": "rat3", "property": "power", "value": 3},
+        {"op": "assert_card", "ref": "rat3", "property": "toughness", "value": 3},
+        {"op": "assert_card", "ref": "bear", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "bear", "property": "toughness", "value": 2},
+        {"op": "destroy", "ref": "rat3"},
+        {"op": "assert_card", "ref": "rat1", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "rat1", "property": "toughness", "value": 2},
+        {"op": "assert_card", "ref": "rat2", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "rat2", "property": "toughness", "value": 2},
+        {"op": "assert_card", "ref": "bear", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "bear", "property": "toughness", "value": 2},
+        {"op": "assert_zone_contains", "player": 0, "zone": "graveyard", "value": 187}
+      ],
+      "seed": 123
+    }
+  ]
+}

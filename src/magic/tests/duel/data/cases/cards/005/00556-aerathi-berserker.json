@@ -1,0 +1,179 @@
+{
+  "version": 1,
+  "card": "Aerathi Berserker",
+  "csvid": 556,
+  "cases": [
+    {
+      "name": "AerathiBerserker_CastAndStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aerathi Berserker",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AerathiBerserker_RampageCountsSecondBlocker",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aerathi Berserker",
+          "ref": "berserker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "first",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "second",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "berserker",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "first",
+          "other": "berserker",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "second",
+          "other": "berserker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "berserker",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "berserker",
+          "property": "toughness",
+          "value": 7
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "berserker",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "berserker",
+          "property": "toughness",
+          "value": 4
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AerathiBerserker_SingleBlockerGivesNoBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aerathi Berserker",
+          "ref": "berserker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "lone",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "berserker",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "lone",
+          "other": "berserker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "berserker",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "berserker",
+          "property": "toughness",
+          "value": 4
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

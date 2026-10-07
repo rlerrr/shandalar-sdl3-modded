@@ -1,0 +1,292 @@
+{
+  "card": "Mana Short",
+  "version": 1,
+  "csvid": 156,
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "op": "choose_player",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "island",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "forest",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "mountain",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "color": 0,
+          "op": "assert_mana",
+          "value": 0,
+          "player": 1
+        },
+        {
+          "color": 1,
+          "op": "assert_mana",
+          "value": 0,
+          "player": 1
+        },
+        {
+          "color": 2,
+          "op": "assert_mana",
+          "value": 0,
+          "player": 1
+        },
+        {
+          "color": 3,
+          "op": "assert_mana",
+          "value": 0,
+          "player": 1
+        },
+        {
+          "color": 4,
+          "op": "assert_mana",
+          "value": 0,
+          "player": 1
+        },
+        {
+          "color": 5,
+          "op": "assert_mana",
+          "value": 0,
+          "player": 1
+        }
+      ],
+      "fixture": "empty_main",
+      "name": "ManaShort_TapsAllTargetLandsAndClearsPool",
+      "setup": [
+        {
+          "zone": "hand",
+          "ref": "source",
+          "name": "Mana Short",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "island",
+          "state": [
+            "untapped"
+          ],
+          "name": "Island",
+          "player": 1
+        },
+        {
+          "zone": "battlefield",
+          "ref": "forest",
+          "state": [
+            "untapped"
+          ],
+          "name": "Forest",
+          "player": 1
+        },
+        {
+          "zone": "battlefield",
+          "ref": "mountain",
+          "state": [
+            "untapped"
+          ],
+          "name": "Mountain",
+          "player": 0
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "op": "choose_player",
+          "value": 0,
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "island",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "plains",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "color": 0,
+          "op": "assert_mana",
+          "value": 0,
+          "player": 0
+        },
+        {
+          "color": 2,
+          "op": "assert_mana",
+          "value": 10,
+          "player": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        }
+      ],
+      "fixture": "empty_main",
+      "name": "ManaShort_TargetCaster",
+      "setup": [
+        {
+          "zone": "hand",
+          "ref": "source",
+          "name": "Mana Short",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "island",
+          "state": [
+            "untapped"
+          ],
+          "name": "Island",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "plains",
+          "state": [
+            "untapped"
+          ],
+          "name": "Plains",
+          "player": 1
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "op": "choose_player",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "color": 0,
+          "op": "assert_mana",
+          "value": 0,
+          "player": 1
+        },
+        {
+          "color": 2,
+          "op": "assert_mana",
+          "value": 0,
+          "player": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 0
+        }
+      ],
+      "fixture": "empty_main",
+      "name": "ManaShort_NoLandsStillRemovesMana",
+      "setup": [
+        {
+          "zone": "hand",
+          "ref": "source",
+          "name": "Mana Short",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "bear",
+          "name": "Grizzly Bears",
+          "player": 1
+        }
+      ]
+    }
+  ]
+}

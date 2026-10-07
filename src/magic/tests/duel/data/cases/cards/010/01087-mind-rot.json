@@ -1,0 +1,299 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "value": 1,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "op": "choose_dialog",
+          "value": 0,
+          "player": 1
+        },
+        {
+          "op": "choose_dialog",
+          "value": 0,
+          "player": 1
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 1,
+          "player": 1,
+          "op": "assert_zone",
+          "zone": "hand"
+        },
+        {
+          "value": 2,
+          "player": 1,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 106,
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 97,
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1087
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Mind Rot",
+          "ref": "source",
+          "zone": "hand"
+        },
+        {
+          "player": 1,
+          "name": "Grizzly Bears",
+          "ref": "h0",
+          "zone": "hand"
+        },
+        {
+          "player": 1,
+          "name": "Giant Growth",
+          "ref": "h1",
+          "zone": "hand"
+        },
+        {
+          "player": 1,
+          "name": "Forest",
+          "ref": "h2",
+          "zone": "hand"
+        }
+      ],
+      "name": "MindRot_OpponentDiscardsTwo",
+      "seed": 123,
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "value": 0,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "value": 0,
+          "player": 0,
+          "op": "choose_zone"
+        },
+        {
+          "op": "choose_zone",
+          "value": 0,
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 1,
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "hand"
+        },
+        {
+          "value": 3,
+          "player": 0,
+          "op": "assert_zone",
+          "zone": "graveyard"
+        },
+        {
+          "op": "assert_zone_contains",
+          "value": 106,
+          "zone": "graveyard",
+          "player": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "value": 97,
+          "zone": "graveyard",
+          "player": 0
+        },
+        {
+          "op": "assert_zone_card",
+          "value": 91,
+          "zone": "hand",
+          "index": 0,
+          "player": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1087
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Mind Rot",
+          "ref": "source",
+          "zone": "hand"
+        },
+        {
+          "player": 0,
+          "name": "Grizzly Bears",
+          "ref": "h0",
+          "zone": "hand"
+        },
+        {
+          "player": 0,
+          "name": "Giant Growth",
+          "ref": "h1",
+          "zone": "hand"
+        },
+        {
+          "player": 0,
+          "name": "Forest",
+          "ref": "h2",
+          "zone": "hand"
+        }
+      ],
+      "name": "MindRot_CasterCanBeTarget",
+      "seed": 123,
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "value": 1,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "op": "choose_dialog",
+          "value": 0,
+          "player": 1
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 0,
+          "player": 1,
+          "op": "assert_zone",
+          "zone": "hand"
+        },
+        {
+          "value": 188,
+          "player": 1,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Mind Rot",
+          "ref": "source",
+          "zone": "hand"
+        },
+        {
+          "player": 1,
+          "name": "Plains",
+          "ref": "h0",
+          "zone": "hand"
+        }
+      ],
+      "name": "MindRot_OneCardOpponentHand",
+      "seed": 123,
+      "fixture": "empty_main"
+    },
+    {
+      "name": "MindRot_EmptyOpponentHand",
+      "steps": [
+        {
+          "value": 1,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "zone": "hand",
+          "value": 0,
+          "player": 1,
+          "op": "assert_zone"
+        },
+        {
+          "zone": "graveyard",
+          "value": 1087,
+          "player": 0,
+          "op": "assert_zone_contains"
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Mind Rot",
+          "zone": "hand",
+          "player": 0,
+          "ref": "source"
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "version": 1,
+  "csvid": 1087,
+  "card": "Mind Rot"
+}

@@ -1,0 +1,89 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "value": 1,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 16,
+          "player": 1,
+          "op": "assert_life"
+        },
+        {
+          "value": 24,
+          "player": 0,
+          "op": "assert_life"
+        },
+        {
+          "value": 1153,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Soul Feast",
+          "ref": "source",
+          "zone": "hand"
+        }
+      ],
+      "name": "SoulFeast_OpponentLosesCasterGains",
+      "seed": 123,
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "value": 0,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 20,
+          "player": 0,
+          "op": "assert_life"
+        },
+        {
+          "value": 20,
+          "player": 1,
+          "op": "assert_life"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Soul Feast",
+          "ref": "source",
+          "zone": "hand"
+        }
+      ],
+      "name": "SoulFeast_TargetCasterNetLife",
+      "seed": 123,
+      "fixture": "empty_main"
+    }
+  ],
+  "version": 1,
+  "csvid": 1153,
+  "card": "Soul Feast"
+}

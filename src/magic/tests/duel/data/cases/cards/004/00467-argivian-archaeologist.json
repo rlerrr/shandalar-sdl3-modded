@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "card": "Argivian Archaeologist",
+  "csvid": 467,
+  "cases": [
+    {
+      "name": "ArgivianArchaeologist_ReturnsSolRingFromGraveyard",
+      "fixture": "stocked_zones",
+      "setup": [
+        {"name": "Argivian Archaeologist", "ref": "source", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "assert_card", "ref": "source", "property": "power", "value": 1},
+        {"op": "assert_card", "ref": "source", "property": "toughness", "value": 1},
+        {"op": "can_activate", "ref": "source", "value": 1},
+        {"op": "choose_zone", "player": -1, "value": 3},
+        {"op": "activate", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "source", "property": "in_play", "value": 1},
+        {"op": "assert_card", "ref": "source", "property": "tapped", "value": 1},
+        {"op": "assert_mana", "player": 0, "color": 5, "value": 8},
+        {"op": "assert_stack", "value": 0},
+        {"op": "assert_zone", "player": 0, "zone": "hand", "value": 5},
+        {"op": "assert_zone_card", "player": 0, "zone": "hand", "index": 4, "value": 230},
+        {"op": "assert_zone_contains", "player": 0, "zone": "hand", "value": 230},
+        {"op": "assert_zone", "player": 0, "zone": "graveyard", "value": 3},
+        {"op": "assert_zone_card", "player": 0, "zone": "graveyard", "index": 0, "value": 106},
+        {"op": "assert_zone_card", "player": 0, "zone": "graveyard", "index": 1, "value": 97},
+        {"op": "assert_zone_card", "player": 0, "zone": "graveyard", "index": 2, "value": 91},
+        {"op": "assert_zone", "player": 1, "zone": "hand", "value": 4},
+        {"op": "assert_zone", "player": 1, "zone": "graveyard", "value": 4}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ArgivianArchaeologist_WrongTypeCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Argivian Archaeologist", "ref": "source", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "wrong_type", "player": 0, "zone": "graveyard"}
+      ],
+      "steps": [
+        {"op": "can_activate", "ref": "source", "value": 0},
+        {"op": "assert_stack", "value": 0},
+        {"op": "assert_zone", "player": 0, "zone": "hand", "value": 0},
+        {"op": "assert_zone", "player": 0, "zone": "graveyard", "value": 1}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ArgivianArchaeologist_TappedCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Argivian Archaeologist", "ref": "source", "player": 0, "zone": "battlefield", "state": ["tapped"]},
+        {"name": "Sol Ring", "ref": "eligible", "player": 0, "zone": "graveyard"}
+      ],
+      "steps": [
+        {"op": "can_activate", "ref": "source", "value": 0},
+        {"op": "activate", "ref": "source", "value": 0},
+        {"op": "assert_card", "ref": "source", "property": "tapped", "value": 1},
+        {"op": "assert_stack", "value": 0},
+        {"op": "assert_zone", "player": 0, "zone": "hand", "value": 0},
+        {"op": "assert_zone", "player": 0, "zone": "graveyard", "value": 1}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ArgivianArchaeologist_SickCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Argivian Archaeologist", "ref": "source", "player": 0, "zone": "battlefield", "state": ["sick"]},
+        {"name": "Sol Ring", "ref": "eligible", "player": 0, "zone": "graveyard"}
+      ],
+      "steps": [
+        {"op": "can_activate", "ref": "source", "value": 0},
+        {"op": "activate", "ref": "source", "value": 0},
+        {"op": "assert_stack", "value": 0},
+        {"op": "assert_zone", "player": 0, "zone": "hand", "value": 0},
+        {"op": "assert_zone", "player": 0, "zone": "graveyard", "value": 1}
+      ],
+      "seed": 123
+    }
+  ]
+}

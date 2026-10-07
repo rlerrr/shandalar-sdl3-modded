@@ -1,0 +1,177 @@
+{
+  "version": 1,
+  "card": "Water Wurm",
+  "csvid": 951,
+  "cases": [
+    {
+      "name": "WaterWurm_OpponentIslandGrantsOneToughnessAndRemovalReverts",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Water Wurm",
+          "ref": "wurm",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "island",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "ownSwamp",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "wurm",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "wurm",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "destroy",
+          "ref": "island"
+        },
+        {
+          "op": "assert_card",
+          "ref": "wurm",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "wurm",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 126
+        },
+        {
+          "op": "assert_card",
+          "ref": "ownSwamp",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "WaterWurm_OwnIslandAndOpponentSwampDoNotEnableBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Water Wurm",
+          "ref": "wurm",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "ownIsland",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "enemySwamp",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "wurm",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "wurm",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ownIsland",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemySwamp",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "WaterWurm_OpponentIslandSubtypeOnDualLandEnablesBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Water Wurm",
+          "ref": "wurm",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Tropical Island",
+          "ref": "dual",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "zone": "battlefield",
+          "player": 1,
+          "ref": "nonIslandLand",
+          "name": "Badlands"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "wurm",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "wurm",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "value": 1,
+          "property": "in_play",
+          "op": "assert_card",
+          "ref": "nonIslandLand"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

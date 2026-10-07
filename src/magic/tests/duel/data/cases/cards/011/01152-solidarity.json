@@ -1,0 +1,175 @@
+{
+  "card": "Solidarity",
+  "csvid": 1152,
+  "cases": [
+    {
+      "seed": 123,
+      "name": "Solidarity_BoostsCasterCreaturesOnly",
+      "steps": [
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "friendly",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 7,
+          "ref": "friendly",
+          "property": "toughness"
+        },
+        {
+          "op": "assert_card",
+          "value": 4,
+          "ref": "enemy",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 4,
+          "ref": "enemy",
+          "property": "toughness"
+        },
+        {
+          "property": "power",
+          "op": "assert_card",
+          "value": 1,
+          "ref": "friendly2"
+        },
+        {
+          "property": "toughness",
+          "op": "assert_card",
+          "value": 6,
+          "ref": "friendly2"
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Solidarity",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "player": 0,
+          "ref": "friendly"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Air Elemental",
+          "player": 1,
+          "ref": "enemy"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Llanowar Elves",
+          "ref": "friendly2",
+          "player": 0
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "Solidarity_ExpiresAtCleanup",
+      "steps": [
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "value": 7,
+          "ref": "friendly",
+          "property": "toughness"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "friendly",
+          "property": "toughness"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "friendly",
+          "property": "power"
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Solidarity",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "player": 0,
+          "ref": "friendly"
+        }
+      ]
+    },
+    {
+      "name": "Solidarity_NoFriendlyCreatures",
+      "steps": [
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "ref": "enemy",
+          "property": "toughness",
+          "value": 2,
+          "op": "assert_card"
+        },
+        {
+          "zone": "graveyard",
+          "value": 1152,
+          "player": 0,
+          "op": "assert_zone_contains"
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Solidarity",
+          "zone": "hand",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "player": 1,
+          "ref": "enemy"
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "version": 1
+}

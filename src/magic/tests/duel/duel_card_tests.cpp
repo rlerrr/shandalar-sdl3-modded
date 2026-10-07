@@ -51,6 +51,7 @@ static int property(const DuelTestCard &c,const char *name) {
 #define PROPERTY(n) if(!std::strcmp(name,#n)) return c.n
   PROPERTY(csvid); PROPERTY(power); PROPERTY(toughness); PROPERTY(tapped); PROPERTY(sick);
   PROPERTY(attacking); PROPERTY(in_play); PROPERTY(in_hand); PROPERTY(damage);
+  PROPERTY(blocking_count); PROPERTY(blocked);
 #undef PROPERTY
   ADD_FAILURE()<<"Unknown observation "<<name; return -99999;
 }
@@ -70,6 +71,7 @@ class BehaviorTest:public testing::Test {
     auto ref = refs.count(s.ref) ? refs.at(s.ref) : DuelTestRef{-1,-1};
     const std::string op=s.op;
     if(op=="choose_target")duel_test_decision(DUEL_CHOICE_TARGET,s.player,ref.player,ref.card);
+    else if(op=="choose_player")duel_test_decision(DUEL_CHOICE_TARGET,s.player,s.value,-1);
     else if(op=="choose_zone")duel_test_decision(DUEL_CHOICE_ZONE,s.player,s.value,-1);
     else if(op=="choose_dialog")duel_test_decision(DUEL_CHOICE_DIALOG,s.player,s.value,-1);
     else if(op=="choose_number")duel_test_decision(DUEL_CHOICE_NUMBER,s.player,s.value,-1);
@@ -85,6 +87,9 @@ class BehaviorTest:public testing::Test {
     else if(op=="remove_from_combat")duel_test_remove_from_combat(ref);
     else if(op=="destroy")duel_test_destroy(ref);
     else if(op=="attack")EXPECT_EQ(!!duel_test_attack(ref),s.value);
+    else if(op=="begin_attackers")duel_test_begin_attackers();
+    else if(op=="finish_attackers")duel_test_finish_attackers();
+    else if(op=="begin_blockers")duel_test_begin_blockers();
     else if(op=="block")EXPECT_EQ(!!duel_test_block(ref,refs.at(s.other)),s.value);
     else if(op=="combat_damage")duel_test_combat_damage();
     else if(op=="advance_combat")duel_test_advance_combat();
@@ -111,6 +116,10 @@ class BehaviorTest:public testing::Test {
     else if(op=="record_state")recorded_state=observable_state();
     else if(op=="assert_recorded_state") { ASSERT_FALSE(recorded_state.empty()); EXPECT_EQ(observable_state(),recorded_state); }
     else if(op=="assert_mana")EXPECT_EQ(duel_test_mana(s.player,s.color),s.value);
+    else if(op=="assert_mana_total") {
+      int total=0;for(int color=0;color<6;++color)total+=duel_test_mana(s.player,color);
+      EXPECT_EQ(total,s.value);
+    }
     else if(op=="assert_life")EXPECT_EQ(duel_test_life(s.player),s.value);
     else if(op=="assert_stack")EXPECT_EQ(duel_test_stack_size(),s.value);
     else if(op=="capture")saved.reset(duel_test_capture());

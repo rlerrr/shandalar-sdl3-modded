@@ -1,0 +1,181 @@
+{
+  "card": "Nausea",
+  "csvid": 1097,
+  "cases": [
+    {
+      "seed": 123,
+      "name": "Nausea_AffectsBothSidesAndKillsOneOne",
+      "steps": [
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "friendly",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "friendly",
+          "property": "toughness"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "enemy",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "enemy",
+          "property": "toughness"
+        },
+        {
+          "op": "assert_card",
+          "value": 3,
+          "ref": "flyer",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 3,
+          "ref": "flyer",
+          "property": "toughness"
+        },
+        {
+          "op": "assert_card",
+          "value": 0,
+          "ref": "elf",
+          "property": "in_play"
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Nausea",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "player": 0,
+          "ref": "friendly"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "player": 1,
+          "ref": "enemy"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Air Elemental",
+          "player": 1,
+          "ref": "flyer"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Llanowar Elves",
+          "player": 0,
+          "ref": "elf"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "Nausea_ExpiresAtCleanup",
+      "steps": [
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "friendly",
+          "property": "toughness"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "friendly",
+          "property": "power"
+        },
+        {
+          "op": "assert_card",
+          "value": 2,
+          "ref": "friendly",
+          "property": "toughness"
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Nausea",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Grizzly Bears",
+          "player": 0,
+          "ref": "friendly"
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "name": "Nausea_DoesNotAffectNoncreature",
+      "steps": [
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "value": 1,
+          "ref": "ring",
+          "property": "in_play"
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "zone": "hand",
+          "name": "Nausea",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "zone": "battlefield",
+          "name": "Sol Ring",
+          "player": 1,
+          "ref": "ring"
+        }
+      ]
+    }
+  ],
+  "version": 1
+}

@@ -9,7 +9,7 @@ enum { DUEL_ZONE_HAND, DUEL_ZONE_BATTLEFIELD, DUEL_ZONE_LIBRARY, DUEL_ZONE_GRAVE
 enum { DUEL_STATE_TAPPED = 1, DUEL_STATE_SICK = 2, DUEL_STATE_ATTACKING = 4, DUEL_STATE_UNTAPPED = 8 };
 typedef struct { int player, card; } DuelTestRef;
 typedef struct {
-  int csvid, power, toughness, tapped, sick, attacking, in_play, in_hand, damage;
+  int csvid, power, toughness, tapped, sick, attacking, in_play, in_hand, damage, blocking_count, blocked;
 } DuelTestCard;
 typedef struct DuelTestSnapshot DuelTestSnapshot;
 int duel_test_initialize(const char *assets);
@@ -32,6 +32,10 @@ void duel_test_cleanup(void);
 void duel_test_remove_from_combat(DuelTestRef ref);
 void duel_test_destroy(DuelTestRef ref);
 int duel_test_attack(DuelTestRef ref);
+/* Declare a complete group, then run the real attack event and trigger pipeline. */
+void duel_test_begin_attackers(void);
+void duel_test_finish_attackers(void);
+void duel_test_begin_blockers(void);
 int duel_test_block(DuelTestRef blocker, DuelTestRef attacker);
 /* Complete blocker declaration and enter the after-blocking response window. */
 void duel_test_advance_combat(void);

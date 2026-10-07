@@ -1,0 +1,472 @@
+{
+  "version": 1,
+  "card": "Beasts of Bogardan",
+  "csvid": 579,
+  "cases": [
+    {
+      "name": "BeastsOfBogardan_OwnWhiteDoesNotGrantButOpponentWhiteDoes",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Beasts of Bogardan",
+          "ref": "beast",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "White Knight",
+          "ref": "ownWhite",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "White Knight",
+          "ref": "opponentWhite",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "opponentWhite",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "battlefield",
+          "index": 0,
+          "value": 283
+        },
+        {
+          "op": "assert_card",
+          "ref": "ownWhite",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BeastsOfBogardan_EnemyWhiteLeavingBattlefieldRemovesBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Beasts of Bogardan",
+          "ref": "beast",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "White Knight",
+          "ref": "whiteSource",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemyBear",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "whiteSource",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "whiteSource"
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 283
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemyBear",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BeastsOfBogardan_RedThreePowerBlockIsIllegal",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Beasts of Bogardan",
+          "ref": "beast",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "redBlocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "beast",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "redBlocker",
+          "other": "beast",
+          "value": 0
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 17
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "redBlocker",
+          "property": "damage",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BeastsOfBogardan_NonredAttackerCanDamageProtectionCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Beasts of Bogardan",
+          "ref": "beast",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "beast",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 106
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BeastsOfBogardan_PreventsRedCombatDamageFromCreatureItBlocks",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Beasts of Bogardan",
+          "ref": "beast",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "beast",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "beast",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 110
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BeastsOfBogardan_RedDamageSpellCanTargetUnprotectedCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Beasts of Bogardan",
+          "ref": "beast",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Shock",
+          "ref": "shock",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "player": 1,
+          "op": "turn",
+          "value": 0
+        },
+        {
+          "ref": "bear",
+          "op": "choose_target",
+          "player": -1
+        },
+        {
+          "ref": "shock",
+          "op": "cast",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "ref": "beast",
+          "op": "assert_card",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "ref": "beast",
+          "op": "assert_card",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "ref": "bear",
+          "op": "assert_card",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "player": 0,
+          "op": "assert_zone_card",
+          "value": 106,
+          "zone": "graveyard",
+          "index": 0
+        },
+        {
+          "player": 1,
+          "op": "assert_zone_card",
+          "value": 1147,
+          "zone": "graveyard",
+          "index": 0
+        },
+        {
+          "value": 0,
+          "op": "assert_stack"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "card": "Plague Wind",
+  "version": 1,
+  "csvid": 1115,
+  "cases": [
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "own",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "flyer",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "zone": "graveyard",
+          "op": "assert_zone",
+          "value": 2,
+          "player": 1
+        },
+        {
+          "zone": "graveyard",
+          "op": "assert_zone",
+          "value": 1,
+          "player": 0
+        }
+      ],
+      "fixture": "empty_main",
+      "name": "PlagueWind_DestroysOpposingCreaturesOnly",
+      "setup": [
+        {
+          "zone": "hand",
+          "ref": "source",
+          "name": "Plague Wind",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "own",
+          "name": "Grizzly Bears",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "enemy",
+          "name": "Grizzly Bears",
+          "player": 1
+        },
+        {
+          "zone": "battlefield",
+          "ref": "flyer",
+          "name": "Air Elemental",
+          "player": 1
+        },
+        {
+          "zone": "battlefield",
+          "ref": "artifact",
+          "name": "Sol Ring",
+          "player": 1
+        }
+      ]
+    },
+    {
+      "seed": 123,
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "own",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ring",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "aura",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "zone": "graveyard",
+          "op": "assert_zone",
+          "value": 0,
+          "player": 1
+        }
+      ],
+      "fixture": "empty_main",
+      "name": "PlagueWind_LeavesFriendlyAndOpposingNoncreatures",
+      "setup": [
+        {
+          "zone": "hand",
+          "ref": "source",
+          "name": "Plague Wind",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "own",
+          "name": "Llanowar Elves",
+          "player": 0
+        },
+        {
+          "zone": "battlefield",
+          "ref": "ring",
+          "name": "Sol Ring",
+          "player": 1
+        },
+        {
+          "zone": "battlefield",
+          "ref": "aura",
+          "name": "Glorious Anthem",
+          "player": 1
+        }
+      ]
+    },
+    {
+      "name": "PlagueWind_NoOpposingCreatures",
+      "steps": [
+        {
+          "ref": "source",
+          "value": 1,
+          "op": "cast"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "ref": "own",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1,
+          "op": "assert_card"
+        },
+        {
+          "zone": "graveyard",
+          "value": 0,
+          "player": 1,
+          "op": "assert_zone"
+        }
+      ],
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Plague Wind",
+          "zone": "hand",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "name": "Grizzly Bears",
+          "zone": "battlefield",
+          "player": 0,
+          "ref": "own"
+        },
+        {
+          "name": "Sol Ring",
+          "zone": "battlefield",
+          "player": 1,
+          "ref": "artifact"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

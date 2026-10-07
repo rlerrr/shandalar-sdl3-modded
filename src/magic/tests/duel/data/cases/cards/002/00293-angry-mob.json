@@ -1,0 +1,271 @@
+{
+  "version": 1,
+  "card": "Angry Mob",
+  "csvid": 293,
+  "cases": [
+    {
+      "name": "AngryMob_OpponentsBattlefieldSwampsOnYourTurnSetBothStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Angry Mob",
+          "ref": "mob",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swampA",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swampB",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "ownIsland",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "graveSwamp",
+          "player": 1,
+          "zone": "graveyard"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "mob",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "mob",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ownIsland",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AngryMob_OwnSwampsAndOpponentsIslandsDoNotCount",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Angry Mob",
+          "ref": "mob",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "ownSwamp",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "island",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "mob",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "mob",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "ownSwamp",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "island",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AngryMob_OpponentsTurnUsesTwoTwoDespiteSwamps",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Angry Mob",
+          "ref": "mob",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swampA",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swampB",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swampC",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "mob",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "mob",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "mob",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "mob",
+          "property": "toughness",
+          "value": 5
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AngryMob_LosingOpponentSwampReducesItsStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Angry Mob",
+          "ref": "mob",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swampA",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swampB",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swampC",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "mob",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "destroy",
+          "ref": "swampB"
+        },
+        {
+          "op": "assert_card",
+          "ref": "mob",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "mob",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 239
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Rukh Egg",
+  "csvid": 452,
+  "cases": [
+    {
+      "name": "RukhEgg_CastAndStats",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Rukh Egg", "ref": "source", "player": 0, "zone": "hand"}
+      ],
+      "steps": [
+        {"op": "cast", "ref": "source", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_zone", "player": 0, "zone": "hand", "value": 0},
+        {"op": "assert_zone", "player": 0, "zone": "battlefield", "value": 1},
+        {"op": "assert_zone_card", "player": 0, "zone": "battlefield", "index": 0, "value": 452},
+        {"op": "assert_zone_state", "player": 0, "zone": "battlefield", "index": 0, "property": "power", "value": 0},
+        {"op": "assert_zone_state", "player": 0, "zone": "battlefield", "index": 0, "property": "toughness", "value": 3},
+        {"op": "assert_stack", "value": 0}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RukhEgg_DeathCreatesRukhAtEndStep",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Rukh Egg", "ref": "source", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "assert_card", "ref": "source", "property": "power", "value": 0},
+        {"op": "assert_card", "ref": "source", "property": "toughness", "value": 3},
+        {"op": "destroy", "ref": "source"},
+        {"op": "assert_zone", "player": 0, "zone": "battlefield", "value": 0},
+        {"op": "assert_zone", "player": 0, "zone": "graveyard", "value": 1},
+        {"op": "assert_zone_contains", "player": 0, "zone": "graveyard", "value": 452},
+        {"op": "cleanup"},
+        {"op": "assert_zone", "player": 0, "zone": "battlefield", "value": 1},
+        {"op": "assert_zone_state", "player": 0, "zone": "battlefield", "index": 0, "property": "power", "value": 4},
+        {"op": "assert_zone_state", "player": 0, "zone": "battlefield", "index": 0, "property": "toughness", "value": 4},
+        {"op": "assert_zone", "player": 0, "zone": "graveyard", "value": 1},
+        {"op": "assert_zone_contains", "player": 0, "zone": "graveyard", "value": 452},
+        {"op": "assert_stack", "value": 0}
+      ],
+      "seed": 123
+    }
+  ]
+}

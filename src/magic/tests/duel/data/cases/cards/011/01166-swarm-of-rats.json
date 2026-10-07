@@ -1,0 +1,152 @@
+{
+  "version": 1,
+  "card": "Swarm of Rats",
+  "csvid": 1166,
+  "cases": [
+    {
+      "name": "SwarmOfRats_CountsItself",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Swarm of Rats",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SwarmOfRats_CountsControlledRatsOnly",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Swarm of Rats",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swarm of Rats",
+          "ref": "allyrat",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swarm of Rats",
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "friendly_nonrat",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "opposing_nonrat",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "allyrat",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly_nonrat",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "opposing_nonrat",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SwarmOfRats_PowerRecalculatesAfterRatDies",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Swarm of Rats",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swarm of Rats",
+          "ref": "allyrat",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "destroy",
+          "ref": "allyrat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "allyrat",
+          "property": "in_play",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

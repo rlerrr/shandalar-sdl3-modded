@@ -1,0 +1,359 @@
+{
+  "version": 1,
+  "card": "Blessed Reversal",
+  "csvid": 958,
+  "cases": [
+    {
+      "name": "BlessedReversal_DefendingCasterGainsForOneAttacker",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Blessed Reversal",
+          "ref": "source",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Raging Goblin",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker0",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 58
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker0",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 23
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 958
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BlessedReversal_DefendingCasterCountsEveryAttacker",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Blessed Reversal",
+          "ref": "source",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Raging Goblin",
+          "ref": "attacker0",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Raging Goblin",
+          "ref": "attacker1",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker0",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker1",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker0",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "attacker1",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 58
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker0",
+          "other": "attacker0",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "blocker1",
+          "other": "attacker1",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 26
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 958
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BlessedReversal_AttackingCasterGainsNoLifeFromOwnAttack",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Blessed Reversal",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Raging Goblin",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker0",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker0",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 958
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BlessedReversal_EmptyAttackGroupGainsNoLife",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Blessed Reversal",
+          "ref": "source",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 58
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 958
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

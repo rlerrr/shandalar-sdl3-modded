@@ -1,0 +1,277 @@
+{
+  "version": 1,
+  "card": "Amnesia",
+  "csvid": 292,
+  "cases": [
+    {
+      "name": "Amnesia_OpponentDiscardsAllNonlands",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Amnesia",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "land0",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "land1",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "spell0",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "spell1",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 7
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 54
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "hand",
+          "index": 0,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "hand",
+          "index": 1,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 145
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 97
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 292
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Amnesia_CasterCanChooseTheirOwnHand",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Amnesia",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "land",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "otherSpell",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "value": 0,
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 7
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 54
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "hand",
+          "index": 0,
+          "value": 188
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 145
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 97
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 292
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Amnesia_EmptyHandHasNothingToDiscard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Amnesia",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 7
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 54
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 292
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

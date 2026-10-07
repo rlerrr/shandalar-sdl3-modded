@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "card": "Akron Legionnaire",
+  "csvid": 558,
+  "cases": [
+    {
+      "name": "AkronLegionnaire_OnlyNamedAndArtifactCreaturesCanAttack",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Akron Legionnaire",
+          "ref": "akron",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "ordinary",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Ornithopter",
+          "ref": "artifactCreature",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "akron",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "ordinary",
+          "value": 0
+        },
+        {
+          "op": "attack",
+          "ref": "artifactCreature",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "assert_card",
+          "ref": "akron",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ordinary",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifactCreature",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 12
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AkronLegionnaire_RestrictionDoesNotAffectOpponentsCreatures",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Akron Legionnaire",
+          "ref": "akron",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "opponentBear",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "opponentBear",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "assert_card",
+          "ref": "opponentBear",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "akron",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 18
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AkronLegionnaire_SecondNamedCreatureAlsoHasException",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Akron Legionnaire",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Akron Legionnaire",
+          "ref": "copy",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "ordinary",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "copy",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "ordinary",
+          "value": 0
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "assert_card",
+          "ref": "copy",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ordinary",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 12
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

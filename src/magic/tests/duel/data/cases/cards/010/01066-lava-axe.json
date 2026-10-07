@@ -1,0 +1,89 @@
+{
+  "cases": [
+    {
+      "steps": [
+        {
+          "value": 1,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 15,
+          "player": 1,
+          "op": "assert_life"
+        },
+        {
+          "value": 20,
+          "player": 0,
+          "op": "assert_life"
+        },
+        {
+          "value": 1066,
+          "player": 0,
+          "op": "assert_zone_contains",
+          "zone": "graveyard"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Lava Axe",
+          "ref": "source",
+          "zone": "hand"
+        }
+      ],
+      "name": "LavaAxe_DamagesOpponentFive",
+      "seed": 123,
+      "fixture": "empty_main"
+    },
+    {
+      "steps": [
+        {
+          "value": 0,
+          "player": 0,
+          "op": "choose_player"
+        },
+        {
+          "op": "cast",
+          "value": 1,
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "value": 15,
+          "player": 0,
+          "op": "assert_life"
+        },
+        {
+          "value": 20,
+          "player": 1,
+          "op": "assert_life"
+        }
+      ],
+      "setup": [
+        {
+          "player": 0,
+          "name": "Lava Axe",
+          "ref": "source",
+          "zone": "hand"
+        }
+      ],
+      "name": "LavaAxe_CanTargetCaster",
+      "seed": 123,
+      "fixture": "empty_main"
+    }
+  ],
+  "version": 1,
+  "csvid": 1066,
+  "card": "Lava Axe"
+}

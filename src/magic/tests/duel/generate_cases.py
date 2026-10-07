@@ -13,12 +13,12 @@ from case_files import load_cases
 
 ZONES = {"hand": 0, "battlefield": 1, "library": 2, "graveyard": 3, "exile": 4}
 STATES = {"tapped": 1, "sick": 2, "attacking": 4, "untapped": 8}
-OPS = {"choose_target", "choose_zone", "choose_dialog", "choose_number", "choose_color", "choose_priority", "choose_trigger", "can_activate",
+OPS = {"choose_target", "choose_player", "choose_zone", "choose_dialog", "choose_number", "choose_color", "choose_priority", "choose_trigger", "can_activate",
        "activate", "can_cast", "cast", "resolve", "cleanup", "remove_from_combat", "destroy", "attack", "block", "combat_damage",
-       "turn", "advance_combat", "assert_card", "assert_zone", "assert_zone_card", "assert_zone_contains", "assert_zone_state",
+       "turn", "begin_attackers", "finish_attackers", "begin_blockers", "advance_combat", "assert_card", "assert_zone", "assert_zone_card", "assert_zone_contains", "assert_zone_state",
        "assert_hand_graveyard_total", "record_state", "assert_recorded_state",
-       "assert_mana", "assert_life", "assert_stack", "capture", "restore", "ai_roundtrip", "ai_turns"}
-PROPERTIES = {"csvid", "power", "toughness", "tapped", "sick", "attacking", "in_play", "in_hand", "damage"}
+       "assert_mana", "assert_mana_total", "assert_life", "assert_stack", "capture", "restore", "ai_roundtrip", "ai_turns"}
+PROPERTIES = {"csvid", "power", "toughness", "tapped", "sick", "attacking", "in_play", "in_hand", "damage", "blocking_count", "blocked"}
 REF_OPS = {"choose_target", "choose_trigger", "can_activate", "activate", "can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card"}
 
 def read(path):
@@ -94,6 +94,12 @@ def build(data, output):
                 raise ValueError(f"Invalid observation in {name}: {step}")
             if "other" in step and step["other"] not in refs:
                 raise ValueError(f"Unknown reference: {step}")
+            if op == "choose_player" and (step.get("value") not in (0, 1) or step.get("player", -1) not in (-1, 0, 1)):
+                raise ValueError(f"Invalid player target in {name}: {step}")
+            if op == "assert_mana_total" and (
+                step.get("player") not in (0, 1) or not isinstance(step.get("value"), int) or step["value"] < 0
+            ):
+                raise ValueError(f"Invalid total mana observation in {name}: {step}")
             if op == "assert_hand_graveyard_total" and (
                 step.get("player") not in (0, 1) or step.get("index") not in registered_csvids
                 or not isinstance(step.get("value"), int) or step["value"] < 0

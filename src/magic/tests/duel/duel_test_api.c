@@ -33,10 +33,12 @@ extern void run_duel_turn(unsigned int);
 extern int assign_blocker_to_attacker(int, int, int, int);
 extern void resolve_combat_damage(int);
 extern void mark_blocked_attackers(int);
+extern int manalinkeh_count_creatures_this_is_blocking(int, int), manalinkeh_is_unblocked(int, int);
 extern int turn_count, stack_phase[32];
 extern int unknown62BCEC, tapped_for_mana_color;
 extern void duel_rules_initialize_headless(void), manalinkeh_recalculate_rules_engine_and_deadbox(void);
 extern void manalinkeh_recalculate_all_cards_in_play(void);
+extern void manalinkeh_remove_from_combat(int player, int card);
 extern int manalinkeh_raw_put_iid_on_top_of_graveyard(int, int);
 extern int manalinkeh_add_card_to_hand(int, int);
 extern int get_card_response_action_type(int, int);
@@ -160,6 +162,10 @@ int duel_test_initialize(const char *assets)
   g_life[0] = g_life[1] = 20; g_current_spell_player = g_current_spell_card = -1;
   g_trigger_condition = -1; g_affected_card = g_affected_card_controller = -1;
   g_stack_size = 0; g_duel_ai_mode_state = 0; g_ai_speculation_depth = 0;
+  /* Both fixture libraries are explicit. The legacy -1 opponent mode draws
+     random encounter cards instead of consuming global_library[1]. */
+  g_selected_wizard_color = -1;
+  g_opponent_initial_library_index = 1;
   baseline = duel_test_capture(); initialized = 1;
   return 1;
 }
@@ -205,7 +211,11 @@ void duel_test_set_mana(int p, int color, int amount) {
   g_raw_mana_available[p][color] = amount;
 }
 void duel_test_set_life(int p, int amount) { g_life[p] = amount; }
-void duel_test_set_turn(int p, int combat) { g_current_turn = g_current_player = p; g_current_phase = combat ? PHASE_DECLARE_BLOCKERS : PHASE_MAIN1; }
+void duel_test_set_turn(int p, int combat) {
+  g_current_turn = g_current_player = p;
+  g_current_phase = combat ? PHASE_DECLARE_BLOCKERS : PHASE_MAIN1;
+  manalinkeh_recalculate_all_cards_in_play();
+}
 void duel_test_decision(DuelChoiceKind kind, int p, int value, int card)
 { if (decision_count == 128) duel_host_fail("too many scripted choices"); decisions[decision_count++] = (Decision){kind,p,value,card}; }
 void duel_test_finish_decisions(void) { if (decision_cursor != decision_count) duel_host_fail("unused scripted choices"); }
@@ -235,7 +245,10 @@ void duel_test_resolve(void) {
   }
 }
 void duel_test_cleanup(void) { g_current_phase=PHASE_CLEANUP; cleanup_phase(g_current_turn); end_turn_phase(g_current_turn); }
-void duel_test_remove_from_combat(DuelTestRef r) { global_card_instances[r.player][r.card].state &= ~STATE_ATTACKING; }
+void duel_test_remove_from_combat(DuelTestRef r) {
+  manalinkeh_remove_from_combat(r.player, r.card);
+  manalinkeh_recalculate_all_cards_in_play();
+}
 void duel_test_destroy(DuelTestRef r) {
   kill_card(r.player,r.card,KILL_DESTROY);
   /* Destruction may queue regeneration and graveyard processing. Finish the real
@@ -255,10 +268,34 @@ int duel_test_attack(DuelTestRef r) {
      A scripted declaration has the same tap obligation as a game declaration.
      Use the engine's vigilance query and tap operation, including tap events. */
   if (!has_vigilance(r.player,r.card)) tap_card_and_dispatch_event(r.player,r.card);
-  manalinkeh_dispatch_event_to_single_card(r.player,r.card,EVENT_DECLARE_ATTACKERS,1-r.player,-1);
+  /* Group declarations dispatch once after every attacker is selected. The
+     older blocker-phase shortcut does not exercise attack triggers. */
+  if (g_current_phase != PHASE_DECLARE_ATTACKERS)
+    manalinkeh_dispatch_event_to_single_card(r.player,r.card,EVENT_DECLARE_ATTACKERS,1-r.player,-1);
   return 1;
 }
+void duel_test_begin_attackers(void) {
+  if (g_current_phase != PHASE_MAIN1)
+    duel_host_fail("begin_attackers requires first main phase");
+  g_current_phase = PHASE_DECLARE_ATTACKERS;
+}
+void duel_test_finish_attackers(void) {
+  if (g_current_phase != PHASE_DECLARE_ATTACKERS)
+    duel_host_fail("finish_attackers requires attacker declaration");
+  /* This engine entry point counts all attackers, notifies every permanent,
+     resolves XTRIGGER_ATTACKING, and refreshes derived characteristics. */
+  C_dispatch_event_raw(EVENT_DECLARE_ATTACKERS);
+  g_current_phase = PHASE_BEFORE_BLOCKING;
+}
+void duel_test_begin_blockers(void) {
+  if (g_current_phase != PHASE_BEFORE_BLOCKING)
+    duel_host_fail("begin_blockers requires the before-blocking response window");
+  g_current_phase = PHASE_DECLARE_BLOCKERS;
+  dispatch_trigger_twice_once_with_each_player_as_reason(g_current_turn, TRIGGER_MUST_BLOCK, gs_choose_defenders_00789a50, 0);
+}
 int duel_test_block(DuelTestRef b,DuelTestRef a) {
+  /* The game UI restricts declarations to the defending player's creatures. */
+  if (b.player == a.player || a.player != g_current_turn) return 0;
   if (!assign_blocker_to_attacker(b.player,b.card,a.player,a.card)) return 0;
   /* Match the declaration performed after this legality check by the game UI. */
   unsigned char parent = global_card_instances[a.player][a.card].blocking;
@@ -288,6 +325,21 @@ DuelTestCard duel_test_inspect(DuelTestRef r)
   DuelTestCard v={0}; v.csvid=i->internal_card_id<0?-1:global_cards_data[i->internal_card_id].id;
   v.in_play=(i->internal_card_id>=0 && manalinkeh_in_play(r.player,r.card));
   v.in_hand=(i->internal_card_id>=0 && manalinkeh_in_hand(r.player,r.card));
+  if (v.in_play) {
+    v.blocking_count=manalinkeh_count_creatures_this_is_blocking(r.player,r.card);
+    /* The core engine also creates multiblocker copies (Blaze of Glory). The
+       Manalink counter recognizes its own callback only, so include core
+       copies through the same single-copy/banding query. */
+    for (int c=0;c<g_active_cards_count[r.player];++c) {
+      card_instance_t *copy=&global_card_instances[r.player][c];
+      if (c!=r.card && copy->internal_card_id>=0 &&
+          global_cards_data[copy->internal_card_id].code_pointer==card_two_headed_giant_of_foriys_legacy &&
+          copy->damage_source_player==r.player && copy->damage_source_card==r.card &&
+          manalinkeh_in_play(r.player,c))
+        v.blocking_count+=manalinkeh_count_creatures_this_is_blocking(r.player,c);
+    }
+    v.blocked=!!(i->state&STATE_ATTACKING) && !manalinkeh_is_unblocked(r.player,r.card);
+  }
   v.tapped=!!(i->state&STATE_TAPPED); v.sick=!!(i->state&STATE_SUMMONSICK_BOTH); v.attacking=!!(i->state&STATE_ATTACKING); v.damage=i->damage_on_card;
   if(i->internal_card_id>=0) { v.power=manalinkeh_get_power(r.player,r.card); v.toughness=manalinkeh_get_toughness(r.player,r.card); }
   return v;

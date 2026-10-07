@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "card": "Ashnod's Battle Gear",
+  "csvid": 475,
+  "cases": [
+    {
+      "name": "AshnodsBattleGear_PumpsOwnCreatureWhileTapped",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Ashnod's Battle Gear", "ref": "gear", "player": 0, "zone": "battlefield"},
+        {"name": "Wall of Stone", "ref": "wall", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "assert_card", "ref": "wall", "property": "power", "value": 0},
+        {"op": "assert_card", "ref": "wall", "property": "toughness", "value": 8},
+        {"op": "can_activate", "ref": "gear", "value": 1},
+        {"op": "choose_target", "ref": "wall", "player": -1},
+        {"op": "activate", "ref": "gear", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "wall", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "wall", "property": "toughness", "value": 6},
+        {"op": "assert_card", "ref": "gear", "property": "tapped", "value": 1},
+        {"op": "assert_card", "ref": "gear", "property": "in_play", "value": 1},
+        {"op": "assert_stack", "value": 0},
+        {"op": "cleanup"},
+        {"op": "assert_card", "ref": "wall", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "wall", "property": "toughness", "value": 6},
+        {"op": "assert_card", "ref": "gear", "property": "tapped", "value": 1}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AshnodsBattleGear_EnemyOnlyBoardCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Ashnod's Battle Gear", "ref": "gear", "player": 0, "zone": "battlefield"},
+        {"name": "Grizzly Bears", "ref": "foe", "player": 1, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "can_activate", "ref": "gear", "value": 0},
+        {"op": "activate", "ref": "gear", "value": 0},
+        {"op": "assert_card", "ref": "foe", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "foe", "property": "toughness", "value": 2},
+        {"op": "assert_card", "ref": "gear", "property": "tapped", "value": 0},
+        {"op": "assert_stack", "value": 0}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AshnodsBattleGear_TappedCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Ashnod's Battle Gear", "ref": "gear", "player": 0, "zone": "battlefield", "state": ["tapped"]},
+        {"name": "Wall of Stone", "ref": "wall", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "can_activate", "ref": "gear", "value": 0},
+        {"op": "activate", "ref": "gear", "value": 0},
+        {"op": "assert_card", "ref": "wall", "property": "power", "value": 0},
+        {"op": "assert_card", "ref": "wall", "property": "toughness", "value": 8},
+        {"op": "assert_stack", "value": 0}
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AshnodsBattleGear_SickSourceCanActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {"name": "Ashnod's Battle Gear", "ref": "gear", "player": 0, "zone": "battlefield", "state": ["sick"]},
+        {"name": "Wall of Stone", "ref": "wall", "player": 0, "zone": "battlefield"}
+      ],
+      "steps": [
+        {"op": "can_activate", "ref": "gear", "value": 1},
+        {"op": "choose_target", "ref": "wall", "player": -1},
+        {"op": "activate", "ref": "gear", "value": 1},
+        {"op": "resolve"},
+        {"op": "assert_card", "ref": "wall", "property": "power", "value": 2},
+        {"op": "assert_card", "ref": "wall", "property": "toughness", "value": 6},
+        {"op": "assert_stack", "value": 0}
+      ],
+      "seed": 123
+    }
+  ]
+}
