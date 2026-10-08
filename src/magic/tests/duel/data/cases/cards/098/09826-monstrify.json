@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Monstrify",
+  "csvid": 9826,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 4,
+        "toughness": 4
+      },
+      "oracle_text": "Target creature gets +4/+4 until end of turn.\nRetrace (You may cast this card from your graveyard by discarding a land card in addition to paying its other costs.)",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared pump component; additional clauses require separate authored cases."
+}

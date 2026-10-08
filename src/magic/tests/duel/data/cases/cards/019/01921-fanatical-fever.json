@@ -352,5 +352,25 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+"recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 3,
+        "toughness": 0
+      },
+      "oracle_text": "Target creature gets +3/+0 and gains trample until end of turn.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
 }

@@ -29,6 +29,11 @@ Only cards with authored cases need files; catalog smoke and wording templates
 are generated separately. These folders keep both file lists and agent edit
 assignments small.
 
+For common Oracle wording, use [recipe-based authoring](RECIPES.md). A compact
+declaration generates reviewed engine scenarios, and batch tools inventory
+unsupported wording and prepare failure-only review reports. Generated recipes
+are behavior cases; the existing card-ID templates remain separate.
+
 A card file records the behaviors its cases actually assert; its existence does
 not imply complete rules coverage. For example, the current Overrun cases check
 the team bonus and cleanup, while trample combat still needs a separate case.

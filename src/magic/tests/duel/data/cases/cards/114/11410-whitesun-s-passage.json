@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Whitesun's Passage",
+  "csvid": 11410,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 1
+    }
+  ]
+}

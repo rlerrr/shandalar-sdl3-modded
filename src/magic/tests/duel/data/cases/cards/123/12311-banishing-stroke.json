@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Banishing Stroke",
+  "csvid": 12311,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "creature",
+          "enchantment"
+        ],
+        "destination": "library_bottom"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_creature",
+        "target_enchantment"
+      ],
+      "oracle_text": "Put target artifact, creature, or enchantment on the bottom of its owner's library.\nMiracle {W} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)"
+    }
+  ],
+  "recipe_coverage": "Declared permanent movement component and life/draw effects only. Alternative costs, additional modes and other Oracle abilities need independent authored cases."
+}

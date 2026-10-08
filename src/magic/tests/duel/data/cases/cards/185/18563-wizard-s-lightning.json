@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Wizard's Lightning",
+  "csvid": 18563,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 3
+      },
+      "oracle_text": "This spell costs {2} less to cast if you control a Wizard.\nWizard's Lightning deals 3 damage to any target.",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

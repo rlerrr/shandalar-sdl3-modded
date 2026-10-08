@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Frantic Purification",
+  "csvid": 5812,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "enchantment"
+        ]
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Destroy target enchantment.\nMadness {W} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)"
+    }
+  ],
+  "recipe_coverage": "Destruction component only; regeneration, alternative costs, secondary abilities and conditional branches need separate cases. Witnesses are nonsnow basic lands, unenchanted non-Human creatures, and permanents with no counters."
+}

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Wielding the Green Dragon",
+  "csvid": 4351,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 1
+    }
+  ]
+}

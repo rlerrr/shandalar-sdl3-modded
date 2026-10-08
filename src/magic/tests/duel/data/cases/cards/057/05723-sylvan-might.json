@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Sylvan Might",
+  "csvid": 5723,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Target creature gets +2/+2 and gains trample until end of turn.\nFlashback {2}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

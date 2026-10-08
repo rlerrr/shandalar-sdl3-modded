@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Narrow Escape",
+  "csvid": 10616,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature",
+          "land"
+        ],
+        "destination": "hand",
+        "controller": "self",
+        "gain_life": 4
+      },
+      "variants": [
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "wrong_controller",
+        "target_enchantment",
+        "target_creature",
+        "target_land"
+      ],
+      "oracle_text": "Return target permanent you control to its owner's hand. You gain 4 life."
+    }
+  ],
+  "recipe_coverage": "Declared permanent movement component and life/draw effects only. Alternative costs, additional modes and other Oracle abilities need independent authored cases."
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Otherworldly Outburst",
+  "csvid": 16168,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 1,
+        "toughness": 0
+      },
+      "oracle_text": "Target creature gets +1/+0 until end of turn. When that creature dies this turn, create a 3/2 colorless Eldrazi Horror creature token.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared pump component; additional clauses require separate authored cases."
+}

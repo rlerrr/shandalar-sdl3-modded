@@ -264,5 +264,29 @@
         }
       ]
     }
-  ]
+  ],
+  "recipes": [
+    {
+      "family": "reduce_creature",
+      "version": 2,
+      "params": {
+        "power": -4,
+        "toughness": -4
+      },
+      "variants": [
+        "friendly_cleanup",
+        "opponent_cleanup",
+        "negative_power",
+        "lethal",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Target creature gets -4/-4 until end of turn."
+    }
+  ],
+  "recipe_coverage": "Declared stat reduction and coupled effects only; extra abilities, alternate costs and restricted branches need independent cases. Witnesses are non-Vampires/non-Cyclopes with no counters; no creature died before casting."
 }

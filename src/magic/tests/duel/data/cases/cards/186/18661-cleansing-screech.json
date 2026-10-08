@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Cleansing Screech",
+  "csvid": 18661,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 1
+    }
+  ]
+}

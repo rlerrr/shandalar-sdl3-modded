@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Blood Lust",
+  "csvid": 583,
+  "recipes": [
+    {
+      "family": "reduce_creature",
+      "version": 2,
+      "params": {
+        "power": 4,
+        "toughness": -4
+      },
+      "variants": [
+        "friendly_cleanup",
+        "opponent_cleanup",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "If target creature has toughness 5 or greater, it gets +4/-4 until end of turn. Otherwise, it gets +4/-X until end of turn, where X is its toughness minus 1."
+    }
+  ],
+  "recipe_coverage": "High-toughness branch only: Scaled Wurm has toughness six. Low-toughness clamping needs authored cases."
+}

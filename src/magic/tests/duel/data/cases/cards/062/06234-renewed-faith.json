@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Renewed Faith",
+  "csvid": 6234,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 2,
+      "params": {
+        "amount": 6
+      },
+      "oracle_text": "You gain 6 life.\nCycling {1}{W} ({1}{W}, Discard this card: Draw a card.)\nWhen you cycle this card, you may gain 2 life.",
+      "variants": [
+        "gain",
+        "injured",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

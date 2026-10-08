@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Aerial Maneuver",
+  "csvid": 12876,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 1,
+        "toughness": 1
+      },
+      "oracle_text": "Target creature gets +1/+1 and gains flying and first strike until end of turn.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

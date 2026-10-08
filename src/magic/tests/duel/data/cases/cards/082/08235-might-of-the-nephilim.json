@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Might of the Nephilim",
+  "csvid": 8235,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Target creature gets +2/+2 until end of turn for each of its colors.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared pump component; additional clauses require separate authored cases. The recipient is monocolored green; other color counts remain separate."
+}

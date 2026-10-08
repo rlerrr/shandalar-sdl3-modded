@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Nourish",
+  "csvid": 6928,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 1
+    }
+  ]
+}

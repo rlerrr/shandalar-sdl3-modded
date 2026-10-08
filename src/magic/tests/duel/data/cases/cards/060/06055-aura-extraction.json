@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Aura Extraction",
+  "csvid": 6055,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "enchantment"
+        ],
+        "destination": "library_top"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Put target enchantment on top of its owner's library.\nCycling {2} ({2}, Discard this card: Draw a card.)"
+    }
+  ],
+  "recipe_coverage": "Declared permanent movement component and life/draw effects only. Alternative costs, additional modes and other Oracle abilities need independent authored cases."
+}

@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Resounding Roar",
+  "csvid": 10042,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 3,
+        "toughness": 3
+      },
+      "oracle_text": "Target creature gets +3/+3 until end of turn.\nCycling {5}{R}{G}{W} ({5}{R}{G}{W}, Discard this card: Draw a card.)\nWhen you cycle this card, target creature gets +6/+6 until end of turn.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Parting Thoughts",
+  "csvid": 16620,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ]
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Destroy target creature. You draw X cards and you lose X life, where X is the number of counters on that creature."
+    }
+  ],
+  "recipe_coverage": "Destruction component only; regeneration, alternative costs, secondary abilities and conditional branches need separate cases. Witnesses are nonsnow basic lands, unenchanted non-Human creatures, and permanents with no counters."
+}

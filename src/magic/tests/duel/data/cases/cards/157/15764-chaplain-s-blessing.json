@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Chaplain's Blessing",
+  "csvid": 15764,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 1
+    }
+  ]
+}

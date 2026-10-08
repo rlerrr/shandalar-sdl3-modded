@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Sun's Bounty",
+  "csvid": 8450,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 2,
+      "params": {
+        "amount": 4
+      },
+      "oracle_text": "You gain 4 life.\nRecover {1}{W} (When a creature is put into your graveyard from the battlefield, you may pay {1}{W}. If you do, return this card from your graveyard to your hand. Otherwise, exile this card.)",
+      "variants": [
+        "gain",
+        "injured",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Life gain component. No creature dies or permanent receives bolster; selected life totals never satisfy Pulse return condition."
+}

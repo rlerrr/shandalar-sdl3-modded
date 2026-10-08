@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Temporal Spring",
+  "csvid": 5445,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature",
+          "land"
+        ],
+        "destination": "library_top"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_enchantment",
+        "target_creature",
+        "target_land"
+      ],
+      "oracle_text": "Put target permanent on top of its owner's library."
+    }
+  ],
+  "recipe_coverage": "Declared permanent movement component and life/draw effects only. Alternative costs, additional modes and other Oracle abilities need independent authored cases."
+}

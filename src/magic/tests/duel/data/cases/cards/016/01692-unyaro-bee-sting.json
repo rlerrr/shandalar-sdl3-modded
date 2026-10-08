@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Unyaro Bee Sting",
+  "csvid": 1692,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 1
+    }
+  ]
+}

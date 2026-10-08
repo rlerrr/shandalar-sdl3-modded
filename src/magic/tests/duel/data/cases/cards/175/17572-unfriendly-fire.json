@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Unfriendly Fire",
+  "csvid": 17572,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 1
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Precision Bolt",
+  "csvid": 19460,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 1
+    }
+  ]
+}

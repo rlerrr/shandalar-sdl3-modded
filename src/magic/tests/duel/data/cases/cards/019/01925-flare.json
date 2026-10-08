@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Flare",
+  "csvid": 1925,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 1
+      },
+      "oracle_text": "Flare deals 1 damage to any target.\nDraw a card at the beginning of the next turn's upkeep.",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Searing Spear",
+  "csvid": 12614,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 1
+    }
+  ]
+}

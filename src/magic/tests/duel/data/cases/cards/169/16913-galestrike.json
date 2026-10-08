@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Galestrike",
+  "csvid": 16913,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "destination": "hand",
+        "draw": 1,
+        "target_tapped": true
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "wrong_state"
+      ],
+      "oracle_text": "Return target tapped creature to its owner's hand.\nDraw a card."
+    }
+  ],
+  "recipe_coverage": "Declared permanent movement component and life/draw effects only. Alternative costs, additional modes and other Oracle abilities need independent authored cases."
+}

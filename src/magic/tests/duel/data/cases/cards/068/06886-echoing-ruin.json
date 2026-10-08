@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Echoing Ruin",
+  "csvid": 6886,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact"
+        ]
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Destroy target artifact and all other artifacts with the same name as that artifact."
+    }
+  ],
+  "recipe_coverage": "Destruction component only; regeneration, alternative costs, secondary abilities and conditional branches need separate cases. Witnesses are nonsnow basic lands, unenchanted non-Human creatures, and permanents with no counters."
+}

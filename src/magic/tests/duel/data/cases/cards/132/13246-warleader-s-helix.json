@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Warleader's Helix",
+  "csvid": 13246,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 4,
+        "gain_life": 4
+      },
+      "oracle_text": "Warleader's Helix deals 4 damage to any target and you gain 4 life.",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Damage and life gain; self targeting and illegal sole target included."
+}

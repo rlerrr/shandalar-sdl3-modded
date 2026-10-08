@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Moment of Triumph",
+  "csvid": 18248,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 2,
+        "toughness": 2,
+        "gain_life": 2
+      },
+      "oracle_text": "Target creature gets +2/+2 until end of turn. You gain 2 life.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "Pump and life gain, including no effects when the sole target becomes illegal."
+}

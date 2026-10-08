@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Blessed Wine",
+  "csvid": 1874,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 2,
+      "params": {
+        "amount": 1
+      },
+      "oracle_text": "You gain 1 life.\nDraw a card at the beginning of the next turn's upkeep.",
+      "variants": [
+        "gain",
+        "injured",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

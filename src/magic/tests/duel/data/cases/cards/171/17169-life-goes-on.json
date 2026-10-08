@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Life Goes On",
+  "csvid": 17169,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 2,
+      "params": {
+        "amount": 4
+      },
+      "oracle_text": "You gain 4 life. If a creature died this turn, you gain 8 life instead.",
+      "variants": [
+        "gain",
+        "injured",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

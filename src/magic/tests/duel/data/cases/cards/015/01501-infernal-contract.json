@@ -334,5 +334,22 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+"recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 4
+      },
+      "oracle_text": "Draw four cards. You lose half your life, rounded up.",
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
 }

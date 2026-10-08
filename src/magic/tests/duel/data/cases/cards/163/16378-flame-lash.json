@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Flame Lash",
+  "csvid": 16378,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 1
+    }
+  ]
+}

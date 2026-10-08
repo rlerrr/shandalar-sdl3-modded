@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Consign to the Pit",
+  "csvid": 19588,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "target_damage": 2
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Destroy target creature. Consign to the Pit deals 2 damage to that creature's controller."
+    }
+  ],
+  "recipe_coverage": "Declared destruction types and life effects only; other Oracle clauses require dedicated cases."
+}

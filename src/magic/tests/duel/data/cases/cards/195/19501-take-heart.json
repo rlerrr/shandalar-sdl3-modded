@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Take Heart",
+  "csvid": 19501,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 2,
+        "toughness": 2
+      },
+      "oracle_text": "Target creature gets +2/+2 until end of turn. You gain 1 life for each attacking creature you control.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared pump component; additional clauses require separate authored cases. No attackers, so life gain is zero."
+}

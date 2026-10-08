@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Bee Sting",
+  "csvid": 2863,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 1
+    }
+  ]
+}

@@ -364,5 +364,27 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+"recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 1,
+        "toughness": 0,
+        "draw": 1
+      },
+      "oracle_text": "Target creature gets +1/+0 until end of turn.\nDraw a card.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "Pump and ordered draw; illegal sole target prevents the draw. Other abilities need separate cases."
 }

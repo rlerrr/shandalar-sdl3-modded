@@ -198,5 +198,46 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 2,
+        "toughness": 2
+      },
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ],
+      "setup": [
+        {
+          "name": "Forest",
+          "ref": "support_0",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Forest",
+          "ref": "support_1",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "oracle_text": "Target creature gets +1/+1 until end of turn for each Forest you control."
+    }
+  ],
+  "recipe_coverage": "Support permanents establish the reviewed land count or artifact condition. Other conditions and no-support variants remain separate. Support permanents start tapped so they cannot finance the insufficient-mana case."
 }

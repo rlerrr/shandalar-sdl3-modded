@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Natural Obsolescence",
+  "csvid": 16757,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact"
+        ],
+        "destination": "library_bottom"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Put target artifact on the bottom of its owner's library."
+    }
+  ],
+  "recipe_coverage": "Declared permanent movement component and life/draw effects only. Alternative costs, additional modes and other Oracle abilities need independent authored cases."
+}

@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Rain of Tears",
+  "csvid": 1265,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "land"
+        ]
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Destroy target land."
+    }
+  ],
+  "recipe_coverage": "Destruction component only; regeneration, alternative costs, secondary abilities and conditional branches need separate cases. Witnesses are nonsnow basic lands, unenchanted non-Human creatures, and permanents with no counters."
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Roil Spout",
+  "csvid": 15417,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "destination": "library_top"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Put target creature on top of its owner's library.\nAwaken 4—{4}{W}{U} (If you cast this spell for {4}{W}{U}, also put four +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)"
+    }
+  ],
+  "recipe_coverage": "Ordinary hand cast; no caster lands in play for Awaken. Alternative costs and graveyard casting need separate cases."
+}

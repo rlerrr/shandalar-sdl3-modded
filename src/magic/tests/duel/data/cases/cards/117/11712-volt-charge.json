@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Volt Charge",
+  "csvid": 11712,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 3
+      },
+      "oracle_text": "Volt Charge deals 3 damage to any target. Proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "resolve_dialogs": [
+        0
+      ]
+    }
+  ],
+  "recipe_coverage": "Base damage branch: no prior attacks, creature deaths, life loss, or counters. Additional mechanics need separate cases. Resolution scripts choose Automatic proliferate with no eligible counters; counter selection needs separate populated-counter cases."
+}

@@ -39,5 +39,27 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+"recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 4,
+        "self_damage": 2
+      },
+      "oracle_text": "Psionic Blast deals 4 damage to any target and 2 damage to you.",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Damage to the chosen recipient and damage to the controller; illegal sole target prevents both."
 }

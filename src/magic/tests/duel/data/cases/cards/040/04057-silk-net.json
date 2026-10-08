@@ -409,5 +409,25 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+"recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 1,
+        "toughness": 1
+      },
+      "oracle_text": "Target creature gets +1/+1 and gains reach until end of turn. (It can block creatures with flying.)",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
 }

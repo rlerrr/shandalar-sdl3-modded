@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Might of Old Krosa",
+  "csvid": 8604,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 4,
+        "toughness": 4
+      },
+      "oracle_text": "Target creature gets +2/+2 until end of turn. If you cast this spell during your main phase, that creature gets +4/+4 until end of turn instead.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared pump component; additional clauses require separate authored cases. Main-phase fixtures require +4/+4, not the other-phase +2/+2."
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Lightning Helix",
+  "csvid": 1328,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 3,
+        "gain_life": 3
+      },
+      "oracle_text": "Lightning Helix deals 3 damage to any target and you gain 3 life.",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Damage and life gain; self targeting and illegal sole target included."
+}

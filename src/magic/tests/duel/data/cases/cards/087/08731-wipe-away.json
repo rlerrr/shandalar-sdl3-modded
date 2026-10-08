@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Wipe Away",
+  "csvid": 8731,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature",
+          "land"
+        ],
+        "destination": "hand"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_enchantment",
+        "target_creature",
+        "target_land"
+      ],
+      "oracle_text": "Split second (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)\nReturn target permanent to its owner's hand."
+    }
+  ],
+  "recipe_coverage": "Declared permanent movement component and life/draw effects only. Alternative costs, additional modes and other Oracle abilities need independent authored cases."
+}

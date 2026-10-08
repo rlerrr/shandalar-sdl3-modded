@@ -7,6 +7,7 @@ import re
 import subprocess
 import sys
 import time
+from concurrent.futures import ThreadPoolExecutor
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -27,7 +28,9 @@ def run_case(args, case, baseline):
                               timeout=args.timeout, env=env, cwd=args.binary.resolve().parent)
         text = proc.stdout + proc.stderr
         code = proc.returncode
-        if "DUEL_HARNESS_ERROR:" in text:
+        if re.search(r"^DUEL_HARNESS_ERROR: execution budget exhausted during [^\r\n]+$", text, re.M):
+            kind = "budget"
+        elif "DUEL_HARNESS_ERROR:" in text:
             kind = "harness"
         elif code == 0 and xml.exists():
             tree = ET.parse(xml)
@@ -61,13 +64,14 @@ def run_case(args, case, baseline):
                   assertion_count=assertion_count,
                   elapsed_seconds=round(time.monotonic()-started, 3), log=str(log), xml=str(xml))
     (output / (name + ".json")).write_text(json.dumps(result, indent=2) + "\n")
-    print(f"{status.upper()}: {name} — {case['card']} (CSVID {case['csvid']}) fixture={case['fixture']} seed={case['seed']}")
-    if status != "passed" and case.get("source_file"):
-        print("Case file: " + case["source_file"])
-    if status not in ("passed", "known_failure"):
-        print(text[-12000:])
-    elif status == "known_failure":
-        print("Known bug: " + expected["reason"])
+    if not getattr(args, "quiet", False):
+        print(f"{status.upper()}: {name} — {case['card']} (CSVID {case['csvid']}) fixture={case['fixture']} seed={case['seed']}")
+        if status != "passed" and case.get("source_file"):
+            print("Case file: " + case["source_file"])
+        if status not in ("passed", "known_failure"):
+            print(text[-12000:])
+        elif status == "known_failure":
+            print("Known bug: " + expected["reason"])
     return result
 
 def main():
@@ -80,11 +84,15 @@ def main():
     parser.add_argument("--tier", choices=("behavior", "template", "smoke", "ai"))
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--timeout", type=float, default=30)
+    parser.add_argument("--jobs", type=int, default=1, help="independent test processes (default: 1)")
+    parser.add_argument("--quiet", action="store_true", help="print only counts; retain all per-case logs/XML")
     parser.add_argument("--shard-index", type=int, default=0)
     parser.add_argument("--shard-count", type=int, default=1)
     args = parser.parse_args()
     if not 0 <= args.shard_index < args.shard_count:
         parser.error("Invalid shard")
+    if args.jobs < 1:
+        parser.error("jobs must be positive")
     manifest = json.loads(args.manifest.read_text())
     baseline = json.loads(args.baseline.read_text())["failures"]
     cases = [c for c in manifest["cases"] if fnmatch.fnmatchcase(c["filter"],args.filter) and (not args.tier or c["tier"]==args.tier)]
@@ -94,7 +102,10 @@ def main():
     unknown = set(baseline) - {c["filter"] for c in manifest["cases"]}
     if unknown:
         parser.error(f"Stale known-failure entries: {sorted(unknown)}")
-    results = [run_case(args,case,baseline) for case in cases]
+    # Each child owns its engine state, output files, timeout and crash boundary.
+    # map preserves manifest order even when processes complete out of order.
+    with ThreadPoolExecutor(max_workers=args.jobs) as executor:
+        results = list(executor.map(lambda case: run_case(args, case, baseline), cases))
     summary = {"source":manifest["source"], "results":results,
                "counts":{status:sum(r["status"]==status for r in results) for status in ("passed","known_failure","failed","unexpected_pass")}}
     summary_name = cases[0]["filter"] if len(cases) == 1 else f"shard-{args.shard_index}"

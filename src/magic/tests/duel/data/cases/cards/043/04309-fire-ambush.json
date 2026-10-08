@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Fire Ambush",
+  "csvid": 4309,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 1
+    }
+  ]
+}

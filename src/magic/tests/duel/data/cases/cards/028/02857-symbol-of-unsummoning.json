@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Symbol of Unsummoning",
+  "csvid": 2857,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "destination": "hand",
+        "draw": 1
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Return target creature to its owner's hand.\nDraw a card."
+    }
+  ],
+  "recipe_coverage": "Main-phase cast with no Merfolk. Bounce plus draw; flash/timing alternatives need separate cases."
+}

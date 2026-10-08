@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Carbonize",
+  "csvid": 6489,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 3
+      },
+      "oracle_text": "Carbonize deals 3 damage to any target. If it's a creature, it can't be regenerated this turn, and if it would die this turn, exile it instead.",
+      "variants": [
+        "survivor",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases. Lethal variant omitted because this card exiles lethal victims."
+}

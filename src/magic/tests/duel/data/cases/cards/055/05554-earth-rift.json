@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Earth Rift",
+  "csvid": 5554,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "land"
+        ]
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Destroy target land.\nFlashback {5}{R}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+    }
+  ],
+  "recipe_coverage": "Destruction component only; regeneration, alternative costs, secondary abilities and conditional branches need separate cases. Witnesses are nonsnow basic lands, unenchanted non-Human creatures, and permanents with no counters."
+}

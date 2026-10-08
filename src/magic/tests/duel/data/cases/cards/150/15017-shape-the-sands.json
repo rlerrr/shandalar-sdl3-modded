@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Shape the Sands",
+  "csvid": 15017,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 0,
+        "toughness": 5
+      },
+      "oracle_text": "Target creature gets +0/+5 and gains reach until end of turn. (It can block creatures with flying.)",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

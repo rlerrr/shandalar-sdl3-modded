@@ -167,5 +167,6 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+  "recipes": [{"family":"pump_creature","version":1}]
 }

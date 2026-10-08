@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Excommunicate",
+  "csvid": 9964,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "destination": "library_top"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Put target creature on top of its owner's library."
+    }
+  ],
+  "recipe_coverage": "Ordinary hand cast; no caster lands in play for Awaken. Alternative costs and graveyard casting need separate cases."
+}

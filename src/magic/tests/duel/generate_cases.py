@@ -38,7 +38,10 @@ def build(data, output):
     fixtures = read(data / "fixtures.json")["fixtures"]
     if (data / "cases.json").exists():
         raise ValueError("Move the legacy cases.json into individual files under data/cases/")
-    cases = load_cases(data / "cases", by_name)
+    cases = load_cases(data / "cases", by_name, oracle["cards"], aliases)
+    if any("_recipe" in c for c in cases):
+        from recipes import validate_context
+        validate_context(oracle["cards"], by_name, fixtures)
     names = set()
     registered_csvids = {r["csvid"] for r in rows}
     chunks = ["// Generated from reviewed semantic fixtures and independent Oracle data.\n"]
@@ -142,6 +145,8 @@ def build(data, output):
         manifest.append({"filter": f"Behavior.{name}", "card": case["card"], "csvid": by_name[case["card"]]["csvid"],
                          "oracle_id": o["oracle_id"], "fixture":case["fixture"], "seed":case.get("seed",123), "tier":"behavior",
                          "source_file":case["_source_file"]})
+        if "_recipe" in case:
+            manifest[-1]["recipe"] = case["_recipe"]
     chunks.append("static const Case *cases[] = {" + ",".join(f"&case_{i}" for i in range(len(cases))) + "};\n")
     # Deliberately narrow templates: numeric vanilla creatures and flying-only creatures.
     templates = []
@@ -176,6 +181,7 @@ def build(data, output):
     inventory = {"version":1,"records":rows,"oracle_mapped_names":len(oracle["cards"]),
                  "behavior_cases":len(cases),"template_cases":len(templates),"smoke_cards":len(smoke),
                  "oracle_sha256":hashlib.sha256((data / "oracle.json").read_bytes()).hexdigest()}
+    inventory["recipe_cases"] = sum("_recipe" in c for c in cases)
     (output / "inventory.json").write_text(json.dumps(inventory,indent=2)+"\n")
     # Configure-time CTest inventory: every case gets its own failure-contained process.
     cmake = []
@@ -185,6 +191,8 @@ def build(data, output):
             cmake.append("if(SHANDALAR_DUEL_EXTENDED_TESTS)\n")
         cmake.append('add_test(NAME "duel.'+item["filter"]+'" COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/run_cases.py" --binary "$<TARGET_FILE:duel_card_tests>" ${duel_node_args} --manifest "${duel_generated}/manifest.json" --baseline "${CMAKE_CURRENT_SOURCE_DIR}/data/known_failures.json" --filter "'+item["filter"]+'" --output "${CMAKE_CURRENT_BINARY_DIR}/results")\n')
         cmake.append('set_tests_properties("duel.'+item["filter"]+'" PROPERTIES LABELS "duel;'+tier+'" TIMEOUT 45)\n')
+        if "recipe" in item:
+            cmake.append('set_property(TEST "duel.'+item["filter"]+'" APPEND PROPERTY LABELS "recipe;recipe_'+item["recipe"]["family"]+'")\n')
         if tier == "smoke":
             cmake.append("endif()\n")
     (output / "cases.cmake").write_text("".join(cmake))

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Angel's Mercy",
+  "csvid": 10383,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 1
+    }
+  ]
+}

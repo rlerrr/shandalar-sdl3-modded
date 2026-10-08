@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Cyclonic Rift",
+  "csvid": 12695,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature"
+        ],
+        "destination": "hand",
+        "controller": "opponent"
+      },
+      "variants": [
+        "opponent",
+        "untapped",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "target_enchantment",
+        "target_creature",
+        "snapshot"
+      ],
+      "oracle_text": "Return target nonland permanent you don't control to its owner's hand.\nOverload {6}{U} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")",
+      "cast_dialogs": {
+        "opponent": [
+          1
+        ],
+        "untapped": [
+          1
+        ],
+        "lost_target": [
+          1
+        ],
+        "target_enchantment": [
+          1
+        ],
+        "target_creature": [
+          1
+        ],
+        "snapshot": [
+          1
+        ]
+      }
+    }
+  ],
+  "recipe_coverage": "Normal targeted cast with Overload declined explicitly when affordable. Cast-query negatives omitted: Overload legally permits a cast even without targets. Overloaded board clearing needs separate cases."
+}

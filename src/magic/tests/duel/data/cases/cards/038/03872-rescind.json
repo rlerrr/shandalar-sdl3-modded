@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Rescind",
+  "csvid": 3872,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature",
+          "land"
+        ],
+        "destination": "hand"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_enchantment",
+        "target_creature",
+        "target_land"
+      ],
+      "oracle_text": "Return target permanent to its owner's hand.\nCycling {2} ({2}, Discard this card: Draw a card.)"
+    }
+  ],
+  "recipe_coverage": "Declared permanent movement component and life/draw effects only. Alternative costs, additional modes and other Oracle abilities need independent authored cases."
+}

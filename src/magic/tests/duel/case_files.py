@@ -4,7 +4,7 @@ import re
 from pathlib import Path
 
 
-def load_cases(directory, registry):
+def load_cases(directory, registry, oracle=None, aliases=None):
     directory = Path(directory)
     files = sorted(directory.rglob("*.json"))
     if not files:
@@ -20,9 +20,12 @@ def load_cases(directory, registry):
             raise ValueError(f"{source}: {error}") from error
         if not isinstance(document, dict) or document.get("version") != 1:
             raise ValueError(f"{source}: unsupported case file schema")
-        entries = document.get("cases")
-        if not isinstance(entries, list) or not entries:
-            raise ValueError(f"{source}: expected a nonempty cases array")
+        entries = document.get("cases", [])
+        declarations = document.get("recipes", [])
+        if not isinstance(entries, list) or not isinstance(declarations, list) or not (entries or declarations):
+            raise ValueError(f"{source}: expected a nonempty cases or recipes array")
+        if any(isinstance(e, dict) and any(k.startswith("_") for k in e) for e in entries):
+            raise ValueError(f"{source}: underscore fields are reserved for generated provenance")
         card = document.get("card")
         if card is not None:
             if card not in registry or document.get("csvid") != registry[card]["csvid"]:
@@ -33,6 +36,17 @@ def load_cases(directory, registry):
             card_homes[csvid] = source
         elif "csvid" in document:
             raise ValueError(f"{source}: CSVID requires a file-level card name")
+        if declarations:
+            if card is None or oracle is None:
+                raise ValueError(f"{source}: recipes require a card home and pinned Oracle context")
+            from recipes import expand
+            record = oracle.get((aliases or {}).get(card, card))
+            entries = list(entries)
+            for declaration in declarations:
+                try:
+                    entries.extend(expand(card, document["csvid"], declaration, record, registry))
+                except ValueError as error:
+                    raise ValueError(f"{source}: {error}") from error
         for entry in entries:
             if not isinstance(entry, dict):
                 raise ValueError(f"{source}: each case must be an object")

@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Aegis of the Heavens",
+  "csvid": 18866,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 1
+    }
+  ]
+}

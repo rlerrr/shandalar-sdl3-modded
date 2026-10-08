@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Devour in Shadow",
+  "csvid": 7037,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "lose_life": 2
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Destroy target creature. It can't be regenerated. You lose life equal to that creature's toughness."
+    }
+  ],
+  "recipe_coverage": "Grizzly Bears has toughness two; other toughness values and regeneration need additional fixtures."
+}

@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Sphinx's Insight",
+  "csvid": 19754,
+  "recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 2
+      },
+      "oracle_text": "Draw two cards.\nAddendum — If you cast this spell during your main phase, you gain 2 life.",
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Ordered draw component. Graveyards contain fewer than twenty cards; tokens and Addendum life gain need separate cases."
+}

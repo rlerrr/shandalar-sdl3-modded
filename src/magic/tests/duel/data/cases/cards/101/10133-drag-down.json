@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Drag Down",
+  "csvid": 10133,
+  "recipes": [
+    {
+      "family": "reduce_creature",
+      "version": 2,
+      "params": {
+        "power": -3,
+        "toughness": -3
+      },
+      "variants": [
+        "friendly_cleanup",
+        "opponent_cleanup",
+        "negative_power",
+        "lethal",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Domain — Target creature gets -1/-1 until end of turn for each basic land type among lands you control.",
+      "setup": [
+        {
+          "name": "Forest",
+          "ref": "support_forest",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Plains",
+          "ref": "support_plains",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Island",
+          "ref": "support_island",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ]
+    }
+  ],
+  "recipe_coverage": "Exactly three basic land types, supplied by tapped support lands. Other Domain counts need separate cases."
+}

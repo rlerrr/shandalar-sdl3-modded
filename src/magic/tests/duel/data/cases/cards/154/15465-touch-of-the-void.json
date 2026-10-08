@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Touch of the Void",
+  "csvid": 15465,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 3
+      },
+      "oracle_text": "Devoid (This card has no color.)\nTouch of the Void deals 3 damage to any target. If a creature dealt damage this way would die this turn, exile it instead.",
+      "variants": [
+        "survivor",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Damage component; lethal variant omitted because lethal victims are exiled."
+}

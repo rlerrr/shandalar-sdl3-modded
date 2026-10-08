@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Expel from Orazca",
+  "csvid": 18198,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature"
+        ],
+        "destination": "hand"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_enchantment",
+        "target_creature"
+      ],
+      "oracle_text": "Ascend (If you control ten or more permanents, you get the city's blessing for the rest of the game.)\nReturn target nonland permanent to its owner's hand. If you have the city's blessing, you may put that permanent on top of its owner's library instead."
+    }
+  ],
+  "recipe_coverage": "One named target and a differently named unselected permanent. No Zombies, city blessing, or matching-name copies; those branches need separate cases."
+}

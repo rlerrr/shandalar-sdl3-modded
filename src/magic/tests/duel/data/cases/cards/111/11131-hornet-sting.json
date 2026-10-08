@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Hornet Sting",
+  "csvid": 11131,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 1
+    }
+  ]
+}

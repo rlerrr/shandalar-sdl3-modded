@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Crashing Tide",
+  "csvid": 18179,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "destination": "hand",
+        "draw": 1
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "This spell has flash as long as you control a Merfolk.\nReturn target creature to its owner's hand.\nDraw a card."
+    }
+  ],
+  "recipe_coverage": "Main-phase cast with no Merfolk. Bounce plus draw; flash/timing alternatives need separate cases."
+}

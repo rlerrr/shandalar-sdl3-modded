@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Qilin's Blessing",
+  "csvid": 18680,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 1
+    }
+  ]
+}

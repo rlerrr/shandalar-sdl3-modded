@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Pirate's Prize",
+  "csvid": 17479,
+  "recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 2
+      },
+      "oracle_text": "Draw two cards. Create a Treasure token. (It's an artifact with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Ordered draw component. Graveyards contain fewer than twenty cards; tokens and Addendum life gain need separate cases."
+}

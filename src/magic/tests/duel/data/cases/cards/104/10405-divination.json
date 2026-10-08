@@ -158,5 +158,6 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+  "recipes": [{"family":"draw_cards","version":1}]
 }

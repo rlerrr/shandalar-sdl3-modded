@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Visions of Beyond",
+  "csvid": 11865,
+  "recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 1
+      },
+      "oracle_text": "Draw a card. If a graveyard has twenty or more cards in it, draw three cards instead.",
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Ordered draw component. Graveyards contain fewer than twenty cards; tokens and Addendum life gain need separate cases."
+}

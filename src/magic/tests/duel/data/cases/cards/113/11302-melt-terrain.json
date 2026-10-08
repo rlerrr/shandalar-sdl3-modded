@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Melt Terrain",
+  "csvid": 11302,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "land"
+        ],
+        "target_damage": 2
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Destroy target land. Melt Terrain deals 2 damage to that land's controller."
+    }
+  ],
+  "recipe_coverage": "Declared destruction types and life effects only; other Oracle clauses require dedicated cases."
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Urge to Feed",
+  "csvid": 10854,
+  "recipes": [
+    {
+      "family": "reduce_creature",
+      "version": 2,
+      "params": {
+        "power": -3,
+        "toughness": -3
+      },
+      "variants": [
+        "friendly_cleanup",
+        "opponent_cleanup",
+        "negative_power",
+        "lethal",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Target creature gets -3/-3 until end of turn. You may tap any number of untapped Vampire creatures you control. If you do, put a +1/+1 counter on each of those Vampires."
+    }
+  ],
+  "recipe_coverage": "Declared stat reduction and coupled effects only; extra abilities, alternate costs and restricted branches need independent cases. Witnesses are non-Vampires/non-Cyclopes with no counters; no creature died before casting."
+}

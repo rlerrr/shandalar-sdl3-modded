@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Artificer's Epiphany",
+  "csvid": 15082,
+  "recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 2
+      },
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "setup": [
+        {
+          "name": "Sol Ring",
+          "ref": "support_0",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "oracle_text": "Draw two cards. If you control no artifacts, discard a card."
+    }
+  ],
+  "recipe_coverage": "Support permanents establish the reviewed land count or artifact condition. Other conditions and no-support variants remain separate. Support permanents start tapped so they cannot finance the insufficient-mana case."
+}

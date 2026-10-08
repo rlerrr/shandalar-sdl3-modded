@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Open Fire",
+  "csvid": 17192,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 1
+    }
+  ]
+}

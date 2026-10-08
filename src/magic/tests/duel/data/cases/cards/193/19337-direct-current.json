@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Direct Current",
+  "csvid": 19337,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 2
+      },
+      "oracle_text": "Direct Current deals 2 damage to any target.\nJump-start (You may cast this card from your graveyard by discarding a card in addition to paying its other costs. Then exile this card.)",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Base damage branch: no prior attacks, creature deaths, life loss, or counters. Additional mechanics need separate cases."
+}

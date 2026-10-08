@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Darkblast",
+  "csvid": 7812,
+  "recipes": [
+    {
+      "family": "reduce_creature",
+      "version": 2,
+      "params": {
+        "power": -1,
+        "toughness": -1
+      },
+      "variants": [
+        "friendly_cleanup",
+        "opponent_cleanup",
+        "negative_power",
+        "lethal",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nDredge 3 (If you would draw a card, you may mill three cards instead. If you do, return this card from your graveyard to your hand.)"
+    }
+  ],
+  "recipe_coverage": "Declared stat reduction and coupled effects only; extra abilities, alternate costs and restricted branches need independent cases. Witnesses are non-Vampires/non-Cyclopes with no counters; no creature died before casting."
+}

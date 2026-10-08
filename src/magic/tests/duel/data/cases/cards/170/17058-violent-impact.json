@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Violent Impact",
+  "csvid": 17058,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "land"
+        ]
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_land"
+      ],
+      "oracle_text": "Destroy target artifact or land.\nCycling {2} ({2}, Discard this card: Draw a card.)"
+    }
+  ],
+  "recipe_coverage": "Declared destruction types and life effects only; other Oracle clauses require dedicated cases."
+}

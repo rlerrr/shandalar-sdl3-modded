@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Arrow Storm",
+  "csvid": 14220,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 4
+      },
+      "oracle_text": "Arrow Storm deals 4 damage to any target.\nRaid — If you attacked this turn, instead Arrow Storm deals 5 damage to that permanent or player and the damage can't be prevented.",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Base damage branch: no prior attacks, creature deaths, life loss, or counters. Additional mechanics need separate cases."
+}

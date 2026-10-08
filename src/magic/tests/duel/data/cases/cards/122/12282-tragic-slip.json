@@ -193,5 +193,29 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+  "recipes": [
+    {
+      "family": "reduce_creature",
+      "version": 2,
+      "params": {
+        "power": -1,
+        "toughness": -1
+      },
+      "variants": [
+        "friendly_cleanup",
+        "opponent_cleanup",
+        "negative_power",
+        "lethal",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Target creature gets -1/-1 until end of turn.\nMorbid — That creature gets -13/-13 until end of turn instead if a creature died this turn."
+    }
+  ],
+  "recipe_coverage": "Declared stat reduction and coupled effects only; extra abilities, alternate costs and restricted branches need independent cases. Witnesses are non-Vampires/non-Cyclopes with no counters; no creature died before casting."
 }

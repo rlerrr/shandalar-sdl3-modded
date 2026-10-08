@@ -19,7 +19,7 @@ file(MAKE_DIRECTORY "${duel_generated}")
 option(SHANDALAR_DUEL_EXTENDED_TESTS "Register the full catalog smoke suite in CTest" OFF)
 file(GLOB_RECURSE duel_case_files CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/data/cases/*.json")
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
-  data/fixtures.json data/oracle.json data/oracle_aliases.json generate_cases.py case_files.py
+  data/fixtures.json data/oracle.json data/oracle_aliases.json generate_cases.py case_files.py recipes.py destruction_recipes.py movement_recipes.py stat_recipes.py
   ${duel_case_files}
   "${SHANDALAR_SRC_ROOT}/magic/src/carddata.c")
 execute_process(COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/generate_cases.py"
@@ -67,3 +67,6 @@ set_tests_properties(duel.presentation_guard PROPERTIES LABELS "duel;harness" TI
 add_test(NAME duel.case_files COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/test_case_files.py")
 set_tests_properties(duel.case_files PROPERTIES LABELS "duel;harness" TIMEOUT 15)
+add_test(NAME duel.recipes COMMAND "${Python3_EXECUTABLE}"
+  "${CMAKE_CURRENT_SOURCE_DIR}/test_recipes.py")
+set_tests_properties(duel.recipes PROPERTIES LABELS "duel;harness" TIMEOUT 15)

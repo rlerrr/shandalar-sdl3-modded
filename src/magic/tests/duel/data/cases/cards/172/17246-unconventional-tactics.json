@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Unconventional Tactics",
+  "csvid": 17246,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 3,
+        "toughness": 3
+      },
+      "oracle_text": "Target creature gets +3/+3 and gains flying until end of turn.\nWhenever a Zombie you control enters, you may pay {W}. If you do, return this card from your graveyard to your hand.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared pump component; additional clauses require separate authored cases."
+}

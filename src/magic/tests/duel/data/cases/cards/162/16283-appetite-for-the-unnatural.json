@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Appetite for the Unnatural",
+  "csvid": 16283,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment"
+        ],
+        "gain_life": 2
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_enchantment"
+      ],
+      "oracle_text": "Destroy target artifact or enchantment. You gain 2 life."
+    }
+  ],
+  "recipe_coverage": "Declared destruction types and life effects only; other Oracle clauses require dedicated cases."
+}

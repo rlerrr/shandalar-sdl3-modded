@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Ichor Slick",
+  "csvid": 8946,
+  "recipes": [
+    {
+      "family": "reduce_creature",
+      "version": 2,
+      "params": {
+        "power": -3,
+        "toughness": -3
+      },
+      "variants": [
+        "friendly_cleanup",
+        "opponent_cleanup",
+        "negative_power",
+        "lethal",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Target creature gets -3/-3 until end of turn.\nCycling {2} ({2}, Discard this card: Draw a card.)\nMadness {3}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)"
+    }
+  ],
+  "recipe_coverage": "Declared stat reduction and coupled effects only; extra abilities, alternate costs and restricted branches need independent cases. Witnesses are non-Vampires/non-Cyclopes with no counters; no creature died before casting."
+}

@@ -242,5 +242,6 @@
         }
       ]
     }
-  ]
+  ],
+  "recipes": [{"family":"gain_life","version":1}]
 }

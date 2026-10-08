@@ -1,0 +1,857 @@
+{
+  "version": 1,
+  "card": "Dismantle",
+  "csvid": 6878,
+  "recipe_coverage": "Destruction component only; regeneration, alternative costs, secondary abilities and conditional branches need separate cases. Witnesses are nonsnow basic lands, unenchanted non-Human creatures, and permanents with no counters.",
+  "cases": [
+    {
+      "name": "Recipe_6878_destroy_permanent_opponent",
+      "card": "Dismantle",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dismantle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Gilded Lotus",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6878
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123,
+      "notes": "No-counter destruction branch. The current handler requests the cast target twice; both scripted choices select the same legal artifact. Counter transfer needs separate cases."
+    },
+    {
+      "name": "Recipe_6878_destroy_permanent_friendly",
+      "card": "Dismantle",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dismantle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Gilded Lotus",
+          "ref": "unselected",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6878
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123,
+      "notes": "No-counter destruction branch. The current handler requests the cast target twice; both scripted choices select the same legal artifact. Counter transfer needs separate cases."
+    },
+    {
+      "name": "Recipe_6878_destroy_permanent_lost_target",
+      "card": "Dismantle",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dismantle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Gilded Lotus",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "recipient"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6878
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123,
+      "notes": "No-counter destruction branch. The current handler requests the cast target twice; both scripted choices select the same legal artifact. Counter transfer needs separate cases."
+    },
+    {
+      "name": "Recipe_6878_destroy_permanent_empty",
+      "card": "Dismantle",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dismantle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123,
+      "notes": "No-counter destruction branch. The current handler requests the cast target twice; both scripted choices select the same legal artifact. Counter transfer needs separate cases."
+    },
+    {
+      "name": "Recipe_6878_destroy_permanent_wrong_target",
+      "card": "Dismantle",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dismantle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Glorious Anthem",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123,
+      "notes": "No-counter destruction branch. The current handler requests the cast target twice; both scripted choices select the same legal artifact. Counter transfer needs separate cases."
+    },
+    {
+      "name": "Recipe_6878_destroy_permanent_payment",
+      "card": "Dismantle",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dismantle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Gilded Lotus",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 2
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6878
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123,
+      "notes": "No-counter destruction branch. The current handler requests the cast target twice; both scripted choices select the same legal artifact. Counter transfer needs separate cases."
+    },
+    {
+      "name": "Recipe_6878_destroy_permanent_insufficient_mana",
+      "card": "Dismantle",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Dismantle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123,
+      "notes": "No-counter destruction branch. The current handler requests the cast target twice; both scripted choices select the same legal artifact. Counter transfer needs separate cases."
+    },
+    {
+      "name": "Recipe_6878_destroy_permanent_snapshot",
+      "card": "Dismantle",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Dismantle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Gilded Lotus",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6878
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6878
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 123,
+      "notes": "No-counter destruction branch. The current handler requests the cast target twice; both scripted choices select the same legal artifact. Counter transfer needs separate cases."
+    }
+  ]
+}

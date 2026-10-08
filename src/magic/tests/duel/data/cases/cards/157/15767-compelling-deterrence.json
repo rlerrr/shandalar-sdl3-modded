@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Compelling Deterrence",
+  "csvid": 15767,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature"
+        ],
+        "destination": "hand"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_enchantment",
+        "target_creature"
+      ],
+      "oracle_text": "Return target nonland permanent to its owner's hand. Then that player discards a card if you control a Zombie."
+    }
+  ],
+  "recipe_coverage": "One named target and a differently named unselected permanent. No Zombies, city blessing, or matching-name copies; those branches need separate cases."
+}

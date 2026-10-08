@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Orcish Cannonade",
+  "csvid": 8622,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 2,
+        "self_damage": 3,
+        "draw": 1
+      },
+      "oracle_text": "Orcish Cannonade deals 2 damage to any target and 3 damage to you.\nDraw a card.",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Target damage, controller damage and ordered draw, including no secondary effects with an illegal sole target."
+}

@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Feed the Clan",
+  "csvid": 14269,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 2,
+      "params": {
+        "amount": 5
+      },
+      "oracle_text": "You gain 5 life.\nFerocious — You gain 10 life instead if you control a creature with power 4 or greater.",
+      "variants": [
+        "gain",
+        "injured",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

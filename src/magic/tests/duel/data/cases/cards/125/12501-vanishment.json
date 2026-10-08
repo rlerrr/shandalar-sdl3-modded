@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Vanishment",
+  "csvid": 12501,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature"
+        ],
+        "destination": "library_top"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_enchantment",
+        "target_creature"
+      ],
+      "oracle_text": "Put target nonland permanent on top of its owner's library.\nMiracle {U} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)"
+    }
+  ],
+  "recipe_coverage": "Declared permanent movement component and life/draw effects only. Alternative costs, additional modes and other Oracle abilities need independent authored cases."
+}

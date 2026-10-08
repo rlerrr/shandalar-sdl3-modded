@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Brimstone Volley",
+  "csvid": 11893,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 3
+      },
+      "oracle_text": "Brimstone Volley deals 3 damage to any target.\nMorbid — Brimstone Volley deals 5 damage instead if a creature died this turn.",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Base damage branch: no prior attacks, creature deaths, life loss, or counters. Additional mechanics need separate cases."
+}

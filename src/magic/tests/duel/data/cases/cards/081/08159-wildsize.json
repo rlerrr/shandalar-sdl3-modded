@@ -211,5 +211,27 @@
   ],
   "csvid": 8159,
   "card": "Wildsize",
-  "version": 1
+  "version": 1,
+"recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 2,
+        "toughness": 2,
+        "draw": 1
+      },
+      "oracle_text": "Target creature gets +2/+2 and gains trample until end of turn.\nDraw a card.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "Pump and ordered draw; illegal sole target prevents the draw. Other abilities need separate cases."
 }

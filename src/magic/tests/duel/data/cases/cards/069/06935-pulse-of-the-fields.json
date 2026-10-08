@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Pulse of the Fields",
+  "csvid": 6935,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 2,
+      "params": {
+        "amount": 4
+      },
+      "oracle_text": "You gain 4 life. Then if an opponent has more life than you, return Pulse of the Fields to its owner's hand.",
+      "variants": [
+        "gain",
+        "injured",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Life gain component. No creature dies or permanent receives bolster; selected life totals never satisfy Pulse return condition."
+}

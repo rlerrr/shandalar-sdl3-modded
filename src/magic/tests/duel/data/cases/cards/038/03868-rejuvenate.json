@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Rejuvenate",
+  "csvid": 3868,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 2,
+      "params": {
+        "amount": 6
+      },
+      "oracle_text": "You gain 6 life.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "variants": [
+        "gain",
+        "injured",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

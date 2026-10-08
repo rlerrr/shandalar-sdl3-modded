@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Reality Hemorrhage",
+  "csvid": 15661,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 2
+      },
+      "oracle_text": "Devoid (This card has no color.)\nReality Hemorrhage deals 2 damage to any target.",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+}

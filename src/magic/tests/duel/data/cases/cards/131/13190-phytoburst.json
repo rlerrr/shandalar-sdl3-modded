@@ -173,5 +173,6 @@
   ],
   "csvid": 13190,
   "card": "Phytoburst",
-  "version": 1
+  "version": 1,
+  "recipes": [{"family":"pump_creature","version":1}]
 }

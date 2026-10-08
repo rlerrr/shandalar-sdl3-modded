@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Leave in the Dust",
+  "csvid": 16741,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature"
+        ],
+        "destination": "hand",
+        "draw": 1
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_enchantment",
+        "target_creature"
+      ],
+      "oracle_text": "Return target nonland permanent to its owner's hand.\nDraw a card."
+    }
+  ],
+  "recipe_coverage": "Declared permanent movement component and life/draw effects only. Alternative costs, additional modes and other Oracle abilities need independent authored cases."
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Fumble",
+  "csvid": 18594,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "destination": "hand"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Return target creature to its owner's hand. Gain control of all Auras and Equipment that were attached to it, then attach them to another creature."
+    }
+  ],
+  "recipe_coverage": "Ordinary hand cast with an unenchanted nonattacking creature. No artifacts, 4-power creatures, or attached Equipment/Auras are controlled by the caster; conditional branches and other abilities need separate cases."
+}

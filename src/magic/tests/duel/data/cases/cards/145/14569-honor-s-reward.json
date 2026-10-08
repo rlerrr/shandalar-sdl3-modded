@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "card": "Honor's Reward",
+  "csvid": 14569,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 2,
+      "params": {
+        "amount": 4
+      },
+      "oracle_text": "You gain 4 life. Bolster 2. (Choose a creature with the least toughness among creatures you control and put two +1/+1 counters on it.)",
+      "variants": [
+        "gain",
+        "injured",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Life gain component. No creature dies or permanent receives bolster; selected life totals never satisfy Pulse return condition."
+}

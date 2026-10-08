@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Set Adrift",
+  "csvid": 14376,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature"
+        ],
+        "destination": "library_top"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "target_enchantment",
+        "target_creature"
+      ],
+      "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nPut target nonland permanent on top of its owner's library."
+    }
+  ],
+  "recipe_coverage": "Empty graveyard: full printed mana, no delve. Stocked snapshot omitted until delve choices and exile are authored."
+}

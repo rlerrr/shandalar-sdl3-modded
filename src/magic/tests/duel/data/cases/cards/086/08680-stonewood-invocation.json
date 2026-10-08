@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Stonewood Invocation",
+  "csvid": 8680,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 5,
+        "toughness": 5
+      },
+      "oracle_text": "Split second (As long as this spell is on the stack, players can't cast spells or activate abilities that aren't mana abilities.)\nTarget creature gets +5/+5 and gains shroud until end of turn. (It can't be the target of spells or abilities.)",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "Shared pump component; additional clauses require separate authored cases."
+}

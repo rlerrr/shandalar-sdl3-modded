@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Glissa's Scorn",
+  "csvid": 11607,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact"
+        ],
+        "target_lose_life": 1
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Destroy target artifact. Its controller loses 1 life."
+    }
+  ],
+  "recipe_coverage": "Declared destruction types and life effects only; other Oracle clauses require dedicated cases."
+}

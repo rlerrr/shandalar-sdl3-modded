@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "card": "Dosan's Oldest Chant",
+  "csvid": 7627,
+  "recipes": [
+    {
+      "family": "gain_life",
+      "version": 2,
+      "params": {
+        "amount": 6,
+        "draw": 1
+      },
+      "oracle_text": "You gain 6 life.\nDraw a card.",
+      "variants": [
+        "gain",
+        "injured",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Life gain plus ordered draw, including injured controller and snapshot restoration."
+}

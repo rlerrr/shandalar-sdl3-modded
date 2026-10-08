@@ -49,5 +49,6 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+  "recipes": [{"family":"damage_any_target","version":1}]
 }

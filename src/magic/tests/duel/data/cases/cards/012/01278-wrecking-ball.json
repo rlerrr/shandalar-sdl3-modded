@@ -189,5 +189,30 @@
     }
   ],
   "version": 1,
-  "csvid": 1278
+  "csvid": 1278,
+"recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature",
+          "land"
+        ]
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_land"
+      ],
+      "oracle_text": "Destroy target creature or land."
+    }
+  ],
+  "recipe_coverage": "Declared destruction types and life effects only; other Oracle clauses require dedicated cases."
 }

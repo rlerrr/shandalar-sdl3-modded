@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Just the Wind",
+  "csvid": 15873,
+  "recipes": [
+    {
+      "family": "move_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "destination": "hand"
+      },
+      "variants": [
+        "opponent",
+        "friendly",
+        "untapped",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "oracle_text": "Return target creature to its owner's hand.\nMadness {U} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)"
+    }
+  ],
+  "recipe_coverage": "Ordinary hand cast with an unenchanted nonattacking creature. No artifacts, 4-power creatures, or attached Equipment/Auras are controlled by the caster; conditional branches and other abilities need separate cases."
+}

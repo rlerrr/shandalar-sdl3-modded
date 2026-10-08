@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "card": "Feral Roar",
+  "csvid": 19057,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 1
+    }
+  ]
+}

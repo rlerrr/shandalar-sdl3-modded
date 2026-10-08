@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Make Mischief",
+  "csvid": 16151,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 1
+      },
+      "oracle_text": "Make Mischief deals 1 damage to any target. Create a 1/1 red Devil creature token. It has \"When this token dies, it deals 1 damage to any target.\"",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Base damage branch: no prior attacks, creature deaths, life loss, or counters. Additional mechanics need separate cases."
+}
