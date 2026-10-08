@@ -1,0 +1,345 @@
+{
+  "version": 1,
+  "card": "Plow Under",
+  "csvid": 1117,
+  "cases": [
+    {
+      "name": "PlowUnder_PutsTwoOpponentLandsOnLibraryTop",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Plow Under",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "land_a",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "land_b",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "land_a",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "land_b",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 55
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 3,
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "land_a",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "land_b",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 9
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1117
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 1,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 8,
+          "value": 145
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PlowUnder_ReturnsEachLandToItsOwnOwnersLibrary",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Plow Under",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "own_land",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "opponent_land",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Plains",
+          "ref": "extra_opponent_land",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "own_land",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "opponent_land",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "own_land",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "opponent_land",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1117
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "extra_opponent_land",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 0,
+          "value": 126
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PlowUnder_RequiresTwoEligibleLandTargets",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Plow Under",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "only_land",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "nonland",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "only_land",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "nonland",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PlowUnder_DoesNotMoveUntargetedLands",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Plow Under",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "target_a",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Mountain",
+          "ref": "target_b",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Plains",
+          "ref": "untargeted",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target_a",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "target_b",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target_a",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "target_b",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 9
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 8,
+          "value": 145
+        },
+        {
+          "op": "assert_card",
+          "ref": "untargeted",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

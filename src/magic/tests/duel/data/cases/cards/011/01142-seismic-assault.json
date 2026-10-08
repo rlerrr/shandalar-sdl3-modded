@@ -1,0 +1,286 @@
+{
+  "version": 1,
+  "card": "Seismic Assault",
+  "csvid": 1142,
+  "cases": [
+    {
+      "name": "SeismicAssault_DiscardsLandForTwoDamageToCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Seismic Assault",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "land",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "target"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 91
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SeismicAssault_DiscardsLandForDamageToPlayer",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Seismic Assault",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Mountain",
+          "ref": "land",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 164
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SeismicAssault_NonlandCardCannotPayDiscardCost",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Seismic Assault",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "nonland",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "damage",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SeismicAssault_EmptyHandCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Seismic Assault",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "damage",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SeismicAssault_ReplaysLandDiscardAndDamageAfterSnapshot",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Seismic Assault",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 3
+        },
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 3
+        },
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

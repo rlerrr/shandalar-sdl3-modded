@@ -1,0 +1,282 @@
+{
+  "version": 1,
+  "card": "Shock Troops",
+  "csvid": 1148,
+  "cases": [
+    {
+      "name": "ShockTroops_SacrificesItForTwoDamageToCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shock Troops",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Shivan Dragon",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Shivan Dragon",
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "target"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ShockTroops_SacrificesItForTwoDamageToOpponent",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shock Troops",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1148
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ShockTroops_NoOtherTargetStillCanDamageOpponent",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shock Troops",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ShockTroops_TappedSourceCanBeSacrificed",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shock Troops",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Shivan Dragon",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "target"
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ShockTroops_TargetsOpponentCreatureAndLeavesOtherCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shock Troops",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Shivan Dragon",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Craw Wurm",
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "target"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -72,6 +72,14 @@ class BehaviorTest:public testing::Test {
     auto ref = refs.count(s.ref) ? refs.at(s.ref) : DuelTestRef{-1,-1};
     const std::string op=s.op;
     if(op=="choose_target")duel_test_decision(DUEL_CHOICE_TARGET,s.player,ref.player,ref.card);
+    else if(op=="choose_damage_target")duel_test_damage_decision(s.player,ref);
+    else if(op=="choose_damage_player")duel_test_damage_decision(s.player,DuelTestRef{s.value,-1});
+    else if(op=="choose_cancel_target")duel_test_decision(DUEL_CHOICE_TARGET,s.player,-1,-1);
+    else if(op=="assert_offered_count")EXPECT_EQ(duel_test_offered_count(),s.value);
+    else if(op=="assert_offered_card") {
+      ASSERT_LT(s.index,duel_test_offered_count());
+      EXPECT_EQ(duel_test_offered_csvid(s.index),s.value);
+    }
     else if(op=="choose_player")duel_test_decision(DUEL_CHOICE_TARGET,s.player,s.value,-1);
     else if(op=="choose_zone")duel_test_decision(DUEL_CHOICE_ZONE,s.player,s.value,-1);
     else if(op=="choose_dialog")duel_test_decision(DUEL_CHOICE_DIALOG,s.player,s.value,-1);

@@ -193,6 +193,16 @@ the harness, so test authors can express those expectations correctly:
   such as Drafna's Restoration select either player's populated graveyard.
 - `choose_zone` indexes the full displayed zone, including cards that fail the
   selection restriction. A choice of `-1` declines an optional selection.
+- `choose_cancel_target` declines an optional target. Queue it only when the
+  engine offers that choice; selecting the last eligible creature can end an
+  optional multi-target selection without a second prompt.
+- `choose_damage_target` selects a real pending damage packet by its recipient
+  (`ref`); `choose_damage_player` uses recipient player `value`. Both take the
+  choosing `player`. Missing or ambiguous packets fail the script. They drive
+  damage prevention through the engine's normal response window.
+- `assert_offered_count` checks the most recent zone/reveal list size;
+  `assert_offered_card` checks its CSVID at `index` against `value`. The list is
+  snapshot state, so library-look tests can check exactly which cards were shown.
 - `record_state` records the current observable board and ordered zones;
   `assert_recorded_state` compares a later result against it. These complement
   `capture`/`restore` for repeatability checks without assuming which legal card
@@ -208,10 +218,17 @@ the harness, so test authors can express those expectations correctly:
   returns. Queue a `choose_priority` response and its decisions before `cast`
   to test targets becoming illegal before resolution. `cast; destroy; resolve`
   can destroy the target after the spell has already resolved and does not
-  reliably test that case. Use `resolve` to drain anything still on the stack.
+  reliably test that case without asserting the spell is still pending before
+  destroying the target (as in Slay's no-draw case). Use `resolve` to drain
+  anything still on the stack. A response's target choices must follow its
+  `choose_priority` decision in the queue; a target decision at the front causes
+  priority to pass instead of playing that response.
 - Named hand/battlefield references describe engine slots. Zone changes can
   create a new slot, so inspect the destination zone's count and card identity
   rather than treating the old slot as a persistent identity.
+- Battlefield setup uses real entry calls. Preload libraries before adding a
+  creature whose entry draws a card; adding its library afterward cannot undo
+  an earlier empty-library loss. Use a real cast for entry-behavior assertions.
 - Hand inspection enumerates engine slots, not chronological draw order. With
   several spells preloaded, uncast spells remain in hand and freed slots can be
   reused by drawn cards. Check counts and contents; use a single spell and an

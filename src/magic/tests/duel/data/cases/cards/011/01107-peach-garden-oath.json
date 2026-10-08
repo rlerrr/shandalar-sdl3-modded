@@ -1,0 +1,222 @@
+{
+  "version": 1,
+  "card": "Peach Garden Oath",
+  "csvid": 1107,
+  "cases": [
+    {
+      "name": "PeachGardenOath_GainsTwoPerControlledCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Peach Garden Oath",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "own_a",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scathe Zombies",
+          "ref": "own_b",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Giant Spider",
+          "ref": "own_c",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 26
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1107
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PeachGardenOath_OpponentsCreaturesDoNotCount",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Peach Garden Oath",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy_a",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scathe Zombies",
+          "ref": "enemy_b",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PeachGardenOath_ZeroCreaturesMeansZeroLifeGain",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Peach Garden Oath",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1107
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PeachGardenOath_CountsOnlyControlledCreatures",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Peach Garden Oath",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "one",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "two",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 24
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "one",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "two",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -21,6 +21,10 @@ void duel_test_set_mana(int player, int color, int amount);
 void duel_test_set_life(int player, int amount);
 void duel_test_set_turn(int player, int combat);
 void duel_test_decision(DuelChoiceKind kind, int player, int value, int card);
+/* Select an engine-created pending damage packet by its actual recipient. */
+void duel_test_damage_decision(int player, DuelTestRef recipient);
+int duel_test_offered_count(void);
+int duel_test_offered_csvid(int index);
 void duel_test_finish_decisions(void);
 int duel_test_finish_target_plan(void);
 /* Count and retire unused choices so a rules failure can retain state assertions. */

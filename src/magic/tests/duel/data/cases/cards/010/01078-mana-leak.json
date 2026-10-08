@@ -1,0 +1,349 @@
+{
+  "version": 1,
+  "card": "Mana Leak",
+  "csvid": 1078,
+  "cases": [
+    {
+      "name": "ManaLeak_CreatureControllerPaysThree",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Mana Leak",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "choose_dialog",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 106
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1078
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 55
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ManaLeak_InstantControllerPaysThree",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Mana Leak",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "choose_dialog",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1078
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 56
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 2,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ManaLeak_CountersWhenControllerDeclinesTax",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Mana Leak",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "choose_dialog",
+          "player": 1,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 97
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1078
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 59
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ManaLeak_CountersWhenControllerCannotPayAfterCasting",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Mana Leak",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 3,
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 2,
+          "value": 9
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 97
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1078
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

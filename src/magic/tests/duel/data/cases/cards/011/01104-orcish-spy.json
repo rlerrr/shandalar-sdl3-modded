@@ -1,0 +1,459 @@
+{
+  "version": 1,
+  "card": "Orcish Spy",
+  "csvid": 1104,
+  "cases": [
+    {
+      "name": "OrcishSpy_LooksAtOpponentTopThree",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Orcish Spy",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "a",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "b",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "c",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "below",
+          "player": 1,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_offered_count",
+          "value": 3
+        },
+        {
+          "op": "assert_offered_card",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_offered_card",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_offered_card",
+          "index": 2,
+          "value": 126
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 4
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 2,
+          "value": 126
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "OrcishSpy_LooksAtControllerTopThree",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Orcish Spy",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "a",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "b",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_offered_count",
+          "value": 2
+        },
+        {
+          "op": "assert_offered_card",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_offered_card",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 2
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "OrcishSpy_TappedSourceCannotLook",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Orcish Spy",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Forest",
+          "ref": "a",
+          "player": 1,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "OrcishSpy_SummoningSickCreatureCannotTap",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Orcish Spy",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        },
+        {
+          "name": "Forest",
+          "ref": "a",
+          "player": 1,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "OrcishSpy_ReplaysOpponentLibraryLookAfterSnapshot",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Orcish Spy",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_offered_count",
+          "value": 3
+        },
+        {
+          "op": "assert_offered_card",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_offered_card",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_offered_card",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_offered_count",
+          "value": 3
+        },
+        {
+          "op": "assert_offered_card",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_offered_card",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_offered_card",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "OrcishSpy_EmptyLibraryOffersNoCards",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Orcish Spy",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_offered_count",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,534 @@
+{
+  "version": 1,
+  "card": "Redeem",
+  "csvid": 1127,
+  "cases": [
+    {
+      "name": "Redeem_PreventsCombatDamageToTwoChosenCreatures",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Redeem",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "protected_a",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scathe Zombies",
+          "ref": "protected_b",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "attacker_a",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "attacker_b",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker_a",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "attacker_b",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "protected_a",
+          "other": "attacker_a",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "protected_b",
+          "other": "attacker_b",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "choose_target",
+          "ref": "protected_a",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "protected_b",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "protected_a",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "protected_a",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "protected_b",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "protected_b",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1127
+        },
+        {
+          "op": "end_combat"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Redeem_PreventsAllDamageToSingleTarget",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Redeem",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "protected",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "protected",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "choose_target",
+          "ref": "protected",
+          "player": -1
+        },
+        {
+          "op": "choose_cancel_target",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "protected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "protected",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1127
+        },
+        {
+          "op": "end_combat"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Redeem_IsLegalWithNoCreaturesAndZeroTargets",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Redeem",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1127
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Redeem_DoesNotPreventDamageToUntargetedCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Redeem",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "protected",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scathe Zombies",
+          "ref": "unprotected",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "attacker_b",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "attacker_b",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "protected",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "unprotected",
+          "other": "attacker_b",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "choose_target",
+          "ref": "protected",
+          "player": -1
+        },
+        {
+          "op": "choose_cancel_target"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "protected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "protected",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "unprotected",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 214
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1127
+        },
+        {
+          "op": "end_combat"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Redeem_PreventionExpiresAtCleanup",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Redeem",
+          "ref": "redeem",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Archangel",
+          "ref": "dragon",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Lightning Blast",
+          "ref": "blast_one",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Blast",
+          "ref": "blast_two",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "dragon",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "redeem",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "dragon",
+          "player": 1
+        },
+        {
+          "op": "cast",
+          "ref": "blast_one",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "dragon",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "dragon",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "dragon",
+          "player": 1
+        },
+        {
+          "op": "cast",
+          "ref": "blast_two",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "dragon",
+          "property": "damage",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "dragon",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ]
+    }
+  ]
+}

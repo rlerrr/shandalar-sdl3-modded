@@ -1,0 +1,318 @@
+{
+  "version": 1,
+  "card": "Mind Sludge",
+  "csvid": 1089,
+  "cases": [
+    {
+      "name": "MindSludge_OneSwampForcesOneDiscard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Mind Sludge",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swamp",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy_card",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "survivor",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_dialog",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 55
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1089
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MindSludge_TwoSwampsForceTwoDiscards",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Mind Sludge",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swamp_a",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swamp_b",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy_card",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "enemy_growth",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "survivor",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_dialog",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_dialog",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1089
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MindSludge_NoSwampsCausesNoDiscard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Mind Sludge",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy_card",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "survivor",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1089
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MindSludge_DiscardsAtMostCardsInHand",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Mind Sludge",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swamp_a",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swamp_b",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Swamp",
+          "ref": "swamp_c",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "only_card",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_dialog",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

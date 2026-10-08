@@ -1,0 +1,356 @@
+{
+  "version": 1,
+  "card": "Persecute",
+  "csvid": 1108,
+  "cases": [
+    {
+      "name": "Persecute_ChooseGreenDiscardsEveryGreenCard",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Persecute",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 3
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 1,
+          "value": 8
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 97
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 3
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 777
+    },
+    {
+      "name": "Persecute_ChooseRedDiscardsLightningBoltAndKeepsOtherColors",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Persecute",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 4
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 145
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Persecute_ColorAbsentDoesNotDiscardCards",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Persecute",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Persecute_OnlyOpponentHandIsAffected",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Persecute",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 3
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1108
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Persecute_TargetsItsCasterAndDiscardsChosenColor",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Persecute",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "green_card",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 3
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 97
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1108
+        }
+      ]
+    }
+  ]
+}

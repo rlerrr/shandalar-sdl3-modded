@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "card": "Master Healer",
+  "csvid": 1081,
+  "cases": [
+    {
+      "name": "MasterHealer_PreventsThreeDamageToFriendlyCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Master Healer",
+          "ref": "healer",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "bolt",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "player": 1,
+          "ref": "bear"
+        },
+        {
+          "op": "cast",
+          "ref": "bolt",
+          "value": 1
+        },
+        {
+          "op": "choose_priority",
+          "ref": "healer"
+        },
+        {
+          "op": "choose_damage_target",
+          "player": 0,
+          "ref": "bear"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "healer",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 145
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MasterHealer_PreventsFourOfFiveDamageToPlayer",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Master Healer",
+          "ref": "healer",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Lava Axe",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_player",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "choose_priority",
+          "ref": "healer"
+        },
+        {
+          "op": "choose_damage_player",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "healer",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 19
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MasterHealer_TappedSourceLetsDamagePass",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Master Healer",
+          "ref": "healer",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "bolt",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "player": 1,
+          "ref": "bear"
+        },
+        {
+          "op": "cast",
+          "ref": "bolt",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "healer",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MasterHealer_SickSourceLetsDamagePass",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Master Healer",
+          "ref": "healer",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "bolt",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "player": 1,
+          "ref": "bear"
+        },
+        {
+          "op": "cast",
+          "ref": "bolt",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "healer",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_targets_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MasterHealer_PreventionReplaysAfterSnapshot",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Master Healer",
+          "ref": "healer",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "bolt",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "player": 1,
+          "ref": "bear"
+        },
+        {
+          "op": "cast",
+          "ref": "bolt",
+          "value": 1
+        },
+        {
+          "op": "choose_priority",
+          "ref": "healer"
+        },
+        {
+          "op": "choose_damage_target",
+          "player": 0,
+          "ref": "bear"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "player": 1,
+          "ref": "bear"
+        },
+        {
+          "op": "cast",
+          "ref": "bolt",
+          "value": 1
+        },
+        {
+          "op": "choose_priority",
+          "ref": "healer"
+        },
+        {
+          "op": "choose_damage_target",
+          "player": 0,
+          "ref": "bear"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

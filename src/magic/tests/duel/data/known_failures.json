@@ -965,6 +965,108 @@
       "patterns": [
         "Expected:\\s+\\(duel_test_mana\\(s\\.player,s\\.color\\)\\)\\s+<=\\s+\\(s\\.value\\),\\s+actual:\\s+10\\s+vs\\s+9[\\s\\S]*?step\\ 11\\ assert_mana_at_most"
       ]
+    },
+    "Behavior.LavaHoundsHasteAllowsImmediateAttackAfterCast": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Lava Hounds",
+      "csvid": 1067,
+      "oracle_id": "86c0dc85-d146-4dfa-819e-f78835bfffff",
+      "reason": "Oracle gives Lava Hounds haste. After a real cast and resolution, the fresh creature remains barred by the attack eligibility path; its immediate attack and 4 combat damage fail. Entry damage is correct. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 6\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_life\\(s\\.player\\)\\s+Which\\s+is:\\s+20\\s+s\\.value\\s+Which\\s+is:\\s+16[\\s\\S]*?step\\ 11\\ assert_life"
+      ]
+    },
+    "Behavior.MindSlash_OnlyActivatesDuringOwnMainPhase": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Mind Slash",
+      "csvid": 1088,
+      "oracle_id": "47e79913-322e-4ba6-9bf8-3b4c1c82a6c4",
+      "reason": "Oracle restricts activation to sorcery timing. With a legal sacrifice, mana, and opponent present, the handler still allows activation on the opponent main phase and during combat because its generic activation flags lack the sorcery timing restriction. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_can_activate\\(ref\\)\\s+Which\\s+is:\\s+true\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 2\\ can_activate\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_can_activate\\(ref\\)\\s+Which\\s+is:\\s+true\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 5\\ can_activate\\ source"
+      ]
+    },
+    "Behavior.MurderousBetrayal_PaysHalfLifeAndDestroysNonblackCreature": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Murderous Betrayal",
+      "csvid": 1093,
+      "oracle_id": "a2fe1e2b-b621-4406-b5e0-f2eebd12c2ba",
+      "reason": "Oracle costs only {B}{B} and half life rounded up, with no tap cost. The handler incorrectly uses GAA_UNTAPPED: it taps the enchantment on activation and rejects an already tapped enchantment. Target, life-rounding, and mana assertions remain correct. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 9\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.MurderousBetrayal_TappedEnchantmentStillActivates": {
+      "kind": "assertion",
+      "assertion_count": 4,
+      "card": "Murderous Betrayal",
+      "csvid": 1093,
+      "oracle_id": "a2fe1e2b-b621-4406-b5e0-f2eebd12c2ba",
+      "reason": "Oracle costs only {B}{B} and half life rounded up, with no tap cost. The handler incorrectly uses GAA_UNTAPPED: it taps the enchantment on activation and rejects an already tapped enchantment. Target, life-rounding, and mana assertions remain correct. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_can_activate\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 7\\ can_activate\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_activate\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 8\\ activate\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 10\\ assert_card\\ target",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_finish_target_plan\\(\\)\\s+Which\\s+is:\\s+1\\s+0\\s+Unconsumed\\s+planned\\s+targets[\\s\\S]*?step\\ 11\\ assert_targets_consumed"
+      ]
+    },
+    "Behavior.Obliterate_CannotBeCounteredByCounterspell": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Obliterate",
+      "csvid": 1100,
+      "oracle_id": "47496941-8007-45a0-a981-76c683cbddc1",
+      "reason": "Oracle makes Obliterate uncounterable, not an illegal Counterspell target. The engine marks it untargetable and refuses the legal counterspell attempt; Counterspell should still be cast and resolve without countering Obliterate. Obliterate destruction still resolves correctly. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_can_cast\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 2\\ can_cast\\ response",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_cast\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 3\\ cast\\ response",
+        "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+48[\\s\\S]*?step\\ 9\\ assert_zone_contains"
+      ]
+    },
+    "Behavior.PlowUnder_DoesNotMoveUntargetedLands": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Plow Under",
+      "csvid": 1117,
+      "oracle_id": "23b36aef-961f-4a78-9652-8594ad73102e",
+      "reason": "Oracle moves two targeted lands to the tops of their owners libraries. The Manalink put_on_top_of_deck wrapper passes a battlefield card slot to the core real_put_on_top_of_deck function, which expects an internal card ID. Targeted lands remain on the battlefield and unrelated cards enter the libraries. Ownership and untouched land assertions remain correct. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 4\\ assert_card\\ target_a",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 5\\ assert_card\\ target_b"
+      ]
+    },
+    "Behavior.PlowUnder_PutsTwoOpponentLandsOnLibraryTop": {
+      "kind": "assertion",
+      "assertion_count": 4,
+      "card": "Plow Under",
+      "csvid": 1117,
+      "oracle_id": "23b36aef-961f-4a78-9652-8594ad73102e",
+      "reason": "Oracle moves two targeted lands to the tops of their owners libraries. The Manalink put_on_top_of_deck wrapper passes a battlefield card slot to the core real_put_on_top_of_deck function, which expects an internal card ID. Targeted lands remain on the battlefield and unrelated cards enter the libraries. Ownership and untouched land assertions remain correct. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 6\\ assert_card\\ land_a",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 7\\ assert_card\\ land_b",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+9\\s+s\\.value\\s+Which\\s+is:\\s+91[\\s\\S]*?step\\ 11\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+188\\s+s\\.value\\s+Which\\s+is:\\s+91[\\s\\S]*?step\\ 12\\ assert_zone_card"
+      ]
+    },
+    "Behavior.PlowUnder_ReturnsEachLandToItsOwnOwnersLibrary": {
+      "kind": "assertion",
+      "assertion_count": 4,
+      "card": "Plow Under",
+      "csvid": 1117,
+      "oracle_id": "23b36aef-961f-4a78-9652-8594ad73102e",
+      "reason": "Oracle moves two targeted lands to the tops of their owners libraries. The Manalink put_on_top_of_deck wrapper passes a battlefield card slot to the core real_put_on_top_of_deck function, which expects an internal card ID. Targeted lands remain on the battlefield and unrelated cards enter the libraries. Ownership and untouched land assertions remain correct. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 4\\ assert_card\\ own_land",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 5\\ assert_card\\ opponent_land",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+126\\s+s\\.value\\s+Which\\s+is:\\s+91[\\s\\S]*?step\\ 11\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+239\\s+s\\.value\\s+Which\\s+is:\\s+126[\\s\\S]*?step\\ 12\\ assert_zone_card"
+      ]
     }
   }
 }

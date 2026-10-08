@@ -1,0 +1,200 @@
+{
+  "version": 1,
+  "card": "Maggot Carrier",
+  "csvid": 1077,
+  "cases": [
+    {
+      "name": "MaggotCarrierBothPlayersLoseOneLife",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Maggot Carrier",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 19
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 19
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MaggotCarrierTriggerDoesNotAffectOtherPermanent",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Maggot Carrier",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "ally",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 19
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 19
+        },
+        {
+          "op": "assert_card",
+          "ref": "ally",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MaggotCarrierCanAttackAndDealOneDamage",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Maggot Carrier",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        },
+        {
+          "op": "end_combat"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MaggotCarrierDiesAndGoesToGraveyard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Maggot Carrier",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 1077
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

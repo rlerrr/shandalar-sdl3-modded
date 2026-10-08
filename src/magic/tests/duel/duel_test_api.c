@@ -3,6 +3,7 @@
 #include "magic/src/global_state.h"
 #include "magic/src/global_other.h"
 #include "magic/src/global_strings.h"
+#include "magic/src/global_duel_ui_ids.h"
 #include "magic/src/carddata_generated.h"
 #include "deckdll/src/card_db.h"
 #include "platform/asset_manager.h"
@@ -54,13 +55,15 @@ static Global globals[] = {
 };
 #undef DUEL_GLOBAL
 
-typedef struct { DuelChoiceKind kind; int player, value, card; } Decision;
+typedef struct { DuelChoiceKind kind; int player, value, card, damage_recipient; } Decision;
 static Decision decisions[128];
 static int decision_count, decision_cursor;
+static int offered_count, offered_csvids[512];
 struct DuelTestSnapshot {
   DuelHostState host;
   int decision_count, decision_cursor;
   Decision decisions[128];
+  int offered_count, offered_csvids[512];
   unsigned char data[];
 };
 static DuelTestSnapshot *baseline;
@@ -86,6 +89,8 @@ DuelTestSnapshot *duel_test_capture(void)
   if (!s) duel_host_fail("snapshot allocation failed");
   s->host = duel_host_capture(); s->decision_count = decision_count; s->decision_cursor = decision_cursor;
   memcpy(s->decisions, decisions, sizeof(decisions));
+  s->offered_count = offered_count;
+  memcpy(s->offered_csvids, offered_csvids, sizeof(offered_csvids));
   duel_engine_capture_ai_snapshot(s->data);
   duel_manalink_snapshot_capture(s->data + core);
   cursor = s->data + core + supplemental;
@@ -101,11 +106,23 @@ void duel_test_restore(const DuelTestSnapshot *s)
   duel_manalink_snapshot_restore(s->data + core);
   duel_host_restore(s->host); decision_count = s->decision_count; decision_cursor = s->decision_cursor;
   memcpy(decisions, s->decisions, sizeof(decisions));
+  offered_count = s->offered_count;
+  memcpy(offered_csvids, s->offered_csvids, sizeof(offered_csvids));
 }
 void duel_test_free_snapshot(DuelTestSnapshot *s) { free(s); }
 static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAnswer *answer)
 {
   (void)context;
+  if (request->kind == DUEL_CHOICE_ZONE) {
+    if (request->count < 0 || request->count > 512 || (request->count && !request->cards))
+      duel_host_fail("invalid offered zone cards");
+    offered_count = 0;
+    for (int c = 0; c < request->count && request->cards[c] != -1; ++c) {
+      int id = request->cards[c];
+      if (id < 0 || id >= g_card_count + 16) duel_host_fail("invalid offered card id");
+      offered_csvids[offered_count++] = global_cards_data[id].id;
+    }
+  }
   if (getenv("DUEL_TEST_TRACE")) fprintf(stderr,"CHOICE kind=%d player=%d prompt=%s\n",request->kind,request->player,request->prompt?request->prompt:"");
   /* Explicit policy: pass priority unless the script requests this player's
      response. Other players' passes must not consume that planned response. */
@@ -120,6 +137,21 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
       (d->value < 0 || d->value > 6 || !(request->count & (1u << d->value))))
     duel_host_fail("illegal scripted mana color");
   ++decision_cursor; answer->value = d->value; answer->card = d->card;
+  if (d->damage_recipient) {
+    int found_player = -1, found_card = -1;
+    for (int p = 0; p < 2; ++p) {
+      for (int c = 0; c < g_active_cards_count[p]; ++c) {
+        card_instance_t *i = &global_card_instances[p][c];
+        if (i->internal_card_id == g_damage_card_internal_card_id && i->info_slot > 0 &&
+            i->damage_target_player == d->value && i->damage_target_card == d->card) {
+          if (found_card != -1) duel_host_fail("ambiguous scripted damage recipient");
+          found_player = p; found_card = c;
+        }
+      }
+    }
+    if (found_card == -1) duel_host_fail("scripted damage packet is not available");
+    answer->value = found_player; answer->card = found_card;
+  }
   if (request->kind == DUEL_CHOICE_PRIORITY && d->value == -3) {
     int found = -1;
     for (int c = 0; c < g_active_cards_count[request->player]; ++c) {
@@ -222,7 +254,16 @@ void duel_test_set_turn(int p, int combat) {
   manalinkeh_recalculate_all_cards_in_play();
 }
 void duel_test_decision(DuelChoiceKind kind, int p, int value, int card)
-{ if (decision_count == 128) duel_host_fail("too many scripted choices"); decisions[decision_count++] = (Decision){kind,p,value,card}; }
+{ if (decision_count == 128) duel_host_fail("too many scripted choices"); decisions[decision_count++] = (Decision){kind,p,value,card,0}; }
+void duel_test_damage_decision(int player, DuelTestRef recipient) {
+  duel_test_decision(DUEL_CHOICE_TARGET, player, recipient.player, recipient.card);
+  decisions[decision_count - 1].damage_recipient = 1;
+}
+int duel_test_offered_count(void) { return offered_count; }
+int duel_test_offered_csvid(int index) {
+  if (index < 0 || index >= offered_count) duel_host_fail("offered card index out of range");
+  return offered_csvids[index];
+}
 void duel_test_finish_decisions(void) { if (decision_cursor != decision_count) duel_host_fail("unused scripted choices"); }
 int duel_test_finish_target_plan(void) {
   int unused = decision_count - decision_cursor;

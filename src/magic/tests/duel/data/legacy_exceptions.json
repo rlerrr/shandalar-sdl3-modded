@@ -109,6 +109,17 @@
       "tests": [
         "Behavior.DeepwoodGhoul_LegacyMainPhaseCannotPreShield"
       ]
+    },
+    {
+      "card": "Horned Troll",
+      "csvid": 1056,
+      "oracle_id": "6ecc61ff-719a-405d-b02a-01607729d05c",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Regeneration is activated during the destruction window rather than proactively in the main phase. Positive cases enter real destruction decisions, verify the cost, and test healing of lethal combat damage.",
+      "tests": [
+        "Behavior.HornedTroll_MainPhaseDoesNotOfferRegeneration"
+      ]
     }
   ]
 }
