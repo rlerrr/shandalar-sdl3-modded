@@ -1,0 +1,481 @@
+{
+  "version": 1,
+  "card": "Control Magic",
+  "csvid": 44,
+  "cases": [
+    {
+      "name": "ControlMagic_ChangesControllerAndReturnsCreatureOnAuraDeath",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Control Magic",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "creature",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "creature",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 8
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "creature",
+          "player": 0,
+          "value": 106
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "creature",
+          "player": 1,
+          "value": 106
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 44
+        }
+      ]
+    },
+    {
+      "name": "ControlMagic_StolenCreatureDeathGoesToOwnersGraveyard",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Control Magic",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "creature",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "creature",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "creature",
+          "player": 0,
+          "value": 106
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "creature"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 44
+        }
+      ]
+    },
+    {
+      "name": "ControlMagic_OnlyCreaturesCanBeEnchanted",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Control Magic",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "land",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "land",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ControlMagic_StolenCreatureLosesOpponentsAnthemAndGetsItBack",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Control Magic",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "creature",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Glorious Anthem",
+          "ref": "anthem",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "choose_target",
+          "ref": "creature",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "creature",
+          "player": 0,
+          "value": 106
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "anthem",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "creature",
+          "player": 1,
+          "value": 106
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 44
+        }
+      ]
+    },
+    {
+      "name": "ControlMagic_CanEnchantOwnCreatureAndAuraEffectPersists",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Control Magic",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "creature",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "creature",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 8
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "creature",
+          "player": 0,
+          "value": 106
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "toughness",
+          "value": 2
+        }
+      ]
+    }
+  ]
+}

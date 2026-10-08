@@ -1,0 +1,391 @@
+{
+  "version": 1,
+  "card": "Aurochs",
+  "csvid": 1861,
+  "cases": [
+    {
+      "name": "Aurochs_AttackingGroupCountsOtherAttackingAurochs",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aurochs",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Aurochs",
+          "ref": "second",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Aurochs",
+          "ref": "idle",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "non_aurochs",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "second",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "second",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 14
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "second",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Aurochs_OneAttackerGetsNoAttackBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aurochs",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Aurochs",
+          "ref": "idle",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Aurochs_TrampleDealsRemainderAfterLethalBlocker",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aurochs",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Aurochs",
+          "ref": "other",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "other",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "source",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 16
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Aurochs_OneOtherAttackerAddsOnePowerBeforeBlocks",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aurochs",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Aurochs",
+          "ref": "other",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Hurloon Minotaur",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "other",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 17
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

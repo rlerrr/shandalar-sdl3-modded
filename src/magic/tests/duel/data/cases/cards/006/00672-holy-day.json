@@ -1,0 +1,263 @@
+{
+  "version": 1,
+  "card": "Holy Day",
+  "csvid": 672,
+  "cases": [
+    {
+      "name": "HolyDay_PreventsCombatDamageFromBothPlayers",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Holy Day",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocked_attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "unblocked_attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "blocked_attacker",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "unblocked_attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "blocked_attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocked_attacker",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "unblocked_attacker",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "damage",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "HolyDay_DoesNotPreventLightningBolt",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Holy Day",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "bolt",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "bolt",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 17
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "HolyDay_EndsAtCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Holy Day",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "HolyDay_CostsWhiteMana",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Holy Day",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

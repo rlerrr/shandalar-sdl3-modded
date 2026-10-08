@@ -1,0 +1,401 @@
+{
+  "version": 1,
+  "card": "Ancestor's Chosen",
+  "csvid": 1738,
+  "cases": [
+    {
+      "name": "AncestorsChosen_CountsCreatureAndNoncreatureGraveyardCards",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Ancestor's Chosen",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "gy_creature",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "gy_spell",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Forest",
+          "ref": "gy_land",
+          "player": 0,
+          "zone": "graveyard"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 53
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 23
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 3
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 8
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 0,
+          "value": 1738
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AncestorsChosen_EmptyGraveyardGainsZero",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Ancestor's Chosen",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 53
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 8
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 0,
+          "value": 1738
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AncestorsChosen_CountIsScopedToCaster",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Ancestor's Chosen",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "own_creature",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "own_spell",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "opp_creature",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "opp_artifact",
+          "player": 1,
+          "zone": "graveyard"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 22
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 0,
+          "value": 1738
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 53
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 8
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AncestorsChosen_CastEntryHasPrintedStatsAndLifeGain",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Ancestor's Chosen",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 24
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 53
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 8
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 0,
+          "value": 1738
+        },
+        {
+          "op": "assert_zone_state",
+          "player": 0,
+          "index": 0,
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_state",
+          "player": 0,
+          "index": 0,
+          "property": "toughness",
+          "value": 4
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AncestorsChosen_FirstStrikeKillsWurmBeforeItDealsDamage",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Ancestor's Chosen",
+          "ref": "chosen",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Craw Wurm",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "chosen",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "chosen",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "chosen",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 49
+        },
+        {
+          "op": "assert_card",
+          "ref": "chosen",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "chosen",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "chosen",
+          "property": "damage",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

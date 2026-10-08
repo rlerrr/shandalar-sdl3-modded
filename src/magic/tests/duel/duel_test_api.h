@@ -22,6 +22,10 @@ void duel_test_set_life(int player, int amount);
 void duel_test_set_turn(int player, int combat);
 void duel_test_decision(DuelChoiceKind kind, int player, int value, int card);
 void duel_test_finish_decisions(void);
+int duel_test_finish_target_plan(void);
+/* Count and retire unused choices so a rules failure can retain state assertions. */
+int duel_test_finish_choice_plan(void);
+DuelTestRef duel_test_permanent_at(int player, int index);
 int duel_test_can_activate(DuelTestRef source);
 int duel_test_activate(DuelTestRef source);
 /* Query the card's EVENT_CAN_CAST handler without paying costs or choosing targets. */
@@ -40,6 +44,8 @@ int duel_test_block(DuelTestRef blocker, DuelTestRef attacker);
 /* Complete blocker declaration and enter the after-blocking response window. */
 void duel_test_advance_combat(void);
 void duel_test_combat_damage(void);
+/* Resolve end-of-combat triggers, clear assignments, enter second main phase. */
+void duel_test_end_combat(void);
 void duel_test_advance_turn(void);
 DuelTestCard duel_test_inspect(DuelTestRef ref);
 int duel_test_zone_count(int player, int zone);

@@ -1,0 +1,228 @@
+{
+  "version": 1,
+  "card": "Syphon Soul",
+  "csvid": 805,
+  "cases": [
+    {
+      "name": "SyphonSoul_DamagesOpponentAndGainsTwo",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Syphon Soul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 22
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SyphonSoul_GainIsAppliedAfterEarlierDamage",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Syphon Soul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "bolt",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "bolt",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 19
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SyphonSoul_EmptyBoardDoesNotChangePlayerScope",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Syphon Soul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 22
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SyphonSoul_RequiresThreeManaIncludingBlack",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Syphon Soul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "version": 1,
+  "card": "Twiddle",
+  "csvid": 256,
+  "cases": [
+    {
+      "name": "Twiddle_TapsArtifact",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Twiddle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "choose_dialog",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Twiddle_UntapsCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Twiddle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "choose_dialog",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 256
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Twiddle_TapsLand",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Twiddle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "choose_dialog",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Twiddle_UntapsArtifact",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Twiddle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "choose_dialog",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "tapped",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Twiddle_NoArtifactCreatureOrLandTarget",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Twiddle",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Glorious Anthem",
+          "ref": "enchantment",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enchantment",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

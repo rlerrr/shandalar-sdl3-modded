@@ -1,0 +1,294 @@
+{
+  "version": 1,
+  "card": "Tower of Coireall",
+  "csvid": 379,
+  "cases": [
+    {
+      "name": "TowerOfCoireall_SickArtifactCanActivateAndPreventsWallBlocking",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tower of Coireall",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Bone",
+          "ref": "wall",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "attacker",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "wall",
+          "other": "attacker",
+          "value": 0
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "blocked",
+          "value": 0
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "TowerOfCoireall_StillAllowsNonWallToBlock",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tower of Coireall",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Air Elemental",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "attacker",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "blocked",
+          "value": 1
+        },
+        {
+          "op": "combat_damage"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "TowerOfCoireall_WallCanBlockAfterCleanupExpiresRestriction",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tower of Coireall",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Bone",
+          "ref": "wall",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "attacker",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "wall",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "blocked",
+          "value": 1
+        },
+        {
+          "op": "combat_damage"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "TowerOfCoireall_TappedArtifactCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tower of Coireall",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

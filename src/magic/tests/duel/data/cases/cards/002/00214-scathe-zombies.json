@@ -1,0 +1,287 @@
+{
+  "version": 1,
+  "card": "Scathe Zombies",
+  "csvid": 214,
+  "cases": [
+    {
+      "name": "ScatheZombies_CastStatsSickness",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Scathe Zombies",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        },
+        {
+          "op": "bind_permanent",
+          "player": 0,
+          "value": 214,
+          "ref": "creature"
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "sick",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ScatheZombies_TradesInCombat",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Scathe Zombies",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 214
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ScatheZombies_StockedZoneSnapshotReplay",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Scathe Zombies",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Stone-Throwing Devils",
+          "ref": "p1_alt",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Wall of Wood",
+          "ref": "p0_exile_alt",
+          "player": 0,
+          "zone": "exile"
+        },
+        {
+          "name": "Bird Maiden",
+          "ref": "p1_exile_alt",
+          "player": 1,
+          "zone": "exile"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "bind_permanent",
+          "player": 0,
+          "value": 214,
+          "ref": "zombie"
+        },
+        {
+          "op": "assert_card",
+          "ref": "zombie",
+          "property": "sick",
+          "value": 1
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "bind_permanent",
+          "player": 0,
+          "value": 214,
+          "ref": "zombie"
+        },
+        {
+          "op": "assert_card",
+          "ref": "zombie",
+          "property": "sick",
+          "value": 1
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ScatheZombies_UnblockedAttackerDealsTwo",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Scathe Zombies",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "version": 1,
+  "card": "Absorb",
+  "csvid": 1375,
+  "cases": [
+    {
+      "name": "Absorb_CountersSpellAndGainsThreeLife",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Absorb",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_player",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 23
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 145
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1375
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 59
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 8
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 4,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Absorb_CountersCreatureSpellBeforeEntry",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Absorb",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 23
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 106
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 58
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 8
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Absorb_WithoutOpponentSpellCannotCastOrGainLife",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Absorb",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Absorb_CountersArtifactSpellAndGainsThreeLife",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Absorb",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 23
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 230
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1375
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 8
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

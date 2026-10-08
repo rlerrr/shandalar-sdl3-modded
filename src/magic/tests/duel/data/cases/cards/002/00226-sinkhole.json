@@ -1,0 +1,348 @@
+{
+  "version": 1,
+  "card": "Sinkhole",
+  "csvid": 226,
+  "cases": [
+    {
+      "name": "SinkholeDestroysOpponentsLand",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Sinkhole",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "other_eligible",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 8
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 164
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 226
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 164
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 226
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SinkholeCanDestroyOwnLand",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Sinkhole",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Taiga",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "other_eligible",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 241
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 226
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SinkholeNoLandCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Sinkhole",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SinkholeLandTargetDoesNotDestroyOtherLand",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Sinkhole",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "other_eligible",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_eligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 226
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

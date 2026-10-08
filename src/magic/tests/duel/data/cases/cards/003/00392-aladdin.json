@@ -1,0 +1,449 @@
+{
+  "version": 1,
+  "card": "Aladdin",
+  "csvid": 392,
+  "cases": [
+    {
+      "name": "Aladdin_StealsOpponentArtifactAndReturnsItWhenSourceLeaves",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aladdin",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "nonartifact",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "artifact",
+          "player": -1
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "artifact",
+          "player": 0,
+          "value": 230
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "artifact",
+          "player": 1,
+          "value": 230
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Aladdin_TargetArtifactDestroyedBeforeResolutionStaysInGraveyard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aladdin",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "artifact",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "artifact"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Aladdin_NoArtifactTargetMakesAbilityUnavailable",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aladdin",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "creature",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Aladdin_SickSourceCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aladdin",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Aladdin_TappedSourceCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aladdin",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Aladdin_SourceLeavesBeforeResolutionDoesNotKeepOpponentArtifact",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aladdin",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "artifact",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "artifact",
+          "player": 1,
+          "value": 230
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Aladdin_CanTargetArtifactAlreadyControlled",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aladdin",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "artifact",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "artifact",
+          "player": 0,
+          "value": 230
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Aladdin_UntappingSourceDoesNotEndControl",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "ref": "source",
+          "name": "Aladdin",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "ref": "artifact",
+          "name": "Sol Ring",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "ref": "untap",
+          "name": "Twiddle",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "artifact",
+          "player": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "bind_permanent",
+          "player": 0,
+          "value": 230,
+          "ref": "stolen"
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "op": "choose_dialog",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "untap",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "stolen",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

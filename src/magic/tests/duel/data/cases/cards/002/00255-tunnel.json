@@ -1,0 +1,246 @@
+{
+  "version": 1,
+  "card": "Tunnel",
+  "csvid": 255,
+  "cases": [
+    {
+      "name": "Tunnel_DestroysTargetWallAndKeepsOtherEligibleWall",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tunnel",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Wall of Wood",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Spears",
+          "ref": "other_wall",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_wall",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 275
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 255
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Tunnel_CanDestroyArtifactWallToo",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tunnel",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Wall of Spears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 545
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Tunnel_NoWallCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tunnel",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "creature",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Tunnel_NonWallCreatureIsIneligible",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tunnel",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Wall of Wood",
+          "ref": "wall",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "wall",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "in_play",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

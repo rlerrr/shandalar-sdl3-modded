@@ -1,0 +1,258 @@
+{
+  "version": 1,
+  "card": "Uncle Istvan",
+  "csvid": 382,
+  "cases": [
+    {
+      "name": "UncleIstvan_CastStatsSickness",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Uncle Istvan",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 1,
+          "value": 7
+        },
+        {
+          "op": "bind_permanent",
+          "player": 0,
+          "value": 382,
+          "ref": "creature"
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "sick",
+          "value": 1
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "creature",
+          "value": 0
+        },
+        {
+          "op": "finish_attackers"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "UncleIstvan_PreventsCreatureDamage",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Uncle Istvan",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "damage",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "UncleIstvan_SpellDamageIsNotPrevented",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Uncle Istvan",
+          "ref": "uncle",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "bolt",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "uncle",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "bolt",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "uncle",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 382
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "UncleIstvan_PreventsFourCombatDamage",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Uncle Istvan",
+          "ref": "uncle",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Earth Elemental",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "uncle",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "uncle",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "uncle",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "damage",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

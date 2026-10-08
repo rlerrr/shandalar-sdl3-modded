@@ -1,0 +1,475 @@
+{
+  "version": 1,
+  "card": "Reclaim",
+  "csvid": 3544,
+  "cases": [
+    {
+      "name": "Reclaim_PutsChosenCardOnTopByFullZoneIndex",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Reclaim",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 8
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 97
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 3,
+          "value": 3544
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 3544
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Reclaim_ReturnsCreatureCardToLibraryTop",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Reclaim",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "chosen",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "other",
+          "player": 0,
+          "zone": "graveyard"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 106
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 1,
+          "value": 3544
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 3544
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Reclaim_CannotChooseOpponentsGraveyard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Reclaim",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "opp",
+          "player": 1,
+          "zone": "graveyard"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Reclaim_EmptyGraveyardCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Reclaim",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Reclaim_PopulatedSnapshotReplayRestoresTopCard",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Reclaim",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 97
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 97
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 8
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 3544
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Reclaim_DrawsTheCardJustPlacedOnTop",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Reclaim",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Archivist",
+          "ref": "archivist",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 3
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 8
+        },
+        {
+          "op": "activate",
+          "ref": "archivist",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_card",
+          "ref": "archivist",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 3544
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "hand",
+          "index": 4,
+          "value": 230
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

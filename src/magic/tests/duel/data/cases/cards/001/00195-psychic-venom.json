@@ -1,0 +1,208 @@
+{
+  "version": 1,
+  "card": "Psychic Venom",
+  "csvid": 195,
+  "cases": [
+    {
+      "name": "PsychicVenom_TappingOpponentsLandDamagesLandController",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Psychic Venom",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "land",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "land",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 2,
+          "value": 9
+        },
+        {
+          "op": "activate",
+          "ref": "land",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "land",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PsychicVenom_TappingControllersLandDamagesController",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Psychic Venom",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "land",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "land",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "activate",
+          "ref": "land",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PsychicVenom_DoesNotDamageWhenLandStaysUntapped",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Psychic Venom",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "land",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "land",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "land",
+          "property": "tapped",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "PsychicVenom_EmptyBattlefieldCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Psychic Venom",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

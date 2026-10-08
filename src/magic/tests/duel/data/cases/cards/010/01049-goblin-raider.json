@@ -1,0 +1,252 @@
+{
+  "version": 1,
+  "card": "Goblin Raider",
+  "csvid": 1049,
+  "cases": [
+    {
+      "name": "GoblinRaider_CastPaysCostEntersSickWithOracleStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Goblin Raider",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "csvid",
+          "value": 1049
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "sick",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "GoblinRaider_CannotBlock",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Goblin Raider",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 0
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "GoblinRaider_CanAttackAndBeBlockedNormally",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Goblin Raider",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "in_play",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "GoblinRaider_UnblockedDealsPrintedTwoCombatDamage",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Goblin Raider",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,581 @@
+{
+  "version": 1,
+  "card": "Xira Arien",
+  "csvid": 858,
+  "cases": [
+    {
+      "name": "XiraArien_TargetsControllerAndDraws",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Xira Arien",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 0
+        },
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 6
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "hand",
+          "index": 4,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "XiraArien_TargetsOpponentAndDraws",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Xira Arien",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 6
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "hand",
+          "index": 4,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "XiraArien_TappedSourceCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Xira Arien",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Forest",
+          "ref": "p0lib0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0lib1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0lib2",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "XiraArien_SickCreatureCannotTap",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Xira Arien",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        },
+        {
+          "name": "Forest",
+          "ref": "p0lib0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0lib1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0lib2",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "XiraArien_SnapshotAiRoundtripRestoreAndRecordedReplay",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Xira Arien",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 6
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "hand",
+          "index": 4,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 6
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "hand",
+          "index": 4,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

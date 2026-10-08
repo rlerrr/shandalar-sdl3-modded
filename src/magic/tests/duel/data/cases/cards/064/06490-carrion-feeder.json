@@ -1,0 +1,314 @@
+{
+  "version": 1,
+  "card": "Carrion Feeder",
+  "csvid": 6490,
+  "cases": [
+    {
+      "name": "CarrionFeeder_SacrificesCreatureAndCounterSurvivesCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Carrion Feeder",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "sacrifice",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "sacrifice",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "sacrifice",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "CarrionFeeder_CanSacrificeItself",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Carrion Feeder",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "source",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6490
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "CarrionFeeder_CannotBlockWhileControlCreatureCan",
+      "fixture": "combat",
+      "setup": [
+        {
+          "name": "Carrion Feeder",
+          "ref": "source",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "block",
+          "ref": "source",
+          "other": "attacker",
+          "value": 0
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "blocking_count",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "blocking_count",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "blocked",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "CarrionFeeder_CountersAccumulateFromTwoSacrifices",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Carrion Feeder",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "sac_a",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "sac_b",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "sac_a",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "sac_a",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "choose_target",
+          "ref": "sac_b",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "sac_b",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 149
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

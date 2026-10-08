@@ -1,0 +1,435 @@
+{
+  "version": 1,
+  "card": "Uthden Troll",
+  "csvid": 261,
+  "cases": [
+    {
+      "name": "UthdenTroll_CastStatsSickness",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Uthden Troll",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "bind_permanent",
+          "player": 0,
+          "value": 261,
+          "ref": "creature"
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "sick",
+          "value": 1
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "creature",
+          "value": 0
+        },
+        {
+          "op": "finish_attackers"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "UthdenTroll_CombatDamage",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Uthden Troll",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Wood",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "UthdenTroll_RegeneratesDuringDestructionWindow",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Uthden Troll",
+          "ref": "troll",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_priority",
+          "ref": "troll"
+        },
+        {
+          "op": "destroy",
+          "ref": "troll"
+        },
+        {
+          "op": "assert_card",
+          "ref": "troll",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "troll",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "troll",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "UthdenTroll_TradesWithScatheZombies",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Uthden Troll",
+          "ref": "troll",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scathe Zombies",
+          "ref": "zombie",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "troll",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "zombie",
+          "other": "troll",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "troll",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "zombie",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 261
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 214
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "UthdenTroll_RegeneratesWhenTappedAndSick",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Uthden Troll",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped",
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "UthdenTroll_LegacyTimingDoesNotAllowMainPhaseRegeneration",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Uthden Troll",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "UthdenTroll_RegeneratesLethalCombatDamageAndLeavesCombat",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "ref": "troll",
+          "name": "Uthden Troll",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "ref": "blocker",
+          "name": "Earth Elemental",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "troll",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "troll",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "choose_priority",
+          "ref": "troll"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "troll",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "troll",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "troll",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "troll",
+          "property": "attacking",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        }
+      ]
+    }
+  ]
+}

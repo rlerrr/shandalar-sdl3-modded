@@ -1,0 +1,254 @@
+{
+  "version": 1,
+  "card": "Remove Soul",
+  "csvid": 770,
+  "cases": [
+    {
+      "name": "RemoveSoul_CountersCreatureSpellOnStack",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Remove Soul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 770
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 2,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RemoveSoul_DoesNotCounterNoncreatureSpell",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Remove Soul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_player",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 17
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 770
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 145
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RemoveSoul_NoCreatureSpellCannotBeCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Remove Soul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RemoveSoul_CounteredCreatureSpellDoesNotEnterPlay",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Remove Soul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Air Elemental",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 770
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 2,
+          "value": 9
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "version": 1,
+  "card": "Execute",
+  "csvid": 1032,
+  "cases": [
+    {
+      "name": "Execute_KillsWhiteCreatureThenDraws",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Execute",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Serra Angel",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "lib",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 221
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "hand",
+          "index": 0,
+          "value": 91
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Execute_NonwhiteCreatureCannotBeTargeted",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Execute",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "lib",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Execute_NoWhiteTargetCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Execute",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "lib",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Execute_CanCastWithWhiteTargetWithoutLibrary",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Execute",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Savannah Lions",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Execute_TargetDestroyedBeforeResolutionDoesNotDraw",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Execute",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Serra Angel",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "lib",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "destroy",
+          "ref": "target"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 221
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

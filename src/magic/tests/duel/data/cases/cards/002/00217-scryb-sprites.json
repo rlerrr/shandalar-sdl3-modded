@@ -1,0 +1,364 @@
+{
+  "version": 1,
+  "card": "Scryb Sprites",
+  "csvid": 217,
+  "cases": [
+    {
+      "name": "ScrybSprites_CastPaysManaAndEntersWithPrintedStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Scryb Sprites",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_state",
+          "player": 0,
+          "index": 0,
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_state",
+          "player": 0,
+          "index": 0,
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ScrybSprites_NewCreatureCannotAttack",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Scryb Sprites",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "sick",
+          "value": 1
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Scryb Sprites",
+          "ref": "flyer",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "guard",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "flyer",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "guard",
+          "other": "flyer",
+          "value": 0
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 19
+        },
+        {
+          "op": "assert_card",
+          "ref": "flyer",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "flyer",
+          "property": "damage",
+          "value": 0
+        }
+      ],
+      "seed": 123,
+      "name": "ScrybSprites_FlyingAttacksPastGroundBlocker"
+    },
+    {
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Scryb Sprites",
+          "ref": "flyer",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Roc of Kher Ridges",
+          "ref": "guard",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "flyer",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "guard",
+          "other": "flyer",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "flyer",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "guard",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "guard",
+          "property": "damage",
+          "value": 1
+        }
+      ],
+      "seed": 123,
+      "name": "ScrybSprites_FlyingBlockerSurvivesSmallAttacker"
+    },
+    {
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Scryb Sprites",
+          "ref": "guard",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "guard",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "guard",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "damage",
+          "value": 1
+        }
+      ],
+      "seed": 123,
+      "name": "ScrybSprites_BlocksSmallAttackerAndDies"
+    }
+  ]
+}

@@ -1,0 +1,207 @@
+{
+  "version": 1,
+  "card": "Storm Seeker",
+  "csvid": 798,
+  "cases": [
+    {
+      "name": "StormSeeker_DamageEqualsOpponentsPopulatedHand",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Storm Seeker",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 16
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "StormSeeker_ZeroCardsDealsZero",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Storm Seeker",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "StormSeeker_CasterHandCountIncludesUncastCards",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Storm Seeker",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "held",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "held2",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "StormSeeker_TargetPlayerMayBeEitherPlayer",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Storm Seeker",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "held1",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "held2",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "held3",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 17
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

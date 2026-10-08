@@ -1,0 +1,224 @@
+{
+  "version": 1,
+  "card": "Tivadar's Crusade",
+  "csvid": 950,
+  "cases": [
+    {
+      "name": "TivadarsCrusade_DestroysGoblinCreaturesForBothPlayers",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tivadar's Crusade",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Goblin King",
+          "ref": "goblin0",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Goblin Balloon Brigade",
+          "ref": "goblin1",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "survivor",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "goblin0",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "goblin1",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "survivor",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 102
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 101
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "TivadarsCrusade_LeavesNongoblinCreaturesOnBothSides",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tivadar's Crusade",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "friend",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friend",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "TivadarsCrusade_EmptyBattlefieldStillResolves",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tivadar's Crusade",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 5,
+          "value": 8
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "TivadarsCrusade_DestroyDoesNotHitArtifacts",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tivadar's Crusade",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Goblin King",
+          "ref": "goblin",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "goblin",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

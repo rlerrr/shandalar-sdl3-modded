@@ -14,10 +14,10 @@ from case_files import load_cases
 ZONES = {"hand": 0, "battlefield": 1, "library": 2, "graveyard": 3, "exile": 4}
 STATES = {"tapped": 1, "sick": 2, "attacking": 4, "untapped": 8}
 OPS = {"choose_target", "choose_player", "choose_zone", "choose_dialog", "choose_number", "choose_color", "choose_priority", "choose_trigger", "can_activate",
-       "activate", "can_cast", "cast", "resolve", "cleanup", "remove_from_combat", "destroy", "attack", "block", "combat_damage",
+       "activate", "can_cast", "cast", "resolve", "cleanup", "remove_from_combat", "destroy", "attack", "block", "combat_damage", "end_combat",
        "turn", "begin_attackers", "finish_attackers", "begin_blockers", "advance_combat", "assert_card", "assert_zone", "assert_zone_card", "assert_zone_contains", "assert_zone_state",
-       "assert_hand_graveyard_total", "record_state", "assert_recorded_state",
-       "assert_mana", "assert_mana_total", "assert_life", "assert_stack", "capture", "restore", "ai_roundtrip", "ai_turns"}
+       "assert_hand_graveyard_total", "record_state", "assert_recorded_state", "bind_permanent",
+       "set_mana", "assert_mana", "assert_mana_at_most", "assert_mana_total", "assert_life", "assert_stack", "assert_targets_consumed", "assert_choices_consumed", "capture", "restore", "ai_roundtrip", "ai_turns"}
 PROPERTIES = {"csvid", "power", "toughness", "tapped", "sick", "attacking", "in_play", "in_hand", "damage", "blocking_count", "blocked"}
 REF_OPS = {"choose_target", "choose_trigger", "can_activate", "activate", "can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card"}
 
@@ -96,10 +96,25 @@ def build(data, output):
                 raise ValueError(f"Unknown reference: {step}")
             if op == "choose_player" and (step.get("value") not in (0, 1) or step.get("player", -1) not in (-1, 0, 1)):
                 raise ValueError(f"Invalid player target in {name}: {step}")
+            if op == "assert_targets_consumed" and step.get("value", 0) != 0:
+                raise ValueError(f"Target plans must consume every planned target in {name}")
+            if op == "bind_permanent" and (
+                step.get("player") not in (0, 1) or not isinstance(step.get("index", -1), int)
+                or step.get("index", -1) < -1 or step.get("value") not in registered_csvids
+                or not isinstance(step.get("ref"), str) or not step["ref"]
+            ):
+                raise ValueError(f"Invalid permanent binding in {name}: {step}")
+            if op == "bind_permanent":
+                refs.add(step["ref"])
             if op == "assert_mana_total" and (
                 step.get("player") not in (0, 1) or not isinstance(step.get("value"), int) or step["value"] < 0
             ):
                 raise ValueError(f"Invalid total mana observation in {name}: {step}")
+            if op in {"set_mana", "assert_mana_at_most"} and (
+                step.get("player") not in (0, 1) or step.get("color") not in range(6)
+                or not isinstance(step.get("value"), int) or step["value"] < 0
+            ):
+                raise ValueError(f"Invalid mana bound in {name}: {step}")
             if op == "assert_hand_graveyard_total" and (
                 step.get("player") not in (0, 1) or step.get("index") not in registered_csvids
                 or not isinstance(step.get("value"), int) or step["value"] < 0
@@ -111,7 +126,7 @@ def build(data, output):
                 raise ValueError(f"Record a result before comparing it in {name}")
             steps_c.append("{" + ",".join([quoted(op), quoted(step.get("ref", "")), quoted(step.get("other", "")),
               quoted(step.get("property", "")), str(step.get("player", 0)), str(step.get("value", 0)),
-              str(ZONES.get(step.get("zone", "hand"), 0)), str(step.get("index", 0)), str(step.get("color", 0))]) + "}")
+              str(ZONES.get(step.get("zone", "hand"), 0)), str(step.get("index", -1 if op == "bind_permanent" else 0)), str(step.get("color", 0))]) + "}")
         chunks.append(f"static const Step case_steps_{i}[] = {{" + ",".join(steps_c) + "};\n")
         chunks.append(f"static const Case case_{i} = {{" + ",".join([quoted(name),quoted(case["card"]),
           quoted(o["oracle_id"]),quoted(text),quoted(case["fixture"]),str(case.get("seed",123)),

@@ -1,0 +1,281 @@
+{
+  "version": 1,
+  "card": "Zuran Orb",
+  "csvid": 1500,
+  "cases": [
+    {
+      "name": "ZuranOrb_SacrificesLandAndGainsTwo",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Zuran Orb",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "land",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "land",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "land",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 91
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 22
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ZuranOrb_CanSacrificeTappedLand",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Zuran Orb",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Taiga",
+          "ref": "land",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "land",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "land",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 241
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 22
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ZuranOrb_NoLandCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Zuran Orb",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ZuranOrb_SeparateActivationsGainTwoEach",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Zuran Orb",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "land_a",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "land_b",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "land_a",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "land_a",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 91
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 22
+        },
+        {
+          "op": "choose_target",
+          "ref": "land_b",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "land_b",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 126
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 24
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

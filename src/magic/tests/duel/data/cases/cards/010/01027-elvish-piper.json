@@ -1,0 +1,379 @@
+{
+  "version": 1,
+  "card": "Elvish Piper",
+  "csvid": 1027,
+  "cases": [
+    {
+      "name": "ElvishPiper_PutsCreatureFromHandOntoBattlefield",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Elvish Piper",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 106
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ElvishPiper_DeclinesOptionalCreatureSelection",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Elvish Piper",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ElvishPiper_NoCreatureInHandMayDecline",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Elvish Piper",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 1
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "spell",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ElvishPiper_SickSourceCannotTap",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Elvish Piper",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 1
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "in_hand",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ElvishPiper_StockedSelectionReplaysAfterSnapshot",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Elvish Piper",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 106
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ElvishPiper_SkipsNoncreatureHandAlternative",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Elvish Piper",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "spell",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

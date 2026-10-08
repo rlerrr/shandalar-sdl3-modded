@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "card": "Balance of Power",
+  "csvid": 977,
+  "cases": [
+    {
+      "name": "BalanceOfPower_DrawsOnlyThePostCastHandDifference",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Balance of Power",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "own",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "opp1",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "opp2",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "lib0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "lib1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "lib2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "opp3",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 3
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BalanceOfPower_OpponentNotAheadDrawsNothing",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Balance of Power",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "lib",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "own",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BalanceOfPower_OpponentIsTheOnlyTarget",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Balance of Power",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BalanceOfPower_TargetOpponentWithEmptyHand",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Balance of Power",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "lib",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

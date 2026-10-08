@@ -1,0 +1,305 @@
+{
+  "version": 1,
+  "card": "Flame Rift",
+  "csvid": 1535,
+  "cases": [
+    {
+      "name": "FlameRift_DamagesBothPlayersAndNotCreatures",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Flame Rift",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "friendly",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 16
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 16
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "damage",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "FlameRift_PaysGenericAndRedMana",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Flame Rift",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 16
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 16
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "FlameRift_NoCreaturesStillHitsPlayers",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Flame Rift",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 16
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 16
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "FlameRift_OpponentCreaturesUnaffected",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Flame Rift",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Serra Angel",
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "damage",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "FlameRift_CannotCastWithoutRedMana",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Flame Rift",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 10
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

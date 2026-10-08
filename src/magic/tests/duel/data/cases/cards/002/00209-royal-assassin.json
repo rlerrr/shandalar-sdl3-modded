@@ -1,0 +1,254 @@
+{
+  "version": 1,
+  "card": "Royal Assassin",
+  "csvid": 209,
+  "cases": [
+    {
+      "name": "RoyalAssassin_DestroysTappedCreatureAndLeavesWitnesses",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Royal Assassin",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Shivan Dragon",
+          "ref": "other_tapped",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "untapped",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "target"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_tapped",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "untapped",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RoyalAssassin_CanAlsoDestroyOwnTappedCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Royal Assassin",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Shivan Dragon",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "target"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 224
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RoyalAssassin_UntappedCreaturesAreNotTargets",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Royal Assassin",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "friendly",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Shivan Dragon",
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RoyalAssassin_TargetLeavingBeforeResolution",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Royal Assassin",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Shivan Dragon",
+          "ref": "witness",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "target"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "target"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,388 @@
+{
+  "version": 1,
+  "card": "Deepwood Ghoul",
+  "csvid": 1011,
+  "cases": [
+    {
+      "name": "DeepwoodGhoul_CastPaysCostEntersSickWithOracleStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Deepwood Ghoul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "csvid",
+          "value": 1011
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "sick",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 1,
+          "value": 9
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DeepwoodGhoul_LegacyMainPhaseCannotPreShield",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Deepwood Ghoul",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DeepwoodGhoul_RegeneratesByPayingLifeWhileSickAndTapped",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Deepwood Ghoul",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick",
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DeepwoodGhoul_DiesToLethalDamageWhenNoRegenerationIsChosen",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Deepwood Ghoul",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1011
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DeepwoodGhoul_RegenerationSnapshotReplayIsStable",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Deepwood Ghoul",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "DeepwoodGhoul_PaysLifeRegeneratesAndHealsLethalCombatDamage",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Deepwood Ghoul",
+          "ref": "blocker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "choose_priority",
+          "ref": "blocker"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

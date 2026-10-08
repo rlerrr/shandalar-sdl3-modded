@@ -1,0 +1,440 @@
+{
+  "version": 1,
+  "card": "Aegis of the Meek",
+  "csvid": 1848,
+  "cases": [
+    {
+      "name": "AegisOfTheMeek_BuffsActualOneOneAndExpires",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aegis of the Meek",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "eligible",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "two_two",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Goblin Sledder",
+          "ref": "other_one_one",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "eligible",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "eligible",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "eligible",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "eligible",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "eligible",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "two_two",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "two_two",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "other_one_one",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "eligible",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "eligible",
+          "property": "toughness",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AegisOfTheMeek_NoOneOneTargetCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aegis of the Meek",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "two_two",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "two_two",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AegisOfTheMeek_TappedSourceCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aegis of the Meek",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "eligible",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "eligible",
+          "property": "power",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AegisOfTheMeek_SickNoncreatureArtifactCanActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aegis of the Meek",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "eligible",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "eligible",
+          "player": -1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "eligible",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "eligible",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "eligible",
+          "property": "power",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AegisOfTheMeek_OnlyOneMatchingStatIsInsufficient",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Aegis of the Meek",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Birds of Paradise",
+          "ref": "zero_one",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Dwarven Thaumaturgist",
+          "ref": "one_two",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "zero_one",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "zero_one",
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "one_two",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "one_two",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ]
+    },
+    {
+      "name": "AegisOfTheMeek_CanBuffOpposingOneOne",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Aegis of the Meek",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Raging Goblin",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

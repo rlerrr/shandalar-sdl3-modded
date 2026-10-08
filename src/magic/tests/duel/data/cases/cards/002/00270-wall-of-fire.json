@@ -1,0 +1,270 @@
+{
+  "version": 1,
+  "card": "Wall of Fire",
+  "csvid": 270,
+  "cases": [
+    {
+      "name": "WallofFireCastForOneAndTwoRed",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wall of Fire",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 270
+        },
+        {
+          "op": "assert_zone_state",
+          "player": 0,
+          "index": 0,
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "WallofFireRepeatedRedPumpsExpire",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wall of Fire",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 5
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 5
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "WallofFireDefenderCannotAttack",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wall of Fire",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 0
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "attacking",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "WallofFireTappedSickStillPumps",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wall of Fire",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped",
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "WallofFireTappedStillPumps",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wall of Fire",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

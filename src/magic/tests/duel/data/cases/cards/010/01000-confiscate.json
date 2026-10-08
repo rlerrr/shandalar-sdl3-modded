@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "card": "Confiscate",
+  "csvid": 1000,
+  "cases": [
+    {
+      "name": "Confiscate_TakesControlOfArtifactAndReturnsOnAuraDestroy",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Confiscate",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "artifact",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "bind_permanent",
+          "player": 0,
+          "value": 230,
+          "ref": "controlled_artifact"
+        },
+        {
+          "op": "assert_card",
+          "ref": "controlled_artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "bind_permanent",
+          "player": 0,
+          "value": 1000,
+          "ref": "aura"
+        },
+        {
+          "op": "destroy",
+          "ref": "aura"
+        },
+        {
+          "op": "bind_permanent",
+          "player": 1,
+          "value": 230,
+          "ref": "returned_artifact"
+        },
+        {
+          "op": "assert_card",
+          "ref": "returned_artifact",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Confiscate_CanEnchantLand",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Confiscate",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "land",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "land",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "bind_permanent",
+          "player": 0,
+          "value": 91,
+          "ref": "controlled_land"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Confiscate_OwnerGetsDestroyedPermanentInGraveyard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Confiscate",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "bind_permanent",
+          "player": 0,
+          "value": 106,
+          "ref": "controlled_target"
+        },
+        {
+          "op": "destroy",
+          "ref": "controlled_target"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Confiscate_OwnPermanentLegal",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Confiscate",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

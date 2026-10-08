@@ -1,0 +1,211 @@
+{
+  "version": 1,
+  "card": "Coercion",
+  "csvid": 997,
+  "cases": [
+    {
+      "name": "Coercion_ChooseOpponentCreatureCard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Coercion",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemycard",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "landcard",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 106
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Coercion_CanChooseAnOpponentLand",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Coercion",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "landcard",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "witness",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 188
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Coercion_EmptyOpponentHandDoesNothing",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Coercion",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Coercion_StockedZonesAiRestoreReplay",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Coercion",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 777
+    }
+  ]
+}

@@ -1,0 +1,201 @@
+{
+  "version": 1,
+  "card": "Shivan Dragon",
+  "csvid": 224,
+  "cases": [
+    {
+      "name": "ShivanDragon_CastForFourAndTwoRed",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shivan Dragon",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 224
+        },
+        {
+          "op": "assert_zone_state",
+          "player": 0,
+          "index": 0,
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_state",
+          "player": 0,
+          "index": 0,
+          "property": "toughness",
+          "value": 5
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 54
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ShivanDragon_RepeatedRedPumpsExpireAtCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shivan Dragon",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 6
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 5
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 5
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ShivanDragon_FlyingCannotBeBlockedByGroundCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shivan Dragon",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "ground",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Mesa Pegasus",
+          "ref": "flier",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "ground",
+          "other": "attacker",
+          "value": 0
+        },
+        {
+          "op": "block",
+          "ref": "flier",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "blocked",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

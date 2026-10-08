@@ -1,0 +1,461 @@
+{
+  "version": 1,
+  "card": "Anarchy",
+  "csvid": 1852,
+  "cases": [
+    {
+      "name": "Anarchy_DestroysWhitePermanentsAndLeavesOtherColors",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Anarchy",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Angel of Mercy",
+          "ref": "white",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Glorious Anthem",
+          "ref": "anthem",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Plains",
+          "ref": "plains",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "nonwhite",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "nonwhite",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 953
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1852
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 966
+        },
+        {
+          "op": "assert_card",
+          "ref": "plains",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Anarchy_WhitePermanentsOfBothPlayersAreAffected",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Anarchy",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Glorious Anthem",
+          "ref": "friendly_white",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Glorious Anthem",
+          "ref": "enemy_white",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "creature",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1852
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 966
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 966
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Anarchy_OtherZonesRemainAndSourceGoesToGraveyard",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Anarchy",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 4,
+          "value": 1852
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1852
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Anarchy_SnapshotReplayPreservesWhiteAndNonwhiteResult",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Anarchy",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "plains",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "island",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Glorious Anthem",
+          "ref": "white_permanent",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 966
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1852
+        },
+        {
+          "op": "assert_card",
+          "ref": "plains",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "island",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 966
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1852
+        },
+        {
+          "op": "assert_card",
+          "ref": "plains",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "island",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,345 @@
+{
+  "version": 1,
+  "card": "Angel of Mercy",
+  "csvid": 953,
+  "cases": [
+    {
+      "name": "AngelOfMercy_CastGainsThreeLife",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Angel of Mercy",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 55
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 23
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 0,
+          "value": 953
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AngelOfMercy_FlyingAttackerCanBeBlockedByFlyingNotGround",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Angel of Mercy",
+          "ref": "angel",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "ground_blocker",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Wind Drake",
+          "ref": "flying_blocker",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "angel",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "ground_blocker",
+          "other": "angel",
+          "value": 0
+        },
+        {
+          "op": "block",
+          "ref": "flying_blocker",
+          "other": "angel",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "angel",
+          "property": "blocked",
+          "value": 1
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "angel",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ground_blocker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 1197
+        }
+      ]
+    },
+    {
+      "name": "AngelOfMercy_FlyingCreatureCanBlockFlyingAttacker",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wind Drake",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Angel of Mercy",
+          "ref": "angel_blocker",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "angel_blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "blocked",
+          "value": 1
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "angel_blocker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 1197
+        },
+        {
+          "op": "assert_card",
+          "ref": "angel_blocker",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "angel_blocker",
+          "property": "toughness",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "AngelOfMercy_TwoCastETBsGainSixTotal",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Angel of Mercy",
+          "ref": "first",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Angel of Mercy",
+          "ref": "second",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "first",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 23
+        },
+        {
+          "op": "cast",
+          "ref": "second",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 26
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 50
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 8
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 0,
+          "value": 953
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 1,
+          "value": 953
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

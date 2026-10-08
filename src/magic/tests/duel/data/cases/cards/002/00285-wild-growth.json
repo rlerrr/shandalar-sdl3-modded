@@ -1,0 +1,304 @@
+{
+  "version": 1,
+  "card": "Wild Growth",
+  "csvid": 285,
+  "cases": [
+    {
+      "name": "WildGrowth_EnchantedAndUnenchantedLandsProduceDifferentAmounts",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wild Growth",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "enchanted",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "plain",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "enchanted",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "activate",
+          "ref": "enchanted",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 11
+        },
+        {
+          "op": "activate",
+          "ref": "plain",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 12
+        },
+        {
+          "op": "assert_card",
+          "ref": "enchanted",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "plain",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "WildGrowth_AdditionalGreenGoesToLandController",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wild Growth",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 12
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "WildGrowth_IslandGetsItsUsualManaPlusGreen",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wild Growth",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 11
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "WildGrowth_EnchantedLandLeavingTakesAuraWithIt",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wild Growth",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "witness",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "destroy",
+          "ref": "target"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "witness",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 91
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 285
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "WildGrowth_NoLandCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wild Growth",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "creature",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -67,6 +67,7 @@ class BehaviorTest:public testing::Test {
   std::string recorded_state;
   for(int i=0;i<spec->step_count;++i) {
     const auto &s=spec->steps[i];
+    if(std::getenv("DUEL_TEST_TRACE"))std::cerr<<"STEP "<<i<<' '<<s.op<<' '<<s.ref<<'\n';
     SCOPED_TRACE(std::string("step ")+std::to_string(i)+" "+s.op+" "+s.ref);
     auto ref = refs.count(s.ref) ? refs.at(s.ref) : DuelTestRef{-1,-1};
     const std::string op=s.op;
@@ -92,8 +93,10 @@ class BehaviorTest:public testing::Test {
     else if(op=="begin_blockers")duel_test_begin_blockers();
     else if(op=="block")EXPECT_EQ(!!duel_test_block(ref,refs.at(s.other)),s.value);
     else if(op=="combat_damage")duel_test_combat_damage();
+    else if(op=="end_combat")duel_test_end_combat();
     else if(op=="advance_combat")duel_test_advance_combat();
     else if(op=="turn")duel_test_set_turn(s.player,s.value);
+    else if(op=="set_mana")duel_test_set_mana(s.player,s.color,s.value);
     else if(op=="assert_card")EXPECT_EQ(property(duel_test_inspect(ref),s.property),s.value);
     else if(op=="assert_zone")EXPECT_EQ(duel_test_zone_count(s.player,s.zone),s.value);
     else if(op=="assert_zone_card")EXPECT_EQ(duel_test_zone_csvid(s.player,s.zone,s.index),s.value);
@@ -102,9 +105,23 @@ class BehaviorTest:public testing::Test {
       EXPECT_TRUE(found)<<"Missing CSVID "<<s.value;
     }
     else if(op=="assert_zone_state") {
-      int found=0; DuelTestRef r={s.player,0};
-      for(int n=0;n<151;++n) { r.card=n; if(duel_test_inspect(r).in_play && found++==s.index)break; }
-      ASSERT_LT(r.card,151); EXPECT_EQ(property(duel_test_inspect(r),s.property),s.value);
+      DuelTestRef r=duel_test_permanent_at(s.player,s.index);
+      ASSERT_GE(r.card,0); EXPECT_EQ(property(duel_test_inspect(r),s.property),s.value);
+    }
+    else if(op=="bind_permanent") {
+      DuelTestRef r={s.player,-1}; int matches=0;
+      if(s.index>=0) {
+        r=duel_test_permanent_at(s.player,s.index);
+        matches=r.card>=0 && duel_test_inspect(r).csvid==s.value;
+      } else {
+        for(int index=0;index<duel_test_zone_count(s.player,DUEL_ZONE_BATTLEFIELD);++index) {
+          auto candidate=duel_test_permanent_at(s.player,index);
+          if(duel_test_inspect(candidate).csvid==s.value) { r=candidate; ++matches; }
+        }
+      }
+      EXPECT_EQ(matches,1)<<"Expected one matching permanent for CSVID "<<s.value;
+      if(matches!=1) { duel_test_dump(); break; }
+      refs[s.ref]=r;
     }
     else if(op=="assert_hand_graveyard_total") {
       int count=0;
@@ -116,12 +133,15 @@ class BehaviorTest:public testing::Test {
     else if(op=="record_state")recorded_state=observable_state();
     else if(op=="assert_recorded_state") { ASSERT_FALSE(recorded_state.empty()); EXPECT_EQ(observable_state(),recorded_state); }
     else if(op=="assert_mana")EXPECT_EQ(duel_test_mana(s.player,s.color),s.value);
+    else if(op=="assert_mana_at_most")EXPECT_LE(duel_test_mana(s.player,s.color),s.value);
     else if(op=="assert_mana_total") {
       int total=0;for(int color=0;color<6;++color)total+=duel_test_mana(s.player,color);
       EXPECT_EQ(total,s.value);
     }
     else if(op=="assert_life")EXPECT_EQ(duel_test_life(s.player),s.value);
     else if(op=="assert_stack")EXPECT_EQ(duel_test_stack_size(),s.value);
+    else if(op=="assert_targets_consumed")EXPECT_EQ(duel_test_finish_target_plan(),0)<<"Unconsumed planned targets";
+    else if(op=="assert_choices_consumed")EXPECT_EQ(duel_test_finish_choice_plan(),0)<<"Unconsumed planned choices";
     else if(op=="capture")saved.reset(duel_test_capture());
     else if(op=="restore") { ASSERT_NE(saved.get(),nullptr); duel_test_restore(saved.get()); }
     else if(op=="ai_roundtrip")duel_test_ai_roundtrip();

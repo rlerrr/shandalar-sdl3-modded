@@ -25,7 +25,7 @@
         "Behavior.DrudgeSkeletons_MainPhaseActivationCorrectlyRejected",
         "Behavior.DrudgeSkeletons_NoShieldDies"
       ],
-      "pending": "Destruction-window activation is not scriptable: the destroy helper completes the death pipeline without prompting the script."
+      "pending": "The host can now script destruction-window activation with choose_priority. This card still lacks a successful destruction-window case; batch 11 covers that shared path through Uthden Troll, Wall of Bone, Wall of Brambles, and Will-o'-the-Wisp."
     },
     {
       "card": "Living Wall",
@@ -38,7 +38,77 @@
         "Behavior.LivingWall_MainPhaseActivationCorrectlyRejected",
         "Behavior.LivingWall_CannotAttackCanBlock"
       ],
-      "pending": "Destruction-window activation is not scriptable: the destroy helper completes the death pipeline without prompting the script."
+      "pending": "The host can now script destruction-window activation with choose_priority. This card still lacks a successful destruction-window case; batch 11 covers that shared path through Uthden Troll, Wall of Bone, Wall of Brambles, and Will-o'-the-Wisp."
+    },
+    {
+      "card": "Uthden Troll",
+      "csvid": 261,
+      "oracle_id": "d6329dcc-b450-482a-8ee3-45449f7a4b3d",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{R}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Use regeneration during the destruction window, after the creature has been marked for destruction. Main-phase shield activation is rejected under the same intentional legacy timing documented for Drudge Skeletons. Regeneration still replaces destruction, taps the creature, heals its damage, and removes it from combat; the new cases exercise those effects through normal engine decisions.",
+      "tests": [
+        "Behavior.UthdenTroll_LegacyTimingDoesNotAllowMainPhaseRegeneration"
+      ],
+      "pending": "This batch covers destruction and lethal-combat windows. Turn-to-turn regeneration availability and regeneration prohibition remain separate coverage."
+    },
+    {
+      "card": "Wall of Bone",
+      "csvid": 268,
+      "oracle_id": "8ffe4986-9e09-4421-ad26-296a4c0df9e4",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Defender (This creature can't attack.)\n{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.) Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Use regeneration during the destruction window, after the creature has been marked for destruction. Main-phase shield activation is rejected under the same intentional legacy timing documented for Drudge Skeletons. Regeneration still replaces destruction, taps the creature, heals its damage, and removes it from combat; the new cases exercise those effects through normal engine decisions.",
+      "tests": [
+        "Behavior.WallofBone_LegacyTimingDoesNotAllowMainPhaseRegeneration"
+      ],
+      "pending": "This batch covers destruction and lethal-combat windows. Turn-to-turn regeneration availability and regeneration prohibition remain separate coverage."
+    },
+    {
+      "card": "Wall of Brambles",
+      "csvid": 269,
+      "oracle_id": "f8d82a00-c10e-4b9e-9642-d05706900a97",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Defender (This creature can't attack.)\n{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Use regeneration during the destruction window, after the creature has been marked for destruction. Main-phase shield activation is rejected under the same intentional legacy timing documented for Drudge Skeletons. Regeneration still replaces destruction, taps the creature, heals its damage, and removes it from combat; the new cases exercise those effects through normal engine decisions.",
+      "tests": [
+        "Behavior.WallofBrambles_LegacyTimingDoesNotAllowMainPhaseRegeneration"
+      ],
+      "pending": "This batch covers destruction and lethal-combat windows. Turn-to-turn regeneration availability and regeneration prohibition remain separate coverage."
+    },
+    {
+      "card": "Will-o'-the-Wisp",
+      "csvid": 286,
+      "oracle_id": "8b60fcfe-fb90-4a00-a708-25b59bfc9b5a",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Flying (This creature can't be blocked except by creatures with flying or reach.)\n{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.) Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Use regeneration during the destruction window, after the creature has been marked for destruction. Main-phase shield activation is rejected under the same intentional legacy timing documented for Drudge Skeletons. Regeneration still replaces destruction, taps the creature, heals its damage, and removes it from combat; the new cases exercise those effects through normal engine decisions.",
+      "tests": [
+        "Behavior.WillotheWisp_LegacyTimingDoesNotAllowMainPhaseRegeneration"
+      ],
+      "pending": "This batch covers destruction and lethal-combat windows. Turn-to-turn regeneration availability and regeneration prohibition remain separate coverage."
+    },
+    {
+      "card": "Carrion Wall",
+      "csvid": 989,
+      "oracle_id": "ce8750d4-1b74-4b02-afd8-6b639c1a9a78",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Defender (This creature can't attack.)\n{1}{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Regeneration is activated during the destruction window rather than proactively in the main phase. Positive cases use real destruction decisions and verify the paid cost and surviving creature.",
+      "tests": [
+        "Behavior.CarrionWall_LegacyMainPhaseNoProactiveRegeneration"
+      ]
+    },
+    {
+      "card": "Deepwood Ghoul",
+      "csvid": 1011,
+      "oracle_id": "d99cd2d0-32b8-4edc-8089-557c48dd4be0",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Pay 2 life: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Regeneration is activated during the destruction window rather than proactively in the main phase. Positive cases use real destruction decisions and verify the paid cost and surviving creature.",
+      "tests": [
+        "Behavior.DeepwoodGhoul_LegacyMainPhaseCannotPreShield"
+      ]
     }
   ]
 }

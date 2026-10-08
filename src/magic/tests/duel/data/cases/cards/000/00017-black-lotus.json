@@ -1,0 +1,267 @@
+{
+  "version": 1,
+  "card": "Black Lotus",
+  "csvid": 17,
+  "cases": [
+    {
+      "name": "BlackLotus_SacrificeForBlack",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Black Lotus",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 17
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 13
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BlackLotus_SacrificeForBlue",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Black Lotus",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 17
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 13
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BlackLotus_SacrificeForGreen",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Black Lotus",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 3
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 17
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 13
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BlackLotus_SacrificeForRed",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Black Lotus",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 4
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 17
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 13
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BlackLotus_SacrificeForWhite",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Black Lotus",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 5
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 17
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 13
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

@@ -1,0 +1,332 @@
+{
+  "version": 1,
+  "card": "Blanchwood Armor",
+  "csvid": 979,
+  "cases": [
+    {
+      "name": "BlanchwoodArmor_CountsAuraControllersForestsAndPersists",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Blanchwood Armor",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "f0_0",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "f1_0",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "f1_1",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "f1_2",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BlanchwoodArmor_BonusPersistsThroughCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Blanchwood Armor",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "f0_0",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "f0_1",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "f0_2",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "f1_0",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 5
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 5
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BlanchwoodArmor_NoForestGivesNoBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Blanchwood Armor",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BlanchwoodArmor_RequiresCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Blanchwood Armor",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "BlanchwoodArmor_ForestDestructionUpdatesBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Blanchwood Armor",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest1",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest2",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "destroy",
+          "ref": "forest1"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

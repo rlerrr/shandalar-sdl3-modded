@@ -1,0 +1,243 @@
+{
+  "version": 1,
+  "card": "Carnivorous Plant",
+  "csvid": 305,
+  "cases": [
+    {
+      "name": "CarnivorousPlant_CastStatsSickness",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Carnivorous Plant",
+          "ref": "spell",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "spell",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "bind_permanent",
+          "player": 0,
+          "value": 305,
+          "ref": "creature"
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "toughness",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "creature",
+          "property": "sick",
+          "value": 1
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "creature",
+          "value": 0
+        },
+        {
+          "op": "finish_attackers"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "CarnivorousPlant_DefenderAndBlock",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Carnivorous Plant",
+          "ref": "plant",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scathe Zombies",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "plant",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "plant",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "plant",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "CarnivorousPlant_DefenderCannotAttack",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Carnivorous Plant",
+          "ref": "wall",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "wall",
+          "value": 0
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "attacking",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "CarnivorousPlant_KillsThreeThreeAttacker",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Carnivorous Plant",
+          "ref": "plant",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "plant",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "plant",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "plant",
+          "property": "damage",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

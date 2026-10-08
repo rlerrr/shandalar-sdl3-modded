@@ -1,0 +1,316 @@
+{
+  "version": 1,
+  "card": "Merfolk Looter",
+  "csvid": 1565,
+  "cases": [
+    {
+      "name": "MerfolkLooter_DrawsThenDiscardsOneCard",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Merfolk Looter",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 6
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 106
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MerfolkLooter_StockedDrawDiscardReplaysAfterSnapshot",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Merfolk Looter",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 6
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MerfolkLooter_SicknessStopsTapAbility",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Merfolk Looter",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        },
+        {
+          "name": "Forest",
+          "ref": "top",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "hand",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MerfolkLooter_TappedSourceCannotActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Merfolk Looter",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Forest",
+          "ref": "top",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "hand",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "MerfolkLooter_DrawsThenDiscardsTheNewCard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Merfolk Looter",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "old_card",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "top",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": -1,
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 145
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 91
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

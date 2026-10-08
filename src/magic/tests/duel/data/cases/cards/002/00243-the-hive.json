@@ -1,0 +1,354 @@
+{
+  "version": 1,
+  "card": "The Hive",
+  "csvid": 243,
+  "cases": [
+    {
+      "name": "TheHive_CreateWaspTokenAndReplay",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "The Hive",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 885
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_state",
+          "player": 0,
+          "index": 1,
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_state",
+          "player": 0,
+          "index": 1,
+          "property": "toughness",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 55
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "TheHive_TappedCannotCreateAnotherWasp",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "The Hive",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "TheHive_SickArtifactCanCreateWasp",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "The Hive",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 885
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 55
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "TheHive_OpponentCanCreateOwnedWasp",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "The Hive",
+          "ref": "source",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 885
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 55
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "TheHive_CreatedWaspCanBlockFlyingCreature",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "The Hive",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Roc of Kher Ridges",
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 55
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "wasp",
+          "player": 0,
+          "value": 885
+        },
+        {
+          "op": "assert_card",
+          "ref": "wasp",
+          "property": "sick",
+          "value": 1
+        },
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "wasp",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "damage",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "wasp",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,398 @@
+{
+  "version": 1,
+  "card": "Coastal Hornclaw",
+  "csvid": 994,
+  "cases": [
+    {
+      "name": "CoastalHornclaw_SacrificeLandGrantsFlyingForCombat",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Coastal Hornclaw",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "land",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "land"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "land",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 126
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "source",
+          "value": 0
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "CoastalHornclaw_CanRepeatWithAnotherLand",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Coastal Hornclaw",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "land_a",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Tropical Island",
+          "ref": "land_b",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "land_a"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "land_b"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "land_a",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "land_b",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 126
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 252
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "CoastalHornclaw_NoLandCannotPayCost",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Coastal Hornclaw",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "CoastalHornclaw_TappedSickSourceCanActivate",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Coastal Hornclaw",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped",
+            "sick"
+          ]
+        },
+        {
+          "name": "Forest",
+          "ref": "land",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "land"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "land",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "CoastalHornclaw_FlyingExpiresAtCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Coastal Hornclaw",
+          "ref": "first",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Coastal Hornclaw",
+          "ref": "second",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "land_a",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "land_b",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "land_a"
+        },
+        {
+          "op": "activate",
+          "ref": "first",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "land_b"
+        },
+        {
+          "op": "activate",
+          "ref": "second",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "first",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "first",
+          "value": 0
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "second",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "second",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "in_play",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

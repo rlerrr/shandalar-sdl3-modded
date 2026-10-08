@@ -1,0 +1,189 @@
+{
+  "version": 1,
+  "card": "Tundra",
+  "csvid": 254,
+  "cases": [
+    {
+      "name": "Tundra_FirstColorManaAndTaps",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tundra",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 5
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 61
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Tundra_SecondColorManaAndTaps",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tundra",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 61
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Tundra_TappedCannotProduceMana",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tundra",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Tundra_SummoningSickLandCanStillTap",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Tundra",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 5
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 61
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

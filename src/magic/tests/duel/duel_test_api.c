@@ -32,8 +32,11 @@ extern int choose_ai_main_phase_action(int), can_attack(int, int);
 extern void run_duel_turn(unsigned int);
 extern int assign_blocker_to_attacker(int, int, int, int);
 extern void resolve_combat_damage(int);
+extern int cleanup_combat_state(int);
 extern void mark_blocked_attackers(int);
 extern int manalinkeh_count_creatures_this_is_blocking(int, int), manalinkeh_is_unblocked(int, int);
+extern int manalinkeh_card_multiblocker_hook(int, int, event_t);
+extern int manalinkeh_dispatch_trigger2(int, trigger_t, const char *, int, int, int);
 extern int turn_count, stack_phase[32];
 extern int unknown62BCEC, tapped_for_mana_color;
 extern void duel_rules_initialize_headless(void), manalinkeh_recalculate_rules_engine_and_deadbox(void);
@@ -104,9 +107,11 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
 {
   (void)context;
   if (getenv("DUEL_TEST_TRACE")) fprintf(stderr,"CHOICE kind=%d player=%d prompt=%s\n",request->kind,request->player,request->prompt?request->prompt:"");
-  /* Explicit harness policy: pass priority unless the script requests a response. */
+  /* Explicit policy: pass priority unless the script requests this player's
+     response. Other players' passes must not consume that planned response. */
   if (request->kind == DUEL_CHOICE_PRIORITY &&
-      (decision_cursor == decision_count || decisions[decision_cursor].kind != DUEL_CHOICE_PRIORITY))
+      (decision_cursor == decision_count || decisions[decision_cursor].kind != DUEL_CHOICE_PRIORITY ||
+       (decisions[decision_cursor].player != -1 && decisions[decision_cursor].player != request->player)))
   { answer->value = -2; answer->card = -1; return 1; }
   if (decision_cursor >= decision_count) return 0;
   Decision *d = &decisions[decision_cursor];
@@ -219,15 +224,38 @@ void duel_test_set_turn(int p, int combat) {
 void duel_test_decision(DuelChoiceKind kind, int p, int value, int card)
 { if (decision_count == 128) duel_host_fail("too many scripted choices"); decisions[decision_count++] = (Decision){kind,p,value,card}; }
 void duel_test_finish_decisions(void) { if (decision_cursor != decision_count) duel_host_fail("unused scripted choices"); }
+int duel_test_finish_target_plan(void) {
+  int unused = decision_count - decision_cursor;
+  for (int i = decision_cursor; i < decision_count; ++i)
+    if (decisions[i].kind != DUEL_CHOICE_TARGET)
+      duel_host_fail("non-target choice remaining in target plan");
+  decision_cursor = decision_count;
+  return unused;
+}
+int duel_test_finish_choice_plan(void) {
+  int unused = decision_count - decision_cursor;
+  decision_cursor = decision_count;
+  return unused;
+}
 int duel_test_can_activate(DuelTestRef s) { return manalinkeh_dispatch_event_to_single_card(s.player,s.card,EVENT_CAN_ACTIVATE,1-s.player,-1); }
 int duel_test_activate(DuelTestRef s) {
   if (!duel_test_can_activate(s)) return 0;
+  int mana_before[6];
+  for (int color = 0; color < 6; ++color)
+    mana_before[color] = g_raw_mana_available[s.player][color];
   int result = activate(s.player,s.player,s.card);
   card_instance_t *instance = &global_card_instances[s.player][s.card];
   int iid = instance->internal_card_id >= 0 ? instance->internal_card_id : instance->original_internal_card_id;
   /* Gameplay finishes mana activations immediately. Keep ordinary activations
      pending so scripts can inspect costs and then resolve them explicitly. */
-  if (result && iid >= 0 && (global_cards_data[iid].extra_ability & EA_MANA_SOURCE) && tapped_for_mana_color != -1)
+  int produced_mana = 0;
+  for (int color = 0; color < 6; ++color)
+    produced_mana |= g_raw_mana_available[s.player][color] > mana_before[color];
+  /* Some legacy non-tapping mana handlers update the pool directly without
+     setting tapped_for_mana_color. A pool increase distinguishes these from
+     a mana source's nonmana mode (for example, sacrificing Mind Stone to draw). */
+  if (result && iid >= 0 && (global_cards_data[iid].extra_ability & EA_MANA_SOURCE) &&
+      (tapped_for_mana_color != -1 || produced_mana))
     manalinkeh_finalize_activation(s.player,s.card);
   return result;
 }
@@ -296,11 +324,34 @@ void duel_test_begin_blockers(void) {
 int duel_test_block(DuelTestRef b,DuelTestRef a) {
   /* The game UI restricts declarations to the defending player's creatures. */
   if (b.player == a.player || a.player != g_current_turn) return 0;
+  /* Gameplay selects the available shadow for an additional block, rather than
+     overwriting the original creature's assignment. Scripts keep its name. */
+  if (global_card_instances[b.player][b.card].state & STATE_BLOCKING) {
+    int shadow = -1;
+    for (int card = 0; card < g_active_cards_count[b.player]; ++card) {
+      card_instance_t *copy = &global_card_instances[b.player][card];
+      if (card != b.card && copy->internal_card_id >= 0 &&
+          (global_cards_data[copy->internal_card_id].code_pointer == manalinkeh_card_multiblocker_hook ||
+           global_cards_data[copy->internal_card_id].code_pointer == card_two_headed_giant_of_foriys_legacy) &&
+          copy->damage_source_player == b.player && copy->damage_source_card == b.card &&
+          (copy->state & STATE_IN_PLAY) && !(copy->state & STATE_BLOCKING)) {
+        shadow = card;
+        break;
+      }
+    }
+    if (shadow < 0) return 0;
+    b.card = shadow;
+  }
   if (!assign_blocker_to_attacker(b.player,b.card,a.player,a.card)) return 0;
   /* Match the declaration performed after this legality check by the game UI. */
   unsigned char parent = global_card_instances[a.player][a.card].blocking;
   global_card_instances[b.player][b.card].state |= STATE_BLOCKING;
   global_card_instances[b.player][b.card].blocking = (unsigned char)(parent == 0xff ? a.card : parent);
+  manalinkeh_recalculate_all_cards_in_play();
+  /* Match choose_defenders' post-selection trigger. It creates Manalink's
+     additional-blocker shadows and runs other blocker-selection handlers. */
+  if (g_battlefield_extra_ability_flags & EA_SELECT_BLOCK)
+    manalinkeh_dispatch_trigger2(g_current_turn, TRIGGER_BLOCKER_CHOSEN, gs_choose_defenders_00789a50, 0, b.player, b.card);
   return 1;
 }
 void duel_test_advance_combat(void) {
@@ -317,6 +368,17 @@ void duel_test_combat_damage(void) {
   if (g_current_phase != PHASE_AFTER_BLOCKING)
     duel_host_fail("advance_combat before combat damage");
   resolve_combat_damage(g_current_turn);
+}
+void duel_test_end_combat(void) {
+  if (g_current_phase != PHASE_NORMAL_COMBAT_DAMAGE)
+    duel_host_fail("end_combat requires completed combat damage");
+  /* The game's combat loop resolves this trigger before clearing assignments.
+     Leave the fixture's mana pools intact, as other phase helpers do. */
+  g_response_processing_flags = 1;
+  dispatch_trigger_twice_once_with_each_player_as_reason(g_current_turn, TRIGGER_END_COMBAT, gs_end_of_combat_008b43a0, 0);
+  cleanup_combat_state(g_current_turn);
+  g_current_phase = PHASE_MAIN2;
+  manalinkeh_recalculate_all_cards_in_play();
 }
 void duel_test_advance_turn(void) { duel_test_cleanup(); g_current_turn=1-g_current_turn; g_current_player=g_current_turn; g_current_phase=PHASE_MAIN1; ++turn_count; }
 DuelTestCard duel_test_inspect(DuelTestRef r)
@@ -353,6 +415,15 @@ int duel_test_zone_count(int p,int zone) {
 int duel_test_zone_csvid(int p,int zone,int index) {
   if(zone<DUEL_ZONE_LIBRARY) { int c,n=0; for(c=0;c<g_active_cards_count[p];++c) { card_instance_t*i=&global_card_instances[p][c]; if(i->internal_card_id>=0 && !(global_cards_data[i->internal_card_id].type & TYPE_EFFECT) && (!!(i->state&STATE_IN_PLAY)==(zone==DUEL_ZONE_BATTLEFIELD)) && n++==index) return global_cards_data[i->internal_card_id].id; } return -1; }
   int*z=zone==DUEL_ZONE_LIBRARY?global_library[p]:zone==DUEL_ZONE_GRAVEYARD?global_graveyard_slots[p]:global_exile[p]; return index<0 || index>=500 || z[index]<0 ? -1 : global_cards_data[z[index]].id;
+}
+DuelTestRef duel_test_permanent_at(int player, int index) {
+  for (int card = 0, n = 0; card < g_active_cards_count[player]; ++card) {
+    card_instance_t *instance = &global_card_instances[player][card];
+    if (instance->internal_card_id >= 0 && (instance->state & STATE_IN_PLAY) &&
+        !(global_cards_data[instance->internal_card_id].type & TYPE_EFFECT) && n++ == index)
+      return (DuelTestRef){player, card};
+  }
+  return (DuelTestRef){player, -1};
 }
 int duel_test_life(int p) {return g_life[p];}
 int duel_test_mana(int p,int color) {return g_raw_mana_available[p][color];}

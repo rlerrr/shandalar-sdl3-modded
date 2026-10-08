@@ -1,0 +1,245 @@
+{
+  "version": 1,
+  "card": "Shield Wall",
+  "csvid": 786,
+  "cases": [
+    {
+      "name": "ShieldWall_BoostsAllFriendlyCreatures",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shield Wall",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "other",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "other",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ShieldWall_ExpiresAtCleanup",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shield Wall",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "toughness",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ShieldWall_EmptyFriendlyBoardStillCostsAndResolves",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shield Wall",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ShieldWall_BuffLetsCreatureSurviveCombat",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Shield Wall",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "bear",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

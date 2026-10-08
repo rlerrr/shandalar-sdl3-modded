@@ -514,6 +514,457 @@
         "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 4[\\s\\S]*?s.value[\\s\\S]*?Which is: 6[\\s\\S]*?step 13 assert_card target",
         "property\\(duel_test_inspect\\(ref\\),s.property\\)[\\s\\S]*?Which is: 6[\\s\\S]*?s.value[\\s\\S]*?Which is: 4[\\s\\S]*?step 14 assert_card target"
       ]
+    },
+    "Behavior.Absorb_CountersArtifactSpellAndGainsThreeLife": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Absorb",
+      "csvid": 1375,
+      "oracle_id": "132ca99a-a3c7-4ed6-b4d0-0edcd7140ca2",
+      "reason": "Oracle requires {W}{U}{U}; casting pays three blue mana and no white mana instead. The shared put_card_on_stack path assigns cc[0] to a single color_index, losing the multicolor distribution. Countering and the three-life gain work. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 12\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+7\\s+s\\.value\\s+Which\\s+is:\\s+8[\\s\\S]*?step\\ 13\\ assert_mana"
+      ]
+    },
+    "Behavior.Absorb_CountersCreatureSpellBeforeEntry": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Absorb",
+      "csvid": 1375,
+      "oracle_id": "132ca99a-a3c7-4ed6-b4d0-0edcd7140ca2",
+      "reason": "Oracle requires {W}{U}{U}; casting pays three blue mana and no white mana instead. The shared put_card_on_stack path assigns cc[0] to a single color_index, losing the multicolor distribution. Countering and the three-life gain work. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 11\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+7\\s+s\\.value\\s+Which\\s+is:\\s+8[\\s\\S]*?step\\ 12\\ assert_mana"
+      ]
+    },
+    "Behavior.Absorb_CountersSpellAndGainsThreeLife": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Absorb",
+      "csvid": 1375,
+      "oracle_id": "132ca99a-a3c7-4ed6-b4d0-0edcd7140ca2",
+      "reason": "Oracle requires {W}{U}{U}; casting pays three blue mana and no white mana instead. The shared put_card_on_stack path assigns cc[0] to a single color_index, losing the multicolor distribution. Countering and the three-life gain work. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 14\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+7\\s+s\\.value\\s+Which\\s+is:\\s+8[\\s\\S]*?step\\ 15\\ assert_mana"
+      ]
+    },
+    "Behavior.AlliedStrategies_DrawsOncePerBasicTypeIncludingDualTypes": {
+      "kind": "assertion",
+      "assertion_count": 13,
+      "card": "Allied Strategies",
+      "csvid": 1587,
+      "oracle_id": "a5ce2ccd-8c78-4749-8854-cb5fa5f4738e",
+      "reason": "Oracle permits this sorcery to target either player and draw for that player's distinct basic land types. Its handler incorrectly guards with IS_GAA_EVENT, rejecting spell events. Casting fails, the planned target is never requested, no mana is paid and no cards are drawn. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_cast\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 1\\ cast\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_finish_target_plan\\(\\)\\s+Which\\s+is:\\s+1\\s+0\\s+Unconsumed\\s+planned\\s+targets[\\s\\S]*?step\\ 2\\ assert_targets_consumed",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+total\\s+Which\\s+is:\\s+60\\s+s\\.value\\s+Which\\s+is:\\s+55[\\s\\S]*?step\\ 4\\ assert_mana_total",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 5\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+6\\s+s\\.value\\s+Which\\s+is:\\s+2[\\s\\S]*?step\\ 6\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+1587\\s+s\\.value\\s+Which\\s+is:\\s+106[\\s\\S]*?step\\ 8\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+\\-1\\s+s\\.value\\s+Which\\s+is:\\s+97[\\s\\S]*?step\\ 9\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+\\-1\\s+s\\.value\\s+Which\\s+is:\\s+230[\\s\\S]*?step\\ 10\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+\\-1\\s+s\\.value\\s+Which\\s+is:\\s+91[\\s\\S]*?step\\ 11\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+106\\s+s\\.value\\s+Which\\s+is:\\s+164[\\s\\S]*?step\\ 12\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+97\\s+s\\.value\\s+Which\\s+is:\\s+126[\\s\\S]*?step\\ 13\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 14\\ assert_mana",
+        "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+1587[\\s\\S]*?step\\ 15\\ assert_zone_contains"
+      ]
+    },
+    "Behavior.AlliedStrategies_DualLandTypesDrawOnlyDistinctTypes": {
+      "kind": "assertion",
+      "assertion_count": 13,
+      "card": "Allied Strategies",
+      "csvid": 1587,
+      "oracle_id": "a5ce2ccd-8c78-4749-8854-cb5fa5f4738e",
+      "reason": "Oracle permits this sorcery to target either player and draw for that player's distinct basic land types. Its handler incorrectly guards with IS_GAA_EVENT, rejecting spell events. Casting fails, the planned target is never requested, no mana is paid and no cards are drawn. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_cast\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 1\\ cast\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_finish_target_plan\\(\\)\\s+Which\\s+is:\\s+1\\s+0\\s+Unconsumed\\s+planned\\s+targets[\\s\\S]*?step\\ 2\\ assert_targets_consumed",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+total\\s+Which\\s+is:\\s+60\\s+s\\.value\\s+Which\\s+is:\\s+55[\\s\\S]*?step\\ 4\\ assert_mana_total",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 5\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+6\\s+s\\.value\\s+Which\\s+is:\\s+2[\\s\\S]*?step\\ 6\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+1587\\s+s\\.value\\s+Which\\s+is:\\s+106[\\s\\S]*?step\\ 7\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+\\-1\\s+s\\.value\\s+Which\\s+is:\\s+97[\\s\\S]*?step\\ 8\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+\\-1\\s+s\\.value\\s+Which\\s+is:\\s+230[\\s\\S]*?step\\ 9\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+\\-1\\s+s\\.value\\s+Which\\s+is:\\s+91[\\s\\S]*?step\\ 10\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+106\\s+s\\.value\\s+Which\\s+is:\\s+164[\\s\\S]*?step\\ 11\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 12\\ assert_mana",
+        "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+1587[\\s\\S]*?step\\ 13\\ assert_zone_contains",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+97\\s+s\\.value\\s+Which\\s+is:\\s+126[\\s\\S]*?step\\ 14\\ assert_zone_card"
+      ]
+    },
+    "Behavior.AlliedStrategies_NoTargetLandTypesDrawsZero": {
+      "kind": "assertion",
+      "assertion_count": 6,
+      "card": "Allied Strategies",
+      "csvid": 1587,
+      "oracle_id": "a5ce2ccd-8c78-4749-8854-cb5fa5f4738e",
+      "reason": "Oracle permits this sorcery to target either player and draw for that player's distinct basic land types. Its handler incorrectly guards with IS_GAA_EVENT, rejecting spell events. Casting fails, the planned target is never requested, no mana is paid and no cards are drawn. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_cast\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 1\\ cast\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_finish_target_plan\\(\\)\\s+Which\\s+is:\\s+1\\s+0\\s+Unconsumed\\s+planned\\s+targets[\\s\\S]*?step\\ 2\\ assert_targets_consumed",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+total\\s+Which\\s+is:\\s+60\\s+s\\.value\\s+Which\\s+is:\\s+55[\\s\\S]*?step\\ 4\\ assert_mana_total",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 5\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 8\\ assert_mana",
+        "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+1587[\\s\\S]*?step\\ 9\\ assert_zone_contains"
+      ]
+    },
+    "Behavior.AlliedStrategies_UsesOpponentsBasicTypes": {
+      "kind": "assertion",
+      "assertion_count": 13,
+      "card": "Allied Strategies",
+      "csvid": 1587,
+      "oracle_id": "a5ce2ccd-8c78-4749-8854-cb5fa5f4738e",
+      "reason": "Oracle permits this sorcery to target either player and draw for that player's distinct basic land types. Its handler incorrectly guards with IS_GAA_EVENT, rejecting spell events. Casting fails, the planned target is never requested, no mana is paid and no cards are drawn. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_cast\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 1\\ cast\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_finish_target_plan\\(\\)\\s+Which\\s+is:\\s+1\\s+0\\s+Unconsumed\\s+planned\\s+targets[\\s\\S]*?step\\ 2\\ assert_targets_consumed",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+total\\s+Which\\s+is:\\s+60\\s+s\\.value\\s+Which\\s+is:\\s+55[\\s\\S]*?step\\ 4\\ assert_mana_total",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 5\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+5\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 6\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 7\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+\\-1\\s+s\\.value\\s+Which\\s+is:\\s+106[\\s\\S]*?step\\ 8\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+\\-1\\s+s\\.value\\s+Which\\s+is:\\s+97[\\s\\S]*?step\\ 9\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+\\-1\\s+s\\.value\\s+Which\\s+is:\\s+230[\\s\\S]*?step\\ 10\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+\\-1\\s+s\\.value\\s+Which\\s+is:\\s+91[\\s\\S]*?step\\ 11\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 12\\ assert_mana",
+        "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+1587[\\s\\S]*?step\\ 13\\ assert_zone_contains",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+106\\s+s\\.value\\s+Which\\s+is:\\s+164[\\s\\S]*?step\\ 14\\ assert_zone_card"
+      ]
+    },
+    "Behavior.Reclaim_DrawsTheCardJustPlacedOnTop": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Reclaim",
+      "csvid": 3544,
+      "oracle_id": "797155cd-faf4-4321-8629-c8c352392748",
+      "reason": "Oracle puts the chosen graveyard card on top of the library without entering the hand. The shared put_on_top_of_deck wrapper passes a card slot to a core helper that expects an internal card ID. The chosen card enters the hand early and a different card enters the library; the draw case catches the extra card too. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+5\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 3\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+12\\s+s\\.value\\s+Which\\s+is:\\s+230[\\s\\S]*?step\\ 4\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+6\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 15\\ assert_zone"
+      ]
+    },
+    "Behavior.Reclaim_PopulatedSnapshotReplayRestoresTopCard": {
+      "kind": "assertion",
+      "assertion_count": 4,
+      "card": "Reclaim",
+      "csvid": 3544,
+      "oracle_id": "797155cd-faf4-4321-8629-c8c352392748",
+      "reason": "Oracle puts the chosen graveyard card on top of the library without entering the hand. The shared put_on_top_of_deck wrapper passes a card slot to a core helper that expects an internal card ID. The chosen card enters the hand early and a different card enters the library; the draw case catches the extra card too. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+5\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 5\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+9\\s+s\\.value\\s+Which\\s+is:\\s+97[\\s\\S]*?step\\ 6\\ assert_zone_card",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+5\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 13\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+9\\s+s\\.value\\s+Which\\s+is:\\s+97[\\s\\S]*?step\\ 14\\ assert_zone_card"
+      ]
+    },
+    "Behavior.Reclaim_PutsChosenCardOnTopByFullZoneIndex": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Reclaim",
+      "csvid": 3544,
+      "oracle_id": "797155cd-faf4-4321-8629-c8c352392748",
+      "reason": "Oracle puts the chosen graveyard card on top of the library without entering the hand. The shared put_on_top_of_deck wrapper passes a card slot to a core helper that expects an internal card ID. The chosen card enters the hand early and a different card enters the library; the draw case catches the extra card too. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+5\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 3\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+9\\s+s\\.value\\s+Which\\s+is:\\s+97[\\s\\S]*?step\\ 6\\ assert_zone_card"
+      ]
+    },
+    "Behavior.Reclaim_ReturnsCreatureCardToLibraryTop": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Reclaim",
+      "csvid": 3544,
+      "oracle_id": "797155cd-faf4-4321-8629-c8c352392748",
+      "reason": "Oracle puts the chosen graveyard card on top of the library without entering the hand. The shared put_on_top_of_deck wrapper passes a card slot to a core helper that expects an internal card ID. The chosen card enters the hand early and a different card enters the library; the draw case catches the extra card too. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 3\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_csvid\\(s\\.player,s\\.zone,s\\.index\\)\\s+Which\\s+is:\\s+126\\s+s\\.value\\s+Which\\s+is:\\s+106[\\s\\S]*?step\\ 6\\ assert_zone_card"
+      ]
+    },
+    "Behavior.SeedsOfStrength_AllThreeClausesCanTargetSameCreature": {
+      "kind": "assertion",
+      "assertion_count": 5,
+      "card": "Seeds of Strength",
+      "csvid": 7949,
+      "oracle_id": "dd3d4d96-1e88-49e1-8276-7f62c22ad91a",
+      "reason": "Oracle requires three creature targets, allowing repeated targets, and costs {G}{W}. The handler's inverted new_pick_target success check breaks after the first choice, omitting the second and third +1/+1 effects. The shared single-color casting path also charges two green mana instead of green plus white. Confirmed natively and in Wasm; production fixes deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_finish_target_plan\\(\\)\\s+Which\\s+is:\\s+2\\s+0\\s+Unconsumed\\s+planned\\s+targets[\\s\\S]*?step\\ 4\\ assert_targets_consumed",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+3\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 7\\ assert_card\\ friendly",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+3\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 8\\ assert_card\\ friendly",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 13\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 14\\ assert_mana"
+      ]
+    },
+    "Behavior.SeedsOfStrength_SplitBonusesThreeAndTwoOne": {
+      "kind": "assertion",
+      "assertion_count": 7,
+      "card": "Seeds of Strength",
+      "csvid": 7949,
+      "oracle_id": "dd3d4d96-1e88-49e1-8276-7f62c22ad91a",
+      "reason": "Oracle requires three creature targets, allowing repeated targets, and costs {G}{W}. The handler's inverted new_pick_target success check breaks after the first choice, omitting the second and third +1/+1 effects. The shared single-color casting path also charges two green mana instead of green plus white. Confirmed natively and in Wasm; production fixes deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_finish_target_plan\\(\\)\\s+Which\\s+is:\\s+2\\s+0\\s+Unconsumed\\s+planned\\s+targets[\\s\\S]*?step\\ 4\\ assert_targets_consumed",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+3\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 7\\ assert_card\\ friendly",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+3\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 8\\ assert_card\\ friendly",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+2\\s+s\\.value\\s+Which\\s+is:\\s+3[\\s\\S]*?step\\ 9\\ assert_card\\ enemy",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+2\\s+s\\.value\\s+Which\\s+is:\\s+3[\\s\\S]*?step\\ 10\\ assert_card\\ enemy",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 14\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 15\\ assert_mana"
+      ]
+    },
+    "Behavior.SeedsOfStrength_ThreeClausesCanTargetOpponentCreature": {
+      "kind": "assertion",
+      "assertion_count": 5,
+      "card": "Seeds of Strength",
+      "csvid": 7949,
+      "oracle_id": "dd3d4d96-1e88-49e1-8276-7f62c22ad91a",
+      "reason": "Oracle requires three creature targets, allowing repeated targets, and costs {G}{W}. The handler's inverted new_pick_target success check breaks after the first choice, omitting the second and third +1/+1 effects. The shared single-color casting path also charges two green mana instead of green plus white. Confirmed natively and in Wasm; production fixes deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_finish_target_plan\\(\\)\\s+Which\\s+is:\\s+2\\s+0\\s+Unconsumed\\s+planned\\s+targets[\\s\\S]*?step\\ 4\\ assert_targets_consumed",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+3\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 7\\ assert_card\\ enemy",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+3\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 8\\ assert_card\\ enemy",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 12\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 13\\ assert_mana"
+      ]
+    },
+    "Behavior.SeedsOfStrength_ThreeDifferentCreatureTargets": {
+      "kind": "assertion",
+      "assertion_count": 5,
+      "card": "Seeds of Strength",
+      "csvid": 7949,
+      "oracle_id": "dd3d4d96-1e88-49e1-8276-7f62c22ad91a",
+      "reason": "Oracle requires three creature targets, allowing repeated targets, and costs {G}{W}. The handler's inverted new_pick_target success check breaks after the first choice, omitting the second and third +1/+1 effects. The shared single-color casting path also charges two green mana instead of green plus white. Confirmed natively and in Wasm; production fixes deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_finish_target_plan\\(\\)\\s+Which\\s+is:\\s+2\\s+0\\s+Unconsumed\\s+planned\\s+targets[\\s\\S]*?step\\ 4\\ assert_targets_consumed",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+2\\s+s\\.value\\s+Which\\s+is:\\s+3[\\s\\S]*?step\\ 8\\ assert_card\\ enemy",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+2\\s+s\\.value\\s+Which\\s+is:\\s+3[\\s\\S]*?step\\ 9\\ assert_card\\ third",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 15\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 16\\ assert_mana"
+      ]
+    },
+    "Behavior.XiraArien_SnapshotAiRoundtripRestoreAndRecordedReplay": {
+      "kind": "assertion",
+      "assertion_count": 8,
+      "card": "Xira Arien",
+      "csvid": 858,
+      "oracle_id": "4a6e367c-7bc9-44a3-8ede-f2d0651abad3",
+      "reason": "Oracle costs {B}{R}{G} and a single tap to draw one card for the targeted player. EVENT_ACTIVATE calls generic_activated_ability in its branch and again at the final return, requesting the target and charging the mana twice. Each activation spends six mana rather than three. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 5\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 6\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 7\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+total\\s+Which\\s+is:\\s+54\\s+s\\.value\\s+Which\\s+is:\\s+57[\\s\\S]*?step\\ 9\\ assert_mana_total",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 28\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 29\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 30\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+total\\s+Which\\s+is:\\s+54\\s+s\\.value\\s+Which\\s+is:\\s+57[\\s\\S]*?step\\ 32\\ assert_mana_total"
+      ]
+    },
+    "Behavior.XiraArien_TargetsControllerAndDraws": {
+      "kind": "assertion",
+      "assertion_count": 4,
+      "card": "Xira Arien",
+      "csvid": 858,
+      "oracle_id": "4a6e367c-7bc9-44a3-8ede-f2d0651abad3",
+      "reason": "Oracle costs {B}{R}{G} and a single tap to draw one card for the targeted player. EVENT_ACTIVATE calls generic_activated_ability in its branch and again at the final return, requesting the target and charging the mana twice. Each activation spends six mana rather than three. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 7\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 8\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 9\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+total\\s+Which\\s+is:\\s+54\\s+s\\.value\\s+Which\\s+is:\\s+57[\\s\\S]*?step\\ 11\\ assert_mana_total"
+      ]
+    },
+    "Behavior.XiraArien_TargetsOpponentAndDraws": {
+      "kind": "assertion",
+      "assertion_count": 4,
+      "card": "Xira Arien",
+      "csvid": 858,
+      "oracle_id": "4a6e367c-7bc9-44a3-8ede-f2d0651abad3",
+      "reason": "Oracle costs {B}{R}{G} and a single tap to draw one card for the targeted player. EVENT_ACTIVATE calls generic_activated_ability in its branch and again at the final return, requesting the target and charging the mana twice. Each activation spends six mana rather than three. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 5\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 6\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 7\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+total\\s+Which\\s+is:\\s+54\\s+s\\.value\\s+Which\\s+is:\\s+57[\\s\\S]*?step\\ 9\\ assert_mana_total"
+      ]
+    },
+    "Behavior.AspectOfWolf_BonusRecalculatesWhenForestsLeave": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Aspect of Wolf",
+      "csvid": 7,
+      "oracle_id": "77b7277d-90a1-4774-a998-8c35c3f94e4a",
+      "reason": "Oracle gives power equal to half the Aura controller's Forest count, rounded down. The handler adds (total - 1) / 2 instead of total / 2, undercounting positive even Forest totals by one. Two-Forest, four-Forest, and changing-Forest-count cases preserve the correct expectations. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+2\\s+s\\.value\\s+Which\\s+is:\\s+3[\\s\\S]*?step\\ 6\\ assert_card\\ target"
+      ]
+    },
+    "Behavior.AspectOfWolf_FourForestsRoundEvenly": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Aspect of Wolf",
+      "csvid": 7,
+      "oracle_id": "77b7277d-90a1-4774-a998-8c35c3f94e4a",
+      "reason": "Oracle gives power equal to half the Aura controller's Forest count, rounded down. The handler adds (total - 1) / 2 instead of total / 2, undercounting positive even Forest totals by one. Two-Forest, four-Forest, and changing-Forest-count cases preserve the correct expectations. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+3\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 5\\ assert_card\\ target"
+      ]
+    },
+    "Behavior.AspectOfWolf_TwoForestsIncludeDualType": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Aspect of Wolf",
+      "csvid": 7,
+      "oracle_id": "77b7277d-90a1-4774-a998-8c35c3f94e4a",
+      "reason": "Oracle gives power equal to half the Aura controller's Forest count, rounded down. The handler adds (total - 1) / 2 instead of total / 2, undercounting positive even Forest totals by one. Two-Forest, four-Forest, and changing-Forest-count cases preserve the correct expectations. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+2\\s+s\\.value\\s+Which\\s+is:\\s+3[\\s\\S]*?step\\ 4\\ assert_card\\ target"
+      ]
+    },
+    "Behavior.WildGrowth_AdditionalGreenGoesToLandController": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Wild Growth",
+      "csvid": 285,
+      "oracle_id": "706ae742-1807-44b7-a4fa-f2e26f61519a",
+      "reason": "Oracle adds one green mana to the enchanted land controller's pool when that land is tapped for mana. Core basic lands update g_produced_mana_color, but wild_growth_aura checks the separate tapped_for_mana_color bridge global, which remains -1. The land pays its usual mana and taps correctly, but the additional green mana is absent. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+11\\s+s\\.value\\s+Which\\s+is:\\s+12[\\s\\S]*?step\\ 5\\ assert_mana"
+      ]
+    },
+    "Behavior.WildGrowth_EnchantedAndUnenchantedLandsProduceDifferentAmounts": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Wild Growth",
+      "csvid": 285,
+      "oracle_id": "706ae742-1807-44b7-a4fa-f2e26f61519a",
+      "reason": "Oracle adds one green mana to the enchanted land controller's pool when that land is tapped for mana. Core basic lands update g_produced_mana_color, but wild_growth_aura checks the separate tapped_for_mana_color bridge global, which remains -1. The land pays its usual mana and taps correctly, but the additional green mana is absent. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+11[\\s\\S]*?step\\ 6\\ assert_mana",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+11\\s+s\\.value\\s+Which\\s+is:\\s+12[\\s\\S]*?step\\ 8\\ assert_mana"
+      ]
+    },
+    "Behavior.WildGrowth_IslandGetsItsUsualManaPlusGreen": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Wild Growth",
+      "csvid": 285,
+      "oracle_id": "706ae742-1807-44b7-a4fa-f2e26f61519a",
+      "reason": "Oracle adds one green mana to the enchanted land controller's pool when that land is tapped for mana. Core basic lands update g_produced_mana_color, but wild_growth_aura checks the separate tapped_for_mana_color bridge global, which remains -1. The land pays its usual mana and taps correctly, but the additional green mana is absent. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+9\\s+s\\.value\\s+Which\\s+is:\\s+10[\\s\\S]*?step\\ 5\\ assert_mana"
+      ]
+    },
+    "Behavior.Aladdin_StealsOpponentArtifactAndReturnsItWhenSourceLeaves": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Aladdin",
+      "csvid": 392,
+      "oracle_id": "9a410f83-ed92-4b55-834a-c7cec8f5d1e2",
+      "reason": "Oracle ends the artifact control effect when Aladdin leaves the battlefield. The handler creates its control legacy with GCUS_CONTROLLED but omits GCUS_SOURCE_IN_PLAY, so source death does not return the stolen artifact. The case verifies the successful steal and costs before retaining correct return assertions. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 11\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+2[\\s\\S]*?step\\ 12\\ assert_zone",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+matches\\s+Which\\s+is:\\s+0\\s+1\\s+Expected\\s+one\\s+matching\\s+permanent\\s+for\\s+CSVID\\s+230[\\s\\S]*?step\\ 13\\ bind_permanent\\ artifact"
+      ]
+    },
+    "Behavior.Paralyze_IfTargetLeavesBeforeResolutionAuraDoesNotAttach": {
+      "kind": "crash",
+      "card": "Paralyze",
+      "csvid": 179,
+      "oracle_id": "e9b4e857-39e5-4a06-89ad-3dd94b3f252a",
+      "reason": "When the only target leaves before resolution, Oracle requires the Aura spell to fail to resolve and enter its owner's graveyard. Resolving Paralyze instead aborts with get_card_instance(-1, -1); the Wasm stack identifies get_abilities called from targeted_aura_impl. This is an invalid target dereference in the shared Aura resolution path, not a missing scripted choice. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "CASE:\\ Paralyze_IfTargetLeavesBeforeResolutionAuraDoesNotAttach\\ CARD:\\ Paralyze\\ ORACLE:\\ e9b4e857\\-39e5\\-4a06\\-89ad\\-3dd94b3f252a",
+        "DUEL_ENGINE_ERROR:\\ bad\\ parameters:\\ get_card_instance\\(\\-1,\\ \\-1\\)"
+      ]
+    },
+    "Behavior.Mortify_DestroyCreatureAndPreserveEnchantments": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Mortify",
+      "csvid": 1540,
+      "oracle_id": "faa01ed1-ccfa-4e58-951f-cd81f9068027",
+      "reason": "Oracle requires {1}{W}{B}; the shared put_card_on_stack path collapses the two colored pips into black and spends {1}{B}{B}, leaving white untouched. Target destruction and total cost are correct. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected:\\s+\\(duel_test_mana\\(s\\.player,s\\.color\\)\\)\\s+<=\\s+\\(s\\.value\\),\\s+actual:\\s+10\\s+vs\\s+9[\\s\\S]*?step\\ 10\\ assert_mana_at_most"
+      ]
+    },
+    "Behavior.Mortify_DestroyEnchantmentAndPreserveArtifact": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Mortify",
+      "csvid": 1540,
+      "oracle_id": "faa01ed1-ccfa-4e58-951f-cd81f9068027",
+      "reason": "Oracle requires {1}{W}{B}; the shared put_card_on_stack path collapses the two colored pips into black and spends {1}{B}{B}, leaving white untouched. Target destruction and total cost are correct. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected:\\s+\\(duel_test_mana\\(s\\.player,s\\.color\\)\\)\\s+<=\\s+\\(s\\.value\\),\\s+actual:\\s+10\\s+vs\\s+9[\\s\\S]*?step\\ 10\\ assert_mana_at_most"
+      ]
+    },
+    "Behavior.Mortify_DestroysLegalCreatureAndPreservesArtifact": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Mortify",
+      "csvid": 1540,
+      "oracle_id": "faa01ed1-ccfa-4e58-951f-cd81f9068027",
+      "reason": "Oracle requires {1}{W}{B}; the shared put_card_on_stack path collapses the two colored pips into black and spends {1}{B}{B}, leaving white untouched. Target destruction and total cost are correct. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected:\\s+\\(duel_test_mana\\(s\\.player,s\\.color\\)\\)\\s+<=\\s+\\(s\\.value\\),\\s+actual:\\s+10\\s+vs\\s+9[\\s\\S]*?step\\ 10\\ assert_mana_at_most"
+      ]
+    },
+    "Behavior.Recoil_BouncesArtifactThenDiscards": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Recoil",
+      "csvid": 1554,
+      "oracle_id": "1579bf86-4400-4467-88e8-1c5ba1209804",
+      "reason": "Oracle requires {1}{U}{B}; the shared put_card_on_stack path instead spends {1}{B}{B}, leaving blue untouched. Recoil also skips the required owner discard after bouncing an own permanent when the opponent hand is empty: its handler gates discard on hand_count[1-player] rather than the bounced permanent owner. The own-target case retains its scripted discard and final hand/graveyard assertions. Confirmed natively and in Wasm; production fixes deferred.",
+      "patterns": [
+        "Expected:\\s+\\(duel_test_mana\\(s\\.player,s\\.color\\)\\)\\s+<=\\s+\\(s\\.value\\),\\s+actual:\\s+10\\s+vs\\s+9[\\s\\S]*?step\\ 11\\ assert_mana_at_most"
+      ]
+    },
+    "Behavior.Recoil_CanTargetOwnPermanent": {
+      "kind": "assertion",
+      "assertion_count": 4,
+      "card": "Recoil",
+      "csvid": 1554,
+      "oracle_id": "1579bf86-4400-4467-88e8-1c5ba1209804",
+      "reason": "Oracle requires {1}{U}{B}; the shared put_card_on_stack path instead spends {1}{B}{B}, leaving blue untouched. Recoil also skips the required owner discard after bouncing an own permanent when the opponent hand is empty: its handler gates discard on hand_count[1-player] rather than the bounced permanent owner. The own-target case retains its scripted discard and final hand/graveyard assertions. Confirmed natively and in Wasm; production fixes deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_finish_choice_plan\\(\\)\\s+Which\\s+is:\\s+1\\s+0\\s+Unconsumed\\s+planned\\s+choices[\\s\\S]*?step\\ 10\\ assert_choices_consumed",
+        "Expected:\\s+\\(duel_test_mana\\(s\\.player,s\\.color\\)\\)\\s+<=\\s+\\(s\\.value\\),\\s+actual:\\s+10\\s+vs\\s+9[\\s\\S]*?step\\ 11\\ assert_mana_at_most",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 15\\ assert_zone",
+        "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+230[\\s\\S]*?step\\ 16\\ assert_zone_contains"
+      ]
+    },
+    "Behavior.Recoil_StockedZonesCaptureReplay": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Recoil",
+      "csvid": 1554,
+      "oracle_id": "1579bf86-4400-4467-88e8-1c5ba1209804",
+      "reason": "Oracle requires {1}{U}{B}; the shared put_card_on_stack path instead spends {1}{B}{B}, leaving blue untouched. Recoil also skips the required owner discard after bouncing an own permanent when the opponent hand is empty: its handler gates discard on hand_count[1-player] rather than the bounced permanent owner. The own-target case retains its scripted discard and final hand/graveyard assertions. Confirmed natively and in Wasm; production fixes deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+observable_state\\(\\)\\s+Which\\s+is:\\s+\"\\{\\\\\"stack\\\\\":0,\\\\\"players\\\\\":\\[\\{\\\\\"life\\\\\":20,\\\\\"mana\\\\\":\\[9,8,10,10,10,10\\],\\\\\"zones\\\\\":\\[\\[106,97,145,188\\],\\[\\],\\[91,188,106,91,164,126,145\\],\\[106,97,91,230,1554\\],\\[126,149\\]\\],\\\\\"permanents\\\\\":\\[\\]\\},\\{\\\\\"life\\\\\":20,\\\\\"mana\\\\\":\\[10,10,10,10,10,10\\],\\\\\"zones\\\\\":\\[\\[106,97,188,230\\],\\[\\],\\[91,188,106,91,164,126,145\\],\\[106,97,91,230,145\\],\\[126,149\\]\\],\\\\\"permanents\\\\\":\\[\\]\\}\\]\\}\"\\s+recorded_state\\s+Which\\s+is:\\s+\"\\{\\\\\"stack\\\\\":0,\\\\\"players\\\\\":\\[\\{\\\\\"life\\\\\":20,\\\\\"mana\\\\\":\\[9,8,10,10,10,10\\],\\\\\"zones\\\\\":\\[\\[106,97,145,188\\],\\[\\],\\[91,188,106,91,164,126,145\\],\\[106,97,91,230,1554\\],\\[126,149\\]\\],\\\\\"permanents\\\\\":\\[\\]\\},\\{\\\\\"life\\\\\":20,\\\\\"mana\\\\\":\\[10,10,10,10,10,10\\],\\\\\"zones\\\\\":\\[\\[106,145,188,230\\],\\[\\],\\[91,188,106,91,164,126,145\\],\\[106,97,91,230,97\\],\\[126,149\\]\\],\\\\\"permanents\\\\\":\\[\\]\\}\\]\\}\"[\\s\\S]*?step\\ 22\\ assert_recorded_state"
+      ]
+    },
+    "Behavior.Recoil_TargetLandAndAllowReturnedCardToBeDiscarded": {
+      "kind": "assertion",
+      "assertion_count": 1,
+      "card": "Recoil",
+      "csvid": 1554,
+      "oracle_id": "1579bf86-4400-4467-88e8-1c5ba1209804",
+      "reason": "Oracle requires {1}{U}{B}; the shared put_card_on_stack path instead spends {1}{B}{B}, leaving blue untouched. Recoil also skips the required owner discard after bouncing an own permanent when the opponent hand is empty: its handler gates discard on hand_count[1-player] rather than the bounced permanent owner. The own-target case retains its scripted discard and final hand/graveyard assertions. Confirmed natively and in Wasm; production fixes deferred.",
+      "patterns": [
+        "Expected:\\s+\\(duel_test_mana\\(s\\.player,s\\.color\\)\\)\\s+<=\\s+\\(s\\.value\\),\\s+actual:\\s+10\\s+vs\\s+9[\\s\\S]*?step\\ 11\\ assert_mana_at_most"
+      ]
     }
   }
 }

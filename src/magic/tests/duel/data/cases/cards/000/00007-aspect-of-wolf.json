@@ -1,0 +1,608 @@
+{
+  "version": 1,
+  "card": "Aspect of Wolf",
+  "csvid": 7,
+  "cases": [
+    {
+      "name": "AspectOfWolf_OneForestRoundsUpOnToughness",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aspect of Wolf",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AspectOfWolf_TwoForestsIncludeDualType",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aspect of Wolf",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "basic_forest",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Tropical Island",
+          "ref": "dual_forest_island",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AspectOfWolf_ThreeForestsRoundDownAndUp",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Aspect of Wolf",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest_one",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest_two",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Taiga",
+          "ref": "dual_forest_mountain",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AspectOfWolf_BonusRecalculatesWhenForestsLeave",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aspect of Wolf",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest_one",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest_two",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Taiga",
+          "ref": "dual_forest_mountain",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "destroy",
+          "ref": "dual_forest_mountain"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "destroy",
+          "ref": "forest_two"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AspectOfWolf_OpponentsForestsDoNotCount",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aspect of Wolf",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "own_forest",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "opponent_forest_one",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Tropical Island",
+          "ref": "opponent_forest_two",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AspectOfWolf_UsesAuraControllersForestsOnOpponentsCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aspect of Wolf",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Taiga",
+          "ref": "dual_forest_mountain",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Tropical Island",
+          "ref": "dual_forest_island",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AspectOfWolf_FourForestsRoundEvenly",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Aspect of Wolf",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "land0",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "land1",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Taiga",
+          "ref": "land2",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Tropical Island",
+          "ref": "land3",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 4
+        }
+      ]
+    }
+  ]
+}

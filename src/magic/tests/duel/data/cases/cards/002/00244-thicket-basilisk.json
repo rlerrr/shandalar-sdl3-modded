@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "card": "Thicket Basilisk",
+  "csvid": 244,
+  "cases": [
+    {
+      "name": "ThicketBasilisk_NonWallDiesAtEndCombat",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Thicket Basilisk",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 110
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ThicketBasilisk_WallSurvivesEndCombat",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Thicket Basilisk",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Wood",
+          "ref": "blocker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "blocker",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "blocker",
+          "property": "damage",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ThicketBasilisk_BlockedCreatureDiesEvenIfBasiliskDies",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Earth Elemental",
+          "ref": "elemental",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Thicket Basilisk",
+          "ref": "basilisk",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "elemental",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "basilisk",
+          "other": "elemental",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "elemental",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "basilisk",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "elemental",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 73
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "ThicketBasilisk_BlocksAttackerThenDestroysIt",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Thicket Basilisk",
+          "ref": "basilisk",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Earth Elemental",
+          "ref": "attacker",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "block",
+          "ref": "basilisk",
+          "other": "attacker",
+          "value": 1
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_card",
+          "ref": "basilisk",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "damage",
+          "value": 2
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "assert_card",
+          "ref": "attacker",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 73
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

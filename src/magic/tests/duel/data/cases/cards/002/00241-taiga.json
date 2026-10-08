@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "card": "Taiga",
+  "csvid": 241,
+  "cases": [
+    {
+      "name": "Taiga_FirstColorManaAndTaps",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Taiga",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 4
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 61
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Taiga_SecondColorManaAndTaps",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Taiga",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 3
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 61
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Taiga_TappedCannotProduceMana",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Taiga",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Taiga_SummoningSickLandCanStillTap",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Taiga",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 4
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 61
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Taiga_ForestSubtypeIsDestroyedByAcidRain",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Taiga",
+          "ref": "forestland",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Plateau",
+          "ref": "nonforest",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Acid Rain",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 241
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 189
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

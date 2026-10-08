@@ -1,0 +1,182 @@
+{
+  "version": 1,
+  "card": "Catalog",
+  "csvid": 990,
+  "cases": [
+    {
+      "name": "Catalog_DrawTwoThenDiscard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Catalog",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "lib0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "lib1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "lib2",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Catalog_CanCastWithOneCardLibrary",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Catalog",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "lib",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Catalog_StockedZonesAiRestoreReplay",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Catalog",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 321
+    },
+    {
+      "name": "Catalog_CanCastWithoutLibrary",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Catalog",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

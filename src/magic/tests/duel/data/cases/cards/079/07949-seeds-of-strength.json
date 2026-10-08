@@ -1,0 +1,443 @@
+{
+  "version": 1,
+  "card": "Seeds of Strength",
+  "csvid": 7949,
+  "cases": [
+    {
+      "name": "SeedsOfStrength_AllThreeClausesCanTargetSameCreature",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Seeds of Strength",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "friendly",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "friendly",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "friendly",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "toughness",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7949
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SeedsOfStrength_SplitBonusesThreeAndTwoOne",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Seeds of Strength",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "friendly",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "friendly",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7949
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SeedsOfStrength_ThreeClausesCanTargetOpponentCreature",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Seeds of Strength",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "toughness",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7949
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SeedsOfStrength_NoCreatureCannotCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Seeds of Strength",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "artifact",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "artifact",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "SeedsOfStrength_ThreeDifferentCreatureTargets",
+      "fixture": "mixed_targets",
+      "setup": [
+        {
+          "name": "Seeds of Strength",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Wind Drake",
+          "ref": "third",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "friendly",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "enemy",
+          "player": -1
+        },
+        {
+          "op": "choose_target",
+          "ref": "third",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_targets_consumed"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "third",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "third",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7949
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

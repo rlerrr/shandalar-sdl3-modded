@@ -1,0 +1,417 @@
+{
+  "version": 1,
+  "card": "Anaba Spirit Crafter",
+  "csvid": 1629,
+  "cases": [
+    {
+      "name": "AnabaSpiritCrafter_BuffsEveryMinotaurIncludingEnemyAndSelf",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Anaba Spirit Crafter",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Anaba Shaman",
+          "ref": "shaman",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hurloon Minotaur",
+          "ref": "enemy_minotaur",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "hill",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "shaman",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy_minotaur",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "hill",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "shaman",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy_minotaur",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "hill",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AnabaSpiritCrafter_SourceLeavingRemovesGlobalBonus",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Anaba Spirit Crafter",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hurloon Minotaur",
+          "ref": "minotaur",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "minotaur",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "minotaur",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1629
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AnabaSpiritCrafter_EnteringAppliesToExistingMinotaurs",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Anaba Spirit Crafter",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hurloon Minotaur",
+          "ref": "minotaur",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "minotaur",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "assert_card",
+          "ref": "minotaur",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AnabaSpiritCrafter_SnapshotRestoresPopulatedBonusBoard",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Anaba Spirit Crafter",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Anaba Shaman",
+          "ref": "shaman",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hurloon Minotaur",
+          "ref": "enemy_minotaur",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "hill",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_card",
+          "ref": "shaman",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy_minotaur",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "hill",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "shaman",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy_minotaur",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "AnabaSpiritCrafter_ExistingMinotaurGetsBonusAfterCrafterEnters",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Anaba Spirit Crafter",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Anaba Shaman",
+          "ref": "shaman",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hurloon Minotaur",
+          "ref": "enemy_minotaur",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "shaman",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy_minotaur",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "bear",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

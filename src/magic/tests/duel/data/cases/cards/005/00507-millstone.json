@@ -1,0 +1,447 @@
+{
+  "version": 1,
+  "card": "Millstone",
+  "csvid": 507,
+  "cases": [
+    {
+      "name": "Millstone_MillsTopTwoFromOwnLibraryAndPaysTwo",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Millstone",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "lib0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "lib1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "lib2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "lib3",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "lib4",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 3
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 1,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Millstone_MayTargetOpponentAndLeavesTheirRemainingOrder",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Millstone",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Mountain",
+          "ref": "lib0",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "lib1",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "lib2",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "lib3",
+          "player": 1,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 1,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 0,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Millstone_FewerThanTwoLibraryMillsOnlyAvailableCards",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Millstone",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "lib0",
+          "player": 1,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Millstone_EmptyLibraryMillsOnlyAvailableCards",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Millstone",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Millstone_ReplaySameTwoCardMillAfterSnapshot",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Millstone",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 4,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 5,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 91
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

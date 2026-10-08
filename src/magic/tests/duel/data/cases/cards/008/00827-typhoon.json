@@ -1,0 +1,291 @@
+{
+  "version": 1,
+  "card": "Typhoon",
+  "csvid": 827,
+  "cases": [
+    {
+      "name": "Typhoon_DamagesByOpponentsIslandAndDualLandCount",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Typhoon",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "island",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Tropical Island",
+          "ref": "dual",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "own_island",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "island",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "dual",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Typhoon_NoOpponentIslandsDealsZero",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Typhoon",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Forest",
+          "ref": "forest",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "own_island",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_card",
+          "ref": "forest",
+          "property": "in_play",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Typhoon_OnlyOpponentIslandCountMatters",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Typhoon",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "mine1",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "mine2",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Island",
+          "ref": "theirs",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 19
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Typhoon_CostsThreeIncludingGreen",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Typhoon",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_mana_at_most",
+          "player": 0,
+          "color": 3,
+          "value": 9
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Typhoon_PopulatedZonesSurviveBackupRestoreAndReplay",
+      "fixture": "stocked_zones",
+      "setup": [
+        {
+          "name": "Typhoon",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "island",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Tropical Island",
+          "ref": "dual",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "assert_recorded_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}
