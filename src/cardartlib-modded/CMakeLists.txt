@@ -30,3 +30,6 @@ target_link_libraries(cardart_modded PUBLIC
   rpbits
   SDL3_image::SDL3_image
 )
+if(TARGET shandalar_llvm_coverage)
+  target_link_libraries(cardart_modded PRIVATE shandalar_llvm_coverage)
+endif()

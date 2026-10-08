@@ -256,4 +256,33 @@ For a quicker run of just the authored behavior tests:
 ctest --test-dir out/build/shandalar-clang-x86 -L behavior --output-on-failure -j1
 ```
 
-CTest handles the known-failure baseline, so the recognized failures won’t fail the gate; new failures and unexpected passes will.
+CTesT handles the known-failure baseline, so the recognized failures won’t fail the gate; new failures and unexpected passes will.
+
+## Code coverage
+
+From **PowerShell** (repository root), run the behavior suite under coverage:
+
+```powershell
+.\ctestcoverage.bat behavior
+```
+
+This configures an instrumented 32-bit `Debug` build in
+`out/build/shandalar-llvmcov-x86` (`SHANDALAR_DUEL_COVERAGE=ON`), builds
+`duel_card_tests`, and runs the selected CTest label with `LLVM_PROFILE_FILE`
+set so every test process writes a raw profile. The script then merges them
+with `llvm-profdata` and renders an `llvm-cov` summary plus HTML, all under
+`out/coverage/llvmcov/`. Pass a second argument as a `ctest -R` filter to
+iterate on a subset, e.g. `.\ctestcoverage.bat behavior AbbeyGargoyles`.
+
+`ctest` has no flag that instruments binaries: `ctest -T Coverage` only
+collects results from a pre-instrumented build. The instrumentation lives in
+the `shandalar_llvm_coverage` interface target, applied to the duel runtime
+libraries and `duel_card_tests` when `SHANDALAR_DUEL_COVERAGE=ON`.
+
+The toolchain matters: coverage needs the 32-bit profile runtime
+(`clang_rt.profile-i386.lib`), which 64-bit-only LLVM distributions do not
+ship, and the manalinkeh layer assumes 32-bit pointer sizes, so a 64-bit
+coverage build is not viable on this branch either. The script uses
+`C:\bin\LLVM-21.1.8-win32` by default (`SHANDALAR_LLVM_COV` overrides it);
+requesting `-DSHANDALAR_DUEL_COVERAGE=ON` with a toolchain that lacks the
+runtime fails configure with a message saying so.

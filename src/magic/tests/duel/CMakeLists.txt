@@ -57,6 +57,9 @@ else()
   target_compile_definitions(duel_card_tests PRIVATE DUEL_TEST_ASSETS="${SHANDALAR_MODDED_ASSET_DIR}")
 endif()
 include("${duel_generated}/cases.cmake")
+if(TARGET shandalar_llvm_coverage)
+  target_link_libraries(duel_card_tests PRIVATE shandalar_llvm_coverage)
+endif()
 add_test(NAME duel.presentation_guard COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/verify_presentation_guard.py"
   --binary "$<TARGET_FILE:duel_card_tests>" ${duel_node_args})

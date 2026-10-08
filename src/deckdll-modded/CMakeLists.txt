@@ -29,3 +29,6 @@ target_link_libraries(deckdll_modded PUBLIC
   magsnd_static
   shandalar_platform
 )
+if(TARGET shandalar_llvm_coverage)
+  target_link_libraries(deckdll_modded PRIVATE shandalar_llvm_coverage)
+endif()

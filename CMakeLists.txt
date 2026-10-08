@@ -40,6 +40,46 @@ option(SHANDALAR_BUILD_DECK "Build the SDL3 Deck Builder application" OFF)
 option(SHANDALAR_BUILD_TESTS "Build unit tests" ON)
 option(SHANDALAR_BUILD_DUEL_TESTS "Build headless real-engine duel regression tests" ON)
 option(SHANDALAR_DUEL_COVERAGE "Instrument the real duel/card runtime with LLVM coverage" OFF)
+if(SHANDALAR_DUEL_COVERAGE)
+  # LLVM source-based coverage (-fprofile-instr-generate -fcoverage-mapping).
+  # Only Clang toolchains with a matching profile runtime can use this.
+  if(EMSCRIPTEN)
+    message(FATAL_ERROR "SHANDALAR_DUEL_COVERAGE is not supported for Emscripten builds. Use ctestcoverage.bat (OpenCppCoverage) for native Windows coverage instead.")
+  endif()
+  if(NOT CMAKE_C_COMPILER_ID MATCHES "Clang" AND NOT CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+    message(FATAL_ERROR "SHANDALAR_DUEL_COVERAGE requires a Clang compiler (C=${CMAKE_C_COMPILER_ID}, CXX=${CMAKE_CXX_COMPILER_ID}). Use ctestcoverage.bat (OpenCppCoverage) for non-Clang Windows coverage instead.")
+  endif()
+  if(WIN32)
+    # The profile runtime ships inside the compiler install, matched to that
+    # compiler version. Current 64-bit-only LLVM distributions have no i686
+    # runtime at all, while e.g. C:\bin\LLVM-21.1.8-win32 still ships
+    # lib/clang/21/lib/windows/clang_rt.profile-i386.lib. Fail fast when the
+    # active compiler cannot provide it instead of failing at link time.
+    execute_process(
+      COMMAND "${CMAKE_C_COMPILER}" -print-resource-dir
+      OUTPUT_VARIABLE SHANDALAR_CLANG_RESOURCE_DIR
+      OUTPUT_STRIP_TRAILING_WHITESPACE
+      ERROR_QUIET)
+    unset(SHANDALAR_PROFILE_RT_LIB CACHE)
+    foreach(_profile_arch IN ITEMS i386 i686 x86)
+      set(_profile_rt_candidate
+        "${SHANDALAR_CLANG_RESOURCE_DIR}/lib/windows/clang_rt.profile-${_profile_arch}.lib")
+      if(EXISTS "${_profile_rt_candidate}")
+        set(SHANDALAR_PROFILE_RT_LIB "${_profile_rt_candidate}" CACHE FILEPATH
+          "LLVM profile runtime for SHANDALAR_DUEL_COVERAGE")
+        break()
+      endif()
+    endforeach()
+    if(NOT SHANDALAR_PROFILE_RT_LIB)
+      message(FATAL_ERROR "SHANDALAR_DUEL_COVERAGE cannot link with ${CMAKE_C_COMPILER}: no clang_rt.profile i386/i686 runtime under ${SHANDALAR_CLANG_RESOURCE_DIR}/lib/windows. Use a toolchain that ships one (e.g. C:\\bin\\LLVM-21.1.8-win32, see ctestcoverage.bat).")
+    endif()
+  endif()
+  add_library(shandalar_llvm_coverage INTERFACE)
+  target_compile_options(shandalar_llvm_coverage INTERFACE
+    "$<$<COMPILE_LANGUAGE:C,CXX>:-fprofile-instr-generate;-fcoverage-mapping>")
+  target_link_options(shandalar_llvm_coverage INTERFACE
+    "-fprofile-instr-generate;-fcoverage-mapping")
+endif()
 set(SHANDALAR_ASSET_DIR "" CACHE PATH "Directory containing the Magic game data")
 get_filename_component(shandalar_sibling_modded_assets "${CMAKE_SOURCE_DIR}/../assets_modded" ABSOLUTE)
 if(EXISTS "${shandalar_sibling_modded_assets}")

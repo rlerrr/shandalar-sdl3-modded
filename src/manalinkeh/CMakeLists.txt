@@ -138,3 +138,6 @@ endif()
 
 # Asset readers share the native/WASM stream overlay.
 target_link_libraries(manalinkeh_static PRIVATE shandalar_platform)
+if(TARGET shandalar_llvm_coverage)
+  target_link_libraries(manalinkeh_static PRIVATE shandalar_llvm_coverage)
+endif()

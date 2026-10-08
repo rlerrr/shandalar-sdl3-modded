@@ -33,6 +33,9 @@ target_link_libraries(shandalar_platform PUBLIC
   SDL3_ttf::SDL3_ttf
 )
 target_link_libraries(shandalar_platform PRIVATE shandalar_miniz)
+if(TARGET shandalar_llvm_coverage)
+  target_link_libraries(shandalar_platform PRIVATE shandalar_llvm_coverage)
+endif()
 if(SHANDALAR_BUILD_SHANDALAR)
   target_link_libraries(shandalar_platform PUBLIC SDL3_image::SDL3_image)
 endif()

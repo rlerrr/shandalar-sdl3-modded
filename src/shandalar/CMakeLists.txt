@@ -138,6 +138,11 @@ target_link_libraries(shandalar_duel_engine PUBLIC
   SDL3::SDL3
   SDL3_ttf::SDL3_ttf
 )
+if(TARGET shandalar_llvm_coverage)
+  # PUBLIC so the profile runtime reaches the duel_card_tests/shandalar links.
+  target_link_libraries(shandalar_duel_engine PUBLIC shandalar_llvm_coverage)
+  target_link_libraries(shandalar_ui_support PRIVATE shandalar_llvm_coverage)
+endif()
 if(MSVC)
   target_link_options(shandalar PRIVATE /errorlimit:0 /OPT:REF)
 endif()

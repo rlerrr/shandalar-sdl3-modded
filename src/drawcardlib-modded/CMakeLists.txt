@@ -26,3 +26,6 @@ target_link_libraries(drawcard_modded PUBLIC
   shandalar_platform
   SDL3_image::SDL3_image
 )
+if(TARGET shandalar_llvm_coverage)
+  target_link_libraries(drawcard_modded PRIVATE shandalar_llvm_coverage)
+endif()
