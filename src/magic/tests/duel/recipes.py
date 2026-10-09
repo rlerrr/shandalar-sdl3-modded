@@ -11,6 +11,8 @@ VERSION = 1
 COLORS = {"B": 1, "U": 2, "G": 3, "R": 4, "W": 5}
 WORDS = {"a": 1, "two": 2, "three": 3, "four": 4}
 VARIANTS = {
+    "creature_keywords": ("cast", "payment", "insufficient_mana", "snapshot", "fresh_attack", "unblocked",
+                          "block_ground", "block_flying", "tapped_attacker", "tapped_blocker"),
     "reduce_creature": ("friendly_cleanup", "opponent_cleanup", "negative_power", "lethal", "lost_target", "empty", "wrong_target", "payment", "insufficient_mana", "snapshot"),
     "move_permanent": ("opponent", "friendly", "untapped", "lost_target", "empty", "wrong_target", "payment", "insufficient_mana", "snapshot"),
     "destroy_permanent": ("opponent", "friendly", "lost_target", "empty", "wrong_target", "payment", "insufficient_mana", "snapshot"),
@@ -30,7 +32,9 @@ def validate_context(oracle, registry, fixtures):
     for name, pt in {"Grizzly Bears": ("2", "2"), "Hill Giant": ("3", "3"),
                      "Shivan Dragon": ("5", "5"), "Llanowar Elves": ("1", "1"),
                      "Scaled Wurm": ("7", "6"), "Wall of Stone": ("0", "8"),
-                     "Drudge Skeletons": ("1", "1"), "Erhnam Djinn": ("4", "5")}.items():
+                     "Drudge Skeletons": ("1", "1"), "Erhnam Djinn": ("4", "5"),
+                     "Suntail Hawk": ("1", "1"), "Giant Spider": ("2", "4"),
+                     "Ornithopter": ("0", "2")}.items():
         record = oracle.get(name, {})
         if name not in registry or (record.get("power"), record.get("toughness")) != pt:
             raise ValueError(f"recipe witness no longer has reviewed Oracle characteristics: {name}")
@@ -43,6 +47,9 @@ def validate_context(oracle, registry, fixtures):
         record = oracle.get(name, {})
         if "Creature" not in record.get("type_line", "") or record.get("colors") != colors or keyword not in record.get("oracle_text", ""):
             raise ValueError(f"destruction predicate witness changed: {name}")
+    for name, keyword in (("Suntail Hawk", "Flying"), ("Giant Spider", "Reach"), ("Ornithopter", "Flying")):
+        if oracle[name].get("keywords") != [keyword] or "Creature" not in oracle[name].get("type_line", ""):
+            raise ValueError(f"creature combat witness changed: {name}")
     if oracle.get("Lightning Bolt", {}).get("oracle_text") != "Lightning Bolt deals 3 damage to any target.":
         raise ValueError("recipe injury witness no longer matches reviewed Oracle")
     for name in ("empty_main", "stocked_zones"):
@@ -142,6 +149,9 @@ def explicit_spec(declaration, oracle):
     family = declaration.get("family")
     if family not in VARIANTS:
         raise ValueError("unknown explicit recipe family")
+    if family == "creature_keywords":
+        from creature_recipes import spec
+        return spec(declaration, oracle)
     if (not oracle or oracle.get("selected_face") or oracle.get("card_faces")
             or oracle.get("layout", "normal") != "normal"
             or oracle.get("type_line") not in ("Instant", "Sorcery")):
@@ -205,6 +215,9 @@ def expand(card_name, csvid, declaration, oracle, registry):
     family = spec["family"]
     variants = declaration.get("variants", list(VARIANTS[family]))
     supported_variants = set(VARIANTS[family]) | ({"lost_target"} if version == 2 and family == "pump_creature" else set())
+    if family == "creature_keywords":
+        from creature_recipes import variants as creature_variants
+        supported_variants = set(creature_variants(spec))
     if family == "destroy_permanent": supported_variants |= {"target_"+t for t in spec["targets"]}
     if family == "move_permanent": supported_variants |= {"target_"+t for t in spec["targets"]} | {"wrong_controller", "wrong_state"}
     if (not isinstance(variants, list) or not variants or any(v not in supported_variants for v in variants)
@@ -252,6 +265,12 @@ def expand(card_name, csvid, declaration, oracle, registry):
         if name not in registry:
             raise ValueError(f"recipe witness missing from registry: {name}")
         return registry[name]["csvid"]
+
+    if family == "creature_keywords":
+        if dialogs or support or resolve_zones:
+            raise ValueError("creature recipes require dedicated cases for custom decisions/setup")
+        from creature_recipes import expand as creatures
+        return creatures(card_name, csvid, declaration, spec, variants, registry)
 
     if family == "move_permanent":
         from movement_recipes import expand as movement

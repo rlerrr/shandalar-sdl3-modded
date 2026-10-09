@@ -1305,6 +1305,593 @@
         "step 3 assert_zone",
         "duel_test_zone_count\\(s.player,s.zone\\)[\\s\\S]*?Which is: 1[\\s\\S]*?s.value[\\s\\S]*?Which is: 0"
       ]
+    },
+    "Behavior.CreatureRecipe_10250_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Cerodon Yearling",
+      "csvid": 10250,
+      "oracle_id": "6db09a0a-6c8e-4829-9b55-00745f0587b5",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_1047_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Goblin Chariot",
+      "csvid": 1047,
+      "oracle_id": "6ef0dd51-31df-4fd3-8153-49a427a7fdcf",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_1071_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Lightning Elemental",
+      "csvid": 1071,
+      "oracle_id": "58aee5cb-7b88-446e-ab10-9f83c10d7227",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_10793_block_ground": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Leatherback Baloth",
+      "csvid": 10793,
+      "oracle_id": "0ee14128-3bec-4b65-8ee4-619337d4ed45",
+      "reason": "Oracle defines Leatherback Baloth as an unconditional vanilla 4/5. Its handler retains is_unlocked(...,37) gating on EVENT_RESOLVE_SPELL and sacrifices it in the normal loaded engine state. This also affects fixture entry; casting, combat and snapshot replay retain correct unconditional creature expectations. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_block\\(ref,refs\\.at\\(s\\.other\\)\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 5\\ block\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 6\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_10793_cast": {
+      "kind": "assertion",
+      "assertion_count": 4,
+      "card": "Leatherback Baloth",
+      "csvid": 10793,
+      "oracle_id": "0ee14128-3bec-4b65-8ee4-619337d4ed45",
+      "reason": "Oracle defines Leatherback Baloth as an unconditional vanilla 4/5. Its handler retains is_unlocked(...,37) gating on EVENT_RESOLVE_SPELL and sacrifices it in the normal loaded engine state. This also affects fixture entry; casting, combat and snapshot replay retain correct unconditional creature expectations. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 4\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 6\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 7\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 11\\ assert_zone\\ "
+      ]
+    },
+    "Behavior.CreatureRecipe_10793_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 4,
+      "card": "Leatherback Baloth",
+      "csvid": 10793,
+      "oracle_id": "0ee14128-3bec-4b65-8ee4-619337d4ed45",
+      "reason": "Oracle defines Leatherback Baloth as an unconditional vanilla 4/5. Its handler retains is_unlocked(...,37) gating on EVENT_RESOLVE_SPELL and sacrifices it in the normal loaded engine state. This also affects fixture entry; casting, combat and snapshot replay retain correct unconditional creature expectations. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 4\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 6\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 7\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 11\\ assert_zone\\ "
+      ]
+    },
+    "Behavior.CreatureRecipe_10793_payment": {
+      "kind": "assertion",
+      "assertion_count": 4,
+      "card": "Leatherback Baloth",
+      "csvid": 10793,
+      "oracle_id": "0ee14128-3bec-4b65-8ee4-619337d4ed45",
+      "reason": "Oracle defines Leatherback Baloth as an unconditional vanilla 4/5. Its handler retains is_unlocked(...,37) gating on EVENT_RESOLVE_SPELL and sacrifices it in the normal loaded engine state. This also affects fixture entry; casting, combat and snapshot replay retain correct unconditional creature expectations. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 10\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 12\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 13\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 17\\ assert_zone\\ "
+      ]
+    },
+    "Behavior.CreatureRecipe_10793_snapshot": {
+      "kind": "assertion",
+      "assertion_count": 8,
+      "card": "Leatherback Baloth",
+      "csvid": 10793,
+      "oracle_id": "0ee14128-3bec-4b65-8ee4-619337d4ed45",
+      "reason": "Oracle defines Leatherback Baloth as an unconditional vanilla 4/5. Its handler retains is_unlocked(...,37) gating on EVENT_RESOLVE_SPELL and sacrifices it in the normal loaded engine state. This also affects fixture entry; casting, combat and snapshot replay retain correct unconditional creature expectations. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 5\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 7\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 8\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+5\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 12\\ assert_zone\\ ",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 27\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 29\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 30\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+5\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 34\\ assert_zone\\ "
+      ]
+    },
+    "Behavior.CreatureRecipe_10793_unblocked": {
+      "kind": "assertion",
+      "assertion_count": 5,
+      "card": "Leatherback Baloth",
+      "csvid": 10793,
+      "oracle_id": "0ee14128-3bec-4b65-8ee4-619337d4ed45",
+      "reason": "Oracle defines Leatherback Baloth as an unconditional vanilla 4/5. Its handler retains is_unlocked(...,37) gating on EVENT_RESOLVE_SPELL and sacrifices it in the normal loaded engine state. This also affects fixture entry; casting, combat and snapshot replay retain correct unconditional creature expectations. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 1\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 2\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 3\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_life\\(s\\.player\\)\\s+Which\\s+is:\\s+20\\s+s\\.value\\s+Which\\s+is:\\s+16[\\s\\S]*?step\\ 8\\ assert_life\\ ",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 10\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_1122_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Raging Goblin",
+      "csvid": 1122,
+      "oracle_id": "30997b43-fc13-41d3-8064-1ccc2cb6fd2b",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_1225_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Lightning Angel",
+      "csvid": 1225,
+      "oracle_id": "2be85439-4606-4e1e-8be7-56d9e31f77c4",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_1235_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Skyknight Legionnaire",
+      "csvid": 1235,
+      "oracle_id": "61178a6c-70b7-447d-87ee-a8d9369c3d15",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_12444_block_flying": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Raging Poltergeist",
+      "csvid": 12444,
+      "oracle_id": "15d460da-9110-4f33-a24f-8582a2bcd96f",
+      "reason": "Raging Poltergeist is a vanilla creature with neither flying nor reach. The shared block assignment currently accepts it against Suntail Hawk and records one blocked creature. Correct flying-block rejection remains intact; card metadata or the native no-op ability path needs investigation. Confirmed natively and in Wasm; production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_block\\(ref,refs\\.at\\(s\\.other\\)\\)\\s+Which\\s+is:\\s+true\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 5\\ block\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 6\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_1269_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Rorix Bladewing",
+      "csvid": 1269,
+      "oracle_id": "48fe0f52-1676-49d5-acf6-5476081e8e1b",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_12773_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Minotaur Aggressor",
+      "csvid": 12773,
+      "oracle_id": "7576bfba-eb4f-4d3e-aec5-52daee84d1d6",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_12796_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Rakdos Ragemutt",
+      "csvid": 12796,
+      "oracle_id": "8f4c7419-bbbe-4ddc-83ae-fd9ea3e86c3d",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_12849_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Tenement Crasher",
+      "csvid": 12849,
+      "oracle_id": "ee11cecc-4772-4bb2-9af8-a2a99eb037f9",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_13227_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Spike Jester",
+      "csvid": 13227,
+      "oracle_id": "29f22168-21aa-4ca9-ab72-b09396a12c76",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_1329_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Bull Cerodon",
+      "csvid": 1329,
+      "oracle_id": "363f5ed8-a7a0-4cde-b09d-9baa26bad347",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_1367_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Rip-Clan Crasher",
+      "csvid": 1367,
+      "oracle_id": "5d45fa1f-110c-4bc8-a0fc-ed04556cf639",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_1403_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Talruum Minotaur",
+      "csvid": 1403,
+      "oracle_id": "c5661500-c48f-4f6d-bbe7-c8bd7118d862",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_14278_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Gurmag Swiftwing",
+      "csvid": 14278,
+      "oracle_id": "fc1256e9-eb92-43b6-abfc-ce19d910a929",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_14313_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Mantis Rider",
+      "csvid": 14313,
+      "oracle_id": "5c1a0a7a-dea4-4b8e-b9c0-8c19942a01ef",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_16303_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Brazen Scourge",
+      "csvid": 16303,
+      "oracle_id": "422ef4ec-863a-450e-9577-a0707bc16532",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_16526_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Snare Thopter",
+      "csvid": 16526,
+      "oracle_id": "a3be0e16-6063-4cd0-87cb-606591a958c2",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_1671_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Volcanic Dragon",
+      "csvid": 1671,
+      "oracle_id": "994db177-03f5-43dd-bf7b-2994e8d430d3",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_1673_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Thundering Giant",
+      "csvid": 1673,
+      "oracle_id": "d23329e2-4134-4e49-b9b6-5febef2bce31",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_17368_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Charging Monstrosaur",
+      "csvid": 17368,
+      "oracle_id": "21dd60d5-76c8-469e-8c4e-112e377d2d59",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_17468_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Nest Robber",
+      "csvid": 17468,
+      "oracle_id": "b909ff27-423f-4e84-887b-7840149a85be",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_2171_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Ambush Party",
+      "csvid": 2171,
+      "oracle_id": "454ed336-362d-46d9-96d5-8fcaa8a1c543",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_2893_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Raging Cougar",
+      "csvid": 2893,
+      "oracle_id": "695ebb35-55fd-4ed1-8cbe-e3fc1223115b",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_2894_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Raging Minotaur",
+      "csvid": 2894,
+      "oracle_id": "4cfd04b3-57bd-4860-8b47-57a0fd0a23fa",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_3650_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Brimstone Dragon",
+      "csvid": 3650,
+      "oracle_id": "b20302d9-eb45-4895-9597-cf3af1abce56",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_3659_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Ogre Berserker",
+      "csvid": 3659,
+      "oracle_id": "9e6f76dc-b7db-49b6-a61e-3495b81e61d7",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_3735_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Crazed Skirge",
+      "csvid": 3735,
+      "oracle_id": "72a53d9e-0645-4024-a90f-73b05c2284c6",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_4132_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Goblin Berserker",
+      "csvid": 4132,
+      "oracle_id": "5f71f205-9551-416a-bba6-55bc65d11c85",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_4209_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Wild Colos",
+      "csvid": 4209,
+      "oracle_id": "cb6b8ce3-9f9d-418c-94b0-c4469a254938",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_4315_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Mountain Bandit",
+      "csvid": 4315,
+      "oracle_id": "e3638c54-e494-47d2-b614-94c9d9add85a",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_4317_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Renegade Troops",
+      "csvid": 4317,
+      "oracle_id": "83a81308-4a15-49cd-b2f6-51431cca79e9",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_4478_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Gerrard's Irregulars",
+      "csvid": 4478,
+      "oracle_id": "595cbe23-4969-4fc2-8386-e5f3e6adfd5f",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_5081_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Raging Kavu",
+      "csvid": 5081,
+      "oracle_id": "d126bb08-be60-4046-91f1-65672ef42c63",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_6676_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Goblin Striker",
+      "csvid": 6676,
+      "oracle_id": "c991d1b8-3adb-4854-9fd3-83f06aeb3941",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.CreatureRecipe_6830_fresh_attack": {
+      "kind": "assertion",
+      "assertion_count": 3,
+      "card": "Vulshok Berserker",
+      "csvid": 6830,
+      "oracle_id": "694f7e51-7b8b-4f00-bd77-a52eded4aaa1",
+      "reason": "Oracle haste permits this freshly cast creature to attack. The existing STATE_SUMMONSICK_NOATTACK guard still rejects it, even when the no-tap sickness bit is removed. Attack assignment and tapping expectations remain correct. Same shared defect as RagingGoblin_FreshCastAttack; confirmed natively and in Wasm. Production fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_attack\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 20\\ attack\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 21\\ assert_card\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 22\\ assert_card\\ source"
+      ]
+    },
+    "Behavior.ShrineKeeper_GenericPlusOneWhiteIsInsufficient": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Shrine Keeper",
+      "csvid": 19069,
+      "oracle_id": "c3319f74-1771-4679-bdad-0ab4b34e9106",
+      "reason": "Pinned Oracle requires WW for Shrine Keeper, while the engine charges 1W: a full pool loses one generic and one white, and a generic-plus-white pool is incorrectly sufficient. Correct printed-cost expectations remain intact. Confirmed natively and in Wasm; card-data fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_cast\\(ref\\)\\s+Which\\s+is:\\s+true\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 6\\ cast\\ source",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_stack_size\\(\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 7\\ assert_stack\\ "
+      ]
+    },
+    "Behavior.ShrineKeeper_PrintedDoubleWhitePayment": {
+      "kind": "assertion",
+      "assertion_count": 2,
+      "card": "Shrine Keeper",
+      "csvid": 19069,
+      "oracle_id": "c3319f74-1771-4679-bdad-0ab4b34e9106",
+      "reason": "Pinned Oracle requires WW for Shrine Keeper, while the engine charges 1W: a full pool loses one generic and one white, and a generic-plus-white pool is incorrectly sufficient. Correct printed-cost expectations remain intact. Confirmed natively and in Wasm; card-data fix deferred.",
+      "patterns": [
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+9\\s+s\\.value\\s+Which\\s+is:\\s+10[\\s\\S]*?step\\ 19\\ assert_mana\\ ",
+        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_mana\\(s\\.player,s\\.color\\)\\s+Which\\s+is:\\s+9\\s+s\\.value\\s+Which\\s+is:\\s+8[\\s\\S]*?step\\ 20\\ assert_mana\\ "
+      ]
     }
   }
 }

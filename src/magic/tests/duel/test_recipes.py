@@ -20,6 +20,43 @@ DATA = Path(__file__).parent / "data"
 
 
 class RecipesTest(unittest.TestCase):
+    def test_creature_whole_text_and_parameter_boundaries(self):
+        from creature_recipes import classify as creature, variants
+        record = self.oracle["Serra Angel"]
+        expected = creature(record)
+        self.assertEqual(expected["keywords"], ["Flying", "Vigilance"])
+        declaration = dict(family="creature_keywords", version=2, params=dict(keywords=expected["keywords"]),
+                           oracle_text=record["oracle_text"], variants=variants(expected))
+        cases = expand("Serra Angel", 221, declaration, record, self.registry)
+        self.assertIn("flying_evasion", [c["_recipe"]["variant"] for c in cases])
+        self.assertTrue(any(s == dict(op="assert_card", ref="source", property="tapped", value=0)
+                            for c in cases if c["_recipe"]["variant"]=="unblocked" for s in c["steps"]))
+        for changes in (dict(oracle_text=record["oracle_text"]+"\nDraw a card."),
+                        dict(oracle_text="If you control a Plains, this creature has flying."),
+                        dict(oracle_text="Flying (Draw a card.)"), dict(power="*"), dict(toughness="0"),
+                        dict(layout="transform"), dict(keywords=["Flying"]), dict(mana_cost="{W/P}")):
+            with self.subTest(changes=changes), self.assertRaises(ValueError):
+                creature(dict(record, **changes))
+        for params in ({"keywords": ["Flying"]}, {"keywords": ["Flying", "Vigilance"], "power": 99}):
+            with self.subTest(params=params), self.assertRaises(ValueError):
+                expand("Serra Angel", 221, dict(declaration, params=params), record, self.registry)
+        with self.assertRaises(ValueError):
+            expand("Serra Angel", 221, dict(declaration, variants=["deathtouch"]), record, self.registry)
+
+    def test_creature_expectations_use_structured_oracle_and_ignore_dispatch(self):
+        from creature_recipes import classify as creature, variants
+        record = dict(self.oracle["Grizzly Bears"], power="3", toughness="4")
+        declaration = dict(family="creature_keywords", version=2, params=dict(keywords=[]),
+                           oracle_text="", variants=variants(creature(record)))
+        first = expand("Grizzly Bears", 106, declaration, record, self.registry)
+        altered = copy.deepcopy(self.registry); altered["Grizzly Bears"]["handler"] = "card_dummy"
+        self.assertEqual(first, expand("Grizzly Bears", 106, declaration, record, altered))
+        self.assertIn(dict(op="assert_card", ref="source", property="power", value=3), first[0]["steps"])
+        self.assertIn(dict(op="assert_card", ref="source", property="toughness", value=4), first[0]["steps"])
+        snapshot = next(c for c in first if c["_recipe"]["variant"]=="snapshot")
+        self.assertEqual(sum(s["op"]=="cast" for s in snapshot["steps"]), 2)
+        self.assertTrue(any(s["op"]=="ai_roundtrip" for s in snapshot["steps"]))
+
     def test_destruction_witness_and_tapped_parameters(self):
         name = "Assassinate"
         declaration = dict(family="destroy_permanent", version=2,

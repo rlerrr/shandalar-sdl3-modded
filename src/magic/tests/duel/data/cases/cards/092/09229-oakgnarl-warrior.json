@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Oakgnarl Warrior",
+  "csvid": 9229,
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Trample",
+          "Vigilance"
+        ]
+      },
+      "oracle_text": "Vigilance, trample",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "trample"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-text creature recipe: normal casting, exact payment, insufficient mana, populated-zone snapshot replay, fresh-cast attack eligibility, attack tapping, unblocked damage, grounded/flying block legality, and tapped creature rejection. Applicable keyword combat components are composed from the declaration; Flash timing, lost/gained abilities, and multiplayer are separate."
+}

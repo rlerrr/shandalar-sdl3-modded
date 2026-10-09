@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Stormrider Spirit",
+  "csvid": 15976,
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flash",
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flash\nFlying",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "flying_evasion",
+        "flying_reach"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-text creature recipe: normal casting, exact payment, insufficient mana, populated-zone snapshot replay, fresh-cast attack eligibility, attack tapping, unblocked damage, grounded/flying block legality, and tapped creature rejection. Applicable keyword combat components are composed from the declaration; Flash timing, lost/gained abilities, and multiplayer are separate."
+}

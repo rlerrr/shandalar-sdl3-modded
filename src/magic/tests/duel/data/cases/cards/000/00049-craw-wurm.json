@@ -7,17 +7,70 @@
       "name": "CrawWurm_CastAndStats",
       "fixture": "empty_main",
       "setup": [
-        {"name": "Craw Wurm", "ref": "source", "player": 0, "zone": "hand"}
+        {
+          "name": "Craw Wurm",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
       ],
       "steps": [
-        {"op": "cast", "ref": "source", "value": 1},
-        {"op": "resolve"},
-        {"op": "assert_card", "ref": "source", "property": "power", "value": 6},
-        {"op": "assert_card", "ref": "source", "property": "toughness", "value": 4},
-        {"op": "assert_card", "ref": "source", "property": "in_play", "value": 1},
-        {"op": "attack", "ref": "source", "value": 0}
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 6
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 0
+        }
       ],
       "seed": 123
     }
-  ]
+  ],
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": []
+      },
+      "oracle_text": "",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-text creature recipe: normal casting, exact payment, insufficient mana, populated-zone snapshot replay, fresh-cast attack eligibility, attack tapping, unblocked damage, grounded/flying block legality, and tapped creature rejection. Applicable keyword combat components are composed from the declaration; Flash timing, lost/gained abilities, and multiplayer are separate."
 }

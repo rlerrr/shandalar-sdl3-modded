@@ -42,6 +42,62 @@ planeswalkers or redirected/prevented damage; pumps do not exercise granted
 abilities or every possible target becoming illegal. Extend reviewed scenarios
 when those interactions matter rather than counting a card as fully covered.
 
+## Creature components
+
+`creature_keywords` is a version 2 whole-text recipe for normal single-face
+creatures with numeric power/toughness, positive toughness and ordinary fixed
+mana costs. Its only effect parameter is an explicit, sorted `keywords` array.
+Printed power/toughness and costs come from structured pinned Oracle fields.
+Rules text must consist entirely of the selected unconditional keywords and
+reviewed reminder strings; Oracle's keyword tags alone never establish that an
+ability is unconditional. Any additional clause rejects automatic enrollment.
+
+```json
+{
+  "family": "creature_keywords",
+  "version": 2,
+  "params": {"keywords": ["Flying", "Vigilance"]},
+  "oracle_text": "Flying\nVigilance",
+  "variants": ["cast", "payment", "insufficient_mana", "snapshot",
+               "fresh_attack", "unblocked", "block_ground", "block_flying",
+               "tapped_attacker", "tapped_blocker", "flying_evasion", "flying_reach"]
+}
+```
+
+Every creature gets real casting, exact/insufficient payment, populated-zone
+snapshot replay after AI search, fresh-cast attack eligibility, unblocked combat,
+grounded/flying blocking and tapped attacker/blocker rejection. Attack declaration
+also checks vigilance's tap obligation. Positive combat cases advance through
+attacker and blocker declarations before dealing damage. Additional components
+exercise flying evasion and reach, first-strike survival, deathtouch against a
+larger creature, trample against a flying blocker, and complete single/pair Menace
+declarations. Unblocked damage checks lifelink and double strike when present.
+Menace block selection is provisional: legality is asserted after advancing the
+entire declaration, rather than rejecting the first selection of a valid pair.
+
+These remain partial scenarios: Flash timing is explicitly marked untested in
+generated provenance, because the existing cast helper bypasses the game's
+priority/timing permission path. Hybrid/zero costs, nonnumeric characteristics,
+zero toughness, additional abilities, lost/granted keywords and arbitrary keyword
+interactions require other recipes or authored cases. First-strike, deathtouch
+and trample component cases need positive power. The generator exposes those
+limits instead of inferring missing expectations from implementation code.
+
+The offline enrollment tool inventories exact supported candidates, preserves
+existing authored cases, and reports distinct cards, new homes, case counts,
+covered keyword components and deferred reasons:
+
+```powershell
+python src/magic/tests/duel/creature_recipe_tools.py --output out/duel-tests/creature-inventory.json
+python src/magic/tests/duel/creature_recipe_tools.py --write --output out/duel-tests/creature-enrollment.json
+```
+
+Vanilla `card_dummy` records qualify because the core engine supplies their
+characteristics. Keyword-only no-op records are deferred for an implementation
+review. This avoids labeling every no-op creature missing or silently treating
+every keyword no-op as implemented. Neither dispatch choice supplies rules
+expectations.
+
 `variants` can select a nonempty subset of the names in `VARIANTS`. Omitting it
 generates all reviewed scenarios. Unknown options fail validation. Names use
 CSVID, family, and variant, so moving a file changes neither names nor order.
@@ -421,3 +477,20 @@ All 165 new cases pass in native and Wasm. Rerunning the 808 existing
 destruction recipe cases yields 766 passes and the same 42 separately recorded
 unimplemented cases on each runtime. All 973 observed states agree across
 platforms; no failure or unimplemented baselines changed.
+
+The creature sweep adds 4,509 generated cases plus three authored Shrine Keeper
+payment cases across 437 cards: 299 vanilla and 138 keyword creatures, with 415
+new card homes. Both runtimes produce 4,467 passes and 45 precisely recorded
+assertion failures: 36 fresh-cast haste cases, six Leatherback Baloth unlock-gate
+cases, one Raging Poltergeist flying-block case, and two Shrine Keeper WW-versus-1W
+cost cases. Temporary paging-file/process failures pass on low-concurrency retry
+and are absent from the baselines. All 4,512 observed states match across
+platforms; the existing case manifest entries remain unchanged.
+
+Shrine Keeper's exact payment is authored with a white-pool click to pay the
+incorrect imported generic requirement using its legal WW pool. This preserves
+a successful cast scenario while separate assertions catch the incorrect color
+charge and insufficient-color acceptance. Remove that temporary choice when the
+metadata is repaired. Twenty Flash creatures have an explicit timing gap; hybrid
+and zero-cost creatures and 231 eligible-syntax keyword no-op records remain
+in the deferred inventory. The full suite now has 10,053 behavior cases.
