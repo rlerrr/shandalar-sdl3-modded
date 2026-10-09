@@ -111,7 +111,7 @@ int choose_fireball_options(int player, int internal_card_id, int maximum_mana, 
   context.maximum_targets = maximum_targets;
   context.mana_to_pay = *mana_to_pay;
   context.number_of_targets = *number_of_targets;
-  context.card_id = CardIDFromType(internal_card_id);
+  context.card_id = CardIDFromInternalIndex(internal_card_id);
 
   if ((g_duel_network_flags & 2) != 0 && player == g_other_player)
   {

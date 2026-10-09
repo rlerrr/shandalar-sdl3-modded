@@ -114,7 +114,7 @@ color_t single_color_test_bit_to_color_t(color_test_t color_mask);
 void AddJournalEntry(int entry_type, int entry_arg);
 #endif
 int GetCardRarity(int card_id);
-int IsCardAvailable(csvid_t csvid, int expansion);
+int manalinkeh_is_planeswalker(int player, int card);
 int copy_cached_library_cards_and_get_count(void *cards, int player);
 void copy_opponent_name_prefix(char *name);
 void delete_and_close_object(HANDLE obj);
@@ -137,6 +137,7 @@ INT_PTR CALLBACK still_thinking_dialog_proc(HWND hwnd, UINT msg, WPARAM wparam, 
 #define PICK_CARD_TYPE_SORCERY_ID 1040
 #define PICK_CARD_TYPE_INSTANT_ID 1041
 #define PICK_CARD_TYPE_LAND_ID 1042
+#define PICK_CARD_TYPE_PLANESWALKER_ID 1043
 
 #define PICK_CARD_COLOR_BLACK 0x2
 #define PICK_CARD_COLOR_BLUE 0x4
@@ -152,6 +153,7 @@ INT_PTR CALLBACK still_thinking_dialog_proc(HWND hwnd, UINT msg, WPARAM wparam, 
 #define PICK_CARD_TYPE_INSTANT 0x10
 #define PICK_CARD_TYPE_INTERRUPT 0x20
 #define PICK_CARD_TYPE_ARTIFACT 0x40
+#define PICK_CARD_TYPE_PLANESWALKER 0x80
 
 typedef struct
 {
@@ -1866,8 +1868,9 @@ static __inline int pick_card_color_matches(card_ptr_t *card, unsigned int color
   return 0;
 }
 
-static __inline int pick_card_type_matches(card_ptr_t *card, unsigned int type_filter)
+static __inline int pick_card_type_matches(card_ptr_t *card, unsigned int type_filter, int internal_id)
 {
+  int planeswalker = manalinkeh_is_planeswalker(-1, internal_id);
   if ((type_filter & PICK_CARD_TYPE_LAND) != 0 && card->card_type == CP_TYPE_LAND)
   {
     return 1;
@@ -1878,7 +1881,7 @@ static __inline int pick_card_type_matches(card_ptr_t *card, unsigned int type_f
     return 1;
   }
 
-  if ((type_filter & PICK_CARD_TYPE_ENCHANTMENT) != 0 && card->card_type == CP_TYPE_ENCHANTMENT)
+  if ((type_filter & PICK_CARD_TYPE_ENCHANTMENT) != 0 && card->card_type == CP_TYPE_ENCHANTMENT && !planeswalker)
   {
     return 1;
   }
@@ -1903,42 +1906,39 @@ static __inline int pick_card_type_matches(card_ptr_t *card, unsigned int type_f
     return 1;
   }
 
-  return 0;
-}
+  if ((type_filter & PICK_CARD_TYPE_PLANESWALKER) != 0 && planeswalker)
+  {
+    return 1;
+  }
 
-static __inline int pick_card_is_available(csvid_t csvid)
-{
-  return IsCardAvailable(csvid, 0) != 0 || IsCardAvailable(csvid, 1) != 0 || IsCardAvailable(csvid, 2) != 0;
+  return 0;
 }
 
 // FUNCTION: MAGIC 0x00506b4c
 static void populate_pick_card_list(HWND listbox, unsigned int color_filter, unsigned int type_filter)
 {
-  int card_index;
-  int list_index;
-
   SendMessageA(listbox, LB_RESETCONTENT, 0, 0);
-  for (card_index = 0; card_index < global_available_slots; ++card_index)
+  // Debug selection uses the engine registry, not the original expansion/DRM
+  // bitmap, which only supports CSV IDs 0..1023.
+  for (int internal_id = 0; internal_id < g_card_count; ++internal_id)
   {
-    if (!pick_card_color_matches(&global_raw_cards_storage[card_index], color_filter))
+    int csvid = global_cards_data[internal_id].id;
+    if (csvid < 0 || csvid >= global_available_slots ||
+        (global_cards_data[internal_id].type & TYPE_EFFECT) != 0)
     {
       continue;
     }
-
-    if (!pick_card_type_matches(&global_raw_cards_storage[card_index], type_filter))
+    card_ptr_t *card = &global_raw_cards_storage[csvid];
+    if (!card->full_name || !card->full_name[0] ||
+        !pick_card_color_matches(card, color_filter) ||
+        !pick_card_type_matches(card, type_filter, internal_id))
     {
       continue;
     }
-
-    if (!pick_card_is_available(global_raw_cards_storage[card_index].id))
+    int list_index = SendMessageA(listbox, LB_ADDSTRING, 0, (LPARAM)card->full_name);
+    if (list_index != LB_ERR && list_index != LB_ERRSPACE)
     {
-      continue;
-    }
-
-    list_index = SendMessageA(listbox, LB_ADDSTRING, 0, (LPARAM)global_raw_cards_storage[card_index].full_name);
-    if (list_index != LB_ERR)
-    {
-      SendMessageA(listbox, LB_SETITEMDATA, list_index, card_index);
+      SendMessageA(listbox, LB_SETITEMDATA, list_index, csvid);
     }
   }
 }
@@ -1972,27 +1972,31 @@ static __inline void check_pick_card_filter_buttons(HWND hwnd, PickCardDialogCon
 
   if ((context->type_filter & PICK_CARD_TYPE_LAND) != 0)
   {
-    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_LAND_ID, PICK_CARD_TYPE_LAND_ID);
+    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_PLANESWALKER_ID, PICK_CARD_TYPE_LAND_ID);
   }
   else if ((context->type_filter & PICK_CARD_TYPE_CREATURE) != 0)
   {
-    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_LAND_ID, PICK_CARD_TYPE_CREATURE_ID);
+    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_PLANESWALKER_ID, PICK_CARD_TYPE_CREATURE_ID);
+  }
+  else if ((context->type_filter & PICK_CARD_TYPE_PLANESWALKER) != 0)
+  {
+    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_PLANESWALKER_ID, PICK_CARD_TYPE_PLANESWALKER_ID);
   }
   else if ((context->type_filter & PICK_CARD_TYPE_ENCHANTMENT) != 0)
   {
-    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_LAND_ID, PICK_CARD_TYPE_ENCHANTMENT_ID);
+    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_PLANESWALKER_ID, PICK_CARD_TYPE_ENCHANTMENT_ID);
   }
   else if ((context->type_filter & PICK_CARD_TYPE_SORCERY) != 0)
   {
-    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_LAND_ID, PICK_CARD_TYPE_SORCERY_ID);
+    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_PLANESWALKER_ID, PICK_CARD_TYPE_SORCERY_ID);
   }
   else if ((context->type_filter & (PICK_CARD_TYPE_INSTANT | PICK_CARD_TYPE_INTERRUPT)) != 0)
   {
-    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_LAND_ID, PICK_CARD_TYPE_INSTANT_ID);
+    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_PLANESWALKER_ID, PICK_CARD_TYPE_INSTANT_ID);
   }
   else
   {
-    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_LAND_ID, PICK_CARD_TYPE_ARTIFACT_ID);
+    CheckRadioButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, PICK_CARD_TYPE_PLANESWALKER_ID, PICK_CARD_TYPE_ARTIFACT_ID);
   }
 }
 
@@ -2035,6 +2039,9 @@ static __inline void set_pick_card_filter_from_command(PickCardDialogContext *co
     break;
   case PICK_CARD_TYPE_LAND_ID:
     context->type_filter = PICK_CARD_TYPE_LAND;
+    break;
+  case PICK_CARD_TYPE_PLANESWALKER_ID:
+    context->type_filter = PICK_CARD_TYPE_PLANESWALKER;
     break;
   }
 }
@@ -2140,6 +2147,10 @@ static INT_PTR CALLBACK dlgproc_pick_card_from_list(HWND hwnd, UINT msg, WPARAM 
     {
       CheckDlgButton(hwnd, PICK_CARD_TYPE_CREATURE_ID, 1);
     }
+    else if ((g_pick_card_dialog_context_ptr->type_filter & PICK_CARD_TYPE_PLANESWALKER) != 0)
+    {
+      CheckDlgButton(hwnd, PICK_CARD_TYPE_PLANESWALKER_ID, 1);
+    }
     else if ((g_pick_card_dialog_context_ptr->type_filter & PICK_CARD_TYPE_ENCHANTMENT) != 0)
     {
       CheckDlgButton(hwnd, PICK_CARD_TYPE_ENCHANTMENT_ID, 1);
@@ -2236,12 +2247,17 @@ static INT_PTR CALLBACK dlgproc_pick_card_from_list(HWND hwnd, UINT msg, WPARAM 
     case PICK_CARD_TYPE_SORCERY_ID:
     case PICK_CARD_TYPE_INSTANT_ID:
     case PICK_CARD_TYPE_LAND_ID:
+    case PICK_CARD_TYPE_PLANESWALKER_ID:
       if (HIWORD(wparam) == 0)
       {
         g_pick_card_dialog_context_ptr->type_filter = 0;
         if (IsDlgButtonChecked(hwnd, PICK_CARD_TYPE_LAND_ID) != 0)
         {
           g_pick_card_dialog_context_ptr->type_filter |= PICK_CARD_TYPE_LAND;
+        }
+        if (IsDlgButtonChecked(hwnd, PICK_CARD_TYPE_PLANESWALKER_ID) != 0)
+        {
+          g_pick_card_dialog_context_ptr->type_filter |= PICK_CARD_TYPE_PLANESWALKER;
         }
         if (IsDlgButtonChecked(hwnd, PICK_CARD_TYPE_CREATURE_ID) != 0)
         {
@@ -3255,6 +3271,10 @@ LRESULT CALLBACK wndproc_MAGICGAME_MainClass(HWND hwnd, UINT msg, WPARAM wparam,
           player_backdrop_color = 1;
         }
         enemy_backdrop_result = pick_internal_card_from_list_dialog("Pick a card to put into play", -1, -1);
+        if (enemy_backdrop_result < 0)
+        {
+          break;
+        }
         command_selected_card = (int)(char)g_duel_phase_stop_settings[g_current_player].phase_flags[g_current_phase];
         g_duel_phase_stop_settings[g_current_player].phase_flags[g_current_phase] =
             (unsigned char)((int)(char)g_duel_phase_stop_settings[g_current_player].phase_flags[g_current_phase] & ~PHASE_STOP_ENABLED);
@@ -3281,6 +3301,10 @@ LRESULT CALLBACK wndproc_MAGICGAME_MainClass(HWND hwnd, UINT msg, WPARAM wparam,
           player_backdrop_color = 1;
         }
         enemy_backdrop_result = pick_internal_card_from_list_dialog("Pick a card to put into hand", -1, -1);
+        if (enemy_backdrop_result < 0)
+        {
+          break;
+        }
         command_saved_phase_flags = add_card_to_hand(player_backdrop_color, enemy_backdrop_result);
         g_duel_summary.hand_counts[player_backdrop_color] += 1;
         if (((g_duel_network_flags & 2) != 0) && (g_active_player == player_backdrop_color))

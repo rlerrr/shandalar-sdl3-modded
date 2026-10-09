@@ -119,7 +119,7 @@ int mana_paid[7];
 int pumpable_power[2];
 int pumpable_toughness[2];
 int ai_defensive_modifier;
-char manalinkeh_cost_scratch[6];
+char manalinkeh_cost_scratch[8];
 char manalinkeh_mana_scratch[8];
 char manalinkeh_surplus_free_mana[8];
 char manalinkeh_prevent_normal_graveyard_effect;

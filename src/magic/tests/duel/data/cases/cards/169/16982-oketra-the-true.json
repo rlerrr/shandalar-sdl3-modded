@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "card": "Oketra the True",
+  "csvid": 16982,
+  "cases": [
+    {
+      "name": "RestoredBinding_16982_CastPrintedStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Oketra the True",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 6
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_16982_CannotAttackAlone",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Oketra the True",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_16982_AttackWithThreeOthers",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Oketra the True",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear0",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear1",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "bear2",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_16982_CreateWarrior",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Oketra the True",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

@@ -10,6 +10,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include "duel_handler_bindings.inc"
+extern int manalinkeh_count_player_counters(int player, int type);
+int duel_test_energy(int player) { return manalinkeh_count_player_counters(player, 2); /* PCOUNTER_ENERGY */ }
 
 extern size_t duel_engine_ai_snapshot_size(void), duel_manalink_snapshot_size(void);
 extern void duel_engine_capture_ai_snapshot(void *), duel_engine_restore_ai_snapshot(const void *);
@@ -232,6 +235,10 @@ DuelTestRef duel_test_add(int player, int zone, int csvid, int state)
   if (state & DUEL_STATE_UNTAPPED) inst->state &= ~STATE_TAPPED;
   if (state & DUEL_STATE_SICK) inst->state |= STATE_SUMMONSICK_BOTH;
   if (state & DUEL_STATE_ATTACKING) inst->state |= STATE_ATTACKING;
+  /* STATE_OWNED_BY_OPPONENT records player one's ownership, independently
+   * of controller.  Toggle the default ownership to construct stolen cards. */
+  if (state & DUEL_STATE_OPPONENT_OWNED) inst->state ^= STATE_OWNED_BY_OPPONENT;
+  if (state & DUEL_STATE_TOKEN) inst->token_status |= STATUS_TOKEN;
   return ref;
 }
 void duel_test_prepare_fixture(void) {
@@ -491,4 +498,14 @@ void duel_test_ai_turns(int count) {
   }
   g_duel_ai_mode_state = previous;
   duel_host_set_ai_choices(0);
+}
+
+extern char *get_displayed_card_name(int player, int card);
+extern void manalinkeh_format_manacost_into_global_allpurpose_buffer(int, int *, int, int);
+extern char global_all_purpose_buffer[1024];
+const char *duel_test_card_name(DuelTestRef ref) { return get_displayed_card_name(ref.player, ref.card); }
+const char *duel_test_payment_prompt(void) {
+  int cost[8] = {2, 0, 0, 0, 0, 0, 0, 0};
+  manalinkeh_format_manacost_into_global_allpurpose_buffer(0, cost, 0, -1);
+  return global_all_purpose_buffer;
 }

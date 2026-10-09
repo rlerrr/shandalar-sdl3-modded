@@ -116,6 +116,91 @@
         }
       ],
       "seed": 123
+    },
+    {
+      "name": "SwordstoPlowshares_NegativePowerGainsNoLife",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Swords to Plowshares",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hydrosurge",
+          "ref": "shrink",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "shrink",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "power",
+          "value": -3
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "exile",
+          "value": 106
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "notes": "Hydrosurge supplies an independent -5/-0 effect to Grizzly Bears (2/2). Expected signed power -3; calculated gain/damage/X amounts cannot be negative."
     }
   ]
 }

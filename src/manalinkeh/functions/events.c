@@ -812,11 +812,10 @@ int get_abilities(int player, int card, event_t event, int new_attacking_card)
 
 	  if (event == EVENT_POWER)
 		{
-		  if (event_result < 0)
-			event_result = 0;
-
+		  /* Power is a signed characteristic.  Damage and other action amounts
+		   * clamp at their own boundaries; queries must retain negative power. */
 		  if (instance->token_status & STATUS_BERSERK)
-			event_result *= 2;
+			event_result += MAX(0, event_result);
 		}
 	}
 

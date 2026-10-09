@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Chandra's Revolution",
+  "csvid": 16675,
+  "cases": [
+    {
+      "name": "RestoredBinding_16675_CreatureDamageLandTap",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Wall of Stone",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "land",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Chandra's Revolution",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "land",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "damage",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "land",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 16675
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

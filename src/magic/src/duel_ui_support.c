@@ -198,11 +198,11 @@ void show_duel_card_preview(unsigned int internal_card_id, int player, int card,
     {
       if (player != -1 && card != -1)
       {
-        SendMessageA((HWND)g_duel_card_preview_window_hwnd, 0x401, CardIDFromType(internal_card_id), (LPARAM)&preview_player);
+        SendMessageA((HWND)g_duel_card_preview_window_hwnd, 0x401, CardIDFromInternalIndex(internal_card_id), (LPARAM)&preview_player);
       }
       else
       {
-        SendMessageA((HWND)g_duel_card_preview_window_hwnd, 0x401, CardIDFromType(internal_card_id), 0);
+        SendMessageA((HWND)g_duel_card_preview_window_hwnd, 0x401, CardIDFromInternalIndex(internal_card_id), 0);
       }
     }
   }

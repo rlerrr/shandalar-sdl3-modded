@@ -675,7 +675,7 @@ int show_cardlist(int *graveyard,
   dialog_context.window_title = window_title;
   for (index = 0; count > index && graveyard[index] != -1; ++index)
   {
-    dialog_context.displayed_csvids[index] = CardIDFromType(graveyard[index]);
+    dialog_context.displayed_csvids[index] = CardIDFromInternalIndex(graveyard[index]);
   }
 
   dialog_context.item_count = index;

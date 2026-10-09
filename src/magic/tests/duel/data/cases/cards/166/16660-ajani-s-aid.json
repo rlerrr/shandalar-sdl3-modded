@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "card": "Ajani's Aid",
+  "csvid": 16660,
+  "cases": [
+    {
+      "name": "RestoredBinding_16660_FindPlaneswalker",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Ajani, Valiant Protector",
+          "ref": "find",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Ajani's Aid",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 16662
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_16660_FindInGraveyard",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Ajani, Valiant Protector",
+          "ref": "find",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Ajani's Aid",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 16662
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

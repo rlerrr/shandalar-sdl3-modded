@@ -1,0 +1,114 @@
+{
+  "version": 1,
+  "card": "Consulate Dreadnought",
+  "csvid": 16678,
+  "cases": [
+    {
+      "name": "RestoredBinding_16678_CrewSix",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Consulate Dreadnought",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "crew1",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "crew2",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "crew1",
+          "player": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "crew2",
+          "player": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "crew1",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "crew2",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 11
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_16678_InsufficientCrew",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Consulate Dreadnought",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "crew1",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

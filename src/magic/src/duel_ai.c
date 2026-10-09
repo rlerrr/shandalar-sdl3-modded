@@ -8,6 +8,7 @@
 #include "defs.h"
 #include "magic/src/cards.h"
 #include "magic/src/duel_engine.h"
+#include "magic/src/duel_host.h"
 #include "magic/src/game_support.h"
 #include "magic/src/global_duel_ui_ids.h"
 #include "magic/src/global_other.h"
@@ -98,6 +99,7 @@ extern int g_ai_response_state;
 
 typedef struct
 {
+  uint32_t host_random_state;
   card_instance_t card_instances[2][151];
   card_data_t extra_card_data[16];
   int library[2][500];
@@ -1496,6 +1498,7 @@ void duel_engine_capture_ai_snapshot(void *destination)
 {
   AiSearchBackup *backup = destination;
 
+  backup->host_random_state = duel_host_capture().random_state;
   memcpy(backup->card_instances, global_card_instances, sizeof(backup->card_instances));
   memcpy(backup->extra_card_data, global_cards_data + g_card_count, sizeof(backup->extra_card_data));
   memcpy(backup->library, global_library, sizeof(backup->library));
@@ -1567,6 +1570,11 @@ void duel_engine_restore_ai_snapshot(const void *source)
 {
   const AiSearchBackup *backup = source;
 
+  /* Restore decisions' RNG stream without refunding the search's time or
+   * execution budget.  Refreshing the AI random table consumes this stream. */
+  DuelHostState host_state = duel_host_capture();
+  host_state.random_state = backup->host_random_state;
+  duel_host_restore(host_state);
   memcpy(global_card_instances, backup->card_instances, sizeof(backup->card_instances));
   memcpy(global_cards_data + g_card_count, backup->extra_card_data, sizeof(backup->extra_card_data));
   memcpy(global_library, backup->library, sizeof(backup->library));

@@ -6,13 +6,18 @@
 extern "C" {
 #endif
 enum { DUEL_ZONE_HAND, DUEL_ZONE_BATTLEFIELD, DUEL_ZONE_LIBRARY, DUEL_ZONE_GRAVEYARD, DUEL_ZONE_EXILE };
-enum { DUEL_STATE_TAPPED = 1, DUEL_STATE_SICK = 2, DUEL_STATE_ATTACKING = 4, DUEL_STATE_UNTAPPED = 8 };
+enum { DUEL_STATE_TAPPED = 1, DUEL_STATE_SICK = 2, DUEL_STATE_ATTACKING = 4, DUEL_STATE_UNTAPPED = 8,
+       DUEL_STATE_OPPONENT_OWNED = 16, DUEL_STATE_TOKEN = 32 };
 typedef struct { int player, card; } DuelTestRef;
 typedef struct {
   int csvid, power, toughness, tapped, sick, attacking, in_play, in_hand, damage, blocking_count, blocked;
 } DuelTestCard;
 typedef struct DuelTestSnapshot DuelTestSnapshot;
 int duel_test_initialize(const char *assets);
+int duel_test_handler_matches_override(int csvid);
+int duel_test_energy(int player);
+const char *duel_test_card_name(DuelTestRef ref);
+const char *duel_test_payment_prompt(void);
 void duel_test_probe_presentation(void);
 void duel_test_reset(uint32_t seed);
 DuelTestRef duel_test_add(int player, int zone, int csvid, int state);

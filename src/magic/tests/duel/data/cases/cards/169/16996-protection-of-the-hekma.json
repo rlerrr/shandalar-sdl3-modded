@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Protection of the Hekma",
+  "csvid": 16996,
+  "cases": [
+    {
+      "name": "RestoredBinding_16996_OpponentDamageReduced",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Protection of the Hekma",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "attacker",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "attacker",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 18
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

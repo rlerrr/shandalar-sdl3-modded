@@ -51,6 +51,7 @@ int duel_host_random(void)
   duel_host_checkpoint("execution budget exhausted during RNG");
   x = state.random_state;
   x ^= x << 13; x ^= x >> 17; x ^= x << 5;
+  if (getenv("DUEL_TEST_TRACE")) fprintf(stderr, "RNG before=%u after=%u\n", state.random_state, x);
   state.random_state = x;
   return (int)(x & 0x7fffffff);
 }

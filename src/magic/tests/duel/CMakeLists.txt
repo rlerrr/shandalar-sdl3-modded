@@ -22,6 +22,9 @@ set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
   data/fixtures.json data/oracle.json data/oracle_aliases.json generate_cases.py case_files.py recipes.py destruction_recipes.py movement_recipes.py stat_recipes.py
   ${duel_case_files}
   "${SHANDALAR_SRC_ROOT}/magic/src/carddata.c")
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  "${CMAKE_SOURCE_DIR}/tools/carddata_handler_overrides.json"
+  "${CMAKE_SOURCE_DIR}/tools/import_carddata.py")
 execute_process(COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/generate_cases.py"
   --output "${duel_generated}" COMMAND_ERROR_IS_FATAL ANY)
 set(duel_globals "${duel_generated}/duel_snapshot_globals.inc")
@@ -70,3 +73,11 @@ set_tests_properties(duel.case_files PROPERTIES LABELS "duel;harness" TIMEOUT 15
 add_test(NAME duel.recipes COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/test_recipes.py")
 set_tests_properties(duel.recipes PROPERTIES LABELS "duel;harness" TIMEOUT 15)
+
+add_test(NAME duel.handler_overrides COMMAND "${Python3_EXECUTABLE}"
+  "${CMAKE_SOURCE_DIR}/tools/test_import_carddata.py")
+set_tests_properties(duel.handler_overrides PROPERTIES LABELS "duel;harness" TIMEOUT 15)
+
+add_test(NAME duel.runner_expectations COMMAND "${Python3_EXECUTABLE}"
+  "${CMAKE_CURRENT_SOURCE_DIR}/test_run_cases.py")
+set_tests_properties(duel.runner_expectations PROPERTIES LABELS "duel;harness" TIMEOUT 15)

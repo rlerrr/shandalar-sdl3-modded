@@ -8,7 +8,7 @@ extern "C" {
 /* Input and presentation boundaries only; legality and game rules stay in the engine. */
 typedef enum {
   DUEL_CHOICE_TARGET, DUEL_CHOICE_ZONE, DUEL_CHOICE_DIALOG,
-  DUEL_CHOICE_NUMBER, DUEL_CHOICE_COLOR, DUEL_CHOICE_PRIORITY
+  DUEL_CHOICE_NUMBER, DUEL_CHOICE_COLOR, DUEL_CHOICE_PRIORITY, DUEL_CHOICE_MANA
 } DuelChoiceKind;
 typedef struct {
   DuelChoiceKind kind;

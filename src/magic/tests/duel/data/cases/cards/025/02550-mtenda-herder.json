@@ -85,7 +85,7 @@
           "op": "assert_card",
           "ref": "wall",
           "property": "power",
-          "value": 0
+          "value": -1
         },
         {
           "op": "assert_card",

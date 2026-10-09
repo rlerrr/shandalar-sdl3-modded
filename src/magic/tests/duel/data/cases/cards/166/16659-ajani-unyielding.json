@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Ajani Unyielding",
+  "csvid": 16659,
+  "cases": [
+    {
+      "name": "RestoredBinding_16659_ExileAndLife",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Ajani Unyielding",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "choose_dialog",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "exile",
+          "value": 106
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 22
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

@@ -335,9 +335,10 @@ print(json.dumps(expand('Concentrate',999,dict(family='draw_cards',version=1),Re
                      dict(filter="Behavior.NowFixed", card="Shock", status="unexpected_pass", failure_kind="passed",
                           log=str(log), xml=str(root / "missing.xml")),
                      dict(filter="Behavior.Passes", status="passed"),
-                     dict(filter="Behavior.Known", status="known_failure")]
+                     dict(filter="Behavior.Known", status="known_failure"),
+                     dict(filter="Behavior.Missing", status="unimplemented")]
             summary = root / "summary.json"
-            summary.write_text(json.dumps(dict(results=cases, counts=dict(passed=1,known_failure=1,failed=1,unexpected_pass=1))))
+            summary.write_text(json.dumps(dict(results=cases, counts=dict(passed=1,known_failure=1,unimplemented=1,failed=1,unexpected_pass=1))))
             report = review([summary])["runs"][0]
             self.assertEqual([f["filter"] for f in report["failures"]], ["Behavior.NewFailure", "Behavior.NowFixed"])
             self.assertEqual(report["failures"][0]["diagnostics"], [dict(error="DUEL_HARNESS_ERROR: missing target")])

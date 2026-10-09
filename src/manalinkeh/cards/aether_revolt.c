@@ -28,10 +28,50 @@ static int improvise_impl(int player, int card, event_t event, int x_spell){
 		td.allowed_controller = td.preferred_controller = player;
 		td.illegal_state = TARGET_STATE_TAPPED;
 		td.illegal_abilities = 0;
-		COST_COLORLESS -= target_available(player, card, &td);
+		int printed = cards_ptr[get_id(player, card)]->req_colorless;
+		if (printed == 40) printed = 0;
+		int discount = MIN(MAX(0, printed + COST_COLORLESS), target_available(player, card, &td));
+		get_card_instance(player, card)->targets[18].player = discount;
+		COST_COLORLESS -= discount;
 	}
 
 	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
+		/* The engine already paid the computed colored and undiscounted
+		 * generic cost. Fixed-cost spells only owe the improvise discount,
+		 * paid by tapping artifacts or by supplying the remaining mana. */
+		if (!x_spell && !played_for_free(player, card) && !is_token(player, card)){
+			card_instance_t *inst = get_card_instance(player, card);
+			int remaining = MAX(0, inst->targets[18].player);
+			if (!remaining)
+				return 1;
+			target_definition_t td;
+			default_target_definition(player, card, &td, TYPE_ARTIFACT);
+			td.allowed_controller = td.preferred_controller = player;
+			td.illegal_state = TARGET_STATE_TAPPED;
+			td.illegal_abilities = 0;
+			int use = DIALOG(player, card, event, DLG_NO_STORAGE,
+				"Use Improvise", can_target(&td), 1, "Play normally", 1, 1);
+			if (!use){ spell_fizzled = 1; return 0; }
+			int tapped = 0;
+			int selected[151];
+			if (use == 1){
+				while (remaining > 0 && can_target(&td)){
+					if (!new_pick_target(&td, "Select an artifact you control to tap.", 0, GS_LITERAL_PROMPT))
+						break;
+					selected[tapped++] = inst->targets[0].card;
+					state_untargettable(player, inst->targets[0].card, 1);
+					--remaining;
+				}
+			}
+			inst->number_of_targets = 0;
+			if (remaining > 0)
+				charge_mana(player, COLOR_COLORLESS, remaining);
+			for (int i = 0; i < tapped; ++i){
+				state_untargettable(player, selected[i], 0);
+				if (spell_fizzled != 1) tap_card(player, selected[i]);
+			}
+			return spell_fizzled == 1 ? 0 : (tapped ? 2 : 1);
+		}
 		if( x_spell )
 			set_special_flags2(player, card, SF2_X_SPELL);
 		if( ! played_for_free(player, card) && ! is_token(player, card) ){
@@ -162,10 +202,8 @@ Enchanted creature gets +2/+2 and has flying.
 		int p = instance->damage_target_player;
 		int c = instance->damage_target_card;
 
-		if( ! affect_me(p, c) )
-			return 0;
-
-		switch( event ){
+		if( affect_me(p, c) ){
+			switch( event ){
 				case EVENT_POWER:
 				case EVENT_TOUGHNESS:
 					event_result += 2;
@@ -175,20 +213,21 @@ Enchanted creature gets +2/+2 and has flying.
 					break;
 				default:
 					break;
-		}
-
-		if( event == EVENT_CHANGE_TYPE && has_subtype(p, c, SUBTYPE_VEHICLE) ){
-			if( ! is_what(-1, event_result, TYPE_CREATURE) ){
-				if( instance->dummy3 < 1 ){
-					int newtype = create_a_card_type(event_result);
-					cards_at_7c7000[newtype]->type |= (cards_data[event_result].type | TYPE_CREATURE);
-					instance->dummy3 = newtype;
-					add_status(p, c, STATUS_ANIMATED);
-				}
-				event_result = instance->dummy3;
 			}
-			else{
-				remove_status(p, c, STATUS_ANIMATED);
+
+			if( event == EVENT_CHANGE_TYPE && has_subtype(p, c, SUBTYPE_VEHICLE) ){
+				if( ! is_what(-1, event_result, TYPE_CREATURE) ){
+					if( instance->dummy3 < 1 ){
+						int newtype = create_a_card_type(event_result);
+						cards_at_7c7000[newtype]->type |= (cards_data[event_result].type | TYPE_CREATURE);
+						instance->dummy3 = newtype;
+						add_status(p, c, STATUS_ANIMATED);
+					}
+					event_result = instance->dummy3;
+				}
+				else{
+					remove_status(p, c, STATUS_ANIMATED);
+				}
 			}
 		}
 	}
@@ -225,9 +264,10 @@ Whenever ~ attacks, you may pay |E|E. If you do, create a 1/1 colorless Servo ar
 */
 	// Used externally
 	etb_energy(player, card, event, 2);
-	if( attack_trigger_with_energy(player, card, event, 2) )
+	if( attack_trigger_with_energy(player, card, event, 2) ){
 	    remove_energy(player, 2);
 		make_servo(player, card, 1);
+	}
 	return 0;
 }
 
@@ -367,9 +407,10 @@ When ~ enters the battlefield, you get |E (an energy counter).
 Whenever ~ attacks, you may pay |E. If you do, it gets +2/+0 until end of turn.
 */
 	etb_energy(player, card, event, 1);
-	if( attack_trigger_with_energy(player, card, event, 1) )
+	if( attack_trigger_with_energy(player, card, event, 1) ){
 	    remove_energy(player, 1);
 		pump_until_eot(player, card, player, card, 2, 0);
+	}
 	return 0;
 }
 
@@ -890,7 +931,8 @@ Creatures you control get +1/+1 for each unity counter on ~.
 	}
 
 	if( in_play(player, card) && ! is_humiliated(player, card) ){
-		boost_creature_type(player, card, event, -1, 1, 1, 0, BCT_CONTROLLER_ONLY);
+		int bonus = count_counters(player, card, COUNTER_UNITY);
+		boost_creature_type(player, card, event, -1, bonus, bonus, 0, BCT_CONTROLLER_ONLY);
 	}
 
 	return global_enchantment(player, card, event);
@@ -955,7 +997,7 @@ Sorcery
 			damage_target0(player, card, 4);
 		}
 		if( validate_target(player, card, &td2, 1) ){
-			effect_frost_titan(player, card, instance->targets[0].player, instance->targets[0].card);
+			effect_frost_titan(player, card, instance->targets[1].player, instance->targets[1].card);
 		}
 		kill_card(player, card, KILL_DESTROY);
 	}
@@ -1000,7 +1042,7 @@ When ~ enters the battlefield, exile all artifacts your opponents control until 
 	if( comes_into_play(player, card, event) ){
 		int c = active_cards_count[1-player]-1;
 		while( c > -1 ){
-				if( in_play(1-player, c) && is_what(1-player, c, TYPE_ENCHANTMENT) ){
+				if( in_play(1-player, c) && is_what(1-player, c, TYPE_ARTIFACT) ){
 					exile_card_and_remember_it_on_exiledby(player, card, 1-player, c);
 				}
 				c--;

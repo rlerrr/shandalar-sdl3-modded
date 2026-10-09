@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Cartouche of Solidarity",
+  "csvid": 16860,
+  "cases": [
+    {
+      "name": "RestoredBinding_16860_PumpAndWarrior",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Cartouche of Solidarity",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

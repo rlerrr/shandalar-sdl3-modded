@@ -92,14 +92,14 @@ int put_card_on_stack(int player, int card, int mode)
   int saved_unk_008ce508;                     // ebp-0x20
   int saved_max_x_value;                      // ebp-0x1c
   int chosen_x_value;                         // ebp-0x18
-  int color_index;                            // ebp-0x14
+  int casting_cost[6];
+  extern char manalinkeh_cost_scratch[8];
   int saved_current_casting_internal_card_id; // ebp-0x10
   int internal_card_id;                       // ebp-0xc
   card_data_t *card_data;                     // ebp-0x8
   int saved_unk_008ce4f4;                     // ebp-0x4
 
   internal_card_id = PLAYER_CARD_INSTANCE(player, card).internal_card_id;
-  color_index = (int)single_color_test_bit_to_color_t((int)(char)global_cards_data[internal_card_id].color);
   card_data = &global_cards_data[internal_card_id];
 
   if (mode != 0)
@@ -119,6 +119,12 @@ int put_card_on_stack(int player, int card, int mode)
   {
     return 0;
   }
+
+  /* MOK 0x00402593 / 0x00402680: payment consumes the cost computed by
+   * compute_and_check_casting_cost(), including multicolor and alternative
+   * cost modifications.  cc[] and the card's color are insufficient. */
+  for (int cost_color = 0; cost_color < 6; ++cost_color)
+    casting_cost[cost_color] = (unsigned char)manalinkeh_cost_scratch[cost_color];
 
   g_ai_recorded_action = -1;
   g_adventure_world_state = 0;
@@ -150,35 +156,27 @@ int put_card_on_stack(int player, int card, int mode)
   }
   else
   {
+    for (int cost_color = 0; cost_color < 6; ++cost_color)
+      g_mana_charge[cost_color] = casting_cost[cost_color];
+    g_mana_charge[6] = 0;
+    if (card_data->type & TYPE_ARTIFACT)
+    {
+      g_mana_charge[6] = g_mana_charge[0];
+      g_mana_charge[0] = 0;
+    }
     if ((player == g_active_player || (g_duel_network_flags & 2) != 0) && g_duel_ai_mode_state != 1)
     {
-      if ((card_data->type & 0x40) != 0)
-      {
-        g_mana_charge[6] = (int)(char)card_data->cc[0];
-        g_mana_charge[6] += (int)(char)card_data->cc[1];
-      }
-      else
-      {
-        g_mana_charge[color_index] = (int)(char)card_data->cc[0];
-        g_mana_charge[0] += (int)(char)card_data->cc[1];
-      }
+      if ((char)card_data->cc[1] == -1)
+        g_mana_charge[(card_data->type & TYPE_ARTIFACT) ? 6 : 0] = -1;
 
       charge_mana_w_global_cost_mod(player, card, 0, 0);
     }
     else if ((card_data->type & 0x40) != 0)
     {
-      charge_mana_w_global_cost_mod(player, card, 6, (int)(char)card_data->cc[1] + (int)(char)card_data->cc[0]);
+      charge_mana_w_global_cost_mod(player, card, 0, 0);
     }
     else
     {
-      if ((char)card_data->cc[0] != 0)
-      {
-        g_mana_charge[color_index] = (int)(char)card_data->cc[0];
-      }
-      if (0 < (char)card_data->cc[1])
-      {
-        g_mana_charge[0] = (int)(char)card_data->cc[1];
-      }
 
       charge_mana_w_global_cost_mod(player, card, 0, 0);
 

@@ -1,0 +1,138 @@
+{
+  "version": 1,
+  "card": "Forsake the Worldly",
+  "csvid": 16912,
+  "cases": [
+    {
+      "name": "RestoredBinding_16912_ExileSolRing",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Sol Ring",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forsake the Worldly",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "exile",
+          "value": 230
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 16912
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_16912_ExileCrusade",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Crusade",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forsake the Worldly",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "exile",
+          "value": 51
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 16912
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_16912_RejectCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forsake the Worldly",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

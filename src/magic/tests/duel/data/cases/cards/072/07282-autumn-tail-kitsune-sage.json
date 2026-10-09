@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Autumn-Tail, Kitsune Sage",
+  "csvid": 7282,
+  "cases": [
+    {
+      "name": "RestoredBinding_7282_CastPrintedStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Autumn-Tail, Kitsune Sage",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 5
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_7282_NoAuraNoActivation",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Autumn-Tail, Kitsune Sage",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

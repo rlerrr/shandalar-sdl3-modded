@@ -19,11 +19,13 @@ int card_balan_wandering_knight(int player, int card, event_t event)
 	  && equipments_attached_to_me(player, card, EATM_REPORT_TOTAL) >= 2)
 	event_result |= KEYWORD_DOUBLE_STRIKE;
 
-  int c;
   if (event == EVENT_RESOLVE_ACTIVATION)
-	for (c = 0; c < active_cards_count[player]; ++c)
-	  if (in_play(player, c) && is_what(player, c, TYPE_ARTIFACT) && has_subtype(player, c, SUBTYPE_EQUIPMENT))
-		equip_target_creature(player, c, player, card);
+    {
+      card_instance_t* instance = get_card_instance(player, card);
+      for (int c = 0; c < active_cards_count[player]; ++c)
+        if (in_play(player, c) && is_what(player, c, TYPE_ARTIFACT) && has_subtype(player, c, SUBTYPE_EQUIPMENT))
+          equip_target_creature(player, c, instance->parent_controller, instance->parent_card);
+    }
 
   return generic_activated_ability(player, card, event, GAA_NONE, MANACOST_XW(1, 1), 0, NULL, NULL);
 }
@@ -57,13 +59,16 @@ int card_fortunate_few(int player, int card, event_t event)
   target_definition_t td;
   default_target_definition(player, card, &td, TYPE_PERMANENT);
   td.illegal_type = TYPE_LAND;
+  td.illegal_abilities = 0;  // Choices, not targets: shroud and protection do not apply.
+  td.allow_cancel = 0;
 
   if (event == EVENT_RESOLVE_SPELL)
 	{
 	  card_instance_t* inst = get_card_instance(player, card);
 	  APNAP(p,
 			inst->targets[p].player = inst->targets[p].card = -1;
-			td.allowed_controller = 1-p;
+			td.who_chooses = p;
+			td.allowed_controller = td.preferred_controller = 1-p;
 			if (can_target(&td)
 				&& new_pick_target(&td, "Select a nonland permanent you don't control.", p, GS_LITERAL_PROMPT))
 			  get_card_instance(inst->targets[p].player, inst->targets[p].card)->state |= STATE_CANNOT_TARGET);

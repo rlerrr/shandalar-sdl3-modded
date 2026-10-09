@@ -283,7 +283,7 @@ unsigned int get_required_mana_color_mask(int *mana)
 
 // FUNCTION: MAGIC 0x0043479e
 // FUNCTION: SHANDALAR 0x00415c7c
-int format_mana_payment_prompt(char *prompt, int *mana_cost, int x_paid, int max_x);
+void format_mana_payment_prompt(int ignored, int *mana_cost, int x_paid, int max_x);
 
 // FUNCTION: MAGIC 0x00434af9
 // FUNCTION: SHANDALAR 0x00415fd7

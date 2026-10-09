@@ -1,0 +1,132 @@
+{
+  "version": 1,
+  "card": "Aether Poisoner",
+  "csvid": 16650,
+  "cases": [
+    {
+      "name": "RestoredBinding_16650_CastPrintedStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aether Poisoner",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_16650_EntryEnergy",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aether Poisoner",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_energy",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_16650_AttackUsesEnergy",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aether Poisoner",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_energy",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_priority",
+          "ref": "source"
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_energy",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

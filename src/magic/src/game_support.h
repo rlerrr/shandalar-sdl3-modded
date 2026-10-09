@@ -94,7 +94,9 @@ void push_card_onto_stack(int player, int card, int event, int extra, int prompt
 void redirect_pending_damage_to_player(int target_player, int target_card, int damage_target_player, int unk_unused);
 int has_vigilance(int player, int card);
 char *get_hunting_subtype_name(int value);
+/* Packed adventure deck entries only. */
 int CardIDFromType(unsigned int type);
+int CardIDFromInternalIndex(unsigned int type);
 int CardTypeFromID(int csvid);
 int find_highest_value_graveyard_card_by_type(int player, unsigned int type);
 int internal_rand(int maximum);
@@ -155,7 +157,7 @@ int end_mana_payment_record(void);
 int restore_recorded_mana_to_pool(int player);
 int is_mana_cost_paid(int *mana_cost, int required_colorless, int max_x);
 unsigned int get_required_mana_color_mask(int *mana);
-int format_mana_payment_prompt(char *prompt, int *mana_cost, int x_paid, int max_x);
+void format_mana_payment_prompt(int ignored, int *mana_cost, int x_paid, int max_x);
 void auto_pay_colored_mana(int player, int *mana_paid_by_color, int *total_mana_paid, int max_colorless);
 void auto_pay_variable_mana(int player,
                             int *mana_paid_by_color,

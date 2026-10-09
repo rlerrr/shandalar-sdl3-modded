@@ -378,6 +378,13 @@ int new_global_tutor(int player, int targ_player, int search_location, int desti
 		}
 	}
 
+	/* Top-of-library tutors keep the selected cards outside the library while
+	 * shuffling the remainder.  Shuffling after insertion loses that ordering. */
+	if (search_location == TUTOR_FROM_DECK && destination == TUTOR_DECK && !avoid_shuffle){
+		shuffle(targ_player);
+		avoid_shuffle = 1;
+	}
+
 	int card_added = -1;
 	int really_tutored = 0;
 	int storage_loc = 0;

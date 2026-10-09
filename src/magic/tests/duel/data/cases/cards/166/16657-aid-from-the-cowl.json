@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Aid from the Cowl",
+  "csvid": 16657,
+  "cases": [
+    {
+      "name": "RestoredBinding_16657_NoRevoltLeavesLibrary",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "top",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Aid from the Cowl",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

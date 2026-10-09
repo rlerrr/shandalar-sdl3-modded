@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "card": "Clue",
+  "csvid": 18711,
+  "coverage_note": "Sacrifice/draw cost and real stack payment caption; excludes investigate creation and interactions with other token mechanics.",
+  "cases": [
+    {
+      "name": "Clue_SacrificeDrawAndPaymentCaption",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Forest",
+          "ref": "drawn",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Clue",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "token"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card_name",
+          "ref": "source"
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_payment_source"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ]
+}

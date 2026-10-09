@@ -1331,11 +1331,7 @@ int card_oust(int player, int card, event_t event){
 
 	if( event == EVENT_RESOLVE_SPELL ){
 		if( valid_target(&td)  ){
-			int *deck = deck_ptr[instance->targets[0].player];
-			put_on_top_of_deck(instance->targets[0].player, instance->targets[0].card);
-			int transit = deck[1];
-			deck[1] = deck[0];
-			deck[0] = transit;
+			put_permanent_under_the_first_x_card_of_its_owners_library(instance->targets[0].player, instance->targets[0].card, 1);
 			gain_life(instance->targets[0].player, 3);
 		}
 		kill_card(player, card, KILL_DESTROY);

@@ -70,7 +70,7 @@ extern int g_life_gained;
 extern int g_attacking_creature_count;
 extern int g_duel_extra_turn_player;
 extern int g_duel_state_0093a848;
-extern char manalinkeh_cost_scratch[6];
+extern char manalinkeh_cost_scratch[8];
 extern char manalinkeh_mana_scratch[8];
 extern char manalinkeh_surplus_free_mana[8];
 extern char manalinkeh_prevent_normal_graveyard_effect;
@@ -267,9 +267,10 @@ extern int shandalar_check_mana_multi(int player);
 #define PAY_MANA_WHITE g_mana_charge[5]
 #define PAY_MANA_ARTIFACT g_mana_charge[6]
 #define pay_mana_xbugrwaU g_mana_charge
-#define mana_pool g_special_mana_pool
+/* Host names distinguish mana already produced from declared source capacity. */
+#define mana_pool g_raw_mana_available
 #define needed_mana_colors g_required_mana_color_mask
-#define raw_mana_available g_raw_mana_available
+#define raw_mana_available g_special_mana_pool
 #define types_of_cards_in_graveyard g_graveyard_card_types
 #define basiclandtypes_controlled g_basiclandtypes_controlled
 #define iid_draw_a_card g_draw_card_placeholder_internal_card_id

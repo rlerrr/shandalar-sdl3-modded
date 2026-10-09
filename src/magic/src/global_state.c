@@ -1288,14 +1288,14 @@ int validate_loaded_duel_card_availability(void)
 
     for (card = 0; card < 500 && global_graveyard_slots[player][card] != -1; card++)
     {
-      card_id = CardIDFromType(global_graveyard_slots[player][card]);
+      card_id = CardIDFromInternalIndex(global_graveyard_slots[player][card]);
       if (card_id != 0xffffffff && is_card_available_in_installed_expansion(card_id) == 0)
         result = 0;
     }
 
     for (card = 0; card < 500 && global_library[player][card] != -1; card++)
     {
-      card_id = CardIDFromType(global_library[player][card]);
+      card_id = CardIDFromInternalIndex(global_library[player][card]);
       if (card_id != 0xffffffff && is_card_available_in_installed_expansion(card_id) == 0)
         result = 0;
     }

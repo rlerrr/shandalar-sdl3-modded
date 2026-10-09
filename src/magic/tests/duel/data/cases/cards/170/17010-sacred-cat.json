@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "card": "Sacred Cat",
+  "csvid": 17010,
+  "cases": [
+    {
+      "name": "RestoredBinding_17010_CastPrintedStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Sacred Cat",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_17010_CombatLifelink",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Sacred Cat",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 21
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 19
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

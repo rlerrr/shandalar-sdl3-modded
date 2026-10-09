@@ -3881,7 +3881,7 @@ LRESULT CALLBACK wndproc_MAGICGAME_CardClass(HWND hwnd, UINT msg, WPARAM wparam,
     {
       AppendMenuA(g_cardclass_popup_menu, MF_POPUP, (UINT_PTR)g_cardclass_alternate_card_submenu,
                   g_cardclass_menu_alternate_card_text);
-      scratch = CardIDFromType(counter_power);
+      scratch = CardIDFromInternalIndex(counter_power);
       ModifyMenuA(g_cardclass_alternate_card_submenu, 0x72, 0, 0x72,
                   global_raw_cards_storage[scratch].full_name);
     }

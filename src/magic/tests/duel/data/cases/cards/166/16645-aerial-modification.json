@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Aerial Modification",
+  "csvid": 16645,
+  "cases": [
+    {
+      "name": "RestoredBinding_16645_CreaturePump",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Aerial Modification",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 4
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 2
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

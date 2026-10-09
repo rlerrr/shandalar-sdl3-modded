@@ -107,7 +107,7 @@ def review(paths, brief=False):
         summary = json.loads(path.read_text())
         failures = []
         for result in summary["results"]:
-            if result["status"] in ("passed", "known_failure"):
+            if result["status"] in ("passed", "known_failure", "unimplemented"):
                 continue
             diagnostics = []
             xml = Path(result["xml"])

@@ -15,6 +15,7 @@
 #include "magic/src/global_strings.h"
 #include "magic/src/global_state.h"
 #include "shared_startup.h"
+#include "carddata_generated.h"
 #ifdef SHANDALAR
 #include "shandalar/src/card_pool.h"
 #endif
@@ -166,17 +167,24 @@ static __inline void append_startup_error(char *message_buffer, const char *path
 
 // FUNCTION: MAGIC 0x004a59ad
 // FUNCTION: SHANDALAR 0x00557b2d
-int CardIDFromType(unsigned int type)
+int CardIDFromInternalIndex(unsigned int type)
 {
-  if (type == -1)
+  if (type >= SHANDALAR_CARD_DATA_COUNT)
   {
     return -1;
   }
-  else
+  return global_cards_data[type].id;
+}
+
+/* Adventure deck words pack flags into bits 14 and 15. Duel indices are
+ * unencoded and must use CardIDFromInternalIndex, including activation effects. */
+int CardIDFromType(unsigned int type)
+{
+  if (type == (unsigned int)-1)
   {
-    type &= ADVENTURE_DECK_CARD_ID_MASK;
-    return global_cards_data[type].id;
+    return -1;
   }
+  return CardIDFromInternalIndex(type & ADVENTURE_DECK_CARD_ID_MASK);
 }
 
 // FUNCTION: MAGIC 0x004a5929

@@ -453,8 +453,11 @@ int get_original_internal_card_id(int player, int card){
 void obliterate_card(int player, int card){
 	card_instance_t* instance = get_card_instance(player, card);
 	if (in_play(player, card) || in_hand(player, card)){
+        int owner = get_owner(player, card);
+        int inserted = !(instance->token_status & (STATUS_TOKEN | STATUS_OBLITERATED));
 		put_on_top_of_deck(player, card);
-		remove_card_from_deck(player, 0);
+        if (inserted)
+          remove_card_from_deck(owner, 0);
 	} else {
 		instance->internal_card_id = -1;	// This is likely all that's really necessary
 		instance->damage_on_card = 0;
@@ -467,8 +470,11 @@ void obliterate_card(int player, int card){
 void obliterate_card_and_recycle(int player, int card){
 	card_instance_t* instance = get_card_instance(player, card);
 	if (in_play(player, card) || in_hand(player, card)){
+        int owner = get_owner(player, card);
+        int inserted = !(instance->token_status & (STATUS_TOKEN | STATUS_OBLITERATED));
 		put_on_top_of_deck(player, card);
-		remove_card_from_deck(player, 0);
+        if (inserted)
+          remove_card_from_deck(owner, 0);
 	} else {
 		instance->internal_card_id = -1;
 		instance->original_internal_card_id = -1;	// This is the difference from obliterate_card()
@@ -845,7 +851,26 @@ int from_graveyard_to_deck(int player, int selected, int action){
   return action;
 }
 
-void real_put_on_top_of_deck(int player, int card);
+/* The host's real_put_on_top_of_deck() inserts a raw IID.  Manalink's
+ * identically named import instead removes an instance from its current zone. */
+static void real_put_on_top_of_deck(int player, int card)
+{
+  card_instance_t* instance = get_card_instance(player, card);
+  if (instance->internal_card_id < 0)
+    return;
+
+  int owner = get_owner(player, card);
+  int iid = instance->original_internal_card_id;
+  int insert = !(instance->token_status & (STATUS_TOKEN | STATUS_OBLITERATED));
+  if (in_play(player, card))
+    dispatch_trigger2(current_turn, TRIGGER_LEAVE_PLAY, "Card leaving play", 0, player, card);
+
+  instance->internal_card_id = -1;
+  destroy_attached_auras_and_obliterate_card(player, card);
+  if (insert)
+    raw_put_iid_on_top_of_deck(owner, iid);
+  call_sub_437E20_unless_ai_is_speculating();
+}
 void put_on_top_of_deck(int player, int card){
 	// Hack for "hydra heads"
 	if( is_hydra_head(player, card) ){

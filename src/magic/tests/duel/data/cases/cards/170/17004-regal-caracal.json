@@ -1,0 +1,112 @@
+{
+  "version": 1,
+  "card": "Regal Caracal",
+  "csvid": 17004,
+  "cases": [
+    {
+      "name": "RestoredBinding_17004_CastPrintedStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Regal Caracal",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 3
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_17004_CatsNotKnights",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Sacred Cat",
+          "ref": "cat",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "White Knight",
+          "ref": "knight",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Regal Caracal",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card",
+          "ref": "cat",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "cat",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "knight",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "knight",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 5
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

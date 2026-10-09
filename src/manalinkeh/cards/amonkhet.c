@@ -365,7 +365,7 @@ int card_regal_caracal(int player, int card, event_t event)
    * Other Cats you control get +1/+1 and have lifelink.
    * When ~ enters the battlefield, create two 1/1 |Swhite Cat creature tokens with lifelink. */
 
-  boost_subtype(player, card, event, SUBTYPE_KNIGHT, 1,1, 0,SP_KEYWORD_LIFELINK, BCT_CONTROLLER_ONLY);
+  boost_subtype(player, card, event, SUBTYPE_CAT, 1,1, 0,SP_KEYWORD_LIFELINK, BCT_CONTROLLER_ONLY);
 
   etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 

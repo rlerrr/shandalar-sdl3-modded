@@ -20,6 +20,7 @@ data/
   oracle.json
   oracle_aliases.json
   known_failures.json
+  unimplemented.json
   legacy_exceptions.json
 ```
 
@@ -137,6 +138,36 @@ Known assertion failures specify an exact `assertion_count` as well as matching
 diagnostic patterns. Additional or missing failures do not match that baseline;
 an unexpected pass also fails the gate. Harness errors cannot be baselined.
 
+`known_failures.json` contains defects in implemented behavior. Missing handlers
+live separately in `unimplemented.json`, currently 342 cases across 60 cards.
+These are reviewed missing implementations, not every `card_dummy` record:
+vanilla creatures can correctly use that handler. The runner discovers this
+companion file beside `--baseline`, or accepts an explicit `--unimplemented` path.
+
+Missing cases still execute their unchanged Oracle assertions. Matching results
+report `unimplemented` separately from `known_failure` and passing coverage, and
+stay out of failure-only recipe review reports. Additional assertions, different
+failures, crashes, unscripted choices, and unexpected passes still fail the gate.
+Generated manifests include handler identities; a changed handler or card identity
+requires reviewing and retiring/reclassifying its missing-implementation entries,
+even if its assertions still fail. Removed case names and entries listed in both
+files are rejected. When implementing a card, remove its missing entries and run
+all its cases; any remaining real defects belong in the known-failure file after
+review. Tests and recipes remain in their original card files.
+
+
+## Recovered handler bindings
+
+The `binding` tier checks that all 46 explicitly recovered records point to their
+reviewed, compiled handlers:
+
+```powershell
+ctest --test-dir out/build/shandalar-clang-x86 -L binding --output-on-failure
+```
+
+Use the Wasm build directory for Node checks, or select `--tier binding` in
+`run_cases.py`. These wiring checks are not rules coverage. `Behavior.RestoredBinding_*` cases check focused Oracle components;
+each card file records their limits in `binding_recovery_coverage`.
 
 ## Current action interface
 
@@ -148,8 +179,20 @@ the harness, so test authors can express those expectations correctly:
   should not assume a payment policy absent an explicit fixture constraint.
   `assert_mana_total` takes `player` and `value`, and sums the six spendable pools.
   Use it to check generic costs without requiring a particular payment color.
+- `assert_energy` takes `player` and `value` and inspects the real engine
+  energy counters. Energy also appears in native/Wasm observable state output.
 - `choose_color` uses those same indices and queues a color decision before an
   activation. The harness rejects choices outside the offered color mask.
+- `choose_mana` takes `player` and `color` and queues a click on an existing
+  mana pool during payment. Use repeated choices to spend colored mana toward
+  a generic cost explicitly. This drives the engine's normal payment code;
+  clicking an empty pool fails the harness. Hybrid payment dialogs still use
+  `choose_dialog` to select a combination before payment begins.
+- Battlefield setup states `opponent_owned` and `token` describe ownership and
+  token status. `opponent_owned` selects the opposite owner from the fixture's
+  controller; it does not change control. These allow library movement cases to
+  check the owner's ordered zone and verify that tokens disappear without
+  adding a library card.
 - Fixtures refresh the engine's cached abilities and mana colors before querying
    actions, and start outside mana payment. An explicit `untapped` setup state
    describes an established permanent, including one that originally entered

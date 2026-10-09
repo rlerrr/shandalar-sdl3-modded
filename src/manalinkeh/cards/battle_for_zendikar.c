@@ -110,6 +110,12 @@ static int awaken_tgt(int player, int card, event_t event, int flags, target_def
 			  cancel = 1;
 			  break;
 		  }
+	  /* Cost modification deferred payment when awaken was affordable.  Even
+	   * without a legal land target, the normal spell still needs payment. */
+	  if (inst->info_slot == CARD_ID_AWAKENING && !can_target(&td_land)
+		  && !played_for_free(player, card) && !is_token(player, card)
+		  && !check_special_flags(player, card, SF_NOT_CAST))
+		charge_mana_from_id(player, card, event, get_id(player, card));
 	}
 
   if (cancel == 1)

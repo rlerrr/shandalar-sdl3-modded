@@ -592,6 +592,23 @@ int select_card_for_action(int player,
                            int dialog_mode)
 {
   if (duel_host_is_headless()) {
+    if (duel_host_scripted_input() && (g_land_can_be_played & LCBP_CHARGING_MANA)) {
+      int color;
+      int selected = duel_host_choose(DUEL_CHOICE_MANA, player, prompt, 0, NULL, &color);
+      if (selected == -3) {
+        if (color < 0 || color > 6 || g_raw_mana_available[player][color] <= 0)
+          duel_host_fail("illegal mana-pool choice");
+        g_target_selection_status_code = -3;
+        g_recorded_action_controller = player;
+        g_recorded_action_phase = color;
+        g_target_player_choice = -1;
+        return -1;
+      }
+      if (selected == -2) { g_target_selection_status_code = -2; g_target_player_choice = player; return -1; }
+      if (selected < 0 || selected >= g_active_cards_count[player]) duel_host_fail("illegal mana-source choice");
+      g_target_selection_status_code = 0; g_target_player_choice = player;
+      return selected;
+    }
     int selected = duel_host_scripted_input()
       ? duel_host_choose(DUEL_CHOICE_PRIORITY, player, prompt, 0, NULL, NULL)
       : choose_ai_main_phase_action(player);

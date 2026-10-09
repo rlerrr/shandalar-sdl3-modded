@@ -28,6 +28,7 @@ extern void *g_shared_startup_allocation;
 void set_global_base_directory(char *path);
 int setup_paths_and_load_text_etc(char *message_buffer);
 int CopyRawCardNamesAndRarities(void);
+int CardIDFromInternalIndex(unsigned int type);
 int InitMpstimeVxdTimer(void);
 void FreeBaseTextBuffer(void);
 void free_duel_interface_resource_buffer(void);

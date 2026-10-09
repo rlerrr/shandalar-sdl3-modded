@@ -211,13 +211,13 @@ char *get_displayed_card_name(int player, int card)
     type = PLAYER_CARD_INSTANCE(player, card).original_internal_card_id;
   }
 
-  csvid = CardIDFromType(type);
+  csvid = CardIDFromInternalIndex(type);
   card_name = "";
   if (csvid != -1)
   {
     if (csvid == g_activation_display_internal_card_id)
     {
-      csvid = CardIDFromType(get_original_internal_card_id(player, card));
+      csvid = CardIDFromInternalIndex(get_original_internal_card_id(player, card));
     }
 
     choice = (unsigned int)PLAYER_CARD_INSTANCE(player, card).display_pic_csv_id;
@@ -893,13 +893,13 @@ unsigned int refresh_duel_display_cache(void)
   g_duel_cached_graveyard_count_player_0 = 0;
   for (zone_index = 0; zone_index < 500 && global_graveyard_slots[0][zone_index] != -1; ++zone_index)
   {
-    g_duel_cached_graveyard_player_0[g_duel_cached_graveyard_count_player_0] = CardIDFromType(global_graveyard_slots[0][zone_index]);
+    g_duel_cached_graveyard_player_0[g_duel_cached_graveyard_count_player_0] = CardIDFromInternalIndex(global_graveyard_slots[0][zone_index]);
     ++g_duel_cached_graveyard_count_player_0;
   }
   g_duel_cached_graveyard_count_player_1 = 0;
   for (zone_index = 0; zone_index < 500 && global_graveyard_slots[1][zone_index] != -1; ++zone_index)
   {
-    g_duel_cached_graveyard_player_1[g_duel_cached_graveyard_count_player_1] = CardIDFromType(global_graveyard_slots[1][zone_index]);
+    g_duel_cached_graveyard_player_1[g_duel_cached_graveyard_count_player_1] = CardIDFromInternalIndex(global_graveyard_slots[1][zone_index]);
     ++g_duel_cached_graveyard_count_player_1;
   }
 
@@ -908,13 +908,13 @@ unsigned int refresh_duel_display_cache(void)
   g_duel_cached_exile_count_player_0 = 0;
   for (zone_index = 0; zone_index < 500 && global_exile[0][zone_index] != -1; ++zone_index)
   {
-    g_duel_cached_exile_player_0[g_duel_cached_exile_count_player_0] = CardIDFromType(global_exile[0][zone_index]);
+    g_duel_cached_exile_player_0[g_duel_cached_exile_count_player_0] = CardIDFromInternalIndex(global_exile[0][zone_index]);
     ++g_duel_cached_exile_count_player_0;
   }
   g_duel_cached_exile_count_player_1 = 0;
   for (zone_index = 0; zone_index < 500 && global_exile[1][zone_index] != -1; ++zone_index)
   {
-    g_duel_cached_exile_player_1[g_duel_cached_exile_count_player_1] = CardIDFromType(global_exile[1][zone_index]);
+    g_duel_cached_exile_player_1[g_duel_cached_exile_count_player_1] = CardIDFromInternalIndex(global_exile[1][zone_index]);
     ++g_duel_cached_exile_count_player_1;
   }
 
@@ -923,13 +923,13 @@ unsigned int refresh_duel_display_cache(void)
   g_duel_cached_library_count_player_0 = 0;
   for (zone_index = 0; zone_index < 500 && global_library[0][zone_index] != -1; ++zone_index)
   {
-    g_duel_cached_library_player_0[g_duel_cached_library_count_player_0] = CardIDFromType(global_library[0][zone_index]);
+    g_duel_cached_library_player_0[g_duel_cached_library_count_player_0] = CardIDFromInternalIndex(global_library[0][zone_index]);
     ++g_duel_cached_library_count_player_0;
   }
   g_duel_cached_library_count_player_1 = 0;
   for (zone_index = 0; zone_index < 500 && global_library[1][zone_index] != -1; ++zone_index)
   {
-    g_duel_cached_library_player_1[g_duel_cached_library_count_player_1] = CardIDFromType(global_library[1][zone_index]);
+    g_duel_cached_library_player_1[g_duel_cached_library_count_player_1] = CardIDFromInternalIndex(global_library[1][zone_index]);
     ++g_duel_cached_library_count_player_1;
   }
 
@@ -1107,7 +1107,7 @@ void draw_displayed_card_overlaid_full_card(HDC dc, RECT *rect, int player, int 
   }
 
   displayed_type = get_displayed_card_base_internal_id(player, card);
-  card_id = CardIDFromType(displayed_type);
+  card_id = CardIDFromInternalIndex(displayed_type);
   if ((card_id == g_activation_display_internal_card_id && get_displayed_card_original_internal_id(player, card) == g_draw_card_placeholder_internal_card_id) || card_id == g_card_back_display_internal_card_id)
   {
     DrawCardBack(dc, rect);
@@ -1600,7 +1600,7 @@ INT_PTR CALLBACK big_card_choice_dialog_proc(HWND hwnd, UINT msg, WPARAM wparam,
     {
       ApplyCardArtPaletteToDc(paint_dc);
       card_image_number = get_displayed_card_id(g_big_card_choice_dialog_context->bigcard_player, g_big_card_choice_dialog_context->bigcard_card);
-      card_id = CardIDFromType(get_displayed_card_original_internal_id(g_big_card_choice_dialog_context->bigcard_player, g_big_card_choice_dialog_context->bigcard_card));
+      card_id = CardIDFromInternalIndex(get_displayed_card_original_internal_id(g_big_card_choice_dialog_context->bigcard_player, g_big_card_choice_dialog_context->bigcard_card));
       if (card_image_number != -1)
       {
         picture_number = get_card_display_pic_num(card_image_number,

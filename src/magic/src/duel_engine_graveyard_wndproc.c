@@ -366,12 +366,12 @@ void copy_cached_ante_cards(int *opponent_antes, int *opponent_count, int *playe
   *opponent_count = g_duel_cached_ante_count_player_1;
   for (index = 0; index < g_duel_cached_ante_count_player_1; index++)
   {
-    opponent_antes[index] = CardIDFromType(g_duel_cached_ante_player_1[index]);
+    opponent_antes[index] = CardIDFromInternalIndex(g_duel_cached_ante_player_1[index]);
   }
   *player_count = g_duel_cached_ante_count_player_0;
   for (index = 0; index < g_duel_cached_ante_count_player_0; index++)
   {
-    player_antes[index] = CardIDFromType(g_duel_cached_ante_player_0[index]);
+    player_antes[index] = CardIDFromInternalIndex(g_duel_cached_ante_player_0[index]);
   }
   LeaveCriticalSection(&g_duel_render_lock);
 }

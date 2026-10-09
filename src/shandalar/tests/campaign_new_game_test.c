@@ -144,6 +144,13 @@ int main(int argc, char **argv)
   snprintf(fixture_ini, sizeof(fixture_ini), "%s/Shandalar.ini", fixture_directory);
   if (argc != 2 || campaign_chdir(argv[1]) != 0) return 2;
   g_card_count = SHANDALAR_CARD_DATA_ACTIVE_COUNT;
+  for (iid = 0; iid < g_card_count; ++iid)
+    check(CardIDFromInternalIndex(iid) == global_cards_data[iid].id,
+          "Raw duel indices must preserve every card index bit");
+  check(CardIDFromInternalIndex((unsigned int)-1) == -1,
+        "Invalid duel index must not resolve to a card");
+  check(CardIDFromInternalIndex(SHANDALAR_CARD_DATA_COUNT) == -1,
+        "Out-of-range duel index must not read beyond the card table");
   memset(g_initial_library, 0, sizeof(g_initial_library));
   g_initial_library[1][0].csvid = 4664; /* Animate Land: absent from imported engine table. */
   g_initial_library[1][0].numcards = 1;
@@ -315,3 +322,6 @@ int main(int argc, char **argv)
   free(global_base_txt);
   return failures ? 1 : 0;
 }
+
+/* This isolated campaign test uses the ordinary host RNG and its srand seeds. */
+int duel_host_random(void) { return rand(); }

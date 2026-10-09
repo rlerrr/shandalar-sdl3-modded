@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Battle at the Bridge",
+  "csvid": 16672,
+  "cases": [
+    {
+      "name": "RestoredBinding_16672_NoCreatureNoCast",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Battle at the Bridge",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

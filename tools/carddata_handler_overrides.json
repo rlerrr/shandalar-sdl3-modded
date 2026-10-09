@@ -1,0 +1,285 @@
+{
+  "version": 1,
+  "cards": {
+    "16158": {
+      "name": "Mockery of Nature",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_mockery_of_nature",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/eldritch_moon.c; source CSV still assigns the dummy address.",
+      "new_field_or": 1
+    },
+    "16644": {
+      "name": "Aegis Automaton",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_aegis_automaton",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16645": {
+      "name": "Aerial Modification",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_aerial_modification",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16646": {
+      "name": "Aeronaut Admiral",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_aeronaut_admiral",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16647": {
+      "name": "Aether Chaser",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_aether_chaser",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16650": {
+      "name": "Aether Poisoner",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_aether_poisoner",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16652": {
+      "name": "Aethergeode Miner",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_aethergeode_miner",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16653": {
+      "name": "Aethersphere Harvester",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_aethersphere_harvester",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16654": {
+      "name": "Aetherstream Leopard",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_aetherstream_leopard",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16655": {
+      "name": "Aethertide Whale",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_aethertide_whale",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16657": {
+      "name": "Aid from the Cowl",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_aid_from_the_cowl",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16658": {
+      "name": "Airdrop Aeronauts",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_airdrop_aeronauts",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16659": {
+      "name": "Ajani Unyielding",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_ajani_unyielding",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16660": {
+      "name": "Ajani's Aid",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_ajanis_aid",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16661": {
+      "name": "Ajani's Comrade",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_ajanis_comrade",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16662": {
+      "name": "Ajani, Valiant Protector",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_ajani_valiant_protector",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16663": {
+      "name": "Alley Evasion",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_alley_evasion",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16667": {
+      "name": "Baral's Expertise",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_barals_expertise",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16668": {
+      "name": "Baral, Chief of Compliance",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_baral_chief_of_compliance",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16669": {
+      "name": "Barricade Breaker",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_barricade_breaker",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address.",
+      "new_field_or": 1
+    },
+    "16671": {
+      "name": "Bastion Inventor",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_bastion_inventor",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address.",
+      "new_field_or": 1
+    },
+    "16672": {
+      "name": "Battle at the Bridge",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_battle_at_the_bridge",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address.",
+      "new_field_or": 1
+    },
+    "16673": {
+      "name": "Call for Unity",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_call_for_unity",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16674": {
+      "name": "Caught in the Brights",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_caught_in_the_brights",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16675": {
+      "name": "Chandra's Revolution",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_chandras_revolution",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16676": {
+      "name": "Cogwork Assembler",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_cogwork_assembler",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16677": {
+      "name": "Consulate Crackdown",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_consulate_crackdown",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16678": {
+      "name": "Consulate Dreadnought",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_consulate_dreadnought",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/aether_revolt.c; source CSV still assigns the dummy address."
+    },
+    "16834": {
+      "name": "Angel of Sanctions",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_angel_of_sanctions",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "16837": {
+      "name": "Anointer Priest",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_anointer_priest",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "16846": {
+      "name": "Binding Mummy",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_binding_mummy",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "16860": {
+      "name": "Cartouche of Solidarity",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_cartouche_of_solidarity",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "16864": {
+      "name": "Cast Out",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_cast_out",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "16892": {
+      "name": "Djeru's Resolve",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_djerus_resolve",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "16912": {
+      "name": "Forsake the Worldly",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_forsake_the_worldly",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "16949": {
+      "name": "In Oketra's Name",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_in_oketras_name",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "16982": {
+      "name": "Oketra the True",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_oketra_the_true",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "16983": {
+      "name": "Oketra's Attendant",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_oketras_attendant",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "16996": {
+      "name": "Protection of the Hekma",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_protection_of_the_hekma",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "17004": {
+      "name": "Regal Caracal",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_regal_caracal",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "17010": {
+      "name": "Sacred Cat",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_sacred_cat",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "17030": {
+      "name": "Sparring Mummy",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_sparring_mummy",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/amonkhet.c; source CSV still assigns the dummy address."
+    },
+    "17283": {
+      "name": "Balan, Wandering Knight",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_balan_wandering_knight",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/commander_2017.c; source CSV still assigns the dummy address."
+    },
+    "17293": {
+      "name": "Curse of Vitality",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_curse_of_vitality",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/commander_2017.c; source CSV still assigns the dummy address."
+    },
+    "17296": {
+      "name": "Fortunate Few",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_fortunate_few",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/commander_2017.c; source CSV still assigns the dummy address."
+    },
+    "7282": {
+      "name": "Autumn-Tail, Kitsune Sage",
+      "source_address": "0x00401000",
+      "handler": "manalinkeh_card_autumn_tail_kitsune_sage",
+      "reason": "Existing compiled implementation in src/manalinkeh/cards/champions_of_kamigawa.c; source CSV still assigns the dummy address."
+    }
+  }
+}

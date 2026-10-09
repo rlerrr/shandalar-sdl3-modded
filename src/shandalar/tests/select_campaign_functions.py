@@ -15,7 +15,7 @@ FUNCTIONS = {
     "magic/src/duel.c": ["AddCardToDeckSorted"],
     "magic/src/duel_card_state.c": ["single_color_test_bit_to_color_t"],
     "magic/src/duel_engine_main_wndproc.c": ["GetCardRarity", "ReadCsvFieldByCsvid"],
-    "magic/src/shared_startup.c": ["CardIDFromType", "CopyRawCardNamesAndRarities"],
+    "magic/src/shared_startup.c": ["CardIDFromType", "CardIDFromInternalIndex", "CopyRawCardNamesAndRarities"],
     "magic/src/duel_ai_support.c": ["internal_rand", "DrawRandomCardFromInitialLibrary"],
     "magic/src/cardlist.c": ["show_cardlist"],
 }
@@ -56,6 +56,8 @@ cardlist_context = re.search(r"(?s)typedef struct show_card_list_dialog_context_
 output.write_text('#include <stdlib.h>\n#include <string.h>\n'
     '#include "shandalar/src/shandalar_internal.h"\n'
     '#include "magic/src/game_support.h"\n'
+    '#include "magic/src/carddata_generated.h"\n'
+    '#include "magic/src/duel_host.h"\n'
     '#include "magic/src/global_other.h"\n'
     '#include "deckdll/src/card_db.h"\n'
     'int GetCardRarity(int);\nint AddCardToDeckSorted(int);\n'

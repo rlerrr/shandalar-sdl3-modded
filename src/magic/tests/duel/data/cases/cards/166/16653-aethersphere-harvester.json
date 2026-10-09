@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Aethersphere Harvester",
+  "csvid": 16653,
+  "cases": [
+    {
+      "name": "RestoredBinding_16653_EntryEnergy",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Aethersphere Harvester",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_energy",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

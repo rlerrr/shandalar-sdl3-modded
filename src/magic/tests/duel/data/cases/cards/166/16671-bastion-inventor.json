@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "card": "Bastion Inventor",
+  "csvid": 16671,
+  "cases": [
+    {
+      "name": "RestoredBinding_16671_CastPrintedStats",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Bastion Inventor",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 4
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "RestoredBinding_16671_HexproofRejectsOpponent",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Bastion Inventor",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "spell",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "spell",
+          "value": 0
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "binding_recovery_coverage": "Explicit registry binding checked separately. These cases assert only their named Oracle components; other abilities, alternative costs, multiplayer behavior and unsupported phase triggers remain outside this batch."
+}

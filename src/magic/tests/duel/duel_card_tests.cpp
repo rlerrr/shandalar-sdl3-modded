@@ -23,7 +23,7 @@ static std::string observable_state() {
   out<<"{\"stack\":"<<duel_test_stack_size()<<",\"players\":[";
   for(int p=0;p<2;++p) {
     if(p)out<<',';
-    out<<"{\"life\":"<<duel_test_life(p)<<",\"mana\":[";
+    out<<"{\"life\":"<<duel_test_life(p)<<",\"energy\":"<<duel_test_energy(p)<<",\"mana\":[";
     for(int color=0;color<6;++color){if(color)out<<',';out<<duel_test_mana(p,color);}
     out<<"],\"zones\":[";
     for(int zone=0;zone<5;++zone){if(zone)out<<',';out<<'[';for(int n=0;n<duel_test_zone_count(p,zone);++n){if(n)out<<',';out<<duel_test_zone_csvid(p,zone,n);}out<<']';}
@@ -85,6 +85,7 @@ class BehaviorTest:public testing::Test {
     else if(op=="choose_dialog")duel_test_decision(DUEL_CHOICE_DIALOG,s.player,s.value,-1);
     else if(op=="choose_number")duel_test_decision(DUEL_CHOICE_NUMBER,s.player,s.value,-1);
     else if(op=="choose_color")duel_test_decision(DUEL_CHOICE_COLOR,s.player,s.value,-1);
+    else if(op=="choose_mana")duel_test_decision(DUEL_CHOICE_MANA,s.player,-3,s.color);
     else if(op=="choose_priority")duel_test_decision(DUEL_CHOICE_PRIORITY,ref.player>=0?ref.player:s.player,ref.card>=0?ref.card:s.value,-1);
     else if(op=="choose_trigger")duel_test_decision(DUEL_CHOICE_PRIORITY,s.player,-3,duel_test_inspect(ref).csvid);
     else if(op=="can_activate")EXPECT_EQ(!!duel_test_can_activate(ref),s.value);
@@ -105,6 +106,8 @@ class BehaviorTest:public testing::Test {
     else if(op=="advance_combat")duel_test_advance_combat();
     else if(op=="turn")duel_test_set_turn(s.player,s.value);
     else if(op=="set_mana")duel_test_set_mana(s.player,s.color,s.value);
+    else if(op=="assert_card_name")EXPECT_STREQ(duel_test_card_name(ref),spec->card);
+    else if(op=="assert_payment_source")EXPECT_NE(std::string(duel_test_payment_prompt()).find(spec->card),std::string::npos);
     else if(op=="assert_card")EXPECT_EQ(property(duel_test_inspect(ref),s.property),s.value);
     else if(op=="assert_zone")EXPECT_EQ(duel_test_zone_count(s.player,s.zone),s.value);
     else if(op=="assert_zone_card")EXPECT_EQ(duel_test_zone_csvid(s.player,s.zone,s.index),s.value);
@@ -147,6 +150,7 @@ class BehaviorTest:public testing::Test {
       EXPECT_EQ(total,s.value);
     }
     else if(op=="assert_life")EXPECT_EQ(duel_test_life(s.player),s.value);
+    else if(op=="assert_energy")EXPECT_EQ(duel_test_energy(s.player),s.value);
     else if(op=="assert_stack")EXPECT_EQ(duel_test_stack_size(),s.value);
     else if(op=="assert_targets_consumed")EXPECT_EQ(duel_test_finish_target_plan(),0)<<"Unconsumed planned targets";
     else if(op=="assert_choices_consumed")EXPECT_EQ(duel_test_finish_choice_plan(),0)<<"Unconsumed planned choices";
@@ -188,6 +192,14 @@ class SmokeTest:public testing::Test {
   duel_test_free_snapshot(saved); duel_test_check_invariants(); duel_test_finish_decisions();
  }
 };
+class BindingTest:public testing::Test {
+ const Smoke *spec;
+ public: explicit BindingTest(const Smoke *s):spec(s){}
+ void TestBody() override {
+  SCOPED_TRACE(std::string(spec->name)+" CSVID "+std::to_string(spec->csvid));
+  EXPECT_TRUE(duel_test_handler_matches_override(spec->csvid));
+ }
+};
 class AITest:public testing::Test {
  unsigned seed;
  public:explicit AITest(unsigned s):seed(s){}
@@ -205,6 +217,7 @@ class AITest:public testing::Test {
  }
 };
 int main(int argc,char**argv) {
+ for(const auto &t:handler_bindings) { auto *s=&t; auto name="Card_"+std::to_string(t.csvid); testing::RegisterTest("Bindings",name.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new BindingTest(s);}); }
  for(unsigned seed:{1u,123u,999u})testing::RegisterTest("AI",("Seed_"+std::to_string(seed)).c_str(),nullptr,nullptr,__FILE__,__LINE__,[seed](){return new AITest(seed);});
  for(const auto *c:cases) testing::RegisterTest("Behavior",c->name,nullptr,nullptr,__FILE__,__LINE__,[c](){return new BehaviorTest(c);});
  for(const auto &t:templates) { auto *s=&t; auto name="Card_"+std::to_string(t.csvid); testing::RegisterTest("Templates",name.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new TemplateTest(s);}); }

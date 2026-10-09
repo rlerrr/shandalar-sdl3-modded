@@ -9,17 +9,18 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "tools"))
 from import_duel_oracle import registry
+from import_carddata import load_handler_overrides
 from case_files import load_cases
 
 ZONES = {"hand": 0, "battlefield": 1, "library": 2, "graveyard": 3, "exile": 4}
-STATES = {"tapped": 1, "sick": 2, "attacking": 4, "untapped": 8}
-OPS = {"choose_target", "choose_damage_target", "choose_damage_player", "choose_cancel_target", "choose_player", "choose_zone", "choose_dialog", "choose_number", "choose_color", "choose_priority", "choose_trigger", "can_activate",
+STATES = {"tapped": 1, "sick": 2, "attacking": 4, "untapped": 8, "opponent_owned": 16, "token": 32}
+OPS = {"choose_target", "choose_damage_target", "choose_damage_player", "choose_cancel_target", "choose_player", "choose_zone", "choose_dialog", "choose_number", "choose_color", "choose_mana", "choose_priority", "choose_trigger", "can_activate",
        "activate", "can_cast", "cast", "resolve", "cleanup", "remove_from_combat", "destroy", "attack", "block", "combat_damage", "end_combat",
        "turn", "begin_attackers", "finish_attackers", "begin_blockers", "advance_combat", "assert_card", "assert_zone", "assert_zone_card", "assert_zone_contains", "assert_zone_state",
        "assert_hand_graveyard_total", "assert_offered_count", "assert_offered_card", "record_state", "assert_recorded_state", "bind_permanent",
-       "set_mana", "assert_mana", "assert_mana_at_most", "assert_mana_total", "assert_life", "assert_stack", "assert_targets_consumed", "assert_choices_consumed", "capture", "restore", "ai_roundtrip", "ai_turns"}
+       "assert_card_name", "assert_payment_source", "set_mana", "assert_mana", "assert_mana_at_most", "assert_mana_total", "assert_life", "assert_energy", "assert_stack", "assert_targets_consumed", "assert_choices_consumed", "capture", "restore", "ai_roundtrip", "ai_turns"}
 PROPERTIES = {"csvid", "power", "toughness", "tapped", "sick", "attacking", "in_play", "in_hand", "damage", "blocking_count", "blocked"}
-REF_OPS = {"choose_target", "choose_damage_target", "choose_trigger", "can_activate", "activate", "can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card"}
+REF_OPS = {"choose_target", "choose_damage_target", "choose_trigger", "can_activate", "activate", "can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card", "assert_card_name"}
 
 def read(path):
     value = json.loads(path.read_text(encoding="utf-8"))
@@ -131,6 +132,8 @@ def build(data, output):
                 or not isinstance(step.get("value"), int) or step["value"] < 0
             ):
                 raise ValueError(f"Invalid hand/graveyard count in {name}: {step}")
+            if op == "choose_mana" and (step.get("color") not in range(7) or step.get("player", 0) not in (0, 1)):
+                raise ValueError(f"Invalid mana-pool click in {name}: {step}")
             if op == "record_state":
                 recorded_state = True
             elif op == "assert_recorded_state" and not recorded_state:
@@ -143,7 +146,7 @@ def build(data, output):
           quoted(o["oracle_id"]),quoted(text),quoted(case["fixture"]),str(case.get("seed",123)),
           f"case_cards_{i}",str(count),f"case_steps_{i}",str(len(steps_c))]) + "};\n")
         manifest.append({"filter": f"Behavior.{name}", "card": case["card"], "csvid": by_name[case["card"]]["csvid"],
-                         "oracle_id": o["oracle_id"], "fixture":case["fixture"], "seed":case.get("seed",123), "tier":"behavior",
+                         "oracle_id": o["oracle_id"], "handler": by_name[case["card"]]["handler"], "fixture":case["fixture"], "seed":case.get("seed",123), "tier":"behavior",
                          "source_file":case["_source_file"]})
         if "_recipe" in case:
             manifest[-1]["recipe"] = case["_recipe"]
@@ -173,9 +176,26 @@ def build(data, output):
         smoke.append("{" + ",".join([quoted(r["name"]),str(r["csvid"])]) + "}")
         manifest.append({"filter":f"Smoke.Card_{r['csvid']}","card":r["name"],"csvid":r["csvid"],"fixture":"stocked_zones","seed":123,"tier":"smoke"})
     chunks.append("static const Smoke smoke_cards[] = {" + ",".join(smoke) + "};\n")
+    # Wiring checks are separate from Oracle behavior coverage.
+    bindings = load_handler_overrides(ROOT / "tools/carddata_handler_overrides.json")
+    declarations, checks, binding_rows = [], [], []
+    for csvid, record in bindings.items():
+        declarations.append(f"extern int {record['handler']}(int, int, event_t);\n")
+        checks.append(f"case {csvid}: return actual == {record['handler']};\n")
+        binding_rows.append("{" + quoted(record["name"]) + "," + str(csvid) + "}")
+        manifest.append({"filter": f"Bindings.Card_{csvid}", "card": record["name"], "csvid": csvid,
+                         "fixture": "registry", "seed": 123, "tier": "binding"})
+    chunks.append("static const Smoke handler_bindings[] = {" + ",".join(binding_rows) + "};\n")
     for seed in (1,123,999):
         manifest.append({"filter":f"AI.Seed_{seed}","card":"Seeded engine duel","csvid":-1,"fixture":"stocked_zones","seed":seed,"tier":"ai"})
     output.mkdir(parents=True, exist_ok=True)
+    (output / "duel_handler_bindings.inc").write_text("".join(declarations) +
+        "int duel_test_handler_matches_override(int csvid) {\n"
+        "  for (int iid = 0; iid < SHANDALAR_CARD_DATA_ACTIVE_COUNT; ++iid) {\n"
+        "    if ((int)global_cards_data[iid].id != csvid) continue;\n"
+        "    int (*actual)(int, int, event_t) = global_cards_data[iid].code_pointer;\n"
+        "    switch (csvid) {\n" + "".join(checks) +
+        "    default: return 0;\n    }\n  }\n  return 0;\n}\n")
     (output / "duel_cases.inc").write_text("".join(chunks), encoding="utf-8")
     (output / "manifest.json").write_text(json.dumps({"version":1,"source":oracle["source"],"cases":manifest},indent=2)+"\n")
     inventory = {"version":1,"records":rows,"oracle_mapped_names":len(oracle["cards"]),

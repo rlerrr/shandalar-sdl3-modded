@@ -2823,9 +2823,10 @@ Return target permanent to its owner's hand. Then that player discards a card. *
 
 	if( event == EVENT_RESOLVE_SPELL){
 		if( valid_target(&td) ){
+			int owner = get_owner(instance->targets[0].player, instance->targets[0].card);
 			bounce_permanent(instance->targets[0].player, instance->targets[0].card);
-			if( hand_count[1-player] > 0 ){
-				discard(instance->targets[0].player, 0, player);
+			if( hand_count[owner] > 0 ){
+				discard(owner, 0, player);
 			}
 		}
 		kill_card(player, card, KILL_DESTROY );

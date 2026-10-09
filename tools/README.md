@@ -20,6 +20,21 @@ import. Zero addresses are uncoded and excluded from the playable engine table;
 vanilla cards use `card_dummy`.
 The sixteen sentinel records remain available for runtime card copies.
 
+`carddata_handler_overrides.json` records reviewed recoveries of existing compiled
+handlers whose source CSV address is still `0x00401000` (`card_dummy`). Each
+override pins the full name, CSVID, source address, handler and review reason.
+The importer fails if an overridden source record changes or disappears, rather
+than silently overriding a newer binding. Four cost-based handlers also restore
+bit 0 of `new_field`, which enables their normal `EVENT_MODIFY_COST` dispatch.
+Both generated files record the override manifest hash. Registry wiring checks
+run under the duel suite's `binding` label; Oracle behavior tests remain separate.
+
+Run importer regression checks with:
+
+```powershell
+python -m unittest discover -s tools -p test_import_carddata.py
+```
+
 `carddata_campaign_metadata.json` retains expansion eligibility and the
 campaign-only extra flags from the original Shandalar table at `0x594208`,
 keyed by CSV ID. Manalink's copies of these fields are unused and usually zero;

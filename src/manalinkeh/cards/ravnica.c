@@ -5447,14 +5447,8 @@ Target creature gets +1/+1 until end of turn. */
 		int i;
 		for(i=0; i<3; i++){
 			if( ! new_pick_target(&td, "TARGET_CREATURE", i, 1) ){
-				add_state(instance->targets[i].player, instance->targets[i].card, STATE_TARGETTED);
-			}
-			else{
 				break;
 			}
-		}
-		for(i=0; i<instance->number_of_targets; i++){
-			remove_state(instance->targets[i].player, instance->targets[i].card, STATE_TARGETTED);
 		}
 	}
 

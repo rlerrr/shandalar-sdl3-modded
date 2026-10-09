@@ -729,7 +729,7 @@ destroy that creature if it attacked this turn. */
 	if( event == EVENT_RESOLVE_SPELL ){
 		if( valid_target(&td) ){
 			pump_ability_until_eot(player, card, instance->targets[0].player, instance->targets[0].card,
-									get_power(instance->targets[0].player, instance->targets[0].card), 0, KEYWORD_TRAMPLE, 0);
+									MAX(0, get_power(instance->targets[0].player, instance->targets[0].card)), 0, KEYWORD_TRAMPLE, 0);
 			int legacy = create_targetted_legacy_effect(player, card, &effect_berserk, instance->targets[0].player, instance->targets[0].card);
 			add_status(player, legacy, STATUS_INVISIBLE_FX);
 			if( current_phase == PHASE_DISCARD ){

@@ -322,3 +322,33 @@ remaining in play after its target becomes illegal, and one is Auger Spree's
 exact-mana payment loop. The negative-power failures retain signed Oracle
 expectations; they identify the common accessor divergence rather than 23
 independent card implementation bugs.
+
+The shared-engine fixes add 21 authored regressions for normal and two-generic
+hybrid payment, stolen permanents and tokens moving into libraries, and signed
+power at combat, life-gain and sacrifice boundaries. Tower Above exercises
+`{2/G}{2/G}{2/G}` with six generic mana, three green mana, mixed combinations,
+explicit colored-pool clicks toward generic costs, and insufficient payments.
+Slitherhead exercises `{B/G}` payment choices and wrong-color rejection.
+
+Library movement now distinguishes instance slots from raw internal IDs, and
+top-of-library tutors shuffle the remaining library before placing their selected
+cards. Casting consumes the computed six-color cost, and Manalink's produced
+mana and declared source-capacity mappings match the host. Power queries retain
+negative values; damage, life gain and Berserk's computed bonus keep zero as
+their lower bound. AI snapshot restoration also restores the host random stream
+without refunding its execution budget. Broader checks exposed and corrected
+Seeds of Strength's target loop, Recoil's discard ownership, and normal payment
+for awaken spells with no eligible land.
+
+These changes retire 179 known-failure entries. Dramatic Rescue's exact-payment
+case now reaches its existing spell-cleanup bug, and Sudden Death's negative
+power case still exposes its effect occurring during casting. Their baselines
+describe those remaining defects precisely. The Mtenda Herder flanking test
+now correctly expects Wall of Stone to have -1 power and deal zero damage.
+
+Both runtimes complete 4,741 behavior cases: 4,334 pass and 407 remain known
+failures, with no new failures or unexpected passes under the updated baseline.
+All 4,740 completed state observations match between native and Wasm; the
+remaining case is the previously recorded Paralyze crash. The 21 new cases pass
+in repeated shuffled runs, and all three seeded AI scenarios and all three
+harness checks pass on each runtime. Both production game targets also build.

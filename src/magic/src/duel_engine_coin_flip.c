@@ -1561,8 +1561,8 @@ int run_duel_coin_flip_dialogs(unsigned int *starting_player,
     redraw_ante_context.starting_player = 0;
   }
 
-  redraw_ante_context.opponent_ante_card = CardIDFromType(opponent_ante_card);
-  redraw_ante_context.player_ante_card = CardIDFromType(player_ante_card);
+  redraw_ante_context.opponent_ante_card = CardIDFromInternalIndex(opponent_ante_card);
+  redraw_ante_context.player_ante_card = CardIDFromInternalIndex(player_ante_card);
   redraw_ante_context.redraw_result = redraw_result;
   redraw_ante_context.ante_result = ante_result;
   redraw_ante_context.ante_info = ante_info;
