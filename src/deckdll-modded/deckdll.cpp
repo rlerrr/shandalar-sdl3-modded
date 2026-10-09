@@ -31,6 +31,7 @@ extern "C" HWND cardlistfilter_hwnd;
 
 static void (*host_begin_deckbuilder)(void);
 static void (*host_end_deckbuilder)(void);
+static int (*host_minimum_deck_size)(void);
 static int (*debug_card_picker)(HWND);
 static int (*debug_card_sort_key)(int);
 
@@ -44,6 +45,11 @@ void deck_set_debug_card_picker(int (*pick_card)(HWND), int (*card_sort_key)(int
 {
   debug_card_picker = pick_card;
   debug_card_sort_key = card_sort_key;
+}
+
+void deck_set_minimum_deck_size_hook(int (*minimum_deck_size)(void))
+{
+  host_minimum_deck_size = minimum_deck_size;
 }
 
 //[[[ types and enums
@@ -6932,7 +6938,7 @@ wndproc_MainClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 		  return 2;
 		}
 
-	      if (global_deck_num_cards < 40)
+	      if (global_deck_num_cards < (host_minimum_deck_size ? host_minimum_deck_size() : 40))
 		{
 		  popup_loaded(hwnd, "DECKBUILDER", "TOOFEWCARDS");
 		  return 2;
