@@ -29,10 +29,20 @@ def validate_context(oracle, registry, fixtures):
             raise ValueError(f"destruction witness no longer has reviewed Oracle type: {name}")
     for name, pt in {"Grizzly Bears": ("2", "2"), "Hill Giant": ("3", "3"),
                      "Shivan Dragon": ("5", "5"), "Llanowar Elves": ("1", "1"),
-                     "Scaled Wurm": ("7", "6"), "Wall of Stone": ("0", "8")}.items():
+                     "Scaled Wurm": ("7", "6"), "Wall of Stone": ("0", "8"),
+                     "Drudge Skeletons": ("1", "1"), "Erhnam Djinn": ("4", "5")}.items():
         record = oracle.get(name, {})
         if name not in registry or (record.get("power"), record.get("toughness")) != pt:
             raise ValueError(f"recipe witness no longer has reviewed Oracle characteristics: {name}")
+    for name, colors, keyword in (("Grizzly Bears", ["G"], ""),
+                                  ("Hill Giant", ["R"], ""),
+                                  ("Shivan Dragon", ["R"], "Flying"),
+                                  ("Wall of Stone", ["R"], "Defender"),
+                                  ("Drudge Skeletons", ["B"], ""),
+                                  ("Erhnam Djinn", ["G"], "")):
+        record = oracle.get(name, {})
+        if "Creature" not in record.get("type_line", "") or record.get("colors") != colors or keyword not in record.get("oracle_text", ""):
+            raise ValueError(f"destruction predicate witness changed: {name}")
     if oracle.get("Lightning Bolt", {}).get("oracle_text") != "Lightning Bolt deals 3 damage to any target.":
         raise ValueError("recipe injury witness no longer matches reviewed Oracle")
     for name in ("empty_main", "stocked_zones"):
@@ -172,7 +182,7 @@ def expand(card_name, csvid, declaration, oracle, registry):
     version = declaration.get("version")
     if type(version) is not int or version not in (VERSION, 2):
         raise ValueError("recipe requires explicit supported version")
-    allowed = {"family", "version", "variants"} | ({"params", "oracle_text", "resolve_dialogs", "cast_dialogs", "setup"} if version == 2 else set())
+    allowed = {"family", "version", "variants"} | ({"params", "oracle_text", "resolve_dialogs", "resolve_zones", "cast_dialogs", "setup"} if version == 2 else set())
     if set(declaration) - allowed:
         raise ValueError("unknown recipe declaration fields")
     dialogs = declaration.get("resolve_dialogs", [])
@@ -200,6 +210,37 @@ def expand(card_name, csvid, declaration, oracle, registry):
     if (not isinstance(variants, list) or not variants or any(v not in supported_variants for v in variants)
             or len(set(variants)) != len(variants)):
         raise ValueError("unknown, empty, or duplicate recipe variants")
+    resolve_zones = declaration.get("resolve_zones", {})
+    if (not isinstance(resolve_zones, dict)
+            or any(v not in variants or v == "lost_target" or not isinstance(choices, list)
+                   or not choices or len(choices) > 32
+                   or any(type(n) is not int or not -1 <= n <= 499 for n in choices)
+                   for v, choices in resolve_zones.items())):
+        raise ValueError("resolve_zones requires reviewed resolution variants and zone choices")
+
+    def with_zone_choices(cases):
+        for case in cases:
+            variant = case["_recipe"]["variant"]
+            choices = resolve_zones.get(variant, [])
+            if not choices:
+                continue
+            steps = []
+            pending_source = False
+            source_resolutions = 0
+            for action in case["steps"]:
+                if action["op"] == "cast":
+                    pending_source = action.get("ref", "source") == "source"
+                if action["op"] == "resolve":
+                    if pending_source:
+                        steps += [step("choose_zone", player=0, value=n) for n in choices]
+                        source_resolutions += 1
+                    pending_source = False
+                steps.append(action)
+            if not source_resolutions:
+                raise ValueError("resolve_zones variant does not resolve a spell")
+            case["steps"] = steps
+            case["_recipe"]["resolve_zones"] = choices
+        return cases
     cast_dialogs = declaration.get("cast_dialogs", {})
     if (not isinstance(cast_dialogs, dict)
             or any(v not in variants or not isinstance(choices, list)
@@ -214,14 +255,14 @@ def expand(card_name, csvid, declaration, oracle, registry):
 
     if family == "move_permanent":
         from movement_recipes import expand as movement
-        return movement(card_name, csvid, declaration, spec, variants, registry)
+        return with_zone_choices(movement(card_name, csvid, declaration, spec, variants, registry))
     if family == "reduce_creature":
         from stat_recipes import expand as reductions
-        return reductions(card_name, csvid, declaration, spec, variants, registry)
+        return with_zone_choices(reductions(card_name, csvid, declaration, spec, variants, registry))
     if family == "destroy_permanent":
         if dialogs or support: raise ValueError("destruction custom setup/dialogs need dedicated authored cases")
         from destruction_recipes import expand as destruction
-        return destruction(card_name, csvid, declaration, spec, variants, registry)
+        return with_zone_choices(destruction(card_name, csvid, declaration, spec, variants, registry))
 
     # Witness characteristics are reviewed separately in test_recipes.py.
     source = card(card_name, "source", zone="hand")
@@ -372,4 +413,4 @@ def expand(card_name, csvid, declaration, oracle, registry):
                                           if version == 2 else {}),
                                        **({"resolve_dialogs": dialogs} if dialogs else {}),
                                        **({"setup": support} if support else {}))))
-    return cases
+    return with_zone_choices(cases)

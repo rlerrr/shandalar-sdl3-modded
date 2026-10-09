@@ -1,0 +1,292 @@
+{
+  "version": 1,
+  "card": "Vanquish the Foul",
+  "csvid": 13590,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "creature_witness": "Erhnam Djinn",
+        "target_tapped": false
+      },
+      "oracle_text": "Destroy target creature with power 4 or greater. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "resolve_zones": {
+        "snapshot": [
+          -1
+        ]
+      }
+    }
+  ],
+  "recipe_coverage": "Power-four boundary and power-three rejection. Modified power, cycling and regeneration prevention remain separate where applicable; Vanquish the Foul keeps its scry card in snapshot replay. Authored real-response cases check predicate legality again at resolution.",
+  "cases": [
+    {
+      "name": "PredicateDestruction_13590_HillGiant_Untapped_P0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Vanquish the Foul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "ineligible",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "PredicateDestruction_13590_HillGiant_Untapped_P1",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Vanquish the Foul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "ineligible",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "PredicateResolution_13590_BecomesIllegal",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Vanquish the Foul",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Lost in a Labyrinth",
+          "ref": "response",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Erhnam Djinn",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "response",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 2
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 13590
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 13479
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 53
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 4
+        }
+      ]
+    }
+  ]
+}

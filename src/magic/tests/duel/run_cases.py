@@ -14,6 +14,16 @@ from pathlib import Path
 ACCEPTED_STATUSES = ("passed", "known_failure", "unimplemented")
 
 
+def expectations_for_platform(records, platform):
+    if platform not in ("native", "wasm"):
+        raise ValueError("Unknown test platform: " + platform)
+    for name, record in records.items():
+        if record.get("platform", platform) not in ("native", "wasm"):
+            raise ValueError(f"Expectation {name} has an invalid platform")
+    return {name: record for name, record in records.items()
+            if record.get("platform", platform) == platform}
+
+
 def classify_outcome(name, kind, assertion_count, text, baseline, unimplemented=None):
     missing = (unimplemented or {}).get(name)
     expected = baseline.get(name) or missing
@@ -33,6 +43,8 @@ def classify_outcome(name, kind, assertion_count, text, baseline, unimplemented=
 
 
 def validate_expectations(manifest, baseline, unimplemented):
+    expectations_for_platform(baseline, "native")
+    expectations_for_platform(unimplemented, "native")
     cases = {c["filter"]: c for c in manifest["cases"]}
     overlap = set(baseline) & set(unimplemented)
     if overlap:
@@ -61,6 +73,9 @@ def load_unimplemented(baseline_path, explicit_path=None):
 
 
 def run_case(args, case, baseline, unimplemented=None):
+    platform = "wasm" if args.node else "native"
+    baseline = expectations_for_platform(baseline, platform)
+    unimplemented = expectations_for_platform(unimplemented or {}, platform)
     name = case["filter"]
     output = args.output.resolve()
     output.mkdir(parents=True, exist_ok=True)

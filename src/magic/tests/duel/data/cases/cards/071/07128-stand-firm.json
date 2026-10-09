@@ -1,0 +1,1406 @@
+{
+  "version": 1,
+  "card": "Stand Firm",
+  "csvid": 7128,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 1,
+        "toughness": 1
+      },
+      "oracle_text": "Target creature gets +1/+1 until end of turn. Scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ],
+      "resolve_zones": {
+        "snapshot": [
+          -1,
+          -1
+        ]
+      }
+    }
+  ],
+  "recipe_coverage": "Primary-effect component plus scry library-order scenarios. Keep, bottom, two-card reorder, short/empty libraries where legal, illegal sole target, and draw-versus-scry sequencing are explicit. Scry-trigger interactions and other controllers remain separate.",
+  "cases": [
+    {
+      "name": "ScryComponent_7128_Keep",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Stand Firm",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "kept",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scaled Wurm",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "library_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "library_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Swamp",
+          "ref": "library_3",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "recipient"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 3,
+          "value": 239
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7128
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 7
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "name": "ScryComponent_7128_BottomOne",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Stand Firm",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "kept",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scaled Wurm",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "library_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "library_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Swamp",
+          "ref": "library_3",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "recipient"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 239
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7128
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 7
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "name": "ScryComponent_7128_BottomAll",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Stand Firm",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "kept",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scaled Wurm",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "library_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "library_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Swamp",
+          "ref": "library_3",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "recipient"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 239
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 3,
+          "value": 188
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7128
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 7
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "name": "ScryComponent_7128_Reorder",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Stand Firm",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "kept",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scaled Wurm",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "library_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "library_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Swamp",
+          "ref": "library_3",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "recipient"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 3,
+          "value": 239
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7128
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 7
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "name": "ScryComponent_7128_Empty",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Stand Firm",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "kept",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scaled Wurm",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "recipient"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7128
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 7
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "name": "ScryComponent_7128_SingleKeep",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Stand Firm",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "kept",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scaled Wurm",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "recipient"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7128
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 7
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "name": "ScryComponent_7128_SingleBottom",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Stand Firm",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "kept",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scaled Wurm",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "recipient"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7128
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 7
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "toughness",
+          "value": 6
+        }
+      ]
+    },
+    {
+      "name": "ScryComponent_7128_IllegalTarget",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Stand Firm",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "kept",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Scaled Wurm",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "library_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "library_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Swamp",
+          "ref": "library_3",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "recipient"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "recipient"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 4
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 3,
+          "value": 239
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7128
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

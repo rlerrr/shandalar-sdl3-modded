@@ -1,0 +1,595 @@
+{
+  "version": 1,
+  "card": "Opt",
+  "csvid": 5051,
+  "recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 1
+      },
+      "oracle_text": "Scry 1. (Look at the top card of your library. You may put that card on the bottom.)\nDraw a card.",
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "resolve_zones": {
+        "ordered": [
+          -1
+        ],
+        "payment": [
+          -1
+        ],
+        "snapshot": [
+          -1
+        ]
+      }
+    }
+  ],
+  "recipe_coverage": "Primary-effect component plus scry library-order scenarios. Keep, bottom, two-card reorder, short/empty libraries where legal, illegal sole target, and draw-versus-scry sequencing are explicit. Scry-trigger interactions and other controllers remain separate.",
+  "cases": [
+    {
+      "name": "ScryComponent_5051_Keep",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Opt",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "kept",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "library_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "library_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Swamp",
+          "ref": "library_3",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 239
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 91
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5051
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "ScryComponent_5051_BottomOne",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Opt",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "kept",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "library_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "library_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Swamp",
+          "ref": "library_3",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 239
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 188
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5051
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "name": "ScryComponent_5051_SnapshotKeep",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Opt",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "kept",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "unselected",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "library_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "library_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Swamp",
+          "ref": "library_3",
+          "player": 0,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 239
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 91
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5051
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "record_state"
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "ai_roundtrip"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_zone",
+          "player": 0,
+          "value": -1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 59
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 239
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 164
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "hand",
+          "value": 91
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5051
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "unselected",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_recorded_state"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Grapeshot",
+  "csvid": 8566,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 1
+      },
+      "oracle_text": "Grapeshot deals 1 damage to any target.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "One original spell with no previously cast spells. Storm copies require separate cases."
+}

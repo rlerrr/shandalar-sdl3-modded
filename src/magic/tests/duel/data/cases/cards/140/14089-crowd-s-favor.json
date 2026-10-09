@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Crowd's Favor",
+  "csvid": 14089,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 1,
+        "toughness": 0
+      },
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nTarget creature gets +1/+0 and gains first strike until end of turn. (It deals combat damage before creatures without first strike.)",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed red-mana payment: own target is green, so it cannot convoke this all-red cost. First strike and red-creature convoke remain separate."
+}

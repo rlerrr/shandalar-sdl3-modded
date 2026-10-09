@@ -1,0 +1,781 @@
+{
+  "version": 1,
+  "card": "Gold",
+  "csvid": 18751,
+  "cases": [
+    {
+      "name": "Gold_SacrificeManaP0Color1",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gold",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "token"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card_name",
+          "ref": "source"
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 61
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Gold_SacrificeManaP0Color2",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gold",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "token"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card_name",
+          "ref": "source"
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 61
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Gold_SacrificeManaP0Color3",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gold",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "token"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card_name",
+          "ref": "source"
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 3
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 61
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Gold_SacrificeManaP0Color4",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gold",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "token"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card_name",
+          "ref": "source"
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 4
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 61
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Gold_SacrificeManaP0Color5",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gold",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "token"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card_name",
+          "ref": "source"
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 5
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 61
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Gold_SacrificeManaP1Color1",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gold",
+          "ref": "source",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "token"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card_name",
+          "ref": "source"
+        },
+        {
+          "op": "choose_color",
+          "player": 1,
+          "value": 1
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 1,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 61
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Gold_SacrificeManaP1Color2",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gold",
+          "ref": "source",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "token"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card_name",
+          "ref": "source"
+        },
+        {
+          "op": "choose_color",
+          "player": 1,
+          "value": 2
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 2,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 61
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Gold_SacrificeManaP1Color3",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gold",
+          "ref": "source",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "token"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card_name",
+          "ref": "source"
+        },
+        {
+          "op": "choose_color",
+          "player": 1,
+          "value": 3
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 61
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Gold_SacrificeManaP1Color4",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gold",
+          "ref": "source",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "token"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card_name",
+          "ref": "source"
+        },
+        {
+          "op": "choose_color",
+          "player": 1,
+          "value": 4
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 4,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 61
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Gold_SacrificeManaP1Color5",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gold",
+          "ref": "source",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "token"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "assert_card_name",
+          "ref": "source"
+        },
+        {
+          "op": "choose_color",
+          "player": 1,
+          "value": 5
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 11
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 61
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    },
+    {
+      "name": "Gold_TappedSource",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Gold",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "token",
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 3
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 11
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ],
+      "seed": 123
+    }
+  ],
+  "coverage_note": "All five colors for both controllers, sacrifice cost, immediate mana resolution, token disappearance, and tapped-source distinction. Creation effects and spending the produced mana remain separate."
+}

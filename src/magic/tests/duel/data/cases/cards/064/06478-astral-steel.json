@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Astral Steel",
+  "csvid": 6478,
+  "recipes": [
+    {
+      "family": "pump_creature",
+      "version": 2,
+      "params": {
+        "power": 1,
+        "toughness": 2
+      },
+      "oracle_text": "Target creature gets +1/+2 until end of turn.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "variants": [
+        "friendly_cleanup",
+        "opponent",
+        "no_creature",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "lost_target"
+      ]
+    }
+  ],
+  "recipe_coverage": "One original spell with no previously cast spells. Cleanup and lost target included; storm copies require separate cases."
+}

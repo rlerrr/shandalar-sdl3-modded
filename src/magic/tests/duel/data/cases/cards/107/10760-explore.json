@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Explore",
+  "csvid": 10760,
+  "recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 1
+      },
+      "oracle_text": "You may play an additional land this turn.\nDraw a card.",
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Ordered one-card draw; additional land permission requires separate cases."
+}

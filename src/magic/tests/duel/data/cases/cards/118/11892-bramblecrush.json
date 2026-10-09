@@ -325,5 +325,32 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "land"
+        ]
+      },
+      "oracle_text": "Destroy target noncreature permanent.",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_enchantment",
+        "target_land"
+      ]
+    }
+  ],
+  "recipe_coverage": "Noncreature permanent branches; creature rejection tested. Planeswalkers and creature lands require separate cases."
 }

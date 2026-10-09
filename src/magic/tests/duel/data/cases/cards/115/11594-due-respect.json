@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Due Respect",
+  "csvid": 11594,
+  "recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 1
+      },
+      "oracle_text": "Permanents enter tapped this turn.\nDraw a card.",
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Ordered one-card draw; tapped entry restriction requires separate cases."
+}

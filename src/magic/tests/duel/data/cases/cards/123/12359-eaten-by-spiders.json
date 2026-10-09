@@ -1,0 +1,624 @@
+{
+  "version": 1,
+  "card": "Eaten by Spiders",
+  "csvid": 12359,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "creature_witness": "Shivan Dragon",
+        "target_tapped": false
+      },
+      "oracle_text": "Destroy target creature with flying and all Equipment attached to that creature.",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Flying-only targets.  Attached and unattached Equipment are tested after legal equip activation on its controller's turn, including disappearance of the sole target before resolution.",
+  "cases": [
+    {
+      "name": "PredicateDestruction_12359_GrizzlyBears_Untapped_P0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Eaten by Spiders",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "ineligible",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "PredicateDestruction_12359_GrizzlyBears_Untapped_P1",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Eaten by Spiders",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "ineligible",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "EatenBySpiders_AttachedEquipment_Opponent",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Eaten by Spiders",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Shivan Dragon",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Bonesplitter",
+          "ref": "equipped",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Bonesplitter",
+          "ref": "unattached",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 1
+        },
+        {
+          "op": "activate",
+          "ref": "equipped",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "equipped",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "equipped",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "unattached",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 224
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 12359
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 6627
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 59
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "EatenBySpiders_AttachedEquipment_Friendly",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Eaten by Spiders",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Shivan Dragon",
+          "ref": "recipient",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Bonesplitter",
+          "ref": "equipped",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Bonesplitter",
+          "ref": "unattached",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "activate",
+          "ref": "equipped",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "equipped",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "equipped",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "unattached",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 224
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 12359
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 6627
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 56
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "EatenBySpiders_AttachedEquipment_LostTarget",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Eaten by Spiders",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Shivan Dragon",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Bonesplitter",
+          "ref": "equipped",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Bonesplitter",
+          "ref": "unattached",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 1
+        },
+        {
+          "op": "activate",
+          "ref": "equipped",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "power",
+          "value": 7
+        },
+        {
+          "op": "assert_card",
+          "ref": "equipped",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "recipient"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "equipped",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "unattached",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 224
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 12359
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 59
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    }
+  ]
+}

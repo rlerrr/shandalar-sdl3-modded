@@ -1,0 +1,158 @@
+{
+  "version": 1,
+  "card": "Natural State",
+  "csvid": 15645,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment"
+        ]
+      },
+      "oracle_text": "Destroy target artifact or enchantment with mana value 3 or less.",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_enchantment"
+      ]
+    }
+  ],
+  "recipe_coverage": "Mana-value-one artifact and mana-value-three enchantment succeed; mana-value-five artifact is rejected. Creature artifacts and enchantments remain separate.",
+  "cases": [
+    {
+      "name": "PredicateDestruction_15645_GildedLotus_Untapped_P0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Natural State",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Gilded Lotus",
+          "ref": "ineligible",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "PredicateDestruction_15645_GildedLotus_Untapped_P1",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Natural State",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Gilded Lotus",
+          "ref": "ineligible",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    }
+  ]
+}

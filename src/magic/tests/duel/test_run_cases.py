@@ -3,10 +3,30 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from run_cases import classify_outcome, load_unimplemented, validate_expectations
+from run_cases import classify_outcome, load_unimplemented, validate_expectations, expectations_for_platform
 
 
 class RunnerExpectationsTest(unittest.TestCase):
+    def test_platform_scoped_failure_still_requires_wasm_success_and_native_failure(self):
+        records = {"case": dict(platform="native", kind="assertion", assertion_count=1,
+                                reason="Native null prompt crash", patterns=["access violation"])}
+        native = expectations_for_platform(records, "native")
+        wasm = expectations_for_platform(records, "wasm")
+        self.assertEqual(classify_outcome("case", "assertion", 1, "access violation", native), "known_failure")
+        self.assertEqual(classify_outcome("case", "passed", 0, "", native), "unexpected_pass")
+        self.assertEqual(classify_outcome("case", "passed", 0, "", wasm), "passed")
+        self.assertEqual(classify_outcome("case", "assertion", 1, "access violation", wasm), "failed")
+        self.assertEqual(classify_outcome("case", "harness", 0, "access violation", native), "failed")
+
+    def test_unscoped_expectation_applies_to_both_and_bad_platform_is_rejected(self):
+        records = {"case": dict(reason="both platforms")}
+        for platform in ("native", "wasm"):
+            self.assertEqual(expectations_for_platform(records, platform), records)
+        with self.assertRaisesRegex(ValueError, "invalid platform"):
+            expectations_for_platform({"case": dict(platform="other")}, "native")
+        with self.assertRaisesRegex(ValueError, "Unknown test platform"):
+            expectations_for_platform(records, "other")
+
     def setUp(self):
         self.name = "Behavior.Missing"
         self.case = dict(filter=self.name, card="Missing spell", csvid=100, oracle_id="oracle", handler="card_dummy")

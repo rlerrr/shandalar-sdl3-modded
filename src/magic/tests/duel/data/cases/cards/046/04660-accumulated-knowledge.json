@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Accumulated Knowledge",
+  "csvid": 4660,
+  "recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 1
+      },
+      "oracle_text": "Draw a card, then draw cards equal to the number of cards named Accumulated Knowledge in all graveyards.",
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "No copies in either graveyard, so draw exactly one. Additional-copy branches require separate cases."
+}

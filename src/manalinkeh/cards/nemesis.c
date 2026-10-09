@@ -1075,7 +1075,7 @@ Destroy target artifact. */
 	card_instance_t *instance = get_card_instance(player, card);
 
 	if( event == EVENT_CAN_CAST ){
-		return generic_spell(player, card, event, GS_CAN_TARGET, &td, NULL, 1, NULL);
+		return generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_ARTIFACT", 1, NULL);
 	}
 
 	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
@@ -1084,7 +1084,7 @@ Destroy target artifact. */
 			spell_fizzled = 1;
 			return 0;
 		}
-		return generic_spell(player, card, event, GS_CAN_TARGET, &td, NULL, 1, NULL);
+		return generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_ARTIFACT", 1, NULL);
 	}
 
 	if( event == EVENT_RESOLVE_SPELL ){

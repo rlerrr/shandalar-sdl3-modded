@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Ray of Dissolution",
+  "csvid": 13531,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "enchantment"
+        ],
+        "gain_life": 3
+      },
+      "oracle_text": "Destroy target enchantment. You gain 3 life.",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Destruction and the coupled three-life gain, including no gain after the sole target becomes illegal."
+}

@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Burn Trail",
+  "csvid": 9491,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 3
+      },
+      "oracle_text": "Burn Trail deals 3 damage to any target.\nConspire (As you cast this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it and you may choose a new target for the copy.)",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed-cost single-spell damage. No two eligible controlled creatures for conspire; the additional-cost copy branch remains separate."
+}

@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Putrefy",
+  "csvid": 1506,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "creature"
+        ]
+      },
+      "oracle_text": "Destroy target artifact or creature. It can't be regenerated.",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_creature"
+      ]
+    }
+  ],
+  "recipe_coverage": "Both artifact and creature destruction; regeneration prevention is separate."
+}

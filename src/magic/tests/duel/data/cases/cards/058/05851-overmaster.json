@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "card": "Overmaster",
+  "csvid": 5851,
+  "recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 1
+      },
+      "oracle_text": "The next instant or sorcery spell you cast this turn can't be countered.\nDraw a card.",
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Ordered draw component; protection of the next instant or sorcery from counters requires separate cases."
+}

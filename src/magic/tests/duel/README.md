@@ -171,6 +171,11 @@ each card file records their limits in `binding_recovery_coverage`.
 
 ## Current action interface
 
+Known-failure records may specify `platform: "native"` or `platform: "wasm"`
+when a reviewed failure occurs on only that runtime. Unscoped records apply to
+both. The other runtime must pass normally; an unexpected pass on the affected
+runtime still fails the gate. Invalid platform labels are rejected.
+
 Oracle supplies the rules expectations. These details describe how scripts drive
 the harness, so test authors can express those expectations correctly:
 
@@ -181,6 +186,10 @@ the harness, so test authors can express those expectations correctly:
   Use it to check generic costs without requiring a particular payment color.
 - `assert_energy` takes `player` and `value` and inspects the real engine
   energy counters. Energy also appears in native/Wasm observable state output.
+- `assert_card_name` takes `ref` and checks the displayed name against that
+  case's card name. `assert_payment_source` checks
+  that the normal mana payment caption for the current stack ability includes
+  that name. Call it after activating, before resolving the ability.
 - `choose_color` uses those same indices and queues a color decision before an
   activation. The harness rejects choices outside the offered color mask.
 - `choose_mana` takes `player` and `color` and queues a click on an existing

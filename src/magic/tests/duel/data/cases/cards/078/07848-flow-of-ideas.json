@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "card": "Flow of Ideas",
+  "csvid": 7848,
+  "recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 1
+      },
+      "oracle_text": "Draw a card for each Island you control.",
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "setup": [
+        {
+          "name": "Island",
+          "ref": "support_own",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Island",
+          "ref": "support_enemy",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Forest",
+          "ref": "support_other",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ]
+    }
+  ],
+  "recipe_coverage": "One owned Island; opposing Island and other basic land must not count. Ordered draws, payment, empty-count and snapshot replay covered.",
+  "cases": [
+    {
+      "name": "ConditionalDraw_7848_ZeroOwnedCount",
+      "fixture": "stocked_zones",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Flow of Ideas",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "unrelated",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 7848
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 54
+        },
+        {
+          "op": "assert_card",
+          "ref": "unrelated",
+          "property": "in_play",
+          "value": 1
+        }
+      ]
+    }
+  ]
+}

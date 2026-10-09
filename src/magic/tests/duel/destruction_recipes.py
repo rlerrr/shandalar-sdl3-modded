@@ -1,11 +1,13 @@
 """Reviewed destruction scenarios, authored from Oracle rather than handlers."""
 WITNESSES = {"artifact": "Sol Ring", "enchantment": "Glorious Anthem",
              "creature": "Grizzly Bears", "land": "Forest"}
+CREATURE_WITNESSES = {"Grizzly Bears", "Hill Giant", "Shivan Dragon", "Wall of Stone",
+                      "Drudge Skeletons", "Erhnam Djinn"}
 
 
 def spec(parameters, mana):
     optional = {"gain_life", "target_gain_life", "target_lose_life", "target_damage", "self_damage", "lose_life"}
-    if not isinstance(parameters, dict) or set(parameters) - ({"targets"} | optional):
+    if not isinstance(parameters, dict) or set(parameters) - ({"targets", "creature_witness", "target_tapped"} | optional):
         raise ValueError("unknown destruction parameters")
     targets = parameters.get("targets")
     if (not isinstance(targets, list) or not targets or any(not isinstance(t,str) or t not in WITNESSES for t in targets)
@@ -13,6 +15,13 @@ def spec(parameters, mana):
         raise ValueError("destruction targets must be unique reviewed permanent types")
     if any(type(parameters[k]) is not int or not 1 <= parameters[k] <= 20 for k in optional & set(parameters)):
         raise ValueError("destruction life amounts must be reviewed integers from 1 to 20")
+    if "creature_witness" in parameters and ("creature" not in targets
+            or not isinstance(parameters["creature_witness"], str)
+            or parameters["creature_witness"] not in CREATURE_WITNESSES):
+        raise ValueError("destruction creature_witness must be a reviewed creature")
+    if "target_tapped" in parameters and (type(parameters["target_tapped"]) is not bool
+            or "creature" not in targets):
+        raise ValueError("destruction target_tapped requires a creature and a boolean")
     return dict(family="destroy_permanent", mana=mana, **parameters)
 
 
@@ -26,6 +35,7 @@ def expand(name, csvid, declaration, parameters, variants, registry):
         owner = int(variant != "friendly")
         category = variant.removeprefix("target_") if variant.startswith("target_") else targets[0]
         victim = WITNESSES[category]
+        if category == "creature": victim = parameters.get("creature_witness", victim)
         setup = [card(name, "source", zone="hand")]
         actions, assertions = [], []
         negative = variant in ("empty", "wrong_target", "insufficient_mana")
@@ -36,9 +46,12 @@ def expand(name, csvid, declaration, parameters, variants, registry):
             victim = WITNESSES[complement]
         if variant != "empty":
             setup += [card(victim, "recipient", player=owner)]
-        # A different named permanent of the same eligible type must survive.
+            if variant != "wrong_target" and parameters.get("target_tapped"):
+                setup[-1]["state"] = ["tapped"]
+        # A differently named permanent of the same broad type must survive.
         alternative = {"artifact": "Gilded Lotus", "enchantment": "Honor of the Pure",
                        "creature": "Hill Giant", "land": "Plains"}[category]
+        if alternative == victim: alternative = "Grizzly Bears"
         if not negative:
             setup += [card(alternative, "unselected", player=owner)]
         if variant in ("empty", "wrong_target"):

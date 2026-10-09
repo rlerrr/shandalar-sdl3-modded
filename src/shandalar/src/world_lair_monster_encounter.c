@@ -499,11 +499,11 @@ void UpdateVisibleDuelCardPreview(uint card_index, int preview_x, int preview_y,
   {
     if ((preview_x != -1) && (preview_y != -1))
     {
-      SendMessageA(g_duel_card_preview_window_hwnd, 0x401, CardIDFromType(card_index), (LPARAM)&preview_x_copy);
+      SendMessageA(g_duel_card_preview_window_hwnd, 0x401, CardIDFromInternalIndex(card_index), (LPARAM)&preview_x_copy);
     }
     else
     {
-      SendMessageA(g_duel_card_preview_window_hwnd, 0x401, CardIDFromType(card_index), 0);
+      SendMessageA(g_duel_card_preview_window_hwnd, 0x401, CardIDFromInternalIndex(card_index), 0);
     }
   }
 }

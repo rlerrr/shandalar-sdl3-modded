@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Mogg Salvage",
+  "csvid": 4718,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact"
+        ]
+      },
+      "oracle_text": "If an opponent controls an Island and you control a Mountain, you may cast this spell without paying its mana cost.\nDestroy target artifact.",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed-cost branch: no opposing Island or friendly Mountain on the battlefield. Free casting needs separate cases."
+}

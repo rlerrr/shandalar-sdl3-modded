@@ -20,6 +20,65 @@ DATA = Path(__file__).parent / "data"
 
 
 class RecipesTest(unittest.TestCase):
+    def test_destruction_witness_and_tapped_parameters(self):
+        name = "Assassinate"
+        declaration = dict(family="destroy_permanent", version=2,
+                           params=dict(targets=["creature"], creature_witness="Hill Giant", target_tapped=True),
+                           oracle_text=self.oracle[name]["oracle_text"], variants=["opponent", "snapshot", "wrong_target"])
+        cases = expand(name, self.registry[name]["csvid"], declaration, self.oracle[name], self.registry)
+        for case in cases[:2]:
+            victim = next(c for c in case["setup"] if c["ref"] == "recipient")
+            other = next(c for c in case["setup"] if c["ref"] == "unselected")
+            self.assertEqual(victim["name"], "Hill Giant")
+            self.assertEqual(victim["state"], ["tapped"])
+            self.assertNotEqual(victim["name"], other["name"])
+        victim = next(c for c in cases[2]["setup"] if c["ref"] == "recipient")
+        self.assertEqual(victim["name"], "Sol Ring")
+        self.assertNotIn("state", victim)
+        for extra in (dict(creature_witness=[]), dict(creature_witness="Lightning Bolt"),
+                      dict(target_tapped=1), dict(target_tapped="tapped")):
+            with self.subTest(extra=extra), self.assertRaises(ValueError):
+                expand(name, self.registry[name]["csvid"], dict(declaration, params=dict(targets=["creature"], **extra)),
+                       self.oracle[name], self.registry)
+        for extra in (dict(creature_witness="Grizzly Bears"), dict(target_tapped=True)):
+            with self.subTest(extra=extra), self.assertRaises(ValueError):
+                expand(name, self.registry[name]["csvid"], dict(declaration, params=dict(targets=["artifact"], **extra)),
+                       self.oracle[name], self.registry)
+
+    def test_resolution_zone_choices_are_variant_scoped_and_replayed(self):
+        name = "Opt"
+        declaration = dict(family="draw_cards", version=2, params=dict(amount=1),
+                           oracle_text=self.oracle[name]["oracle_text"],
+                           variants=["ordered", "snapshot"], resolve_zones={"snapshot": [-1]})
+        cases = expand(name, self.registry[name]["csvid"], declaration, self.oracle[name], self.registry)
+        self.assertFalse(any(s["op"] == "choose_zone" for s in cases[0]["steps"]))
+        self.assertEqual(sum(s["op"] == "choose_zone" for s in cases[1]["steps"]), 2)
+        for i, action in enumerate(cases[1]["steps"]):
+            if action["op"] == "resolve":
+                self.assertEqual(cases[1]["steps"][i-1], dict(op="choose_zone", player=0, value=-1))
+        self.assertEqual(cases[1]["_recipe"]["resolve_zones"], [-1])
+
+    def test_resolution_zone_choices_reject_invalid_or_nonresolving_variants(self):
+        name = "Opt"
+        declaration = dict(family="draw_cards", version=2, params=dict(amount=1),
+                           oracle_text=self.oracle[name]["oracle_text"], variants=["ordered", "insufficient_mana"])
+        for choices in ({"missing": [-1]}, {"ordered": [True]}, {"ordered": [-2]},
+                        {"ordered": []}, {"ordered": [0]*33}, {"insufficient_mana": [-1]}):
+            with self.subTest(choices=choices), self.assertRaisesRegex(ValueError, "resolve_zones"):
+                expand(name, self.registry[name]["csvid"], dict(declaration, resolve_zones=choices),
+                       self.oracle[name], self.registry)
+
+    def test_resolution_zone_choices_do_not_apply_to_fixture_setup_spells(self):
+        name = "Revitalize"
+        declaration = dict(family="gain_life", version=2, params=dict(amount=3, draw=1),
+                           oracle_text=self.oracle[name]["oracle_text"], variants=["injured"],
+                           resolve_zones={"injured": [-1]})
+        case = expand(name, self.registry[name]["csvid"], declaration, self.oracle[name], self.registry)[0]
+        resolutions = [i for i, action in enumerate(case["steps"]) if action["op"] == "resolve"]
+        self.assertEqual(len(resolutions), 2)
+        self.assertNotEqual(case["steps"][resolutions[0]-1]["op"], "choose_zone")
+        self.assertEqual(case["steps"][resolutions[1]-1], dict(op="choose_zone", player=0, value=-1))
+
     @classmethod
     def setUpClass(cls):
         cls.oracle = json.loads((DATA / "oracle.json").read_text(encoding="utf-8"))["cards"]

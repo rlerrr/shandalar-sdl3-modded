@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Soul Spike",
+  "csvid": 8445,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 4,
+        "gain_life": 4
+      },
+      "oracle_text": "You may exile two black cards from your hand rather than pay this spell's mana cost.\nSoul Spike deals 4 damage to any target and you gain 4 life.",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed-cost branch with fewer than two black hand cards. Damage, life gain and illegal target included; alternate exile cost remains separate."
+}

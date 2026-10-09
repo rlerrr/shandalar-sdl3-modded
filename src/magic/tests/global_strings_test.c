@@ -76,6 +76,14 @@ int main(int argc, char **argv)
   passed &= check(load_text(NULL, "MISSING_SECTION") == -1 && g_text_lines[0][0] == 0 &&
                   g_text_lines[299][0] == 0,
                   "Missing sections must clear old shared text");
+  memset(g_text_lines, 'X', sizeof(g_text_lines));
+  passed &= check(load_text(NULL, NULL) == -1 && g_text_lines[0][0] == 0 &&
+                  g_text_lines[299][0] == 0,
+                  "Null sections must be rejected and clear old shared text");
+  memset(g_text_lines, 'X', sizeof(g_text_lines));
+  passed &= check(load_text("UIStrings.txt", "") == -1 && g_text_lines[0][0] == 0 &&
+                  g_text_lines[299][0] == 0,
+                  "Empty sections must be rejected and clear old shared text");
   passed &= check(load_text("UIStrings.txt", "NO_FINAL_NEWLINE") == 1 &&
                   strcmp(g_text_lines[0], "Last character") == 0,
                   "An unterminated final line must retain its last character");

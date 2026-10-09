@@ -200,6 +200,11 @@ int main(int argc, char **argv)
     show_cardlist(cards, NULL, NULL, 8, "Campaign cards", 0, "");
     check(campaign_test_cardlist_csvids[1] == CARD_ID_SKYSHROUD_CLAIM,
           "Library viewer must still strip campaign new-card flags");
+    cards[0] = SHANDALAR_CARD_DATA_ACTIVE_COUNT - 1;
+    cards[1] = -1;
+    show_cardlist(cards, NULL, NULL, 2, "High duel index", 1, "");
+    check(campaign_test_cardlist_csvids[0] == global_cards_data[cards[0]].id,
+          "Library viewer must preserve duel indices above the packed deck limit");
   }
   shandalar_card_pool_initialize(argv[1]);
   shandalar_card_pool_on_database_loaded(argv[1]);

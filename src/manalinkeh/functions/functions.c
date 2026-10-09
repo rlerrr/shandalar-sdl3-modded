@@ -13460,7 +13460,10 @@ int generic_spell(int player, int card, event_t event, int flags, target_definit
 			int targeted_player[2] = {0};
 			while( can_target(td) && trgs < (max_targets+base_target) ){
 					const char* use_prompt;
-					if (flags & GS_LITERAL_PROMPT){
+					if (prompt == NULL){
+						use_prompt = "Select a target.";
+					}
+					else if (flags & GS_LITERAL_PROMPT){
 						use_prompt = prompt;
 					}
 					else {

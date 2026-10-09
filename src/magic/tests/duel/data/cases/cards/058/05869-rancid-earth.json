@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Rancid Earth",
+  "csvid": 5869,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "land"
+        ]
+      },
+      "oracle_text": "Destroy target land.\nThreshold — If there are seven or more cards in your graveyard, instead destroy that land and Rancid Earth deals 1 damage to each creature and each player.",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Nonthreshold branch: shared graveyards have fewer than seven cards. Threshold damage requires separate cases."
+}

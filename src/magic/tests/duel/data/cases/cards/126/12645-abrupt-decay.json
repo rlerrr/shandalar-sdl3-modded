@@ -1,0 +1,234 @@
+{
+  "version": 1,
+  "card": "Abrupt Decay",
+  "csvid": 12645,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature"
+        ]
+      },
+      "oracle_text": "This spell can't be countered.\nDestroy target nonland permanent with mana value 3 or less.",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "target_enchantment",
+        "target_creature"
+      ]
+    }
+  ],
+  "recipe_coverage": "Nonland targets with mana value at most three: Sol Ring (one), Glorious Anthem (three), and Grizzly Bears (two). High-value and land rejection included. Counter immunity and planeswalkers need separate cases.",
+  "cases": [
+    {
+      "name": "ConditionalRestriction_12645_GildedLotus_P0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Abrupt Decay",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Gilded Lotus",
+          "ref": "ineligible",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ]
+    },
+    {
+      "name": "ConditionalRestriction_12645_GildedLotus_P1",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Abrupt Decay",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Gilded Lotus",
+          "ref": "ineligible",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ]
+    },
+    {
+      "name": "ConditionalRestriction_12645_HillGiant_P0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Abrupt Decay",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "ineligible",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ]
+    },
+    {
+      "name": "ConditionalRestriction_12645_HillGiant_P1",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Abrupt Decay",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "ineligible",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        }
+      ]
+    }
+  ]
+}

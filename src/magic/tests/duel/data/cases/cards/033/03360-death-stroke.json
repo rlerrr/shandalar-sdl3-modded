@@ -336,6 +336,285 @@
         }
       ],
       "seed": 123
+    },
+    {
+      "name": "PredicateDestruction_3360_GrizzlyBears_Untapped_P0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Death Stroke",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "ineligible",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "PredicateDestruction_3360_GrizzlyBears_Untapped_P1",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Death Stroke",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "ineligible",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "PredicateResolution_3360_BecomesIllegal",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Death Stroke",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Twiddle",
+          "ref": "response",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "recipient",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "ref": "recipient",
+          "player": 0
+        },
+        {
+          "op": "choose_dialog",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "response",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 2
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "recipient",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 3360
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 256
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 57
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
     }
-  ]
+  ],
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "creature_witness": "Grizzly Bears",
+        "target_tapped": true
+      },
+      "oracle_text": "Destroy target tapped creature.",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Tapped-only targets. Authored real-response cases check predicate legality again at resolution."
 }

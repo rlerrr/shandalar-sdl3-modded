@@ -26,12 +26,12 @@ work through the core engine without a card handler.
 | Family | Exact supported Oracle text | Scenarios |
 | --- | --- | --- |
 | `draw_cards` | `Draw a card.` or `Draw two/three/four cards.` | Ordered library, draw identities and multiplicities, kept hand card, payment, insufficient mana, snapshot replay |
-| `gain_life` | `You gain N life.` (1–20) | Both life totals, injured controller, payment, insufficient mana, snapshot replay |
-| `pump_creature` | `Target creature gets +P/+T until end of turn.` (0–10 each, nonzero combined) | Own and opposing targets, unselected witness, cleanup, no creature, payment, insufficient mana, snapshot replay |
-| `damage_any_target` | `NAME deals N damage to any target.` (1–4) | Surviving and lethal creature damage, both players, lost target while pending, unselected witness, payment, insufficient mana, snapshot replay |
+| `gain_life` | `You gain N life.` (1-20) | Both life totals, injured controller, payment, insufficient mana, snapshot replay |
+| `pump_creature` | `Target creature gets +P/+T until end of turn.` (0-10 each, nonzero combined) | Own and opposing targets, unselected witness, cleanup, no creature, payment, insufficient mana, snapshot replay |
+| `damage_any_target` | `NAME deals N damage to any target.` (1-4) | Surviving and lethal creature damage, both players, lost target while pending, unselected witness, payment, insufficient mana, snapshot replay |
 
 Automatic version 1 enrollment accepts only normal-layout Instants and Sorceries with no keywords and a fixed, ordinary
-mana cost of 1–10 qualify. Full text must match: extra clauses, restrictions,
+mana cost of 1-10 qualify. Full text must match: extra clauses, restrictions,
 optional effects, alternative costs, and multi-face cards go to manual authoring.
 Unsupported cards receive an inventory reason; an explicitly mismatched recipe
 fails generation. Witness characteristics and fixture contents are checked before
@@ -47,6 +47,15 @@ generates all reviewed scenarios. Unknown options fail validation. Names use
 CSVID, family, and variant, so moving a file changes neither names nor order.
 Versions make recipe revisions deliberate; Oracle refreshes still require review
 of the pinned corpus diff.
+
+Version 2 declarations may supply `resolve_zones`, a map from selected variant
+names to ordered zone-choice indices (`-1` finishes an optional choice). Choices
+are queued immediately before the source spell resolves and repeated on snapshot
+replay. They do not apply to setup spells or illegal-target variants. For example,
+`"resolve_zones": {"snapshot": [-1, -1]}` keeps both scryed cards on top in their
+original order. This scripts presentation decisions; the assertions still come
+from reviewed Oracle behavior. Unknown variants, invalid indices, and plans for
+variants that never resolve are rejected.
 
 ## Signed stat reductions
 
@@ -103,7 +112,7 @@ an illegal sole target, and snapshot replay. Optional `target_TYPE` variants
 exercise each additional declared type.
 
 Destruction life parameters are `gain_life`, `lose_life`, `self_damage`,
-`target_gain_life`, `target_lose_life`, and `target_damage` (1–20). Both players'
+`target_gain_life`, `target_lose_life`, and `target_damage` (1-20). Both players'
 life totals are checked, including friendly targets and no secondary effects
 when the sole target becomes illegal. Variable amounts must match the witnesses:
 Divine Offering and Crumble use Sol Ring's mana value of one; Devour in Shadow
@@ -146,8 +155,8 @@ Incinerate uses `damage_any_target` with `params: {"amount": 3}` and its full
 pinned Oracle text. Draw and life recipes likewise take `amount`; pumps take
 `power` and `toughness`. Existing reviewed numeric ranges still apply.
 
-Pump and damage parameters can also declare coupled `gain_life` (1–20),
-`self_damage` (1–4), `lose_life` (1–10), and `draw` (1–4). Life-gain recipes can
+Pump and damage parameters can also declare coupled `gain_life` (1-20),
+`self_damage` (1-4), `lose_life` (1-10), and `draw` (1-4). Life-gain recipes can
 declare `draw`. For example, Lightning Helix uses
 `{"amount": 3, "gain_life": 3}`; Orcish Cannonade uses
 `{"amount": 2, "self_damage": 3, "draw": 1}`; Wildsize uses
@@ -352,3 +361,63 @@ All 4,740 completed state observations match between native and Wasm; the
 remaining case is the previously recorded Paralyze crash. The 21 new cases pass
 in repeated shuffled runs, and all three seeded AI scenarios and all three
 harness checks pass on each runtime. Both production game targets also build.
+
+The restricted-destruction batch adds 177 cases using existing recipes across
+23 cards, plus 40 authored eligibility checks; 12 card homes are new. All 217
+pass in native and Wasm, with identical observable states and no new baselines.
+Restriction cases check both controllers: black and artifact creatures, Swamps,
+creature size, and Vampire/Werewolf/Zombie exclusions. Normal casting, costs,
+lost targets, ownership, life changes, and snapshot replay reuse the shared
+recipes. Card files document gaps such as regeneration, cycling, madness,
+flashback, threshold, and additional-land permissions.
+
+The automatic exact-text inventory is exhausted: all 43 matches are enrolled.
+That inventory reports version 1 matches, not every potential version 2
+component. Further expansion requires reviewed explicit parameters or new
+recipe mechanics; the remaining Oracle text cannot be enrolled indiscriminately.
+
+The next component batch adds 137 recipe cases and 17 authored cases across 20
+cards, including 18 new homes. Variable draws use explicit support permanents
+for owned Islands, owned creatures, Birds on both sides, owned Humans, and the
+greatest owned permanent mana value. Zero-count cases keep stocked zones and
+opposing permanents, checking that unrelated cards do not inflate the draw.
+Destruction supplements cover artifact creatures, black creatures, and high
+mana values. Storm, conspire, convoke, alternate costs, split second, and counter
+immunity remain separate where the card's coverage note says so.
+
+The batch initially exposed five native casting crashes in Mogg Salvage: its
+null prompt reached the text loader. Mogg Salvage now supplies its artifact
+prompt, generic spell targeting supplies a default for absent prompts, and the
+text loader rejects null or empty section names. Two Dismantling Blow cases
+exercise the shared fallback directly with exact printed-cost mana. The five
+native-only baselines are retired; all 156 cases pass in both runtimes.
+
+The scry batch adds 72 recipe cases and 64 authored cases across ten new cards:
+Battlewise Valor, Ferocious Charge, Stand Firm, Bolt of Keranos, Magma Jet, Spark
+Jolt, Lose Hope, Lost in a Labyrinth, Opt, and Serum Visions. Main effects reuse
+existing recipes. Authored cases check keeping cards, bottoming one or all,
+two-card reordering, short/empty libraries where legal, illegal sole targets,
+temporary-effect cleanup, and snapshot replay. Opt scries before drawing;
+Serum Visions draws before scrying. All 136 cases pass in native and Wasm.
+
+Destruction components accept an explicit `creature_witness` from a reviewed
+whitelist and a boolean `target_tapped`. The generator validates witness power,
+toughness, colors and relevant keywords against the pinned corpus. These
+parameters select legal fixture subjects; they do not infer restrictions from
+free-form Oracle text. Authored cases supply the ineligible subjects.
+
+The predicate-destruction batch adds 121 recipe cases and 44 authored cases
+across fifteen cards (nine new card homes). It covers flying, defender, black
+creatures, tapped/untapped state, power thresholds, and mana-value restrictions.
+Power-four, power-three and power-two boundaries have explicit witnesses.
+Nine real-response cases change power or tapped state before resolution and
+verify the now-illegal target survives. Three Eaten by Spiders cases activate
+Equip legally, then check attached Equipment destruction, survival of unattached
+Equipment, ownership, and the sole target disappearing before resolution.
+Cycling, regeneration and further altered-characteristic scenarios remain
+separate where documented by individual card files.
+
+All 165 new cases pass in native and Wasm. Rerunning the 808 existing
+destruction recipe cases yields 766 passes and the same 42 separately recorded
+unimplemented cases on each runtime. All 973 observed states agree across
+platforms; no failure or unimplemented baselines changed.

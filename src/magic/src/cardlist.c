@@ -675,7 +675,9 @@ int show_cardlist(int *graveyard,
   dialog_context.window_title = window_title;
   for (index = 0; count > index && graveyard[index] != -1; ++index)
   {
-    dialog_context.displayed_csvids[index] = CardIDFromInternalIndex(graveyard[index]);
+    /* Campaign callers may include the new-card marker; unlike a packed deck
+       lookup, the viewer must preserve bit 14 in raw duel indices. */
+    dialog_context.displayed_csvids[index] = CardIDFromInternalIndex(graveyard[index] & ~0x10000u);
   }
 
   dialog_context.item_count = index;

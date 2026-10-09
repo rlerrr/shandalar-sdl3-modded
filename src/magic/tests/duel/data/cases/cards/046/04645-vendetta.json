@@ -209,6 +209,150 @@
         }
       ],
       "name": "Vendetta_ElementalToughnessFourCostsFourLife"
+    },
+    {
+      "name": "RestrictedDestruction_4645_DrudgeSkeletons_P0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Vendetta",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Drudge Skeletons",
+          "ref": "ineligible",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
+    },
+    {
+      "name": "RestrictedDestruction_4645_DrudgeSkeletons_P1",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Vendetta",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Drudge Skeletons",
+          "ref": "ineligible",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "ineligible",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        }
+      ]
     }
-  ]
+  ],
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "lose_life": 2
+      },
+      "oracle_text": "Destroy target nonblack creature. It can't be regenerated. You lose life equal to that creature's toughness.",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Grizzly Bears has toughness two, so the caster loses two life. Black targets are rejected; other toughness values and regeneration require separate cases."
 }

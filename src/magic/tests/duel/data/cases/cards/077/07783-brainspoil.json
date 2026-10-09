@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "card": "Brainspoil",
+  "csvid": 7783,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ]
+      },
+      "oracle_text": "Destroy target creature that isn't enchanted. It can't be regenerated.\nTransmute {1}{B}{B} ({1}{B}{B}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Unenchanted creatures in shared boards. Transmute, regeneration, and rejection of enchanted creatures require separate cases."
+}

@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "card": "Serene Offering",
+  "csvid": 3272,
+  "recipes": [
+    {
+      "family": "destroy_permanent",
+      "version": 2,
+      "params": {
+        "targets": [
+          "enchantment"
+        ],
+        "gain_life": 3
+      },
+      "oracle_text": "Destroy target enchantment. You gain life equal to its mana value.",
+      "variants": [
+        "opponent",
+        "friendly",
+        "lost_target",
+        "empty",
+        "wrong_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Glorious Anthem has mana value three, so the caster gains three life. Other mana values and Auras need separate cases."
+}

@@ -193,6 +193,143 @@
         }
       ],
       "seed": 123
+    },
+    {
+      "name": "ConditionalDraw_998_ZeroOwnedCount",
+      "fixture": "stocked_zones",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Collective Unconscious",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "unrelated",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 998
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 54
+        },
+        {
+          "op": "assert_card",
+          "ref": "unrelated",
+          "property": "in_play",
+          "value": 1
+        }
+      ]
     }
-  ]
+  ],
+  "recipes": [
+    {
+      "family": "draw_cards",
+      "version": 2,
+      "params": {
+        "amount": 2
+      },
+      "oracle_text": "Draw a card for each creature you control.",
+      "variants": [
+        "ordered",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ],
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "support_bear",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "support_giant",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        },
+        {
+          "name": "Scaled Wurm",
+          "ref": "support_enemy",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ]
+    }
+  ],
+  "recipe_coverage": "Two owned creatures; the opposing creature must not count. Ordered draws, payment, empty-count and snapshot replay covered."
 }

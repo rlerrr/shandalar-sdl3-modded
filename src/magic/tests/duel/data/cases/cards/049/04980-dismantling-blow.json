@@ -1,0 +1,250 @@
+{
+  "version": 1,
+  "card": "Dismantling Blow",
+  "csvid": 4980,
+  "coverage_note": "Shared generic-spell null-prompt fallback, owned/opposing artifact destruction, stack timing, and exact printed-cost payment with no mana for kicker. Enchantments and kicker require separate cases.",
+  "cases": [
+    {
+      "name": "DismantlingBlow_NullPromptDestroyP0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Dismantling Blow",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 2
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "target"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4980
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "DismantlingBlow_NullPromptDestroyP1",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Dismantling Blow",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 2
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 1
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "target"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 230
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4980
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

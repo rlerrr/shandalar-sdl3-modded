@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "card": "Fireblast",
+  "csvid": 2705,
+  "recipes": [
+    {
+      "family": "damage_any_target",
+      "version": 2,
+      "params": {
+        "amount": 4
+      },
+      "oracle_text": "You may sacrifice two Mountains rather than pay this spell's mana cost.\nFireblast deals 4 damage to any target.",
+      "variants": [
+        "survivor",
+        "lethal",
+        "opponent",
+        "self",
+        "lost_target",
+        "payment",
+        "insufficient_mana",
+        "snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed six-mana branch, with no Mountains on the battlefield. Alternate sacrifice cost requires separate cases."
+}

@@ -78,6 +78,8 @@ int load_text(const char *file_name, const char *section_name)
   int result;
 
   memset(g_text_lines, 0, sizeof(g_text_lines));
+  if (section_name == NULL || section_name[0] == '\0')
+    return -1;
   if (file_name != NULL)
   {
     result = load_text_file(file_name, section_name);
