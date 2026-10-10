@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Fated Conflagration",
+  "csvid": 13705,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 5,
+        "targets": [
+          "creature"
+        ],
+        "scry": 2,
+        "scry_on_your_turn": true
+      },
+      "oracle_text": "Fated Conflagration deals 5 damage to target creature or planeswalker. If it's your turn, scry 2.",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "survivor",
+        "lethal",
+        "lost_target",
+        "friendly",
+        "empty",
+        "wrong_type",
+        "scry_bottom",
+        "other_turn",
+        "regenerate"
+      ]
+    }
+  ],
+  "recipe_coverage": "Targeted damage component: exact normal payment, legality, real responses, ordered stocked zones, cleanup, and AI/snapshot replay. Regeneration success follows documented legacy destruction-window timing. Additional abilities (alternate costs, graveyard casting, planeswalkers, uncounterability, damage prevention, equipment destruction, regeneration prohibition) require separate authored cases where present."
+}

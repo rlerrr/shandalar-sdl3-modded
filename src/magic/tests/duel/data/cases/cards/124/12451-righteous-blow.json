@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Righteous Blow",
+  "csvid": 12451,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 2,
+        "targets": [
+          "creature"
+        ],
+        "combat": "attacking_or_blocking"
+      },
+      "oracle_text": "Righteous Blow deals 2 damage to target attacking or blocking creature.",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "survivor",
+        "lethal",
+        "lost_target",
+        "friendly",
+        "empty",
+        "wrong_type",
+        "noncombat",
+        "lost_combat",
+        "blocking"
+      ]
+    }
+  ],
+  "recipe_coverage": "Targeted damage component: exact normal payment, legality, real responses, ordered stocked zones, cleanup, and AI/snapshot replay. Regeneration success follows documented legacy destruction-window timing. Additional abilities (alternate costs, graveyard casting, planeswalkers, uncounterability, damage prevention, equipment destruction, regeneration prohibition) require separate authored cases where present."
+}

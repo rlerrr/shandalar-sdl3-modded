@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Alchemist's Greeting",
+  "csvid": 16031,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 4,
+        "targets": [
+          "creature"
+        ]
+      },
+      "oracle_text": "Alchemist's Greeting deals 4 damage to target creature.\nMadness {1}{R} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "survivor",
+        "lethal",
+        "lost_target",
+        "friendly",
+        "empty",
+        "wrong_type",
+        "regenerate"
+      ]
+    }
+  ],
+  "recipe_coverage": "Targeted damage component: exact normal payment, legality, real responses, ordered stocked zones, cleanup, and AI/snapshot replay. Regeneration success follows documented legacy destruction-window timing. Additional abilities (alternate costs, graveyard casting, planeswalkers, uncounterability, damage prevention, equipment destruction, regeneration prohibition) require separate authored cases where present."
+}

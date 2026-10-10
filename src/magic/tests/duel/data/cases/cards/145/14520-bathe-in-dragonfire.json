@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Bathe in Dragonfire",
+  "csvid": 14520,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 4,
+        "targets": [
+          "creature"
+        ]
+      },
+      "oracle_text": "Bathe in Dragonfire deals 4 damage to target creature.",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "survivor",
+        "lethal",
+        "lost_target",
+        "friendly",
+        "empty",
+        "wrong_type",
+        "regenerate"
+      ]
+    }
+  ],
+  "recipe_coverage": "Targeted damage component: exact normal payment, legality, real responses, ordered stocked zones, cleanup, and AI/snapshot replay. Regeneration success follows documented legacy destruction-window timing. Additional abilities (alternate costs, graveyard casting, planeswalkers, uncounterability, damage prevention, equipment destruction, regeneration prohibition) require separate authored cases where present."
+}

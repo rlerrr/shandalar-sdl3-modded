@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Rush of Battle",
+  "csvid": 14356,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "sweep",
+      "version": 2,
+      "params": {
+        "effect": "stats",
+        "targets": [
+          "creature"
+        ],
+        "power": 2,
+        "toughness": 1,
+        "scope": "self"
+      },
+      "oracle_text": "Creatures you control get +2/+1 until end of turn. Warrior creatures you control gain lifelink until end of turn. (Damage dealt by those Warriors also causes their controller to gain that much life.)",
+      "variants": [
+        "mixed",
+        "friendly_only",
+        "opponent_only",
+        "empty_board",
+        "empty_zones",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "cleanup",
+        "tapped_all",
+        "untapped_all",
+        "injured",
+        "late_arrival",
+        "stacking"
+      ]
+    }
+  ],
+  "recipe_coverage": " Reviewed board-wide temporary stat component: exact signed power/toughness, friendly/opposing/color/subtype scope, unchanged noncreatures, reduced-toughness deaths including indestructible witnesses, stacking and cleanup, later arrivals, preexisting damage, ordered populated libraries and owned hands/graveyards/exile, normal printed mana cost, caller-owned snapshot replay after AI. Includes untapping/draw/scry/death-life/exile clauses when declared. Other Oracle clauses (keyword grants and combat, kicker, alternate costs, cycling, flashback, madness, awaken, spell mastery, vehicles) remain separate coverage gaps where present. No complete-card coverage claim."
+}

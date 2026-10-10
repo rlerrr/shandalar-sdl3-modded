@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Cage of Hands",
+  "csvid": 7177,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "aura_control",
+      "version": 2,
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [],
+        "scope": "creature",
+        "no_attack": true,
+        "no_block": true
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.\n{1}{W}: Return this Aura to its owner's hand.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent_cleanup",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "lost_target",
+        "snapshot",
+        "tapped",
+        "large_target",
+        "unblocked",
+        "opponent_unblocked",
+        "empty_zones",
+        "aura_removed",
+        "aura_bounced",
+        "host_bounced",
+        "host_destroyed",
+        "removed_attack",
+        "block_ground",
+        "removed_block",
+        "wrong_type"
+      ]
+    }
+  ],
+  "recipe_coverage": " Reviewed signed-stat and restriction Aura components: surviving large and lethal small creatures, normal casting/target loss, cleanup persistence, legal Disenchant removal/Disperse bounce, host loss, owner-specific populated zones, exact costs, snapshot/AI replay, real attacking/blocking, and restricted nonmana/mana activations with an unaffected control. Printed entry life, Aura-to-hand death replacement, and combat damage prevention are checked where declared. This is component coverage, not whole-card certification. Other activated abilities, threshold, upkeep/end-step triggers, target-triggered self-removal, transformations, Vehicle interactions, retargeting, and color/subtype changes remain separate gaps where present; Kirtar's Desire uses four graveyard cards, below threshold. Arachnus Web cleanup uses a 2-power host, below its end-step threshold; its large-target case does not advance to the end step."
+}

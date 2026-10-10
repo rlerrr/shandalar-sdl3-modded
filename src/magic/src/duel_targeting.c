@@ -604,7 +604,9 @@ int select_card_for_action(int player,
         g_target_player_choice = -1;
         return -1;
       }
-      if (selected == -2) { g_target_selection_status_code = -2; g_target_player_choice = player; return -1; }
+      /* Mana cancellation has no selected player/card. charge_mana checks
+         that pair before considering the cancel status. */
+      if (selected == -2) { g_target_selection_status_code = -2; g_target_player_choice = -1; return -1; }
       if (selected < 0 || selected >= g_active_cards_count[player]) duel_host_fail("illegal mana-source choice");
       g_target_selection_status_code = 0; g_target_player_choice = player;
       return selected;

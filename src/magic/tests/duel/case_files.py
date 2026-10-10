@@ -44,7 +44,7 @@ def load_cases(directory, registry, oracle=None, aliases=None):
             entries = list(entries)
             for declaration in declarations:
                 try:
-                    entries.extend(expand(card, document["csvid"], declaration, record, registry))
+                    entries.extend(expand(card, document["csvid"], declaration, record, registry, oracle_context=oracle))
                 except ValueError as error:
                     raise ValueError(f"{source}: {error}") from error
         for entry in entries:

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Miraculous Recovery",
+  "csvid": 2743,
+  "recipes": [
+    {
+      "family": "recover_card",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "destination": "battlefield",
+        "counters": 1
+      },
+      "oracle_text": "Return target creature card from your graveyard to the battlefield. Put a +1/+1 counter on it.",
+      "variants": [
+        "return",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "lost_target",
+        "snapshot",
+        "alternate",
+        "shifted_target",
+        "wrong_owner",
+        "wrong_type",
+        "eligible_type_creature",
+        "death_owner"
+      ]
+    }
+  ],
+  "recipe_coverage": "Oracle-reviewed single-card recovery: eligible alternatives and full-zone indices, type/color/value restrictions, graveyard ownership, exact/insufficient mana, empty zone, ordered unaffected zones, target departure and index shift through a real Reclaim response, populated-zone snapshot replay. Reanimation also checks entry characteristics and subsequent death ownership; subtype bonuses are explicit. Multi-target recovery, graveyard shroud, replacement effects, and exceptional card types remain separate."
+}

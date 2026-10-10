@@ -1,0 +1,39 @@
+{
+  "version": 1,
+  "card": "Rally the Peasants",
+  "csvid": 12049,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "sweep",
+      "version": 2,
+      "params": {
+        "effect": "stats",
+        "targets": [
+          "creature"
+        ],
+        "power": 2,
+        "toughness": 0,
+        "scope": "self"
+      },
+      "oracle_text": "Creatures you control get +2/+0 until end of turn.\nFlashback {2}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "variants": [
+        "mixed",
+        "friendly_only",
+        "opponent_only",
+        "empty_board",
+        "empty_zones",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "cleanup",
+        "tapped_all",
+        "untapped_all",
+        "injured",
+        "late_arrival",
+        "stacking"
+      ]
+    }
+  ],
+  "recipe_coverage": " Reviewed board-wide temporary stat component: exact signed power/toughness, friendly/opposing/color/subtype scope, unchanged noncreatures, reduced-toughness deaths including indestructible witnesses, stacking and cleanup, later arrivals, preexisting damage, ordered populated libraries and owned hands/graveyards/exile, normal printed mana cost, caller-owned snapshot replay after AI. Includes untapping/draw/scry/death-life/exile clauses when declared. Other Oracle clauses (keyword grants and combat, kicker, alternate costs, cycling, flashback, madness, awaken, spell mastery, vehicles) remain separate coverage gaps where present. No complete-card coverage claim."
+}

@@ -11,6 +11,22 @@ VERSION = 1
 COLORS = {"B": 1, "U": 2, "G": 3, "R": 4, "W": 5}
 WORDS = {"a": 1, "two": 2, "three": 3, "four": 4}
 VARIANTS = {
+    "etb_value_creature": ("cast", "payment", "snapshot", "bounce_recast"),
+    "blocking_creature": ("cast", "payment", "snapshot", "combat_snapshot"),
+    "combat_keyword_creature": ("cast", "payment", "snapshot", "combat_snapshot_0"),
+    "tap_damage_creature": ("cast", "activation_payment", "pending_snapshot", "survivor"),
+    "regenerate_creature": ("cast", "payment", "snapshot", "destroy"),
+    "mana_creature": ("cast", "payment", "snapshot", "fresh_activation"),
+    "defensive_creature": ("cast", "payment", "snapshot", "defense_snapshot"),
+    "evasion_creature": ("cast", "payment", "snapshot", "combat_snapshot"),
+    "self_pump_creature": ("activation", "activation_payment", "stacked_activations", "activation_snapshot"),
+    "aura_control": ("friendly_cleanup", "payment", "insufficient_mana", "lost_target", "snapshot"),
+    "aura_creature": ("friendly_cleanup", "payment", "insufficient_mana", "lost_target", "snapshot"),
+    "grant_creature": ("friendly_cleanup", "payment", "insufficient_mana", "lost_target", "snapshot"),
+    "sweep": ("mixed", "payment", "insufficient_mana", "snapshot"),
+    "damage_spell": ("payment", "insufficient_mana", "snapshot"),
+    "recover_card": ("return", "payment", "insufficient_mana", "empty", "lost_target", "snapshot"),
+    "counter_spell": ("opponent", "own_spell", "payment", "insufficient_mana", "no_stack", "snapshot"),
     "creature_keywords": ("cast", "payment", "insufficient_mana", "snapshot", "fresh_attack", "unblocked",
                           "block_ground", "block_flying", "tapped_attacker", "tapped_blocker"),
     "reduce_creature": ("friendly_cleanup", "opponent_cleanup", "negative_power", "lethal", "lost_target", "empty", "wrong_target", "payment", "insufficient_mana", "snapshot"),
@@ -149,17 +165,91 @@ def explicit_spec(declaration, oracle):
     family = declaration.get("family")
     if family not in VARIANTS:
         raise ValueError("unknown explicit recipe family")
-    if family == "creature_keywords":
+    if family in ("aura_creature", "aura_control"):
+        allowed_types=("Enchantment — Aura", "Snow Enchantment — Aura")
+        if family == "aura_control":allowed_types += ("Kindred Enchantment — Rebel Aura",)
+        if (not oracle or oracle.get("type_line") not in allowed_types
+                or oracle.get("layout", "normal") != "normal" or oracle.get("selected_face") or oracle.get("card_faces")
+                or family == "aura_creature" and not oracle.get("oracle_text", "").startswith(("Enchant creature\n", "Enchant creature ("))):
+            raise ValueError("Aura recipe requires a normal single-face creature Aura")
+        if declaration.get("oracle_text") != oracle.get("oracle_text") or "variants" not in declaration:
+            raise ValueError("Aura recipe requires pinned Oracle text and reviewed variants")
+        from grant_recipes import spec
+        if family == "aura_control":
+            scopes={"creature":"Enchant creature", "permanent":"Enchant permanent", "nonland":"Enchant nonland permanent", "artifact_or_creature":"Enchant artifact or creature"}
+            parameters=declaration.get("params")
+            scope=parameters.get("scope") if isinstance(parameters,dict) else None
+            if not isinstance(scope,str) or scope not in scopes or not any(line==scopes[scope] or line.startswith(scopes[scope]+" (") for line in oracle["oracle_text"].splitlines()):
+                raise ValueError("Aura control scope requires the reviewed Oracle enchant line")
+        return spec(declaration.get("params"), cost_from_oracle(oracle), family)
+    if family in ("creature_keywords", "self_pump_creature", "evasion_creature", "defensive_creature", "mana_creature", "regenerate_creature", "etb_value_creature", "blocking_creature", "tap_damage_creature", "combat_keyword_creature"):
+        if family == "combat_keyword_creature":
+            from combat_keyword_creature_recipes import spec
+            return spec(declaration, oracle)
+        if family == "tap_damage_creature":
+            from tap_damage_creature_recipes import spec
+            return spec(declaration, oracle)
+        if family == "blocking_creature":
+            from blocking_creature_recipes import spec
+            return spec(declaration, oracle)
+        if family == "etb_value_creature":
+            from etb_value_creature_recipes import spec
+            return spec(declaration, oracle)
+        if family == "regenerate_creature":
+            from regenerate_creature_recipes import spec
+            return spec(declaration, oracle)
+        if family == "mana_creature":
+            from mana_creature_recipes import spec
+            return spec(declaration, oracle)
+        if family == "defensive_creature":
+            from defensive_creature_recipes import spec
+            return spec(declaration, oracle)
+        if family == "evasion_creature":
+            from evasion_creature_recipes import spec
+            return spec(declaration, oracle)
+        if family == "self_pump_creature":
+            from pump_creature_recipes import spec
+            return spec(declaration, oracle)
         from creature_recipes import spec
         return spec(declaration, oracle)
+    if family == "counter_spell":
+        if not oracle or oracle.get("type_line") != "Instant" or oracle.get("layout", "normal") != "normal" or oracle.get("selected_face") or oracle.get("card_faces"):
+            raise ValueError("counterspell recipe requires a normal single-face Instant")
+        if not isinstance(declaration.get("oracle_text"), str) or not declaration["oracle_text"] or declaration["oracle_text"] != oracle.get("oracle_text"):
+            raise ValueError("counterspell Oracle text changed or is missing; review the declaration")
+        if "variants" not in declaration:
+            raise ValueError("counterspell recipe requires reviewed variants")
+        from counter_recipes import spec
+        return spec(declaration.get("params"), cost_from_oracle(oracle))
     if (not oracle or oracle.get("selected_face") or oracle.get("card_faces")
             or oracle.get("layout", "normal") != "normal"
-            or oracle.get("type_line") not in ("Instant", "Sorcery")):
+            or oracle.get("type_line") not in ("Instant", "Sorcery")
+               and not (family in ("sweep", "grant_creature") and oracle.get("type_line") in ("Instant — Arcane", "Sorcery — Arcane"))):
         raise ValueError("explicit recipe requires a normal single-face Instant or Sorcery")
     text = declaration.get("oracle_text")
     if not isinstance(text, str) or not text or text != oracle.get("oracle_text"):
         raise ValueError("explicit recipe Oracle text changed or is missing; review the declaration")
     parameters = declaration.get("params")
+    if family == "grant_creature":
+        if "variants" not in declaration:
+            raise ValueError("ability-grant recipes require reviewed variants")
+        from grant_recipes import spec
+        return spec(parameters, cost_from_oracle(oracle))
+    if family == "sweep":
+        if "variants" not in declaration:
+            raise ValueError("sweep recipes require reviewed variants")
+        from sweep_recipes import spec
+        return spec(parameters, cost_from_oracle(oracle))
+    if family == "damage_spell":
+        if "variants" not in declaration:
+            raise ValueError("damage recipes require reviewed variants")
+        from damage_recipes import spec
+        return spec(parameters, cost_from_oracle(oracle))
+    if family == "recover_card":
+        if "variants" not in declaration:
+            raise ValueError("recovery recipes require reviewed variants")
+        from graveyard_recipes import spec
+        return spec(parameters, cost_from_oracle(oracle))
     if family == "reduce_creature":
         from stat_recipes import spec
         return spec(parameters, cost_from_oracle(oracle))
@@ -186,13 +276,14 @@ def explicit_spec(declaration, oracle):
     return dict(family=family, mana=cost_from_oracle(oracle), **parameters)
 
 
-def expand(card_name, csvid, declaration, oracle, registry):
+def expand(card_name, csvid, declaration, oracle, registry, oracle_context=None):
     if not isinstance(declaration, dict):
         raise ValueError("recipe declaration must be an object")
     version = declaration.get("version")
     if type(version) is not int or version not in (VERSION, 2):
         raise ValueError("recipe requires explicit supported version")
-    allowed = {"family", "version", "variants"} | ({"params", "oracle_text", "resolve_dialogs", "resolve_zones", "cast_dialogs", "setup"} if version == 2 else set())
+    allowed = {"family", "version", "variants"} | ({"params", "oracle_text", "resolve_dialogs", "resolve_zones", "cast_dialogs", "repeat_cast_dialogs", "setup", "eligibility_only", "cast_target_first", "cast_target_count"} if version == 2 else set())
+    if version == 2 and declaration.get('family') == 'self_pump_creature':allowed |= {'activation_dialog','activation_dialogs','activation_cancel_mana'}
     if set(declaration) - allowed:
         raise ValueError("unknown recipe declaration fields")
     dialogs = declaration.get("resolve_dialogs", [])
@@ -215,14 +306,92 @@ def expand(card_name, csvid, declaration, oracle, registry):
     family = spec["family"]
     variants = declaration.get("variants", list(VARIANTS[family]))
     supported_variants = set(VARIANTS[family]) | ({"lost_target"} if version == 2 and family == "pump_creature" else set())
+    if family in ("grant_creature", "aura_creature", "aura_control"):
+        from grant_recipes import variants as grant_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        if family in ("aura_creature", "aura_control"):
+            for witness, cost, text in (("Disenchant", "{1}{W}", "Destroy target artifact or enchantment."),
+                    ("Disperse", "{1}{U}", "Return target nonland permanent to its owner's hand.")):
+                r=oracle_context.get(witness, {})
+                if witness not in registry or (r.get("mana_cost"),r.get("oracle_text")) != (cost,text):
+                    raise ValueError(f"Aura action witness changed: {witness}")
+        if family == "aura_control":
+            for witness, power, toughness, text in (("Furnace Whelp","2","2","Flying\n{R}: This creature gets +1/+0 until end of turn."),
+                    ("Llanowar Elves","1","1","{T}: Add {G}."), ("Wirewood Elf","1","2","{T}: Add {G}.")):
+                r=oracle_context.get(witness,{})
+                if witness not in registry or "Creature" not in r.get("type_line","") or (r.get("power"),r.get("toughness"),r.get("oracle_text")) != (power,toughness,text):
+                    raise ValueError(f"Aura activation witness changed: {witness}")
+        supported_variants = set(grant_variants(spec))
     if family == "creature_keywords":
         from creature_recipes import variants as creature_variants
         supported_variants = set(creature_variants(spec))
+    if family == "combat_keyword_creature":
+        from combat_keyword_creature_recipes import variants as combat_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(combat_variants(spec))
+    if family == "tap_damage_creature":
+        from tap_damage_creature_recipes import variants as tap_damage_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(tap_damage_variants(spec))
+    if family == "blocking_creature":
+        from blocking_creature_recipes import variants as blocking_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(blocking_variants(spec))
+    if family == "etb_value_creature":
+        from etb_value_creature_recipes import variants as entry_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(entry_variants(spec))
+    if family == "regenerate_creature":
+        from regenerate_creature_recipes import variants as regeneration_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(regeneration_variants(spec))
+    if family == "mana_creature":
+        from mana_creature_recipes import variants as mana_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(mana_variants(spec))
+    if family == "defensive_creature":
+        from defensive_creature_recipes import variants as defensive_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(defensive_variants(spec))
+    if family == "evasion_creature":
+        from evasion_creature_recipes import variants as evasion_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(evasion_variants(spec))
+    if family == "self_pump_creature":
+        from pump_creature_recipes import variants as pump_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(pump_variants(spec))
+    if family == "counter_spell":
+        from counter_recipes import variants as counter_variants
+        supported_variants = set(counter_variants(spec))
+    if family == "recover_card":
+        from graveyard_recipes import validate_witnesses, variants as recovery_variants
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(recovery_variants(spec, oracle_context))
+    if family == "damage_spell":
+        from damage_recipes import validate_witnesses, variants as damage_variants
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(damage_variants(spec, oracle_context))
+    if family == "sweep":
+        from sweep_recipes import validate_witnesses, variants as sweep_variants
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(sweep_variants(spec))
     if family == "destroy_permanent": supported_variants |= {"target_"+t for t in spec["targets"]}
     if family == "move_permanent": supported_variants |= {"target_"+t for t in spec["targets"]} | {"wrong_controller", "wrong_state"}
     if (not isinstance(variants, list) or not variants or any(v not in supported_variants for v in variants)
             or len(set(variants)) != len(variants)):
         raise ValueError("unknown, empty, or duplicate recipe variants")
+    eligibility = declaration.get("eligibility_only", [])
+    if (not isinstance(eligibility, list) or any(not isinstance(v, str) for v in eligibility)
+            or len(set(eligibility)) != len(eligibility)
+            or any(v not in variants or v not in ("opponent_cleanup", "opponent_unblocked", "expired_flying") for v in eligibility)
+            or eligibility and (family != "grant_creature" or spec.get("controller", "any") != "any")):
+        raise ValueError("eligibility_only requires reviewed opposing-target grant variants")
+    if "cast_target_first" in declaration and (declaration["cast_target_first"] is not True or family != "grant_creature"):
+        raise ValueError("cast_target_first requires a reviewed grant decision order")
+    if "cast_target_count" in declaration and (family != "aura_creature"
+            or type(declaration["cast_target_count"]) is not int or declaration["cast_target_count"] not in (1,2)):
+        raise ValueError("cast_target_count requires a reviewed Aura presentation sequence")
     resolve_zones = declaration.get("resolve_zones", {})
     if (not isinstance(resolve_zones, dict)
             or any(v not in variants or v == "lost_target" or not isinstance(choices, list)
@@ -258,19 +427,100 @@ def expand(card_name, csvid, declaration, oracle, registry):
     if (not isinstance(cast_dialogs, dict)
             or any(v not in variants or not isinstance(choices, list)
                    or any(type(n) is not int or not 0 <= n <= 32 for n in choices) for v, choices in cast_dialogs.items())
-            or cast_dialogs and family != "move_permanent"):
-        raise ValueError("cast_dialogs requires reviewed movement variants and zero-based choices")
+            or cast_dialogs and family not in ("move_permanent", "sweep", "grant_creature")):
+        raise ValueError("cast_dialogs requires reviewed movement/sweep/grant variants and zero-based choices")
+    repeat_dialogs = declaration.get("repeat_cast_dialogs", {})
+    if (not isinstance(repeat_dialogs, dict)
+            or any(v != "stacking" or v not in variants or not isinstance(choices, list)
+                   or any(type(n) is not int or not 0 <= n <= 32 for n in choices) for v, choices in repeat_dialogs.items())
+            or repeat_dialogs and family != "sweep"):
+        raise ValueError("repeat_cast_dialogs requires reviewed sweep stacking choices")
 
     def identity(name):
         if name not in registry:
             raise ValueError(f"recipe witness missing from registry: {name}")
         return registry[name]["csvid"]
 
+    if family == "combat_keyword_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("combat keyword recipes require dedicated cases for custom decisions/setup")
+        from combat_keyword_creature_recipes import expand as combat_creatures
+        return combat_creatures(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+    if family == "tap_damage_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("tap damage recipes require dedicated cases for custom decisions/setup")
+        from tap_damage_creature_recipes import expand as shooters
+        return shooters(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+    if family == "blocking_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("blocking recipes require dedicated cases for custom decisions/setup")
+        from blocking_creature_recipes import expand as blockers
+        return blockers(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+    if family == "etb_value_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("entry recipes require dedicated cases for custom decisions/setup")
+        from etb_value_creature_recipes import expand as entry_creatures
+        return entry_creatures(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+    if family == "regenerate_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("regeneration recipes require dedicated cases for custom decisions/setup")
+        from regenerate_creature_recipes import expand as regenerators
+        return regenerators(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+    if family == "mana_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("mana recipes require dedicated cases for custom decisions/setup")
+        from mana_creature_recipes import expand as mana_creatures
+        return mana_creatures(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+    if family == "defensive_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("defensive recipes require dedicated cases for custom decisions/setup")
+        from defensive_creature_recipes import expand as defenders
+        return defenders(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+    if family == "evasion_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("evasion recipes require dedicated cases for custom decisions/setup")
+        from evasion_creature_recipes import expand as evaders
+        return evaders(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+    if family == "self_pump_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("self-pump recipes require dedicated cases for custom casting decisions/setup")
+        from pump_creature_recipes import expand as pumps
+        return pumps(card_name, csvid, declaration, spec, variants, registry, oracle_context)
     if family == "creature_keywords":
         if dialogs or support or resolve_zones:
             raise ValueError("creature recipes require dedicated cases for custom decisions/setup")
         from creature_recipes import expand as creatures
         return creatures(card_name, csvid, declaration, spec, variants, registry)
+    if family == "counter_spell":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("counterspell recipes require dedicated cases for custom decisions/setup")
+        from counter_recipes import expand as counters, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        return counters(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+
+    if family == "recover_card":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("recovery recipes need dedicated cases for custom decisions/setup")
+        from graveyard_recipes import expand as recovery
+        return recovery(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+
+    if family == "damage_spell":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("damage recipes need dedicated cases for custom decisions/setup")
+        from damage_recipes import expand as damage
+        return damage(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+
+    if family == "sweep":
+        if dialogs or support or resolve_zones:
+            raise ValueError("sweeps need dedicated cases for custom decisions/setup")
+        from sweep_recipes import expand as sweep
+        return sweep(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+
+    if family in ("grant_creature", "aura_creature", "aura_control"):
+        if dialogs or support or resolve_zones or repeat_dialogs:
+            raise ValueError("ability grants require dedicated cases for custom setup/resolution")
+        from grant_recipes import expand as grants
+        return grants(card_name, csvid, declaration, spec, variants, registry, oracle_context)
 
     if family == "move_permanent":
         from movement_recipes import expand as movement

@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Homing Lightning",
+  "csvid": 12978,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 4,
+        "targets": [
+          "creature"
+        ],
+        "same_name_damage": true
+      },
+      "oracle_text": "Homing Lightning deals 4 damage to target creature and each other creature with the same name as that creature.",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "survivor",
+        "lethal",
+        "lost_target",
+        "friendly",
+        "empty",
+        "wrong_type",
+        "same_name",
+        "regenerate"
+      ]
+    }
+  ],
+  "recipe_coverage": "Targeted damage component: exact normal payment, legality, real responses, ordered stocked zones, cleanup, and AI/snapshot replay. Regeneration success follows documented legacy destruction-window timing. Additional abilities (alternate costs, graveyard casting, planeswalkers, uncounterability, damage prevention, equipment destruction, regeneration prohibition) require separate authored cases where present."
+}

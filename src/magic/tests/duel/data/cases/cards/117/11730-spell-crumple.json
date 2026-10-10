@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Spell Crumple",
+  "csvid": 11730,
+  "recipes": [
+    {
+      "family": "counter_spell",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature",
+          "instant",
+          "sorcery",
+          "artifact",
+          "enchantment",
+          "aura"
+        ],
+        "destination": "library_bottom",
+        "self_destination": "library_bottom"
+      },
+      "oracle_text": "Counter target spell. If that spell is countered this way, put it on the bottom of its owner's library instead of into that player's graveyard. Put Spell Crumple on the bottom of its owner's library.",
+      "variants": [
+        "opponent",
+        "own_spell",
+        "payment",
+        "insufficient_mana",
+        "no_stack",
+        "snapshot",
+        "type_instant",
+        "type_sorcery",
+        "type_artifact",
+        "type_enchantment",
+        "type_aura"
+      ]
+    }
+  ],
+  "recipe_coverage": "Oracle-reviewed counterspell component through real casting and priority: own/opposing spells, supported type/color/value restrictions, payment, no stack, insufficient mana, ordered destinations and immediate effects, populated-zone snapshot replay. Tax counters also cover pay, decline, exact mana, and unaffordable payment. Counter immunity, target removal during response, multiple stack objects, and exceptional card types require separate cases."
+}

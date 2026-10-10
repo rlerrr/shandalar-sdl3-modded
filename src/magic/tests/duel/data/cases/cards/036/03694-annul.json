@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Annul",
+  "csvid": 3694,
+  "recipes": [
+    {
+      "family": "counter_spell",
+      "version": 2,
+      "params": {
+        "targets": [
+          "artifact",
+          "enchantment",
+          "aura"
+        ]
+      },
+      "oracle_text": "Counter target artifact or enchantment spell.",
+      "variants": [
+        "opponent",
+        "own_spell",
+        "payment",
+        "insufficient_mana",
+        "no_stack",
+        "snapshot",
+        "type_enchantment",
+        "type_aura",
+        "wrong_type"
+      ]
+    }
+  ],
+  "recipe_coverage": "Oracle-reviewed counterspell component through real casting and priority: own/opposing spells, supported type/color/value restrictions, payment, no stack, insufficient mana, ordered destinations and immediate effects, populated-zone snapshot replay. Tax counters also cover pay, decline, exact mana, and unaffordable payment. Counter immunity, target removal during response, multiple stack objects, and exceptional card types require separate cases."
+}

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Call to the Netherworld",
+  "csvid": 8493,
+  "recipes": [
+    {
+      "family": "recover_card",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "destination": "hand",
+        "colors": [
+          "B"
+        ]
+      },
+      "oracle_text": "Return target black creature card from your graveyard to your hand.\nMadness {0} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "variants": [
+        "return",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "lost_target",
+        "snapshot",
+        "alternate",
+        "shifted_target",
+        "wrong_owner",
+        "wrong_color",
+        "eligible_type_creature"
+      ]
+    }
+  ],
+  "recipe_coverage": "Oracle-reviewed single-card recovery: eligible alternatives and full-zone indices, type/color/value restrictions, graveyard ownership, exact/insufficient mana, empty zone, ordered unaffected zones, target departure and index shift through a real Reclaim response, populated-zone snapshot replay. Reanimation also checks entry characteristics and subsequent death ownership; subtype bonuses are explicit. Multi-target recovery, graveyard shroud, replacement effects, and exceptional card types remain separate. This declaration tests the normal hand-cast recovery component; Madness remains separate."
+}

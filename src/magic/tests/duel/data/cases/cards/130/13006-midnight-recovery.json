@@ -1,0 +1,32 @@
+{
+  "version": 1,
+  "card": "Midnight Recovery",
+  "csvid": 13006,
+  "recipes": [
+    {
+      "family": "recover_card",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature"
+        ],
+        "destination": "hand"
+      },
+      "oracle_text": "Return target creature card from your graveyard to your hand.\nCipher (Then you may exile this spell card encoded on a creature you control. Whenever that creature deals combat damage to a player, its controller may cast a copy of the encoded card without paying its mana cost.)",
+      "variants": [
+        "return",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "lost_target",
+        "snapshot",
+        "alternate",
+        "shifted_target",
+        "wrong_owner",
+        "wrong_type",
+        "eligible_type_creature"
+      ]
+    }
+  ],
+  "recipe_coverage": "Oracle-reviewed single-card recovery: eligible alternatives and full-zone indices, type/color/value restrictions, graveyard ownership, exact/insufficient mana, empty zone, ordered unaffected zones, target departure and index shift through a real Reclaim response, populated-zone snapshot replay. Reanimation also checks entry characteristics and subsequent death ownership; subtype bonuses are explicit. Multi-target recovery, graveyard shroud, replacement effects, and exceptional card types remain separate. This declaration tests the normal hand-cast recovery component; Cipher encoding and combat copies remains separate."
+}

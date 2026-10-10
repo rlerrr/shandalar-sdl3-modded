@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "card": "Truefire Paladin",
+  "csvid": 13087,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "self_pump_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Vigilance"
+        ],
+        "power": 2,
+        "toughness": 0,
+        "activation_cost": "{R}{W}"
+      },
+      "oracle_text": "Vigilance\n{R}{W}: This creature gets +2/+0 until end of turn.\n{R}{W}: This creature gains first strike until end of turn.",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "activation",
+        "activation_payment",
+        "stacked_activations",
+        "repeated_activations",
+        "tapped_activation",
+        "fresh_activation",
+        "opposing_turn_activation",
+        "combat_activation",
+        "lost_source",
+        "activation_snapshot",
+        "five_activations"
+      ],
+      "activation_dialogs": {
+        "activation": 0,
+        "activation_payment": 0,
+        "stacked_activations": 0,
+        "repeated_activations": 0,
+        "tapped_activation": 0,
+        "fresh_activation": 0,
+        "opposing_turn_activation": 0,
+        "combat_activation": 0,
+        "lost_source": 0,
+        "activation_snapshot": 0,
+        "five_activations": 0
+      }
+    }
+  ],
+  "recipe_coverage": " Reviewed self-pump component: normal casting, structured Oracle base characteristics and unconditional keywords, real combat, exact activation payment, unchanged stats before resolution, queued/individually resolved repetitions, tapped and freshly cast hosts, opposing-turn activation, in-combat activation, cleanup expiry, target/source loss through a real priority response, caller-owned snapshot and AI backup replay, populated ordered zones, and per-turn limits/reset when declared. Other activated abilities and timing of flash remain gaps where present. Activation affordability negatives are omitted for multimode cards because another printed ability can independently permit activation. Component coverage, not whole-card certification."
+}

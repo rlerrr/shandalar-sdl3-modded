@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Kozilek's Channeler",
+  "csvid": 15362,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "mana_creature",
+      "version": 2,
+      "params": {
+        "keywords": [],
+        "activation_cost": "{T}",
+        "mana_outputs": [
+          "{C}{C}"
+        ],
+        "production": "fixed"
+      },
+      "oracle_text": "{T}: Add {C}{C}.",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "fresh_activation",
+        "sick_activation",
+        "tapped_activation",
+        "production_0",
+        "payment_0",
+        "repeat_denied_0",
+        "opposing_turn_0",
+        "combat_0",
+        "spend_0",
+        "spend_generic_0",
+        "mana_snapshot_0",
+        "untap_repeat_0",
+        "opposing_owner"
+      ]
+    }
+  ],
+  "recipe_coverage": " Reviewed single tap-for-mana component: structured Oracle casting cost and base stats, ordinary casting and combat declarations, explicit input cost and mana outputs, individual colors including true colorless, immediate resolution with no stack residue, no repeated use while tapped, sickness and a real freshly cast host, opposing-turn use, tapping an already declared blocker, exact payment and wrong-input-color negatives, using the generated mana to cast colored and generic-cost creatures, real Vitalize untap and reuse with opposing witnesses, caller-owned snapshot replay after AI backups, populated owned zones and ordered libraries. Variable output, additional abilities/costs, restricted mana spending, other printed mechanics, mana replacement/trigger interactions, flash timing, and AI color-choice policy remain gaps. Component coverage, not whole-card certification."
+}

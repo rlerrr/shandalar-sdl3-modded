@@ -103,5 +103,46 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+  "recipes": [
+    {
+      "family": "recover_card",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature",
+          "instant",
+          "sorcery",
+          "artifact",
+          "enchantment",
+          "land"
+        ],
+        "destination": "hand"
+      },
+      "oracle_text": "Return target card from your graveyard to your hand.",
+      "variants": [
+        "return",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "lost_target",
+        "snapshot",
+        "alternate",
+        "shifted_target",
+        "wrong_owner",
+        "eligible_type_creature",
+        "type_creature",
+        "eligible_type_instant",
+        "type_instant",
+        "eligible_type_sorcery",
+        "type_sorcery",
+        "eligible_type_artifact",
+        "type_artifact",
+        "eligible_type_enchantment",
+        "type_enchantment",
+        "eligible_type_land"
+      ]
+    }
+  ],
+  "recipe_coverage": "Oracle-reviewed single-card recovery: eligible alternatives and full-zone indices, type/color/value restrictions, graveyard ownership, exact/insufficient mana, empty zone, ordered unaffected zones, target departure and index shift through a real Reclaim response, populated-zone snapshot replay. Reanimation also checks entry characteristics and subsequent death ownership; subtype bonuses are explicit. Multi-target recovery, graveyard shroud, replacement effects, and exceptional card types remain separate."
 }

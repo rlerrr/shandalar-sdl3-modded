@@ -41,6 +41,42 @@ the team bonus and cleanup, while trample combat still needs a separate case.
 The Lignify cases check base stats and ability removal; creature subtype remains
 outside the current inspection interface.
 
+Board-wide stat recipes now cover mixed opposing boards, signed stats, lethal
+toughness reductions, stacking, later arrivals, cleanup, owned populated zones,
+and snapshot replay. Declared untapping, draw, scry, life-per-death, and exile
+components are checked too. Keyword grants and other additional clauses remain
+explicit coverage gaps where the card's authored cases do not exercise them.
+
+Temporary keyword recipes now exercise flying/reach blocking, trample damage,
+first/double strike, lifelink, deathtouch, indestructibility, hexproof/shroud, and
+haste through real casting, responses, and combat. Fresh creatures are legally
+cast before the haste check. Cleanup controls exercise expiration. Declared
+must-block effects use their blocker-choice triggers. These cover the reviewed
+components of a card, with remaining clauses documented in its card file.
+
+Creature Aura recipes check persistent bonuses, removal, bounce, loss of their
+host, entry draw/life effects, and returning-Aura triggers, alongside combat
+abilities. Ownership of the Aura and its enchanted creature is checked
+separately. Cleanup must preserve the continuous effect.
+
+Signed-stat and restriction Auras also cover lethal toughness reduction,
+negative power without negative combat damage, normal attack/block restrictions,
+and disabled activated abilities. Removal restores those actions; unaffected
+creatures provide controls. Mana-ability exceptions use separate witnesses,
+with larger bodies when a toughness penalty would kill a 1/1 witness.
+
+Self-pumping creature recipes combine populated-zone casting/combat checks with
+real activation costs, pre-resolution stack observations, repeated and queued
+bonuses, cleanup, tapped/fresh hosts, source loss, and per-turn activation caps.
+Explicit menu decisions select the printed ability; other modes remain separate
+coverage gaps. Snapshot replay includes a resolved dynamic effect.
+
+Evasion creature recipes use real combat declarations to check fear, intimidate,
+shadow, horsemanship, basic landwalk, and unconditional unblockability. Blocker
+colors, artifact status, flying/reach, and both directions of shadow are tested
+separately. Landwalk uses the defending player's battlefield, including tapped
+lands and land removal before blockers. Other activated modes remain gaps.
+
 Original sets can become a browsing/filter index once we have a reviewed
 first-printing mapping. The pinned Oracle corpus currently lacks that mapping;
 the set in a Scryfall card URL may describe a reprint. A card's name, CSVID, and
@@ -300,6 +336,11 @@ the harness, so test authors can express those expectations correctly:
 - Player targets use `choose_player`; a missing timing or presentation hook
   does not change legal targets. For example, Shock has legal player targets
   when the battlefield is empty. Report remaining harness gaps separately.
+- `set_budget` sets the remaining work allowance to an integer between 200,000
+  and 2,000,000 without resetting RNG, time, or planned choices. Large sweep
+  boards use this explicitly for finite simultaneous-event processing. Existing
+  cases retain the ordinary limit; snapshots include the selected allowance,
+  and isolated-process timeouts still bound execution.
 
 
 ## Running the suite

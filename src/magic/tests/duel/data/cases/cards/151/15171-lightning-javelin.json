@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Lightning Javelin",
+  "csvid": 15171,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 3,
+        "targets": [
+          "creature",
+          "player"
+        ],
+        "scry": 1
+      },
+      "oracle_text": "Lightning Javelin deals 3 damage to any target. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "opponent_player",
+        "self_player",
+        "survivor",
+        "lethal",
+        "lost_target",
+        "friendly",
+        "scry_bottom",
+        "regenerate"
+      ]
+    }
+  ],
+  "recipe_coverage": "Targeted damage component: exact normal payment, legality, real responses, ordered stocked zones, cleanup, and AI/snapshot replay. Regeneration success follows documented legacy destruction-window timing. Additional abilities (alternate costs, graveyard casting, planeswalkers, uncounterability, damage prevention, equipment destruction, regeneration prohibition) require separate authored cases where present."
+}

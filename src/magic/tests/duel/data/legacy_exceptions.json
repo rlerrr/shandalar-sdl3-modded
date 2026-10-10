@@ -23,9 +23,10 @@
       "shandalar_behavior": "The shared regeneration helper gates activation on the LCBP_REGENERATION window flag, which is only set while the engine prompts for regeneration effects during destruction. Main-phase activation is correctly rejected under pre-Sixth Edition timing, where regeneration could only be used at destruction time.",
       "tests": [
         "Behavior.DrudgeSkeletons_MainPhaseActivationCorrectlyRejected",
-        "Behavior.DrudgeSkeletons_NoShieldDies"
+        "Behavior.DrudgeSkeletons_NoShieldDies",
+        "Behavior.RegenerateCreatureRecipe_70_legacy_timing"
       ],
-      "pending": "The host can now script destruction-window activation with choose_priority. This card still lacks a successful destruction-window case; batch 11 covers that shared path through Uthden Troll, Wall of Bone, Wall of Brambles, and Will-o'-the-Wisp."
+      "pending": "The regeneration recipe now covers successful destruction and lethal-damage windows, payment, repeated use, cleanup reuse, prohibition, and snapshot restoration. Control changes, sacrifice, and exile remain separate coverage."
     },
     {
       "card": "Living Wall",
@@ -36,9 +37,10 @@
       "shandalar_behavior": "Same shared regeneration window gate as Drudge Skeletons: main-phase activation is correctly rejected; regeneration applied at destruction time.",
       "tests": [
         "Behavior.LivingWall_MainPhaseActivationCorrectlyRejected",
-        "Behavior.LivingWall_CannotAttackCanBlock"
+        "Behavior.LivingWall_CannotAttackCanBlock",
+        "Behavior.RegenerateCreatureRecipe_148_legacy_timing"
       ],
-      "pending": "The host can now script destruction-window activation with choose_priority. This card still lacks a successful destruction-window case; batch 11 covers that shared path through Uthden Troll, Wall of Bone, Wall of Brambles, and Will-o'-the-Wisp."
+      "pending": "The regeneration recipe now covers successful destruction and lethal-damage windows, payment, repeated use, cleanup reuse, prohibition, and snapshot restoration. Control changes, sacrifice, and exile remain separate coverage."
     },
     {
       "card": "Uthden Troll",
@@ -48,9 +50,10 @@
       "oracle_expectation": "{R}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
       "shandalar_behavior": "Use regeneration during the destruction window, after the creature has been marked for destruction. Main-phase shield activation is rejected under the same intentional legacy timing documented for Drudge Skeletons. Regeneration still replaces destruction, taps the creature, heals its damage, and removes it from combat; the new cases exercise those effects through normal engine decisions.",
       "tests": [
-        "Behavior.UthdenTroll_LegacyTimingDoesNotAllowMainPhaseRegeneration"
+        "Behavior.UthdenTroll_LegacyTimingDoesNotAllowMainPhaseRegeneration",
+        "Behavior.RegenerateCreatureRecipe_261_legacy_timing"
       ],
-      "pending": "This batch covers destruction and lethal-combat windows. Turn-to-turn regeneration availability and regeneration prohibition remain separate coverage."
+      "pending": "The regeneration recipe also covers cleanup reuse and regeneration prohibition; control changes, sacrifice, and exile remain separate coverage."
     },
     {
       "card": "Wall of Bone",
@@ -60,9 +63,10 @@
       "oracle_expectation": "Defender (This creature can't attack.)\n{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.) Modern regeneration may be activated proactively to create a replacement shield.",
       "shandalar_behavior": "Use regeneration during the destruction window, after the creature has been marked for destruction. Main-phase shield activation is rejected under the same intentional legacy timing documented for Drudge Skeletons. Regeneration still replaces destruction, taps the creature, heals its damage, and removes it from combat; the new cases exercise those effects through normal engine decisions.",
       "tests": [
-        "Behavior.WallofBone_LegacyTimingDoesNotAllowMainPhaseRegeneration"
+        "Behavior.WallofBone_LegacyTimingDoesNotAllowMainPhaseRegeneration",
+        "Behavior.RegenerateCreatureRecipe_268_legacy_timing"
       ],
-      "pending": "This batch covers destruction and lethal-combat windows. Turn-to-turn regeneration availability and regeneration prohibition remain separate coverage."
+      "pending": "The regeneration recipe also covers cleanup reuse and regeneration prohibition; control changes, sacrifice, and exile remain separate coverage."
     },
     {
       "card": "Wall of Brambles",
@@ -72,9 +76,10 @@
       "oracle_expectation": "Defender (This creature can't attack.)\n{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
       "shandalar_behavior": "Use regeneration during the destruction window, after the creature has been marked for destruction. Main-phase shield activation is rejected under the same intentional legacy timing documented for Drudge Skeletons. Regeneration still replaces destruction, taps the creature, heals its damage, and removes it from combat; the new cases exercise those effects through normal engine decisions.",
       "tests": [
-        "Behavior.WallofBrambles_LegacyTimingDoesNotAllowMainPhaseRegeneration"
+        "Behavior.WallofBrambles_LegacyTimingDoesNotAllowMainPhaseRegeneration",
+        "Behavior.RegenerateCreatureRecipe_269_legacy_timing"
       ],
-      "pending": "This batch covers destruction and lethal-combat windows. Turn-to-turn regeneration availability and regeneration prohibition remain separate coverage."
+      "pending": "The regeneration recipe also covers cleanup reuse and regeneration prohibition; control changes, sacrifice, and exile remain separate coverage."
     },
     {
       "card": "Will-o'-the-Wisp",
@@ -84,9 +89,10 @@
       "oracle_expectation": "Flying (This creature can't be blocked except by creatures with flying or reach.)\n{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.) Modern regeneration may be activated proactively to create a replacement shield.",
       "shandalar_behavior": "Use regeneration during the destruction window, after the creature has been marked for destruction. Main-phase shield activation is rejected under the same intentional legacy timing documented for Drudge Skeletons. Regeneration still replaces destruction, taps the creature, heals its damage, and removes it from combat; the new cases exercise those effects through normal engine decisions.",
       "tests": [
-        "Behavior.WillotheWisp_LegacyTimingDoesNotAllowMainPhaseRegeneration"
+        "Behavior.WillotheWisp_LegacyTimingDoesNotAllowMainPhaseRegeneration",
+        "Behavior.RegenerateCreatureRecipe_286_legacy_timing"
       ],
-      "pending": "This batch covers destruction and lethal-combat windows. Turn-to-turn regeneration availability and regeneration prohibition remain separate coverage."
+      "pending": "The regeneration recipe also covers cleanup reuse and regeneration prohibition; control changes, sacrifice, and exile remain separate coverage."
     },
     {
       "card": "Carrion Wall",
@@ -96,7 +102,8 @@
       "oracle_expectation": "Defender (This creature can't attack.)\n{1}{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
       "shandalar_behavior": "Regeneration is activated during the destruction window rather than proactively in the main phase. Positive cases use real destruction decisions and verify the paid cost and surviving creature.",
       "tests": [
-        "Behavior.CarrionWall_LegacyMainPhaseNoProactiveRegeneration"
+        "Behavior.CarrionWall_LegacyMainPhaseNoProactiveRegeneration",
+        "Behavior.RegenerateCreatureRecipe_989_legacy_timing"
       ]
     },
     {
@@ -118,7 +125,404 @@
       "oracle_expectation": "{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
       "shandalar_behavior": "Regeneration is activated during the destruction window rather than proactively in the main phase. Positive cases enter real destruction decisions, verify the cost, and test healing of lethal combat damage.",
       "tests": [
-        "Behavior.HornedTroll_MainPhaseDoesNotOfferRegeneration"
+        "Behavior.HornedTroll_MainPhaseDoesNotOfferRegeneration",
+        "Behavior.RegenerateCreatureRecipe_1056_legacy_timing"
+      ]
+    },
+    {
+      "card": "Ancient Silverback",
+      "csvid": 1242,
+      "oracle_id": "5f12134c-d626-4a5e-8653-700681a491fc",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{G}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.) Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_1242_legacy_timing"
+      ]
+    },
+    {
+      "card": "Asphodel Wanderer",
+      "csvid": 13383,
+      "oracle_id": "a6ffcbc9-0990-4d95-a995-1b2f321256d7",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{2}{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_13383_legacy_timing"
+      ]
+    },
+    {
+      "card": "Carnassid",
+      "csvid": 3347,
+      "oracle_id": "97b386da-4bc0-4c39-a5cc-17e441c45127",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Trample\n{1}{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_3347_legacy_timing"
+      ]
+    },
+    {
+      "card": "Charging Troll",
+      "csvid": 1744,
+      "oracle_id": "bbc1b96d-5a63-4091-a2c7-08bd289e0bf2",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Vigilance\n{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_1744_legacy_timing"
+      ]
+    },
+    {
+      "card": "Clay Statue",
+      "csvid": 483,
+      "oracle_id": "cc1ba59c-bb70-4da9-bbd0-a466075f9053",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{2}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_483_legacy_timing"
+      ]
+    },
+    {
+      "card": "Cudgel Troll",
+      "csvid": 10401,
+      "oracle_id": "c2f86723-4765-4dac-a9f6-9cfa543613b2",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{G}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.) Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_10401_legacy_timing"
+      ]
+    },
+    {
+      "card": "Diabolic Machine",
+      "csvid": 376,
+      "oracle_id": "afd9b232-3f46-40c5-b1cf-2a7e8c955eba",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{3}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_376_legacy_timing"
+      ]
+    },
+    {
+      "card": "Dutiful Thrull",
+      "csvid": 12935,
+      "oracle_id": "744fcf77-b597-48a0-92ec-f3a617c03df1",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_12935_legacy_timing"
+      ]
+    },
+    {
+      "card": "Fog of Gnats",
+      "csvid": 3993,
+      "oracle_id": "41f58e06-5ce0-4b2d-a280-5bb3b6c56dfe",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Flying\n{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_3993_legacy_timing"
+      ]
+    },
+    {
+      "card": "Ghost Ship",
+      "csvid": 326,
+      "oracle_id": "09de1136-8a8f-4539-92a2-611dcdd0790b",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Flying\n{U}{U}{U}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_326_legacy_timing"
+      ]
+    },
+    {
+      "card": "Gorilla Chieftain",
+      "csvid": 2291,
+      "oracle_id": "4137ee86-bbf0-49dc-87c5-b48a384baac4",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{1}{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_2291_legacy_timing"
+      ]
+    },
+    {
+      "card": "Living Airship",
+      "csvid": 5396,
+      "oracle_id": "3bcead90-f7be-4fba-84e7-3d7c788a8b64",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Flying\n{2}{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_5396_legacy_timing"
+      ]
+    },
+    {
+      "card": "Malach of the Dawn",
+      "csvid": 1656,
+      "oracle_id": "c351a325-42cb-43ad-8648-c204e2317b50",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Flying\n{W}{W}{W}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_1656_legacy_timing"
+      ]
+    },
+    {
+      "card": "Manor Skeleton",
+      "csvid": 12012,
+      "oracle_id": "aa3f4938-ac4b-4f52-a8d3-481c1b387467",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Haste\n{1}{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_12012_legacy_timing"
+      ]
+    },
+    {
+      "card": "Ranger en-Vec",
+      "csvid": 3236,
+      "oracle_id": "04bb6731-5662-48d5-9e48-99d378c4adaf",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "First strike\n{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_3236_legacy_timing"
+      ]
+    },
+    {
+      "card": "Revered Dead",
+      "csvid": 8835,
+      "oracle_id": "96a57ce0-f1ab-4af7-8c18-8e35aad11780",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{W}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_8835_legacy_timing"
+      ]
+    },
+    {
+      "card": "Sanguine Guard",
+      "csvid": 1689,
+      "oracle_id": "d86cc093-5db9-437a-a5bd-77d6faf97ca0",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "First strike\n{1}{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_1689_legacy_timing"
+      ]
+    },
+    {
+      "card": "Selesnya Sentry",
+      "csvid": 12817,
+      "oracle_id": "29e8d973-0233-446e-b587-1c7508352642",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{5}{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_12817_legacy_timing"
+      ]
+    },
+    {
+      "card": "Tangle Hulk",
+      "csvid": 11537,
+      "oracle_id": "f6d0360c-ebc6-48b5-80ad-d52dadcdd5f5",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{2}{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_11537_legacy_timing"
+      ]
+    },
+    {
+      "card": "Trestle Troll",
+      "csvid": 12857,
+      "oracle_id": "8661d773-3b92-4fcf-8ffc-aced1ff7be8a",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Defender\nReach (This creature can block creatures with flying.)\n{1}{B}{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_12857_legacy_timing"
+      ]
+    },
+    {
+      "card": "Troll Ascetic",
+      "csvid": 6820,
+      "oracle_id": "0585ea6a-ef78-4386-a22c-6b8d8fc6c03c",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)\n{1}{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_6820_legacy_timing"
+      ]
+    },
+    {
+      "card": "Walking Dead",
+      "csvid": 839,
+      "oracle_id": "5791456c-7b3c-4e93-a6d1-94ab01858816",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_839_legacy_timing"
+      ]
+    },
+    {
+      "card": "Wolfir Avenger",
+      "csvid": 12511,
+      "oracle_id": "83deda94-66e8-4655-9cd5-6d97d809946d",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Flash (You may cast this spell any time you could cast an instant.)\n{1}{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_12511_legacy_timing"
+      ]
+    },
+    {
+      "card": "Yavimaya Gnats",
+      "csvid": 2165,
+      "oracle_id": "828c1a94-36e1-484b-afc8-87f85956d60d",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Flying\n{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_2165_legacy_timing"
+      ]
+    },
+    {
+      "card": "Metathran Zombie",
+      "csvid": 5043,
+      "oracle_id": "c631887c-e157-4a95-8a59-08a44854d07f",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_5043_legacy_timing"
+      ]
+    },
+    {
+      "card": "Pewter Golem",
+      "csvid": 6756,
+      "oracle_id": "c9d2c69e-6a4a-45b0-aff1-c19bcbe3b490",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{1}{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_6756_legacy_timing"
+      ]
+    },
+    {
+      "card": "Phyrexian Monitor",
+      "csvid": 4168,
+      "oracle_id": "1eb6c28d-ebac-4016-ad07-c90081ee4983",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_4168_legacy_timing"
+      ]
+    },
+    {
+      "card": "Restless Dead",
+      "csvid": 2584,
+      "oracle_id": "5315ba59-ca80-498e-b21a-ed87e6a4c955",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_2584_legacy_timing"
+      ]
+    },
+    {
+      "card": "Screeching Harpy",
+      "csvid": 3267,
+      "oracle_id": "58bbd316-e22c-4c23-8024-364122d1e9a2",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Flying\n{1}{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_3267_legacy_timing"
+      ]
+    },
+    {
+      "card": "Skeletal Wurm",
+      "csvid": 11039,
+      "oracle_id": "d988ed15-2927-421b-9a6e-01f0261272c2",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_11039_legacy_timing"
+      ]
+    },
+    {
+      "card": "Skyshroud Troll",
+      "csvid": 3283,
+      "oracle_id": "2e6d3120-d41d-4e48-b33f-0f73c876fe69",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{1}{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_3283_legacy_timing"
+      ]
+    },
+    {
+      "card": "Tattered Drake",
+      "csvid": 7981,
+      "oracle_id": "1199a252-3c7c-4ae4-b063-dc132bfbea2f",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Flying\n{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_7981_legacy_timing"
+      ]
+    },
+    {
+      "card": "Tel-Jilad Exile",
+      "csvid": 6808,
+      "oracle_id": "58987ca8-ee9b-412e-b08f-440588234e00",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{1}{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_6808_legacy_timing"
+      ]
+    },
+    {
+      "card": "Unworthy Dead",
+      "csvid": 3936,
+      "oracle_id": "7454e2cf-5ef2-4623-bac7-c375fd230595",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{B}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_3936_legacy_timing"
+      ]
+    },
+    {
+      "card": "Votary of the Conclave",
+      "csvid": 8005,
+      "oracle_id": "83837ceb-7aae-4257-8545-a6cf34656e3b",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "{2}{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_8005_legacy_timing"
+      ]
+    },
+    {
+      "card": "Wall of Pine Needles",
+      "csvid": 2149,
+      "oracle_id": "1d5bc31c-f4a1-4a59-b466-0347ddbbc7fb",
+      "rule": "Pre-Sixth Edition regeneration timing",
+      "oracle_expectation": "Defender (This creature can't attack.)\n{G}: Regenerate this creature. Modern regeneration may be activated proactively to create a replacement shield.",
+      "shandalar_behavior": "Activate during the destruction window instead of creating a proactive shield. The recipe tests normal destruction decisions, payment, healing, and leaving combat, and records this timing exception explicitly.",
+      "tests": [
+        "Behavior.RegenerateCreatureRecipe_2149_legacy_timing"
       ]
     }
   ]

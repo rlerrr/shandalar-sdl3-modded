@@ -19,7 +19,37 @@
         "insufficient_mana",
         "snapshot"
       ]
+    },
+    {
+      "family": "grant_creature",
+      "version": 2,
+      "params": {
+        "power": 7,
+        "toughness": 7,
+        "keywords": [
+          "Trample"
+        ],
+        "must_be_blocked": true
+      },
+      "oracle_text": "Target creature gets +7/+7 and gains trample until end of turn. It must be blocked this turn if able. (A creature with trample can deal excess combat damage to the player or planeswalker it's attacking.)",
+      "variants": [
+        "friendly_cleanup",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "wrong_type",
+        "lost_target",
+        "snapshot",
+        "tapped",
+        "large_target",
+        "unblocked",
+        "opponent_cleanup",
+        "empty_zones",
+        "trample",
+        "expired_trample",
+        "forced_block"
+      ]
     }
   ],
-  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases. Reviewed temporary ability component through normal casting/response/stack and real combat: declared signed-free stat bonuses, targeting, flying/reach legality, trample allocation, first/double strike, lifelink, deathtouch, indestructibility versus destruction/damage/zero toughness, hexproof/shroud ownership, and freshly cast haste/ability removal where declared. Includes cleanup/expiry, populated owned zones, exact cost, snapshot/AI replay, untapping/draw/life/death-loss components as declared. Additional Oracle clauses (must-block requirements, ferocious trample, alternate costs, overload, flashback, kicker effects, madness, split-second response prohibition) require separate authored cases. Not whole-card certification. The mandatory-block component also uses the legal blocker-choice trigger before combat damage."
 }

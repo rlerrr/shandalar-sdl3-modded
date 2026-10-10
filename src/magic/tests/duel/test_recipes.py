@@ -20,6 +20,325 @@ DATA = Path(__file__).parent / "data"
 
 
 class RecipesTest(unittest.TestCase):
+    def test_generated_case_rejects_unbounded_work_allowance(self):
+        from generate_cases import build
+        with tempfile.TemporaryDirectory(dir=Path.cwd()) as temporary:
+            data=Path(temporary);cases=data/"cases";cases.mkdir()
+            (data/"oracle.json").write_text(json.dumps(dict(version=1,cards={"Wrath of God":self.oracle["Wrath of God"]},source={})))
+            (data/"oracle_aliases.json").write_text(json.dumps(dict(version=1,aliases={})))
+            (data/"fixtures.json").write_text(json.dumps(dict(version=1,fixtures={"empty_main":dict(cards=[])})))
+            for budget in (True,-1,199999,2000001,4294967295):
+                (cases/"wrath.json").write_text(json.dumps(dict(version=1,card="Wrath of God",csvid=290,cases=[
+                    dict(name="BudgetBoundary",fixture="empty_main",steps=[dict(op="set_budget",value=budget)])])))
+                with self.assertRaisesRegex(ValueError,"scripted work budget"):
+                    build(data,data/"generated")
+
+    def test_sweep_overlapping_types_and_indestructible_witnesses(self):
+        record=self.oracle["Whipflare"]
+        declaration=dict(family="sweep",version=2,params=dict(effect="damage",targets=["creature"],amount=2,exclude_types=["artifact"]),
+                         oracle_text=record["oracle_text"],variants=["mixed","injured"])
+        cases=expand("Whipflare",11716,declaration,record,self.registry,oracle_context=self.oracle)
+        self.assertEqual(cases[0]["steps"][0],dict(op="set_budget",value=2000000))
+        from sweep_recipes import BOARD
+        for player in (0,1):
+            for name in ("Darksteel Myr","Darksteel Gargoyle","Obsianus Golem"):
+                ref=f"permanent_{player}_{BOARD.index(name)}"
+                self.assertIn(dict(op="assert_card",ref=ref,property="in_play",value=1),cases[0]["steps"])
+                self.assertIn(dict(op="assert_card",ref=ref,property="damage",value=0),cases[0]["steps"])
+            for name in ("Dryad Arbor","Nyxborn Eidolon"):
+                self.assertIn(dict(op="assert_card",ref=f"permanent_{player}_{BOARD.index(name)}",property="in_play",value=0),cases[0]["steps"])
+        self.assertIn(dict(op="cast",ref="injury",value=1),cases[1]["steps"])
+        self.assertFalse(any(s["op"]=="destroy" for s in cases[1]["steps"]))
+
+    def test_sweep_death_counts_and_caller_owned_snapshots(self):
+        record=self.oracle["Fumigate"]
+        declaration=dict(family="sweep",version=2,params=dict(effect="destroy",targets=["creature"],gain_per_destroyed=1),
+                         oracle_text=record["oracle_text"],variants=["mixed","empty_board","snapshot"])
+        cases=expand("Fumigate",16385,declaration,record,self.registry,oracle_context=self.oracle)
+        self.assertIn(dict(op="assert_life",player=0,value=38),cases[0]["steps"])
+        self.assertIn(dict(op="assert_zone",player=1,zone="battlefield",value=14),cases[0]["steps"])
+        self.assertFalse(any(s==dict(op="assert_life",player=0,value=38) for s in cases[1]["steps"]))
+        self.assertEqual(sum(s["op"]=="cast" for s in cases[2]["steps"]),2)
+        self.assertIn(dict(op="assert_recorded_state"),cases[2]["steps"])
+        altered=copy.deepcopy(self.registry);altered["Fumigate"]["mana_cost"]="{9}";altered["Fumigate"]["handler"]="unrelated"
+        self.assertEqual(cases,expand("Fumigate",16385,declaration,record,altered,oracle_context=self.oracle))
+
+    def test_sweep_exile_duration_and_genuinely_insufficient_mana(self):
+        from sweep_recipes import MANA_SOURCES
+        record=self.oracle["Anger of the Gods"]
+        declaration=dict(family="sweep",version=2,params=dict(effect="damage",targets=["creature"],amount=3,exile_on_death=True),
+                         oracle_text=record["oracle_text"],variants=["later_death","expired_death","insufficient_mana"])
+        cases=expand("Anger of the Gods",13373,declaration,record,self.registry,oracle_context=self.oracle)
+        self.assertIn(dict(op="assert_zone",player=1,zone="exile",value=9),cases[0]["steps"])
+        self.assertIn(dict(op="assert_zone",player=1,zone="exile",value=8),cases[1]["steps"])
+        cleanup=next(i for i,s in enumerate(cases[1]["steps"]) if s["op"]=="cleanup")
+        destroy=next(i for i,s in enumerate(cases[1]["steps"]) if s["op"]=="destroy")
+        self.assertLess(cleanup,destroy)
+        self.assertFalse(any(c["name"] in MANA_SOURCES and c["zone"]=="battlefield" for c in cases[2]["setup"]))
+        self.assertIn(dict(op="cast",ref="source",value=0),cases[2]["steps"])
+
+    def test_sweep_declarations_fail_closed(self):
+        from sweep_recipes import spec,variants
+        record=self.oracle["Wrath of God"]
+        params=dict(effect="destroy",targets=["creature"])
+        declaration=dict(family="sweep",version=2,params=params,oracle_text=record["oracle_text"],variants=variants(spec(params,[0,0,0,0,0,4])))
+        for changes in (dict(effect="exile"),dict(targets=[]),dict(targets=[{}]),dict(colors=[{}]),dict(amount=2),dict(flying=1),dict(scope="owner"),dict(nonbasic=True),dict(unknown=1)):
+            with self.assertRaises(ValueError):expand("Wrath of God",290,dict(declaration,params=dict(params,**changes)),record,self.registry,oracle_context=self.oracle)
+        with self.assertRaises(ValueError):expand("Wrath of God",290,declaration,record,self.registry)
+        with self.assertRaises(ValueError):expand("Wrath of God",290,dict(declaration,oracle_text="Changed"),record,self.registry,oracle_context=self.oracle)
+        altered=copy.deepcopy(self.oracle);altered["Dryad Arbor"]["type_line"]="Creature — Dryad"
+        with self.assertRaises(ValueError):expand("Wrath of God",290,declaration,record,self.registry,oracle_context=altered)
+        with self.assertRaises(ValueError):spec(dict(effect="damage",amount=2,targets=[],players="none"),[0]*6)
+
+    def test_sweep_normal_cost_dialog_is_explicit_and_replayed(self):
+        record=self.oracle["Planar Outburst"]
+        declaration=dict(family="sweep",version=2,params=dict(effect="destroy",targets=["creature"],exclude_types=["land"]),
+                         oracle_text=record["oracle_text"],variants=["mixed","empty_board","snapshot"],cast_dialogs=dict(mixed=[0],snapshot=[0]))
+        cases=expand("Planar Outburst",15401,declaration,record,self.registry,oracle_context=self.oracle)
+        self.assertEqual(sum(s["op"]=="choose_dialog" for s in cases[0]["steps"]),1)
+        self.assertFalse(any(s["op"]=="choose_dialog" for s in cases[1]["steps"]))
+        self.assertEqual(sum(s["op"]=="choose_dialog" for s in cases[2]["steps"]),2)
+        self.assertEqual(cases[2]["_recipe"]["cast_dialogs"],[0])
+
+    def test_stat_sweep_indestructibility_does_not_prevent_zero_toughness_death(self):
+        from sweep_recipes import BOARD
+        r=self.oracle["Languish"]
+        d=dict(family="sweep",version=2,params=dict(effect="stats",targets=["creature"],power=-4,toughness=-4),
+               oracle_text=r["oracle_text"],variants=["mixed","cleanup"])
+        cases=expand("Languish",15170,d,r,self.registry,oracle_context=self.oracle)
+        for player in (0,1):
+            self.assertIn(dict(op="assert_card",ref=f"permanent_{player}_{BOARD.index('Darksteel Myr')}",property="in_play",value=0),cases[0]["steps"])
+            ref=f"permanent_{player}_{BOARD.index('Scaled Wurm')}"
+            self.assertIn(dict(op="assert_card",ref=ref,property="toughness",value=2),cases[0]["steps"])
+            self.assertIn(dict(op="assert_card",ref=ref,property="toughness",value=6),cases[1]["steps"])
+
+    def test_stat_sweep_stacking_new_arrivals_and_signed_power(self):
+        from sweep_recipes import BOARD
+        for name,power,toughness,scope in (("Glorious Charge",1,1,"self"),("Hell Swarm",-1,0,"all")):
+            r=self.oracle[name];d=dict(family="sweep",version=2,params=dict(effect="stats",targets=["creature"],power=power,toughness=toughness,scope=scope),
+                                      oracle_text=r["oracle_text"],variants=["late_arrival","stacking"])
+            arrival,stacking=expand(name,self.registry[name]["csvid"],d,r,self.registry,oracle_context=self.oracle)
+            self.assertIn(dict(op="cast",ref="additional",value=1),arrival["steps"])
+            self.assertIn(dict(op="assert_card",ref="additional",property="power",value=2),arrival["steps"])
+            ref=f"permanent_0_{BOARD.index('Darksteel Myr')}"
+            self.assertIn(dict(op="assert_card",ref=ref,property="power",value=power*2),stacking["steps"])
+            self.assertIn(dict(op="cleanup"),stacking["steps"])
+            self.assertIn(dict(op="assert_card",ref=ref,property="power",value=0),stacking["steps"])
+
+    def test_stat_sweep_rejects_mixed_effects_and_unreviewed_parameters(self):
+        from sweep_recipes import spec
+        p=dict(effect="stats",targets=["creature"],power=1,toughness=1)
+        for change in (dict(power=True),dict(toughness=-8),dict(amount=2),dict(players="all"),dict(untap=1),dict(draw=True),
+                       dict(exclude_subtypes=["Unknown"]),dict(opponent_power=-1),dict(opponent_power=-1,opponent_toughness=-1,scope="self")):
+            with self.assertRaises(ValueError):spec(dict(p,**change),[0]*6)
+        with self.assertRaises(ValueError):spec(dict(effect="damage",targets=["creature"],amount=2,power=1),[0]*6)
+
+    def test_stat_sweep_subtype_and_opposing_changes_are_distinct(self):
+        from sweep_recipes import BOARD
+        r=self.oracle["Zealous Persecution"]
+        d=dict(family="sweep",version=2,params=dict(effect="stats",targets=["creature"],power=1,toughness=1,opponent_power=-1,opponent_toughness=-1),
+               oracle_text=r["oracle_text"],variants=["mixed"])
+        steps=expand("Zealous Persecution",10378,d,r,self.registry,oracle_context=self.oracle)[0]["steps"]
+        ref=f"permanent_0_{BOARD.index('Darksteel Myr')}"
+        self.assertIn(dict(op="assert_card",ref=ref,property="power",value=1),steps)
+        self.assertIn(dict(op="assert_card",ref=f"permanent_1_{BOARD.index('Darksteel Myr')}",property="in_play",value=0),steps)
+        r=self.oracle["Eyeblight Massacre"];d.update(params=dict(effect="stats",targets=["creature"],power=-2,toughness=-2,exclude_subtypes=["Elf"]),oracle_text=r["oracle_text"])
+        steps=expand("Eyeblight Massacre",15126,d,r,self.registry,oracle_context=self.oracle)[0]["steps"]
+        for player in (0,1):self.assertIn(dict(op="assert_card",ref=f"elf_{player}",property="in_play",value=1),steps)
+
+    def test_stat_sweep_global_death_effects_include_later_arrivals(self):
+        for name,clause in (("Flaying Tendrils",dict(exile_on_death=True)),("Death Frenzy",dict(gain_per_destroyed=1))):
+            r=self.oracle[name];d=dict(family="sweep",version=2,params=dict(effect="stats",targets=["creature"],power=-2,toughness=-2,**clause),
+                                      oracle_text=r["oracle_text"],variants=["late_arrival_death"])
+            c=expand(name,self.registry[name]["csvid"],d,r,self.registry,oracle_context=self.oracle)[0]
+            self.assertIn(dict(op="assert_card",ref="additional",property="toughness",value=2),c["steps"])
+            self.assertIn(dict(op="destroy",ref="additional"),c["steps"])
+            if name=="Flaying Tendrils":self.assertIn(dict(op="assert_zone_contains",player=0,zone="exile",value=self.registry['Grizzly Bears']['csvid']),c['steps'])
+            else:self.assertIn(dict(op="assert_life",player=0,value=33),c['steps'])
+
+    def test_stat_sweep_repeated_casts_have_separate_optional_choices(self):
+        r=self.oracle["Hideous Laughter"]
+        d=dict(family="sweep",version=2,params=dict(effect="stats",targets=["creature"],power=-2,toughness=-2),
+               oracle_text=r["oracle_text"],variants=["stacking"],cast_dialogs=dict(stacking=[0]),repeat_cast_dialogs=dict(stacking=[]))
+        c=expand("Hideous Laughter",7231,d,r,self.registry,oracle_context=self.oracle)[0]
+        self.assertEqual(sum(s['op']=='choose_dialog' for s in c['steps']),1)
+        self.assertEqual(c['_recipe']['repeat_cast_dialogs'],[])
+        for choices in ([0],dict(stacking=[True]),dict(stacking=[-1]),dict(mixed=[0])):
+            with self.assertRaises(ValueError):expand("Hideous Laughter",7231,dict(d,repeat_cast_dialogs=choices),r,self.registry,oracle_context=self.oracle)
+
+    def test_stat_sweep_two_large_costs_have_enough_generic_mana(self):
+        r=self.oracle["Vitalizing Wind"]
+        d=dict(family="sweep",version=2,params=dict(effect="stats",targets=["creature"],power=7,toughness=7,scope="self"),
+               oracle_text=r['oracle_text'],variants=['stacking'])
+        c=expand("Vitalizing Wind",4910,d,r,self.registry,oracle_context=self.oracle)[0]
+        self.assertIn(dict(op='set_mana',player=0,color=0,value=16),c['steps'])
+        self.assertIn(dict(op='set_mana',player=0,color=3,value=2),c['steps'])
+        self.assertIn(dict(op='assert_mana_total',player=0,value=0),c['steps'])
+
+    def test_damage_restrictions_real_combat_and_response(self):
+        from damage_recipes import spec, variants
+        from recipes import cost_from_oracle
+        record = self.oracle["Sandblast"]
+        params = dict(amount=5, targets=["creature"], combat="attacking_or_blocking")
+        declaration = dict(family="damage_spell", version=2, params=params, oracle_text=record["oracle_text"],
+                           variants=variants(spec(params, cost_from_oracle(record)), self.oracle))
+        cases = expand("Sandblast",14617,declaration,record,self.registry,oracle_context=self.oracle)
+        blocking = next(c for c in cases if c["name"].endswith("_blocking"))
+        self.assertEqual([s["op"] for s in blocking["steps"][:7]],
+                         ["turn", "begin_attackers", "attack", "finish_attackers", "begin_blockers", "block", "advance_combat"])
+        lost = next(c for c in cases if c["name"].endswith("_lost_target"))
+        self.assertIn(dict(op="choose_priority",ref="response"),lost["steps"])
+        lost_combat = next(c for c in cases if c["name"].endswith("_lost_combat"))
+        self.assertIn(dict(op="remove_from_combat",ref="recipient"),lost_combat["steps"])
+        for variant in ("empty", "wrong_type", "noncombat"):
+            self.assertIn(dict(op="can_cast",ref="source",value=0),next(c for c in cases if c["name"].endswith("_"+variant))["steps"])
+        self.assertFalse(any(s["op"]=="combat_damage" for c in cases for s in c["steps"]))
+
+    def test_damage_exile_duration_and_snapshot_replay(self):
+        record=self.oracle["Magma Spray"]
+        declaration=dict(family="damage_spell",version=2,params=dict(amount=2,targets=["creature"],exile_on_death=True),
+                         oracle_text=record["oracle_text"],variants=["later_death","expired_death","indestructible","snapshot"])
+        cases=expand("Magma Spray",10007,declaration,record,self.registry,oracle_context=self.oracle)
+        self.assertIn(dict(op="assert_zone",player=1,zone="exile",value=3),cases[0]["steps"])
+        self.assertIn(dict(op="assert_zone",player=1,zone="exile",value=2),cases[1]["steps"])
+        self.assertIn(dict(op="assert_zone_card",player=1,zone="graveyard",index=4,value=self.registry["Scaled Wurm"]["csvid"]),cases[1]["steps"])
+        self.assertLess(next(i for i,s in enumerate(cases[1]["steps"]) if s["op"]=="cleanup"), next(i for i,s in enumerate(cases[1]["steps"]) if s["op"]=="destroy"))
+        self.assertIn(dict(op="assert_card",ref="recipient",property="in_play",value=1),cases[2]["steps"])
+        self.assertEqual(sum(s["op"]=="cast" for s in cases[3]["steps"]),2)
+        self.assertIn(dict(op="assert_recorded_state"),cases[3]["steps"])
+
+    def test_damage_parameters_and_witnesses_fail_closed(self):
+        record=self.oracle["Roast"]
+        params=dict(amount=5,targets=["creature"],flying=False)
+        declaration=dict(family="damage_spell",version=2,params=params,oracle_text=record["oracle_text"],variants=["wrong_flying"])
+        for changes in (dict(amount=True),dict(amount=14),dict(targets=["land"]),dict(targets=[{}]),dict(colors=["C"]),dict(colors=[{}]),dict(controller="self"),dict(scry_on_your_turn=True),dict(flying=0),dict(unknown=1)):
+            with self.assertRaises(ValueError):expand("Roast",14994,dict(declaration,params=dict(params,**changes)),record,self.registry,oracle_context=self.oracle)
+        with self.assertRaises(ValueError):expand("Roast",14994,declaration,record,self.registry)
+        altered=copy.deepcopy(self.oracle);altered["Mahamoti Djinn"]["keywords"]=[]
+        with self.assertRaises(ValueError):expand("Roast",14994,declaration,record,self.registry,oracle_context=altered)
+        with self.assertRaises(ValueError):expand("Roast",14994,dict(declaration,oracle_text="Changed"),record,self.registry,oracle_context=self.oracle)
+
+    def test_damage_scry_and_gain_fizzle_with_last_target(self):
+        record=self.oracle["Rage of Purphoros"]
+        declaration=dict(family="damage_spell",version=2,params=dict(amount=4,targets=["creature"],scry=1,prevent_regeneration=True),
+                         oracle_text=record["oracle_text"],variants=["scry_bottom","lost_target"])
+        cases=expand("Rage of Purphoros",13529,declaration,record,self.registry,oracle_context=self.oracle)
+        self.assertIn(dict(op="choose_zone",player=0,value=0),cases[0]["steps"])
+        self.assertFalse(any(s["op"]=="choose_zone" for s in cases[1]["steps"]))
+        self.assertIn(dict(op="assert_zone_card",player=0,zone="library",index=0,value=self.registry["Forest"]["csvid"]),cases[1]["steps"])
+        record=self.oracle["Douse in Gloom"]
+        declaration=dict(family="damage_spell",version=2,params=dict(amount=2,targets=["creature"],gain_life=2),
+                         oracle_text=record["oracle_text"],variants=["friendly","lost_target","regenerate"])
+        cases=expand("Douse in Gloom",1446,declaration,record,self.registry,oracle_context=self.oracle)
+        self.assertIn(dict(op="assert_life",player=0,value=22),cases[0]["steps"])
+        self.assertFalse(any(s==dict(op="assert_life",player=0,value=22) for s in cases[1]["steps"]))
+        regen=cases[2]["steps"]
+        self.assertLess(next(i for i,s in enumerate(regen) if s["op"]=="cast"),next(i for i,s in enumerate(regen) if s["op"]=="choose_priority"))
+        self.assertIn(dict(op="assert_card",ref="recipient",property="tapped",value=1),regen)
+        record=self.oracle["Engulfing Flames"]
+        declaration=dict(family="damage_spell",version=2,params=dict(amount=1,targets=["creature"],prevent_regeneration=True),
+                         oracle_text=record["oracle_text"],variants=["regeneration_expired"])
+        expired=expand("Engulfing Flames",5558,declaration,record,self.registry,oracle_context=self.oracle)[0]["steps"]
+        self.assertLess(next(i for i,s in enumerate(expired) if s["op"]=="cleanup"),next(i for i,s in enumerate(expired) if s["op"]=="choose_priority"))
+        self.assertIn(dict(op="destroy",ref="recipient"),expired)
+
+    def test_recovery_zone_indices_and_snapshot_multiplicities(self):
+        from graveyard_recipes import spec, variants
+        from recipes import cost_from_oracle
+        record = self.oracle["Raise Dead"]
+        declaration = dict(family="recover_card", version=2, params=dict(targets=["creature"], destination="hand"),
+                           oracle_text=record["oracle_text"])
+        declaration["variants"] = variants(spec(declaration["params"], cost_from_oracle(record)), self.oracle)
+        cases = expand("Raise Dead",198,declaration,record,self.registry,oracle_context=self.oracle)
+        ordinary = next(c for c in cases if c["name"].endswith("_return"))
+        self.assertIn(dict(op="choose_zone",player=-1,value=4),ordinary["steps"])
+        self.assertTrue(all(any(s["op"]=="choose_priority" for s in c["steps"]) for c in cases if c["name"].endswith(("lost_target","shifted_target"))))
+        snapshot=next(c for c in cases if c["name"].endswith("snapshot"))
+        self.assertIn(dict(op="choose_zone",player=-1,value=8),snapshot["steps"])
+        self.assertIn(dict(op="assert_zone_card",player=0,zone="graveyard",index=0,value=106),snapshot["steps"])
+        self.assertIn(dict(op="assert_hand_graveyard_total",player=0,index=106,value=3),snapshot["steps"])
+        self.assertIn(dict(op="assert_recorded_state"),snapshot["steps"])
+        altered=copy.deepcopy(self.registry);altered["Raise Dead"]["mana_cost"]="{9}"
+        self.assertEqual(cases,expand("Raise Dead",198,declaration,record,altered,oracle_context=self.oracle))
+
+    def test_recovery_parameters_and_owner_after_reanimation(self):
+        record=self.oracle["Reanimate"]
+        params=dict(targets=["creature"],destination="battlefield",graveyard="any",lose_life_from_value=True)
+        declaration=dict(family="recover_card",version=2,params=params,oracle_text=record["oracle_text"],variants=["opponent_death_owner"])
+        case=expand("Reanimate",self.registry["Reanimate"]["csvid"],declaration,record,self.registry,oracle_context=self.oracle)[0]
+        self.assertIn(dict(op="destroy",ref="returned"),case["steps"])
+        self.assertIn(dict(op="assert_zone_card",player=1,zone="graveyard",index=11,value=106),case["steps"])
+        self.assertIn(dict(op="assert_life",player=0,value=18),case["steps"])
+        for changes in (dict(value_max=True),dict(targets=["instant"]),dict(colors=["C"]),dict(bonus_subtype="Angel"),dict(destination="exile")):
+            with self.assertRaises(ValueError):expand("Reanimate",999,dict(declaration,params=dict(params,**changes)),record,self.registry,oracle_context=self.oracle)
+        with self.assertRaises(ValueError):expand("Reanimate",999,declaration,record,self.registry)
+        with self.assertRaises(ValueError):expand("Reanimate",999,dict(declaration,oracle_text="Changed"),record,self.registry,oracle_context=self.oracle)
+
+    def test_recovery_isolated_eligibility_and_fizzled_self_exile(self):
+        from graveyard_recipes import WITNESSES
+        record=self.oracle["Treasured Find"]
+        parameters=dict(targets=["creature","instant","sorcery","artifact","enchantment","land"],destination="hand",self_destination="exile",target_witness="Grizzly Bears")
+        declaration=dict(family="recover_card",version=2,params=parameters,oracle_text=record["oracle_text"],variants=["eligible_type_land","lost_target"])
+        cases=expand("Treasured Find",12856,declaration,record,self.registry,oracle_context=self.oracle)
+        probe=cases[0]
+        self.assertEqual([c["name"] for c in probe["setup"] if c["zone"]=="graveyard"],["Forest","Forest"])
+        self.assertIn(dict(op="can_cast",ref="source",value=1),probe["steps"])
+        self.assertFalse(any(s["op"] in ("cast","choose_zone") for s in probe["steps"]))
+        self.assertIn(dict(op="assert_zone",player=0,zone="exile",value=2),cases[1]["steps"])
+        self.assertIn(dict(op="assert_zone_card",player=0,zone="graveyard",index=12,value=12856),cases[1]["steps"])
+        for target in ("Unknown",[],"Lightning Bolt"):
+            changes=dict(parameters,target_witness=target)
+            if target=="Lightning Bolt":changes['targets']=["creature"]
+            with self.assertRaises(ValueError):expand("Treasured Find",12856,dict(declaration,params=changes),record,self.registry,oracle_context=self.oracle)
+
+    def test_recovery_shifted_target_has_independent_order_expectations(self):
+        record=self.oracle["Reclaim"]
+        declaration=dict(family="recover_card",version=2,params=dict(targets=["creature","instant","sorcery","artifact","enchantment","land"],destination="library_top"),oracle_text=record["oracle_text"],variants=["shifted_target"])
+        case=expand("Reclaim",self.registry["Reclaim"]["csvid"],declaration,record,self.registry,oracle_context=self.oracle)[0]
+        self.assertEqual([s["value"] for s in case["steps"] if s["op"]=="choose_zone"],[11,0])
+        self.assertIn(dict(op="assert_zone_card",player=0,zone="library",index=0,value=self.registry["Shivan Dragon"]["csvid"]),case["steps"])
+        self.assertIn(dict(op="assert_zone_card",player=0,zone="library",index=1,value=self.registry["Forest"]["csvid"]),case["steps"])
+        self.assertFalse(any(s["op"]=="event" for s in case["steps"]))
+
+    def test_counterspell_explicit_parameters_and_witness_context(self):
+        from counter_recipes import spec, variants
+        from recipes import cost_from_oracle
+        record = self.oracle["Mana Leak"]
+        parameters = dict(targets=["creature", "instant", "sorcery", "artifact", "enchantment", "aura"], tax=3)
+        declaration = dict(family="counter_spell", version=2, params=parameters, oracle_text=record["oracle_text"],
+                           variants=variants(spec(parameters, cost_from_oracle(record))))
+        cases = expand("Mana Leak", 1078, declaration, record, self.registry, oracle_context=self.oracle)
+        self.assertEqual(len(cases), 14)
+        paid = next(c for c in cases if c["name"].endswith("tax_paid"))
+        self.assertIn(dict(op="choose_dialog", player=1, value=0), paid["steps"])
+        self.assertIn(dict(op="assert_mana_total", player=1, value=55), paid["steps"])
+        self.assertFalse(any(s["op"] == "event" for c in cases for s in c["steps"]))
+        changed = copy.deepcopy(self.registry)
+        changed["Grizzly Bears"]["mana_cost"] = "{9}"
+        self.assertEqual(cases, expand("Mana Leak",1078,declaration,record,changed,oracle_context=self.oracle))
+        for changes in (dict(tax=True), dict(targets=["land"]), dict(value_exact=2,value_min=1),
+                        dict(value_min=5),dict(mill=5),dict(target_damage_from_power=True)):
+            with self.assertRaises(ValueError):
+                expand("Mana Leak",1078,dict(declaration,params=dict(parameters,**changes)),record,self.registry,oracle_context=self.oracle)
+        with self.assertRaises(ValueError):expand("Mana Leak",1078,declaration,record,self.registry)
+        with self.assertRaises(ValueError):expand("Mana Leak",1078,dict(declaration,oracle_text=""),dict(record,oracle_text=""),self.registry,oracle_context=self.oracle)
+        with self.assertRaises(ValueError):expand("Mana Leak",1078,{k:v for k,v in declaration.items() if k!="variants"},record,self.registry,oracle_context=self.oracle)
+        changed_oracle=copy.deepcopy(self.oracle);changed_oracle["Grizzly Bears"]["cmc"]=5
+        with self.assertRaises(ValueError):expand("Mana Leak",1078,declaration,record,self.registry,oracle_context=changed_oracle)
+        with self.assertRaises(ValueError):expand("Mana Leak",1078,dict(declaration,oracle_text="Changed"),record,self.registry,oracle_context=self.oracle)
+
+    def test_counterspell_destination_and_snapshot_expectations(self):
+        record = self.oracle["Spell Crumple"]
+        declaration = dict(family="counter_spell",version=2,oracle_text=record["oracle_text"],
+                           params=dict(targets=["creature"],destination="library_bottom",self_destination="library_bottom"),
+                           variants=["own_spell", "snapshot"])
+        cases=expand("Spell Crumple",11730,declaration,record,self.registry,oracle_context=self.oracle)
+        self.assertIn(dict(op="assert_zone_card",player=0,zone="library",index=7,value=106),cases[0]["steps"])
+        self.assertIn(dict(op="assert_zone_card",player=0,zone="library",index=8,value=11730),cases[0]["steps"])
+        snapshot=cases[1]["steps"]
+        self.assertEqual(sum(s["op"]=="cast" for s in snapshot),2)
+        self.assertTrue(all(dict(op=op) in snapshot for op in ("capture","ai_roundtrip","restore","assert_recorded_state")))
+
     def test_creature_whole_text_and_parameter_boundaries(self):
         from creature_recipes import classify as creature, variants
         record = self.oracle["Serra Angel"]

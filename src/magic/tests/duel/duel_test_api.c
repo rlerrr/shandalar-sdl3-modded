@@ -58,7 +58,7 @@ static Global globals[] = {
 };
 #undef DUEL_GLOBAL
 
-typedef struct { DuelChoiceKind kind; int player, value, card, damage_recipient; } Decision;
+typedef struct { DuelChoiceKind kind; int player, value, card, damage_recipient, regeneration_window; } Decision;
 static Decision decisions[128];
 static int decision_count, decision_cursor;
 static int offered_count, offered_csvids[512];
@@ -131,7 +131,8 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
      response. Other players' passes must not consume that planned response. */
   if (request->kind == DUEL_CHOICE_PRIORITY &&
       (decision_cursor == decision_count || decisions[decision_cursor].kind != DUEL_CHOICE_PRIORITY ||
-       (decisions[decision_cursor].player != -1 && decisions[decision_cursor].player != request->player)))
+       (decisions[decision_cursor].player != -1 && decisions[decision_cursor].player != request->player) ||
+       (decisions[decision_cursor].regeneration_window && !(g_land_can_be_played & LCBP_REGENERATION))))
   { answer->value = -2; answer->card = -1; return 1; }
   if (decision_cursor >= decision_count) return 0;
   Decision *d = &decisions[decision_cursor];
@@ -216,6 +217,13 @@ void duel_test_reset(uint32_t seed)
   duel_test_restore(baseline); decision_count = decision_cursor = 0;
   duel_host_install(&host, seed, 200000);
 }
+void duel_test_set_budget(uint32_t steps)
+{
+  DuelHostState state = duel_host_capture();
+  if (steps < 200000 || steps > 2000000) duel_host_fail("invalid scripted work budget");
+  state.remaining_steps = steps;
+  duel_host_restore(state);
+}
 static int iid(int csvid) { int i; for (i = 0; i < g_card_count; ++i) if ((int)global_cards_data[i].id == csvid) return i; duel_host_fail("fixture card not registered"); return -1; }
 DuelTestRef duel_test_add(int player, int zone, int csvid, int state)
 {
@@ -249,6 +257,9 @@ void duel_test_prepare_fixture(void) {
   /* The normal mana-payment path restores this to -1 when it finishes. A
      fixture starts outside that path; zero falsely means payment is active. */
   unknown62BCEC = -1;
+  /* No UI phase shortcut is pending in a freshly loaded fixture. Zero would
+     mean "run to untap" and cause normal mana cancellation to be ignored. */
+  g_stop_phase = g_stop_phase_player = -1;
 }
 void duel_test_set_mana(int p, int color, int amount) {
   g_raw_mana_available[p][7] += amount - g_raw_mana_available[p][color];
@@ -261,7 +272,13 @@ void duel_test_set_turn(int p, int combat) {
   manalinkeh_recalculate_all_cards_in_play();
 }
 void duel_test_decision(DuelChoiceKind kind, int p, int value, int card)
-{ if (decision_count == 128) duel_host_fail("too many scripted choices"); decisions[decision_count++] = (Decision){kind,p,value,card,0}; }
+{ if (decision_count == 128) duel_host_fail("too many scripted choices"); decisions[decision_count++] = (Decision){kind,p,value,card,0,0}; }
+void duel_test_regeneration_decision(DuelTestRef source) {
+  duel_test_decision(DUEL_CHOICE_PRIORITY, source.player, source.card, -1);
+  /* Spell responses and damage prevention precede the legacy destruction
+     window. Retain this planned activation through those earlier passes. */
+  decisions[decision_count - 1].regeneration_window = 1;
+}
 void duel_test_damage_decision(int player, DuelTestRef recipient) {
   duel_test_decision(DUEL_CHOICE_TARGET, player, recipient.player, recipient.card);
   decisions[decision_count - 1].damage_recipient = 1;
@@ -448,7 +465,10 @@ DuelTestCard duel_test_inspect(DuelTestRef r)
           manalinkeh_in_play(r.player,c))
         v.blocking_count+=manalinkeh_count_creatures_this_is_blocking(r.player,c);
     }
-    v.blocked=!!(i->state&STATE_ATTACKING) && !manalinkeh_is_unblocked(r.player,r.card);
+    /* Becoming blocked persists after the last blocker leaves combat. Counting
+       living blockers (is_unblocked) loses that fact, e.g. after flanking kills
+       a 1/1. Inspect the same historical flag used by core combat damage. */
+    v.blocked=!!(i->state&STATE_ATTACKING) && !!(i->state&STATE_ISBLOCKED);
   }
   v.tapped=!!(i->state&STATE_TAPPED); v.sick=!!(i->state&STATE_SUMMONSICK_BOTH); v.attacking=!!(i->state&STATE_ATTACKING); v.damage=i->damage_on_card;
   if(i->internal_card_id>=0) { v.power=manalinkeh_get_power(r.player,r.card); v.toughness=manalinkeh_get_toughness(r.player,r.card); }
@@ -464,15 +484,17 @@ int duel_test_zone_csvid(int p,int zone,int index) {
   if(zone<DUEL_ZONE_LIBRARY) { int c,n=0; for(c=0;c<g_active_cards_count[p];++c) { card_instance_t*i=&global_card_instances[p][c]; if(i->internal_card_id>=0 && !(global_cards_data[i->internal_card_id].type & TYPE_EFFECT) && (!!(i->state&STATE_IN_PLAY)==(zone==DUEL_ZONE_BATTLEFIELD)) && n++==index) return global_cards_data[i->internal_card_id].id; } return -1; }
   int*z=zone==DUEL_ZONE_LIBRARY?global_library[p]:zone==DUEL_ZONE_GRAVEYARD?global_graveyard_slots[p]:global_exile[p]; return index<0 || index>=500 || z[index]<0 ? -1 : global_cards_data[z[index]].id;
 }
-DuelTestRef duel_test_permanent_at(int player, int index) {
+static DuelTestRef active_zone_at(int player, int zone, int index) {
   for (int card = 0, n = 0; card < g_active_cards_count[player]; ++card) {
     card_instance_t *instance = &global_card_instances[player][card];
-    if (instance->internal_card_id >= 0 && (instance->state & STATE_IN_PLAY) &&
+    if (instance->internal_card_id >= 0 && (!!(instance->state & STATE_IN_PLAY) == (zone == DUEL_ZONE_BATTLEFIELD)) &&
         !(global_cards_data[instance->internal_card_id].type & TYPE_EFFECT) && n++ == index)
       return (DuelTestRef){player, card};
   }
   return (DuelTestRef){player, -1};
 }
+DuelTestRef duel_test_permanent_at(int player, int index) { return active_zone_at(player, DUEL_ZONE_BATTLEFIELD, index); }
+DuelTestRef duel_test_hand_at(int player, int index) { return active_zone_at(player, DUEL_ZONE_HAND, index); }
 int duel_test_life(int p) {return g_life[p];}
 int duel_test_mana(int p,int color) {return g_raw_mana_available[p][color];}
 int duel_test_stack_size(void) {return g_stack_size;}

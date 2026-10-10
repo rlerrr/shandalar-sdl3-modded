@@ -248,5 +248,7 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+  "recipes": [{"family": "blocking_creature", "version": 2, "params": {"keywords": [], "restriction": "none", "power_limit": 0}, "oracle_text": "This creature can't block.", "variants": ["cast", "payment", "insufficient_mana", "snapshot", "fresh_attack", "unblocked", "tapped_attacker", "defend_flying_zero_0", "defend_flying_zero_1", "defend_ground_one_0", "defend_ground_one_1", "defend_ground_two_0", "defend_ground_two_1", "defend_ground_three_0", "defend_ground_three_1", "defend_ground_four_0", "defend_ground_four_1", "defend_flying_one_0", "defend_flying_one_1", "defend_flying_two_0", "defend_flying_two_1", "defend_flying_three_0", "defend_flying_three_1", "defend_flying_four_0", "defend_flying_four_1", "defend_reach_0", "defend_reach_1", "tapped_blocker", "sick_blocker", "combat_snapshot", "cleanup_blocking", "growth_before_block", "shrink_before_block", "damage_0", "damage_1", "empty_zones", "wrong_color"]}],
+  "recipe_coverage": "Reviewed unconditional blocking restriction component: Oracle stats and casting costs, exact/wrong-color/missing payment, ground and flying attackers across power boundaries for both players, Reach as distinct from Flying, tapped and summoning-sick blockers, real pre-block power changes, declared blockers and combat damage, cleanup, populated/empty zones, and snapshot replay after AI backups. Untested activated abilities, Flash timing, forced attacks, control changes, multiple attackers/blockers, and other keyword combinations remain gaps. Component coverage, not whole-card certification."
 }

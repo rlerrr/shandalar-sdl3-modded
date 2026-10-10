@@ -422,7 +422,7 @@
       "seed": 123
     }
   ],
-"recipes": [
+  "recipes": [
     {
       "family": "pump_creature",
       "version": 2,
@@ -439,7 +439,36 @@
         "insufficient_mana",
         "snapshot"
       ]
+    },
+    {
+      "family": "grant_creature",
+      "version": 2,
+      "params": {
+        "power": 1,
+        "toughness": 0,
+        "keywords": [
+          "First strike"
+        ]
+      },
+      "oracle_text": "Target creature gets +1/+0 and gains first strike until end of turn. (It deals combat damage before creatures without first strike.)",
+      "variants": [
+        "friendly_cleanup",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "wrong_type",
+        "lost_target",
+        "snapshot",
+        "tapped",
+        "large_target",
+        "unblocked",
+        "opponent_cleanup",
+        "empty_zones",
+        "first_strike",
+        "expired_first_strike",
+        "opponent_unblocked"
+      ]
     }
   ],
-  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases."
+  "recipe_coverage": "Shared component only; additional Oracle clauses require separate authored cases. Reviewed temporary ability component through normal casting/response/stack and real combat: declared signed-free stat bonuses, targeting, flying/reach legality, trample allocation, first/double strike, lifelink, deathtouch, indestructibility versus destruction/damage/zero toughness, hexproof/shroud ownership, and freshly cast haste/ability removal where declared. Includes cleanup/expiry, populated owned zones, exact cost, snapshot/AI replay, untapping/draw/life/death-loss components as declared. Additional Oracle clauses (must-block requirements, ferocious trample, alternate costs, overload, flashback, kicker effects, madness, split-second response prohibition) require separate authored cases. Not whole-card certification."
 }

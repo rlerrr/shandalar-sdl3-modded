@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Explosive Impact",
+  "csvid": 12720,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 5,
+        "targets": [
+          "creature",
+          "player"
+        ]
+      },
+      "oracle_text": "Explosive Impact deals 5 damage to any target.",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "opponent_player",
+        "self_player",
+        "survivor",
+        "lethal",
+        "lost_target",
+        "friendly",
+        "regenerate"
+      ]
+    }
+  ],
+  "recipe_coverage": "Targeted damage component: exact normal payment, legality, real responses, ordered stocked zones, cleanup, and AI/snapshot replay. Regeneration success follows documented legacy destruction-window timing. Additional abilities (alternate costs, graveyard casting, planeswalkers, uncounterability, damage prevention, equipment destruction, regeneration prohibition) require separate authored cases where present."
+}

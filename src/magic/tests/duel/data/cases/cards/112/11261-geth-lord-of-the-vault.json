@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Geth, Lord of the Vault",
+  "csvid": 11261,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "evasion_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Intimidate"
+        ]
+      },
+      "oracle_text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\n{X}{B}: Put target artifact or creature card with mana value X from an opponent's graveyard onto the battlefield tapped under your control. Then that player mills X cards.",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "tapped_attacker",
+        "tapped_blocker",
+        "attack_white",
+        "attack_blue",
+        "attack_black",
+        "attack_red",
+        "attack_green",
+        "attack_artifact",
+        "attack_colored_artifact",
+        "attack_colorless",
+        "attack_flying",
+        "attack_reach",
+        "attack_shadow",
+        "attack_shadow_flying",
+        "attack_horse",
+        "defend_green",
+        "defend_flying",
+        "defend_shadow",
+        "defend_shadow_flying",
+        "defend_horse",
+        "opponent_attack",
+        "opponent_defend",
+        "cleanup_evasion",
+        "evasion_damage",
+        "combat_snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": " Reviewed evasion component: casting and exact payment, base characteristics, real combat declarations, five blocker colors, artifact and colored-artifact exceptions, colorless nonartifact blockers, flying/reach, shadow and horsemanship in both directions, unblocked damage, opposing ownership, persistent evasion after cleanup, populated owned zones and ordered libraries, combat snapshot/AI backup replay, and defending-player basic landwalk with matching/wrong/tapped/attacker-owned/removed lands where printed. Other activated abilities and flash timing remain explicit gaps. Component coverage, not whole-card certification."
+}

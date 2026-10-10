@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "card": "Flame Jet",
+  "csvid": 4128,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 3,
+        "targets": [
+          "player"
+        ]
+      },
+      "oracle_text": "Flame Jet deals 3 damage to target player or planeswalker.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "opponent_player",
+        "self_player"
+      ]
+    }
+  ],
+  "recipe_coverage": "Targeted damage component: exact normal payment, legality, real responses, ordered stocked zones, cleanup, and AI/snapshot replay. Regeneration success follows documented legacy destruction-window timing. Additional abilities (alternate costs, graveyard casting, planeswalkers, uncounterability, damage prevention, equipment destruction, regeneration prohibition) require separate authored cases where present."
+}

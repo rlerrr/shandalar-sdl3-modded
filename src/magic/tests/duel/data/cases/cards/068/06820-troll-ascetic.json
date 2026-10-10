@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "card": "Troll Ascetic",
+  "csvid": 6820,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "defensive_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Hexproof"
+        ]
+      },
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)\n{1}{G}: Regenerate this creature.",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "target_growth_0",
+        "target_growth_1",
+        "target_bounce_0",
+        "target_bounce_1",
+        "target_shrink_0",
+        "target_shrink_1",
+        "target_damage_0",
+        "target_damage_1",
+        "target_exile_0",
+        "target_exile_1",
+        "target_destroy_0",
+        "target_destroy_1",
+        "wrath_0",
+        "wrath_1",
+        "sweep_damage_0",
+        "sweep_damage_1",
+        "defend_white",
+        "defend_blue",
+        "defend_black",
+        "defend_red",
+        "defend_green",
+        "defend_artifact",
+        "defend_multicolored",
+        "defend_colorless",
+        "defense_snapshot",
+        "attack_white",
+        "attack_blue",
+        "attack_black",
+        "attack_red",
+        "attack_green",
+        "attack_artifact",
+        "attack_multicolored",
+        "attack_colorless",
+        "attack_flying"
+      ]
+    },
+    {
+      "family": "regenerate_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Hexproof"
+        ],
+        "activation_cost": "{1}{G}",
+        "timing": "pre_sixth_destruction_window"
+      },
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)\n{1}{G}: Regenerate this creature.",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "legacy_timing",
+        "destroy",
+        "regeneration_payment",
+        "sick",
+        "tapped",
+        "tapped_sick",
+        "opposing_turn",
+        "repeat",
+        "spent_mana",
+        "insufficient",
+        "no_response",
+        "regeneration_snapshot",
+        "cleanup_reuse",
+        "combat_block",
+        "lethal_damage",
+        "cannot_regenerate",
+        "wrong_color",
+        "combat_attack",
+        "zero_toughness"
+      ]
+    }
+  ],
+  "recipe_coverage": " Reviewed defensive component: normal casting and structured Oracle base characteristics, legal combat declarations, friendly and opposing spell targeting, colored and colorless combat damage, indestructible destruction and zero toughness, untargeted damage and destruction, cleanup, caller-owned snapshots replayed after AI backups, populated owned zones and ordered libraries. Activated abilities, flash timing, protection enchantment restrictions, sacrifice, and dynamic gain/loss of defensive abilities remain gaps. Component coverage, not whole-card certification. Reviewed mana-only self-regeneration component with explicit pre-Sixth Edition destruction-window timing: structured Oracle casting cost and base stats, ordinary casting and combat declarations, exact activation payment, sick/tapped hosts, repeated destruction and spent-cost refusal, missing mana and wrong-color negatives, destruction with no response, real lethal and nonlethal damage, healing pre-existing damage, removal of attacker and blocker from combat, Terminate prohibition, zero-toughness death where applicable, cleanup reuse, caller-owned snapshot replay after AI backups, populated owned zones and ordered libraries. Proactive modern shields are an intentional documented timing exception. Other keyword mechanics, flash timing, hexproof targeting, regeneration after control changes, sacrifice, exile, and AI policy remain gaps. Component coverage, not whole-card certification."
+}

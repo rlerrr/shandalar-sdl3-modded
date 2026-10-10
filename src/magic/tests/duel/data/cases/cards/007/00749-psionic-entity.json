@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Psionic Entity",
+  "csvid": 749,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "tap_damage_creature",
+      "version": 2,
+      "params": {
+        "keywords": [],
+        "activation_cost": "{T}",
+        "damage": 2,
+        "targets": "any",
+        "damage_you": 0,
+        "damage_self": 3,
+        "controller_life_loss": 0,
+        "tap_target": false
+      },
+      "oracle_text": "{T}: This creature deals 2 damage to any target and 3 damage to itself.",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "survivor",
+        "lethal",
+        "friendly",
+        "opponent_controller",
+        "activation_payment",
+        "tapped_activation",
+        "sick_activation",
+        "fresh_activation",
+        "opposing_turn",
+        "repeat_denied",
+        "cancel_target",
+        "pending_snapshot",
+        "target_bounced",
+        "source_bounced",
+        "source_destroyed",
+        "target_destroyed",
+        "cleanup_damage",
+        "cleanup_tapped",
+        "empty_zones",
+        "opponent_player",
+        "self_player",
+        "self_target",
+        "indestructible"
+      ]
+    }
+  ],
+  "recipe_coverage": " Reviewed whole-text ordinary mana/tap damage component: Oracle casting cost/stats and keywords, damage target scope and printed backlash/tapping/life loss, activation costs before resolution, both controllers, own and opposing targets, tap and sickness restrictions, haste immediately after real casting, exact/missing/wrong-color mana, cancellation, target/source loss, repeated untapping with Vitalize, damage cleanup, owned stocked zones and empty variants, and pending activation replay after AI backups. Flash timing, planeswalkers, protection/prevention/redirection, countering activated abilities, multiplayer and other combined mechanics remain gaps. Component coverage, not whole-card certification."
+}

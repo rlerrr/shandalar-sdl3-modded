@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Combust",
+  "csvid": 11107,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 5,
+        "targets": [
+          "creature"
+        ],
+        "colors": [
+          "W",
+          "U"
+        ]
+      },
+      "oracle_text": "This spell can't be countered.\nCombust deals 5 damage to target white or blue creature. The damage can't be prevented.",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "survivor",
+        "lethal",
+        "lost_target",
+        "friendly",
+        "empty",
+        "wrong_type",
+        "wrong_color"
+      ]
+    }
+  ],
+  "recipe_coverage": "Targeted damage component: exact normal payment, legality, real responses, ordered stocked zones, cleanup, and AI/snapshot replay. Regeneration success follows documented legacy destruction-window timing. Additional abilities (alternate costs, graveyard casting, planeswalkers, uncounterability, damage prevention, equipment destruction, regeneration prohibition) require separate authored cases where present."
+}

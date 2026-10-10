@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Pulse of Murasa",
+  "csvid": 15659,
+  "recipes": [
+    {
+      "family": "recover_card",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature",
+          "land"
+        ],
+        "destination": "hand",
+        "graveyard": "any",
+        "gain_life": 6
+      },
+      "oracle_text": "Return target creature or land card from a graveyard to its owner's hand. You gain 6 life.",
+      "variants": [
+        "return",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "lost_target",
+        "snapshot",
+        "alternate",
+        "shifted_target",
+        "opponent_graveyard",
+        "wrong_type",
+        "eligible_type_creature",
+        "type_creature",
+        "eligible_type_land"
+      ]
+    }
+  ],
+  "recipe_coverage": "Oracle-reviewed single-card recovery: eligible alternatives and full-zone indices, type/color/value restrictions, graveyard ownership, exact/insufficient mana, empty zone, ordered unaffected zones, target departure and index shift through a real Reclaim response, populated-zone snapshot replay. Reanimation also checks entry characteristics and subsequent death ownership; subtype bonuses are explicit. Multi-target recovery, graveyard shroud, replacement effects, and exceptional card types remain separate."
+}

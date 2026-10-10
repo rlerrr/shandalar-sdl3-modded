@@ -82,8 +82,13 @@ def expand(name, csvid, declaration, spec, selected, registry):
     from recipes import card, step, observe, exact_mana
     cases = []
     keys, power, toughness, mana = set(spec["keywords"]), spec["power"], spec["toughness"], spec["mana"]
+    component=spec["family"] in ("self_pump_creature", "evasion_creature", "defensive_creature", "mana_creature", "regenerate_creature", "etb_value_creature", "blocking_creature", "tap_damage_creature", "combat_keyword_creature")
+    prefix={"self_pump_creature":"PumpCreatureRecipe", "evasion_creature":"EvasionCreatureRecipe", "defensive_creature":"DefensiveCreatureRecipe", "mana_creature":"ManaCreatureRecipe", "regenerate_creature":"RegenerateCreatureRecipe", "etb_value_creature":"EtbValueCreatureRecipe"}.get(spec["family"],"CreatureRecipe")
+    if spec["family"] == "blocking_creature": prefix = "BlockingCreatureRecipe"
+    if spec["family"] == "tap_damage_creature": prefix = "TapDamageCreatureRecipe"
+    if spec["family"] == "combat_keyword_creature": prefix = "CombatKeywordCreatureRecipe"
     for variant in selected:
-        fixture = "stocked_zones" if variant == "snapshot" else "empty_main"
+        fixture = "stocked_zones" if component or variant == "snapshot" else "empty_main"
         setup, actions = [], []
         casting = variant in ("cast", "payment", "insufficient_mana", "snapshot", "fresh_attack")
         setup.append(card(name, "source", zone="hand" if casting else "battlefield"))
@@ -97,14 +102,14 @@ def expand(name, csvid, declaration, spec, selected, registry):
                         observe("source", "in_play", 1), observe("source", "in_hand", 0),
                         observe("source", "power", power), observe("source", "toughness", toughness),
                         observe("source", "tapped", 0), step("assert_stack", value=0),
-                        step("assert_zone", player=0, zone="hand", value=4 if variant == "snapshot" else 0),
-                        step("assert_zone", player=0, zone="graveyard", value=4 if variant == "snapshot" else 0)]
+                        step("assert_zone", player=0, zone="hand", value=4 if fixture == "stocked_zones" else 0),
+                        step("assert_zone", player=0, zone="graveyard", value=4 if fixture == "stocked_zones" else 0)]
             else:
                 run += [observe("source", "in_hand", 1), observe("source", "in_play", 0), step("assert_stack", value=0)]
             for player in (0, 1):
                 run += [step("assert_life", player=player, value=20),
-                        step("assert_zone", player=player, zone="library", value=7 if variant == "snapshot" else 0),
-                        step("assert_zone", player=player, zone="exile", value=2 if variant == "snapshot" else 0)]
+                        step("assert_zone", player=player, zone="library", value=7 if fixture == "stocked_zones" else 0),
+                        step("assert_zone", player=player, zone="exile", value=2 if fixture == "stocked_zones" else 0)]
             run += [step("assert_mana_total", player=0,
                          value=0 if variant in ("payment", "insufficient_mana") else 60-sum(mana))]
             actions += run
@@ -168,8 +173,9 @@ def expand(name, csvid, declaration, spec, selected, registry):
                             step("assert_life", player=0, value=20+(total if "Lifelink" in keys else 0)),
                             observe("source", "in_play", 1), observe("source", "damage", 0),
                             step("end_combat"), observe("source", "attacking", 0)]
-        cases.append(dict(name=f"CreatureRecipe_{csvid}_{variant}", card=name, fixture=fixture, seed=123,
-                          setup=setup, steps=actions, _recipe=dict(family="creature_keywords", version=2,
+        cases.append(dict(name=f"{prefix}_{csvid}_{variant}", card=name, fixture=fixture, seed=123,
+                          setup=setup, steps=actions, _recipe=dict(family=spec["family"], version=2,
                           variant=variant, params=declaration["params"], oracle_text=declaration["oracle_text"],
-                          untested_keywords=["Flash"] if "Flash" in keys else [])))
+                          untested_keywords=["Flash"] if "Flash" in keys else [],
+                          **({"untested_abilities":spec["remaining_abilities"]} if spec["family"] in ("evasion_creature", "defensive_creature", "blocking_creature", "combat_keyword_creature") else {}))))
     return cases

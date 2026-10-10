@@ -111,5 +111,7 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+  "recipes": [{"family": "regenerate_creature", "version": 2, "params": {"keywords": ["Defender"], "activation_cost": "{1}", "timing": "pre_sixth_destruction_window"}, "oracle_text": "Defender (This creature can't attack.)\n{1}: Regenerate this creature.", "variants": ["cast", "payment", "insufficient_mana", "snapshot", "fresh_attack", "unblocked", "block_ground", "block_flying", "tapped_attacker", "tapped_blocker", "legacy_timing", "destroy", "regeneration_payment", "sick", "tapped", "tapped_sick", "opposing_turn", "repeat", "spent_mana", "insufficient", "no_response", "regeneration_snapshot", "cleanup_reuse", "combat_block", "lethal_damage", "cannot_regenerate", "nonlethal_damage", "heal_existing_damage"]}],
+  "recipe_coverage": "Reviewed mana-only self-regeneration component with explicit pre-Sixth Edition destruction-window timing: structured Oracle casting cost and base stats, ordinary casting and combat declarations, exact activation payment, sick/tapped hosts, repeated destruction and spent-cost refusal, missing mana and wrong-color negatives, destruction with no response, real lethal and nonlethal damage, healing pre-existing damage, removal of attacker and blocker from combat, Terminate prohibition, zero-toughness death where applicable, cleanup reuse, caller-owned snapshot replay after AI backups, populated owned zones and ordered libraries. Proactive modern shields are an intentional documented timing exception. Other keyword mechanics, flash timing, hexproof targeting, regeneration after control changes, sacrifice, exile, and AI policy remain gaps. Component coverage, not whole-card certification."
 }

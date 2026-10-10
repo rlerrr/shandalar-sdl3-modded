@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "card": "Rising Miasma",
+  "csvid": 15416,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "sweep",
+      "version": 2,
+      "params": {
+        "effect": "stats",
+        "targets": [
+          "creature"
+        ],
+        "power": -2,
+        "toughness": -2,
+        "scope": "all"
+      },
+      "oracle_text": "All creatures get -2/-2 until end of turn.\nAwaken 3\u2014{5}{B}{B} (If you cast this spell for {5}{B}{B}, also put three +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+      "variants": [
+        "mixed",
+        "friendly_only",
+        "opponent_only",
+        "empty_board",
+        "empty_zones",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "cleanup",
+        "tapped_all",
+        "untapped_all",
+        "injured",
+        "late_arrival",
+        "stacking"
+      ],
+      "cast_dialogs": {
+        "mixed": [
+          0
+        ],
+        "friendly_only": [
+          0
+        ],
+        "empty_zones": [
+          0
+        ],
+        "payment": [
+          0
+        ],
+        "snapshot": [
+          0
+        ],
+        "cleanup": [
+          0
+        ],
+        "tapped_all": [
+          0
+        ],
+        "untapped_all": [
+          0
+        ],
+        "injured": [
+          0
+        ],
+        "late_arrival": [
+          0
+        ],
+        "stacking": [
+          0
+        ]
+      }
+    }
+  ],
+  "recipe_coverage": " Reviewed board-wide temporary stat component: exact signed power/toughness, friendly/opposing/color/subtype scope, unchanged noncreatures, reduced-toughness deaths including indestructible witnesses, stacking and cleanup, later arrivals, preexisting damage, ordered populated libraries and owned hands/graveyards/exile, normal printed mana cost, caller-owned snapshot replay after AI. Includes untapping/draw/scry/death-life/exile clauses when declared. Other Oracle clauses (keyword grants and combat, kicker, alternate costs, cycling, flashback, madness, awaken, spell mastery, vehicles) remain separate coverage gaps where present. No complete-card coverage claim."
+}

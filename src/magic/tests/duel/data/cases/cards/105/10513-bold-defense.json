@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "card": "Bold Defense",
+  "csvid": 10513,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "sweep",
+      "version": 2,
+      "params": {
+        "effect": "stats",
+        "targets": [
+          "creature"
+        ],
+        "power": 1,
+        "toughness": 1,
+        "scope": "self"
+      },
+      "oracle_text": "Kicker {3}{W} (You may pay an additional {3}{W} as you cast this spell.)\nCreatures you control get +1/+1 until end of turn. If this spell was kicked, instead creatures you control get +2/+2 and gain first strike until end of turn.",
+      "variants": [
+        "mixed",
+        "friendly_only",
+        "opponent_only",
+        "empty_board",
+        "empty_zones",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "cleanup",
+        "tapped_all",
+        "untapped_all",
+        "injured",
+        "late_arrival",
+        "stacking"
+      ],
+      "cast_dialogs": {
+        "mixed": [
+          1
+        ],
+        "friendly_only": [
+          1
+        ],
+        "opponent_only": [
+          1
+        ],
+        "empty_board": [
+          1
+        ],
+        "empty_zones": [
+          1
+        ],
+        "snapshot": [
+          1
+        ],
+        "cleanup": [
+          1
+        ],
+        "tapped_all": [
+          1
+        ],
+        "untapped_all": [
+          1
+        ],
+        "injured": [
+          1
+        ],
+        "late_arrival": [
+          1
+        ],
+        "stacking": [
+          1
+        ],
+        "payment": [
+          1
+        ]
+      }
+    }
+  ],
+  "recipe_coverage": " Reviewed board-wide temporary stat component: exact signed power/toughness, friendly/opposing/color/subtype scope, unchanged noncreatures, reduced-toughness deaths including indestructible witnesses, stacking and cleanup, later arrivals, preexisting damage, ordered populated libraries and owned hands/graveyards/exile, normal printed mana cost, caller-owned snapshot replay after AI. Includes untapping/draw/scry/death-life/exile clauses when declared. Other Oracle clauses (keyword grants and combat, kicker, alternate costs, cycling, flashback, madness, awaken, spell mastery, vehicles) remain separate coverage gaps where present. No complete-card coverage claim."
+}

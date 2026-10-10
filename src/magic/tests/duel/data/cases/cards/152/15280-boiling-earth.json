@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Boiling Earth",
+  "csvid": 15280,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "sweep",
+      "version": 2,
+      "params": {
+        "effect": "damage",
+        "targets": [
+          "creature"
+        ],
+        "amount": 1,
+        "scope": "opponent"
+      },
+      "oracle_text": "Boiling Earth deals 1 damage to each creature your opponents control.\nAwaken 4\u2014{6}{R} (If you cast this spell for {6}{R}, also put four +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+      "variants": [
+        "mixed",
+        "friendly_only",
+        "opponent_only",
+        "empty_board",
+        "empty_zones",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "cleanup",
+        "tapped_all",
+        "untapped_all",
+        "injured"
+      ],
+      "cast_dialogs": {
+        "mixed": [
+          0
+        ],
+        "friendly_only": [
+          0
+        ],
+        "empty_zones": [
+          0
+        ],
+        "payment": [
+          0
+        ],
+        "snapshot": [
+          0
+        ],
+        "cleanup": [
+          0
+        ],
+        "tapped_all": [
+          0
+        ],
+        "untapped_all": [
+          0
+        ],
+        "injured": [
+          0
+        ]
+      }
+    }
+  ],
+  "recipe_coverage": "Reviewed sweep component on both sides of a mixed board, with overlapping permanent types, colors, flying, indestructible witnesses, tapped/untapped variants, empty boards/zones, populated libraries/graveyards/exile, exact normal payment and snapshot/AI replay. Additional Oracle clauses (alternate costs, cycling, flashback, awaken, uncounterability, regeneration prohibition, planeswalker scope) require separate authored cases where present. Graveyards and exile are checked by ownership and contents rather than arbitrary simultaneous-death order."
+}

@@ -1,0 +1,40 @@
+{
+  "version": 1,
+  "card": "Eternal Warrior",
+  "csvid": 628,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "aura_creature",
+      "version": 2,
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "Vigilance"
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature has vigilance.",
+      "variants": [
+        "friendly_cleanup",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "wrong_type",
+        "lost_target",
+        "snapshot",
+        "tapped",
+        "large_target",
+        "unblocked",
+        "opponent_cleanup",
+        "opponent_unblocked",
+        "empty_zones",
+        "aura_removed",
+        "aura_bounced",
+        "host_bounced",
+        "host_destroyed"
+      ]
+    }
+  ],
+  "recipe_coverage": " Reviewed continuous Aura component: normal casting and target loss, persistence through cleanup, legal Disenchant removal and Disperse bounce, attached-host bounce/destruction, owner-specific zones, exact costs, snapshot/AI replay, and declared keywords through real combat. Declared entry draw/life effects and Aura-to-hand death replacements are checked. Activated abilities, alternate costs, graveyard return abilities, dredge, madness, cycling, aura swap, and granted activated abilities remain separate coverage gaps where present. Not whole-card certification."
+}

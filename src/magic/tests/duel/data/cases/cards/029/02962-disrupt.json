@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Disrupt",
+  "csvid": 2962,
+  "recipes": [
+    {
+      "family": "counter_spell",
+      "version": 2,
+      "params": {
+        "targets": [
+          "instant",
+          "sorcery"
+        ],
+        "tax": 1,
+        "draw": 1
+      },
+      "oracle_text": "Counter target instant or sorcery spell unless its controller pays {1}.\nDraw a card.",
+      "variants": [
+        "opponent",
+        "own_spell",
+        "payment",
+        "insufficient_mana",
+        "no_stack",
+        "snapshot",
+        "type_sorcery",
+        "wrong_type",
+        "tax_paid",
+        "tax_exact",
+        "tax_unaffordable"
+      ]
+    }
+  ],
+  "recipe_coverage": "Oracle-reviewed counterspell component through real casting and priority: own/opposing spells, supported type/color/value restrictions, payment, no stack, insufficient mana, ordered destinations and immediate effects, populated-zone snapshot replay. Tax counters also cover pay, decline, exact mana, and unaffordable payment. Counter immunity, target removal during response, multiple stack objects, and exceptional card types require separate cases."
+}

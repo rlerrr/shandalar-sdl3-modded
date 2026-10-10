@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "card": "Boiling Seas",
+  "csvid": 2876,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "sweep",
+      "version": 2,
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "land"
+        ],
+        "land_subtypes": [
+          "Island"
+        ]
+      },
+      "oracle_text": "Destroy all Islands.",
+      "variants": [
+        "mixed",
+        "friendly_only",
+        "opponent_only",
+        "empty_board",
+        "empty_zones",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "cleanup",
+        "tapped_all",
+        "untapped_all"
+      ]
+    }
+  ],
+  "recipe_coverage": "Reviewed sweep component on both sides of a mixed board, with overlapping permanent types, colors, flying, indestructible witnesses, tapped/untapped variants, empty boards/zones, populated libraries/graveyards/exile, exact normal payment and snapshot/AI replay. Additional Oracle clauses (alternate costs, cycling, flashback, awaken, uncounterability, regeneration prohibition, planeswalker scope) require separate authored cases where present. Graveyards and exile are checked by ownership and contents rather than arbitrary simultaneous-death order."
+}

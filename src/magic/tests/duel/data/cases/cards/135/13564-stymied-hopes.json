@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Stymied Hopes",
+  "csvid": 13564,
+  "recipes": [
+    {
+      "family": "counter_spell",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature",
+          "instant",
+          "sorcery",
+          "artifact",
+          "enchantment",
+          "aura"
+        ],
+        "tax": 1,
+        "scry": 1
+      },
+      "oracle_text": "Counter target spell unless its controller pays {1}. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+      "variants": [
+        "opponent",
+        "own_spell",
+        "payment",
+        "insufficient_mana",
+        "no_stack",
+        "snapshot",
+        "type_instant",
+        "type_sorcery",
+        "type_artifact",
+        "type_enchantment",
+        "type_aura",
+        "tax_paid",
+        "tax_exact",
+        "tax_unaffordable"
+      ]
+    }
+  ],
+  "recipe_coverage": "Oracle-reviewed counterspell component through real casting and priority: own/opposing spells, supported type/color/value restrictions, payment, no stack, insufficient mana, ordered destinations and immediate effects, populated-zone snapshot replay. Tax counters also cover pay, decline, exact mana, and unaffordable payment. Counter immunity, target removal during response, multiple stack objects, and exceptional card types require separate cases."
+}

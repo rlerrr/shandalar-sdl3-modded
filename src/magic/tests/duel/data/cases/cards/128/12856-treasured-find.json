@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Treasured Find",
+  "csvid": 12856,
+  "recipes": [
+    {
+      "family": "recover_card",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature",
+          "instant",
+          "sorcery",
+          "artifact",
+          "enchantment",
+          "land"
+        ],
+        "destination": "hand",
+        "self_destination": "exile",
+        "target_witness": "Grizzly Bears"
+      },
+      "oracle_text": "Return target card from your graveyard to your hand. Exile Treasured Find.",
+      "variants": [
+        "return",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "lost_target",
+        "snapshot",
+        "alternate",
+        "shifted_target",
+        "wrong_owner",
+        "eligible_type_creature",
+        "eligible_type_instant",
+        "eligible_type_sorcery",
+        "eligible_type_artifact",
+        "eligible_type_enchantment",
+        "eligible_type_land"
+      ]
+    }
+  ],
+  "recipe_coverage": "Oracle-reviewed single-card recovery: eligible alternatives and full-zone indices, type/color/value restrictions, graveyard ownership, exact/insufficient mana, empty zone, ordered unaffected zones, target departure and index shift through a real Reclaim response, populated-zone snapshot replay. Reanimation also checks entry characteristics and subsequent death ownership; subtype bonuses are explicit. Multi-target recovery, graveyard shroud, replacement effects, and exceptional card types remain separate. Existing noncreature selection defects are represented by isolated eligible_type legality assertions; complex recovery scenarios currently use legal creature choices. Restore the noncreature type resolution variants when those defects are fixed."
+}

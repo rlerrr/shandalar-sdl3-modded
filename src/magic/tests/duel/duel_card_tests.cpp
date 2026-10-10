@@ -86,7 +86,9 @@ class BehaviorTest:public testing::Test {
     else if(op=="choose_number")duel_test_decision(DUEL_CHOICE_NUMBER,s.player,s.value,-1);
     else if(op=="choose_color")duel_test_decision(DUEL_CHOICE_COLOR,s.player,s.value,-1);
     else if(op=="choose_mana")duel_test_decision(DUEL_CHOICE_MANA,s.player,-3,s.color);
+    else if(op=="choose_cancel_mana")duel_test_decision(DUEL_CHOICE_MANA,s.player,-2,-1);
     else if(op=="choose_priority")duel_test_decision(DUEL_CHOICE_PRIORITY,ref.player>=0?ref.player:s.player,ref.card>=0?ref.card:s.value,-1);
+    else if(op=="choose_regeneration")duel_test_regeneration_decision(ref);
     else if(op=="choose_trigger")duel_test_decision(DUEL_CHOICE_PRIORITY,s.player,-3,duel_test_inspect(ref).csvid);
     else if(op=="can_activate")EXPECT_EQ(!!duel_test_can_activate(ref),s.value);
     else if(op=="activate")EXPECT_EQ(!!duel_test_activate(ref),s.value);
@@ -106,6 +108,8 @@ class BehaviorTest:public testing::Test {
     else if(op=="advance_combat")duel_test_advance_combat();
     else if(op=="turn")duel_test_set_turn(s.player,s.value);
     else if(op=="set_mana")duel_test_set_mana(s.player,s.color,s.value);
+    else if(op=="set_life")duel_test_set_life(s.player,s.value);
+    else if(op=="set_budget")duel_test_set_budget(s.value);
     else if(op=="assert_card_name")EXPECT_STREQ(duel_test_card_name(ref),spec->card);
     else if(op=="assert_payment_source")EXPECT_NE(std::string(duel_test_payment_prompt()).find(spec->card),std::string::npos);
     else if(op=="assert_card")EXPECT_EQ(property(duel_test_inspect(ref),s.property),s.value);
@@ -119,18 +123,20 @@ class BehaviorTest:public testing::Test {
       DuelTestRef r=duel_test_permanent_at(s.player,s.index);
       ASSERT_GE(r.card,0); EXPECT_EQ(property(duel_test_inspect(r),s.property),s.value);
     }
-    else if(op=="bind_permanent") {
+    else if(op=="bind_permanent" || op=="bind_hand") {
+      int zone=op=="bind_hand"?DUEL_ZONE_HAND:DUEL_ZONE_BATTLEFIELD;
+      auto at=op=="bind_hand"?duel_test_hand_at:duel_test_permanent_at;
       DuelTestRef r={s.player,-1}; int matches=0;
       if(s.index>=0) {
-        r=duel_test_permanent_at(s.player,s.index);
+        r=at(s.player,s.index);
         matches=r.card>=0 && duel_test_inspect(r).csvid==s.value;
       } else {
-        for(int index=0;index<duel_test_zone_count(s.player,DUEL_ZONE_BATTLEFIELD);++index) {
-          auto candidate=duel_test_permanent_at(s.player,index);
+        for(int index=0;index<duel_test_zone_count(s.player,zone);++index) {
+          auto candidate=at(s.player,index);
           if(duel_test_inspect(candidate).csvid==s.value) { r=candidate; ++matches; }
         }
       }
-      EXPECT_EQ(matches,1)<<"Expected one matching permanent for CSVID "<<s.value;
+      EXPECT_EQ(matches,1)<<"Expected one matching "<<(op=="bind_hand"?"hand card":"permanent")<<" for CSVID "<<s.value;
       if(matches!=1) { duel_test_dump(); break; }
       refs[s.ref]=r;
     }

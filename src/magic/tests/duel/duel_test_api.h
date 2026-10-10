@@ -20,6 +20,8 @@ const char *duel_test_card_name(DuelTestRef ref);
 const char *duel_test_payment_prompt(void);
 void duel_test_probe_presentation(void);
 void duel_test_reset(uint32_t seed);
+/* Adjust only the remaining deterministic work budget, preserving RNG/time. */
+void duel_test_set_budget(uint32_t steps);
 DuelTestRef duel_test_add(int player, int zone, int csvid, int state);
 void duel_test_prepare_fixture(void);
 void duel_test_set_mana(int player, int color, int amount);
@@ -28,6 +30,8 @@ void duel_test_set_turn(int player, int combat);
 void duel_test_decision(DuelChoiceKind kind, int player, int value, int card);
 /* Select an engine-created pending damage packet by its actual recipient. */
 void duel_test_damage_decision(int player, DuelTestRef recipient);
+/* Activate only in the legacy destruction window; pass earlier responses. */
+void duel_test_regeneration_decision(DuelTestRef source);
 int duel_test_offered_count(void);
 int duel_test_offered_csvid(int index);
 void duel_test_finish_decisions(void);
@@ -35,6 +39,7 @@ int duel_test_finish_target_plan(void);
 /* Count and retire unused choices so a rules failure can retain state assertions. */
 int duel_test_finish_choice_plan(void);
 DuelTestRef duel_test_permanent_at(int player, int index);
+DuelTestRef duel_test_hand_at(int player, int index);
 int duel_test_can_activate(DuelTestRef source);
 int duel_test_activate(DuelTestRef source);
 /* Query the card's EVENT_CAN_CAST handler without paying costs or choosing targets. */

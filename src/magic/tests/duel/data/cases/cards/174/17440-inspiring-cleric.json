@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Inspiring Cleric",
+  "csvid": 17440,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "etb_value_creature",
+      "version": 2,
+      "params": {
+        "keywords": [],
+        "draw": 0,
+        "gain_life": 4,
+        "lose_life": 0
+      },
+      "oracle_text": "When this creature enters, you gain 4 life.",
+      "variants": [
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "injured",
+        "opponent_cast",
+        "two_copies",
+        "bounce_recast",
+        "bounce_only",
+        "blink",
+        "blink_snapshot",
+        "countered",
+        "pending_snapshot",
+        "snapshot",
+        "cleanup_once",
+        "destroy",
+        "other_creature",
+        "empty_hand",
+        "empty_graveyard",
+        "empty_exile",
+        "short_library",
+        "opponent_injured",
+        "opponent_bounce",
+        "opponent_pending_snapshot",
+        "fresh_attack",
+        "wrong_color"
+      ]
+    }
+  ],
+  "recipe_coverage": " Reviewed unconditional entry draw/life component: structured Oracle casting cost and base stats, exact payment and insufficient/wrong-color negatives, ordered draws and explicit life gain/loss, both controllers and injured life totals, two copies, legal bounce and recast, blink and repeated entry, countered creature spells, death and bounce without re-entry, unrelated creature entry, cleanup without repeat, pre-cast and pending-spell snapshot replay after AI backups, stocked owned zones with deliberate empty variants and final-card library draws. Additional keyword interactions, optional triggers, variable effects, multiple simultaneous triggers, alternate costs, draw replacement/prevention, empty-library loss, and AI policy remain gaps. Component coverage, not whole-card certification."
+}

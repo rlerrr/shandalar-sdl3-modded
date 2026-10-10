@@ -254,5 +254,7 @@
       ],
       "seed": 123
     }
-  ]
+  ],
+  "recipes": [{"family": "self_pump_creature", "version": 2, "params": {"keywords": [], "power": 0, "toughness": 1, "activation_cost": "{1}"}, "oracle_text": "{1}: This creature gets +0/+1 until end of turn.", "variants": ["cast", "payment", "insufficient_mana", "snapshot", "fresh_attack", "unblocked", "block_ground", "block_flying", "tapped_attacker", "tapped_blocker", "activation", "activation_payment", "stacked_activations", "repeated_activations", "tapped_activation", "fresh_activation", "opposing_turn_activation", "combat_activation", "lost_source", "activation_snapshot", "activation_insufficient_mana", "five_activations"]}],
+  "recipe_coverage": "Reviewed self-pump component: normal casting, structured Oracle base characteristics and unconditional keywords, real combat, exact activation payment, unchanged stats before resolution, queued/individually resolved repetitions, tapped and freshly cast hosts, opposing-turn activation, in-combat activation, cleanup expiry, target/source loss through a real priority response, caller-owned snapshot and AI backup replay, populated ordered zones, and per-turn limits/reset when declared. Other activated abilities and timing of flash remain gaps where present. Activation affordability negatives are omitted for multimode cards because another printed ability can independently permit activation. Component coverage, not whole-card certification."
 }
