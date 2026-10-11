@@ -183,6 +183,12 @@ validate_target_impl(int player, int card,	// Beware - these will both be -1 whe
   int rval = 1;
   char error_str[200];
 
+  /* A scripted decision supplies policy for either controller. Preserve the
+     actual chooser for hexproof and predicates, but validate controller scope
+     against the rules restriction rather than the AI's preferred opponent.
+     Normal gameplay and AI searches retain their existing policy. */
+  if (duel_host_scripted_input()) preferred_controller = allowed_controller;
+
 #define FAIL_STR(err_str)				\
   do									\
 	{									\

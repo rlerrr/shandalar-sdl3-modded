@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Golgari Signet",
+  "csvid": 1717,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "permanent_mana",
+      "version": 2,
+      "params": {
+        "activation_cost": "{1}, {T}",
+        "mana_outputs": [
+          "{B}{G}"
+        ],
+        "production": "fixed",
+        "enters_tapped": false,
+        "entry_life": 0,
+        "indestructible": false
+      },
+      "oracle_text": "{1}, {T}: Add {B}{G}.",
+      "variants": [
+        "entry_0",
+        "tapped_0",
+        "sick_0",
+        "opposing_turn_0",
+        "combat_0",
+        "bare_zones_0",
+        "two_sources_0",
+        "bounce_0",
+        "destroy_0",
+        "tax_0",
+        "resolved_snapshot_0",
+        "insufficient_input_0",
+        "fresh_cast_0",
+        "pending_cast_snapshot_0",
+        "countered_0",
+        "insufficient_cast_mana_0",
+        "entry_1",
+        "tapped_1",
+        "sick_1",
+        "opposing_turn_1",
+        "combat_1",
+        "bare_zones_1",
+        "two_sources_1",
+        "bounce_1",
+        "destroy_1",
+        "tax_1",
+        "resolved_snapshot_1",
+        "insufficient_input_1",
+        "fresh_cast_1",
+        "pending_cast_snapshot_1",
+        "countered_1",
+        "insufficient_cast_mana_1",
+        "production_0_0",
+        "payment_0_0",
+        "repeat_denied_0_0",
+        "spend_generic_0_0",
+        "ready_snapshot_0_0",
+        "untap_repeat_0_0",
+        "spend_colored_0_0",
+        "production_0_1",
+        "payment_0_1",
+        "repeat_denied_0_1",
+        "spend_generic_0_1",
+        "ready_snapshot_0_1",
+        "untap_repeat_0_1",
+        "spend_colored_0_1"
+      ]
+    }
+  ]
+}

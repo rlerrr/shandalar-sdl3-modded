@@ -307,6 +307,11 @@ the harness, so test authors can express those expectations correctly:
 - `can_cast` queries the real card's `EVENT_CAN_CAST` handler without selecting
   targets or paying mana. It tests that handler's permission, not full timing
   or affordability. Use `cast` to exercise payment and resolution.
+- `can_target_creature` checks a named `other` target using the production
+  unrestricted creature-spell target definition and validator for source `ref`.
+  Equipment tests use Unsummon to distinguish hexproof from shroud without the
+  AI strategically declining to bounce its own creature. This narrow probe does
+  not model card-specific restrictions, timing, costs, or actual resolution.
 - `cast` runs the normal response window, which can resolve spells before it
   returns. Queue a `choose_priority` response and its decisions before `cast`
   to test targets becoming illegal before resolution. `cast; destroy; resolve`
@@ -350,7 +355,7 @@ From **PowerShell**, run this for the full native duel suite, including all cata
 ```powershell
 & 'C:/Program Files/Microsoft Visual Studio/18/Community/Common7/Tools/Launch-VsDevShell.ps1' -Arch x86 -HostArch amd64 -SkipAutomaticLocation -NoLogo
 
-cmake -S . -B out/build/shandalar-clang-x86 -DSHANDALAR_DUEL_EXTENDED_TESTS=ON
+cmake -S . -B out/build/shandalar-clang-x86 -DSHANDALAR_BUILD_TESTS:BOOL=ON -DSHANDALAR_BUILD_DUEL_TESTS:BOOL=ON -DSHANDALAR_DUEL_EXTENDED_TESTS:BOOL=ON
 cmake --build out/build/shandalar-clang-x86 --target duel_card_tests -j6
 
 ctest --test-dir out/build/shandalar-clang-x86 -L duel --output-on-failure -j1
@@ -359,7 +364,7 @@ ctest --test-dir out/build/shandalar-clang-x86 -L duel --output-on-failure -j1
 To run the same suite under Node/Wasm:
 
 ```powershell
-cmake -S . -B out/build/shandalar-wasm -DSHANDALAR_DUEL_EXTENDED_TESTS=ON
+cmake -S . -B out/build/shandalar-wasm -DSHANDALAR_BUILD_TESTS:BOOL=ON -DSHANDALAR_BUILD_DUEL_TESTS:BOOL=ON -DSHANDALAR_DUEL_EXTENDED_TESTS:BOOL=ON
 cmake --build out/build/shandalar-wasm --target duel_card_tests -j6
 
 ctest --test-dir out/build/shandalar-wasm -L duel --output-on-failure -j1
@@ -401,3 +406,53 @@ coverage build is not viable on this branch either. The script uses
 `C:\bin\LLVM-21.1.8-win32` by default (`SHANDALAR_LLVM_COV` overrides it);
 requesting `-DSHANDALAR_DUEL_COVERAGE=ON` with a toolchain that lacks the
 runtime fails configure with a message saying so.
+
+
+For searches after a shuffle, `choose_zone_card` scripts a CSVID instead of a
+raw `choose_zone` index. The headless host chooses the first offered occurrence
+of that card and fails if it is absent; duplicate copies are interchangeable.
+The engine's usual search filter still validates that selection. A script must
+use `choose_zone` with `value: -1` when explicitly declining a search.
+
+
+Generated hybrid-payment cases use `choose_payment` to select a requested mana
+vector from the real payment dialog. The host fails on a missing or ambiguous
+option. It does not alter costs or choose a replacement payment automatically.
+Exact single-option payments and AI payment paths need no dialog script.
+
+
+Hybrid creature recipes require a reviewed `payment_colors` array, with one
+legal color per two-color hybrid symbol. Supplemental payment variants use
+explicit pools and assert the remaining mana after a real cast. Existing family
+scope still applies: a component recipe does not claim the card's additional
+unexercised abilities are covered, and Flash timing still needs dedicated tests.
+
+
+`assert_poison` observes a player's poison counter total. Card observations
+include `minus1_counters` as well as `plus1_counters`; both counters and player
+poison appear in observable snapshots used for deterministic replay comparisons.
+
+`choose_trigger` selects an offered trigger effect by the referenced card's
+CSVID. Earlier response windows pass without consuming the planned selection;
+an unavailable trigger leaves an unconsumed choice and fails the case. Snapshot
+capture/restore also saves the script's named-instance bindings so replay can
+rebind cards that moved between the battlefield and hand.
+
+Scripted targeting for either controller uses the rules' allowed controller,
+instead of the AI's preferred controller. The actual chooser and all other
+legality checks are preserved. Normal gameplay and AI searches retain their
+usual targeting policy.
+
+`assert_zone_multiplicity` checks an exact CSVID count in one player's zone,
+including zero. Unlike combined hand/graveyard totals, it detects moving the
+wrong card when both cards already have copies in both zones.
+
+`choose_optional_zone` declines a graveyard selection if offered, with an
+explicit legal fallback CSVID. If the engine requires a selection, the host
+chooses that fallback through normal validation and records a forced action.
+`assert_forced_zone_choices: 0` and unchanged-zone assertions expose the rules
+failure without aborting the process. A skipped optional trigger needs no
+selection. All ordinary decisions still require consumption. This input path
+does not relax `must_select` or card eligibility. Forced-action counts are part
+of the caller-owned test snapshots. Exact public-recovery reveal notices are
+acknowledged automatically; gameplay dialogs remain scripted.

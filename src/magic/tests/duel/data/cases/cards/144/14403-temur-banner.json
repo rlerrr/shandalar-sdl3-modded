@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "card": "Temur Banner",
+  "csvid": 14403,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "value_activation",
+      "version": 2,
+      "params": {
+        "effect": "draw",
+        "amount": 1,
+        "mana_cost": "{G}{U}{R}",
+        "tap": true,
+        "sacrifice": true,
+        "pay_life": 0,
+        "mana_outputs": [
+          "{G}",
+          "{U}",
+          "{R}"
+        ]
+      },
+      "oracle_text": "{T}: Add {G}, {U}, or {R}.\n{G}{U}{R}, {T}, Sacrifice this artifact: Draw a card.",
+      "variants": [
+        "value_0",
+        "payment_0",
+        "tapped_0",
+        "sick_0",
+        "opposing_turn_0",
+        "combat_0",
+        "two_sources_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "tax_0",
+        "cast_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "fresh_activation_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "second_copy_pending_0",
+        "value_1",
+        "payment_1",
+        "tapped_1",
+        "sick_1",
+        "opposing_turn_1",
+        "combat_1",
+        "two_sources_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "tax_1",
+        "cast_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "fresh_activation_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "second_copy_pending_1",
+        "mana_0_0",
+        "mana_1_0",
+        "mana_2_0",
+        "mana_0_1",
+        "mana_1_1",
+        "mana_2_1"
+      ]
+    }
+  ]
+}

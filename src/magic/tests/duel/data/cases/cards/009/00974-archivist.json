@@ -282,5 +282,65 @@
       ],
       "seed": 123
     }
+  ],
+  "recipes": [
+    {
+      "family": "value_activation",
+      "version": 2,
+      "params": {
+        "effect": "draw",
+        "amount": 1,
+        "mana_cost": "",
+        "tap": true,
+        "sacrifice": false,
+        "pay_life": 0,
+        "mana_outputs": []
+      },
+      "oracle_text": "{T}: Draw a card.",
+      "variants": [
+        "value_0",
+        "payment_0",
+        "tapped_0",
+        "sick_0",
+        "opposing_turn_0",
+        "combat_0",
+        "two_sources_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "tax_0",
+        "cast_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "fresh_activation_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "cleanup_0",
+        "repeat_denied_0",
+        "untap_repeat_0",
+        "value_1",
+        "payment_1",
+        "tapped_1",
+        "sick_1",
+        "opposing_turn_1",
+        "combat_1",
+        "two_sources_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "tax_1",
+        "cast_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "fresh_activation_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "cleanup_1",
+        "repeat_denied_1",
+        "untap_repeat_1"
+      ]
+    }
   ]
 }

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Triskelavus",
+  "csvid": 8710,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "entry_counter_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flying"
+        ],
+        "mechanic": "fixed",
+        "amount": 3
+      },
+      "oracle_text": "Flying\nThis creature enters with three +1/+1 counters on it.\n{1}, Remove a +1/+1 counter from this creature: Create a 1/1 colorless Triskelavite artifact creature token with flying. It has \"Sacrifice this token: This token deals 1 damage to any target.\"",
+      "variants": [
+        "cast_0",
+        "pending_snapshot_0",
+        "snapshot_0",
+        "cleanup_0",
+        "blink_0",
+        "blink_snapshot_0",
+        "bounce_0",
+        "bounce_recast_0",
+        "growth_blink_0",
+        "pump_0",
+        "destroy_0",
+        "exile_0",
+        "tapped_entry_0",
+        "sick_entry_0",
+        "empty_zones_0",
+        "anthem_0",
+        "fresh_attack_0",
+        "two_copies_0",
+        "cast_1",
+        "pending_snapshot_1",
+        "snapshot_1",
+        "cleanup_1",
+        "blink_1",
+        "blink_snapshot_1",
+        "bounce_1",
+        "bounce_recast_1",
+        "growth_blink_1",
+        "pump_1",
+        "destroy_1",
+        "exile_1",
+        "tapped_entry_1",
+        "sick_entry_1",
+        "empty_zones_1",
+        "anthem_1",
+        "fresh_attack_1",
+        "two_copies_1",
+        "payment",
+        "insufficient_mana",
+        "countered"
+      ]
+    }
+  ],
+  "recipe_coverage": " Explicit fixed entry counters or bloodthirst component, pinned to complete Oracle passive text and numeric stats. Direct +1/+1 counter inspection, real casting/payment, both players, damage-versus-life-loss and recipient/turn distinctions, multiple damage events, combat damage, late stack responses, countered casts, blink/bounce/re-entry, cleanup, source removal, anthems versus counters, populated zones and snapshot replay after AI backups. Printed activated abilities and source keywords remain gaps. Graft, modular, other passive/triggered clauses, variable entry amounts and nonstandard costs are excluded. Not whole-card certification."
+}

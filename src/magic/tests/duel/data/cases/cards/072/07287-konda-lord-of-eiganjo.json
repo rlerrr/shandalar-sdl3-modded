@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Konda, Lord of Eiganjo",
+  "csvid": 7287,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "combat_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Indestructible",
+          "Vigilance"
+        ],
+        "mechanic": "bushido",
+        "amount": 5
+      },
+      "oracle_text": "Vigilance, indestructible\nBushido 5 (Whenever this creature blocks or becomes blocked, it gets +5/+5 until end of turn.)",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "attack_alone_0",
+        "attack_pair_0",
+        "other_alone_0",
+        "other_pair_0",
+        "defend_0",
+        "defend_ground_0",
+        "defend_damage_0",
+        "defend_cleanup_0",
+        "tapped_defend_0",
+        "sick_defend_0",
+        "tapped_source_0",
+        "sick_source_0",
+        "combat_snapshot_0",
+        "cleanup_0",
+        "damage_0",
+        "attack_alone_1",
+        "attack_pair_1",
+        "other_alone_1",
+        "other_pair_1",
+        "defend_1",
+        "defend_ground_1",
+        "defend_damage_1",
+        "defend_cleanup_1",
+        "tapped_defend_1",
+        "sick_defend_1",
+        "tapped_source_1",
+        "sick_source_1",
+        "combat_snapshot_1",
+        "cleanup_1",
+        "damage_1",
+        "blocked",
+        "blocked_damage",
+        "two_blockers",
+        "flanking_blocker",
+        "small_blocker",
+        "empty_zones",
+        "wrong_color",
+        "lethal_blocker",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1"
+      ]
+    }
+  ]
+}

@@ -11,6 +11,20 @@ VERSION = 1
 COLORS = {"B": 1, "U": 2, "G": 3, "R": 4, "W": 5}
 WORDS = {"a": 1, "two": 2, "three": 3, "four": 4}
 VARIANTS = {
+    "death_value_creature": ("destroy_0", "payment_0", "death_snapshot_0", "combat_death_0"),
+    "etb_recovery_creature": ("entry_0", "payment_0", "pending_snapshot_0", "blink_0"),
+    "etb_removal_creature": ("entry_0", "payment_0", "pending_snapshot_0", "blink_0"),
+    "counter_damage_creature": ("unblocked_0", "blocked_0", "cleanup_0", "combat_snapshot_0"),
+    "trigger_pump_creature": ("effect_0", "payment_0", "pending_snapshot_0", "cleanup_0"),
+    "attack_pump_creature": ("attack_0", "payment_0", "declaration_snapshot_0", "cleanup_0"),
+    "mass_stats": ("effect_0", "payment_0", "pending_snapshot_0", "cleanup_0"),
+    "fixed_mill": ("effect_0", "payment_0", "pending_snapshot_0", "two_copies_0"),
+    "value_activation": ("value_0", "payment_0", "pending_snapshot_0", "two_sources_0"),
+    "equipment": ("attach_0", "equip_payment_0", "move_0", "pending_snapshot_0"),
+    "permanent_mana": ("entry_0", "production_0_0", "payment_0_0", "ready_snapshot_0_0"),
+    "cycling": ("cycle_0", "payment_0", "pending_snapshot_0", "two_copies_0"),
+    "entry_counter_creature": ("cast_0", "payment", "snapshot_0", "blink_snapshot_0"),
+    "lord_creature": ("cast_0", "payment", "snapshot_0", "combat_snapshot_0"),
     "etb_value_creature": ("cast", "payment", "snapshot", "bounce_recast"),
     "blocking_creature": ("cast", "payment", "snapshot", "combat_snapshot"),
     "combat_keyword_creature": ("cast", "payment", "snapshot", "combat_snapshot_0"),
@@ -162,6 +176,44 @@ def explicit_spec(declaration, oracle):
     The full text pin forces re-review on Oracle refresh; it is not proof that
     the author's parameters or selected scenarios accurately describe the card.
     """
+    from hybrid_creature_recipes import applies, specification
+    if applies(declaration):return specification(declaration,oracle)
+    if declaration.get('family')=='death_value_creature':
+        from death_value_creature_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='etb_recovery_creature':
+        from etb_recovery_creature_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='etb_removal_creature':
+        from etb_removal_creature_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='counter_damage_creature':
+        from counter_damage_creature_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='trigger_pump_creature':
+        from trigger_pump_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='attack_pump_creature':
+        from attack_pump_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='mass_stats':
+        from mass_stats_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='fixed_mill':
+        from mill_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='value_activation':
+        from value_activation_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='equipment':
+        from equipment_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='permanent_mana':
+        from permanent_mana_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='cycling':
+        from cycling_recipes import spec
+        return spec(declaration,oracle)
     family = declaration.get("family")
     if family not in VARIANTS:
         raise ValueError("unknown explicit recipe family")
@@ -182,7 +234,13 @@ def explicit_spec(declaration, oracle):
             if not isinstance(scope,str) or scope not in scopes or not any(line==scopes[scope] or line.startswith(scopes[scope]+" (") for line in oracle["oracle_text"].splitlines()):
                 raise ValueError("Aura control scope requires the reviewed Oracle enchant line")
         return spec(declaration.get("params"), cost_from_oracle(oracle), family)
-    if family in ("creature_keywords", "self_pump_creature", "evasion_creature", "defensive_creature", "mana_creature", "regenerate_creature", "etb_value_creature", "blocking_creature", "tap_damage_creature", "combat_keyword_creature"):
+    if family in ("creature_keywords", "self_pump_creature", "evasion_creature", "defensive_creature", "mana_creature", "regenerate_creature", "etb_value_creature", "blocking_creature", "tap_damage_creature", "combat_keyword_creature", "lord_creature", "entry_counter_creature"):
+        if family == "entry_counter_creature":
+            from entry_counter_creature_recipes import spec
+            return spec(declaration, oracle)
+        if family == "lord_creature":
+            from lord_creature_recipes import spec
+            return spec(declaration, oracle)
         if family == "combat_keyword_creature":
             from combat_keyword_creature_recipes import spec
             return spec(declaration, oracle)
@@ -277,12 +335,19 @@ def explicit_spec(declaration, oracle):
 
 
 def expand(card_name, csvid, declaration, oracle, registry, oracle_context=None):
+    from hybrid_creature_recipes import applies, expand as hybrid
+    if applies(declaration):return hybrid(card_name,csvid,declaration,oracle,registry,oracle_context)
+    return _expand_plain(card_name,csvid,declaration,oracle,registry,oracle_context)
+
+
+def _expand_plain(card_name, csvid, declaration, oracle, registry, oracle_context=None):
     if not isinstance(declaration, dict):
         raise ValueError("recipe declaration must be an object")
     version = declaration.get("version")
     if type(version) is not int or version not in (VERSION, 2):
         raise ValueError("recipe requires explicit supported version")
     allowed = {"family", "version", "variants"} | ({"params", "oracle_text", "resolve_dialogs", "resolve_zones", "cast_dialogs", "repeat_cast_dialogs", "setup", "eligibility_only", "cast_target_first", "cast_target_count"} if version == 2 else set())
+    if version == 2 and declaration.get('family') in ('etb_removal_creature','etb_recovery_creature'):allowed |= {'trigger_priority'}
     if version == 2 and declaration.get('family') == 'self_pump_creature':allowed |= {'activation_dialog','activation_dialogs','activation_cancel_mana'}
     if set(declaration) - allowed:
         raise ValueError("unknown recipe declaration fields")
@@ -325,6 +390,62 @@ def expand(card_name, csvid, declaration, oracle, registry, oracle_context=None)
     if family == "creature_keywords":
         from creature_recipes import variants as creature_variants
         supported_variants = set(creature_variants(spec))
+    if family == "death_value_creature":
+        from death_value_creature_recipes import variants as death_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants=set(death_variants(spec))
+    if family == "etb_removal_creature":
+        from etb_removal_creature_recipes import variants as etb_removal_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants=set(etb_removal_variants(spec))
+    if family == "etb_recovery_creature":
+        from etb_recovery_creature_recipes import variants as recovery_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants=set(recovery_variants(spec))
+    if family == "counter_damage_creature":
+        from counter_damage_creature_recipes import variants as counter_damage_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants=set(counter_damage_variants(spec))
+    if family == "entry_counter_creature":
+        from entry_counter_creature_recipes import variants as entry_counter_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(entry_counter_variants(spec))
+    if family == "trigger_pump_creature":
+        from trigger_pump_recipes import variants as trigger_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(trigger_variants(spec))
+    if family == "attack_pump_creature":
+        from attack_pump_recipes import variants as attack_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(attack_variants(spec))
+    if family == "mass_stats":
+        from mass_stats_recipes import variants as mass_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(mass_variants(spec))
+    if family == "fixed_mill":
+        from mill_recipes import variants as mill_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(mill_variants(spec))
+    if family == "value_activation":
+        from value_activation_recipes import variants as value_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(value_variants(spec))
+    if family == "equipment":
+        from equipment_recipes import variants as equipment_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(equipment_variants(spec))
+    if family == "permanent_mana":
+        from permanent_mana_recipes import variants as permanent_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(permanent_variants(spec))
+    if family == "cycling":
+        from cycling_recipes import variants as cycling_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(cycling_variants(spec))
+    if family == "lord_creature":
+        from lord_creature_recipes import variants as lord_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants = set(lord_variants(spec))
     if family == "combat_keyword_creature":
         from combat_keyword_creature_recipes import variants as combat_variants, validate_witnesses
         validate_witnesses(oracle_context, registry)
@@ -441,6 +562,77 @@ def expand(card_name, csvid, declaration, oracle, registry, oracle_context=None)
             raise ValueError(f"recipe witness missing from registry: {name}")
         return registry[name]["csvid"]
 
+    if family == "death_value_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("death recipes require dedicated cases for custom decisions/setup")
+        from death_value_creature_recipes import expand as death_receipt
+        return death_receipt(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "etb_recovery_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("entry recovery recipes require dedicated cases for custom decisions/setup")
+        from etb_recovery_creature_recipes import expand as entry_recovery
+        return entry_recovery(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+
+    if family == "etb_removal_creature":
+        if support or resolve_zones or cast_dialogs:
+            raise ValueError("entry removal recipes require dedicated cases for custom setup/zone/cast decisions")
+        from etb_removal_creature_recipes import expand as etb_removal
+        return etb_removal(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "counter_damage_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("counter damage recipes require dedicated cases for custom decisions/setup")
+        from counter_damage_creature_recipes import expand as counter_damage
+        return counter_damage(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "entry_counter_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("entry counter recipes require dedicated cases for custom decisions/setup")
+        from entry_counter_creature_recipes import expand as entry_counters
+        return entry_counters(card_name, csvid, declaration, spec, variants, registry, oracle_context)
+    if family == "trigger_pump_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("trigger pump recipes require dedicated cases for custom decisions/setup")
+        from trigger_pump_recipes import expand as trigger
+        return trigger(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "attack_pump_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("attack pump recipes require dedicated cases for custom decisions/setup")
+        from attack_pump_recipes import expand as attack
+        return attack(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "mass_stats":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("mass stats recipes require dedicated cases for custom decisions/setup")
+        from mass_stats_recipes import expand as mass
+        return mass(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "fixed_mill":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("fixed mill recipes require dedicated cases for custom decisions/setup")
+        from mill_recipes import expand as mill
+        return mill(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "value_activation":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("value activation recipes require dedicated cases for custom decisions/setup")
+        from value_activation_recipes import expand as value_activation
+        return value_activation(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "equipment":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("equipment recipes require dedicated cases for custom decisions/setup")
+        from equipment_recipes import expand as equipment
+        return equipment(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "permanent_mana":
+        if dialogs or support or declaration.get("resolve_zones") or declaration.get("cast_dialogs") or declaration.get("repeat_cast_dialogs"):
+            raise ValueError("mana permanent recipes require dedicated cases for custom decisions/setup")
+        from permanent_mana_recipes import expand as permanent_mana
+        return permanent_mana(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "cycling":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('cycling recipes require dedicated cases for custom decisions/setup')
+        from cycling_recipes import expand as cycling
+        return cycling(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "lord_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("lord recipes require dedicated cases for custom decisions/setup")
+        from lord_creature_recipes import expand as lords
+        return lords(card_name, csvid, declaration, spec, variants, registry, oracle_context)
     if family == "combat_keyword_creature":
         if dialogs or support or resolve_zones or cast_dialogs:
             raise ValueError("combat keyword recipes require dedicated cases for custom decisions/setup")

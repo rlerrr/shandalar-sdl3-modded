@@ -19,8 +19,8 @@ file(MAKE_DIRECTORY "${duel_generated}")
 option(SHANDALAR_DUEL_EXTENDED_TESTS "Register the full catalog smoke suite in CTest" OFF)
 file(GLOB_RECURSE duel_case_files CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/data/cases/*.json")
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
-  data/fixtures.json data/oracle.json data/oracle_aliases.json generate_cases.py case_files.py recipes.py destruction_recipes.py movement_recipes.py stat_recipes.py creature_recipes.py counter_recipes.py graveyard_recipes.py damage_recipes.py sweep_recipes.py grant_recipes.py pump_creature_recipes.py evasion_creature_recipes.py defensive_creature_recipes.py mana_creature_recipes.py regenerate_creature_recipes.py etb_value_creature_recipes.py blocking_creature_recipes.py tap_damage_creature_recipes.py combat_keyword_creature_recipes.py
-  ${duel_case_files}
+  data/fixtures.json data/oracle.json data/oracle_aliases.json generate_cases.py case_files.py recipes.py destruction_recipes.py movement_recipes.py stat_recipes.py creature_recipes.py counter_recipes.py graveyard_recipes.py damage_recipes.py sweep_recipes.py grant_recipes.py pump_creature_recipes.py evasion_creature_recipes.py defensive_creature_recipes.py mana_creature_recipes.py regenerate_creature_recipes.py etb_value_creature_recipes.py blocking_creature_recipes.py tap_damage_creature_recipes.py combat_keyword_creature_recipes.py lord_creature_recipes.py entry_counter_creature_recipes.py cycling_recipes.py permanent_mana_recipes.py equipment_recipes.py
+  value_activation_recipes.py mill_recipes.py mass_stats_recipes.py attack_pump_recipes.py trigger_pump_recipes.py hybrid_creature_recipes.py counter_damage_creature_recipes.py etb_removal_creature_recipes.py etb_recovery_creature_recipes.py death_value_creature_recipes.py ${duel_case_files}
   "${SHANDALAR_SRC_ROOT}/magic/src/carddata.c")
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
   "${CMAKE_SOURCE_DIR}/tools/carddata_handler_overrides.json"
@@ -45,7 +45,7 @@ endif()
 if(EMSCRIPTEN)
   set_target_properties(duel_card_tests PROPERTIES SUFFIX ".js")
   target_link_options(duel_card_tests PRIVATE -sENVIRONMENT=node -sFETCH=1 -sEXIT_RUNTIME=1 -sALLOW_MEMORY_GROWTH=1
-    -sINITIAL_MEMORY=128MB -sSTACK_SIZE=4MB -sASSERTIONS=1 -sFORCE_FILESYSTEM=1
+    -sINITIAL_MEMORY=256MB -sSTACK_SIZE=4MB -sASSERTIONS=1 -sFORCE_FILESYSTEM=1
     -lnodefs.js "--pre-js=${CMAKE_CURRENT_SOURCE_DIR}/node_results.js")
   foreach(asset cards.dat Text.res uistrings.txt MP_UIStrings.txt prompts.txt)
     target_link_options(duel_card_tests PRIVATE "--preload-file=${SHANDALAR_MODDED_ASSET_DIR}/${asset}@/assets_modded/${asset}")
@@ -72,7 +72,7 @@ add_test(NAME duel.case_files COMMAND "${Python3_EXECUTABLE}"
 set_tests_properties(duel.case_files PROPERTIES LABELS "duel;harness" TIMEOUT 15)
 add_test(NAME duel.recipes COMMAND "${Python3_EXECUTABLE}"
   -m unittest discover -s "${CMAKE_CURRENT_SOURCE_DIR}" -p "test_*recipes.py")
-set_tests_properties(duel.recipes PROPERTIES LABELS "duel;harness" TIMEOUT 15)
+set_tests_properties(duel.recipes PROPERTIES LABELS "duel;harness" TIMEOUT 60)
 
 add_test(NAME duel.handler_overrides COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_SOURCE_DIR}/tools/test_import_carddata.py")

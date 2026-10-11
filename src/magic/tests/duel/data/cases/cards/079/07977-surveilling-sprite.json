@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "card": "Surveilling Sprite",
+  "csvid": 7977,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "death_value_creature",
+      "version": 2,
+      "params": {
+        "draw": 1,
+        "gain_life": 0,
+        "optional": true,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature dies, you may draw a card.",
+      "variants": [
+        "cast_only_0",
+        "destroy_0",
+        "murder_0",
+        "exile_0",
+        "bounce_0",
+        "blink_only_0",
+        "blink_destroy_0",
+        "other_death_0",
+        "cleanup_once_0",
+        "two_copies_0",
+        "countered_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "ready_snapshot_0",
+        "death_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "injured_0",
+        "short_library_0",
+        "combat_death_0",
+        "tapped_death_0",
+        "lethal_damage_0",
+        "zero_toughness_0",
+        "decline_0",
+        "wrong_color_0",
+        "cast_only_1",
+        "destroy_1",
+        "murder_1",
+        "exile_1",
+        "bounce_1",
+        "blink_only_1",
+        "blink_destroy_1",
+        "other_death_1",
+        "cleanup_once_1",
+        "two_copies_1",
+        "countered_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "ready_snapshot_1",
+        "death_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "injured_1",
+        "short_library_1",
+        "combat_death_1",
+        "tapped_death_1",
+        "lethal_damage_1",
+        "zero_toughness_1",
+        "decline_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

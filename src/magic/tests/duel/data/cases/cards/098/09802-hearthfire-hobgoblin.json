@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Hearthfire Hobgoblin",
+  "csvid": 9802,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Double strike"
+        ],
+        "payment_colors": [
+          "R",
+          "R",
+          "R"
+        ]
+      },
+      "oracle_text": "Double strike",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "first_strike",
+        "hybrid_payment_other",
+        "hybrid_payment_mixed",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1"
+      ]
+    }
+  ]
+}

@@ -12,6 +12,8 @@
 #include <string.h>
 #include "duel_handler_bindings.inc"
 extern int manalinkeh_count_player_counters(int player, int type);
+extern int manalinkeh_count_counters(int player, int card, int type);
+int duel_test_poison(int player) { return manalinkeh_count_player_counters(player, 0); /* PCOUNTER_POISON */ }
 int duel_test_energy(int player) { return manalinkeh_count_player_counters(player, 2); /* PCOUNTER_ENERGY */ }
 
 extern size_t duel_engine_ai_snapshot_size(void), duel_manalink_snapshot_size(void);
@@ -28,6 +30,7 @@ extern int activate(int, int, int), put_card_on_stack(int, int, int), resolve_to
 extern void reset_duel_globals(void), cleanup_phase(unsigned int);
 extern int reset_timestamp_players(void);
 extern int end_turn_phase(unsigned int);
+extern int TENTATIVE_start_turn(int);
 extern void shandalar_initialize_modded_card_database(void);
 extern void InitializeDuelUiGlobalIds(void);
 extern void save_ai_search_state(void), restore_ai_search_state(void);
@@ -62,11 +65,13 @@ typedef struct { DuelChoiceKind kind; int player, value, card, damage_recipient,
 static Decision decisions[128];
 static int decision_count, decision_cursor;
 static int offered_count, offered_csvids[512];
+static int forced_zone_choices;
 struct DuelTestSnapshot {
   DuelHostState host;
   int decision_count, decision_cursor;
   Decision decisions[128];
   int offered_count, offered_csvids[512];
+  int forced_zone_choices;
   unsigned char data[];
 };
 static DuelTestSnapshot *baseline;
@@ -93,6 +98,7 @@ DuelTestSnapshot *duel_test_capture(void)
   s->host = duel_host_capture(); s->decision_count = decision_count; s->decision_cursor = decision_cursor;
   memcpy(s->decisions, decisions, sizeof(decisions));
   s->offered_count = offered_count;
+  s->forced_zone_choices = forced_zone_choices;
   memcpy(s->offered_csvids, offered_csvids, sizeof(offered_csvids));
   duel_engine_capture_ai_snapshot(s->data);
   duel_manalink_snapshot_capture(s->data + core);
@@ -110,12 +116,36 @@ void duel_test_restore(const DuelTestSnapshot *s)
   duel_host_restore(s->host); decision_count = s->decision_count; decision_cursor = s->decision_cursor;
   memcpy(decisions, s->decisions, sizeof(decisions));
   offered_count = s->offered_count;
+  forced_zone_choices = s->forced_zone_choices;
   memcpy(offered_csvids, s->offered_csvids, sizeof(offered_csvids));
 }
 void duel_test_free_snapshot(DuelTestSnapshot *s) { free(s); }
 static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAnswer *answer)
 {
   (void)context;
+  /* Mana output and a public recovery reveal have OK-only notices. These exact
+     notices carry no gameplay choice; other dialogs remain scripted. */
+  if (request->kind == DUEL_CHOICE_DIALOG && request->player == 1 && request->prompt) {
+    static const char *notices[] = {"to produce black mana.", "to produce blue mana.",
+      "to produce green mana.", "to produce red mana.", "to produce white mana.", "to produce colorless mana.", "reveals:"};
+    for (unsigned i=0; i<sizeof(notices)/sizeof(*notices); ++i) {
+      if (!strcmp(request->prompt,notices[i]) &&
+          (decision_cursor>=decision_count || decisions[decision_cursor].kind!=DUEL_CHOICE_DIALOG ||
+           (decisions[decision_cursor].player!=-1 && decisions[decision_cursor].player!=request->player))) {
+        answer->value=0; answer->card=-1; return 1;
+      }
+    }
+  }
+  /* A one-option color prompt has no branching decision. Select its sole
+     legal value unless the test supplied an explicit color choice. */
+  if (request->kind == DUEL_CHOICE_COLOR && request->count>0 &&
+      !(request->count & (request->count-1)) &&
+      (decision_cursor>=decision_count || decisions[decision_cursor].kind!=DUEL_CHOICE_COLOR ||
+       (decisions[decision_cursor].player!=-1 && decisions[decision_cursor].player!=request->player))) {
+    int color=0;
+    while (color<7 && !(request->count & (1u<<color))) ++color;
+    if (color<7) { answer->value=color; answer->card=-1; return 1; }
+  }
   if (request->kind == DUEL_CHOICE_ZONE) {
     if (request->count < 0 || request->count > 512 || (request->count && !request->cards))
       duel_host_fail("invalid offered zone cards");
@@ -140,7 +170,92 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
   if (request->kind == DUEL_CHOICE_COLOR &&
       (d->value < 0 || d->value > 6 || !(request->count & (1u << d->value))))
     duel_host_fail("illegal scripted mana color");
+  if (request->kind == DUEL_CHOICE_PRIORITY && d->value == -3) {
+    /* A planned trigger may follow earlier spell-response windows. Pass until
+       its effect is offered; an absent trigger remains queued and fails the
+       test's consumed-choice check rather than selecting an unrelated action. */
+    int found = -1;
+    for (int c = 0; (int)g_trigger_condition != -1 && c < g_active_cards_count[request->player]; ++c) {
+      card_instance_t *i = &global_card_instances[request->player][c];
+      if (i->internal_card_id >= 0 &&
+          ((int)global_cards_data[i->internal_card_id].id == d->card ||
+           ((global_cards_data[i->internal_card_id].type & TYPE_EFFECT) && i->display_pic_csv_id == d->card)) &&
+          get_card_response_action_type(request->player,c)) {
+        if (found != -1) duel_host_fail("ambiguous scripted trigger");
+        found = c;
+      }
+    }
+    if (found == -1) { answer->value = -2; answer->card = -1; return 1; }
+    ++decision_cursor; answer->value = found; answer->card = -1; return 1;
+  }
   ++decision_cursor; answer->value = d->value; answer->card = d->card;
+  if (request->kind == DUEL_CHOICE_ZONE && d->value == -5) {
+    if (request->zone_must_select < 0) duel_host_fail("optional zone decision lacks selection policy");
+    answer->value = -1; answer->card = -1;
+    if (request->zone_must_select) {
+      /* Expose a forced optional action as a rules assertion. Select the
+         scripted legal fallback so normal engine validation and resolution
+         still run; never bypass the engine's must-select restriction. */
+      ++forced_zone_choices;
+      int found = -1;
+      for (int c=0;c<offered_count;++c) if (offered_csvids[c]==d->card) { found=c; break; }
+      if (found == -1) duel_host_fail("optional zone fallback is not offered");
+      answer->value = found;
+    }
+  }
+  if (request->kind == DUEL_CHOICE_DIALOG && d->value == -4) {
+    /* Select the explicitly scripted mana vector from the real payment menu,
+       without depending on option ordering or which alternatives are affordable. */
+    const char *line = request->prompt;
+    int index = 0, found = -1;
+    while (line && *line) {
+      const char *end = strchr(line,'\n');
+      if (!end) end = line + strlen(line);
+      const char *at = line;
+      while (at < end && (*at == ' ' || *at == '\t')) ++at;
+      if (end-at >= 4 && !strncmp(at,"Pay ",4)) {
+        int counts[6] = {0}, valid = 1;
+        at += 4;
+        if (at < end && *at >= '0' && *at <= '9') {
+          while (at < end && *at >= '0' && *at <= '9') {
+            if (counts[0] <= 15) counts[0] = counts[0]*10 + *at - '0';
+            else valid = 0;
+            ++at;
+          }
+        }
+        const char *colors = "BUGRW";
+        for (; at < end; ++at) {
+          const char *color = strchr(colors,*at);
+          if (color) ++counts[1+color-colors];
+          else if (*at != ' ' && *at != '\r' && *at != '\t') valid = 0;
+        }
+        unsigned packed = 0;
+        for (int color=0;color<6;++color) {
+          if (counts[color] > 15) valid = 0;
+          packed |= (unsigned)counts[color] << (4*color);
+        }
+        if (valid && packed == (unsigned)d->card) {
+          if (found != -1) duel_host_fail("ambiguous scripted payment");
+          found = index;
+        }
+      }
+      ++index;
+      line = *end ? end+1 : end;
+    }
+    if (found == -1) duel_host_fail("scripted payment is not offered");
+    answer->value = found; answer->card = -1;
+  }
+  if (request->kind == DUEL_CHOICE_ZONE && d->value == -3) {
+    /* Choose a named card after a shuffle without prescribing RNG results.
+       Duplicate copies deliberately select the first offered occurrence.
+       The engine still validates the selected card against its tutor filter. */
+    int found = -1;
+    for (int c = 0; c < offered_count; ++c) {
+      if (offered_csvids[c] == d->card) { found = c; break; }
+    }
+    if (found == -1) duel_host_fail("scripted zone card is not offered");
+    answer->value = found; answer->card = -1;
+  }
   if (d->damage_recipient) {
     int found_player = -1, found_card = -1;
     for (int p = 0; p < 2; ++p) {
@@ -155,20 +270,6 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
     }
     if (found_card == -1) duel_host_fail("scripted damage packet is not available");
     answer->value = found_player; answer->card = found_card;
-  }
-  if (request->kind == DUEL_CHOICE_PRIORITY && d->value == -3) {
-    int found = -1;
-    for (int c = 0; c < g_active_cards_count[request->player]; ++c) {
-      card_instance_t *i = &global_card_instances[request->player][c];
-      if (i->internal_card_id >= 0 && i->display_pic_csv_id == d->card &&
-          (global_cards_data[i->internal_card_id].type & TYPE_EFFECT) &&
-          get_card_response_action_type(request->player,c)) {
-        if (found != -1) duel_host_fail("ambiguous scripted trigger");
-        found = c;
-      }
-    }
-    if (found == -1) duel_host_fail("scripted trigger is not available");
-    answer->value = found;
   }
   return 1;
 }
@@ -214,7 +315,7 @@ void duel_test_reset(uint32_t seed)
 {
   DuelHost host = {NULL, choose};
   if (!initialized) duel_host_fail("engine not initialized");
-  duel_test_restore(baseline); decision_count = decision_cursor = 0;
+  duel_test_restore(baseline); decision_count = decision_cursor = forced_zone_choices = 0;
   duel_host_install(&host, seed, 200000);
 }
 void duel_test_set_budget(uint32_t steps)
@@ -261,6 +362,7 @@ void duel_test_prepare_fixture(void) {
      mean "run to untap" and cause normal mana cancellation to be ignored. */
   g_stop_phase = g_stop_phase_player = -1;
 }
+void duel_test_refresh(void) { manalinkeh_recalculate_all_cards_in_play(); }
 void duel_test_set_mana(int p, int color, int amount) {
   g_raw_mana_available[p][7] += amount - g_raw_mana_available[p][color];
   g_raw_mana_available[p][color] = amount;
@@ -284,6 +386,7 @@ void duel_test_damage_decision(int player, DuelTestRef recipient) {
   decisions[decision_count - 1].damage_recipient = 1;
 }
 int duel_test_offered_count(void) { return offered_count; }
+int duel_test_forced_zone_choices(void) { return forced_zone_choices; }
 int duel_test_offered_csvid(int index) {
   if (index < 0 || index >= offered_count) duel_host_fail("offered card index out of range");
   return offered_csvids[index];
@@ -298,7 +401,12 @@ int duel_test_finish_target_plan(void) {
   return unused;
 }
 int duel_test_finish_choice_plan(void) {
-  int unused = decision_count - decision_cursor;
+  int unused = 0;
+  for (int i=decision_cursor;i<decision_count;++i) {
+    /* An explicit optional decline also permits a skipped optional trigger.
+       The test still asserts unchanged zones and no forced recovery. */
+    if (!(decisions[i].kind==DUEL_CHOICE_ZONE && decisions[i].value==-5)) ++unused;
+  }
   decision_cursor = decision_count;
   return unused;
 }
@@ -325,6 +433,33 @@ int duel_test_activate(DuelTestRef s) {
   return result;
 }
 int duel_test_can_cast(DuelTestRef s) { return manalinkeh_dispatch_event_to_single_card(s.player,s.card,EVENT_CAN_CAST,1-s.player,-1); }
+int duel_test_can_target_creature(DuelTestRef source, DuelTestRef target) {
+  extern void manalinkeh_default_target_definition(int, int, target_definition_t *, int);
+  extern int manalinkeh_validate_arbitrary_target(target_definition_t *, int, int);
+  target_definition_t td;
+  manalinkeh_default_target_definition(source.player, source.card, &td, TYPE_CREATURE);
+  return manalinkeh_validate_arbitrary_target(&td, target.player, target.card);
+}
+static DuelTestRef hand_ability_proxy(int player) {
+  for (int card=0; card<g_active_cards_count[player]; ++card) {
+    int iid=global_card_instances[player][card].internal_card_id;
+    if (iid>=0 && global_cards_data[iid].id==CARD_ID_RULES_ENGINE && manalinkeh_in_play(player,card))
+      return (DuelTestRef){player,card};
+  }
+  return (DuelTestRef){player,-1};
+}
+int duel_test_can_activate_hand(DuelTestRef s) {
+  if (s.player<0 || s.player>1 || s.card<0 || s.card>=g_active_cards_count[s.player]) return 0;
+  if (!manalinkeh_in_hand(s.player,s.card)) return 0;
+  DuelTestRef proxy=hand_ability_proxy(s.player);
+  return proxy.card>=0 &&
+    manalinkeh_dispatch_event_to_single_card(s.player,s.card,EVENT_CAN_ACTIVATE_FROM_HAND,1-s.player,-1) &&
+    duel_test_can_activate(proxy);
+}
+int duel_test_activate_hand(DuelTestRef s) {
+  if (!duel_test_can_activate_hand(s)) return 0;
+  return duel_test_activate(hand_ability_proxy(s.player));
+}
 int duel_test_cast(DuelTestRef s) { if (!put_card_on_stack(s.player,s.card,0)) return 0; return put_card_on_stack(s.player,s.card,1); }
 void duel_test_resolve(void) {
   int n=0;
@@ -445,7 +580,23 @@ void duel_test_end_combat(void) {
   g_current_phase = PHASE_MAIN2;
   manalinkeh_recalculate_all_cards_in_play();
 }
-void duel_test_advance_turn(void) { duel_test_cleanup(); g_current_turn=1-g_current_turn; g_current_player=g_current_turn; g_current_phase=PHASE_MAIN1; ++turn_count; }
+void duel_test_advance_turn(void) {
+  if (g_stack_size != 0) duel_host_fail("advance_turn requires an empty stack");
+  duel_test_cleanup();
+  g_current_turn=1-g_current_turn;
+  g_current_player=g_current_turn;
+  ++turn_count;
+  /* Run the game's turn gate (skip-turn effects, per-turn traps and sickness).
+     The network flag suppresses the host's autosave, not rules dispatch.
+     As with fixture phase selection, upkeep/draw/untap are deliberately omitted. */
+  int previous_network_flags=g_duel_network_flags;
+  g_duel_network_flags |= 2;
+  int skipped=TENTATIVE_start_turn(g_current_turn);
+  g_duel_network_flags=previous_network_flags;
+  if (skipped) duel_host_fail("advance_turn encountered a skipped turn");
+  g_current_phase=PHASE_MAIN1;
+  manalinkeh_recalculate_all_cards_in_play();
+}
 DuelTestCard duel_test_inspect(DuelTestRef r)
 {
   card_instance_t *i=&global_card_instances[r.player][r.card];
@@ -453,6 +604,8 @@ DuelTestCard duel_test_inspect(DuelTestRef r)
   v.in_play=(i->internal_card_id>=0 && manalinkeh_in_play(r.player,r.card));
   v.in_hand=(i->internal_card_id>=0 && manalinkeh_in_hand(r.player,r.card));
   if (v.in_play) {
+    v.minus1_counters=manalinkeh_count_counters(r.player,r.card,1); /* COUNTER_M1_M1 */
+    v.plus1_counters=manalinkeh_count_counters(r.player,r.card,0); /* COUNTER_P1_P1 */
     v.blocking_count=manalinkeh_count_creatures_this_is_blocking(r.player,r.card);
     /* The core engine also creates multiblocker copies (Blaze of Glory). The
        Manalink counter recognizes its own callback only, so include core

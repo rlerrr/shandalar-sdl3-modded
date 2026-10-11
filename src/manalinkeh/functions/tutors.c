@@ -39,7 +39,7 @@ const char* hack_override_show_deck_done_button_label = NULL;
 int select_card_from_zone(int player, int targ_player, const int *s_location, int zone_count, int must_select, int ai_selection_mode, int test_type, test_definition_t *this_test){
   if (duel_host_scripted_input())
   {
-    int selected = duel_host_choose(DUEL_CHOICE_ZONE, player, this_test->message, zone_count, s_location, NULL);
+    int selected = duel_host_choose_zone(player, this_test->message, zone_count, s_location, must_select);
     if (selected == -1 && !must_select) return -1;
     if (selected < 0 || selected >= zone_count ||
         !new_make_test(targ_player, s_location[selected], test_type, this_test))

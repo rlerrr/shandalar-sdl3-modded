@@ -7,22 +7,87 @@
       "name": "JayemdaeTome_DrawsTopLibraryCard",
       "fixture": "empty_main",
       "setup": [
-        {"name": "Jayemdae Tome", "ref": "source", "player": 0, "zone": "battlefield"},
-        {"name": "Forest", "ref": "library0", "player": 0, "zone": "library"},
-        {"name": "Plains", "ref": "library1", "player": 0, "zone": "library"},
-        {"name": "Grizzly Bears", "ref": "library2", "player": 0, "zone": "library"},
-        {"name": "Mountain", "ref": "library3", "player": 0, "zone": "library"}
+        {
+          "name": "Jayemdae Tome",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Forest",
+          "ref": "library0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "library1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "library2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "library3",
+          "player": 0,
+          "zone": "library"
+        }
       ],
       "steps": [
-        {"op": "can_activate", "ref": "source", "value": 1},
-        {"op": "activate", "ref": "source", "value": 1},
-        {"op": "resolve"},
-        {"op": "assert_card", "ref": "source", "property": "tapped", "value": 1},
-        {"op": "assert_zone", "player": 0, "zone": "hand", "value": 1},
-        {"op": "assert_zone_card", "player": 0, "zone": "hand", "index": 0, "value": 91},
-        {"op": "assert_zone", "player": 0, "zone": "library", "value": 3},
-        {"op": "assert_zone_card", "player": 0, "zone": "library", "index": 0, "value": 188},
-        {"op": "assert_stack", "value": 0}
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "hand",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 3
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 188
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        }
       ],
       "seed": 123
     },
@@ -30,13 +95,93 @@
       "name": "JayemdaeTome_TappedCannotActivate",
       "fixture": "empty_main",
       "setup": [
-        {"name": "Jayemdae Tome", "ref": "source", "player": 0, "zone": "battlefield", "state": ["tapped"]}
+        {
+          "name": "Jayemdae Tome",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "tapped"
+          ]
+        }
       ],
       "steps": [
-        {"op": "can_activate", "ref": "source", "value": 0},
-        {"op": "activate", "ref": "source", "value": 0}
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 0
+        }
       ],
       "seed": 123
+    }
+  ],
+  "recipes": [
+    {
+      "family": "value_activation",
+      "version": 2,
+      "params": {
+        "effect": "draw",
+        "amount": 1,
+        "mana_cost": "{4}",
+        "tap": true,
+        "sacrifice": false,
+        "pay_life": 0,
+        "mana_outputs": []
+      },
+      "oracle_text": "{4}, {T}: Draw a card.",
+      "variants": [
+        "value_0",
+        "payment_0",
+        "tapped_0",
+        "sick_0",
+        "opposing_turn_0",
+        "combat_0",
+        "two_sources_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "tax_0",
+        "cast_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "fresh_activation_0",
+        "insufficient_mana_0",
+        "red_payment_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "cleanup_0",
+        "repeat_denied_0",
+        "untap_repeat_0",
+        "value_1",
+        "payment_1",
+        "tapped_1",
+        "sick_1",
+        "opposing_turn_1",
+        "combat_1",
+        "two_sources_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "tax_1",
+        "cast_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "fresh_activation_1",
+        "insufficient_mana_1",
+        "red_payment_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "cleanup_1",
+        "repeat_denied_1",
+        "untap_repeat_1"
+      ]
     }
   ]
 }

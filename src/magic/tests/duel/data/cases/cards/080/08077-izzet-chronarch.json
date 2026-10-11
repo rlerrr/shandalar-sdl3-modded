@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Izzet Chronarch",
+  "csvid": 8077,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "etb_recovery_creature",
+      "version": 2,
+      "params": {
+        "targets": [
+          "instant",
+          "sorcery"
+        ],
+        "type_match": "any",
+        "exclude_types": [],
+        "optional": false,
+        "keywords": []
+      },
+      "oracle_text": "When this creature enters, return target instant or sorcery card from your graveyard to your hand.",
+      "variants": [
+        "entry_0",
+        "alternate_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_graveyard_0",
+        "other_graveyard_0",
+        "countered_0",
+        "cleanup_once_0",
+        "other_creature_0",
+        "bounce_only_0",
+        "bounce_recast_0",
+        "blink_0",
+        "destroy_source_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blink_snapshot_0",
+        "bare_zones_0",
+        "graveyard_shroud_0",
+        "wrong_type_0",
+        "wrong_color_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "entry_1",
+        "alternate_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_graveyard_1",
+        "other_graveyard_1",
+        "countered_1",
+        "cleanup_once_1",
+        "other_creature_1",
+        "bounce_only_1",
+        "bounce_recast_1",
+        "blink_1",
+        "destroy_source_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blink_snapshot_1",
+        "bare_zones_1",
+        "graveyard_shroud_1",
+        "wrong_type_1",
+        "wrong_color_1",
+        "type_instant_1",
+        "type_sorcery_1"
+      ]
+    }
+  ]
+}

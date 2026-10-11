@@ -1,7 +1,7 @@
 """Pinned bushido, flanking and exalted components through complete combat declarations."""
 import re
 from creature_recipes import KEYWORDS, REMINDERS
-from defensive_creature_recipes import EXTRA_REMINDERS
+from defensive_creature_recipes import EXTRA_REMINDERS, protection_values, protects, mirror_cast_cases
 from grant_recipes import HAND, GRAVE, EXILE, LIBRARY
 
 BASE = ('cast', 'payment', 'insufficient_mana', 'snapshot', 'fresh_attack')
@@ -17,6 +17,7 @@ WITNESSES = {
     'Benalish Cavalry': ('2', '2', ['Flanking'], 'Flanking '+REMINDER['flanking']),
     'Akrasan Squire': ('1', '1', ['Exalted'], 'Exalted '+REMINDER['exalted']),
     'Muck Rats': ('1', '1', [], ''),
+    'Colossus of Akros': ('10','10',['Defender','Indestructible','Monstrosity'],"Defender, indestructible\n{10}: Monstrosity 10. (If this creature isn't monstrous, put ten +1/+1 counters on it and it becomes monstrous.)\nAs long as this creature is monstrous, it has trample and can attack as though it didn't have defender."),
 }
 
 
@@ -27,14 +28,14 @@ def spec(declaration, record):
             or 'variants' not in declaration):
         raise ValueError('combat keyword requires a pinned normal single-face creature and reviewed variants')
     p = declaration.get('params')
-    if not isinstance(p, dict) or set(p) != {'keywords', 'mechanic', 'amount'}:
+    if not isinstance(p, dict) or not {'keywords','mechanic','amount'} <= set(p) or set(p)-{'keywords','mechanic','amount','protection'}:
         raise ValueError('explicit combat keywords, mechanic and amount required')
     mode = p['mechanic']; n = p['amount']
     if mode not in REMINDER or type(n) is not int or not 1 <= n <= 5 or mode != 'bushido' and n != 1:
         raise ValueError('unsupported combat keyword or bonus')
     clause = mode.title() + (f' {n}' if mode == 'bushido' else '')
     expected = {clause, clause+' '+REMINDER[mode].format(n=n)}
-    rules = []; keys = []; abilities = []; canonical = {k.lower():k for k in KEYWORDS}
+    rules = []; keys = []; abilities = []; protection=[]; canonical = {k.lower():k for k in KEYWORDS+('Indestructible',)}
     for line in record['oracle_text'].splitlines():
         if re.match(r'^(?:\{[^}]+\}|Sacrifice |Discard |Remove |Exile |Pay |Tap |Untap |Return )', line) and ':' in line:
             abilities.append(line); continue
@@ -43,19 +44,23 @@ def spec(declaration, record):
         for reminder in re.findall(r'\([^\n]*?\)', line):
             if reminder not in REMINDERS | EXTRA_REMINDERS: raise ValueError('unreviewed combat keyword reminder')
             text = text.replace(reminder, '')
+        if text.strip().startswith('Protection from '):
+            protection.extend(protection_values(text.strip()[len('Protection from '):]));continue
         tokens = [k.strip().lower() for k in text.strip().split(',')]
         if any(k not in canonical for k in tokens): raise ValueError('unreviewed passive or triggered combat clause')
         keys += [canonical[k] for k in tokens]
     if (len(rules) != 1 or p['keywords'] != sorted(keys) or len(set(keys)) != len(keys)
             or set(keys) & {'Menace', 'Deathtouch', 'Double strike', 'Lifelink'}
             or mode != 'exalted' and 'Trample' in keys
-            or not set(keys+[mode.title()]) <= set(record.get('keywords', []))):
+            or not set(keys+[mode.title()]+(['Protection'] if protection else [])) <= set(record.get('keywords', []))
+            or p.get('protection',[])!=sorted(protection) or len(set(protection))!=len(protection)
+            or 'protection' in p and not protection):
         raise ValueError('combat parameters must match reviewed passive text and structured keywords')
     for field in ('power', 'toughness'):
         if not re.fullmatch(r'\d+', record.get(field, '')) or not 0 <= int(record[field]) <= 20:
             raise ValueError('bounded numeric combat creature stats required')
     if int(record['toughness']) == 0: raise ValueError('creature must survive entry')
-    return dict(p, family='combat_keyword_creature', power=int(record['power']), toughness=int(record['toughness']),
+    return dict(p, protection=sorted(protection), family='combat_keyword_creature', power=int(record['power']), toughness=int(record['toughness']),
                 mana=cost_from_oracle(record), remaining_abilities=abilities, legendary='Legendary' in record['type_line'])
 
 
@@ -72,6 +77,8 @@ def variants(p):
     if p['mechanic'] == 'exalted': result += ['source_bounced_before', 'source_bounced_after', 'multiple_attackers_then_bounce']
     result.append('empty_zones')
     if any(p['mana'][1:]): result.append('wrong_color')
+    if 'Indestructible' in p['keywords'] and p['mechanic']=='bushido' and 'Defender' not in p['keywords']:result.append('lethal_blocker')
+    result += [v+'_1' for v in BASE]
     return result
 
 
@@ -90,9 +97,11 @@ def validate_witnesses(oracle, registry):
 def expand(name, csvid, declaration, p, selected, registry, oracle):
     from recipes import card, step, observe, exact_mana
     from creature_recipes import expand as creatures
-    result = creatures(name, csvid, declaration, p, [v for v in selected if v in BASE], registry)
+    base=creatures(name,csvid,declaration,p,[v for v in BASE if v in selected or v+'_1' in selected],registry)
+    result=[c for c in base if c['_recipe']['variant'] in selected]+mirror_cast_cases(base,selected)
     mode = p['mechanic']; keys = set(p['keywords']); power = p['power']; tough = p['toughness']; n = p['amount']
     for variant in (v for v in selected if v not in BASE):
+        if variant.endswith('_1') and variant[:-2] in BASE:continue
         owner = int(variant.endswith('_1')); v = variant[:-2] if variant.endswith(('_0', '_1')) else variant
         fixture = 'empty_main' if v == 'empty_zones' else 'stocked_zones'
         hands = [list(HAND) if fixture == 'stocked_zones' else [] for _ in (0, 1)]
@@ -157,14 +166,14 @@ def expand(name, csvid, declaration, p, selected, registry, oracle):
                 hands[owner][-1] = 'Suntail Hawk'
             if v in ('source_bounced_after', 'multiple_attackers_then_bounce'): run += bounce
             run.append(step('begin_blockers'))
-            blocked = v in ('blocked', 'blocked_damage', 'two_blockers', 'flanking_blocker', 'small_blocker') or v == 'combat_snapshot' and mode != 'exalted' and not defending
+            blocked = v in ('blocked', 'blocked_damage', 'two_blockers', 'flanking_blocker', 'small_blocker','lethal_blocker') or v == 'combat_snapshot' and mode != 'exalted' and not defending
             if defending:
                 legal = int(v != 'tapped_defend' and (an != 'Air Elemental' or bool(keys & {'Flying', 'Reach'})))
                 run += [step('block', ref='source', other=attacker, value=legal), observe('source', 'blocking_count', legal)]
                 if mode == 'bushido' and legal: expected['source'] = [power+n, tough+n]
             elif blocked:
-                wn = 'Benalish Cavalry' if v == 'flanking_blocker' else 'Muck Rats' if v == 'small_blocker' else 'Air Elemental'
-                wp, wt = map(int, WITNESSES[wn][:2]); allowed = int('Flying' not in keys or wn == 'Air Elemental')
+                wn = 'Colossus of Akros' if v=='lethal_blocker' else 'Benalish Cavalry' if v == 'flanking_blocker' else 'Muck Rats' if v == 'small_blocker' else 'Air Elemental'
+                wp, wt = map(int, WITNESSES[wn][:2]); allowed = int(('Flying' not in keys or wn == 'Air Elemental') and not protects(p,oracle[wn]['colors'],True,'Artifact' in oracle[wn]['type_line']))
                 for ref in ('blocker', 'blocker_two')[:2 if v == 'two_blockers' else 1]:
                     setup.append(card(wn, ref, 1-owner)); battle[1-owner] += 1
                     expected[ref] = [wp, wt]
@@ -179,11 +188,11 @@ def expand(name, csvid, declaration, p, selected, registry, oracle):
                 if pt[1] == 0:
                     run.append(observe(ref, 'in_play', 0)); graves[1-owner].append(wn); battle[1-owner] -= 1
                 else: run += [observe(ref, 'power', pt[0]), observe(ref, 'toughness', pt[1]), observe(ref, 'damage', 0)]
-            if v in ('blocked_damage', 'defend_damage'):
+            if v in ('blocked_damage', 'defend_damage','lethal_blocker'):
                 source_pt = expected['source']; opponent_ref = 'attacker' if defending else 'blocker'
                 op_pt = expected[opponent_ref]
                 source_damage = op_pt[0] if not ('First strike' in keys and source_pt[0] >= op_pt[1]) else 0
-                source_alive = source_damage < source_pt[1]; opponent_alive = source_pt[0] < op_pt[1]
+                source_alive = source_damage < source_pt[1] or 'Indestructible' in keys; opponent_alive = source_pt[0] < op_pt[1]
                 run += [step('combat_damage'), observe('source', 'in_play', int(source_alive)), observe(opponent_ref, 'in_play', int(opponent_alive))]
                 if source_alive: run.append(observe('source', 'damage', source_damage))
                 else: graves[owner].append(name); battle[owner] -= 1

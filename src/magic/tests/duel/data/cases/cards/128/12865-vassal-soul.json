@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Vassal Soul",
+  "csvid": 12865,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flying"
+        ],
+        "payment_colors": [
+          "W",
+          "W"
+        ]
+      },
+      "oracle_text": "Flying",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "flying_evasion",
+        "flying_reach",
+        "hybrid_payment_other",
+        "hybrid_payment_mixed",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1"
+      ]
+    }
+  ]
+}

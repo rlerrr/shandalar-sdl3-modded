@@ -242,6 +242,100 @@
       "seed": 123
     }
   ],
-  "recipes": [{"family": "sweep", "version": 2, "params": {"effect": "stats", "targets": ["creature"], "power": 0, "toughness": 2, "scope": "self"}, "oracle_text": "Creatures you control get +0/+2 until end of turn.", "variants": ["mixed", "friendly_only", "opponent_only", "empty_board", "empty_zones", "payment", "insufficient_mana", "snapshot", "cleanup", "tapped_all", "untapped_all", "injured", "late_arrival", "stacking"]}],
+  "recipes": [
+    {
+      "family": "sweep",
+      "version": 2,
+      "params": {
+        "effect": "stats",
+        "targets": [
+          "creature"
+        ],
+        "power": 0,
+        "toughness": 2,
+        "scope": "self"
+      },
+      "oracle_text": "Creatures you control get +0/+2 until end of turn.",
+      "variants": [
+        "mixed",
+        "friendly_only",
+        "opponent_only",
+        "empty_board",
+        "empty_zones",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "cleanup",
+        "tapped_all",
+        "untapped_all",
+        "injured",
+        "late_arrival",
+        "stacking"
+      ]
+    },
+    {
+      "family": "mass_stats",
+      "version": 2,
+      "params": {
+        "scope": "own",
+        "state": "all",
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 2,
+        "draw": 0,
+        "untap": false
+      },
+      "oracle_text": "Creatures you control get +0/+2 until end of turn.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_battlefield_0",
+        "bare_zones_0",
+        "tapped_0",
+        "sick_0",
+        "two_copies_0",
+        "cleanup_0",
+        "late_entry_0",
+        "removed_before_0",
+        "removed_after_0",
+        "bounced_before_0",
+        "bounced_after_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "combat_blocked_0",
+        "combat_unblocked_0",
+        "wrong_color_0",
+        "opposing_turn_0",
+        "stacked_spells_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_battlefield_1",
+        "bare_zones_1",
+        "tapped_1",
+        "sick_1",
+        "two_copies_1",
+        "cleanup_1",
+        "late_entry_1",
+        "removed_before_1",
+        "removed_after_1",
+        "bounced_before_1",
+        "bounced_after_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "combat_blocked_1",
+        "combat_unblocked_1",
+        "wrong_color_1",
+        "opposing_turn_1",
+        "stacked_spells_1"
+      ]
+    }
+  ],
   "recipe_coverage": "Reviewed board-wide temporary stat component: exact signed power/toughness, friendly/opposing/color/subtype scope, unchanged noncreatures, reduced-toughness deaths including indestructible witnesses, stacking and cleanup, later arrivals, preexisting damage, ordered populated libraries and owned hands/graveyards/exile, normal printed mana cost, caller-owned snapshot replay after AI. Includes untapping/draw/scry/death-life/exile clauses when declared. Other Oracle clauses (keyword grants and combat, kicker, alternate costs, cycling, flashback, madness, awaken, spell mastery, vehicles) remain separate coverage gaps where present. No complete-card coverage claim."
 }

@@ -20,8 +20,17 @@ def expectations_for_platform(records, platform):
     for name, record in records.items():
         if record.get("platform", platform) not in ("native", "wasm"):
             raise ValueError(f"Expectation {name} has an invalid platform")
-    return {name: record for name, record in records.items()
-            if record.get("platform", platform) == platform}
+    selected = {name: record for name, record in records.items()
+                if record.get("platform", platform) == platform}
+    # Older native-only baselines serialized caught hardware exceptions as one
+    # assertion. Adapt only explicitly pinned SEH signatures, preserving their
+    # on-disk identity, exact patterns and unexpected-pass checks.
+    seh_prefix = re.escape("SEH exception with code 0xc0000005 thrown in the test body.")
+    return {name: dict(record, kind="crash", assertion_count=0)
+            if platform == "native" and record.get("platform") == "native"
+            and record.get("kind") == "assertion" and record.get("assertion_count") == 1
+            and any(pattern.startswith(seh_prefix) for pattern in record.get("patterns", []))
+            else record for name, record in selected.items()}
 
 
 def classify_outcome(name, kind, assertion_count, text, baseline, unimplemented=None):
@@ -72,6 +81,34 @@ def load_unimplemented(baseline_path, explicit_path=None):
     return data["cases"]
 
 
+def process_outcome(code, xml, text):
+    if re.search(r"^DUEL_HARNESS_ERROR: execution budget exhausted during [^\r\n]+$", text, re.M):
+        return "budget", 0
+    if "DUEL_HARNESS_ERROR:" in text:
+        return "harness", 0
+    if xml.exists():
+        tree = ET.parse(xml)
+        failures = tree.findall(".//failure")
+        # GoogleTest catches native hardware faults and writes failure XML.
+        # Keep these as crashes, just like Wasm traps, rather than rules assertions.
+        if any(re.search(r"(?m)^SEH exception with code 0x[0-9a-fA-F]+ thrown in the test body\.$",
+                        f.get("message", "")) for f in failures):
+            # Earlier rules assertions must not disappear behind a known crash.
+            return ("crash", 0) if len(failures) == 1 else ("assertion", len(failures))
+        if code == 0:
+            count = int(tree.getroot().get("tests", "0"))
+            return ("passed" if count == 1 and not failures and not tree.findall(".//skipped") else "harness"), 0
+        if failures:
+            return "assertion", len(failures)
+    # A Wasm trap prevents GoogleTest from flushing XML. Preserve any preceding
+    # rules failures in the console instead of accepting a known trap alone.
+    if "RuntimeError:" in text:
+        prior_assertions = re.findall(r"(?m)^[^\r\n]*duel_card_tests\.cpp:\d+: Failure\s*$", text)
+        if prior_assertions:
+            return "assertion", len(prior_assertions) + 1
+    return "crash", 0
+
+
 def run_case(args, case, baseline, unimplemented=None):
     platform = "wasm" if args.node else "native"
     baseline = expectations_for_platform(baseline, platform)
@@ -92,19 +129,7 @@ def run_case(args, case, baseline, unimplemented=None):
                               timeout=args.timeout, env=env, cwd=args.binary.resolve().parent)
         text = proc.stdout + proc.stderr
         code = proc.returncode
-        if re.search(r"^DUEL_HARNESS_ERROR: execution budget exhausted during [^\r\n]+$", text, re.M):
-            kind = "budget"
-        elif "DUEL_HARNESS_ERROR:" in text:
-            kind = "harness"
-        elif code == 0 and xml.exists():
-            tree = ET.parse(xml)
-            count = int(tree.getroot().get("tests", "0"))
-            kind = "passed" if count == 1 and not tree.findall(".//failure") and not tree.findall(".//skipped") else "harness"
-        elif xml.exists() and ET.parse(xml).findall(".//failure"):
-            kind = "assertion"
-            assertion_count = len(ET.parse(xml).findall(".//failure"))
-        else:
-            kind = "crash"
+        kind, assertion_count = process_outcome(code, xml, text)
     except subprocess.TimeoutExpired as error:
         def decode(s): return s.decode("utf-8", errors="replace") if isinstance(s, bytes) else s or ""
         text, code, kind = decode(error.stdout) + decode(error.stderr), None, "timeout"

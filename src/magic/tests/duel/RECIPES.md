@@ -1393,3 +1393,673 @@ The scenarios complete real attacker and blocker declarations instead of sending
 The harness inspector now reads the core `STATE_ISBLOCKED` history flag. Counting surviving blockers incorrectly described an attacker as unblocked after flanking killed its sole blocker, even though core combat damage correctly remained blocked. No production engine/card fixes were made in this batch. Flash timing, separately printed activated abilities, trample allocation, creatures blocking multiple attackers, trigger counters, and multiplayer remain gaps. This is component coverage, not whole-card certification.
 
 Batch validation: 1,920 cases across 43 implemented cards (14 bushido / 603 cases, 13 flanking / 572 cases, 16 exalted / 745 cases), adding 42 card homes. Native x86 and Node/Wasm each report 1,907 passes and 13 exact known failures: ten Opal-Eye scenarios expose its non-GAA early return before bushido; three fresh-cast scenarios reproduce the existing haste attack gate on Duskmantle Prowler, Ronin Houndmaster and Suq’Ata Lancer. Correct Oracle assertions remain intact. Noble Hierarch’s simultaneous-trigger scenario passes with explicit ordering and is not baselined. All 1,920 observable results match across platforms, along with 43 older controls (32 pass / 11 known), two older legal/illegal menace inspection cases, 202 recipe guards, seven loader guards, nine runner guards, and 27 CTest checks per platform. All 45,359 earlier manifest entries and three authored cases in existing homes are preserved. The suite now has 30,065 behavior cases across 2,062 card records. Detailed evidence: `out/duel-tests/recipe-combat-keywords/`.
+
+
+### Continuous creature boosts
+
+`lord_creature` uses explicit `predicate` (`all`, `subtype`, `color`, or `artifact`),
+`value`, `scope` (`own` or `both`), `other`, positive `power`/`toughness` amounts,
+and source `keywords`. Full pinned passive Oracle text must agree exactly; this
+first scope supports one unconditional boost clause and ordinary mana costs.
+Additional printed activated abilities are recorded as coverage gaps. Additional
+passive restrictions, triggers, conditional boosts, negative modifiers and
+multiple boost clauses fail closed. Numeric stats and reviewed witnesses are
+required. Legendary sources cannot have two copies under one controller.
+
+Boards include matching and nonmatching creatures controlled by both players.
+Tests cover self-inclusion/exclusion, controller scope, stacked and opposing
+sources, tapped/summoning-sick sources, casting and exact mana payment, source
+bounce/recast, destroy and blink, witness blink, additive Giant Growth followed
+by cleanup, unblocked combat damage, and snapshot replay after AI backups.
+Blink and bounce explicitly rebind the new object before inspecting it.
+Populated hands, graveyards, exile and ordered libraries are checked throughout;
+empty-zone variants are deliberate. Source keywords (including flying and Flash), printed activated abilities,
+type/color/control changes, enchantment sources and multiplayer remain gaps.
+
+The first enrollment contains 1,856 cases across 46 card records. Fail-closed
+unit checks also validate parameters, passive clauses, witness characteristics,
+self-exclusion, controller scope, payment, snapshot sequencing and references.
+
+Validation: native x86 and Node/Wasm each report 1,821 passes and 35 exact known
+failures. All 1,856 observable states agree, as do 45 existing controls (34 passes,
+11 prior known failures). The new failures expose one defect: Jacques le Vert
+omits its own Oracle +0/+2 because its color-boost helper lacks `BCT_INCLUDE_SELF`.
+Correct assertions remain intact; production fixes are deferred. Basal Thrull is
+explicitly tapped in the missing-color negative so its sacrifice mana cannot make
+the supposedly illegal cast legal. There are 241 passing Python guard checks and
+25 successful CTest gates per platform. Build options and all prior cases/baselines
+are preserved. Details: `out/duel-tests/recipe-lords/validation.json`.
+
+### Entry counters and bloodthirst
+
+`entry_counter_creature` has explicit `mechanic` (`fixed` or `bloodthirst`),
+`amount` (1–7), and `keywords` parameters. The complete pinned passive text must
+agree with the declaration; ordinary costs and numeric base stats come from
+Oracle. Fixed counters support base 0/0 creatures that survive their entry.
+Graft, modular, variable amounts, other passive/triggered clauses, nonstandard
+costs and alternate faces fail closed. Printed activated abilities and keywords
+are recorded as gaps; these cases cover the entry component, not the whole card.
+
+The inspector reads actual +1/+1 counters as well as power/toughness. Both
+controllers exercise casts, exact payment and illegal payment, countered spells,
+blink, bounce/recast, removal, cleanup, independent copies, and populated zones.
+Giant Growth and Glorious Anthem change stats without changing the counter count.
+Bloodthirst cases distinguish opponent damage from self/creature damage and actual
+life loss (a resolved Death of a Thousand Stings). They cover combat damage,
+multiple damage events, damage while the creature spell is pending, earlier-turn
+damage, damaged-turn re-entry and new-turn re-entry. Snapshot replay includes paid
+pending spells, pending blinks and damage history, with intervening AI backups.
+Expensive repeated casts receive a larger colorless fixture pool; dedicated
+payment tests still supply exactly the printed cost. An entry `require_card`
+prerequisite stops a case if the creature dies unexpectedly, before queuing
+dependent targets. An exit observer records the resulting board even after a
+fatal assertion, so prerequisite failures can be compared across platforms.
+
+The new `advance_turn` action runs cleanup and the game's start-turn gate before
+selecting the next player's main phase. This performs skip-turn housekeeping,
+per-turn trap reset and sickness clearing. It deliberately omits untap, upkeep
+and draw, preserving fixture mana and ordered zones; it is not a full turn
+simulation. A skipped turn or nonempty stack fails explicitly. Earlier scripts
+that only selected a new turn omitted the trap reset and produced false
+bloodthirst failures. Start-turn autosave is suppressed through the existing
+network flag while the real rules dispatch runs. Production gameplay is unchanged.
+
+Batch validation: 1,945 cases across 39 new card homes. Native x86 and Node/Wasm
+each report 1,789 passes and 156 exact known failures. These represent four defect
+groups: Spike Breeder enters with two counters instead of three (37 cases);
+Festercreep uses a −1/−1 counter and dies at entry (37); Bloodscale Prowler,
+Ghor-Clan Savage and Rabble-Rouser lack the metadata that enables damage history
+(60); and the shared bloodthirst helper checks damage at casting rather than
+entry (22 across the other eleven bloodthirst cards). Correct assertions remain
+intact. Festercreep cases stop at the entry prerequisite, without accepting
+unused choices or invalid follow-up actions. Production fixes are deferred.
+
+All 1,945 observable results agree across platforms, including prerequisite
+failures. The 49 older controls report 37 passes and 12 prior known failures on
+both platforms. There are 269 passing Python guards and 48 successful CTest gates
+per platform. A native recipe-guard timeout during overlapping runs passed when
+the checks were rerun without that overlap. All 49,135 earlier manifest entries
+and previous baselines are preserved. The suite now contains 33,866 behavior
+cases across 2,146 card records. Detailed evidence and grouped diagnoses:
+`out/duel-tests/recipe-entry-counters/`.
+
+### Ordinary cycling
+
+`cycling` pins the complete Oracle text and an explicit `cycling_cost` parameter.
+It accepts ordinary fixed generic/colored costs only; cycling/discard triggers,
+other hand/graveyard mechanics and alternate faces require dedicated cases.
+Printed spell effects, battlefield abilities and other keywords are visible gaps.
+This recipe covers cycling, not those other components of a card.
+
+The `can_activate_hand`, `require_can_activate_hand` and `activate_hand` actions
+use the engine's existing rules-engine proxy and scripted hand-ability menu.
+Eligibility, payment, discard and stack resolution run through production code.
+Tests inspect the paid cost and discarded source before allowing the draw.
+Missing proxy metadata is a fatal prerequisite failure, before any decision is
+queued; it cannot be mistaken for a successful direct event invocation.
+
+Both controllers exercise ordered draws, exact payment, insufficient/wrong-color
+mana, cancellation, two copies, combat and opposing-turn activation, stocked and
+intentionally sparse zones, and last-card/duplicate-card libraries. Fluctuator
+and Suppression Field exercise reductions, taxes and controller scope. Reclaim
+can move the discarded source onto the library while cycling is pending; Tormod's
+Crypt can exile it. Those abilities must still draw on resolution. Crypt uses the
+human controller for either graveyard so AI strategic self-target refusal does
+not create a rules failure. Pending and resolved snapshots replay after AI
+backups and compare observable state. A cleanup test checks that ending temporary
+effects does not cancel a pending ability; it does not simulate full priority
+handling in the cleanup step.
+
+Batch validation: 2,022 cases across 45 card records, adding 30 new homes and
+extending 15 existing ones. Native x86 and Node/Wasm each report 1,690 passes and
+332 exact known failures, with no harness or decision failures accepted. Three
+defect groups explain them: opposing Suppression Fields are omitted from cycling
+costs (164 cases across 41 cards); Cast Out, Djeru's Resolve and Forsake the Worldly
+lack the metadata that exposes their implemented cycling handlers (126); and
+Repopulate's spell handler omits its cycling branch (42). Correct Oracle
+assertions remain intact. Production fixes are deferred.
+
+All 2,022 observable results agree across platforms. The 180 older controls
+report 164 passes and 16 prior known failures on each. There are 293 passing
+Python guards and 32 successful CTest checks per platform. An overlapping native
+recipe-guard run timed out; rerunning CTest serially passed. All 51,080 earlier
+manifest entries, prior authored cases and previous baselines are preserved.
+The suite now contains 35,888 behavior cases across 2,176 card records. Detailed
+validation and grouped diagnoses: `out/duel-tests/recipe-cycling/`.
+
+### Mana-producing lands and artifacts
+
+`permanent_mana` pins the whole Oracle text and explicit `activation_cost`,
+`mana_outputs`, `production`, `enters_tapped`, `entry_life`, and `indestructible`
+parameters. It supports ordinary noncreature lands/artifacts with a tap cost and
+an optional one-to-three generic input. Fixed output is at most three mana;
+choices support two/three single colors or one color from all five, including
+two/three mana of that one color. Basic-land reminder text is recognized.
+Conditional/restricted production, additional activated abilities and unreviewed
+entry/passive/triggered clauses fail closed. Cycling remains a visible gap.
+Artifact spell costs come from structured Oracle data; zero-cost Moxen are valid.
+Lands enter via the real fixture put-into-play path. These cases do not test land
+play permissions or emulate playing lands by casting spells.
+
+Both controllers exercise entry state/life, explicit mana pools, separate taps,
+repeated activation refusal, input costs, opponent turns, combat, populated/empty
+zones, spending produced mana, removal and snapshots. Colored spending uses
+one-mana creature witnesses for each produced color. Generic spending supplies
+only the shortfall for Phyrexian Hulk. Human payments script the colored-pool
+clicks; AI payments use the engine's automatic payment path.
+Twiddle legally untaps sources; Suppression Field is legally cast before checking
+that it leaves mana abilities untaxed. Artifact casts cover immediate activation,
+insufficient payment, pending snapshots and Negate in a real priority window.
+Snapshots replay after AI backups. `require_can_activate` stops before queuing
+color decisions if eligibility is broken.
+
+The new `refresh` action updates cached characteristics using the production
+recalculation routine between actions. Artifact resolution is followed by this
+normal refresh before activation. The headless host selects a sole legal color
+when no explicit color choice is queued, and acknowledges only the six exact AI
+informational "to produce ... mana." notices, preserving explicit scripted
+confirmations when present. Those notices
+report an already selected output; gameplay decisions and other dialogs still
+require scripts. No card implementations are changed by this recipe.
+
+Empty-input fixtures refresh mana availability after overriding the raw pools.
+Otherwise a filter land can retain the mana counted while the fixture had its
+initial funding. A fatal eligibility assertion stops negative tests before
+dependent activation choices if the engine still reports the ability available.
+
+The isolated runner registers only the requested test for exact GoogleTest
+filters. Wildcard, multi-case and exclusion filters keep full registration.
+Listing tests works without initializing the engine or loading assets.
+
+Batch validation: 7,086 cases across 143 card records, adding 108 new homes and
+extending 35 existing ones. All new cases pass on native x86 and Node/Wasm, with
+identical observable results and no added known failures. The 864 older controls
+retain 782 passes and 82 known failures on each platform. There are 329 passing
+Python guards and 39 successful CTest checks per platform.
+
+Full catalog discovery and nine representative exact/wildcard/multi-case/exclusion
+filters agree with the manifest on both platforms. Native exact-case registration
+measured about 23 ms, down from about 187 ms before the shortcut; these timings are
+informational, not a performance gate. All 53,102 earlier manifest entries, 73
+authored cases in the extended homes, and previous baselines are preserved.
+The suite now contains 42,974 behavior cases across 2,284 card records. Validation
+and harness diagnoses: `out/duel-tests/recipe-permanent-mana/`.
+
+### Ordinary Equipment (`equipment`, version 2)
+
+Explicit parameters describe the permanent equipped-creature bonus separately
+from the source Equipment's own indestructibility:
+
+```json
+{
+  "family": "equipment",
+  "version": 2,
+  "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+  "params": {
+    "power": 2,
+    "toughness": 0,
+    "keywords": [],
+    "equip_cost": "{1}",
+    "indestructible": false
+  },
+  "variants": ["attach_0", "attach_1", "move_0", "pending_snapshot_1"]
+}
+```
+
+The whole pinned Oracle text must match one unconditional bonus and one ordinary
+generic equip cost. Source indestructibility and reviewed reminder text are
+allowed; extra triggers, scaling, alternative attachment methods, and targeting
+restrictions require dedicated cases. Granted keywords are read from the
+explicit parameters and checked against the effect clause, since Scryfall's
+keyword tags describe the Equipment itself. Normal mana costs still come from
+structured Oracle data. Zero casting/equip costs and negative toughness bonuses
+are supported.
+
+Both controllers exercise real equip activations, payment, pending-stack checks,
+moving attachments, invalid or lost targets, source and host departures,
+cleanup, and snapshots restored after AI backups. Populated zones retain exact
+contents, ownership, and ordered libraries, with a deliberate empty-zone variant.
+Human generic payments using red mana script payment before target selection.
+Conditional variants test combat keywords and source-versus-host
+indestructibility; menace checks the complete blocker declaration rather than
+rejecting the first of two legal blockers. Hexproof/shroud probes use the
+production target validator without asking whether the AI wants to cast
+Unsummon on its own creature.
+
+These cases do not cover equip timing permissions, multiplayer, or multi-blocker
+damage ordering. Assertions remain independent of card implementations; engine
+bugs uncovered by the batch are documented rather than repaired here. Native
+hardware faults caught by GoogleTest are classified as crashes, matching Wasm
+traps, rather than counted as card-rules assertions. The larger generated test
+catalog requires a 256 MB initial Wasm test allocation, with growth enabled.
+Earlier explicit native SEH baselines are adapted in memory without changing
+their stored records. A rules assertion before a hardware fault or Wasm trap
+still fails the gate. Equipping a sick creature does not require preserving the
+engine's sickness flags; the separate attack scenarios check haste permission.
+
+Batch validation: 2,648 cases across 43 new card records. Native x86 and
+Node/Wasm each retain 2,458 passes and 190 strict known failures: 86 pending-source
+departure crashes, 86 duplicated equip-tax checks, 14 granted-haste attack
+failures, and four excess lifelink gains during trample. Correct Oracle
+expectations remain in place. All 2,562 completed observable states agree across
+platforms; the 86 crashes follow the same attachment path and cannot produce a
+completed state observation.
+
+The 74 older controls retain their expected outcomes. Their 63 completed states
+agree across platforms; 11 older native-only hardware faults remain recognized
+while the corresponding Wasm cases pass. Each platform passes 39 CTest checks
+and two shuffled shared-process runs. There are 364 passing Python guards, and
+full discovery plus nine representative filters match the generated manifest.
+All 60,188 previous manifest entries and 810 previous baseline records are
+preserved. The suite now has 45,622 behavior cases across 2,327 card records.
+Validation and diagnoses: `out/duel-tests/recipe-equipment/`.
+
+### Fixed draw and life activations (`value_activation`, version 2)
+
+This family tests ordinary standalone permanents with one fixed self-draw or
+life-gain ability. Explicit parameters specify the effect and amount, ordinary
+mana cost, tap cost, self-sacrifice, life payment, and any alternate tap-for-mana
+outputs. Validation reconstructs the complete pinned Oracle text; extra triggers,
+keywords, target choices, discard costs, hand-size conditions, and variable costs
+require dedicated tests. Casting costs and numeric creature characteristics come
+from structured Oracle fields. Tokens are excluded.
+
+Both controllers use normal casting, activation, cost payment, and stack
+resolution. Cases check that costs happen before drawing or gaining life, then
+inspect both players' populated zones, ordered libraries, card multiplicities,
+mana pools, life, source state, and stack. Other scenarios exercise fresh and
+summoning-sick creatures, tapped sources, the opponent's turn, combat, repeated
+and stacked activations, independent copies, Suppression Field, source removal
+while an ability is pending, and ready/pending/resolved snapshots after nested
+AI backup/restore. Bare-zone cases intentionally retain recognizable libraries.
+
+Optional ordinary mana abilities get separate output cases for each color and
+owner. The recipe scripts presentation mode indices and color choices; these
+choices do not supply the rules expectations. When the draw branch is
+unaffordable but its mana alternative remains legal, negative-pool cases execute
+the legal mana branch and verify that no draw or sacrifice occurs. These cases
+prove the fallback behavior; they do not prove that the UI disables the draw
+choice. Empty-library loss, land-play permissions, and creature combat
+characteristics remain outside this family's scope.
+
+Example declaration for Jayemdae Tome:
+
+```json
+{
+  "family": "value_activation",
+  "version": 2,
+  "oracle_text": "{4}, {T}: Draw a card.",
+  "params": {
+    "effect": "draw", "amount": 1, "mana_cost": "{4}",
+    "tap": true, "sacrifice": false, "pay_life": 0, "mana_outputs": []
+  },
+  "variants": ["value_0", "payment_1", "pending_snapshot_1"]
+}
+```
+
+Heart Warden, Dreamstone Hedron, Hedron Archive, and Blighted Cataract were
+reviewed but deferred from this enrollment. Their AI-dependent mode routing and
+choice presentation need dedicated decision scripts. AI refusals and missing or
+unused scripted choices are not recorded as known rules failures. Cleanup cases
+verify paid costs before dispatching cleanup; this helper does not simulate
+priority/phase-boundary mana-pool emptying.
+
+The initial enrollment expands 40 card records (33 new homes and seven existing
+homes) into 1,686 behavior cases. Every new case passes natively and in Wasm,
+with identical observable states and no new known-failure records. The 86 older
+controls retain their expected outcomes, including earlier Equipment regressions
+and native-only faults. Both platforms pass 39 CTest checks, two shuffled
+shared-process runs, and ten discovery filters. There are 398 passing Python
+guards. All 62,836 prior manifest entries and 1,000 baseline records are
+preserved. The suite now contains 47,308 behavior cases across 2,360 card records.
+Validation artifacts: `out/duel-tests/recipe-value-activation/`.
+
+## Fixed library milling
+
+`fixed_mill` uses explicit `mode` (`spell`, `activation`, or `entry`), `amount`,
+`recipient` (`any`, `opponent`, `self`, or `both`), `draw`, `draw_first`,
+`mana_cost`, `tap`, and `sacrifice` parameters. The complete pinned Oracle text
+must match these parameters. Normal single-face instants, sorceries, standalone
+creatures/artifacts/enchantments, and simple creature entry triggers are
+supported. Fixed amounts are
+bounded to ten milled cards and three drawn cards. Additional abilities,
+keywords, variable amounts, storm, flashback, splice, and conditional milling
+require dedicated cases. Scryfall's `Mill` action keyword is allowed; it does
+not introduce an additional ability.
+
+The initial group includes Millstone, Ambassador Laquatus, Whetstone,
+Ghoulcaller's Bell, Morgue Thrull, Thought Scour, Mental Note, Glimpse the
+Unthinkable, Vessel of Paramnesia, and simple entry creatures. Both controllers
+receive populated hands, graveyards, exile, and ordered libraries containing
+duplicates. Assertions verify complete graveyard and remaining library order,
+hand/graveyard multiplicities, mana payment, tap/sacrifice costs, stack contents,
+life, and source presence. Effects resolve through the engine. Source removal,
+countering through the real casting response window, cleanup, independent
+copies, untap/repeat, genuinely stacked activations, and ready/pending/resolved
+snapshots after AI backup/restore provide regression scenarios.
+
+Short, exactly sized, and empty libraries are deliberately separate cases:
+milling an exhausted library is not drawing from it and should not cause a
+loss. Cantrip loss from an empty library needs a separate game-loss fixture.
+For targeted milling, self-target cases use controller 0 because the legacy
+AI's target validator applies strategic preferences for controller 1. Those AI
+refusals are not rules failures. Both controllers still exercise opponent,
+untargeted self, and global milling as applicable. Creature combat abilities
+remain outside this recipe's scope.
+
+Graveyard order checks pin the engine's deterministic default ordering as a
+regression expectation; they do not imply that Oracle requires a unique order
+for simultaneously milled cards. Legendary sources omit same-controller copy
+fixtures, which would need a separately scripted legend-rule decision.
+
+Pending spell slots are included by the engine's hand inspector, so semantic
+hand assertions run after resolution; pending libraries and graveyards are
+still checked before the effect. Costs and stack depth are checked while the
+ability is pending. Cleanup assertions do not model mana-pool emptying at phase
+boundaries.
+
+```json
+{
+  "family": "fixed_mill",
+  "version": 2,
+  "oracle_text": "{2}, {T}: Target player mills two cards.",
+  "params": {
+    "mode": "activation", "amount": 2, "recipient": "any",
+    "draw": 0, "draw_first": false, "mana_cost": "{2}",
+    "tap": true, "sacrifice": false
+  },
+  "variants": ["effect_0", "payment_1", "pending_snapshot_1", "self_target_0"]
+}
+```
+
+Validation artifacts: `out/duel-tests/recipe-fixed-mill/`.
+
+The initial enrollment adds 873 behavior cases across 25 card records (24 new
+homes and one existing home): seven spells, nine activated abilities, and nine
+entry creatures. All 873 pass natively and in Wasm with identical observable
+states and no new known failures. Both platforms pass 39 CTest checks, two
+shuffled shared-process runs, and ten discovery filters. There are 430 passing
+Python guards. The 86 older controls retain their expected outcomes; all 64,522
+prior catalog entries and 1,000 baseline records are preserved. The suite now
+contains 48,181 behavior cases across 2,384 card records. Production engine code
+is unchanged, and the original build settings are restored.
+
+
+## Group stat spells with combat and both-controller replay
+
+`mass_stats` (version 2) supplements the existing `sweep` component cases with
+whole-text-pinned instant/sorcery scenarios for both controllers. Explicit
+parameters select `scope` (`own`, `opponents`, `both`), `state` (`all`,
+`attacking`, `blocking`), a creature `predicate` (`all`, `color`, `not_color`,
+`not_subtype`), its `value`, signed `power` and `toughness`, zero/one `draw`,
+and boolean `untap`. The reviewed subtype exclusion is Elf. Oracle's `+0` and
+`-0` both mean zero; the complete original text still remains pinned. Extra
+keywords, conditions, alternative costs, or additional effects require separate
+cases. Arcane casting is supported without claiming splice coverage.
+
+The mixed board has vanilla creatures of every color, a colorless artifact
+creature, an Elf, a large combat body, and a defender, on each side. Darksteel
+Relic and Maze of Ith check that noncreatures remain unaffected without
+supplying hidden mana in the insufficient-payment variants. Hands, ordered
+libraries, graveyards, and owned exile remain populated. Bare-zone and
+empty-battlefield variants deliberately remove their respective contents.
+
+Real attacker/blocker declarations exercise attacking-only and blocking-only
+cohorts, blocked damage, and unblocked damage. Sorceries resolve in main phase
+before combat starts; instants use the combat response window. Other cases
+cover exact/wrong-color/insufficient payment, tapped and sick creatures,
+sequential and simultaneously stacked copies, source spells countered through
+priority, a creature destroyed or bounced before/after resolution, cleanup,
+and a legally cast flash creature entering after the effect. That late entrant
+keeps its printed stats, because the effect's creature cohort is fixed on
+resolution. Snapshots replay before casting, with a paid spell pending, and
+after resolution around AI backups. Pending spells are excluded from semantic
+hand assertions until resolution because the engine hand inspector includes
+stack slots.
+
+Declarations preserve existing authored and `sweep` cases. These scenarios
+strengthen combat, both-controller, and pending-stack coverage; a new recipe
+on an already covered card does not count as another card home. Multiplayer,
+Arcane interactions, empty-library draw loss, and unmentioned rules components
+remain outside this family.
+
+```json
+{
+  "family": "mass_stats",
+  "version": 2,
+  "params": {
+    "scope": "own", "state": "all", "predicate": "all", "value": "",
+    "power": 1, "toughness": 1, "draw": 0, "untap": false
+  },
+  "oracle_text": "Creatures you control get +1/+1 until end of turn.",
+  "variants": ["effect_0", "effect_1", "combat_blocked_0", "pending_snapshot_1"]
+}
+```
+
+The first group-stat batch adds 1,700 scenarios across 38 card records: Rally
+and Hydrolash are two new homes, while 36 existing homes retain their earlier
+cases and gain deeper coverage. Native x86 and Node/Wasm agree on 1,666 passes
+and 34 strict extensions of Army of Allah's existing swapped-stat failure
+(+0/+2 instead of +2/+0). All 1,700 observable states agree. Both runtimes also
+pass 39 representative CTest checks, ten discovery filters, and two shuffled
+shared-process orders; 465 Python guards pass. Eighty-eight older controls retain
+their expected outcomes, including the documented native-only faults. No
+production code was changed. The suite reaches 2,386 card records and 49,881
+behavior scenarios.
+
+
+## Attacking creatures' own temporary stats
+
+`attack_pump_creature` (version 2) pins a normal single-face creature's complete
+Oracle text. Explicit `power` and `toughness` specify its nonzero attacking
+bonus, and `keywords` pins its reviewed unconditional passive abilities. The
+text must contain exactly one unconditional "Whenever this creature attacks,
+it gets ... until end of turn" trigger, with no additional abilities. Printed
+numeric characteristics and ordinary casting costs come from structured Oracle
+fields. Conditional triggers, variable characteristics, alternative costs,
+additional abilities, and unreviewed keyword combinations are rejected.
+
+Both controllers use complete attacker and blocker declarations. Scenarios
+check printed stats before commitment, the bonus after declaration, unaffected
+other attackers, independent same-card attackers, attacks by other creatures,
+blocking, tapped and sick sources, actual fresh casts, blocked/unblocked damage,
+trample overflow, and cleanup. Removing a creature from combat must preserve
+the turn-long bonus. Returning or destroying it after declaration prevents its
+combat damage and checks the owner's hand/graveyard. Exact, insufficient and
+wrong-color casting costs are exercised independently. Populated hands,
+ordered libraries, graveyards and exile accompany the normal boards; bare-zone
+variants deliberately empty them. Snapshots replay a ready board, a provisional
+attacker declaration, and the resolved modifier around AI backups. Additional
+combat phases, multiplayer, Flash timing, and Flying/Reach blocker restrictions
+remain separate coverage gaps.
+
+```json
+{
+  "family": "attack_pump_creature",
+  "version": 2,
+  "params": {"power": 1, "toughness": 1, "keywords": []},
+  "oracle_text": "Whenever this creature attacks, it gets +1/+1 until end of turn.",
+  "variants": ["attack_0", "attack_1", "declaration_snapshot_0", "cleanup_1"]
+}
+```
+
+The first attack-bonus batch adds 702 scenarios for 16 newly covered cards.
+All 702 pass natively and under Node/Wasm, with identical observable states
+and no new failure expectations. The 67,095 earlier manifest entries and 1,034
+baseline entries remain unchanged. Both platforms pass 39 representative CTest
+checks, ten discovery filters, and two shuffled shared-process orders; 497
+Python guards pass. Ninety-four earlier regression controls retain their
+expected outcomes. Native and Wasm build caches have been recreated, their
+generated tables match independent generation, and the usual build flags have
+been restored. No production engine code changed. The suite reaches 2,402 card
+records and 50,583 behavior scenarios.
+
+
+`trigger_pump_creature` covers whole-text prowess and unconditional landfall
+self bonuses, with explicit `trigger`, `power`, `toughness`, and passive
+`keywords` parameters. Pinned Oracle text validates the selected trigger and
+bonus; structured characteristics supply printed stats and mana costs.
+
+Real artifact/instant casts exercise prowess; Rampant Growth and Nature's Lore
+put searched lands onto the battlefield for landfall. Both controllers receive
+positive, repeated, and multiple-source cases, alongside opponent-controlled
+spells, creature spells, failed searches, nonland entry, late-arriving sources,
+and destroyed sources. Combat checks use the resulting bonus and real cleanup.
+Ready, pending-spell, and resolved snapshots replay after an AI save/restore.
+Populated hands, graveyards, exile and libraries remain checked; searched
+libraries are checked for contents and size rather than a rules-prescribed
+shuffle order. Bare-zone cases retain searchable lands deliberately.
+
+These recipes leave countered triggering spells, mixed trigger ordering,
+ordinary land-play actions, and multiplayer for dedicated cases. They preserve
+real gameplay failures instead of adjusting expectations to card handlers.
+
+
+Verified trigger-pump enrollment: 27 new card records and 1,290 cases.
+Native x86 and Wasm each pass 1,286 cases; four freshly cast haste cases for
+Monastery Swiftspear and Stormchaser Mage reproduce the existing
+`STATE_SUMMONSICK_NOATTACK` defect. Correct expectations remain in place, with
+five-assertion signatures and case-specific patterns in the known-failure
+manifest. All 1,290 observable states agree across platforms. Older regression
+controls, CTest, discovery, shuffled order, and independent generation checks
+pass without production engine changes.
+
+
+Defensive recipes now accept reviewed two- and three-color protection lists.
+Two-color hybrid costs require explicit `payment_colors`, one legal color per
+Oracle hybrid symbol. Exact payment, opposite-color payment and mixed payment
+use real casting; the human payment menu is selected by its offered mana
+vector instead of an option number. Ordinary mana parsing remains strict.
+Both defensive and combat-keyword recipes support mirrored second-controller
+base scenarios, including replayed snapshots without shared-step aliasing.
+
+Combat-keyword components can explicitly combine protection with bushido or
+exalted. Protection prevents the relevant blocker from making a legal block;
+a rejected block must not trigger bushido. Indestructible bushido has a lethal
+10/10 Colossus of Akros blocker case, exercising Konda's survival and cleanup.
+Other activated abilities remain recorded as untested components.
+
+
+Verified protection/combat expansion: eight new records and 418 cases for
+Slippery Bogle, Stillmoon Cavalier, Oversoul of Dusk, Hand of Cruelty, Hand of
+Honor, Knight of Glory, Knight of Infamy, and Konda, Lord of Eiganjo. All pass
+natively and in Wasm with identical observable states. All 69,087 previous
+manifest entries and 1,038 failure baselines remain unchanged. Both platforms
+pass 39 representative CTest checks, ten discovery filters and two shuffled
+four-case orders; 534 Python guards pass. The 116 older controls retain their
+expected outcomes. No production engine code changed.
+
+
+The shared hybrid creature layer accepts explicit `payment_colors` on supported
+version-two creature recipes. Each choice corresponds to one two-color hybrid
+symbol in the pinned Oracle mana cost. It delegates text, characteristics and
+ability checks to the original recipe; the ordinary mana parser still rejects
+hybrid costs. This does not add support for two-generic hybrid, Phyrexian mana,
+variable costs, or hybrid activation costs.
+
+`hybrid_payment_other` chooses the other color of each symbol;
+`hybrid_payment_mixed` alternates the declared and opposite colors. Single-symbol
+cards necessarily duplicate an exact payment in the mixed variant. Casts with
+multiple affordable payment vectors script the real human payment dialog;
+exact single-option payments and AI choices remain unscripted. Pure keyword
+creatures now use stocked zones, including mirrored controller and snapshot
+cases, and assert the retained zone contents and ordered libraries.
+
+
+Verified hybrid-creature enrollment: 14 new card records and 262 cases.
+Each platform passes 260 cases; Rakdos Shred-Freak's freshly cast attacks under
+both controllers reproduce the existing haste defect. Correct attack, tapped
+and attacking assertions remain in place with strict three-assertion signatures.
+All 262 observable states agree natively and in Wasm. Inkfathom Witch's fear
+component is exercised; its separate activated ability remains outside this
+recipe. No production card or engine code changed.
+
+
+### Infect and wither creature components
+
+`counter_damage_creature` requires explicit `mechanic` (`Infect` or `Wither`)
+and unconditional `keywords`, plus a whole Oracle text pin. It admits normal,
+single-face creatures with bounded numeric stats and those passive clauses;
+additional ordinary activated abilities are recorded as untested. Extra entry,
+death, attack, upkeep, or damage triggers and replacement effects fail closed.
+Trample, double strike, deathtouch and menace combinations need dedicated cases.
+
+Both controllers receive actual casts, exact and insufficient payment, fresh
+attacks, blocked and unblocked combat, defending ground and flying attackers,
+pumped damage, cleanup, source removal, empty-zone variants, and ready/combat/
+resolved snapshot replay after an AI round trip. Zero-power witnesses prevent
+unrelated retaliation while testing surviving and lethal counter damage.
+Infect keeps life unchanged and gives poison to the damaged player; wither
+reduces life normally. Lifelink applies to either form of damage. Surviving
+creatures retain -1/-1 counters and stat reductions after cleanup, with no
+marked damage. Direct poison and counter observations participate in snapshots.
+Noncombat damage, counter cancellation, multiple blockers and Flash timing
+remain explicit gaps. Supplemental hybrid-payment cases use the existing
+explicit color layer; wrong-color cases supply a color outside both alternatives.
+
+
+Verified counter-damage enrollment: 18 new records and 780 cases. Native x86
+and Wasm each pass 772 cases. Eight fresh/sick haste cases for Blackcleave
+Goblin and Boggart Ram-Gang reproduce the existing no-attack sickness-bit defect;
+five-assertion signatures preserve attack, tapped/attacking state and damage or
+poison expectations. All 780 observable states agree across platforms. Headless
+poison and -1/-1 counter inspection is new; no production engine code changed.
+AI cast cases use exact pools instead of assuming a hybrid color preference.
+
+### Creature entry removal and bounce
+
+`etb_removal_creature` takes explicit `effect`, `targets`, `optional`, and
+`keywords`, checked against the whole pinned Oracle text. It covers a single
+unconditional entry clause on a normal creature with numeric stats. Additional
+ordinary activated abilities and passive keywords are listed as untested;
+conditional entry abilities and additional triggers require dedicated cases.
+
+Both controllers cast through the real stack and select friendly or opposing
+targets. Cases check exact and insufficient payment, each allowed permanent
+type, optional decline, entry without other targets, countering the creature,
+cleanup, source removal, bounce/recast, blink, and snapshot replay after AI
+searches. Mandatory creature bounce can return the source itself. Stocked
+hands, graveyards, exile and ordered libraries are checked alongside the effect;
+empty zones are explicit variants. Returned cards are rebound to their new hand
+instances. Targets leaving after selection, trigger ordering, alternative costs,
+and additional abilities remain gaps.
+
+`trigger_priority: true` describes an optional trigger's host input path rather
+than an expected rules result. It scripts selecting the pending effect after
+earlier response windows; declining instead passes that optional trigger.
+
+Verified entry-removal enrollment: 25 new card records and 1,030 cases. All
+pass natively and in Wasm with identical observable states, including optional
+decline and mandatory self-return. No new card failure baseline was added.
+Headless input now selects optional triggers through earlier response windows,
+honors legal friendly targets for either controller, and restores named-instance
+bindings with snapshots. Production gameplay and AI targeting policy are unchanged.
+
+### Creature entry recovery to hand
+
+`etb_recovery_creature` takes explicit `targets`, `type_match`, `exclude_types`,
+`optional`, and `keywords`. The full Oracle text must contain exactly the
+reviewed, unconditional entry recovery clause. Union types, an enchantment
+creature intersection, any card, and noncreature/nonland exclusions are
+distinct declarations. Other triggers, replacement effects, variable stats,
+restricted colors/subtypes, and alternative costs need dedicated cases.
+Ordinary activated abilities and passive keywords are reported as untested.
+
+Both controllers use real casts and graveyard selection with several legal
+alternatives. Cases include each permitted type, exact payment, insufficient
+or wrong mana, empty and opposing graveyards, wrong types, optional decline,
+Ground Seal protection, countering, cleanup, source destruction, bounce/recast,
+blink and ready/pending/resolved snapshot replay after AI searches. Populated
+hands, libraries, graveyards and exile are checked, including duplicate and
+absent card counts in each hand/graveyard separately and ordered libraries.
+Returning to the battlefield, graveyard targets moving after selection, trigger
+ordering and additional abilities remain explicit gaps.
+
+Verified entry-recovery enrollment: 18 new card records plus Gravedigger receive
+886 cases. Native x86 and Wasm each pass 732 and reproduce 154 rules failures
+with identical observable states. A shared entry-callback guard prevents
+Anarchist, Cartographer, Scrivener, Treasure Hunter and Stoic Builder from
+recovering cards; Auramancer and Mnemonic Wall force an Oracle-optional choice.
+Strict failure signatures preserve all 1,048 prior baselines. Headless input
+observes whether a zone choice is mandatory and tests count duplicates and
+absent cards separately in each zone. Production rules remain unchanged.

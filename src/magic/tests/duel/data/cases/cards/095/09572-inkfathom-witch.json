@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Inkfathom Witch",
+  "csvid": 9572,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "evasion_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Fear"
+        ],
+        "payment_colors": [
+          "U"
+        ]
+      },
+      "oracle_text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\n{2}{U}{B}: Each unblocked creature has base power and toughness 4/1 until end of turn.",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "tapped_attacker",
+        "tapped_blocker",
+        "attack_white",
+        "attack_blue",
+        "attack_black",
+        "attack_red",
+        "attack_green",
+        "attack_artifact",
+        "attack_colored_artifact",
+        "attack_colorless",
+        "attack_flying",
+        "attack_reach",
+        "attack_shadow",
+        "attack_shadow_flying",
+        "attack_horse",
+        "defend_green",
+        "defend_flying",
+        "defend_shadow",
+        "defend_shadow_flying",
+        "defend_horse",
+        "opponent_attack",
+        "opponent_defend",
+        "cleanup_evasion",
+        "evasion_damage",
+        "combat_snapshot",
+        "hybrid_payment_other",
+        "hybrid_payment_mixed"
+      ]
+    }
+  ]
+}

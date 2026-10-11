@@ -16,6 +16,27 @@ class DefensiveCreatureRecipesTest(unittest.TestCase):
         return dict(family='defensive_creature',version=2,oracle_text=self.oracle[name]['oracle_text'],params=p,variants=selected or ['target_growth_0'])
     def cases(self,name,d,registry=None,oracle=None):
         return expand(name,self.registry[name]['csvid'],d,self.oracle[name],registry or self.registry,oracle_context=oracle or self.oracle)
+    def test_compound_protection_and_explicit_hybrid_payments(self):
+        for name,colors,pay in [('Oversoul of Dusk',['black','blue','red'],['G']*5),('Stillmoon Cavalier',['black','white'],['W']*2),('Slippery Bogle',[],['G'])]:
+            d=self.declaration(name,['Hexproof'] if name=='Slippery Bogle' else [],colors,['payment','hybrid_payment_other','hybrid_payment_mixed']);d['params']['payment_colors']=pay
+            p=explicit_spec(d,self.oracle[name]);self.assertEqual(p['protection'],colors);self.assertEqual(len(self.cases(name,d)),3)
+            for bad in ([],['R']*len(pay),pay+[pay[0]]):
+                with self.assertRaises(ValueError):self.cases(name,dict(d,params=dict(d['params'],payment_colors=bad)))
+    def test_compound_protection_preserves_targeting_differences(self):
+        d=self.declaration('Oversoul of Dusk',[],['black','blue','red'],['target_growth_0','target_exile_0','target_bounce_0']);d['params']['payment_colors']=['G']*5
+        a,b,c=self.cases('Oversoul of Dusk',d);self.assertIn(dict(op='cast',ref='spell0',value=1),a['steps']);self.assertIn(dict(op='cast',ref='spell0',value=1),b['steps']);self.assertIn(dict(op='can_cast',ref='spell0',value=0),c['steps'])
+    def test_hybrid_choices_do_not_change_global_ordinary_cost_parser(self):
+        from recipes import cost_from_oracle
+        with self.assertRaises(ValueError):cost_from_oracle(self.oracle['Slippery Bogle'])
+        d=self.declaration();d['params']['payment_colors']=[]
+        with self.assertRaises(ValueError):self.cases('Gladecover Scout',d)
+    def test_hybrid_menu_choice_is_scripted_only_when_needed(self):
+        d=self.declaration('Slippery Bogle',['Hexproof'],selected=['cast','payment','cast_1']);d['params']['payment_colors']=['G'];cases=self.cases('Slippery Bogle',d)
+        by={c['_recipe']['variant']:c for c in cases};self.assertTrue(any(s['op']=='choose_payment' for s in by['cast']['steps']));self.assertFalse(any(s['op']=='choose_payment' for s in by['payment']['steps']+by['cast_1']['steps']))
+    def test_replayed_mirror_checks_actor_mana_each_time(self):
+        d=self.declaration('Slippery Bogle',['Hexproof'],selected=['snapshot_1']);d['params']['payment_colors']=['G'];c=self.cases('Slippery Bogle',d)[0];checks=[s for s in c['steps'] if s['op']=='assert_mana_total'];self.assertEqual(len(checks),2);self.assertTrue(all(s['player']==1 and s['value']==59 for s in checks))
+    def test_alternate_and_mixed_hybrid_colors(self):
+        d=self.declaration('Stillmoon Cavalier',[],['black','white'],['hybrid_payment_other','hybrid_payment_mixed']);d['params']['payment_colors']=['B','B'];a,b=self.cases('Stillmoon Cavalier',d);self.assertEqual(a['_recipe']['payment_colors'],['W','W']);self.assertEqual(b['_recipe']['payment_colors'],['B','W'])
     def test_pin_and_explicit_scope(self):
         d=self.declaration();self.cases('Gladecover Scout',d)
         for change in (dict(oracle_text='changed'),dict(params={}),dict(params=dict(keywords=['Shroud'])),dict(params=dict(keywords=['Hexproof'],protection=[])),dict(params=dict(keywords=['Hexproof'],other=1))):

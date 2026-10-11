@@ -3,10 +3,53 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from run_cases import classify_outcome, load_unimplemented, validate_expectations, expectations_for_platform
+from run_cases import classify_outcome, load_unimplemented, validate_expectations, expectations_for_platform, process_outcome
+import xml.etree.ElementTree as ET
+import re
 
 
 class RunnerExpectationsTest(unittest.TestCase):
+    def test_known_crash_cannot_hide_a_preceding_rules_failure(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            xml=Path(temporary)/'result.xml';root=ET.Element('testsuites',tests='1');case=ET.SubElement(root,'testcase')
+            ET.SubElement(case,'failure',message='Expected equality of these values: power')
+            ET.SubElement(case,'failure',message='unknown file\nSEH exception with code 0xc0000005 thrown in the test body.')
+            ET.ElementTree(root).write(xml)
+            self.assertEqual(process_outcome(1,xml,''),('assertion',2))
+            baseline={'case':dict(kind='crash',reason='Reviewed trap',patterns=['function signature mismatch'])}
+            xml.unlink();text='C:/dev/shandalar-sdl3/src/magic/tests/duel/duel_card_tests.cpp:113: Failure\nExpected equality\nRuntimeError: null function or function signature mismatch'
+            kind,count=process_outcome(1,xml,text)
+            self.assertEqual((kind,count),('assertion',2))
+            self.assertEqual(classify_outcome('case',kind,count,text,baseline),'failed')
+
+    def test_old_explicit_native_seh_baseline_is_adapted_without_mutation(self):
+        message='SEH exception with code 0xc0000005 thrown in the test body.'
+        record=dict(platform='native',kind='assertion',assertion_count=1,reason='Reviewed native hardware fault',patterns=[re.escape(message)])
+        records={'case':record}
+        native=expectations_for_platform(records,'native')
+        self.assertEqual(classify_outcome('case','crash',0,message,native),'known_failure')
+        self.assertEqual(classify_outcome('case','assertion',1,message,native),'failed')
+        self.assertEqual(classify_outcome('case','passed',0,'',native),'unexpected_pass')
+        self.assertEqual(expectations_for_platform(records,'wasm'),{})
+        self.assertEqual(record['kind'],'assertion');self.assertEqual(record['assertion_count'],1)
+
+    def test_native_hardware_fault_is_a_crash_even_with_failure_xml(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            xml=Path(temporary)/'result.xml'
+            root=ET.Element('testsuites',tests='1');case=ET.SubElement(root,'testcase')
+            failure=ET.SubElement(case,'failure',message='SEH exception with code 0xc0000005 thrown in the test body.')
+            for prefix in ('','unknown file\n'):
+                failure.set('message',prefix+'SEH exception with code 0xc0000005 thrown in the test body.')
+                ET.ElementTree(root).write(xml)
+                self.assertEqual(process_outcome(1,xml,''),('crash',0))
+            failure.set('message','Expected equality of these values: power')
+            ET.ElementTree(root).write(xml)
+            self.assertEqual(process_outcome(1,xml,''),('assertion',1))
+            self.assertEqual(process_outcome(1,xml,'DUEL_HARNESS_ERROR: unscripted choice'),('harness',0))
+            self.assertEqual(process_outcome(1,xml,'DUEL_HARNESS_ERROR: execution budget exhausted during resolve'),('budget',0))
+            xml.unlink()
+            self.assertEqual(process_outcome(1,xml,'RuntimeError: memory access out of bounds'),('crash',0))
+
     def test_platform_scoped_failure_still_requires_wasm_success_and_native_failure(self):
         records = {"case": dict(platform="native", kind="assertion", assertion_count=1,
                                 reason="Native null prompt crash", patterns=["access violation"])}

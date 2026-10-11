@@ -16,6 +16,7 @@ typedef struct {
   const char *prompt;
   int count;
   const int *cards;
+  int zone_must_select; /* -1 when unspecified; input policy, not a rules override. */
 } DuelChoiceRequest;
 typedef struct { int value, card; } DuelChoiceAnswer;
 typedef struct {
@@ -34,6 +35,8 @@ int duel_host_scripted_input(void);
 void duel_host_set_ai_choices(int enabled);
 int duel_host_choose(DuelChoiceKind kind, int player, const char *prompt,
                      int count, const int *cards, int *card);
+int duel_host_choose_zone(int player, const char *prompt, int count,
+                          const int *cards, int must_select);
 int duel_host_random(void);
 uint32_t duel_host_clock(void);
 void duel_host_checkpoint(const char *operation);

@@ -21,6 +21,16 @@ class CombatKeywordCreatureRecipesTest(unittest.TestCase):
     def cases(self, name, d, rows=None):
         return expand(name, self.rows[name]['csvid'], d, self.oracle[name], rows or self.rows, oracle_context=self.oracle)
 
+    def test_protection_bushido_and_exalted_parameters(self):
+        for name,mode,color in [('Hand of Cruelty','bushido','white'),('Hand of Honor','bushido','black'),('Knight of Glory','exalted','black'),('Knight of Infamy','exalted','white')]:
+            d=self.declaration(name,mode,selected=['attack_alone_0']);d['params']['protection']=[color];self.cases(name,d)
+            with self.assertRaises(ValueError):self.cases(name,dict(d,params=dict(d['params'],protection=[])))
+    def test_protected_blocker_cannot_trigger_bushido(self):
+        d=self.declaration('Hand of Honor',selected=['small_blocker']);d['params']['protection']=['black'];c=self.cases('Hand of Honor',d)[0]
+        self.assertIn(dict(op='block',ref='blocker',other='source',value=0),c['steps']);self.assertNotIn(dict(op='assert_card',ref='source',property='power',value=3),c['steps'])
+    def test_indestructible_bushido_survives_lethal_damage(self):
+        d=self.declaration('Konda, Lord of Eiganjo',n=5,keys=['Indestructible','Vigilance'],selected=['lethal_blocker']);c=self.cases('Konda, Lord of Eiganjo',d)[0]
+        self.assertIn(dict(op='combat_damage'),c['steps']);self.assertIn(dict(op='assert_card',ref='source',property='damage',value=10),c['steps']);self.assertIn(dict(op='assert_card',ref='source',property='in_play',value=1),c['steps'])
     def test_pinned_parameters_fail_closed(self):
         d=self.declaration()
         for change in (dict(oracle_text='changed'), dict(params={}), dict(params=dict(d['params'],amount=True)),

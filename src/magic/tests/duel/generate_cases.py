@@ -16,11 +16,15 @@ ZONES = {"hand": 0, "battlefield": 1, "library": 2, "graveyard": 3, "exile": 4}
 STATES = {"tapped": 1, "sick": 2, "attacking": 4, "untapped": 8, "opponent_owned": 16, "token": 32}
 OPS = {"choose_target", "choose_damage_target", "choose_damage_player", "choose_cancel_target", "choose_cancel_mana", "choose_player", "choose_zone", "choose_dialog", "choose_number", "choose_color", "choose_mana", "choose_priority", "choose_regeneration", "choose_trigger", "can_activate",
        "activate", "can_cast", "cast", "resolve", "cleanup", "remove_from_combat", "destroy", "attack", "block", "combat_damage", "end_combat",
-       "turn", "begin_attackers", "finish_attackers", "begin_blockers", "advance_combat", "assert_card", "assert_zone", "assert_zone_card", "assert_zone_contains", "assert_zone_state",
+       "turn", "advance_turn", "begin_attackers", "finish_attackers", "begin_blockers", "advance_combat", "assert_card", "require_card", "assert_zone", "assert_zone_card", "assert_zone_contains", "assert_zone_state",
        "assert_hand_graveyard_total", "assert_offered_count", "assert_offered_card", "record_state", "assert_recorded_state", "bind_permanent", "bind_hand",
-       "assert_card_name", "assert_payment_source", "set_mana", "set_life", "set_budget", "assert_mana", "assert_mana_at_most", "assert_mana_total", "assert_life", "assert_energy", "assert_stack", "assert_targets_consumed", "assert_choices_consumed", "capture", "restore", "ai_roundtrip", "ai_turns"}
-PROPERTIES = {"csvid", "power", "toughness", "tapped", "sick", "attacking", "in_play", "in_hand", "damage", "blocking_count", "blocked"}
-REF_OPS = {"choose_regeneration", "choose_target", "choose_damage_target", "choose_trigger", "can_activate", "activate", "can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card", "assert_card_name"}
+       "assert_card_name", "assert_payment_source", "set_mana", "set_life", "set_budget", "assert_mana", "assert_mana_at_most", "assert_mana_total", "assert_life", "assert_energy", "assert_poison", "assert_stack", "assert_targets_consumed", "assert_choices_consumed", "capture", "restore", "ai_roundtrip", "ai_turns"}
+PROPERTIES = {"csvid", "power", "toughness", "tapped", "sick", "attacking", "in_play", "in_hand", "damage", "blocking_count", "blocked", "plus1_counters", "minus1_counters"}
+OPS |= {"refresh", "choose_zone_card", "choose_payment", "can_activate_hand", "require_can_activate_hand", "activate_hand", "require_can_activate", "can_target_creature"}
+OPS.add("assert_zone_multiplicity")
+OPS |= {"choose_optional_zone", "assert_forced_zone_choices"}
+REF_OPS = {"choose_regeneration", "choose_target", "choose_damage_target", "choose_trigger", "can_activate", "activate", "can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card", "require_card", "assert_card_name"}
+REF_OPS |= {"can_activate_hand", "require_can_activate_hand", "activate_hand", "require_can_activate", "can_target_creature"}
 
 def read(path):
     value = json.loads(path.read_text(encoding="utf-8"))
@@ -98,6 +102,8 @@ def build(data, output):
                 raise ValueError(f"Invalid observation in {name}: {step}")
             if "other" in step and step["other"] not in refs:
                 raise ValueError(f"Unknown reference: {step}")
+            if op == "can_target_creature" and step.get("other") not in refs:
+                raise ValueError(f"Creature target probe requires a named target: {step}")
             if op in {"choose_player", "choose_damage_player"} and (step.get("value") not in (0, 1) or step.get("player", -1) not in (-1, 0, 1)):
                 raise ValueError(f"Invalid player target in {name}: {step}")
             if op == "choose_damage_target" and step.get("player", -1) not in (-1, 0, 1):
@@ -112,6 +118,16 @@ def build(data, output):
                 raise ValueError(f"Invalid offered card count in {name}: {step}")
             if op == "assert_offered_card" and (not isinstance(step.get("index"), int) or not 0 <= step["index"] < 512 or step.get("value") not in registered_csvids):
                 raise ValueError(f"Invalid offered card observation in {name}: {step}")
+            if op == "choose_optional_zone" and (step.get("player") not in (0, 1) or step.get("value") not in registered_csvids):
+                raise ValueError(f"Invalid optional zone fallback in {name}: {step}")
+            if op == "assert_forced_zone_choices" and (type(step.get("value")) is not int or step["value"] < 0):
+                raise ValueError(f"Invalid forced zone choice count in {name}: {step}")
+            if op == "assert_zone_multiplicity" and (
+                step.get("player") not in (0, 1) or step.get("zone") not in ZONES
+                or step.get("index") not in registered_csvids
+                or type(step.get("value")) is not int or step["value"] < 0
+            ):
+                raise ValueError(f"Invalid zone multiplicity observation in {name}: {step}")
             if op == "assert_targets_consumed" and step.get("value", 0) != 0:
                 raise ValueError(f"Target plans must consume every planned target in {name}")
             if op in {"bind_permanent", "bind_hand"} and (

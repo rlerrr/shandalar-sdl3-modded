@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Sickle Ripper",
+  "csvid": 9674,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counter_damage_creature",
+      "version": 2,
+      "params": {
+        "mechanic": "Wither",
+        "keywords": []
+      },
+      "oracle_text": "Wither (This deals damage to creatures in the form of -1/-1 counters.)",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "blocked_0",
+        "lethal_blocker_0",
+        "defend_ground_0",
+        "defend_flying_0",
+        "other_attack_0",
+        "tapped_0",
+        "sick_0",
+        "pump_0",
+        "cleanup_0",
+        "destroy_after_0",
+        "bounce_after_0",
+        "ready_snapshot_0",
+        "combat_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "wrong_color_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "blocked_1",
+        "lethal_blocker_1",
+        "defend_ground_1",
+        "defend_flying_1",
+        "other_attack_1",
+        "tapped_1",
+        "sick_1",
+        "pump_1",
+        "cleanup_1",
+        "destroy_after_1",
+        "bounce_after_1",
+        "ready_snapshot_1",
+        "combat_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "wrong_color_1",
+        "payment"
+      ]
+    }
+  ]
+}

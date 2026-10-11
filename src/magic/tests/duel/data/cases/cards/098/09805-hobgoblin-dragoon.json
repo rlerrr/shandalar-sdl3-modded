@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Hobgoblin Dragoon",
+  "csvid": 9805,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "First strike",
+          "Flying"
+        ],
+        "payment_colors": [
+          "R"
+        ]
+      },
+      "oracle_text": "Flying, first strike",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "flying_evasion",
+        "flying_reach",
+        "first_strike",
+        "hybrid_payment_other",
+        "hybrid_payment_mixed",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1"
+      ]
+    }
+  ]
+}

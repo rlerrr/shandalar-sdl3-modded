@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Merfolk of the Depths",
+  "csvid": 13004,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flash"
+        ],
+        "payment_colors": [
+          "G",
+          "G"
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "hybrid_payment_other",
+        "hybrid_payment_mixed",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1"
+      ]
+    }
+  ]
+}

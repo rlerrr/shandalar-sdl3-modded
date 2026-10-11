@@ -20,6 +20,21 @@ DATA = Path(__file__).parent / "data"
 
 
 class RecipesTest(unittest.TestCase):
+    def test_creature_target_probe_requires_a_named_existing_target(self):
+        from generate_cases import build
+        with tempfile.TemporaryDirectory(dir=Path.cwd()) as temporary:
+            data=Path(temporary);cases=data/'cases';cases.mkdir()
+            (data/'oracle.json').write_text(json.dumps(dict(version=1,cards={'Unsummon':self.oracle['Unsummon']},source={})))
+            (data/'oracle_aliases.json').write_text(json.dumps(dict(version=1,aliases={})))
+            (data/'fixtures.json').write_text(json.dumps(dict(version=1,fixtures={'empty_main':dict(cards=[])})))
+            for other in (None,'missing'):
+                action=dict(op='can_target_creature',ref='source',value=1)
+                if other:action['other']=other
+                case=dict(name='TargetProbeBoundary',fixture='empty_main',setup=[dict(name='Unsummon',ref='source',player=0,zone='hand')],steps=[action])
+                (cases/'unsummon.json').write_text(json.dumps(dict(version=1,card='Unsummon',csvid=260,cases=[case])))
+                with self.assertRaisesRegex(ValueError,'named target|Unknown reference'):
+                    build(data,data/'generated')
+
     def test_generated_case_rejects_unbounded_work_allowance(self):
         from generate_cases import build
         with tempfile.TemporaryDirectory(dir=Path.cwd()) as temporary:

@@ -23,13 +23,13 @@ static std::string observable_state() {
   out<<"{\"stack\":"<<duel_test_stack_size()<<",\"players\":[";
   for(int p=0;p<2;++p) {
     if(p)out<<',';
-    out<<"{\"life\":"<<duel_test_life(p)<<",\"energy\":"<<duel_test_energy(p)<<",\"mana\":[";
+    out<<"{\"life\":"<<duel_test_life(p)<<",\"energy\":"<<duel_test_energy(p)<<",\"poison\":"<<duel_test_poison(p)<<",\"mana\":[";
     for(int color=0;color<6;++color){if(color)out<<',';out<<duel_test_mana(p,color);}
     out<<"],\"zones\":[";
     for(int zone=0;zone<5;++zone){if(zone)out<<',';out<<'[';for(int n=0;n<duel_test_zone_count(p,zone);++n){if(n)out<<',';out<<duel_test_zone_csvid(p,zone,n);}out<<']';}
     out<<"],\"permanents\":[";
     bool comma=false;
-    for(int n=0;n<150;++n){auto c=duel_test_inspect({p,n});if(!c.in_play)continue;if(comma)out<<',';comma=true;out<<'['<<n<<','<<c.csvid<<','<<c.power<<','<<c.toughness<<','<<c.tapped<<','<<c.sick<<','<<c.attacking<<','<<c.damage<<']';}
+    for(int n=0;n<150;++n){auto c=duel_test_inspect({p,n});if(!c.in_play)continue;if(comma)out<<',';comma=true;out<<'['<<n<<','<<c.csvid<<','<<c.power<<','<<c.toughness<<','<<c.tapped<<','<<c.sick<<','<<c.attacking<<','<<c.damage<<','<<c.plus1_counters<<','<<c.minus1_counters<<']';}
     out<<"]}";
   }
   out<<"]}";
@@ -52,6 +52,7 @@ static int property(const DuelTestCard &c,const char *name) {
   PROPERTY(csvid); PROPERTY(power); PROPERTY(toughness); PROPERTY(tapped); PROPERTY(sick);
   PROPERTY(attacking); PROPERTY(in_play); PROPERTY(in_hand); PROPERTY(damage);
   PROPERTY(blocking_count); PROPERTY(blocked);
+  PROPERTY(plus1_counters); PROPERTY(minus1_counters);
 #undef PROPERTY
   ADD_FAILURE()<<"Unknown observation "<<name; return -99999;
 }
@@ -63,7 +64,13 @@ class BehaviorTest:public testing::Test {
   std::cerr<<"CASE: "<<spec->name<<" CARD: "<<spec->card<<" ORACLE: "<<spec->oracle_id<<" FIXTURE: "<<spec->fixture<<" SEED: "<<spec->seed<<"\n";
   SCOPED_TRACE(std::string(spec->card)+" Oracle "+spec->oracle_id+" "+spec->oracle_text);
   Refs refs; load_fixture(refs,spec->fixture,spec->seed); add_cards(refs,spec->cards,spec->count); duel_test_prepare_fixture();
+  // Keep the resulting board visible even if a fatal prerequisite assertion
+  // stops a case before its dependent actions can queue invalid choices.
+  struct ObservationOnExit {
+    ~ObservationOnExit() { std::cout<<"OBSERVATION: "<<observable_state()<<'\n'; }
+  } observation_on_exit;
   std::unique_ptr<DuelTestSnapshot,decltype(&duel_test_free_snapshot)> saved(nullptr,duel_test_free_snapshot);
+  Refs saved_refs;
   std::string recorded_state;
   for(int i=0;i<spec->step_count;++i) {
     const auto &s=spec->steps[i];
@@ -72,6 +79,8 @@ class BehaviorTest:public testing::Test {
     auto ref = refs.count(s.ref) ? refs.at(s.ref) : DuelTestRef{-1,-1};
     const std::string op=s.op;
     if(op=="choose_target")duel_test_decision(DUEL_CHOICE_TARGET,s.player,ref.player,ref.card);
+    else if(op=="choose_optional_zone")duel_test_decision(DUEL_CHOICE_ZONE,s.player,-5,s.value);
+    else if(op=="assert_forced_zone_choices")EXPECT_EQ(duel_test_forced_zone_choices(),s.value);
     else if(op=="choose_damage_target")duel_test_damage_decision(s.player,ref);
     else if(op=="choose_damage_player")duel_test_damage_decision(s.player,DuelTestRef{s.value,-1});
     else if(op=="choose_cancel_target")duel_test_decision(DUEL_CHOICE_TARGET,s.player,-1,-1);
@@ -82,7 +91,9 @@ class BehaviorTest:public testing::Test {
     }
     else if(op=="choose_player")duel_test_decision(DUEL_CHOICE_TARGET,s.player,s.value,-1);
     else if(op=="choose_zone")duel_test_decision(DUEL_CHOICE_ZONE,s.player,s.value,-1);
+    else if(op=="choose_zone_card")duel_test_decision(DUEL_CHOICE_ZONE,s.player,-3,s.value);
     else if(op=="choose_dialog")duel_test_decision(DUEL_CHOICE_DIALOG,s.player,s.value,-1);
+    else if(op=="choose_payment")duel_test_decision(DUEL_CHOICE_DIALOG,s.player,-4,s.value);
     else if(op=="choose_number")duel_test_decision(DUEL_CHOICE_NUMBER,s.player,s.value,-1);
     else if(op=="choose_color")duel_test_decision(DUEL_CHOICE_COLOR,s.player,s.value,-1);
     else if(op=="choose_mana")duel_test_decision(DUEL_CHOICE_MANA,s.player,-3,s.color);
@@ -91,9 +102,15 @@ class BehaviorTest:public testing::Test {
     else if(op=="choose_regeneration")duel_test_regeneration_decision(ref);
     else if(op=="choose_trigger")duel_test_decision(DUEL_CHOICE_PRIORITY,s.player,-3,duel_test_inspect(ref).csvid);
     else if(op=="can_activate")EXPECT_EQ(!!duel_test_can_activate(ref),s.value);
+    else if(op=="require_can_activate")ASSERT_EQ(!!duel_test_can_activate(ref),s.value);
     else if(op=="activate")EXPECT_EQ(!!duel_test_activate(ref),s.value);
+    else if(op=="can_activate_hand")EXPECT_EQ(!!duel_test_can_activate_hand(ref),s.value);
+    else if(op=="require_can_activate_hand")ASSERT_EQ(!!duel_test_can_activate_hand(ref),s.value);
+    else if(op=="activate_hand")ASSERT_EQ(!!duel_test_activate_hand(ref),s.value);
     else if(op=="can_cast")EXPECT_EQ(!!duel_test_can_cast(ref),s.value);
+    else if(op=="can_target_creature")EXPECT_EQ(!!duel_test_can_target_creature(ref,refs.at(s.other)),s.value);
     else if(op=="cast")EXPECT_EQ(!!duel_test_cast(ref),s.value);
+    else if(op=="refresh")duel_test_refresh();
     else if(op=="resolve")duel_test_resolve();
     else if(op=="cleanup")duel_test_cleanup();
     else if(op=="remove_from_combat")duel_test_remove_from_combat(ref);
@@ -107,17 +124,25 @@ class BehaviorTest:public testing::Test {
     else if(op=="end_combat")duel_test_end_combat();
     else if(op=="advance_combat")duel_test_advance_combat();
     else if(op=="turn")duel_test_set_turn(s.player,s.value);
+    else if(op=="advance_turn")duel_test_advance_turn();
     else if(op=="set_mana")duel_test_set_mana(s.player,s.color,s.value);
     else if(op=="set_life")duel_test_set_life(s.player,s.value);
     else if(op=="set_budget")duel_test_set_budget(s.value);
     else if(op=="assert_card_name")EXPECT_STREQ(duel_test_card_name(ref),spec->card);
     else if(op=="assert_payment_source")EXPECT_NE(std::string(duel_test_payment_prompt()).find(spec->card),std::string::npos);
     else if(op=="assert_card")EXPECT_EQ(property(duel_test_inspect(ref),s.property),s.value);
+    else if(op=="require_card")ASSERT_EQ(property(duel_test_inspect(ref),s.property),s.value);
     else if(op=="assert_zone")EXPECT_EQ(duel_test_zone_count(s.player,s.zone),s.value);
     else if(op=="assert_zone_card")EXPECT_EQ(duel_test_zone_csvid(s.player,s.zone,s.index),s.value);
     else if(op=="assert_zone_contains") {
       bool found=false; for(int n=0;n<duel_test_zone_count(s.player,s.zone);++n) if(duel_test_zone_csvid(s.player,s.zone,n)==s.value)found=true;
       EXPECT_TRUE(found)<<"Missing CSVID "<<s.value;
+    }
+    else if(op=="assert_zone_multiplicity") {
+      int count=0;
+      for(int n=0;n<duel_test_zone_count(s.player,s.zone);++n)
+        count+=duel_test_zone_csvid(s.player,s.zone,n)==s.index;
+      EXPECT_EQ(count,s.value)<<"Zone "<<s.zone<<" CSVID "<<s.index;
     }
     else if(op=="assert_zone_state") {
       DuelTestRef r=duel_test_permanent_at(s.player,s.index);
@@ -156,12 +181,13 @@ class BehaviorTest:public testing::Test {
       EXPECT_EQ(total,s.value);
     }
     else if(op=="assert_life")EXPECT_EQ(duel_test_life(s.player),s.value);
+    else if(op=="assert_poison")EXPECT_EQ(duel_test_poison(s.player),s.value);
     else if(op=="assert_energy")EXPECT_EQ(duel_test_energy(s.player),s.value);
     else if(op=="assert_stack")EXPECT_EQ(duel_test_stack_size(),s.value);
     else if(op=="assert_targets_consumed")EXPECT_EQ(duel_test_finish_target_plan(),0)<<"Unconsumed planned targets";
     else if(op=="assert_choices_consumed")EXPECT_EQ(duel_test_finish_choice_plan(),0)<<"Unconsumed planned choices";
-    else if(op=="capture")saved.reset(duel_test_capture());
-    else if(op=="restore") { ASSERT_NE(saved.get(),nullptr); duel_test_restore(saved.get()); }
+    else if(op=="capture") { saved.reset(duel_test_capture()); saved_refs=refs; }
+    else if(op=="restore") { ASSERT_NE(saved.get(),nullptr); duel_test_restore(saved.get()); refs=saved_refs; }
     else if(op=="ai_roundtrip")duel_test_ai_roundtrip();
     else if(op=="ai_turns")duel_test_ai_turns(s.value);
     else FAIL()<<"Unimplemented action "<<op;
@@ -169,7 +195,6 @@ class BehaviorTest:public testing::Test {
     if(HasFailure())duel_test_dump();
   }
   duel_test_finish_decisions();
-  std::cout<<"OBSERVATION: "<<observable_state()<<'\n';
  }
 };
 class TemplateTest:public testing::Test {
@@ -223,13 +248,21 @@ class AITest:public testing::Test {
  }
 };
 int main(int argc,char**argv) {
- for(const auto &t:handler_bindings) { auto *s=&t; auto name="Card_"+std::to_string(t.csvid); testing::RegisterTest("Bindings",name.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new BindingTest(s);}); }
- for(unsigned seed:{1u,123u,999u})testing::RegisterTest("AI",("Seed_"+std::to_string(seed)).c_str(),nullptr,nullptr,__FILE__,__LINE__,[seed](){return new AITest(seed);});
- for(const auto *c:cases) testing::RegisterTest("Behavior",c->name,nullptr,nullptr,__FILE__,__LINE__,[c](){return new BehaviorTest(c);});
- for(const auto &t:templates) { auto *s=&t; auto name="Card_"+std::to_string(t.csvid); testing::RegisterTest("Templates",name.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new TemplateTest(s);}); }
- for(const auto &t:smoke_cards) { auto *s=&t; auto name="Card_"+std::to_string(t.csvid); testing::RegisterTest("Smoke",name.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new SmokeTest(s);}); }
  testing::InitGoogleTest(&argc,argv);
- for(int i=1;i<argc;++i)if(!std::strcmp(argv[i],"--gtest_list_tests"))return RUN_ALL_TESTS();
+ // The isolated runner requests one exact test. Avoid allocating tens of
+ // thousands of unused GoogleTest factories in every fresh process. Complex
+ // filters retain Google's normal full-registration matching behavior.
+ const std::string filter=GTEST_FLAG_GET(filter);
+ const auto dot=filter.find('.');
+ const bool exact=dot!=std::string::npos && filter.find_first_of("*?:-")==std::string::npos;
+ const std::string suite=exact?filter.substr(0,dot):"", name=exact?filter.substr(dot+1):"";
+ auto selected=[&](const char *s,const char *n){return !exact || (suite==s && name==n);};
+ if(!exact || suite=="Bindings")for(const auto &t:handler_bindings) { auto *s=&t; auto n="Card_"+std::to_string(t.csvid); if(selected("Bindings",n.c_str()))testing::RegisterTest("Bindings",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new BindingTest(s);}); }
+ if(!exact || suite=="AI")for(unsigned seed:{1u,123u,999u}) { auto n="Seed_"+std::to_string(seed); if(selected("AI",n.c_str()))testing::RegisterTest("AI",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[seed](){return new AITest(seed);}); }
+ if(!exact || suite=="Behavior")for(const auto *c:cases)if(selected("Behavior",c->name))testing::RegisterTest("Behavior",c->name,nullptr,nullptr,__FILE__,__LINE__,[c](){return new BehaviorTest(c);});
+ if(!exact || suite=="Templates")for(const auto &t:templates) { auto *s=&t; auto n="Card_"+std::to_string(t.csvid); if(selected("Templates",n.c_str()))testing::RegisterTest("Templates",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new TemplateTest(s);}); }
+ if(!exact || suite=="Smoke")for(const auto &t:smoke_cards) { auto *s=&t; auto n="Card_"+std::to_string(t.csvid); if(selected("Smoke",n.c_str()))testing::RegisterTest("Smoke",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new SmokeTest(s);}); }
+ if(GTEST_FLAG_GET(list_tests))return RUN_ALL_TESTS();
  if (!duel_test_initialize(DUEL_TEST_ASSETS)) { std::cerr<<"Missing real card database at "<<DUEL_TEST_ASSETS<<"\n"; return 2; }
  for(int i=1;i<argc;++i)if(!std::strcmp(argv[i],"--duel-presentation-probe"))duel_test_probe_presentation();
  return RUN_ALL_TESTS();

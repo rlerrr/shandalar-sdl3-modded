@@ -13,6 +13,47 @@ EXTRA_REMINDERS = {
     '(Damage and effects that say "destroy" don\'t destroy this creature. If its toughness is 0 or less, it\'s still put into its owner\'s graveyard.)',
 } | {f"(This creature can't be blocked, targeted, dealt damage, or enchanted by anything {c}.)" for c in ('white','blue','black','red','green')}
 
+def protection_values(text):
+    """Exact reviewed color-list grammar; subtype and conditional lists fail closed."""
+    if text in PROTECTION:return [text]
+    colors=('white','blue','black','red','green')
+    for count in (2,3):
+        import itertools
+        for selected in itertools.permutations(colors,count):
+            phrase=(selected[0]+' and from '+selected[1]) if count==2 else (selected[0]+', from '+selected[1]+', and from '+selected[2])
+            if text==phrase:return list(selected)
+    raise ValueError('unreviewed protection category or compound list')
+
+def reviewed_payment(record,params):
+    from recipes import cost_from_oracle
+    cost=record.get('mana_cost','');symbols=re.findall(r'\{([WUBRG])/([WUBRG])\}',cost)
+    if not symbols:
+        if 'payment_colors' in params:raise ValueError('payment colors require two-color hybrid symbols')
+        return cost_from_oracle(record),[]
+    choices=params.get('payment_colors')
+    if not isinstance(choices,list) or len(choices)!=len(symbols) or any(c not in pair for c,pair in zip(choices,symbols)):
+        raise ValueError('one explicit legal color per two-color hybrid symbol required')
+    index=iter(choices)
+    converted=re.sub(r'\{[WUBRG]/[WUBRG]\}',lambda m:'{'+next(index)+'}',cost)
+    return cost_from_oracle(dict(record,mana_cost=converted)),symbols
+
+def mirror_cast_cases(cases,selected):
+    """Symmetric stocked boards; switch the active player before legal casts."""
+    import copy
+    from recipes import step
+    result=[]
+    for case in cases:
+        variant=case['_recipe']['variant']
+        if variant+'_1' not in selected:continue
+        mirrored=copy.deepcopy(case)
+        # Replayed runs may share step objects. Mirror each occurrence once.
+        mirrored['steps']=[dict(s) for s in mirrored['steps']]
+        mirrored['name']+='_1';mirrored['_recipe']['variant']+='_1'
+        for item in mirrored['setup']+mirrored['steps']:
+            if item.get('player') in (0,1):item['player']=1-item['player']
+        mirrored['steps'].insert(0,step('turn',player=1,value=0));result.append(mirrored)
+    return result
+
 # Full Oracle pins for witnesses, separate from engine implementation and flags.
 WITNESSES = {
     'white': ('Pillarfield Ox', ['W'], False, 2, 4, ''),
@@ -53,14 +94,12 @@ def spec(declaration, record):
             text=text.replace(reminder,'')
         text=text.strip()
         if text.startswith('Protection from '):
-            value=text[len('Protection from '):]
-            if value not in PROTECTION:raise ValueError('unreviewed protection category')
-            protection.append(value);continue
+            protection.extend(protection_values(text[len('Protection from '):]));continue
         tokens=[t.strip().lower() for t in text.split(',')]
         if any(t not in canonical for t in tokens):raise ValueError('unreviewed defensive passive or triggered rules')
         keys.extend(canonical[t] for t in tokens)
     p=declaration.get('params')
-    if (not isinstance(p,dict) or set(p)-{'keywords','protection'} or p.get('keywords')!=sorted(keys)
+    if (not isinstance(p,dict) or set(p)-{'keywords','protection','payment_colors'} or p.get('keywords')!=sorted(keys)
             or p.get('protection',[])!=sorted(protection) or 'protection' in p and not protection
             or len(set(keys))!=len(keys) or len(set(protection))!=len(protection)
             or not (protection or set(keys)&set(SHIELDS))):
@@ -73,8 +112,9 @@ def spec(declaration, record):
     colors=record.get('colors')
     if not isinstance(colors,list) or any(c not in ('W','U','B','R','G') for c in colors) or len(set(colors))!=len(colors):
         raise ValueError('structured unique Oracle colors required')
+    mana,hybrids=reviewed_payment(record,p)
     return dict(family='defensive_creature',keywords=sorted(keys),protection=sorted(protection),colors=colors,
-                power=int(record['power']),toughness=int(record['toughness']),mana=cost_from_oracle(record),remaining_abilities=abilities)
+                power=int(record['power']),toughness=int(record['toughness']),mana=mana,hybrids=hybrids,remaining_abilities=abilities)
 
 
 def variants(p):
@@ -83,6 +123,8 @@ def variants(p):
     result+=['defend_'+w for w in WITNESSES]+['defense_snapshot']
     if 'Defender' not in p['keywords']:result+=['attack_'+w for w in WITNESSES]+['attack_flying']
     if 'Indestructible' in p['keywords'] and may_target(p,0,0,['B']):result+=['zero_toughness']
+    if p.get('hybrids'):result+=['hybrid_payment_other','hybrid_payment_mixed']
+    result += [v+'_1' for v in BASE]
     return result
 
 
@@ -119,8 +161,30 @@ def may_target(p,caster,owner,colors):
 def expand(name,csvid,declaration,p,selected,registry,oracle):
     from recipes import card,step,observe,cost_from_oracle
     from creature_recipes import expand as creatures
-    result=creatures(name,csvid,declaration,p,[v for v in selected if v in BASE],registry)
+    base=creatures(name,csvid,declaration,p,[v for v in BASE if v in selected or v+'_1' in selected],registry)
+    result=[c for c in base if c['_recipe']['variant'] in selected]+mirror_cast_cases(base,selected)
+    if p.get('hybrids'):
+        packed=sum(n<<(4*color) for color,n in enumerate(p['mana']))
+        for case in result:
+            if case['_recipe']['variant'] not in ('cast','snapshot','fresh_attack'):continue
+            scripted=[]
+            for action in case['steps']:
+                if action['op']=='cast':scripted.append(step('choose_payment',player=0,value=packed))
+                scripted.append(action)
+            case['steps']=scripted
+    for variant in ('hybrid_payment_other','hybrid_payment_mixed'):
+        if variant not in selected:continue
+        original=declaration['params']['payment_colors']
+        choices=[(pair[1] if current==pair[0] else pair[0]) if variant=='hybrid_payment_other' or index%2 else current for index,(pair,current) in enumerate(zip(p['hybrids'],original))]
+        alt=dict(declaration['params'],payment_colors=choices);mana,_=reviewed_payment(oracle[name],alt)
+        cases=creatures(name,csvid,declaration,dict(p,mana=mana),['payment'],registry)
+        for case in cases:
+            case['name']=f'DefensiveCreatureRecipe_{csvid}_{variant}'
+            case['_recipe'].update(variant=variant,payment_colors=choices)
+        result+=cases
     for variant in (v for v in selected if v not in BASE):
+        if variant.startswith('hybrid_payment_'):continue
+        if variant.endswith('_1') and variant[:-2] in BASE:continue
         # Scripted human caster; suffix selects creature ownership, avoiding AI strategic refusal.
         owner=int(variant[-1]) if variant.startswith(('target_','wrath_','sweep_damage_')) else 0
         setup=[card(name,'source',owner)];actions=[];mana=[60,60];life=[20,20];battle=[0,0];battle[owner]=1
