@@ -11,6 +11,19 @@ VERSION = 1
 COLORS = {"B": 1, "U": 2, "G": 3, "R": 4, "W": 5}
 WORDS = {"a": 1, "two": 2, "three": 3, "four": 4}
 VARIANTS = {
+    "creature_conditions": ("entry_0", "cast_0", "combat_0", "untap_attack_0"),
+    "mana_modes": ("entry_0", "zero_pool_fallback_0", "production_0_0_0_0"),
+    "conditional_keyword": ("effect_0_0", "effect_3_0", "increase_0", "decrease_0"),
+    "conditional_stats": ("effect_0_0", "effect_1_0", "snapshot_1_0", "increase_0"),
+    "conditional_mana_land": ("entry_none_0", "production_none_0_0", "entry_snapshot_none_0", "mana_snapshot_0_0"),
+    "mana_consequence": ("production_0_0", "payment_0_0", "prevention_0_0", "mana_snapshot_0_0"),
+    "damage_activation": ("effect_0", "payment_0", "pending_snapshot_0", "prevention_0"),
+    "tap_activation": ("effect_0", "payment_0", "pending_snapshot_0", "combat_block_0"),
+    "token_creation": ("create_0", "payment_0", "pending_snapshot_0", "destroy_token_0"),
+    "self_keyword_activation": ("effect_0", "payment_0", "pending_snapshot_0", "expired_probe_0"),
+    "target_keyword_activation": ("effect_0", "payment_0", "pending_snapshot_0", "cleanup_0"),
+    "target_stats_activation": ("effect_0", "payment_0", "pending_snapshot_0", "cleanup_0"),
+    "passive_keyword_creature": ("cast_0", "payment_0", "snapshot_0", "unblocked_0"),
     "death_value_creature": ("destroy_0", "payment_0", "death_snapshot_0", "combat_death_0"),
     "etb_recovery_creature": ("entry_0", "payment_0", "pending_snapshot_0", "blink_0"),
     "etb_removal_creature": ("entry_0", "payment_0", "pending_snapshot_0", "blink_0"),
@@ -178,6 +191,45 @@ def explicit_spec(declaration, oracle):
     """
     from hybrid_creature_recipes import applies, specification
     if applies(declaration):return specification(declaration,oracle)
+    if declaration.get('family')=='creature_conditions':
+        from creature_conditions_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='mana_modes':
+        from mana_modes_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='conditional_keyword':
+        from conditional_keyword_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='conditional_stats':
+        from conditional_stats_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='conditional_mana_land':
+        from conditional_mana_land_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='mana_consequence':
+        from mana_consequence_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='damage_activation':
+        from damage_activation_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='tap_activation':
+        from tap_activation_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='token_creation':
+        from token_creation_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='self_keyword_activation':
+        from self_keyword_activation_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='target_keyword_activation':
+        from target_keyword_activation_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='target_stats_activation':
+        from target_stats_activation_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='passive_keyword_creature':
+        from passive_keyword_creature_recipes import spec
+        return spec(declaration,oracle)
     if declaration.get('family')=='death_value_creature':
         from death_value_creature_recipes import spec
         return spec(declaration,oracle)
@@ -387,6 +439,57 @@ def _expand_plain(card_name, csvid, declaration, oracle, registry, oracle_contex
                 if witness not in registry or "Creature" not in r.get("type_line","") or (r.get("power"),r.get("toughness"),r.get("oracle_text")) != (power,toughness,text):
                     raise ValueError(f"Aura activation witness changed: {witness}")
         supported_variants = set(grant_variants(spec))
+    if family == "creature_conditions":
+        from creature_conditions_recipes import variants as creature_condition_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(creature_condition_variants(spec))
+    if family == "mana_modes":
+        from mana_modes_recipes import variants as mana_modes_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(mana_modes_variants(spec))
+    if family == "conditional_keyword":
+        from conditional_keyword_recipes import variants as conditional_keyword_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(conditional_keyword_variants(spec))
+    if family == "conditional_stats":
+        from conditional_stats_recipes import variants as conditional_stat_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(conditional_stat_variants(spec))
+    if family == "conditional_mana_land":
+        from conditional_mana_land_recipes import variants as conditional_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(conditional_variants(spec))
+    if family == "mana_consequence":
+        from mana_consequence_recipes import variants as consequence_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(consequence_variants(spec))
+    if family == "damage_activation":
+        from damage_activation_recipes import variants as damage_activation_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(damage_activation_variants(spec))
+    if family == "tap_activation":
+        from tap_activation_recipes import variants as tap_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(tap_variants(spec))
+    if family == "token_creation":
+        from token_creation_recipes import variants as token_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry,spec)
+        supported_variants=set(token_variants(spec))
+    if family == "self_keyword_activation":
+        from self_keyword_activation_recipes import variants as self_keyword_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants=set(self_keyword_variants(spec))
+    if family == "target_keyword_activation":
+        from target_keyword_activation_recipes import variants as keyword_activation_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants=set(keyword_activation_variants(spec))
+    if family == "target_stats_activation":
+        from target_stats_activation_recipes import variants as target_stats_variants, validate_witnesses
+        validate_witnesses(oracle_context, registry)
+        supported_variants=set(target_stats_variants(spec))
+    if family == "passive_keyword_creature":
+        from passive_keyword_creature_recipes import variants as passive_variants
+        supported_variants=set(passive_variants(spec))
     if family == "creature_keywords":
         from creature_recipes import variants as creature_variants
         supported_variants = set(creature_variants(spec))
@@ -562,6 +665,71 @@ def _expand_plain(card_name, csvid, declaration, oracle, registry, oracle_contex
             raise ValueError(f"recipe witness missing from registry: {name}")
         return registry[name]["csvid"]
 
+    if family == "creature_conditions":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('creature-condition custom setup and decisions require dedicated cases')
+        from creature_conditions_recipes import expand as creature_condition_expand
+        return creature_condition_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "mana_modes":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('mana-mode custom setup and decisions require dedicated cases')
+        from mana_modes_recipes import expand as mana_modes_expand
+        return mana_modes_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "conditional_keyword":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('conditional-keyword custom setup and decisions require dedicated cases')
+        from conditional_keyword_recipes import expand as conditional_keyword_expand
+        return conditional_keyword_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "conditional_stats":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('conditional-stat custom setup and decisions require dedicated cases')
+        from conditional_stats_recipes import expand as conditional_stat_expand
+        return conditional_stat_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "conditional_mana_land":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('conditional land custom setup and decisions require dedicated cases')
+        from conditional_mana_land_recipes import expand as conditional_land_expand
+        return conditional_land_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "mana_consequence":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('mana consequence custom setup and decisions require dedicated cases')
+        from mana_consequence_recipes import expand as mana_consequence_expand
+        return mana_consequence_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "damage_activation":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('damage activation custom setup and decisions require dedicated cases')
+        from damage_activation_recipes import expand as activated_damage
+        return activated_damage(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "tap_activation":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('tap/untap custom setup and decisions require dedicated cases')
+        from tap_activation_recipes import expand as tap_expand
+        return tap_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "token_creation":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('token creation custom setup and decisions require dedicated cases')
+        from token_creation_recipes import expand as token_expand
+        return token_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "self_keyword_activation":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("self keyword abilities require dedicated cases for custom decisions/setup")
+        from self_keyword_activation_recipes import expand as self_keywords
+        return self_keywords(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "target_keyword_activation":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("keyword abilities require dedicated cases for custom decisions/setup")
+        from target_keyword_activation_recipes import expand as keyword_activation
+        return keyword_activation(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "target_stats_activation":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("target stats abilities require dedicated cases for custom decisions/setup")
+        from target_stats_activation_recipes import expand as targeted_stats
+        return targeted_stats(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == "passive_keyword_creature":
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError("passive keyword components require dedicated cases for custom decisions/setup")
+        from passive_keyword_creature_recipes import expand as passive_keywords
+        return passive_keywords(card_name,csvid,declaration,spec,variants,registry,oracle_context)
     if family == "death_value_creature":
         if dialogs or support or resolve_zones or cast_dialogs:
             raise ValueError("death recipes require dedicated cases for custom decisions/setup")

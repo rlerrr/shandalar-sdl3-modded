@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Xathrid Gorgon",
+  "csvid": 12642,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "passive_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Deathtouch"
+        ],
+        "activated_abilities": [
+          "{2}{B}, {T}: Put a petrification counter on target creature. It gains defender and becomes a colorless artifact in addition to its other types. Its activated abilities can't be activated. (A creature with defender can't attack.)"
+        ]
+      },
+      "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\n{2}{B}, {T}: Put a petrification counter on target creature. It gains defender and becomes a colorless artifact in addition to its other types. Its activated abilities can't be activated. (A creature with defender can't attack.)",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "block_ground_0",
+        "block_flying_0",
+        "tapped_attacker_0",
+        "tapped_blocker_0",
+        "deathtouch_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "block_ground_1",
+        "block_flying_1",
+        "tapped_attacker_1",
+        "tapped_blocker_1",
+        "deathtouch_1"
+      ]
+    }
+  ]
+}

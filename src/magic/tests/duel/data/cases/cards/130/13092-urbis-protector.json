@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "card": "Urbis Protector",
+  "csvid": 13092,
+  "oracle_id": "564dd5e7-6c1e-4959-a594-60e08552aec9",
+  "cases": [],
+  "recipes": [
+    {
+      "family": "token_creation",
+      "version": 2,
+      "params": {
+        "keywords": [],
+        "token": {
+          "name": "Angel",
+          "count": 1,
+          "power": 4,
+          "toughness": 4,
+          "colors": [
+            "W"
+          ],
+          "subtypes": [
+            "Angel"
+          ],
+          "artifact": false,
+          "keywords": [
+            "Flying"
+          ]
+        }
+      },
+      "oracle_text": "When this creature enters, create a 4/4 white Angel creature token with flying.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "two_casts_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "wrath_0",
+        "other_creature_0",
+        "source_destroyed_0",
+        "source_bounced_0",
+        "bounce_recast_0",
+        "blink_0",
+        "blink_snapshot_0",
+        "preloaded_source_0",
+        "evasion_0",
+        "reach_blocker_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "two_casts_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "wrath_1",
+        "other_creature_1",
+        "source_destroyed_1",
+        "source_bounced_1",
+        "bounce_recast_1",
+        "blink_1",
+        "blink_snapshot_1",
+        "preloaded_source_1",
+        "evasion_1",
+        "reach_blocker_1"
+      ]
+    }
+  ]
+}

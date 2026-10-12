@@ -1,151 +1,192 @@
 {
-    "card": "Dragon Whelp",
-    "cases": [
+  "card": "Dragon Whelp",
+  "cases": [
+    {
+      "fixture": "empty_main",
+      "name": "DragonWhelp_RepeatedPumpAndCleanup",
+      "seed": 123,
+      "setup": [
         {
-            "fixture": "empty_main",
-            "name": "DragonWhelp_RepeatedPumpAndCleanup",
-            "seed": 123,
-            "setup": [
-                {
-                    "name": "Dragon Whelp",
-                    "player": 0,
-                    "ref": "source",
-                    "zone": "battlefield"
-                }
-            ],
-            "steps": [
-                {
-                    "op": "activate",
-                    "ref": "source",
-                    "value": 1
-                },
-                {
-                    "op": "resolve"
-                },
-                {
-                    "op": "activate",
-                    "ref": "source",
-                    "value": 1
-                },
-                {
-                    "op": "resolve"
-                },
-                {
-                    "op": "assert_card",
-                    "property": "power",
-                    "ref": "source",
-                    "value": 4
-                },
-                {
-                    "op": "assert_card",
-                    "property": "toughness",
-                    "ref": "source",
-                    "value": 3
-                },
-                {
-                    "op": "assert_mana",
-                    "color": 4,
-                    "player": 0,
-                    "value": 8
-                },
-                {
-                    "op": "cleanup"
-                },
-                {
-                    "op": "assert_card",
-                    "property": "power",
-                    "ref": "source",
-                    "value": 2
-                },
-                {
-                    "op": "assert_card",
-                    "property": "toughness",
-                    "ref": "source",
-                    "value": 3
-                }
-            ]
+          "name": "Dragon Whelp",
+          "player": 0,
+          "ref": "source",
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
         },
         {
-            "fixture": "empty_main",
-            "name": "DragonWhelp_FourPumpsTriggerEndStepSacrifice",
-            "seed": 123,
-            "setup": [
-                {
-                    "name": "Dragon Whelp",
-                    "player": 0,
-                    "ref": "source",
-                    "zone": "battlefield"
-                }
-            ],
-            "steps": [
-                {
-                    "op": "activate",
-                    "ref": "source",
-                    "value": 1
-                },
-                {
-                    "op": "resolve"
-                },
-                {
-                    "op": "activate",
-                    "ref": "source",
-                    "value": 1
-                },
-                {
-                    "op": "resolve"
-                },
-                {
-                    "op": "activate",
-                    "ref": "source",
-                    "value": 1
-                },
-                {
-                    "op": "resolve"
-                },
-                {
-                    "op": "activate",
-                    "ref": "source",
-                    "value": 1
-                },
-                {
-                    "op": "resolve"
-                },
-                {
-                    "op": "assert_card",
-                    "property": "power",
-                    "ref": "source",
-                    "value": 6
-                },
-                {
-                    "op": "assert_card",
-                    "property": "toughness",
-                    "ref": "source",
-                    "value": 3
-                },
-                {
-                    "op": "assert_mana",
-                    "color": 4,
-                    "player": 0,
-                    "value": 6
-                },
-                {
-                    "op": "cleanup"
-                },
-                {
-                    "op": "assert_card",
-                    "property": "in_play",
-                    "ref": "source",
-                    "value": 0
-                },
-                {
-                    "op": "assert_zone_contains",
-                    "player": 0,
-                    "value": 67,
-                    "zone": "graveyard"
-                }
-            ]
+          "op": "resolve"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "source",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "source",
+          "value": 3
+        },
+        {
+          "op": "assert_mana",
+          "color": 4,
+          "player": 0,
+          "value": 8
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "source",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "source",
+          "value": 3
         }
-    ],
-    "csvid": 67,
-    "version": 1
+      ]
+    },
+    {
+      "fixture": "empty_main",
+      "name": "DragonWhelp_FourPumpsTriggerEndStepSacrifice",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Dragon Whelp",
+          "player": 0,
+          "ref": "source",
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "property": "power",
+          "ref": "source",
+          "value": 6
+        },
+        {
+          "op": "assert_card",
+          "property": "toughness",
+          "ref": "source",
+          "value": 3
+        },
+        {
+          "op": "assert_mana",
+          "color": 4,
+          "player": 0,
+          "value": 6
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "property": "in_play",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_contains",
+          "player": 0,
+          "value": 67,
+          "zone": "graveyard"
+        }
+      ]
+    }
+  ],
+  "csvid": 67,
+  "version": 1,
+  "recipes": [
+    {
+      "family": "passive_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flying"
+        ],
+        "activated_abilities": [
+          "{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step."
+        ]
+      },
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "block_ground_0",
+        "block_flying_0",
+        "tapped_attacker_0",
+        "tapped_blocker_0",
+        "flying_evasion_0",
+        "flying_reach_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "block_ground_1",
+        "block_flying_1",
+        "tapped_attacker_1",
+        "tapped_blocker_1",
+        "flying_evasion_1",
+        "flying_reach_1"
+      ]
+    }
+  ]
 }

@@ -46,7 +46,9 @@ def variants(p):
  if p['toughness']<=4:modes.append('zero_toughness')
  if p['optional']:modes.append('decline')
  if any(p['mana'][1:]):modes.append('wrong_color')
- return [v+'_'+str(owner) for owner in (0,1) for v in modes]
+ # Player 1 is the real engine's AI. Its accepted optional trigger is a policy
+ # choice; lack of a human decline prompt there is not a rules failure.
+ return [v+'_'+str(owner) for owner in (0,1) for v in modes if v!='decline' or owner==0]
 
 def validate_witnesses(o,registry):
  for nm,values in RESPONSES.items():
@@ -127,7 +129,7 @@ def expand(name,csvid,d,p,selected,registry,oracle):
     if v=='tapped_death':
      # A real Twiddle provides the tapped state before destruction.
      add('Twiddle','tap',1-owner);pay('Twiddle',1-owner);hands[1-owner].remove('Twiddle');graves[1-owner].append('Twiddle');entities['tap']['hand']=False
-     actions += [step('choose_dialog',player=1-owner,value=0),step('choose_target',player=1-owner,ref='source'),step('cast',ref='tap',value=1),step('resolve')]
+     actions += [step('choose_target',player=1-owner,ref='source'),step('cast',ref='tap',value=1),step('choose_dialog',player=1-owner,value=0),step('resolve'),observe('source','tapped',1)]
     decline=v=='decline';actions += decisions(decline=decline)+[step('destroy',ref='source')];died(decline=decline)
     if v=='two_copies':actions += decisions('second')+[step('destroy',ref='second')];died('second')
     if v=='cleanup_once':actions.append(step('cleanup'))

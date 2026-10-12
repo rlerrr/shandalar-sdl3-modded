@@ -899,5 +899,46 @@
       "seed": 123
     }
   ],
-  "coverage_note": "Sacrifice cost, ordered draw, mana boundaries, tapped/sick sources, both controllers, populated neighboring zones, activation caption, and snapshot replay. Token creation and other card interactions remain separate."
+  "coverage_note": "Sacrifice cost, ordered draw, mana boundaries, tapped/sick sources, both controllers, populated neighboring zones, activation caption, and snapshot replay. Token creation and other card interactions remain separate.",
+  "recipes": [
+    {
+      "family": "passive_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flying"
+        ],
+        "activated_abilities": [
+          "{2}, Sacrifice this creature: Draw a card."
+        ]
+      },
+      "oracle_text": "Flying\n{2}, Sacrifice this creature: Draw a card.",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "block_ground_0",
+        "block_flying_0",
+        "tapped_attacker_0",
+        "tapped_blocker_0",
+        "flying_evasion_0",
+        "flying_reach_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "block_ground_1",
+        "block_flying_1",
+        "tapped_attacker_1",
+        "tapped_blocker_1",
+        "flying_evasion_1",
+        "flying_reach_1"
+      ]
+    }
+  ]
 }

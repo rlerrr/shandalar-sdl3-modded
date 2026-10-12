@@ -11,7 +11,13 @@
 #include <stdio.h>
 #include <string.h>
 #include "duel_handler_bindings.inc"
+#include "manalinkeh/subtypes.h"
+extern int manalinkeh_get_color(int, int);
+extern unsigned int manalinkeh_get_type(int, int);
+extern int manalinkeh_has_subtype(int, int, subtype_t);
 extern int manalinkeh_count_player_counters(int player, int type);
+extern int manalinkeh_get_unlock_code(int csvid);
+extern int unlocked[50];
 extern int manalinkeh_count_counters(int player, int card, int type);
 int duel_test_poison(int player) { return manalinkeh_count_player_counters(player, 0); /* PCOUNTER_POISON */ }
 int duel_test_energy(int player) { return manalinkeh_count_player_counters(player, 2); /* PCOUNTER_ENERGY */ }
@@ -21,6 +27,7 @@ extern void duel_engine_capture_ai_snapshot(void *), duel_engine_restore_ai_snap
 extern void duel_manalink_snapshot_capture(void *), duel_manalink_snapshot_restore(const void *);
 extern int manalinkeh_get_power(int, int), manalinkeh_get_toughness(int, int);
 extern int manalinkeh_put_into_play(int, int), manalinkeh_in_hand(int, int);
+extern void manalinkeh_count_colors_of_lands_in_play(void);
 extern card_instance_t *manalinkeh_in_play(int, int);
 extern int manalinkeh_dispatch_event_to_single_card(int, int, event_t, int, int);
 extern void manalinkeh_dispatch_event_raw(event_t);
@@ -72,6 +79,7 @@ struct DuelTestSnapshot {
   Decision decisions[128];
   int offered_count, offered_csvids[512];
   int forced_zone_choices;
+  int unlocked[50];
   unsigned char data[];
 };
 static DuelTestSnapshot *baseline;
@@ -99,6 +107,7 @@ DuelTestSnapshot *duel_test_capture(void)
   memcpy(s->decisions, decisions, sizeof(decisions));
   s->offered_count = offered_count;
   s->forced_zone_choices = forced_zone_choices;
+  memcpy(s->unlocked, unlocked, sizeof(s->unlocked));
   memcpy(s->offered_csvids, offered_csvids, sizeof(offered_csvids));
   duel_engine_capture_ai_snapshot(s->data);
   duel_manalink_snapshot_capture(s->data + core);
@@ -117,6 +126,7 @@ void duel_test_restore(const DuelTestSnapshot *s)
   memcpy(decisions, s->decisions, sizeof(decisions));
   offered_count = s->offered_count;
   forced_zone_choices = s->forced_zone_choices;
+  memcpy(unlocked, s->unlocked, sizeof(s->unlocked));
   memcpy(offered_csvids, s->offered_csvids, sizeof(offered_csvids));
 }
 void duel_test_free_snapshot(DuelTestSnapshot *s) { free(s); }
@@ -326,9 +336,30 @@ void duel_test_set_budget(uint32_t steps)
   duel_host_restore(state);
 }
 static int iid(int csvid) { int i; for (i = 0; i < g_card_count; ++i) if ((int)global_cards_data[i].id == csvid) return i; duel_host_fail("fixture card not registered"); return -1; }
+int duel_test_card_available(int csvid)
+{
+  (void)iid(csvid);
+  int level = manalinkeh_get_unlock_code(csvid);
+  if (level < 0 || level >= 50) duel_host_fail("invalid challenge availability level");
+  return level == 0 || unlocked[level] == 1;
+}
+void duel_test_set_card_available(int csvid, int available)
+{
+  (void)iid(csvid);
+  int level = manalinkeh_get_unlock_code(csvid);
+  if (level <= 0 || level >= 50 || (available != 0 && available != 1))
+    duel_host_fail("invalid fixture card availability override");
+  unlocked[level] = available;
+}
 DuelTestRef duel_test_add(int player, int zone, int csvid, int state)
 {
   DuelTestRef ref = {player, -1}; int id = iid(csvid);
+  /* Explicit fixture cards belong to the available test collection. Grant only
+     their mapped challenge unlocks, without files or tournament-rule overrides.
+     Caller-owned snapshots preserve this input environment across AI searches. */
+  int level = manalinkeh_get_unlock_code(csvid);
+  if (level < 0 || level >= 50) duel_host_fail("invalid fixture challenge level");
+  if (level > 0) unlocked[level] = 1;
   if (zone >= DUEL_ZONE_LIBRARY) {
     if (zone == DUEL_ZONE_GRAVEYARD) { ref.card = manalinkeh_raw_put_iid_on_top_of_graveyard(player, id); return ref; }
     int *z = zone == DUEL_ZONE_LIBRARY ? global_library[player] : zone == DUEL_ZONE_GRAVEYARD ? global_graveyard_slots[player] : global_exile[player];
@@ -348,6 +379,10 @@ DuelTestRef duel_test_add(int player, int zone, int csvid, int state)
    * of controller.  Toggle the default ownership to construct stolen cards. */
   if (state & DUEL_STATE_OPPONENT_OWNED) inst->state ^= STATE_OWNED_BY_OPPONENT;
   if (state & DUEL_STATE_TOKEN) inst->token_status |= STATUS_TOKEN;
+  /* Normal gameplay refreshes battlefield counts between actions. Ordered
+     fixture placement must do the same before the next permanent's entry
+     replacement effect queries the land-count cache. */
+  if (zone == DUEL_ZONE_BATTLEFIELD) manalinkeh_count_colors_of_lands_in_play();
   return ref;
 }
 void duel_test_prepare_fixture(void) {
@@ -596,6 +631,29 @@ void duel_test_advance_turn(void) {
   if (skipped) duel_host_fail("advance_turn encountered a skipped turn");
   g_current_phase=PHASE_MAIN1;
   manalinkeh_recalculate_all_cards_in_play();
+}
+int duel_test_token_characteristic(DuelTestRef r, const char *property)
+{
+  if (!strcmp(property,"token")) return !!(global_card_instances[r.player][r.card].token_status & 0x10); /* STATUS_TOKEN */
+  if (!strcmp(property,"color")) return manalinkeh_get_color(r.player,r.card) & 0x3e; /* colored bits; colorless is absence */
+  if (!strcmp(property,"artifact")) return !!(manalinkeh_get_type(r.player,r.card) & TYPE_ARTIFACT);
+  static const struct { const char *name; subtype_t code; } subtypes[] = {
+#define TOKEN_SUBTYPE(name, code) {"subtype_" name, SUBTYPE_##code}
+    TOKEN_SUBTYPE("Angel",ANGEL), TOKEN_SUBTYPE("Bear",BEAR), TOKEN_SUBTYPE("Bird",BIRD),
+    TOKEN_SUBTYPE("Centaur",CENTAUR), TOKEN_SUBTYPE("Citizen",CITIZEN), TOKEN_SUBTYPE("Dragon",DRAGON),
+    TOKEN_SUBTYPE("Drake",DRAKE), TOKEN_SUBTYPE("Eldrazi",ELDRAZI), TOKEN_SUBTYPE("Elf",ELF),
+    TOKEN_SUBTYPE("Goblin",GOBLIN), TOKEN_SUBTYPE("Horror",HORROR), TOKEN_SUBTYPE("Human",HUMAN),
+    TOKEN_SUBTYPE("Insect",INSECT), TOKEN_SUBTYPE("Knight",KNIGHT), TOKEN_SUBTYPE("Ally",ALLY),
+    TOKEN_SUBTYPE("Minotaur",MINOTAUR), TOKEN_SUBTYPE("Myr",MYR), TOKEN_SUBTYPE("Satyr",SATYR),
+    /* The core header predates Servo; Manalink's subtypes.h assigns 0x00ee. */
+    {"subtype_Servo", (subtype_t)0x00ee}, TOKEN_SUBTYPE("Sliver",SLIVER), TOKEN_SUBTYPE("Soldier",SOLDIER),
+    TOKEN_SUBTYPE("Spirit",SPIRIT), TOKEN_SUBTYPE("Thopter",THOPTER), TOKEN_SUBTYPE("Warrior",WARRIOR),
+    TOKEN_SUBTYPE("Wurm",WURM)
+#undef TOKEN_SUBTYPE
+  };
+  for (unsigned n=0;n<sizeof(subtypes)/sizeof(subtypes[0]);++n)
+    if (!strcmp(property,subtypes[n].name)) return !!manalinkeh_has_subtype(r.player,r.card,subtypes[n].code);
+  duel_host_fail("unknown token characteristic"); return 0;
 }
 DuelTestCard duel_test_inspect(DuelTestRef r)
 {

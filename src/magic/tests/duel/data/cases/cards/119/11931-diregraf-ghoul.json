@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Diregraf Ghoul",
+  "csvid": 11931,
+  "oracle_id": "6048fc70-0dcc-4b54-977d-16e240225f82",
+  "cases": [],
+  "recipes": [
+    {
+      "family": "creature_conditions",
+      "version": 2,
+      "params": {
+        "keywords": [],
+        "enters_tapped": true,
+        "attack_land": null
+      },
+      "oracle_text": "This creature enters tapped.",
+      "variants": [
+        "entry_0",
+        "cast_0",
+        "cast_no_land_0",
+        "cast_payment_0",
+        "insufficient_mana_0",
+        "cast_snapshot_0",
+        "combat_0",
+        "tapped_0",
+        "sick_0",
+        "fresh_attack_0",
+        "fresh_untapped_attack_0",
+        "untap_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "untapped_block_ground_0",
+        "untapped_block_flying_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "entry_1",
+        "cast_1",
+        "cast_no_land_1",
+        "cast_payment_1",
+        "insufficient_mana_1",
+        "cast_snapshot_1",
+        "combat_1",
+        "tapped_1",
+        "sick_1",
+        "fresh_attack_1",
+        "fresh_untapped_attack_1",
+        "untap_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "untapped_block_ground_1",
+        "untapped_block_flying_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1"
+      ]
+    }
+  ]
+}

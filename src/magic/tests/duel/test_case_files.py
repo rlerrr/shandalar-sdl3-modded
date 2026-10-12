@@ -77,6 +77,36 @@ class CaseFilesTest(unittest.TestCase):
                 with self.assertRaisesRegex(ValueError, message):
                     load_cases(self.directory, self.registry)
 
+    def test_alternate_records_require_authored_rules_scenarios(self):
+        self.registry["Infantry Veteran"]["kind"] = "alternate"
+        doc = self.card_file()
+        self.write("cards/alternate.json", doc)
+        self.assertEqual(len(load_cases(self.directory, self.registry)), 1)
+        self.write("cards/alternate.json", dict(doc, recipes=[{"family": "creature_keywords"}]))
+        with self.assertRaisesRegex(ValueError, "require a primary card"):
+            load_cases(self.directory, self.registry, {"Infantry Veteran": {}})
+
+    def test_reviewed_registry_classification_applied(self):
+        from generate_cases import registry
+        rows = {r["csvid"]: r for r in registry()}
+        self.assertEqual(rows[910]["kind"], "alternate")
+        self.assertIn("Mishra's Factory", rows[910]["kind_reason"])
+        self.assertEqual(rows[2723]["kind"], "card")
+
+    def test_registry_classification_rejects_stale_or_unreviewed_entries(self):
+        from unittest.mock import patch
+        import generate_cases
+        import import_duel_oracle
+        base = {"name": "Assembly-Worker", "kind": "alternate", "reason": "Reviewed identity"}
+        for doc in ([None], {"version": 2, "overrides": {}}, {"version": 1, "overrides": []},
+                    {"version": 1, "overrides": {"999999": base}},
+                    *({"version": 1, "overrides": {"910": dict(base, **change)}}
+                      for change in ({"name": "Wrong"}, {"kind": "card"}, {"reason": ""}))):
+            with self.subTest(doc=doc), patch.object(import_duel_oracle, "DATA", Path(self.temp.name)):
+                (Path(self.temp.name) / "registry_kinds.json").write_text(json.dumps(doc), encoding="utf8")
+                with self.assertRaises(ValueError):
+                    generate_cases.registry()
+
 
 if __name__ == "__main__":
     unittest.main()

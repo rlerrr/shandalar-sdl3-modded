@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Hakim, Loreweaver",
+  "csvid": 2500,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "passive_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flying"
+        ],
+        "activated_abilities": [
+          "{U}{U}: Return target Aura card from your graveyard to the battlefield attached to Hakim. Activate only during your upkeep and only if Hakim isn't enchanted.",
+          "{U}{U}, {T}: Destroy all Auras attached to Hakim."
+        ]
+      },
+      "oracle_text": "Flying\n{U}{U}: Return target Aura card from your graveyard to the battlefield attached to Hakim. Activate only during your upkeep and only if Hakim isn't enchanted.\n{U}{U}, {T}: Destroy all Auras attached to Hakim.",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "block_ground_0",
+        "block_flying_0",
+        "tapped_attacker_0",
+        "tapped_blocker_0",
+        "flying_evasion_0",
+        "flying_reach_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "block_ground_1",
+        "block_flying_1",
+        "tapped_attacker_1",
+        "tapped_blocker_1",
+        "flying_evasion_1",
+        "flying_reach_1"
+      ]
+    }
+  ]
+}

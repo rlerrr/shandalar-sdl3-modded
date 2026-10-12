@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Soul of Theros",
+  "csvid": 14180,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "passive_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Vigilance"
+        ],
+        "activated_abilities": [
+          "{4}{W}{W}: Creatures you control get +2/+2 and gain first strike and lifelink until end of turn.",
+          "{4}{W}{W}, Exile this card from your graveyard: Creatures you control get +2/+2 and gain first strike and lifelink until end of turn."
+        ]
+      },
+      "oracle_text": "Vigilance\n{4}{W}{W}: Creatures you control get +2/+2 and gain first strike and lifelink until end of turn.\n{4}{W}{W}, Exile this card from your graveyard: Creatures you control get +2/+2 and gain first strike and lifelink until end of turn.",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "block_ground_0",
+        "block_flying_0",
+        "tapped_attacker_0",
+        "tapped_blocker_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "block_ground_1",
+        "block_flying_1",
+        "tapped_attacker_1",
+        "tapped_blocker_1"
+      ]
+    }
+  ]
+}

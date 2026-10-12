@@ -82,7 +82,7 @@ def expand(name, csvid, declaration, spec, selected, registry):
     from recipes import card, step, observe, exact_mana
     cases = []
     keys, power, toughness, mana = set(spec["keywords"]), spec["power"], spec["toughness"], spec["mana"]
-    component=spec["family"] in ("self_pump_creature", "evasion_creature", "defensive_creature", "mana_creature", "regenerate_creature", "etb_value_creature", "blocking_creature", "tap_damage_creature", "combat_keyword_creature")
+    component=spec["family"] in ("passive_keyword_creature", "self_pump_creature", "evasion_creature", "defensive_creature", "mana_creature", "regenerate_creature", "etb_value_creature", "blocking_creature", "tap_damage_creature", "combat_keyword_creature")
     prefix={"self_pump_creature":"PumpCreatureRecipe", "evasion_creature":"EvasionCreatureRecipe", "defensive_creature":"DefensiveCreatureRecipe", "mana_creature":"ManaCreatureRecipe", "regenerate_creature":"RegenerateCreatureRecipe", "etb_value_creature":"EtbValueCreatureRecipe"}.get(spec["family"],"CreatureRecipe")
     if spec["family"] == "blocking_creature": prefix = "BlockingCreatureRecipe"
     if spec["family"] == "tap_damage_creature": prefix = "TapDamageCreatureRecipe"

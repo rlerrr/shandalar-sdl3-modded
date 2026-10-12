@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "card": "Midnight Haunting",
+  "csvid": 12021,
+  "oracle_id": "a79e21fc-89bd-4547-8bef-5510554e1431",
+  "cases": [],
+  "recipes": [
+    {
+      "family": "token_creation",
+      "version": 2,
+      "params": {
+        "keywords": [],
+        "token": {
+          "name": "Spirit",
+          "count": 2,
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "W"
+          ],
+          "subtypes": [
+            "Spirit"
+          ],
+          "artifact": false,
+          "keywords": [
+            "Flying"
+          ]
+        }
+      },
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "two_casts_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "wrath_0",
+        "other_creature_0",
+        "evasion_0",
+        "reach_blocker_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "two_casts_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "wrath_1",
+        "other_creature_1",
+        "evasion_1",
+        "reach_blocker_1"
+      ]
+    }
+  ]
+}

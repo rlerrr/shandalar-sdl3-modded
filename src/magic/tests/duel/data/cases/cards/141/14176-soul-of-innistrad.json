@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Soul of Innistrad",
+  "csvid": 14176,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "passive_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Deathtouch"
+        ],
+        "activated_abilities": [
+          "{3}{B}{B}: Return up to three target creature cards from your graveyard to your hand.",
+          "{3}{B}{B}, Exile this card from your graveyard: Return up to three target creature cards from your graveyard to your hand."
+        ]
+      },
+      "oracle_text": "Deathtouch\n{3}{B}{B}: Return up to three target creature cards from your graveyard to your hand.\n{3}{B}{B}, Exile this card from your graveyard: Return up to three target creature cards from your graveyard to your hand.",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "block_ground_0",
+        "block_flying_0",
+        "tapped_attacker_0",
+        "tapped_blocker_0",
+        "deathtouch_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "block_ground_1",
+        "block_flying_1",
+        "tapped_attacker_1",
+        "tapped_blocker_1",
+        "deathtouch_1"
+      ]
+    }
+  ]
+}

@@ -10,12 +10,7 @@
 #ifndef DUEL_TEST_ASSETS
 #define DUEL_TEST_ASSETS "/assets_modded"
 #endif
-struct Setup { const char *ref; int player, zone, csvid, state; };
-struct Fixture { const char *name; const Setup *cards; int count, turn, combat; int life[2]; int mana[2][6]; };
-struct Step { const char *op, *ref, *other, *property; int player, value, zone, index, color; };
-struct Case { const char *name, *card, *oracle_id, *oracle_text, *fixture; unsigned seed; const Setup *cards; int count; const Step *steps; int step_count; };
-struct Template { const char *name; int csvid, power, toughness; const char *oracle_id; };
-struct Smoke { const char *name; int csvid; };
+#include "duel_case_types.h"
 #include "duel_cases.inc"
 using Refs = std::map<std::string,DuelTestRef>;
 static std::string observable_state() {
@@ -148,6 +143,28 @@ class BehaviorTest:public testing::Test {
       DuelTestRef r=duel_test_permanent_at(s.player,s.index);
       ASSERT_GE(r.card,0); EXPECT_EQ(property(duel_test_inspect(r),s.property),s.value);
     }
+    else if(op=="assert_matching_permanents") {
+      int matches=0;
+      for(int index=0;index<duel_test_zone_count(s.player,DUEL_ZONE_BATTLEFIELD);++index) {
+        auto candidate=duel_test_permanent_at(s.player,index);
+        auto card=duel_test_inspect(candidate);
+        if(card.csvid!=s.index)continue;
+        ++matches;
+        const bool token_property=std::string(s.property)=="color" || std::string(s.property)=="artifact" ||
+          std::string(s.property)=="token" || std::string(s.property).rfind("subtype_",0)==0;
+        EXPECT_EQ(token_property?duel_test_token_characteristic(candidate,s.property):property(card,s.property),s.value);
+      }
+      ASSERT_GT(matches,0)<<"No matching permanent for CSVID "<<s.index;
+    }
+    else if(op=="bind_permanent_copy") {
+      DuelTestRef selected={s.player,-1};int ordinal=0;
+      for(int index=0;index<duel_test_zone_count(s.player,DUEL_ZONE_BATTLEFIELD);++index) {
+        auto candidate=duel_test_permanent_at(s.player,index);
+        if(duel_test_inspect(candidate).csvid==s.value && ordinal++==s.index)selected=candidate;
+      }
+      ASSERT_GE(selected.card,0)<<"Missing permanent copy "<<s.index<<" of CSVID "<<s.value;
+      refs[s.ref]=selected;
+    }
     else if(op=="bind_permanent" || op=="bind_hand") {
       int zone=op=="bind_hand"?DUEL_ZONE_HAND:DUEL_ZONE_BATTLEFIELD;
       auto at=op=="bind_hand"?duel_test_hand_at:duel_test_permanent_at;
@@ -174,6 +191,8 @@ class BehaviorTest:public testing::Test {
     }
     else if(op=="record_state")recorded_state=observable_state();
     else if(op=="assert_recorded_state") { ASSERT_FALSE(recorded_state.empty()); EXPECT_EQ(observable_state(),recorded_state); }
+    else if(op=="set_card_available")duel_test_set_card_available(s.index,s.value);
+    else if(op=="assert_card_available")EXPECT_EQ(duel_test_card_available(s.index),s.value);
     else if(op=="assert_mana")EXPECT_EQ(duel_test_mana(s.player,s.color),s.value);
     else if(op=="assert_mana_at_most")EXPECT_LE(duel_test_mana(s.player,s.color),s.value);
     else if(op=="assert_mana_total") {

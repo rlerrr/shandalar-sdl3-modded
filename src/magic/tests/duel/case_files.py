@@ -39,6 +39,8 @@ def load_cases(directory, registry, oracle=None, aliases=None):
         if declarations:
             if card is None or oracle is None:
                 raise ValueError(f"{source}: recipes require a card home and pinned Oracle context")
+            if registry[card].get("kind", "card") in ("alternate", "internal", "token", "effect"):
+                raise ValueError(f"{source}: Oracle card recipes require a primary card; use authored scenarios for alternate forms, tokens and internal effects")
             from recipes import expand
             record = oracle.get((aliases or {}).get(card, card))
             entries = list(entries)

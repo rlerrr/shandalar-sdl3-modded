@@ -13,6 +13,8 @@ typedef struct {
   int csvid, power, toughness, tapped, sick, attacking, in_play, in_hand, damage, blocking_count, blocked, plus1_counters, minus1_counters;
 } DuelTestCard;
 typedef struct DuelTestSnapshot DuelTestSnapshot;
+/* Read-only token observations; ordinary card inspection stays unchanged. */
+int duel_test_token_characteristic(DuelTestRef ref, const char *property);
 int duel_test_initialize(const char *assets);
 int duel_test_handler_matches_override(int csvid);
 int duel_test_energy(int player);
@@ -24,6 +26,9 @@ void duel_test_reset(uint32_t seed);
 /* Adjust only the remaining deterministic work budget, preserving RNG/time. */
 void duel_test_set_budget(uint32_t steps);
 DuelTestRef duel_test_add(int player, int zone, int csvid, int state);
+/* Challenge availability is test environment state, never a rules override. */
+int duel_test_card_available(int csvid);
+void duel_test_set_card_available(int csvid, int available);
 void duel_test_prepare_fixture(void);
 /* Refresh the cached characteristics normal gameplay updates between actions. */
 void duel_test_refresh(void);

@@ -26,6 +26,18 @@ def registry():
                          "kind": "internal" if name.startswith("#") else "custom" if name.startswith("**") else "card"})
     if not rows:
         raise ValueError("No engine registry records found")
+    taxonomy = json.loads((DATA / "registry_kinds.json").read_text(encoding="utf-8"))
+    if not isinstance(taxonomy, dict) or taxonomy.get("version") != 1 or not isinstance(taxonomy.get("overrides"), dict):
+        raise ValueError("Unsupported reviewed registry classification schema")
+    by_id = {r["csvid"]: r for r in rows}
+    for key, override in taxonomy["overrides"].items():
+        if (not key.isdigit() or int(key) not in by_id or not isinstance(override, dict)
+                or set(override) != {"name", "kind", "reason"}
+                or override["name"] != by_id[int(key)]["name"]
+                or override["kind"] not in ("alternate", "token", "effect")
+                or not isinstance(override["reason"], str) or not override["reason"].strip()):
+            raise ValueError(f"Invalid reviewed registry classification: {key}")
+        by_id[int(key)].update(kind=override["kind"], kind_reason=override["reason"])
     return rows
 
 def read_bulk(path):

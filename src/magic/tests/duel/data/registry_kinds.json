@@ -1,0 +1,10 @@
+{
+  "version": 1,
+  "overrides": {
+    "910": {
+      "name": "Assembly-Worker",
+      "kind": "alternate",
+      "reason": "Mishra's Factory animation form: the registry record is an artifact creature land with no casting cost, and card_assembly_worker delegates to card_mishras_factory. It is not the printed {3} Assembly-Worker creature with the same name. Use authored Factory scenarios and the Factory Oracle reference for this form."
+    }
+  }
+}

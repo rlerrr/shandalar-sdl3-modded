@@ -1,0 +1,115 @@
+{
+  "version": 1,
+  "card": "Volcano Imp",
+  "csvid": 5327,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "passive_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flying"
+        ],
+        "activated_abilities": [
+          "{1}{R}: This creature gains first strike until end of turn."
+        ]
+      },
+      "oracle_text": "Flying\n{1}{R}: This creature gains first strike until end of turn.",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "block_ground_0",
+        "block_flying_0",
+        "tapped_attacker_0",
+        "tapped_blocker_0",
+        "flying_evasion_0",
+        "flying_reach_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "block_ground_1",
+        "block_flying_1",
+        "tapped_attacker_1",
+        "tapped_blocker_1",
+        "flying_evasion_1",
+        "flying_reach_1"
+      ]
+    },
+    {
+      "family": "self_keyword_activation",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flying"
+        ],
+        "grants": [
+          "First strike"
+        ],
+        "mana_cost": "{1}{R}"
+      },
+      "oracle_text": "Flying\n{1}{R}: This creature gains first strike until end of turn.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "tapped_0",
+        "sick_0",
+        "fresh_activation_0",
+        "opposing_turn_0",
+        "cast_0",
+        "cast_payment_0",
+        "inactive_probe_0",
+        "expired_probe_0",
+        "shrouded_source_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "stacked_0",
+        "repeat_0",
+        "unaffected_witness_0",
+        "tax_0",
+        "tax_insufficient_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "insufficient_cast_mana_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "two_sources_0",
+        "effect_1",
+        "payment_1",
+        "tapped_1",
+        "sick_1",
+        "fresh_activation_1",
+        "opposing_turn_1",
+        "cast_1",
+        "cast_payment_1",
+        "inactive_probe_1",
+        "expired_probe_1",
+        "shrouded_source_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "stacked_1",
+        "repeat_1",
+        "unaffected_witness_1",
+        "tax_1",
+        "tax_insufficient_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "insufficient_cast_mana_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "two_sources_1"
+      ]
+    }
+  ]
+}

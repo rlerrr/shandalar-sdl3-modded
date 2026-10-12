@@ -366,9 +366,11 @@ sources begin tapped.
 
 Dismantle uses authored scenarios because its handler requests the cast target
 twice. Both choices name the same legal artifact; the counter-transfer branch
-still needs separate cases. Might of Alara remains unenrolled because its legacy
-challenge-unlock gate blocks the current player-zero fixture. Testing its Domain
-effect needs explicit unlocked fixture state, rather than a false rules baseline.
+still needs separate cases. Might of Alara was deferred in this batch because its
+legacy challenge-unlock gate blocked the player-zero fixture. The later passive
+keyword batch supplies explicit in-memory availability for loaded fixture cards;
+its Domain effect still needs a reviewed declaration rather than a false rules
+baseline.
 
 The permanent-movement batch adds 509 behavior cases across 52 cards (49 new
 card homes). Both runtimes pass 320. The 189 precisely reviewed failures include
@@ -2063,3 +2065,711 @@ recovering cards; Auramancer and Mnemonic Wall force an Oracle-optional choice.
 Strict failure signatures preserve all 1,048 prior baselines. Headless input
 observes whether a zone choice is mandatory and tests count duplicates and
 absent cards separately in each zone. Production rules remain unchanged.
+
+### Fixed creature death receipts
+
+`death_value_creature` takes explicit `draw`, `gain_life`, `optional` and
+`keywords`. It admits a single fixed death clause plus reviewed unconditional
+keywords on a normal creature with bounded numeric stats. Extra entry/upkeep
+triggers, variable receipts, replacement effects and additional abilities fail
+closed. The whole Oracle text is pinned; keywords are reported as untested
+components rather than implied whole-card coverage.
+
+Both controllers cast the source, then exercise destruction, Murder, lethal
+damage, zero toughness and combat death where applicable. Casting, countering,
+exile, bounce, blink and another creature dying must not produce the death
+receipt. Cases cover exact/insufficient/wrong mana, injured controllers, two
+copies, cleanup, death while tapped by a real spell, surviving damage, stocked
+or bare zones, short ordered libraries, and snapshot replay after AI searches.
+Exact per-zone multiplicities check both receipt and absence. Human optional
+decline is separate from the AI's normal accepted-draw policy; the AI is not
+expected to refuse a beneficial optional trigger without a decision hook.
+Sacrifice costs, control changes, trigger ordering, replacement effects and
+empty-library draw loss remain explicit gaps.
+
+Verified death-receipt enrollment: 15 new card records plus Onulet receive 783
+cases. All pass natively and in Wasm with identical observable states. No
+failure baseline or production rules change was needed. The AI's decision to
+accept a beneficial optional draw is retained as policy, while human decline
+uses the real pending trigger path.
+
+### Passive keywords beside activated abilities
+
+`passive_keyword_creature` supplies explicit `keywords` and verbatim
+`activated_abilities`. The whole Oracle text is pinned. Every nonactivated
+clause must be an unconditional keyword already reviewed by `creature_keywords`;
+conditional keywords, other triggers, static effects, variable characteristics,
+alternative costs and modal continuation lines require another recipe. At
+least one passive keyword and one ordinary activated clause are required.
+
+The existing keyword combat scenarios run for both controllers, with stocked
+hands, libraries, graveyards and exile. Exact per-zone counts include absent
+cards; libraries retain their order. Snapshot replay checks the same zones
+before recording and after an AI round trip. All activated clauses are reported
+as untested and are not intentionally activated by these scenarios. This is
+passive-component coverage, not a certification of those separate abilities.
+Flash timing, gaining or losing keywords, control changes and additional combat
+interactions remain explicit gaps. Enrollment avoids duplicating cards whose
+existing creature recipes already exercise this passive layer.
+
+Fixture cards are considered available in the test collection. Adding a card
+grants only its mapped challenge unlock in memory before invoking its handler;
+it does not create unlock files or alter production challenge rules. The test
+snapshot preserves these availability flags. Dedicated cases mutate and restore
+Kiki-Jiki's flag and verify that a restored fixture can cast the real card.
+
+The first enrollment adds 4,902 behavior cases across 217 records (212 new card
+homes). Native and Wasm both pass 4,874 cases; 28 retain correct fresh-attack
+expectations for 14 haste creatures affected by the shared no-attack sickness
+flag. Their baselines require exact assertion counts and traces. These cases
+exercise the passive keyword component, not the recorded activated abilities.
+
+Two additional availability scenarios cover fixture casting and caller-owned
+snapshot restoration, including AI searches. The availability correction also
+makes six existing Leatherback Baloth cases pass on both platforms; their old
+challenge-lock fixture baselines are retired. Production challenge and card rules
+are unchanged. The suite now has 60,936 behavior cases across 2,739 cards.
+
+### Targeted temporary stat abilities
+
+`target_stats_activation` requires explicit source `keywords`, signed `power`
+and `toughness` changes, `targets`, `mana_cost`, `tap`, and `sacrifice` costs.
+The whole Oracle text must contain exactly one reviewed ability plus supported
+unconditional keywords. Other abilities, triggers, variable amounts and complex
+restrictions require separate cases. Supported target scopes cover creatures,
+flying or green creatures, Dwarves, Soldiers, attackers, blockers, either combat
+role, and attacking Humans. Self-sacrifice refers to the source creature only.
+
+Both controllers use stocked zones and exact per-zone multiplicities, including
+absent cards, with ordered libraries. Cases check activation and casting costs,
+wrong mana, tapping and sickness, Suppression Field, legal friendly/opposing
+targets, shroud, lost targets and sources, stacking, two selected recipients,
+repeated activations after untapping, cleanup, negative power and zero-toughness
+death. Costs take effect before resolution while the recipient retains its base
+stats. Combat restrictions use normal declarations and `advance_combat`; combat
+damage and cleanup verify the temporary effect's gameplay consequence and expiry.
+Ready, pending and resolved snapshots preserve the effect and zone assertions
+after AI round trips. Self-targeting, blink identity, control changes, extra
+keywords on recipients and multiple restricted combat targets remain explicit
+gaps. Source keyword mechanics have their separate passive-component cases.
+
+The initial batch adds 1,586 cases across 26 cards (19 new homes). Every case
+passes natively and in Wasm with identical observable states; the 1,224 existing
+failure baselines remain unchanged. The suite now has 62,522 behavior cases
+across 2,758 cards.
+
+Reviewed registry identity classifications live in `data/registry_kinds.json`.
+CSVID 910, named Assembly-Worker, is Mishra's Factory's animated artifact creature
+land form. Its casting and mana abilities differ from the printed `{3}` creature
+with the same name. The record is classified as an alternate; ordinary Oracle
+recipes and normal-card smoke enrollment exclude it. Authored Factory scenarios
+can still reference the form. Classification entries require an exact existing
+name, a reviewed nonprimary kind and a reason; stale IDs or names fail closed.
+The discarded printed-card assumptions are not rules failure baselines.
+
+`target_keyword_activation` covers a single fixed temporary keyword ability on
+a normal creature with optional unconditional source keywords. Its explicit
+parameters are `keywords` (source), `grant`, `targets`, `mana_cost`, and `tap`.
+The complete pinned Oracle clause must match the reviewed cost, scope, effect
+and reminder text; additional effects or abilities require separate cases.
+Costs use structured mana symbols rather than inferred prose. Reviewed scopes
+include any creature, your creature, specified colors, Beasts, Humans, and power
+5 or greater. Each selected variant runs independently for both controllers.
+
+The probes use normal combat, destruction and concrete target validation:
+flying evasion, first/double strike survival, excess trample damage, deathtouch
+deaths, lifelink life gain, vigilance tapping, fresh-creature haste attacks,
+indestructible destruction and shroud against both players' targeting sources.
+Haste expectations check actual attacks and tap activations; they do not require
+raw summoning-sickness flags to be cleared.
+Unselected recipients retain their original behavior. Expiry probes repeat the
+behavior after cleanup, except haste expiry across turns, which remains a gap.
+Casting, costs, wrong mana, sickness, tapping, Suppression Field, lost sources
+and targets, stacked activations and exact zone receipts are also checked.
+Ready, pending and resolved snapshots replay after real AI backup/restore.
+
+Repeat probes remove alternative recipients before checking availability and
+queuing another selection. Pixie Queen's player-1 repeat-selection variant is
+deferred: its AI flying filter rejects the already flying legal choice while
+aggregate availability remains true. Do not baseline that harness diagnostic
+as a rules assertion. Its player-0 repetition and player-1 shroud permission
+regression remain covered. Self-targeting, multiple recipients, control changes,
+blink identity, recipient keyword interactions, indestructibility against lethal damage and zero toughness
+and source passive-keyword mechanics remain explicit coverage gaps.
+
+The Wasm test target reserves 384 MiB initially: its generated case tables have
+grown beyond the previous 256 MiB linker minimum. This is separate from the
+game's memory settings; runtime memory growth remains enabled.
+
+The first keyword-activation batch adds 1,455 cases across 24 cards, including
+17 new homes. Native and Wasm each have 1,222 passes and 233 precisely baselined
+assertion cases, with identical recorded states. The assertions expose four
+issues: granted haste's attack gate, the Mage controller restriction, Bloodthorn
+Taunter's extra sickness restriction and Pixie Queen's AI shroud mask. The 1,224
+prior baselines remain unchanged; no production rules were changed. The suite
+now has 63,977 behavior cases across 2,775 cards. Validation includes 651 Python
+guards, 52 CTest checks per platform, 158 existing control cases, registration
+and shuffled-order checks, and independent generated-data hashes.
+
+`self_keyword_activation` covers one ordinary mana ability that grants its
+creature a fixed keyword until end of turn. Parameters are `keywords` (the
+source's unconditional keywords), `grants` (an explicit list), and `mana_cost`.
+The complete pinned Oracle clause, reminder and structured cost must match.
+Reviewed grants are flying, first strike, deathtouch, lifelink, vigilance,
+reach, shroud, hexproof, indestructible and menace, plus the explicit vigilance
+and lifelink combination. Sources may have flying or defender; other source
+keyword combinations require separate combat expectations. Additional costs,
+restrictions, abilities and effects fail closed.
+
+The ability uses the real activation and stack paths without a target choice.
+Both controllers receive independent cases for exact payment, insufficient and
+wrong-colored mana, Suppression Field, tapped and summoning-sick sources,
+freshly cast sources, opposing turns, repeated and stacked activations, source
+loss before resolution, an unaffected creature and cleanup expiry. A legal
+Robe of Mirrors setup checks that shroud does not prevent a nontargeted ability;
+if its creature dies, the Aura's graveyard receipt is checked too.
+
+Gameplay probes check evasion and reach, first strike through return damage,
+deathtouch through both deaths, lifelink and vigilance through life and tapping,
+and shroud versus hexproof through concrete targeting by both players.
+Indestructibility cases distinguish destruction, lethal damage, zero toughness,
+exile and bounce. Menace uses completed blocker declarations, including a
+two-blocker variant; that variant deliberately stops before damage assignment.
+Stocked and empty zones, exact multiplicities, library order and ready, pending
+and resolved snapshots after AI round trips are covered. Control changes,
+blink identity, extra keyword interactions, source passive mechanics and
+multiple simultaneous damage assignments remain explicit gaps.
+
+The first self-keyword batch adds 1,948 cases across 37 cards (28 new homes).
+All cases pass natively and in Wasm with identical observable states. The 1,457
+existing failure baselines remain unchanged; no production rules were changed.
+Validation covers 668 Python guards, 78 CTest checks per platform, 166 existing
+control cases, discovery and shuffled-order checks, and independent generation
+hashes. The suite now has 65,925 behavior cases across 2,803 cards.
+
+`token_creation` covers a fixed group of identical creature tokens made by an
+ordinary instant/sorcery or a creature's entry trigger. Explicit parameters are
+the source's `keywords` and a `token` definition containing `name`, `count`,
+`power`, `toughness`, `colors`, `subtypes`, `artifact` and `keywords`. The entire
+pinned creation clause must match. Token characteristics come from that clause;
+the same token name in the bulk corpus may represent a different variant.
+The registry supplies its CSVID identity. Counts and characteristics are bounded;
+additional clauses, variable counts and mixed token groups fail closed.
+
+Both controllers receive cases for casting, exact payment, insufficient and
+wrong-colored mana, countering, repeated casts, unrelated creature entry,
+cleanup, stocked and empty zones and ready, pending-spell and resolved snapshots
+after AI round trips. Creature makers also cover destruction, bounce, re-entry,
+blink and blink snapshots. Battlefield fixture loading uses the real
+`put_into_play` path: its entry trigger creates tokens without a spell or mana
+payment. Tokens persist when their maker leaves; they cease to exist after
+their own destruction, bounce or exile. Wrath checks distinguish nontoken
+graveyard receipts from vanished tokens.
+
+Every copy receives stat, color, artifact-status, subtype and token-status
+checks. Fresh attacks test haste through actual declarations, without asserting
+raw sickness flags. Ready attacks use normal turn advancement. Combat probes
+cover ground and flying blockers, flying evasion and reach, trample excess,
+deathtouch deaths and vigilance tapping. Only one token participates in each
+damage scenario. Exact zone counts and multiplicities include token absence in
+hands, graveyards and exile, plus ordered libraries and both players' life and
+mana. Test-only operations bind a particular duplicate permanent or inspect all
+permanents matching a CSVID; missing matches fail rather than passing vacuously.
+
+Source passive abilities, a separate priority window for the entry trigger,
+control changes, copying, token doublers, multiple simultaneous damage
+assignments and additional card types remain explicit gaps. Conditional counts,
+Stangg's linked token, mixed groups, delayed token removal and Spectral
+Reserves' additional life gain remain outside this recipe.
+
+The first token-creation batch adds 1,512 cases across 33 newly covered cards.
+All pass natively and in Wasm with identical recorded states. The 1,457 existing
+failure baselines remain unchanged. Validation includes 689 Python guards,
+70 CTest checks per platform, 174 existing controls, discovery, shuffled order
+and independent generation hashes. The suite now has 67,437 behavior cases
+across 2,836 cards. Ten Wasm processes required serial retries after memory
+pressure: seven explicit instantiation OOMs and three no-output Node fail-fast
+exits. These diagnostics are archived separately, never treated as rules
+failures. Keep full data generation separate from Node test execution.
+
+### Fixed tap and untap abilities
+
+`tap_activation` accepts a single complete `Tap target …` or `Untap target …`
+ability on an ordinary artifact, enchantment, or creature with reviewed static
+Flying/Defender keywords. Other source keywords fail closed until reviewed.
+Version 2 declarations pin the whole Oracle text and explicitly give
+`keywords`, `effect` (`tap` or `untap`), `targets`, `mana_cost`, and a boolean
+`tap` cost. For example, Seeker of Skybreak uses `effect: "untap"`,
+`targets: "creature"`, `mana_cost: ""`, `tap: true`, and `keywords: []`.
+Extra clauses and separate mana modes fail closed.
+
+Reviewed targets include creatures, flying/nonflying creatures, green and
+non-Human creatures, power/toughness thresholds, Walls, artifacts, artifact
+creatures, enemy artifacts, lands, Forests, Gates, any permanent, and the
+artifact/creature/land union. Target witnesses and response spells are pinned
+independently of engine handlers. Both controllers receive legal friendly or
+enemy targets, redundant tap/untap operations, unselected alternatives, exact
+payments, tax and insufficient-payment checks, source readiness and casting,
+repeat activations, removal or shroud in response, cleanup persistence, stocked
+and empty zones, and ready/pending/resolved snapshots with intervening AI work.
+Selected scopes also exercise self-targeting and actual mana production after
+untapping a Forest or Sol Ring.
+
+Combat uses normal declarations and damage. Tapping before declarations prevents
+an attack or block; untapping permits it. Tapping an already-declared attacker
+or blocker does not remove it from combat or suppress its damage. Walls receive
+blocking probes rather than illegal attacks. Every final board checks exact zone
+counts and multiplicities, ordered libraries, both players' mana and life, and
+the selected and unselected permanents.
+
+Negative availability cases protect an eligible creature source with a legally
+cast Robe of Mirrors. A broad artifact source can still target itself, so scopes
+without a reviewed way to remove that alternative omit those negative probes.
+Additional effects, alternate mana modes, noncreature-target shroud, changing
+power/toughness restrictions while an ability is pending, control changes,
+restricted-scope self-targeting, and independent source keyword behavior remain
+explicit gaps. Maze of Ith and the other tap/untap cards with additional effects
+require separate recipes or authored cases.
+
+Gate fixtures run the real entry path, including the Guildgate's tapped entry.
+The already-ready probe untaps both Gates with legal Twiddle spells first.
+The repeated Gate probe retaps its target with Twiddle before the second
+activation, so it tests reuse without forcing an AI-ineligible choice.
+Greenside Watcher's redundant-untap probe remains active for player 0; the
+player 1 version is explicitly deferred because its AI policy filters ready
+Gates. This is a decision-policy gap, not a known rules failure.
+
+The first tap/untap batch adds 3,047 cases across 45 cards, including 37 new
+card files. Native and Wasm observations, outcome kinds and assertion counts
+match for every case: 3,035 pass and 12 expose shroud defects in Cephalid
+Retainer (8 cases) and Flood (4). These failures retain correct assertions and
+exact signatures; production rules are unchanged. All 1,457 prior baselines
+and 84,650 prior manifest entries are preserved. The suite now contains 70,484
+behavior cases across 2,873 cards.
+
+Validation includes 714 Python guards, 94 CTest checks per platform, 182 prior
+controls, 12 discovery filters per platform, two shuffled four-case orders per
+platform, and independent generation hashes. The fixture audit proves 3,044
+scenarios unchanged, three legally corrected Gate setups, and one documented
+deferred AI-only probe. Both build caches are restored to typed OFF/ON/OFF
+settings. The detailed report is
+`out/duel-tests/recipe-tap-activation/validation.json`.
+
+### Fixed targeted damage abilities
+
+`damage_activation` accepts one complete fixed-damage ability on an ordinary
+artifact, enchantment, or creature with reviewed Flying, Defender, or Haste
+keywords. Version 2 pins the whole Oracle text and explicitly supplies
+`keywords`, `damage`, `targets`, `mana_cost`, `tap`, `sacrifice`, `pay_life`,
+`damage_you`, `damage_self`, `controller_life_loss`, and `tap_target`.
+Boolean costs and effects must be booleans; damage and life quantities must be
+integers. Ordinary mana, tapping, paying life, and sacrificing the source are
+supported costs. At most one reviewed collateral effect is allowed.
+
+For example, Prodigal Sorcerer uses `damage: 1`, `targets: "any"`,
+`mana_cost: ""`, `tap: true`, `sacrifice: false`, `keywords: []`, and zero/false
+for every remaining effect or cost. Brothers of Fire instead uses
+`mana_cost: "{1}{R}{R}"`, `tap: false`, and `damage_you: 1`. Mogg Fanatic uses
+`sacrifice: true` and `tap: false`. Expectations use these explicit values and
+the independent Oracle pin, never the handler's implementation.
+
+Reviewed target scopes are any target, creature, flying creature, attacking or
+blocking creature, attacking flying creature, player, and opponent. Player and
+opponent wording may mention planeswalkers, but planeswalker targeting remains
+an explicit coverage gap. Variable damage or costs, discard, sacrificing other
+permanents, sweep damage, random choices, modal abilities, extra clauses, and
+unreviewed source keywords fail closed.
+
+Cases cover both controllers, selected and unselected alternatives, friendly
+targets and self-targeting where legal, lethal and indestructible targets,
+source readiness, actual casting, exact payment, wrong colors, insufficient
+mana or life, Suppression Field, repeated or stacked activations, legal untap
+and reuse, and source or target removal. Costs are checked before resolution.
+Safe Passage tests damage prevention; Gilded Light tests player shroud and the
+flash aura Alexi's Cloak tests creature shroud in response. Preventing damage
+does not prevent a separately specified life loss
+or tapping effect. Losing every legal target prevents collateral effects too.
+Haste is checked through actual activation permission rather than assuming the
+engine clears its raw summoning-sickness flag.
+
+Combat-restricted targets use normal attacker/blocker declarations and phase
+advancement. Damage to an attacker is combined with real combat damage; killing
+a declared blocker does not make its attacker unblocked. Cleanup clears marked
+damage without untapping. Both players have stocked hands, graveyards, exile,
+and ordered libraries; deliberately empty variants remain separate. Every
+final board checks mana, life, permanent state, exact zone counts and card
+multiplicities. Ready, pending, and resolved snapshots are replayed around AI
+backup work and compared for equivalent state.
+
+Regeneration, color protection, damage redirection, planeswalkers, pending
+target-characteristic changes, independent static keyword behavior, alternate
+modes, and additional costs or effects require separate cases. High-damage
+survivor Krosan Cloudscraper is used only in scenarios that do not advance
+through its upkeep; its upkeep and morph rules are not asserted here.
+
+Rakdos Ickspitter's positive targeting drafts are kept in
+`data/pending_cases/cards/082/08269-rakdos-ickspitter-damage.json`: its missing
+targeting flag leaves scripted target decisions unconsumed. These 60 drafts
+are not active tests or new rule baselines. Four negative-availability probes
+remain active, alongside its previously authored regression. Restore the
+pending probes when the targeting path can consume their legal choices.
+
+The first fixed-damage batch adds 3,512 active cases across 58 cards, including
+27 new card files. Every native/Wasm observation matches: 3,452 pass and 60
+expose reviewed defects. Elite Archers' literal-prompt flag is passed in a mana
+argument, adding two white mana to its printed tap-only cost (50 cases).
+Shivan Hellkite (4 cases) and Razortip Whip (2) resolve damage against targets
+that gained shroud. Rakdos Ickspitter (4) permits activation without a legal
+creature target. Exact assertion signatures are baselined; production fixes
+remain separate. All 1,469 prior baselines and 87,697 prior manifest entries
+are preserved. The suite now contains 73,996 behavior cases across 2,900 cards.
+
+The fixture review replaces 100 non-flash shroud responses with legal Alexi's
+Cloak responses and its Oracle mana cost; 3,412 other scenarios are unchanged.
+The review also records an audit follow-up for the same shortcut in older
+recipes. Pending targeting drafts remain outside the active catalog.
+
+Validation includes 737 Python guards, 120 CTest checks per platform, 198 prior
+controls, 12 discovery filters per platform, two shuffled four-case orders per
+platform, and independent generation hashes. The controls retain 185 matching
+recorded states, two matching pre-existing crashes, and 11 pre-existing
+native-only faults whose Wasm counterparts pass. Both build caches are restored
+to typed OFF/ON/OFF settings. The detailed report is
+`out/duel-tests/recipe-damage-activation/validation.json`.
+
+### Mana production with life consequences
+
+`mana_consequence` uses a whole normal-card Oracle pin and explicit version 2
+parameters: `production`, `outputs`, `colored_damage`, `fixed_damage`,
+`life_payment`, `opponent_life`, and `enters_tapped`. It admits ordinary
+noncreature lands and artifacts with exactly one bounded life consequence.
+The reviewed production forms are `colorless_choice`, `colorless_any`, `fixed`,
+and `any_color`. Every ordinary output is listed explicitly and ordered as in
+the printed ability. Extra clauses, keywords, variable costs, and unsupported
+production forms fail closed.
+
+For example, Adarkar Wastes uses `outputs: ["{C}", "{W}", "{U}"]`,
+`production: "colorless_choice"`, and `colored_damage: 1`; colorless production
+does not cause damage. Ancient Tomb uses one `{C}{C}` output and
+`fixed_damage: 2`. Mana Confluence uses all five ordinary colors and
+`life_payment: 1`. Grove of the Burnwillows uses `opponent_life: 1` for colored
+production. Other consequence quantities are explicitly zero.
+
+Both controllers exercise every output, immediate mana production with an
+empty payment pool, prevention, low but nonlethal life totals, taxes, repeat
+activation, legal untap and reuse, independent sources, and exact mana spending
+on real colored or generic-cost spells. Safe Passage prevents damage; it
+does not prevent paying life or an opponent gaining life. Incidental tapping,
+including retapping after colored production, must not repeat a consequence
+that belongs to the mana ability's effect. Source removal leaves produced mana
+in the pool. Artifacts also receive casting, exact casting payment, insufficient
+mana, and fresh-activation probes; their tap abilities do not acquire creature
+summoning-sickness restrictions.
+
+Tapped-entry lands use the real entry path and legal Twiddle spells to become
+ready. Combat probes use normal declarations and phase advancement. Ready and
+post-production snapshots replay around AI backup work; mana abilities resolve
+immediately rather than creating a pending stack object. Both players' hands,
+graveyards, exile, and ordered libraries receive exact contents checks, with
+separate empty-zone variants.
+
+Land play permissions, automatic payment-source selection, lethal life totals,
+multiplayer, damage redirection, counterspell responses to artifact casting,
+and cards with additional costs or clauses require separate cases. City of
+Brass' separate triggered damage clause is outside this recipe.
+
+The first mana-consequence batch adds 2,582 cases across 25 newly covered cards.
+All pass natively and in Wasm with identical recorded states. The same batch
+replaces 178 pending non-flash shroud responses across the targeted-stat,
+targeted-keyword, and tap/untap families with legal Alexi's Cloak responses.
+The audit covers 89 card records: 174 corrected cases pass and four retain the
+existing Flood/Cephalid Retainer failures, with matching states, outcome kinds,
+and assertion counts. The other 5,910 scenarios in those families are unchanged.
+
+The generic-payment fixture review corrects 114 cases that expected a negative
+colorless balance after spending colored mana on a generic cost. A complete
+six-mana pool pays Phyrexian Hulk's `{6}` cost and leaves every pool empty;
+2,468 other new scenarios are unchanged. These draft expectation failures
+were not added to the failure manifest. All 1,529 existing baselines and
+91,209 prior catalog entries are preserved. The catalog now has 93,791 entries,
+including 76,578 behavior cases across 2,925 cards. Production rules and the
+headless engine interface are unchanged.
+
+The mana-consequence audit includes 764 Python guards, 60 CTest checks per
+platform, 262 prior controls, 12 discovery filters per platform, two shuffled
+four-case orders per platform, and independent generation hashes. Controls
+retain 249 matching recorded states, two matching pre-existing crashes, and
+11 pre-existing native-only faults whose Wasm counterparts pass. Both build
+caches are restored to typed OFF/ON/OFF settings. The detailed report is
+`out/duel-tests/recipe-mana-consequence/validation.json`.
+
+### Conditional-entry mana lands
+
+`conditional_mana_land` pins a whole normal-card Oracle record and explicitly
+supplies `outputs`, `condition`, `limit`, and `types`. Its entry predicates are
+`at_most_other_lands` with `limit: 2`, `at_least_basics` with `limit: 2`, and
+`land_types` with `limit: 0` and two named qualifying basic land types. The two
+ordinary colored outputs are listed in their printed order. The complete
+Oracle text must contain exactly the reviewed entry rule and mana ability;
+additional clauses, faces, keywords, and unreviewed predicates fail closed.
+
+Fast-land fixtures cover zero through four other lands, basic and nonbasic
+lands, nonland permanents, opponent-controlled lands, and sequential entry at
+the third/fourth-land boundary. Battle-land fixtures distinguish basic
+supertypes from basic land subtypes, count two copies of the same basic name,
+and reject mixed basic/nonbasic pairs. Check-land fixtures accept either named
+type independently and a nonbasic dual with qualifying types, while rejecting
+wrong and untyped lands. Matching cards in hands, graveyards, exile, and
+libraries do not satisfy a battlefield condition.
+
+Fixture order controls which lands exist when the source enters through the
+real engine path. Ordinary cases do not override the source's tapped state.
+Late qualifying lands must not untap an already-entered source; removing
+qualifiers does not retap a source that entered ready. Reducing the land count
+does not untap a fast land that entered tapped. Production cases first check
+entry state, then use a legal Twiddle when untapping is necessary.
+
+Both controllers exercise both outputs on every entry board. Additional cases
+cover empty payment pools, taxes, noncreature sickness flags, opposing turns,
+combat, repeat activation, independent sources, incidental tapping, source
+removal, and actual colored/generic spell payment. Entry, ready, and
+post-production snapshots replay around AI backup work. Final assertions cover
+exact battlefield and zone multiplicities, ordered libraries, mana, life, and
+permanent state. Separate variants deliberately leave the nonbattlefield zones
+empty.
+
+Land play permissions, re-entry and control changes, type-changing effects,
+interacting entry replacement effects, automatic payment-source selection,
+and multiplayer require separate cases. Optional life payment, revealing a
+card as a land enters, and filtering mana are outside this recipe.
+
+Ordered fixture placement refreshes the engine's cached land counts between
+permanents. Fast lands query that cache during entry, so refreshing only after
+the complete board was loaded produced 28 misleading failures in the initial
+434-case pilot. The narrow headless-host correction resolved those failures
+without changing the card handler or overriding tapping. The previous mana
+batch is replayed to check compatibility with that host change.
+
+Generated setup arrays, action arrays, and case descriptors now live in bounded
+C++ data shards rather than one large translation unit. The registration
+table retains the same case pointers and order. A definition-hash audit
+compares every case with the original monolithic output, and the build links
+only the generated source inventory. Unchanged shards keep their timestamps;
+stale generated files are left out of the build. This changes test-data storage
+without changing rules, assertions, or the engine testing interface.
+
+This batch adds 3,620 cases across 25 newly covered lands. Every case passes
+natively and in Wasm with identical observable state. All 2,582 prior
+mana-consequence cases pass again on each platform, and their 5,164 recorded
+observations are unchanged. The 1,529-entry failure manifest and 93,791 prior
+catalog entries are preserved. The suite now contains 80,198 behavior cases
+across 2,950 cards, with 97,411 total catalog entries.
+
+Validation includes 794 Python guards, 61 CTest checks per platform, 268 prior
+controls, 12 discovery filters per platform, and two shuffled four-case orders
+per platform. Controls retain 255 matching states, two matching pre-existing
+crashes, and 11 pre-existing native-only faults whose Wasm counterparts pass.
+All 61 generated files match independent generation. The sharding audit
+preserves every one of 80,198 case definitions and the full manifest; 55 data
+shards each stay below 8 MiB. Both build caches are restored to typed
+OFF/ON/OFF settings. The report is
+`out/duel-tests/recipe-conditional-mana/validation.json`.
+
+### Continuous self-stat bonuses from counts
+
+`conditional_stats` pins a whole normal creature record and explicitly supplies
+`keywords`, `condition` (`metalcraft` or `threshold`), `power`, and `toughness`.
+The complete text must contain exactly the reviewed self-stat clause and
+supported unconditional Flying, Reach, Shroud, or Haste keywords. Additional
+activated or triggered abilities, conditional keyword grants, other static
+effects, faces, and unreviewed reminders fail closed. Werebear's separate mana
+ability remains a documented deferred candidate.
+
+Metalcraft boards cover zero through four controlled artifacts and count an
+artifact-creature source itself. Threshold boards contain zero, one, five,
+six, seven, or eight real graveyard cards. Both controllers receive casting,
+effect, actual unblocked combat, snapshot, and repeated-recalculation cases on
+every count board. Opponent-only and offboard cases distinguish ownership and
+zone scope; duplicate names still represent multiple cards. Empty nonbattlefield
+zones remain deliberate variants. Recalculation must not stack the bonus, and
+cleanup must not expire a continuous effect whose condition is still true.
+
+Transitions cross a boundary by casting Sol Ring or Twiddle, by a creature
+dying, by an artifact being destroyed, or by Morningtide exiling graveyards.
+Morningtide itself reaches its owner's graveyard after its effect. Tremor
+tests loss of a toughness bonus with marked damage already present, including
+state-based death. These spells do not target a shrouded source. Independent
+sources share the count while retaining their own state. All final boards
+check life, mana, permanent state, exact zone multiplicities, and ordered
+libraries; snapshots restore them around AI backup work.
+
+Independent static keyword rules, type/control changes, other continuous
+modifiers, additional abilities or triggers, graveyard replacement effects,
+and multiplayer require separate cases. The recipe constructs boundary
+graveyards as real initial zone cards from the empty reusable fixture and
+fills both players' other zones explicitly.
+
+The first continuous-stat batch adds 780 cases for ten newly covered creatures.
+Every case passes natively and in Wasm with identical states, outcome kinds,
+and assertion counts. The 1,529 existing baselines and 97,411 prior catalog
+entries are preserved. The suite now has 80,978 behavior cases across 2,960
+cards and 98,191 total catalog entries. Card rules and the headless engine
+interface are unchanged.
+
+Validation includes 818 Python guards, 31 CTest checks per platform, 272 prior
+controls, 12 discovery filters per platform, and two shuffled four-case orders
+per platform. Controls retain 259 matching states, two matching pre-existing
+crashes, and 11 pre-existing native-only faults whose Wasm counterparts pass.
+All 62 generated files match independent generation, and data shards remain
+bounded below 8 MiB. Both build caches are restored to typed OFF/ON/OFF
+settings. The report is
+`out/duel-tests/recipe-conditional-stats/validation.json`.
+
+### Continuous conditional combat keywords
+
+`conditional_keyword` supplies explicit `keywords`, `condition` (`metalcraft`
+or `threshold`), `power`, `toughness`, and `grant` parameters, alongside the
+whole Oracle pin and an explicit variant list. The first scope supports Flying,
+Double strike, or Trample, with either no stat bonus or a positive paired bonus.
+An unconditional Vigilance clause is also supported. For example, Auriok
+Sunchaser declares `keywords: []`, `condition: "metalcraft"`, `power: 2`,
+`toughness: 2`, and `grant: "Flying"`. Additional clauses and protection rules
+require dedicated cases; Mystic Crusader and Mystic Enforcer are deferred.
+
+The recipe reuses the continuous-stat fixture builder for real artifact and
+graveyard counts. Each ready-board, casting, count-transition, recalculation,
+and cleanup scenario then probes the granted ability through a legal attack,
+blocker declaration, and normal combat damage. Ground, flying, and reach
+blockers check evasion; unblocked, large-blocker, and first-strike scenarios
+check both damage steps of double strike. Trample checks lethal damage assigned
+to a blocker and excess damage dealt to its controller. Vigilance checks the
+attacker's tapped state. Casting scenarios first reject a fresh attack, then
+use the normal turn gate twice before testing combat.
+
+Snapshots capture the ready board, execute combat, run AI backup work, restore,
+and execute the same combat again. Every final board checks ownership, zone
+multiplicities, ordered libraries, mana, life, and permanent state. The combat
+expectations use pinned Oracle characteristics without consulting handlers or
+injecting ability events. Defending with the source, multiple blockers,
+control/type changes, other continuous modifiers, additional abilities,
+graveyard replacement effects, and multiplayer remain explicit coverage gaps.
+
+The first conditional-keyword batch adds 758 cases across eight newly covered
+cards. Every case passes natively and in Wasm with identical observable states.
+The 1,529 existing baselines and 98,191 prior catalog entries are unchanged.
+The suite now has 81,736 behavior cases across 2,968 cards and 98,949 total
+catalog entries. Production rules and the engine testing interface are unchanged.
+
+Validation includes 843 Python guards, 27 CTest checks per platform, 276 prior
+controls, 12 discovery filters per platform, and two shuffled four-case orders
+per platform. Controls preserve 263 matching states, two paired old crashes,
+and 11 old native-only faults whose Wasm counterparts pass. All 62 generated
+files match independent hashes; the 56 data shards stay below 8 MiB. Both build
+caches are restored to typed OFF/ON/OFF settings. Lossless NTFS compression of
+generated data and test artifacts recovered build space without deleting files.
+The report is `out/duel-tests/recipe-conditional-keywords/validation.json`.
+
+### Multiple tap-for-mana modes
+
+`mana_modes` declares two or three complete printed modes on a normal Land or
+Artifact. Each mode supplies `cost`, `production`, `outputs`, `choices`, and
+`fallback_choices`. The first mode is the ordinary free `{T}: Add {C}.`
+fallback. Other costs admit one to five generic mana or one ordinary two-color
+hybrid symbol plus tapping. Outputs admit one to five explicit ordinary mana
+symbols, fixed alternatives, or one mana of any color. The full Oracle text
+must match every declared mode; restrictions, triggers, other costs, entry
+effects, and additional clauses require separate cases.
+
+For example, Mystic Gate's second mode declares `cost: "{W/U}, {T}"`,
+`production: "choice"`, and `outputs: ["{W}{W}", "{W}{U}", "{U}{U}"]`.
+Both printed input colors fund every output, with exact payment assertions.
+The decision scripts are UI bindings, separate from those rules expectations:
+`choices[output][controller][payment]` selects a bounded color/dialog script,
+and `fallback_choices[controller]` handles the unfunded colorless path. Human
+filter-land menus couple payment and output choices; the AI path requests the
+two output colors separately. Crystal Quarry's free mode has its own colorless
+subchoice. These bindings are validated without deriving expected costs or
+outputs from card handlers.
+
+Both controllers exercise output production with reserves, exact payment,
+immediate resolution, repeated-tap rejection, a real Twiddle and repeated
+activation, taxes, colored/generic spending, ready and produced-mana snapshots,
+and owned populated zones. Common cases cover entry, incidental tapping,
+noncreature sickness, combat, opposing turns, source loss, deliberate bare
+zones, and the zero-pool colorless fallback. Artifact sources also receive
+casting, exact casting cost, insufficient mana, and fresh activation cases.
+All final boards check life, six mana amounts, permanent state, exact zone
+multiplicities, and ordered libraries.
+
+The AI filter-land path prioritizes filtering when colored funding exists.
+Its free-mode fixtures therefore supply only C, while human free-mode fixtures
+also test selecting C with both modes funded. Generic affordability considers
+colored mana too. Repeated-activation cases assert the first output, legally
+cast Twiddle, and install the next explicit payment pool before activating
+again. Automatic payment-source selection, mode-specific eligibility queries,
+offered-color restrictions, AI selection of free C with colored funding,
+hybrid input choice with both colors simultaneously available, multiple-source
+chaining, land-play permissions, and multiplayer remain coverage gaps.
+
+The first multi-mode mana batch adds 2,368 cases across 19 newly covered cards.
+All pass natively and in Wasm with identical observable states. The 1,529 prior
+baselines and 98,949 prior catalog entries are preserved. The suite now has
+84,104 behavior cases across 2,987 cards and 101,317 total catalog entries.
+Production rules and the engine testing interface are unchanged.
+
+The initial 430-case pilot exposed decision-binding and fixture-affordability
+mistakes. Correcting those scripts produced 430 passing pilots without changing
+the pinned Oracle costs or outputs or baselining draft failures. The review is
+`out/duel-tests/recipe-mana-modes/pilot-review.json`.
+
+Validation includes 870 Python guards, 48 CTest checks per platform, 280 prior
+controls, 12 discovery filters per platform, and two shuffled four-case orders
+per platform. Controls retain 267 matching states, two paired old crashes, and
+11 old native-only faults whose Wasm counterparts pass. All 65 generated files
+match independent hashes; 59 data shards stay below 8 MiB. Both build caches
+are restored to typed OFF/ON/OFF settings. Lossless compression of prior audit
+snapshots recovered space after a disk-full Wasm link; the retry and all Wasm
+execution checks passed. The report is
+`out/duel-tests/recipe-mana-modes/validation.json`.
+
+## Printed creature entry and attack conditions
+
+`creature_conditions` version 2 uses explicit `keywords`, `enters_tapped`, and
+`attack_land` parameters. The latter is either null or an object specifying
+`type` (Island or Mountain) and `scope` (defender or battlefield). Parameters
+must match the complete pinned Oracle text of a normal creature with numeric
+power and toughness. Additional abilities fail closed; this family supports
+only the reviewed Flying/Trample keywords and entry/attack clauses.
+
+Both controllers exercise real casting and payment, entry tapping, sickness,
+legal Twiddle untapping, ground/flying blocks, combat damage, empty-zone
+variants, cleanup, and snapshot restoration after AI backup searches. Land
+restrictions additionally cover ownership, wrong/missing/offboard types,
+tapped lands, snow and dual lands, removal before/after attack declaration,
+and a legal Spreading Seas or Blood Moon that supplies the required type.
+Spreading Seas includes its draw in expected hand and library contents.
+
+Boards check life, all mana pools, named permanent state, zone counts, exact
+card multiplicities, and ordered libraries. Battlefield enumeration exposes
+current type-change CSVIDs. For the changed qualifying land only, identity
+checks use its stable reference and zone count; all other identities and
+zones remain checked. Printed identity under these type changes is an explicit
+gap, alongside land-play timing, other type-changing effects, control changes,
+multiple blockers, trample overflow, additional clauses, and multiplayer.
+
+The first creature-condition batch adds 702 cases across 13 newly covered
+cards. All pass natively and in Wasm with identical observable states. Coverage
+now totals 84,806 behavior cases across 3,000 cards and 102,019 catalog entries.
+The 1,529 existing failure baselines remain unchanged. Production rules and the
+headless engine interface are unchanged. The pilot's six draft identity-check
+failures and their correction are recorded in
+`out/duel-tests/recipe-creature-conditions/pilot-review.json`.
+
+Validation includes 899 Python guards, 36 CTest checks per platform, 284 prior
+controls, 12 discovery filters per platform, and two shuffled four-case orders
+per platform. Controls retain 271 matching states, two paired old crashes, and
+11 old native-only faults with passing Wasm counterparts. All 101,317 prior
+catalog entries are preserved. The 66 generated outputs match independent
+hashes, with 60 data shards below 8 MiB. Typed OFF/ON/OFF build settings are
+restored. The report is
+`out/duel-tests/recipe-creature-conditions/validation.json`.

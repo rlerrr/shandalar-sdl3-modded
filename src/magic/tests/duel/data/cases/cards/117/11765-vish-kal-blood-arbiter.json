@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Vish Kal, Blood Arbiter",
+  "csvid": 11765,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "passive_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flying",
+          "Lifelink"
+        ],
+        "activated_abilities": [
+          "Sacrifice a creature: Put X +1/+1 counters on Vish Kal, where X is the sacrificed creature's power.",
+          "Remove all +1/+1 counters from Vish Kal: Target creature gets -1/-1 until end of turn for each +1/+1 counter removed this way."
+        ]
+      },
+      "oracle_text": "Flying, lifelink\nSacrifice a creature: Put X +1/+1 counters on Vish Kal, where X is the sacrificed creature's power.\nRemove all +1/+1 counters from Vish Kal: Target creature gets -1/-1 until end of turn for each +1/+1 counter removed this way.",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "block_ground_0",
+        "block_flying_0",
+        "tapped_attacker_0",
+        "tapped_blocker_0",
+        "flying_evasion_0",
+        "flying_reach_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "block_ground_1",
+        "block_flying_1",
+        "tapped_attacker_1",
+        "tapped_blocker_1",
+        "flying_evasion_1",
+        "flying_reach_1"
+      ]
+    }
+  ]
+}

@@ -48,6 +48,13 @@ class DeathValueRecipesTest(unittest.TestCase):
   self.assertIn(dict(op='choose_trigger',player=0,ref='source'),cs[0]['steps'])
   self.assertFalse(any(s['op']=='choose_trigger' for s in cs[1]['steps']))
   self.assertIn(dict(op='assert_zone',player=0,zone='library',value=7),cs[1]['steps'])
+  self.assertNotIn('decline_1',variants(explicit_spec(d,self.oracle['Aven Fisher'])))
+ def test_tapped_death_observes_a_real_spell_before_destruction(self):
+  d=self.declaration();d['variants']=['tapped_death_0'];steps=self.cases(d=d)[0]['steps']
+  target=steps.index(dict(op='choose_target',player=1,ref='source'))
+  dialog=steps.index(dict(op='choose_dialog',player=1,value=0))
+  tapped=steps.index(dict(op='assert_card',ref='source',property='tapped',value=1))
+  self.assertLess(target,dialog);self.assertLess(tapped,steps.index(dict(op='destroy',ref='source')))
  def test_snapshots_replay_pending_real_removal(self):
   d=self.declaration();d['variants']=['death_snapshot_0','ready_snapshot_1','resolved_snapshot_0']
   for c in self.cases(d=d):

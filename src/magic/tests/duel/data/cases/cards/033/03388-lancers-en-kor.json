@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Lancers en-Kor",
+  "csvid": 3388,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "passive_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Trample"
+        ],
+        "activated_abilities": [
+          "{0}: The next 1 damage that would be dealt to this creature this turn is dealt to target creature you control instead."
+        ]
+      },
+      "oracle_text": "Trample\n{0}: The next 1 damage that would be dealt to this creature this turn is dealt to target creature you control instead.",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "block_ground_0",
+        "block_flying_0",
+        "tapped_attacker_0",
+        "tapped_blocker_0",
+        "trample_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "block_ground_1",
+        "block_flying_1",
+        "tapped_attacker_1",
+        "tapped_blocker_1",
+        "trample_1"
+      ]
+    }
+  ]
+}

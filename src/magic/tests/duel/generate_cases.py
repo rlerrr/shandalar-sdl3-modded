@@ -11,6 +11,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 from import_duel_oracle import registry
 from import_carddata import load_handler_overrides
 from case_files import load_cases
+from case_shards import CaseShards
 
 ZONES = {"hand": 0, "battlefield": 1, "library": 2, "graveyard": 3, "exile": 4}
 STATES = {"tapped": 1, "sick": 2, "attacking": 4, "untapped": 8, "opponent_owned": 16, "token": 32}
@@ -23,6 +24,12 @@ PROPERTIES = {"csvid", "power", "toughness", "tapped", "sick", "attacking", "in_
 OPS |= {"refresh", "choose_zone_card", "choose_payment", "can_activate_hand", "require_can_activate_hand", "activate_hand", "require_can_activate", "can_target_creature"}
 OPS.add("assert_zone_multiplicity")
 OPS |= {"choose_optional_zone", "assert_forced_zone_choices"}
+OPS |= {"set_card_available", "assert_card_available"}
+OPS |= {"assert_matching_permanents", "bind_permanent_copy"}
+TOKEN_PROPERTIES = {"token", "color", "artifact"} | {"subtype_"+n for n in (
+    "Angel","Bear","Bird","Centaur","Citizen","Dragon","Drake","Eldrazi","Elf","Goblin",
+    "Horror","Human","Insect","Knight","Ally","Minotaur","Myr","Satyr","Servo","Sliver",
+    "Soldier","Spirit","Thopter","Warrior","Wurm")}
 REF_OPS = {"choose_regeneration", "choose_target", "choose_damage_target", "choose_trigger", "can_activate", "activate", "can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card", "require_card", "assert_card_name"}
 REF_OPS |= {"can_activate_hand", "require_can_activate_hand", "activate_hand", "require_can_activate", "can_target_creature"}
 
@@ -51,7 +58,7 @@ def build(data, output):
     registered_csvids = {r["csvid"] for r in rows}
     chunks = ["// Generated from reviewed semantic fixtures and independent Oracle data.\n"]
 
-    def setup(array_name, cards):
+    def setup(array_name, cards, destination=None):
         refs = set()
         values = []
         for c in cards:
@@ -61,7 +68,7 @@ def build(data, output):
             flags = sum(STATES[x] for x in c.get("state", []))
             values.append("{" + ",".join([quoted(c["ref"]), str(c["player"]), str(ZONES[c["zone"]]),
                                         str(by_name[c["name"]]["csvid"]), str(flags)]) + "}")
-        chunks.append(f"static const Setup {array_name}[] = {{" + ",".join(values or ['{"",0,0,0,0}']) + "};\n")
+        (chunks if destination is None else destination).append(f"static const Setup {array_name}[] = {{" + ",".join(values or ['{"",0,0,0,0}']) + "};\n")
         return refs, len(cards)
 
     fixtures_c = []
@@ -76,13 +83,15 @@ def build(data, output):
                           "{" + ",".join("{" + ",".join(map(str, p)) + "}" for p in mana) + "}"]) + "}")
     chunks.append("static const Fixture fixtures[] = {" + ",".join(fixtures_c) + "};\n")
     manifest = []
+    case_shards = CaseShards(output)
     for i, case in enumerate(cases):
         name = case["name"]
         if name in names or not re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*", name):
             raise ValueError(f"Invalid/duplicate case name: {name}")
         names.add(name)
         f = fixtures[case["fixture"]]
-        refs, count = setup(f"case_cards_{i}", case.get("setup", []))
+        case_chunks = []
+        refs, count = setup(f"case_cards_{i}", case.get("setup", []), case_chunks)
         base_refs = {c["ref"] for c in f["cards"]}
         if refs & base_refs:
             raise ValueError(f"Duplicate instance reference in {name}")
@@ -98,7 +107,7 @@ def build(data, output):
             op = step["op"]
             if op not in OPS or (op in REF_OPS and step.get("ref") not in refs):
                 raise ValueError(f"Invalid action in {name}: {step}")
-            if step.get("property", "power") not in PROPERTIES:
+            if step.get("property", "power") not in PROPERTIES | (TOKEN_PROPERTIES if op=="assert_matching_permanents" else set()):
                 raise ValueError(f"Invalid observation in {name}: {step}")
             if "other" in step and step["other"] not in refs:
                 raise ValueError(f"Unknown reference: {step}")
@@ -122,12 +131,29 @@ def build(data, output):
                 raise ValueError(f"Invalid optional zone fallback in {name}: {step}")
             if op == "assert_forced_zone_choices" and (type(step.get("value")) is not int or step["value"] < 0):
                 raise ValueError(f"Invalid forced zone choice count in {name}: {step}")
+            if op in {"set_card_available", "assert_card_available"} and (
+                type(step.get("index")) is not int or step["index"] not in registered_csvids
+                or type(step.get("value")) is not int or step["value"] not in (0, 1)
+            ):
+                raise ValueError(f"Invalid fixture card availability in {name}: {step}")
             if op == "assert_zone_multiplicity" and (
                 step.get("player") not in (0, 1) or step.get("zone") not in ZONES
                 or step.get("index") not in registered_csvids
                 or type(step.get("value")) is not int or step["value"] < 0
             ):
                 raise ValueError(f"Invalid zone multiplicity observation in {name}: {step}")
+            if op == "assert_matching_permanents" and (
+                step.get("player") not in (0,1) or step.get("index") not in registered_csvids
+                or type(step.get("value")) is not int or "property" not in step
+            ):
+                raise ValueError(f"Invalid matching permanent observation in {name}: {step}")
+            if op == "bind_permanent_copy" and (
+                step.get("player") not in (0,1) or type(step.get("index")) is not int
+                or not 0<=step["index"]<16 or step.get("value") not in registered_csvids
+                or not isinstance(step.get("ref"),str) or not step["ref"]
+            ):
+                raise ValueError(f"Invalid permanent copy binding in {name}: {step}")
+            if op == "bind_permanent_copy":refs.add(step["ref"])
             if op == "assert_targets_consumed" and step.get("value", 0) != 0:
                 raise ValueError(f"Target plans must consume every planned target in {name}")
             if op in {"bind_permanent", "bind_hand"} and (
@@ -161,20 +187,24 @@ def build(data, output):
             steps_c.append("{" + ",".join([quoted(op), quoted(step.get("ref", "")), quoted(step.get("other", "")),
               quoted(step.get("property", "")), str(step.get("player", 0)), str(step.get("value", 0)),
               str(ZONES.get(step.get("zone", "hand"), 0)), str(step.get("index", -1 if op in {"bind_permanent", "bind_hand"} else 0)), str(step.get("color", 0))]) + "}")
-        chunks.append(f"static const Step case_steps_{i}[] = {{" + ",".join(steps_c) + "};\n")
-        chunks.append(f"static const Case case_{i} = {{" + ",".join([quoted(name),quoted(case["card"]),
+        case_chunks.append(f"static const Step case_steps_{i}[] = {{" + ",".join(steps_c) + "};\n")
+        case_chunks.append(f"static const Case case_{i} = {{" + ",".join([quoted(name),quoted(case["card"]),
           quoted(o["oracle_id"]),quoted(text),quoted(case["fixture"]),str(case.get("seed",123)),
           f"case_cards_{i}",str(count),f"case_steps_{i}",str(len(steps_c))]) + "};\n")
+        case_shards.add(i, case_chunks)
         manifest.append({"filter": f"Behavior.{name}", "card": case["card"], "csvid": by_name[case["card"]]["csvid"],
                          "oracle_id": o["oracle_id"], "handler": by_name[case["card"]]["handler"], "fixture":case["fixture"], "seed":case.get("seed",123), "tier":"behavior",
                          "source_file":case["_source_file"]})
         if "_recipe" in case:
             manifest[-1]["recipe"] = case["_recipe"]
+    chunks.append(case_shards.finish())
     chunks.append("static const Case *cases[] = {" + ",".join(f"&case_{i}" for i in range(len(cases))) + "};\n")
     # Deliberately narrow templates: numeric vanilla creatures and flying-only creatures.
     templates = []
     seen = set()
     for r in rows:
+        if r["kind"] != "card":
+            continue
         o = oracle["cards"].get(aliases.get(r["name"], r["name"]))
         if not o or r["csvid"] in seen:
             continue

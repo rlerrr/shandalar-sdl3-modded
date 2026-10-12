@@ -1,0 +1,160 @@
+{
+  "version": 1,
+  "card": "Crystal Quarry",
+  "csvid": 5525,
+  "oracle_id": "ca68648f-fe3a-4770-9842-a3dc2310f099",
+  "cases": [],
+  "recipes": [
+    {
+      "family": "mana_modes",
+      "version": 2,
+      "params": {
+        "modes": [
+          {
+            "cost": "{T}",
+            "production": "fixed",
+            "outputs": [
+              "{C}"
+            ],
+            "choices": [
+              [
+                [
+                  [
+                    {
+                      "kind": "dialog",
+                      "value": 0
+                    },
+                    {
+                      "kind": "color",
+                      "value": 0
+                    }
+                  ]
+                ],
+                [
+                  [
+                    {
+                      "kind": "dialog",
+                      "value": 0
+                    },
+                    {
+                      "kind": "color",
+                      "value": 0
+                    }
+                  ]
+                ]
+              ]
+            ],
+            "fallback_choices": [
+              [
+                {
+                  "kind": "color",
+                  "value": 0
+                }
+              ],
+              [
+                {
+                  "kind": "dialog",
+                  "value": 0
+                },
+                {
+                  "kind": "color",
+                  "value": 0
+                }
+              ]
+            ]
+          },
+          {
+            "cost": "{5}, {T}",
+            "production": "fixed",
+            "outputs": [
+              "{W}{U}{B}{R}{G}"
+            ],
+            "choices": [
+              [
+                [
+                  [
+                    {
+                      "kind": "dialog",
+                      "value": 1
+                    }
+                  ]
+                ],
+                [
+                  [
+                    {
+                      "kind": "dialog",
+                      "value": 1
+                    }
+                  ]
+                ]
+              ]
+            ],
+            "fallback_choices": [
+              [],
+              []
+            ]
+          }
+        ]
+      },
+      "oracle_text": "{T}: Add {C}.\n{5}, {T}: Add {W}{U}{B}{R}{G}.",
+      "variants": [
+        "entry_0",
+        "tapped_0",
+        "sick_0",
+        "opposing_turn_0",
+        "combat_0",
+        "bare_zones_0",
+        "zero_pool_fallback_0",
+        "source_bounced_0",
+        "source_destroyed_0",
+        "incidental_tap_0",
+        "resolved_snapshot_0",
+        "production_0_0_0_0",
+        "payment_0_0_0_0",
+        "repeat_denied_0_0_0_0",
+        "untap_repeat_0_0_0_0",
+        "tax_0_0_0_0",
+        "ready_snapshot_0_0_0_0",
+        "mana_snapshot_0_0_0_0",
+        "spend_generic_0_0_0_0",
+        "production_1_0_0_0",
+        "payment_1_0_0_0",
+        "repeat_denied_1_0_0_0",
+        "untap_repeat_1_0_0_0",
+        "tax_1_0_0_0",
+        "ready_snapshot_1_0_0_0",
+        "mana_snapshot_1_0_0_0",
+        "spend_generic_1_0_0_0",
+        "spend_colored_1_0_0_0",
+        "entry_1",
+        "tapped_1",
+        "sick_1",
+        "opposing_turn_1",
+        "combat_1",
+        "bare_zones_1",
+        "zero_pool_fallback_1",
+        "source_bounced_1",
+        "source_destroyed_1",
+        "incidental_tap_1",
+        "resolved_snapshot_1",
+        "production_0_0_0_1",
+        "payment_0_0_0_1",
+        "repeat_denied_0_0_0_1",
+        "untap_repeat_0_0_0_1",
+        "tax_0_0_0_1",
+        "ready_snapshot_0_0_0_1",
+        "mana_snapshot_0_0_0_1",
+        "spend_generic_0_0_0_1",
+        "production_1_0_0_1",
+        "payment_1_0_0_1",
+        "repeat_denied_1_0_0_1",
+        "untap_repeat_1_0_0_1",
+        "tax_1_0_0_1",
+        "ready_snapshot_1_0_0_1",
+        "mana_snapshot_1_0_0_1",
+        "spend_generic_1_0_0_1",
+        "spend_colored_1_0_0_1"
+      ]
+    }
+  ]
+}

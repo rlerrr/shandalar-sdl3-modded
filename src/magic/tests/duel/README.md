@@ -83,6 +83,13 @@ the set in a Scryfall card URL may describe a reprint. A card's name, CSVID, and
 Oracle ID determine its identity. Moving its file into a set folder later does
 not change its test names or execution order. Do not duplicate tests for reprints.
 
+Reviewed exceptions to registry identity categories live in
+`data/registry_kinds.json`. CSVID 910's Assembly-Worker is the animated Mishra's
+Factory land form, which shares a name with a separately printed creature.
+Alternate forms, tokens and internal effects require authored scenarios with
+the appropriate parent-card Oracle reference; ordinary card recipes reject
+those records. The generated inventory retains the classification and rationale.
+
 ## Card files
 
 Use a versioned document with a full registry name, CSVID, and cases:

@@ -34,6 +34,30 @@
         "fresh_activation",
         "shroud_only_target"
       ]
+    },
+    {
+      "family": "damage_activation",
+      "version": 2,
+      "params": {
+        "keywords": [],
+        "damage": 1,
+        "targets": "creature",
+        "mana_cost": "",
+        "tap": true,
+        "sacrifice": false,
+        "pay_life": 0,
+        "damage_you": 0,
+        "damage_self": 0,
+        "controller_life_loss": 1,
+        "tap_target": false
+      },
+      "oracle_text": "{T}: This creature deals 1 damage to target creature and that creature's controller loses 1 life.",
+      "variants": [
+        "no_targets_0",
+        "shrouded_targets_0",
+        "no_targets_1",
+        "shrouded_targets_1"
+      ]
     }
   ],
   "recipe_coverage": "Casting, basic combat, tap/sickness restrictions, and an isolated no-legal-target probe are enrolled. The handler omits GAA_CAN_TARGET, so no target-selection or damage-resolution coverage is credited. Pending damage cases remain supported by the recipe for enrollment after a production fix; draft unused-choice failures are not baselined."
