@@ -123,7 +123,7 @@ int card_abu_ja_far(int player, int card, event_t event)
       (PLAYER_CARD_INSTANCE(player, card).state & STATE_INVISIBLE) == 0 &&
       PLAYER_CARD_INSTANCE(player, card).kill_code != KILL_REMOVE &&
       ((g_current_player == player && (PLAYER_CARD_INSTANCE(player, card).state & STATE_ATTACKING) != 0) ||
-       (g_current_player != player && (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking != -1)))
+       (g_current_player != player && PLAYER_CARD_INSTANCE(player, card).blocking != 255)))
   {
     effect_card = add_card_to_hand(player, g_duel_generated_internal_card_id_12);
     if (effect_card != -1)
@@ -137,7 +137,7 @@ int card_abu_ja_far(int player, int card, event_t event)
       PLAYER_CARD_INSTANCE(player, effect_card).damage_source_player = (char)player;
       PLAYER_CARD_INSTANCE(player, effect_card).damage_source_card = card;
       PLAYER_CARD_INSTANCE(player, effect_card).damage_target_card =
-          (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking;
+          PLAYER_CARD_INSTANCE(player, card).blocking;
       if ((PLAYER_CARD_INSTANCE(player, card).state & STATE_ATTACKING) != 0)
       {
         PLAYER_CARD_INSTANCE(player, effect_card).info_slot = -2;
@@ -145,7 +145,7 @@ int card_abu_ja_far(int player, int card, event_t event)
       else
       {
         PLAYER_CARD_INSTANCE(player, effect_card).info_slot =
-            (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking;
+            PLAYER_CARD_INSTANCE(player, card).blocking;
       }
       TENTATIVE_set_timestamps(player, effect_card);
     }
@@ -736,7 +736,7 @@ int card_camel(int player, int card, event_t event)
         PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).info_slot = 0;
       }
 
-      if (g_current_player == player && (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking != -1)
+      if (g_current_player == player && PLAYER_CARD_INSTANCE(player, card).blocking != 255)
       {
         for (current_card = 0; current_card < g_active_cards_count[player]; ++current_card)
         {
@@ -1771,7 +1771,7 @@ int card_giant_badger(int player, int card, event_t event)
 {
   if (event == EVENT_DECLARE_BLOCKERS &&
       g_current_phase == PHASE_DECLARE_BLOCKERS &&
-      (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking != -1 &&
+      PLAYER_CARD_INSTANCE(player, card).blocking != 255 &&
       player != g_current_player &&
       global_cards_data[PLAYER_CARD_INSTANCE(player, card).internal_card_id].code_pointer !=
           card_two_headed_giant_of_foriys_legacy)
@@ -2566,7 +2566,7 @@ int card_mijae_djinn(int player, int card, event_t event)
     {
       PLAYER_CARD_INSTANCE(player, card).state |= STATE_TAPPED;
       PLAYER_CARD_INSTANCE(player, card).state &= ~STATE_ATTACKING;
-      PLAYER_CARD_INSTANCE(player, card).blocking = -1;
+      PLAYER_CARD_INSTANCE(player, card).blocking = 255;
     }
   }
 
@@ -3926,7 +3926,7 @@ int card_two_headed_giant_of_foriys(int player, int card, event_t event)
     {
       g_event_result |= 2;
     }
-    if (event == EVENT_RESOLVE_TRIGGER && PLAYER_CARD_INSTANCE(player, card).blocking != -1)
+    if (event == EVENT_RESOLVE_TRIGGER && PLAYER_CARD_INSTANCE(player, card).blocking != 255)
     {
       for (s.u.current_card = 0; s.u.current_card < g_active_cards_count[player]; ++s.u.current_card)
       {
@@ -3938,7 +3938,7 @@ int card_two_headed_giant_of_foriys(int player, int card, event_t event)
     }
   }
 
-  if (event == EVENT_GRAVEYARD_FROM_PLAY && g_affected_card == card && g_affected_card_controller == player && PLAYER_CARD_INSTANCE(player, card).blocking != -1)
+  if (event == EVENT_GRAVEYARD_FROM_PLAY && g_affected_card == card && g_affected_card_controller == player && PLAYER_CARD_INSTANCE(player, card).blocking != 255)
   {
     for (s.u.current_card = 0; s.u.current_card < g_active_cards_count[player]; ++s.u.current_card)
     {
@@ -4696,7 +4696,7 @@ int card_ydwen_efreet(int player, int card, event_t event)
 
   if (event == EVENT_DECLARE_BLOCKERS &&
       player != g_current_player &&
-      PLAYER_CARD_INSTANCE(player, card).blocking != -1 &&
+      PLAYER_CARD_INSTANCE(player, card).blocking != 255 &&
       global_cards_data[PLAYER_CARD_INSTANCE(player, card).internal_card_id].code_pointer !=
           card_two_headed_giant_of_foriys_legacy)
   {
@@ -4706,7 +4706,7 @@ int card_ydwen_efreet(int player, int card, event_t event)
     choice = do_dialog(player, player, card, -1, -1, dialog_text, internal_rand(2));
     if (coin_flip(player, get_displayed_card_name(player, card), 1) != choice)
     {
-      PLAYER_CARD_INSTANCE(player, card).blocking = -1;
+      PLAYER_CARD_INSTANCE(player, card).blocking = 255;
       PLAYER_CARD_INSTANCE(player, card).state &= ~STATE_BLOCKING;
       PLAYER_CARD_INSTANCE(player, card).state |= STATE_TAPPED;
     }

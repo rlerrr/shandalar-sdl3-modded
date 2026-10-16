@@ -28,7 +28,7 @@ static int improvise_impl(int player, int card, event_t event, int x_spell){
 		td.allowed_controller = td.preferred_controller = player;
 		td.illegal_state = TARGET_STATE_TAPPED;
 		td.illegal_abilities = 0;
-		int printed = cards_ptr[get_id(player, card)]->req_colorless;
+		int printed = cards_ptr[get_id(player, card)]->req.req_colorless;
 		if (printed == 40) printed = 0;
 		int discount = MIN(MAX(0, printed + COST_COLORLESS), target_available(player, card, &td));
 		get_card_instance(player, card)->targets[18].player = discount;

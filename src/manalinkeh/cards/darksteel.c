@@ -1791,25 +1791,25 @@ int card_mycosynth_lattice(int player, int card, event_t event)
 	  card_ptr_t* cp = cards_ptr[get_id(affected_card_controller, affected_card)];
 	  int amount = 0;
 
-	  if (cp->req_black < 15)
-		amount += cp->req_black;
-	  COST_BLACK -= cp->req_black;
+	  if (cp->req.req_black < 15)
+		amount += cp->req.req_black;
+	  COST_BLACK -= cp->req.req_black;
 
-	  if (cp->req_blue < 15)
-		amount += cp->req_blue;
-	  COST_BLUE -= cp->req_blue;
+	  if (cp->req.req_blue < 15)
+		amount += cp->req.req_blue;
+	  COST_BLUE -= cp->req.req_blue;
 
-	  if (cp->req_green < 15)
-		amount += cp->req_green;
-	  COST_GREEN -= cp->req_green;
+	  if (cp->req.req_green < 15)
+		amount += cp->req.req_green;
+	  COST_GREEN -= cp->req.req_green;
 
-	  if (cp->req_red < 15)
-		amount += cp->req_red;
-	  COST_RED -= cp->req_red;
+	  if (cp->req.req_red < 15)
+		amount += cp->req.req_red;
+	  COST_RED -= cp->req.req_red;
 
-	  if (cp->req_white < 15)
-		amount += cp->req_white;
-	  COST_WHITE -= cp->req_white;
+	  if (cp->req.req_white < 15)
+		amount += cp->req.req_white;
+	  COST_WHITE -= cp->req.req_white;
 
 	  COST_COLORLESS += amount;
 	}
@@ -3194,7 +3194,7 @@ int card_trinisphere(int player, int card, event_t event){
 			int cless = get_updated_casting_cost(affected_card_controller, affected_card, -1, event, -1);
 			--dont_account_for_trinisphere;
 			card_ptr_t* c = cards_ptr[ get_id(affected_card_controller, affected_card)  ];
-			int cmc = cless + c->req_black + c->req_blue + c->req_green + c->req_red + c->req_white;
+			int cmc = cless + c->req.req_black + c->req.req_blue + c->req.req_green + c->req.req_red + c->req.req_white;
 			if( cmc < 3 ){
 				COST_COLORLESS += 3 - cmc;
 			}

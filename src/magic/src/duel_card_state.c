@@ -210,9 +210,9 @@ int card_two_headed_giant_of_foriys_legacy(int player, int card, event_t event)
 {
   if (event == EVENT_BLOCK_LEGALITY && card == g_affected_card && player == g_affected_card_controller)
   {
-    if ((int)(char)DAMAGE_SOURCE_CARD_INSTANCE(player, card).blocking == g_attacking_card ||
-        (int)(char)DAMAGE_SOURCE_CARD_INSTANCE(player, card).blocking ==
-            (int)(char)PLAYER_CARD_INSTANCE(g_attacking_card_controller, g_attacking_card).blocking)
+    if (DAMAGE_SOURCE_CARD_INSTANCE(player, card).blocking == g_attacking_card ||
+        DAMAGE_SOURCE_CARD_INSTANCE(player, card).blocking ==
+            PLAYER_CARD_INSTANCE(g_attacking_card_controller, g_attacking_card).blocking)
     {
       g_event_result = 1;
     }

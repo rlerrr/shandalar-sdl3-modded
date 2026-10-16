@@ -999,8 +999,8 @@ int card_fieldmist_borderpost(int player, int card, event_t event){
 		else{
 			instance->info_slot = 0;
 			card_ptr_t* c = cards_ptr[ get_id(player, card) ];
-			int cless = get_updated_casting_cost(player, card, -1, event, c->req_colorless);
-			if( ! has_mana_multi_a(player, cless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white) ){
+			int cless = get_updated_casting_cost(player, card, -1, event, c->req.req_colorless);
+			if( ! has_mana_multi_a(player, cless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white) ){
 				infinite_casting_cost();
 			}
 		}

@@ -933,13 +933,11 @@ int PackRarityCsvThreeBitValue(int value, int slot)
 int LoadRarityCsvCardData(const char *filename)
 {
   int parsed_db_rarity;
-  int temp_value2;
   char *next_field;
   unsigned short ai_dependencies;
   int inflatable_value;
   int parsed_expansion;
   int ai_modifiers2;
-  int temp_value;
   int ai_modifiers1;
   char *file_buffer;
   card_ptr_t *raw_card;
@@ -1177,12 +1175,10 @@ int LoadRarityCsvCardData(const char *filename)
         raw_card->ai_modifiers2 = ai_modifiers2;
 
         raw_card->ai_base_value = (short)ParseRarityCsvIntFieldClamped(&cursor, 999);
-        temp_value = ParseRarityCsvIntFieldClamped(&cursor, 999);
-        temp_value2 = ParseRarityCsvIntFieldClamped(&cursor, 999);
-        raw_card->ai_power_toughness = MAKEWORD(temp_value, temp_value2);
-        temp_value = ParseRarityCsvIntFieldClamped(&cursor, 0xff);
-        temp_value2 = ParseRarityCsvIntFieldClamped(&cursor, 0xff);
-        raw_card->ai_inc_power_toughness = MAKEWORD(temp_value, temp_value2);
+        raw_card->ai_power = (uint8_t)ParseRarityCsvIntFieldClamped(&cursor, 999);
+        raw_card->ai_toughness = (uint8_t)ParseRarityCsvIntFieldClamped(&cursor, 999);
+        raw_card->ai_inc_power = (uint8_t)ParseRarityCsvIntFieldClamped(&cursor, 0xff);
+        raw_card->ai_inc_toughness = (uint8_t)ParseRarityCsvIntFieldClamped(&cursor, 0xff);
 
         inflatable_value = ParseRarityCsvIntFieldClamped(&cursor, 1);
         if (inflatable_value != 0)

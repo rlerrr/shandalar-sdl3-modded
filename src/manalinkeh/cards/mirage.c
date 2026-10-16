@@ -1472,21 +1472,21 @@ You may spend white mana as though it were mana of any color. You may spend othe
 	if( event == EVENT_MODIFY_COST_GLOBAL && affected_card_controller == player ){
 		card_ptr_t* c = cards_ptr[ get_id(affected_card_controller, affected_card)  ];
 		int amount = 0;
-		if( c->req_black < 16 ){
-			amount+=c->req_black;
-			COST_BLACK-=c->req_black;
+		if( c->req.req_black < 16 ){
+			amount+=c->req.req_black;
+			COST_BLACK-=c->req.req_black;
 		}
-		if( c->req_blue < 16 ){
-			amount+=c->req_blue;
-			COST_BLUE-=c->req_blue;
+		if( c->req.req_blue < 16 ){
+			amount+=c->req.req_blue;
+			COST_BLUE-=c->req.req_blue;
 		}
-		if( c->req_green < 16 ){
-			amount+=c->req_green;
-			COST_GREEN-=c->req_green;
+		if( c->req.req_green < 16 ){
+			amount+=c->req.req_green;
+			COST_GREEN-=c->req.req_green;
 		}
-		if( c->req_red < 16 ){
-			amount+=c->req_red;
-			COST_RED-=c->req_red;
+		if( c->req.req_red < 16 ){
+			amount+=c->req.req_red;
+			COST_RED-=c->req.req_red;
 		}
 		COST_WHITE+=amount;
 	}
@@ -2170,9 +2170,9 @@ You may put a creature card from your hand onto the battlefield. If you do, sacr
 		int result = new_global_tutor(player, player, TUTOR_FROM_HAND, TUTOR_PLAY, 0, AI_MAX_CMC, &this_test);
 		if( result != -1 ){
 			card_ptr_t* c = cards_ptr[ get_id( player, result ) ];
-			int colorless = c->req_colorless-2;
+			int colorless = c->req.req_colorless-2;
 			if(colorless < 0 ){ colorless = 0; }
-			charge_mana_multi(player, colorless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white );
+			charge_mana_multi(player, colorless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white );
 			if( spell_fizzled == 1 ){
 				kill_card(player, result, KILL_SACRIFICE);
 			}

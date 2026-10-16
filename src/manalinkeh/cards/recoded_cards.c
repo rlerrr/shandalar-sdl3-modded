@@ -844,7 +844,7 @@ int card_ashnods_trasmogrant(int player, int card, event_t event){
 	if( event == EVENT_RESOLVE_ACTIVATION ){
 		card_ashnods_trasmogrant_exe(player, card, event);
 		card_instance_t *target = get_card_instance( instance->targets[0].player, instance->targets[0].card );
-		target->counters--;
+		target->counters_byte--;
 		target->counter_power--;
 		target->counter_toughness--;
 		add_1_1_counter(instance->targets[0].player, instance->targets[0].card);
@@ -1212,7 +1212,7 @@ void add_oc_counters(int player, int card, int howmany){
 
     int i;
     for( i = 0; i < howmany; i++){
-           instance->counters++;
+           instance->counters_byte++;
            instance->counter_toughness--;
     }
 	play_sound_effect(WAV_COUNTER);

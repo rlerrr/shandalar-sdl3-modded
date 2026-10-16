@@ -5010,11 +5010,11 @@ int card_oath_of_nissa(int player, int card, event_t event){
 		for(i=0; i<active_cards_count[player]; i++){
 			if( in_hand(player, i) && is_planeswalker(player, i) ){
 				int amount = get_updated_casting_cost(player, i, -1, event, -1);
-				amount+=cards_ptr[get_id(player, i)]->req_black;
-				amount+=cards_ptr[get_id(player, i)]->req_blue;
-				amount+=cards_ptr[get_id(player, i)]->req_green;
-				amount+=cards_ptr[get_id(player, i)]->req_red;
-				amount+=cards_ptr[get_id(player, i)]->req_white;
+				amount+=cards_ptr[get_id(player, i)]->req.req_black;
+				amount+=cards_ptr[get_id(player, i)]->req.req_blue;
+				amount+=cards_ptr[get_id(player, i)]->req.req_green;
+				amount+=cards_ptr[get_id(player, i)]->req.req_red;
+				amount+=cards_ptr[get_id(player, i)]->req.req_white;
 				if( has_mana(player, COLOR_COLORLESS, amount) ){
 					if( is_what(player, i, TYPE_INSTANT) || can_sorcery_be_played(player, event) ){
 						return 1;
@@ -5031,11 +5031,11 @@ int card_oath_of_nissa(int player, int card, event_t event){
 		for(i=0; i<active_cards_count[player]; i++){
 			if( in_hand(player, i) && is_planeswalker(player, i) ){
 				int amount = get_updated_casting_cost(player, i, -1, event, -1);
-				amount+=cards_ptr[get_id(player, i)]->req_black;
-				amount+=cards_ptr[get_id(player, i)]->req_blue;
-				amount+=cards_ptr[get_id(player, i)]->req_green;
-				amount+=cards_ptr[get_id(player, i)]->req_red;
-				amount+=cards_ptr[get_id(player, i)]->req_white;
+				amount+=cards_ptr[get_id(player, i)]->req.req_black;
+				amount+=cards_ptr[get_id(player, i)]->req.req_blue;
+				amount+=cards_ptr[get_id(player, i)]->req.req_green;
+				amount+=cards_ptr[get_id(player, i)]->req.req_red;
+				amount+=cards_ptr[get_id(player, i)]->req.req_white;
 				if( has_mana(player, COLOR_COLORLESS, amount) ){
 					if( is_what(player, i, TYPE_INSTANT) || can_sorcery_be_played(player, event) ){
 						playable[0][pc] = get_card_instance(player, i)->internal_card_id;

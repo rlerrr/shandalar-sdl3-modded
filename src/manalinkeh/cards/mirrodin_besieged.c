@@ -2552,7 +2552,7 @@ Put the rest on the bottom of your library in any order.
 				for(i=0; i<amount; i++){
 					int iid = deck_ptr[player][i];
 					//No point of parsing non-permanents or permanents with X costs
-					if( is_what(-i, iid, TYPE_PERMANENT) && cards_data[iid].cc[1] != 255 ){
+					if( is_what(-i, iid, TYPE_PERMANENT) && cards_data[iid].cc[1] != -1 ){
 						int csvid = cards_data[iid].id;
 						CYCLE_ALL_CARDS(p, c, 	{
 													if( in_play(p, c) && is_what(p, c, TYPE_PERMANENT) && get_card_name(p, c) == csvid ){

@@ -201,7 +201,7 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 
 	card_ptr_t* c = cards_ptr[ id ];
 	if( cless == -1 ){
-		cless = c->req_colorless;
+		cless = c->req.req_colorless;
 	}
 
 	int clr = get_color_by_id(player, id);
@@ -437,7 +437,7 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 				}
 
 				if( get_id(i, count) == CARD_ID_OMNISCIENCE && i == player){
-					cless-=c->req_colorless;
+					cless-=c->req.req_colorless;
 				}
 
 				if( get_id(i, count) == CARD_ID_PEARL_MEDALLION  && i == player && (clr & COLOR_TEST_WHITE) ){
@@ -453,7 +453,7 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 				}
 
 				if( get_id(i, count) == CARD_ID_ROOFTOP_STORM && i == player && has_subtype_by_id(id, CARD_ID_ZOMBIE) ){
-					cless-=c->req_colorless;
+					cless-=c->req.req_colorless;
 				}
 
 				if( get_id(i, count) == CARD_ID_RUBY_MEDALLION  && i == player && (clr & COLOR_TEST_RED) ){
@@ -527,7 +527,7 @@ int card_trinisphere(int player, int card, event_t event){
         if( event == EVENT_MODIFY_COST_GLOBAL && ! is_what(affected_card_controller, affected_card, TYPE_LAND) ){
 			int cless = get_updated_casting_cost_exc_trinisphere(affected_card_controller, affected_card, event, -1);
 			card_ptr_t* c = cards_ptr[ get_id(affected_card_controller, affected_card)  ];
-			int cmc = cless + c->req_black + c->req_blue + c->req_green + c->req_red + c->req_white;
+			int cmc = cless + c->req.req_black + c->req.req_blue + c->req.req_green + c->req.req_red + c->req.req_white;
             if( cmc < 3 ){
                 COST_COLORLESS += 3 - cmc;
             }

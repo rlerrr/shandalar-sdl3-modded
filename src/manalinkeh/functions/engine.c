@@ -176,11 +176,11 @@ void recalculate_all_cards_in_play(void)
 
 		  /* 704.5r If a permanent has both a +1/+1 counter and a -1/-1 counter on it, N +1/+1 and N -1/-1 counters are removed from it, where N is the smaller
 		   * of the number of +1/+1 and -1/-1 counters on it. */
-		  if (instance->counters > 0 && instance->counters_m1m1 > 0 && is_what(p, c, TYPE_PERMANENT)
+		  if (instance->counters_byte > 0 && instance->counters_m1m1 > 0 && is_what(p, c, TYPE_PERMANENT)
 			  && !(instance->toughness <= 0 && is_what(p, c, TYPE_CREATURE)))
 			{
-			  int n = MIN(instance->counters, instance->counters_m1m1);
-			  instance->counters -= n;
+			  int n = MIN(instance->counters_byte, instance->counters_m1m1);
+			  instance->counters_byte -= n;
 			  instance->counters_m1m1 -= n;
 			}
 
@@ -1947,12 +1947,12 @@ int card_instances_should_be_displayed_identically(card_instance_t* inst1, card_
 			   || inst1->color != inst2->color
 			   || inst1->blocking != inst2->blocking
 			   || inst1->info_slot != inst2->info_slot
-			   || inst1->special_counters != inst2->special_counters
+			   || inst1->special_counters_byte != inst2->special_counters_byte
 			   || inst1->counters2 != inst2->counters2
 			   || inst1->counters3 != inst2->counters3
 			   || inst1->counters4 != inst2->counters4
 			   || inst1->unknown0x11a != inst2->unknown0x11a
-			   || inst1->counters != inst2->counters
+			   || inst1->counters_byte != inst2->counters_byte
 			   || inst1->counters5 != inst2->counters5
 			   || inst1->unknown0x122 != inst2->unknown0x122
 			   || ((inst1->token_status ^ inst2->token_status) & STATUS_RED_BORDER)

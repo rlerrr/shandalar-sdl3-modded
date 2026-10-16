@@ -832,7 +832,7 @@ static void add_or_remove_counters_impl(int player, int card, counter_t type, in
 	{
 	  case COUNTER_P1_P1:
 		p = t = +1;
-		position = &instance->counters;
+		position = &instance->counters_byte;
 		break;
 
 	  case COUNTER_M1_M1:
@@ -883,7 +883,7 @@ static void add_or_remove_counters_impl(int player, int card, counter_t type, in
 		  // (Those correspond to t18[4] and t18[5] for the slots, and t18[6] and t18[7] for the labels, respectively.)
 #define CHECK_IN_TARGETS(pos_byte, lbl_byte)	CHECK_COMMON(t18[pos_byte], t18[lbl_byte])
 
-		  CHECK_COMMON(instance->special_counters, instance->special_counter_type);
+		  CHECK_COMMON(instance->special_counters_byte, instance->special_counter_type);
 		  CHECK_IN_COUNTERS(counters2, 0);
 		  CHECK_IN_COUNTERS(counters3, 1);
 		  CHECK_IN_COUNTERS(counters4, 2);
@@ -901,12 +901,12 @@ static void add_or_remove_counters_impl(int player, int card, counter_t type, in
 		  // Find a free slot to assign to this type.
 
 		  // If nothing in the special_counters slot and we're adding a counter of the preferred type, use that.
-		  if (instance->special_counters == 0)
+		  if (instance->special_counters_byte == 0)
 			{
 			  unsigned int preferred_type = get_counter_type_by_instance(instance);
 			  if (preferred_type == type)
 				{
-				  position = &instance->special_counters;
+				  position = &instance->special_counters_byte;
 				  label = &instance->special_counter_type;
 				  goto found;
 				}
@@ -937,9 +937,9 @@ static void add_or_remove_counters_impl(int player, int card, counter_t type, in
 		  TRY_ASSIGN_IN_COUNTERS(counters5, 3);
 
 		  // No other visible slots free, so consider adding in the special counter slot even if doesn't match the preferred type.
-		  if (instance->special_counters == 0)
+		  if (instance->special_counters_byte == 0)
 			{
-			  position = &instance->special_counters;
+			  position = &instance->special_counters_byte;
 			  label = &instance->special_counter_type;
 			  goto found;
 			}
@@ -1191,12 +1191,12 @@ void copy_counters(int t_player, int t_card, int src_player, int src_card, int r
 	  ++num_types;													\
 	}
 
-  ADD_TYPE(instance->special_counters, instance->special_counter_type);
+  ADD_TYPE(instance->special_counters_byte, instance->special_counter_type);
   ADD_TYPE(instance->counters2, t18[0]);
   ADD_TYPE(instance->counters3, t18[1]);
   ADD_TYPE(instance->counters4, t18[2]);
   ADD_TYPE(instance->counters5, t18[3]);
-  ADD_TYPE(instance->counters, COUNTER_P1_P1);
+  ADD_TYPE(instance->counters_byte, COUNTER_P1_P1);
   ADD_TYPE(instance->counters_m1m1, COUNTER_M1_M1);
   ADD_TYPE(t18[4], t18[6]);
   ADD_TYPE(t18[5], t18[7]);
@@ -1269,7 +1269,7 @@ void move_counters(int t_player, int t_card, int src_player, int src_card, count
 static int count_counters_impl(card_instance_t* instance, counter_t type)
 {
   if (type == COUNTER_P1_P1)
-	return instance->counters;	// Dedicated slot for +1/+1 counters
+	return instance->counters_byte;	// Dedicated slot for +1/+1 counters
 
   if (type == COUNTER_M1_M1)
 	return instance->counters_m1m1;	// Dedicated slot for -1/-1 counters
@@ -1279,8 +1279,8 @@ static int count_counters_impl(card_instance_t* instance, counter_t type)
   int tot;
   if ((unsigned char)type == COUNTER_invalid)	// Total count of all counters
 	{
-	  tot = (instance->special_counters		// dedicated to a type determined by card's csvid
-			 + instance->counters			// dedicated to +1/+1 counters
+	  tot = (instance->special_counters_byte		// dedicated to a type determined by card's csvid
+			 + instance->counters_byte			// dedicated to +1/+1 counters
 			 + instance->counters_m1m1);	// dedicated to -1/-1 counters
 
 	  // Dynamically-assigned counter types.
@@ -1308,7 +1308,7 @@ static int count_counters_impl(card_instance_t* instance, counter_t type)
   tot = 0;
 
   if (instance->special_counter_type == type)
-	tot += instance->special_counters;
+	tot += instance->special_counters_byte;
 
   // Four visible
   if (t18[0] == type)
@@ -1351,12 +1351,12 @@ void remove_all_counters(int player, int card, counter_t type)
   if ((unsigned char)type == COUNTER_invalid)
 	{
 	  card_instance_t* instance = get_card_instance(player, card);
-	  instance->special_counters = 0;
+	  instance->special_counters_byte = 0;
 	  instance->special_counter_type = -1;
 	  instance->counters2 = 0;
 	  instance->counters3 = 0;
 	  instance->counters4 = 0;
-	  instance->counters = 0;
+	  instance->counters_byte = 0;
 	  instance->counters5 = 0;
 	  instance->counters_m1m1 = 0;
 	  instance->targets[18].player = -1;
@@ -1909,12 +1909,12 @@ counter_t choose_existing_counter_type(int who_chooses, int src_player, int src_
 	uint8_t typ;
   } counter_data[9] =
 	  {
-		{ instance->special_counters, instance->special_counter_type },	// Top
+		{ instance->special_counters_byte, instance->special_counter_type },	// Top
 		{ instance->counters2, t18[0] },	// Upper right
 		{ instance->counters3, t18[1] },	// Upper center
 		{ instance->counters4, t18[2] },	// Upper left
 		{ instance->counters5, t18[3] },	// Lower right
-		{ instance->counters, COUNTER_P1_P1 },		// Lower left
+		{ instance->counters_byte, COUNTER_P1_P1 },		// Lower left
 		{ instance->counters_m1m1, COUNTER_M1_M1 },	// Also lower left
 		{ t18[4], t18[6] },	// undisplayed 1
 		{ t18[5], t18[7] }	// undisplayed 2
@@ -2134,7 +2134,7 @@ void add_energy(int player, int number_of_counters)
 	if (ai_is_speculating != 1)
 		play_sound_effect(WAV_COUNTER);  // maybe use a new sound here; same with poison and experience counters
 
-	if( number_of_counters > 0 && (enable_xtrigger_flags & XTRIGGER_COUNTER_ENERGY))
+	if( number_of_counters > 0 && (enable_xtrigger_flags & ENABLE_XTRIGGER_COUNTER_ENERGY))
 	{
 		int old_counters_added = counters_added;
 		counters_added = number_of_counters;

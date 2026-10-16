@@ -120,6 +120,18 @@ if(SHANDALAR_BUILD_TESTS AND NOT EMSCRIPTEN)
   add_test(NAME target_predicate_test COMMAND target_predicate_test)
 endif()
 
+add_executable(defs_abi_test EXCLUDE_FROM_ALL tests/defs_abi_test.c)
+if(SHANDALAR_BUILD_TESTS)
+  set_property(TARGET defs_abi_test PROPERTY EXCLUDE_FROM_ALL FALSE)
+endif()
+if(EMSCRIPTEN)
+  set_target_properties(defs_abi_test PROPERTIES SUFFIX ".js")
+  target_link_options(defs_abi_test PRIVATE -sENVIRONMENT=node -sEXIT_RUNTIME=1)
+endif()
+if(SHANDALAR_BUILD_TESTS AND NOT EMSCRIPTEN)
+  add_test(NAME defs_abi_test COMMAND defs_abi_test)
+endif()
+
 # Keep legacy translation units from retaining every unrelated function when
 # the host requests only one of their MOK replacement entry points.
 if(MSVC)

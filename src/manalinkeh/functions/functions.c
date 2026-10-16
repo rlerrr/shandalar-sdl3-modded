@@ -3226,8 +3226,8 @@ int get_cmc_by_id(int id){
 
 	card_ptr_t* c = cards_ptr[ id ];
 
-	int result = c->req_black + c->req_blue + c->req_green + c->req_red + c->req_white;
-	int cless = c->req_colorless;
+	int result = c->req.req_black + c->req.req_blue + c->req.req_green + c->req.req_red + c->req.req_white;
+	int cless = c->req.req_colorless;
 
 	if( cless == 40 ){
 		cless = 0;
@@ -3288,9 +3288,9 @@ int get_cmc(int player, int card){
 
 int get_cmc_by_internal_id(int id){
 	card_data_t* card_d = &cards_data[ id  ];
-	int cmc = card_d->cc[0] + card_d->cc[1];
-	if( card_d->cc[1] > 16 ){
-		cmc = card_d->cc[0];
+	int cmc = (uint8_t)card_d->cc[0] + (uint8_t)card_d->cc[1];
+	if( (uint8_t)card_d->cc[1] > 16 ){
+		cmc = (uint8_t)card_d->cc[0];
 	}
 
 	if( card_d->id == CARD_ID_LOTUS_BLOOM ){
@@ -4355,7 +4355,7 @@ int get_hacked_color(int player, int card, int color)
   int result; // eax
 
   v3 = get_card_instance(player, card);
-  result = v3->hack_mode[color];
+  result = (uint8_t)v3->hack_mode[color];
   if (!v3->hack_mode[color])
     result = color;
   return result;
@@ -4368,7 +4368,7 @@ int get_sleighted_color(int player, int card, int color)
   color_t result; // eax
 
   instance = get_card_instance(player, card);
-  result = instance->color_id[color];
+  result = (uint8_t)instance->color_id[color];
   if (!instance->color_id[color])
     result = color;
   return result;
@@ -7374,8 +7374,8 @@ int check_playable_permanents(int player, int p_type, int mode){
 			if( in_hand(player, count) && is_what(player, count, p_type) ){
 				int id = get_id(player, count);
 				card_ptr_t* c = cards_ptr[ id ];
-				if( has_mana_multi(player, c->req_colorless, c->req_black, c->req_blue, c->req_green,
-					c->req_red, c->req_white)
+				if( has_mana_multi(player, c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green,
+					c->req.req_red, c->req.req_white)
 				  ){
 					card_instance_t *instance = get_card_instance(player, count);
 					if( can_legally_play_iid(player, instance->internal_card_id) ){
@@ -7969,7 +7969,7 @@ int true_get_updated_casting_cost(int player, int card, int iid, event_t event, 
 
 	card_ptr_t* c = cards_ptr[ csvid ];
 	if( cless == -1 ){
-		cless = c->req_colorless;
+		cless = c->req.req_colorless;
 	}
 	if( cless > 15 || cless == -1 ){
 		cless = 0;
@@ -8434,7 +8434,7 @@ int true_get_updated_casting_cost(int player, int card, int iid, event_t event, 
 						case CARD_ID_OMNISCIENCE:
 						{
 							if( i == player){
-								cless-=c->req_colorless;
+								cless-=c->req.req_colorless;
 							}
 							break;
 						}
@@ -8458,7 +8458,7 @@ int true_get_updated_casting_cost(int player, int card, int iid, event_t event, 
 						case CARD_ID_ROOFTOP_STORM:
 						{
 							if( i == player && has_subtype_by_id(csvid, SUBTYPE_ZOMBIE) ){
-								cless-=c->req_colorless;
+								cless-=c->req.req_colorless;
 							}
 							break;
 						}
@@ -8643,7 +8643,7 @@ int true_get_updated_casting_cost(int player, int card, int iid, event_t event, 
 
 	if( trinisphere_flag == 1 && cless < 3 && dont_account_for_trinisphere <= 0 ){
 		if( orig_cless == -1 ){
-			int total_cmc = c->req_black + c->req_blue + c->req_green + c->req_red + c->req_white;
+			int total_cmc = c->req.req_black + c->req.req_blue + c->req.req_green + c->req.req_red + c->req.req_white;
 			if( total_cmc < 3 ){
 				cless = 3-total_cmc;
 			}
@@ -8757,7 +8757,7 @@ int has_mana_to_cast_iid(int player, event_t event, int iid)
   if(csvid==CARD_ID_REAPER_KING)return can_cast_reaper_king(player,-1,event);
 
   card_ptr_t* cp = cards_ptr[csvid];
-  int orig_cless = cp->req_colorless;
+  int orig_cless = cp->req.req_colorless;
   if (orig_cless == 40)
 	orig_cless = 0;
 
@@ -8765,7 +8765,7 @@ int has_mana_to_cast_iid(int player, event_t event, int iid)
   if(csvid==CARD_ID_KARADOR_GHOST_CHIEFTAIN){cless-=count_graveyard_by_type(player,TYPE_CREATURE);if(cless<0)cless=0;}
   int is_artifact = cards_data[iid].type & TYPE_ARTIFACT;
   if (is_phyrexian(csvid))
-	return has_phyrexian_mana(player, cless, cp->req_black, cp->req_blue, cp->req_green, cp->req_red, cp->req_white, is_artifact);
+	return has_phyrexian_mana(player, cless, cp->req.req_black, cp->req.req_blue, cp->req.req_green, cp->req.req_red, cp->req.req_white, is_artifact);
   else if (is_normal_hybrid(cp))
 	{
 	  int c1 = get_colors_for_hybrid(-1, iid, 0, 0);
@@ -8784,9 +8784,9 @@ int has_mana_to_cast_iid(int player, event_t event, int iid)
 	}
 #endif
   else if (is_artifact)
-	return has_mana_multi_a(player, cless, cp->req_black, cp->req_blue, cp->req_green, cp->req_red, cp->req_white);
+	return has_mana_multi_a(player, cless, cp->req.req_black, cp->req.req_blue, cp->req.req_green, cp->req.req_red, cp->req.req_white);
   else
-	return has_mana_multi(player, cless, cp->req_black, cp->req_blue, cp->req_green, cp->req_red, cp->req_white);
+	return has_mana_multi(player, cless, cp->req.req_black, cp->req.req_blue, cp->req.req_green, cp->req.req_red, cp->req.req_white);
 }
 
 int charge_mana_from_id(int player/*to_charge*/, int card/*to_charge_for - optional; set to -1 to omit*/, event_t event, int csvid)
@@ -8810,7 +8810,7 @@ int charge_mana_from_id(int player/*to_charge*/, int card/*to_charge_for - optio
   if(csvid==CARD_ID_REAPER_KING){int y=card>-1?card:add_card_to_hand(player,iid);int z=casting_reaper_king(player,y,event);if(card<0)obliterate_card(player,y);return z;}
 
   card_ptr_t* cp = cards_ptr[csvid];
-  int orig_cless = cp->req_colorless;
+  int orig_cless = cp->req.req_colorless;
   if (orig_cless == 40)
 	orig_cless = 0;
 
@@ -8830,7 +8830,7 @@ int charge_mana_from_id(int player/*to_charge*/, int card/*to_charge_for - optio
 	{
 	  // This both accounts for changed casting cost itself, and needs a real card.
 	  ADD_CARD();
-	  rval = charge_phyrexian_mana(player, card, event, orig_cless, cp->req_black, cp->req_blue, cp->req_green, cp->req_red, cp->req_white, is_artifact);
+	  rval = charge_phyrexian_mana(player, card, event, orig_cless, cp->req.req_black, cp->req.req_blue, cp->req.req_green, cp->req.req_red, cp->req.req_white, is_artifact);
 	}
   else
 	{
@@ -8864,7 +8864,7 @@ int charge_mana_from_id(int player/*to_charge*/, int card/*to_charge_for - optio
 		  if (csvid==CARD_ID_KARADOR_GHOST_CHIEFTAIN){cless-=count_graveyard_by_type(player,TYPE_CREATURE);if(cless<0)cless=0;}
 
 		  int charge_x = 0;
-		  if (cards_data[iid].cc[1] == 255)	// a more reliable check than orig_cless == 40; cards that naughtily charge X themselves set orig_cless == 40 so X appears in displayed mana cost but cc[1] == 0 so it's not charged by the engine
+		  if (cards_data[iid].cc[1] == -1)	// a more reliable check than orig_cless == 40; cards that naughtily charge X themselves set orig_cless == 40 so X appears in displayed mana cost but cc[1] == 0 so it's not charged by the engine
 			{
 			  if (cless == 0)
 				cless = -1;	// can just do it in the initial mana call
@@ -8872,7 +8872,7 @@ int charge_mana_from_id(int player/*to_charge*/, int card/*to_charge_for - optio
 				charge_x = 1;
 			}
 
-		  rval = charge_mana_multi_a(player, is_artifact ? 0 : cless, cp->req_black, cp->req_blue, cp->req_green, cp->req_red, cp->req_white, is_artifact ? cless : 0);
+		  rval = charge_mana_multi_a(player, is_artifact ? 0 : cless, cp->req.req_black, cp->req.req_blue, cp->req.req_green, cp->req.req_red, cp->req.req_white, is_artifact ? cless : 0);
 
 		  if (rval && charge_x)
 			rval = charge_mana_multi_a(player, is_artifact ? 0 : -1, 0,0,0,0,0, is_artifact ? -1 : 0);
@@ -11823,11 +11823,11 @@ void exile_if_would_be_put_into_graveyard(int player, int card, int t_player, in
 void null_casting_cost(int player, int card){
 	card_ptr_t* c = cards_ptr[ get_id(player, card) ];
 	COST_COLORLESS-=get_updated_casting_cost(player, card, -1, EVENT_MODIFY_COST, -1);
-	COST_BLACK-=c->req_black;
-	COST_BLUE-=c->req_blue;
-	COST_GREEN-=c->req_green;
-	COST_RED-=c->req_red;
-	COST_WHITE-=c->req_white;
+	COST_BLACK-=c->req.req_black;
+	COST_BLUE-=c->req.req_blue;
+	COST_GREEN-=c->req.req_green;
+	COST_RED-=c->req.req_red;
+	COST_WHITE-=c->req.req_white;
 }
 
 void infinite_casting_cost(void){
@@ -12415,8 +12415,8 @@ int can_cast_spell_from_grave(int player, int mode){
 			  ){
 				int id = cards_data[grave[count]].id;
 				card_ptr_t* c = cards_ptr[ id ];
-				if( has_mana_multi(player, c->req_colorless, c->req_black, c->req_blue, c->req_green,
-					c->req_red, c->req_white)
+				if( has_mana_multi(player, c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green,
+					c->req.req_red, c->req.req_white)
 				  ){
 					if( can_legally_play_iid(player, grave[count]) ){
 						if( mode == 1 ){
@@ -13666,12 +13666,12 @@ int is_x_spell(int player, int card){
 	card_data_t* card_d;
 	if( player != -1 ){
 		card_d = get_card_data(player, card);
-		if( card_d->cc[1] == 255 ){
+		if( card_d->cc[1] == -1 ){
 			return 1;
 		}
 	}
 	else{
-		if( cards_data[card].cc[1] == 255 ){
+		if( cards_data[card].cc[1] == -1 ){
 			return 1;
 		}
 	}
@@ -13859,12 +13859,12 @@ static int this_dies_trigger_impl(int player, int card, event_t event, resolve_t
 	  SET_BYTE3(leg->eot_toughness) = trigger_mode;
 
 	  // for e.g. Vexing Sphinx
-	  leg->special_counters = instance->special_counters;
+	  leg->special_counters_byte = instance->special_counters_byte;
 	  leg->special_counter_type = instance->special_counter_type;
 	  leg->counters2 = instance->counters2;
 	  leg->counters3 = instance->counters3;
 	  leg->counters4 = instance->counters4;
-	  leg->counters = instance->counters;
+	  leg->counters_byte = instance->counters_byte;
 	  leg->counters5 = instance->counters5;
 	  leg->counters_m1m1 = instance->counters_m1m1;
 

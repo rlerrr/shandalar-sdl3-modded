@@ -236,7 +236,7 @@ void mark_blocked_attackers(int player)
       {
         blocker_internal_card_id = global_card_instances[opponent][card].internal_card_id;
         if ((blocker_internal_card_id != -1) &&
-            ((char)global_card_instances[opponent][card].blocking == attacker))
+            (global_card_instances[opponent][card].blocking == attacker))
         {
           is_blocked = 1;
         }
@@ -248,7 +248,7 @@ void mark_blocked_attackers(int player)
       for (card = 0; card < g_active_cards_count[player]; card++)
       {
         if ((attacker == card) ||
-            (((char)global_card_instances[player][card].blocking == attacker) &&
+            ((global_card_instances[player][card].blocking == attacker) &&
              ((global_card_instances[player][card].state & (STATE_OUBLIETTED | STATE_IN_PLAY | STATE_ATTACKING)) ==
               (STATE_IN_PLAY | STATE_ATTACKING))))
         {
@@ -944,7 +944,7 @@ restart_main_phase_action_loop:
                                      g_ui_message_buffer, 2, &selected_bandmate) != 0)
             {
               main_phase_selected_bandmate_card = selected_bandmate.card;
-              if ((char)global_card_instances[player][main_phase_selected_bandmate_card].blocking == -1)
+              if (global_card_instances[player][main_phase_selected_bandmate_card].blocking == 255)
               {
                 global_card_instances[player][main_phase_selected_bandmate_card].blocking = (unsigned char)main_phase_selected_bandmate_card;
                 global_card_instances[player][main_phase_selected_card].blocking = (unsigned char)main_phase_selected_bandmate_card;
@@ -1024,15 +1024,15 @@ restart_main_phase_action_loop:
           if (g_combat_assignment_cancelled != 0)
           {
             *(unsigned int *)&global_card_instances[g_trigger_cause_controller][g_trigger_cause].state &= 0xfffffffb;
-            if ((char)global_card_instances[g_trigger_cause_controller][g_trigger_cause].blocking != -1)
+            if (global_card_instances[g_trigger_cause_controller][g_trigger_cause].blocking != 255)
             {
               bandmate_index = 0;
               bandmate_count = 0;
               for (; bandmate_index < g_active_cards_count[player]; bandmate_index = bandmate_index + 1)
               {
                 if ((bandmate_index != g_trigger_cause) &&
-                    ((char)global_card_instances[player][bandmate_index].blocking ==
-                     (char)global_card_instances[g_trigger_cause_controller][g_trigger_cause].blocking))
+                    (global_card_instances[player][bandmate_index].blocking ==
+                     global_card_instances[g_trigger_cause_controller][g_trigger_cause].blocking))
                 {
                   bandmates[bandmate_count] = bandmate_index;
                   bandmate_count = bandmate_count + 1;

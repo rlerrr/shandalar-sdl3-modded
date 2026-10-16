@@ -33,7 +33,6 @@ static int create_multiblocker(int player, int card, int num_blockable)
 		  cd->code_pointer = MANALINKEH_CARD_MULTIBLOCKER;
 		  cd->extra_ability = 0;
 		  cd->id = 907;
-		  cd->reserved2 = 0;
 		}
 	  else
 		return 0;

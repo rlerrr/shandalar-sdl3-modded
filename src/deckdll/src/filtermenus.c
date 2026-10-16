@@ -2617,7 +2617,8 @@ bool check_filters(csvid_t csvid)
   req = &global_raw_cards_storage[csvid].req;
   power = global_raw_cards_storage[csvid].power;
   toughness = global_raw_cards_storage[csvid].toughness;
-  abils = global_raw_cards_storage[csvid].abilities;
+  /* The original database stores ten ability bytes after its two subtype words. */
+  abils = (char *)&global_raw_cards_storage[csvid].types[2];
   artist = global_raw_cards_storage[csvid].artist;
   rarity = global_raw_cards_storage[csvid].rarity;
 

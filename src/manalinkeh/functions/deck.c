@@ -137,78 +137,27 @@ static int calc_initial_attack_rating(int player, int card)
   return rating / 8;
 }
 
-static card_instance_t card_instance_template =
+static const card_instance_t card_instance_template =
 {
-  0,	// special_counters
-  0,	// counters2
-  0,	// counters3
-  0,	// counters4
-  -1,	// damage_target_card
-  0,	// state
-  -1,	// damage_source_player
-  0,	// unused0				// left uninitialized
-  0,	// toughness
-  0,	// damage_on_card
-  0,	// counter_power
-  0,	// unknown0x14
-  0,	// token_status
-  0,	// counter_toughness
-  0,	// color
-  0,	// destroys_if_blocked	// left uninitialized
-  0,	// dummy3
-  -1,	// blocking
-  0,	// initial_color
-  0,	// unused0x26
-  KEYWORD_RECALC_ABILITIES,	// regen_status
-  {0,0,0,0,0,0,0,0},	// mana_to_untap[8]		// [7] is left uninitialized
-  0,	// power
-  0,	// number_of_targets
-  0,	// unknown0x37
-  0,	// info_slot
-  -1,	// original_internal_card_id
-  {0,0,0,0,0},	// color_id[6]
-  (uint16_t)(-1),	// backup_internal_card_id
-  -1,	// damage_source_card
-  0,	// eot_toughness
-  -1,	// damage_target_player
-  0xFF,	// special_counter_type	// left uninitialized
-  -1,	// unk52				// left uninitialized
-  -1,	// unk53				// left uninitialized
-  -1,	// timestamp
-  0,	// mana_color
-  0,	// card_color
-  0,	// unk5a				// left uninitialized
-  0,	// unk5b				// left uninitialized
-  0,	// upkeep_flags
-  0,	// attack_rating
-  0,	// display_pic_csv_id	// left uninitialized
-  0,	// display_pic_num		// left uninitialized
-  0,	// kill_code
-  0,	// unk69				// left uninitialized
-  0,	// unk6A				// left uninitialized
-  0,	// unk6B				// left uninitialized
-  -1,	// internal_card_id
-  0,	// unknown0x70			// left uninitialized
-  {{-1,-1},{-1,-1},{-1,-1},{-1,-1},{-1,-1},
-   {-1,-1},{-1,-1},{-1,-1},{-1,-1},{-1,-1},
-   {-1,-1},{-1,-1},{-1,-1},{-1,-1},{-1,-1},
-   {-1,-1},{-1,-1},{-1,-1},{-1,-1}},		// targets[19]
-  -1,	// parent_controller
-  -1,	// parent_card
-  {0,0,0,0,0,0},	// hack_mode[6]
-  0,	// unknown0x11a
-  0,	// untap_status
-  0,	// counters
-  0,	// counters5
-  0,	// unknown0x122
-  0,	// upkeep_colorless
-  0,	// upkeep_black
-  0,	// upkeep_blue
-  0,	// upkeep_green
-  0,	// upkeep_red
-  0,	// upkeep_white
-  0,	// upkeep_artmana
-  0		// counters_m1m1	// left uninitialized
+  .damage_target_card = -1,
+  .damage_source_player = -1,
+  .blocking = 255,
+  .regen_status = KEYWORD_RECALC_ABILITIES,
+  .original_internal_card_id = -1,
+  .backup_internal_card_id = (uint16_t)-1,
+  .damage_source_card = -1,
+  .damage_target_player = -1,
+  .special_counter_type = 0xff,
+  .unk52 = 0xff,
+  .unk53 = 0xff,
+  .timestamp = (uint32_t)-1,
+  .internal_card_id = -1,
+  .targets = {{-1,-1},{-1,-1},{-1,-1},{-1,-1},{-1,-1},
+              {-1,-1},{-1,-1},{-1,-1},{-1,-1},{-1,-1},
+              {-1,-1},{-1,-1},{-1,-1},{-1,-1},{-1,-1},
+              {-1,-1},{-1,-1},{-1,-1},{-1,-1}},
+  .parent_controller = -1,
+  .parent_card = -1
 };
 
 void create_card_instance(int player, unsigned int iid, int card)

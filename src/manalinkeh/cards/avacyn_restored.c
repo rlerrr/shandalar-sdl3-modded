@@ -5321,11 +5321,11 @@ Creature - Dryad 2/2
 			int color_to_reduce = 0;
 			card_ptr_t* c = cards_ptr[get_id(affected_card_controller, affected_card)];
 			int clrs[5];
-			clrs[0] = c->req_black;
-			clrs[1] = c->req_blue;
-			clrs[2] = c->req_green;
-			clrs[3] = c->req_red;
-			clrs[4] = c->req_white;
+			clrs[0] = c->req.req_black;
+			clrs[1] = c->req.req_blue;
+			clrs[2] = c->req.req_green;
+			clrs[3] = c->req.req_red;
+			clrs[4] = c->req.req_white;
 			int i;
 			int par = 0;
 			for(i=0; i<5; i++){
@@ -5335,35 +5335,35 @@ Creature - Dryad 2/2
 				}
 			}
 			if( color_to_reduce == 0 ){
-				amount-=c->req_black;
+				amount-=c->req.req_black;
 				if( amount < 0 ){
 					amount = 0;
 				}
 				COST_BLACK-=(3-amount);
 			}
 			if( color_to_reduce == 1 ){
-				amount-=c->req_blue;
+				amount-=c->req.req_blue;
 				if( amount < 0 ){
 					amount = 0;
 				}
 				COST_BLUE-=(3-amount);
 			}
 			if( color_to_reduce == 2 ){
-				amount-=c->req_green;
+				amount-=c->req.req_green;
 				if( amount < 0 ){
 					amount = 0;
 				}
 				COST_GREEN-=(3-amount);
 			}
 			if( color_to_reduce == 3 ){
-				amount-=c->req_red;
+				amount-=c->req.req_red;
 				if( amount < 0 ){
 					amount = 0;
 				}
 				COST_RED-=(3-amount);
 			}
 			if( color_to_reduce == 4 ){
-				amount-=c->req_white;
+				amount-=c->req.req_white;
 				if( amount < 0 ){
 					amount = 0;
 				}
@@ -6244,19 +6244,19 @@ As ~ enters the battlefield, choose a creature type.
 	if(event == EVENT_MODIFY_COST_GLOBAL && affected_card_controller == player && ! is_tapped(player, card)){
 		if( instance->targets[1].card > 0 && has_creature_type(affected_card_controller, affected_card_controller, instance->targets[1].card) ){
 			card_ptr_t* c = cards_ptr[get_id(affected_card_controller, affected_card_controller)];
-			if( c->req_black > 0 ){
+			if( c->req.req_black > 0 ){
 				COST_BLACK-=1;
 			}
-			else if( c->req_blue > 0  ){
+			else if( c->req.req_blue > 0  ){
 				COST_BLUE-=1;
 			}
-			else if( c->req_green > 0  ){
+			else if( c->req.req_green > 0  ){
 					COST_GREEN-=1;
 			}
-			else if( c->req_red > 0 ){
+			else if( c->req.req_red > 0 ){
 					COST_RED-=1;
 			}
-			else if( c->req_white > 0 ){
+			else if( c->req.req_white > 0 ){
 					COST_WHITE-=1;
 			}
 		}

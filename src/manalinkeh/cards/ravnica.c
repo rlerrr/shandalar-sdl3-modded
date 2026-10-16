@@ -301,8 +301,8 @@ int ravnica_manachanger(int player, int card, event_t event, int plus_black, int
 		card_instance_t *instance = get_card_instance( player, card );
 		card_ptr_t* c = cards_ptr[ get_id(player, card) ];
 		int cless = get_updated_casting_cost(player, card, -1, event, -1);
-		if( has_mana_multi(player, cless-1, c->req_black+plus_black, c->req_blue+plus_blue,
-							c->req_green+plus_green, c->req_red+plus_red, c->req_white+plus_white)
+		if( has_mana_multi(player, cless-1, c->req.req_black+plus_black, c->req.req_blue+plus_blue,
+							c->req.req_green+plus_green, c->req.req_red+plus_red, c->req.req_white+plus_white)
 		  ){
 			null_casting_cost(player, card);
 			instance->info_slot = 1;
@@ -329,7 +329,7 @@ int charge_changed_mana(int player, int card, int plus_black, int plus_blue, int
 		special_color = COLOR_WHITE;
 	}
 	card_ptr_t* c = cards_ptr[ get_id(player, card) ];
-	int cless = get_updated_casting_cost(player, card, -1, EVENT_CAST_SPELL, c->req_colorless);
+	int cless = get_updated_casting_cost(player, card, -1, EVENT_CAST_SPELL, c->req.req_colorless);
 	if( cless < 1 ){
 		cless = 0;
 	}
@@ -338,13 +338,13 @@ int charge_changed_mana(int player, int card, int plus_black, int plus_blue, int
 		cless2 = 0;
 	}
 	int choice = 0;
-	if( has_mana_multi(player, cless-1, c->req_black+plus_black, c->req_blue+plus_blue, c->req_green+plus_green, c->req_red+plus_red, c->req_white+plus_white)){
+	if( has_mana_multi(player, cless-1, c->req.req_black+plus_black, c->req.req_blue+plus_blue, c->req.req_green+plus_green, c->req.req_red+plus_red, c->req.req_white+plus_white)){
 		if( player == AI ){
 			choice = 1;
 		}
 		else{
-			int manacost[5] = { c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white };
-			int manacost_mod[5] = { c->req_black+plus_black,  c->req_blue+plus_blue, c->req_green+plus_green, c->req_red+plus_red, c->req_white+plus_white };
+			int manacost[5] = { c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white };
+			int manacost_mod[5] = { c->req.req_black+plus_black,  c->req.req_blue+plus_blue, c->req.req_green+plus_green, c->req.req_red+plus_red, c->req.req_white+plus_white };
 			char buffer[500];
 			int pos = scnprintf(buffer, 500, " Pay ");
 			if( cless == -1 ){
@@ -413,7 +413,7 @@ int charge_changed_mana(int player, int card, int plus_black, int plus_blue, int
 		}
 	}
 	if( choice == 0 ){
-		charge_mana_multi(player, cless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white);
+		charge_mana_multi(player, cless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white);
 		if( spell_fizzled != 1 ){
 			int result = 1 + (mana_paid[special_color] > 0);
 			return result;
@@ -423,7 +423,7 @@ int charge_changed_mana(int player, int card, int plus_black, int plus_blue, int
 		}
 	}
 	else if( choice == 1 ){
-			charge_mana_multi(player, cless2, c->req_black+plus_black, c->req_blue+plus_blue, c->req_green+plus_green, c->req_red+plus_red, c->req_white+plus_white);
+			charge_mana_multi(player, cless2, c->req.req_black+plus_black, c->req.req_blue+plus_blue, c->req.req_green+plus_green, c->req.req_red+plus_red, c->req.req_white+plus_white);
 			if( spell_fizzled != 1 ){
 				return 2;
 			}
@@ -1123,7 +1123,7 @@ Search your library for a creature card with converted mana cost X or less and p
 
 	if( event == EVENT_MODIFY_COST){
 		card_ptr_t* c = cards_ptr[ get_id(player, card)  ];
-		if( has_convoked_mana_extended(player, card, event, c->req_colorless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white) == 2 ){
+		if( has_convoked_mana_extended(player, card, event, c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white) == 2 ){
 			null_casting_cost(player, card);
 			get_card_instance( player, card )->targets[1].player = 1;
 		}

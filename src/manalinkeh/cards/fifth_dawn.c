@@ -256,7 +256,7 @@ static void sunburst(int player, int card, event_t event, int ctype){
 	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
 		if( player == AI ){
 			card_ptr_t* c = cards_ptr[ get_id(player, card) ];
-			int required = c->req_colorless;
+			int required = c->req.req_colorless;
 			if( required > 5 ){
 				required = 5;
 			}

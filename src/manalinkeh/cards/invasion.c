@@ -4,7 +4,7 @@
 int do_kicker(int player, int card, int colorless, int black, int blue, int green, int red, int white){
 	int diff = 0;
 	if( ! played_for_free(player, card) ){
-		diff = MIN(0, cards_ptr[get_id(player, card)]->req_colorless+true_get_updated_casting_cost(player, card, -1, EVENT_CAST_SPELL, -1));
+		diff = MIN(0, cards_ptr[get_id(player, card)]->req.req_colorless+true_get_updated_casting_cost(player, card, -1, EVENT_CAST_SPELL, -1));
 	}
 	if( colorless != -1 ){
 		int cless = MAX(0, colorless+diff);
@@ -96,8 +96,8 @@ int generic_split_card(int player, int card, event_t event, int can_play_first_h
 							int can_fuse = ! not_played_from_hand(player, card);
 							if( can_fuse ){
 								card_ptr_t* c = cards_ptr[ get_id(player, card)  ];
-								int c2 = get_updated_casting_cost(player, card, -1, event, c->req_colorless+colorless2);
-								if( ! has_mana_multi(player, c2, c->req_black+black2, c->req_blue+blue2, c->req_green+green2, c->req_red+red2, c->req_white+white2) ){
+								int c2 = get_updated_casting_cost(player, card, -1, event, c->req.req_colorless+colorless2);
+								if( ! has_mana_multi(player, c2, c->req.req_black+black2, c->req.req_blue+blue2, c->req.req_green+green2, c->req.req_red+red2, c->req.req_white+white2) ){
 									can_fuse = 0;
 								}
 							}
@@ -125,8 +125,8 @@ int generic_split_card(int player, int card, event_t event, int can_play_first_h
 		}
 		if( (instance->info_slot & 1) && (instance->info_slot & 2) ){ // Fuse
 			card_ptr_t* c = cards_ptr[ get_id(player, card)  ];
-			int c2 = get_updated_casting_cost(player, card, -1, event, c->req_colorless+colorless2);
-			charge_mana_multi(player, c2, c->req_black+black2, c->req_blue+blue2, c->req_green+green2, c->req_red+red2, c->req_white+white2);
+			int c2 = get_updated_casting_cost(player, card, -1, event, c->req.req_colorless+colorless2);
+			charge_mana_multi(player, c2, c->req.req_black+black2, c->req.req_blue+blue2, c->req.req_green+green2, c->req.req_red+red2, c->req.req_white+white2);
 			if( spell_fizzled != 1 ){
 				ff = 1;
 			}

@@ -3867,9 +3867,9 @@ int card_lure(int player, int card, event_t event)
   {
     PLAYER_CARD_INSTANCE(player, card).info_slot = 1;
     g_trigger_condition = -1;
-    if ((int)PLAYER_CARD_INSTANCE(player, card).damage_target_player == g_current_player && (DAMAGE_TARGET_CARD_INSTANCE(player, card).state & STATE_ATTACKING) != 0 && is_in_play(g_affected_card_controller, g_affected_card) && PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).blocking == -1 && g_affected_card_controller != g_current_player && can_block_with_landwalk_masks(g_affected_card_controller, g_affected_card, (int)(char)PLAYER_CARD_INSTANCE(player, card).damage_target_player, PLAYER_CARD_INSTANCE(player, card).damage_target_card) != 0)
+    if ((int)PLAYER_CARD_INSTANCE(player, card).damage_target_player == g_current_player && (DAMAGE_TARGET_CARD_INSTANCE(player, card).state & STATE_ATTACKING) != 0 && is_in_play(g_affected_card_controller, g_affected_card) && PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).blocking == 255 && g_affected_card_controller != g_current_player && can_block_with_landwalk_masks(g_affected_card_controller, g_affected_card, (int)(char)PLAYER_CARD_INSTANCE(player, card).damage_target_player, PLAYER_CARD_INSTANCE(player, card).damage_target_card) != 0)
     {
-      if (DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking == -1)
+      if (DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking == 255)
       {
         blocking_card = PLAYER_CARD_INSTANCE(player, card).damage_target_card;
       }

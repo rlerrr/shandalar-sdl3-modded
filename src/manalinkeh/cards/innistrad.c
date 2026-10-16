@@ -297,7 +297,7 @@ int card_back_from_the_brink(int player, int card, event_t event ){
 			while( grave[count] != -1 ){
 					if( is_what(-1, grave[count], TYPE_CREATURE) ){
 						card_ptr_t* c = cards_ptr[ cards_data[grave[count]].id];
-						int costs[6] = {c->req_colorless > 15 ? 0 : c->req_colorless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white};
+						int costs[6] = {c->req.req_colorless > 15 ? 0 : c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white};
 						costs[0] = get_cost_mod_for_activated_abilities(player, card, costs[0], costs[1], costs[2], costs[3], costs[4], costs[5]);
 						if( has_mana_multi(player, costs[0], costs[1], costs[2], costs[3], costs[4], costs[5]) ){
 							return 1;
@@ -316,7 +316,7 @@ int card_back_from_the_brink(int player, int card, event_t event ){
 		while( grave[count] != -1 ){
 				if( is_what(-1, grave[count], TYPE_CREATURE) ){
 					card_ptr_t* c = cards_ptr[ cards_data[grave[count]].id];
-					int costs[6] = {c->req_colorless > 15 ? 0 : c->req_colorless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white};
+					int costs[6] = {c->req.req_colorless > 15 ? 0 : c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white};
 					costs[0] = get_cost_mod_for_activated_abilities(player, card, costs[0], costs[1], costs[2], costs[3], costs[4], costs[5]);
 					if( has_mana_multi(player, costs[0], costs[1], costs[2], costs[3], costs[4], costs[5]) ){
 						playable[0][pc] = grave[count];
@@ -331,7 +331,7 @@ int card_back_from_the_brink(int player, int card, event_t event ){
 		int selected = select_card_from_zone(player, player, playable[0], pc, 0, AI_MAX_VALUE, -1, &this_test);
 		if( selected != -1 ){
 			card_ptr_t* c = cards_ptr[ cards_data[playable[0][selected]].id];
-			int costs[6] = {c->req_colorless > 15 ? 0 : c->req_colorless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white};
+			int costs[6] = {c->req.req_colorless > 15 ? 0 : c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white};
 			costs[0] = get_cost_mod_for_activated_abilities(player, card, costs[0], costs[1], costs[2], costs[3], costs[4], costs[5]);
 			charge_mana_multi(player, costs[0], costs[1], costs[2], costs[3], costs[4], costs[5]);
 			if( spell_fizzled != 1 ){
@@ -1504,12 +1504,12 @@ int card_rooftop_storm(int player, int card, event_t event){
 			has_subtype(affected_card_controller,affected_card, SUBTYPE_ZOMBIE)
 		  ){
 			card_ptr_t* c = cards_ptr[ get_id(affected_card_controller,affected_card) ];
-			COST_COLORLESS-=c->req_colorless;
-			COST_BLACK-=c->req_black;
-			COST_BLUE-=c->req_blue;
-			COST_GREEN-=c->req_green;
-			COST_RED-=c->req_red;
-			COST_WHITE-=c->req_white;
+			COST_COLORLESS-=c->req.req_colorless;
+			COST_BLACK-=c->req.req_black;
+			COST_BLUE-=c->req.req_blue;
+			COST_GREEN-=c->req.req_green;
+			COST_RED-=c->req.req_red;
+			COST_WHITE-=c->req.req_white;
 		}
 	}
 

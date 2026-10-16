@@ -8,7 +8,7 @@
  * Original campaign cards can have Manalink internal IDs above 4095. */
 #define ADVENTURE_DECK_CARD_ID_MASK 0x3fff
 
-// Type declarations.  Should contain no function or extern data declarations.
+// Shared engine types, constants, and header-only compatibility helpers.
 
 #include "inttypes.h"
 
@@ -25,7 +25,7 @@
 #define PACKED
 #endif
 
-#if __cplusplus < 201103L
+#if defined(__cplusplus) && __cplusplus < 201103L
 #define override
 #define static_assert(expr, msg)
 #endif
@@ -40,7 +40,7 @@
 	}
 #endif
 
-/* Colors */
+/* Colors, special abilities, and turn phases. */
 typedef enum
 {
 	COLOR_COLORLESS = 0,
@@ -50,14 +50,11 @@ typedef enum
 	COLOR_RED = 4,
 	COLOR_WHITE = 5,
 	COLOR_ARTIFACT = 6,
-	COLOR_ANY = 7
-#ifdef SHANDALAR
-		,
+	COLOR_ANY = 7,
 	COLOR_HYBRID = 7 // only valid in the context of pay_mana_xbugrwaU[]
-#endif
 } color_t;
 
-/* Colors */
+/* Color masks */
 typedef enum
 {
 	COLOR_TEST_0 = 0,
@@ -194,6 +191,55 @@ typedef enum
 	EVENT_PLANESWALK_OUT = 0xC1,
 	EVENT_RESOLVE_SPLICE = 0xC2,
 	EVENT_SHOULD_AI_PLAY = 0xC7,
+
+	EVENT_UPKEEP = 0x4,
+	EVENT_MAIN_PHASE2 = 0x1e,
+	EVENT_BEGIN_COMBAT = 0x89,
+	EVENT_SET_LEGACY_EFFECT_NAME = 0x100,
+	EVENT_SET_LEGACY_EFFECT_TEXT = 0x200,
+	EVENT_TRIGGER_RESOLVED = 0x300,
+	EVENT_CAN_CHANGE_TARGET = 0x400,
+	EVENT_CAN_MOVE_AURA = 0x600,
+	EVENT_MOVE_AURA = 0x700,
+	EVENT_RESOLVE_MOVING_AURA = 0x800,
+	EVENT_ENTERING_THE_BATTLEFIELD_AS_CLONE = 0x900,
+	EVENT_UPKEEP_TRIGGER_ABILITY = 0xa00,
+	EVENT_RESOLVE_THIS_DIES_TRIGGER = 0xb00,
+	EVENT_TAPPED_TO_PLAY_ABILITY = 0xc00,
+	EVENT_RESOLVE_ACTIVATED_GRAVEYARD_ABILITY = 0xd00,
+	EVENT_RETURN_TO_PLAY_FROM_GRAVE_MODIFIED = 0xe00,
+	EVENT_ANOTHER_PERMANENT_HAS_TRANSFORMED = 0xf00,
+	EVENT_PLAY_FIRST_HALF = 0x1000,
+	EVENT_PLAY_SECOND_HALF = 0x1100,
+	EVENT_HAS_MORPH = 0x1200,
+	EVENT_SUBTYPE = 0x1300,
+	EVENT_UNATTACH = 0x1400,
+	EVENT_EQUIPMENT_ATTACHED = 0x1500,
+	EVENT_DAMAGE_TRIGGER_ABILITY = 0x1600,
+	EVENT_CAN_ACTIVATE_HIDEAWAY_LAND = 0x1700,
+	EVENT_BECAME_MONSTROUS = 0x4000,
+	EVENT_PHASING = 0x4100,
+	EVENT_END_TRIGGER = 0x4200,
+	EVENT_END_OF_UNTAP_STEP = 0x4300,
+	EVENT_PHASE_CHANGED = 0x4400,
+	EVENT_CHECK_DESTROY_IF_BLOCKED = 0x4500,
+	EVENT_BEGIN_TURN = 0x4600,
+	EVENT_STATIC_EFFECTS = 0x4700,
+	EVENT_MANA_POOL_DRAINING = 0x4800,
+	EVENT_CHOOSING_TO_UNTAP = 0x4900,
+	EVENT_TRANSFORMED = 0x4a00,
+	EVENT_EFFECT_CREATED = 0x4b00,
+	EVENT_RESOLVE_GENERAL_EFFECT = 0x4c00,
+	EVENT_FIGHT = 0x4d00,
+	EVENT_QUERY_AWAKEN = 0x4e00,
+	EVENT_CANT_CREW = 0x4f00,
+	EVENT_HIDDEN_AGENDA = 0x5000,
+	EVENT_ETB_ABILITY = 0x5100,
+	EVENT_ETB = 0x5100,
+	EVENT_DREDGE = 0x5200,
+	EVENT_SURVEIL = 0x5300,
+	EVENT_CHANGE_TARGET = 0x5400,
+	EVENT_SET_IN_MOTION = 0x5500,
 } event_t;
 
 /* Trigger conditions */
@@ -257,8 +303,7 @@ typedef enum
 	XTRIGGER_REPLACE_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = 0x01000400, // Triggers before each card is put into a graveyard from anything except mill()/special_mill().  trigger_cause_controller is the player whose graveyard it is; trigger_cause is the iid of the card going to graveyard.  The card currently won't be anywhere.  Set replace_milled=1 (sic) to indicate replacement; always check it before doing anything to be sure nothing's already replaced it first.  This trigger is very blunt, and probably doesn't interact well with "When [something] is put into a graveyard from the battlefield"/"When [something] dies" triggers (it certainly won't interleave with them properly); probably best to also replace during EVENT_GRAVEYARD_FROM_PLAY if there's no choice involved.
 	XTRIGGER_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = 0x01000500,			// Triggers after each card is put into a graveyard from anything except mill()/special_mill().  trigger_cause_controller is the player being milled; trigger_cause is the iid of the card, gy_from_anywhere_pos is the tentative position of the card in the graveyard, and gy_from_anywhere_source is the canonical graveyard_source[][] value of the card so it can be reliably found if it's still there.
 	XTRIGGER_SCRY = 0x01000600,											// Triggers whenever a player scries.  trigger_cause_controller is the player scrying; trigger_cause is the number of cards scryed.
-	XTRIGGER_BECAME_RENOWNED = 0x1007000,								// {trigger_cause_controller,trigger_cause} just became renowned.
-#ifdef SHANDALAR
+	XTRIGGER_BECAME_RENOWNED = 0x01001200,								// {trigger_cause_controller,trigger_cause} just became renowned.
 	XTRIGGER_DISCARDED = 0x01000800,		 // Shandalar only: triggers when a card has been discarded (as opposed to TRIGGER_DISCARD, which is for replacement effects).  trigger_cause_controller is the player who discarded; trigger cause is the graveyard_source of the discarded card; discarded_iid is the original_iid of the discarded card.
 	XTRIGGER_LAND_PLAYED = 0x01000900,		 // Shandalar only: a land is being played.  Dispatched instead of TRIGGER_SPELL_CAST.
 	XTRIGGER_REPLACE_GAIN_LIFE = 0x01000A00, // Shandalar only: a player is going to gain life; allow that to be replaced.  The amount is stored and can be edited in life_gained.  trigger_cause_controller and trigger_cause are the player gaining life and -1 respectrively.
@@ -274,9 +319,9 @@ typedef enum
 	XTRIGGER_REPLACE_TOKENS = 0x1005000,	 // One or more tokens would be put on the battlefield.  trigger_cause_controller is whose control, trigger_cause is the iid of the token, Token::num_added() is the number to be placed on the bf (and can be changed with Token::set_num_added()), and Token::added_as_cost() is valid.  Dispatched only if ENABLE_XTRIGGER_COUNTERS (sic) is set.
 	XTRIGGER_REPLACE_COUNTERS = 0x1006000,	 // One or more counters would be added to (not removed from) trigger_cause_controller/trigger_cause.  The number of counters is stored in counters_added, type in counters_added_type, and whether they were added as a cost in counters_added_as_cost; the first two can be modified.  Dispatched only if ENABLE_XTRIGGER_COUNTERS is set.
 	XTRIGGER_COUNTERS = 0x1007000,			 // One or more counters were added to or removed from trigger_cause_controller/trigger_cause.  The number of counters is stored in counters_added and type in counters_added_type.  Set counters_added_need_repeat if a separate trigger is needed for each counter; then counters_added_repeating will be true if it's the second or later.  Dispatched only if ENABLE_XTRIGGER_COUNTERS is set.
-#else
-	XTRIGGER_1_1_COUNTERS = 0x1007000, // One or more +1/+1 counters were placed on trigger_cause_controller/trigger_cause.  The number of counters is stored in counters_added. Dispatched only if ENABLE_XTRIGGER_1_1_COUNTERS is set.
-#endif
+
+	XTRIGGER_COUNTER_ENERGY = 0x01001100,
+	XTRIGGER_1_1_COUNTERS = 0x01001300,
 } xtrigger_t;
 
 /* Triggers, unlike events, are relatively computationally expensive.  Triggers that are rarely handled, particularly ones from things that would get dispatched
@@ -290,7 +335,6 @@ typedef enum
 	ENABLE_XTRIGGER_MILLED = (1 << 1),
 	ENABLE_XTRIGGER_REPLACE_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = (1 << 2),
 	ENABLE_XTRIGGER_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = (1 << 3),
-#ifdef SHANDALAR
 	ENABLE_XTRIGGER_REPLACE_KILL = (1 << 4),
 	ENABLE_TRIGGER_REPLACE_CARD_DRAW = (1 << 5), // sic
 	ENABLE_XTRIGGER_CARD_DRAWN = (1 << 6),
@@ -299,9 +343,8 @@ typedef enum
 	ENABLE_XTRIGGER_COMBAT = (1 << 9),
 	ENABLE_XTRIGGER_SHUFFLE = (1 << 10),
 	ENABLE_XTRIGGER_COUNTERS = (1 << 11),
-#else
-	ENABLE_XTRIGGER_1_1_COUNTERS = (1 << 11),
-#endif
+	ENABLE_XTRIGGER_1_1_COUNTERS = (1 << 12),
+	ENABLE_XTRIGGER_COUNTER_ENERGY = (1 << 13),
 } enable_xtrigger_flags_t;
 
 typedef struct
@@ -322,6 +365,8 @@ typedef enum
 	RESOLVE_TRIGGER_MANDATORY = 2,
 	RESOLVE_TRIGGER_OPPONENT = 4, // Triggers for 1-player, not player.
 	RESOLVE_TRIGGER_ANYBODY = 8,  // Triggers for both player and 1-player.
+
+	RESOLVE_TRIGGER_DUH = 3,
 } resolve_trigger_t;
 
 /* Modes for kill_card() */
@@ -340,6 +385,8 @@ typedef enum
 								   * illegal targets.  kill_card() immediately translates this to KILL_SACRIFICE for kill_card_exe, so it'll show up as
 								   * KILL_SACRIFICE in kill_code still; but it also sets SF_KILL_STATE_BASED_ACTION so things like It That Betrays don't trigger
 								   * for it. */
+
+	KILL_EXILE = 4,
 } kill_t;
 
 /* Modes for new_global_tutor(), reveal_top_cards_of_library_and_choose() */
@@ -403,6 +450,12 @@ typedef enum
 	STATE_DECLINE_OPTIONAL_TRIGGER = 0x8000000,
 	STATE_IS_TRIGGERING = 0x10000000,
 	STATE_DONT_RECOPY_ONTO_STACK = 0x20000000, // If set during EVENT_ACTIVATE, then don't copy the card back into its (already-existing) activation card on the stack.  Caller's responsibility to either update all relevant values there (per recopy_card_onto_stack), or simply not handle EVENT_RESOLVE_ACTIVATION.  Bit is removed when recopying is skipped.  Works only for activation, not casting.
+
+	STATE_DRAWN_THIS_TURN = 1,
+	STATE_JUST_CAST = 128,
+	STATE_SICKNESS_UNUSED = 65536,
+	STATE_SUMMON_SICK = 131072,
+	STATE_UNUSED80000 = 524288,
 } state_t;
 
 // "status" for "token_status" in "card_instance"
@@ -429,16 +482,11 @@ typedef enum
 	STATUS_ISLAND_SANCTUARY = 0x400000,
 	STATUS_CANNOT_REGENERATE = 0x800000,
 	STATUS_CONTROLLED = 0x1000000,
-#ifdef SHANDALAR
-	STATUS_DURATION_IN_EOT1 = 0x2000000, // eot_toughness1 is a Duration::Enum.  Honored only for custom effects.
-#else
+	STATUS_DURATION_IN_EOT1 = 0x20000000, // eot_toughness1 is a Duration::Enum.  Honored only for custom effects.
 	STATUS_BASICLAND_DEPENDANT = 0x2000000, // Alters displayed an effect card's main text for sleight and hack based on its source's current sleight/hack status, not its status when the effect card was created.  Set only with fx_asterisk in exe.
-#endif
 	STATUS_CANNOT_BE_DESTROYED = 0x4000000, // Indestructible ???
 	STATUS_SPECIAL_BLOCKER = 0x8000000,
-#ifdef SHANDALAR
 	STATUS_TRANSFORMED = 0x10000000, // A transformed double-faced card, melded meldable card, or flipped flippable card.
-#endif
 	STATUS_CANNOT_LEAVE_PLAY = 0x40000000 // Manalink: this card can't be exiled or destroyed; incompletely and poorly-implemented, and unused.  Shandalar: on an effect card, detaches if the object it's attached to leaves play instead of being destroyed.
 } status_t;
 
@@ -458,9 +506,7 @@ typedef enum
 	TYPE_PERMANENT = TYPE_LAND | TYPE_CREATURE | TYPE_ENCHANTMENT | TYPE_ARTIFACT,
 	TYPE_NONEFFECT = TYPE_PERMANENT | TYPE_SPELL,
 	TYPE_ANY = TYPE_NONEFFECT | TYPE_EFFECT,
-#ifdef SHANDALAR
 	DAMAGE_TYPE_ACTIVATION = 1 << 11, // Set only on damage cards' source type
-#endif
 	// Valid only in targetting
 	TARGET_TYPE_TOKEN = 1 << 12,
 	TARGET_TYPE_DAMAGE_LEGACY = 1 << 13,	   // Checked for but unused by exe
@@ -469,6 +515,7 @@ typedef enum
 	TARGET_TYPE_PLANESWALKER = 1 << 16,		   // Works for targetting, is_what(), and the make_test() family, but not much else.  All will also accept planeswalkers if all of land/creature/enchantment/artifact are set.
 	TARGET_TYPE_NONCREATURE_CAN_BLOCK = 1 << 25,
 	TARGET_TYPE_PERMANENT = TYPE_LAND | TYPE_CREATURE | TYPE_ENCHANTMENT | TYPE_ARTIFACT | TARGET_TYPE_TOKEN,
+
 } type_t;
 
 /* Flags for boost_subtype(), boost_creature_type(), and boost_creature_by_color() */
@@ -522,9 +569,11 @@ typedef enum
 	KEYWORD_PRISTINE = KEYWORD_PROT_COLORED | KEYWORD_PROT_ARTIFACTS,
 	KEYWORD_RECALC_ALL = KEYWORD_RECALC_CHANGE_TYPE | KEYWORD_RECALC_TOUGHNESS | KEYWORD_RECALC_POWER | KEYWORD_RECALC_ABILITIES | KEYWORD_RECALC_SET_COLOR,
 	KEYWORD_NONABILITIES = KEYWORD_RECALC_ALL | (1 << 31),
+
+	KEYWORD_SHROUD = 131072,
 } keyword_t;
 
-// Special abilities
+/* Special abilities */
 typedef enum
 {
 	SP_KEYWORD_FEAR = 1 << 0,
@@ -561,7 +610,7 @@ typedef enum
 	SP_KEYWORD_DOES_NOT_END_AT_EOT = 1 << 31,
 } sp_keyword_t;
 
-/* Phases of turn */
+/* Turn phases */
 typedef enum
 {
 	PHASE_START = 0x0,
@@ -762,11 +811,28 @@ typedef enum
 
 	// Updates need to be mirrored in Text.res:CUECARD_COUNTERS_SPECIAL; the final entry for COUNTER_end should just be "Counters"
 
-	COUNTER_end,
 	COUNTER_invalid = 255,
+
+	COUNTER_VORTEX = 38,
+	COUNTER_PLOT = 127,
+	COUNTER_HOUR = 128,
+	COUNTER_FURY = 129,
+	COUNTER_SPITE = 130,
+	COUNTER_UNITY = 131,
+	COUNTER_BRICK = 132,
+	COUNTER_GLOBE = 133,
+	COUNTER_CAGE = 134,
+	COUNTER_LANDMARK = 135,
+	COUNTER_PREY = 136,
+	COUNTER_SLUMBER = 137,
+	COUNTER_HIT = 138,
+	COUNTER_EGG = 139,
+	COUNTER_SILVER = 140,
+	COUNTER_end = COUNTER_SILVER + 1,
 } counter_t;
 
-#if defined(SHANDALAR_MODDED_DECKDLL) && defined(__cplusplus)
+/* Shared ID wrappers for C++ consumers; C keeps the integer representation. */
+#ifdef __cplusplus
 struct iid_t
 {
 	iid_t(void) {}
@@ -804,16 +870,23 @@ typedef int iid_t;
 typedef struct card_instance_struct
 {
 	/* some values might be padding */
-	uint32_t special_counters; /*  0x00 */
-	// uint8_t	counters2;			/*  0x01 */	// Originally -0/-2 counters from Spirit Shackle
-	// uint8_t	counters3;			/*  0x02 */	// Originally -1/-1 counters from Unstable Mutation
-	// uint8_t	counters4;			/*  0x03 */	// Originally -0/-1 counters
+	union
+	{
+		uint32_t special_counters; /* 0x00: host counter word */
+		struct
+		{
+			uint8_t special_counters_byte; /* 0x00: preferred counter type */
+			uint8_t counters2; /* 0x01: originally -0/-2 counters */
+			uint8_t counters3; /* 0x02: originally -1/-1 counters */
+			uint8_t counters4; /* 0x03: originally -0/-1 counters */
+		};
+	};
 	int32_t damage_target_card; /*  0x04 */	 // Card this aura or effect card is attached to.
 	state_t state;							 /*  0x08 */
 	int8_t damage_source_player; /*  0x0C */ //  int32_t  damage_source_player;
 	int8_t unused0; /*  0x0D */				 // Shandalar: untouched
 	int16_t toughness;						 /*  0x0E */
-	int16_t damage_on_card;					 /*  0x10 */
+	uint16_t damage_on_card; /* 0x10: marked damage */
 	int16_t counter_power;					 /*  0x12 */
 	uint32_t unknown0x14; /*  0x14 */		 // activating trigger
 	status_t token_status;					 /*  0x18 */
@@ -821,7 +894,7 @@ typedef struct card_instance_struct
 	int8_t color; /*  0x1E */				 // 8 bit version of color_test_t
 	int8_t destroys_if_blocked; /*  0x1F */	 /* Formerly enemy_against_color.  Uses values in destroys_if_blocked_t.  Set to 0 at the start of EVENT_CHANGE_TYPE, and should be reset in response.  AI hinting only. */
 	int32_t dummy3; /*  0x20 */				 // A dynamically-created internal_card_id stored here on a card in play, or in internal_card_id in any card, won't get reaped in end_turn_phase()
-	int8_t blocking; /*  0x24 */			 // Banding id, if attacking
+	uint8_t blocking; /* 0x24: slot/band index, 255 if none */
 	int8_t initial_color; /*  0x25 */		 // Shandalar: untouched
 	int16_t unused0x26; /*  0x26 */			 // Exe version of rampage() uses this as temporary storage. (!)  That's no longer called, and the data's otherwise entirely untouched.  Shandalar: untouched
 	uint32_t regen_status; /*  0x28 */		 // Keywords.
@@ -877,9 +950,16 @@ typedef struct card_instance_struct
 	int8_t hack_mode[6]; /* 0x114 */   // colorless -> black -> blue -> green->red -> white
 	uint16_t unknown0x11a; /* 0x11A */ // originally -2/-1 counters and +1/+2 counters	Shandalar: untouched
 	uint32_t untap_status; /* 0x11C */ // Only bits 1 and 2 are used by the exe; but the whole dword is cleared in untap_phase().
-	uint32_t counters; /* 0x120 */	   // originally +1/+1 counters from Dwarven Weaponsmith
-	// uint8_t counters5; /* 0x121 */	   // originally +1/+1 counters from Ashnod's Transmogrant
-	//  uint16_t unknown0x122; /* 0x122 */ // originally +0/+1 and +2/+2 counters
+	union
+	{
+		uint32_t counters; /* 0x120: host counter word */
+		struct
+		{
+			uint8_t counters_byte; /* 0x120: +1/+1 counters */
+			uint8_t counters5; /* 0x121: arbitrary imported counter type */
+			uint16_t unknown0x122; /* 0x122: originally +0/+1 and +2/+2 counters */
+		};
+	};
 	/*
 	 * The exe treats these as seven contiguous bytes in at least one place (see FUN_004460d3),
 	 * so keep both named fields and an array view.
@@ -959,7 +1039,7 @@ typedef struct
 	uint8_t type; /* 0x28 */					// ct_all.csv:Type:Effect..Type::Land
 	int8_t subtype; /* 0x29 */					// ct_all.csv:Family
 	int8_t color; /* 0x2a */					// ct_all.csv:Color Unused..Color Colorless
-	int8_t cc[3]; /* 0x2b */					// 0:colored mana, 1:colorless mana, 2:flags
+	int8_t cc[3]; /* 0x2b */					// 0:colored mana, 1:colorless mana (-1 for X), 2:flags
 	int16_t power;								/* 0x2e */
 	int16_t toughness;							/* 0x30 */
 	uint8_t new_field; /* 0x32 */				// ct_all.csv:Extra Flags (Unused)..Modifies Casting Cost
@@ -970,9 +1050,10 @@ typedef struct
 	uint8_t rarity; /* 0x40 */					// unused in current Manalink
 	uint8_t act_phases; /* 0x41 */				// ct_all.csv:Activate after Combat..Play before Combat
 	uint8_t expansion; /* 0x42 */				// unused in current Manalink
-	uint8_t creature_rating; /* 0x43 */			// reserved padding in the engine record
+	uint8_t unused0x43; /* 0x43 */				// reserved padding in the engine record
 	int32_t ai_base_value; /* 0x44 */			// ct_all.csv Creature Rating Mod; separate from card_ptr_t's AI score
 } PACKED card_data_t;
+STATIC_ASSERT(sizeof(card_data_t) == 72, card_data_t_wrong_size);
 
 typedef enum
 {
@@ -980,11 +1061,9 @@ typedef enum
 	UNTAP_STATUS_COULD_UNTAP = 0x1,
 	UNTAP_STATUS_WILL_UNTAP = 0x2,
 // Executable only ever touches or looks at the above two bits.
-#ifdef SHANDALAR
 	// For these two, also set types_that_dont_untap if appropriate; the executable understands that, but not these.
 	UNTAP_STATUS_DOESNT_UNTAP = 0x4, // This permanent doesn't untap during its controller's untap step.  Cleared and set during EVENT_ABILITIES; automatically honored by untap_phase().
 	UNTAP_STATUS_SOME_UNTAP = 0x8,	 // Winter Orb-like effects that only allow a certain number of permanents to untap.  Cleared and set during EVENT_ABILITIES.  Not automatically honored by untap_phase(); effect source is responsible for setting UNTAP_STATUS_COULD_UNTAP/UNTAP_STATUS_WILL_UNTAP.
-#endif
 } untap_status_t;
 
 typedef enum
@@ -1072,6 +1151,8 @@ typedef enum
 	CPF_IS_DFC = 0x1,
 	CPF_IS_TRANSFORMED_DFC = 0x2,
 	CPF_IS_MELD = 0x4, // If also CPF_IS_TRANSFORMED_DFC, then it's the melded form, otherwise it's meldable.
+
+	CPF_IS_FLIP = 8,
 } CardPtrFlags;
 STATIC_ASSERT(sizeof(CardPtrFlags) == 4, CardPtrFlags_wrong_size);
 
@@ -1098,11 +1179,19 @@ typedef struct
 	uint32_t expansion;		 // 0xc
 	uint32_t color;			 // 0x10	// 1:black 2:blue 3:artifact 4:gold 5:green 6:land 7:red 8:white
 	uint32_t card_type;		 // 0x14 // 1:artifact 2:enchantment 3:instant 4:interrupt 5:land 6:sorcery 7:creature 8:token
-	uint32_t subtype;		 /* 0x18 == 24 */
-	const char *type_text;	 // 0x20 // e.g. "Legendary Creature - Human"
-	uint32_t db_card_type_2; // 0x24	// 1:ante 2:cardstealer 3:counter 4:directdamage 5:discard 6:drawer 7:lifegain 8:damageprevention 9:anti-land 10:manasource 11:bounce/untap/tap 12:pump
-	uint32_t rarity;		 // 0x28	// 1:common 2:rare 3:dungeon/astral/promotional 4:uncommon (sic)
-	casting_cost_t req;		 // 0x2c
+	union
+	{
+		uint32_t subtype; // 0x18
+		struct
+		{
+			uint16_t subtype1;
+			uint16_t subtype2;
+		};
+	};
+	const char *type_text;	 // 0x1c // e.g. "Legendary Creature - Human"
+	uint32_t db_card_type_2; // 0x20	// 1:ante 2:cardstealer 3:counter 4:directdamage 5:discard 6:drawer 7:lifegain 8:damageprevention 9:anti-land 10:manasource 11:bounce/untap/tap 12:pump
+	uint32_t rarity;		 // 0x24	// 1:common 2:rare 3:dungeon/astral/promotional 4:uncommon (sic)
+	casting_cost_t req;		 // 0x28
 	uint8_t unused0x31;
 	uint16_t unused0x32;
 	CardPtrFlags flags; // set only in Shandalar
@@ -1113,8 +1202,10 @@ typedef struct
 	const char *mana_cost_text; // e.g. "|4|GU|GU"
 	uint32_t ai_modifiers1;
 	uint32_t ai_modifiers2;
-	uint16_t ai_inc_power_toughness;
-	uint16_t ai_power_toughness;
+	uint8_t ai_inc_power;
+	uint8_t ai_inc_toughness;
+	uint8_t ai_power;
+	uint8_t ai_toughness;
 	int16_t ai_base_value;
 	int16_t ai_dependencies;	// deck constructor only
 	int32_t sleight_color;		// csv2dat doesn't seem to put anything here
@@ -1130,12 +1221,7 @@ typedef struct
 	char *flavor_text;
 	int32_t power;	   // 0x7c
 	int32_t toughness; // 0x80
-#if defined(SHANDALAR_MODDED_DECKDLL)
-	int16_t types[7]; // 0x84
-#else
-	int16_t types[2];	// 0x84
-	char abilities[10]; // 0x88
-#endif
+	int16_t types[7]; // 0x84: expanded subtype data in the modded database
 	int8_t mana_source_colors;
 	int8_t inflatable;
 	uint8_t hack_colors; // In Shandalar: color_test_t of |Hlandtypes appearing in rules text or type text
@@ -1143,6 +1229,7 @@ typedef struct
 	uint8_t enchant_type; // // bits 0-3: Enchant Type OWN; bits 4-7: Enchant Type OPP.  In Shandalar: zero.
 	uint8_t hack_mode;	  // In Shandalar: zero
 } card_ptr_t;			  /* need better name here */
+STATIC_ASSERT(sizeof(card_ptr_t) == 152, card_ptr_t_wrong_size);
 
 typedef struct
 {
@@ -1344,6 +1431,8 @@ typedef enum
 	DDBM_TRACE_DAMAGED_PLAYERS = (1 << 9),
 	DDBM_STORE_IN_TARGETS_9 = (1 << 10),	 // Instead of the default targets[8].player, which, brilliantly, is the same place as equipment.
 	DDBM_TRACE_DAMAGING_SOURCES = (1 << 11), // "card" must be "-1". Uses "info_slot" and from "targets[0].card" to "targets[9].card" to storage. Tracks only permanents.
+
+	DDBM_MUST_DAMAGE_TRIGGERING_PLAYER = 4096,
 } ddbm_flags_t;
 
 /* Trap conditions  */
@@ -1436,6 +1525,9 @@ typedef enum
 #error "Number of bits per turn must be a multiple of 8"
 #endif
 #define TRAP_NUMBYTES_BITS_PERSISTENT ((TRAP_MAX_BITS_PERSISTENT - TRAP_MIN_BITS_PERSISTENT + 1) / 8)
+
+	TRAP_P1_P1_COUNTER_PLACED = 1543,
+	TRAP_REVOLT = 1548,
 } traps_t;
 
 /* flags for "generic_activated_ability" mode  */
@@ -1481,6 +1573,8 @@ typedef enum
 // And this version also sets an amount of life to pay.
 #define GVC_COUNTERS_AND_LIFE(counter_type, number, life) (GVC_COUNTERS(counter_type, number) | ((life) & 0xFF))
 
+	GAA_EQUIPMENT = 256,
+	GAA_DO_NOT_RECALCULATE_ACTIVATION_COST = 2048,
 } generic_activated_ability_flags_t;
 
 /* flags for "generic_spell" */
@@ -1500,6 +1594,8 @@ typedef enum
 	GS_GRAVE_RECYCLER_OPP_GRAVE = 1 << 11,
 	GS_GRAVE_RECYCLER_BOTH_GRAVES = 1 << 12,
 	GS_ONE_OR_MULTIPLE_TARGETS = 1 << 13, // For cards like "Fire // Ice"
+
+	GS_SAC_PERMANENT_AS_COST = 16384,
 } generic_spell_flags_t;
 
 /* Special flags  - Generic flags */
@@ -1574,6 +1670,8 @@ typedef enum
 	SF2_DEEP_WATER = 1 << 29,
 	SF2_REFLECTING_MIRROR = 1 << 30,
 	SF2_COPIED_FROM_STACK = 1 << 31,
+
+	SF2_MIRACLE = 1048576,
 } special_flags2_t;
 
 /* Special flags  3*/
@@ -1605,6 +1703,11 @@ typedef enum
 	SF3_MADNESS_COST_PAID = 1 << 12,
 	SF3_HARDCODED_SLEIGHT_WORDS_REPLACED = 1 << 13,
 	SF3_HARDCODED_HACK_WORDS_REPLACED = 1 << 14,
+
+	SF3_ENCHANTMENT_ALTERATION_P0 = 32768,
+	SF3_ENCHANTMENT_ALTERATION_P1 = 65536,
+	SF3_EMULATING_LANDS_PLAYED = 131072,
+	SF3_EMBALMED_OR_ETERNALIZED = 262144,
 } special_flags3_t;
 
 // Parameters for token_generation_t::action
@@ -1764,9 +1867,11 @@ typedef enum
 	GA_RETURN_TO_PLAY_MODIFIED = GA_RETURN_TO_PLAY | (1 << 7),
 	GA_RETURN_TO_PLAY_WITH_EFFECT = GA_RETURN_TO_PLAY | (1 << 8),
 	GA_PUT_ON_TOP_OF_DECK = 1 << 9,
+	GA_EMBALM = 1 << 11,
 	GA_GRAVE_ABILITY_MASK = GA_PLAYABLE_FROM_GRAVE | GA_RETURN_TO_HAND | GA_RETURN_TO_PLAY | GA_UNEARTH | GA_BASIC | GA_SCAVENGE |
-		GA_RETURN_TO_PLAY_MODIFIED | GA_RETURN_TO_PLAY_WITH_EFFECT | GA_PUT_ON_TOP_OF_DECK,
+		GA_RETURN_TO_PLAY_MODIFIED | GA_RETURN_TO_PLAY_WITH_EFFECT | GA_PUT_ON_TOP_OF_DECK | GA_EMBALM,
 	GA_INTERRUPT_ABILITY = 1 << 10,
+
 } graveyard_ability_type_t;
 
 typedef enum
@@ -1780,7 +1885,7 @@ typedef enum
 typedef struct
 {
 	int16_t internal_card_id;
-	int8_t generating_event;
+	uint8_t generating_event; // Serialized event byte, including values above 0x7f.
 	int8_t unknown_sdt; // seems to usually be a player.  I don't see anything that accesses it directly.
 } PACKED stack_data_t;
 
@@ -1867,6 +1972,12 @@ typedef enum
 	PB_COMMANDER_IN_PLAY = 1 << 19,
 	PB_CANT_HAVE_OR_GAIN_SHROUD = 1 << 20, // Arcane Lighthouse
 	PB_CANT_HAVE_OR_GAIN_ABILITIES_MASK = PB_CANT_HAVE_OR_GAIN_FIRST_STRIKE | PB_CANT_HAVE_OR_GAIN_FLYING | PB_CANT_HAVE_OR_GAIN_DEATHTOUCH | PB_CANT_HAVE_OR_GAIN_TRAMPLE | PB_CANT_HAVE_OR_GAIN_HEXPROOF | PB_CANT_HAVE_OR_GAIN_SHROUD,
+
+	PB_CANT_GAIN_LIFE = 0x200000,
+	PB_ACTIVATE_ABILITIES_OF_CREATURES_DISABLED = 0x400000,
+	PB_ACTIVATE_ABILITIES_OF_ARTIFACTS_DISABLED = 0x800000,
+	PB_NONMANA_ACTIVATE_ABILITIES_OF_CREATURES_DISABLED = 0x1000000,
+	PB_NONMANA_ACTIVATE_ABILITIES_OF_ARTIFACTS_DISABLED = 0x2000000,
 } player_bits_t;
 
 typedef enum
@@ -2056,7 +2167,16 @@ typedef enum
 	WAV_DETHRONE = WAV_PLUS_COUNTER, // A +1/+1 counter is put on a card because of its dethrone ability.
 	WAV_CREATURE_TOKEN = WAV_SUMMON, // A creature token put on the battlefield
 
-	WAV_HIGHEST = 80,
+
+	WAV_SCHEME = 81,
+	WAV_MONARCH = 82,
+	WAV_ASCEND = 83,
+	WAV_PHASEIN = 65,
+	WAV_PHASEOUT = 65,
+	WAV_TRANSFORM_XLN = 66,
+	WAV_TURN_FACE_DOWN = 68,
+	WAV_TURN_FACE_UP = 67,
+	WAV_HIGHEST = WAV_ASCEND,
 } wav_t;
 
 typedef enum
@@ -2116,10 +2236,36 @@ typedef enum
 	ICON_PROT_MISC = 47,
 	ICON_SKULK = 48,
 	ICON_MENACE = 49,
-	ICON_CANT_ACTIVATE = 50,
-	ICON_LOST_ABILITIES = 51,
 
-	ICON_MAX = 51
+	ICON_MADNESS = 8,
+	ICON_PROWESS = 41,
+	ICON_NINJUTSU = 45,
+	ICON_CANT_ACTIVATE_TAP = 50,
+	ICON_CANT_ACTIVATE = 51,
+	ICON_LOST_ABILITIES = 52,
+	ICON_RENOWNED = 53,
+	ICON_MONSTROUS = 54,
+	ICON_MORPH = 55,
+	ICON_MANIFEST = 56,
+	ICON_DELVE = 57,
+	ICON_IMPROVISE = 58,
+	ICON_CONVOKE = 59,
+	ICON_CANT_ATTACK = 60,
+	ICON_REBOUND = 61,
+	ICON_STORM = 62,
+	ICON_PROVOKE = 63,
+	ICON_REPLICATE = 64,
+	ICON_PHASING = 65,
+	ICON_SQUIRRELLINK = 66,
+	ICON_SPLIT_SECOND = 67,
+	ICON_SOULBOND = 68,
+	ICON_HEXPROOF_MONOCOLORED = 69,
+	ICON_HEXPROOF_BLACK = 70,
+	ICON_HEXPROOF_BLUE = 71,
+	ICON_HEXPROOF_GREEN = 72,
+	ICON_HEXPROOF_RED = 73,
+	ICON_HEXPROOF_WHITE = 74,
+	ICON_MAX = ICON_HEXPROOF_WHITE,
 } ability_icon_t;
 
 typedef enum
@@ -2164,12 +2310,10 @@ typedef enum
 	TARGET_ZONE_CREATURE_OR_PLAYER = TARGET_ZONE_IN_PLAY | TARGET_ZONE_PLAYERS,
 	TARGET_ZONE_0x2000 = 0x2000, // set during blocking selection
 	TARGET_ZONE_ON_STACK = 0x4000,
-#ifdef SHANDALAR
 	// Values past this can't be combined with others.
 	TARGET_ZONE_GRAVEYARD = 0x01000000,
 	TARGET_ZONE_ARRAY = 0x02000000, // Target within an arbitrary array.  Set via Target::zone_array(), not directly with Target::zone(TARGET_ZONE_ARRAY).
 	TARGET_ZONE_EXILE = 0x04000000,
-#endif
 } target_zone_t;
 
 typedef enum
@@ -2232,6 +2376,9 @@ typedef enum
 	TARGET_SPECIAL_DAMAGE_PERMANENT_WITH_SUBTYPE = (1 << 22), // will look at the 'required_subtype' argument
 	TARGET_SPECIAL_REGENERATION = (1 << 23),				  // checks both the "kill_code" for "KIL_DESTROY" and "token_status" for "STATUS_CANNOT_REGENERATE"
 	TARGET_SPECIAL_CMC_GREATER_OR_EQUAL = (1 << 24),
+
+	TARGET_SPECIAL_CMC_EQUAL = 2097152,
+	TARGET_SPECIAL_OPPONENT = 33554432,
 } target_special_t;
 
 typedef enum
@@ -2279,6 +2426,9 @@ typedef enum
 	PAUE_REMOVE_TARGET_AT_EOT = 1 << 14, // Uses "eot_removal_method"
 	PAUE_END_AT_THE_BEGINNING_OF_YOUR_NEXT_TURN = 1 << 15,
 	PAUE_UNTAP = 1 << 16,
+
+	PAUE_RESET_FORCED_SUBTYPES_AT_EOT = 131072,
+	PAUE_RESET_ADDED_SUBTYPES_AT_EOT = 262144,
 } paue_3player_t;
 
 typedef struct pump_ability_until_eot_arguments_t
@@ -2366,6 +2516,8 @@ typedef enum
 	FOG_BY_CONTROLLED_BY_PLAYER = 1 << 11, // prevents damage by creatures controlled by t_player, not damage to them
 	FOG_BY_NON_SUBTYPE = 1 << 12,		   // prevent damage only by non-[subtype] creatures.  subtype is given as param to fog_special2().
 	FOG_BY_ANY_TYPE = 1 << 13,			   // prevent damage by any type of source, not just creatures
+
+	FOG_ONLY_DAMAGE_TO_T_PLAYER = 16384,
 } fog_special_flags_t;
 
 typedef enum
@@ -2480,6 +2632,10 @@ typedef enum
 	GFPC_STORE_COLORS = 1 << 3,			// Only one of this parameters shoudl be used at once
 	GFPC_TRACK_DEAD_CREATURES = 1 << 4, // Only one of this parameters shoudl be used at once Will store the "internal_card_id" of the dead creatures from "targets[storage_locatio].player" to a maximum of "targets[9].player"
 	GFPC_EXTRA_SKIP_TOKENS = 1 << 5,	// Can be combined with the previous values.
+
+	GFPC_STORE_OWNER = 64,
+	GFPC_TRACK_OWNER = 128,
+	GFPC_TRACK_CONTROLLER = 256,
 } count_for_gfp_ability_and_store_values_flags_t;
 
 typedef enum
@@ -2488,6 +2644,10 @@ typedef enum
 	GCUS_CONTROLLED = 1 << 1,					// lose control if lose control of source
 	GCUS_TAPPED = 1 << 2,						// lose control if source isn't tapped
 	GCUS_BURY_IF_TAPPED_OR_LEAVE_PLAY = 1 << 3, // bury controlled permanent if source leaves play or becomes untapped (but not if controlled)
+
+	GCUS_CHECK_POWER = 16,
+	GCUS_ENCHANTED = 32,
+	GCUS_SOURCE_IN_PLAY = 64,
 } gcus_t;
 
 typedef enum
@@ -2505,6 +2665,8 @@ typedef enum
 	EXBY_TEST_IID = 1 << 17,			  // Only cards with iid == testarg, or the same csvid as iid's, are legal choices.
 	EXBY_TEST_CAN_CAST = 1 << 18,		  // Only cards that player could cast.  testarg is the current event.
 	EXBY_TEST_HAS_MANA_TO_CAST = 1 << 19, // Only cards that player has the mana to cast.  testarg is the current event.
+
+	EXBY_TEST_HAS_GENERIC_MANA_TO_PAY_CMC = 1048576,
 } exiledby_choose_mode_t;
 
 typedef enum
@@ -2512,14 +2674,14 @@ typedef enum
 	TYPETEXT_NO_ABBREV = 1 << 0, /* Don't abbreviate "instant interrupt" to "instant", "artifact creature enchantment land" or "artifact creature enchantment
 								  * land planeswalker" to "permanent", or "permanent instant sorcery" to "card". */
 	TYPETEXT_INVERT = 1 << 1,	 // Precede each returned type with "non", and put a comma between the last two types instead of "or".
-#ifdef SHANDALAR
 	TYPETEXT_A = 1 << 2,
-#endif
 } type_text_t;
 
 typedef enum
 {
 	FBL_NO_MANA_COST = 1 << 0,
+
+	FBL_PLAYING_PERMANENT_CARD = 2,
 } flashback_legacy_t;
 
 typedef enum
@@ -2559,6 +2721,9 @@ typedef enum
 	AUTOTAP_NO_DONT_AUTO_TAP = 1 << 2,
 	AUTOTAP_NO_ARTIFACTS = 1 << 3,
 	AUTOTAP_NO_CREATURES = 1 << 4
+,
+
+	AUTOTAP_0 = 0,
 } autotap_t;
 
 typedef enum
@@ -2592,6 +2757,8 @@ typedef enum
 	WORLDMAGIC_DWARVEN_PICK = 9,
 	WORLDMAGIC_SWORD_OF_RESISTANCE = 10,
 	WORLDMAGIC_RING_OF_THE_GUARDIAN = 11,
+
+	NUM_WORLDMAGICS = 12,
 } shandalar_worldmagic_index_t;
 
 // Data structures exported from drawcardlib.
@@ -2618,7 +2785,10 @@ typedef enum
 	DFC_SYMBOL_MOON = 4,
 	DFC_SYMBOL_EMRAKUL = 5,
 
-	DFC_SYMBOL_MAX = DFC_SYMBOL_EMRAKUL
+
+	DFC_SYMBOL_COMPASS = 6,
+	DFC_SYMBOL_LAND = 7,
+	DFC_SYMBOL_MAX = DFC_SYMBOL_LAND,
 } DfcSymbol;
 
 typedef enum
@@ -2646,8 +2816,16 @@ typedef enum
 		cmds;       \
 	} while (cancel == 1)
 
-#define MIN(a, b) ((a) < (b) ? (a) : (b))
-#define MAX(a, b) ((a) > (b) ? (a) : (b))
+#define COMPARE(a, comparator, b)		\
+({										\
+  __typeof__(a) macro_compare_a = (a);	\
+  __typeof__(b) macro_compare_b = (b);	\
+  macro_compare_a comparator macro_compare_b ? macro_compare_a : macro_compare_b;	\
+})
+
+#define MIN(a, b) COMPARE(a, <, b)
+#define MAX(a, b) COMPARE(a, >, b)
+#define SWAP(a, b) do { __typeof__(a) temp_swap_ = a; a = b; b = temp_swap_; } while (0)
 
 #define CLAMP(val, lo, hi)                       \
 	({                                           \
@@ -2696,5 +2874,192 @@ typedef enum
 #define SET_SBYTE2(l) (*((int8_t *)(&(l)) + 2))
 #define SBYTE3(l) ((int8_t)(((l) >> 24) & 0xFF))
 #define SET_SBYTE3(l) (*((int8_t *)(&(l)) + 3))
+
+/* Imported engine API additions. */
+
+typedef enum {
+	RS_RESET_FORCED = 	1<<0,
+	RS_RESET_ADDED = 	1<<1,
+} reset_subtype_mode_t;
+typedef enum
+{
+	PCOUNTER_POISON				= 0,
+	PCOUNTER_EXPERIENCE			= 1,
+	PCOUNTER_ENERGY				= 2,
+	PCOUNTER_MAX_PCOUNTERS		= 2,
+	PCOUNTER_invalid			= -1,
+} player_counter_names_t;
+typedef enum
+{
+	LOBOTOMY_MUST_FIND_ALL_COPIES			= 1<<0,
+	LOBOTOMY_NO_SHUFFLE						= 1<<1,
+	LOBOTOMY_REPORT_ONLY_EXILED_FROM_HAND	= 1<<2, //See "Thought Hemorrhage"
+} lobotomy_flags_t;
+typedef enum
+{
+	RCUYRT_MILL_REST 					= 1<<0,
+	RCUYRT_PUT_REST_ON_BOTTOM 			= 1<<1,
+	RCUYRT_PUT_REST_ON_BOTTOM_RANDOM 	= 1<<2,
+	RCUYRT_EXILE_REST					= 1<<3,
+	RCUYRT_SHUFFLE_REST	 				= 1<<4,
+	RCUYRT_ADD_TEST_TO_HAND		 		= 1<<5,
+	RCUYRT_PUT_TEST_INTO_PLAY 			= 1<<6,
+	RCUYRT_PUT_TEST_INTO_PLAY_TAPPED 	= 1<<7,
+	RCUYRT_TPLAYER_GET_TEST 			= 1<<8,
+	RCUYRT_RETURN_ADDED_CARD 			= 1<<9,
+	RCUYRT_RETURN_REVEALED_CARDS 		= 1<<10,
+	RCUYRT_EXILE_TEST			 		= 1<<11,
+	RCUYRT_REVEAL_UP_TO_X			 	= 1<<12, //Will use BYTE1(test.qty) as max cards to reveal.
+} reveal_card_until_you_reveal_test_flags_t;
+typedef enum
+{
+	NM_AB_DISABLE	= 1,
+	NM_AB_ENABLE	= 0,
+	ALL_AB_DISABLE	= 1,
+	ALL_AB_ENABLE	= 0,
+	HUMILIATE_ON	= 1,
+	HUMILIATE_OFF	= 0,
+} disable_abilities_and_humiliate_flags_t;
+typedef enum
+{
+	SET_PT_END_AT_EOT 					= 1<<0,
+	SET_PT_END_IF_SOURCE_LEAVES_PLAY 	= 1<<1,
+	SET_PT_END_AT_OWNERS_UPKEEP 		= 1<<2,
+	SET_PT_RESET_SUBTYPES_AT_END 		= 1<<3,
+} set_pt_legacy_modes_t;
+typedef enum
+{
+	GBC_RETURN_ONLY					= 0,
+	GBC_PLAYER_GET_ALL_CARDS 		= 1<<0,
+	GBC_PUT_PERMANENTS_INTO_BF 		= 1<<1,
+} get_back_cards_stored_in_exiledby_mode;
+typedef enum
+{
+	WMARK_ORDER_OF_THE_WIDGET		= 0,
+	WMARK_AGENTS_OF_SNEAK			= 1,
+	WMARK_LEAGUE_OF_DASTARDLY_DOOM	= 2,
+	WMARK_GOBLIN_EXPLOSIONEERS		= 3,
+	WMARK_CROSSBREED_LABS			= 4,
+	WMARK_NONE						= 0xFF
+	/* Other watermarks are in an arbitrary order.  There's at most 255 of them; if fewer, then .name==NULL is a
+	 * fencepost. */
+} watermark_t;
+typedef enum
+{
+	BORDER_BLACK	= 0,
+	BORDER_WHITE	= 1,
+	BORDER_SILVER	= 2
+} border_t;
+
+typedef card_function_pointer CardFunction;
+
+typedef struct
+{
+	unsigned int reported_subtypes[100];
+} reported_subtypes_t;
+
+typedef Rarity Rarities;
+
+typedef struct
+{
+  char* name;	// internal identify
+  char* disp;	// displayable name
+  uint8_t* expansions;	// May be NULL; else an array indexed by EXPANSION_t
+  uint8_t row;
+  uint8_t col;
+  uint8_t copied_expansions;	// if 1, expansions is a copy of another malloced pointer, and shouldn't be freed itself
+  uint8_t saturation;	// If 0, then draw watermark as is, and it's not considered a watermark for the purposes of Unset cards.
+} Watermark;
+
+#ifdef __cplusplus
+// Enum math.
+// While the warning's generally useful, complaints about |ing two bitmask types not being convertible back to that bitmask without a cast is infuriating.
+template<typename T> struct SafeBool
+{
+  T t;
+  constexpr explicit SafeBool(T v): t(v)	{}
+  constexpr operator T(void) const		{ return t; }
+  constexpr explicit operator bool(void) const	{ return (int)t; }
+  constexpr explicit operator int(void) const	{ return (int)t; }
+};
+template<typename T> struct SafeBool64
+{
+  T t;
+  constexpr explicit SafeBool64(T v): t(v)	{}
+  constexpr operator T(void) const		{ return t; }
+  constexpr explicit operator bool(void) const	{ return (uint64_t)t != 0; }
+  constexpr explicit operator uint64_t(void) const	{ return (uint64_t)t; }
+  constexpr explicit operator int(void) const = delete;
+};
+#define OP_BITWISE(T)	OP_BITWISE_CAST(T, int, SafeBool)
+#define OP_BITWISE64(T)	OP_BITWISE_CAST(T, uint64_t, SafeBool64)
+#define OP_BITWISE_CAST(T, Underlying, SafeBoolTyp)			\
+inline constexpr T			operator| (T  lhs, T rhs)		\
+{ return static_cast<T>(static_cast<Underlying>(lhs) | static_cast<Underlying>(rhs)); }	\
+inline           T&			operator|=(T& lhs, T rhs)		\
+{ return lhs = (lhs | rhs); }								\
+inline constexpr T			operator^ (T  lhs, T rhs)		\
+{ return static_cast<T>(static_cast<Underlying>(lhs) ^ static_cast<Underlying>(rhs)); }	\
+inline           T&			operator^=(T& lhs, T rhs)		\
+{ return lhs = (lhs ^ rhs); }								\
+inline constexpr SafeBoolTyp<T>	operator& (T  lhs, T rhs)	\
+{ return SafeBoolTyp<T>(static_cast<T>(static_cast<Underlying>(lhs) & static_cast<Underlying>(rhs))); }	\
+inline           T&			operator&=(T& lhs, T rhs)		\
+{ return lhs = (lhs & rhs); }								\
+inline constexpr T			operator~ (T  v)				\
+{ return static_cast<T>(~static_cast<Underlying>(v)); }		\
+/**/
+#define FRIEND_OP_BITWISE(T) /* for use with private types */	\
+friend constexpr T				operator| (T  lhs, T rhs);	\
+friend           T&				operator|=(T& lhs, T rhs);	\
+friend constexpr T				operator^ (T  lhs, T rhs);	\
+friend           T&				operator^=(T& lhs, T rhs);	\
+friend constexpr SafeBool<T>	operator& (T  lhs, T rhs);	\
+friend           T&				operator&=(T& lhs, T rhs);	\
+friend constexpr T				operator~ (T  v);			\
+/**/
+#define OP_BITWISE_DENY(T, U)	OP_BITWISE_DENY_IMPL(T, U);	OP_BITWISE_DENY_IMPL(U, T)
+#define OP_BITWISE_DENY_IMPL(T, U)										\
+       constexpr T				operator| (T  lhs, U rhs) = delete;	\
+                 T&				operator|=(T& lhs, U rhs) = delete;	\
+       constexpr T				operator^ (T  lhs, U rhs) = delete;	\
+                 T&				operator^=(T& lhs, U rhs) = delete;	\
+       constexpr SafeBool<T>	operator& (T  lhs, U rhs) = delete;	\
+                 T&				operator&=(T& lhs, U rhs) = delete
+/**/
+OP_BITWISE(CardPtrFlags);
+#endif
+
+typedef const char* (*target_predicate_t)(int who_chooses, int player, int card,
+                                        int targeting_player, int targeting_card);
+
+static inline int32_t target_predicate_extra(target_predicate_t predicate)
+{
+  STATIC_ASSERT(sizeof(int32_t) == sizeof(target_predicate_t), target_predicate_must_fit_extra);
+  return (int32_t)predicate;
+}
+
+#define RESOLVE_TRIGGER_AI(p_)	(duh_mode(p_) ? RESOLVE_TRIGGER_MANDATORY : RESOLVE_TRIGGER_OPTIONAL)
+
+#define RESOLVE_TRIGGER_CHECK_LIFE_TOTAL(p_, v_)	((duh_mode(p_) && life[p_]-v_ > 5)? RESOLVE_TRIGGER_MANDATORY : RESOLVE_TRIGGER_OPTIONAL)
+
+#define RESOLVE_TRIGGER_CHECK_DECK_COUNT(p_, v_)	((duh_mode(p_) && count_deck(p_)-v_ > 10)? RESOLVE_TRIGGER_MANDATORY : RESOLVE_TRIGGER_OPTIONAL)
+
+#define GVC_PLAYER_COUNTERS(counter_type, number)	(0x02000000 | (((counter_type) & 0xFF) << 16) | (((number) & 0xFF) << 8))
+
+#define GVC_PLAYER_COUNTERS_AND_LIFE(counter_type, number, life)	(GVC_PLAYER_COUNTERS(counter_type, number) | ((life) & 0xFF))
+
+#define APNAP(playervar, ...)									\
+	do {														\
+		int playervar; int macro_apnap;	/* avoid comma */		\
+		for (macro_apnap = 0; macro_apnap <= 1; ++macro_apnap){	\
+			playervar = current_turn ^ macro_apnap;				\
+			{__VA_ARGS__;}										\
+		}														\
+	} while (0)
+
+#define CYCLE_ALL_CARDS(playervar, cardvar, ...) do { int playervar = current_turn; int cardvar; for( cardvar = active_cards_count[playervar]-1; cardvar > -1; cardvar-- ){{__VA_ARGS__;}} playervar = 1-current_turn; for( cardvar = active_cards_count[playervar]-1; cardvar > -1; cardvar-- ){{__VA_ARGS__;}} } while (0)
+
+
 
 #endif

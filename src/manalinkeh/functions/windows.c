@@ -837,10 +837,10 @@ LRESULT __stdcall wndproc_CardClass_hook(HWND hwnd, UINT msg, WPARAM wparam, LPA
 					 && (get_damage_overlay_rect(&rect, &client_rect),	// copy_damage_rect()
 						 PtInRect(&rect, pt)))
 			  sprintf(tooltip, gs_cuecard_smallcard_damage, instance->damage_on_card);	// CUECARD_SMALLCARD[2] = Damage: %d
-			else if (instance->special_counters > 0
-					 && (copy_special_counter_rect(&rect, &client_rect, instance->special_counters),	// copy_special_counter_rect()
+			else if (instance->special_counters_byte > 0
+					 && (copy_special_counter_rect(&rect, &client_rect, instance->special_counters_byte),	// copy_special_counter_rect()
 						 PtInRect(&rect, pt)))
-			  get_counter_name_by_type(tooltip, instance->special_counter_type, instance->special_counters);
+			  get_counter_name_by_type(tooltip, instance->special_counter_type, instance->special_counters_byte);
 			else if (instance->counters2
 					 && 90 * client_rect.bottom / 256 < pt.y && pt.y < 159 * client_rect.bottom / 256
 					 && client_rect.left + 2 * (client_rect.right - client_rect.left) / 3 <= pt.x)
@@ -858,20 +858,20 @@ LRESULT __stdcall wndproc_CardClass_hook(HWND hwnd, UINT msg, WPARAM wparam, LPA
 					 && 53 * client_rect.bottom / 100 < pt.y && pt.y < 89 * client_rect.bottom / 100
 					 && (client_rect.right + client_rect.left) / 2 <= pt.x)
 			  get_counter_name_by_type(tooltip, BYTE3(instance->targets[18].player), instance->counters5);
-			else if ((instance->counters || instance->counters_m1m1)
+			else if ((instance->counters_byte || instance->counters_m1m1)
 					 && 53 * client_rect.bottom / 100 < pt.y && pt.y < 89 * client_rect.bottom / 100
 					 && pt.x < (client_rect.right + client_rect.left) / 2)
 			  {
 				if (instance->counters_m1m1 == 0)
-				  get_counter_name_by_type(tooltip, COUNTER_P1_P1, instance->counters);
-				else if (instance->counters == 0)
+				  get_counter_name_by_type(tooltip, COUNTER_P1_P1, instance->counters_byte);
+				else if (instance->counters_byte == 0)
 				  get_counter_name_by_type(tooltip, COUNTER_M1_M1, instance->counters_m1m1);
 				else
 				  {
 					char m1m1[100];
 					get_counter_name_by_type(m1m1, COUNTER_M1_M1, instance->counters_m1m1);
 					char p1p1[100];
-					get_counter_name_by_type(p1p1, COUNTER_P1_P1, instance->counters);
+					get_counter_name_by_type(p1p1, COUNTER_P1_P1, instance->counters_byte);
 					scnprintf(tooltip, 100, "%s; %s", m1m1, p1p1);
 				  }
 			  }

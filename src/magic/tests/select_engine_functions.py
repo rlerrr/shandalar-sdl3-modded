@@ -23,7 +23,8 @@ FUNCTIONS = {
                   "save_combat_simulation_state", "restore_combat_simulation_state",
                   "enumerate_ai_block_assignments", "record_ai_action_selection",
                   "replay_ai_action_selection"],
-    "dialog.c": ["refresh_duel_display_cache"],
+    "dialog.c": ["refresh_duel_display_cache", "displayed_card_indices_invalid",
+                 "get_displayed_card_blocking"],
     "duel_engine_lifeclass_wndproc.c": ["is_invalid_duel_player", "get_displayed_player_counters"],
     "global_state.c": ["save_or_load_ver1", "save_or_load_ver2"],
     "duel_main_phase.c": ["mark_blocked_attackers"],
@@ -66,6 +67,7 @@ def main():
     definitions.insert(0, "\n".join(declarations))
     output.parent.mkdir(parents=True, exist_ok=True)
     output.write_text('#include <stdio.h>\n#include "magic/src/game_support.h"\n'
+                      '#include "magic/src/duel_host.h"\n'
                       '#include "magic/src/global_strings.h"\n'
                       'extern int ai_blocker_count;\nextern int ai_blocker_cards[16];\n'
                       'extern int g_ai_response_state;\nextern int g_duel_action_pending;\n'

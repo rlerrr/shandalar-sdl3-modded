@@ -1925,7 +1925,7 @@ int tawnos_coffin_phase_out_one(int target_player, int target_card)
   g_trigger_cause = saved_trigger_cause;
   pop_affected_card_stack();
   PLAYER_CARD_INSTANCE(target_player, target_card).damage_on_card = 0;
-  PLAYER_CARD_INSTANCE(target_player, target_card).blocking = (char)-1;
+  PLAYER_CARD_INSTANCE(target_player, target_card).blocking = 255;
   PLAYER_CARD_INSTANCE(target_player, target_card).state &= ~STATE_ATTACKING;
   PLAYER_CARD_INSTANCE(target_player, target_card).state |= STATE_OUBLIETTED;
   TENTATIVE_reassess_all_cards(0, 0x20);

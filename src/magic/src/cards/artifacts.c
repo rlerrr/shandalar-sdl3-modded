@@ -2106,13 +2106,13 @@ int card_battering_ram(int player, int card, event_t event)
     if (g_current_player == player &&
         (PLAYER_CARD_INSTANCE(player, card).state & (STATE_ATTACKING | STATE_ATTACKED)) != 0)
     {
-      if (PLAYER_CARD_INSTANCE(player, card).blocking == -1)
+      if (PLAYER_CARD_INSTANCE(player, card).blocking == 255)
       {
         s.blocking_card = card;
       }
       else
       {
-        s.blocking_card = (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking;
+        s.blocking_card = PLAYER_CARD_INSTANCE(player, card).blocking;
       }
 
       for (s.current_card = 0; s.current_card < g_active_cards_count[s.opponent]; ++s.current_card)
@@ -4853,7 +4853,7 @@ int generic_clockwork_creature(int player, int card, int event, int amount)
     set_special_counters(player, card, amount);
   }
 
-  if (g_trigger_condition == TRIGGER_END_COMBAT && C_get_special_counters(player, card) != 0 && g_affected_card == card && g_affected_card_controller == player && player == g_current_turn && ((PLAYER_CARD_INSTANCE(player, card).state & STATE_ATTACKING) != 0 || (PLAYER_CARD_INSTANCE(player, card).blocking != -1 && g_current_player != player)))
+  if (g_trigger_condition == TRIGGER_END_COMBAT && C_get_special_counters(player, card) != 0 && g_affected_card == card && g_affected_card_controller == player && player == g_current_turn && ((PLAYER_CARD_INSTANCE(player, card).state & STATE_ATTACKING) != 0 || (PLAYER_CARD_INSTANCE(player, card).blocking != 255 && g_current_player != player)))
   {
     if (event == EVENT_TRIGGER)
     {

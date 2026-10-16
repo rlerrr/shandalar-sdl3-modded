@@ -31,28 +31,6 @@
 #include "gdiplus.h"
 
 #ifdef SHANDALAR_SDL_WIN32_COMPAT
-/* Types added to the later Manalink dump used by this draw library. */
-typedef struct
-{
-  uint8_t default_expansion, default_rarity, watermark, dfc_symbol, flags;
-  uint8_t rarity_in_expansion[0];
-} Rarities;
-
-typedef struct
-{
-  char* name;
-  char* disp;
-  uint8_t* expansions;
-  uint8_t row, col, copied_expansions, saturation;
-} Watermark;
-
-typedef enum
-{
-  BORDER_BLACK = 0,
-  BORDER_WHITE = 1,
-  BORDER_SILVER = 2
-} border_t;
-
 /* card_ptr_t kept the same bytes but grouped the casting cost meanwhile. */
 #define req_colorless req.req_colorless
 #define req_black req.req_black

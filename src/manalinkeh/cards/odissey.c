@@ -1578,7 +1578,7 @@ Activate this ability only any time you could cast an instant. (For example, if 
 		ai_modifier += 48;
 		card_ptr_t* c = cards_ptr[ cards_data[deck_ptr[player][0]].id ];
 		// Unimplemented: Ruling 11/1/2005: If you flip over a hybrid card, you get one of either color mana, not both, for each mana symbol.
-		produce_mana_tapped_multi(player, card, 0, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white);
+		produce_mana_tapped_multi(player, card, 0, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white);
 		mill(player, 1);
 	}
 

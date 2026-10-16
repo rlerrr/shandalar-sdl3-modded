@@ -824,12 +824,12 @@ int merseine_ability(int player, int card, event_t event){
 		if( event == EVENT_CAN_ACTIVATE && count_counters(pl, cr, COUNTER_NET) && enc_p == player ){
 			if( can_use_activated_abilities(pl, cr) ){
 				card_ptr_t* c = cards_ptr[get_id(enc_p, enc_c)];
-				int cless = c->req_colorless;
+				int cless = c->req.req_colorless;
 				if( check_special_flags2(player, card, SF2_X_SPELL) ){
 					cless += get_card_instance(enc_p, enc_c)->info_slot;
 				}
-				int c1 = get_cost_mod_for_activated_abilities(pl, cr, cless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white);
-				if( has_mana_multi(player, c1, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white) ){
+				int c1 = get_cost_mod_for_activated_abilities(pl, cr, cless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white);
+				if( has_mana_multi(player, c1, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white) ){
 					return 1;
 				}
 			}
@@ -837,12 +837,12 @@ int merseine_ability(int player, int card, event_t event){
 
 		if( event == EVENT_ACTIVATE ){
 			card_ptr_t* c = cards_ptr[get_id(enc_p, enc_c)];
-			int cless = c->req_colorless;
+			int cless = c->req.req_colorless;
 			if( check_special_flags2(player, card, SF2_X_SPELL) ){
 				cless += get_card_instance(enc_p, enc_c)->info_slot;
 			}
-			int c1 = get_cost_mod_for_activated_abilities(pl, cr, cless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white);
-			charge_mana_multi(player, c1, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white);
+			int c1 = get_cost_mod_for_activated_abilities(pl, cr, cless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white);
+			charge_mana_multi(player, c1, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white);
 		}
 
 		if( event == EVENT_RESOLVE_ACTIVATION ){

@@ -364,7 +364,7 @@ int compute_and_check_casting_cost(int player, int unused, int card)
 
   if (!free_spell)
 	{
-	  int cless = cp->req_colorless;
+	  int cless = cp->req.req_colorless;
 	  if (cless == 40)
 		cless = 0;
 	  cost_xbugrwaU[0] += cless;
@@ -377,7 +377,7 @@ int compute_and_check_casting_cost(int player, int unused, int card)
 
 #define COMPUTE_COLOR(col, req_col)				\
   if (!free_spell)								\
-	cost_xbugrwaU[col] += cp->req_col;			\
+	cost_xbugrwaU[col] += cp->req.req_col;			\
   if (cost_xbugrwaU[col] < 0)					\
 	{											\
 	  surplus_free_mana[col] = cost_xbugrwaU[col];	\

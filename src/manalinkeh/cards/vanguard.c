@@ -1648,7 +1648,7 @@ int can_play_commander(int player, int card, event_t event, int commander_code){
 			t_cless -= count_graveyard(player);
 		}
 		int cless = MAX(0, t_cless);
-		if( has_mana_multi(player, cless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white) ){
+		if( has_mana_multi(player, cless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white) ){
 			return 1;
 		}
 	}

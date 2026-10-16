@@ -100,7 +100,7 @@ void modify_cost_for_delve(int player, int card, event_t event){
 			if( cless < 0 ){
 				cless = 0;
 			}
-			if( has_mana_multi(player, cless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white) ){
+			if( has_mana_multi(player, cless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white) ){
 				instance->info_slot = 1;
 				null_casting_cost(player, card);
 			}
@@ -130,7 +130,7 @@ int cast_spell_with_delve(int player, int card){
 		test_definition_t this_test;
 		new_default_test_definition(&this_test, TYPE_ANY, "Select a card to exile for Delve.");
 		int trc = select_multiple_cards_from_graveyard(player, player, 0, AI_MIN_VALUE, &this_test, max, &instance->targets[0]);
-		charge_mana_multi(player, cless-trc, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white);
+		charge_mana_multi(player, cless-trc, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white);
 		if( spell_fizzled != 1 ){
 			int result = get_id(player, card) == CARD_ID_SOULFLAYER ? 0 : 2;
 			const int *grave = get_grave(player);
@@ -149,7 +149,7 @@ int cast_spell_with_delve(int player, int card){
 	}
 
 	if( choice == 1 ){
-		charge_mana_multi(player, cless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white);
+		charge_mana_multi(player, cless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white);
 		if( spell_fizzled != 1 ){
 			return 1;
 		}

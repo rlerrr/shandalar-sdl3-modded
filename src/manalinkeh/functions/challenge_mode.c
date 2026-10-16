@@ -1249,8 +1249,8 @@ void apply_challenge_not_my_deck_upkeep(void){
 			int card = get_random_card();
 			int id = get_internal_card_id_from_csv_id( card );
 			card_ptr_t* c1 = cards_ptr[ card];
-			if( ! ( cards_data[ id ].type & TYPE_LAND ) &&  c->req_colorless == c1->req_colorless && c->req_black == c1->req_black && c->req_blue == c1->req_blue &&
-				  c->req_green == c1->req_green && c->req_red == c1->req_red && c->req_white == c1->req_white ){
+			if( ! ( cards_data[ id ].type & TYPE_LAND ) &&  c->req.req_colorless == c1->req.req_colorless && c->req.req_black == c1->req.req_black && c->req.req_blue == c1->req.req_blue &&
+				  c->req.req_green == c1->req.req_green && c->req.req_red == c1->req.req_red && c->req.req_white == c1->req.req_white ){
 				attempts = 4000;
 				card_found = id;
 			}
@@ -1639,7 +1639,7 @@ void check_challenge2_deck_legality(void){
 			else if( challenge2 == 7 && ! ( cards_data[ deck[i] ].type & TYPE_CREATURE ) ){
 				result = i;
 			}
-			else if( challenge2 == 2 && ( cards_data[ deck[i] ].cc[0] + cards_data[ deck[i] ].cc[1] < 4 ) && ! ( cards_data[ deck[i] ].type & TYPE_LAND ) ){
+			else if( challenge2 == 2 && ( (uint8_t)cards_data[ deck[i] ].cc[0] + (uint8_t)cards_data[ deck[i] ].cc[1] < 4 ) && ! ( cards_data[ deck[i] ].type & TYPE_LAND ) ){
 				result = i;
 			}
 
@@ -1673,7 +1673,7 @@ void check_challenge2_deck_legality(void){
 				result = i;
 			}
 			else if( challenge3 == 7 && ! is_beta_land( cards_data[ deck[i] ].id ) ){
-				int cmc = cards_data[ deck[i] ].cc[0] + cards_data[ deck[i] ].cc[1];
+				int cmc = (uint8_t)cards_data[ deck[i] ].cc[0] + (uint8_t)cards_data[ deck[i] ].cc[1];
 				if( cmc < 1 || cmc > 10 ){
 					result = i;
 				}
@@ -1731,7 +1731,7 @@ void check_challenge2_deck_legality(void){
 			for( i=0;i<active_cards_count[HUMAN];i++){
 				card_instance_t *instance = get_card_instance(HUMAN, i);
 				int id = instance->internal_card_id;
-				int cmc = cards_data[ id ].cc[0] + cards_data[ id ].cc[1];
+				int cmc = (uint8_t)cards_data[ id ].cc[0] + (uint8_t)cards_data[ id ].cc[1];
 				if( cmc > 0 && cmc < 11 ){
 					counts[cmc-1]++;
 				}

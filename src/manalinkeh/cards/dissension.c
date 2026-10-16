@@ -1241,7 +1241,7 @@ If a mana symbol has multiple colors, choose one.) */
 
 		if( beginning_of_phase(player, card, event, player, card, PHASE_MAIN1) ){
 			card_ptr_t* c = cards_ptr[ get_id(instance->damage_target_player, instance->damage_target_card) ];
-			produce_mana_multi(player, c->req_colorless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white);
+			produce_mana_multi(player, c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white);
 		}
 	}
 		if( ! IS_AURA_EVENT(player, card, event) ){

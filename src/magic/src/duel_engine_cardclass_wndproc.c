@@ -416,7 +416,7 @@ unsigned int log_card_snapshot_changes(card_instance_t *old_snapshot, card_insta
     {
       changed_flags |= 0x800;
     }
-    if ((char)new_snapshot->blocking != (char)old_snapshot->blocking)
+    if (new_snapshot->blocking != old_snapshot->blocking)
     {
       changed_flags |= 0x1000;
     }
@@ -531,7 +531,7 @@ int card_snapshots_match_for_redraw(card_instance_t *old_snapshot, card_instance
   {
     unchanged = 0;
   }
-  if ((char)new_snapshot->blocking != (char)old_snapshot->blocking)
+  if (new_snapshot->blocking != old_snapshot->blocking)
   {
     unchanged = 0;
   }
@@ -1967,7 +1967,6 @@ void draw_special_effect_small_card(HDC dc, RECT *rect, card_id_t card_id, unsig
   int single_color;
   unsigned int display_info;
   int displayed_player_and_card[2];
-  int i;
   card_ptr_t card_data;
   unsigned int display_version;
 
@@ -2039,10 +2038,7 @@ void draw_special_effect_small_card(HDC dc, RECT *rect, card_id_t card_id, unsig
   card_data.type_text = NULL;
   card_data.db_card_type_2 = 0xffffffff;
   card_data.rarity = 0;
-  for (i = 0; i < 10; ++i)
-  {
-    card_data.abilities[i] = 0;
-  }
+  memset(card_data.types, 0, sizeof(card_data.types));
   card_data.unused0x38 = 0xffffffff;
   card_data.unused0x3c = 0;
   card_data.artist = NULL;
@@ -2634,7 +2630,7 @@ int assign_blocker_to_attacker(int blocker_player, int blocker_card, int attacke
   int result;
 
   saved_state = global_card_instances[blocker_player][blocker_card].state;
-  saved_blocking = (int)(char)global_card_instances[blocker_player][blocker_card].blocking;
+  saved_blocking = global_card_instances[blocker_player][blocker_card].blocking;
   global_card_instances[blocker_player][blocker_card].state &= ~8;
   global_card_instances[blocker_player][blocker_card].blocking = (unsigned char)0xff;
 

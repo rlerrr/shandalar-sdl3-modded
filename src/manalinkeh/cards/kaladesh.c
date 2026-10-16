@@ -4188,7 +4188,7 @@ Trample
 Whenever you get one or more |E (energy counters), Territorial Gorger gets +2/+2 until end of turn.
 2/2
 */
-	enable_xtrigger_flags |= XTRIGGER_COUNTER_ENERGY;
+	enable_xtrigger_flags |= ENABLE_XTRIGGER_COUNTER_ENERGY;
 	if( xtrigger_condition() == XTRIGGER_COUNTER_ENERGY && affect_me(player, card) && trigger_cause_controller == player &&
 		! is_humiliated(player, card))
 	{
@@ -6408,7 +6408,7 @@ Artifact
 Whenever you get one or more |E (energy counters), put a +1/+1 counter on target creature you control.
 |4, |T: You get |E.
 */
-	enable_xtrigger_flags |= XTRIGGER_COUNTER_ENERGY;
+	enable_xtrigger_flags |= ENABLE_XTRIGGER_COUNTER_ENERGY;
 	if( xtrigger_condition() == XTRIGGER_COUNTER_ENERGY && affect_me(player, card) && trigger_cause_controller == player &&
 		reason_for_trigger_controller == player && ! is_humiliated(player, card))
 	{

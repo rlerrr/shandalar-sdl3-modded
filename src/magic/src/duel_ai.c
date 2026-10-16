@@ -2689,7 +2689,7 @@ void setup_combat_damage_simulation(int player)
       internal_card_id = AI_CARD_INTERNAL_ID(player, card);
       if (((internal_card_id != -1) &&
            ((AI_CARD_STATE(player, card) & STATE_ATTACKING) != 0)) &&
-          ((AI_CARD_BLOCKING(player, card) == -1) || (AI_CARD_BLOCKING(player, card) == card)))
+          ((AI_CARD_BLOCKING(player, card) == 255) || (AI_CARD_BLOCKING(player, card) == card)))
       {
         card_color = single_color_test_bit_to_color_t((int)global_cards_data[internal_card_id].color);
         power = AI_EVAL(player, card).power;
@@ -2755,7 +2755,7 @@ void setup_combat_damage_simulation(int player)
       internal_card_id = AI_CARD_INTERNAL_ID(player, card);
       if ((((internal_card_id != -1) &&
             ((AI_CARD_STATE(player, card) & STATE_ATTACKING) != 0)) &&
-           (AI_CARD_BLOCKING(player, card) != -1)) &&
+           (AI_CARD_BLOCKING(player, card) != 255)) &&
           (AI_CARD_BLOCKING(player, card) != card))
       {
         band_anchor_index = -1;
@@ -2833,7 +2833,7 @@ void setup_combat_damage_simulation(int player)
             (((global_cards_data[internal_card_id].type & TYPE_CREATURE) != 0) ||
              ((AI_CARD_STATE(ai_blocker_player, card) & STATE_NONCREATURE_CAN_BLOCK) != 0))) &&
            ((AI_CARD_STATE(ai_blocker_player, card) & (STATE_OUBLIETTED | STATE_IN_PLAY | STATE_TAPPED)) == STATE_IN_PLAY)) &&
-          (AI_CARD_BLOCKING(ai_blocker_player, card) == -1))
+          (AI_CARD_BLOCKING(ai_blocker_player, card) == 255))
       {
         blocker_candidates[blocker_candidate_count] = card;
         blocker_candidate_count++;
@@ -3125,7 +3125,7 @@ void enumerate_ai_block_assignments(int player, int blocker_index)
   else
   {
     blocker = &global_card_instances[ai_blocker_player][ai_blocker_cards[blocker_index]];
-    if (((blocker->state & STATE_UNKNOWN8000) == 0) || (blocker->blocking == -1))
+    if (((blocker->state & STATE_UNKNOWN8000) == 0) || (blocker->blocking == 255))
     {
       ai_candidate_block_assignments[blocker_index] = -1;
       enumerate_ai_block_assignments(player, blocker_index + 1);

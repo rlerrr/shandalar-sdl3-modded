@@ -358,7 +358,7 @@ if(SHANDALAR_BUILD_TESTS AND WIN32)
     INCLUDE_DIRECTORIES "${SHANDALAR_SRC_ROOT}/manalinkeh"
   )
   add_executable(mok_engine_test ../magic/tests/mok_engine_test.c "${mok_test_engine_source}"
-                 "${mok_ai_bridge_source}")
+                 "${mok_ai_bridge_source}" ../magic/src/duel_host.c)
   target_include_directories(mok_engine_test PRIVATE "${SHANDALAR_SRC_ROOT}")
   target_include_directories(mok_engine_test BEFORE PRIVATE "${SHANDALAR_SRC_ROOT}/magic/compat")
   target_compile_definitions(mok_engine_test PRIVATE SHANDALAR MODERN_FIXES)

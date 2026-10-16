@@ -2444,7 +2444,7 @@ Artifact
 
 static int is_not_x_spell(int unused1, int unused2, int player, int card){
 	int iid = get_original_internal_card_id(player, card);
-	return cards_data[iid].cc[1] == 255 ? 0 : 1;
+	return cards_data[iid].cc[1] == -1 ? 0 : 1;
 }
 
 int card_isochron_scepter(int player, int card, event_t event){

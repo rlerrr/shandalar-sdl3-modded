@@ -219,18 +219,18 @@ static int patron(int player, int card, event_t event, int subtype){
 		if( new_can_sacrifice_as_cost(player, card, &test) ){
 			int costs[6];
 			card_ptr_t* c = cards_ptr[ get_id(player, card) ];
-			costs[0] = get_updated_casting_cost(player, card, -1, event, c->req_colorless);
-			costs[1] = c->req_black;
-			costs[2] = c->req_blue;
-			costs[3] = c->req_green;
-			costs[4] = c->req_red;
-			costs[5] = c->req_white;
+			costs[0] = get_updated_casting_cost(player, card, -1, event, c->req.req_colorless);
+			costs[1] = c->req.req_black;
+			costs[2] = c->req.req_blue;
+			costs[3] = c->req.req_green;
+			costs[4] = c->req.req_red;
+			costs[5] = c->req.req_white;
 			int count = 0;
 			while( count < active_cards_count[player]  ){
 					if( in_play(player, count) && is_what(player, count, TYPE_PERMANENT) && has_subtype(player, count, subtype) ){
 						card_ptr_t* c1 = cards_ptr[ get_id(player, count) ];
-						if( has_mana_multi(player, costs[0]-c1->req_colorless, costs[1]-c1->req_black, costs[2]-c1->req_blue, costs[3]-c1->req_green,
-											costs[4]-c1->req_red, costs[5]-c1->req_white)
+						if( has_mana_multi(player, costs[0]-c1->req.req_colorless, costs[1]-c1->req.req_black, costs[2]-c1->req.req_blue, costs[3]-c1->req.req_green,
+											costs[4]-c1->req.req_red, costs[5]-c1->req.req_white)
 						  ){
 							instance->info_slot = 1;
 							null_casting_cost(player, card);
@@ -274,12 +274,12 @@ static int patron(int player, int card, event_t event, int subtype){
 					card_ptr_t* c1 = cards_ptr[ get_id(instance->targets[0].player, instance->targets[0].card) ];
 					int costs[6];
 					card_ptr_t* c = cards_ptr[ get_id(player, card) ];
-					costs[0] = get_updated_casting_cost(player, card, -1, event, c->req_colorless)-c1->req_colorless;
-					costs[1] = c->req_black-c1->req_black;
-					costs[2] = c->req_blue-c1->req_blue;
-					costs[3] = c->req_green-c1->req_green;
-					costs[4] = c->req_red-c1->req_red;
-					costs[5] = c->req_white-c1->req_white;
+					costs[0] = get_updated_casting_cost(player, card, -1, event, c->req.req_colorless)-c1->req.req_colorless;
+					costs[1] = c->req.req_black-c1->req.req_black;
+					costs[2] = c->req.req_blue-c1->req.req_blue;
+					costs[3] = c->req.req_green-c1->req.req_green;
+					costs[4] = c->req.req_red-c1->req.req_red;
+					costs[5] = c->req.req_white-c1->req.req_white;
 					int i;
 					for(i=0; i<6; i++){
 						if( costs[i] < 0 ){

@@ -321,9 +321,9 @@ int get_displayed_card_blocking(int player, int card)
   }
 
   EnterCriticalSection(&g_duel_render_lock);
-  blocking = (int)(char)DISPLAYED_PLAYER_CARD_INSTANCE(player, card).blocking;
+  blocking = global_displayed_card_instances[player][card].blocking;
   LeaveCriticalSection(&g_duel_render_lock);
-  return blocking;
+  return blocking == 255 ? -1 : blocking;
 }
 
 // FUNCTION: MAGIC 0x004487d8

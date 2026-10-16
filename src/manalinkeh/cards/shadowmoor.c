@@ -15,7 +15,7 @@ int get_color_for_monocolored_hybrid(int player, int card){
 int get_number_of_monocolored_hybrid_mana(int player, int card, int exc_cless){
 	int id = player != -1 ? get_id(player, card) : cards_data[card].id;
 	card_ptr_t* c = cards_ptr[ id ];
-	return c->req_colorless-exc_cless;
+	return c->req.req_colorless-exc_cless;
 }
 
 int has_mana_for_monocolor_hybrid(int player, int hybrid_cless, int clr, int cless){
@@ -100,19 +100,19 @@ int get_number_of_hybrid_mana(int player, int card, int ex_c1, int ex_c2){
 	int id = player != -1 ? get_id(player, card) : cards_data[card].id;
 	card_ptr_t* c = cards_ptr[ id ];
 	if( ex_c1 != COLOR_BLACK && ex_c2 != COLOR_BLACK){
-		result+=c->req_black;
+		result+=c->req.req_black;
 	}
 	if( ex_c1 != COLOR_BLUE && ex_c2 != COLOR_BLUE){
-		result+=c->req_blue;
+		result+=c->req.req_blue;
 	}
 	if( ex_c1 != COLOR_GREEN && ex_c2 != COLOR_GREEN){
-		result+=c->req_green;
+		result+=c->req.req_green;
 	}
 	if( ex_c1 != COLOR_RED && ex_c2 != COLOR_RED){
-		result+=c->req_red;
+		result+=c->req.req_red;
 	}
 	if( ex_c1 != COLOR_WHITE && ex_c2 != COLOR_WHITE){
-		result+=c->req_white;
+		result+=c->req.req_white;
 	}
 	return result;
 }

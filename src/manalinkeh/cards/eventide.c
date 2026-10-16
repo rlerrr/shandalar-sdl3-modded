@@ -147,19 +147,19 @@ static int count_chroma(int player, int card, int clr1, int clr2, int must_be_pe
 	  int clrs = (1<<clr1) | (1<<clr2);
 
 	  if (clrs & COLOR_TEST_BLACK)
-		result += cp->req_black;
+		result += cp->req.req_black;
 
 	  if (clrs & COLOR_TEST_BLUE)
-		result += cp->req_blue;
+		result += cp->req.req_blue;
 
 	  if (clrs & COLOR_TEST_GREEN)
-		result += cp->req_green;
+		result += cp->req.req_green;
 
 	  if (clrs & COLOR_TEST_RED)
-		result += cp->req_red;
+		result += cp->req.req_red;
 
 	  if (clrs & COLOR_TEST_WHITE)
-		result += cp->req_white;
+		result += cp->req.req_white;
 
 	  return result;
 	}

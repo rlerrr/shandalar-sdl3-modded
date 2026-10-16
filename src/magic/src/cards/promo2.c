@@ -610,7 +610,7 @@ int card_sewers_of_estark(int player, int card, event_t event)
       {
         create_legacy_effect(player, card, g_duel_generated_internal_card_id_02, target.player, target.card);
       }
-      else if (PLAYER_CARD_INSTANCE(target.player, target.card).blocking != -1 &&
+      else if (PLAYER_CARD_INSTANCE(target.player, target.card).blocking != 255 &&
                target.player != g_current_player)
       {
         create_legacy_effect(player, card, g_duel_generated_internal_card_id_26, target.player, target.card);

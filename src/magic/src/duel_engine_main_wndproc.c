@@ -594,7 +594,7 @@ unsigned int get_displayed_card_ui_flags(int player, int card)
   {
     result |= 4;
   }
-  if (global_displayed_card_instances[player][card].blocking != -1)
+  if (global_displayed_card_instances[player][card].blocking != 255)
   {
     result |= 8;
   }

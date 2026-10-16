@@ -23,7 +23,7 @@ int buyback(int player, int card, int colorless, int black, int blue, int green,
 	if( ! is_token(player, card) ){
 		int diff = 0;
 		if( ! played_for_free(player, card) ){
-			diff = MIN(0, cards_ptr[get_id(player, card)]->req_colorless+true_get_updated_casting_cost(player, card, -1, EVENT_CAST_SPELL, -1));
+			diff = MIN(0, cards_ptr[get_id(player, card)]->req.req_colorless+true_get_updated_casting_cost(player, card, -1, EVENT_CAST_SPELL, -1));
 		}
 		diff-=(2*count_cards_by_id(player, CARD_ID_MEMORY_CRYSTAL));
 		int cless = MAX(0, colorless+diff);

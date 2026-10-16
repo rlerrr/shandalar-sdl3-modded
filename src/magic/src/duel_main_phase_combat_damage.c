@@ -534,7 +534,7 @@ void resolve_combat_damage(int player)
 
     for (card = 0; card < g_active_cards_count[player]; card = card + 1)
     {
-      if (PLAYER_CARD_INSTANCE(player, card).blocking != -1 &&
+      if (PLAYER_CARD_INSTANCE(player, card).blocking != 255 &&
           PLAYER_CARD_INSTANCE(player, card).blocking != card)
       {
         continue;
@@ -1080,7 +1080,7 @@ void resolve_combat_damage(int player)
     for (scan_card = 0; scan_card < g_active_cards_count[defending_player]; scan_card = scan_card + 1)
     {
       if (PLAYER_CARD_INSTANCE(defending_player, scan_card).internal_card_id != -1 &&
-          PLAYER_CARD_INSTANCE(defending_player, scan_card).blocking != -1)
+          PLAYER_CARD_INSTANCE(defending_player, scan_card).blocking != 255)
       {
         ai_blocker_cards[ai_blocker_count] = scan_card;
         combat_damage_blocker_toughness[ai_blocker_count] =

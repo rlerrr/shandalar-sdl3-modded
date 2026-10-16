@@ -11,7 +11,7 @@ int m15_paragon(int player, int card, event_t event, color_test_t colors, int po
 int cast_spell_with_convoke(int player, int card, event_t event){
 	if( ! played_for_free(player, card) && ! is_token(player, card) && get_card_instance(player, card)->info_slot == 1 ){
 		card_ptr_t* c = cards_ptr[ get_id(player, card)  ];
-		if( ! charge_convoked_mana_extended(player, card, event, c->req_colorless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white) ){
+		if( ! charge_convoked_mana_extended(player, card, event, c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white) ){
 			spell_fizzled = 1;
 			return 0;
 		}
@@ -25,7 +25,7 @@ int generic_spell_with_convoke(int player, int card, event_t event){
 
 	if( event == EVENT_MODIFY_COST){
 		card_ptr_t* c = cards_ptr[ get_id(player, card)  ];
-		if( has_convoked_mana_extended(player, card, event, c->req_colorless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white) == 2 ){
+		if( has_convoked_mana_extended(player, card, event, c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white) == 2 ){
 			null_casting_cost(player, card);
 			instance->info_slot = 1;
 		}
@@ -1069,7 +1069,7 @@ int card_chief_engineer(int player, int card, event_t event){
 			for(i=0; i<active_cards_count[player]; i++){
 				if( in_hand(player, i) && is_what(player, i, TYPE_ARTIFACT) ){
 					card_ptr_t* c = cards_ptr[ get_id(player, i) ];
-					if( has_convoked_mana_extended(player, i, event, c->req_colorless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white) ){
+					if( has_convoked_mana_extended(player, i, event, c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white) ){
 						if( is_what(player, i, TYPE_INSTANT) ){
 							return 1;
 						}
@@ -1087,7 +1087,7 @@ int card_chief_engineer(int player, int card, event_t event){
 			for(i=0; i<active_cards_count[player]; i++){
 				if( in_hand(player, i) && is_what(player, i, TYPE_ARTIFACT) ){
 					card_ptr_t* c = cards_ptr[ get_id(player, i) ];
-					if( has_convoked_mana_extended(player, i, event, c->req_colorless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white) ){
+					if( has_convoked_mana_extended(player, i, event, c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white) ){
 						if( is_what(player, i, TYPE_INSTANT) ){
 							ap[0][apc] = get_card_instance(player, i)->internal_card_id;
 							ap[1][apc] = i;
@@ -1106,7 +1106,7 @@ int card_chief_engineer(int player, int card, event_t event){
 			int selected = select_card_from_zone(player, player, ap[0], apc, 0, AI_MAX_VALUE, -1, &test);
 			if( selected != -1 ){
 				card_ptr_t* c = cards_ptr[ get_id(player, ap[1][selected] ) ];
-				if( charge_convoked_mana_extended(player, ap[1][selected], event, c->req_colorless, c->req_black, c->req_blue, c->req_green, c->req_red, c->req_white) ){
+				if( charge_convoked_mana_extended(player, ap[1][selected], event, c->req.req_colorless, c->req.req_black, c->req.req_blue, c->req.req_green, c->req.req_red, c->req.req_white) ){
 					play_card_in_hand_for_free(player, ap[1][selected]);
 					cant_be_responded_to = 1;
 				}

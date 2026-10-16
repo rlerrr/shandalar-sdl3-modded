@@ -32,6 +32,7 @@ void save_combat_simulation_state(void);
 void restore_combat_simulation_state(void);
 unsigned int refresh_duel_display_cache(void);
 int get_displayed_player_counters(int player);
+int get_displayed_card_blocking(int player, int card);
 unsigned int save_or_load_ver1(void);
 unsigned int save_or_load_ver2(void);
 extern int g_duel_cached_graveyard_player_0[500], g_duel_cached_graveyard_player_1[500];
@@ -43,7 +44,7 @@ static int counter_io_loading;
 static unsigned char saved_counter_bytes[8];
 void FUN_00464bb0(void) {}
 void refresh_ai_random_table(void) {}
-int CardIDFromType(unsigned int iid) { return iid; }
+int CardIDFromInternalIndex(unsigned int iid) { return iid; }
 int CardTypeFromID(int csv) { return csv; }
 int save_or_load_data(void *data, unsigned int size)
 {
@@ -518,7 +519,7 @@ static void test_end_of_turn(void)
     {
       check(PLAYER_CARD_INSTANCE(p, 0).state == persistent,
             "Both players must lose this turn's combat history while retaining persistent state");
-      check(PLAYER_CARD_INSTANCE(p, 0).blocking == -1 &&
+      check(PLAYER_CARD_INSTANCE(p, 0).blocking == 255 &&
             PLAYER_CARD_INSTANCE(p, 0).damage_on_card == 0,
             "Both players must lose their blocking assignment and marked damage");
       check(PLAYER_CARD_INSTANCE(p, 1).state == STATE_BLOCKED &&
@@ -572,9 +573,25 @@ static void test_tapped_blocker_assignment(void)
   }
 }
 
+static void test_displayed_blocking_indices(void)
+{
+  const int indices[] = {0, 127, 128, 149, 255};
+  unsigned int i;
+  reset();
+  InitializeCriticalSection(&g_duel_render_lock);
+  for (i = 0; i < sizeof(indices) / sizeof(indices[0]); ++i)
+  {
+    global_displayed_card_instances[0][0].blocking = indices[i];
+    check(get_displayed_card_blocking(0, 0) == (indices[i] == 255 ? -1 : indices[i]),
+          "Displayed blocking must preserve high indices and translate only the no-block sentinel");
+  }
+  DeleteCriticalSection(&g_duel_render_lock);
+}
+
 static void test_ai_blocker_bridge(void)
 {
-  int count, i, allow, speculate;
+  int count, i, allow, speculate, attacker;
+  for (attacker = 125; attacker <= 149; attacker += 24)
   for (count = 1; count <= 16; count *= 2)
   for (allow = 0; allow < 2; ++allow)
   for (speculate = 0; speculate < 2; ++speculate)
@@ -583,7 +600,7 @@ static void test_ai_blocker_bridge(void)
     ai_blocker_player = 1;
     ai_blocker_count = count;
     combat_damage_attacker_count = 1;
-    combat_damage_attacker_cards[0] = 125;
+    combat_damage_attacker_cards[0] = attacker;
     g_ai_combat_best_score = 16;
     g_ai_attacker_power[0] = allow ? (1 << count) - 1 : 0;
     g_duel_ai_mode_state = speculate;
@@ -595,26 +612,26 @@ static void test_ai_blocker_bridge(void)
     blocker_chosen_events = 0;
     memset(ai_attacker_blocker_counts, 0, sizeof(ai_attacker_blocker_counts));
     memset(g_ai_combat_blocking_card_indices, 0, sizeof(g_ai_combat_blocking_card_indices));
-    g_active_cards_count[0] = 126;
+    g_active_cards_count[0] = attacker + 1;
     g_active_cards_count[1] = count + 1;
-    PLAYER_CARD_INSTANCE(0, 125).internal_card_id = 2;
-    PLAYER_CARD_INSTANCE(0, 125).state = STATE_IN_PLAY | STATE_ATTACKING;
+    PLAYER_CARD_INSTANCE(0, attacker).internal_card_id = 2;
+    PLAYER_CARD_INSTANCE(0, attacker).state = STATE_IN_PLAY | STATE_ATTACKING;
     for (i = 0; i < count; ++i)
     {
       ai_blocker_cards[i] = i + 1;
       PLAYER_CARD_INSTANCE(1, i + 1).internal_card_id = 3;
       PLAYER_CARD_INSTANCE(1, i + 1).state = STATE_IN_PLAY;
-      PLAYER_CARD_INSTANCE(1, i + 1).blocking = -1;
+      PLAYER_CARD_INSTANCE(1, i + 1).blocking = 255;
     }
     ai_assign_blockers(0);
     check(blocker_chosen_events == (allow ? count : 0),
           "Imported blocker triggers must use the battlefield event mask");
     for (i = 0; i < count; ++i)
-      check(PLAYER_CARD_INSTANCE(1, i + 1).blocking == (allow ? 125 : -1) &&
+      check(PLAYER_CARD_INSTANCE(1, i + 1).blocking == (allow ? attacker : 255) &&
             !!(PLAYER_CARD_INSTANCE(1, i + 1).state & STATE_BLOCKING) == allow,
-            "Imported blockers must read the engine's chosen attacker, including choices beyond slot seven");
+            "Imported blockers must preserve attacker indices above 127 and the no-block sentinel");
     mark_blocked_attackers(0);
-    check(!!(PLAYER_CARD_INSTANCE(0, 125).state & STATE_ISBLOCKED) == allow,
+    check(!!(PLAYER_CARD_INSTANCE(0, attacker).state & STATE_ISBLOCKED) == allow,
           "The combat engine must recognize the chosen attacker as blocked");
   }
 }
@@ -733,6 +750,7 @@ int main(void)
   test_untap_preparation();
   test_end_of_turn();
   test_tapped_blocker_assignment();
+  test_displayed_blocking_indices();
   test_ai_blocker_bridge();
   test_ai_target_replay();
   test_combat_death_ordering();

@@ -1518,7 +1518,7 @@ draw_fullcard_vanguard(HDC hdc, const card_ptr_t* cp)
   tws.shadow_offset.x = tws.shadow_offset.y = 0;
   tws.shadow_visible = 0;
 
-  len = sprintf(buf, "%+d", (int8_t)(cp->ai_power_toughness & 0xff));
+  len = sprintf(buf, "%+d", (int8_t)cp->ai_power);
   for (fnt = BIGCARDVANGUARD_FONT; fnt < BIGCARDVANGUARD_FONT3; ++fnt)
 	{
 	  SelectObject(hdc, fonts[fnt]);
@@ -1531,7 +1531,7 @@ draw_fullcard_vanguard(HDC hdc, const card_ptr_t* cp)
   pos = (cfg->fullcard_vanguard_hand.right + cfg->fullcard_vanguard_hand.left) / 2;
   draw_text_with_shadow_at_x(hdc, &cfg->fullcard_vanguard_hand, pos, &tws, -1, buf, -1);
 
-  len = sprintf(buf, "%+d", (int8_t)(cp->ai_power_toughness >> 8));
+  len = sprintf(buf, "%+d", (int8_t)cp->ai_toughness);
   for (fnt = BIGCARDVANGUARD_FONT; fnt < BIGCARDVANGUARD_FONT3; ++fnt)
 	{
 	  SelectObject(hdc, fonts[fnt]);

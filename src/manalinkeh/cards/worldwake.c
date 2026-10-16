@@ -3,7 +3,7 @@ int do_multikicker(int player, int card, event_t event, int colorless, int black
 	int result = 0;
 	int diff = 0;
 	if( ! played_for_free(player, card) ){
-		diff = MIN(0, cards_ptr[get_id(player, card)]->req_colorless+true_get_updated_casting_cost(player, card, -1, event, -1));
+		diff = MIN(0, cards_ptr[get_id(player, card)]->req.req_colorless+true_get_updated_casting_cost(player, card, -1, event, -1));
 	}
 	int cless = colorless+diff;
 	while( 1 ){
@@ -659,8 +659,8 @@ int card_comet_storm(int player, int card, event_t event){
 			//A very particular case, so we couldn't use the "set_x_for_x_spell" function
 			instance->info_slot = x_value;
 			int value_before_x = 0;
-			if( cards_data[instance->internal_card_id].cc[1] <= 15 ){
-				value_before_x += cards_data[instance->internal_card_id].cc[1];
+			if( (uint8_t)cards_data[instance->internal_card_id].cc[1] <= 15 ){
+				value_before_x += (uint8_t)cards_data[instance->internal_card_id].cc[1];
 			}
 			int diff = value_before_x - true_get_updated_casting_cost(player, card, -1, event, -1);
 
@@ -864,7 +864,7 @@ int card_everflowing_chalice(int player, int card, event_t event)
 			instance->info_slot = 0;
 			int diff = 0;
 			if( ! played_for_free(player, card) ){
-				diff = MIN(0, cards_ptr[get_id(player, card)]->req_colorless+true_get_updated_casting_cost(player, card, -1, EVENT_CAST_SPELL, -1));
+				diff = MIN(0, cards_ptr[get_id(player, card)]->req.req_colorless+true_get_updated_casting_cost(player, card, -1, EVENT_CAST_SPELL, -1));
 			}
 			int cless = 2+diff;
 			while( 1 ){

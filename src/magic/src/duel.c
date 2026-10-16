@@ -1424,13 +1424,13 @@ int end_turn_phase(unsigned int player)
     if (global_card_instances[player][card].internal_card_id != -1)
     {
       global_card_instances[player][card].state &= ~(STATE_JUST_DRAWED | STATE_ATTACKING | STATE_BLOCKING | STATE_ATTACKED | STATE_ISBLOCKED | STATE_BLOCKED | STATE_UNKNOWN8000);
-      global_card_instances[player][card].blocking = -1;
+      global_card_instances[player][card].blocking = 255;
       global_card_instances[player][card].damage_on_card = 0;
     }
     if (global_card_instances[other_player][card].internal_card_id != -1)
     {
       global_card_instances[other_player][card].state &= ~(STATE_JUST_DRAWED | STATE_ATTACKING | STATE_BLOCKING | STATE_ATTACKED | STATE_ISBLOCKED | STATE_BLOCKED | STATE_UNKNOWN8000);
-      global_card_instances[other_player][card].blocking = -1;
+      global_card_instances[other_player][card].blocking = 255;
       global_card_instances[other_player][card].damage_on_card = 0;
     }
     if (global_card_instances[player][card].internal_card_id >= g_card_count)

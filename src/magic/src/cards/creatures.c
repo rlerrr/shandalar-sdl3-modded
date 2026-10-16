@@ -2988,7 +2988,7 @@ int card_time_elemental(int player, int card, event_t event)
 
   if ((event == EVENT_DECLARE_BLOCKERS || event == EVENT_SHOULD_AI_PLAY) &&
       g_current_phase == PHASE_DECLARE_BLOCKERS &&
-      PLAYER_CARD_INSTANCE(player, card).blocking != -1 &&
+      PLAYER_CARD_INSTANCE(player, card).blocking != 255 &&
       global_cards_data[PLAYER_CARD_INSTANCE(player, card).internal_card_id].code_pointer !=
           card_two_headed_giant_of_foriys_legacy)
   {
@@ -5248,7 +5248,7 @@ int card_elder_land_wurm(int player, int card, event_t event)
 {
   if (event == EVENT_DECLARE_BLOCKERS &&
       player != g_current_player &&
-      (global_card_instances[player] + card)->blocking != -1)
+      (global_card_instances[player] + card)->blocking != 255)
   {
     (global_card_instances[player] + card)->info_slot = 1;
     return 0;
@@ -6577,13 +6577,13 @@ int card_venom(int player, int card, event_t event)
     if (PLAYER_CARD_INSTANCE(player, card).damage_target_player == g_current_player &&
         (DAMAGE_TARGET_CARD_INSTANCE(player, card).state & (STATE_ATTACKING | STATE_ATTACKED)) != 0)
     {
-      if (DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking == -1)
+      if (DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking == 255)
       {
         s.blocking_card = PLAYER_CARD_INSTANCE(player, card).damage_target_card;
       }
       else
       {
-        s.blocking_card = (int)(char)DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking;
+        s.blocking_card = DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking;
       }
 
       for (s.current_card = 0; s.current_card < g_active_cards_count[s.opponent]; ++s.current_card)
@@ -6602,12 +6602,12 @@ int card_venom(int player, int card, event_t event)
     }
 
     if (PLAYER_CARD_INSTANCE(player, card).damage_target_player != g_current_player &&
-        DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking != -1)
+        DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking != 255)
     {
-      s.grouped_blocker = (int)(char)PLAYER_CARD_INSTANCE(s.opponent, (int)(char)DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking).blocking;
+      s.grouped_blocker = PLAYER_CARD_INSTANCE(s.opponent, DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking).blocking;
       if (s.grouped_blocker == -1)
       {
-        create_legacy_effect(player, card, g_duel_generated_internal_card_id_06, s.opponent, (int)(char)DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking);
+        create_legacy_effect(player, card, g_duel_generated_internal_card_id_06, s.opponent, DAMAGE_TARGET_CARD_INSTANCE(player, card).blocking);
       }
       else
       {
@@ -6649,13 +6649,13 @@ int card_thicket_basilisk(int player, int card, event_t event)
     s.opponent = 1 - player;
     if ((player == g_current_player) && ((PLAYER_CARD_INSTANCE(player, card).state & (STATE_ATTACKED | STATE_ATTACKING)) != 0))
     {
-      if (PLAYER_CARD_INSTANCE(player, card).blocking == -1)
+      if (PLAYER_CARD_INSTANCE(player, card).blocking == 255)
       {
         s.blocking_card = card;
       }
       else
       {
-        s.blocking_card = (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking;
+        s.blocking_card = PLAYER_CARD_INSTANCE(player, card).blocking;
       }
 
       for (s.current_card = 0; s.current_card < g_active_cards_count[s.opponent]; s.current_card = s.current_card + 1)
@@ -6668,15 +6668,15 @@ int card_thicket_basilisk(int player, int card, event_t event)
       }
     }
 
-    if ((player != g_current_player) && (PLAYER_CARD_INSTANCE(player, card).blocking != -1))
+    if ((player != g_current_player) && (PLAYER_CARD_INSTANCE(player, card).blocking != 255))
     {
-      s.grouped_blocker = (int)(char)PLAYER_CARD_INSTANCE(s.opponent, (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking).blocking;
+      s.grouped_blocker = PLAYER_CARD_INSTANCE(s.opponent, PLAYER_CARD_INSTANCE(player, card).blocking).blocking;
       if (s.grouped_blocker == -1)
       {
-        s.blocking_iid = PLAYER_CARD_INSTANCE(s.opponent, (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking).internal_card_id;
+        s.blocking_iid = PLAYER_CARD_INSTANCE(s.opponent, PLAYER_CARD_INSTANCE(player, card).blocking).internal_card_id;
         if ((s.blocking_iid != -1) && ((global_cards_data[s.blocking_iid].subtype != 0) && ((global_cards_data[s.blocking_iid].type & TYPE_CREATURE) != 0)))
         {
-          create_legacy_effect(player, card, g_duel_generated_internal_card_id_06, s.opponent, (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking);
+          create_legacy_effect(player, card, g_duel_generated_internal_card_id_06, s.opponent, PLAYER_CARD_INSTANCE(player, card).blocking);
         }
       }
       else
@@ -6711,13 +6711,13 @@ int card_wall_of_dust(int player, int card, event_t event)
   {
     s.opponent = 1 - player;
     if (g_current_player != player &&
-        PLAYER_CARD_INSTANCE(player, card).blocking != -1 &&
+        PLAYER_CARD_INSTANCE(player, card).blocking != 255 &&
         PLAYER_CARD_INSTANCE(player, card).info_slot == 0)
     {
       PLAYER_CARD_INSTANCE(player, card).info_slot |= 1;
       s.grouped_blocker =
-          (char)PLAYER_CARD_INSTANCE(s.opponent,
-                                     (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking)
+          PLAYER_CARD_INSTANCE(s.opponent,
+                                     PLAYER_CARD_INSTANCE(player, card).blocking)
               .blocking;
       if (s.grouped_blocker == -1)
       {
@@ -6725,9 +6725,9 @@ int card_wall_of_dust(int player, int card, event_t event)
                              card,
                              g_duel_generated_internal_card_id_08,
                              s.opponent,
-                             (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking);
+                             PLAYER_CARD_INSTANCE(player, card).blocking);
         PLAYER_CARD_INSTANCE(s.opponent,
-                             (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking)
+                             PLAYER_CARD_INSTANCE(player, card).blocking)
             .token_status |= 0x8000;
       }
       else
@@ -6842,13 +6842,13 @@ int card_abomination(int player, int card, event_t event)
     if (player == g_current_player &&
         (PLAYER_CARD_INSTANCE(player, card).state & (STATE_ATTACKING | STATE_ATTACKED)) != 0)
     {
-      if (PLAYER_CARD_INSTANCE(player, card).blocking == -1)
+      if (PLAYER_CARD_INSTANCE(player, card).blocking == 255)
       {
         s.blocking_card = card;
       }
       else
       {
-        s.blocking_card = (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking;
+        s.blocking_card = PLAYER_CARD_INSTANCE(player, card).blocking;
       }
 
       for (s.current_card = 0; s.current_card < g_active_cards_count[s.opponent]; ++s.current_card)
@@ -6863,15 +6863,15 @@ int card_abomination(int player, int card, event_t event)
       }
     }
 
-    if ((player != g_current_player) && (PLAYER_CARD_INSTANCE(player, card).blocking != -1))
+    if ((player != g_current_player) && (PLAYER_CARD_INSTANCE(player, card).blocking != 255))
     {
-      s.grouped_blocker = (char)PLAYER_CARD_INSTANCE(s.opponent, (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking).blocking;
+      s.grouped_blocker = PLAYER_CARD_INSTANCE(s.opponent, PLAYER_CARD_INSTANCE(player, card).blocking).blocking;
       if (s.grouped_blocker == -1)
       {
-        if ((PLAYER_CARD_INSTANCE(s.opponent, (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking).color &
+        if ((PLAYER_CARD_INSTANCE(s.opponent, PLAYER_CARD_INSTANCE(player, card).blocking).color &
              s.affected_colors) != 0)
         {
-          create_legacy_effect(player, card, g_duel_generated_internal_card_id_06, s.opponent, (int)(char)PLAYER_CARD_INSTANCE(player, card).blocking);
+          create_legacy_effect(player, card, g_duel_generated_internal_card_id_06, s.opponent, PLAYER_CARD_INSTANCE(player, card).blocking);
         }
       }
       else

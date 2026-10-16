@@ -1734,7 +1734,7 @@ static int __cdecl piety_pump_blocker(int target_player, int target_card, int un
 {
   int effect_card;
 
-  if (PLAYER_CARD_INSTANCE(target_player, target_card).blocking != -1 &&
+  if (PLAYER_CARD_INSTANCE(target_player, target_card).blocking != 255 &&
       (PLAYER_CARD_INSTANCE(target_player, target_card).state & STATE_ATTACKING) == 0)
   {
     effect_card = create_legacy_effect(piety_source_player,
