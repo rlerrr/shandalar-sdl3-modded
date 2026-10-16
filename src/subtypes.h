@@ -1,9 +1,11 @@
 #ifndef SUBTYPES_H
 #define SUBTYPES_H
 
-// Our new subtype codes, stored in the "new_type" columns of "manalink.csv"
+// Shared subtype codes, stored in the "new_type" columns of "manalink.csv".
+// Preserve numeric IDs: binary card data and saved state may contain them.
 typedef enum
 {
+  SUBTYPE_INVALID                     = 0,
 SUBTYPE_MIN_CREATURE_SUBTYPE		= 0x0001,
   SUBTYPE_ALLY                        = 0x0001,	//creature types
   SUBTYPE_ANGEL                       = 0x0002,
@@ -239,7 +241,25 @@ SUBTYPE_MIN_CREATURE_SUBTYPE		= 0x0001,
   SUBTYPE_PROCESSOR					  = 0x00E8,
   SUBTYPE_SCION						  = 0x00E9,
   SUBTYPE_MOLE						  = 0x00EA,
-  SUBTYPE_MAX_USED_CREATURE_SUBTYPE	  = 0x00EA,
+  SUBTYPE_PILOT                       = 0x00EB,
+  SUBTYPE_AETHERBORN                  = 0x00EC,
+  SUBTYPE_MONKEY                      = 0x00ED,
+  SUBTYPE_SERVO                       = 0x00EE,
+  SUBTYPE_JACKAL                      = 0x00EF,
+  SUBTYPE_DINOSAUR                    = 0x00F0,
+  SUBTYPE_TRILOBITE                   = 0x00F1,
+  SUBTYPE_CHICKEN                     = 0x00F2, // unsets only
+  SUBTYPE_BRAINIAC                    = 0x00F3, // unsets only
+  SUBTYPE_CYBORG                      = 0x00F4, // unsets only
+  SUBTYPE_GAMER                       = 0x00F5, // unsets only
+  SUBTYPE_KILLBOT                     = 0x00F6, // unsets only
+  SUBTYPE_SPY                         = 0x00F7, // unsets only
+  SUBTYPE_VILLAIN                     = 0x00F8, // unsets only
+  SUBTYPE_AZRA                        = 0x00F9,
+  SUBTYPE_PANGOLIN                    = 0x00FA,
+  SUBTYPE_EGG                         = 0x00FB,
+  SUBTYPE_AUTOBOT                     = 0x00FC,
+  SUBTYPE_MAX_USED_CREATURE_SUBTYPE	  = 0x00FC,
   SUBTYPE_NONE                        = 0x0FFE, //When set, by design the creature lost every other creature type.
   SUBTYPE_ALL_CREATURES               = 0x0FFF,	//FIXME: counts as all possible creature types
   SUBTYPE_MAX_CREATURE_SUBTYPE		  = 0x0FFF,
@@ -271,7 +291,8 @@ SUBTYPE_MIN_SUPERTYPE				= 0x2000,
   SUBTYPE_WORLD                       = 0x2004,
   SUBTYPE_NONBASIC                    = 0x2005,
   SUBTYPE_ELITE                       = 0x2006,
-SUBTYPE_MAX_USED_SUPERTYPE			= 0x2006,
+  SUBTYPE_HOST                        = 0x2007, // unsets only
+SUBTYPE_MAX_USED_SUPERTYPE			= 0x2007,
 SUBTYPE_MAX_SUPERTYPE				= 0x2FFF,
 
 SUBTYPE_MIN_ARTIFACT_SUBTYPE		= 0x3000,
@@ -280,7 +301,9 @@ SUBTYPE_MIN_ARTIFACT_SUBTYPE		= 0x3000,
   SUBTYPE_FORTIFICATION               = 0x3002,
   SUBTYPE_HORDE_ARTIFACT              = 0x3003,		//internal use only
   SUBTYPE_CLUE                        = 0x3004,
-SUBTYPE_MAX_USED_ARTIFACT_SUBTYPE	= 0x3004,
+  SUBTYPE_VEHICLE                     = 0x3005,
+  SUBTYPE_TREASURE                    = 0x3006,
+SUBTYPE_MAX_USED_ARTIFACT_SUBTYPE	= 0x3006,
 SUBTYPE_MAX_ARTIFACT_SUBTYPE		= 0x3FFF,
 
 SUBTYPE_MIN_ENCHANTMENT_SUBTYPE		= 0x4000,
@@ -295,7 +318,10 @@ SUBTYPE_MIN_ENCHANTMENT_SUBTYPE		= 0x4000,
   SUBTYPE_AURA_INSTANT				= 0x4007,
   SUBTYPE_AURA_PLANESWALKER			= 0x4008,
   /* End internal use only */
+  SUBTYPE_MIN_REAL_ENCHANTMENT_SUBTYPE= 0x4010,
   SUBTYPE_CURSE                       = 0x4010,
+  SUBTYPE_CARTOUCHE                   = 0x4011,
+  SUBTYPE_SAGA                        = 0x4012,
   SUBTYPE_SHRINE                      = 0x4020,
 SUBTYPE_MAX_USED_ENCHANTMENT_SUBTYPE= 0x4020,
 SUBTYPE_MAX_ENCHANTMENT_SUBTYPE		= 0x4FFF,
@@ -356,7 +382,23 @@ SUBTYPE_MIN_PLANESWALKER_SUBTYPE	= 0x7000,
   SUBTYPE_UGIN                        = 0x701D,
   SUBTYPE_NARSET                      = 0x701E,
   SUBTYPE_ARLINN                      = 0x701F,
-SUBTYPE_MAX_USED_PLANESWALKER_SUBTYPE = 0x701F,
+  SUBTYPE_DOVIN                       = 0x7020,
+  SUBTYPE_SAHEELI                     = 0x7021,
+  SUBTYPE_KAYA                        = 0x7022,
+  SUBTYPE_SAMUT                       = 0x7023,
+  SUBTYPE_HUATLI                      = 0x7024,
+  SUBTYPE_ANGRATH                     = 0x7025,
+  SUBTYPE_JAYA                        = 0x7026,
+  SUBTYPE_ROWAN                       = 0x7027,
+  SUBTYPE_WILL                        = 0x7028,
+  SUBTYPE_YANGGU                      = 0x7029,
+  SUBTYPE_YANLING                     = 0x702A,
+  SUBTYPE_VIVIEN                      = 0x702B,
+  SUBTYPE_DUNGEON_MASTER              = 0x702C,
+  SUBTYPE_AMINATOU                    = 0x702D,
+  SUBTYPE_ESTRID                      = 0x702E,
+  SUBTYPE_WINDGRACE                   = 0x702F,
+SUBTYPE_MAX_USED_PLANESWALKER_SUBTYPE = 0x702F,
 SUBTYPE_MAX_PLANESWALKER_SUBTYPE	  = 0x71FF,
 
 SUBTYPE_MIN_PLANE_SUBTYPE			= 0x8000,
@@ -405,6 +447,7 @@ SUBTYPE_MIN_PLANE_SUBTYPE			= 0x8000,
   SUBTYPE_XEREX                       = 0x8030,
 SUBTYPE_MAX_USED_PLANE_SUBTYPE		= 0x8030,
 SUBTYPE_MAX_PLANE_SUBTYPE			= 0x8FFF,
+  SUBTYPE_MAX_SUBTYPE                 = 0x8FFF,
 } subtype_t;
 
 // The old hardcoded subtype codes, stored in the "subtype" columns of "manalink.csv"

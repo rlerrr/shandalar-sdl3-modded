@@ -4,6 +4,34 @@ This directory is a source-level fork of ManalinkEh for the
 `modded-shandalar-manalink` target.  It does not use the old injected DLL or
 absolute MOK executable addresses.
 
+## Shared header migration
+
+The definitions in `src/` are the canonical shared definitions. Consolidate the
+imported headers incrementally, preserving numeric IDs and the layouts consumed
+by existing save files and binary asset loaders. Matching names or total record
+sizes do not establish matching field meanings, widths, or offsets.
+
+- `card_id.h`, `Expansions.h`, and `stypes.h` forward to the main headers. Their
+  definitions were identical before consolidation; the forwarding headers keep
+  existing include paths working without maintaining duplicate declarations.
+- `subtypes.h` forwards to the main header, which includes the imported subtype
+  IDs and expanded creature, supertype, artifact, and planeswalker range limits.
+  Existing IDs and the ordinary enum representation are preserved. The imported
+  header's alternate `SHANDALAR` branch (a 16-bit C++ enum and separate constants)
+  is not part of this host's type model.
+- Migrate `defs.h` a type or enum at a time. Reconcile missing names and semantic
+  differences explicitly. For binary records, verify member offsets, widths,
+  signedness, packing, and serialization before sharing a declaration.
+- The unused engine API declarations in the root `src/manalink.h` have been
+  removed. Its former card-art and rendering consumers include `defs.h` and
+  standard library headers directly. `src/manalinkeh/manalink.h` remains the
+  imported engine API, including its static bridge adaptations.
+
+In particular, Manalink's `STATE_SUMMON_SICK` combines uses that the host splits
+between attack and activation restrictions. Migrate its callers according to
+their purpose rather than introducing a blanket alias. Full haste and permission
+to activate abilities as though a creature had haste must remain distinct.
+
 ## Current boundary
 
 - The imported sources compile into `manalinkeh_static`.

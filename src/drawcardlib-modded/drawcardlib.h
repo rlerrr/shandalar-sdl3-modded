@@ -5,6 +5,7 @@
 #include <assert.h>
 #include <errno.h>
 #include <limits.h>
+#include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -21,9 +22,7 @@
 // We want the function in image.dll.
 #undef LoadImage
 
-#undef PACKED	// (unconditionally!) redefined within manalink.h
-#define DRAWCARDLIB 1
-#include "manalink.h"
+#include "defs.h"
 #include "modded_compat.h"
 #ifndef SHANDALAR_SDL_WIN32_COMPAT
 #include "../shandalar/export_to_drawcardlib.h"	// for INSTANCE_FLAG_ARTIFACT/INSTANCE_FLAG_ENCHANTMENT display in Shandalar.
