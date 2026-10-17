@@ -1768,7 +1768,7 @@ void setup_ai_combat_abilities(int player)
       ai_combat_eval_table[attached_player][attached_card].toughness += has_mana(attached_player, COLOR_WHITE, 1);
     }
     else if ((global_cards_data[internal_card_id].code_pointer == card_royal_assassin) &&
-             ((global_card_instances[defending_player][card].state & STATE_SUMMONSICK_BOTH) == 0))
+             ((global_card_instances[defending_player][card].state & STATE_SUMMONSICK_NOTAP) == 0))
     {
       untapped_royal_assassin_count++;
     }

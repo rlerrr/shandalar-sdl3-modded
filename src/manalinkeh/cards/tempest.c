@@ -223,7 +223,7 @@ int shared_sliver_activated_ability(int player, int card, event_t event, int mod
 	td.required_subtype = SUBTYPE_SLIVER;
 	td.extra = target_predicate_extra(activating_sliver);
 	td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.illegal_state = (mode & GAA_UNTAPPED) ? TARGET_STATE_TAPPED | TARGET_STATE_SUMMONING_SICK : 0;
+	td.illegal_state = (mode & GAA_UNTAPPED) ? TARGET_STATE_TAPPED | TARGET_STATE_SUMMONSICK_NOTAP : 0;
 	td.illegal_abilities = 0;
 
 	card_instance_t *instance = get_card_instance(player, card);

@@ -657,8 +657,8 @@ int other_leaves_play(int triggering_player, int triggering_card, int t_player, 
 
 int is_sick(int player, int card){
 	card_instance_t *instance = get_card_instance(player, card);
-	if( (instance->state & STATE_SUMMON_SICK) ){
-		if( is_what(player, card, TYPE_CREATURE) && ! check_special_flags2(player, card, SF2_THOUSAND_YEAR_ELIXIR) ){
+	if( (instance->state & STATE_SUMMONSICK_NOTAP) ){
+		if( is_what(player, card, TYPE_CREATURE) ){
 			return 1;
 		}
 	}
@@ -667,8 +667,8 @@ int is_sick(int player, int card){
 
 int is_animated_and_sick(int player, int card){
 	card_instance_t *instance = get_card_instance(player, card);
-	if( (instance->state & STATE_SUMMON_SICK) ){
-		if( is_what(player, card, TYPE_CREATURE) && ! check_special_flags2(player, card, SF2_THOUSAND_YEAR_ELIXIR) ){
+	if( (instance->state & STATE_SUMMONSICK_NOTAP) ){
+		if( is_what(player, card, TYPE_CREATURE) ){
 			return 1;
 		}
 	}
@@ -1062,8 +1062,20 @@ int legacy_effect_pump_ability_until_eot(int player, int card, event_t event ){
 	//                  &(1|2): spirit link benefitting controller (instead of either of above)
 	// targets[5].player: if > 0, then creature can block this many additional creatures
 	// targets[5].card: if > -1, extra function to return (see Berserk on unlimited.c)
+	// targets[8].player: original target controller for PAUE_END_IF_TARGET_CHANGES_CONTROL
 
 	card_instance_t *instance = get_card_instance(player, card);
+	if (instance->targets[3].player & PAUE_END_IF_TARGET_CHANGES_CONTROL){
+		event_flags |= EA_CONTROLLED;
+		if (instance->damage_target_player != instance->targets[8].player || instance->targets[8].card == -2){
+			// Latch expiry immediately; remove the effect outside characteristic queries,
+			// whose cached type result would otherwise restore a just-killed effect.
+			instance->targets[8].card = -2;
+			if (event == EVENT_STATIC_EFFECTS || event == EVENT_CARDCONTROLLED || event == EVENT_CLEANUP)
+				kill_card(player, card, KILL_EXILE);
+			return 0;
+		}
+	}
 	if( affect_me(instance->targets[0].player, instance->targets[0].card ) ){
 		if( event == EVENT_POWER ){
 			event_result += instance->counter_power;
@@ -1269,6 +1281,11 @@ static int pump_ability_until_eot_with_precomputed_sleight_hack_suppress(int pla
 	legacy_instance->targets[5].player = pump->can_block_additional_creatures;
 	legacy_instance->targets[6].player = pump->source_p;
 	legacy_instance->targets[6].card = pump->source_c;
+	if (pump->paue_flags & PAUE_END_IF_TARGET_CHANGES_CONTROL){
+		legacy_instance->targets[8].player = t_player;
+		legacy_instance->targets[8].card = -1;
+		event_flags |= EA_CONTROLLED;
+	}
 	return legacy_card;
 }
 
@@ -7939,13 +7956,6 @@ int count_graveyard_from_play(int player, int card, int event, int trg, int type
 		}
 	}
 	return 0;
-}
-
-void remove_summoning_sickness(int player, int card ){
-	card_instance_t *this = get_card_instance(player, card);
-	if( this->state & STATE_SUMMON_SICK ){
-		this->state &= ~STATE_SUMMON_SICK;
-	}
 }
 
 int dont_account_for_trinisphere = 0;
@@ -16658,7 +16668,7 @@ void ai_modifier_for_act_of_treason(int player, int card){
 			int pow = get_power(instance->targets[0].player, instance->targets[0].card);
 			if( instance->targets[0].player == player ){
 				int mod = -(pow*8);
-				if( is_sick(instance->targets[0].player, instance->targets[0].card) && current_phase < PHASE_DECLARE_ATTACKERS &&
+				if( check_state(instance->targets[0].player, instance->targets[0].card, STATE_SUMMONSICK_NOATTACK) && current_phase < PHASE_DECLARE_ATTACKERS &&
 					current_turn == player )
 				{
 					mod = pow*8;
@@ -16829,7 +16839,7 @@ int reanimate_test_from_any_graveyard(int player, int card, test_definition_t *t
 void ai_modifier_for_haste_granting_effects(int player, int card){
 	card_instance_t *instance = get_card_instance( player, card );
 	int mod = -48;
-	if( is_sick(instance->targets[0].player,  instance->targets[0].card) ){
+	if( check_state(instance->targets[0].player, instance->targets[0].card, STATE_SUMMONSICK_BOTH) ){
 		mod = 0;
 		if( current_turn == player && current_phase < PHASE_DECLARE_ATTACKERS ){
 			mod += 48;

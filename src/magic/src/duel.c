@@ -568,7 +568,7 @@ int TENTATIVE_start_turn(int player)
   g_land_can_be_played &= ~LCBP_FLAGS_CLEARED_EACH_TURN;
   for (card = 0; card < g_active_cards_count[player]; card = card + 1)
   {
-    global_card_instances[player][card].state &= ~(STATE_ATTACKING | STATE_BLOCKING | STATE_PLAYED_FROM_HAND | STATE_UNKNOWN8000 | STATE_SUMMONSICK_NOATTACK | STATE_SUMMONSICK_NOTAP);
+    global_card_instances[player][card].state &= ~(STATE_ATTACKING | STATE_BLOCKING | STATE_PLAYED_FROM_HAND | STATE_UNKNOWN8000 | STATE_SUMMONSICK | STATE_SUMMONSICK_BOTH);
   }
   TENTATIVE_reassess_all_cards(0, 0xff);
   return 0;

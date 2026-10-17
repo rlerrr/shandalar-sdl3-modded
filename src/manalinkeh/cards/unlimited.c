@@ -3154,41 +3154,13 @@ Enchanted creature can attack as though it had haste.
 	{
 	  card_instance_t* tgt_inst = get_card_instance(tp, tc);
 
-	  /* Current Oracle wording has reverted to the original functionality, which only allows attacking and not tapping like the 5th-edition wording does.  I'm
-	   * going to studiously ignore that rather than trying to hack it into combat selection and AI, or trying to only removing summoning sickness during
-	   * Declare Attackers or such. */
-	  if ((tgt_inst->state & STATE_SUMMON_SICK)
-		  && ((event == EVENT_RESOLVE_SPELL && cancel != 1)	// after_vanilla_aura()
-			  || (event == EVENT_CARDCONTROLLED && affect_me(tp, tc) && in_play(tp, tc))))
-		{
-		  tgt_inst->state &= ~STATE_SUMMON_SICK;
-		  instance->targets[3].player = 1;	// For the restore-summoning-sickness hack below
-		}
+	  if (event == EVENT_ABILITIES && affect_me(tp, tc)
+		  && in_play(player, card) && in_play(tp, tc) && !is_humiliated(player, card))
+		tgt_inst->state &= ~STATE_SUMMONSICK_NOATTACK;
 
 	  if (event == EVENT_RESOLVE_ACTIVATION && in_play(tp, tc))
 		untap_card(tp, tc);
-
-	  /* Hack (translated from the exe) to restore summoning sickness if this leaves play.  Only sort of works.  (Try casting two Instill Energies on the same
-	   * creature and then Disenchanting one, for example.)
-	   *
-	   * A real solution would be to:
-	   * 1. Set both STATE_SUMMON_SICK and some other bit when a creature enters play or is controlled and remove both at start of turn (maybe STATE_SICKNESS,
-	   *    which I haven't seen the exe use so far)
-	   * 2. Make this and Haste and so on only remove STATE_SUMMON_SICK and only during EVENT_ABILITIES, and add STATE_SUMMON_SICK at the start of
-	   *    EVENT_ABILITIES if the other bit is set. */
-	  if (trigger_condition == TRIGGER_LEAVE_PLAY && affect_me(player, card) && reason_for_trigger_controller == player
-		  && trigger_cause_controller == player && trigger_cause == card && instance->targets[3].player == 1
-		  && in_play(tp, tc))
-		{
-		  if (event == EVENT_TRIGGER)
-			event_result |= RESOLVE_TRIGGER_MANDATORY;
-		  if (event == EVENT_RESOLVE_TRIGGER)
-			tgt_inst->state |= STATE_SUMMON_SICK;
-		}
 	}
-
-  if (event == EVENT_BEGIN_TURN && current_turn == instance->damage_target_player)
-	instance->targets[3].player = 0;
 
   return rval || generic_activated_ability(player, card, event, GAA_ONCE_PER_TURN|GAA_IN_YOUR_TURN, MANACOST_X(0), 0, NULL, NULL);
 }
@@ -4335,7 +4307,7 @@ static int effect_nettling_imp(int player, int card, event_t event)
 	{
 	  if (p >= 0 && c >= 0
 		  && in_play(p, c)
-		  && !(get_card_instance(p, c)->state & (STATE_SUMMON_SICK | STATE_ATTACKED)))
+		  && !(get_card_instance(p, c)->state & (STATE_SUMMONSICK | STATE_ATTACKED)))
 		kill_card(p, c, KILL_DESTROY);
 
 	  kill_card(player, card, KILL_DESTROY);
@@ -5551,14 +5523,12 @@ static int effect_sirens_call(int player, int card, event_t event)
   // 0x4a22d0
   all_must_attack_if_able(player, event, -1);
 
-	if ((event == EVENT_CLEANUP || event == EVENT_SHOULD_AI_PLAY) && affect_me(player, card)){
-	  /* Ruling: 10/4/2004 It will require creatures with Haste to attack since they are able, but it won't destroy them if they don't for some reason.
-	   * Not implementable, since haste removes summoning sickness without a trace.  (Instill Energy keeps track of whether it removes summoning sickness, in
-	   * case the aura is removed.) */
+	if (event == EVENT_CLEANUP || (event == EVENT_SHOULD_AI_PLAY && affect_me(player, card))){
+	  // Haste does not erase the continuous-control exemption from destruction.
 		int c = active_cards_count[current_turn]-1;
 		while( c > -1 ){
 			if (in_play(current_turn, c) && is_what(current_turn, c, TYPE_CREATURE) && !has_subtype(current_turn, c, SUBTYPE_WALL)
-				&& !(get_card_instance(current_turn, c)->state & (STATE_SUMMON_SICK | STATE_ATTACKED))
+				&& !(get_card_instance(current_turn, c)->state & (STATE_SUMMONSICK | STATE_ATTACKED))
 			  ){
 				kill_card(current_turn, c, KILL_DESTROY);
 			}

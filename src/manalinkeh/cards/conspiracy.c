@@ -444,7 +444,7 @@ int card_secret_of_paradise(int player, int card, event_t event){
 	default_target_definition(player, card, &td, TYPE_CREATURE);
 	td.allowed_controller = player;
 	td.preferred_controller = player;
-	td.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONING_SICK;
+	td.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONSICK_NOTAP;
 	td.illegal_abilities = 0;
 	td.extra = get_conspiracys_hidden_name(player, card) > -1 ? get_conspiracys_hidden_name(player, card) : 0;
 

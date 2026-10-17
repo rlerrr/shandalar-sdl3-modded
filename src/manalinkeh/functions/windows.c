@@ -895,7 +895,7 @@ LRESULT __stdcall wndproc_CardClass_hook(HWND hwnd, UINT msg, WPARAM wparam, LPA
 				  strcpy(tooltip, gs_cuecard_smallcard_dying);	// CUECARD_SMALLCARD[7] = Dying
 				else
 				  {
-					int is_summonsick = ((instance->state & STATE_SUMMON_SICK)
+					int is_summonsick = ((instance->state & STATE_SUMMONSICK_BOTH)
 										 && (option_ShowAllCardsSummonSickness
 											 || (cards_data[instance->internal_card_id].type & TYPE_CREATURE)));
 					int is_phased = instance->state & STATE_OUBLIETTED;

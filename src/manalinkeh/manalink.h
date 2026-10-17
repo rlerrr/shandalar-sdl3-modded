@@ -421,6 +421,7 @@ int generate_reserved_token_by_id(int player, int csvid);	// Just like generate_
 void generate_tokens_by_id(int player, int card, int csvid, int howmany);
 int comes_into_play(int player, int card, event_t event);
 int comes_into_play_mode(int player, int card, event_t event, resolve_trigger_t trigger_mode);
+// Whether summoning sickness restricts tap/untap costs; attack permission is separate.
 int is_sick(int, int);
 int is_animated_and_sick(int, int);
 
@@ -916,7 +917,6 @@ void effect_fof(int player, int who_chooses, int number, int put_rest_where);	//
 int vanilla_equipment(int player, int card, event_t event, int equip_cost, int p_plus, int t_plus, int k_plus, int k_special);
 int special_count_grave(int player, int, int, int, int, int, int, int, int, int, int);
 void change_color(int player, int card, int t_player, int t_card, color_test_t new_color, change_color_t mode);
-void give_haste(int player, int card);
 void put_top_x_on_bottom(int player, int t_player, int remaining);
 void put_top_x_on_bottom_in_random_order(int player, int amount);
 int generic_aura(int player, int card, event_t event, int pref_controller, int power, int toughness, int abilities, int sp_abilities, int subtype, int color, int forbid);
@@ -953,7 +953,6 @@ int check_battlefield_for_id(int player, int);
 int check_battlefield_for_targettable_id(int player, int card, int, int, int);
 int store_and_trigger_graveyard_from_play(int player, int card, int event, int t_player, int trigger_mode, test_definition_t* test, int triggering_player, int triggering_card);	// Only needs to be called during EVENT_GRAVEYARD_FROM_PLAY and TRIGGER_GRAVEYARD_FROM_PLAY.  (More to the point, only need to initialize test then.)
 int count_graveyard_from_play(int player, int card, int event, int, int, int, int, int, int, int, int, int, int, int);
-void remove_summoning_sickness(int player, int card );
 int check_for_cip_effects_removal(int player, int card);
 int not_played_from_hand(int player, int card);
 int indestructible_until_eot(int player, int card, event_t event);

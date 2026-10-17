@@ -880,7 +880,7 @@ Each creature without converted mana cost of the chosen value enters the battlef
 			}
 			if( event == EVENT_ABILITIES ){
 				if( odd == instance->info_slot ){
-					give_haste(affected_card_controller, affected_card);
+					haste(affected_card_controller, affected_card, event);
 				}
 			}
 		}
@@ -5849,7 +5849,7 @@ int card_thousand_year_elixir(int player, int card, event_t event){
 	if (event == EVENT_ABILITIES && affected_card_controller == player && is_what(affected_card_controller, affected_card, TYPE_CREATURE) &&
 		in_play(player, card) && in_play(affected_card_controller, affected_card) && !is_humiliated(player, card) )
 	{
-		set_special_flags2(affected_card_controller, affected_card, SF2_THOUSAND_YEAR_ELIXIR);
+		get_card_instance(affected_card_controller, affected_card)->state &= ~STATE_SUMMONSICK_NOTAP;
 	}
 
 	if (!IS_GAA_EVENT(event)){
@@ -6136,7 +6136,7 @@ int card_warren_pilfeners(int player, int card, event_t event){
 				result = new_global_tutor(player, player, TUTOR_FROM_GRAVE, TUTOR_HAND, 0, AI_MAX_VALUE, &this_test);
 			}
 			if( result > -1 && has_subtype(player, result, SUBTYPE_GOBLIN) ){
-				give_haste(player, card);
+				pump_ability_until_eot(player, card, player, card, 0, 0, 0, SP_KEYWORD_HASTE);
 			}
 		}
 	}

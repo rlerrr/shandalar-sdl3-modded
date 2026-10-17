@@ -32,6 +32,8 @@ void duel_test_set_card_available(int csvid, int available);
 void duel_test_prepare_fixture(void);
 /* Refresh the cached characteristics normal gameplay updates between actions. */
 void duel_test_refresh(void);
+/* Exercise suspend's continuous haste duration without simulating its countdown. */
+DuelTestRef duel_test_suspend_haste(DuelTestRef ref);
 void duel_test_set_mana(int player, int color, int amount);
 void duel_test_set_life(int player, int amount);
 void duel_test_set_turn(int player, int combat);

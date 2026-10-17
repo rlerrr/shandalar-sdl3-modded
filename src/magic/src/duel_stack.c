@@ -2833,7 +2833,7 @@ int get_card_response_action_type(int player, int card)
   }
   else
   {
-    if ((PLAYER_CARD_INSTANCE(player, card).state & (STATE_INVISIBLE | STATE_SUMMONSICK)) != 0)
+    if ((PLAYER_CARD_INSTANCE(player, card).state & (STATE_INVISIBLE | STATE_JUST_CAST)) != 0)
     {
       return 0;
     }

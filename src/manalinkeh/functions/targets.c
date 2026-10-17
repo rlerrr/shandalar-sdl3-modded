@@ -625,8 +625,12 @@ validate_target_impl(int player, int card,	// Beware - these will both be -1 whe
 			FAILURE(gs_target_error_will_untap);//",will untap"
 
 		  if ((required_state & TARGET_STATE_SUMMONING_SICK)
-			  && !(tgt_instance->state & STATE_SUMMON_SICK))
+			  && !(tgt_instance->state & STATE_SUMMONSICK))
 			FAILURE(gs_target_error_summoning_sickness);//",summoning sickness
+
+		  if ((required_state & TARGET_STATE_SUMMONSICK_NOTAP)
+			  && !(tgt_instance->state & STATE_SUMMONSICK_NOTAP))
+			FAILURE(gs_target_error_summoning_sickness);//",summoning sickness"
 		}
 
 	  if (illegal_state)
@@ -687,7 +691,12 @@ validate_target_impl(int player, int card,	// Beware - these will both be -1 whe
 			FAILURE(gs_target_error_will_untap);//",will untap"
 
 		  if ((illegal_state & TARGET_STATE_SUMMONING_SICK)
-			  && (tgt_instance->state & STATE_SUMMON_SICK)
+			  && (tgt_instance->state & STATE_SUMMONSICK)
+			  && (cards_data[tgt_instance->internal_card_id].type & TYPE_CREATURE))
+			FAILURE(gs_target_error_summoning_sickness);//",summoning sickness"
+
+		  if ((illegal_state & TARGET_STATE_SUMMONSICK_NOTAP)
+			  && (tgt_instance->state & STATE_SUMMONSICK_NOTAP)
 			  && (cards_data[tgt_instance->internal_card_id].type & TYPE_CREATURE))
 			FAILURE(gs_target_error_summoning_sickness);//",summoning sickness"
 		}

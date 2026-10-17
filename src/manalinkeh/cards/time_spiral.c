@@ -81,7 +81,10 @@ int generic_suspend_legacy(int player, int card, event_t event){
 		if( check_rfg(instance->targets[6].player, instance->targets[9].card) ){
 			int crd = play_card_in_exile_for_free(instance->targets[6].player, instance->targets[6].player, instance->targets[9].card);
 			if( is_what(instance->targets[6].player, crd, TYPE_CREATURE) ){
-				give_haste(instance->targets[6].player, crd);
+				pump_ability_t haste_pump;
+				default_pump_ability_definition(player, card, &haste_pump, 0, 0, 0, SP_KEYWORD_HASTE);
+				haste_pump.paue_flags = PAUE_END_IF_TARGET_CHANGES_CONTROL;
+				pump_ability(player, card, instance->targets[6].player, crd, &haste_pump);
 			}
 			if (instance->targets[9].card == CARD_ID_RIFTMARKED_KNIGHT){
 			  token_generation_t token;
@@ -2557,7 +2560,10 @@ int card_greater_gargadon_suspended(int player, int card, event_t event){
 		int id = CARD_ID_GREATER_GARGADON;
 		if( check_rfg(player, id) ){
 			int crd = play_card_in_exile_for_free(player, player, id);
-			remove_summoning_sickness(player, crd);
+			pump_ability_t haste_pump;
+			default_pump_ability_definition(player, card, &haste_pump, 0, 0, 0, SP_KEYWORD_HASTE);
+			haste_pump.paue_flags = PAUE_END_IF_TARGET_CHANGES_CONTROL;
+			pump_ability(player, card, player, crd, &haste_pump);
 		}
 		kill_card(player, card, KILL_SACRIFICE);
 	}

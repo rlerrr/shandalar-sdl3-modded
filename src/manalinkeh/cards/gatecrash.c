@@ -4926,7 +4926,7 @@ static int ozbedat_legacy(int player, int card, event_t event){
 			int card_added = add_card_to_hand(player, get_internal_card_id_from_csv_id(CARD_ID_OBZEDAT_GHOST_COUNCIL));
 			remove_card_from_rfg(player, CARD_ID_OBZEDAT_GHOST_COUNCIL);
 			put_into_play(player, card_added);
-			give_haste(player, card_added);
+			pump_ability_until_eot(player, card, player, card_added, 0, 0, 0, SP_KEYWORD_HASTE);
 		}
 		kill_card(player, card, KILL_EXILE);
 	}

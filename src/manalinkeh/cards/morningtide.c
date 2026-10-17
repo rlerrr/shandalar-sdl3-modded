@@ -3589,9 +3589,9 @@ int card_vengeful_firebrand(int player, int card, event_t event){
    * ~ has haste as long as a Warrior card is in your graveyard.
    * |R: ~ gets +1/+0 until end of turn. */
 
-	if( event == EVENT_ABILITIES && affect_me(player, card) && ! is_humiliated(player, card) && is_sick(player, card) &&
+	if( event == EVENT_ABILITIES && affect_me(player, card) && ! is_humiliated(player, card) &&
 		any_in_graveyard_by_subtype(player, SUBTYPE_WARRIOR) )
-		give_haste(player, card);
+		haste(player, card, event);
 
 	return generic_shade_merge_pt(player, card, event, 0, MANACOST_R(1), 1,0);
 }

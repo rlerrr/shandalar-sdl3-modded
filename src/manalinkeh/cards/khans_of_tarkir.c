@@ -4683,7 +4683,7 @@ int card_savage_knucklebone(int player, int card, event_t event){
 		};
 		int priorities[4] = {	10,
 								8,
-								current_turn == player && current_phase < PHASE_DECLARE_ATTACKERS && check_state(player, card, STATE_SUMMON_SICK) ?
+								current_turn == player && current_phase < PHASE_DECLARE_ATTACKERS && check_state(player, card, STATE_SUMMONSICK_NOATTACK) ?
 								15 : 5
 		};
 		int choice = DIALOG(player, card, event, DLG_RANDOM, DLG_NO_STORAGE,

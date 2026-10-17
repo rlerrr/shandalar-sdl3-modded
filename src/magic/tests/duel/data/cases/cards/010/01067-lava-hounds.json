@@ -86,12 +86,6 @@
           "value": 16
         },
         {
-          "op": "assert_card",
-          "ref": "source",
-          "property": "sick",
-          "value": 1
-        },
-        {
           "op": "turn",
           "player": 0,
           "value": 0

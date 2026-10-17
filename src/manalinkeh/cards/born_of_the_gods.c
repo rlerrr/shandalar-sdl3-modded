@@ -4088,7 +4088,7 @@ int card_phenax_god_of_deception(int player, int card, event_t event)
   default_target_definition(player, card, &td_creature, TYPE_CREATURE);				\
   td_creature.allowed_controller = player;											\
   td_creature.preferred_controller = player;										\
-  td_creature.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONING_SICK;	\
+  td_creature.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONSICK_NOTAP;	\
   td_creature.illegal_abilities = 0
 
 #define DECL_TGT_PLAYER(player, card, td_player)			\

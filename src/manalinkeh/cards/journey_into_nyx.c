@@ -4664,7 +4664,7 @@ int card_dance_of_panic(int player, int card, event_t event){
 	}
 
 	if (event == EVENT_ABILITIES && affected_card_controller == player && count_subtype(ANYBODY, TYPE_PERMANENT, SUBTYPE_REVELER) > 4 ){
-		remove_summoning_sickness(affected_card_controller, affected_card);
+		haste(affected_card_controller, affected_card, event);
 	}
 
 	return global_enchantment(player, card, event);

@@ -6800,7 +6800,7 @@ int card_copy_artifact(int player, int card, event_t event)
         g_card_types_in_play[player] |=
             (unsigned char)global_cards_data[PLAYER_CARD_INSTANCE(player, card).internal_card_id].type;
         PLAYER_CARD_INSTANCE(player, card).state |=
-            ((player == 0) ? 0 : STATE_POWER_STRUGGLE) | STATE_SUMMONSICK |
+            ((player == 0) ? 0 : STATE_POWER_STRUGGLE) | STATE_JUST_CAST |
             STATE_SUMMONSICK_NOATTACK | STATE_SUMMONSICK_NOTAP | STATE_IN_PLAY;
         g_trigger_cause_controller = player;
         g_trigger_cause = card;

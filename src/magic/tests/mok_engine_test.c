@@ -489,8 +489,8 @@ static void test_end_of_turn(void)
   int turn_player, p;
   const unsigned int transient = STATE_JUST_DRAWED | STATE_ATTACKING | STATE_BLOCKING |
       STATE_ATTACKED | STATE_ISBLOCKED | STATE_BLOCKED | STATE_UNKNOWN8000;
-  const unsigned int persistent = STATE_IN_PLAY | STATE_TAPPED | STATE_SUMMONSICK |
-      STATE_OWNED_BY_OPPONENT | STATE_VIGILANCE;
+  const unsigned int persistent = STATE_IN_PLAY | STATE_TAPPED | STATE_JUST_CAST |
+      STATE_OWNED_BY_OPPONENT | STATE_VIGILANCE | STATE_SUMMONSICK | STATE_SUMMONSICK_BOTH;
 
   for (turn_player = 0; turn_player < 2; ++turn_player)
   {

@@ -542,7 +542,7 @@ int can_attack(int player, int card)
 	  && (!(instance->regen_status & KEYWORD_DEFENDER)
 		  || (instance->token_status & STATUS_WALL_CAN_ATTACK))
 	  && (is_what(player, card, TYPE_CREATURE) || (instance->state & STATE_NONCREATURE_CAN_ATTACK))
-	  && !(instance->state & (STATE_OUBLIETTED|STATE_SUMMON_SICK|STATE_TAPPED))
+	  && !(instance->state & (STATE_OUBLIETTED|STATE_SUMMONSICK_NOATTACK|STATE_TAPPED))
 	  && !(instance->token_status & STATUS_CANT_ATTACK))
 	{
 	  int old_cancel = cancel;
@@ -1356,7 +1356,7 @@ int autotap_mana_source(int player, int card)
   if (inst->state & STATE_TAPPED)
     return 0;
 
-  if ((inst->state & STATE_SUMMON_SICK) && is_what(player, card, TYPE_CREATURE))
+  if ((inst->state & STATE_SUMMONSICK_NOTAP) && is_what(player, card, TYPE_CREATURE))
 	return 0;
 
   int old_land_can_be_played = land_can_be_played;
@@ -1776,7 +1776,7 @@ int put_card_on_stack3(int player, int card)
 	  allow_response(-2, current_phase, global_all_purpose_buffer/*global_all_purpose_buffer*/, EVENT_CAST_SPELL);	// allow_response()
 	}
   instance->state &= ~STATE_INVISIBLE;
-  instance->state |= STATE_IN_PLAY;
+  instance->state |= STATE_IN_PLAY | STATE_SUMMONSICK | STATE_SUMMONSICK_BOTH;
 
   // Begin removals
   // if (instance->internal_card_id != iid)
@@ -1862,7 +1862,7 @@ int is_a_tappable_mana_source(int player, int card)
 	return 0;
   if (instance->state & STATE_TAPPED)
 	return 0;
-  if ((instance->state & STATE_SUMMON_SICK) && (cd->type & TYPE_CREATURE))
+  if ((instance->state & STATE_SUMMONSICK_NOTAP) && (cd->type & TYPE_CREATURE))
 	return 0;
   return 1;
 #else
@@ -1938,7 +1938,7 @@ int card_instances_should_be_displayed_identically(card_instance_t* inst1, card_
   // (Changes in ability icons and unknown0x70 are detected separately.)
   return (inst1 == inst2
 		  || !(inst1->internal_card_id != inst2->internal_card_id
-			   || ((inst1->state ^ inst2->state) & (STATE_SUMMON_SICK|STATE_TAPPED|STATE_OWNED_BY_OPPONENT|STATE_TARGETTED|STATE_CANNOT_TARGET|STATE_OUBLIETTED
+			   || ((inst1->state ^ inst2->state) & (STATE_SUMMONSICK_BOTH|STATE_TAPPED|STATE_OWNED_BY_OPPONENT|STATE_TARGETTED|STATE_CANNOT_TARGET|STATE_OUBLIETTED
 													|STATE_IS_TRIGGERING))	// added
 			   || inst1->damage_on_card != inst2->damage_on_card
 			   || inst1->power != inst2->power

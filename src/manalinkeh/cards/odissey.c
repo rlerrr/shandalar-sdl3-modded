@@ -3707,7 +3707,7 @@ int card_need_for_speed(int player, int card, event_t event){
 		generic_activated_ability(player, card, event, GAA_CAN_TARGET, MANACOST_R(1), 0, &td, "TARGET_CREATURE");
 		if( spell_fizzled != 1 ){
 			kill_card(BYTE2(sac), BYTE3(sac), KILL_SACRIFICE);
-			if( check_state(instance->targets[0].player, instance->targets[0].card, STATE_SUMMON_SICK) ){
+			if( check_state(instance->targets[0].player, instance->targets[0].card, STATE_SUMMONSICK_BOTH) ){
 				ai_modifier += 24;
 				if( current_turn == player && current_phase < PHASE_DECLARE_ATTACKERS ){
 					ai_modifier += 24;
@@ -4325,7 +4325,7 @@ int card_reckless_charge(int player, int card, event_t event){
 	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
 		generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_CREATURE", 1, NULL);
 		if( spell_fizzled != 1 ){
-			if( check_state(instance->targets[0].player, instance->targets[0].card, STATE_SUMMON_SICK) ){
+			if( check_state(instance->targets[0].player, instance->targets[0].card, STATE_SUMMONSICK_BOTH) ){
 				ai_modifier += 24;
 			}
 			if( current_turn == player && current_phase < PHASE_DECLARE_ATTACKERS ){

@@ -979,7 +979,7 @@ int permanents_you_control_can_tap_for_mana(int player, int card, event_t event,
 		default_target_definition(player, card, &td, type);
 		td.allowed_controller = player;
 		td.preferred_controller = player;
-		td.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONING_SICK;
+		td.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONSICK_NOTAP;
 		td.illegal_abilities = 0;
 		if (subtype > 0){
 			td.required_subtype = subtype;
@@ -1027,7 +1027,7 @@ int permanents_you_control_can_tap_for_mana_all_one_color(int player, int card, 
 		default_target_definition(player, card, &td, type);
 		td.allowed_controller = player;
 		td.preferred_controller = player;
-		td.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONING_SICK;
+		td.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONSICK_NOTAP;
 		td.illegal_abilities = 0;
 		if (subtype > 0){
 			td.required_subtype = subtype;

@@ -216,6 +216,38 @@ class BehaviorTest:public testing::Test {
   duel_test_finish_decisions();
  }
 };
+TEST(SummoningSickness, SuspendHasteEndsOnControlLoss) {
+  Refs refs; load_fixture(refs,"empty_main",123);
+  auto creature=duel_test_add(0,DUEL_ZONE_BATTLEFIELD,149,DUEL_STATE_SICK); // Llanowar Elves
+  auto control=duel_test_add(1,DUEL_ZONE_HAND,44,0); // Control Magic
+  auto effect=duel_test_suspend_haste(creature);
+  duel_test_prepare_fixture();
+  EXPECT_TRUE(duel_test_can_activate(creature));
+  duel_test_cleanup(); duel_test_refresh();
+  EXPECT_TRUE(duel_test_can_activate(creature))<<"Suspend haste survives cleanup";
+  duel_test_set_turn(1,0);
+  duel_test_decision(DUEL_CHOICE_TARGET,1,creature.player,creature.card);
+  ASSERT_TRUE(duel_test_cast(control)); duel_test_resolve(); duel_test_refresh();
+  DuelTestRef stolen={1,-1};
+  for(int i=0;i<150;++i) {
+    auto c=duel_test_inspect({1,i});
+    if(c.in_play && c.csvid==149)stolen.card=i;
+  }
+  ASSERT_GE(stolen.card,0);
+  EXPECT_FALSE(duel_test_inspect(effect).in_play);
+  EXPECT_FALSE(duel_test_can_activate(stolen));
+  EXPECT_FALSE(duel_test_attack(stolen));
+  duel_test_destroy(control); duel_test_refresh();
+  DuelTestRef returned={0,-1};
+  for(int i=0;i<150;++i) {
+    auto c=duel_test_inspect({0,i});
+    if(c.in_play && c.csvid==149)returned.card=i;
+  }
+  ASSERT_GE(returned.card,0);
+  EXPECT_FALSE(duel_test_can_activate(returned))<<"Regaining control must not revive the expired grant";
+  EXPECT_FALSE(duel_test_attack(returned));
+  duel_test_finish_decisions(); duel_test_check_invariants();
+}
 class TemplateTest:public testing::Test {
  const Template *spec;
  public: explicit TemplateTest(const Template *s):spec(s){}

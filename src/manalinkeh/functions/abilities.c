@@ -1004,13 +1004,6 @@ int freeze_when_damage(int player, int card, event_t event){
 	return 0;
 }
 
-void give_haste(int player, int card)	// Avoid!
-{
-  card_instance_t* instance = in_play(player, card);
-  if (instance)
-	instance->state &= ~STATE_SUMMON_SICK;
-}
-
 void haste(int player, int card, event_t event)
 {
   if (event == EVENT_ABILITIES && affect_me(player, card))
@@ -1023,7 +1016,7 @@ void haste(int player, int card, event_t event)
 	  instance->targets[16].card |= SP_KEYWORD_HASTE;
 
 	  if (!is_humiliated(player, card))
-		instance->state &= ~STATE_SUMMON_SICK;
+		instance->state &= ~STATE_SUMMONSICK_BOTH;
 	}
 }
 

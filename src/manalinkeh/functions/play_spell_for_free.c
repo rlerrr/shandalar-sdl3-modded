@@ -685,7 +685,7 @@ int real_put_into_play(int player, int card)
 
   types_of_cards_on_bf[player] |= typ;
   redraw_libraries();
-  inst->state |= STATE_SUMMON_SICK|STATE_INVISIBLE|STATE_IN_PLAY;
+  inst->state |= STATE_SUMMONSICK|STATE_SUMMONSICK_BOTH|STATE_INVISIBLE|STATE_IN_PLAY;
   dispatch_event(player, card, EVENT_CAST_SPELL);
   inst->state |= STATE_JUST_CAST;
   if (player == 1)

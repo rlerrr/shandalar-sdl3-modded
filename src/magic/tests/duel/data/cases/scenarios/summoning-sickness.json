@@ -1,0 +1,947 @@
+{
+  "version": 1,
+  "cases": [
+    {
+      "card": "Instill Energy",
+      "name": "Sickness_InstillEnergyAllowsOnlyAttacking",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Instill Energy",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "card": "Instill Energy",
+      "name": "Sickness_StackedInstillEnergyAndNaturalRecovery",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Instill Energy",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Instill Energy",
+          "ref": "second",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "second",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "destroy",
+          "ref": "second"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "advance_turn"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "advance_turn"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "card": "Instill Energy",
+      "name": "Sickness_OldCreatureStaysReadyWhenAuraLeaves",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Instill Energy",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "card": "Thousand-Year Elixir",
+      "name": "Sickness_ElixirAllowsOnlyActivating",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Thousand-Year Elixir",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "value": 1,
+          "property": "tapped"
+        }
+      ]
+    },
+    {
+      "card": "Thousand-Year Elixir",
+      "name": "Sickness_ElixirLossRestoresTapRestriction",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Thousand-Year Elixir",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "card": "Thousand-Year Elixir",
+      "name": "Sickness_StackedElixirsRetainPermission",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Thousand-Year Elixir",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Thousand-Year Elixir",
+          "ref": "second",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "destroy",
+          "ref": "second"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "card": "Thousand-Year Elixir",
+      "name": "Sickness_InstillAndElixirCompose",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Thousand-Year Elixir",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Instill Energy",
+          "ref": "aura",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "aura",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "card": "Mass Hysteria",
+      "name": "Sickness_LosingFullHasteRestoresBothRestrictions",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Mass Hysteria",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "capture"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "destroy",
+          "ref": "source"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "card": "Raging Goblin",
+      "name": "Sickness_HumbleRemovesAndCleanupRestoresHaste",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Raging Goblin",
+          "ref": "target",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Humble",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "card": "Burst of Speed",
+      "name": "Sickness_TemporaryHasteExpiresBeforeNextOwnTurn",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Burst of Speed",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "capture"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "restore"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "card": "Control Magic",
+      "name": "Sickness_ControlChangeRestartsBothRestrictions",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Control Magic",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "target",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "choose_target",
+          "ref": "target",
+          "player": -1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "bind_permanent",
+          "ref": "target",
+          "value": 149,
+          "player": 0
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 0
+        },
+        {
+          "op": "advance_turn"
+        },
+        {
+          "op": "advance_turn"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "turn",
+          "value": 1,
+          "player": 0
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "card": "Vengeful Firebrand",
+      "name": "Sickness_ConditionalHasteStillAppliesWithElixir",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Thousand-Year Elixir",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Vengeful Firebrand",
+          "ref": "target",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "sick"
+          ]
+        },
+        {
+          "name": "Warrior en-Kor",
+          "ref": "warrior",
+          "player": 0,
+          "zone": "graveyard"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "attack",
+          "ref": "target",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "card": "Nettling Imp",
+      "name": "Sickness_NettlingImpCannotTargetFreshHasteCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Nettling Imp",
+          "ref": "source",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Raging Goblin",
+          "ref": "target",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "card": "Siren's Call",
+      "name": "Sickness_SirensCallSpareFreshHasteCreature",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Siren's Call",
+          "ref": "source",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Raging Goblin",
+          "ref": "target",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "old",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "target",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "cleanup"
+        },
+        {
+          "op": "assert_card",
+          "ref": "target",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "old",
+          "property": "in_play",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

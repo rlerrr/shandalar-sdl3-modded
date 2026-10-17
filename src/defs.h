@@ -426,7 +426,7 @@ typedef enum
 	STATE_TAPPED = 0x10,
 	STATE_INVISIBLE = 0x20,	 // Mok --> CAST_UNRESOLVED	On the stack.  If STATE_IN_PLAY also set, then no longer interruptible.
 	STATE_ATTACKED = 0x40,	 // Previously STATE_ATTACKING this turn, but no longer attacking
-	STATE_SUMMONSICK = 0x80, // Entered the battlefield or changed control since start of controller's last turn
+	STATE_JUST_CAST = 0x80, // Casting/stack bookkeeping; independent of summoning sickness
 	STATE_PROCESSING = 0x100,
 	STATE_ISBLOCKED = 0x200,		// Card was blocked this combat.
 	STATE_PLAYED_FROM_HAND = 0x400, // Not what it says.
@@ -436,7 +436,7 @@ typedef enum
 	STATE_BLOCKED = 0x4000,				 // Previously STATE_BLOCKING this turn, but no longer blocking
 	STATE_UNKNOWN8000 = 0x8000,			 // Means something similar to "Already chosen to attack or block".
 	STATE_SUMMONSICK_NOATTACK = 0x10000, // Unable to attack due to summoning sickness.  Temporarily removable with haste or Instill Energy.
-	STATE_SUMMONSICK_NOTAP = 0x20000,	 // Unable to tap as a cost due to summoning sickness.  Temporarily removable with hase or Thousand-Year Elixir.
+	STATE_SUMMONSICK_NOTAP = 0x20000,	 // Unable to tap as a cost due to summoning sickness.  Temporarily removable with haste or Thousand-Year Elixir.
 	STATE_SUMMONSICK_BOTH = STATE_SUMMONSICK_NOATTACK | STATE_SUMMONSICK_NOTAP,
 	STATE_NO_AUTO_TAPPING = 0x40000,
 	STATE_ETB_THIS_TURN = 0x80000, // Almost the same as STATE_SUMMONSICK, but not added when control changes, and cleared at the start of every turn
@@ -452,9 +452,9 @@ typedef enum
 	STATE_DONT_RECOPY_ONTO_STACK = 0x20000000, // If set during EVENT_ACTIVATE, then don't copy the card back into its (already-existing) activation card on the stack.  Caller's responsibility to either update all relevant values there (per recopy_card_onto_stack), or simply not handle EVENT_RESOLVE_ACTIVATION.  Bit is removed when recopying is skipped.  Works only for activation, not casting.
 
 	STATE_DRAWN_THIS_TURN = 1,
-	STATE_JUST_CAST = 128,
-	STATE_SICKNESS_UNUSED = 65536,
-	STATE_SUMMON_SICK = 131072,
+	// Underlying lack of continuous control. Rebuild BOTH before applying haste permissions.
+	// Set on entry/control change; cleared only at the start of the controller's turn.
+	STATE_SUMMONSICK = 0x40000000,
 	STATE_UNUSED80000 = 524288,
 } state_t;
 
@@ -1650,7 +1650,6 @@ typedef enum
 	SF2_INFINITE_REFLECTION = 1 << 9,	   // Also used for Essence of the Wild - flags permanents as cloning cards
 	SF2_TEMPORARY_COPY_OF_TOKEN = 1 << 10, // Don't apply token_characteristic_setting_effects() to this token from this source.  May be set either on tokens themselves or on effects that apply a token's characteristics; for tokens, must be set continuously during EVENT_CHANGE_TYPE.
 	SF2_MONSTROUS = 1 << 11,
-	SF2_THOUSAND_YEAR_ELIXIR = 1 << 12, // Must be set continuously during EVENT_ABILITIES.
 	SF2_MISDIRECTION = 1 << 13,			// Misplaced; only permanents should have these flags, since they overlap the targets array
 	SF2_QUICKSILVER_DRAGON = 1 << 14,	// Misplaced; only permanents should have these flags, since they overlap the targets array
 	SF2_REBOUND = 1 << 15,				// Misplaced; only permanents should have these flags, since they overlap the targets array
@@ -2330,10 +2329,11 @@ typedef enum
 	TARGET_STATE_DAMAGED = (1 << 9),
 	TARGET_STATE_COULD_UNTAP = (1 << 10), // Target won't necessarily untap during this untap step, but could
 	TARGET_STATE_WILL_UNTAP = (1 << 11),  // Target is going to untap during this untap step.
-	TARGET_STATE_SUMMONING_SICK = (1 << 12),
+	TARGET_STATE_SUMMONING_SICK = (1 << 12), // Lacks continuous control, even with haste
 	TARGET_STATE_TAPPED_OR_BLOCKING = (1 << 13), // Not checked for illegal_state
 	TARGET_STATE_DESTROYED = (1 << 14),			 // Not checked for illegal_state
 	TARGET_STATE_DYING = TARGET_STATE_DESTROYED,
+	TARGET_STATE_SUMMONSICK_NOTAP = (1 << 15), // Cannot pay tap/untap costs due to sickness
 } target_state_t;
 
 typedef enum
@@ -2426,6 +2426,7 @@ typedef enum
 	PAUE_REMOVE_TARGET_AT_EOT = 1 << 14, // Uses "eot_removal_method"
 	PAUE_END_AT_THE_BEGINNING_OF_YOUR_NEXT_TURN = 1 << 15,
 	PAUE_UNTAP = 1 << 16,
+	PAUE_END_IF_TARGET_CHANGES_CONTROL = 1 << 19,
 
 	PAUE_RESET_FORCED_SUBTYPES_AT_EOT = 131072,
 	PAUE_RESET_ADDED_SUBTYPES_AT_EOT = 262144,

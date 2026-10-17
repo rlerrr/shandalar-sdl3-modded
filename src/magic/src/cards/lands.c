@@ -771,7 +771,7 @@ int card_mishra_s_factory(int player, int card, event_t event)
                                         EVENT_CAST_SPELL,
                                         1 - g_card_on_stack_controller,
                                         -1);
-          PARENT_CARD_INSTANCE(player, card).state |= STATE_SUMMONSICK;
+          PARENT_CARD_INSTANCE(player, card).state |= STATE_JUST_CAST;
           dispatch_event_to_single_card(g_card_on_stack_controller,
                                         g_card_on_stack,
                                         EVENT_RESOLVE_SPELL,
@@ -1108,7 +1108,7 @@ int card_assembly_worker(int player, int card, event_t event)
                                       EVENT_CAST_SPELL,
                                       1 - g_card_on_stack_controller,
                                       -1);
-        PARENT_CARD_INSTANCE(player, card).state |= STATE_SUMMONSICK;
+        PARENT_CARD_INSTANCE(player, card).state |= STATE_JUST_CAST;
         dispatch_event_to_single_card(g_card_on_stack_controller,
                                       g_card_on_stack,
                                       EVENT_RESOLVE_SPELL,

@@ -1902,7 +1902,7 @@ static int legions_initiative_legacy(int player, int card, event_t event){
 						int card_added = add_card_to_hand(owner, iid);
 						remove_card_from_rfg(owner, cards_data[iid].id);
 						put_into_play(owner, card_added);
-						give_haste(owner, card_added);
+						pump_ability_until_eot(player, card, owner, card_added, 0, 0, 0, SP_KEYWORD_HASTE);
 					}
 				}
 			}

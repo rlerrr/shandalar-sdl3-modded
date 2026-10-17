@@ -88,3 +88,13 @@ set_tests_properties(duel.handler_overrides PROPERTIES LABELS "duel;harness" TIM
 add_test(NAME duel.runner_expectations COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/test_run_cases.py")
 set_tests_properties(duel.runner_expectations PROPERTIES LABELS "duel;harness" TIMEOUT 15)
+
+if(EMSCRIPTEN)
+  add_test(NAME duel.summoning_sickness COMMAND "${duel_node}" "$<TARGET_FILE:duel_card_tests>"
+    --gtest_filter=SummoningSickness.SuspendHasteEndsOnControlLoss)
+else()
+  add_test(NAME duel.summoning_sickness COMMAND duel_card_tests
+    --gtest_filter=SummoningSickness.SuspendHasteEndsOnControlLoss)
+endif()
+set_tests_properties(duel.summoning_sickness PROPERTIES LABELS "duel;engine" TIMEOUT 15
+  WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>")

@@ -2705,7 +2705,7 @@ int effect_flame_fusillade(int player, int card, event_t event)
   td_tap.allowed_controller = player;
   td_tap.preferred_controller = player;
   td_tap.illegal_abilities = 0;
-  td_tap.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONING_SICK;
+  td_tap.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONSICK_NOTAP;
 
 #define DECL_TGT(p, c, td_tgt)	\
   target_definition_t td_tgt;	\

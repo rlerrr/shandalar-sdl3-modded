@@ -691,10 +691,12 @@ int get_abilities(int player, int card, event_t event, int new_attacking_card)
 				if ((typ & TYPE_PERMANENT) && !(typ & TYPE_EFFECT))
 				  {
 					instance->targets[16].card = 0;
-					instance->state &= ~STATE_VIGILANCE;
+					// Restore natural restrictions before applying the current haste permissions.
+					instance->state &= ~(STATE_VIGILANCE | STATE_SUMMONSICK_BOTH);
+					if (instance->state & STATE_SUMMONSICK)
+					  instance->state |= STATE_SUMMONSICK_BOTH;
 					instance->token_status &= ~(STATUS_WALL_CAN_ATTACK | STATUS_CANT_ATTACK);
 					remove_special_flags(player, card, SF_MODULAR | SF_HEXPROOF_OVERRIDE);
-					remove_special_flags2(player, card, SF2_THOUSAND_YEAR_ELIXIR);
 				  }
 			  }
 

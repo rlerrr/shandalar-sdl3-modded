@@ -370,10 +370,10 @@ DuelTestRef duel_test_add(int player, int zone, int csvid, int state)
   ref.card = manalinkeh_add_card_to_hand(player, id);
   if (zone == DUEL_ZONE_BATTLEFIELD) manalinkeh_put_into_play(player, ref.card);
   card_instance_t *inst = &global_card_instances[player][ref.card];
-  inst->state &= ~STATE_SUMMONSICK_BOTH;
+  inst->state &= ~(STATE_SUMMONSICK | STATE_SUMMONSICK_BOTH);
   if (state & DUEL_STATE_TAPPED) inst->state |= STATE_TAPPED;
   if (state & DUEL_STATE_UNTAPPED) inst->state &= ~STATE_TAPPED;
-  if (state & DUEL_STATE_SICK) inst->state |= STATE_SUMMONSICK_BOTH;
+  if (state & DUEL_STATE_SICK) inst->state |= STATE_SUMMONSICK | STATE_SUMMONSICK_BOTH;
   if (state & DUEL_STATE_ATTACKING) inst->state |= STATE_ATTACKING;
   /* STATE_OWNED_BY_OPPONENT records player one's ownership, independently
    * of controller.  Toggle the default ownership to construct stolen cards. */
@@ -398,6 +398,15 @@ void duel_test_prepare_fixture(void) {
   g_stop_phase = g_stop_phase_player = -1;
 }
 void duel_test_refresh(void) { manalinkeh_recalculate_all_cards_in_play(); }
+extern void manalinkeh_default_pump_ability_definition(int, int, pump_ability_t *, int, int, int, int);
+extern int manalinkeh_pump_ability(int, int, int, int, pump_ability_t *);
+DuelTestRef duel_test_suspend_haste(DuelTestRef ref) {
+  pump_ability_t pump;
+  manalinkeh_default_pump_ability_definition(ref.player, ref.card, &pump, 0, 0, 0, SP_KEYWORD_HASTE);
+  pump.paue_flags = PAUE_END_IF_TARGET_CHANGES_CONTROL;
+  DuelTestRef effect = {ref.player, manalinkeh_pump_ability(ref.player, ref.card, ref.player, ref.card, &pump)};
+  return effect;
+}
 void duel_test_set_mana(int p, int color, int amount) {
   g_raw_mana_available[p][7] += amount - g_raw_mana_available[p][color];
   g_raw_mana_available[p][color] = amount;
@@ -519,11 +528,6 @@ void duel_test_destroy(DuelTestRef r) {
   regenerate_or_graveyard_triggers();
 }
 int duel_test_attack(DuelTestRef r) {
-  /* Match the separate no-attack sickness guard in the main phase and AI action
-     scan. Manalink's can_attack alone checks the no-tap bit and can accept
-     creatures that the game cannot declare as attackers. This fixture helper
-     still does not implement the complete attack timing/cost sequence. */
-  if (global_card_instances[r.player][r.card].state & STATE_SUMMONSICK_NOATTACK) return 0;
   if (!can_attack(r.player,r.card)) return 0;
   global_card_instances[r.player][r.card].state |= STATE_ATTACKING;
   /* The combat fixture can preload STATE_ATTACKING without completing a
