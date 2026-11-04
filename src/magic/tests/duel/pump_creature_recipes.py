@@ -96,7 +96,9 @@ def expand(name,csvid,declaration,p,selected,registry,oracle):
         if lost:setup.append(card('Unsummon','response',zone='hand'));hands[0].append('Unsummon')
         pre=[];power=p['power'];toughness=p['toughness'];boost=p['boost_power'];boost_t=p['boost_toughness']
         if fresh:
-            pre += [step('cast',ref='source',value=1),step('resolve'),step('assert_choices_consumed'),observe('source','sick',1)]
+            # This field exposes the engine's effective sickness restriction;
+            # haste clears it while the fixture still exercises fresh entry.
+            pre += [step('cast',ref='source',value=1),step('resolve'),step('assert_choices_consumed'),observe('source','sick',int('Haste' not in p['keywords']))]
             mana[0]-=sum(p['mana'])
         if variant=='opposing_turn_activation':pre.append(step('turn',player=1,value=0))
         if combat:

@@ -3422,6 +3422,24 @@ char *white_damage_source(int who_chooses, int player, int card, int targeting_p
 // island --> better leave it hardcoded
 
 /* ManalinkEh 2022: 0x24bfd80; original cards/unlimited.c:1049. */
+static int celestial_prism_mana_cost(int player, int card)
+{
+  card_instance_t *instance = get_card_instance(player, card);
+  int saved = instance->targets[17].card;
+  int fields = count_cards_by_id(ANYBODY, CARD_ID_SUPPRESSION_FIELD);
+  /* Suppression Field excludes mana abilities. Retain cost reductions such
+     as Power Artifact, and restore the shared cost flags after the query. */
+  if (saved >= 0)
+    for (int bit = 20; bit < 24 && fields > 0; ++bit)
+      if ((unsigned int)instance->targets[17].card & (1u << bit)) {
+        instance->targets[17].card &= ~(1u << bit);
+        --fields;
+      }
+  int cost = get_cost_mod_for_activated_abilities(player, card, MANACOST_X(2));
+  instance->targets[17].card = saved;
+  return cost;
+}
+
 int card_celestial_prism(int player, int card, event_t event)
 {
   /* Celestial Prism	|3
@@ -3438,7 +3456,7 @@ int card_celestial_prism(int player, int card, event_t event)
           (result = is_tapped(player, card), result == 0)) &&
          ((result = is_animated_and_sick(player, card),
            result == 0 && (result = can_produce_mana(player, card), result != 0)))) &&
-        (result = has_mana_for_activated_ability(player, card, 2, 0, 0, 0, 0, 0), result != 0))
+        (result = has_mana_multi(player, celestial_prism_mana_cost(player, card), 0, 0, 0, 0, 0), result != 0))
     {
       declare_mana_available_hex(player, 0x3e, 1);
       declare_mana_available(player, 0, -1);
@@ -3449,7 +3467,7 @@ int card_celestial_prism(int player, int card, event_t event)
     result = is_tapped(player, card);
     if (((result == 0) && (result = is_animated_and_sick(player, card), result == 0)) &&
         ((result = can_produce_mana(player, card),
-          result != 0 && ((result = has_mana_for_activated_ability(player, card, 2, 0, 0, 0, 0, 0),
+          result != 0 && ((result = has_mana_multi(player, celestial_prism_mana_cost(player, card), 0, 0, 0, 0, 0),
                            result != 0 && (instance = get_card_instance(player, card),
                                            instance->targets[1].player != 1))))))
     {
@@ -3468,7 +3486,7 @@ int card_celestial_prism(int player, int card, event_t event)
       return 0;
     }
     instance->targets[1].player = 1;
-    charge_mana_for_activated_ability(player, card, 2, 0, 0, 0, 0, 0);
+    charge_mana_multi(player, celestial_prism_mana_cost(player, card), 0, 0, 0, 0, 0);
     instance->targets[1].player = 0;
     if (spell_fizzled != 1)
     {

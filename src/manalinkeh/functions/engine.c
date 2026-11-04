@@ -814,6 +814,15 @@ static void enforce_minimum_blockers(void)
   }
 }
 
+#ifdef MANALINKEH_STATIC
+/* Manual declarations in the headless host finish the same validation that
+   human_assign_blockers performs after its selection loop. */
+void manalinkeh_finish_blocker_selection(void)
+{
+  enforce_minimum_blockers();
+}
+#endif
+
 #endif
 
 #ifndef SHANDALAR

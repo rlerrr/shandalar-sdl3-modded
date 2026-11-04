@@ -40,12 +40,12 @@
         },
         {
           "op": "choose_target",
-          "ref": "source",
+          "ref": "target",
           "player": -1
         },
         {
           "op": "choose_target",
-          "ref": "target",
+          "ref": "source",
           "player": -1
         },
         {
@@ -138,12 +138,12 @@
       "steps": [
         {
           "op": "choose_target",
-          "ref": "goblin",
+          "ref": "target",
           "player": -1
         },
         {
           "op": "choose_target",
-          "ref": "target",
+          "ref": "goblin",
           "player": -1
         },
         {
@@ -237,12 +237,12 @@
       "steps": [
         {
           "op": "choose_target",
-          "ref": "goblin",
+          "ref": "target",
           "player": -1
         },
         {
           "op": "choose_target",
-          "ref": "target",
+          "ref": "goblin",
           "player": -1
         },
         {
@@ -331,12 +331,12 @@
         },
         {
           "op": "choose_target",
-          "ref": "goblin",
+          "ref": "target",
           "player": -1
         },
         {
           "op": "choose_target",
-          "ref": "target",
+          "ref": "goblin",
           "player": -1
         },
         {

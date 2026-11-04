@@ -6,13 +6,17 @@
 
 static int is_multiblocker_card(int player, int card)
 {
-  return cards_at_7c7000[get_card_instance(player, card)->internal_card_id]->code_pointer == MANALINKEH_CARD_MULTIBLOCKER;
+  int iid = get_card_instance(player, card)->internal_card_id;
+  return iid >= 0 && cards_at_7c7000[iid] &&
+         cards_at_7c7000[iid]->code_pointer == MANALINKEH_CARD_MULTIBLOCKER;
 }
 
 int is_multiblocker_card_copying(int player, int card, int orig_player, int orig_card)
 {
   card_instance_t* instance = get_card_instance(player, card);
-  return (cards_at_7c7000[instance->internal_card_id]->code_pointer == MANALINKEH_CARD_MULTIBLOCKER
+  /* Damage processing can query a shadow after its slot has been reaped. */
+  return (instance->internal_card_id >= 0 && cards_at_7c7000[instance->internal_card_id] &&
+          cards_at_7c7000[instance->internal_card_id]->code_pointer == MANALINKEH_CARD_MULTIBLOCKER
 		  && instance->damage_source_player == orig_player && instance->damage_source_card == orig_card);
 }
 

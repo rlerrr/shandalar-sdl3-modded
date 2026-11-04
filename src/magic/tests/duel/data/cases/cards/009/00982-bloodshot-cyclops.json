@@ -41,13 +41,13 @@
         },
         {
           "op": "choose_target",
-          "player": 0,
-          "ref": "fodder"
+          "ref": "target",
+          "player": 0
         },
         {
           "op": "choose_target",
-          "ref": "target",
-          "player": 0
+          "player": 0,
+          "ref": "fodder"
         },
         {
           "op": "activate",
@@ -104,14 +104,14 @@
       ],
       "steps": [
         {
-          "op": "choose_target",
-          "player": 0,
-          "ref": "source"
-        },
-        {
           "op": "choose_player",
           "player": 0,
           "value": 1
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "source"
         },
         {
           "op": "activate",

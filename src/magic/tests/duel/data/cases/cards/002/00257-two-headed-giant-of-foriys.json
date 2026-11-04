@@ -315,6 +315,9 @@
           "value": 2
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "assert_card",
           "ref": "atk_a",
           "property": "blocked",
@@ -331,9 +334,6 @@
           "ref": "atk_c",
           "property": "blocked",
           "value": 0
-        },
-        {
-          "op": "advance_combat"
         },
         {
           "op": "combat_damage"

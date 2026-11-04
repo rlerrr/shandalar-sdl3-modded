@@ -50,6 +50,7 @@ extern int cleanup_combat_state(int);
 extern void mark_blocked_attackers(int);
 extern int manalinkeh_count_creatures_this_is_blocking(int, int), manalinkeh_is_unblocked(int, int);
 extern int manalinkeh_card_multiblocker_hook(int, int, event_t);
+extern void manalinkeh_finish_blocker_selection(void);
 extern int manalinkeh_dispatch_trigger2(int, trigger_t, const char *, int, int, int);
 extern int turn_count, stack_phase[32];
 extern int unknown62BCEC, tapped_for_mana_color;
@@ -480,6 +481,9 @@ int duel_test_activate(DuelTestRef s) {
   return result;
 }
 int duel_test_can_cast(DuelTestRef s) { return manalinkeh_dispatch_event_to_single_card(s.player,s.card,EVENT_CAN_CAST,1-s.player,-1); }
+extern int manalinkeh_get_base_power_iid(int, int), manalinkeh_get_base_toughness_iid(int, int);
+int duel_test_base_power(int player, int csvid) { return manalinkeh_get_base_power_iid(player, iid(csvid)); }
+int duel_test_base_toughness(int player, int csvid) { return manalinkeh_get_base_toughness_iid(player, iid(csvid)); }
 int duel_test_can_target_creature(DuelTestRef source, DuelTestRef target) {
   extern void manalinkeh_default_target_definition(int, int, target_definition_t *, int);
   extern int manalinkeh_validate_arbitrary_target(target_definition_t *, int, int);
@@ -601,6 +605,7 @@ void duel_test_advance_combat(void) {
     duel_host_fail("advance_combat requires blocker declaration");
   /* Match resolve_combat_if_needed: a single event sees the complete board,
      including an empty declaration, before opening the response window. */
+  manalinkeh_finish_blocker_selection();
   C_dispatch_event_raw(EVENT_DECLARE_BLOCKERS);
   mark_blocked_attackers(g_current_turn);
   g_current_phase = PHASE_AFTER_BLOCKING;

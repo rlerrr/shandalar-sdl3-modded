@@ -11,6 +11,7 @@
 #include <sstream>
 #include <memory>
 #include <string>
+#include "batch_journal.h"
 #ifndef DUEL_TEST_ASSETS
 #define DUEL_TEST_ASSETS "/assets_modded"
 #endif
@@ -220,6 +221,34 @@ class BehaviorTest:public testing::Test {
   duel_test_finish_decisions();
  }
 };
+TEST(CharacteristicValues, OutsideBattlefieldUsesCurrentCountsWithoutCreatingCards) {
+  Refs refs; load_fixture(refs,"stocked_zones",123);
+  auto initial=observable_state();
+  EXPECT_EQ(duel_test_base_power(0,7682),4); // Kiyomaro: cards in its owner's hand.
+  EXPECT_EQ(duel_test_base_toughness(0,7682),4);
+  EXPECT_EQ(duel_test_base_power(0,15938),4); // Sage of Ancient Lore.
+  EXPECT_EQ(duel_test_base_power(0,15939),8); // Werewolf: all players' hands.
+  EXPECT_EQ(duel_test_base_power(0,14169),0); // Seraph: creatures you control.
+  EXPECT_EQ(duel_test_base_power(0,15842),0); // Westvale Cult Leader.
+  EXPECT_EQ(duel_test_base_power(0,20952),0); // Anax: devotion to red.
+  EXPECT_EQ(observable_state(),initial);
+  duel_test_add(0,DUEL_ZONE_BATTLEFIELD,9640,0); // Pyre Charger contributes RR.
+  duel_test_prepare_fixture();
+  EXPECT_EQ(duel_test_base_power(0,14169),1);
+  EXPECT_EQ(duel_test_base_toughness(0,15842),1);
+  EXPECT_EQ(duel_test_base_power(0,20952),2);
+  EXPECT_EQ(duel_test_base_power(0,7682),4);
+  EXPECT_EQ(duel_test_base_toughness(0,15939),8);
+}
+TEST(CharacteristicValues, NullBindingDoesNotCallAnAbsentCharacteristicCallback) {
+  Refs refs; load_fixture(refs,"stocked_zones",123);
+  auto initial=observable_state();
+  // Imported placeholders retain null bindings; this verifies query safety,
+  // not implementation of their missing printed abilities.
+  EXPECT_EQ(duel_test_base_power(0,8740),0);
+  EXPECT_EQ(duel_test_base_toughness(0,8740),0);
+  EXPECT_EQ(observable_state(),initial);
+}
 TEST(SummoningSickness, SuspendHasteEndsOnControlLoss) {
   Refs refs; load_fixture(refs,"empty_main",123);
   auto creature=duel_test_add(0,DUEL_ZONE_BATTLEFIELD,149,DUEL_STATE_SICK); // Llanowar Elves
@@ -308,7 +337,27 @@ int main(int argc,char**argv) {
  _CrtSetReportMode(_CRT_ASSERT, _CRTDBG_MODE_FILE);
  _CrtSetReportFile(_CRT_ASSERT, _CRTDBG_FILE_STDERR);
 #endif
+ std::string case_list,journal;
+ for(int i=1;i<argc;++i) {
+  std::string arg=argv[i];
+  if(arg.rfind("--duel-case-list=",0)==0)case_list=arg.substr(17);
+  if(arg.rfind("--duel-batch-journal=",0)==0)journal=arg.substr(21);
+ }
  testing::InitGoogleTest(&argc,argv);
+ std::unordered_set<std::string> requested;
+ if(!case_list.empty()) {
+  std::ifstream input(case_list);std::string entry,filter;
+  if(!input) {std::cerr<<"DUEL_HARNESS_ERROR: cannot read batch case list\n";return 2;}
+  while(std::getline(input,entry)) {
+   if(!entry.empty() && entry.back()=='\r')entry.pop_back();
+   if(entry.empty() || entry.find_first_of("*?:-")!=std::string::npos || !requested.insert(entry).second) {
+    std::cerr<<"DUEL_HARNESS_ERROR: invalid or duplicate batch case\n";return 2;
+   }
+   if(!filter.empty())filter+=':';filter+=entry;
+  }
+  if(requested.empty()) {std::cerr<<"DUEL_HARNESS_ERROR: empty batch case list\n";return 2;}
+  GTEST_FLAG_SET(filter,filter);
+ }
  // The isolated runner requests one exact test. Avoid allocating tens of
  // thousands of unused GoogleTest factories in every fresh process. Complex
  // filters retain Google's normal full-registration matching behavior.
@@ -316,12 +365,22 @@ int main(int argc,char**argv) {
  const auto dot=filter.find('.');
  const bool exact=dot!=std::string::npos && filter.find_first_of("*?:-")==std::string::npos;
  const std::string suite=exact?filter.substr(0,dot):"", name=exact?filter.substr(dot+1):"";
- auto selected=[&](const char *s,const char *n){return !exact || (suite==s && name==n);};
+ auto selected=[&](const char *s,const char *n){return !requested.empty()?requested.count(std::string(s)+'.'+n)!=0:!exact || (suite==s && name==n);};
  if(!exact || suite=="Bindings")for(const auto &t:handler_bindings) { auto *s=&t; auto n="Card_"+std::to_string(t.csvid); if(selected("Bindings",n.c_str()))testing::RegisterTest("Bindings",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new BindingTest(s);}); }
  if(!exact || suite=="AI")for(unsigned seed:{1u,123u,999u}) { auto n="Seed_"+std::to_string(seed); if(selected("AI",n.c_str()))testing::RegisterTest("AI",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[seed](){return new AITest(seed);}); }
  if(!exact || suite=="Behavior")for(const auto *c:cases)if(selected("Behavior",c->name))testing::RegisterTest("Behavior",c->name,nullptr,nullptr,__FILE__,__LINE__,[c](){return new BehaviorTest(c);});
  if(!exact || suite=="Templates")for(const auto &t:templates) { auto *s=&t; auto n="Card_"+std::to_string(t.csvid); if(selected("Templates",n.c_str()))testing::RegisterTest("Templates",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new TemplateTest(s);}); }
  if(!exact || suite=="Smoke")for(const auto &t:smoke_cards) { auto *s=&t; auto n="Card_"+std::to_string(t.csvid); if(selected("Smoke",n.c_str()))testing::RegisterTest("Smoke",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new SmokeTest(s);}); }
+ if(!requested.empty()) {
+  auto remaining=requested;
+  const auto &unit=*testing::UnitTest::GetInstance();
+  for(int i=0;i<unit.total_test_suite_count();++i) {
+   const auto &s=*unit.GetTestSuite(i);
+   for(int j=0;j<s.total_test_count();++j)remaining.erase(std::string(s.name())+'.'+s.GetTestInfo(j)->name());
+  }
+  if(!remaining.empty()) {std::cerr<<"DUEL_HARNESS_ERROR: unregistered batch case "<<*remaining.begin()<<'\n';return 2;}
+ }
+ if(!journal.empty())testing::UnitTest::GetInstance()->listeners().Append(new BatchJournal(journal));
  if(GTEST_FLAG_GET(list_tests))return RUN_ALL_TESTS();
  if (!duel_test_initialize(DUEL_TEST_ASSETS)) { std::cerr<<"Missing real card database at "<<DUEL_TEST_ASSETS<<"\n"; return 2; }
  for(int i=1;i<argc;++i)if(!std::strcmp(argv[i],"--duel-presentation-probe"))duel_test_probe_presentation();

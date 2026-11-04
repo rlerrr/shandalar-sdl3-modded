@@ -23,10 +23,6 @@
                     {
                       "kind": "dialog",
                       "value": 0
-                    },
-                    {
-                      "kind": "color",
-                      "value": 0
                     }
                   ]
                 ],
@@ -35,29 +31,16 @@
                     {
                       "kind": "dialog",
                       "value": 0
-                    },
-                    {
-                      "kind": "color",
-                      "value": 0
                     }
                   ]
                 ]
               ]
             ],
             "fallback_choices": [
-              [
-                {
-                  "kind": "color",
-                  "value": 0
-                }
-              ],
+              [],
               [
                 {
                   "kind": "dialog",
-                  "value": 0
-                },
-                {
-                  "kind": "color",
                   "value": 0
                 }
               ]

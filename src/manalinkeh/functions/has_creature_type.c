@@ -1545,96 +1545,37 @@ card_instance_t *update_alter_add_subtype(subtype_t subt, card_instance_t *inst)
 /* ManalinkEh 2022: 0x2672d90; original functions/has_creature_type.c:433. */
 card_instance_t *update_alter_remove_subtype(subtype_t subt, card_instance_t *inst)
 {
-  card_ext_t *extension;
-  int subtype_index;
-  int next_index;
-  subtype_t shifted_subtype;
-  int shift_index;
-
-  if (inst == NULL)
-  {
+  if (!inst)
     inst = get_card_instance(affected_card_controller, affected_card);
+  /* Compact the twelve subtype slots and clear the vacated tail. Leaving the
+     last shifted value in place can loop forever when removing creature types. */
+  int kept = 0;
+  for (int i = 0; i < 12; ++i) {
+    uint16_t value = inst->ext->subtype[i];
+    if (value && value != subt)
+      inst->ext->subtype[kept++] = value;
   }
-  extension = inst->ext;
-  subtype_index = 0;
-  do
-  {
-    while (extension->subtype[subtype_index] != subt)
-    {
-      subtype_index = subtype_index + 1;
-      if (subtype_index == 0xc)
-      {
-        return inst;
-      }
-    }
-    do
-    {
-      extension->subtype[subtype_index] = 0;
-      shift_index = subtype_index;
-      if (subtype_index < 0xc)
-      {
-        do
-        {
-          next_index = shift_index + 1;
-          if ((shift_index == 11 ? extension->inst_info_data[0].id
-                                 : extension->subtype[shift_index + 1]) == 0)
-            break;
-          extension->subtype[shift_index] =
-              (shift_index == 11 ? extension->inst_info_data[0].id
-                                 : extension->subtype[shift_index + 1]);
-          shift_index = next_index;
-        } while (next_index != 0xc);
-        shifted_subtype = (subtype_t)extension->subtype[subtype_index];
-      }
-      else
-      {
-        shifted_subtype = SUBTYPE_INVALID;
-      }
-    } while (subt == shifted_subtype);
-    subtype_index = subtype_index + 1;
-    if (subtype_index == 0xc)
-    {
-      return inst;
-    }
-  } while (true);
+  while (kept < 12)
+    inst->ext->subtype[kept++] = SUBTYPE_INVALID;
+  return inst;
 }
 
 /* ManalinkEh 2022: 0x2672eb0; original functions/has_creature_type.c:458. */
 card_instance_t *update_alter_remove_creature_subtypes(card_instance_t *inst)
 {
-  card_ext_t *extension;
-  int next_index;
-  int i;
-  int shift_index;
-
-  if (inst == NULL)
-  {
+  if (!inst)
     inst = get_card_instance(affected_card_controller, affected_card);
+  /* Compact the twelve subtype slots and clear the vacated tail. Leaving the
+     last shifted value in place can loop forever when removing creature types. */
+  int kept = 0;
+  for (int i = 0; i < 12; ++i) {
+    uint16_t value = inst->ext->subtype[i];
+    if (value && (uint32_t)value - 1U > 0xffeU)
+      inst->ext->subtype[kept++] = value;
   }
-  extension = inst->ext;
-  i = 0;
-  do
-  {
-    while ((0xffeU < (uint32_t)extension->subtype[i] - 1U ||
-            (extension->subtype[i] = 0, shift_index = i, 0xb < i)))
-    {
-      i = i + 1;
-      if (i == 0xc)
-      {
-        return inst;
-      }
-    }
-    do
-    {
-      next_index = shift_index + 1;
-      if ((shift_index == 11 ? extension->inst_info_data[0].id
-                             : extension->subtype[shift_index + 1]) == 0)
-        break;
-      extension->subtype[shift_index] = (shift_index == 11 ? extension->inst_info_data[0].id
-                                                           : extension->subtype[shift_index + 1]);
-      shift_index = next_index;
-    } while (next_index != 0xc);
-  } while (true);
+  while (kept < 12)
+    inst->ext->subtype[kept++] = SUBTYPE_INVALID;
+  return inst;
 }
 
 /* ManalinkEh 2022: 0x2672fa0; original functions/has_creature_type.c:500. */

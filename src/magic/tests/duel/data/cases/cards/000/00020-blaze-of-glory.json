@@ -127,6 +127,15 @@
         },
         {
           "op": "assert_card",
+          "ref": "witness",
+          "property": "blocking_count",
+          "value": 0
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "assert_card",
           "ref": "a",
           "property": "blocked",
           "value": 1
@@ -136,15 +145,6 @@
           "ref": "b",
           "property": "blocked",
           "value": 1
-        },
-        {
-          "op": "assert_card",
-          "ref": "witness",
-          "property": "blocking_count",
-          "value": 0
-        },
-        {
-          "op": "advance_combat"
         },
         {
           "op": "cleanup"
@@ -252,6 +252,9 @@
           "value": 1
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "assert_card",
           "ref": "a",
           "property": "blocked",
@@ -262,9 +265,6 @@
           "ref": "b",
           "property": "blocked",
           "value": 0
-        },
-        {
-          "op": "advance_combat"
         },
         {
           "op": "assert_stack",
@@ -366,6 +366,9 @@
           "value": 0
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "assert_card",
           "ref": "a",
           "property": "blocked",
@@ -376,9 +379,6 @@
           "ref": "b",
           "property": "blocked",
           "value": 0
-        },
-        {
-          "op": "advance_combat"
         },
         {
           "op": "assert_stack",
@@ -480,6 +480,9 @@
           "value": 2
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "assert_card",
           "ref": "a",
           "property": "blocked",
@@ -490,9 +493,6 @@
           "ref": "b",
           "property": "blocked",
           "value": 1
-        },
-        {
-          "op": "advance_combat"
         },
         {
           "op": "assert_stack",
@@ -589,6 +589,9 @@
           "value": 0
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "assert_card",
           "ref": "a",
           "property": "blocked",
@@ -599,9 +602,6 @@
           "ref": "b",
           "property": "blocked",
           "value": 0
-        },
-        {
-          "op": "advance_combat"
         },
         {
           "op": "assert_stack",

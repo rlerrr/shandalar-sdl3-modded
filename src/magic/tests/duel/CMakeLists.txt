@@ -64,6 +64,16 @@ else()
   target_compile_definitions(duel_card_tests PRIVATE DUEL_TEST_ASSETS="${SHANDALAR_MODDED_ASSET_DIR}")
 endif()
 include("${duel_generated}/cases.cmake")
+add_custom_target(duel_tests_batched
+  COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/run_cases.py"
+    --binary "$<TARGET_FILE:duel_card_tests>" ${duel_node_args}
+    --manifest "${duel_generated}/manifest.json"
+    --baseline "${CMAKE_CURRENT_SOURCE_DIR}/data/known_failures.json"
+    --output "${CMAKE_CURRENT_BINARY_DIR}/batch-results"
+    --batch-size 128 --jobs 4 --timeout 30 --quiet
+  DEPENDS duel_card_tests
+  WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>"
+  USES_TERMINAL VERBATIM)
 if(TARGET shandalar_llvm_coverage)
   target_link_libraries(duel_card_tests PRIVATE shandalar_llvm_coverage)
 endif()
@@ -92,13 +102,24 @@ set_tests_properties(duel.exe_carddata_import PROPERTIES LABELS "duel;harness" T
 add_test(NAME duel.runner_expectations COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/test_run_cases.py")
 set_tests_properties(duel.runner_expectations PROPERTIES LABELS "duel;harness" TIMEOUT 15)
+add_test(NAME duel.runner_batches COMMAND "${Python3_EXECUTABLE}"
+  "${CMAKE_CURRENT_SOURCE_DIR}/test_batch_cases.py")
+set_tests_properties(duel.runner_batches PROPERTIES LABELS "duel;harness" TIMEOUT 30)
+add_test(NAME duel.template_oracle COMMAND "${Python3_EXECUTABLE}"
+  "${CMAKE_CURRENT_SOURCE_DIR}/test_template_oracle.py")
+set_tests_properties(duel.template_oracle PROPERTIES LABELS "duel;harness" TIMEOUT 15)
 
 if(EMSCRIPTEN)
   add_test(NAME duel.summoning_sickness COMMAND "${duel_node}" "$<TARGET_FILE:duel_card_tests>"
     --gtest_filter=SummoningSickness.SuspendHasteEndsOnControlLoss)
+  add_test(NAME duel.characteristics COMMAND "${duel_node}" "$<TARGET_FILE:duel_card_tests>"
+    --gtest_filter=CharacteristicValues.*)
 else()
   add_test(NAME duel.summoning_sickness COMMAND duel_card_tests
     --gtest_filter=SummoningSickness.SuspendHasteEndsOnControlLoss)
+  add_test(NAME duel.characteristics COMMAND duel_card_tests --gtest_filter=CharacteristicValues.*)
 endif()
+set_tests_properties(duel.characteristics PROPERTIES LABELS "duel;engine" TIMEOUT 15
+  WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>")
 set_tests_properties(duel.summoning_sickness PROPERTIES LABELS "duel;engine" TIMEOUT 15
   WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>")

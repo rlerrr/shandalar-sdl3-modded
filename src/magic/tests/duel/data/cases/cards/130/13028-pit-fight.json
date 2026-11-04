@@ -28,6 +28,11 @@
       ],
       "steps": [
         {
+          "op": "choose_payment",
+          "player": 0,
+          "value": 65537
+        },
+        {
           "op": "choose_target",
           "ref": "fighter",
           "player": -1
@@ -41,6 +46,23 @@
           "op": "cast",
           "ref": "source",
           "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
         },
         {
           "op": "resolve"
@@ -149,6 +171,11 @@
       ],
       "steps": [
         {
+          "op": "choose_payment",
+          "player": 0,
+          "value": 65537
+        },
+        {
           "op": "choose_target",
           "ref": "fighter",
           "player": -1
@@ -162,6 +189,23 @@
           "op": "cast",
           "ref": "source",
           "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 9
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 9
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 58
         },
         {
           "op": "resolve"

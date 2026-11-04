@@ -2064,6 +2064,13 @@ int card_kiri_onna(int player, int card, event_t event)
 
 int card_kiyomaro_first_to_stand(int player, int card, event_t event)
 {
+  /* The base-characteristic query has an owner but no battlefield slot. */
+  if (card == -1) {
+    if (player >= 0 && (event == EVENT_POWER || event == EVENT_TOUGHNESS))
+      set_characteristic_pt(hand_count[player]);
+    return 0;
+  }
+
   /* Kiyomaro, First to Stand	|3|W|W
    * Legendary Creature - Spirit 100/100
    * ~'s power and toughness are each equal to the number of cards in your hand.

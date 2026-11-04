@@ -1772,7 +1772,7 @@ int cycling(int player, int card, event_t event, int colorless, int black, int b
   if (event == EVENT_CAN_ACTIVATE_FROM_HAND)
   {
     colorless -= (2 * count_cards_by_id(player, CARD_ID_FLUCTUATOR));
-    colorless += (2 * count_cards_by_id(player, CARD_ID_SUPPRESSION_FIELD));
+    colorless += (2 * count_cards_by_id(ANYBODY, CARD_ID_SUPPRESSION_FIELD));
 
     if (colorless < 0)
     {
@@ -1786,7 +1786,7 @@ int cycling(int player, int card, event_t event, int colorless, int black, int b
   else if (event == EVENT_ACTIVATE_FROM_HAND)
   {
     colorless -= (2 * count_cards_by_id(player, CARD_ID_FLUCTUATOR));
-    colorless += (2 * count_cards_by_id(player, CARD_ID_SUPPRESSION_FIELD));
+    colorless += (2 * count_cards_by_id(ANYBODY, CARD_ID_SUPPRESSION_FIELD));
 
     if (colorless < 0)
     {
@@ -1820,7 +1820,7 @@ int cycling_hybrid(int player, int card, event_t event, int amt_colored, color_t
 
   if (event == EVENT_CAN_ACTIVATE_FROM_HAND || event == EVENT_ACTIVATE_FROM_HAND)
   {
-    amt_colorless += 2 * count_cards_by_id(player, CARD_ID_SUPPRESSION_FIELD);
+    amt_colorless += 2 * count_cards_by_id(ANYBODY, CARD_ID_SUPPRESSION_FIELD);
     if (amt_colorless > 0)
     {
       amt_colorless -= 2 * count_cards_by_id(player, CARD_ID_FLUCTUATOR);
@@ -1860,7 +1860,7 @@ int cycling_special_cost(int player, int card, event_t event, int mode)
 
   if (event == EVENT_CAN_ACTIVATE_FROM_HAND || event == EVENT_ACTIVATE_FROM_HAND)
   {
-    amt_colorless += 2 * count_cards_by_id(player, CARD_ID_SUPPRESSION_FIELD);
+    amt_colorless += 2 * count_cards_by_id(ANYBODY, CARD_ID_SUPPRESSION_FIELD);
     if (amt_colorless > 0)
     {
       amt_colorless -= 2 * count_cards_by_id(player, CARD_ID_FLUCTUATOR);
@@ -9824,6 +9824,9 @@ static int this_dies_trigger_impl(int player, int card, event_t event,
         legacy_state = instance->state | 0x1000;
       }
       instance->state = legacy_state;
+      /* The last-known flags moved out of targets[] in 2022. Death-trigger
+         callbacks still need them (for example SF_CORRECTLY_RESOLVED on Rancor). */
+      *instance->ext = *trigger_instance->ext;
       memcpy(instance->targets, trigger_instance->targets, sizeof(instance->targets));
       instance->number_of_targets = trigger_instance->number_of_targets;
       instance->parent_controller = player;
@@ -16575,16 +16578,8 @@ int vanilla_pump(int player, int card, event_t event, target_definition_t *td, i
   else if (td_prompt.allowed_controller == 1 - player)
     prompt = "TARGET_CREATURE_OPPONENTS_CONTROL";
   bool regenerates = hack_side_effect == 0x0a000000U || hack_side_effect == 0x18000000U;
-  if (regenerates)
-  {
-    target_definition_t td_regen = *td;
-    td_regen.required_state |= 0x4000;
-    if (player == 1)
-      td_regen.special |= 0x800000;
-    if (event == EVENT_CAN_CAST ||
-        (event == EVENT_CAST_SPELL && card == affected_card && player == affected_card_controller))
-      return generic_spell(player, card, event, 0x11, &td_regen, prompt, 1, NULL);
-  }
+  /* These spells create a regeneration shield; Oracle does not require the
+     target to be dying. Resolution below uses regenerate_or_shield(). */
   if (event == EVENT_RESOLVE_SPELL)
   {
     if (valid_target(td))
@@ -24269,21 +24264,32 @@ static int get_pt_for_creature_with_variable_pt(int player, int iid, event_t eve
   int curr = event == EVENT_POWER ? cards_data[iid].power : cards_data[iid].toughness;
   if ((curr > 0 && (curr & 0x4000)))
   {
+    int characteristic = curr;
     curr &= ~0x4000;
+    /* Null bindings are retained placeholder records in the imported EXE
+       table. They have no characteristic-defining callback to invoke. */
+    if (!cards_data[iid].code_pointer)
+      return curr;
 
     int old_affected_card_controller = affected_card_controller;
     int old_affected_card = affected_card;
     int old_event_result = event_result;
+    int old_raw_base_pt = raw_base_pt;
+    int old_raw_characteristic_pt = raw_characteristic_pt;
 
     affected_card_controller = player;
     affected_card = -1;
     event_result = curr;
+    raw_base_pt = curr;
+    raw_characteristic_pt = characteristic;
     call_card_fn(cards_data[iid].code_pointer, NULL, player, -1, event);
     curr = event_result;
 
     affected_card_controller = old_affected_card_controller;
     affected_card = old_affected_card;
     event_result = old_event_result;
+    raw_base_pt = old_raw_base_pt;
+    raw_characteristic_pt = old_raw_characteristic_pt;
   }
   return curr;
 }

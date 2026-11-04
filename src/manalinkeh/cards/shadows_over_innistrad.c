@@ -746,6 +746,13 @@ int card_hanweir_militia_captain(int player, int card, event_t event){
 
 int card_westvale_cult_leader(int player, int card, event_t event)
 {
+  /* The base-characteristic query has an owner but no battlefield slot. */
+  if (card == -1) {
+    if (player >= 0 && (event == EVENT_POWER || event == EVENT_TOUGHNESS))
+      set_characteristic_pt(count_subtype(player, TYPE_CREATURE, -1));
+    return 0;
+  }
+
   /* Westvale Cult Leader		0x200e792
    * Creature - Human Cleric 100/100
    * ~'s power and toughness are each equal to the number of creatures you control.
@@ -6085,6 +6092,13 @@ int card_root_out(int player, int card, event_t event ){
 
 int card_sage_of_ancient_lore(int player, int card, event_t event)
 {
+  /* The base-characteristic query has an owner but no battlefield slot. */
+  if (card == -1) {
+    if (player >= 0 && (event == EVENT_POWER || event == EVENT_TOUGHNESS))
+      set_characteristic_pt(hand_count[player]);
+    return 0;
+  }
+
   /* Sage of Ancient Lore	|4|G	0x200eb25
    * Creature - Human Shaman Werewolf 100/100
    * ~'s power and toughness are each equal to the number of cards in your hand.
@@ -6111,6 +6125,13 @@ int card_sage_of_ancient_lore(int player, int card, event_t event)
 
 int card_werewolf_of_ancient_hunger(int player, int card, event_t event)
 {
+  /* The base-characteristic query has an owner but no battlefield slot. */
+  if (card == -1) {
+    if (player >= 0 && (event == EVENT_POWER || event == EVENT_TOUGHNESS))
+      set_characteristic_pt(hand_count[0] + hand_count[1]);
+    return 0;
+  }
+
   /* Werewolf of Ancient Hunger	0x200eb2a
    * Creature - Werewolf 100/100
    * Vigilance, trample

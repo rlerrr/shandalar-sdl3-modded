@@ -7,7 +7,7 @@ import re
 import subprocess
 import sys
 import time
-from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import ThreadPoolExecutor, as_completed
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -166,14 +166,15 @@ def main():
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--timeout", type=float, default=30)
     parser.add_argument("--jobs", type=int, default=1, help="independent test processes (default: 1)")
-    parser.add_argument("--quiet", action="store_true", help="print only counts; retain all per-case logs/XML")
+    parser.add_argument("--batch-size", type=int, default=1, help="cases per initialized process (default: 1, isolated)")
+    parser.add_argument("--quiet", action="store_true", help="print counts and progress; retain diagnostic artifacts")
     parser.add_argument("--shard-index", type=int, default=0)
     parser.add_argument("--shard-count", type=int, default=1)
     args = parser.parse_args()
     if not 0 <= args.shard_index < args.shard_count:
         parser.error("Invalid shard")
-    if args.jobs < 1:
-        parser.error("jobs must be positive")
+    if args.jobs < 1 or args.batch_size < 1 or args.timeout <= 0:
+        parser.error("jobs, batch-size and timeout must be positive")
     manifest = json.loads(args.manifest.read_text())
     baseline = json.loads(args.baseline.read_text())["failures"]
     try:
@@ -185,11 +186,40 @@ def main():
     cases = cases[args.shard_index::args.shard_count]
     if not cases:
         parser.error("No matching test cases; an empty run is not success")
-    # Each child owns its engine state, output files, timeout and crash boundary.
-    # map preserves manifest order even when processes complete out of order.
-    with ThreadPoolExecutor(max_workers=args.jobs) as executor:
-        results = list(executor.map(lambda case: run_case(args, case, baseline, unimplemented), cases))
+    if len({case["filter"] for case in cases}) != len(cases):
+        parser.error("Duplicate test names in the selected manifest cases")
+    args.output.mkdir(parents=True, exist_ok=True)
+    started = time.monotonic()
+    platform = "wasm" if args.node else "native"
+    baseline = expectations_for_platform(baseline, platform)
+    unimplemented = expectations_for_platform(unimplemented, platform)
+    results = []
+    if args.batch_size == 1:
+        with ThreadPoolExecutor(max_workers=args.jobs) as executor:
+            results = list(executor.map(lambda case: run_case(args, case, baseline, unimplemented), cases))
+    else:
+        from batch_cases import run_batch
+        batches = [cases[i:i+args.batch_size] for i in range(0, len(cases), args.batch_size)]
+        last_update = started
+        with ThreadPoolExecutor(max_workers=args.jobs) as executor:
+            futures = [executor.submit(run_batch, args, batch, baseline, unimplemented, i) for i, batch in enumerate(batches)]
+            try:
+                for future in as_completed(futures):
+                    results.extend(future.result())
+                    if time.monotonic() - last_update >= 10 or len(results) == len(cases):
+                        progress = dict(completed=len(results), total=len(cases), elapsed_seconds=round(time.monotonic()-started, 1),
+                                        unexpected=sum(r["status"] not in ACCEPTED_STATUSES for r in results))
+                        (args.output / "progress.json").write_text(json.dumps(progress)+"\n")
+                        print(json.dumps(progress), file=sys.stderr, flush=True)
+                        last_update = time.monotonic()
+            except BaseException:
+                for future in futures:
+                    future.cancel()
+                raise
+        order = {case["filter"]: i for i, case in enumerate(cases)}
+        results.sort(key=lambda result: order[result["filter"]])
     summary = {"source":manifest["source"], "results":results,
+               "batch_size":args.batch_size, "jobs":args.jobs, "elapsed_seconds":round(time.monotonic()-started, 3),
                "counts":{status:sum(r["status"]==status for r in results) for status in ("passed","known_failure","unimplemented","failed","unexpected_pass")}}
     summary_name = cases[0]["filter"] if len(cases) == 1 else f"shard-{args.shard_index}"
     (args.output / f"summary-{summary_name}.json").write_text(json.dumps(summary,indent=2)+"\n")

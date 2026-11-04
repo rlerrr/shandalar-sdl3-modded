@@ -340,6 +340,12 @@ static int cast_spell_with_improvise_impl(int player, int card, event_t event)
 /* ManalinkEh 2022: 0x20bc670; original cards/aether_revolt.c:262. */
 int improvise(int player, int card, event_t event)
 {
+#ifdef MANALINKEH_STATIC
+  /* The SDL host charges the undiscounted portion before EVENT_CAST_SPELL.
+     Retain its explicit artifact discount rather than the patched EXE's
+     null-cost/payment lifecycle. */
+  return improvise_impl(player, card, event, is_x_spell(player, card));
+#else
   int result;
   if (event == EVENT_MODIFY_COST)
   {
@@ -360,6 +366,7 @@ int improvise(int player, int card, event_t event)
     spell_fizzled = 1;
   }
   return 0;
+#endif
 }
 #endif
 
@@ -465,7 +472,7 @@ int card_aerial_modification(int player, int card, event_t event)
   else if (event == EVENT_ABILITIES && attached_card == affected_card &&
            attached_player == affected_card_controller)
     event_result |= 0x20;
-  if (has_subtype(attached_player, attached_card, SUBTYPE_VEHICLE))
+  if (attached_card >= 0 && has_subtype(attached_player, attached_card, SUBTYPE_VEHICLE))
     return generic_animating_aura_custom_prompt(player, card, event, &td,
                                                 "Select target creature or Vehicle.", 0, 0, 0, 0);
   return targeted_aura_custom_prompt(player, card, event, &td,

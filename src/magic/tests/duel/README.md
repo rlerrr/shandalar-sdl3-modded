@@ -385,6 +385,52 @@ ctest --test-dir out/build/shandalar-clang-x86 -L behavior --output-on-failure -
 
 CTesT handles the known-failure baseline, so the recognized failures won’t fail the gate; new failures and unexpected passes will.
 
+For the large catalog, batch cases to amortize loading the real card database:
+
+```powershell
+cmake --build out/build/shandalar-clang-x86 --target duel_tests_batched
+```
+
+This builds the test executable and runs the full catalog in batches of 128 with
+four workers, writing results under the build's `src/shandalar/duel_tests/batch-results`.
+The same target works in the Wasm build. To customize the run:
+
+```powershell
+python src/magic/tests/duel/run_cases.py `
+  --binary out/build/shandalar-clang-x86/src/shandalar/duel_tests/duel_card_tests.exe `
+  --manifest out/build/shandalar-clang-x86/src/shandalar/duel_tests/generated/manifest.json `
+  --baseline src/magic/tests/duel/data/known_failures.json `
+  --output temp/duel-full --batch-size 128 --jobs 6 --timeout 30 --quiet
+```
+
+The default `--batch-size 1` retains process isolation. Batches use the same
+per-case engine reset and strict baseline matching. A failure stops that child;
+remaining cases start in a fresh process. A flushed journal preserves completed
+results after a crash, and the watchdog bounds each test separately. New failures,
+unexpected passes, and interrupted cases also run alone. A different isolated
+outcome fails with `failure_kind: isolation`, exposing state leakage rather than
+accepting the isolated pass. Rebuild the test executable before using batching.
+
+`summary-shard-0.json` contains every result and total elapsed time;
+`progress.json` records completed counts. Passed cases reference shared batch
+logs/journals; other cases have individual diagnostic logs and result JSON.
+For Node/Wasm, use the `.js` binary plus `--node <path-to-node>`; batching uses
+the existing `/test-output` mount. `--tier`, `--filter`, and sharding work in
+both modes. CTest's existing individual entries remain isolated.
+
+The [October 2022 Oracle audit](../../../../docs/test-audits/manalink-2022.json)
+records the engine corrections, stale fixture assumptions, and retired failure
+expectations. Generic token names do not identify a unique Oracle stat line,
+so automatic vanilla templates exclude tokens; explicit token-creation cases
+retain their characteristic checks. Smoke checks of null-bound placeholder
+records establish query/snapshot safety only, not implementation of abilities.
+
+Combat scripts inspect historical `blocked` state after `advance_combat` finishes
+the declaration. The selector can reject a lone blocker immediately if no second
+eligible blocker exists, while final minimum-blocker validation still handles
+incomplete assignments. After setting mana pools, use `refresh` before querying
+availability so the engine's cached mana options match those pools.
+
 ## Code coverage
 
 From **PowerShell** (repository root), run the behavior suite under coverage:

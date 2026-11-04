@@ -209,6 +209,9 @@
           "value": 0
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "assert_card",
           "ref": "attacker",
           "property": "blocked",
@@ -219,9 +222,6 @@
           "ref": "alternative",
           "property": "blocked",
           "value": 0
-        },
-        {
-          "op": "advance_combat"
         },
         {
           "op": "assert_stack",
@@ -343,6 +343,9 @@
           "value": 0
         },
         {
+          "op": "advance_combat"
+        },
+        {
           "op": "assert_card",
           "ref": "attacker",
           "property": "blocked",
@@ -353,9 +356,6 @@
           "ref": "alternative",
           "property": "blocked",
           "value": 0
-        },
-        {
-          "op": "advance_combat"
         },
         {
           "op": "assert_stack",

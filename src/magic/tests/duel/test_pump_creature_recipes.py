@@ -41,6 +41,13 @@ class PumpCreatureRecipesTest(unittest.TestCase):
         self.assertIn(dict(op='assert_life',player=1,value=17),s)
         self.assertIn(dict(op='choose_priority',ref='response'),lost['steps'])
         self.assertIn(dict(op='assert_zone_contains',player=0,zone='hand',value=7059),lost['steps'])
+
+    def test_fresh_haste_does_not_expect_the_engine_to_restrict_tapping(self):
+        d=self.declaration('Pyre Charger',selected=['fresh_activation'])
+        d['params']=dict(keywords=['Haste'],power=1,toughness=0,activation_cost='{R}')
+        s=self.cases('Pyre Charger',d)[0]['steps']
+        self.assertIn(dict(op='assert_card',ref='source',property='sick',value=0),s)
+        self.assertIn(dict(op='activate',ref='source',value=1),s)
     def test_per_turn_limit_and_cleanup_reset(self):
         d=self.declaration('Vampire Bats',selected=['activation_limit','activation_limit_reset'],activation_limit=2);d['params']['activation_cost']='{B}'
         limit,reset=self.cases('Vampire Bats',d)

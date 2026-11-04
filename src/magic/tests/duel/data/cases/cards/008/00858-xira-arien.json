@@ -38,11 +38,6 @@
           "value": 0
         },
         {
-          "op": "choose_player",
-          "player": -1,
-          "value": 0
-        },
-        {
           "op": "activate",
           "ref": "source",
           "value": 1
@@ -136,11 +131,6 @@
         {
           "op": "can_activate",
           "ref": "source",
-          "value": 1
-        },
-        {
-          "op": "choose_player",
-          "player": -1,
           "value": 1
         },
         {
@@ -348,11 +338,6 @@
           "value": 1
         },
         {
-          "op": "choose_player",
-          "player": -1,
-          "value": 1
-        },
-        {
           "op": "activate",
           "ref": "source",
           "value": 1
@@ -460,11 +445,6 @@
         },
         {
           "op": "restore"
-        },
-        {
-          "op": "choose_player",
-          "player": -1,
-          "value": 1
         },
         {
           "op": "choose_player",

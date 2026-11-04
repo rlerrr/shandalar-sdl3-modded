@@ -290,6 +290,149 @@
         }
       ],
       "seed": 123
+    },
+    {
+      "name": "CelestialPrism_SuppressionFieldPreservesPowerArtifactReduction",
+      "fixture": "empty_main",
+      "setup": [
+        {
+          "name": "Celestial Prism",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Suppression Field",
+          "ref": "field",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Power Artifact",
+          "ref": "reducer",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "cast",
+          "ref": "field",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "source"
+        },
+        {
+          "op": "cast",
+          "ref": "reducer",
+          "value": 1
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 1
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "can_activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "choose_color",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "activate",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 1
+        }
+      ]
     }
   ],
   "recipes": [

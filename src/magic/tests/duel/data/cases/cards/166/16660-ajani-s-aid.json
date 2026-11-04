@@ -68,6 +68,11 @@
       ],
       "steps": [
         {
+          "op": "choose_zone",
+          "player": 0,
+          "value": 0
+        },
+        {
           "op": "cast",
           "ref": "source",
           "value": 1

@@ -1527,6 +1527,9 @@ int new_global_tutor(int player, int targ_player, int search_location, int desti
         if (zone != TUTOR_FROM_HAND)
         {
           put_iid_under_the_first_x_cards_of_library(targ_player, iid, 0);
+          /* Report a successful move, as the reveal/hand path does. Callers
+             such as Drafna's Restoration continue selecting until cancelled. */
+          card_added = iid;
           break;
         }
       }

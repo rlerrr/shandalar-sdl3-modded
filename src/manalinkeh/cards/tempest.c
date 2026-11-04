@@ -4226,7 +4226,8 @@ int card_reanimate(int player, int card, event_t event){
 			card_instance_t* instance = get_card_instance(player, card);
 			const int* grave = get_grave(instance->targets[0].player);
 			int selected = validate_target_from_grave_source(player, card, instance->targets[0].player, 0);
-			ai_modifier += cards_ptr[grave[selected]]->ai_base_value;
+			if (selected >= 0)
+				ai_modifier += cards_ptr[cards_data[grave[selected]].id]->ai_base_value;
 		}
 		return 0;
 	}

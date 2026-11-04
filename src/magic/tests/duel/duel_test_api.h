@@ -81,6 +81,8 @@ void duel_test_end_combat(void);
    Does not simulate untap, upkeep or draw; fixture zones and mana stay intact. */
 void duel_test_advance_turn(void);
 DuelTestCard duel_test_inspect(DuelTestRef ref);
+int duel_test_base_power(int player, int csvid);
+int duel_test_base_toughness(int player, int csvid);
 int duel_test_zone_count(int player, int zone);
 int duel_test_zone_csvid(int player, int zone, int index);
 int duel_test_life(int player);

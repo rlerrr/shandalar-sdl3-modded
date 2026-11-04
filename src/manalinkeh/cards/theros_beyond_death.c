@@ -470,6 +470,13 @@ static int anax_effect(int player, int card, event_t event)
 /* ManalinkEh 2022: 0x235a7d0; original cards/theros_beyond_death.c:285. */
 int card_anax_hardened_in_the_forge(int player, int card, event_t event)
 {
+  /* The base-characteristic query has an owner but no battlefield slot. */
+  if (card == -1) {
+    if (player >= 0 && event == EVENT_POWER)
+      set_characteristic_pt(devotion(player, -1, COLOR_RED, 0));
+    return 0;
+  }
+
   /* Anax, Hardened in the Forge	|1|R|R
    * Legendary Enchantment Creature - Demigod * /3
    * Anax's power is equal to your devotion to red. (Each |R in the mana costs of permanents you control counts toward your devotion to red.)

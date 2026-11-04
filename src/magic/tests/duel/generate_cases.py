@@ -42,6 +42,18 @@ def read(path):
 def quoted(value):
     return json.dumps(value, ensure_ascii=True)
 
+def template_stats(face):
+    # Tokens sharing a name can have different Oracle identities and stats.
+    # A registry name alone cannot select a particular Bear/Elf/etc. token.
+    if face.get("layout") == "token" or "Token" in face.get("type_line", ""):
+        return None
+    if "Creature" not in face.get("type_line", "") or face.get("oracle_text", "") not in ("", "Flying", "Flying, vigilance"):
+        return None
+    if not all(str(face.get(k, "")).isdigit() for k in ("power", "toughness")):
+        return None
+    return int(face["power"]), int(face["toughness"])
+
+
 def build(data, output):
     rows = registry()
     by_name = {r["name"]: r for r in rows if r["kind"] != "internal"}
@@ -210,10 +222,7 @@ def build(data, output):
             continue
         seen.add(r["csvid"])
         face = o.get("selected_face", o)
-        text = face.get("oracle_text", "")
-        if "Creature" in face.get("type_line", "") and text in ("", "Flying", "Flying, vigilance"):
-            if not str(face.get("power", "")).isdigit() or not str(face.get("toughness", "")).isdigit():
-                continue
+        if template_stats(face) is not None:
             templates.append("{" + ",".join([quoted(r["name"]),str(r["csvid"]),str(face["power"]),str(face["toughness"]),quoted(o["oracle_id"])]) + "}")
             manifest.append({"filter":f"Templates.Card_{r['csvid']}","card":r["name"],"csvid":r["csvid"],"oracle_id":o["oracle_id"],"fixture":"empty_main","seed":123,"tier":"template"})
     chunks.append("static const Template templates[] = {" + ",".join(templates) + "};\n")

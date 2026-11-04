@@ -826,6 +826,13 @@ int card_sanctified_charge(int player, int card, event_t event){
 
 int card_seraph_of_the_masses(int player, int card, event_t event)
 {
+  /* The base-characteristic query has an owner but no battlefield slot. */
+  if (card == -1) {
+    if (player >= 0 && (event == EVENT_POWER || event == EVENT_TOUGHNESS))
+      set_characteristic_pt(count_subtype(player, TYPE_CREATURE, -1));
+    return 0;
+  }
+
   /* Seraph of the Masses	|5|W|W
    * Creature - Angel * / *
    * Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for |1 or one mana of that creature's color.)

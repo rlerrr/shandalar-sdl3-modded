@@ -159,9 +159,9 @@ def expand(name, csvid, declaration, spec, selected, registry):
             elif variant.startswith("menace_"):
                 setup += [card("Suntail Hawk", "blocker", player=1)]
                 if variant == "menace_pair": setup += [card("Suntail Hawk", "second", player=1)]
-                # Block selection is provisional. Menace validates the complete
-                # declaration when the real declare-blockers event advances.
-                actions += [step("block", ref="blocker", other="source", value=1)]
+                # The 2022 selector rejects a lone blocker when no second
+                # eligible creature is available. Final legality is unchanged.
+                actions += [step("block", ref="blocker", other="source", value=int(variant == "menace_pair"))]
                 if variant == "menace_pair": actions += [step("block", ref="second", other="source", value=1)]
                 actions += [step("advance_combat"), observe("source", "blocked", int(variant == "menace_pair")),
                             observe("blocker", "blocking_count", int(variant == "menace_pair"))]

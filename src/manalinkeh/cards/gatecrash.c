@@ -6837,7 +6837,7 @@ int card_pit_fight(int player, int card, event_t event){
 
 	card_instance_t *instance = get_card_instance(player, card);
 
-	if( event == EVENT_CAN_CAST && can_target(&td) ){
+	if( event == EVENT_CAN_CAST && can_target(&td) && target_available(player, card, &td1) > 1 ){
 		return generic_spell(player, card, event, GS_CAN_TARGET, &td1, NULL, 1, NULL);
 	}
 

@@ -53,11 +53,8 @@
         "lost_source": 1,
         "activation_snapshot": 1,
         "five_activations": 1
-      },
-      "activation_cancel_mana": [
-        "activation_payment"
-      ]
+      }
     }
   ],
-  "recipe_coverage": " Reviewed self-pump component: normal casting, structured Oracle base characteristics and unconditional keywords, real combat, exact activation payment, unchanged stats before resolution, queued/individually resolved repetitions, tapped and freshly cast hosts, opposing-turn activation, in-combat activation, cleanup expiry, target/source loss through a real priority response, caller-owned snapshot and AI backup replay, populated ordered zones, and per-turn limits/reset when declared. Other activated abilities and timing of flash remain gaps where present. Activation affordability negatives are omitted for multimode cards because another printed ability can independently permit activation. Component coverage, not whole-card certification. Windreaver exact-payment scripts cancellation only when the erroneous blue-mana prompt appears; correct white cost, successful activation, and toughness bonus assertions remain. A future fix must remove this workaround, and unconsumed-choice checks enforce that review."
+  "recipe_coverage": " Reviewed self-pump component: normal casting, structured Oracle base characteristics and unconditional keywords, real combat, exact activation payment, unchanged stats before resolution, queued/individually resolved repetitions, tapped and freshly cast hosts, opposing-turn activation, in-combat activation, cleanup expiry, target/source loss through a real priority response, caller-owned snapshot and AI backup replay, populated ordered zones, and per-turn limits/reset when declared. Other activated abilities and timing of flash remain gaps where present. Activation affordability negatives are omitted for multimode cards because another printed ability can independently permit activation. Component coverage, not whole-card certification."
 }

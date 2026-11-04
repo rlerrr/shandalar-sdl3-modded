@@ -61,7 +61,8 @@
         "decline_1",
         "wrong_color_1",
         "target_creature_1"
-      ]
+      ],
+      "trigger_priority": true
     }
   ]
 }

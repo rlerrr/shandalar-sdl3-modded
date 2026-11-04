@@ -3371,7 +3371,7 @@ int card_boiling_earth(int player, int card, event_t event)
 	{
 	  if (awaken_validate(player, card, 0))
 		{
-		  new_damage_all(player, card, 1-player, 1, 0, NULL);
+		  new_damage_all(player, card, 1-player, 1, NDA_ALL_CREATURES, NULL);
 		  awaken_resolve(player, card, 0, 4);
 		}
 	  kill_card(player, card, KILL_DESTROY);
