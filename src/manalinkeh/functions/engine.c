@@ -4038,7 +4038,8 @@ int upkeep_phase(int player)
     g_phase_stop_suppressed =
         (g_stop_phase != -1 && (g_stop_phase != 4 || g_stop_phase_player != player));
 
-  #ifndef MANALINKEH_STATICif (ai_is_speculating != 1 && !(trace_mode & 2))
+#ifndef MANALINKEH_STATIC
+  if (ai_is_speculating != 1 && !(trace_mode & 2))
   {
     TENTATIVE_reassess_all_cards();
     start_ai_decision_search(17, 10);
@@ -4052,8 +4053,8 @@ speculate_more:
     ai_modifier = 0;
   }
 
-  #endif
-current_phase = PHASE_BEGIN_UPKEEP;
+#endif
+  current_phase = PHASE_BEGIN_UPKEEP;
   phase_changed(player, PHASE_BEGIN_UPKEEP);
   dispatch_trigger2(player, TRIGGER_UPKEEP, gs_prompt_specialfephase_8, 0, 0, 0);
 

@@ -8,7 +8,9 @@
 #include <windows.h>
 
 #ifndef CaptureStackBackTrace
-USHORT WINAPI RtlCaptureStackBackTrace(ULONG FramesToSkip, ULONG FramesToCapture, PVOID *BackTrace, PULONG BackTraceHash);
+/* This OS call takes plain values, never SDL compatibility handles. */
+unsigned short WINAPI RtlCaptureStackBackTrace(DWORD FramesToSkip, DWORD FramesToCapture,
+                                             void **BackTrace, DWORD *BackTraceHash);
 #  define CaptureStackBackTrace RtlCaptureStackBackTrace
 #endif
 #endif
@@ -24,7 +26,7 @@ show_backtrace(const char* title, const char* header)
     abort();
   }
 #ifndef __EMSCRIPTEN__
-  PVOID frames[100];
+  void *frames[100];
 
   int numframes = CaptureStackBackTrace(0, 30, &frames[0], NULL);
 #endif

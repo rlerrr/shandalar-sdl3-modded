@@ -71,13 +71,14 @@ target_include_directories(manalinkeh_static PRIVATE
   "${CMAKE_CURRENT_SOURCE_DIR}"
   "${manalinkeh_generated_dir}"
 )
+# Native builds also use SDL compatibility objects, not Windows SDK handles.
+target_include_directories(manalinkeh_static PRIVATE
+  "${SHANDALAR_SRC_ROOT}"
+)
+target_include_directories(manalinkeh_static BEFORE PRIVATE
+  "${SHANDALAR_SRC_ROOT}/magic/compat"
+)
 if(EMSCRIPTEN)
-  target_include_directories(manalinkeh_static PRIVATE
-    "${SHANDALAR_SRC_ROOT}"
-  )
-  target_include_directories(manalinkeh_static BEFORE PRIVATE
-    "${SHANDALAR_SRC_ROOT}/magic/compat"
-  )
   target_link_libraries(manalinkeh_static PRIVATE
     SDL3::Headers
   )
