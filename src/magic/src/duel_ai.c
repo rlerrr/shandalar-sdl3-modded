@@ -6,6 +6,7 @@
 #include <string.h>
 
 #include "defs.h"
+#include "manalink_runtime.h"
 #include "magic/src/cards.h"
 #include "magic/src/duel_engine.h"
 #include "magic/src/duel_host.h"
@@ -100,6 +101,7 @@ extern int g_ai_response_state;
 typedef struct
 {
   uint32_t host_random_state;
+  ManalinkRuntimeSnapshot manalink_runtime;
   card_instance_t card_instances[2][151];
   card_data_t extra_card_data[16];
   int library[2][500];
@@ -152,13 +154,7 @@ typedef struct
 // GLOBAL: SHANDALAR 0x0074f1f0
 static AiSearchBackup g_ai_search_backup;
 
-typedef struct ai_combat_eval_entry_t
-{
-  int power;
-  int toughness;
-  unsigned int abilities;
-  int cached_score;
-} ai_combat_eval_entry_t;
+
 
 #define AI_CARD(player_, card_) global_card_instances[(player_)][(card_)]
 #define AI_CARD_STATE(player_, card_) AI_CARD(player_, card_).state
@@ -285,6 +281,7 @@ int defending_cop_available_mana;
 // GLOBAL: MAGIC 0x0072c8f0
 // GLOBAL: SHANDALAR 0x00765e30
 static card_instance_t combat_sim_saved_card_instances[2][151];
+static ManalinkRuntimeSnapshot combat_sim_saved_manalink_runtime;
 // GLOBAL: MAGIC 0x00742ae0
 // GLOBAL: SHANDALAR 0x0077c070
 static card_data_t combat_sim_saved_dynamic_card_data[16];
@@ -402,7 +399,7 @@ static int combat_sim_saved_unk_007a79b0[2];
 
 // GLOBAL: MAGIC 0x00709570
 // GLOBAL: SHANDALAR 0x0097c860
-ai_combat_eval_entry_t ai_combat_eval_table[2][150];
+ai_combat_eval_entry_t ai_combat_eval_table[2][151];
 
 // GLOBAL: MAGIC 0x008cefac
 // GLOBAL: SHANDALAR 0x0097db28
@@ -1499,6 +1496,7 @@ void duel_engine_capture_ai_snapshot(void *destination)
   AiSearchBackup *backup = destination;
 
   backup->host_random_state = duel_host_capture().random_state;
+  manalinkeh_capture_runtime_snapshot(&backup->manalink_runtime);
   memcpy(backup->card_instances, global_card_instances, sizeof(backup->card_instances));
   memcpy(backup->extra_card_data, global_cards_data + g_card_count, sizeof(backup->extra_card_data));
   memcpy(backup->library, global_library, sizeof(backup->library));
@@ -1575,6 +1573,7 @@ void duel_engine_restore_ai_snapshot(const void *source)
   DuelHostState host_state = duel_host_capture();
   host_state.random_state = backup->host_random_state;
   duel_host_restore(host_state);
+  manalinkeh_restore_runtime_snapshot(&backup->manalink_runtime);
   memcpy(global_card_instances, backup->card_instances, sizeof(backup->card_instances));
   memcpy(global_cards_data + g_card_count, backup->extra_card_data, sizeof(backup->extra_card_data));
   memcpy(global_library, backup->library, sizeof(backup->library));
@@ -3013,6 +3012,7 @@ void setup_combat_damage_simulation(int player)
 // FUNCTION: SHANDALAR 0x004c3b83
 void save_combat_simulation_state(void)
 {
+  manalinkeh_capture_runtime_snapshot(&combat_sim_saved_manalink_runtime);
   memcpy(combat_sim_saved_card_instances, global_card_instances, sizeof(combat_sim_saved_card_instances));
   memcpy(combat_sim_saved_dynamic_card_data, global_cards_data + g_card_count, sizeof(combat_sim_saved_dynamic_card_data));
   memcpy(combat_sim_saved_library, global_library, sizeof(combat_sim_saved_library));
@@ -3058,6 +3058,7 @@ void save_combat_simulation_state(void)
 // FUNCTION: SHANDALAR 0x004c3e34
 void restore_combat_simulation_state(void)
 {
+  manalinkeh_restore_runtime_snapshot(&combat_sim_saved_manalink_runtime);
   memcpy(global_card_instances, combat_sim_saved_card_instances, sizeof(combat_sim_saved_card_instances));
   memcpy(global_cards_data + g_card_count, combat_sim_saved_dynamic_card_data, sizeof(combat_sim_saved_dynamic_card_data));
   memcpy(global_library, combat_sim_saved_library, sizeof(combat_sim_saved_library));

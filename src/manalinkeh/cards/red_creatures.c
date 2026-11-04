@@ -1,11 +1,21 @@
 #include "manalink.h"
 
 int card_goblin_king(int player, int card, event_t event){
+  /* CARD_ID_GOBLIN_KING	102
+   * Goblin King	|1|R|R
+   * Creature - Goblin 2/2
+   * Other Goblin creatures get +1/+1 and have |H2mountainwalk. (They can't be blocked as long as defending player controls |Ha Mountain.) */
+
     boost_creature_type(player, card, event, SUBTYPE_GOBLIN, 1, 1, get_hacked_walk(player, card, KEYWORD_MOUNTAINWALK), 0);
     return 0;
 }
 
 int card_gorilla_shaman(int player, int card, event_t event){
+  /* CARD_ID_GORILLA_SHAMAN	2292
+   * Gorilla Shaman	|R
+   * Creature - Ape Shaman 1/1
+   * |X|X|1: Destroy target noncreature artifact with converted mana cost X. */
+
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_ARTIFACT );
     td.illegal_type = TYPE_CREATURE;
@@ -37,6 +47,11 @@ int card_gorilla_shaman(int player, int card, event_t event){
 }
 
 int card_squee_goblin_nabob(int player, int card, event_t event){
+  /* CARD_ID_SQUEE_GOBLIN_NABOB	4619
+   * Squee, Goblin Nabob	|2|R
+   * Legendary Creature - Goblin 1/1
+   * At the beginning of your upkeep, you may return ~ from your graveyard to your hand. */
+
     card_instance_t *instance= get_card_instance(player, card);
     check_legend_rule(player, card, event);
     if( event == EVENT_GRAVEYARD_ABILITY_UPKEEP ){
@@ -56,8 +71,11 @@ int card_squee_goblin_nabob(int player, int card, event_t event){
     return 0;
 }
 
-
 int card_simian_spirit_guide(int player, int card, event_t event){
+  /* Simian Spirit Guide	|2|R
+   * Creature - Ape Spirit 2/2
+   * Exile ~ from your hand: Add |R to your mana pool. */
+
     if( event == EVENT_CAN_ACTIVATE_FROM_HAND ){
         return 1;
     }
@@ -80,6 +98,9 @@ int is_goblin(int player, int card){
 }
 
 int card_ogre_arsonist(int player, int card, event_t event){
+  /* Ogre Arsonist	|4|R
+   * Creature - Ogre 3/3
+   * When this creature enters, destroy target land. */
 
 	card_instance_t *instance = get_card_instance(player, card);
 	target_definition_t td;
@@ -94,10 +115,19 @@ int card_ogre_arsonist(int player, int card, event_t event){
 }
 
 int card_fire_imp(int player, int card, event_t event){
+  /* CARD_ID_FIRE_IMP	2881
+   * Fire Imp	|2|R
+   * Creature - Imp 2/1
+   * When ~ enters the battlefield, it deals 2 damage to target creature. */
+
     return cip_damage_creature(player, card, event, 2);
 }
 
 int card_balduvian_horde(int player, int card, event_t event){
+  /* CARD_ID_BALDUVIAN_HORDE	1686
+   * Balduvian Horde	|2|R|R
+   * Creature - Human Barbarian 5/5
+   * When ~ enters the battlefield, sacrifice it unless you discard a card at random. */
 
   if( comes_into_play(player, card, event ) ){
       int did_discard = 0;
@@ -120,6 +150,12 @@ int card_balduvian_horde(int player, int card, event_t event){
 }
 
 int card_two_headed_dragon(int player, int card, event_t event){
+  /* Two-Headed Dragon	|4|R|R
+   * Creature - Dragon 4/4
+   * Flying
+   * Menace
+   * ~ can block an additional creature each combat.
+   * |1|R: ~ gets +2/+0 until end of turn. */
 
     minimum_blockers(player, card, event, 2);
 

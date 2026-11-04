@@ -11,6 +11,7 @@
 // Shared engine types, constants, and header-only compatibility helpers.
 
 #include "inttypes.h"
+#include <stdbool.h>
 
 /* Creature types are in their own header because there are so many of them. */
 #include "subtypes.h"
@@ -232,7 +233,7 @@ typedef enum
 	EVENT_RESOLVE_GENERAL_EFFECT = 0x4c00,
 	EVENT_FIGHT = 0x4d00,
 	EVENT_QUERY_AWAKEN = 0x4e00,
-	EVENT_CANT_CREW = 0x4f00,
+	EVENT_CANT_CREW = 7424,
 	EVENT_HIDDEN_AGENDA = 0x5000,
 	EVENT_ETB_ABILITY = 0x5100,
 	EVENT_ETB = 0x5100,
@@ -240,6 +241,35 @@ typedef enum
 	EVENT_SURVEIL = 0x5300,
 	EVENT_CHANGE_TARGET = 0x5400,
 	EVENT_SET_IN_MOTION = 0x5500,
+
+	/* Additional October 2022 engine selectors. */
+	EVENT_0 = 0,
+	EVENT_GRAVEYARD_ABILITY_EOT = 1280,
+	EVENT_CHAPTER1 = 6144,
+	EVENT_CHAPTER2 = 6400,
+	EVENT_CHAPTER3 = 6656,
+	EVENT_CHAPTER4 = 6912,
+	EVENT_COMMANDER_TO_COMMAND_ZONE = 7168,
+	EVENT_SP_ABILITY = 7680,
+	EVENT_SPA = 7680,
+	EVENT_DAT_ABILITY = 7936,
+	EVENT_CARD_TO_EXILE = 8192,
+	EVENT_COUNTERSPELL = 22016,
+	EVENT_EXPLORE = 22272,
+	EVENT_COUNTERS = 22528,
+	EVENT_QUERY_CUMULATIVE_UPKEEP = 22784,
+	EVENT_REMOVED_FROM_GRAVEYARD = 23040,
+	EVENT_COIN_FLIP_WON_OR_LOST = 23296,
+	EVENT_SPELL_COPIED = 23552,
+	EVENT_QUERY = 23808,
+	EVENT_QUERY_AFF = 24064,
+	EVENT_LEAVES_PLAY_ABILITY = 24320,
+	EVENT_LTB = 24320,
+	EVENT_ATTACK_LEGALITY_ALL = 24576,
+	EVENT_PROT_MISC = 24832,
+	EVENT_SPELL_CAST = 25088,
+	EVENT_LAND_PLAYED = 25344,
+	EVENT_THIS_SPELL_CAST = 25600,
 } event_t;
 
 /* Trigger conditions */
@@ -299,29 +329,35 @@ typedef enum
 {
 	XTRIGGER_ATTACKING = 0x01000100,									// Triggers once after all attackers are declared, paid for, and tapped.  In manalink, trigger_cause_controller and trigger_cause are always 0; in shandalar, trigger_cause_controller is current_turn; LOWORD(trigger_cause) is the number of attackers declared; and HIWORD(trigger_cause) is (one of) the attacking creatures.
 	XTRIGGER_REPLACE_MILL = 0x01000200,									// Triggers before each card is milled.  trigger_cause_controller is the player being milled; trigger_cause is the position of the card in trigger_cause_controller's deck.  (That's not necessarily 0, for instance if it was milled by Cellar Door.)  It will still be at deck_ptr[trigger_cause_controller][trigger_cause].  Set replace_milled=1 to indicate replacement (with the card revealed or moved to a public zone) or =2 to indicate replacement (with a move to a hidden zone without revealing the card); always check it before doing anything to be sure nothing's already replaced it first.
-	XTRIGGER_MILLED = 0x01000300,										// Triggers after each card is milled.  trigger_cause_controller is the player being milled.  num_milled will contain the number of cards that were milled; they're accessible through cards_milled[].
-	XTRIGGER_REPLACE_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = 0x01000400, // Triggers before each card is put into a graveyard from anything except mill()/special_mill().  trigger_cause_controller is the player whose graveyard it is; trigger_cause is the iid of the card going to graveyard.  The card currently won't be anywhere.  Set replace_milled=1 (sic) to indicate replacement; always check it before doing anything to be sure nothing's already replaced it first.  This trigger is very blunt, and probably doesn't interact well with "When [something] is put into a graveyard from the battlefield"/"When [something] dies" triggers (it certainly won't interleave with them properly); probably best to also replace during EVENT_GRAVEYARD_FROM_PLAY if there's no choice involved.
-	XTRIGGER_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = 0x01000500,			// Triggers after each card is put into a graveyard from anything except mill()/special_mill().  trigger_cause_controller is the player being milled; trigger_cause is the iid of the card, gy_from_anywhere_pos is the tentative position of the card in the graveyard, and gy_from_anywhere_source is the canonical graveyard_source[][] value of the card so it can be reliably found if it's still there.
-	XTRIGGER_SCRY = 0x01000600,											// Triggers whenever a player scries.  trigger_cause_controller is the player scrying; trigger_cause is the number of cards scryed.
-	XTRIGGER_BECAME_RENOWNED = 0x01001200,								// {trigger_cause_controller,trigger_cause} just became renowned.
-	XTRIGGER_DISCARDED = 0x01000800,		 // Shandalar only: triggers when a card has been discarded (as opposed to TRIGGER_DISCARD, which is for replacement effects).  trigger_cause_controller is the player who discarded; trigger cause is the graveyard_source of the discarded card; discarded_iid is the original_iid of the discarded card.
-	XTRIGGER_LAND_PLAYED = 0x01000900,		 // Shandalar only: a land is being played.  Dispatched instead of TRIGGER_SPELL_CAST.
-	XTRIGGER_REPLACE_GAIN_LIFE = 0x01000A00, // Shandalar only: a player is going to gain life; allow that to be replaced.  The amount is stored and can be edited in life_gained.  trigger_cause_controller and trigger_cause are the player gaining life and -1 respectrively.
-	XTRIGGER_CARD_SPECIFIC = 0x01000B00,	 // Shandalar only: generic trigger dispatched from a specific card to other cards, typically to impose an upkeep payment.  Should be handled by the dispatching card.  trigger_cause_controller and trigger_cause should be the dispatching card.  See shandalar/cards/upkeep:impose_upkeep_cost() for an example.
-	XTRIGGER_REPLACE_KILL = 0x01000C00,		 // Shandalar only: sent when a non-effect card or token would go to graveyard or be exiled from the battlefield or stack, including a non-permanent card that was cast.  Happens before EVENT_GRAVEYARD_FROM_PLAY.  Sent only if ENABLE_XTRIGGER_REPLACE_KILL is set; trigger_cause_controller and trigger_cause are the dispatching card, and its kill_code will be accurate.  Set suppress_this_trigger=1 to abort the original kill_card - and you want to do that in essentially all cases of replacement.  Even in the special case of changing a go-to-graveyard to exile, kill the card again rather than setting kill_code.  You'll also need to remove STATUS_DYING in almost all cases.
-	XTRIGGER_CARD_DRAWN = 0x1000D00,		 // Shandalar only: A card was drawn (and not replaced).  It's in {trigger_cause_controller, trigger_cause}.
-	XTRIGGER_THIS_DIES = 0x1000E00,			 // Shandalar only: This isn't actually ever dispatched.  A card calling HAS_WHEN_THIS_DIES() will have TRIGGER_GRAVEYARD_FROM_PLAY translated into this and then forwarded to it after it's left the battlefield.
-	XTRIGGER_LOSE_LIFE = 0x1000F00,			 // Shandalar only: Works exactly like TRIGGER_GAIN_LIFE - either a card must have EA_LICH, or it must be manually set in event_flags; and the amount of life lost is stored in life_gained (always a negative number here)
-	XTRIGGER_MAIN_PHASE = 0x1001000,		 // Shandalar only: dispatched at the start of each main phase.  trigger_cause_controller is current turn; trigger_cause is the number of main phase: 0 is precombat main phase, 1 is first postcombat main phase, 2 is second postcombat main phase, etc.  Dispatched only if ENABLE_XTRIGGER_MAIN_PHASE is set.
-	XTRIGGER_COMBAT = 0x1002000,			 // Shandalar only: dispatched at the start of combat, just before EVENT_MUST_ATTACK.  trigger_cause_controller is current turn; trigger_cause is the number of combat: 1 is the first combat each turn, 2 is the second, etc.  Dispatched only if ENABLE_XTRIGGER_COMBAT is set.
-	XTRIGGER_SHUFFLE = 0x1003000,			 // Shandalar only: trigger_cause_controller's deck is shuffled.  Dispatched only if ENABLE_XTRIGGER_SHUFFLE is set.
-	XTRIGGER_TRANSFORM = 0x1004000,			 // Shandalar only: {trigger_cause_controller, trigger_cause} just transformed
-	XTRIGGER_REPLACE_TOKENS = 0x1005000,	 // One or more tokens would be put on the battlefield.  trigger_cause_controller is whose control, trigger_cause is the iid of the token, Token::num_added() is the number to be placed on the bf (and can be changed with Token::set_num_added()), and Token::added_as_cost() is valid.  Dispatched only if ENABLE_XTRIGGER_COUNTERS (sic) is set.
-	XTRIGGER_REPLACE_COUNTERS = 0x1006000,	 // One or more counters would be added to (not removed from) trigger_cause_controller/trigger_cause.  The number of counters is stored in counters_added, type in counters_added_type, and whether they were added as a cost in counters_added_as_cost; the first two can be modified.  Dispatched only if ENABLE_XTRIGGER_COUNTERS is set.
-	XTRIGGER_COUNTERS = 0x1007000,			 // One or more counters were added to or removed from trigger_cause_controller/trigger_cause.  The number of counters is stored in counters_added and type in counters_added_type.  Set counters_added_need_repeat if a separate trigger is needed for each counter; then counters_added_repeating will be true if it's the second or later.  Dispatched only if ENABLE_XTRIGGER_COUNTERS is set.
+	XTRIGGER_MILLED = 16779008,										// Triggers after each card is milled.  trigger_cause_controller is the player being milled.  num_milled will contain the number of cards that were milled; they're accessible through cards_milled[].
+	XTRIGGER_REPLACE_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = 16777984, // Triggers before each card is put into a graveyard from anything except mill()/special_mill().  trigger_cause_controller is the player whose graveyard it is; trigger_cause is the iid of the card going to graveyard.  The card currently won't be anywhere.  Set replace_milled=1 (sic) to indicate replacement; always check it before doing anything to be sure nothing's already replaced it first.  This trigger is very blunt, and probably doesn't interact well with "When [something] is put into a graveyard from the battlefield"/"When [something] dies" triggers (it certainly won't interleave with them properly); probably best to also replace during EVENT_GRAVEYARD_FROM_PLAY if there's no choice involved.
+	XTRIGGER_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = 16779264,			// Triggers after each card is put into a graveyard from anything except mill()/special_mill().  trigger_cause_controller is the player being milled; trigger_cause is the iid of the card, gy_from_anywhere_pos is the tentative position of the card in the graveyard, and gy_from_anywhere_source is the canonical graveyard_source[][] value of the card so it can be reliably found if it's still there.
+	XTRIGGER_SCRY = 16779776,											// Triggers whenever a player scries.  trigger_cause_controller is the player scrying; trigger_cause is the number of cards scryed.
+	XTRIGGER_BECAME_RENOWNED = 16780032,								// {trigger_cause_controller,trigger_cause} just became renowned.
+	XTRIGGER_DISCARDED = 0x1008000,		 // Shandalar only: triggers when a card has been discarded (as opposed to TRIGGER_DISCARD, which is for replacement effects).  trigger_cause_controller is the player who discarded; trigger cause is the graveyard_source of the discarded card; discarded_iid is the original_iid of the discarded card.
+	XTRIGGER_LAND_PLAYED = 0x1008100,		 // Shandalar only: a land is being played.  Dispatched instead of TRIGGER_SPELL_CAST.
+	XTRIGGER_REPLACE_GAIN_LIFE = 16778752, // Shandalar only: a player is going to gain life; allow that to be replaced.  The amount is stored and can be edited in life_gained.  trigger_cause_controller and trigger_cause are the player gaining life and -1 respectrively.
+	XTRIGGER_CARD_SPECIFIC = 0x1008200,	 // Shandalar only: generic trigger dispatched from a specific card to other cards, typically to impose an upkeep payment.  Should be handled by the dispatching card.  trigger_cause_controller and trigger_cause should be the dispatching card.  See shandalar/cards/upkeep:impose_upkeep_cost() for an example.
+	XTRIGGER_REPLACE_KILL = 0x1008300,		 // Shandalar only: sent when a non-effect card or token would go to graveyard or be exiled from the battlefield or stack, including a non-permanent card that was cast.  Happens before EVENT_GRAVEYARD_FROM_PLAY.  Sent only if ENABLE_XTRIGGER_REPLACE_KILL is set; trigger_cause_controller and trigger_cause are the dispatching card, and its kill_code will be accurate.  Set suppress_this_trigger=1 to abort the original kill_card - and you want to do that in essentially all cases of replacement.  Even in the special case of changing a go-to-graveyard to exile, kill the card again rather than setting kill_code.  You'll also need to remove STATUS_DYING in almost all cases.
+	XTRIGGER_CARD_DRAWN = 0x1008400,		 // Shandalar only: A card was drawn (and not replaced).  It's in {trigger_cause_controller, trigger_cause}.
+	XTRIGGER_THIS_DIES = 0x1008500,			 // Shandalar only: This isn't actually ever dispatched.  A card calling HAS_WHEN_THIS_DIES() will have TRIGGER_GRAVEYARD_FROM_PLAY translated into this and then forwarded to it after it's left the battlefield.
+	XTRIGGER_LOSE_LIFE = 0x1008600,			 // Shandalar only: Works exactly like TRIGGER_GAIN_LIFE - either a card must have EA_LICH, or it must be manually set in event_flags; and the amount of life lost is stored in life_gained (always a negative number here)
+	XTRIGGER_MAIN_PHASE = 0x1008700,		 // Shandalar only: dispatched at the start of each main phase.  trigger_cause_controller is current turn; trigger_cause is the number of main phase: 0 is precombat main phase, 1 is first postcombat main phase, 2 is second postcombat main phase, etc.  Dispatched only if ENABLE_XTRIGGER_MAIN_PHASE is set.
+	XTRIGGER_COMBAT = 0x1008800,			 // Shandalar only: dispatched at the start of combat, just before EVENT_MUST_ATTACK.  trigger_cause_controller is current turn; trigger_cause is the number of combat: 1 is the first combat each turn, 2 is the second, etc.  Dispatched only if ENABLE_XTRIGGER_COMBAT is set.
+	XTRIGGER_SHUFFLE = 0x1008900,			 // Shandalar only: trigger_cause_controller's deck is shuffled.  Dispatched only if ENABLE_XTRIGGER_SHUFFLE is set.
+	XTRIGGER_TRANSFORM = 0x1008a00,			 // Shandalar only: {trigger_cause_controller, trigger_cause} just transformed
+	XTRIGGER_REPLACE_TOKENS = 0x1008b00,	 // One or more tokens would be put on the battlefield.  trigger_cause_controller is whose control, trigger_cause is the iid of the token, Token::num_added() is the number to be placed on the bf (and can be changed with Token::set_num_added()), and Token::added_as_cost() is valid.  Dispatched only if ENABLE_XTRIGGER_COUNTERS (sic) is set.
+	XTRIGGER_REPLACE_COUNTERS = 16778240,	 // One or more counters would be added to (not removed from) trigger_cause_controller/trigger_cause.  The number of counters is stored in counters_added, type in counters_added_type, and whether they were added as a cost in counters_added_as_cost; the first two can be modified.  Dispatched only if ENABLE_XTRIGGER_COUNTERS is set.
+	XTRIGGER_COUNTERS = 0x1008c00,			 // One or more counters were added to or removed from trigger_cause_controller/trigger_cause.  The number of counters is stored in counters_added and type in counters_added_type.  Set counters_added_need_repeat if a separate trigger is needed for each counter; then counters_added_repeating will be true if it's the second or later.  Dispatched only if ENABLE_XTRIGGER_COUNTERS is set.
 
-	XTRIGGER_COUNTER_ENERGY = 0x01001100,
-	XTRIGGER_1_1_COUNTERS = 0x01001300,
+	XTRIGGER_COUNTER_ENERGY = 16779520,
+	XTRIGGER_1_1_COUNTERS = 16780288,
+
+	/* Additional October 2022 engine selectors. */
+	XTRIGGER_0 = 0,
+	XTRIGGER_REPLACE_MILL_CARDS = 16778496,
+	XTRIGGER_M1_M1_COUNTERS = 16780544,
+	XTRIGGER_REPLACE_ETB = 16780800,
 } xtrigger_t;
 
 /* Triggers, unlike events, are relatively computationally expensive.  Triggers that are rarely handled, particularly ones from things that would get dispatched
@@ -332,19 +368,24 @@ typedef enum
 typedef enum
 {
 	ENABLE_XTRIGGER_REPLACE_MILL = (1 << 0),
-	ENABLE_XTRIGGER_MILLED = (1 << 1),
-	ENABLE_XTRIGGER_REPLACE_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = (1 << 2),
-	ENABLE_XTRIGGER_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = (1 << 3),
-	ENABLE_XTRIGGER_REPLACE_KILL = (1 << 4),
-	ENABLE_TRIGGER_REPLACE_CARD_DRAW = (1 << 5), // sic
-	ENABLE_XTRIGGER_CARD_DRAWN = (1 << 6),
-	ENABLE_TRIGGER_BOUNCE_PERMANENT = (1 << 7), // sic
-	ENABLE_XTRIGGER_MAIN_PHASE = (1 << 8),
-	ENABLE_XTRIGGER_COMBAT = (1 << 9),
-	ENABLE_XTRIGGER_SHUFFLE = (1 << 10),
-	ENABLE_XTRIGGER_COUNTERS = (1 << 11),
-	ENABLE_XTRIGGER_1_1_COUNTERS = (1 << 12),
-	ENABLE_XTRIGGER_COUNTER_ENERGY = (1 << 13),
+	ENABLE_XTRIGGER_MILLED = 8,
+	ENABLE_XTRIGGER_REPLACE_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = 2,
+	ENABLE_XTRIGGER_CARD_TO_GY_FROM_ANYWHERE_BUT_LIBRARY = 16,
+	ENABLE_XTRIGGER_REPLACE_KILL = 0x10000,
+	ENABLE_TRIGGER_REPLACE_CARD_DRAW = (1 << 22), // sic
+	ENABLE_XTRIGGER_CARD_DRAWN = 0x20000,
+	ENABLE_TRIGGER_BOUNCE_PERMANENT = (1 << 23), // sic
+	ENABLE_XTRIGGER_MAIN_PHASE = 0x40000,
+	ENABLE_XTRIGGER_COMBAT = 0x80000,
+	ENABLE_XTRIGGER_SHUFFLE = 0x100000,
+	ENABLE_XTRIGGER_COUNTERS = 4,
+	ENABLE_XTRIGGER_1_1_COUNTERS = 32,
+	ENABLE_XTRIGGER_COUNTER_ENERGY = 0x200000,
+
+	/* Additional October 2022 engine selectors. */
+	ENABLE_XTRIGGER_0 = 0,
+	ENABLE_XTRIGGER_M1_M1_COUNTERS = 64,
+	ENABLE_XTRIGGER_REPLACE_ETB = 128,
 } enable_xtrigger_flags_t;
 
 typedef struct
@@ -387,24 +428,32 @@ typedef enum
 								   * for it. */
 
 	KILL_EXILE = 4,
+
+	/* Additional October 2022 engine selectors. */
+	KILL_0 = 0,
 } kill_t;
 
 /* Modes for new_global_tutor(), reveal_top_cards_of_library_and_choose() */
 typedef enum
 {
-	TUTOR_HAND = 0,
-	TUTOR_DECK = 1,
-	TUTOR_GRAVE = 2,
-	TUTOR_PLAY = 3,		   // Not valid for destination_rest parameter of reveal_top_cards_of_library_and_choose()
-	TUTOR_PLAY_TAPPED = 4, // Not valid for destination_rest parameter of reveal_top_cards_of_library_and_choose()
-	TUTOR_RFG = 5,
-	TUTOR_GET_ID = 6,		  // Not valid for destination_rest parameter of reveal_top_cards_of_library_and_choose()
-	TUTOR_PLAY_ATTACKING = 7, // Not valid for destination_rest parameter of reveal_top_cards_of_library_and_choose()
-	TUTOR_GET_POSITION = 8,	  // Not valid for destination_rest parameter of reveal_top_cards_of_library_and_choose()
-	TUTOR_BOTTOM_OF_DECK = 9,
-	TUTOR_TPLAYER_HAND = 10,
-	TUTOR_BOTTOM_OF_DECK_RANDOM = 11, // Only valid for the destination_rest parameter of reveal_top_cards_of_library_and_choose()
-	TUTOR_HAND_AND_MARK = 12,		  // Add a "STATE_TARGETTED" to each card tutored, to be removed lately. See Dwarven Recruiter.
+	TUTOR_HAND = 1,
+	TUTOR_DECK = 2,
+	TUTOR_GRAVE = 3,
+	TUTOR_PLAY = 4,		   // Not valid for destination_rest parameter of reveal_top_cards_of_library_and_choose()
+	TUTOR_PLAY_TAPPED = 5, // Not valid for destination_rest parameter of reveal_top_cards_of_library_and_choose()
+	TUTOR_RFG = 6,
+	TUTOR_GET_ID = 7,		  // Not valid for destination_rest parameter of reveal_top_cards_of_library_and_choose()
+	TUTOR_PLAY_ATTACKING = 8, // Not valid for destination_rest parameter of reveal_top_cards_of_library_and_choose()
+	TUTOR_GET_POSITION = 9,	  // Not valid for destination_rest parameter of reveal_top_cards_of_library_and_choose()
+	TUTOR_BOTTOM_OF_DECK = 10,
+	TUTOR_TPLAYER_HAND = 11,
+	TUTOR_BOTTOM_OF_DECK_RANDOM = 12, // Only valid for the destination_rest parameter of reveal_top_cards_of_library_and_choose()
+	TUTOR_HAND_AND_MARK = 13,		  // Add a "STATE_TARGETTED" to each card tutored, to be removed lately. See Dwarven Recruiter.
+
+	/* Additional October 2022 engine selectors. */
+	TUTOR_0 = 0,
+	TUTOR_EXILE = 6,
+	TUTOR_OPPOSITION_AGENT = 14,
 } tutor_t;
 
 typedef enum
@@ -414,6 +463,9 @@ typedef enum
 	TUTOR_FROM_RFG = 3,
 	TUTOR_FROM_HAND = 4,
 	TUTOR_FROM_GRAVE_NOTARGET = 5, // just like TUTOR_FROM_GRAVE, but not affected by graveyard_has_shroud
+
+	/* Additional October 2022 engine selectors. */
+	TUTOR_FROM_DECK_AUTO = 6,
 } tutor_from_t;
 
 /* Card States */
@@ -452,10 +504,15 @@ typedef enum
 	STATE_DONT_RECOPY_ONTO_STACK = 0x20000000, // If set during EVENT_ACTIVATE, then don't copy the card back into its (already-existing) activation card on the stack.  Caller's responsibility to either update all relevant values there (per recopy_card_onto_stack), or simply not handle EVENT_RESOLVE_ACTIVATION.  Bit is removed when recopying is skipped.  Works only for activation, not casting.
 
 	STATE_DRAWN_THIS_TURN = 1,
-	// Underlying lack of continuous control. Rebuild BOTH before applying haste permissions.
-	// Set on entry/control change; cleared only at the start of the controller's turn.
-	STATE_SUMMONSICK = 0x40000000,
 	STATE_UNUSED80000 = 524288,
+
+	/* Additional October 2022 engine selectors. */
+	STATE_0 = 0,
+	STATE_SUMMON_SICK_BACKUP = 65536,
+	STATE_SICKNESS_UNUSED = 65536,
+	STATE_SUMMON_SICK = 131072,
+	STATE_STIFLED = 1073741824,
+	STATE_BEING_CAST = 2147483648,
 } state_t;
 
 // "status" for "token_status" in "card_instance"
@@ -488,6 +545,11 @@ typedef enum
 	STATUS_SPECIAL_BLOCKER = 0x8000000,
 	STATUS_TRANSFORMED = 0x10000000, // A transformed double-faced card, melded meldable card, or flipped flippable card.
 	STATUS_CANNOT_LEAVE_PLAY = 0x40000000 // Manalink: this card can't be exiled or destroyed; incompletely and poorly-implemented, and unused.  Shandalar: on an effect card, detaches if the object it's attached to leaves play instead of being destroyed.
+,
+	/* Additional October 2022 engine selectors. */
+	STATUS_0 = 0,
+	STATUS_CANNOT_BE_COUNTERED = 512,
+	STATUS_TRIGGER_CARD = 2147483648,
 } status_t;
 
 /* Card Types  */
@@ -512,7 +574,7 @@ typedef enum
 	TARGET_TYPE_DAMAGE_LEGACY = 1 << 13,	   // Checked for but unused by exe
 	TARGET_TYPE_HACK_SLEIGHT_LEGACY = 1 << 14, // Checked for but unused by exe
 	TARGET_TYPE_DRAW_CARD_LEGACY = 1 << 15,	   // Checked for but unused by exe
-	TARGET_TYPE_PLANESWALKER = 1 << 16,		   // Works for targetting, is_what(), and the make_test() family, but not much else.  All will also accept planeswalkers if all of land/creature/enchantment/artifact are set.
+	TARGET_TYPE_PLANESWALKER = 256,		   // Works for targetting, is_what(), and the make_test() family, but not much else.  All will also accept planeswalkers if all of land/creature/enchantment/artifact are set.
 	TARGET_TYPE_NONCREATURE_CAN_BLOCK = 1 << 25,
 	TARGET_TYPE_PERMANENT = TYPE_LAND | TYPE_CREATURE | TYPE_ENCHANTMENT | TYPE_ARTIFACT | TARGET_TYPE_TOKEN,
 
@@ -571,6 +633,11 @@ typedef enum
 	KEYWORD_NONABILITIES = KEYWORD_RECALC_ALL | (1 << 31),
 
 	KEYWORD_SHROUD = 131072,
+
+	/* Additional October 2022 engine selectors. */
+	KEYWORD_0 = 0,
+	KEYWORD_CHANGELING = 524288,
+	KEYWORD_REAL_KEYWORDS = 1626865663,
 } keyword_t;
 
 /* Special abilities */
@@ -608,6 +675,16 @@ typedef enum
 									 //  SP_KEYWORD_PERSIST					= 1<<29,	// unused
 	SP_KEYWORD_HORSEMANSHIP = 1 << 30,
 	SP_KEYWORD_DOES_NOT_END_AT_EOT = 1 << 31,
+
+	/* Additional October 2022 engine selectors. */
+	SP_KEYWORD_0 = 0,
+	SP_KEYWORD_SQUIRRELLINK = 536870912,
+	SP_KEYWORD_RAMPAGE = 64,
+	SP_KEYWORD_TRAMPLE_OVER_PWS = 262144,
+	SP_KEYWORD_MINBLOCKERS_3 = 524288,
+	SP_KEYWORD_MAXBLOCKERS_1 = 2097152,
+	SP_KEYWORD_REAL_KEYWORDS = 1652812559,
+	SP_KEYWORD_NOT_SIMPLE_BITS = 357809216,
 } sp_keyword_t;
 
 /* Turn phases */
@@ -776,7 +853,7 @@ typedef enum
 	COUNTER_SCROLL = 95,
 
 	COUNTER_SHELL = 96,
-	COUNTER_SHIELD = 97,
+	COUNTER_SHIELD = 185,
 	COUNTER_SHOE = 98,
 	COUNTER_SHRED = 99,
 	COUNTER_SLEEP = 100,
@@ -828,7 +905,55 @@ typedef enum
 	COUNTER_HIT = 138,
 	COUNTER_EGG = 139,
 	COUNTER_SILVER = 140,
-	COUNTER_end = COUNTER_SILVER + 1,
+	COUNTER_end = 187,
+
+	/* Additional October 2022 engine selectors. */
+	COUNTER_PALLIATION = 97,
+	COUNTER_KNOWLEDGE = 141,
+	COUNTER_COIN = 142,
+	COUNTER_TASK = 143,
+	COUNTER_DEATHTOUCH = 144,
+	COUNTER_DOUBLE_STRIKE = 145,
+	COUNTER_FIRST_STRIKE = 146,
+	COUNTER_FLYING = 147,
+	COUNTER_HEXPROOF = 148,
+	COUNTER_INDESTRUCTIBLE = 149,
+	COUNTER_LIFELINK = 150,
+	COUNTER_MENACE = 151,
+	COUNTER_REACH = 152,
+	COUNTER_TRAMPLE = 153,
+	COUNTER_VIGILANCE = 154,
+	COUNTER_MANABOND = 155,
+	COUNTER_FETCH = 156,
+	COUNTER_FORESHADOW = 157,
+	COUNTER_INCARNATION = 158,
+	COUNTER_SOUL = 159,
+	COUNTER_ACORN = 160,
+	COUNTER_BOOK = 161,
+	COUNTER_COMPONENT = 162,
+	COUNTER_CORRUPTION = 163,
+	COUNTER_ENLIGHTENED = 164,
+	COUNTER_GHOSTFORM = 165,
+	COUNTER_HARMONY = 166,
+	COUNTER_HONE = 167,
+	COUNTER_NIGHT = 168,
+	COUNTER_POINT = 169,
+	COUNTER_VOID = 170,
+	COUNTER_VOW = 171,
+	COUNTER_VOYAGE = 172,
+	COUNTER_AEGIS = 173,
+	COUNTER_EMBER = 174,
+	COUNTER_RITUAL = 175,
+	COUNTER_VALOR = 176,
+	COUNTER_BLOODLINE = 177,
+	COUNTER_CROAK = 178,
+	COUNTER_INVITATION = 179,
+	COUNTER_JUDGMENT = 180,
+	COUNTER_SUSPECT = 181,
+	COUNTER_HATCHING = 182,
+	COUNTER_COLLECTION = 183,
+	COUNTER_CONTESTED = 184,
+	COUNTER_STASH = 186,
 } counter_t;
 
 /* Shared ID wrappers for C++ consumers; C keeps the integer representation. */
@@ -856,6 +981,7 @@ struct csvid_t
 	explicit csvid_t(uint16_t value) : raw(value == 0xffff ? -1 : (int)value) {}
 	bool ok(void) const { return raw >= 0; }
 	int raw;
+	iid_t iid() const;
 };
 inline bool operator==(iid_t lhs, iid_t rhs) { return lhs.raw == rhs.raw; }
 inline bool operator!=(iid_t lhs, iid_t rhs) { return lhs.raw != rhs.raw; }
@@ -865,6 +991,10 @@ inline bool operator!=(csvid_t lhs, csvid_t rhs) { return lhs.raw != rhs.raw; }
 typedef int csvid_t;
 typedef int iid_t;
 #endif
+
+typedef int (*CardFunction)(int, int, event_t);
+typedef int (*CardPairFunction)(int, int);
+typedef struct card_ext_t card_ext_t;
 
 /* Info struct */
 typedef struct card_instance_struct
@@ -899,18 +1029,18 @@ typedef struct card_instance_struct
 	int16_t unused0x26; /*  0x26 */			 // Exe version of rampage() uses this as temporary storage. (!)  That's no longer called, and the data's otherwise entirely untouched.  Shandalar: untouched
 	uint32_t regen_status; /*  0x28 */		 // Keywords.
 
-	int8_t mana_to_untap[8]; /*  0x2C */ // No longer used in Manalink, but still read by the exe in one place and still written in one place.  To reclaim, make check_untap_payment() just return 0, and rewrite setup_upkeep_costs_and_set_untap_cost() to not touch it.
+	union { int8_t mana_to_untap[8]; struct { card_ext_t *ext; uint32_t unused30; }; }; /*  0x2C */ // No longer used in Manalink, but still read by the exe in one place and still written in one place.  To reclaim, make check_untap_payment() just return 0, and rewrite setup_upkeep_costs_and_set_untap_cost() to not touch it.
 
 	int16_t power;								   /*  0x34 */
 	int8_t number_of_targets;					   /*  0x36 */
-	int8_t unknown0x37; /*  0x37 */				   // Used only on damage cards, apparently for temporary storage
-	int32_t info_slot;							   /*  0x38 */
+	union { int8_t unknown0x37; uint8_t mode; }; /*  0x37 */				   // Used only on damage cards, apparently for temporary storage
+	union { int32_t info_slot; CardFunction info_slot_fn; };							   /*  0x38 */
 	int32_t original_internal_card_id; /*  0x3C */ // Mok : CD_CardIDinCT_Parent
 	int8_t color_id[6]; /*  0x40 */				   // cless -> black -> blue -> green -> red -> white - Sleight of Mind data
 	uint16_t backup_internal_card_id; /*  0x46 */  // internal_card_id is stored here at the end of EVENT_CHANGE_TYPE.  A crutch to deal with the poor design decision of setting internal_card_id == -1 to indicate a card's left play.
 	int32_t damage_source_card; /*  0x48 */		   /* damage source card */
 
-	uint32_t eot_toughness; /*  0x4C */ // Bytes 0 and 1 manipulate text-modifiers on csvid=903 effect cards; otherwise reserved for individual card use.
+	union { uint32_t eot_toughness; struct { uint8_t eot_toughness0, eot_toughness1, eot_toughness2, eot_toughness3; }; }; /*  0x4C */ // Bytes 0 and 1 manipulate text-modifiers on csvid=903 effect cards; otherwise reserved for individual card use.
 
 	int8_t damage_target_player; /*  0x50 */ // Player of card this aura or effect card is attached to.
 
@@ -966,6 +1096,8 @@ typedef struct card_instance_struct
 	 *
 	 * Note: this relies on MSVC's anonymous struct/union extension (works with our toolchain).
 	 */
+	union {
+		struct {
 	union
 	{
 		struct
@@ -981,6 +1113,9 @@ typedef struct card_instance_struct
 		int8_t upkeep_cost[7];
 	};
 	uint8_t counters_m1m1; /* 0x12B */ // Shandalar: untouched
+		};
+		uint32_t unused0x124; /* Native token special-keyword mirror. */
+	};
 } PACKED card_instance_t;
 STATIC_ASSERT(sizeof(card_instance_t) == 300, card_instance_t_wrong_size);
 
@@ -1025,6 +1160,10 @@ typedef enum
 	EA_PLAY_COST = 0x40000000,	 // If set, this specific card receives EVENT_MODIFY_COST_GLOBAL events to change other spells' casting costs.
 
 	EA_ABILITY_COST = 0x80000000,
+
+	/* Additional October 2022 engine selectors. */
+	EA_0 = 0,
+	EA_ATTACK_LEGALITY_ALL = 128,
 } extra_abilities_t;
 
 typedef int(__cdecl *card_function_pointer)(int player, int card, event_t event);
@@ -1033,8 +1172,7 @@ typedef int(__cdecl *card_function_pointer)(int player, int card, event_t event)
 typedef struct
 {
 	uint8_t secret;								/* 0x00 */
-	char name[18];								/* 0x01 */
-	uint8_t reserved1[17];						/* 0x13 */
+	char name[35]; /* 0x01: October 2022 engine name, before the ID at 0x24 */
 	card_id_t id;								/* 0x24 */
 	uint8_t type; /* 0x28 */					// ct_all.csv:Type:Effect..Type::Land
 	int8_t subtype; /* 0x29 */					// ct_all.csv:Family
@@ -1153,6 +1291,13 @@ typedef enum
 	CPF_IS_MELD = 0x4, // If also CPF_IS_TRANSFORMED_DFC, then it's the melded form, otherwise it's meldable.
 
 	CPF_IS_FLIP = 8,
+
+	/* Additional October 2022 engine selectors. */
+	CPF_EVER_BANNED_OR_RESTRICTED = 1,
+	CPF_BANNED_VINTAGE = 2,
+	CPF_RESTRICTED_VINTAGE = 4,
+	CPF_BANNED_LEGACY = 8,
+	CPF_BANNED_COMMANDER = 16,
 } CardPtrFlags;
 STATIC_ASSERT(sizeof(CardPtrFlags) == 4, CardPtrFlags_wrong_size);
 
@@ -1280,6 +1425,8 @@ typedef struct
 	unsigned char can_legally_play;
 	unsigned char owner;
 	int storage; // If > -1, when used in "new_global_tutor", will store the result of the tutor on (player, card) targeting part, beginning with "get_card_instance(player, storage)->targets[0].card". Will store internal_card_id or csv_id depening on the type of tutor
+	unsigned int sp_keyword;
+	unsigned short sp_keyword_flag;
 } test_definition_t;
 
 typedef enum
@@ -1317,6 +1464,9 @@ typedef enum
 #define ACT_ADD_COUNTERS(counter_type, num) (ACT_ADD_COUNTERS_BASE | (((counter_type) & 0xFF) << 16) | ((num) & 0xFFFF))
 	ACT_REMOVE_COUNTERS_BASE = 0x02000000,
 #define ACT_REMOVE_COUNTERS(counter_type, num) (ACT_REMOVE_COUNTERS_BASE | (((counter_type) & 0xFF) << 16) | ((num) & 0xFFFF))
+
+	/* Additional October 2022 engine selectors. */
+	ACT_KILL_EXILE = 4,
 } actions_t;
 
 // Flags shared by Manipulate All, Global Tutor, New Global Tutor, Damage All, New Damage all
@@ -1433,6 +1583,10 @@ typedef enum
 	DDBM_TRACE_DAMAGING_SOURCES = (1 << 11), // "card" must be "-1". Uses "info_slot" and from "targets[0].card" to "targets[9].card" to storage. Tracks only permanents.
 
 	DDBM_MUST_DAMAGE_TRIGGERING_PLAYER = 4096,
+
+	/* Additional October 2022 engine selectors. */
+	DDBM_0 = 0,
+	DDBM_MAY_DAMAGE_PLANESWALKER = 64,
 } ddbm_flags_t;
 
 /* Trap conditions  */
@@ -1482,7 +1636,7 @@ typedef enum
 	TRAP_STORM_GREEN = 0x405,
 	TRAP_STORM_RED = 0x406,
 	TRAP_STORM_WHITE = 0x407,
-	TRAP_COT_FLAG = 0x408,
+	TRAP_COT_FLAG = 1035,
 	TRAP_PLANESWALKERS_PLAYED = 0x409,
 #define TRAP_MAX_NYBBLES_PER_TURN 0x40F
 #if ((TRAP_MAX_NYBBLES_PER_TURN - TRAP_MIN_NYBBLES_PER_TURN + 1) % 2) != 0
@@ -1528,6 +1682,14 @@ typedef enum
 
 	TRAP_P1_P1_COUNTER_PLACED = 1543,
 	TRAP_REVOLT = 1548,
+
+	/* Additional October 2022 engine selectors. */
+	TRAP_TOKENS_CREATED = 518,
+	TRAP_SPELL_COUNT = 769,
+	TRAP_NONCREATURES_PLAYED = 1032,
+	TRAP_PROWL_PIRATE = 1034,
+	TRAP_ATTACKED_ROGUE = 1549,
+	TRAP_TURN_IS_EXTRA = 1797,
 } traps_t;
 
 /* flags for "generic_activated_ability" mode  */
@@ -1575,6 +1737,10 @@ typedef enum
 
 	GAA_EQUIPMENT = 256,
 	GAA_DO_NOT_RECALCULATE_ACTIVATION_COST = 2048,
+
+	/* Additional October 2022 engine selectors. */
+	GAA_DURING_COMBAT = 4096,
+	GAA_MANA_ABILITY = 2097152,
 } generic_activated_ability_flags_t;
 
 /* flags for "generic_spell" */
@@ -1593,9 +1759,12 @@ typedef enum
 	GS_SAC_CREATURE_AS_COST = 1 << 10,
 	GS_GRAVE_RECYCLER_OPP_GRAVE = 1 << 11,
 	GS_GRAVE_RECYCLER_BOTH_GRAVES = 1 << 12,
-	GS_ONE_OR_MULTIPLE_TARGETS = 1 << 13, // For cards like "Fire // Ice"
+	GS_ONE_OR_MULTIPLE_TARGETS = 16384, // For cards like "Fire // Ice"
 
-	GS_SAC_PERMANENT_AS_COST = 16384,
+	GS_SAC_PERMANENT_AS_COST = 32768,
+
+	/* Additional October 2022 engine selectors. */
+	GS_GRAVE_RECYCLER_FROM_GRAVEYARDS = 8192,
 } generic_spell_flags_t;
 
 /* Special flags  - Generic flags */
@@ -1633,6 +1802,9 @@ typedef enum
 	SF_TARGETS_ALREADY_SET = 1 << 29,
 	SF_DONT_COPY_TOKEN_SOURCE = 1 << 30, // If this token is copied, don't set the copy's source
 	SF_PLAYED_FROM_EXILE = 1 << 31,		 // Misplaced; only permanents should have these flags, since they overlap the targets array
+
+	/* Additional October 2022 engine selectors. */
+	SF_0 = 0,
 } special_flags_t;
 
 /* Special flags  2*/
@@ -1671,6 +1843,11 @@ typedef enum
 	SF2_COPIED_FROM_STACK = 1 << 31,
 
 	SF2_MIRACLE = 1048576,
+
+	/* Additional October 2022 engine selectors. */
+	SF2_THOUSAND_YEAR_ELIXIR = 4096,
+	SF2_0 = 0,
+	SF2_REDIRECT = 1073741824,
 } special_flags2_t;
 
 /* Special flags  3*/
@@ -1707,6 +1884,15 @@ typedef enum
 	SF3_ENCHANTMENT_ALTERATION_P1 = 65536,
 	SF3_EMULATING_LANDS_PLAYED = 131072,
 	SF3_EMBALMED_OR_ETERNALIZED = 262144,
+
+	/* Additional October 2022 engine selectors. */
+	SF3_0 = 0,
+	SF3_ESCAPE = 524288,
+	SF3_SWITCH_POW_TGH = 1048576,
+	SF3_IMPROVISE_PAID = 2097152,
+	SF3_IN_PLAY_VIA_KODAMA_EAST_TREE = 4194304,
+	SF3_CANNOT_PHASE_IN = 8388608,
+	SF3_LEGEND_RULE_DISABLED = 16777216,
 } special_flags3_t;
 
 // Parameters for token_generation_t::action
@@ -1716,15 +1902,22 @@ typedef enum
 	TOKEN_ACTION_ATTACKING_UNTAPPED = 1 << 1,										// Token is put into play attacking but not tapped
 	TOKEN_ACTION_ATTACKING = TOKEN_ACTION_TAPPED | TOKEN_ACTION_ATTACKING_UNTAPPED, // Token is put into play tapped and attacking
 	TOKEN_ACTION_EQUIP = 1 << 2,													// Equip source player/card to the (first) generated token.
-	TOKEN_ACTION_HASTE = 1 << 3,													// Token gets haste until end of turn.  s_key_plus can set it permanently, but only on token-only cards.
-	TOKEN_ACTION_DONT_COPY_TOKEN_SOURCE = 1 << 4,									// If this token is copied, don't set the copy's source
-	TOKEN_ACTION_CONVERT_INTO_ARTIFACT = 1 << 5,									// Used by Feldon of the Third Way
+	TOKEN_ACTION_HASTE = 16,													// Token gets haste until end of turn.  s_key_plus can set it permanently, but only on token-only cards.
+	TOKEN_ACTION_DONT_COPY_TOKEN_SOURCE = 32,									// If this token is copied, don't set the copy's source
+	TOKEN_ACTION_CONVERT_INTO_ARTIFACT = 64,									// Used by Feldon of the Third Way
 
 	// The following all use action_argument, so are incompatible with each other (except for TOKEN_ACTION_PUMP_POWER, which can combine with TOKEN_ACTION_PUMP_TOUGHNESS)
 	TOKEN_ACTION_BLOCKING = 1 << 16,	   // Token is put into play blocking action_argument.
 	TOKEN_ACTION_PUMP_POWER = 1 << 17,	   // Token gets +X/+0 until end of turn.  X is action_argument.  (Not actually used by anything.)
 	TOKEN_ACTION_PUMP_TOUGHNESS = 1 << 18, // Token gets +0/+X until end of turn.  X is action_argument.  (Not actually used by anything.)
 	TOKEN_ACTION_ADD_SUBTYPE = 1 << 19,	   // Add subtype in action_argument to token.
+
+	/* Additional October 2022 engine selectors. */
+	TOKEN_ACTION_ADD_COUNTERS = 1048576,
+	TOKEN_ACTION_EQUIP_ANY = 8,
+	TOKEN_ACTION_RECORD_SOURCE_ID = 128,
+	TOKEN_ACTION_ISNT_LEGENDARY = 256,
+	TOKEN_ACTION_SKIP_ATTACK_CHECK = 2097152,
 } token_action_t;
 
 /* Parameters for "generate_token" and such */
@@ -1752,6 +1945,7 @@ typedef struct struct_token_generation_t // struct name only for forward declara
 	int (*special_code_for_legacy)(int, int, event_t);								  // Usable with nontokens
 	void (*special_code_on_generation)(struct struct_token_generation_t *, int, int); // If set, this is called for each token before it's put in play.  It gets passed the token_generation_t structure, the idx of the card_added, and which number token this is (starting from 0).
 	int special_flags2;
+	int special_flags3;
 } token_generation_t;
 
 /* Flags for "check_battlefield_for_special_card */
@@ -1806,6 +2000,10 @@ typedef enum
 	REF_CONSPIRE = 1 << 19,
 	REF_RECOVER = 1 << 20,
 	REF_BEGINNING_OF_COMBAT_EFFECTS = 1 << 22,
+
+	/* Additional October 2022 engine selectors. */
+	REF_GAIN_LIFE_TRIGGER = 256,
+	REF_EOT_ABILITY_IN_GRAVE = 2097152,
 } re_flags_t;
 
 /* Flags for ec_definition_t::effect */
@@ -1846,12 +2044,16 @@ typedef enum
 
 typedef enum
 {
-	STORM_CREATURE = (1 << 0),
+	STORM_CREATURE = 64,
 	STORM_BLACK = COLOR_TEST_BLACK,
 	STORM_BLUE = COLOR_TEST_BLUE,
 	STORM_GREEN = COLOR_TEST_GREEN,
 	STORM_RED = COLOR_TEST_RED,
 	STORM_WHITE = COLOR_TEST_WHITE,
+
+	/* Additional October 2022 engine selectors. */
+	STORM_ENCHANTMENT = 128,
+	STORM_INSTANT_SORCERY = 256,
 } storm_mode_t;
 
 typedef enum
@@ -1871,6 +2073,10 @@ typedef enum
 		GA_RETURN_TO_PLAY_MODIFIED | GA_RETURN_TO_PLAY_WITH_EFFECT | GA_PUT_ON_TOP_OF_DECK | GA_EMBALM,
 	GA_INTERRUPT_ABILITY = 1 << 10,
 
+
+	/* Additional October 2022 engine selectors. */
+	GA_ETERNALIZE = 4096,
+	GA_ESCAPE = 8192,
 } graveyard_ability_type_t;
 
 typedef enum
@@ -1932,6 +2138,9 @@ typedef enum
 	LCBP_DURING_EVENT_CHANGE_TYPE_SECOND_PASS = 0x20000, // this is set during EVENT_CHANGE_TYPE's second dispatch
 	LCBP_CHARGING_MANA = 0x40000,						 // set while charging mana (but turned back off while dispatching EVENT_RESOLVE_ACTIVATION, EVENT_TAP_CARD, and other triggers activated while charging mana)
 														 // All other values unused.
+
+	/* Additional October 2022 engine selectors. */
+	LCBP_ACTIVATING_FROM_HAND = 4194304,
 } land_can_be_played_t;
 
 typedef struct
@@ -1950,8 +2159,8 @@ typedef enum
 {
 	PB_OPPONENT_CHECKS_ATTACK_LEGALITY = 1 << 0, // Always dispatch EVENT_ATTACK_LEGALITY for the other player's creatures, even if no card with EA_DECLARE_ATTACK is on the battlefield.
 	PB_SHANDALAR_LIBRARY_OF_LENG = 1 << 1,		 // Suppresses discard phase; shoehorns Library of Leng's replacement effect into discard().  Set and works only in Shandalar.
-	PB_COUNT_TOTAL_PLAYABLE_LANDS = 1 << 2,		 // Set to recount number of playable lands in count_colors_of_lands_in_play().
-	PB_SEND_EVENT_UNTAP_CARD_TO_ALL = 1 << 3,	 // Set to make EVENT_UNTAP_CARD for this player's permanents be sent to all cards, not just the card being untapped.  Cleared just before EVENT_BEGIN_TURN each turn.  It's easiest and safest to set the bit continuously; that's reasonably cheap (much more so than getting a card instance or constructing a test_definition_t or target_definition_t), and robust in the face of changing card types, animation, and control.
+	PB_COUNT_TOTAL_PLAYABLE_LANDS = 8,		 // Set to recount number of playable lands in count_colors_of_lands_in_play().
+	PB_SEND_EVENT_UNTAP_CARD_TO_ALL = 4,	 // Set to make EVENT_UNTAP_CARD for this player's permanents be sent to all cards, not just the card being untapped.  Cleared just before EVENT_BEGIN_TURN each turn.  It's easiest and safest to set the bit continuously; that's reasonably cheap (much more so than getting a card instance or constructing a test_definition_t or target_definition_t), and robust in the face of changing card types, animation, and control.
 	PB_CANT_HAVE_OR_GAIN_FIRST_STRIKE = 1 << 4,	 // Archetype of Courage's ability - Creatures this player controls can't have or gain first strike.
 	PB_CANT_HAVE_OR_GAIN_FLYING = 1 << 5,		 // Archetype of Imagination
 	PB_CANT_HAVE_OR_GAIN_DEATHTOUCH = 1 << 6,	 // Archetype of Finality
@@ -1977,6 +2186,15 @@ typedef enum
 	PB_ACTIVATE_ABILITIES_OF_ARTIFACTS_DISABLED = 0x800000,
 	PB_NONMANA_ACTIVATE_ABILITIES_OF_CREATURES_DISABLED = 0x1000000,
 	PB_NONMANA_ACTIVATE_ABILITIES_OF_ARTIFACTS_DISABLED = 0x2000000,
+
+	/* Additional October 2022 engine selectors. */
+	PB_CAST_APPROACH_OF_THE_SECOND_SUN1 = 4194304,
+	PB_CAST_APPROACH_OF_THE_SECOND_SUN2 = 8388608,
+	PB_HAND_ABILITIES_DISABLED = 16777216,
+	PB_GY_ABILITIES_DISABLED = 33554432,
+	PB_PROTECTION = 67108864,
+	PB_LEGEND_RULE_DISABLED = 134217728,
+	PB_RESET_ON_RECALC_MASK = 255852528,
 } player_bits_t;
 
 typedef enum
@@ -2046,7 +2264,10 @@ typedef enum
 	SETTING_ABILITY_ICON_SIZE,
 	SETTING_ABILITY_ICON_FILE,
 
-	SETTING_MAX_PLUS_1
+	SETTING_MAX_PLUS_1 = 31,
+	/* Additional October 2022 engine selectors. */
+	SETTING_OLD_PW_RULES = 29,
+	SETTING_OPPONENT_SKILL = 30,
 } settings_t;
 
 // Constants for play_sound_effect().  Named identically to their filenames in DuelSounds/, except for the duplicate values at the end
@@ -2175,7 +2396,14 @@ typedef enum
 	WAV_TRANSFORM_XLN = 66,
 	WAV_TURN_FACE_DOWN = 68,
 	WAV_TURN_FACE_UP = 67,
-	WAV_HIGHEST = WAV_ASCEND,
+	WAV_HIGHEST = 88,
+
+	/* Additional October 2022 engine selectors. */
+	WAV_SNOW = 84,
+	WAV_POISON = 85,
+	WAV_ENERGY_PLUS = 86,
+	WAV_ENERGY_MINUS = 87,
+	WAV_DICE = 88,
 } wav_t;
 
 typedef enum
@@ -2264,7 +2492,12 @@ typedef enum
 	ICON_HEXPROOF_GREEN = 72,
 	ICON_HEXPROOF_RED = 73,
 	ICON_HEXPROOF_WHITE = 74,
-	ICON_MAX = ICON_HEXPROOF_WHITE,
+	ICON_MAX = 76,
+
+	/* Additional October 2022 engine selectors. */
+	ICON_HEXPROOF_MISC = 69,
+	ICON_WARD = 75,
+	ICON_DECAYED = 76,
 } ability_icon_t;
 
 typedef enum
@@ -2299,6 +2532,7 @@ typedef struct
 	int32_t allow_cancel; // 0: no cancel.  1: cancel button.  2: done button.  3: both done and cancel buttons.  If done is chosen, select_target returns 0 and sets target.card to -2.
 	int32_t player;
 	int32_t card;
+	int32_t flags;
 } target_definition_t;
 
 typedef enum
@@ -2313,6 +2547,9 @@ typedef enum
 	TARGET_ZONE_GRAVEYARD = 0x01000000,
 	TARGET_ZONE_ARRAY = 0x02000000, // Target within an arbitrary array.  Set via Target::zone_array(), not directly with Target::zone(TARGET_ZONE_ARRAY).
 	TARGET_ZONE_EXILE = 0x04000000,
+
+	/* Additional October 2022 engine selectors. */
+	TARGET_ZONE_0 = 0,
 } target_zone_t;
 
 typedef enum
@@ -2334,6 +2571,9 @@ typedef enum
 	TARGET_STATE_DESTROYED = (1 << 14),			 // Not checked for illegal_state
 	TARGET_STATE_DYING = TARGET_STATE_DESTROYED,
 	TARGET_STATE_SUMMONSICK_NOTAP = (1 << 15), // Cannot pay tap/untap costs due to sickness
+
+	/* Additional October 2022 engine selectors. */
+	TARGET_STATE_0 = 0,
 } target_state_t;
 
 typedef enum
@@ -2379,12 +2619,21 @@ typedef enum
 
 	TARGET_SPECIAL_CMC_EQUAL = 2097152,
 	TARGET_SPECIAL_OPPONENT = 33554432,
+
+	/* Additional October 2022 engine selectors. */
+	TARGET_SPECIAL_0 = 0,
+	TARGET_SPECIAL_NOT_OPPONENT = 67108864,
+	TARGET_SPECIAL_NOT_SPELL_ON_STACK = 134217728,
 } target_special_t;
 
 typedef enum
 {
 	DISC_RANDOM = 1 << 0,
 	DISC_CAUSED = 1 << 1,
+
+	/* Additional October 2022 engine selectors. */
+	DISC_OPTIONAL = 4,
+	DISC_JUST_MARK = 8,
 } discard_flags_t;
 
 typedef struct
@@ -2426,10 +2675,17 @@ typedef enum
 	PAUE_REMOVE_TARGET_AT_EOT = 1 << 14, // Uses "eot_removal_method"
 	PAUE_END_AT_THE_BEGINNING_OF_YOUR_NEXT_TURN = 1 << 15,
 	PAUE_UNTAP = 1 << 16,
-	PAUE_END_IF_TARGET_CHANGES_CONTROL = 1 << 19,
+	PAUE_END_IF_TARGET_CHANGES_CONTROL = 1 << 21, // Host duration; native bits through 20 are occupied.
 
 	PAUE_RESET_FORCED_SUBTYPES_AT_EOT = 131072,
 	PAUE_RESET_ADDED_SUBTYPES_AT_EOT = 262144,
+
+	/* Additional October 2022 engine selectors. */
+	PAUE_KILL_TARGET_IF_SOURCE_LEAVES_BATTLEFIELD = 8,
+	PAUE_FORCE_COLOR = 131072,
+	PAUE_FORCE_SUBTYPE = 262144,
+	PAUE_ADD_SUBTYPE = 524288,
+	PAUE_FORCE_PT = 1048576,
 } paue_3player_t;
 
 typedef struct pump_ability_until_eot_arguments_t
@@ -2443,6 +2699,9 @@ typedef struct pump_ability_until_eot_arguments_t
 	int paue_flags;
 	int can_block_additional_creatures;
 	int eot_removal_method;
+	subtype_t subtype;
+	color_test_t color;
+	int disabling_mode;
 } pump_ability_t;
 
 typedef enum
@@ -2470,6 +2729,10 @@ typedef enum
 	// These two valid only for seek_grave_for_id_to_reanimate.  Can't be combined with any of the modes above.
 	REANIMATEXTRA_RETURN_TO_HAND2 = -1, // Doesn't have the problems REANIMATE_RETURN_TO_HAND does, though only valid in seek_grave_for_id_to_reanimate
 	REANIMATEXTRA_LEAVE_IN_GRAVEYARD = -2,
+
+	/* Additional October 2022 engine selectors. */
+	REANIMATE_ATTACH_AURA_TO_REANIMATOR = 65536,
+	REANIMATEXTRA_EXILE_FROM_GRAVEYARD = -3,
 } reanimate_mode_t;
 
 typedef enum
@@ -2482,6 +2745,10 @@ typedef enum
 	SHAPESHIFT_IMPL_COPYING_TOKEN = 0x00400000, // Turned into a token with characteristic-setting effects.
 	SHAPESHIFT_IMPL_COUNTER_FLAG = 0x00800000,	// Effect ends if permanent doesn't have an appropriate counter on it.  Shouldn't be set directly; use the SHAPESHIFT_COUNTER() macro.
 	SHAPESHIFT_IMPL_COUNTER_MASK = 0xFF000000,	// Storage for counter_type
+
+	/* Additional October 2022 engine selectors. */
+	SHAPESHIFT_ADD_ARTIFACT = 4,
+	SHAPESHIFT_RESET_DLR_AT_EOE = 8,
 } shapeshift_t;
 
 typedef enum
@@ -2494,11 +2761,14 @@ typedef enum
 
 typedef enum
 {
-	IPF_TARGET = 1,
+	IPF_TARGET = 5,
 	IPF_ATTACH_AURA,
 	IPF_ATTACH_EQUIPMENT, // or fortification
 	IPF_DAMAGE,
 	IPF_BLOCK,
+
+	/* Additional October 2022 engine selectors. */
+	IPF_QUERY = 6,
 } is_protected_from_mode_t;
 
 typedef enum
@@ -2589,6 +2859,14 @@ typedef enum
 
 	DAT_STORE_IN_TARGETS_3 = (1 << 10), // Store internal data in targets[3].player instead of targets[1].player, since there aren't really any slots guaranteed free even amongst just the cards that call this.
 	DAT_STORE_IN_INFO_SLOT = (1 << 11), // Store internal data in info_slot instead of targets[1].player, since there aren't really any slots guaranteed free even amongst just the cards that call this.
+
+	/* Additional October 2022 engine selectors. */
+	DAT_RESOLVE_TRIGGER_OPTIONAL = 1,
+	DAT_RESOLVE_TRIGGER_MANDATORY = 2,
+	DAT_RESOLVE_TRIGGER_DUH = 3,
+	DAT_DONT_REPORT_VALUE = 8192,
+	DAT_BATTALION = 16384,
+	DAT_ATTACKS_WITH_2_OR_MORE = 32768,
 } declare_attackers_trigger_t;
 
 typedef enum
@@ -2600,7 +2878,10 @@ typedef enum
 	SAC_AS_COST = 1 << 4,		// Disallow sacrifice of creatures if there's an Angel of Jubilation in play.
 	SAC_CAUSED = 1 << 5,		// Disallow all sacrifices if player != t_player and t_player controls Tajuru Preserver or Sigarda, Host of Herons.
 	SAC_RETURN_CHOICE = 1 << 6, // Returns the sacrificed {player,card} in {BYTE2,BYTE3} of the return value.  If sacrificing more than one, then only returns the last.
-	SAC_SET_TARGETS = 1 << 7,	// Sets a bunch of values in {player,card}'s targets[0] - targets[4], for backwards compatibility with the old sacrifice() interface.  Avoid.
+	SAC_SET_TARGETS = 256,	// Sets a bunch of values in {player,card}'s targets[0] - targets[4], for backwards compatibility with the old sacrifice() interface.  Avoid.
+
+	/* Additional October 2022 engine selectors. */
+	SAC_OPTIONAL = 128,
 } sacrifice_t;
 
 typedef enum
@@ -2610,6 +2891,10 @@ typedef enum
 	SARV_REPORT_COLORS = 1 << 2,		  // Use only one of these or you'll get messed result
 	SARV_REPORT_CMC = 1 << 4,			  // Use only one of these or you'll get messed result
 	SARV_EXTRA_IMPOSE_SACRIFICE = 1 << 31 // Can be mixed with the other parameters
+,
+	/* Additional October 2022 engine selectors. */
+	SARV_0 = 0,
+	SARV_REPORT_COUNT = 8,
 } sacrifice_and_report_value_flags_t;
 
 typedef enum
@@ -2617,6 +2902,9 @@ typedef enum
 	SFG_CANNOT_CANCEL = 1,
 	SFG_NOTARGET = 2,		  // unaffected by graveyard_has_shroud
 	SFG_NO_SPELL_FIZZLED = 4, // Does not set "cancel" to "1" if no target is selected, see "Pull from the Deep"
+
+	/* Additional October 2022 engine selectors. */
+	SFG_0 = 0,
 } select_grave_t;
 
 typedef enum
@@ -2632,11 +2920,17 @@ typedef enum
 	GFPC_STORE_CMC = 1 << 2,			// Only one of this parameters shoudl be used at once
 	GFPC_STORE_COLORS = 1 << 3,			// Only one of this parameters shoudl be used at once
 	GFPC_TRACK_DEAD_CREATURES = 1 << 4, // Only one of this parameters shoudl be used at once Will store the "internal_card_id" of the dead creatures from "targets[storage_locatio].player" to a maximum of "targets[9].player"
-	GFPC_EXTRA_SKIP_TOKENS = 1 << 5,	// Can be combined with the previous values.
+	GFPC_EXTRA_SKIP_TOKENS = 64,	// Can be combined with the previous values.
 
-	GFPC_STORE_OWNER = 64,
-	GFPC_TRACK_OWNER = 128,
-	GFPC_TRACK_CONTROLLER = 256,
+	GFPC_STORE_OWNER = 128,
+	GFPC_TRACK_OWNER = 256,
+	GFPC_TRACK_CONTROLLER = 512,
+
+	/* Additional October 2022 engine selectors. */
+	GFPC_INTO_WHOSE_GRAVE = 32,
+	GFPC_EXTRA_ONLY_TOKENS = 1024,
+	GFPC_STORE_COUNTERS = 2048,
+	GFPC_HOFRI_GHOSTFORGE = 4096,
 } count_for_gfp_ability_and_store_values_flags_t;
 
 typedef enum
@@ -2649,6 +2943,9 @@ typedef enum
 	GCUS_CHECK_POWER = 16,
 	GCUS_ENCHANTED = 32,
 	GCUS_SOURCE_IN_PLAY = 64,
+
+	/* Additional October 2022 engine selectors. */
+	GCUS_EO_YOUR_T = 128,
 } gcus_t;
 
 typedef enum
@@ -2676,6 +2973,9 @@ typedef enum
 								  * land planeswalker" to "permanent", or "permanent instant sorcery" to "card". */
 	TYPETEXT_INVERT = 1 << 1,	 // Precede each returned type with "non", and put a comma between the last two types instead of "or".
 	TYPETEXT_A = 1 << 2,
+
+	/* Additional October 2022 engine selectors. */
+	TYPETEXT_0 = 0,
 } type_text_t;
 
 typedef enum
@@ -2693,6 +2993,14 @@ typedef enum
 	MPCFE_UNTIL_EOT = 1 << 3,					// can only play until end of turn
 	MPCFE_ATTACH = 1 << 4,						// attach effect to {player,card}, so can only play so long as its source is on the battlefield
 	MPCFE_UNTIL_END_OF_YOUR_NEXT_TURN = 1 << 5, // can only play until the end of your next turn
+
+	/* Additional October 2022 engine selectors. */
+	MPCFE_0 = 0,
+	MPCFE_UNTIL_YOUR_NEXT_UPKEEP = 64,
+	MPCFE_EXILE_ON_RESOLUTION = 128,
+	MPCFE_ATTACK_WITH_ROGUE = 256,
+	MPCFE_LUKKA = 512,
+	MPCFE_DURING_YOUR_NEXT_TURN = 1024,
 } mpcfe_mode_t;
 
 typedef enum
@@ -2734,6 +3042,10 @@ typedef enum
 	SE_TYPE_CANT_BE_PLAYED = 1 << 2,
 	SE_CREATURES_CANT_ATTACK = 1 << 3,
 	SE_EPIC = 1 << 4,
+
+	/* Additional October 2022 engine selectors. */
+	SE_UNTIL_YOUR_NEXT_TURN = 32,
+	SE_MODIFY_NEXT_SPELL_COST = 64,
 } card_special_effect_modes_t;
 
 typedef struct
@@ -2789,7 +3101,13 @@ typedef enum
 
 	DFC_SYMBOL_COMPASS = 6,
 	DFC_SYMBOL_LAND = 7,
-	DFC_SYMBOL_MAX = DFC_SYMBOL_LAND,
+	DFC_SYMBOL_MAX = 11,
+
+	/* Additional October 2022 engine selectors. */
+	DFC_SYMBOL_MODAL_FRONT = 8,
+	DFC_SYMBOL_MODAL_BACK = 9,
+	DFC_SYMBOL_FAN_CLOSE = 10,
+	DFC_SYMBOL_FAN_OPEN = 11,
 } DfcSymbol;
 
 typedef enum
@@ -2911,6 +3229,10 @@ typedef enum
 	RCUYRT_RETURN_REVEALED_CARDS 		= 1<<10,
 	RCUYRT_EXILE_TEST			 		= 1<<11,
 	RCUYRT_REVEAL_UP_TO_X			 	= 1<<12, //Will use BYTE1(test.qty) as max cards to reveal.
+
+	/* Additional October 2022 engine selectors. */
+	RCUYRT_PLAY_SPELL_FOR_FREE = 8192,
+	RCUYRT_OPPONENT_REVEAL = 16384,
 } reveal_card_until_you_reveal_test_flags_t;
 typedef enum
 {
@@ -2952,7 +3274,7 @@ typedef enum
 	BORDER_SILVER	= 2
 } border_t;
 
-typedef card_function_pointer CardFunction;
+
 
 typedef struct
 {
@@ -3063,4 +3385,156 @@ static inline int32_t target_predicate_extra(target_predicate_t predicate)
 
 
 
+
+/* October 2022 engine types. */
+typedef enum
+{
+  QUERY_ADVENTURER = 1,
+  QUERY_COMPANION = 2,
+  QUERY_IS_PLAIN_MANA_PRODUCER = 3,
+  QUERY_STORM = 4,
+  QUERY_GRAVESTORM = 5
+} event_query_t;
+
+typedef enum
+{
+  AL_UNUSED = 1,
+  AL_TRIG = 2,
+  AL_STATIC = 4,
+  AL_NM_NL_ACT = 8,
+  AL_MANA = 16,
+  AL_LOYALTY = 32,
+  AL_KEY = 64,
+  AL_INDESTRUCTIBLE = 128,
+  AL_DEFENDER = 256,
+  AL_NM_ACT = 40,
+  AL_ALL_ACT = 56,
+  AL_ALL_NM = 110,
+  AL_NOT_KEY = 62,
+  AL_ALL = 126
+} ability_loss_t;
+
+typedef enum
+{
+  CFW_0 = 0,
+  CFW_HAND = 1,
+  CFW_EXILE = 2,
+  CFW_CLONED_AURA = 4,
+  CFW_GRAVEYARD = 8,
+  CFW_LIBRARY = 16,
+  CFW_OUTSIDE_THE_GAME = 32,
+  CFW_COMMAND_ZONE = 64,
+  CFW_SOURCE_ZONE = 127,
+  CFW_IGNORE_SORCERY_TIMING = 1024,
+  CFW_CLEAVE_COST_PAID = 2048,
+  CFW_DASH_COST_PAID = 4096,
+  CFW_EVOKE_COST_PAID = 8192,
+  CFW_KICKER_COST_PAID = 16384,
+  CFW_MADNESS_COST_PAID = 32768,
+  CFW_MANIFEST = 65536,
+  CFW_MORPH = 131072,
+  CFW_PROWL_COST_PAID = 262144,
+  CFW_SURGE_COST_PAID = 524288,
+  CFW_MIRACLE_COST_PAID = 1048576,
+  CFW_UNEARTH_COST_PAID = 2097152,
+  CFW_SPECTACLE_COST_PAID = 4194304,
+  CFW_FORETOLD = 8388608,
+  CFW_CREATED_TOKEN = 16777216,
+  CFW_EPIC = 33554432,
+  CFW_COPY_SPELL = 67108864,
+  CFW_PUT_INTO_PLAY = 134217728,
+  CFW_CAST = 268435456,
+  CFW_CAST_BY_NONOWNER = 536870912,
+  CFW_ALTERNATIVE_COST = 1073741824,
+  CFW_ADDITIONAL_COST = -2147483648,
+  CFW_COPIABLE_CARD_FROM = -1023411200
+} CardFromWhere;
+
+typedef enum
+{
+  SP_KEYWORD2_0 = 0,
+  SP_KEYWORD2_PROT_MISC = 1,
+  SP_KEYWORD2_GRANTED_PROT_MISC = 2,
+  SP_KEYWORD2_HEXPROOF_MISC = 4,
+  SP_KEYWORD2_CANNON_FODDER = 8
+} sp_keyword2_t;
+
+typedef enum
+{
+  OGM_NONE = 0,
+  OGM_EDH = 1,
+  OGM_PLANECHASE = 2,
+  OGM_RANDOM_SINGLETON = 4,
+  OGM_SPAT = 8
+} other_game_mode_t;
+
+typedef enum {
+ SPM_NONE = 0,
+ SPM_MOMIR = 1,
+ SPM_DRAFT = 2,
+ SPM_TESTING = 3
+} singleplayer_mode_t;
+typedef struct
+{
+  uint16_t id;
+  uint16_t data2;
+  uint32_t data;
+} inst_info_t;
+typedef struct
+{
+  int16_t generating_id;
+  int16_t stored_iid;
+} inst_stored_iid_t;
+typedef struct
+{
+  subtype_t subtype;
+  int8_t added_forced;
+} subtypes_not_in_play_t;
+
+struct card_ext_t
+{
+  uint32_t sp_keywords;
+  uint32_t sp_keywords2;
+  uint16_t subtype[12];
+  inst_info_t inst_info_data[6];
+  uint8_t mana_paid_to_cast[8];
+  uint8_t phyrexian_mana_spent_to_cast;
+  uint8_t snow_mana_spent_to_cast;
+  uint8_t any_snow_mana_of_color_spent_to_cast_raw;
+  uint8_t treasure_mana_spent_to_cast;
+  inst_stored_iid_t inst_stored_iids[12];
+  CardFromWhere cardfromwhere;
+  int16_t turn_etb;
+  int8_t became_player;
+  uint8_t became_card;
+  int8_t base_power;
+  int8_t base_toughness;
+  int8_t pow_mod_unblocked;
+  int8_t pow_before_attack;
+  int16_t raw_power;
+  int16_t raw_toughness;
+  uint8_t soulbond;
+  uint8_t times_regenerated;
+  uint8_t times_conspire_paid;
+  uint8_t times_replicate_paid;
+  uint8_t invis_counters[8];
+  uint8_t invis_counter_types[8];
+  int16_t copy_iid_;
+  int16_t change_name_csvid_;
+  special_flags_t special_flags;
+  special_flags2_t special_flags2;
+  special_flags3_t special_flags3;
+  int8_t legacy_mana_to_untap[8];
+  int8_t legacy_upkeep_cost[7];
+  uint8_t host_summoning_sickness;
+};
+
+
+/* Shared AI combat evaluation storage (MOK 0x609164). */
+typedef struct ai_combat_eval_entry_t {
+  union { int power; int potential_power; };
+  union { int toughness; int potential_toughness; };
+  union { unsigned int abilities; keyword_t abils; };
+  union { int cached_score; int opinion_of_game_state_without_this; };
+} ai_combat_eval_entry_t;
 #endif

@@ -606,4 +606,4 @@ int card_living_land_FX(int player, int card, event_t event);
 int card_blaze_FX(int player, int card, event_t event);
 int card_river_FX(int player, int card, event_t event);
 int card_beast_FX(int player, int card, event_t event);
-int card_transmute_FX(int player, int card, event_t event);
+int card_transmute_FX(int player, int card, event_t event);void manalinkeh_memcpy_inst_and_ext(card_instance_t*, const card_instance_t*);

@@ -2,6 +2,7 @@
 #define __GAME_SUPPORT_H__
 
 #include "defs.h"
+#include "manalink_runtime.h"
 #include "global_state.h"
 #include "global_other.h"
 #include "network.h"

@@ -1,6 +1,11 @@
 #include "manalink.h"
 
 int card_illusions_of_grandeur(int player, int card, event_t event){
+  /* Illusions of Grandeur	|3|U	0x2001CE0
+   * Enchantment
+   * Cumulative upkeep |2
+   * When ~ enters the battlefield, you gain 20 life.
+   * When ~ leaves the battlefield, you lose 20 life. */
 
     if( ! is_unlocked(player, card, event, 21) ){ return 0; }
 
@@ -28,7 +33,7 @@ int card_illusions_of_grandeur(int player, int card, event_t event){
         gain_life(player, 20);
     }
 
-    if( leaves_play(player, card, event) ){
+    if( leaves_play(player, card, event, RESOLVE_TRIGGER_MANDATORY, 1) ){
         lose_life(player, 20);
     }
 
@@ -36,6 +41,10 @@ int card_illusions_of_grandeur(int player, int card, event_t event){
 }
 
 int card_mystic_remora(int player, int card, event_t event){
+  /* Mystic Remora	|U	0x20017EA
+   * Enchantment
+   * Cumulative upkeep |1
+   * Whenever an opponent casts a noncreature spell, you may draw a card unless that player pays |4. */
 
     if(event == EVENT_CAN_CAST){
         return 1;
@@ -69,8 +78,11 @@ int card_mystic_remora(int player, int card, event_t event){
     return global_enchantment(player, card, event);
 }
 
-
 int card_battle_of_wits(int player, int card, event_t event){
+  /* Battle of Wits	|3|U|U
+   * Enchantment
+   * At the beginning of your upkeep, if you have 200 or more cards in your library, you win the game. */
+
     if( event == EVENT_CAN_CAST ){
         return 1;
     }

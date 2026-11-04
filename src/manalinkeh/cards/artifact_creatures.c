@@ -1,10 +1,14 @@
 #include "manalink.h"
 
 int card_sundering_titan(int player, int card, event_t event){
+  /* CARD_ID_SUNDERING_TITAN	6968
+   * Sundering Titan	|8
+   * Artifact Creature - Golem 7/10
+   * When ~ enters the battlefield or leaves the battlefield, choose a land of each basic land type, then destroy those lands. */
 
     card_instance_t *instance = get_card_instance(player, card);
 
-    if( (comes_into_play(player, card, event) > 0 || leaves_play(player, card, event)) ){
+    if( (comes_into_play(player, card, event) > 0 || leaves_play(player, card, event, RESOLVE_TRIGGER_MANDATORY, 1)) ){
 		instance->number_of_targets = 0;
 
         // target each land
@@ -64,8 +68,13 @@ int card_sundering_titan(int player, int card, event_t event){
     return 0;
 }
 
-
 int card_darksteel_colossus(int player, int card, event_t event){
+  /* Darksteel Colossus	|11
+   * Artifact Creature - Golem 11/11
+   * Trample
+   * ~ is indestructible.
+   * If ~ would be put into a graveyard from anywhere, reveal ~ and shuffle it into its owner's library instead. */
+
     if( event == EVENT_GRAVEYARD_ABILITY ){
         remove_card_from_grave(player, card);
         int *deck = deck_ptr[player];
@@ -80,6 +89,10 @@ int card_darksteel_colossus(int player, int card, event_t event){
 }
 
 int card_bottle_gnomes(int player, int card, event_t event){
+  /* CARD_ID_BOTTLE_GNOMES	1705
+   * Bottle Gnomes	|3
+   * Artifact Creature - Gnome 1/3
+   * Sacrifice ~: You gain 3 life. */
 
     if( event == EVENT_RESOLVE_ACTIVATION ){
         gain_life(player, 3);
@@ -89,6 +102,10 @@ int card_bottle_gnomes(int player, int card, event_t event){
 }
 
 int card_phyrexian_dreadnought(int player, int card, event_t event){
+  /* Phyrexian Dreadnought	|1
+   * Artifact Creature - Phyrexian Dreadnought 12/12
+   * Trample
+   * When this creature enters, sacrifice it unless you sacrifice any number of creatures with total power 12 or greater. */
 
     if( trigger_condition == TRIGGER_COMES_INTO_PLAY && affect_me(player, card) && 
         reason_for_trigger_controller == player ){

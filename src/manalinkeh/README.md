@@ -1,24 +1,35 @@
 # Static ManalinkEh fork
 
-This directory is a source-only import from `C:\dev\manalink3-src` for the
-modded Shandalar target.  It intentionally excludes old object files, DLL
-exports, the linker script, injection patches, and other build products.
+This directory integrates the October 2022 recovered source from
+`rlerrr/manalink3-src` commit `c6797b6061f69ac0c21efaac3f6500b783ec9f70`.
+The SDL host originally used the December 2020 tree at
+`cad36b4807cc7353754332a1697e2c97fd3ec9d5`.
 
-`ManalinkEh.asm` is retained as the authoritative ordered veneer list, but is
-not compiled.  The build generates a native registry for all 11,814 veneers.
-The smaller assembly helpers under `cards/` and `functions/` are also retained
-as porting references and are initially excluded from the static target.
+`ManalinkEh.asm` is the authoritative ordered list of 15,169 veneers. It is
+input to the C registry generator; no injection assembly or DLL is loaded.
+The excluded source aggregates listed in CMake remain historical references.
 
-`mok_manalink_redirects.h` replaces MOK's executable jump patches with source
-name mappings.  All live `EXE_*` function and data uses in the compiled source
-set have been replaced with ordinary named references.  The declarations in
-`shandalar_exe_functions.h` and `shandalar_exe_globals.h` form the temporary
-host boundary while the two engines are joined.
+`mok_manalink_redirects.h` replaces the EXE jump patches with source mappings.
+`shandalar_host_names.h` maps shared engine storage to its host owner. Typed
+function/global declarations in `shandalar_exe_*.h` were resolved against the
+MOK address annotations in `C:/dev/shandalar-decomp/Ghidra/mok.csv`.
+EXE addresses are provenance, not runtime pointers.
 
-The remaining absolute pointers are the two AI speculation snapshots in
-`functions/ai.c`.  They copy large contiguous regions of MOK global storage;
-those must become field-by-field snapshots because the SDL3 engine deliberately
-does not preserve the executable's global layout.
+Card extensions live in source-owned banks, including separate display banks.
+Card copies preserve each destination's extension storage. The AI snapshots
+save these banks and the imported rules, mana, and dice state by named fields;
+they do not copy contiguous EXE address ranges.
 
-The static archive builds on its own.  Linking it into `shandalar` and removing
-the 73 replaced original implementations is the next integration step.
+Reconstruct the card registry using `tools/import_carddata_exe.py` with the
+October 2022 `Magic.exe` and its adjacent `Cards.dat`. Original internal IDs,
+null bindings, and sixteen dynamic slots are preserved. The reviewed Skyclave
+Basilica pointer repair is pinned to the executable hash and original record.
+See `tools/README.md` for reproduction commands.
+
+Native x86 and WebAssembly builds pass the focused 139-case regression set,
+including haste permissions, suspend, AI rollback, bindings, and Skyclave
+Basilica. All 177 previously unimplemented behavior cases with recovered
+handlers pass. The deterministic 849-case behavior sample has 843 passes,
+five existing known failures, and one existing unimplemented card, with no
+unexpected failures. The full behavior and catalog suites have not been run.
+See PORTING.md for validation details and remaining limits.

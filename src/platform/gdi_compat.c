@@ -1835,6 +1835,7 @@ int SetStretchBltMode(HDC dc, int mode) { (void)dc; return mode; }
 
 COLORREF SetTextColor(HDC dc, COLORREF color) { COLORREF old = dc ? dc->text_color : 0; if (dc) dc->text_color = color; return old; }
 COLORREF GetTextColor(HDC dc) { return dc ? dc->text_color : 0; }
+COLORREF GetBkColor(HDC dc) { return dc ? dc->background_color : 0; }
 COLORREF SetBkColor(HDC dc, COLORREF color) { COLORREF old = dc ? dc->background_color : 0; if (dc) dc->background_color = color; return old; }
 int SetBkMode(HDC dc, int mode) { int old = dc ? dc->background_mode : 0; if (dc) dc->background_mode = mode; return old; }
 int SetROP2(HDC dc, int mode) { (void)dc; return mode; }
@@ -2602,6 +2603,11 @@ BOOL ExtTextOutA(HDC dc, int x, int y, UINT options, const RECT *rect,
   int saved = 0;
   BOOL result;
   (void)dx;
+  if ((options & 0x0002) && rect) {
+    HBRUSH background = CreateSolidBrush(GetBkColor(dc));
+    FillRect(dc, rect, background);
+    DeleteObject(background);
+  }
   if ((options & ETO_CLIPPED) && rect) {
     saved = SaveDC(dc);
     IntersectClipRect(dc, rect->left, rect->top, rect->right, rect->bottom);

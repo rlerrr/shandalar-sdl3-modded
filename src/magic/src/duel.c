@@ -201,6 +201,8 @@ void refresh_ai_random_table(void)
 // FUNCTION: SHANDALAR 0x00409680
 void reset_duel_globals(void)
 {
+  extern void manalinkeh_initialize_card_extensions(void);
+  manalinkeh_initialize_card_extensions();
   int card;
   int player;
 
@@ -568,7 +570,8 @@ int TENTATIVE_start_turn(int player)
   g_land_can_be_played &= ~LCBP_FLAGS_CLEARED_EACH_TURN;
   for (card = 0; card < g_active_cards_count[player]; card = card + 1)
   {
-    global_card_instances[player][card].state &= ~(STATE_ATTACKING | STATE_BLOCKING | STATE_PLAYED_FROM_HAND | STATE_UNKNOWN8000 | STATE_SUMMONSICK | STATE_SUMMONSICK_BOTH);
+    global_card_instances[player][card].state &= ~(STATE_ATTACKING | STATE_BLOCKING | STATE_PLAYED_FROM_HAND | STATE_UNKNOWN8000 | STATE_SUMMONSICK_BOTH);
+    global_card_instances[player][card].ext->host_summoning_sickness = 0;
   }
   TENTATIVE_reassess_all_cards(0, 0xff);
   return 0;
@@ -2335,7 +2338,8 @@ int play_duel(int player, int creature_type)
       g_duel_ai_mode_state = 1;
       shuffle_duel_library(0, 1);
       g_duel_ai_mode_state = card_index;
-      memcpy(global_card_instances[1], global_card_instances[0], sizeof(global_card_instances[1]));
+      for (int copied_card = 0; copied_card < 151; ++copied_card)
+        manalinkeh_memcpy_inst_and_ext(&global_card_instances[1][copied_card], &global_card_instances[0][copied_card]);
       for (card_index = 0; card_index < 0x96; card_index = card_index + 1)
       {
         if (global_card_instances[1][card_index].internal_card_id != -1)

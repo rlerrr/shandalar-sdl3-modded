@@ -1,34 +1,48 @@
 #include "manalink.h"
 
+/* Canonical recovered helper declarations. */
+void seek_grave_to_reanimate_this_turn(int player, int t_player, int selected_type,
+                                            reanimate_mode_t mode);
+
 #define TOKEN_FLAG (1<<31)
 
-void increase_dead_count(int player, int iid, int is_tok){
+void increase_dead_count(int player, int iid, int is_tok)
+{
+  int card;
+  card_instance_t *instance;
+  target_t *dead_iid_slot;
 
-	int dbc = get_deadbox_card(player);
-	if( dbc < 0 ){
-		return;
-	}
-	card_instance_t *instance = get_card_instance( player, dbc );
-
-	if (is_tok){
-		iid |= TOKEN_FLAG;
-	}
-
-	int* q;
-	for (q = &instance->targets[0].player; q <= &instance->targets[17].card; ++q){
-		if (*q == -1){
-			*q = iid;
-			break;
-		}
-	}
-
-	++hack_silent_counters;
-	add_counter(player, dbc, COUNTER_DEATH);
-	if( is_tok == 0 ){
-		add_counter(player, dbc, COUNTER_CORPSE);
-	}
-	--hack_silent_counters;
-
+  card = get_deadbox_card(player);
+  if (-1 < card)
+  {
+    instance = get_card_instance(player, card);
+    if (is_tok != 0)
+    {
+      iid = iid | 0x80000000;
+    }
+    dead_iid_slot = instance->targets;
+    do
+    {
+      if (dead_iid_slot->player == -1)
+      {
+        dead_iid_slot->player = iid;
+        break;
+      }
+      dead_iid_slot = (target_t *)&dead_iid_slot->card;
+    } while (dead_iid_slot <= &instance->targets[0x11].card);
+    hack_silent_counters = hack_silent_counters + 1;
+    add_counters(player, card, player, card, COUNTER_DEATH, 1);
+    if (is_tok == 0)
+    {
+      add_counters(player, card, player, card, COUNTER_CORPSE, 1);
+      hack_silent_counters = hack_silent_counters + -1;
+    }
+    else
+    {
+      hack_silent_counters = hack_silent_counters + -1;
+    }
+  }
+  return;
 }
 
 int get_dead_count(int player, int mode){
@@ -72,24 +86,33 @@ int get_dead_count(int player, int mode){
 	return amount;
 }
 
-void reset_dead_count(void){
+void reset_dead_count(void)
+{
+  int card;
+  card_instance_t *instance;
+  target_t *dead_record;
+  int player;
 
-	int p;
-	for(p=0; p<2; p++){
-		int dbc = get_deadbox_card(p);
-		if( dbc < 0 ){
-			return;
-		}
-		if( dbc != -1 ){
-			card_instance_t *instance = get_card_instance( p, dbc );
-			remove_all_counters(p, dbc, -1);
-			int i;
-			for(i=0; i<18; i++){
-				instance->targets[i].player = -1;
-				instance->targets[i].card = -1;
-			}
-		}
-	}
+  player = 0;
+  do
+  {
+    card = get_deadbox_card(player);
+    if (card < 0)
+    {
+      return;
+    }
+    instance = get_card_instance(player, card);
+    remove_all_counters(player, card, player, card, ~COUNTER_P1_P1);
+    dead_record = instance->targets;
+    do
+    {
+      dead_record->player = -1;
+      dead_record->card = -1;
+      dead_record = dead_record + 1;
+    } while (dead_record != instance->targets + 0x12);
+    player = player + 1;
+  } while (player != 2);
+  return;
 }
 
 int card_deadbox(int player, int card, event_t event){
@@ -176,36 +199,12 @@ int card_deadbox(int player, int card, event_t event){
 	return 0;
 }
 
-static void seek_grave_to_reanimate_this_turn(int player, int selected_type, reanimate_mode_t mode){
-
-	int non_pw = selected_type & GDC_NONPLANESWALKER;
-	selected_type &= ~(GDC_NONTOKEN | GDC_NONPLANESWALKER);	/* we effectively force nontoken anyway, just in case there's a different nontoken card of the same
-															 * name in the graveyard */
-
-	int p, *q;
-	for(p=0; p<2; p++){
-		if( p == player || player == 2 ){
-			int dbc = get_deadbox_card(p);
-			if( dbc > -1 ){
-				card_instance_t *instance = get_card_instance( p, dbc );
-				for (q = &instance->targets[0].player; q <= &instance->targets[17].card; ++q){
-					if (*q != -1 && !(*q & TOKEN_FLAG)
-						&& is_what(-1, *q, selected_type)
-						&& !(non_pw && is_planeswalker(-1, *q))){
-						seek_grave_for_id_to_reanimate(player, -1, p, cards_data[*q].id, mode);
-					}
-				}
-			}
-		}
-	}
-}
-
 void reanimate_all_dead_this_turn(int player, int selected_type){
-	return seek_grave_to_reanimate_this_turn(player, selected_type, REANIMATE_DEFAULT);
+	return seek_grave_to_reanimate_this_turn(player, player, selected_type, REANIMATE_DEFAULT);
 }
 
 void return_all_dead_this_turn_to_hand(int player, int selected_type){
-	return seek_grave_to_reanimate_this_turn(player, selected_type, REANIMATE_RETURN_TO_HAND);
+	return seek_grave_to_reanimate_this_turn(player, player, selected_type, REANIMATE_RETURN_TO_HAND);
 }
 
 int choose_a_dead_this_turn(int player, int card, int t_player, int can_cancel, int ai_selection_mode, test_definition_t *this_test, int target_pos){
@@ -284,3 +283,39 @@ int has_type_dead_this_turn_in_grave(int player, test_definition_t *this_test){
 	}
 	return 0;
 }
+
+#ifndef SHANDALAR
+/* ManalinkEh 2022: 0x2671e30; original functions/deadbox.c:179. */
+void seek_grave_to_reanimate_this_turn(int player, int t_player, int selected_type,
+                                       reanimate_mode_t mode)
+{
+  int non_pw = selected_type & 0x40000000U;
+  for (int p = 0; p < 2; ++p)
+  {
+    if (t_player != p && t_player != 2)
+      continue;
+    int dbc = get_deadbox_card(p);
+    if (dbc < 0)
+      continue;
+    card_instance_t *instance = get_card_instance(p, dbc);
+    for (int dead_slot = 0; dead_slot < 36; ++dead_slot)
+    {
+      int iid = dead_slot & 1 ? instance->targets[dead_slot / 2].card
+                              : instance->targets[dead_slot / 2].player;
+      if (iid < 0 || !is_what(-1, iid, selected_type & 0x3fffffff))
+        continue;
+      iid = dead_slot & 1 ? instance->targets[dead_slot / 2].card
+                          : instance->targets[dead_slot / 2].player;
+      if (non_pw)
+      {
+        if (is_planeswalker(-1, iid))
+          continue;
+        iid = dead_slot & 1 ? instance->targets[dead_slot / 2].card
+                            : instance->targets[dead_slot / 2].player;
+      }
+      seek_grave_for_id_to_reanimate(player, -1, p, (unsigned int)cards_data[iid].id, mode);
+    }
+  }
+}
+
+#endif

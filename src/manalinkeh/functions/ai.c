@@ -125,6 +125,16 @@ void memcpy_suppress_size_warning(void* dest, const void* src, size_t sz);
 extern int mulligans_complete[2];
 extern int challenge_round, challenge1, challenge2, challenge3, challenge4;
 #define BACKUP_AND_SAVE_LIST				\
+  BACKUP_ARRAY(card_ext);			\
+  BACKUP_ARRAY(disp_card_ext);		\
+  BACKUP_ARRAY(card_flags);			\
+  BACKUP_ARRAY(your_spells_cant_be_countered_by_color);\
+  BACKUP_ARRAY(mana_colors_added);\
+  BACKUP_ARRAY(mana_color_override);\
+  BACKUP_ARRAY(mana_quantity_override);\
+  BACKUP_ARRAY(multi_mana_transmutation);\
+  BACKUP_ARRAY(add_to_die_rolls);\
+  BACKUP_ARRAY(roll_extra_dice);\
   BACKUP_ARRAY(graveyard_source);			\
   BACKUP_SCALAR(next_graveyard_source_id);	\
   BACKUP_SCALAR(turn_count);				\
@@ -149,14 +159,8 @@ BACKUP_AND_SAVE_LIST
 void backup_data_for_ai(void)
 {
   // 0x498e30
-#ifdef MANALINKEH_STATIC
   save_combat_simulation_state();
-#else
-  memcpy((void*)0x50be70, &must_attack, 0x1a740);
-  STATIC_ASSERT(sizeof(card_data_t) == 72, sizeof_card_data_t_must_be_72);
-  // This target immediately follows 0x50be70.
-  memcpy((void*)0x5265b0, &cards_data[g_card_count], 16 * sizeof(card_data_t));
-#endif
+
   g_saved_ai_modifier = ai_modifier;
 
 #define BACKUP_CMD_A(data)	memcpy(backup_##data, data, sizeof(data))
@@ -169,13 +173,8 @@ void backup_data_for_ai(void)
 void restore_data_for_ai(void)
 {
   // 0x498e70
-#ifdef MANALINKEH_STATIC
   restore_combat_simulation_state();
-#else
-  memcpy_suppress_size_warning(&must_attack, (void*)0x50be70, 0x1a740);
-  STATIC_ASSERT(sizeof(card_data_t) == 72, sizeof_card_data_t_must_be_72);
-  memcpy(&cards_data[g_card_count], (void*)0x5265b0, 16 * sizeof(card_data_t));
-#endif
+
   ai_modifier = g_saved_ai_modifier;
 
 #define BACKUP_CMD_A(data)	memcpy(data, backup_##data, sizeof(data))
@@ -199,18 +198,8 @@ BACKUP_AND_SAVE_LIST
 void backup_data_for_ai_0(void)
 {
   // 0x498d90
-#ifdef MANALINKEH_STATIC
   save_ai_search_state();
-#else
-  // This target immediately follows 0x5265b0 in backup_data_for_ai()/restore_data_for_ai().
-  memcpy((void*)0x526a30, &must_attack, 0x1cd00);
-  g_saved_recorded_action_count = 0;
-  STATIC_ASSERT(sizeof(card_data_t) == 72, sizeof_card_data_t_must_be_72);
-  // This target immediately follows 0x526a30.
-  memcpy((void*)0x543730, &cards_data[g_card_count], 16 * sizeof(card_data_t));
-  // Immediately followed by displayed_mana_pool[][].
-  ASSERT(stack_size >= 0);
-#endif
+
 
 #define BACKUP_CMD_A(data)	memcpy(backup0_##data, data, sizeof(data))
 #define BACKUP_CMD_S(data)	backup0_##data = data
@@ -222,13 +211,8 @@ void backup_data_for_ai_0(void)
 void restore_data_for_ai_0(void)
 {
   // 0x498df0
-#ifdef MANALINKEH_STATIC
   restore_ai_search_state();
-#else
-  memcpy_suppress_size_warning(&must_attack, (void*)0x526a30, 0x1cd00);
-  STATIC_ASSERT(sizeof(card_data_t) == 72, sizeof_card_data_t_must_be_72);
-  memcpy(&cards_data[g_card_count], (void*)0x543730, 16 * sizeof(card_data_t));
-#endif
+
 #define BACKUP_CMD_A(data)	memcpy(data, backup0_##data, sizeof(data))
 #define BACKUP_CMD_S(data)	data = backup0_##data
   BACKUP_AND_SAVE_LIST
@@ -394,80 +378,7 @@ int recorded_rand(int player, int upperbound)
 }
 
 void human_assign_blockers(int player);
-void ai_assign_blockers(int player)
-{
-  // 0x4b18e0
 
-  setup_combat_damage_simulation(player);	//TENTATIVE_ai_speculate_on_combat(player);
-
-  g_ai_attacker_count = -9999;
-
-  int i;
-  for (i = 0; i < 16; ++i)
-	ai_block_damage_orders[i] = 0;
-
-  enumerate_ai_block_assignments(player, 0);
-
-  if (!(ai_is_speculating == 1 || current_turn == HUMAN))
-	return;
-
-  // Begin additions
-  if (event_flags & EF_ATTACKER_CHOOSES_BLOCKERS)
-	{
-	  if (!(ai_is_speculating == 1 || current_turn == AI))	// if speculating or AI is attacking, nothing blocks
-		human_assign_blockers(player);
-	  return;
-	}
-  // End additions
-
-  for (i = 0; i < ai_blocker_count; ++i)
-	{
-      forbid_attack = 0;
-	  if (event_flags & EA_PAID_BLOCK)
-		{
-		  push_affected_card_stack();	//push_affected_card_stack()
-		  trigger_cause_controller = ai_blocker_player;	//TENTATIVE_ai_speculation_opponent
-		  trigger_cause = ai_blocker_cards[i];		//WILDGUESS_ai_combat_block_card[i]
-		  dispatch_trigger(1 - current_turn, TRIGGER_PAY_TO_BLOCK, gs_prompt_turnsequence_0/*PROMPT_TURNSEQUENCE[0]*/, 1);
-		  pop_affected_card_stack();	//pop_affected_card_stack()
-		  if (forbid_attack)
-			{
-			  forbid_attack = 0;
-			  continue;
-			}
-		}
-
-	  uint8_t blk = BYTE0(g_ai_combat_blocking_card_indices[i]);
-
-	  card_instance_t* instance = get_card_instance(ai_blocker_player,	// TENTATIVE_ai_speculation_opponent
-													ai_blocker_cards[i]);	// WILDGUESS_ai_combat_block_card[i]
-	  // Begin additions
-	  if (instance->blocking != 255)	// Already during one of the two triggers dispatched from here
-		continue;
-	  // End additions
-	  instance->blocking = blk;
-
-	  if (blk != 255)	// Originally !(blk & 0x80) - this failed when blocking ids 128-149
-		instance->state |= STATE_BLOCKING;
-
-	  if (ai_is_speculating != 1)
-		{
-		  /* All this does is SendMessageA(hwnd_MainClass, 0x464u, 0xFFu, 0).  It's always called through a wrapper that checks ai_is_speculating != 1
-		   * (except from C where it's already been checked).  wndproc_MainClass responds by calling TENTATIVE_redisplay_all(0, 0xff) at 0x437ec0. */
-		  request_duel_display_refresh();
-
-		  if (blk != 255)
-			play_sound_effect(WAV_BLOCK2);
-		}
-
-	  /* This immediately followed the EA_PAID_BLOCK/TRIGGER_PAY_TO_BLOCK.  Putting it down here matches the order when a human blocks; in particular,
-	   * instance->blocking is correct during TRIGGER_BLOCKER_CHOSEN, which is necessary for Tromokratis. */
-	  if ((event_flags & EA_SELECT_BLOCK) && blk != 255)
-		dispatch_trigger2(current_turn, TRIGGER_BLOCKER_CHOSEN, gs_prompt_blockerselection_0, 0,//PROMPT_BLOCKERSELECTION[0]
-						  ai_blocker_player,	//TENTATIVE_ai_speculation_opponent
-						  ai_blocker_cards[i]);		//WILDGUESS_ai_combat_block_card[i]
-	}
-}
 
 extern int raw_mana_available[2][8];
 void dispatch_event_raw(event_t event);
@@ -650,5 +561,74 @@ int ai_decision_phase(int player, int *phase_code_to_go_to, int *becomes_second_
 	  play_sound_effect(WAV_ENDTURN);
 	}
 
+  return 0;
+}
+
+int can_autotap(int player, int card, autotap_t autotap_flags)
+{
+  enum
+  {
+    QUERY_IS_PLAIN_MANA_PRODUCER = 3
+  };
+
+  card_instance_t *instance;
+  int producer_iid_or_check;
+  unsigned int producer_colors_or_flags;
+
+  instance = in_play(player, card);
+  if (instance != NULL)
+  {
+    producer_iid_or_check = instance->internal_card_id;
+    producer_colors_or_flags = instance->card_color & 0x7f;
+    if (is_what(player, card, 1) != 0)
+    {
+      producer_colors_or_flags = producer_colors_or_flags | mana_colors_added[player];
+    }
+    if ((producer_colors_or_flags & 0x3f) != 0)
+    {
+      producer_colors_or_flags = cards_data[producer_iid_or_check].extra_ability;
+      if ((producer_colors_or_flags & 0x1000) == 0)
+      {
+        if (is_what(player, card, 1) == 0)
+        {
+          return 0;
+        }
+        if ((*(unsigned char *)(mana_colors_added + player) & 0x3f) == 0)
+        {
+          return 0;
+        }
+        producer_colors_or_flags = cards_data[producer_iid_or_check].extra_ability;
+      }
+      if (((((producer_colors_or_flags & 0x10000) == 0) &&
+            (producer_iid_or_check = can_produce_mana(player, card), producer_iid_or_check != 0)) &&
+           (((autotap_flags & AUTOTAP_NO_BASIC_LANDS) == AUTOTAP_0 ||
+             ((producer_iid_or_check = is_basic_land(player, card),
+               producer_iid_or_check == 0 &&
+                   (producer_iid_or_check = query(player, card, -1, QUERY_IS_PLAIN_MANA_PRODUCER),
+                    producer_iid_or_check == 0)))))) &&
+          ((((autotap_flags & AUTOTAP_NO_NONBASIC_LANDS) == AUTOTAP_0 ||
+             (((producer_iid_or_check = is_what(player, card, 1),
+                producer_iid_or_check == 0 || (producer_iid_or_check = is_basic_land(player, card),
+                                               producer_iid_or_check != 0)) ||
+               (producer_iid_or_check = query(player, card, -1, QUERY_IS_PLAIN_MANA_PRODUCER),
+                producer_iid_or_check != 0)))) &&
+            ((((autotap_flags & AUTOTAP_NO_DONT_AUTO_TAP) == AUTOTAP_0 ||
+               ((instance->state & 0x40000) == 0)) &&
+              (((autotap_flags & AUTOTAP_NO_ARTIFACTS) == AUTOTAP_0 ||
+                ((producer_iid_or_check = is_what(player, card, 0x40),
+                  producer_iid_or_check == 0 ||
+                      (producer_iid_or_check =
+                           query(player, card, -1, QUERY_IS_PLAIN_MANA_PRODUCER),
+                       producer_iid_or_check != 0))))))))))
+      {
+        if ((autotap_flags & AUTOTAP_NO_CREATURES) != AUTOTAP_0)
+        {
+          producer_iid_or_check = is_what(player, card, 2);
+          return (unsigned int)(producer_iid_or_check == 0);
+        }
+        return 1;
+      }
+    }
+  }
   return 0;
 }

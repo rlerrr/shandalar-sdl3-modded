@@ -3,6 +3,7 @@
 // Functions
 
 // Cards
+
 int card_acolythe_of_xathrid(int player, int card, event_t event){
 /* CARD_ID_ACOLYTE_OF_XATHRID	10380
 Acolyte of Xathrid	|B
@@ -61,18 +62,42 @@ Gain control of target creature until end of turn. Untap that creature. It gains
 	return generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_CREATURE", 1, NULL);
 }
 
-static int effect_must_attack(int player, int card, event_t event){
+int effect_must_attack(int player, int card, event_t event)
+{
 
-	if( get_card_instance(player, card)->damage_target_card > -1 ){
-		card_instance_t *instance = get_card_instance(player, card);
-		attack_if_able(instance->damage_target_player, instance->damage_target_card, event);
-	}
+  if (get_card_instance(player, card)->damage_target_card > -1)
+  {
+    card_instance_t *instance = get_card_instance(player, card);
+    attack_if_able(instance->damage_target_player, instance->damage_target_card, event);
+  }
 
-	if( event == EVENT_CLEANUP ){
-		kill_card(player, card, KILL_EXILE);
-	}
+  if (event == EVENT_PHASE_CHANGED && current_phase >= PHASE_MAIN2)
+  {
+    kill_card(player, card, KILL_EXILE);
+  }
 
-	return 0;
+  return 0;
+}
+
+/* ManalinkEh 2022: 0x24feed0; original cards/m10.c:78. */
+int effect_must_attack_on_next_combat(int player, int card, event_t event)
+{
+  card_instance_t *instance;
+  instance = get_card_instance(player, card);
+  if (-1 < instance->damage_target_card)
+  {
+    instance = get_card_instance(player, card);
+    attack_if_able((int)instance->damage_target_player, instance->damage_target_card, event);
+  }
+  if ((event == EVENT_PHASE_CHANGED) && (0x1d < current_phase))
+  {
+    instance = get_card_instance(player, card);
+    if (instance->damage_target_player == current_turn)
+    {
+      kill_card(player, card, KILL_EXILE);
+    }
+  }
+  return 0;
 }
 
 int card_alluring_siren(int player, int card, event_t event){
@@ -134,16 +159,27 @@ When ~ enters the battlefield, target |H2Forest becomes a 4/5 |Sgreen Treefolk c
 	if( event == EVENT_ETB_ABILITY ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_LAND);
-		td.required_subtype = SUBTYPE_FOREST;
+		td.required_subtype = get_hacked_subtype(player, card, SUBTYPE_FOREST);
 		td.preferred_controller = player;
 
 		card_instance_t *instance = get_card_instance(player, card);
 
-		if( can_target(&td) && new_pick_target(&td, "TARGET_LAND", 0, 0) ){
-			add_a_subtype(instance->targets[0].player, instance->targets[0].card, SUBTYPE_TREEFOLK);
-			land_animation2(player, card, instance->targets[0].player, instance->targets[0].card, 2, 4, 5, 0, 0, 0, 0);
+		char prompt[100];
+		int len = scnprintf(prompt, 100, get_hacked_land_text(player, card, "Select target %s you control it", SUBTYPE_FOREST));
+		scnprintf(prompt + len, 100 - len, get_sleighted_color_text(player, card, " becomes a %s Treefolk creature.", COLOR_GREEN));
+		if (can_target(&td) && new_pick_target(&td, prompt, 0, GS_LITERAL_PROMPT)){
+			int legacy = land_animation2(player, card, instance->targets[0].player, instance->targets[0].card, 2, 4, 5, 0, 0,
+				get_sleighted_color_test(player, card, COLOR_TEST_GREEN), NULL);
+			get_card_instance(player, legacy)->targets[9].card = SUBTYPE_TREEFOLK;
+			instance->targets[9] = instance->targets[0];
 		}
 		instance->number_of_targets = 0;
+	}
+
+	leaves_play(player, card, event, 0, 0);
+	if (event == EVENT_LEAVES_PLAY_ABILITY){
+		card_instance_t* instance = get_card_instance(player, card);
+		purge_add_force_a_subtype_permanently_legacy(instance->targets[9].player, instance->targets[9].card, 1);
 	}
 
 	return 0;
@@ -185,13 +221,10 @@ You gain 1 life for each land you control. */
 	return basic_spell(player, card, event);
 }
 
-
 int card_burning_inquiry(int player, int card, event_t event){
-	/*
-	  Burning Inquiry |R
-	  Sorcery
-	  Each player draws three cards, then discards three cards at random.
-	*/
+  /* Burning Inquiry |R
+   * 	  Sorcery
+   * 	  Each player draws three cards, then discards three cards at random. */
 
 	if(event == EVENT_RESOLVE_SPELL ){
 		APNAP(p, {
@@ -229,12 +262,11 @@ int card_bramble_creeper(int player, int card, event_t event)
 }
 
 int card_capricious_efreet(int player, int card, event_t event){
-/*
-Capricious Efreet |4|R|R
-Creature — Efreet 6/4
-At the beginning of your upkeep, choose target nonland permanent you control and up to two target nonland permanents you don't control.
-Destroy one of them at random.
-*/
+  /* Capricious Efreet |4|R|R
+   * Creature — Efreet 6/4
+   * At the beginning of your upkeep, choose target nonland permanent you control and up to two target nonland permanents you don't control.
+   * Destroy one of them at random. */
+
 	upkeep_trigger_ability(player, card, event, player);
 
 	if( event == EVENT_UPKEEP_TRIGGER_ABILITY ){
@@ -350,6 +382,7 @@ int card_cemetery_reaper(int player, int card, event_t event){
 				if( selected != -1 ){
 					rfg_card_from_grave(instance->targets[0].player, selected);
 					add_state(player, card, STATE_TAPPED);
+					tapped_for_mana_color = -1;
 				}
 				else{
 					spell_fizzled = 1;
@@ -366,7 +399,7 @@ int card_cemetery_reaper(int player, int card, event_t event){
 		token_generation_t token;
 		default_token_definition(instance->parent_controller, instance->parent_card, CARD_ID_ZOMBIE, &token);
 		token.pow = token.tou = 2;
-		token.color_forced = get_sleighted_color_test(player, card, COLOR_TEST_BLACK);
+		token.color_forced = COLOR_TEST_BLACK;
 		generate_token(&token);
 	}
 
@@ -559,6 +592,7 @@ Land
 			else{
 				remove_state(player, card, STATE_TAPPED);
 			}
+			tapped_for_mana_color = -1;
 		}
 		if( choice == 2 ){
 			spell_fizzled = 1;
@@ -594,7 +628,7 @@ Creature - Angel 3/4
 Flying
 If a source an opponent controls would deal damage to you, prevent 1 of that damage. */
 
-	if( event == EVENT_PREVENT_DAMAGE && ! is_humiliated(player, card) ){
+	if( event == EVENT_PREVENT_DAMAGE && ! is_humiliated(player, card, AL_STATIC) ){
 		card_instance_t *damage= get_card_instance( affected_card_controller, affected_card);
 		if( damage->internal_card_id == damage_card ){
 			if( damage->damage_source_player != player && damage->damage_target_card == -1 && damage->damage_target_player == player &&
@@ -664,14 +698,10 @@ Hive Mind	|5|U
 Enchantment
 Whenever a player casts an instant or sorcery spell, each other player copies that spell. Each of those players may choose new targets for his or her copy.*/
 
-	if( trigger_condition == TRIGGER_SPELL_CAST && affect_me(player, card) ){
-		test_definition_t test;
-		default_test_definition(&test, TYPE_SPELL);
-		if( new_specific_spell_played(player, card, event, ANYBODY, RESOLVE_TRIGGER_MANDATORY, &test) ){
-			copy_spell_from_stack(1-trigger_cause_controller, trigger_cause_controller, trigger_cause);
-		}
+	sp_ability_trigger(ANYBODY, event, RESOLVE_TRIGGER_MANDATORY, TYPE_SPELL, NULL, player, card);
+	if (event == EVENT_SPA){
+		copy_spell_from_stack(1-trigger_cause_controller, trigger_cause_controller, trigger_cause);
 	}
-
 	return global_enchantment(player, card, event);
 }
 
@@ -699,10 +729,13 @@ Enchantment
 Whenever an opponent casts a spell, reveal the top card of your library. If it's a creature card, put it onto the battlefield.
 Otherwise, you may put that card on the bottom of your library. */
 
-	if( ai_is_speculating !=1 && new_specific_spell_played(player, card, event, 1-player, RESOLVE_TRIGGER_MANDATORY, NULL) ){
+	if (ai_is_speculating != 1){
+		sp_ability_trigger(1-player, event, RESOLVE_TRIGGER_MANDATORY, TYPE_ANY, NULL, player, card);
+	}
+	if (event == EVENT_SPA){
 		int *deck = deck_ptr[player];
 		if( deck[0] != -1 ){
-			show_deck( player, deck, 1, "Here's the first card of deck.", 0, 0x7375B0 );
+			show_deck( player, deck, 1, "Here's the first card of deck.", 0, gs_done_008b40e0 );
 			if( is_what(-1, deck[0], TYPE_CREATURE) ){
 				put_into_play_a_card_from_deck(player, player, 0);
 			}
@@ -719,13 +752,12 @@ Otherwise, you may put that card on the bottom of your library. */
 }
 
 int card_magebane_armor(int player, int card, event_t event){
-/*
-Magebane Armor |3
-Artifact — Equipment
-Equipped creature gets +2/+4 and loses flying.
-Prevent all noncombat damage that would be dealt to equipped creature.
-Equip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)
-*/
+  /* Magebane Armor |3
+   * Artifact — Equipment
+   * Equipped creature gets +2/+4 and loses flying.
+   * Prevent all noncombat damage that would be dealt to equipped creature.
+   * Equip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.) */
+
 	card_instance_t* instance;
 	if( (instance = in_play(player, card)) && is_equipping(player, card) ){
 		int p = instance->damage_target_player;
@@ -756,7 +788,7 @@ int card_master_of_the_wild_hunt(int player, int card, event_t event){
 		token_generation_t token;
 		default_token_definition(player, card, CARD_ID_WOLF, &token);
 		token.pow = token.tou = 2;
-		token.color_forced = get_sleighted_color_test(player, card, COLOR_TEST_GREEN);
+		token.color_forced = COLOR_TEST_GREEN;
 		generate_token(&token);
 	}
 
@@ -814,12 +846,11 @@ int card_master_of_the_wild_hunt(int player, int card, event_t event){
 }
 
 int card_mirror_of_fate(int player, int card, event_t event){
-/*
-Mirror of Fate |5
-Artifact
-{T}, Sacrifice Mirror of Fate: Choose up to seven face-up exiled cards you own.
-	Exile all the cards from your library, then put the chosen cards on top of your library.
-*/
+  /* Mirror of Fate |5
+   * Artifact
+   * {T}, Sacrifice Mirror of Fate: Choose up to seven face-up exiled cards you own.
+   * 	Exile all the cards from your library, then put the chosen cards on top of your library. */
+
 	if( event == EVENT_RESOLVE_ACTIVATION ){
 		char msg[100] = "Select a card to put into your deck.";
 		test_definition_t this_test;
@@ -897,7 +928,7 @@ Destroy all nonland permanents. */
 		test_definition_t this_test;
 		default_test_definition(&this_test, TYPE_LAND);
 		this_test.type_flag = 1;
-		APNAP(p,{new_manipulate_all(player, card, p, &this_test, KILL_DESTROY);};);
+		new_manipulate_all(player, card, ANYBODY, &this_test, KILL_DESTROY);
 		kill_card(player, card, KILL_DESTROY);
 	}
 
@@ -915,40 +946,78 @@ Other Soldier creatures you control have first strike. */
 	return 0;
 }
 
-static void sphinx_ambassador_ability(int player, int card, int t_player){
-/* Search that [t_player] library for a card, then that player names a card. If you searched for a creature card that isn't the named card,
- * you may put it onto the battlefield under your control. Then that player shuffles his or her library.
-*/
-	int *deck = deck_ptr[t_player];
-	if( deck[0] != -1 ){
-		test_definition_t this_test;
-		new_default_test_definition(&this_test, TYPE_ANY, "Select a card.");
-		if( IS_AI(player) ){
-			default_test_definition(&this_test, TYPE_CREATURE);
-		}
-		int selected = new_select_a_card(player, 1-player, TUTOR_FROM_DECK, 0, AI_MAX_VALUE, -1, &this_test);
-		if( selected != -1 ){
-			int csvid = -1;
-			if( ! IS_AI(t_player) ){
-				csvid = card_from_list(player, 3, TYPE_ANY, 0, 0, 0, 0, 0, 0, 0, -1, 0);
-			}
-			if( cards_data[deck[selected]].id != csvid && is_what(-1, deck[selected], TYPE_CREATURE) ){
-				put_into_play_a_card_from_deck(player, t_player, selected);
-			}
-		}
-		shuffle(1-player);
-	}
+/* ManalinkEh 2022: 0x2500fb0; original cards/m10.c:937. */
+int card_sanguine_bond(int player, int card, event_t event)
+{
+  /* Sanguine Bond	|3|B|B
+   * Enchantment
+   * Whenever you gain life, target opponent loses that much life. */
+
+  int gained_life;
+  card_instance_t *instance;
+
+  gained_life = trigger_gain_life(player, card, event, player, RESOLVE_TRIGGER_MANDATORY);
+  if (gained_life != 0)
+  {
+    instance = in_play(player, card);
+    if (instance != NULL)
+    {
+      if (check_battlefield_for_id(player, CARD_ID_EXQUISITE_BLOOD) == 0)
+      {
+        lose_life(1 - player, gained_life);
+      }
+      else
+      {
+        lose_the_game(1 - player);
+      }
+    }
+  }
+  return global_enchantment(player, card, event);
+}
+
+static void sphinx_ambassador_ability(int player, int card, int t_player)
+{
+  /* Search that [t_player] library for a card, then that player names a card. If you searched for a
+   * creature card that isn't the named card, you may put it onto the battlefield under your
+   * control. Then that player shuffles his or her library.
+   */
+  int *deck = deck_ptr[t_player];
+  if (deck[0] != -1)
+  {
+    test_definition_t this_test;
+    new_default_test_definition(&this_test, TYPE_ANY, "Select a card.");
+    if (IS_AI(player))
+    {
+      default_test_definition(&this_test, TYPE_CREATURE);
+    }
+    int selected =
+        new_select_a_card(player, 1 - player, TUTOR_FROM_DECK, 0, AI_MAX_VALUE, -1, &this_test);
+    if (selected != -1)
+    {
+      int csvid = -1;
+      if (!IS_AI(t_player))
+      {
+        test_definition_t test;
+        new_default_test_definition(&test, TYPE_ANY, "Choose a card name.");
+        csvid = new_card_from_list(player, 3, &test);
+      }
+      if (cards_data[deck[selected]].id != csvid && is_what(-1, deck[selected], TYPE_CREATURE))
+      {
+        put_into_play_a_card_from_deck(player, t_player, selected);
+      }
+    }
+    shuffle(1 - player);
+  }
 }
 
 int card_sphinx_ambassador(int player, int card, event_t event){
-/*
-Sphinx Ambassador |5|U|U
-Creature — Sphinx
-Flying
-Whenever Sphinx Ambassador deals combat damage to a player, search that player's library for a card,
-	then that player names a card. If you searched for a creature card that isn't the named card, you may put it onto the battlefield
-	under your control. Then that player shuffles his or her library.
-*/
+  /* Sphinx Ambassador |5|U|U
+   * Creature — Sphinx
+   * Flying
+   * Whenever Sphinx Ambassador deals combat damage to a player, search that player's library for a card,
+   * 	then that player names a card. If you searched for a creature card that isn't the named card, you may put it onto the battlefield
+   * 	under your control. Then that player shuffles his or her library. */
+
 	int result = whenever_i_deal_damage_to_a_player(player, card, event, DDBM_MUST_BE_COMBAT_DAMAGE);
 	if( result ){
 		int times_damaged[2] = {BYTE0(result), BYTE1(result)};
@@ -969,6 +1038,7 @@ static const char* target_is_skeleton_vampire_or_zombie(int who_chooses, int pla
   return (has_subtype(player, card, SUBTYPE_SKELETON) || has_subtype(player, card, SUBTYPE_VAMPIRE) || has_subtype(player, card, SUBTYPE_ZOMBIE)
 		  ? NULL : gs_target_error_subtype);	//",subtype"
 }
+
 int card_undead_slayer(int player, int card, event_t event)
 {
   /* Undead Slayer	|2|W
@@ -1002,7 +1072,7 @@ As long as the top card of your library is |Sblack, ~ and other Vampire creature
 
 	reveal_top_card(player, card, event);
 
-	if( in_play(player, card) && ! is_humiliated(player, card) ){
+	if( in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		int iid = deck_ptr[player][0];
 		if( iid > -1 ){
 			if( get_color_by_internal_id(player, iid) & get_sleighted_color_test(player, card, COLOR_TEST_BLACK) ){
@@ -1033,13 +1103,12 @@ Other Soldier creatures you control get +1/+0. */
 }
 
 int card_xathrid_demon(int player, int card, event_t event){
-/*
-Xathrid Demon |3|B|B|B
-Creature — Demon 7/7
-Flying, trample
-At the beginning of your upkeep, sacrifice a creature other than Xathrid Demon, then each opponent loses life equal
-	to the sacrificed creature's power. If you can't sacrifice a creature, tap Xathrid Demon and you lose 7 life.
-*/
+  /* Xathrid Demon |3|B|B|B
+   * Creature — Demon 7/7
+   * Flying, trample
+   * At the beginning of your upkeep, sacrifice a creature other than Xathrid Demon, then each opponent loses life equal
+   * 	to the sacrificed creature's power. If you can't sacrifice a creature, tap Xathrid Demon and you lose 7 life. */
+
 	upkeep_trigger_ability(player, card, event, player);
 
 	if( event == EVENT_UPKEEP_TRIGGER_ABILITY ){
@@ -1066,4 +1135,3 @@ At the beginning of your upkeep, sacrifice a creature other than Xathrid Demon, 
 
 	return 0;
 }
-

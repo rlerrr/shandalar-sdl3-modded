@@ -1,6 +1,13 @@
 #include "manalink.h"
 
 int card_elephant_grass(int player, int card, event_t event){
+  /* CARD_ID_ELEPHANT_GRASS	2695
+   * Elephant Grass	|G
+   * Enchantment
+   * Cumulative upkeep |1 (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)
+   * |SBlack creatures can't attack you.
+   * Non|Sblack creatures can't attack you unless their controller pays |2 for each creature he or she controls that's attacking you. */
+
     if( event == EVENT_ATTACK_LEGALITY && current_turn == 1-player ){
         int color = get_color(affected_card_controller, affected_card);
         if( color & COLOR_TEST_BLACK ){
@@ -13,6 +20,13 @@ int card_elephant_grass(int player, int card, event_t event){
 }
 
 int card_utopia_sprawl(int player, int card, event_t event){
+  /* CARD_ID_UTOPIA_SPRAWL	8310
+   * Utopia Sprawl	|G
+   * Enchantment - Aura
+   * Enchant |H2Forest
+   * As ~ enters the battlefield, choose a color.
+   * Whenever enchanted |H2Forest is tapped for mana, its controller adds one mana of the chosen color to his or her mana pool (in addition to the mana the land produces). */
+
 	card_instance_t* instance = get_card_instance(player, card);
 	int result = wild_growth_aura(player, card, event, SUBTYPE_FOREST, instance->targets[2].player, instance->targets[2].card);
 	if (cancel != 1	// failed to verify target
@@ -25,6 +39,11 @@ int card_utopia_sprawl(int player, int card, event_t event){
 }
 
 int card_enchantresss_presence(int player, int card, event_t event){
+  /* CARD_ID_ENCHANTRESSS_PRESENCE	6131
+   * Enchantress's Presence	|2|G
+   * Enchantment
+   * Whenever you cast an enchantment spell, draw a card. */
+
     if(event == EVENT_CAN_CAST){
         return 1;
     }

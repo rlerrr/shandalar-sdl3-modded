@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "source_sha256": "0170f02b1c381a20a97ca0c12e99c8d338453ce4edbfc99148e726d565bee0de",
+  "cards": {
+    "21990": {
+      "name": "Skyclave Basilica",
+      "source_iid": 21922,
+      "source_address": "0x42012f4a",
+      "corrected_address": "0x02012f4a",
+      "handler": "manalinkeh_mdfc_back_etb_tapped_land",
+      "reason": "Reviewed correction for October 2022 reconstruction: the shipped record has an extra 0x40000000 bit in its code pointer. Veneer 0x02012f4a resolves to the recovered shared MDFC land-back handler at 0x02307c90 in cards/zendikar_rising.c. Apply only to this exact source record, preserving the extracted bytes as provenance."
+    }
+  }
+}

@@ -28,12 +28,21 @@ int karoo(int player, int card, event_t event, int color1, int color2, int ai_ca
 }
 
 int card_dryad_arbor(int player, int card, event_t event){
+  /* CARD_ID_DRYAD_ARBOR	8916
+   * Dryad Arbor	""
+   * Land Creature - |H2Forest Dryad 1/1
+   * (~ isn't a spell, it's affected by summoning sickness, and it has "|T: Add |H|G to your mana pool.") */
+
     colored_artifact(player, card, event);
     return mana_producer_fixed(player, card, event, COLOR_GREEN);
 }
 
-
 int card_forbidden_orchard(int player, int card, event_t event){
+  /* Forbidden Orchard	""
+   * Land
+   * |T: Add one mana of any color to your mana pool.
+   * Whenever you tap ~ for mana, target opponent puts a 1/1 colorless Spirit creature token onto the battlefield. */
+
     if( event == EVENT_RESOLVE_ACTIVATION ){
         generate_token_by_id(opp, CARD_ID_SPIRIT);
     }
@@ -158,44 +167,110 @@ int karoo2(int player, int card, event_t event, int color1, int color2){
     return two_mana_land(player, card, event, color1, color2);
 }
 
-
  int card_izzet_boilerworks(int player, int card, event_t event){
+  /* Izzet Boilerworks	""
+   * Land
+   * This land enters tapped.
+   * When this land enters, return a land you control to its owner's hand.
+   * |T: Add |U|R. */
+
     return karoo( player, card, event, COLOR_RED, COLOR_BLUE, CARD_ID_VOLCANIC_ISLAND );
  }
  
  int card_selesnya_sanctuary(int player, int card, event_t event){
+  /* CARD_ID_SELESNYA_SANCTUARY	1725
+   * Selesnya Sanctuary	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * When ~ enters the battlefield, return a land you control to its owner's hand.
+   * |T: Add |G|W to your mana pool. */
+
     return karoo( player, card, event, COLOR_GREEN, COLOR_WHITE, CARD_ID_SAVANNAH );
  }
  
  int card_golgari_rot_farm(int player, int card, event_t event){
+  /* CARD_ID_GOLGARI_ROT_FARM	1726
+   * Golgari Rot Farm	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * When ~ enters the battlefield, return a land you control to its owner's hand.
+   * |T: Add |B|G to your mana pool. */
+
     return karoo( player, card, event, COLOR_GREEN, COLOR_BLACK, CARD_ID_BAYOU );
  }
  
  int card_boros_garrison(int player, int card, event_t event){
+  /* CARD_ID_BOROS_GARRISON	7778
+   * Boros Garrison	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * When ~ enters the battlefield, return a land you control to its owner's hand.
+   * |T: Add |R|W to your mana pool. */
+
     return karoo( player, card, event, COLOR_RED, COLOR_WHITE, CARD_ID_PLATEAU );
  }
  
  int card_dimir_aqueduct(int player, int card, event_t event){
+  /* CARD_ID_DIMIR_AQUEDUCT	1727
+   * Dimir Aqueduct	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * When ~ enters the battlefield, return a land you control to its owner's hand.
+   * |T: Add |U|B to your mana pool. */
+
     return karoo( player, card, event, COLOR_BLACK, COLOR_BLUE, CARD_ID_UNDERGROUND_SEA );
  }
  
  int card_gruul_turf(int player, int card, event_t event){
+  /* Gruul Turf	""
+   * Land
+   * This land enters tapped.
+   * When this land enters, return a land you control to its owner's hand.
+   * |T: Add |R|G. */
+
     return karoo( player, card, event, COLOR_RED, COLOR_GREEN, CARD_ID_TAIGA);
  }
  
  int card_azorius_chancery(int player, int card, event_t event){
+  /* Azorius Chancery	""
+   * Land
+   * This land enters tapped.
+   * When this land enters, return a land you control to its owner's hand.
+   * |T: Add |W|U. */
+
     return karoo( player, card, event, COLOR_WHITE, COLOR_BLUE, CARD_ID_TUNDRA );
  }
  
  int card_rakdos_carnarium(int player, int card, event_t event){
+  /* CARD_ID_RAKDOS_CARNARIUM	1731
+   * Rakdos Carnarium	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * When ~ enters the battlefield, return a land you control to its owner's hand.
+   * |T: Add |B|R to your mana pool. */
+
     return karoo( player, card, event, COLOR_RED, COLOR_BLACK, CARD_ID_BADLANDS );
  }
  
  int card_simic_growth_chamber(int player, int card, event_t event){
+  /* CARD_ID_SIMIC_GROWTH_CHAMBER	1732
+   * Simic Growth Chamber	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * When ~ enters the battlefield, return a land you control to its owner's hand.
+   * |T: Add |G|U to your mana pool. */
+
     return karoo( player, card, event, COLOR_GREEN, COLOR_BLUE, CARD_ID_TROPICAL_ISLAND );
  }
  
  int card_orzhov_basilica(int player, int card, event_t event){
+  /* CARD_ID_ORZHOV_BASILICA	1551
+   * Orzhov Basilica	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * When ~ enters the battlefield, return a land you control to its owner's hand.
+   * |T: Add |W|B to your mana pool. */
+
     return karoo( player, card, event, COLOR_WHITE, COLOR_BLACK, CARD_ID_SCRUBLAND );
  }
 
@@ -229,46 +304,118 @@ int sac_land(int player, int card, event_t event, int base_color, int color1, in
 }
 
 int card_dwarven_ruins(int player, int card, event_t event){
+  /* CARD_ID_DWARVEN_RUINS	1767
+   * Dwarven Ruins	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * |T: Add |R to your mana pool.
+   * |T, Sacrifice ~: Add |R|R to your mana pool. */
+
     return sac_land(player, card, event, COLOR_RED, COLOR_RED, COLOR_RED );
 }
 
 int card_ebon_stronghold(int player, int card, event_t event){
+  /* CARD_ID_EBON_STRONGHOLD	1770
+   * Ebon Stronghold	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * |T: Add |B to your mana pool.
+   * |T, Sacrifice ~: Add |B|B to your mana pool. */
+
     return sac_land(player, card, event, COLOR_BLACK, COLOR_BLACK, COLOR_BLACK );
 }
 
 int card_havenwood_battleground(int player, int card, event_t event){
+  /* CARD_ID_HAVENWOOD_BATTLEGROUND	1788
+   * Havenwood Battleground	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * |T: Add |G to your mana pool.
+   * |T, Sacrifice ~: Add |G|G to your mana pool. */
+
     return sac_land(player, card, event, COLOR_GREEN, COLOR_GREEN, COLOR_GREEN );
 }
 
 int card_ruins_of_trokair(int player, int card, event_t event){
+  /* CARD_ID_RUINS_OF_TROKAIR	1818
+   * Ruins of Trokair	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * |T: Add |W to your mana pool.
+   * |T, Sacrifice ~: Add |W|W to your mana pool. */
+
     return sac_land(player, card, event, COLOR_WHITE, COLOR_WHITE, COLOR_WHITE );
 }
 
 int card_svyelunite_temple(int player, int card, event_t event){
+  /* CARD_ID_SVYELUNITE_TEMPLE	1826
+   * Svyelunite Temple	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * |T: Add |U to your mana pool.
+   * |T, Sacrifice ~: Add |U|U to your mana pool. */
+
     return sac_land(player, card, event, COLOR_BLUE, COLOR_BLUE, COLOR_BLUE );
 }
 
 int card_ancient_spring(int player, int card, event_t event){
+  /* Ancient Spring	""
+   * Land
+   * This land enters tapped.
+   * |T: Add |U.
+   * |T, Sacrifice this land: Add |W|B. */
+
     return sac_land(player, card, event, COLOR_BLUE, COLOR_WHITE, COLOR_BLACK );
 }
 
 int card_geothermal_crevice(int player, int card, event_t event){
+  /* Geothermal Crevice	""
+   * Land
+   * This land enters tapped.
+   * |T: Add |R.
+   * |T, Sacrifice this land: Add |B|G. */
+
     return sac_land(player, card, event, COLOR_RED, COLOR_BLACK, COLOR_GREEN );
 }
 
 int card_irrigation_ditch(int player, int card, event_t event){
+  /* Irrigation Ditch	""
+   * Land
+   * This land enters tapped.
+   * |T: Add |W.
+   * |T, Sacrifice this land: Add |G|U. */
+
     return sac_land(player, card, event, COLOR_WHITE, COLOR_GREEN, COLOR_BLUE );
 }
 
 int card_sulfur_vent(int player, int card, event_t event){
+  /* CARD_ID_SULFUR_VENT	5136
+   * Sulfur Vent	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * |T: Add |B to your mana pool.
+   * |T, Sacrifice ~: Add |U|R to your mana pool. */
+
     return sac_land(player, card, event, COLOR_BLACK, COLOR_RED, COLOR_BLUE );
 }
 
 int card_tinder_farm(int player, int card, event_t event){
+  /* CARD_ID_TINDER_FARM	5152
+   * Tinder Farm	""
+   * Land
+   * ~ enters the battlefield tapped.
+   * |T: Add |G to your mana pool.
+   * |T, Sacrifice ~: Add |R|W to your mana pool. */
+
     return sac_land(player, card, event, COLOR_GREEN, COLOR_RED, COLOR_WHITE );
 }
 
 int card_cloudpost(int player, int card, event_t event){
+  /* CARD_ID_CLOUDPOST	6637
+   * Cloudpost	""
+   * Land - Locus
+   * ~ enters the battlefield tapped.
+   * |T: Add |C to your mana pool for each Locus on the battlefield. */
 
     comes_into_play_tapped(player, card, event);
 

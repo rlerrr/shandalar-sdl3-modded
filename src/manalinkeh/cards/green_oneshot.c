@@ -1,6 +1,5 @@
 #include "manalink.h"
 
-
 int is_forest(int player, int card){
     if( has_subtype(player, card, SUBTYPE_FOREST )){
         return 1;
@@ -9,6 +8,12 @@ int is_forest(int player, int card){
 }
 
 int card_land_grant(int player, int card, event_t event){
+  /* CARD_ID_LAND_GRANT	4517
+   * Land Grant	|1|G
+   * Sorcery
+   * If you have no land cards in hand, you may reveal your hand rather than pay ~'s mana cost.
+   * Search your library for |Ha Forest card, reveal that card, and put it into your hand. Then shuffle your library. */
+
     //if( player == AI ){ return 0; }
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_LAND);
@@ -35,10 +40,19 @@ int card_land_grant(int player, int card, event_t event){
 }
 
 int card_living_wish(int player, int card, event_t event){
+  /* CARD_ID_LIVING_WISH	5971
+   * Living Wish	|1|G
+   * Sorcery
+   * You may choose a creature or land card you own from outside the game, reveal that card, and put it into your hand. Exile ~. */
+
     return generic_wish(player, card, event, TYPE_CREATURE | TYPE_LAND, CARD_ID_GAEAS_CRADLE);
 }
 
 int card_overrun(int player, int card, event_t event){
+  /* Overrun	|2|G|G|G
+   * Sorcery
+   * Creatures you control get +3/+3 and gain trample until end of turn. (Each of those creatures can deal excess combat damage to the player or planeswalker it's attacking.) */
+
     if(event == EVENT_CAN_CAST ){
         return 1;
     }
@@ -66,6 +80,11 @@ int is_green(int player, int card){
 }
 
 int card_farseek(int player, int card, event_t event){
+  /* CARD_ID_FARSEEK	1507
+   * Farseek	|1|G
+   * Sorcery
+   * Search your library for |Ha Plains, |H2Island, |H2Swamp, or |H2Mountain card and put it onto the battlefield tapped. Then shuffle your library. */
+
     if( event == EVENT_CAN_CAST ){
         return 1;
     }
@@ -84,8 +103,14 @@ int card_farseek(int player, int card, event_t event){
     return 0;
 }
 
-
 int card_reap_and_sow(int player, int card, event_t event){
+  /* CARD_ID_REAP_AND_SOW	6942
+   * Reap and Sow	|3|G
+   * Sorcery
+   * Choose one -
+   * Destroy target land.
+   * Search your library for a land card, put that card onto the battlefield, then shuffle your library.
+   * Entwine |1|G (Choose both if you pay the entwine cost.) */
 
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_LAND);
@@ -150,6 +175,14 @@ int card_reap_and_sow(int player, int card, event_t event){
 }
 
 int card_tooth_and_nail(int player, int card, event_t event){
+  /* CARD_ID_TOOTH_AND_NAIL	1548
+   * Tooth and Nail	|5|G|G
+   * Sorcery
+   * Choose one -
+   * Search your library for up to two creature cards, reveal them, put them into your hand, then shuffle your library.
+   * Put up to two creature cards from your hand onto the battlefield.
+   * Entwine |2 (Choose both if you pay the entwine cost.) */
+
     card_instance_t *instance = get_card_instance(player, card);
 
     if(event == EVENT_CAN_CAST ){
@@ -217,6 +250,12 @@ int card_tooth_and_nail(int player, int card, event_t event){
 }
 
 int card_eureka(int player, int card, event_t event){
+  /* CARD_ID_EUREKA	629
+   * Eureka	|2|G|G
+   * Sorcery
+   * Starting with you, each player may put a permanent card from his or her hand onto the battlefield.
+   * Repeat this process until no one puts a card onto the battlefield. */
+
     if( event == EVENT_CAN_CAST ){
         return 1;
     }
@@ -237,6 +276,11 @@ int card_eureka(int player, int card, event_t event){
 }
 
 int card_early_harvest(int player, int card, event_t event){
+  /* CARD_ID_EARLY_HARVEST	2459
+   * Early Harvest	|1|G|G
+   * Instant
+   * Target player untaps all basic lands he or she controls. */
+
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_CREATURE);
     td.zone = TARGET_ZONE_PLAYERS;
@@ -283,6 +327,11 @@ int effect_glimpse_of_nature(int player, int card, event_t event){
 }
 
 int card_glimpse_of_nature(int player, int card, event_t event){
+  /* CARD_ID_GLIMPSE_OF_NATURE	7218
+   * Glimpse of Nature	|G
+   * Sorcery
+   * Whenever you cast a creature spell this turn, draw a card. */
+
     if(event == EVENT_CAN_CAST ){
         return 1;
     }

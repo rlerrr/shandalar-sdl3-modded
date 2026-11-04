@@ -138,25 +138,11 @@ HWND shandalar_win32_create_dialog(HINSTANCE instance, HWND parent, LPCSTR title
                          x, y, width, height, parent, NULL, instance, NULL);
 }
 
-INT_PTR DialogBoxParamA(HINSTANCE instance, LPCSTR template_name, HWND parent,
-                        DLGPROC dialog_proc, LPARAM init_param)
+static INT_PTR run_modal_dialog(HWND window, HWND parent, DLGPROC dialog_proc, LPARAM init_param)
 {
-  shandalar_require_presentation("unexpected DialogBox request");
   DialogState state;
   MSG message;
-  DialogFactoryRegistration *registration;
-  UINT resource_id = (UINT)(uintptr_t)template_name & 0xffffu;
-  HWND window = NULL;
-  for (registration = g_factories; registration; registration = registration->next) {
-    if (registration->resource_id == resource_id) {
-      window = registration->factory(instance, template_name, parent);
-      break;
-    }
-  }
-  if (!window)
-    window = shandalar_win32_create_dialog(instance, parent, "", 100, 100, 320, 200);
-  if (!window)
-    return -1;
+  if (!window) return -1;
   memset(&state, 0, sizeof(state));
   state.window = window;
   state.proc = dialog_proc;
@@ -190,6 +176,24 @@ INT_PTR DialogBoxParamA(HINSTANCE instance, LPCSTR template_name, HWND parent,
   }
   g_dialogs = state.next;
   return state.result;
+}
+
+INT_PTR DialogBoxParamA(HINSTANCE instance, LPCSTR template_name, HWND parent,
+                        DLGPROC dialog_proc, LPARAM init_param)
+{
+  shandalar_require_presentation("unexpected DialogBox request");
+  DialogFactoryRegistration *registration;
+  UINT resource_id = (UINT)(uintptr_t)template_name & 0xffffu;
+  HWND window = NULL;
+  for (registration = g_factories; registration; registration = registration->next) {
+    if (registration->resource_id == resource_id) {
+      window = registration->factory(instance, template_name, parent);
+      break;
+    }
+  }
+  if (!window)
+    window = shandalar_win32_create_dialog(instance, parent, "", 100, 100, 320, 200);
+  return run_modal_dialog(window, parent, dialog_proc, init_param);
 }
 
 BOOL EndDialog(HWND dialog, INT_PTR result)
@@ -309,4 +313,69 @@ BOOL shandalar_win32_register_dialog_factory(UINT resource_id,
   registration->next = g_factories;
   g_factories = registration;
   return TRUE;
+}
+
+/* Parse the standard, packed Win32 dialog format emitted by the recovered UI.
+ * Both the template and every control use UTF-16 strings and DWORD alignment. */
+static const WORD *dialog_string(const WORD *p, char *text, size_t capacity, WORD *ordinal)
+{
+  size_t n = 0;
+  *ordinal = 0;
+  if (*p == 0xffff) { *ordinal = p[1]; text[0] = 0; return p + 2; }
+  while (*p) {
+    unsigned ch = *p++;
+    if (ch < 0x80) { if (n + 1 < capacity) text[n++] = (char)ch; }
+    else if (ch < 0x800) {
+      if (n + 2 < capacity) { text[n++] = 0xc0 | (ch >> 6); text[n++] = 0x80 | (ch & 63); }
+    } else if (n + 3 < capacity) {
+      text[n++] = 0xe0 | (ch >> 12); text[n++] = 0x80 | ((ch >> 6) & 63); text[n++] = 0x80 | (ch & 63);
+    }
+  }
+  text[n] = 0;
+  return p + 1;
+}
+INT_PTR DialogBoxIndirectParamA(HINSTANCE instance, LPCDLGTEMPLATE templ, HWND parent,
+                                DLGPROC proc, LPARAM parameter)
+{
+  shandalar_require_presentation("unexpected DialogBox request");
+  if (!templ || !proc) return -1;
+  char menu[256], class_name[256], title[512], font[256];
+  WORD ordinal;
+  const WORD *p = (const WORD *)(templ + 1);
+  p = dialog_string(p, menu, sizeof(menu), &ordinal);
+  p = dialog_string(p, class_name, sizeof(class_name), &ordinal);
+  p = dialog_string(p, title, sizeof(title), &ordinal);
+  int font_size = 8;
+  font[0] = 0;
+  if (templ->style & 0x40) {
+    font_size = *p++;
+    p = dialog_string(p, font, sizeof(font), &ordinal);
+  }
+  HWND dialog = shandalar_win32_create_dialog(instance, parent, title,
+      templ->x * 2, templ->y * 2, templ->cx * 2, templ->cy * 2);
+  if (!dialog) return -1;
+  if (*font) shandalar_win32_set_dialog_template_font(dialog, font, font_size);
+  for (unsigned i = 0; i < templ->cdit; ++i) {
+    p = (const WORD *)(((uintptr_t)p + 3) & ~(uintptr_t)3);
+    const DLGTEMPLATE *item = (const DLGTEMPLATE *)p;
+    /* DLGITEMTEMPLATE shares the first two DWORDs, followed by x,y,cx,cy,id. */
+    const short *coords = (const short *)(p + 4);
+    int x = coords[0], y = coords[1], width = coords[2], height = coords[3];
+    WORD id = p[8];
+    p += 9;
+    p = dialog_string(p, class_name, sizeof(class_name), &ordinal);
+    if (ordinal >= 0x80 && ordinal <= 0x85) {
+      static const char *classes[] = {"BUTTON", "EDIT", "STATIC", "LISTBOX", "SCROLLBAR", "COMBOBOX"};
+      snprintf(class_name, sizeof(class_name), "%s", classes[ordinal - 0x80]);
+    }
+    p = dialog_string(p, title, sizeof(title), &ordinal);
+    DWORD style = item->style;
+    if (strcmp(class_name, "LISTBOX") == 0) style = (style & ~0x2030u) | 0x40;
+    HWND control = CreateWindowExA(item->dwExtendedStyle, class_name, title, style,
+        x * 2, y * 2, width * 2, height * 2, dialog, (HMENU)(uintptr_t)id, instance, NULL);
+    if (!control) { DestroyWindow(dialog); return -1; }
+    WORD extra = *p++;
+    p = (const WORD *)((const unsigned char *)p + extra);
+  }
+  return run_modal_dialog(dialog, parent, proc, parameter);
 }

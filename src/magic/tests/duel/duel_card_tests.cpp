@@ -1,4 +1,8 @@
 #include <gtest/gtest.h>
+#if defined(_WIN32) && !defined(__EMSCRIPTEN__)
+#include <crtdbg.h>
+#include <windows.h>
+#endif
 #include "duel_test_api.h"
 #include <cstring>
 #include <cstdlib>
@@ -299,6 +303,11 @@ class AITest:public testing::Test {
  }
 };
 int main(int argc,char**argv) {
+#if defined(_WIN32) && !defined(__EMSCRIPTEN__)
+ _set_error_mode(_OUT_TO_STDERR);
+ _CrtSetReportMode(_CRT_ASSERT, _CRTDBG_MODE_FILE);
+ _CrtSetReportFile(_CRT_ASSERT, _CRTDBG_FILE_STDERR);
+#endif
  testing::InitGoogleTest(&argc,argv);
  // The isolated runner requests one exact test. Avoid allocating tens of
  // thousands of unused GoogleTest factories in every fresh process. Complex

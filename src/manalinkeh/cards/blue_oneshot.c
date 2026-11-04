@@ -1,6 +1,11 @@
 #include "manalink.h"
 
 int card_compulsive_research(int player, int card, event_t event){
+  /* CARD_ID_COMPULSIVE_RESEARCH	1549
+   * Compulsive Research	|2|U
+   * Sorcery
+   * Target player draws three cards. Then that player discards two cards unless he or she discards a land card. */
+
     /* Original Code: 004E81DF */
     target_definition_t td;
     card_instance_t *instance = get_card_instance( player, card);
@@ -40,6 +45,11 @@ int card_compulsive_research(int player, int card, event_t event){
 }
 
 int card_thirst_for_knowledge(int player, int card, event_t event){
+  /* CARD_ID_THIRST_FOR_KNOWLEDGE	1545
+   * Thirst for Knowledge	|2|U
+   * Instant
+   * Draw three cards. Then discard two cards unless you discard an artifact card. */
+
     /* Original Code: 004E76FB */
     card_instance_t *instance = get_card_instance( player, card);
     if( event == EVENT_CAN_CAST ){
@@ -74,6 +84,12 @@ int card_thirst_for_knowledge(int player, int card, event_t event){
 }
 
 int card_mind_bend(int player, int card, event_t event){
+  /* CARD_ID_MIND_BEND	1086
+   * Mind Bend	|U
+   * Instant
+   * Change the text of target permanent by replacing all instances of one color word with another or one basic land type with another.
+   * (For example, you may change "nonblack creature" to "nongreen creature" or "forestwalk" to "islandwalk." This effect lasts indefinitely.) */
+
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_PERMANENT);
     card_instance_t *instance = get_card_instance( player, card);
@@ -103,8 +119,12 @@ int card_mind_bend(int player, int card, event_t event){
     return 0;
 }
 
-
 int card_echoing_truth(int player, int card, event_t event){
+  /* CARD_ID_ECHOING_TRUTH	6887
+   * Echoing Truth	|1|U
+   * Instant
+   * Return target nonland permanent and all other permanents with the same name as that permanent to their owners' hands. */
+
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_NONLAND);
     td.illegal_type = TYPE_LAND;
@@ -140,11 +160,17 @@ int card_echoing_truth(int player, int card, event_t event){
 }
 
 int card_gifts_ungiven(int player, int card, event_t event){
+  /* Gifts Ungiven	|3|U
+   * Instant
+   * Search your library for up to four cards with different names and reveal them. Target opponent chooses two of those cards. Put the chosen cards into your graveyard and the rest into your hand. Then shuffle. */
 
     return 0;
 }
 
 int card_gifts_ungiven2(int player, int card, event_t event){
+  /* Gifts Ungiven	|3|U
+   * Instant
+   * Search your library for up to four cards with different names and reveal them. Target opponent chooses two of those cards. Put the chosen cards into your graveyard and the rest into your hand. Then shuffle. */
 
 //    card_instance_t *instance = get_card_instance(player, card);
 
@@ -225,7 +251,7 @@ int card_gifts_ungiven2(int player, int card, event_t event){
                      int selected = -1;
                      if( 1-player != AI ){
                          while( selected == -1 ){
-                                selected = show_deck(1-player, chosen, cards, "Choose a card", 0, 0x7375B0 );
+                                selected = show_deck(1-player, chosen, cards, "Choose a card", 0, gs_done_008b40e0 );
 								if( cards_data[chosen[selected]].id == CARD_ID_RULES_ENGINE ){
 									selected = -1;
 								}
@@ -267,6 +293,12 @@ int card_gifts_ungiven2(int player, int card, event_t event){
 }
 
 int card_mental_note(int player, int card, event_t event){
+  /* CARD_ID_MENTAL_NOTE	5974
+   * Mental Note	|U
+   * Instant
+   * Put the top two cards of your library into your graveyard.
+   * Draw a card. */
+
     if( event == EVENT_CAN_CAST ){
         return 1;
     }
@@ -279,6 +311,11 @@ int card_mental_note(int player, int card, event_t event){
 }
 
 int card_prosperity(int player, int card, event_t event){
+  /* CARD_ID_PROSPERITY	1497
+   * Prosperity	|X|U
+   * Sorcery
+   * Each player draws X cards. */
+
     card_instance_t *instance = get_card_instance( player, card);
     if(event == EVENT_CAN_CAST ){
         return ! check_battlefield_for_id(2, CARD_ID_GADDOCK_TEEG);
@@ -296,6 +333,12 @@ int card_prosperity(int player, int card, event_t event){
 }
 
 int card_gush(int player, int card, event_t event){
+  /* CARD_ID_GUSH	4482
+   * Gush	|4|U
+   * Instant
+   * You may return two |H1Islands you control to their owner's hand rather than pay ~'s mana cost.
+   * Draw two cards. */
+
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_LAND);
     td.required_subtype = SUBTYPE_ISLAND;
@@ -351,6 +394,11 @@ int card_gush(int player, int card, event_t event){
 }
 
 int card_disrupt(int player, int card, event_t event){
+  /* Disrupt	|U
+   * Instant
+   * Counter target instant or sorcery spell unless its controller pays |1.
+   * Draw a card. */
+
     if(event == EVENT_CAN_CAST ){
         int result =  card_force_spike(player, card, event);
         if( result > 0 ){
@@ -378,6 +426,10 @@ int card_disrupt(int player, int card, event_t event){
 }
 
 int card_brainstorm(int player, int card, event_t event){
+  /* Brainstorm	|U	0x200133F
+   * Instant
+   * Draw three cards, then put two cards from your hand on top of your library in any order. */
+
     if( event == EVENT_CAN_CAST ){
         return 1;
     }
@@ -401,10 +453,14 @@ int card_brainstorm(int player, int card, event_t event){
     return 0;
 }
 
-
-
 int card_repulse(int player, int card, event_t event)
 {
+  /* CARD_ID_REPULSE	1352
+   * Repulse	|2|U
+   * Instant
+   * Return target creature to its owner's hand.
+   * Draw a card. */
+
   int result =  card_unsummon(player, card, event);
   if(event == EVENT_RESOLVE_SPELL){
     if( spell_fizzled != 1 ){
@@ -415,6 +471,11 @@ int card_repulse(int player, int card, event_t event)
 }
 
 int card_dissipate(int player, int card, event_t event){
+  /* CARD_ID_DISSIPATE	2452
+   * Dissipate	|1|U|U
+   * Instant
+   * Counter target spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard. */
+
     int result =  card_memory_lapse(player, card, event);
     if(event == EVENT_RESOLVE_SPELL && spell_fizzled != 1 ){
         card_instance_t *instance = get_card_instance(player, card);
@@ -428,6 +489,11 @@ int default_tutor_1(int card){
 }
 
 int card_mystical_tutor(int player, int card, event_t event){
+  /* CARD_ID_MYSTICAL_TUTOR	1527
+   * Mystical Tutor	|U
+   * Instant
+   * Search your library for an instant or sorcery card and reveal that card. Shuffle your library, then put the card on top of it. */
+
      //return type_tutor(player, card, event, TYPE_INSTANT | TYPE_INTERRUPT, TYPE_SORCERY, 1, 0);
     if( event == EVENT_CAN_CAST ){
         return 1;
@@ -455,9 +521,10 @@ int effect_mana_drain(int player, int card, event_t event){
     return 0;
 }
 
-
-
 int card_mana_drain(int player, int card, event_t event){
+  /* Mana Drain	|U|U
+   * Instant
+   * Counter target spell. At the beginning of your next main phase, add an amount of |C equal to that spell's mana value. */
 
     card_instance_t *instance = get_card_instance(player, card);
 	

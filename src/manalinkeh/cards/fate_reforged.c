@@ -1,55 +1,71 @@
 #include "manalink.h"
+static int wotft_1(int,int,event_t);
+static int wotft_2(int,int,event_t);
 
 // Functions
-void bolster(int player, int card, int num_counters){
-	process_damage_prevention();	// resolve_damage_cards_and_prevent_damage();
-	regenerate_or_graveyard_triggers();	// regenerate_or_graveyard_triggers();
+void bolster(int player, int card, int num_counters)
+{
+  card_instance_t *instance;
+  card_instance_t *candidate;
+  int candidate_toughness;
+  int candidate_card;
+  int lowest_toughness;
+  int chosen_card;
+  int chosen_player;
+  int tied_creatures;
+  target_definition_t td;
+  char msg[100];
 
-	/* Choose a creature with the least toughness or tied with the least toughness among creatures you control. Put "num_counters" +1/+1 counters on it.*/
-	card_instance_t *instance = get_card_instance( player, card );
-	int t_player = -1;
-	int t_card = -1;
-	int doubles_count = 1;
-	int min_t = 100;
-	int count = active_cards_count[player]-1;
-	while( count > -1 ){
-			if( in_play(player, count) && is_what(player, count, TYPE_CREATURE) ){
-				int this_t = get_toughness(player, count);
-				if( this_t < min_t ){
-					t_player = player;
-					t_card = count;
-					min_t = this_t;
-					doubles_count = 1;
-				}
-				else if( this_t == min_t ){
-						doubles_count++;
-				}
-			}
-			count--;
-	}
-
-	if( doubles_count > 1 ){
-		target_definition_t td;
-		default_target_definition(player, card, &td, TYPE_CREATURE);
-		td.allowed_controller = player;
-		td.preferred_controller = player;
-		td.illegal_abilities = 0;
-		td.toughness_requirement = min_t;
-		td.allow_cancel = 0;
-
-		instance->number_of_targets = 0;
-		char msg[100];
-		scnprintf(msg, 100, "Select a creature you control with toughness %d.", min_t);
-		if( new_pick_target(&td, msg, 0, GS_LITERAL_PROMPT) ){
-			t_player = instance->targets[0].player;
-			t_card = instance->targets[0].card;
-		}
-	}
-
-	if( t_player != -1 && t_card != -1 ){
-		add_counters(t_player, t_card, COUNTER_P1_P1, num_counters);
-	}
-
+  process_damage_prevention();
+  regenerate_or_graveyard_triggers();
+  instance = get_card_instance(player, card);
+  candidate_card = active_cards_count[player] + -1;
+  if (-1 < candidate_card)
+  {
+    tied_creatures = 1;
+    chosen_card = -1;
+    chosen_player = -1;
+    lowest_toughness = 100;
+    do
+    {
+      candidate = in_play(player, candidate_card);
+      if (candidate != NULL && is_what(player, candidate_card, 2) != 0)
+      {
+        candidate_toughness = get_toughness(player, candidate_card);
+        if (candidate_toughness < lowest_toughness)
+        {
+          tied_creatures = 1;
+          chosen_card = candidate_card;
+          chosen_player = player;
+          lowest_toughness = candidate_toughness;
+        }
+        else
+          tied_creatures = tied_creatures + (unsigned int)(candidate_toughness == lowest_toughness);
+      }
+      candidate_card = candidate_card - 1;
+    } while (candidate_card != -1);
+    if (1 < tied_creatures)
+    {
+      default_target_definition(player, card, &td, 2);
+      td.allow_cancel = 0;
+      instance->number_of_targets = '\0';
+      td.allowed_controller = player;
+      td.preferred_controller = player;
+      td.illegal_abilities = 0;
+      td.toughness_requirement = lowest_toughness;
+      scnprintf(msg, 100, "Select a creature you control with toughness %d.", lowest_toughness);
+      if (new_pick_target(&td, msg, 0, 0x80) != 0)
+      {
+        chosen_player = instance->targets[0].player;
+        chosen_card = instance->targets[0].card;
+      }
+    }
+    if ((chosen_player != -1) && (chosen_card != -1))
+    {
+      add_counters(player, card, chosen_player, chosen_card, COUNTER_P1_P1, num_counters);
+    }
+  }
+  return;
 }
 
 static int manifest_legacy(int player, int card, event_t event){
@@ -160,28 +176,34 @@ static int manifest(int player, int card){
 	return card_added;
 }
 
-static int manifesting_aura(int player, int card, event_t event, int key, int s_key){
-
-	if( event == EVENT_RESOLVE_SPELL ){
-		int result = manifest(player, card);
-		if( result > -1 ){
-			add_a_subtype(player, card, SUBTYPE_AURA_CREATURE);
-			attach_aura_to_target(player, card, event, player, result);
-		}
-		else{
-			kill_card(player, card, KILL_SACRIFICE);
-		}
-	}
-
-	card_instance_t *instance = get_card_instance(player, card);
-
-	if( instance->damage_target_player > -1 && in_play(player, card) && ! is_humiliated(player, card) ){
-		return generic_aura(player, card, event, player, 0, 0, key, s_key, 0, 0, 0);
-	}
-
-	return global_enchantment(player, card, event);
+static int manifesting_aura(int player, int card, event_t event, int key, int s_key)
+{
+  int result;
+  card_instance_t *instance;
+  if (event == EVENT_RESOLVE_SPELL)
+  {
+    add_a_subtype_permanently(player, card, player, card, SUBTYPE_AURA);
+    result = manifest(player, card);
+    instance = get_card_instance(player, card);
+    if (result < 0)
+    {
+      kill_card(player, card, KILL_STATE_BASED_ACTION);
+    }
+    else
+    {
+      instance->targets[0].player = player;
+      instance->targets[0].card = result;
+      instance->number_of_targets = '\x01';
+    }
+  }
+  result = has_subtype(player, card, SUBTYPE_AURA);
+  if (result == 0)
+  {
+    result = global_enchantment(player, card, event);
+    return result;
+  }
+  return generic_aura(player, card, event, player, 0, 0, key, s_key, 0, 0, 0);
 }
-
 
 enum{
 	KHANS = 0,
@@ -205,7 +227,7 @@ static int dash_cost_cless(int player, int cless)
 {
   int c;
   for (c = 0; c < active_cards_count[player]; ++c)
-	if (in_play(player, c) && get_id(player, c) == CARD_ID_WARBRINGER && !is_humiliated(player, c)
+	if (in_play(player, c) && get_id(player, c) == CARD_ID_WARBRINGER && !is_humiliated(player, c, AL_STATIC)
 		&& (cless -= 2) <= 0)
 	  return 0;
   return cless;
@@ -273,7 +295,7 @@ static int runemark(int player, int card, event_t event, color_test_t colors, in
 	if (event == EVENT_ABILITIES){
 		card_instance_t* instance = in_play(player, card);
 
-		if( instance && affect_me(instance->damage_target_player, instance->damage_target_card) && ! is_humiliated(player, card) ){
+		if( instance && affect_me(instance->damage_target_player, instance->damage_target_card) && ! is_humiliated(player, card, AL_STATIC) ){
 			test_definition_t this_test;
 			default_test_definition(&this_test, TYPE_PERMANENT);
 			this_test.color = get_sleighted_color_test(player, card, colors);
@@ -294,122 +316,151 @@ static int runemark(int player, int card, event_t event, color_test_t colors, in
 // Cards
 
 // Colorless
-int card_ugin_the_spirit_dragon(int player, int card, event_t event){
-	/* Ugin, the Spirit Dragon	|8	0x200d392
-	 * Legendary Planeswalker - Ugin (7)
-	 * +2: ~ deals 3 damage to any target.
-	 * -X: Exile each permanent with converted mana cost X or less that's one or more colors.
-	 * -10: You gain 7 life, draw seven cards, then put up to seven permanent cards from your hand onto the battlefield. */
-	if (event == EVENT_ACTIVATE || event == EVENT_RESOLVE_ACTIVATION){	// planeswalker() for EVENT_CAN_ACTIVATE; always at least one choice legal
+int card_ugin_the_spirit_dragon(int player, int card, event_t event)
+{
+  /* Ugin, the Spirit Dragon	|8	0x200d392
+   * Legendary Planeswalker - Ugin (7)
+   * +2: ~ deals 3 damage to any target.
+   * -X: Exile each permanent with converted mana cost X or less that's one or more colors.
+   * -10: You gain 7 life, draw seven cards, then put up to seven permanent cards from your hand onto the battlefield. */
 
-		target_definition_t td;
-		default_target_definition(player, card, &td, TYPE_CREATURE|TARGET_TYPE_PLANESWALKER);
-		td.zone = TARGET_ZONE_CREATURE_OR_PLAYER;
+  enum
+  {
+    CHOICE_DAMAGE = 1,
+    CHOICE_SWIPE = 2,
+    CHOICE_ULTIMATUM = 3
+  };
 
-		test_definition_t this_test;
-		default_test_definition(&this_test, TYPE_PERMANENT);
-		this_test.color = COLOR_TEST_ANY_COLORED;
-
-		card_instance_t *instance = get_card_instance(player, card);
-
-		int priorities[3] = {10, 0, 20};
-		if( event == EVENT_ACTIVATE ){
-			int ai_value = 0;
-			int i;
-			for(i=0; i<=count_counters(player, card, COUNTER_LOYALTY); i++){
-				this_test.cmc = i+1;
-				this_test.cmc_flag = F5_CMC_LESSER_THAN_VALUE;
-				int actual_value = 	3*check_battlefield_for_special_card(player, card, 1-player, CBFSC_GET_COUNT, &this_test)-
-									2*check_battlefield_for_special_card(player, card, player, CBFSC_GET_COUNT, &this_test);
-				if( actual_value > ai_value ){
-					ai_value = actual_value;
-				}
-			}
-			priorities[1] = ai_value;
-		}
-
-		enum{
-			CHOICE_DAMAGE = 1,
-			CHOICE_SWIPE,
-			CHOICE_ULTIMATUM
-		} choice = DIALOG(player, card, event, DLG_RANDOM, DLG_PLANESWALKER,
-						  "3 damage to creature or player", 1, priorities[0], 2,
-						  "Exile permanents", 1, priorities[1], 0,
-						  "Ultimatum", 1, priorities[2], -10
-						  );
-
-		if (event == EVENT_ACTIVATE){
-			instance->number_of_targets = 0;
-			if( choice == CHOICE_DAMAGE ){
-				pick_target(&td, "TARGET_ANY");
-			}
-			if( choice == CHOICE_SWIPE ){
-				int loyalty_to_remove = 0;
-				int ai_value = 0;
-				int i;
-				for(i=0; i<=count_counters(player, card, COUNTER_LOYALTY); i++){
-					this_test.cmc = i+1;
-					int actual_value = 	3*check_battlefield_for_special_card(player, card, 1-player, CBFSC_GET_COUNT, &this_test)-
-										2*check_battlefield_for_special_card(player, card, player, CBFSC_GET_COUNT, &this_test);
-					if( actual_value > ai_value ){
-						ai_value = actual_value;
-						loyalty_to_remove = i;
-					}
-				}
-				if( player == HUMAN ){
-					loyalty_to_remove = choose_a_number(player, "Remove how much Loyalty?", priorities[1]);
-				}
-				if( loyalty_to_remove > -1 && loyalty_to_remove <= count_counters(player, card, COUNTER_LOYALTY) ){
-					remove_counters(player, card, COUNTER_LOYALTY, loyalty_to_remove);
-					instance->targets[1].player = loyalty_to_remove;
-				}
-				else{
-					spell_fizzled = 1;
-				}
-			}
-		}
-		else {	// event == EVENT_RESOLVE_ACTIVATION
-			switch (choice){
-				case CHOICE_DAMAGE:
-				{
-					if( valid_target(&td) ){
-						damage_target0(player, card, 3);
-					}
-					break;
-				}
-				case CHOICE_SWIPE:
-				{
-					this_test.cmc = instance->targets[1].player+1;
-					this_test.cmc_flag = F5_CMC_LESSER_THAN_VALUE;
-					APNAP(p, {new_manipulate_all(player, card, p, &this_test, KILL_EXILE);};);
-				}
-				break;
-				case CHOICE_ULTIMATUM:
-				{
-					gain_life(player, 7);
-					draw_cards(player, 7);
-					test_definition_t this_test2;
-					new_default_test_definition(&this_test2, TYPE_PERMANENT, "Select a permanent to put into play.");
-					this_test2.zone = TARGET_ZONE_HAND;
-					int amount = check_battlefield_for_special_card(player, card, player, CBFSC_GET_COUNT, &this_test2);
-					this_test2.qty = MIN(7, amount);
-					tutor_multiple_card_from_hand(player, player, player, TUTOR_PLAY, 0, AI_MAX_CMC, &this_test2);
-				}
-				break;
-			}
-		}
-	}
-
-	return planeswalker(player, card, event, 7);
+  int i;
+  int choice_or_loyalty;
+  card_instance_t *instance;
+  int opponent_value_or_index;
+  int exile_priority_or_opponent_value;
+  int own_value;
+  int loyalty_to_remove;
+  int best_exile_priority;
+  int exile_priority;
+  target_definition_t td;
+  test_definition_t this_test;
+  test_definition_t this_test2;
+  check_legend_rule(player, card, event);
+  if ((event == EVENT_ACTIVATE) || (event == EVENT_RESOLVE_ACTIVATION))
+  {
+    default_target_definition(player, card, &td, 0x102);
+    td.zone = TARGET_ZONE_CREATURE_OR_PLAYER;
+    default_test_definition(&this_test, 0x47);
+    this_test.color = 0x3e;
+    instance = get_card_instance(player, card);
+    if (event == EVENT_ACTIVATE)
+    {
+      i = 0;
+      exile_priority = 0;
+      while (opponent_value_or_index = count_counters(player, card, COUNTER_LOYALTY),
+             i <= opponent_value_or_index)
+      {
+        i = i + 1;
+        this_test.cmc_flag = 3;
+        this_test.cmc = i;
+        opponent_value_or_index =
+            check_battlefield_for_special_card(player, card, 1 - player, 4, &this_test);
+        exile_priority_or_opponent_value =
+            check_battlefield_for_special_card(player, card, player, 4, &this_test);
+        opponent_value_or_index =
+            opponent_value_or_index * 3 + exile_priority_or_opponent_value * -2;
+        if (exile_priority < opponent_value_or_index)
+        {
+          exile_priority = opponent_value_or_index;
+        }
+      }
+      choice_or_loyalty =
+          dialog_impl(player, card, EVENT_ACTIVATE, DLG_RANDOM, DLG_PLANESWALKER,
+                      "3 damage to creature or player", 1, 10, 2, "Exile permanents", 1,
+                      exile_priority, 0, "Ultimatum", 1, 0x14, 0xfffffff6, 0, 0, 0, 0);
+      instance->number_of_targets = '\0';
+      if (choice_or_loyalty == CHOICE_DAMAGE)
+      {
+        pick_target(&td, "TARGET_ANY");
+      }
+      else if (choice_or_loyalty == CHOICE_SWIPE)
+      {
+        best_exile_priority = 0;
+        loyalty_to_remove = 0;
+        choice_or_loyalty = 0;
+        while (opponent_value_or_index = choice_or_loyalty,
+               choice_or_loyalty = count_counters(player, card, COUNTER_LOYALTY),
+               opponent_value_or_index <= choice_or_loyalty)
+        {
+          choice_or_loyalty = opponent_value_or_index + 1;
+          this_test.cmc = choice_or_loyalty;
+          exile_priority_or_opponent_value =
+              check_battlefield_for_special_card(player, card, 1 - player, 4, &this_test);
+          own_value = check_battlefield_for_special_card(player, card, player, 4, &this_test);
+          exile_priority_or_opponent_value = exile_priority_or_opponent_value * 3 + own_value * -2;
+          if (best_exile_priority < exile_priority_or_opponent_value)
+          {
+            loyalty_to_remove = opponent_value_or_index;
+            best_exile_priority = exile_priority_or_opponent_value;
+          }
+        }
+        if (player == 0)
+        {
+          loyalty_to_remove = choose_a_number(0, "Remove how much Loyalty?", exile_priority);
+        }
+        if ((loyalty_to_remove < 0) ||
+            (choice_or_loyalty = count_counters(player, card, COUNTER_LOYALTY),
+             choice_or_loyalty < loyalty_to_remove))
+        {
+          spell_fizzled = 1;
+        }
+        else
+        {
+          remove_counters(player, card, player, card, COUNTER_LOYALTY, loyalty_to_remove);
+          instance->targets[1].player = loyalty_to_remove;
+        }
+      }
+    }
+    else
+    {
+      choice_or_loyalty = dialog_impl(
+          player, card, event, DLG_RANDOM, DLG_PLANESWALKER, "3 damage to creature or player", 1, 10, 2,
+          "Exile permanents", 1, 0, 0, "Ultimatum", 1, 0x14, 0xfffffff6, 0, 0, 0, 0);
+      if (choice_or_loyalty == CHOICE_SWIPE)
+      {
+        this_test.cmc = instance->targets[1].player + 1;
+        this_test.cmc_flag = 3;
+        new_manipulate_all(player, card, 2, &this_test, ACT_KILL_REMOVE);
+      }
+      else if (choice_or_loyalty == CHOICE_ULTIMATUM)
+      {
+        gain_life(player, 7);
+        draw_cards(player, 7);
+        new_default_test_definition(&this_test2, 0x47, "Select a permanent to put into play.");
+        this_test2.zone = 0x100;
+        choice_or_loyalty =
+            check_battlefield_for_special_card(player, card, player, 4, &this_test2);
+        if (7 < choice_or_loyalty)
+        {
+          choice_or_loyalty = 7;
+        }
+        this_test2.qty = (unsigned short)choice_or_loyalty;
+        tutor_multiple_card_from_hand(player, player, player, 4, 0, 2, &this_test2);
+      }
+      else if ((choice_or_loyalty == CHOICE_DAMAGE) &&
+               (choice_or_loyalty = valid_target(&td), choice_or_loyalty != 0))
+      {
+        damage_target0(player, card, 3);
+      }
+    }
+  }
+  return planeswalker(player, card, event, 7);
 }
 
 // White
 int card_abzan_advantage(int player, int card, event_t event){
-	/*
-	  Abzan Advantage |1|W
-	  Instant
-	  Target player sacrifices an enchantment. Bolster 1
-	*/
+  /* Abzan Advantage |1|W
+   * 	  Instant
+   * 	  Target player sacrifices an enchantment. Bolster 1 */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -432,24 +483,22 @@ int card_abzan_advantage(int player, int card, event_t event){
 }
 
 int card_abzan_runemark(int player, int card, event_t event){
-	/*
-	  Abzan Runemark |2|W
-	  Enchantment - Aura
-	  Enchant creature
-	  Enchanted creature gets +2/+2.
-	  Enchanted creature has vigilance as long as you control a black or green permanent.
-	*/
+  /* Abzan Runemark |2|W
+   * 	  Enchantment - Aura
+   * 	  Enchant creature
+   * 	  Enchanted creature gets +2/+2.
+   * 	  Enchanted creature has vigilance as long as you control a black or green permanent. */
+
 	return runemark(player, card, event, COLOR_TEST_BLACK | COLOR_TEST_GREEN, 0, SP_KEYWORD_VIGILANCE);
 }
 
 int card_abzan_skycaptain(int player, int card, event_t event){
-	/*
-	  Abzan Skycaptain |3|W
-	  Creature - Bird Soldier
-	  Flying
-	  When Abzan Captain dies, bolster 2.
-	  2/2
-	*/
+  /* Abzan Skycaptain |3|W
+   * 	  Creature - Bird Soldier
+   * 	  Flying
+   * 	  When Abzan Captain dies, bolster 2.
+   * 	  2/2 */
+
 	if( this_dies_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY) ){
 		bolster(player, card, 2);
 	}
@@ -499,12 +548,11 @@ static int channel_harm_legacy(int player, int card, event_t event){
 }
 
 int card_channel_harm(int player, int card, event_t event){
-	/*
-	  Channel Harm |5|W
-	  Instant
-	  Prevent all damage that would be dealt to you and permanents you control this turn by sources you don't control.
-	  If damage is prevented this way, you may have Channel Harm deal that much damage to target creature.
-	*/
+  /* Channel Harm |5|W
+   * 	  Instant
+   * 	  Prevent all damage that would be dealt to you and permanents you control this turn by sources you don't control.
+   * 	  If damage is prevented this way, you may have Channel Harm deal that much damage to target creature. */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		create_legacy_effect(player, card, &channel_harm_legacy);
 		kill_card(player, card, KILL_DESTROY);
@@ -514,18 +562,17 @@ int card_channel_harm(int player, int card, event_t event){
 }
 
 int card_citadel_siege(int player, int card, event_t event){
-	/*
-	  Citadel Siege |2|W|W
-	  Enchantment
-	  As Citadel Siege enters the battlefield, choose Khans or Dragons.
-	  * Khans - At the beginning of combat on your turn, put two +1/+1 counters on target creature you control.
-	  * Dragons - At the beginning of combat on each opponent's turn, tap target creature that player controls.
-	  */
+  /* Citadel Siege |2|W|W
+   * 	  Enchantment
+   * 	  As Citadel Siege enters the battlefield, choose Khans or Dragons.
+   * Khans - At the beginning of combat on your turn, put two +1/+1 counters on target creature you control.
+   * Dragons - At the beginning of combat on each opponent's turn, tap target creature that player controls. */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		choose_khans_or_dragons(player, card, 3*count_subtype(player, TYPE_CREATURE, -1), 2*count_subtype(1-player, TYPE_CREATURE, -1));
 	}
 
-	if( beginning_of_combat(player, card, event, ANYBODY, -1) ){
+	if( beginning_of_combat(player, card, event, ANYBODY) ){
 		card_instance_t *instance = get_card_instance(player, card);
 
 		if( current_turn == player && get_khans_or_dragons(player, card) == KHANS ){
@@ -538,7 +585,7 @@ int card_citadel_siege(int player, int card, event_t event){
 			instance->number_of_targets = 0;
 
 			if( can_target(&td) && new_pick_target(&td, "Select target creature you control.", 0, GS_LITERAL_PROMPT) ){
-				add_1_1_counters(instance->targets[0].player, instance->targets[0].card, 2);
+				add_counters(player, card, instance->targets[0].player, instance->targets[0].card, COUNTER_P1_P1, 2);
 			}
 		}
 
@@ -551,7 +598,7 @@ int card_citadel_siege(int player, int card, event_t event){
 
 			instance->number_of_targets = 0;
 
-			if( can_target(&td) && new_pick_target(&td, "Select target creature your opponent controls.", 0, GS_LITERAL_PROMPT) ){
+			if( can_target(&td) && new_pick_target(&td, "Citadel Siege: Select target creature your opponent control, tap it.", 0, GS_LITERAL_PROMPT) ){
 				tap_card(instance->targets[0].player, instance->targets[0].card);
 			}
 		}
@@ -560,87 +607,113 @@ int card_citadel_siege(int player, int card, event_t event){
 	return global_enchantment(player, card, event);
 }
 
-int card_daghatar_the_adamant(int player, int card, event_t event){
-	/*
-	  Daghatar the Adamant |3|W
-	  Legendary Creature - Human Warrior
-	  Vigilance
-	  Daghatar the Adamant enters the battlefield with four +1/+1 counters on it.
-	  1(B/G)(B/G): Move a +1/+1 counter from target creature onto a second target creature.
-	  0/0
-	*/
-	check_legend_rule(player, card, event);
+int card_daghatar_the_adamant(int player, int card, event_t event)
+{
+  /* Daghatar the Adamant	|3|W
+   * Legendary Creature - Human Warrior 0/0
+   * Vigilance
+   * Daghatar enters with four +1/+1 counters on it.
+   * |1|BG|BG: Move a +1/+1 counter from target creature onto a second target creature. */
 
-	vigilance(player, card, event);
+  card_instance_t *instance;
+  int result;
+  target_definition_t *destination_target_definition;
+  target_definition_t td;
+  target_definition_t td2;
 
-	enters_the_battlefield_with_counters(player, card, event, COUNTER_P1_P1, 4);
-
-	if( ! IS_GAA_EVENT(event) ){
-		return 0;
-	}
-
-	target_definition_t td;
-	default_target_definition(player, card, &td, TYPE_CREATURE);
-	td.special = TARGET_SPECIAL_REQUIRES_COUNTER;
-	td.extra = COUNTER_P1_P1;
-
-	target_definition_t td2;
-	default_target_definition(player, card, &td2, TYPE_CREATURE);
-	td2.preferred_controller = player;
-
-	card_instance_t *instance = get_card_instance(player, card);
-
-	if( event == EVENT_CAN_ACTIVATE ){
-		if( generic_activated_ability(player, card, event, GAA_CAN_TARGET, MANACOST0, 0, &td, NULL) ){
-			int c1 = get_cost_mod_for_activated_abilities(player, card, MANACOST_XB(1, 2));
-			if( has_mana_hybrid(player, 2, COLOR_BLACK, COLOR_GREEN, c1) ){
-				if( target_available(player, card, &td2) > 1 ){
-					return 1;
-				}
-			}
-		}
-	}
-
-	if( event == EVENT_ACTIVATE ){
-		int c1 = get_cost_mod_for_activated_abilities(player, card, MANACOST_XB(1, 2));
-		if( charge_mana_hybrid(player, card, 2, COLOR_BLACK, COLOR_GREEN, c1) ){
-			if( new_pick_target(&td, "Select target creature with a +1/+1 counter.", 0, 1 | GS_LITERAL_PROMPT) ){
-				state_untargettable(instance->targets[0].player, instance->targets[0].card, 1);
-				new_pick_target(&td2, "TARGET_CREATURE", 1, 1);
-				state_untargettable(instance->targets[0].player, instance->targets[0].card, 0);
-			}
-		}
-	}
-
-	if( event == EVENT_RESOLVE_ACTIVATION ){
-		if( validate_target(player, card, &td, 0) && validate_target(player, card, &td2, 1) ){
-			move_counters(instance->targets[1].player, instance->targets[1].card, instance->targets[0].player, instance->targets[0].card,
-							COUNTER_P1_P1, 1);
-		}
-	}
-
-	return 0;
+  check_legend_rule(player, card, event);
+  vigilance(player, card, event);
+  enters_the_battlefield_with_counters(player, card, event, COUNTER_P1_P1, 4);
+  if ((event == EVENT_CAN_ACTIVATE) || (event == EVENT_ACTIVATE))
+  {
+    default_target_definition(player, card, &td, 2);
+    td.special = TARGET_SPECIAL_REQUIRES_COUNTER;
+    td.extra = 0;
+    default_target_definition(player, card, &td2, 2);
+    td2.preferred_controller = player;
+    instance = get_card_instance(player, card);
+    if (event == EVENT_CAN_ACTIVATE)
+    {
+      result = generic_activated_ability(player, card, EVENT_CAN_ACTIVATE, 4, 0, 0, 0, 0, 0, 0, 0,
+                                         &td, NULL);
+      if (result == 0)
+      {
+        return 0;
+      }
+      result = get_cost_mod_for_activated_abilities(player, card, 1, 2, 0, 0, 0, 0);
+      result = has_mana_hybrid(player, 2, 1, 3, result);
+      if (result == 0)
+      {
+        return 0;
+      }
+      result = target_available(player, card, &td2);
+      if (result < 2)
+      {
+        return 0;
+      }
+      return 1;
+    }
+    if (event == EVENT_ACTIVATE)
+    {
+      result = get_cost_mod_for_activated_abilities(player, card, 1, 2, 0, 0, 0, 0);
+      result = charge_mana_hybrid(player, card, 2, 1, 3, result);
+      if (result == 0)
+      {
+        return 0;
+      }
+      result = new_pick_target(&td, "Select target creature with a +1/+1 counter.", 0, 0x81);
+      if (result == 0)
+      {
+        return 0;
+      }
+      state_untargettable(instance->targets[0].player, instance->targets[0].card, 1);
+      new_pick_target(&td2, "TARGET_CREATURE", 1, 1);
+      state_untargettable(instance->targets[0].player, instance->targets[0].card, 0);
+      return 0;
+    }
+  }
+  else
+  {
+    if ((event != EVENT_RESOLVE_ACTIVATION) && (event != EVENT_CLEANUP))
+    {
+      return 0;
+    }
+    default_target_definition(player, card, &td, 2);
+    td.special = TARGET_SPECIAL_REQUIRES_COUNTER;
+    td.extra = 0;
+    default_target_definition(player, card, &td2, 2);
+    td2.preferred_controller = player;
+    instance = get_card_instance(player, card);
+  }
+  destination_target_definition = &td2;
+  if (((event == EVENT_RESOLVE_ACTIVATION) &&
+       (result = validate_target(player, card, &td, 0), result != 0)) &&
+      (result = validate_target(player, card, destination_target_definition, 1), result != 0))
+  {
+    move_counters(player, card, instance->targets[1].player, instance->targets[1].card,
+                  instance->targets[0].player, instance->targets[0].card, COUNTER_P1_P1, 1);
+    return 0;
+  }
+  return 0;
 }
 
 int card_dragon_bell_monk(int player, int card, event_t event){
-	/*
-	  Dragon Bell Monk |2|W
-	  Creature - Human Monk 2/2
-	  Vigilance
-	  Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
-	*/
+  /* Dragon Bell Monk |2|W
+   * 	  Creature - Human Monk 2/2
+   * 	  Vigilance
+   * 	  Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.) */
+
 	vigilance(player, card, event);
 	prowess(player, card, event);
 	return 0;
 }
 
 int card_dragonscale_general(int player, int card, event_t event){
-	/*
-	  Dragonscale General |3|W
-	  Creature - Human Warrior
-	  At the beginning of your end step, bolster X, where X is the number of tapped creatures you control. (Choose a creature with the least toughness among creatures you control and put X +1/+1 counters on it.)
-	  2/3
-	*/
+  /* Dragonscale General |3|W
+   * 	  Creature - Human Warrior
+   * 	  At the beginning of your end step, bolster X, where X is the number of tapped creatures you control. (Choose a creature with the least toughness among creatures you control and put X +1/+1 counters on it.)
+   * 	  2/3 */
+
 	if( current_turn == player && trigger_condition == TRIGGER_EOT && affect_me(player, card) && reason_for_trigger_controller == player ){
 		test_definition_t this_test;
 		default_test_definition(&this_test, TYPE_CREATURE);
@@ -660,31 +733,33 @@ static int has_1_1_counter(int iid, int unused, int player, int card)
 }
 
 int card_elite_scaleguard(int player, int card, event_t event){
-	/*
-	  Elite Scaleguard |4|W
-	  Creature - Human Soldier
-	  When Elite Scaleguard enters the battlefield, bolster 2.
-	  Whenever a creature you control with a +1/+1 counter on it attacks, tap target creature defending player controls.
-	  2/3
-	*/
+  /* Elite Scaleguard |4|W
+   * 	  Creature - Human Soldier
+   * 	  When Elite Scaleguard enters the battlefield, bolster 2.
+   * 	  Whenever a creature you control with a +1/+1 counter on it attacks, tap target creature defending player controls.
+   * 	  2/3 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
 		bolster(player, card, 2);
 	}
 
-	test_definition_t this_test;
-	default_test_definition(&this_test, TYPE_CREATURE);
-	this_test.special_selection_function = &has_1_1_counter;
-
-	int amt;
-	if ((amt = declare_attackers_trigger_test(player, card, event, DAT_TRACK, player, -1, &this_test))){
+	if (event == EVENT_DECLARE_ATTACKERS && affect_me(player, card)){
+		test_definition_t this_test;
+		default_test_definition(&this_test, TYPE_CREATURE);
+		this_test.special_selection_function = &has_1_1_counter;
+		store_attackers(player, card, event, DAT_TRACK, player, -1, &this_test);
+	}
+	dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 1);
+	if (event == EVENT_DAT_ABILITY){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_CREATURE);
 		td.preferred_controller = 1-player;
 		td.allowed_controller = 1-player;
 
 		card_instance_t* instance = get_card_instance(player, card);
+		int amt = instance->info_slot;
 
 		for (--amt; amt >= 0; --amt){
 			if( can_target(&td) ){
@@ -706,11 +781,10 @@ Creature - Beast
 */
 
 int card_honors_reward(int player, int card, event_t event){
-	/*
-	  Honor's Reward |2|W
-	  Instant
-	  You gain 4 life. Bolster 2. (Choose a creature with the least toughness among creatures you control and put two +1/+1 counters on it.)
-	*/
+  /* Honor's Reward |2|W
+   * 	  Instant
+   * 	  You gain 4 life. Bolster 2. (Choose a creature with the least toughness among creatures you control and put two +1/+1 counters on it.) */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		gain_life(player, 4);
 		bolster(player, card, 2);
@@ -721,14 +795,12 @@ int card_honors_reward(int player, int card, event_t event){
 }
 
 int card_jeskai_barricade(int player, int card, event_t event){
-	/*
-	  Jeskai Barricade |1|W
-	  Creature - Wall
-	  Flash
-	  Defender
-	  When Jeskai Barricade enters the battlefield, you may return another creature you control to its owner's hand.
-	  0/4
-	*/
+  /* Jeskai Barricade |1|W
+   * 	  Creature - Wall
+   * 	  Flash
+   * 	  Defender
+   * 	  When Jeskai Barricade enters the battlefield, you may return another creature you control to its owner's hand.
+   * 	  0/4 */
 
 	etb_ability(player, card, event, RESOLVE_TRIGGER_AI(player));
 
@@ -751,41 +823,39 @@ int card_jeskai_barricade(int player, int card, event_t event){
 }
 
 int card_lightform(int player, int card, event_t event){
-	/*
-	  Lightform |1|W|W
-	  Enchantment
-	  When Lightform enters the battlefield, it becomes an Aura with enchant creature. Manifest the top card of your library and attach Lightform to it.
-	  Enchanted creature has flying and lifelink.
-	*/
+  /* Lightform |1|W|W
+   * 	  Enchantment
+   * 	  When Lightform enters the battlefield, it becomes an Aura with enchant creature. Manifest the top card of your library and attach Lightform to it.
+   * 	  Enchanted creature has flying and lifelink. */
+
 	return manifesting_aura(player, card, event, KEYWORD_FLYING, SP_KEYWORD_LIFELINK);
 }
 
 int card_lotus_eye_mystics(int player, int card, event_t event){
-	/*
-	  Lotus-Eye Mystics |3|W
-	  Creature - Human Monk
-	  Prowess
-	  When Lotus-Eye Mystics enters the battlefield, return target enchantment card from your graveyard to your hand.
-	  3/2
-	*/
+  /* Lotus-Eye Mystics |3|W
+   * 	  Creature - Human Monk
+   * 	  Prowess
+   * 	  When Lotus-Eye Mystics enters the battlefield, return target enchantment card from your graveyard to your hand.
+   * 	  3/2 */
+
 	prowess(player, card, event);
 	return card_auramancer(player, card, event);
 }
 
 int card_mardu_woe_reaper(int player, int card, event_t event){
-	/*
-	  Mardu Woe-Reaper |W
-	  Creature - Human Warrior
-	  Whenever Mardu Woe-Reaper or another Warrior enters the battlefield under your control,
-	  you may exile target creature card from a graveyard. If you do, you gain 1 life.
-	  2/1
-	*/
+  /* Mardu Woe-Reaper |W
+   * 	  Creature - Human Warrior
+   * 	  Whenever Mardu Woe-Reaper or another Warrior enters the battlefield under your control,
+   * 	  you may exile target creature card from a graveyard. If you do, you gain 1 life.
+   * 	  2/1 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
-	if( ! is_humiliated(player, card) && trigger_condition == TRIGGER_COMES_INTO_PLAY && affect_me(player, card) ){
+	if( ! is_humiliated(player, card, AL_TRIG) && trigger_condition == TRIGGER_COMES_INTO_PLAY && affect_me(player, card) ){
 		test_definition_t test;
 		default_test_definition(&test, TYPE_PERMANENT);
 		test.subtype = SUBTYPE_WARRIOR;
+		test.not_me = 1;
 
 		etb_ability_global(player, event, RESOLVE_TRIGGER_MANDATORY, 0, &test, player, card);
 	}
@@ -810,13 +880,11 @@ int card_mardu_woe_reaper(int player, int card, event_t event){
 }
 
 int card_mastery_of_the_unseen(int player, int card, event_t event){
-	/*
-	  Mastery of the Unseen |1|W
-	  Enchantment
-	  Whenever a permanent you control is turned face up, you gain 1 life for each creature you control.
-	  3W: Manifest the top card of your library.
-	  (Put it onto the battlefield face down as a 2/2 creature. Turn it face up at any time for its mana cost if it's a creature card.)
-	*/
+  /* Mastery of the Unseen |1|W
+   * 	  Enchantment
+   * 	  Whenever a permanent you control is turned face up, you gain 1 life for each creature you control.
+   * 	  3W: Manifest the top card of your library.
+   * 	  (Put it onto the battlefield face down as a 2/2 creature. Turn it face up at any time for its mana cost if it's a creature card.) */
 
 	if( ! IS_GAA_EVENT(event) ){
 		return global_enchantment(player, card, event);
@@ -829,35 +897,42 @@ int card_mastery_of_the_unseen(int player, int card, event_t event){
 	return generic_activated_ability(player, card, event, 0, MANACOST_XW(3, 1), 0, NULL, NULL);
 }
 
-
 // Monk token --> Rhino token
 
-int card_monastery_mentor(int player, int card, event_t event){
-	/*
-	  Monastery Mentor |2|W
-	  Creature - Human Monk
-	  Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
-	  Whenever you cast a noncreature spell, put a 1/1 white Monk creature token with prowess onto the battlefield.
-	  2/2
-	*/
-	if( prowess(player, card, event) ){
-		token_generation_t token;
-		default_token_definition(player, card, CARD_ID_MONK, &token);
-		token.pow = token.tou = 1;
-		token.color_forced = COLOR_TEST_WHITE;
-		generate_token(&token);
-	}
+int card_monastery_mentor(int player, int card, event_t event)
+{
+  /* Monastery Mentor |2|W
+   *     Creature - Human Monk
+   *     Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
+   *     Whenever you cast a noncreature spell, put a 1/1 white Monk creature token with prowess onto the
+   *     battlefield. 2/2 */
 
-	return 0;
+  if (trigger_condition == TRIGGER_SPELL_CAST && affect_me(player, card))
+  {
+    test_definition_t test;
+    default_test_definition(&test, TYPE_CREATURE);
+    test.type_flag = DOESNT_MATCH;
+    sp_ability_trigger(player, event, RESOLVE_TRIGGER_MANDATORY, TYPE_NONE, &test, player, card);
+  }
+  if (event == EVENT_SPA)
+  {
+    prowess(player, card, event);
+    token_generation_t token;
+    default_token_definition(player, card, CARD_ID_MONK, &token);
+    token.pow = token.tou = 1;
+    token.color_forced = COLOR_TEST_WHITE;
+    generate_token(&token);
+  }
+
+  return 0;
 }
 
 int card_pressure_point(int player, int card, event_t event){
-	/*
-	  Pressure Point |1|W
-	  Instant
-	  Tap target creature.
-	  Draw a card.
-	*/
+  /* Pressure Point |1|W
+   * 	  Instant
+   * 	  Tap target creature.
+   * 	  Draw a card. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -877,12 +952,11 @@ int card_pressure_point(int player, int card, event_t event){
 }
 
 int card_rally_the_ancestors(int player, int card, event_t event){
-	/*
-	  Rally the Ancestors |X|W|W
-	  Instant
-	  Return each creature card with converted mana cost X or less from your graveyard to the battlefield.
-	  Exile those creatures at the beginning of your next upkeep. Exile Rally the Ancestors.
-	*/
+  /* Rally the Ancestors |X|W|W
+   * 	  Instant
+   * 	  Return each creature card with converted mana cost X or less from your graveyard to the battlefield.
+   * 	  Exile those creatures at the beginning of your next upkeep. Exile Rally the Ancestors. */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		test_definition_t this_test;
 		default_test_definition(&this_test, TYPE_CREATURE);
@@ -919,13 +993,11 @@ static int count_aura_attached_to_creatures(int player){
 }
 
 int card_sages_reverie(int player, int card, event_t event){
-	/*
-	  Sage's Reverie |3|W
-	  Enchantment - Aura
-	  Enchant creature.
-	  When Sage's Reverie enters the battlefield, draw a card for each aura you control that's attached to a creature.
-	  Enchanted creature gets +1/+1 for each aura you control that's attached to a creature.
-	*/
+  /* Sage's Reverie |3|W
+   * 	  Enchantment - Aura
+   * 	  Enchant creature.
+   * 	  When Sage's Reverie enters the battlefield, draw a card for each aura you control that's attached to a creature.
+   * 	  Enchanted creature gets +1/+1 for each aura you control that's attached to a creature. */
 
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
@@ -933,7 +1005,7 @@ int card_sages_reverie(int player, int card, event_t event){
 		draw_cards(player, count_aura_attached_to_creatures(player));
 	}
 
-	if( ! IS_AURA_EVENT(player, card, event) ){
+	if (!IS_AURA_EVENT(player, card, event) && event != EVENT_STATIC_EFFECTS){
 		return 0;
 	}
 
@@ -953,11 +1025,10 @@ int card_sages_reverie(int player, int card, event_t event){
 }
 
 int card_sandblast(int player, int card, event_t event){
-	/*
-	  Sandblast |2|W
-	  Instant
-	  Sandblast deals 5 damage to target attacking or blocking creature.
-	*/
+  /* Sandblast |2|W
+   * 	  Instant
+   * 	  Sandblast deals 5 damage to target attacking or blocking creature. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -977,19 +1048,18 @@ int card_sandblast(int player, int card, event_t event){
 }
 
 int card_sandsteppe_outcast(int player, int card, event_t event){
-	/*
-	  Sandsteppe Outcast |2|W
-	  Creature - Human Warrior
-	  When Sandsteppe Outcast enters the battlefield, choose one -
-	  * Put a +1/+1 counter on Sandsteppe Outcast.
-	  * Put a 1/1 white Spirit creature token with flying onto the battlefield.
-	  */
+  /* Sandsteppe Outcast |2|W
+   * 	  Creature - Human Warrior
+   * 	  When Sandsteppe Outcast enters the battlefield, choose one -
+   * Put a +1/+1 counter on Sandsteppe Outcast.
+   * Put a 1/1 white Spirit creature token with flying onto the battlefield. */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
 		int choice = do_dialog(player, player, card, -1, -1, " Add a +1/+1 counter\n Generate a Spirit", count_subtype(player, TYPE_CREATURE, -1) > 5 ? 0 : 1);
 		if( choice == 0 ){
-			add_1_1_counter(player, card);
+			add_counters(player, card, player, card, COUNTER_P1_P1, 1);
 		}
 		else{
 			token_generation_t token;
@@ -1004,11 +1074,10 @@ int card_sandsteppe_outcast(int player, int card, event_t event){
 }
 
 int card_soul_summons(int player, int card, event_t event){
-	/*
-	  Soul Summons |1|W
-	  Sorcery
-	  Manifest the top card of your library. (Put it onto the battlefield face down as a 2/2 creature. Turn it face up at any time for its mana cost if it's a creature card.)
-	*/
+  /* Soul Summons |1|W
+   * 	  Sorcery
+   * 	  Manifest the top card of your library. (Put it onto the battlefield face down as a 2/2 creature. Turn it face up at any time for its mana cost if it's a creature card.) */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		manifest(player, card);
 		kill_card(player, card, KILL_DESTROY);
@@ -1018,20 +1087,18 @@ int card_soul_summons(int player, int card, event_t event){
 }
 
 int card_soulfire_grand_master(int player, int card, event_t event){
-	/*
-	  Soulfire Grand Master |1|W
-	  Creature - Human Monk
-	  Lifelink
-	  Instant and sorcery spells you control have lifelink.
-	  2(U/R)(U/R): The next time you cast an instant or sorcery spell from your hand this turn, put that card into your hand instead of your graveyard as it resolves.
-	  2/2
-	*/
+  /* Soulfire Grand Master |1|W
+   * 	  Creature - Human Monk
+   * 	  Lifelink
+   * 	  Instant and sorcery spells you control have lifelink.
+   * 	  2(U/R)(U/R): The next time you cast an instant or sorcery spell from your hand this turn, put that card into your hand instead of your graveyard as it resolves.
+   * 	  2/2 */
 
 	card_instance_t *instance = get_card_instance(player, card);
 
 	lifelink(player, card, event);
 
-	if( ! is_humiliated(player, card) ){
+	if( ! is_humiliated(player, card, AL_STATIC) ){
 		if( event == EVENT_CAST_SPELL && is_what(affected_card_controller, affected_card, TYPE_SPELL) ){
 			lifelink(affected_card_controller, affected_card, event);
 		}
@@ -1075,13 +1142,12 @@ int card_soulfire_grand_master(int player, int card, event_t event){
 }
 
 int card_valorous_stance(int player, int card, event_t event){
-	/*
-	  Valorous Stance |1|W
-	  Instant
-	  Choose one -
-	  * Target creature gains indestructible until end of turn.
-	  * Destroy target creature with toughness 4 or greater.
-	  */
+  /* Valorous Stance |1|W
+   * 	  Instant
+   * 	  Choose one -
+   * Target creature gains indestructible until end of turn.
+   * Destroy target creature with toughness 4 or greater. */
+
 	if(event == EVENT_CHECK_PUMP && current_phase == PHASE_AFTER_BLOCKING ){
 		if( has_mana_to_cast_iid(player, EVENT_CAN_CAST, get_card_instance(player, card)->internal_card_id) ){
 			pumpable_toughness[player] += 99;
@@ -1144,12 +1210,11 @@ int card_valorous_stance(int player, int card, event_t event){
 }
 
 int card_wandering_champion(int player, int card, event_t event){
-	/*
-	  Wandering Champion |1|W
-	  Creature - Human Monk
-	  Whenever Wandering Champion deals combat damage to a player, if you control a blue or red permanent, you may discard a card. If you do, draw a card.
-	  3/1
-	*/
+  /* Wandering Champion |1|W
+   * 	  Creature - Human Monk
+   * 	  Whenever Wandering Champion deals combat damage to a player, if you control a blue or red permanent, you may discard a card. If you do, draw a card.
+   * 	  3/1 */
+
 	check_damage(player, card, event, DDBM_MUST_BE_COMBAT_DAMAGE | DDBM_MUST_DAMAGE_PLAYER, player, card);
 
 	if( trigger_condition == TRIGGER_DEAL_DAMAGE && affect_me(player, card) && reason_for_trigger_controller == player ){
@@ -1167,14 +1232,13 @@ int card_wandering_champion(int player, int card, event_t event){
 }
 
 int card_wardscale_dragon(int player, int card, event_t event){
-	/*
-	  Wardscale Dragon |4|W|W
-	  Creature - Dragon
-	  Flying
-	  As long as Wardscale Dragon is attacking, defending player can't cast spells.
-	  4/4
-	*/
-	if( event == EVENT_MODIFY_COST_GLOBAL && is_attacking(player, card) && ! is_humiliated(player, card) ){
+  /* Wardscale Dragon |4|W|W
+   * 	  Creature - Dragon
+   * 	  Flying
+   * 	  As long as Wardscale Dragon is attacking, defending player can't cast spells.
+   * 	  4/4 */
+
+	if( event == EVENT_MODIFY_COST_GLOBAL && is_attacking(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		if( affected_card_controller == 1-player ){
 			infinite_casting_cost();
 		}
@@ -1186,14 +1250,13 @@ int card_wardscale_dragon(int player, int card, event_t event){
 // Blue
 
 int card_aven_surveyor(int player, int card, event_t event){
-	/*
-	  Aven Surveyor |3|U|U
-	  Creature - Bird Scout
-	  When Aven Surveyor enters the battlefield, choose one -
-	  *Put a +1/+1 counter on Aven Surveyor
-	  *Return target creature to its owner's hand
-	  2/2
-	*/
+  /* Aven Surveyor |3|U|U
+   * 	  Creature - Bird Scout
+   * 	  When Aven Surveyor enters the battlefield, choose one -
+   * Put a +1/+1 counter on Aven Surveyor
+   * Return target creature to its owner's hand
+   * 	  2/2 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
@@ -1203,7 +1266,7 @@ int card_aven_surveyor(int player, int card, event_t event){
 
 		int choice = do_dialog(player, player, card, -1, -1, " Add a +1/+1 counter\n Bounce a creature", can_target(&td) ? 1 : 0);
 		if( choice == 0 ){
-			add_1_1_counter(player, card);
+			add_counters(player, card, player, card, COUNTER_P1_P1, 1);
 		}
 		else{
 			if( pick_target(&td, "TARGET_CREATURE") ){
@@ -1216,21 +1279,19 @@ int card_aven_surveyor(int player, int card, event_t event){
 }
 
 int card_cloudform(int player, int card, event_t event){
-	/*
-	  Cloudform |1|U|U
-	  Enchantment
-	  When Cloudform enters the battlefield, it becomes an aura with enchant creature. Manifest the top card of your library and attach Cloudform to it.
-	  Enchanted creature has flying and hexproof.
-	*/
+  /* Cloudform |1|U|U
+   * 	  Enchantment
+   * 	  When Cloudform enters the battlefield, it becomes an aura with enchant creature. Manifest the top card of your library and attach Cloudform to it.
+   * 	  Enchanted creature has flying and hexproof. */
+
 	return manifesting_aura(player, card, event, KEYWORD_FLYING, SP_KEYWORD_HEXPROOF);
 }
 
 int card_enchanted_awareness(int player, int card, event_t event){
-	/*
-	  Enhanced Awareness |4|U
-	  Instant
-	  Draw three cards, then discard a card.
-	*/
+  /* Enhanced Awareness |4|U
+   * 	  Instant
+   * 	  Draw three cards, then discard a card. */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		draw_cards(player, 3);
 		discard(player, 0, player);
@@ -1241,13 +1302,12 @@ int card_enchanted_awareness(int player, int card, event_t event){
 }
 
 int card_fascination(int player, int card, event_t event){
-	/*
-	  Fascination |X|U|U
-	  Sorcery
-	  Choose one -
-	  * Each player draws X cards.
-	  * Each player puts the top X cards of his or her library into his or her graveyard.
-	  */
+  /* Fascination |X|U|U
+   * 	  Sorcery
+   * 	  Choose one -
+   * Each player draws X cards.
+   * Each player puts the top X cards of his or her library into his or her graveyard. */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		int choice = do_dialog(player, player, card, -1, -1, " Draw X\n Mill X", count_deck(player) > 20 && count_deck(1-player) < 20 ? 1 : 0);
 		if( choice == 0 ){
@@ -1270,14 +1330,13 @@ When Frost Walker becomes the target of a spell or ability, sacrifice it.
 */
 
 int card_jeskai_infiltrator(int player, int card, event_t event){
-	/*
-	  Jeskai Infiltrator |2|U
-	  Creature - Human Monk
-	  Jeskai Infiltrator is unblockable as long as you control no other creatures.
-	  Whenever Jeskai Infiltrator deals combat damage to a player, exile it and the top card of your library in a face-down pile,
-	  shuffle that pile, then manifest those cards.
-	  2/3
-	*/
+  /* Jeskai Infiltrator |2|U
+   * 	  Creature - Human Monk
+   * 	  Jeskai Infiltrator is unblockable as long as you control no other creatures.
+   * 	  Whenever Jeskai Infiltrator deals combat damage to a player, exile it and the top card of your library in a face-down pile,
+   * 	  shuffle that pile, then manifest those cards.
+   * 	  2/3 */
+
 	if( event == EVENT_ABILITIES && affect_me(player, card) && count_subtype(player, TYPE_CREATURE, -1) < 2 ){
 		unblockable(player, card, event);
 	}
@@ -1294,24 +1353,22 @@ int card_jeskai_infiltrator(int player, int card, event_t event){
 }
 
 int card_jeskai_runemark(int player, int card, event_t event){
-	/*
-	  Jeskai Runemark |2|U
-	  Enchantment - Aura
-	  Enchant creature
-	  Enchanted creature gets +2/+2.
-	  Enchanted creature has flying as long as you control a red or white permanent.
-	*/
+  /* Jeskai Runemark |2|U
+   * 	  Enchantment - Aura
+   * 	  Enchant creature
+   * 	  Enchanted creature gets +2/+2.
+   * 	  Enchanted creature has flying as long as you control a red or white permanent. */
+
 	return runemark(player, card, event, COLOR_TEST_RED | COLOR_TEST_WHITE, KEYWORD_FLYING, 0);
 }
 
 int card_jeskai_sage(int player, int card, event_t event){
-	/*
-	  Jeskai Sage |1|U
-	  Creature - Human Monk
-	  Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn)
-	  When Jeskai Sage dies, draw a card.
-	  1/1
-	*/
+  /* Jeskai Sage |1|U
+   * 	  Creature - Human Monk
+   * 	  Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn)
+   * 	  When Jeskai Sage dies, draw a card.
+   * 	  1/1 */
+
 	prowess(player, card, event);
 	if( this_dies_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY) ){
 		draw_cards(player, 1);
@@ -1329,13 +1386,12 @@ Prowess
 */
 
 int card_marang_river_prowler(int player, int card, event_t event){
-	/*
-	  Marang River Prowler |2|U
-	  Creature - Human Rogue
-	  Marang River Prowler can't block and can't be blocked.
-	  You may cast Marang River Prowler from your graveyard as long as you control a black or green permanent.
-	  2/1
-	*/
+  /* Marang River Prowler |2|U
+   * 	  Creature - Human Rogue
+   * 	  Marang River Prowler can't block and can't be blocked.
+   * 	  You may cast Marang River Prowler from your graveyard as long as you control a black or green permanent.
+   * 	  2/1 */
+
 	cannot_block(player, card, event);
 
 	unblockable(player, card, event);
@@ -1363,12 +1419,11 @@ int card_marang_river_prowler(int player, int card, event_t event){
 }
 
 int card_mindscour_dragon(int player, int card, event_t event){
-	/*
-	  Mindscour Dragon |4|U|U
-	  Creature - Dragon
-	  Whenever Mindscour Dragon deals combat damage to an opponent, target player puts the top four cards of his or her library into his or her graveyard.
-	  4/4
-	*/
+  /* Mindscour Dragon |4|U|U
+   * 	  Creature - Dragon
+   * 	  Whenever Mindscour Dragon deals combat damage to an opponent, target player puts the top four cards of his or her library into his or her graveyard.
+   * 	  4/4 */
+
 	if( damage_dealt_by_me(player, card, event, DDBM_MUST_BE_COMBAT_DAMAGE | DDBM_MUST_DAMAGE_PLAYER) ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, 0);
@@ -1387,29 +1442,39 @@ int card_mindscour_dragon(int player, int card, event_t event){
 	return 0;
 }
 
-int card_mistfire_adept(int player, int card, event_t event){
-	/*
-	  Mistfire Adept |3|U
-	  Creature - Human Monk
-	  Prowess
-	  Whenever you cast a noncreature spell, target creature gains flying until end of turn.
-	  3/3
-	*/
+int card_mistfire_adept(int player, int card, event_t event)
+{
+  /* Mistfire Adept |3|U
+   *     Creature - Human Monk
+   *     Prowess
+   *     Whenever you cast a noncreature spell, target creature gains flying until end of turn.
+   *     3/3 */
 
-	if( prowess(player, card, event) ){
-		target_definition_t td;
-		default_target_definition(player, card, &td, TYPE_CREATURE);
-		td.preferred_controller = player;
-		td.allow_cancel = 0;
+  if (trigger_condition == TRIGGER_SPELL_CAST && affect_me(player, card))
+  {
+    test_definition_t test;
+    default_test_definition(&test, TYPE_CREATURE);
+    test.type_flag = DOESNT_MATCH;
+    sp_ability_trigger(player, event, RESOLVE_TRIGGER_MANDATORY, TYPE_NONE, &test, player, card);
+  }
+  if (event == EVENT_SPA)
+  {
+    prowess(player, card, event);
+    target_definition_t td;
+    default_target_definition(player, card, &td, TYPE_CREATURE);
+    td.preferred_controller = player;
+    td.allow_cancel = 0;
 
-		if( can_target(&td) && pick_target(&td, "TARGET_CREATURE") ){
-			card_instance_t *instance = get_card_instance(player, card);
-			instance->number_of_targets = 0;
-			pump_ability_until_eot(player, card, instance->targets[0].player, instance->targets[0].card, 0, 0, KEYWORD_FLYING, 0);
-		}
-	}
+    if (can_target(&td) && pick_target(&td, "TARGET_CREATURE"))
+    {
+      card_instance_t *instance = get_card_instance(player, card);
+      instance->number_of_targets = 0;
+      pump_ability_until_eot(player, card, instance->targets[0].player, instance->targets[0].card,
+                             0, 0, KEYWORD_FLYING, 0);
+    }
+  }
 
-	return 0;
+  return 0;
 }
 
 /*
@@ -1421,11 +1486,10 @@ When Monastery Siege enters the battlefield, choose Khans or Dragons.
 */
 
 int card_neutralizing_blast(int player, int card, event_t event){
-	/*
-	  Neutralizing Blast |1|U
-	  Instant
-	  Counter target multicolored spell.
-	*/
+  /* Neutralizing Blast |1|U
+   * 	  Instant
+   * 	  Counter target multicolored spell. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -1440,11 +1504,10 @@ int card_neutralizing_blast(int player, int card, event_t event){
 }
 
 int card_rakshasas_disdain(int player, int card, event_t event){
-	/*
-	  Rakshasa's Disdain |2|U
-	  Instant
-	  Counter target spell unless its controller pays 1 for each card in your graveyard.
-	*/
+  /* Rakshasa's Disdain |2|U
+   * 	  Instant
+   * 	  Counter target spell unless its controller pays 1 for each card in your graveyard. */
+
 	if( event == EVENT_CAN_CAST || (event == EVENT_CAST_SPELL && affect_me(player, card)) ){
 		return counterspell(player, card, event, NULL, 0);
 	}
@@ -1458,11 +1521,10 @@ int card_rakshasas_disdain(int player, int card, event_t event){
 }
 
 int card_reality_shift(int player, int card, event_t event){
-	/*
-	  Reality Shift |1|U
-	  Instant
-	  Exile target creature. Its controller manifests the top card of his or her library. (That player puts it onto the battlefield face down as a 2/2 creature. If it's a creature card, it can be turned face up at any time for its mana cost.)
-	*/
+  /* Reality Shift |1|U
+   * 	  Instant
+   * 	  Exile target creature. Its controller manifests the top card of his or her library. (That player puts it onto the battlefield face down as a 2/2 creature. If it's a creature card, it can be turned face up at any time for its mana cost.) */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -1488,12 +1550,11 @@ int card_reality_shift(int player, int card, event_t event){
 }
 
 int card_refocus(int player, int card, event_t event){
-	/*
-	  Refocus |1|U
-	  Instant
-	  Untap target creature.
-	  Draw a card.
-	*/
+  /* Refocus |1|U
+   * 	  Instant
+   * 	  Untap target creature.
+   * 	  Draw a card. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -1519,13 +1580,12 @@ static int renowned_weaponsmith_tutor(int iid, int unused, int unused2, int unus
 }
 
 int card_renowned_weaponsmith(int player, int card, event_t event){
-	/*
-	  Renowned Weaponsmith |1|U --> Approximation
-	  Creature - Human Artificer
-	  T: Add 2 to your mana pool. Spend this mana only to cast artifact spells or activate abilities of artifacts.
-	  U, T: Search your library for a card named Heart-Piercer Bow or Vial of Dragonfire, reveal it, put it into your hand, then shuffle your library.
-	  1/3
-	*/
+  /* Renowned Weaponsmith |1|U --> Approximation
+   * 	  Creature - Human Artificer
+   * 	  T: Add 2 to your mana pool. Spend this mana only to cast artifact spells or activate abilities of artifacts.
+   * 	  U, T: Search your library for a card named Heart-Piercer Bow or Vial of Dragonfire, reveal it, put it into your hand, then shuffle your library.
+   * 	  1/3 */
+
 	card_instance_t *instance = get_card_instance( player, card);
 
 	if( event == EVENT_COUNT_MANA && affect_me(player, card) ){
@@ -1576,12 +1636,11 @@ int card_renowned_weaponsmith(int player, int card, event_t event){
 }
 
 int card_rite_of_undoing(int player, int card, event_t event){
-	/*
-	  Rite of Undoing |4|U
-	  Instant
-	  Delve
-	  Return target nonland permanent you control and target nonland permanent you don't control to their owners' hands.
-	*/
+  /* Rite of Undoing |4|U
+   * 	  Instant
+   * 	  Delve
+   * 	  Return target nonland permanent you control and target nonland permanent you don't control to their owners' hands. */
+
 	modify_cost_for_delve(player, card, event);
 
 	if( ! IS_GS_EVENT(player, card, event) ){
@@ -1639,15 +1698,15 @@ int card_rite_of_undoing(int player, int card, event_t event){
 }
 
 int card_sage_eye_avengers(int player, int card, event_t event){
-	/*
-	  Sage-Eye Avengers |4|U|U
-	  Creature - Djinn Monk
-	  Prowess
-	  Whenever Sage-Eye Avengers attacks, you may return target creature to its owner's hand if its power is less than Sage-Eye Avengers's power.
-	  4/5
-	*/
+  /* Sage-Eye Avengers |4|U|U
+   * 	  Creature - Djinn Monk
+   * 	  Prowess
+   * 	  Whenever Sage-Eye Avengers attacks, you may return target creature to its owner's hand if its power is less than Sage-Eye Avengers's power.
+   * 	  4/5 */
+
 	prowess(player, card, event);
-	if( declare_attackers_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, card) ){
+	dat_ability(player, card, event, duh_mode(player) ? DAT_RESOLVE_TRIGGER_MANDATORY : DAT_RESOLVE_TRIGGER_OPTIONAL, 0);
+	if (event == EVENT_DAT_ABILITY){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_CREATURE);
 
@@ -1666,11 +1725,10 @@ int card_sage_eye_avengers(int player, int card, event_t event){
 }
 
 int card_shifting_loyalties(int player, int card, event_t event){
-	/*
-	  Shifting Loyalties |5|U
-	  Sorcery
-	  Exchange control of two target permanents that share a type.
-	*/
+  /* Shifting Loyalties |5|U
+   * 	  Sorcery
+   * 	  Exchange control of two target permanents that share a type. */
+
 	if (!IS_CASTING(player, card, event)){
 		return 0;
 	}
@@ -1739,35 +1797,49 @@ int card_shifting_loyalties(int player, int card, event_t event){
 	return 0;
 }
 
-int card_shun_yun_the_silent_tempest(int player, int card, event_t event){
-	/*
-	  Shu Yun, the Silent Tempest |2|U
-	  Legendary Creature - Human Monk
-	  Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
-	  Whenever you cast a noncreature spell, you may pay (R/W)(R/W). If you do, target creature gains double strike until end of turn.
-	  3/2
-	*/
-	check_legend_rule(player, card, event);
+int card_shun_yun_the_silent_tempest(int player, int card, event_t event)
+{
+  /* Shu Yun, the Silent Tempest |2|U
+   *     Legendary Creature - Human Monk
+   *     Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)
+   *     Whenever you cast a noncreature spell, you may pay (R/W)(R/W). If you do, target creature gains
+   *     double strike until end of turn. 3/2 */
 
-	if( prowess(player, card, event) ){
+  check_legend_rule(player, card, event);
 
-		target_definition_t td;
-		default_target_definition(player, card, &td, TYPE_CREATURE);
-		td.preferred_controller = player;
+  if (trigger_condition == TRIGGER_SPELL_CAST && affect_me(player, card))
+  {
+    test_definition_t test;
+    default_test_definition(&test, TYPE_CREATURE);
+    test.type_flag = DOESNT_MATCH;
+    sp_ability_trigger(player, event, RESOLVE_TRIGGER_MANDATORY, TYPE_NONE, &test, player, card);
+  }
+  if (event == EVENT_SPA)
+  {
+    prowess(player, card, event);
 
-		card_instance_t *instance = get_card_instance(player, card);
+    target_definition_t td;
+    default_target_definition(player, card, &td, TYPE_CREATURE);
+    td.preferred_controller = player;
 
-		if( can_target(&td) && has_mana_hybrid(player, 2, COLOR_RED, COLOR_WHITE, 0) ){
-			if( do_dialog(player, player, card, -1, -1, " Give double strike\n Pass", 1) == 0 ){
-				if( charge_mana_hybrid(player, card, 2, COLOR_RED, COLOR_WHITE, 0) && pick_target(&td, "TARGET_CREATURE") ){
-					instance->number_of_targets = 0;
-					pump_ability_until_eot(player, card, instance->targets[0].player, instance->targets[0].card, 0, 0, KEYWORD_DOUBLE_STRIKE, 0);
-				}
-			}
-		}
-	}
+    card_instance_t *instance = get_card_instance(player, card);
 
-	return 0;
+    if (can_target(&td) && has_mana_hybrid(player, 2, COLOR_RED, COLOR_WHITE, 0))
+    {
+      if (do_dialog(player, player, card, -1, -1, " Give double strike\n Pass", 1) == 0)
+      {
+        if (charge_mana_hybrid(player, card, 2, COLOR_RED, COLOR_WHITE, 0) &&
+            pick_target(&td, "TARGET_CREATURE"))
+        {
+          instance->number_of_targets = 0;
+          pump_ability_until_eot(player, card, instance->targets[0].player,
+                                 instance->targets[0].card, 0, 0, KEYWORD_DOUBLE_STRIKE, 0);
+        }
+      }
+    }
+  }
+
+  return 0;
 }
 /*
 Sultai Skullkeeper |1|U --> Screeching Skaab
@@ -1777,11 +1849,9 @@ When Sultai Skullkeeper enters the battlefield, put the top two cards of your li
 */
 
 int card_supplant_form(int player, int card, event_t event){
-	/*
-	  Supplant Form |4|U|U
-	  Instant
-	  Return target creature to its owner's hand. You put a token onto the battlefield that's a copy of that creature.
-	*/
+  /* Supplant Form |4|U|U
+   * 	  Instant
+   * 	  Return target creature to its owner's hand. You put a token onto the battlefield that's a copy of that creature. */
 
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
@@ -1810,12 +1880,11 @@ int card_supplant_form(int player, int card, event_t event){
 }
 
 int card_temporal_trespass(int player, int card, event_t event){
-	/*
-	  Temporal Trespass |8|U|U|U
-	  Sorcery
-	  Delve
-	  Take an extra turn after this one. Exile Temporal Trespass.
-	*/
+  /* Temporal Trespass |8|U|U|U
+   * 	  Sorcery
+   * 	  Delve
+   * 	  Take an extra turn after this one. Exile Temporal Trespass. */
+
 	modify_cost_for_delve(player, card, event);
 
 	if( ! IS_GS_EVENT(player, card, event) ){
@@ -1848,31 +1917,30 @@ int card_temporal_trespass(int player, int card, event_t event){
 	return 0;
 }
 
-int card_torrent_elemental(int player, int card, event_t event){
-	/*
-	  Torrent Elemental |4|U
-	  Creature - Elemental
-	  Flying
-	  Whenever Torrent Elemental attacks, tap all creatures defending player controls.
-	  3(B/G)(B/G): Put Torrent Elemental from exile onto the battlefield tapped. Activate this ability only any time you could cast a sorcery.
-	  3/5
-	*/
-	//The rest of the code is in "activate_cards_in_hand" in "rules_engine.c"
-	if( declare_attackers_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, card) ){
-		test_definition_t this_test;
-		default_test_definition(&this_test, TYPE_CREATURE);
-		new_manipulate_all(player, card, 1-player, &this_test, ACT_TAP);
-	}
+int card_torrent_elemental(int player, int card, event_t event)
+{
+  /* Torrent Elemental |4|U
+   * 	  Creature - Elemental
+   * 	  Flying
+   * 	  Whenever Torrent Elemental attacks, tap all creatures defending player controls.
+   * 	  3(B/G)(B/G): Put Torrent Elemental from exile onto the battlefield tapped. Activate this ability only any time you could cast a sorcery.
+   * 	  3/5 */
 
-	return 0;
+  dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 0);
+  if (event == EVENT_DAT_ABILITY)
+  {
+    test_definition_t test;
+    default_test_definition(&test, TYPE_CREATURE);
+    new_manipulate_all(player, card, 1-player, &test, ACT_TAP);
+  }
+  return 0;
 }
 
 int card_whisk_away(int player, int card, event_t event){
-	/*
-	  Whisk Away |2|U
-	  Instant
-	  Put target attacking or blocking creature on top of its owner's library.
-	*/
+  /* Whisk Away |2|U
+   * 	  Instant
+   * 	  Put target attacking or blocking creature on top of its owner's library. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -1893,12 +1961,11 @@ int card_whisk_away(int player, int card, event_t event){
 }
 
 int card_will_of_the_naga(int player, int card, event_t event){
-	/*
-	  Will of the Naga |4|U|U
-	  Instant
-	  Delve
-	  Tap up to two target creatures. Those creatures don't untap during their controller's next untap step.
-	*/
+  /* Will of the Naga |4|U|U
+   * 	  Instant
+   * 	  Delve
+   * 	  Tap up to two target creatures. Those creatures don't untap during their controller's next untap step. */
+
 	modify_cost_for_delve(player, card, event);
 
 	if( ! IS_GS_EVENT(player, card, event) ){
@@ -1945,11 +2012,10 @@ int card_will_of_the_naga(int player, int card, event_t event){
 }
 
 int card_write_into_being(int player, int card, event_t event){
-	/*
-	  Write into Being |2|U
-	  Sorcery
-	  Look at the top two cards of your library. Manifest one of those cards, then put the other on top or bottom of your library.
-	*/
+  /* Write into Being |2|U
+   * 	  Sorcery
+   * 	  Look at the top two cards of your library. Manifest one of those cards, then put the other on top or bottom of your library. */
+
 	if( event == EVENT_RESOLVE_SPELL){
 		int amount = MIN(2, count_deck(player));
 		if( amount ){
@@ -1978,25 +2044,23 @@ int card_write_into_being(int player, int card, event_t event){
 // Black
 
 int card_aleshas_vanguard(int player, int card, event_t event){
-	/*
-	  Alesha's Vanguard |3|B
-	  Creature - Orc Warrior
-	  Dash 2B
-	  3/3
-	*/
+  /* Alesha's Vanguard |3|B
+   * 	  Creature - Orc Warrior
+   * 	  Dash 2B
+   * 	  3/3 */
+
 	dash(player, card, event, MANACOST_XB(2, 1));
 
 	return 0;
 }
 
 int card_ancestral_vengeance(int player, int card, event_t event){
-	/*
-	  Ancestral Vengeance |B|B
-	  Enchantment - Aura
-	  Enchant creature
-	  When Ancestral Vengeance enters the battlefield, put a +1/+1 counter on target creature you control.
-	  Enchanted creature gets -1/-1.
-	*/
+  /* Ancestral Vengeance |B|B
+   * 	  Enchantment - Aura
+   * 	  Enchant creature
+   * 	  When Ancestral Vengeance enters the battlefield, put a +1/+1 counter on target creature you control.
+   * 	  Enchanted creature gets -1/-1. */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
@@ -2009,7 +2073,7 @@ int card_ancestral_vengeance(int player, int card, event_t event){
 		card_instance_t *instance = get_card_instance( player, card);
 
 		if( can_target(&td) && new_pick_target(&td, "Select target creature you control.", 1, GS_LITERAL_PROMPT) ){
-			add_1_1_counter(instance->targets[1].player, instance->targets[1].card);
+			add_counters(player, card, instance->targets[1].player, instance->targets[1].card, COUNTER_P1_P1, 1);
 		}
 	}
 
@@ -2017,12 +2081,11 @@ int card_ancestral_vengeance(int player, int card, event_t event){
 }
 
 int card_archfiend_of_depravity(int player, int card, event_t event){
-	/*
-	  Archfiend of Depravity |3|B|B
-	  Creature - Demon
-	  At the beginning of each opponent's end step, that player chooses up to two creatures he or she controls, then sacrifices the rest.
-	  5/4
-	*/
+  /* Archfiend of Depravity |3|B|B
+   * 	  Creature - Demon
+   * 	  At the beginning of each opponent's end step, that player chooses up to two creatures he or she controls, then sacrifices the rest.
+   * 	  5/4 */
+
 	if( current_turn != player && eot_trigger(player, card, event) ){
 		if( can_sacrifice(player, 1-player, 1, TYPE_CREATURE, 0) ){
 			target_definition_t td;
@@ -2058,13 +2121,12 @@ int card_archfiend_of_depravity(int player, int card, event_t event){
 }
 
 int card_battle_brawler(int player, int card, event_t event){
-	/*
-	  Battle Brawler |1|B
-	  Creature - Orc Warrior
-	  As long as you control a red or white permanent, Battle Brawler gets +1/+0 and has first strike.
-	  2/2
-	*/
-	if( ! is_humiliated(player, card) ){
+  /* Battle Brawler |1|B
+   * 	  Creature - Orc Warrior
+   * 	  As long as you control a red or white permanent, Battle Brawler gets +1/+0 and has first strike.
+   * 	  2/2 */
+
+	if( ! is_humiliated(player, card, AL_STATIC) ){
 		if( (event == EVENT_POWER || event == EVENT_ABILITIES) && affect_me(player, card) ){
 			test_definition_t this_test;
 			default_test_definition(&this_test, TYPE_PERMANENT);
@@ -2090,29 +2152,30 @@ int card_battle_brawler(int player, int card, event_t event){
 static int brutal_hordechief_legacy(int player, int card, event_t event)
 {
   if (event == EVENT_DECLARE_BLOCKERS || event == EVENT_CLEANUP)
-	{
-	  event_flags &= ~EF_ATTACKER_CHOOSES_BLOCKERS;	// Assumes all such effects last only for this combat
-	  kill_card(player, card, event);
-	}
+  {
+    event_flags &=
+        ~EF_ATTACKER_CHOOSES_BLOCKERS; // Assumes all such effects last only for this combat
+    kill_card(player, card, KILL_EXILE);
+  }
 
   return 0;
 }
 
 int card_brutal_hordechief(int player, int card, event_t event){
-	/*
-	  Brutal Hordechief |3|B
-	  Creature - Orc Warrior
-	  Whenever a creature you control attacks, defending player loses 1 life and you gain 1 life.
-	  3(R/W)(R/W): Creatures your opponents control block this turn if able, and you choose how those creatures block.
-	  3/3
-	*/
-	card_instance_t *instance = get_card_instance( player, card);
+  /* Brutal Hordechief |3|B
+   * 	  Creature - Orc Warrior
+   * 	  Whenever a creature you control attacks, defending player loses 1 life and you gain 1 life.
+   * 	  3(R/W)(R/W): Creatures your opponents control block this turn if able, and you choose how those creatures block.
+   * 	  3/3 */
 
-	int result = declare_attackers_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, -1);
-	if( result ){
-		lose_life(1-player, result);
-		gain_life(player, result);
+	store_attackers(player, card, event, DAT_SEPARATE_TRIGGERS, player, -1, NULL);
+	dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 1);
+	if (event == EVENT_DAT_ABILITY){ lose_life(1-player, 1); gain_life(player, 1); }
+	if (!IS_GAA_EVENT(event)){
+		return 0;
 	}
+
+	card_instance_t *instance = get_card_instance(player, card);
 
 	if( event == EVENT_CAN_ACTIVATE ){
 		if( generic_activated_ability(player, card, event, 0, MANACOST0, 0, NULL, NULL) ){
@@ -2135,13 +2198,12 @@ int card_brutal_hordechief(int player, int card, event_t event){
 }
 
 int card_crux_of_fate(int player, int card, event_t event){
-	/*
-	  Crux of Fate |3|B|B
-	  Sorcery
-	  Choose one -
-	  * Destroy all Dragon creatures.
-	  * Destroy all non-Dragon creatures.
-	  */
+  /* Crux of Fate |3|B|B
+   * 	  Sorcery
+   * 	  Choose one -
+   * Destroy all Dragon creatures.
+   * Destroy all non-Dragon creatures. */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		test_definition_t this_test;
 		default_test_definition(&this_test, TYPE_CREATURE);
@@ -2158,11 +2220,10 @@ int card_crux_of_fate(int player, int card, event_t event){
 }
 
 int card_dark_deal(int player, int card, event_t event){
-	/*
-	  Dark Deal |2|B
-	  Sorcery
-	  Each player discards all the cards in his or her hand, then draws that many cards minus one.
-	*/
+  /* Dark Deal |2|B
+   * 	  Sorcery
+   * 	  Each player discards all the cards in his or her hand, then draws that many cards minus one. */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		int discarded[2] = {hand_count[0], hand_count[1]};
 		APNAP(p, {
@@ -2179,11 +2240,9 @@ int card_dark_deal(int player, int card, event_t event){
 }
 
 int card_diplomacy_of_the_wastes(int player, int card, event_t event){
-	/*
-	  Diplomacy of the Wastes |2|B
-	  Sorcery
-	  Target opponent reveals his or her hand. You choose a nonland card from it. That player discards that card. If you control a Warrior, that player loses 2 life.
-	*/
+  /* Diplomacy of the Wastes |2|B
+   * 	  Sorcery
+   * 	  Target opponent reveals his or her hand. You choose a nonland card from it. That player discards that card. If you control a Warrior, that player loses 2 life. */
 
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
@@ -2215,32 +2274,34 @@ int card_diplomacy_of_the_wastes(int player, int card, event_t event){
 	return generic_spell(player, card, event, GS_CAN_ONLY_TARGET_OPPONENT, &td, NULL, 1, NULL);
 }
 
-int card_fearsome_awakening(int player, int card, event_t event){
-	/*
-	  Fearsome Awakening |4|B
-	  Sorcery
-	  Return target creature card from your graveyard to the battlefield. If it's a Dragon, put two +1/+1 counters on it.
-	*/
-	if (!IS_GS_EVENT(player, card, event)){
-		return 0;
-	}
+int card_fearsome_awakening(int player, int card, event_t event)
+{
+  /* Fearsome Awakening	|4|B
+   * Sorcery
+   * Return target creature card from your graveyard to the battlefield. If it's a Dragon, put two +1/+1 counters on it. */
 
-	test_definition_t this_test;
-	new_default_test_definition(&this_test, TYPE_CREATURE, "Select target creature card.");
-	this_test.ai_selection_mode = AI_MAX_CMC;
-
-	if ( event == EVENT_RESOLVE_SPELL ){
-		int selected = validate_target_from_grave_source(player, card, player, 0);
-		if( selected != -1 ){
-			int result = reanimate_permanent(player, card, player, selected, REANIMATE_DEFAULT);
-			if( result != -1 && has_subtype(player, result, SUBTYPE_DRAGON) ){
-				add_1_1_counters(player, result, 2);
-			}
-		}
-		kill_card(player, card, KILL_DESTROY);
-	}
-
-	return generic_spell(player, card, event, GS_GRAVE_RECYCLER, NULL, NULL, 0, &this_test);
+  int grave_index_or_reanimated_card;
+  test_definition_t this_test;
+  if (!IS_GS_EVENT(player, card, event))
+  {
+    return 0;
+  }
+  new_default_test_definition(&this_test, 2, "Select target creature card.");
+  this_test.ai_selection_mode = 2;
+  if (event == EVENT_RESOLVE_SPELL)
+  {
+    grave_index_or_reanimated_card = validate_target_from_grave_source(player, card, player, 0);
+    if (((grave_index_or_reanimated_card != -1) &&
+         (grave_index_or_reanimated_card = reanimate_permanent(
+              player, card, player, grave_index_or_reanimated_card, REANIMATE_DEFAULT),
+          grave_index_or_reanimated_card != -1)) &&
+        (has_subtype(player, grave_index_or_reanimated_card, SUBTYPE_DRAGON) != 0))
+    {
+      add_counters(player, card, player, grave_index_or_reanimated_card, COUNTER_P1_P1, 2);
+    }
+    kill_card(player, card, KILL_DESTROY);
+  }
+  return generic_spell(player, card, event, 8, NULL, NULL, 0, &this_test);
 }
 
 int card_ghastly_conscripts(int player, int card, event_t event){
@@ -2295,11 +2356,9 @@ int card_ghastly_conscripts(int player, int card, event_t event){
 }
 
 int card_grave_strenght(int player, int card, event_t event){
-	/*
-	  Grave Strength |1|B
-	  Sorcery
-	  Choose target creature. Put the top three cards of your library into your graveyard, then put a +1/+1 counter on that creature for each creature card in your graveyard.
-	*/
+  /* Grave Strength |1|B
+   * 	  Sorcery
+   * 	  Choose target creature. Put the top three cards of your library into your graveyard, then put a +1/+1 counter on that creature for each creature card in your graveyard. */
 
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
@@ -2323,7 +2382,7 @@ int card_grave_strenght(int player, int card, event_t event){
 					milled++;
 			}
 			mill(player, milled);
-			add_1_1_counters(instance->targets[0].player, instance->targets[0].card, amount);
+			add_counters(player, card, instance->targets[0].player, instance->targets[0].card, COUNTER_P1_P1, amount);
 		}
 		kill_card(player, card, KILL_DESTROY);
 	}
@@ -2346,14 +2405,13 @@ static const char* is_already_damaged(int who_chooses, int player, int card, int
 }
 
 int card_hooded_assasin(int player, int card, event_t event){
-	/*
-	  Hooded Assassin |2|B
-	  Creature - Human Assassin
-	  When Hooded Assassin enters the battlefield, choose one -
-	  * Put a +1/+1 counter on Hooded Assassin.
-	  * Destroy target creature that was dealt damage this turn.
-	  1/2
-	*/
+  /* Hooded Assassin |2|B
+   * 	  Creature - Human Assassin
+   * 	  When Hooded Assassin enters the battlefield, choose one -
+   * Put a +1/+1 counter on Hooded Assassin.
+   * Destroy target creature that was dealt damage this turn.
+   * 	  1/2 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
@@ -2365,7 +2423,7 @@ int card_hooded_assasin(int player, int card, event_t event){
 
 		int choice = do_dialog(player, player, card, -1, -1, " Add a +1/+1 counter\n Kill a damaged creature", can_target(&td) ? 1 : 0);
 		if( choice == 0 ){
-			add_1_1_counter(player, card);
+			add_counters(player, card, player, card, COUNTER_P1_P1, 1);
 		}
 		else{
 			if( can_target(&td) && new_pick_target(&td, "Select target creature that was dealt damage this turn.", 0, GS_LITERAL_PROMPT) ){
@@ -2377,34 +2435,35 @@ int card_hooded_assasin(int player, int card, event_t event){
 	return 0;
 }
 
-int card_mardu_shadowspear(int player, int card, event_t event){
-	/*
-	  Mardu Shadowspear |B
-	  Creature - Human Warrior
-	  Whenever Mardu Shadowspear attacks, each opponent loses 1 life.
-	  Dash 1B (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
-	  1/1
-	*/
-	dash(player, card, event, MANACOST_XB(1, 1));
+int card_mardu_shadowspear(int player, int card, event_t event)
+{
+  /* Mardu Shadowspear |B
+   * 	  Creature - Human Warrior
+   * 	  Whenever Mardu Shadowspear attacks, each opponent loses 1 life.
+   * 	  Dash 1B (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
+   * 	  1/1 */
 
-	if( declare_attackers_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, card) ){
-		lose_life(1-player, 1);
-	}
-
-	return 0;
+  if (card != -1)
+    dash(player, card, event, MANACOST_XB(1, 1));
+  dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 0);
+  if (event == EVENT_DAT_ABILITY)
+    lose_life(1-player, 1);
+  return 0;
 }
 
 int card_mardu_strike_leader(int player, int card, event_t event){
-	/*
-	  Mardu Strike Leader |2|B
-	  Creature - Human Warrior
-	  Whenever Mardu Strike Leader attacks, put a 2/1 black Warrior creature token onto the battlefield.
-	  Dash 3B (You may cast this spell for its dash cost. If you do, it gains haste, and it is returned from the battlefield to your hand at the beginning of the next end step.)
-	  3/2
-	*/
-	dash(player, card, event, MANACOST_XB(3, 1));
+  /* Mardu Strike Leader |2|B
+   * 	  Creature - Human Warrior
+   * 	  Whenever Mardu Strike Leader attacks, put a 2/1 black Warrior creature token onto the battlefield.
+   * 	  Dash 3B (You may cast this spell for its dash cost. If you do, it gains haste, and it is returned from the battlefield to your hand at the beginning of the next end step.)
+   * 	  3/2 */
 
-	if( declare_attackers_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, card) ){
+	if (card != -1){
+		dash(player, card, event, MANACOST_XB(3, 1));
+	}
+
+	dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 0);
+	if (event == EVENT_DAT_ABILITY){
 		token_generation_t token;
 		default_token_definition(player, card, CARD_ID_WARRIOR, &token);
 		token.pow = 2;
@@ -2424,13 +2483,11 @@ When Merciless Executioner enters the battlefield, each player sacrifices a crea
 */
 
 int card_noxious_dragon(int player, int card, event_t event){
-	/*
-	  Noxious Dragon |4|B|B
-	  Creature - Dragon
-	  Flying
-	  When Noxious Dragon dies, you may destroy target creature with converted mana cost 3 or less.
-	  4/4
-	*/
+  /* Noxious Dragon |4|B|B
+   * 	  Creature - Dragon
+   * 	  Flying
+   * 	  When Noxious Dragon dies, you may destroy target creature with converted mana cost 3 or less.
+   * 	  4/4 */
 
 	if( this_dies_trigger(player, card, event, RESOLVE_TRIGGER_AI(player)) ){
 		target_definition_t td;
@@ -2447,12 +2504,11 @@ int card_noxious_dragon(int player, int card, event_t event){
 }
 
 int card_orc_sureshot(int player, int card, event_t event){
-	/*
-	  Orc Sureshot |3|B
-	  Creature - Orc Archer
-	  Whenever another creature enters the battlefield under your control, target creature an opponent controls gets -1/-1 until end of turn.
-	  4/2
-	*/
+  /* Orc Sureshot |3|B
+   * 	  Creature - Orc Archer
+   * 	  Whenever another creature enters the battlefield under your control, target creature an opponent controls gets -1/-1 until end of turn.
+   * 	  4/2 */
+
 	if( trigger_condition == TRIGGER_COMES_INTO_PLAY && affect_me(player, card) && reason_for_trigger_controller == player ){
 
 		test_definition_t this_test;
@@ -2479,13 +2535,11 @@ int card_orc_sureshot(int player, int card, event_t event){
 }
 
 int card_palace_siege(int player, int card, event_t event){
-	/*
-	  Palace Siege |3|B|B
-	  Enchantment
-	  As Palace Siege enters the battlefield, choose Khans or Dragons.
-	  * Khans - At the beginning of your upkeep, return target creature card from your graveyard to your hand.
-	  * Dragons - At the beginning of your upkeep, each opponent loses 2 life and you gain 2 life.
-	  */
+  /* Palace Siege |3|B|B
+   * 	  Enchantment
+   * 	  As Palace Siege enters the battlefield, choose Khans or Dragons.
+   * Khans - At the beginning of your upkeep, return target creature card from your graveyard to your hand.
+   * Dragons - At the beginning of your upkeep, each opponent loses 2 life and you gain 2 life. */
 
 	if( event == EVENT_RESOLVE_SPELL ){
 		choose_khans_or_dragons(player, card, 2*count_graveyard_by_type(player, TYPE_CREATURE), (20-life[1-player])*2 );
@@ -2513,12 +2567,11 @@ int card_palace_siege(int player, int card, event_t event){
 }
 
 int card_qarsi_high_priest(int player, int card, event_t event){
-	/*
-	  Qarsi High Priest |B
-	  Creature - Human Cleric
-	  1B, t, Sacrifice another creature: Manifest the top card of your library.
-	  0/2
-	*/
+  /* Qarsi High Priest |B
+   * 	  Creature - Human Cleric
+   * 	  1B, t, Sacrifice another creature: Manifest the top card of your library.
+   * 	  0/2 */
+
 	if( event == EVENT_RESOLVE_ACTIVATION ){
 		manifest(player, card);
 	}
@@ -2527,11 +2580,10 @@ int card_qarsi_high_priest(int player, int card, event_t event){
 }
 
 int card_reach_of_shadows(int player, int card, event_t event){
-	/*
-	  Reach of Shadows |4|B
-	  Instant
-	  Destroy target creature that's one or more colors.
-	*/
+  /* Reach of Shadows |4|B
+   * 	  Instant
+   * 	  Destroy target creature that's one or more colors. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -2552,12 +2604,11 @@ int card_reach_of_shadows(int player, int card, event_t event){
 }
 
 int card_sibsig_host(int player, int card, event_t event){
-	/*
-	  Sibsig Host |4|B
-	  Creature - Zombie
-	  When Sibsig Host enters the battlefield, each player puts the top three cards of his or her library into his or her graveyard.
-	  2/6
-	*/
+  /* Sibsig Host |4|B
+   * 	  Creature - Zombie
+   * 	  When Sibsig Host enters the battlefield, each player puts the top three cards of his or her library into his or her graveyard.
+   * 	  2/6 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
@@ -2568,13 +2619,12 @@ int card_sibsig_host(int player, int card, event_t event){
 }
 
 int card_sibsig_muckdraggers(int player, int card, event_t event){
-	/*
-	  Sibsig Muckdraggers |8|B
-	  Creature - Zombie
-	  Delve
-	  When Sibsig Muckdraggers enters the battlefield, return target creature card from your graveyard to your hand.
-	  3/6
-	*/
+  /* Sibsig Muckdraggers |8|B
+   * 	  Creature - Zombie
+   * 	  Delve
+   * 	  When Sibsig Muckdraggers enters the battlefield, return target creature card from your graveyard to your hand.
+   * 	  3/6 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
@@ -2585,13 +2635,12 @@ int card_sibsig_muckdraggers(int player, int card, event_t event){
 }
 
 int card_soulflayer(int player, int card, event_t event){
-	/*
-	  Soulflayer |4|B|B
-	  Creature - Demon
-	  Delve
-	  If a creature card with flying was exiled with Soulflayer's delve ability, Soulflayer has flying. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, reach, trample, and vigilance.
-	  4/4
-	*/
+  /* Soulflayer |4|B|B
+   * 	  Creature - Demon
+   * 	  Delve
+   * 	  If a creature card with flying was exiled with Soulflayer's delve ability, Soulflayer has flying. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, reach, trample, and vigilance.
+   * 	  4/4 */
+
 	card_instance_t *instance = get_card_instance(player, card);
 
 	modify_cost_for_delve(player, card, event);
@@ -2608,7 +2657,7 @@ int card_soulflayer(int player, int card, event_t event){
 		}
 	}
 
-	if( event == EVENT_ABILITIES && affect_me(player, card) && ! is_humiliated(player, card) && instance->targets[1].player > 0 ){
+	if( event == EVENT_ABILITIES && affect_me(player, card) && ! is_humiliated(player, card, AL_STATIC) && instance->targets[1].player > 0 ){
 		event_result |= instance->targets[1].player;
 	}
 
@@ -2616,13 +2665,12 @@ int card_soulflayer(int player, int card, event_t event){
 }
 
 int card_sultai_emissary(int player, int card, event_t event){
-	/*
-	  Sultai Emissary |1|B
-	  Creature - Zombie Warrior
-	  When Sultai Emissary dies, manifest the top card of your library.
-	  (Put that card onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)
-	  1/1
-	*/
+  /* Sultai Emissary |1|B
+   * 	  Creature - Zombie Warrior
+   * 	  When Sultai Emissary dies, manifest the top card of your library.
+   * 	  (Put that card onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)
+   * 	  1/1 */
+
 	if( this_dies_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY) ){
 		manifest(player, card);
 	}
@@ -2631,24 +2679,22 @@ int card_sultai_emissary(int player, int card, event_t event){
 }
 
 int card_sultai_runemark(int player, int card, event_t event){
-	/*
-	  Sultai Runemark |2|B
-	  Enchantment - Aura
-	  Enchant creature
-	  Enchanted creature gets +2/+2.
-	  Enchanted creature has deathtouch as long as you control a green or blue permanent.
-	*/
+  /* Sultai Runemark |2|B
+   * 	  Enchantment - Aura
+   * 	  Enchant creature
+   * 	  Enchanted creature gets +2/+2.
+   * 	  Enchanted creature has deathtouch as long as you control a green or blue permanent. */
+
 	return runemark(player, card, event, COLOR_TEST_BLUE | COLOR_TEST_GREEN, 0, SP_KEYWORD_DEATHTOUCH);
 }
 
 int card_tasigur_the_golden_fang(int player, int card, event_t event){
-	/*
-	  Tasigur, the Golden Fang |5|B
-	  Legendary Creature - Human Shaman
-	  Delve
-	  2(G/U)(G/U): Put the top two cards of your library into your graveyard, then return a nonland card of an opponent's choice from your graveyard to your hand.
-	  4/5
-	*/
+  /* Tasigur, the Golden Fang |5|B
+   * 	  Legendary Creature - Human Shaman
+   * 	  Delve
+   * 	  2(G/U)(G/U): Put the top two cards of your library into your graveyard, then return a nonland card of an opponent's choice from your graveyard to your hand.
+   * 	  4/5 */
+
 	check_legend_rule(player, card, event);
 
 	if( event == EVENT_CAN_ACTIVATE ){
@@ -2677,12 +2723,11 @@ int card_tasigur_the_golden_fang(int player, int card, event_t event){
 }
 
 int card_tasigur_cruelty(int player, int card, event_t event){
-	/*
-	  Tasigur's Cruelty |5|B
-	  Sorcery
-	  Delve
-	  Each opponent discards two cards.
-	*/
+  /* Tasigur's Cruelty |5|B
+   * 	  Sorcery
+   * 	  Delve
+   * 	  Each opponent discards two cards. */
+
 	modify_cost_for_delve(player, card, event);
 
 	card_instance_t *instance = get_card_instance(player, card);
@@ -2724,99 +2769,110 @@ static int check_for_alesha_reanimation(int player){
 }
 
 int card_alesha_who_smileas_at_death(int player, int card, event_t event){
-	/*
-	  Alesha, Who Smiles at Death |2|R
-	  Legendary Creature - Human Warrior
-	  First strike
-	  Whenever Alesha, Who Smiles at Death attacks, you may pay (W/B)(W/B). If you do, return target creature card with power 2 or less from your graveyard to the battlefield tapped and attacking.
-	  3/2
-	*/
+  /* Alesha, Who Smiles at Death |2|R
+   * 	  Legendary Creature - Human Warrior
+   * 	  First strike
+   * 	  Whenever Alesha, Who Smiles at Death attacks, you may pay (W/B)(W/B). If you do, return target creature card with power 2 or less from your graveyard to the battlefield tapped and attacking.
+   * 	  3/2 */
+
 	check_legend_rule(player, card, event);
-
-	store_attackers(player, card, event, 0, player, card, NULL);
-
-	if (xtrigger_condition() == XTRIGGER_ATTACKING && affect_me(player, card) && reason_for_trigger_controller == player){
-		int active = check_for_alesha_reanimation(player) && has_mana_hybrid(player, 2, COLOR_BLACK, COLOR_WHITE, 0) ? 1 : 0;
-		if( active && declare_attackers_trigger(player, card, event, RESOLVE_TRIGGER_AI(player), player, card) ){
-			if( charge_mana_hybrid(player, card, 2, COLOR_BLACK, COLOR_WHITE, 0) ){
-				test_definition_t this_test;
-				new_default_test_definition(&this_test, TYPE_CREATURE, "Select a creture with Power 2 or less.");
-				this_test.power = 3;
-				this_test.power_flag = F5_POWER_LESSER_THAN_VALUE;
-				new_global_tutor(player, player, TUTOR_FROM_GRAVE, TUTOR_PLAY_ATTACKING, 1, AI_MAX_CMC, &this_test);
-			}
+	store_attackers(player, card, event, 0, player, -1, NULL);
+	dat_ability(player, card, event, RESOLVE_TRIGGER_AI(player), 1);
+	if (event == EVENT_DAT_ABILITY && check_for_alesha_reanimation(player) && has_mana_hybrid(player, 2, COLOR_BLACK, COLOR_WHITE, 0)){
+		if (charge_mana_hybrid(player, card, 2, COLOR_BLACK, COLOR_WHITE, 0)){
+			test_definition_t test;
+			new_default_test_definition(&test, TYPE_CREATURE, "Select a creture with Power 2 or less.");
+			test.power = 3;
+			test.power_flag = F5_POWER_LESSER_THAN_VALUE;
+			new_global_tutor(player, player, TUTOR_FROM_GRAVE, TUTOR_PLAY_ATTACKING, 1, AI_MAX_CMC, &test);
 		}
 	}
-
 	return 0;
 }
 
-static int arcbond_legacy(int player, int card, event_t event){
+static int arcbond_legacy(int player, int card, event_t event)
+{
 
-	card_instance_t *instance= get_card_instance(player, card);
+  card_instance_t *instance = get_card_instance(player, card);
 
-	if( instance->damage_target_player > -1 ){
-		int pp = instance->damage_target_player;
-		int cc = instance->damage_target_card;
-		card_instance_t* damage = damage_being_dealt(event);
-		if (damage && damage->damage_target_card == cc && damage->damage_target_player == pp && damage->info_slot > 0){
-			int i;
-			for(i=1; i<19; i++){
-				if( instance->targets[i].player < 1 ){
-					instance->targets[i].player = damage->info_slot;
-					break;
-				}
-				if( instance->targets[i].card < 1 ){
-					instance->targets[i].card = damage->info_slot;
-					break;
-				}
-			}
-		}
+  if (instance->damage_target_player > -1)
+  {
+    int pp = instance->damage_target_player;
+    int cc = instance->damage_target_card;
+    card_instance_t *damage = damage_being_dealt(event);
+    if (damage && damage->damage_target_card == cc && damage->damage_target_player == pp &&
+        damage->info_slot > 0)
+    {
+      int i;
+      for (i = 1; i < 19; i++)
+      {
+        if (instance->targets[i].player < 1)
+        {
+          instance->targets[i].player = damage->info_slot;
+          break;
+        }
+        if (instance->targets[i].card < 1)
+        {
+          instance->targets[i].card = damage->info_slot;
+          break;
+        }
+      }
+    }
 
-		if (trigger_condition == TRIGGER_DEAL_DAMAGE && affect_me(player, card) && reason_for_trigger_controller == player){
-			if( instance->targets[1].player > 0 ){
-				if (event == EVENT_TRIGGER){
-					event_result |= RESOLVE_TRIGGER_MANDATORY;
-				}
-				if (event == EVENT_RESOLVE_TRIGGER){
-					// Free up targets, just in case something triggers instantly (and improperly) which eventually results in dealing damage back.
-					int i, dam[20], dc = 0;
-					for(i=1; i<18; i++){
-						if( instance->targets[i].player > 0 ){
-							dam[dc] = instance->targets[i].player;
-							dc++;
-							instance->targets[i].player = 0;
-						}
-						if( instance->targets[i].card > 0 ){
-							dam[dc] = instance->targets[i].card;
-							dc++;
-							instance->targets[i].card = 0;
-						}
-					}
-					test_definition_t this_test;
-					default_test_definition(&this_test, TYPE_CREATURE);
-					this_test.not_me = 1;
-					for (i = 0; i < dc; ++i){
-						APNAP(p, {new_damage_all(pp, cc, p, dam[i], NDA_PLAYER_TOO, &this_test);};);
-					}
-				}
-			}
-		}
-	}
+    if (trigger_condition == TRIGGER_DEAL_DAMAGE && affect_me(player, card) &&
+        reason_for_trigger_controller == player)
+    {
+      if (instance->targets[1].player > 0)
+      {
+        if (event == EVENT_TRIGGER)
+        {
+          event_result |= RESOLVE_TRIGGER_MANDATORY;
+        }
+        if (event == EVENT_RESOLVE_TRIGGER)
+        {
+          // Free up targets, just in case something triggers instantly (and improperly) which
+          // eventually results in dealing damage back.
+          int i, dam[20], dc = 0;
+          for (i = 1; i < 18; i++)
+          {
+            if (instance->targets[i].player > 0)
+            {
+              dam[dc] = instance->targets[i].player;
+              dc++;
+              instance->targets[i].player = 0;
+            }
+            if (instance->targets[i].card > 0)
+            {
+              dam[dc] = instance->targets[i].card;
+              dc++;
+              instance->targets[i].card = 0;
+            }
+          }
+          test_definition_t this_test;
+          default_test_definition(&this_test, TYPE_CREATURE);
+          this_test.not_me = 1;
+          for (i = 0; i < dc; ++i)
+          {
+            new_damage_all(pp, cc, ANYBODY, dam[i], NDA_PLAYER_TOO, &this_test);
+          }
+        }
+      }
+    }
+  }
 
-	if( event == EVENT_CLEANUP ){
-		kill_card(player, card, KILL_EXILE);
-	}
+  if (event == EVENT_CLEANUP)
+  {
+    kill_card(player, card, KILL_EXILE);
+  }
 
-	return 0;
+  return 0;
 }
 
 int card_arcbond(int player, int card, event_t event){
-	/*
-	  Arcbond |2|R
-	  Instant
-	  Choose target creature. Whenever that creature is dealt damage this turn, it deals that much damage to each other creature and each player.
-	*/
+  /* Arcbond |2|R
+   * 	  Instant
+   * 	  Choose target creature. Whenever that creature is dealt damage this turn, it deals that much damage to each other creature and each player. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -2837,7 +2893,6 @@ int card_arcbond(int player, int card, event_t event){
 	return generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_CREATURE", 1, NULL);
 }
 
-
 /*
 Bathe in Dragonfire |2|R --> Flame Slash
 Sorcery
@@ -2845,13 +2900,12 @@ Bathe in Dragonfire deals 4 damage to target creature.
 */
 
 int card_bloodfire_enforcer(int player, int card, event_t event){
-	/*
-	  Bloodfire Enforcers |3|R
-	  Creature - Human Monk
-	  Bloodfire Enforcers has first strike and trample as long as an instant card and a sorcery card are in your graveyard.
-	  5/2
-	*/
-	if( event == EVENT_ABILITIES && affect_me(player, card) && ! is_humiliated(player, card) ){
+  /* Bloodfire Enforcers |3|R
+   * 	  Creature - Human Monk
+   * 	  Bloodfire Enforcers has first strike and trample as long as an instant card and a sorcery card are in your graveyard.
+   * 	  5/2 */
+
+	if( event == EVENT_ABILITIES && affect_me(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		if( count_graveyard_by_type(player, TYPE_SORCERY) && count_graveyard_by_type(player, TYPE_INSTANT | TYPE_INTERRUPT) ){
 			event_result |= (KEYWORD_TRAMPLE | KEYWORD_FIRST_STRIKE);
 		}
@@ -2861,11 +2915,9 @@ int card_bloodfire_enforcer(int player, int card, event_t event){
 }
 
 int card_break_through_the_line(int player, int card, event_t event){
-	/*
-	  Break Through the Line |1|R
-	  Enchantment
-	  R: Target creature with power 2 or less gains haste until end of turn and can't be blocked this turn.
-	*/
+  /* Break Through the Line |1|R
+   * 	  Enchantment
+   * 	  R: Target creature with power 2 or less gains haste until end of turn and can't be blocked this turn. */
 
 	if( ! IS_GAA_EVENT(event) ){
 		return global_enchantment(player, card, event);
@@ -2912,14 +2964,13 @@ int card_collateral_damage(int player, int card, event_t event){
 }
 
 int card_defiant_ogre(int player, int card, event_t event){
-	/*
-	  Defiant Ogre |5|R
-	  Creature - Ogre Warrior
-	  When Defiant Ogre enters the battlefield, choose one -
-	  * Put a +1/+1 counter on Defiant Ogre.
-	  * Destroy target artifact.
-	  3/5
-	*/
+  /* Defiant Ogre |5|R
+   * 	  Creature - Ogre Warrior
+   * 	  When Defiant Ogre enters the battlefield, choose one -
+   * Put a +1/+1 counter on Defiant Ogre.
+   * Destroy target artifact.
+   * 	  3/5 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
@@ -2929,7 +2980,7 @@ int card_defiant_ogre(int player, int card, event_t event){
 
 		int choice = do_dialog(player, player, card, -1, -1, " Add a +1/+1 counter\n Kill an artifact", can_target(&td) ? 1 : 0);
 		if( choice == 0 ){
-			add_1_1_counter(player, card);
+			add_counters(player, card, player, card, COUNTER_P1_P1, 1);
 		}
 		else{
 			if( can_target(&td) && new_pick_target(&td, "TARGET_ARTIFACT", 0, 0) ){
@@ -2960,11 +3011,10 @@ int dragonrage_legacy(int player, int card, event_t event){
 	return 0;
 }
 int card_dragonrage(int player, int card, event_t event){
-	/*
-	  Dragonrage |2|R
-	  Instant
-	  Add R to your mana pool for each attacking creature you control. Until end of turn, attacking creatures you control gain "R: This creature gets +1/+0 until end of turn."
-	*/
+  /* Dragonrage |2|R
+   * 	  Instant
+   * 	  Add R to your mana pool for each attacking creature you control. Until end of turn, attacking creatures you control gain "R: This creature gets +1/+0 until end of turn." */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		produce_mana(player, COLOR_RED, count_attackers(player));
 		int i;
@@ -2980,15 +3030,14 @@ int card_dragonrage(int player, int card, event_t event){
 }
 
 int card_fierce_invocation(int player, int card, event_t event){
-	/*
-	  Fierce Invocation |4|R
-	  Sorcery
-	  Manifest the top card of your library, then put two +1/+1 counters on it. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)
-	*/
+  /* Fierce Invocation |4|R
+   * 	  Sorcery
+   * 	  Manifest the top card of your library, then put two +1/+1 counters on it. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.) */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		int result = manifest(player, card);
 		if( result > -1 ){
-			add_1_1_counters(player, result, 2);
+			add_counters(player, card, player, result, COUNTER_P1_P1, 2);
 		}
 		kill_card(player, card, KILL_DESTROY);
 	}
@@ -3006,18 +3055,17 @@ static int rfg_at_end_of_combat(int player, int card, event_t event){
 	return 0;
 }
 
-
 int card_flamerush_rider(int player, int card, event_t event){
-	/*
-	  Flamerush Rider |4|R
-	  Creature - Human Warrior
-	  Whenever Flamerush Rider attacks, put a token onto the battlefield tapped and attacking that's a copy of another target attacking creature. Exile the token at end of combat.
-	  Dash 2RR (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
-	  3/3
-	*/
-	dash(player, card, event, MANACOST_XR(2, 2));
+  /* Flamerush Rider |4|R
+   * 	  Creature - Human Warrior
+   * 	  Whenever Flamerush Rider attacks, put a token onto the battlefield tapped and attacking that's a copy of another target attacking creature. Exile the token at end of combat.
+   * 	  Dash 2RR (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
+   * 	  3/3 */
 
-	if( declare_attackers_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, card) ){
+	if (card != -1){ dash(player, card, event, MANACOST_XR(2, 2)); }
+
+	dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 0);
+	if (event == EVENT_DAT_ABILITY){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_CREATURE);
 		td.allowed_controller = current_turn;
@@ -3058,12 +3106,11 @@ Ferocious - At the beginning of combat on your turn, if you control a creature w
 */
 
 int card_friendly_fire(int player, int card, event_t event){
-	/*
-	  Friendly Fire |3|R
-	  Instant
-	  Target creature's controller reveals a card at random from his or her hand.
-	  Friendly fire deals damage to that creature and that player equal to the revealed card's converted mana cost.
-	*/
+  /* Friendly Fire |3|R
+   * 	  Instant
+   * 	  Target creature's controller reveals a card at random from his or her hand.
+   * 	  Friendly fire deals damage to that creature and that player equal to the revealed card's converted mana cost. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -3088,16 +3135,16 @@ int card_friendly_fire(int player, int card, event_t event){
 }
 
 int card_goblin_heelcutter(int player, int card, event_t event){
-	/*
-	  Goblin Heelcutter |3|R
-	  Creature - Goblin Berserker
-	  Whenever Goblin Heelcutter attacks, target creature can't block this turn.
-	  Dash 2R (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
-	  3/2
-	*/
-	dash(player, card, event, MANACOST_XR(2, 1));
+  /* Goblin Heelcutter |3|R
+   * 	  Creature - Goblin Berserker
+   * 	  Whenever Goblin Heelcutter attacks, target creature can't block this turn.
+   * 	  Dash 2R (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
+   * 	  3/2 */
 
-	if( declare_attackers_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, card) ){
+	if (card != -1){ dash(player, card, event, MANACOST_XR(2, 1)); }
+
+	dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 0);
+	if (event == EVENT_DAT_ABILITY){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_CREATURE);
 		td.preferred_controller = 1-current_turn;
@@ -3122,12 +3169,10 @@ Creature - Boar
 */
 
 int card_humble_defector(int player, int card, event_t event){
-	/*
-	  Humble Defector |1|R
-	  Creature - Human Rogue
-	  T: Draw two cards. Target opponent gains control of Humble Defector. Activate this ability only during your turn.
-	  2/1
-	*/
+  /* Humble Defector |1|R
+   * 	  Creature - Human Rogue
+   * 	  T: Draw two cards. Target opponent gains control of Humble Defector. Activate this ability only during your turn.
+   * 	  2/1 */
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -3140,12 +3185,11 @@ int card_humble_defector(int player, int card, event_t event){
 }
 
 int card_hungering_yeti(int player, int card, event_t event){
-	/*
-	  Hungering Yeti |4|R
-	  Creature - Yeti
-	  As long as you control a green or blue permanent, you may cast Hungering Yeti as though it had flash.
-	  4/4
-	*/
+  /* Hungering Yeti |4|R
+   * 	  Creature - Yeti
+   * 	  As long as you control a green or blue permanent, you may cast Hungering Yeti as though it had flash.
+   * 	  4/4 */
+
 	if( event == EVENT_MODIFY_COST ){
 		if( ! can_sorcery_be_played(player, event) ){
 			test_definition_t this_test;
@@ -3161,13 +3205,12 @@ int card_hungering_yeti(int player, int card, event_t event){
 }
 
 int card_lightning_shrieker(int player, int card, event_t event){
-	/*
-	  Lightning Shrieker |4|R
-	  Creature - Dragon
-	  Flying, Trample, Haste
-	  At the beginning of the end step, Lightning Shrieker's owner shuffles it into his or her library.
-	  5/5
-	*/
+  /* Lightning Shrieker |4|R
+   * 	  Creature - Dragon
+   * 	  Flying, Trample, Haste
+   * 	  At the beginning of the end step, Lightning Shrieker's owner shuffles it into his or her library.
+   * 	  5/5 */
+
 	haste(player, card, event);
 
 	if( eot_trigger(player, card, event) ){
@@ -3180,36 +3223,32 @@ int card_lightning_shrieker(int player, int card, event_t event){
 }
 
 int card_mardu_runemark(int player, int card, event_t event){
-	/*
-	  Mardu Runemark |2|R
-	  Enchantment - Aura
-	  Enchant creature
-	  Enchanted creature gets +2/+2.
-	  Enchanted creature has first strike as long as you control a white or black permanent.
-	*/
+  /* Mardu Runemark |2|R
+   * 	  Enchantment - Aura
+   * 	  Enchant creature
+   * 	  Enchanted creature gets +2/+2.
+   * 	  Enchanted creature has first strike as long as you control a white or black permanent. */
+
 	return runemark(player, card, event, COLOR_TEST_BLACK | COLOR_TEST_WHITE, KEYWORD_FIRST_STRIKE, 0);
 }
 
 int card_mardu_scout(int player, int card, event_t event){
-	/*
-	  Mardu Scout |R|R
-	  Creature - Goblin Scout
-	  Dash 1R (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
-	  3/1
-	*/
+  /* Mardu Scout |R|R
+   * 	  Creature - Goblin Scout
+   * 	  Dash 1R (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
+   * 	  3/1 */
+
 	dash(player, card, event, MANACOST_XR(1, 1));
 
 	return 0;
 }
 
 int card_mob_rule(int player, int card, event_t event ){
-	/*
-	  Mob Rule |4|R|R
-	  Sorcery
-	  Choose one -
-	  * Gain control of all creatures with power 4 or greater until end of turn. Untap those creatures. They gain haste until end of turn.
-	  * Gain control of all creatures with power 3 or less until end of turn. Untap those creatures. They gain haste until end of turn.
-	  */
+  /* Mob Rule |4|R|R
+   * 	  Sorcery
+   * 	  Choose one -
+   * Gain control of all creatures with power 4 or greater until end of turn. Untap those creatures. They gain haste until end of turn.
+   * Gain control of all creatures with power 3 or less until end of turn. Untap those creatures. They gain haste until end of turn. */
 
 	if( event == EVENT_RESOLVE_SPELL ){
 		int values[2] = {0, 0};
@@ -3250,73 +3289,47 @@ int card_outpost_siege(int player, int card, event_t event){
 	 * As ~ enters the battlefield, choose Khans or Dragons.
 	 * * Khans - At the beginning of your upkeep, exile the top card of your library. Until end of turn, you may play that card.
 	 * * Dragons - Whenever a creature you control leaves the battlefield, ~ deals 1 damage to any target. */
-	if( event == EVENT_RESOLVE_SPELL ){
-		choose_khans_or_dragons(player, card, 4*count_subtype(player, TYPE_CREATURE, -1), 20 );
+
+	if (event == EVENT_RESOLVE_SPELL){ choose_khans_or_dragons(player, card, 4*count_subtype(player, TYPE_CREATURE, -1), 20); }
+	if (is_humiliated(player, card, AL_TRIG)){ return 0; }
+	if (get_khans_or_dragons(player, card) == KHANS){ upkeep_trigger_ability(player, card, event, player); }
+	if (event == EVENT_UPKEEP_TRIGGER_ABILITY && deck_ptr[player][0] != -1){
+	    create_may_play_card_from_exile_effect(player, card, player, cards_data[deck_ptr[player][0]].id, MPCFE_UNTIL_EOT);
+	    rfg_top_card_of_deck(player);
 	}
-
-	if( is_humiliated(player, card) ){
-		return 0;
+	if (trigger_condition == TRIGGER_LEAVE_PLAY && affect_me(player, card) && reason_for_trigger_controller == player && get_khans_or_dragons(player, card) == DRAGONS){
+	    test_definition_t test;
+	    default_test_definition(&test, TYPE_CREATURE);
+	    test_leaves_play(player, card, event, player, &test, 1, 1);
 	}
-
-	if( get_khans_or_dragons(player, card) == KHANS ){
-		upkeep_trigger_ability(player, card, event, player);
+	if (event == EVENT_LEAVES_PLAY_ABILITY){
+	    target_definition_t td;
+	    default_target_definition(player, card, &td, TYPE_CREATURE|TARGET_TYPE_PLANESWALKER);
+	    td.zone = TARGET_ZONE_CREATURE_OR_PLAYER;
+	    td.allow_cancel = 0;
+	    get_card_instance(player, card)->number_of_targets = 0;
+	    if (can_target(&td) && pick_target(&td, "TARGET_ANY")){ damage_target0(player, card, 1); }
 	}
-
-	if( event == EVENT_UPKEEP_TRIGGER_ABILITY ){
-		if( deck_ptr[player][0] != -1 ){
-			create_may_play_card_from_exile_effect(player, card, player, cards_data[deck_ptr[player][0]].id, MPCFE_UNTIL_EOT);
-			rfg_top_card_of_deck(player);
-		}
-	}
-
-	if( trigger_condition == TRIGGER_LEAVE_PLAY && affect_me(player, card) && reason_for_trigger_controller == player ){
-		if( trigger_cause_controller == player && is_what(trigger_cause_controller, trigger_cause, TYPE_CREATURE) &&
-			get_khans_or_dragons(player, card) == DRAGONS
-		  ){
-			target_definition_t td;
-			default_target_definition(player, card, &td, TYPE_CREATURE|TARGET_TYPE_PLANESWALKER);
-			td.zone = TARGET_ZONE_CREATURE_OR_PLAYER;
-			td.allow_cancel = 0;
-
-			card_instance_t *instance = get_card_instance(player, card);
-
-			instance->number_of_targets = 0;
-
-			if( can_target(&td) ){
-				if(event == EVENT_TRIGGER){
-					event_result |= RESOLVE_TRIGGER_MANDATORY;
-				}
-				else if(event == EVENT_RESOLVE_TRIGGER){
-						if( pick_target(&td, "TARGET_ANY") ){
-							damage_target0(player, card, 1);
-						}
-				}
-			}
-		}
-	}
-
 	return global_enchantment(player, card, event);
 }
 
 int card_rageform(int player, int card, event_t event){
-	/*
-	  Rageform |2|R|R
-	  Enchantment
-	  When Rageform enters the battlefield, it becomes an Aura with enchant creature. Manifest the top card of your library and attach Rageform to it.
-	  Enchanted creature has double strike. (It deals both first-strike and regular combat damage.)
-	*/
+  /* Rageform |2|R|R
+   * 	  Enchantment
+   * 	  When Rageform enters the battlefield, it becomes an Aura with enchant creature. Manifest the top card of your library and attach Rageform to it.
+   * 	  Enchanted creature has double strike. (It deals both first-strike and regular combat damage.) */
+
 	return manifesting_aura(player, card, event, KEYWORD_DOUBLE_STRIKE, 0);
 }
 
 int card_shaman_of_the_great_hunt(int player, int card, event_t event){
-	/*
-	  Shaman of the Great Hunt |3|R
-	  Creature - Orc Shaman
-	  Haste
-	  Whenever a creature you control deals combat damage to a player, put a +1/+1 counter on it.
-	  Ferocious - 2(G/U)(G/U): Draw a card for each creature you control with power 4 or greater.
-	  4/2
-	*/
+  /* Shaman of the Great Hunt |3|R
+   * 	  Creature - Orc Shaman
+   * 	  Haste
+   * 	  Whenever a creature you control deals combat damage to a player, put a +1/+1 counter on it.
+   * 	  Ferocious - 2(G/U)(G/U): Draw a card for each creature you control with power 4 or greater.
+   * 	  4/2 */
+
 	haste(player, card, event);
 
 	test_definition_t test;
@@ -3328,7 +3341,7 @@ int card_shaman_of_the_great_hunt(int player, int card, event_t event){
 		card_instance_t *instance = get_card_instance(player, card);
 		int i;
 		for(i=0; i<amount; i++){
-			add_1_1_counter(instance->targets[i].player, instance->targets[i].card);
+			add_counters(player, card, instance->targets[i].player, instance->targets[i].card, COUNTER_P1_P1, 1);
 		}
 	}
 
@@ -3358,13 +3371,12 @@ int card_shaman_of_the_great_hunt(int player, int card, event_t event){
 }
 
 int card_shockmaw_dragon(int player, int card, event_t event ){
-	/*
-	  Shockmaw Dragon |4|R|R
-	  Creature - Dragon
-	  Flying
-	  Whenever Shockmaw Dragon deals combat damage to a player, it deals 1 damage to each creature that player controls.
-	  4/4
-	*/
+  /* Shockmaw Dragon |4|R|R
+   * 	  Creature - Dragon
+   * 	  Flying
+   * 	  Whenever Shockmaw Dragon deals combat damage to a player, it deals 1 damage to each creature that player controls.
+   * 	  4/4 */
+
 	if( damage_dealt_by_me(player, card, event, DDBM_MUST_BE_COMBAT_DAMAGE | DDBM_MUST_DAMAGE_PLAYER | DDBM_TRACE_DAMAGED_PLAYERS) ){
 		if( BYTE0(get_card_instance(player, card)->targets[1].player) ){
 			new_damage_all(player, card, 0, 1, NDA_ALL_CREATURES, NULL);
@@ -3378,12 +3390,11 @@ int card_shockmaw_dragon(int player, int card, event_t event ){
 }
 
 int card_smoldering_efreet(int player, int card, event_t event ){
-	/*
-	  Smoldering Efreet |1|R
-	  Creature - Efreet Monk
-	  When Smoldering Efreet dies, it deals 2 damage to you.
-	  2/2
-	*/
+  /* Smoldering Efreet |1|R
+   * 	  Creature - Efreet Monk
+   * 	  When Smoldering Efreet dies, it deals 2 damage to you.
+   * 	  2/2 */
+
 	if( this_dies_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY) ){
 		damage_player(player, 2, player, card);
 	}
@@ -3392,26 +3403,25 @@ int card_smoldering_efreet(int player, int card, event_t event ){
 }
 
 int card_temur_battle_rage(int player, int card, event_t event ){
-	/*
-	  Temur Battle Rage |1|R
-	  Instant
-	  Target creature gains double strike until end of turn.
-	  Ferocious - That creature also gains trample until end of turn if you control a creature with power 4 or greater.
-	*/
+  /* Temur Battle Rage |1|R
+   * 	  Instant
+   * 	  Target creature gains double strike until end of turn.
+   * 	  Ferocious - That creature also gains trample until end of turn if you control a creature with power 4 or greater. */
+
 	return vanilla_instant_pump(player, card, event, ANYBODY, player, 0, 0, KEYWORD_DOUBLE_STRIKE | (ferocious(player, card) ? KEYWORD_TRAMPLE : 0), 0);
 }
 
 int card_vaultbreaker(int player, int card, event_t event){
-	/*
-	  Vaultbreaker |3|R
-	  Creature - Orc Rogue
-	  Whenever Vaultbreaker attacks, you may discard a card. If you do, draw a card.
-	  Dash 2R
-	  4/2
-	*/
-	dash(player, card, event, MANACOST_XR(2, 1));
+  /* Vaultbreaker |3|R
+   * 	  Creature - Orc Rogue
+   * 	  Whenever Vaultbreaker attacks, you may discard a card. If you do, draw a card.
+   * 	  Dash 2R
+   * 	  4/2 */
 
-	if( declare_attackers_trigger(player, card, event, hand_count[player] ? RESOLVE_TRIGGER_AI(player) : 0, player, card) ){
+	if (card != -1){ dash(player, card, event, MANACOST_XR(2, 1)); }
+
+	dat_ability(player, card, event, hand_count[player] ? (duh_mode(player) ? DAT_RESOLVE_TRIGGER_MANDATORY : DAT_RESOLVE_TRIGGER_OPTIONAL) : 0, 0);
+	if (event == EVENT_DAT_ABILITY){
 		test_definition_t this_test;
 		new_default_test_definition(&this_test, TYPE_ANY, "Select a card to discard.");
 		int selected = new_select_a_card(player, player, TUTOR_FROM_HAND, 0, AI_MIN_VALUE, -1, &this_test);
@@ -3452,12 +3462,11 @@ int card_wild_slash(int player, int card, event_t event){
 
 // Green
 int card_abzan_beastmaster(int player, int card, event_t event){
-	/*
-	  Abzan Beastmaster |2|G
-	  Creature - Hound Shaman
-	  At the beginning of your upkeep, draw a card if you control the creature with the greatest toughness or tied for the greatest toughness.
-	  2/1
-	*/
+  /* Abzan Beastmaster |2|G
+   * 	  Creature - Hound Shaman
+   * 	  At the beginning of your upkeep, draw a card if you control the creature with the greatest toughness or tied for the greatest toughness.
+   * 	  2/1 */
+
 	if( trigger_condition == TRIGGER_UPKEEP && affect_me(player, card) && reason_for_trigger_controller == player && current_turn == player ){
 		int max_t[2] = {0, 0};
 		test_definition_t this_test;
@@ -3474,13 +3483,12 @@ int card_abzan_beastmaster(int player, int card, event_t event){
 }
 
 int card_abzan_kin_guard(int player, int card, event_t event){
-	/*
-	  Abzan Kin-Guard |3|G
-	  Creature - Human Warrior
-	  Abzan Kin-Guard has lifelink as long as you control a white or black permanent.
-	  3/3
-	*/
-	if( ! is_humiliated(player, card) ){
+  /* Abzan Kin-Guard |3|G
+   * 	  Creature - Human Warrior
+   * 	  Abzan Kin-Guard has lifelink as long as you control a white or black permanent.
+   * 	  3/3 */
+
+	if( ! is_humiliated(player, card, AL_STATIC) ){
 		if( event == EVENT_ABILITIES && affect_me(player, card) ){
 			test_definition_t this_test;
 			default_test_definition(&this_test, TYPE_PERMANENT);
@@ -3494,20 +3502,19 @@ int card_abzan_kin_guard(int player, int card, event_t event){
 }
 
 int card_ainok_guide(int player, int card, event_t event){
-	/*
-	  Ainok Guide |1|G
-	  Creature - Hound Scout
-	  When Ainok Guide enters the battlefield, choose one -
-	  * Put a +1/+1 counter on Ainok Guide.
-	  * Search your library for a basic land card, reveal it, then shuffle your library and put that card on top of it.
-	  1/1
-	*/
+  /* Ainok Guide |1|G
+   * 	  Creature - Hound Scout
+   * 	  When Ainok Guide enters the battlefield, choose one -
+   * Put a +1/+1 counter on Ainok Guide.
+   * Search your library for a basic land card, reveal it, then shuffle your library and put that card on top of it.
+   * 	  1/1 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
 		int choice = do_dialog(player, player, card, -1, -1, " Add a +1/+1 counter\n Tutor land", count_subtype(player, TYPE_LAND, -1) > 5 ? 0 : 1);
 		if( choice == 0 ){
-			add_1_1_counter(player, card);
+			add_counters(player, card, player, card, COUNTER_P1_P1, 1);
 		}
 		else{
 			test_definition_t this_test;
@@ -3521,13 +3528,12 @@ int card_ainok_guide(int player, int card, event_t event){
 }
 
 int card_ambush_krotiq(int player, int card, event_t event){
-	/*
-	  Ambush Krotiq |5|G
-	  Creature - Insect
-	  Trample
-	  When Ambush Krotiq enters the battlefield, return another creature you control to its owner's hand.
-	  5/5
-	*/
+  /* Ambush Krotiq |5|G
+   * 	  Creature - Insect
+   * 	  Trample
+   * 	  When Ambush Krotiq enters the battlefield, return another creature you control to its owner's hand.
+   * 	  5/5 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
@@ -3551,13 +3557,12 @@ int card_ambush_krotiq(int player, int card, event_t event){
 }
 
 int card_arashin_war_beast(int player, int card, event_t event){
-	/*
-	  Arashin War Beast |5|G|G
-	  Creature - Beast
-	  Whenever Arashin War Beast deals combat damage to one or more blocking creatures, manifest the top card of your library.
-	  6/6
-	*/
-	if( ! is_humiliated(player, card) ){
+  /* Arashin War Beast |5|G|G
+   * 	  Creature - Beast
+   * 	  Whenever Arashin War Beast deals combat damage to one or more blocking creatures, manifest the top card of your library.
+   * 	  6/6 */
+
+	if( ! is_humiliated(player, card, AL_TRIG) ){
 		card_instance_t* instance = get_card_instance(player, card);
 		if (event == EVENT_DEAL_DAMAGE){
 			card_instance_t* damage = get_card_instance(affected_card_controller, affected_card);
@@ -3598,30 +3603,26 @@ Reach
 */
 
 int card_battlefront_krushok(int player, int card, event_t event){
-	/*
-	  Battlefront Krushok |4|G
-	  Creature - Beast
-	  Battlefront Krushok can't be blocked by more than one creature.
-	  Each creature you control with a +1/+1 counter on it can't be blocked by more than one creature.
-	  3/4
-	*/
+  /* Battlefront Krushok |4|G
+   * 	  Creature - Beast
+   * 	  Battlefront Krushok can't be blocked by more than one creature.
+   * 	  Each creature you control with a +1/+1 counter on it can't be blocked by more than one creature.
+   * 	  3/4 */
 
-	if( event == EVENT_BLOCK_LEGALITY && attacking_card_controller == player && ! is_humiliated(player, card) ){
-		if( attacking_card == card || count_1_1_counters(attacking_card_controller, attacking_card) > 0 ){
-			if( count_my_blockers(attacking_card_controller, attacking_card) > 1 ){
-				event_result = 1;
-			}
+	maxblockers_1(player, card, event);
+	if (event == EVENT_ABILITIES && !is_humiliated(player, card, AL_STATIC) && affected_card_controller == player){
+		if (count_counters(player, affected_card, COUNTER_P1_P1) != 0){
+			maxblockers_1(affected_card_controller, affected_card, EVENT_ABILITIES);
 		}
 	}
 	return 0;
 }
 
 int card_cached_defenses(int player, int card, event_t event){
-	/*
-	  Cached Defenses |2|G
-	  Sorcery
-	  Bolster 3.
-	*/
+  /* Cached Defenses |2|G
+   * 	  Sorcery
+   * 	  Bolster 3. */
+
 	if(event == EVENT_RESOLVE_SPELL ){
 		bolster(player, card, 3);
 		kill_card(player, card, KILL_DESTROY);
@@ -3631,13 +3632,12 @@ int card_cached_defenses(int player, int card, event_t event){
 }
 
 int card_destructor_dragon(int player, int card, event_t event){
-	/*
-	  Destructor Dragon |4|G|G
-	  Creature - Dragon
-	  Flying
-	  When Destructor Dragon dies, destroy target noncreature permanent.
-	  4/4
-	*/
+  /* Destructor Dragon |4|G|G
+   * 	  Creature - Dragon
+   * 	  Flying
+   * 	  When Destructor Dragon dies, destroy target noncreature permanent.
+   * 	  4/4 */
+
 	if( this_dies_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY) ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_PERMANENT);
@@ -3662,15 +3662,15 @@ Creature - Beast
 */
 
 int card_formless_nurturing(int player, int card, event_t event){
-/*  Formless Nurturing |3|G
-	Sorcery
-	Manifest the top card of your library, then put a +1/+1 counter on it.
-	(To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.) */
+  /* Formless Nurturing |3|G
+   * 	Sorcery
+   * 	Manifest the top card of your library, then put a +1/+1 counter on it.
+   * 	(To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.) */
 
 	if(event == EVENT_RESOLVE_SPELL ){
 		int result = manifest(player, card);
 		if( result > -1 ){
-			add_1_1_counter(player, result);
+			add_counters(player, card, player, result, COUNTER_P1_P1, 1);
 		}
 		kill_card(player, card, KILL_DESTROY);
 	}
@@ -3679,12 +3679,11 @@ int card_formless_nurturing(int player, int card, event_t event){
 }
 
 int card_frontier_mastodon(int player, int card, event_t event){
-	/*
-	  Frontier Mastodon |2|G
-	  Creature - Elephant
-	  Ferocious - Frontier Mastodon enters the battlefield with a +1/+1 counter on it if you control a creature with power 4 or greater.
-	  3/2
-	*/
+  /* Frontier Mastodon |2|G
+   * 	  Creature - Elephant
+   * 	  Ferocious - Frontier Mastodon enters the battlefield with a +1/+1 counter on it if you control a creature with power 4 or greater.
+   * 	  3/2 */
+
 	if((event == EVENT_CAST_SPELL || event == EVENT_ENTERING_THE_BATTLEFIELD_AS_CLONE) && affect_me(player, card)){
 		if( ferocious(player, card) ){
 			enters_the_battlefield_with_counters(player, card, event, COUNTER_P1_P1, 1);
@@ -3694,20 +3693,19 @@ int card_frontier_mastodon(int player, int card, event_t event){
 }
 
 int card_frontier_siege(int player, int card, event_t event){
-	/*
-	  Frontier Siege |3|G
-	  Enchantment
-	  As Frontier Siege enters the battlefield, choose Khans or Dragons.
-	  * Khans - At the beginning of each of your main phases, add GG to your mana pool.
-	  * Dragons - Whenever a creature with flying enters the battlefield under your control, you may have it fight target creature you don't control.
-	  */
+  /* Frontier Siege |3|G
+   * 	  Enchantment
+   * 	  As Frontier Siege enters the battlefield, choose Khans or Dragons.
+   * Khans - At the beginning of each of your main phases, add GG to your mana pool.
+   * Dragons - Whenever a creature with flying enters the battlefield under your control, you may have it fight target creature you don't control. */
+
 	card_instance_t *instance = get_card_instance(player, card);
 
 	if( event == EVENT_RESOLVE_SPELL ){
 		instance->targets[2].player = choose_khans_or_dragons_no_storage(player, card, 20, 4*count_subtype(player, TYPE_LAND, -1));
 	}
 
-	if( is_humiliated(player, card) ){
+	if( is_humiliated(player, card, AL_TRIG) ){
 		return 0;
 	}
 
@@ -3748,12 +3746,11 @@ int card_frontier_siege(int player, int card, event_t event){
 }
 
 int card_fruit_of_the_first_tree(int player, int card, event_t event){
-	/*
-	  Fruit of the First Tree |3|G
-	  Enchantment - Aura
-	  Enchant Creature
-	  When enchanted creature dies, you gain X life and draw X cards, where X is its toughness.
-	*/
+  /* Fruit of the First Tree |3|G
+   * 	  Enchantment - Aura
+   * 	  Enchant Creature
+   * 	  When enchanted creature dies, you gain X life and draw X cards, where X is its toughness. */
+
 	if( attached_creature_dies_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY) ){
 		card_instance_t* inst = get_card_instance(player, card);
 		int amount = get_toughness(inst->damage_target_player, inst->damage_target_card);
@@ -3765,12 +3762,10 @@ int card_fruit_of_the_first_tree(int player, int card, event_t event){
 }
 
 int card_map_the_wastes(int player, int card, event_t event){
-	/*
-	  Map the Wastes |2|G
-	  Sorcery
-	  Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.
-	  Bolster 1.
-	*/
+  /* Map the Wastes |2|G
+   * 	  Sorcery
+   * 	  Search your library for a basic land card, put it onto the battlefield tapped, then shuffle your library.
+   * 	  Bolster 1. */
 
 	if(event == EVENT_RESOLVE_SPELL ){
 		test_definition_t this_test;
@@ -3796,11 +3791,10 @@ static const char* is_artifact_or_enchantment_or_flying_creature(int who_chooses
 }
 
 int card_return_to_the_earth(int player, int card, event_t event ){
-	/*
-	  Return to the Earth |3|G
-	  Instant
-	  Destroy target artifact, enchantment, or creature with flying.
-	*/
+  /* Return to the Earth |3|G
+   * 	  Instant
+   * 	  Destroy target artifact, enchantment, or creature with flying. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -3823,13 +3817,11 @@ int card_return_to_the_earth(int player, int card, event_t event ){
 }
 
 int card_ruthless_instincts(int player, int card, event_t event){
-	/*
-	  Ruthless Instincts |2|G
-	  Instant
-	  Choose one -
-	  * Target nonattacking creature gains reach and deathtouch until end of turn. Untap it.
-	  * Target attacking creature gets +2/+2 and gains trample until end of turn.
-	  */
+  /* Ruthless Instincts |2|G
+   * 	  Instant
+   * 	  Choose one -
+   * Target nonattacking creature gains reach and deathtouch until end of turn. Untap it.
+   * Target attacking creature gets +2/+2 and gains trample until end of turn. */
 
 	if(event == EVENT_CHECK_PUMP && has_mana_to_cast_iid(player, EVENT_CAN_CAST, get_card_instance(player, card)->internal_card_id) ){
 		pumpable_power[player]+=2;
@@ -3903,14 +3895,13 @@ int card_ruthless_instincts(int player, int card, event_t event){
 }
 
 int card_sandsteppe_mastodon(int player, int card, event_t event){
-	/*
-	  Sandsteppe Mastodon |5|G|G
-	  Creature - Elephant
-	  Reach
-	  When Sandsteppe Mastodon enters the battlefield, bolster 5.
-	  (Choose a creature with the least toughness or tied with the least toughness among creatures you control. Put 5 +1/+1 counters on it.)
-	  5/5
-	*/
+  /* Sandsteppe Mastodon |5|G|G
+   * 	  Creature - Elephant
+   * 	  Reach
+   * 	  When Sandsteppe Mastodon enters the battlefield, bolster 5.
+   * 	  (Choose a creature with the least toughness or tied with the least toughness among creatures you control. Put 5 +1/+1 counters on it.)
+   * 	  5/5 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
@@ -3921,12 +3912,10 @@ int card_sandsteppe_mastodon(int player, int card, event_t event){
 }
 
 int card_shamanic_revelation(int player, int card, event_t event){
-	/*
-	  Shamanic Revelation |3|G|G
-	  Sorcery
-	  Draw a card for each creature you control.
-	  Ferocious - You gain 4 life for each creature you control with power 4 or greater.
-	*/
+  /* Shamanic Revelation |3|G|G
+   * 	  Sorcery
+   * 	  Draw a card for each creature you control.
+   * 	  Ferocious - You gain 4 life for each creature you control with power 4 or greater. */
 
 	if(event == EVENT_RESOLVE_SPELL ){
 		int amount = count_subtype(player, TYPE_CREATURE, -1);
@@ -3939,11 +3928,9 @@ int card_shamanic_revelation(int player, int card, event_t event){
 }
 
 int card_sudden_reclamation(int player, int card, event_t event){
-	/*
-	  Sudden Reclamation |3|G
-	  Instant
-	  Put the top four cards of your library into your graveyard, then return a creature card and a land card from your graveyard to your hand.
-	*/
+  /* Sudden Reclamation |3|G
+   * 	  Instant
+   * 	  Put the top four cards of your library into your graveyard, then return a creature card and a land card from your graveyard to your hand. */
 
 	if( event == EVENT_RESOLVE_SPELL ){
 		mill(player, 4);
@@ -3963,24 +3950,21 @@ int card_sudden_reclamation(int player, int card, event_t event){
 }
 
 int card_temur_runemark(int player, int card, event_t event){
-	/*
-	  Temur Runemark |2|G
-	  Enchantment - Aura
-	  Enchant creature
-	  Enchanted creature gets +2/+2.
-	  Enchanted creature has trample as long as you control a blue or red permanent.
-	*/
+  /* Temur Runemark |2|G
+   * 	  Enchantment - Aura
+   * 	  Enchant creature
+   * 	  Enchanted creature gets +2/+2.
+   * 	  Enchanted creature has trample as long as you control a blue or red permanent. */
+
 	return runemark(player, card, event, COLOR_TEST_BLUE | COLOR_TEST_RED, KEYWORD_TRAMPLE, 0);
 }
 
-
 int card_temur_sabretooth(int player, int card, event_t event){
-	/*
-	  Temur Sabertooth |2|G|G
-	  Creature - Cat
-	  1G: You may return another creature you control to its owner's hand. If you do, Temur Sabertooth gains indestructible until end of turn.
-	  4/3
-	*/
+  /* Temur Sabertooth |2|G|G
+   * 	  Creature - Cat
+   * 	  1G: You may return another creature you control to its owner's hand. If you do, Temur Sabertooth gains indestructible until end of turn.
+   * 	  4/3 */
+
 	card_instance_t *instance = get_card_instance(player, card);
 
 	if( event == EVENT_RESOLVE_ACTIVATION ){
@@ -4007,14 +3991,13 @@ int card_temur_sabretooth(int player, int card, event_t event){
 }
 
 int card_temur_war_shaman(int player, int card, event_t event){
-	/*
-	  Temur War Shaman |4|G|G
-	  Creature - Human Shaman
-	  When Temur War Shaman enters the battlefield, manifest the top card of your library.
-	  (Put that card onto the battlefield face down as a 2/2 creature. You may turn it face up at any time for its mana cost if it is a creature card.)
-	  Whenever a permanent you control is turned face up, if it is a creature, you may have it fight target creature you don't control.
-	  4/5
-	*/
+  /* Temur War Shaman |4|G|G
+   * 	  Creature - Human Shaman
+   * 	  When Temur War Shaman enters the battlefield, manifest the top card of your library.
+   * 	  (Put that card onto the battlefield face down as a 2/2 creature. You may turn it face up at any time for its mana cost if it is a creature card.)
+   * 	  Whenever a permanent you control is turned face up, if it is a creature, you may have it fight target creature you don't control.
+   * 	  4/5 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
@@ -4024,89 +4007,201 @@ int card_temur_war_shaman(int player, int card, event_t event){
 	return 0;
 }
 
-int card_warden_of_the_first_tree(int player, int card, event_t event){
-	/*
-	  Warden of the First Tree |G
-	  Creature - Human
-	  1(W/B): Warden of the First Tree becomes a Human Warrior with base power and toughness 3/3.
-	  2(W/B)(W/B): If Warden of the First Tree is a Warrior, it becomes a Human Spirit Warrior with trample and lifelink.
-	  3(W/B)(W/B)(W/B): If Warden of the First Tree is a Spirit, put five +1/+1 counters on it.
-	  1/1
-	*/
-	card_instance_t *instance = get_card_instance( player, card);
-	if( event == EVENT_RESOLVE_SPELL ){
-		instance->targets[9].player = 0;
-	}
+/* ManalinkEh 2022: 0x26229b0; original cards/fate_reforged.c:4080. */
+static int wotft_1(int player, int card, event_t event)
+{
+  card_instance_t *instance;
 
-	if( event == EVENT_CAN_ACTIVATE ){
-		int c1 = get_cost_mod_for_activated_abilities(player, card, MANACOST_XB(1, 1));
-		return has_mana_hybrid(player, 1, COLOR_BLACK, COLOR_WHITE, c1);
-	}
+  if (((uint32_t)(event - EVENT_POWER) < 2) || (event == EVENT_CHANGE_TYPE))
+  {
 
-	if(event == EVENT_ACTIVATE ){
-		instance->info_slot = 0;
-		int abilities[3] = {0, 0, 0};
-		int i;
-		for(i=0; i<3; i++){
-			int c1 = get_cost_mod_for_activated_abilities(player, card, MANACOST_XB(i+1, i+1));
-			abilities[i] = has_mana_hybrid(player, i+1, COLOR_BLACK, COLOR_WHITE, c1);
-		}
-		int priorities[3] = { 	! has_subtype(player, card, SUBTYPE_WARRIOR) ? 10 : -50,
-								has_subtype(player, card, SUBTYPE_WARRIOR) ? 15 : -50,
-								has_subtype(player, card, SUBTYPE_SPIRIT) ? 20 : -50,
-		};
-		int choice = DIALOG(player, card, event, DLG_RANDOM, DLG_NO_STORAGE,
-						"3/3 Human Warrior", abilities[0], priorities[0],
-						"Give Trample & Lifelink", abilities[1], priorities[1],
-						"Add 5 +1/+1 counters", abilities[2], priorities[2]);
-		if( ! choice ){
-			spell_fizzled = 1;
-			return 0;
-		}
-		int c1 = get_cost_mod_for_activated_abilities(player, card, MANACOST_XB(choice, 1));
-		charge_mana_hybrid(player, card, choice, COLOR_BLACK, COLOR_WHITE, c1);
-		if( spell_fizzled != 1 ){
-			instance->info_slot = choice;
-		}
-	}
+    instance = get_card_instance(player, card);
+    if ((instance->damage_target_card == affected_card) &&
+        (instance->damage_target_player == affected_card_controller))
+    {
 
-	if(event == EVENT_RESOLVE_ACTIVATION ){
-		card_instance_t *parent = get_card_instance( instance->parent_controller, instance->parent_card  );
-		if( instance->info_slot == 1 ){
-			reset_subtypes(instance->parent_controller, instance->parent_card, 3); //11/24/2014: The first and second activated abilities cause Warden of the First Tree to lose any other creature types it has. It retains any card types or supertypes it may have.
-			parent->targets[9].player = instance->info_slot;
-			int legacy = real_set_pt(instance->parent_controller, instance->parent_card, instance->parent_controller, instance->parent_card, 3, 3, 0);
-			add_status(player, legacy, STATUS_INVISIBLE_FX);
-		}
-		if( instance->info_slot == 2 && has_subtype(instance->parent_controller, instance->parent_card, SUBTYPE_WARRIOR) ){
-			reset_subtypes(instance->parent_controller, instance->parent_card, 3); //11/24/2014: The first and second activated abilities cause Warden of the First Tree to lose any other creature types it has. It retains any card types or supertypes it may have.
-			parent->targets[9].player = instance->info_slot;
-		}
-		if( instance->info_slot == 3 && has_subtype(instance->parent_controller, instance->parent_card, SUBTYPE_SPIRIT) ){
-			parent->targets[9].player = instance->info_slot;
-			add_1_1_counters(instance->parent_controller, instance->parent_card, 5);
-		}
-	}
+      instance =
+          get_card_instance((int)instance->damage_target_player, instance->damage_target_card);
+      if ((uint32_t)(event - EVENT_POWER) < 2)
+      {
+        set_base_pt(3);
+      }
+      else
+      {
+        update_alter_remove_creature_subtypes(instance);
+        update_alter_add_subtype(SUBTYPE_HUMAN, instance);
+        update_alter_add_subtype(SUBTYPE_WARRIOR, instance);
+      }
+    }
+  }
+  return 0;
+}
 
-	if( ! is_humiliated(player, card) ){
-		if( instance->targets[9].player > -1 && (instance->targets[9].player & 2) ){
-			lifelink(player, card, event);
-			if(event == EVENT_ABILITIES && affect_me(player, card ) ){
-				event_result |= KEYWORD_TRAMPLE;
-			}
-		}
-	}
-	return 0;
+/* ManalinkEh 2022: 0x2622ce0; original cards/fate_reforged.c:4097. */
+static int wotft_2(int player, int card, event_t event)
+{
+  int target_card;
+  card_instance_t *instance;
+  int player_00;
+
+  if ((event & 0xfffffff7) == EVENT_ABILITIES)
+  {
+
+    instance = get_card_instance(player, card);
+    target_card = instance->damage_target_card;
+    if ((target_card == affected_card) &&
+        (player_00 = (int)instance->damage_target_player, player_00 == affected_card_controller))
+    {
+
+      instance = get_card_instance(player_00, target_card);
+      if (event == EVENT_ABILITIES)
+      {
+        event_result = event_result | 0x80;
+        lifelink(player_00, target_card, EVENT_ABILITIES);
+      }
+      else
+      {
+        update_alter_remove_creature_subtypes(instance);
+        update_alter_add_subtype(SUBTYPE_HUMAN, instance);
+        update_alter_add_subtype(SUBTYPE_SPIRIT, instance);
+        update_alter_add_subtype(SUBTYPE_WARRIOR, instance);
+      }
+    }
+  }
+  return 0;
+}
+
+int card_warden_of_the_first_tree(int player, int card, event_t event)
+{
+  /* Warden of the First Tree	|G
+   * Creature - Human 1/1
+   * |1|WB: This creature becomes a Human Warrior with base power and toughness 3/3.
+   * |2|WB|WB: If this creature is a Warrior, it becomes a Human Spirit Warrior with trample and lifelink.
+   * |3|WB|WB|WB: If this creature is a Spirit, put five +1/+1 counters on it. */
+
+  card_instance_t *activation;
+  int modified_cost_or_subtype;
+  int choice_or_result;
+  int32_t player_00;
+  card_instance_t *ability_effect;
+  int warrior_priority;
+  int32_t card_00;
+  int ability_number_or_spirit;
+  CardFunction func_ptr;
+  int abilities[3];
+
+  if ((event == EVENT_CAN_ACTIVATE) || (event == EVENT_ACTIVATE))
+  {
+    activation = get_card_instance(player, card);
+    if (event == EVENT_CAN_ACTIVATE)
+    {
+      choice_or_result = get_cost_mod_for_activated_abilities(player, card, 1, 1, 0, 0, 0, 0);
+      choice_or_result = has_mana_hybrid(player, 1, 1, 5, choice_or_result);
+      return choice_or_result;
+    }
+    if (event == EVENT_ACTIVATE)
+    {
+      activation->info_slot = 0;
+      abilities[0] = 0;
+      abilities[1] = 0;
+      abilities[2] = 0;
+      choice_or_result = 0;
+      do
+      {
+        ability_number_or_spirit = choice_or_result + 1;
+        modified_cost_or_subtype = get_cost_mod_for_activated_abilities(
+            player, card, ability_number_or_spirit, ability_number_or_spirit, 0, 0, 0, 0);
+        modified_cost_or_subtype =
+            has_mana_hybrid(player, ability_number_or_spirit, 1, 5, modified_cost_or_subtype);
+        abilities[choice_or_result] = modified_cost_or_subtype;
+        choice_or_result = ability_number_or_spirit;
+      } while (ability_number_or_spirit != 3);
+      modified_cost_or_subtype = has_subtype(player, card, SUBTYPE_WARRIOR);
+      choice_or_result = has_subtype(player, card, SUBTYPE_WARRIOR);
+      warrior_priority = (unsigned int)((choice_or_result == 0) ? -50 : 15);
+      choice_or_result = warrior_priority;
+      ability_number_or_spirit = has_subtype(player, card, SUBTYPE_SPIRIT);
+      choice_or_result = dialog_impl(
+          player, card, EVENT_ACTIVATE, DLG_RANDOM, DLG_NO_STORAGE, "3/3 Human Warrior", abilities[0],
+          (unsigned int)((modified_cost_or_subtype == 0) ? 10 : -50), "Give Trample & Lifelink",
+          abilities[1], warrior_priority, "Add 5 +1/+1 counters", abilities[2],
+          (unsigned int)((ability_number_or_spirit == 0) ? -50 : 20), 0, 0, 0, 0,
+          choice_or_result);
+      if (choice_or_result != 0)
+      {
+        modified_cost_or_subtype =
+            get_cost_mod_for_activated_abilities(player, card, choice_or_result, 1, 0, 0, 0, 0);
+        charge_mana_hybrid(player, card, choice_or_result, 1, 5, modified_cost_or_subtype);
+        if (spell_fizzled == 1)
+        {
+          return 0;
+        }
+        activation->info_slot = choice_or_result;
+        return 0;
+      }
+      spell_fizzled = 1;
+      return 0;
+    }
+  }
+  else
+  {
+    if ((event != EVENT_RESOLVE_ACTIVATION) && (event != EVENT_CLEANUP))
+    {
+      return 0;
+    }
+    activation = get_card_instance(player, card);
+  }
+  if (event != EVENT_RESOLVE_ACTIVATION)
+  {
+    return 0;
+  }
+  choice_or_result = activation->info_slot;
+  bool refresh_choice = choice_or_result == 1 || choice_or_result == 2;
+  if (choice_or_result == 1)
+  {
+    card_00 = activation->parent_card;
+    player_00 = activation->parent_controller;
+    func_ptr = wotft_1;
+    choice_or_result =
+        create_targetted_legacy_effect_no_repeat(player_00, card_00, func_ptr, player_00, card_00);
+    ability_effect = get_card_instance(player, choice_or_result);
+    ability_effect->token_status = 0x10000;
+  }
+  else if (choice_or_result == 2)
+  {
+    choice_or_result =
+        has_subtype(activation->parent_controller, activation->parent_card, SUBTYPE_WARRIOR);
+    if (choice_or_result != 0)
+    {
+      card_00 = activation->parent_card;
+      player_00 = activation->parent_controller;
+      func_ptr = wotft_2;
+      choice_or_result = create_targetted_legacy_effect_no_repeat(player_00, card_00, func_ptr,
+                                                                  player_00, card_00);
+      ability_effect = get_card_instance(player, choice_or_result);
+      ability_effect->token_status = 0x10000;
+    }
+  }
+  if (refresh_choice)
+    choice_or_result = activation->info_slot;
+  if ((choice_or_result == 3) &&
+      (choice_or_result =
+           has_subtype(activation->parent_controller, activation->parent_card, SUBTYPE_SPIRIT),
+       choice_or_result != 0))
+  {
+    add_counters(player, card, activation->parent_controller, activation->parent_card,
+                 COUNTER_P1_P1, 5);
+  }
+  return 0;
 }
 
 int card_whisperer_of_the_wilds(int player, int card, event_t event){
-	/*
-	  Whisperer of the Wilds |1|G
-	  Creature - Human Shaman
-	  T: Add G to your mana pool.
-	  Ferocious - T: Add GG to your mana pool. Activate this ability only if you control a creature with power 4 or greater.
-	  0/2
-	*/
+  /* Whisperer of the Wilds |1|G
+   * 	  Creature - Human Shaman
+   * 	  T: Add G to your mana pool.
+   * 	  Ferocious - T: Add GG to your mana pool. Activate this ability only if you control a creature with power 4 or greater.
+   * 	  0/2 */
+
 	if( event == EVENT_CAN_ACTIVATE ){
 		return mana_producer(player, card, event);
 	}
@@ -4123,41 +4218,54 @@ int card_whisperer_of_the_wilds(int player, int card, event_t event){
 	return 0;
 }
 
-static int whisperwood_elemental_legacy(int player, int card, event_t event){
-	card_instance_t *instance = get_card_instance( player, card);
-	if( instance->damage_target_player > -1 ){
-		if( event == EVENT_GRAVEYARD_FROM_PLAY && affect_me(instance->damage_target_player, instance->damage_target_card) ){
-			if( get_card_instance(instance->damage_target_player, instance->damage_target_card)->kill_code > 0 &&
-				get_card_instance(instance->damage_target_player, instance->damage_target_card)->kill_code < KILL_EXILE
-			  ){
-				instance->damage_target_player = instance->damage_target_card = -1;
-				instance->targets[11].player = 66;
-			}
-		}
-	}
+static int whisperwood_elemental_legacy(int player, int card, event_t event)
+{
+  card_instance_t *instance = get_card_instance(player, card);
+  if (instance->damage_target_player > -1)
+  {
+    if (event == EVENT_GRAVEYARD_FROM_PLAY &&
+        affect_me(instance->damage_target_player, instance->damage_target_card))
+    {
+      if (get_card_instance(instance->damage_target_player, instance->damage_target_card)
+                  ->kill_code > 0 &&
+          get_card_instance(instance->damage_target_player, instance->damage_target_card)
+                  ->kill_code < KILL_EXILE &&
+          !check_for_death_trigger_removal(instance->damage_target_player,
+                                           instance->damage_target_card))
+      {
+        instance->damage_target_player = instance->damage_target_card = -1;
+        instance->targets[11].player = 66;
+      }
+    }
+  }
 
-	if( resolve_gfp_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY) ){
-		manifest(player, card);
-		kill_card(player, card, KILL_EXILE);
-	}
+  if (resolve_gfp_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY))
+  {
+    int amount = card_counts[player][CCOUNTS_TEYSA_KARLOV] + 1;
+    do
+    {
+      manifest(player, card);
+    } while (--amount);
+    kill_card(player, card, KILL_EXILE);
+  }
 
-	if( event == EVENT_CLEANUP ){
-		kill_card(player, card, KILL_EXILE);
-	}
+  if (event == EVENT_CLEANUP)
+  {
+    kill_card(player, card, KILL_EXILE);
+  }
 
-	return 0;
+  return 0;
 }
 
 int card_whisperwood_elemental(int player, int card, event_t event){
-	/*
-	  Whisperwood Elemental |3|G|G
-	  Creature - Elemental
-	  At the beginning of your end step, manifest the top card of your library.
-	  (Put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card)
-	  Sacrifice Whisperwood Elemental: Until end of turn, face-up, nontoken creatures you control gain
-	  "When this creature dies, manifest the top card of your library."
-	  4/4
-	*/
+  /* Whisperwood Elemental |3|G|G
+   * 	  Creature - Elemental
+   * 	  At the beginning of your end step, manifest the top card of your library.
+   * 	  (Put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card)
+   * 	  Sacrifice Whisperwood Elemental: Until end of turn, face-up, nontoken creatures you control gain
+   * 	  "When this creature dies, manifest the top card of your library."
+   * 	  4/4 */
+
 	if( current_turn == player && eot_trigger(player, card, event) ){
 		manifest(player, card);
 	}
@@ -4178,16 +4286,15 @@ int card_whisperwood_elemental(int player, int card, event_t event){
 }
 
 int card_wildcall(int player, int card, event_t event){
-	/*
-	  Wildcall |X|G|G
-	  Sorcery
-	  Manifest the top card of your library, then put X +1/+1 counters on it.
-	  (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up at any time for its mana cost if it's a creature card.)
-	*/
+  /* Wildcall |X|G|G
+   * 	  Sorcery
+   * 	  Manifest the top card of your library, then put X +1/+1 counters on it.
+   * 	  (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up at any time for its mana cost if it's a creature card.) */
+
 	if(event == EVENT_RESOLVE_SPELL ){
 		int result = manifest(player, card);
 		if( result > -1 ){
-			add_1_1_counters(player, card, get_card_instance(player, card)->info_slot);
+			add_counters(player, card, player, card, COUNTER_P1_P1, get_card_instance(player, card)->info_slot);
 		}
 		kill_card(player, card, KILL_DESTROY);
 	}
@@ -4195,14 +4302,14 @@ int card_wildcall(int player, int card, event_t event){
 	return generic_spell(player, card, event, GS_X_SPELL, NULL, NULL, 0, NULL);
 }
 
+// Gold
 int card_winds_of_qal_sisma(int player, int card, event_t event){
-	/*
-	  Winds of Qal Sisma |1|G
-	  Instant
-	  Prevent all combat damage that would be dealt this turn.
-	  Ferocious - If you control a creature with power 4 or greater,
-	  instead prevent all combat damage that would be dealt this turn by creatures your opponents control.
-	*/
+  /* Winds of Qal Sisma |1|G
+   * 	  Instant
+   * 	  Prevent all combat damage that would be dealt this turn.
+   * 	  Ferocious - If you control a creature with power 4 or greater,
+   * 	  instead prevent all combat damage that would be dealt this turn by creatures your opponents control. */
+
 	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
 		if( current_turn == player || current_phase != PHASE_AFTER_BLOCKING || count_attackers(current_turn) < 1 ){
 			ai_modifier-=25;
@@ -4218,21 +4325,18 @@ int card_winds_of_qal_sisma(int player, int card, event_t event){
 	return generic_spell(player, card, event, 0, NULL, NULL, 0, NULL);
 }
 
-
 int card_yasova_dragonclaw(int player, int card, event_t event){
-	/*
-	  Yasova Dragonclaw |2|G
-	  Legendary Creature - Human Warrior
-	  Trample
-	  At the beginning of combat on your turn, you may pay 1(U/R)(U/R).
-	  If you do, gain control of target creature an opponent controls with power less than Yasova Dragonclaw's power until end of turn,
-	  untap that creature, and it gains haste until end of turn.
-	  4/2
-	*/
+  /* Yasova Dragonclaw |2|G
+   * 	  Legendary Creature - Human Warrior
+   * 	  Trample
+   * 	  At the beginning of combat on your turn, you may pay 1(U/R)(U/R).
+   * 	  If you do, gain control of target creature an opponent controls with power less than Yasova Dragonclaw's power until end of turn,
+   * 	  untap that creature, and it gains haste until end of turn.
+   * 	  4/2 */
 
 	check_legend_rule(player, card, event);
 
-	if( beginning_of_combat(player, card, event, player, -1) && has_mana_hybrid(player, 2, COLOR_BLUE, COLOR_RED, 1) &&
+	if( beginning_of_combat(player, card, event, player) && has_mana_hybrid(player, 2, COLOR_BLUE, COLOR_RED, 1) &&
 		get_card_instance(player, card)->targets[1].player != 66
 	  ){
 		target_definition_t td;
@@ -4263,17 +4367,14 @@ int card_yasova_dragonclaw(int player, int card, event_t event){
 	return 0;
 }
 
-
-// Gold
 int card_atarka_world_render(int player, int card, event_t event)
 {
-	/*
-	  Atarka, World Render |5|R|G
-	  Legendary Creature - Dragon
-	  Flying, trample
-	  Whenever a Dragon you control attacks, it gains double strike until end of turn.
-	  6/4
-	*/
+  /* Atarka, World Render |5|R|G
+   * 	  Legendary Creature - Dragon
+   * 	  Flying, trample
+   * 	  Whenever a Dragon you control attacks, it gains double strike until end of turn.
+   * 	  6/4 */
+
 	check_legend_rule(player, card, event);
 
 	if( event == EVENT_DECLARE_ATTACKERS ){
@@ -4348,13 +4449,12 @@ int card_cunning_strike(int player, int card, event_t event){
 }
 
 int card_dromoka_the_eternal(int player, int card, event_t event){
-	/*
-	  Dromoka, the Eternal |3|G|W
-	  Legendary Creature - Dragon
-	  Flying
-	  Whenever a Dragon you control attacks, bolster 2. (Put 2 +1/+1 counters on a creature of your choice with the lowest toughness among creatures you control.)
-	  5/5
-	*/
+  /* Dromoka, the Eternal |3|G|W
+   * 	  Legendary Creature - Dragon
+   * 	  Flying
+   * 	  Whenever a Dragon you control attacks, bolster 2. (Put 2 +1/+1 counters on a creature of your choice with the lowest toughness among creatures you control.)
+   * 	  5/5 */
+
 	check_legend_rule(player, card, event);
 
 	if( event == EVENT_DECLARE_ATTACKERS ){
@@ -4372,11 +4472,10 @@ int card_dromoka_the_eternal(int player, int card, event_t event){
 }
 
 int card_ethereal_ambush(int player, int card, event_t event){
-	/*
-	  Ethereal Ambush |3|G|U
-	  Instant
-	  Manifest the top two cards of your library.
-	*/
+  /* Ethereal Ambush |3|G|U
+   * 	  Instant
+   * 	  Manifest the top two cards of your library. */
+
 	if(event == EVENT_RESOLVE_SPELL ){
 		manifest(player, card);
 		manifest(player, card);
@@ -4387,11 +4486,10 @@ int card_ethereal_ambush(int player, int card, event_t event){
 }
 
 int card_grim_contest(int player, int card, event_t event){
-	/*
-	  Grim Contest |1|B|G
-	  Instant
-	  Choose target creature you control and target creature an opponent controls. Each of those creatures deals damage equal to its toughness to the other.
-	*/
+  /* Grim Contest |1|B|G
+   * 	  Instant
+   * 	  Choose target creature you control and target creature an opponent controls. Each of those creatures deals damage equal to its toughness to the other. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -4466,14 +4564,13 @@ int card_harsh_sustenance(int player, int card, event_t event){
 
 int card_kolaghan_the_storms_fury(int player, int card, event_t event)
 {
-	/*
-	  Kolaghan, the Storm's Fury |3|B|R
-	  Legendary Creature - Dragon
-	  Flying
-	  Whenever a Dragon you control attacks, creatures you control get +1/+0 until end of turn.
-	  Dash 3BR (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
-	  4/5
-	*/
+  /* Kolaghan, the Storm's Fury |3|B|R
+   * 	  Legendary Creature - Dragon
+   * 	  Flying
+   * 	  Whenever a Dragon you control attacks, creatures you control get +1/+0 until end of turn.
+   * 	  Dash 3BR (You may cast this spell for its dash cost. If you do, it gains haste, and it's returned from the battlefield to its owner's hand at the beginning of the next end step.)
+   * 	  4/5 */
+
 	check_legend_rule(player, card, event);
 
 	dash(player, card, event, MANACOST_XBR(3, 1, 1));
@@ -4494,13 +4591,12 @@ int card_kolaghan_the_storms_fury(int player, int card, event_t event)
 
 int card_ojutai_soul_of_winter(int player, int card, event_t event)
 {
-	/*
-	  Ojutai, Soul of Winter |5|W|U
-	  Legendary Creature - Dragon
-	  Flying, vigilance
-	  Whenever a Dragon you control attacks, tap target nonland permanent an opponent controls. It doesn't untap during its controller's next untap step.
-	  5/6
-	*/
+  /* Ojutai, Soul of Winter |5|W|U
+   * 	  Legendary Creature - Dragon
+   * 	  Flying, vigilance
+   * 	  Whenever a Dragon you control attacks, tap target nonland permanent an opponent controls. It doesn't untap during its controller's next untap step.
+   * 	  5/6 */
+
 	check_legend_rule(player, card, event);
 
 	vigilance(player, card, event);
@@ -4531,15 +4627,15 @@ int card_ojutai_soul_of_winter(int player, int card, event_t event)
 	return 0;
 }
 
+//Artifacts
 int card_silumgar_the_drifting_death(int player, int card, event_t event)
 {
-	/*
-	  Silumgar, the Drifting Death |4|U|B
-	  Legendary Creature - Dragon
-	  Flying, hexproof
-	  Whenever a Dragon you control attacks, each creature defending player controls get -1/-1 until end of turn.
-	  3/7
-	*/
+  /* Silumgar, the Drifting Death |4|U|B
+   * 	  Legendary Creature - Dragon
+   * 	  Flying, hexproof
+   * 	  Whenever a Dragon you control attacks, each creature defending player controls get -1/-1 until end of turn.
+   * 	  3/7 */
+
 	check_legend_rule(player, card, event);
 
 	hexproof(player, card, event);
@@ -4560,11 +4656,10 @@ int card_silumgar_the_drifting_death(int player, int card, event_t event)
 
 int card_war_flare(int player, int card, event_t event)
 {
-	/*
-	  War Flare |2|R|W
-	  Instant
-	  Creatures you control get +2/+1 until end of turn. Untap those creatures.
-	*/
+  /* War Flare |2|R|W
+   * 	  Instant
+   * 	  Creatures you control get +2/+1 until end of turn. Untap those creatures. */
+
 	if( event == EVENT_RESOLVE_SPELL ){
 		pump_ability_t pump;
 		default_pump_ability_definition(player, card, &pump, 2, 1, 0, 0);
@@ -4576,8 +4671,6 @@ int card_war_flare(int player, int card, event_t event)
 	return basic_spell(player, card, event);
 }
 
-
-//Artifacts
 int card_goblin_boom_keg(int player, int card, event_t event){
 	/* Goblin Boom Keg	|4	0x200d635
 	 * Artifact
@@ -4602,14 +4695,20 @@ int card_goblin_boom_keg(int player, int card, event_t event){
 	return 0;
 }
 
+/*
+Pilgrim of the Fires |7 --> vanilla
+Artifact Creature - Golem
+First strike, trample
+6/4
+*/
+
 int card_heros_blade(int player, int card, event_t event){
-	/*
-	  Hero's Blade |2
-	  Artifact - Equipment
-	  Equipped creature gets +3/+2.
-	  Whenever a legendary creature enters the battlefield under your control, you may attach Hero's Blade to it.
-	  Equip 4
-	*/
+  /* Hero's Blade |2
+   * 	  Artifact - Equipment
+   * 	  Equipped creature gets +3/+2.
+   * 	  Whenever a legendary creature enters the battlefield under your control, you may attach Hero's Blade to it.
+   * 	  Equip 4 */
+
 	card_instance_t *instance = get_card_instance(player, card);
 
 	if( specific_cip(player, card, event, player, RESOLVE_TRIGGER_AI(player), TYPE_CREATURE, 0, SUBTYPE_LEGEND, 0, 0, 0, 0, 0, -1, 0) ){
@@ -4620,12 +4719,11 @@ int card_heros_blade(int player, int card, event_t event){
 }
 
 int card_hewer_stone_retainer(int player, int card, event_t event){
-	/*
-	  Hewed Stone Retainers |3
-	  Artifact Creature - Golem
-	  Cast Hewed-Stone Retainers only if you've cast another spell this turn.
-	  4/4
-	*/
+  /* Hewed Stone Retainers |3
+   * 	  Artifact Creature - Golem
+   * 	  Cast Hewed-Stone Retainers only if you've cast another spell this turn.
+   * 	  4/4 */
+
 	if( event == EVENT_MODIFY_COST && get_specific_storm_count(player) < 1 ){
 		infinite_casting_cost();
 	}
@@ -4633,56 +4731,65 @@ int card_hewer_stone_retainer(int player, int card, event_t event){
 	return 0;
 }
 
+// Lands
 /*
-Pilgrim of the Fires |7 --> vanilla
-Artifact Creature - Golem
-First strike, trample
-6/4
+Crucible of the Spirit Dragon --> Impossible
+Land
+T: Add 1 to your mana pool.
+1, T: Put a storage counter on Crucible of the Spirit Dragon.
+T, Remove X storage counters from Crucible of the Spirit Dragon: Add X mana in any combination of colors to your mana pool. Spend this mana only to cast Dragon spells or activate abilities of Dragons.
 */
 
-int card_scroll_of_the_masters(int player, int card, event_t event){
-	/*
-	  Scroll of the Masters |2
-	  Artifact
-	  Whenever you cast a noncreature spell, put a lore counter on Scroll of the Masters.
-	  3,T: Target creature you control gets +1/+1 until end of turn for each lore counter on Scroll of the Masters.
-	*/
+/* Recovered October 2022 implementations; see docs/recovery-progress.md. */
 
-	if( prowess_mode(player, card, event, RESOLVE_TRIGGER_MANDATORY) ){
-		add_counter(player, card, COUNTER_LORE);
-	}
+int card_scroll_of_the_masters(int player, int card, event_t event)
+{
+  /* Scroll of the Masters |2
+   *     Artifact
+   *     Whenever you cast a noncreature spell, put a lore counter on Scroll of the Masters.
+   *     3,T: Target creature you control gets +1/+1 until end of turn for each lore counter on Scroll of
+   *     the Masters. */
 
-	if (!IS_GAA_EVENT(event)){
-		return 0;
-	}
+  prowess_mode(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+  if (event == EVENT_SPA)
+  {
+    add_counters(player, card, player, card, COUNTER_LORE, 1);
+  }
 
-	target_definition_t td;
-	default_target_definition(player, card, &td, TYPE_CREATURE);
-	td.allowed_controller = player;
-	td.preferred_controller = player;
+  if (!IS_GAA_EVENT(event))
+  {
+    return 0;
+  }
 
-	card_instance_t* instance = get_card_instance(player, card);
+  target_definition_t td;
+  default_target_definition(player, card, &td, TYPE_CREATURE);
+  td.allowed_controller = player;
+  td.preferred_controller = player;
 
-	if( event == EVENT_ACTIVATE ){
-		instance->info_slot = count_counters(player, card, COUNTER_LORE);
-	}
+  card_instance_t *instance = get_card_instance(player, card);
 
-	if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td)){
-		pump_until_eot(instance->parent_controller, instance->parent_card, instance->targets[0].player, instance->targets[0].card,
-						instance->info_slot, instance->info_slot);
-	}
+  if (event == EVENT_ACTIVATE)
+  {
+    instance->info_slot = count_counters(player, card, COUNTER_LORE);
+  }
 
-	return generic_activated_ability(player, card, event, GAA_UNTAPPED|GAA_CAN_TARGET|GAA_LITERAL_PROMPT, MANACOST_X(3), 0,
-									&td, "Select target creature you control.");
+  if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td))
+  {
+    pump_until_eot(instance->parent_controller, instance->parent_card, instance->targets[0].player,
+                   instance->targets[0].card, instance->info_slot, instance->info_slot);
+  }
+
+  return generic_activated_ability(player, card, event,
+                                   GAA_UNTAPPED | GAA_CAN_TARGET | GAA_LITERAL_PROMPT,
+                                   MANACOST_X(3), 0, &td, "Select target creature you control.");
 }
 
 int card_ugins_contruct(int player, int card, event_t event){
-	/*
-	  Ugin's Construct |4
-	  Artifact Creature - Construct
-	  When Ugin's Construct enters the battlefield, sacrifice a permanent that's one or more colors.
-	  4/5
-	*/
+  /* Ugin's Construct |4
+   * 	  Artifact Creature - Construct
+   * 	  When Ugin's Construct enters the battlefield, sacrifice a permanent that's one or more colors.
+   * 	  4/5 */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
@@ -4704,12 +4811,3 @@ int card_ugins_contruct(int player, int card, event_t event){
 
 	return 0;
 }
-
-// Lands
-/*
-Crucible of the Spirit Dragon --> Impossible
-Land
-T: Add 1 to your mana pool.
-1, T: Put a storage counter on Crucible of the Spirit Dragon.
-T, Remove X storage counters from Crucible of the Spirit Dragon: Add X mana in any combination of colors to your mana pool. Spend this mana only to cast Dragon spells or activate abilities of Dragons.
-*/

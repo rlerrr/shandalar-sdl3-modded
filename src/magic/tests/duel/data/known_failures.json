@@ -1376,17 +1376,6 @@
         "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_can_cast\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step 0 can_cast source"
       ]
     },
-    "Behavior.RecoveryRecipe_12856_eligible_type_enchantment": {
-      "kind": "assertion",
-      "assertion_count": 1,
-      "card": "Treasured Find",
-      "csvid": 12856,
-      "oracle_id": "e99d6c5c-b029-4cd1-bd7a-6f8ea91eb4a7",
-      "reason": "Treasured Find's implemented handler restricts graveyard selection to TYPE_CREATURE, but Oracle permits any card. Isolated legal artifact, enchantment, instant, land, and sorcery graveyards incorrectly reject casting. Complex scenarios retain legal creature choices; restore the noncreature resolution variants when repaired. Confirmed natively and in Wasm; production fix deferred.",
-      "patterns": [
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+!!duel_test_can_cast\\(ref\\)\\s+Which\\s+is:\\s+false\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step 0 can_cast source"
-      ]
-    },
     "Behavior.RecoveryRecipe_12856_eligible_type_instant": {
       "kind": "assertion",
       "assertion_count": 1,
@@ -2115,45 +2104,6 @@
         "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+11238[\\s\\S]*?step\\ 213\\ assert_zone_contains",
         "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+13761[\\s\\S]*?step\\ 214\\ assert_zone_contains",
         "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+8916[\\s\\S]*?step\\ 215\\ assert_zone_contains"
-      ]
-    },
-    "Behavior.SweepRecipe_10378_injured": {
-      "kind": "assertion",
-      "assertion_count": 29,
-      "card": "Zealous Persecution",
-      "csvid": 10378,
-      "oracle_id": "ccf8d919-1399-4bef-94ac-04c67f122828",
-      "reason": "Zealous Persecution grants +1/+1 to both players' creatures. Oracle requires friendly +1/+1 and opposing -1/-1. Correct opposing characteristics, reduced-toughness deaths, graveyard contents and cleanup assertions remain; the production handler currently applies the same positive pump to both sides. This is a card-handler defect, not a signed-power expectation change. Production fix deferred.",
-      "patterns": [
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 138\\ assert_card\\ permanent_1_0",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+4\\s+s\\.value\\s+Which\\s+is:\\s+2[\\s\\S]*?step\\ 141\\ assert_card\\ permanent_1_1",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+4\\s+s\\.value\\s+Which\\s+is:\\s+2[\\s\\S]*?step\\ 142\\ assert_card\\ permanent_1_1",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+6[\\s\\S]*?step\\ 146\\ assert_card\\ permanent_1_2",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+7\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 147\\ assert_card\\ permanent_1_2",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+6\\s+s\\.value\\s+Which\\s+is:\\s+4[\\s\\S]*?step\\ 151\\ assert_card\\ permanent_1_3",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+7\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 152\\ assert_card\\ permanent_1_3",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 154\\ assert_card\\ permanent_1_4",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+3\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 157\\ assert_card\\ permanent_1_5",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+3\\s+s\\.value\\s+Which\\s+is:\\s+1[\\s\\S]*?step\\ 158\\ assert_card\\ permanent_1_5",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+5\\s+s\\.value\\s+Which\\s+is:\\s+3[\\s\\S]*?step\\ 162\\ assert_card\\ permanent_1_6",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+7\\s+s\\.value\\s+Which\\s+is:\\s+5[\\s\\S]*?step\\ 163\\ assert_card\\ permanent_1_6",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 165\\ assert_card\\ permanent_1_7",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+4\\s+s\\.value\\s+Which\\s+is:\\s+2[\\s\\S]*?step\\ 168\\ assert_card\\ permanent_1_8",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+4\\s+s\\.value\\s+Which\\s+is:\\s+2[\\s\\S]*?step\\ 169\\ assert_card\\ permanent_1_8",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 171\\ assert_card\\ permanent_1_9",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+1\\s+s\\.value\\s+Which\\s+is:\\s+0[\\s\\S]*?step\\ 172\\ assert_card\\ permanent_1_10",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+23\\s+s\\.value\\s+Which\\s+is:\\s+18[\\s\\S]*?step\\ 229\\ assert_zone",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+count\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1\\s+CSVID\\s+213[\\s\\S]*?step\\ 235\\ assert_hand_graveyard_total",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+count\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1\\s+CSVID\\s+1195[\\s\\S]*?step\\ 236\\ assert_hand_graveyard_total",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+count\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1\\s+CSVID\\s+11238[\\s\\S]*?step\\ 237\\ assert_hand_graveyard_total",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+count\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1\\s+CSVID\\s+13761[\\s\\S]*?step\\ 238\\ assert_hand_graveyard_total",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+count\\s+Which\\s+is:\\s+0\\s+s\\.value\\s+Which\\s+is:\\s+1\\s+CSVID\\s+8916[\\s\\S]*?step\\ 239\\ assert_hand_graveyard_total",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+duel_test_zone_count\\(s\\.player,s\\.zone\\)\\s+Which\\s+is:\\s+4\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 242\\ assert_zone",
-        "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+213[\\s\\S]*?step\\ 247\\ assert_zone_contains",
-        "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+1195[\\s\\S]*?step\\ 248\\ assert_zone_contains",
-        "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+11238[\\s\\S]*?step\\ 249\\ assert_zone_contains",
-        "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+13761[\\s\\S]*?step\\ 250\\ assert_zone_contains",
-        "Value\\s+of:\\s+found\\s+Actual:\\s+false\\s+Expected:\\s+true\\s+Missing\\s+CSVID\\s+8916[\\s\\S]*?step\\ 251\\ assert_zone_contains"
       ]
     },
     "Behavior.SweepRecipe_10378_late_arrival": {
@@ -6641,17 +6591,6 @@
         "Expected\\ equality\\ of\\ these\\ values:\\\n\\ \\ !!duel_test_can_activate_hand\\(ref\\)\\\n\\ \\ \\ \\ Which\\ is:\\ false\\\n\\ \\ s\\.value\\\n\\ \\ \\ \\ Which\\ is:\\ 1[\\s\\S]*?step\\ 7\\ require_can_activate_hand\\ source"
       ]
     },
-    "Behavior.CyclingRecipe_16864_opposing_reducer_1": {
-      "kind": "assertion",
-      "assertion_count": 1,
-      "card": "Cast Out",
-      "csvid": 16864,
-      "oracle_id": "f90b00f6-36e0-4988-9409-57297483a952",
-      "reason": "This card's amonkhet.c handler implements its pinned Oracle cycling ability, but its production carddata record has cc[2]=0 rather than cycling marker 4. check_card_for_rules_engine and activate_cards_in_hand therefore do not expose it through the game's hand-ability proxy. Correct require_can_activate_hand expectations fail before any menu choice is queued, with no accepted unused choices. Both controllers, costs and pending/source-removal scenarios retain that fatal prerequisite. Native x86 and Wasm agree. Production metadata fix deferred.",
-      "patterns": [
-        "Expected\\ equality\\ of\\ these\\ values:\\\n\\ \\ !!duel_test_can_activate_hand\\(ref\\)\\\n\\ \\ \\ \\ Which\\ is:\\ false\\\n\\ \\ s\\.value\\\n\\ \\ \\ \\ Which\\ is:\\ 1[\\s\\S]*?step\\ 7\\ require_can_activate_hand\\ source"
-      ]
-    },
     "Behavior.CyclingRecipe_16864_opposing_tax_0": {
       "kind": "assertion",
       "assertion_count": 1,
@@ -10988,18 +10927,6 @@
         "(?:SEH exception with code 0xc0000005 thrown in the test body\\.[\\s\\S]*?step 23 resolve |RuntimeError: null function or function signature mismatch[\\s\\S]*?manalinkeh_equip_target_creature[\\s\\S]*?manalinkeh_basic_equipment[\\s\\S]*?resolve_top_card_on_stack)"
       ]
     },
-    "Behavior.EquipmentRecipe_11437_source_bounced_pending_1": {
-      "kind": "crash",
-      "assertion_count": 0,
-      "card": "Darksteel Plate",
-      "csvid": 11437,
-      "oracle_id": "b5b4cf54-ed5e-42d0-9d98-5fec76b0b0b8",
-      "reason": "Equip resolves after Boomerang returns its source to hand. The Equipment should remain in hand and the creature receive no bonus. basic_equipment still attaches through the departed parent slot, then equip_target_creature calls that slot's card handler. Native x86 faults with SEH 0xc0000005; Wasm traps with a function signature mismatch in the same attachment path. Production fix deferred; source-departure and zone assertions remain beyond the crash.",
-      "patterns": [
-        "CASE:\\ EquipmentRecipe_11437_source_bounced_pending_1\\ CARD:\\ Darksteel\\ Plate\\ ORACLE:\\ b5b4cf54\\-ed5e\\-42d0\\-9d98\\-5fec76b0b0b8",
-        "(?:SEH exception with code 0xc0000005 thrown in the test body\\.[\\s\\S]*?step 23 resolve |RuntimeError: null function or function signature mismatch[\\s\\S]*?manalinkeh_equip_target_creature[\\s\\S]*?manalinkeh_basic_equipment[\\s\\S]*?resolve_top_card_on_stack)"
-      ]
-    },
     "Behavior.EquipmentRecipe_11437_tax_0": {
       "kind": "assertion",
       "assertion_count": 1,
@@ -12864,21 +12791,6 @@
         "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+10\\s+s\\.value\\s+Which\\s+is:\\s+6[\\s\\S]*?step\\ 455\\ assert_card\\ army_1_7(?=\\s|$)"
       ]
     },
-    "Behavior.MassStatsRecipe_397_tapped_0": {
-      "kind": "assertion",
-      "assertion_count": 4,
-      "card": "Army of Allah",
-      "csvid": 397,
-      "oracle_id": "3483946d-8645-4c22-b0ba-a65a44456324",
-      "reason": "Extends the existing ArmyOfAllah_AttackingBonus failure. Oracle gives attacking creatures +2/+0; the registered arabian_nights handler passes power 0 and toughness 2 to pump_creatures_until_eot. Each cast grants +0/+2 instead, affecting stats, blocked combat survival/owned zones, or unblocked damage. Correct Oracle assertions, payment, cleanup and snapshot replay remain intact. Every observed assertion and its count are pinned on both runtimes. Production fix deferred.",
-      "patterns": [
-        "CASE:\\ MassStatsRecipe_397_tapped_0\\ CARD:\\ Army\\ of\\ Allah\\ ORACLE:\\ 3483946d\\-8645\\-4c22\\-b0ba\\-a65a44456324",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+7\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 192\\ assert_card\\ army_0_7(?=\\s|$)",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+6[\\s\\S]*?step\\ 193\\ assert_card\\ army_0_7(?=\\s|$)",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+7\\s+s\\.value\\s+Which\\s+is:\\s+9[\\s\\S]*?step\\ 402\\ assert_card\\ army_0_7(?=\\s|$)",
-        "Expected\\s+equality\\s+of\\s+these\\s+values:\\s+property\\(duel_test_inspect\\(ref\\),s\\.property\\)\\s+Which\\s+is:\\s+8\\s+s\\.value\\s+Which\\s+is:\\s+6[\\s\\S]*?step\\ 403\\ assert_card\\ army_0_7(?=\\s|$)"
-      ]
-    },
     "Behavior.MassStatsRecipe_397_tapped_1": {
       "kind": "assertion",
       "assertion_count": 4,
@@ -14370,27 +14282,6 @@
         "step\\ 158\\ assert_zone_multiplicity\\ "
       ]
     },
-    "Behavior.EtbRecoveryCreatureRecipe_3466_bounce_recast_0": {
-      "kind": "assertion",
-      "assertion_count": 9,
-      "card": "Cartographer",
-      "csvid": 3466,
-      "oracle_id": "50d33663-5d83-4e3c-9ed7-074fe29a9fc8",
-      "reason": "Oracle permits the chosen graveyard card to return on entry. The shared Exodus recycler wrappers gate every event on trigger_condition == TRIGGER_COMES_INTO_PLAY. etb_ability invokes EVENT_ETB_ABILITY through call_card_function, whose call_card_fn clears trigger_condition for that non-trigger event; the wrappers skip the recovery callback. Stoic Builder shares Cartographer. Correct chosen-card transfer, zone multiplicities, re-entry and snapshot assertions remain intact. Confirmed for both controllers natively and in Wasm; production fix deferred.",
-      "patterns": [
-        "CASE:\\ EtbRecoveryCreatureRecipe_3466_bounce_recast_0\\ CARD:\\ Cartographer\\ ORACLE:\\ 50d33663\\-5d83\\-4e3c\\-9ed7\\-074fe29a9fc8",
-        "Unconsumed planned choices",
-        "step\\ 5\\ assert_choices_consumed\\ ",
-        "step\\ 16\\ assert_choices_consumed\\ ",
-        "step\\ 31\\ assert_zone\\ ",
-        "step\\ 36\\ assert_zone_contains\\ ",
-        "step\\ 42\\ assert_zone_multiplicity\\ ",
-        "step\\ 51\\ assert_zone_multiplicity\\ ",
-        "step\\ 56\\ assert_zone\\ ",
-        "step\\ 77\\ assert_zone_multiplicity\\ ",
-        "step\\ 86\\ assert_zone_multiplicity\\ "
-      ]
-    },
     "Behavior.EtbRecoveryCreatureRecipe_3466_bounce_recast_1": {
       "kind": "assertion",
       "assertion_count": 9,
@@ -15616,24 +15507,6 @@
         "step\\ 130\\ assert_zone_multiplicity\\ ",
         "step\\ 133\\ assert_zone\\ ",
         "step\\ 165\\ assert_zone_multiplicity\\ "
-      ]
-    },
-    "Behavior.EtbRecoveryCreatureRecipe_3579_destroy_source_0": {
-      "kind": "assertion",
-      "assertion_count": 6,
-      "card": "Treasure Hunter",
-      "csvid": 3579,
-      "oracle_id": "71ae3bc0-28da-4e91-bffd-a49fe545b7a9",
-      "reason": "Oracle permits the chosen graveyard card to return on entry. The shared Exodus recycler wrappers gate every event on trigger_condition == TRIGGER_COMES_INTO_PLAY. etb_ability invokes EVENT_ETB_ABILITY through call_card_function, whose call_card_fn clears trigger_condition for that non-trigger event; the wrappers skip the recovery callback. Stoic Builder shares Cartographer. Correct chosen-card transfer, zone multiplicities, re-entry and snapshot assertions remain intact. Confirmed for both controllers natively and in Wasm; production fix deferred.",
-      "patterns": [
-        "CASE:\\ EtbRecoveryCreatureRecipe_3579_destroy_source_0\\ CARD:\\ Treasure\\ Hunter\\ ORACLE:\\ 71ae3bc0\\-28da\\-4e91\\-bffd\\-a49fe545b7a9",
-        "Unconsumed planned choices",
-        "step\\ 5\\ assert_choices_consumed\\ ",
-        "step\\ 16\\ assert_zone\\ ",
-        "step\\ 21\\ assert_zone_contains\\ ",
-        "step\\ 38\\ assert_zone_multiplicity\\ ",
-        "step\\ 41\\ assert_zone\\ ",
-        "step\\ 74\\ assert_zone_multiplicity\\ "
       ]
     },
     "Behavior.EtbRecoveryCreatureRecipe_3579_destroy_source_1": {

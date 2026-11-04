@@ -14,7 +14,7 @@ void boost_subtype(int player, int card, event_t event, subtype_t subtype, int p
 	  if (!is_what(affected_card_controller, affected_card, TYPE_CREATURE))
 		return;
 
-	  if (is_humiliated(player, card))
+	  if (is_humiliated(player, card, AL_STATIC))
 		return;
 
 	  if ((flags & BCT_CONTROLLER_ONLY) && affected_card_controller != player)
@@ -66,7 +66,7 @@ int boost_creature_by_color(int player, int card, event_t event, int clr, int po
 		if (!is_what(affected_card_controller, affected_card, TYPE_CREATURE))
 			return 0;
 
-		if (is_humiliated(player, card))
+		if (is_humiliated(player, card, AL_STATIC))
 			return 0;
 
 		clr &= COLOR_TEST_ANY_COLORED;

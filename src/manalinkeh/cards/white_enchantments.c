@@ -18,6 +18,12 @@ void spirit_link_effect(int player, int card, event_t event, int who_gains){
 }
 
 int card_spirit_link(int player, int card, event_t event){
+  /* CARD_ID_SPIRIT_LINK	794
+   * Spirit Link	|W
+   * Enchantment - Aura
+   * Enchant creature (Target a creature as you cast this. This card enters the battlefield attached to that creature.)
+   * Whenever enchanted creature deals damage, you gain that much life. */
+
 /*
     card_instance_t *instance = get_card_instance(player, card);
     if( event == EVENT_ATTACK_LEGALITY && instance->targets[0].player == AI ){
@@ -37,6 +43,10 @@ int card_spirit_link(int player, int card, event_t event){
 }
 
 int card_in_the_presence_of_the_master(int player, int card, event_t event){
+  /* Presence of the Master	|3|W
+   * Enchantment
+   * Whenever a player casts an enchantment spell, counter it. */
+
     if( event == EVENT_CAST_SPELL && ! affect_me(player, card) ){
         int p = affected_card_controller;
         int c = affected_card;
@@ -49,6 +59,11 @@ int card_in_the_presence_of_the_master(int player, int card, event_t event){
 }
 
 int card_story_circle(int player, int card, event_t event){
+  /* CARD_ID_STORY_CIRCLE	1163
+   * Story Circle	|1|W|W
+   * Enchantment
+   * As ~ enters the battlefield, choose a color.
+   * |W: The next time a source of your choice of the chosen color would deal damage to you this turn, prevent that damage. */
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -82,6 +97,12 @@ int card_story_circle(int player, int card, event_t event){
 }
 
 int card_angelic_benediction( int player, int card, event_t event){
+  /* CARD_ID_ANGELIC_BENEDICTION	9913
+   * Angelic Benediction	|3|W
+   * Enchantment
+   * Exalted (Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)
+   * Whenever a creature you control attacks alone, you may tap target creature. */
+
     int attacker = exalted(player, card, event, 0, 0);
 	if (attacker != -1){
 		target_definition_t td;

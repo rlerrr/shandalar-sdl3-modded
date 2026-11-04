@@ -64,6 +64,9 @@ class SelfKeywordActivationRecipesTest(unittest.TestCase):
   for c,zone in ((zero,'graveyard'),(exile,'exile'),(bounce,'hand')):
    self.assertIn(dict(op='assert_card',ref='source',property='in_play',value=0),c['steps']);self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone=zone,index=self.rows['Wily Bandar']['csvid'],value=1),c['steps'])
  def test_menace_checks_completed_declaration(self):
+  single,pair=self.cases('Weldfast Monitor',['effect_0','two_blockers_1'])
+  self.assertIn(dict(op='block',ref='witness',other='source',value=0),single['steps'])
+  self.assertIn(dict(op='block',ref='witness',other='source',value=1),pair['steps'])
   single,pair=self.cases('Weldfast Monitor',['effect_0','two_blockers_1']);self.assertIn(dict(op='advance_combat'),single['steps']);self.assertIn(dict(op='assert_card',ref='witness',property='blocking_count',value=0),single['steps']);self.assertIn(dict(op='assert_card',ref='source',property='blocked',value=1),pair['steps'])
  def test_costs_and_no_raw_sickness_expectation(self):
   paid,wrong,tax,fresh=self.cases(selected=['payment_0','wrong_color_1','tax_1','fresh_activation_0']);self.assertIn(dict(op='assert_mana',player=0,color=4,value=0),paid['steps']);self.assertIn(dict(op='require_can_activate',ref='source',value=0),wrong['steps']);self.assertIn(dict(op='set_mana',player=1,color=0,value=2),tax['steps']);self.assertIn(dict(op='require_can_activate',ref='source',value=1),fresh['steps']);self.assertFalse(any(s['op']=='assert_card' and s.get('property')=='sick' for s in fresh['steps']))

@@ -1632,7 +1632,7 @@ is_hack_instance_a_creature(void)
 }
 
 int
-DrawSmallCard(HDC hdc, const RECT* card_rect, const card_ptr_t* cp, int version, int mode, int player, int card)
+DrawSmallCardEx(HDC hdc, const RECT* card_rect, const card_ptr_t* cp, int version, int mode, int player, int card, int expansion)
 {
   if (!hdc || !card_rect || !cp)
 	return 0;
@@ -1649,6 +1649,14 @@ DrawSmallCard(HDC hdc, const RECT* card_rect, const card_ptr_t* cp, int version,
   SetViewportOrgEx(hdc, card_rect->left, card_rect->top, NULL);
 
   const Rarities* r = get_rarity(cp->id);
+  Rarities selected_printing;
+  if (r && expansion > 0 && printing_rarity(r, expansion) != NONE) {
+    selected_printing = *r;
+    selected_printing.default_expansion = expansion;
+    selected_printing.default_rarity = printing_rarity(r, expansion);
+    r = &selected_printing;
+  }
+
   PicHandleNames framenum = select_frame(cp, r, -1, -1);
   int colorless_option;
   if (framenum == CARDBACK)
@@ -1912,4 +1920,9 @@ get_card_data_from_csvid(uint32_t csvid)
   else
 	return &cards_data_exe[csvid_to_iid[csvid]];
 #endif
+}
+
+int DrawSmallCard(HDC hdc, const RECT* card_rect, const card_ptr_t* cp, int version, int mode, int player, int card)
+{
+  return DrawSmallCardEx(hdc, card_rect, cp, version, mode, player, card, 0);
 }

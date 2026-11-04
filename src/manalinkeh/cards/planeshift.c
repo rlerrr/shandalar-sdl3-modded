@@ -1,6 +1,7 @@
 #include "manalink.h"
 
 // Functions
+
 int count_domain(int player, int card){
 	int i, count = 0;
 	for (i = COLOR_BLACK; i <= COLOR_WHITE; ++i){
@@ -154,7 +155,7 @@ int card_allied_strategies(int player, int card, event_t event){
 	 * Sorcery
 	 * Domain - Target player draws a card for each basic land type among lands he or she controls. */
 
-	if( ! IS_GAA_EVENT(event) ){
+	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
 
@@ -308,6 +309,103 @@ Pay 1 life: Return ~ to its owner's hand. */
 	return generic_activated_ability(player, card, event, 0, MANACOST0, 1, NULL, NULL);
 }
 
+/* ManalinkEh 2022: 0x2187500; original cards/planeshift.c:311. */
+int card_confound(int player, int card, event_t event)
+{
+  /* Confound	|1|U
+   * Instant
+   * Counter target spell that targets a creature.
+   * Draw a card. */
+
+  card_instance_t *instance;
+  int i;
+  int counter_available_or_target_index;
+  int target_card_or_creature;
+  card_instance_t *stack_spell;
+  card_instance_t *target_creature_or_spell;
+  card_instance_t *targeted_creature;
+  int resolved_target_or_creature;
+
+  if (event == EVENT_CAN_CAST)
+  {
+
+    counter_available_or_target_index = card_counterspell(player, card, EVENT_CAN_CAST);
+
+    if ((0 < counter_available_or_target_index) &&
+        (stack_spell = get_card_instance(card_on_stack_controller, card_on_stack),
+         stack_spell->number_of_targets != '\0'))
+    {
+      i = 0;
+      do
+      {
+        while (((stack_spell->targets[i].player == player &&
+                 (target_card_or_creature = stack_spell->targets[i].card,
+                  target_card_or_creature != -1)) &&
+                (target_creature_or_spell = in_play(player, target_card_or_creature),
+                 target_creature_or_spell != NULL)))
+        {
+          target_card_or_creature =
+              is_what(stack_spell->targets[i].player, stack_spell->targets[i].card, 2);
+          if (target_card_or_creature != 0)
+          {
+            return counter_available_or_target_index;
+          }
+          i = i + 1;
+          if ((int)(unsigned int)stack_spell->number_of_targets <= i)
+          {
+            return 0;
+          }
+        }
+        i = i + 1;
+      } while (i < (int)(unsigned int)stack_spell->number_of_targets);
+    }
+  }
+  else
+  {
+    if (event != EVENT_RESOLVE_SPELL)
+    {
+      return card_counterspell(player, card, event);
+    }
+    if (counterspell_validate(player, card, NULL, 0) != 0)
+    {
+
+      instance = get_card_instance(player, card);
+      target_creature_or_spell =
+          get_card_instance(instance->targets[0].player, instance->targets[0].card);
+      if (target_creature_or_spell->number_of_targets != '\0')
+      {
+        counter_available_or_target_index = 0;
+        do
+        {
+          if (((target_creature_or_spell->targets[counter_available_or_target_index].player ==
+                player) &&
+               (resolved_target_or_creature =
+                    target_creature_or_spell->targets[counter_available_or_target_index].card,
+                resolved_target_or_creature != -1)) &&
+              ((targeted_creature = in_play(player, resolved_target_or_creature),
+                targeted_creature != NULL &&
+                    (resolved_target_or_creature = is_what(
+                         target_creature_or_spell->targets[counter_available_or_target_index]
+                             .player,
+                         target_creature_or_spell->targets[counter_available_or_target_index].card,
+                         2),
+                     resolved_target_or_creature != 0))))
+          {
+            real_counter_a_spell(player, card, instance->targets[0].player,
+                                 instance->targets[0].card);
+            draw_a_card(player);
+            break;
+          }
+          counter_available_or_target_index = counter_available_or_target_index + 1;
+        } while (counter_available_or_target_index <
+                 (int)(unsigned int)target_creature_or_spell->number_of_targets);
+      }
+    }
+    kill_card(player, card, KILL_DESTROY);
+  }
+  return 0;
+}
+
 int card_crosis_catacombs(int player, int card, event_t event){
 /* CARD_ID_CROSISS_CATACOMBS	5209
 Crosis's Catacombs	""
@@ -317,7 +415,7 @@ When ~ enters the battlefield, sacrifice it unless you return a non-Lair land yo
 
 	// also code for the others "Lair" lands
 
-	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
+	if( event == EVENT_CAST_SPELL && affect_me(player, card) && !is_humiliated(player, card, AL_TRIG) ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_LAND);
 		td.allowed_controller = player;
@@ -332,7 +430,7 @@ When ~ enters the battlefield, sacrifice it unless you return a non-Lair land yo
 
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
-	if( event == EVENT_ETB_ABILITY ){
+	if( event == EVENT_ETB_ABILITY && !is_humiliated(player, card, AL_TRIG) ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_LAND);
 		td.allowed_controller = player;
@@ -352,18 +450,17 @@ When ~ enters the battlefield, sacrifice it unless you return a non-Lair land yo
 		}
 	}
 
-	return mana_producer(player, card, event);
+	return plain_mana_producer(player, card, event);
 }
 
 int card_crosis_charm(int player, int card, event_t event){
-/*
-Crosis's Charm |U|B|R
-Instant
-Choose one —
-• Return target permanent to its owner's hand.
-• Destroy target nonblack creature. It can't be regenerated.
-• Destroy target artifact.
-*/
+  /* Crosis's Charm |U|B|R
+   * Instant
+   * Choose one ï¿½
+   * ï¿½ Return target permanent to its owner's hand.
+   * ï¿½ Destroy target nonblack creature. It can't be regenerated.
+   * ï¿½ Destroy target artifact. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -658,18 +755,22 @@ Domain - At the beginning of your upkeep, sacrifice ~ unless you pay |10. This c
 }
 
 int card_dralnus_crusade(int player, int card, event_t event){
-/*
-Dralnu's Crusade |1|B|R
-Enchantment
-Goblin creatures get +1/+1.
-All Goblins are black and are Zombies in addition to their other creature types.
-*/
+  /* Dralnu's Crusade |1|B|R
+   * Enchantment
+   * Goblin creatures get +1/+1.
+   * All Goblins are black and are Zombies in addition to their other creature types. */
+
 	boost_creature_type(player, card, event, SUBTYPE_GOBLIN, 1, 1, 0, BCT_INCLUDE_SELF);
 
-	if( event == EVENT_SET_COLOR && in_play(player, card) && ! is_humiliated(player, card) &&
+	if( (event == EVENT_SET_COLOR || event == EVENT_CHANGE_TYPE) && in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) &&
 		has_subtype(affected_card_controller, affected_card, SUBTYPE_GOBLIN) )
 	{
-		event_result = COLOR_TEST_BLACK;
+		if (event == EVENT_SET_COLOR){
+			event_result = COLOR_TEST_BLACK;
+		}
+		else{
+			add_a_subtype(affected_card_controller, affected_card, SUBTYPE_ZOMBIE);
+		}
 	}
 
 	return global_enchantment(player, card, event);
@@ -707,7 +808,7 @@ If ~ was kicked, it enters the battlefield with flying and with X +1/+1 counters
 		enters_the_battlefield_with_counters(player, card, event, COUNTER_P1_P1, get_card_instance(player, card)->info_slot);
 	}
 
-	if( event == EVENT_ABILITIES && affect_me(player, card) && kicked(player, card) && ! is_humiliated(player, card) ){
+	if( event == EVENT_ABILITIES && affect_me(player, card) && kicked(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		event_result |= KEYWORD_FLYING;
 	}
 
@@ -752,7 +853,7 @@ Choose one -
 			int choice = DIALOG(player, card, event, DLG_RANDOM,
 								"Gain 5 life", 1, life[player] < 6 ? 25 : 1,
 								"Counterspell", can_counter, 15,
-								"Target crit gets -5/-5", can_target(&td), 5);
+								"Target creature gets -2/-2", can_target(&td), 5);
 			if( ! choice ){
 				spell_fizzled = 1;
 				return 0;
@@ -783,11 +884,10 @@ Choose one -
 }
 
 int card_eladamris_call(int player, int card, event_t event){
-	/*
-	  Eladamri's Call |W|G
-	  Instant
-	  Search your library for a creature card, reveal that card, and put it into your hand. Then shuffle your library.
-	*/
+  /* Eladamri's Call |W|G
+   * 	  Instant
+   * 	  Search your library for a creature card, reveal that card, and put it into your hand. Then shuffle your library. */
+
 	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
 		ai_modifier += (current_turn == 1-player ? 96 : 24);
 	}
@@ -803,11 +903,10 @@ int card_eladamris_call(int player, int card, event_t event){
 }
 
 int card_ertai_the_corrupted(int player, int card, event_t event){
-/*
-Ertai, the Corrupted |2|W|U|B
-Legendary Creature — Human Wizard 3/4
-{U}, {T}, Sacrifice a creature or enchantment: Counter target spell.
-*/
+  /* Ertai, the Corrupted |2|W|U|B
+   * Legendary Creature ï¿½ Human Wizard 3/4
+   * {U}, {T}, Sacrifice a creature or enchantment: Counter target spell. */
+
 	check_legend_rule(player, card, event);
 
 	if( ! IS_GAA_EVENT(event) ){
@@ -1091,11 +1190,10 @@ int card_lord_of_the_undead(int player, int card, event_t event){
 }
 
 int card_maggot_carrier(int player, int card, event_t event){
-	/*
-	  Maggot Carrier |B
-	  Creature - Zombie 1/1
-	  When Maggot Carrier enters the battlefield, each player loses 1 life.
-	*/
+  /* Maggot Carrier |B
+   * 	  Creature - Zombie 1/1
+   * 	  When Maggot Carrier enters the battlefield, each player loses 1 life. */
+
 	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
 	if( event == EVENT_ETB_ABILITY ){
@@ -1107,11 +1205,10 @@ int card_maggot_carrier(int player, int card, event_t event){
 }
 
 int card_malicious_advice(int player, int card, event_t event){
-/*
-Malicious Advice |X|U|B
-Instant
-Tap X target artifacts, creatures, and/or lands. You lose X life.
-*/
+  /* Malicious Advice |X|U|B
+   * Instant
+   * Tap X target artifacts, creatures, and/or lands. You lose X life. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -1191,7 +1288,7 @@ int card_march_of_souls(int player, int card, event_t event){
 					default_token_definition(player, card, CARD_ID_SPIRIT, &token);
 					token.t_player = p;
 					token.qty = killed[p];
-					token.color_forced = get_sleighted_color_test(player, card, COLOR_TEST_WHITE);
+					token.color_forced = COLOR_TEST_WHITE;
 					token.key_plus = KEYWORD_FLYING;
 					generate_token(&token);
 				}
@@ -1262,17 +1359,16 @@ Spells with the chosen name can't be cast. */
 	return 0;
 }
 
-int card_mogg_sentry(int player, int card, event_t event){
-	/*
-	  Mogg Sentry |R
-	  Creature - Goblin Warrior 1/1
-	  Whenever an opponent casts a spell, Mogg Sentry gets +2/+2 until end of turn.
-	*/
-	if( new_specific_spell_played(player, card, event, 1-player, RESOLVE_TRIGGER_MANDATORY, NULL) ){
-		pump_until_eot_merge_previous(player, card, player, card, 2, 2);
-	}
+int card_mogg_sentry(int player, int card, event_t event)
+{
+  /* Mogg Sentry |R
+   * 	  Creature - Goblin Warrior 1/1
+   * 	  Whenever an opponent casts a spell, Mogg Sentry gets +2/+2 until end of turn. */
 
-	return 0;
+  sp_ability_trigger(1-player, event, RESOLVE_TRIGGER_MANDATORY, TYPE_ANY, NULL, player, card);
+  if (event == EVENT_SPA)
+    pump_until_eot_merge_previous(player, card, player, card, 2, 2);
+  return 0;
 }
 
 int card_nemata_grove_guardian(int player, int card, event_t event){
@@ -1326,13 +1422,12 @@ int card_nemata_grove_guardian(int player, int card, event_t event){
 }
 
 int card_nightscape_battlemage(int player, int card, event_t event){
-	/*
-	  Nightscape Battlemage |2|B
-	  Creature - Zombie Wizard 2/2
-	  Kicker {2}{U} and/or {2}{R} (You may pay an additional {2}{U} and/or {2}{R} as you cast this spell.)
-	  When Nightscape Battlemage enters the battlefield, if it was kicked with its {2}{U} kicker, return up to two target nonblack creatures to their owners' hands.
-	  When Nightscape Battlemage enters the battlefield, if it was kicked with its {2}{R} kicker, destroy target land.
-	*/
+  /* Nightscape Battlemage |2|B
+   * 	  Creature - Zombie Wizard 2/2
+   * 	  Kicker {2}{U} and/or {2}{R} (You may pay an additional {2}{U} and/or {2}{R} as you cast this spell.)
+   * 	  When Nightscape Battlemage enters the battlefield, if it was kicked with its {2}{U} kicker, return up to two target nonblack creatures to their owners' hands.
+   * 	  When Nightscape Battlemage enters the battlefield, if it was kicked with its {2}{R} kicker, destroy target land. */
+
 	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_CREATURE);
@@ -1400,13 +1495,11 @@ int card_nightscape_familiar(int player, int card, event_t event)
 }
 
 int card_orims_chant(int player, int card, event_t event){
-	/*
-	  Orim's Chant |W
-	  Instant
-	  Kicker {W} (You may pay an additional {W} as you cast this spell.)
-	  Target player can't cast spells this turn.
-	  If Orim's Chant was kicked, creatures can't attack this turn.
-	*/
+  /* Orim's Chant |W
+   * 	  Instant
+   * 	  Kicker {W} (You may pay an additional {W} as you cast this spell.)
+   * 	  Target player can't cast spells this turn.
+   * 	  If Orim's Chant was kicked, creatures can't attack this turn. */
 
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
@@ -1423,7 +1516,7 @@ int card_orims_chant(int player, int card, event_t event){
 	}
 
 	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
-		generic_spell(player, card, event, GS_CAN_TARGET, &td, NULL, 1, NULL);
+		generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_PLAYER", 1, NULL);
 		if( spell_fizzled != 1 ){
 			if( ! is_token(player, card) ){
 				do_kicker(player, card, MANACOST_W(1));
@@ -1492,14 +1585,13 @@ int card_phyrexian_tyranny(int player, int card, event_t event){
 }
 
 int card_primal_growth(int player, int card, event_t event){
-	/*
-	  Primal Growth |2|G
-	  Sorcery, 2G
-	  Kicker — Sacrifice a creature. (You may sacrifice a creature in addition to any other costs as you cast this spell.)
-	  Search your library for a basic land card, put that card onto the battlefield, then shuffle your library.
-	  If Primal Growth was kicked, instead search your library for up to two basic land cards, put them onto the battlefield,
-	  then shuffle your library.
-	*/
+  /* Primal Growth |2|G
+   * 	  Sorcery, 2G
+   * 	  Kicker ï¿½ Sacrifice a creature. (You may sacrifice a creature in addition to any other costs as you cast this spell.)
+   * 	  Search your library for a basic land card, put that card onto the battlefield, then shuffle your library.
+   * 	  If Primal Growth was kicked, instead search your library for up to two basic land cards, put them onto the battlefield,
+   * 	  then shuffle your library. */
+
 	if( event == EVENT_CAN_CAST ){
 		return basic_spell(player, card, event);
 	}
@@ -1630,26 +1722,24 @@ Quirion Dryad	|1|G
 Creature - Dryad 1/1
 Whenever you cast a |Swhite, |Sblue, |Sblack, or |Sred spell, put a +1/+1 counter on ~. */
 
-	if( ! is_unlocked(player, card, event, 4) ){ return 0; }
-
-	if( trigger_condition == TRIGGER_SPELL_CAST && affect_me(player, card) ){
+	if (!is_unlocked(player, card, event, 4)){ return 0; }
+	if (trigger_condition == TRIGGER_SPELL_CAST && affect_me(player, card)){
 		test_definition_t test;
 		default_test_definition(&test, TYPE_ANY);
 		test.color = get_sleighted_color_test(player, card, COLOR_TEST_BLACK | COLOR_TEST_BLUE | COLOR_TEST_RED | COLOR_TEST_WHITE);
-		if( new_specific_spell_played(player, card, event, player, RESOLVE_TRIGGER_MANDATORY, &test) ){
-			add_1_1_counter(player, card);
-		}
+		sp_ability_trigger(player, event, RESOLVE_TRIGGER_MANDATORY, TYPE_NONE, &test, player, card);
 	}
-
+	if (event == EVENT_SPA){
+		add_counters(player, card, player, card, COUNTER_P1_P1, 1);
+	}
 	return 0;
 }
 
-  /* Quirion Explorer = card_sylvok_explorer 2005abb
+/* Quirion Explorer = card_sylvok_explorer 2005abb
 CARD_ID_QUIRION_EXPLORER	5286
 Quirion Explorer	|1|G
 Creature - Elf Druid Scout 1/1
 |T: Add to your mana pool one mana of any color that a land an opponent controls could produce. */
-
 int card_rith_charm(int player, int card, event_t event){
 	/* Rith's Charm	|R|G|W
 	 * Instant
@@ -1841,17 +1931,16 @@ When ~ enters the battlefield, draw two cards, then put two cards from your hand
 }
 
 int card_shifting_sky(int player, int card, event_t event){
-	/*
-	  Shifting Sky |2|U
-	  Enchantment
-	  As Shifting Sky enters the battlefield, choose a color.
-	  All nonland permanents are the chosen color.
-	*/
+  /* Shifting Sky |2|U
+   * 	  Enchantment
+   * 	  As Shifting Sky enters the battlefield, choose a color.
+   * 	  All nonland permanents are the chosen color. */
+
 	if (event == EVENT_RESOLVE_SPELL){
 		get_card_instance(player, card)->targets[1].card = 1<<choose_a_color_and_show_legacy(player, card, 1-player, -1);
 	}
 
-	if (event == EVENT_SET_COLOR && ! is_humiliated(player, card) ){
+	if (event == EVENT_SET_COLOR && ! is_humiliated(player, card, AL_STATIC) ){
 		int col = get_card_instance(player, card)->targets[1].card;
 		if (col > 0 && is_what(affected_card_controller, affected_card, TYPE_PERMANENT) &&
 			! is_what(affected_card_controller, affected_card, TYPE_LAND) )
@@ -1915,25 +2004,48 @@ int card_sparkcaster(int player, int card, event_t event){
 	return 0;
 }
 
-int card_star_compass(int player, int card, event_t event){
-	/*
-	  Star Compass |2
-	  Artifact
-	  Star Compass enters the battlefield tapped.
-	  {T}: Add to your mana pool one mana of any color that a basic land you control could produce.
-	*/
-	comes_into_play_tapped(player, card, event);
-	return card_fellwar_stone(player, card, event);
+int card_star_compass(int player, int card, event_t event)
+{
+  /* Star Compass |2
+   * 	  Artifact
+   * 	  Star Compass enters the battlefield tapped.
+   * 	  {T}: Add to your mana pool one mana of any color that a basic land you control could produce. */
+
+  comes_into_play_tapped(player, card, event);
+  if (event == EVENT_CHANGE_TYPE && affect_me(player, card))
+  {
+    card_instance_t* instance = get_card_instance(player, card);
+    for (int c = 0; c < active_cards_count[player]; ++c)
+      if (in_play(player, c) && is_what(player, c, TYPE_LAND) && has_subtype(player, c, SUBTYPE_BASIC) &&
+          get_colors_of_mana_land_could_produce_ignoring_costs(player, c))
+      {
+        int colors = get_color_of_mana_produced_by_id(get_id(player, card), COLOR_TEST_ANY_COLORED, player);
+        instance->card_color = (uint8_t)colors;
+        instance->mana_color = (uint8_t)colors;
+      }
+  }
+  card_instance_t* instance = get_card_instance(player, card);
+  if (instance->mana_color == 0 || get_card_instance(player, card)->mana_color == COLOR_TEST_COLORLESS)
+  {
+    if (event == EVENT_CAN_ACTIVATE && player == AI)
+      return 0;
+    if (event == EVENT_ACTIVATE && can_produce_mana(player, card))
+    {
+      produce_mana_tapped(player, card, COLOR_COLORLESS, 0);
+      return 0;
+    }
+    if (event == EVENT_COUNT_MANA)
+      return 0;
+  }
+  return mana_producer(player, card, event);
 }
 
 int card_stormscape_battlemage(int player, int card, event_t event){
-	/*
-	  Stormscape Battlemage |2|U
-	  Creature - Metathran Wizard 2/2
-	  Kicker {W} and/or {2}{B}
-	  When Stormscape Battlemage enters the battlefield, if it was kicked with its {W} kicker, you gain 3 life.
-	  When Stormscape Battlemage enters the battlefield, if it was kicked with its {2}{B} kicker, destroy target nonblack creature. That creature can't be regenerated.
-	*/
+  /* Stormscape Battlemage |2|U
+   * 	  Creature - Metathran Wizard 2/2
+   * 	  Kicker {W} and/or {2}{B}
+   * 	  When Stormscape Battlemage enters the battlefield, if it was kicked with its {W} kicker, you gain 3 life.
+   * 	  When Stormscape Battlemage enters the battlefield, if it was kicked with its {2}{B} kicker, destroy target nonblack creature. That creature can't be regenerated. */
 
 	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
 		target_definition_t td;
@@ -2050,13 +2162,11 @@ At the beginning of each player's upkeep, that player returns a creature he or s
 }
 
 int card_sunscape_battlemage(int player, int card, event_t event){
-	/*
-	  Sunscape Battlemage |2|W
-	  Creature - Human Wizard 2/2
-	  Kicker {1}{G} and/or {2}{U} (You may pay an additional {1}{G} and/or {2}{U} as you cast this spell.)
-	  When Sunscape Battlemage enters the battlefield, if it was kicked with its {1}{G} kicker, destroy target creature with flying.
-	  When Sunscape Battlemage enters the battlefield, if it was kicked with its {2}{U} kicker, draw two cards.
-	*/
+  /* Sunscape Battlemage |2|W
+   * 	  Creature - Human Wizard 2/2
+   * 	  Kicker {1}{G} and/or {2}{U} (You may pay an additional {1}{G} and/or {2}{U} as you cast this spell.)
+   * 	  When Sunscape Battlemage enters the battlefield, if it was kicked with its {1}{G} kicker, destroy target creature with flying.
+   * 	  When Sunscape Battlemage enters the battlefield, if it was kicked with its {2}{U} kicker, draw two cards. */
 
 	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
 		target_definition_t td;
@@ -2160,7 +2270,7 @@ int card_terminal_moraine(int player, int card, event_t event){
 			choice = CHOICE_TUTOR_LAND;
 		}
 		instance->info_slot = choice;
-		if( ! IS_AI(player) ){
+		if( !IS_AI(player) && !paying_mana() ){
 			choice = DIALOG(player, card, event, DLG_RANDOM,
 							"Produce mana", 1, 1,
 							"Sac & Tutor basic land", 1, 5);
@@ -2193,11 +2303,10 @@ int card_terminal_moraine(int player, int card, event_t event){
 }
 
 int card_terminate(int player, int card, event_t event){
-	/*
-	  Terminate |B|R
-	  Instant
-	  Destroy target creature. It can't be regenerated.
-	*/
+  /* Terminate |B|R
+   * 	  Instant
+   * 	  Destroy target creature. It can't be regenerated. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -2279,13 +2388,12 @@ int card_thornscape_familiar(int player, int card, event_t event)
 }
 
 int card_thunderscape_battlemage(int player, int card, event_t event){
-	/*
-	  Thunderscape Battlemage |2|R
-	  Creature - Human Wizard 2/2
-	  Kicker {1}{B} and/or {G} (You may pay an additional {1}{B} and/or {G} as you cast this spell.)
-	  When Thunderscape Battlemage enters the battlefield, if it was kicked with its {1}{B} kicker, target player discards two cards.
-	  When Thunderscape Battlemage enters the battlefield, if it was kicked with its {G} kicker, destroy target enchantment.
-	*/
+  /* Thunderscape Battlemage |2|R
+   * 	  Creature - Human Wizard 2/2
+   * 	  Kicker {1}{B} and/or {G} (You may pay an additional {1}{B} and/or {G} as you cast this spell.)
+   * 	  When Thunderscape Battlemage enters the battlefield, if it was kicked with its {1}{B} kicker, target player discards two cards.
+   * 	  When Thunderscape Battlemage enters the battlefield, if it was kicked with its {G} kicker, destroy target enchantment. */
+
 	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_CREATURE);
@@ -2342,14 +2450,13 @@ int card_thunderscape_familiar(int player, int card, event_t event)
 }
 
 int card_treva_charm(int player, int card, event_t event){
-/*
-Treva's Charm |W|U|G
-Instant
-Choose one —
-• Destroy target enchantment.
-• Exile target attacking creature.
-• Draw a card, then discard a card.
-*/
+  /* Treva's Charm |W|U|G
+   * Instant
+   * Choose one ï¿½
+   * ï¿½ Destroy target enchantment.
+   * ï¿½ Exile target attacking creature.
+   * ï¿½ Draw a card, then discard a card. */
+
 	if( ! IS_GS_EVENT(player, card, event) ){
 		return 0;
 	}
@@ -2448,7 +2555,7 @@ As ~ enters the battlefield, choose a color.
 
 	// original code : 0x4e4a34
 
-	if( event == EVENT_ABILITIES && affect_me(player, card) && ! is_humiliated(player, card) ){
+	if( event == EVENT_ABILITIES && affect_me(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		event_result |= get_card_instance(player, card)->info_slot;
 	}
 
@@ -2460,13 +2567,17 @@ As ~ enters the battlefield, choose a color.
 }
 
 int card_warped_devotion(int player, int card, event_t event){
+  /* Warped Devotion	|2|B
+   * Enchantment
+   * Whenever a permanent is returned to a player's hand, that player discards a card. */
+
 	/*
 	  0x4151A0
 	  Warped Devotion |2|B
 	  Enchantment
 	  Whenever a permanent is returned to a player's hand, that player discards a card.
 	*/
-	if( ! is_humiliated(player, card) ){
+	if( ! is_humiliated(player, card, AL_TRIG) ){
 		if( trigger_condition == TRIGGER_BOUNCE_PERMANENT ){
 			if( affect_me( player, card) && reason_for_trigger_controller == player ){
 				if( trigger_cause != -1 ){ //Won't trigger for tokens

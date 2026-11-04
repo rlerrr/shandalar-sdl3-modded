@@ -19,7 +19,7 @@ FIELDS = ("oracle_id", "name", "oracle_text", "mana_cost", "type_line", "power",
 def registry():
     rows = []
     for line in (ROOT / "src/magic/src/carddata.c").read_text().splitlines():
-        match = re.search(r'\{\s*(?:0|255),\s*".*?",\s*\{0\},\s*(-?\d+),.*?,\s*(\w+),\s*0x.*?/\*\s*(\d+):\s*(.*?)\s*\*/', line)
+        match = re.search(r'\{\s*\d+,\s*".*?",\s*(?:\{0\},\s*)?(-?\d+),.*?,\s*(\w+),\s*0x.*?/\*\s*(\d+):\s*(.*?)\s*\*/', line)
         if match:
             csvid, handler, iid, name = match.groups()
             rows.append({"csvid": int(csvid), "iid": int(iid), "name": name, "handler": handler,

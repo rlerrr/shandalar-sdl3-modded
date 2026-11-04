@@ -62,13 +62,16 @@ STATIC_ASSERT(offsetof(card_instance_t, counters5) == 0x121, counter5_offset);
 STATIC_ASSERT(offsetof(card_instance_t, unknown0x122) == 0x122, counter_padding_offset);
 STATIC_ASSERT(offsetof(card_instance_t, upkeep_cost) == 0x124, upkeep_array_offset);
 STATIC_ASSERT(offsetof(card_instance_t, counters_m1m1) == 0x12b, minus_one_counter_offset);
-STATIC_ASSERT(TARGET_TYPE_PLANESWALKER == 0x10000, host_planeswalker_bit);
-STATIC_ASSERT(COUNTER_end == COUNTER_SILVER + 1, complete_counter_range);
-STATIC_ASSERT(DFC_SYMBOL_MAX == DFC_SYMBOL_LAND, complete_dfc_range);
-STATIC_ASSERT(ICON_MAX == ICON_HEXPROOF_WHITE, complete_icon_range);
+STATIC_ASSERT(TARGET_TYPE_PLANESWALKER == 0x100, host_planeswalker_bit);
+STATIC_ASSERT(COUNTER_end == COUNTER_STASH + 1, complete_counter_range);
+STATIC_ASSERT(DFC_SYMBOL_MAX == DFC_SYMBOL_FAN_OPEN, complete_dfc_range);
+STATIC_ASSERT(ICON_MAX == ICON_DECAYED, complete_icon_range);
 STATIC_ASSERT(ICON_CANT_ACTIVATE != ICON_CANT_ACTIVATE_TAP, distinct_activation_icons);
+STATIC_ASSERT((PAUE_END_IF_TARGET_CHANGES_CONTROL &
+              (PAUE_ADD_SUBTYPE | PAUE_FORCE_PT | PAUE_FORCE_SUBTYPE | PAUE_FORCE_COLOR)) == 0,
+              distinct_control_duration);
 STATIC_ASSERT(ICON_LOST_ABILITIES != ICON_CANT_ACTIVATE, distinct_lost_ability_icon);
-STATIC_ASSERT(WAV_HIGHEST == WAV_ASCEND, complete_sound_range);
+STATIC_ASSERT(WAV_HIGHEST == WAV_DICE, complete_sound_range);
 STATIC_ASSERT((GA_GRAVE_ABILITY_MASK & GA_EMBALM) != 0, embalm_in_graveyard_mask);
 STATIC_ASSERT((GA_GRAVE_ABILITY_MASK & GA_INTERRUPT_ABILITY) == 0, interrupt_outside_graveyard_mask);
 STATIC_ASSERT(STATUS_DURATION_IN_EOT1 != STATUS_BASICLAND_DEPENDANT, distinct_effect_status_bits);

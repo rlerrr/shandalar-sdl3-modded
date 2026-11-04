@@ -1,6 +1,7 @@
 // -*- c-basic-offset: 2 -*-
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 #include "magic/src/duel_host.h"
 
 #ifndef __EMSCRIPTEN__
@@ -58,4 +59,15 @@ backtrace_and_abort(const char* header)
 {
   show_backtrace("Assertion failed", header);
   abort();
+}
+
+/* ManalinkEh 2022: 0x26c11d0; original functions/show_backtrace.c:50. */
+void fatal(const char *fmt, ...)
+{
+  char buf[2000];
+  va_list args;
+  va_start(args, fmt);
+  vsnprintf(buf, sizeof(buf), fmt, args);
+  va_end(args);
+  backtrace_and_abort(buf);
 }

@@ -1,8 +1,8 @@
-#include "platform/file_io.h"
 #include <sys/stat.h>
 #include <errno.h>
 
 #include "manalink.h"
+#include "platform/file_io.h"
 #include "card_id.h"
 
 #define ALIGN_COLUMNS	9	//align Manalink.csv Rearity columns with rarity bits in rarity.dat, check header *1
@@ -309,117 +309,10 @@ static void load_set(int player, int card, int num_set, int set){
 	}
 }
 
-static void make_pack(int pack_id, int enforce_rarity){
-	int i = 0;
-	int j = 0;
-	int k = 0;
-	int num_set = pack_id/8;
-
-	int set_cards = set_rs[num_set][0] + set_rs[num_set][1] + set_rs[num_set][2];	//Commons + UnCommons + Rares
-	int card = 0;
-	int card_id = 0;
-	int match = 0;
-
-	if( enforce_rarity == 0){	//IGNORE RARITY
-		for(i=0;i<15;i++){	//put cards in pack
-			card = internal_rand(set_cards);
-			card_id = in_set1[num_set][card].csvid;
-
-			// make sure this is not already in the pack
-			for(j=0;j<i;j++){
-				if(packs[pack_id][j] == card_id){
-					i--;	//rerun loop for new card_id
-					match =1;
-					break;
-				}
-			}
-			if (match ==0)
-				packs[pack_id][i] = card_id;
-
-			match =0;
-		}
-	}
-	else if( enforce_rarity == 1){	//ENFORCE RARITY, put in each pack 1R +3U +11C, // for a few sets, count uncommons as rares TBD
-		for(i=0;i<15;i++){	//put cards in pack
-			int k1 =0;
-
-			if (i<11) {	//put 11C
-				card = internal_rand(set_rs[num_set][0]);	// rand between set num commons
-				k=0;
-				for(k=0; k < set_cards; k++) {
-					if (in_set1[num_set][k].rarity == COMMON) {
-						k1++;
-					}
-					if (k1 == card)
-					break;
-
-				}
-			}
-			else if (i<14){	//put 3U
-				card = internal_rand(set_rs[num_set][1]);	// rand between set num uncommons
-				k=0;
-				for(k=0; k < set_cards; k++) {
-					if (in_set1[num_set][k].rarity == UNCOMMON) {
-						k1++;
-					}
-					if (k1 == card)
-					break;
-				}
-			}
-			else if (i==14) {	//put 1 rare,
-				card = internal_rand(set_rs[num_set][2]);	// rand between set num rares
-				for(k=0; k < set_cards; k++) {
-					if (in_set1[num_set][k].rarity == RARE) {
-						k1++;
-					}
-					if (k1 == card)
-					break;
-				}
-			}
-
-			if (k != set_cards)
-				card_id = in_set1[num_set][k].csvid;
-
-			// make sure this is not already in the pack
-			for(j=0;j<i;j++){
-				if(packs[pack_id][j] == card_id){
-					i--;	//rerun loop for new card_id
-					match =1;
-					break;
-				}
-			}
-			if (match ==0)
-				packs[pack_id][i] = card_id;
-
-			match =0;
-		}
-	}
-	else if( enforce_rarity == 2){	//SINGLETON
-		for(i=0;i<15;i++){	//put cards in pack
-			card = internal_rand(set_cards);
-			card_id = in_set1[num_set][card].csvid;
-
-			while (in_set1[num_set][card].rarity == 7) {
-				card = internal_rand(set_cards);
-				card_id = in_set1[num_set][card].csvid;
-			}
-
-			/* // make sure this is not already used
-				if(in_set1[num_set][card].rarity == 7){
-					i--;	//rerun loop for new card_id
-					match =1;
-				}
-			*/
-				packs[pack_id][i] = card_id;
-				in_set1[num_set][card].rarity= 7;	//UNUSED = 7 IN RARITY STRUCT
-		}
-	}
-}
-
 #ifdef ROTISSERIE
 static void make_rotisserie_pack(void){
 	int set = sets[0];
-	//SDL_IOStream *file = shandalar_open_file_io("packs.txt", "a+");
+	//FILE *file = fopen("packs.txt", "a+");
 	int card;
 	for(card=0;card<500;card++){
 		rotisserie[card] = -1;
@@ -478,17 +371,17 @@ static void make_rotisserie_pack(void){
 			}
 			rotisserie[idx] = card;
 			count++;
-			//shandalar_io_printf(file,"Card=%s Pack %d, position: %d\n", c->name, count, idx );
+			//fprintf(file,"Card=%s Pack %d, position: %d\n", c->name, count, idx );
 		}
 	}
 
 	// print out the deck list
 	int i;
 	for(i=0;i<500;i++){
-		//shandalar_io_printf(file,"Deck %d: %d\n", i, rotisserie[i] );
+		//fprintf(file,"Deck %d: %d\n", i, rotisserie[i] );
 	}
 
-	//shandalar_io_close(file);
+	//fclose(file);
 }
 #endif
 
@@ -508,7 +401,7 @@ static int get_best_card_in_pack(int player, int cards_left, int* pack){
 			card_ptr_t* c = cards_ptr[ card ];
 			card_data_t* card_d = &cards_data[ get_internal_card_id_from_csv_id( card ) ];
 			//card_data_t* card_d = &cards_data[ card ];
-			//shandalar_io_printf(file,"it is %d\n", card );
+			//fprintf(file,"it is %d\n", card );
 			// keep track of our backup pick
 			int score = c->ai_base_value - internal_rand(10);
 			if( score > max_score_backup ){
@@ -585,11 +478,11 @@ static void make_AI_picks(int pack, int pick){
 		else{
 			which_pack = pack * 8 + which_pack;
 		}
-		//shandalar_io_printf(file,"player %d (pick %d)is picking out of pack %d:\n", player, 15*pack+pick, which_pack );
+		//fprintf(file,"player %d (pick %d)is picking out of pack %d:\n", player, 15*pack+pick, which_pack );
 
 		int best_card = get_best_card_in_pack(player, 15-pick, packs[which_pack]);
 
-		//shandalar_io_printf(file,"pick made\n" );
+		//fprintf(file,"pick made\n" );
 
 		int card = packs[which_pack][best_card];
 		picks[player][15*pack+pick] = card;
@@ -697,7 +590,7 @@ static void review_picks(int pack){
 	for(i=0;i<15*(pack+1);i++){
 		deck[i] = get_internal_card_id_from_csv_id( picks[0][i] );
 	}
-	show_deck( HUMAN, deck_ptr[HUMAN], 500, "Review your picks", 0, 0x7375B0 );
+	show_deck( HUMAN, deck_ptr[HUMAN], 500, "Review your picks", 0, gs_done_008b40e0 );
 }
 
 static void build_deck(const char *deck_name, int player){
@@ -808,233 +701,4 @@ static int choose_set(int player, int card, int setnum)
 	}
 
   return set;
-}
-
-int card_draft(int player, int card, event_t event){
-	if (ai_is_speculating == 1){
-		return 0;
-	}
-
-	if( trigger_condition == TRIGGER_UPKEEP && affect_me(player, card) ){
-		if(event == EVENT_TRIGGER){
-			event_result |= RESOLVE_TRIGGER_MANDATORY;
-		}
-		else if(event == EVENT_RESOLVE_TRIGGER){
-			// put our hand back into the deck
-
-			int count = 0;
-			while( count < active_cards_count[HUMAN]){
-				if(! in_play(HUMAN, count) ){
-					put_on_top_of_deck(HUMAN, count);
-				}
-				count++;
-			}
-
-			// decide if rarity should be enforced
-			int j;
-			/*
-			for(j=0;j<2000;j++){
-				used[j] = 0;
-			}
-			*/
-
-			// empty out picks
-			for(j=0;j<100;j++){
-				int k=0;
-				for(k=0;k<8;k++){
-					picks[k][j] = -1;
-				}
-			}
-
-			// empty out sets
-			for(j=0;j<3;j++){
-				sets[j]= -1;
-			}
-
-#ifdef ROTISSERIE
-			// Rotisserie actually works badly, so I've removed it - Gargaroz
-			int enforce_rarity = do_dialog(HUMAN, player, card, -1, -1, " Ignore Rarity\n Enforce Rarity\nSingleton Draft\nRotisserie ", 0);
-#else
-			int enforce_rarity = do_dialog(HUMAN, player, card, -1, -1, " Ignore Rarity\n Enforce Rarity\n Singleton Draft", 0);
-#endif
-
-			// pick the sets
-			int num_sets = 3;
-			if( enforce_rarity == 3 ){
-				num_sets = 1;
-			}
-
-			for (j = 0; j < num_sets; ++j){
-				sets[j] = choose_set(player, card, j);
-				set_name[j] = get_set_name(sets[j]);
-			}
-
-			// empty out sets cards
-			for(j=0;j<3;j++){
-				int k=0;
-				for(k=0;k<1000;k++){
-					unsigned char i=0;
-					for(i=0;i<2;i++){
-						in_set1[j][k].csvid = -1;
-						in_set1[j][k].rarity = -1;
-					}
-				}
-			}
-			// empty out RARITIES
-			for(j=0;j<3;j++){
-				int k=0;
-				for(k=0;k<3;k++){
-					set_rs[k][j] = 0;
-				}
-			}
-			// load sets
-			load_set(player, card, 0, sets[0]);
-			load_set(player, card, 1, sets[1]);
-			load_set(player, card, 2, sets[2]);
-
-			if( enforce_rarity == 1){	//enforce rarity
-				char buffer[500];
-				for ( j =0; j< 3; j++) {
-					//check if set has coded sufficient cards to enforce rarity
-					if ( (set_rs[j][0] < 11) || (set_rs[j][1] < 3) || (set_rs[j][2] < 1) )  {
-						SDL_IOStream *file = shandalar_open_file_io("draft_errors.txt", "a+");
-						shandalar_io_printf(file,"Not enough coded cards to enforce rarity for set %s (ID=%d), Commons=%d,	Uncommons=%d,	Rares=%d !\n", set_name[j], (sets[j] -ALIGN_IDS), set_rs[j][0], set_rs[j][1], set_rs[j][2] );	//-7 to be in accordance with expansions.h
-						shandalar_io_close(file);
-						snprintf(buffer, 500, "Not enough coded cards to enforce rarity for set %s (ID=%d), Commons=%d,	Uncommons=%d,	Rares=%d !\n", set_name[j], (sets[j] -ALIGN_IDS), set_rs[j][0], set_rs[j][1], set_rs[j][2] );	//-7 to be in accordance with expansions.h
-						do_dialog(HUMAN, player, card, -1, -1, buffer, 0);
-						lose_the_game(AI);
-						break;
-					}
-				}
-			}
-			else if( enforce_rarity == 2){	//SINGLETON
-				SDL_IOStream *file = shandalar_open_file_io("draft_errors.txt", "a+");
-				char buffer[500];
-				//check if sets have enough coded cards for SINGLETON
-				for ( j =0; j< 3; j++) {
-					if ( (set_rs[j][0] + set_rs[j][1] + set_rs[j][2]) < 120 )  {	// (num_players*15) = 90 or 120
-						shandalar_io_printf(file,"Not enough coded cards (< 120) to enforce SINGLETON for set %s (ID=%d), Commons=%d,	Uncommons=%d,	Rares=%d !\n", set_name[j], (sets[j] -ALIGN_IDS), set_rs[j][0], set_rs[j][1], set_rs[j][2] );	//-7 to be in accordance with expansions.h
-						snprintf(buffer, 500,"Not enough coded cards (< 120) to enforce SINGLETON for set %s (ID=%d), Commons=%d,	Uncommons=%d,	Rares=%d !\n", set_name[j], (sets[j] -7), set_rs[j][0], set_rs[j][1], set_rs[j][2] );	//-7 to be in accordance with expansions.h
-						do_dialog(HUMAN, player, card, -1, -1, buffer, 0);
-						lose_the_game(AI);
-						break;
-					}
-				}
-				if ( sets[1] == sets[0] ) {
-					if ( (set_rs[0][0] + set_rs[0][1] + set_rs[0][2]) < 240 )  {	//(num_players * 15*2) = 180 or 240
-						shandalar_io_printf(file,"Not enough coded cards (< 240)  to enforce SINGLETON for set %s (ID=%d), where sets[0] == sets[1]  !\n", set_name[0], (sets[0] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
-						snprintf(buffer, 500,"Not enough coded cards (< 240) to enforce SINGLETON for set %s (ID=%d), where set1 = set2 , Restart draft !", set_name[0], (sets[0] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
-						do_dialog(HUMAN, player, card, -1, -1, buffer, 0);
-						lose_the_game(AI);
-					}
-					if ( sets[2] == sets[1] ) {
-						if ( (set_rs[0][0] + set_rs[0][1] + set_rs[0][2]) < 360 )  {	//(num_players * 15*3) = 270 or 360
-							shandalar_io_printf(file,"Not enough coded cards (< 360)  to enforce SINGLETON for set %s (ID=%d), where sets[0] == sets[1]== sets[2] !\n", set_name[0], (sets[0] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
-							snprintf(buffer, 500,"Not enough coded cards (< 360) to enforce SINGLETON for set %s (ID=%d), where set1 == set2== set3 , Restart draft !", set_name[0], (sets[0] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
-							do_dialog(HUMAN, player, card, -1, -1, buffer, 0);
-							lose_the_game(AI);
-						}
-					}
-				}
-				if ( sets[1] == sets[2] ) {
-					if ( (set_rs[1][0] + set_rs[1][1] + set_rs[1][2]) < 240 )  {	//(num_players * 15*2) = 180 or 240
-						shandalar_io_printf(file,"Not enough coded cards (< 240)  to enforce SINGLETON for set %s (ID=%d), where sets[1] == sets[2]  !\n", set_name[1], (sets[1] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
-						snprintf(buffer, 500,"Not enough coded cards (< 240) to enforce SINGLETON for set %s (ID=%d), where set2 == set3 , Restart draft !", set_name[1], (sets[1] -ALIGN_IDS));	//-7 to be in accordance with expansions.h
-						do_dialog(HUMAN, player, card, -1, -1, buffer, 0);
-						lose_the_game(AI);
-					}
-				}
-
-				shandalar_io_close(file);
-			}
-
-			if( enforce_rarity == 3 ){	//Rotisserie
-#ifdef ROTISSERIE
-				// make 1 giant pack
-				make_rotisserie_pack();
-
-				// keep making picks until the rotisserie is empty
-				int current_player = internal_rand(8);
-				int pivot_player1 = current_player;
-				int pivot_player2 = pivot_player1 - 1;
-				if( pivot_player2 == -1 ){ pivot_player2 = 7; }
-				int direction = 1;
-				int pick_count = 0;
-				char buffer[1000];
-				int pos = 0;
-				while( rotisserie[0] > -1 ){
-					if( current_player == 0 ){
-						if( pivot_player1 != 0 || direction != 1 ){
-							do_dialog(HUMAN, player, card, -1, -1, buffer, 0);
-						}
-						make_human_pick_rotisserie();
-						pos += scnprintf(buffer + pos, 1000-pos, "\n ");
-					}
-					else{
-						//SDL_IOStream *file = shandalar_open_file_io("rot.txt", "a+");
-						//int pick =
-						make_AI_picks_rotisserie(current_player);
-						pos += scnprintf(buffer + pos, 1000-pos, "\n %d picks %s", current_player+1, cards_ptr[ picks[current_player][pick_count] ]->full_name );
-						//shandalar_io_printf(file, "%d picks %s (%d)\n", current_player, cards_ptr[ picks[current_player][pick_count] ]->full_name, pick  );
-						//shandalar_io_close(file);
-					}
-
-					if( current_player == pivot_player2 && direction == 1 ){
-						direction = -1;
-						pick_count++;
-					}
-					else if( current_player == pivot_player1 && direction == -1 ){
-						direction = 1;
-						pick_count++;
-					}
-					else{
-						current_player += direction;
-						if( current_player == -1 ){ current_player = 7; }
-						if( current_player == 8 ){ current_player = 0; }
-					}
-				}
-#endif
-			}
-			else{
-					// make the packs
-					for(count=0;count<24;count++){
-						/*if (sets[count/8] >13) {
-							make_pack(count, 0);	//ignore rarity for custom sets
-						}
-						else
-						*/make_pack(count, enforce_rarity);
-
-					}
-
-					// do the picks
-					for (j=0;j<3;j++){
-						int i;
-						for (i=0;i<15;i++){
-							make_human_pick(j, i);
-							make_AI_picks(j, i);
-						}
-
-						if( j < 2 ){
-							review_picks(j);
-						}
-					}
-
-				}
-			// build the decks
-			build_deck("Draft - Human", 0);
-
-			//build the AI decks
-			for(j = 1;j<8;j++){
-				char buffer3[50];
-				snprintf(buffer3, 50, "Draft Opponent %d", j );
-				make_deck(j);
-				build_deck(buffer3, j);
-			}
-
-			// stop the game
-			lose_the_game(AI);
-
-		}
-	}
-	return 0;
 }

@@ -58,6 +58,16 @@ int save_or_load_data(void *data, unsigned int size)
   return 1;
 }
 
+static unsigned char test_rules_state[32];
+size_t duel_rules_snapshot_size(void) { return sizeof(test_rules_state); }
+void duel_rules_snapshot_capture(void *p) { memcpy(p, test_rules_state, sizeof(test_rules_state)); }
+void duel_rules_snapshot_restore(const void *p) { memcpy(test_rules_state, p, sizeof(test_rules_state)); }
+void enumerate_ai_block_assignments(int player, int depth);
+void ai_assign_one_blocker(int player, int depth) { enumerate_ai_block_assignments(player, depth); }
+void enforce_minimum_blockers(void) {}
+card_instance_t *get_displayed_card_instance(int player, int card)
+{ return &global_displayed_card_instances[player][card]; }
+
 static int failures;
 extern int ai_blocker_player, g_ai_attacker_count, g_ai_combat_best_score;
 extern int ai_candidate_block_assignments[16], ai_attacker_blocker_counts[16];
@@ -243,6 +253,7 @@ static void reset(void)
 {
   int p, c;
   memset(global_card_instances, 0, sizeof(global_card_instances));
+  manalinkeh_initialize_card_extensions();
   memset(global_cards_data, 0, sizeof(global_cards_data));
   memset(&g_duel_summary, 0, sizeof(g_duel_summary));
   for (p = 0; p < 2; ++p)
@@ -413,6 +424,44 @@ static void test_untap_preparation(void)
         "Untap preparation must leave the final untap and status reset to Manalink's wrapper");
 }
 
+static void test_extension_state(void)
+{
+  card_instance_t *source, *dest;
+  reset();
+  source = &PLAYER_CARD_INSTANCE(0, 0);
+  dest = &PLAYER_CARD_INSTANCE(1, 1);
+  source->ext->sp_keywords2 = 123;
+  source->ext->legacy_upkeep_cost[2] = 7;
+  manalinkeh_memcpy_inst_and_ext(dest, source);
+  check(dest->ext != source->ext && dest->ext->sp_keywords2 == 123,
+        "Cross-card copies must retain independent extension storage");
+  dest->ext->sp_keywords2 = 456;
+  check(source->ext->sp_keywords2 == 123, "Copied extensions must not alias their source");
+  test_rules_state[0] = 17;
+  save_ai_search_state();
+  source->ext->sp_keywords2 = 999;
+  source->ext->legacy_upkeep_cost[2] = 99;
+  test_rules_state[0] = 0;
+  restore_ai_search_state();
+  check(source->ext->sp_keywords2 == 123 && source->ext->legacy_upkeep_cost[2] == 7 &&
+        test_rules_state[0] == 17, "AI rollback must restore extensions and imported rules state");
+  save_combat_simulation_state();
+  source->ext->sp_keywords2 = 999;
+  restore_combat_simulation_state();
+  check(source->ext->sp_keywords2 == 123, "Combat rollback must restore extension state");
+  InitializeCriticalSection(&g_duel_render_lock);
+  refresh_duel_display_cache();
+  check(global_displayed_card_instances[0][0].ext != source->ext &&
+        global_displayed_card_instances[0][0].ext->sp_keywords2 == 123,
+        "The display cache must own a separate extension snapshot");
+  source->ext->sp_keywords2 = 444;
+  check(global_displayed_card_instances[0][0].ext->sp_keywords2 == 123 &&
+        refresh_duel_display_cache() != 0 &&
+        global_displayed_card_instances[0][0].ext->sp_keywords2 == 444,
+        "Extension-only changes must invalidate the display cache");
+  DeleteCriticalSection(&g_duel_render_lock);
+}
+
 static void test_player_counters(void)
 {
   static const unsigned char expected[8] = {3, 4, 5, 0, 7, 8, 9, 0};
@@ -490,7 +539,7 @@ static void test_end_of_turn(void)
   const unsigned int transient = STATE_JUST_DRAWED | STATE_ATTACKING | STATE_BLOCKING |
       STATE_ATTACKED | STATE_ISBLOCKED | STATE_BLOCKED | STATE_UNKNOWN8000;
   const unsigned int persistent = STATE_IN_PLAY | STATE_TAPPED | STATE_JUST_CAST |
-      STATE_OWNED_BY_OPPONENT | STATE_VIGILANCE | STATE_SUMMONSICK | STATE_SUMMONSICK_BOTH;
+      STATE_OWNED_BY_OPPONENT | STATE_VIGILANCE | STATE_SUMMONSICK_BOTH;
 
   for (turn_player = 0; turn_player < 2; ++turn_player)
   {
@@ -740,6 +789,7 @@ static void test_combat_death_ordering(void)
 
 int main(void)
 {
+  test_extension_state();
   test_player_counters();
   test_combat_steps();
   test_multicolor_summary();

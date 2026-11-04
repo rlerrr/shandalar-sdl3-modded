@@ -117,8 +117,49 @@ genuinely shared, a typed adapter when signatures differ, or explicit
 Manalink-owned state when the SDL engine has no owner.  Do not add no-op linker
 stubs.
 
-## Known runtime hazard
+## October 2022 migration
 
-The imported AI save/restore code still contains raw MOK address assumptions.
-The target is not runtime-ready until those snapshots are converted to named
-host state or removed from the selected dependency closure.
+The recovered October 2022 source is integrated into the static target. MOK
+annotations resolve EXE references to source functions and shared storage. AI
+snapshots save named host and extension state; no contiguous EXE memory ranges
+are copied. Card extensions and display extensions have independent banks, and
+live card/activation copies preserve the destination's extension pointer.
+
+Haste has one canonical keyword bit, `SP_KEYWORD_HASTE`. Attack and tap-cost
+permissions are derived separately so effects granting only one permission work.
+The host's underlying continuous-control flag lives in the extension: its old
+state bit is `STATE_STIFLED` in the recovered engine and cannot be shared.
+
+The host's control-change duration uses a separate flag above the native pump
+flags, and stores its original target controller outside the new subtype/color
+slots. Suspend grants the same haste keyword through that duration mechanism.
+Event range and action-sentinel comparisons explicitly use unsigned arithmetic
+so native MSVC-compatible enum behavior matches WebAssembly.
+
+### Validation, November 4, 2026
+
+- Native x86 and WebAssembly application/test builds link successfully.
+- The same 139 focused engine/card cases pass on both targets, including all
+  summoning-sickness scenarios, suspend control loss, AI snapshots, handler
+  overrides, and the repaired Skyclave Basilica binding.
+- All 177 behavior cases whose former dummy handlers are recovered pass natively.
+  Their obsolete unimplemented expectations were removed.
+- Behavior shard 0 of 100 (849 cases) reports 843 passes, five known failures,
+  one unimplemented card (Pirate's Prize), and no unexpected failures. Seven
+  obsolete known-failure entries were removed after verified passes.
+- The 871 recipe-generator tests and nine card-data importer tests pass.
+- The compiled-source pointer audit preprocesses 169 imported translation units
+  and finds no absolute executable-address pointer casts, including indexed
+  arithmetic references. Excluded historical source aggregates are not runtime
+  code and are outside this audit.
+- Native ABI, extension-copy/snapshot, dynamic-dialog-template, and GDI checks
+  pass. The separate `winuser_compat_test` currently fails its window-ordering
+  assertion at `GetWindow(parent, GW_CHILD) == child`; that remains unresolved.
+
+These are sampled rules checks, not a complete rules certification. The full
+84,820-case behavior suite and 24,458-case catalog suite have not been completed.
+New high-IID cards are available to duels, but campaign eligibility remains
+limited by its existing 14-bit card-ID field. The storm reimplementation remains
+preserved on `codex/storm-reimplementation-2020`, outside this integration branch.
+
+See README.md for the source revision and card-data reconstruction command.

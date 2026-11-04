@@ -24,26 +24,29 @@ static int scheme_a_reckoning_approaches(int player, int card, event_t event)
 {
   /* A Reckoning Approaches	""
    * Scheme
-   * When you set this scheme in motion, look at the top six cards of your library. You may put a creature card from among them onto the battlefield. Put the rest on the bottom of your library in any order. */
+   * When you set this scheme in motion, look at the top six cards of your library. You may put a
+   * creature card from among them onto the battlefield. Put the rest on the bottom of your library
+   * in any order. */
 
   if (event == EVENT_SET_IN_MOTION)
-	{
-	  int n = count_deck(player);
-	  n = MIN(n, 6);
-	  if (n > 0)
-		{
-		  test_definition_t this_test;
-		  new_default_test_definition(&this_test, TYPE_CREATURE, "Select a creature card.");
-		  this_test.create_minideck = n;
-		  this_test.no_shuffle = 1;
+  {
+    int n = count_deck(player);
+    n = MIN(n, 6);
+    if (n > 0)
+    {
+      test_definition_t this_test;
+      new_default_test_definition(&this_test, TYPE_CREATURE, "Select a creature card.");
+      this_test.create_minideck = n;
+      this_test.no_shuffle = 1;
 
-		  if (new_global_tutor(player, player, TUTOR_FROM_DECK, TUTOR_PLAY, 0, AI_MAX_CMC, &this_test) != 1)
-			--n;
+      if (new_global_tutor(player, player, TUTOR_FROM_DECK, TUTOR_PLAY, 0, AI_MAX_CMC,
+                           &this_test) >= 0)
+        --n;
 
-		  if (n > 0)
-			put_top_x_on_bottom(player, player, n);
-		}
-	}
+      if (n > 0)
+        put_top_x_on_bottom(player, player, n);
+    }
+  }
   return 0;
 }
 

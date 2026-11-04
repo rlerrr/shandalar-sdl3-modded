@@ -86,7 +86,7 @@ with 7-Zip, copies the existing ZIP, verifies archive contents, and writes
 refuses to overwrite an existing package. The web host's mod picker is in the
 sibling `shandalar-dot-dev` repository.
 
-The engine card table is generated from the 2020 `ct_all.csv` and `Manalink.csv`;
+The engine card table is reconstructed from the October 2022 `Magic.exe`;
 see [the importer instructions](tools/README.md). Use the matching `Cards.dat`
 and supporting resources from the same release.
 

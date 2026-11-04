@@ -349,7 +349,9 @@ if(SHANDALAR_BUILD_TESTS AND WIN32)
     COMMAND "${Python3_EXECUTABLE}" "${SHANDALAR_SRC_ROOT}/manalinkeh/tests/select_ai_bridge_functions.py"
             "${SHANDALAR_SRC_ROOT}/manalinkeh/functions" "${mok_ai_bridge_source}"
     DEPENDS ../manalinkeh/tests/select_ai_bridge_functions.py
-            ../manalinkeh/functions/ai.c ../manalinkeh/functions/targets.c
+            ../manalinkeh/functions/engine.c ../manalinkeh/functions/deck.c
+            ../manalinkeh/functions/windows.c ../manalinkeh/functions/static_host.c
+            ../manalinkeh/functions/targets.c
             ../manalinkeh/functions/events.c
     VERBATIM
   )

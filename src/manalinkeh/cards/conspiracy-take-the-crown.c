@@ -1,8 +1,10 @@
 #include "manalink.h"
 
+static int check_for_jared_carthalion_legacy(int player);
+
 // FUNCTIONS
 
-static int who_is_the_monarch(void){
+int who_is_the_monarch(void){
 	int result = -1;
 	CYCLE_ALL_CARDS(p, c, 	{
 								if( in_play(p, c) && get_id(p, c) == CARD_ID_THE_MONARCH ){
@@ -13,121 +15,153 @@ static int who_is_the_monarch(void){
 	return result;
 }
 
+/* ManalinkEh 2022: 0x220cad0; original cards/conspiracy-take-the-crown.c:16. */
+static int check_for_jared_carthalion_legacy(int player)
+{
+  card_instance_t *instance;
+  int result;
+  int card;
 
-static void you_become_the_monarch(int player){
-	int monarch_player = -1;
-	int monarch_card = -1;
-	CYCLE_ALL_CARDS(p, c, 	{
-								if( in_play(p, c) && get_id(p, c) == CARD_ID_THE_MONARCH ){
-									monarch_player = p;
-									monarch_card = c;
-								}
-							};
-	);
-	if( monarch_player == -1 ){
-		monarch_player = player;
-		monarch_card = generate_reserved_token_by_id(player, CARD_ID_THE_MONARCH);
-	}
-	else{
-		monarch_player = player;
-		monarch_card = gain_control_permanently(player, monarch_player, monarch_card);
-	}
+  if (active_cards_count[player] < 1)
+  {
+    return 0;
+  }
+  card = 0;
+  do
+  {
+    instance = in_play(player, card);
+    if (instance != NULL)
+    {
+      result = is_what(player, card, 0x80);
+      if (result != 0)
+      {
 
-	// Knights of the Black Rose effect;
-	/* Whenever an opponent becomes the monarch, if you were the monarch as the turn began, that player loses 2 life and you gain 2 life.*/
-	int c;
-	if( get_card_instance(monarch_player, monarch_card)->targets[0].player == 1-player ){
-		for(c=0; c<active_cards_count[1-player]; c++){
-			if( in_play(1-player, c) && ! is_humiliated(1-player, c) ){
-				if( get_id(1-player, c) == CARD_ID_KNIGHTS_OF_THE_BLACK_ROSE ){
-					lose_life(player, 2);
-					gain_life(1-player, 2);
-				}
-			}
-		}
-	}
+        instance = get_card_instance(player, card);
+        if (instance->info_slot_fn == jared_carthalion_effect)
+        {
+          return 1;
+        }
+      }
+    }
+    card = card + 1;
+  } while (card < active_cards_count[player]);
+  return 0;
+}
 
-	// Custodi Lich effect
-	/* Whenever you become the monarch, target player sacrifices a creature. */
-	int marked[2][100] = {{-1}};
-	for(c=0; c<active_cards_count[player]; c++){
-		if( in_play(player, c) && ! is_humiliated(player, c) ){
-			if( get_id(player, c) == CARD_ID_CUSTODI_LICH ){
-				target_definition_t td;
-				default_target_definition(player, c, &td, 0);
-				td.zone = TARGET_ZONE_PLAYERS;
-				td.allow_cancel = 0;
-				if( can_target(&td) && pick_target(&td, "TARGET_PLAYER") ){
-					card_instance_t *instance = get_card_instance(player, c);
-					test_definition_t test;
-					new_default_test_definition(&test, TYPE_CREATURE, "Select a creature to sacrifice.");
-					int sac = new_sacrifice(player, c, instance->targets[0].player,
-											SAC_CAUSED | SAC_NO_CANCEL | SAC_JUST_MARK | SAC_RETURN_CHOICE, &test);
-					instance->number_of_targets = 0;
-					if( sac ){
-						int k;
-						for(k=0; k<100; k++){
-							if( marked[BYTE2(sac)][k] == -1 ){
-								marked[BYTE2(sac)][k] = BYTE3(sac);
-							}
-							break;
-						}
-					}
-				}
-			}
-		}
-	}
-	int p;
-	c = 0;
-	for(p=0; p<2; p++){
-		while( marked[p][c] != -1 ){
-				kill_card(p, marked[p][c], KILL_SACRIFICE);
-				c++;
-		}
-	}
+void you_become_the_monarch(int player)
+{
+  if (check_for_jared_carthalion_legacy(player))
+    return;
+  int monarch_player = -1;
+  int monarch_card = -1;
+  CYCLE_ALL_CARDS(p, c, {
+    if (in_play(p, c) && get_id(p, c) == CARD_ID_THE_MONARCH)
+    {
+      monarch_player = p;
+      monarch_card = c;
+    }
+  };);
+  if (monarch_player == -1)
+  {
+    monarch_player = player;
+    monarch_card = generate_reserved_token_by_id(player, CARD_ID_THE_MONARCH);
+  }
+  else
+  {
+    // Native retains the previous controller for the following instance lookup.
+    monarch_card = gain_control_permanently(player, monarch_player, monarch_card);
+  }
+
+  // Knights of the Black Rose effect;
+  /* Whenever an opponent becomes the monarch, if you were the monarch as the turn began, that
+   * player loses 2 life and you gain 2 life.*/
+  int c;
+  if (get_card_instance(monarch_player, monarch_card)->targets[0].player == 1 - player)
+  {
+    for (c = 0; c < active_cards_count[1 - player]; c++)
+    {
+      if (in_play(1 - player, c) && !is_humiliated(1 - player, c, AL_TRIG))
+      {
+        if (get_id(1 - player, c) == CARD_ID_KNIGHTS_OF_THE_BLACK_ROSE)
+        {
+          lose_life(player, 2);
+          gain_life(1 - player, 2);
+        }
+      }
+    }
+  }
+
+  // Custodi Lich effect
+  /* Whenever you become the monarch, target player sacrifices a creature. */
+  int marked[2][100];
+  for (int p = 0; p < 2; ++p)
+    for (int i = 0; i < 100; ++i)
+      marked[p][i] = -1;
+  for (c = 0; c < active_cards_count[player]; c++)
+  {
+    if (in_play(player, c) && !is_humiliated(player, c, AL_TRIG))
+    {
+      if (get_id(player, c) == CARD_ID_CUSTODI_LICH)
+      {
+        target_definition_t td;
+        default_target_definition(player, c, &td, 0);
+        td.zone = TARGET_ZONE_PLAYERS;
+        td.allow_cancel = 0;
+        if (can_target(&td) && pick_target(&td, "TARGET_PLAYER"))
+        {
+          card_instance_t *instance = get_card_instance(player, c);
+          test_definition_t test;
+          new_default_test_definition(&test, TYPE_CREATURE, "Select a creature to sacrifice.");
+          int sac =
+              new_sacrifice(player, c, instance->targets[0].player,
+                            SAC_CAUSED | SAC_NO_CANCEL | SAC_JUST_MARK | SAC_RETURN_CHOICE, &test);
+          instance->number_of_targets = 0;
+          if (sac)
+          {
+            int k;
+            for (k = 0; k < 100; k++)
+            {
+              if (marked[BYTE2(sac)][k] == -1)
+              {
+                marked[BYTE2(sac)][k] = BYTE3(sac);
+              }
+              break;
+            }
+          }
+        }
+      }
+    }
+  }
+  int p;
+  c = 0;
+  for (p = 0; p < 2; p++)
+  {
+    while (marked[p][c] != -1)
+    {
+      kill_card(p, marked[p][c], KILL_SACRIFICE);
+      c++;
+    }
+  }
 }
 
 // EMBLEMS
-int card_the_monarch(int player, int card, event_t event){
-/* The Monarch	0x200f0f7
- * Emblem
- * At the beginning of your end step, draw a card.
- * Whenever a creature deals combat damage to you, its controller becomes the monarch. */
 
-	if( event == EVENT_BEGIN_TURN ){
-		get_card_instance(player, card)->targets[0].player = player;
-	}
+int card_the_monarch(int player, int card, event_t event)
+{
+  /* The Monarch	0x200f0f7
+   * Emblem
+   * At the beginning of your end step, draw a card.
+   * Whenever a creature deals combat damage to you, its controller becomes the monarch. */
 
-	card_instance_t* damage = damage_being_dealt(event);
-	if( damage && damage->damage_target_card == -1 && damage->damage_target_player == player)
-	{
-		if( !(damage->token_status & (STATUS_COMBAT_DAMAGE|STATUS_FIRST_STRIKE_DAMAGE)) ){
-			return 0;
-		}
-
-		if( ! is_what(damage->damage_source_player, damage->damage_source_card, TYPE_CREATURE) ){
-			return 0;
-		}
-
-		if( check_special_flags(damage->damage_source_player, damage->damage_source_card, SF_ATTACKING_PWALKER) ){
-			return 0;
-		}
-
-		get_card_instance(player, card)->targets[8].player = 66;
-	}
-
-	if( resolve_damage_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, card) ){
-		get_card_instance(player, card)->targets[8].player = 0;
-		give_control_of_self(player, card);
-	}
-
-	if( current_turn == player && eot_trigger(player, card, event) ){
-		draw_cards(player, 1);
-	}
-
-	return 0;
+  check_damage(1 - player, -1, event,
+               DDBM_MUST_DAMAGE_TRIGGERING_PLAYER | DDBM_MUST_BE_COMBAT_DAMAGE, player, card);
+  if (resolve_damage_trigger(player, card, event, DDBM_0, player, card) &&
+      !check_for_jared_carthalion_legacy(1 - player))
+    give_control_of_self(player, card);
+  if (current_turn == player && eot_trigger(player, card, event))
+    draw_cards(player, 1);
+  return 0;
 }
-
 
 // CONSPIRACY
 
@@ -138,7 +172,7 @@ int card_conspiracy_adrianas_valor(int player, int card, event_t event){
  * Whenever a creature you control with the chosen name attacks, you may pay |W.
  * If you do, that creature gains indestructible until end of turn. (Damage and effects that say "destroy" don't destroy it.) */
 
-	if (event == EVENT_DECLARE_ATTACKERS && !is_humiliated(player, card))
+	if (event == EVENT_DECLARE_ATTACKERS && !is_humiliated(player, card, AL_TRIG))
 	{
 		test_definition_t test;
 		default_test_definition(&test, TYPE_CREATURE);
@@ -146,12 +180,11 @@ int card_conspiracy_adrianas_valor(int player, int card, event_t event){
 		store_attackers(player, card, event, DAT_STORE_IN_INFO_SLOT | DAT_TRACK, player, -1, &test);
 	}
 
-	int amt = declare_attackers_trigger(player, card, event, DAT_STORE_IN_INFO_SLOT | DAT_TRACK, player, -1);
-	if( amt && has_mana(player, COLOR_WHITE, 1) )
-	{
+	dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 1);
+	if (event == EVENT_DAT_ABILITY){
 		card_instance_t* instance = get_card_instance(player, card);
 		unsigned char* attackers = (unsigned char*)(&instance->targets[2].player);
-		for (--amt; amt >= 0; --amt){
+		for (int amt = instance->targets[1].player - 1; amt >= 0; --amt){
 			if (in_play(current_turn, attackers[amt])){
 				charge_mana_while_resolving(player, card, event, player, COLOR_WHITE, 1);
 				if( spell_fizzled != 1 ){
@@ -457,17 +490,17 @@ int card_conspiracy_natural_unity(int player, int card, event_t event){
  * Creatures you control with the chosen name have:
  * "At the beginning of combat on your turn, you may pay |G. If you do, put a +1/+1 counter on this creature." */
 
-	if( beginning_of_combat(player, card, event, player, -1) ){
+	if( beginning_of_combat(player, card, event, player) ){
 		int i;
 		for(i=0; i<active_cards_count[player] && has_mana(player, COLOR_GREEN, 1); i++){
-			if( in_play(player, i) && is_what(player, i, TYPE_CREATURE) && ! is_humiliated(player, i) ){
+			if( in_play(player, i) && is_what(player, i, TYPE_CREATURE) && ! is_humiliated(player, i, AL_TRIG) ){
 				int choice = DIALOG(player, i, EVENT_ACTIVATE, DLG_NO_STORAGE, DLG_NO_CANCEL,
 									"Add +1/+1 counter", 1, 5,
 									"Decline",	1, 1);
 				if( choice == 1 ){
 					charge_mana(player, COLOR_GREEN, 1);
 					if( spell_fizzled != 1 ){
-						add_1_1_counter(player, i);
+						add_counters(player, card, player, i, COUNTER_P1_P1, 1);
 					}
 				}
 			}
@@ -523,8 +556,6 @@ int card_conspiracy_summoners_bond(int player, int card, event_t event){
  * (Start the game with this conspiracy face up in the command zone.)
  * Each creature you control assigns combat damage equal to its toughness rather than its power. */
 
-// WHITE
-
 /* Ballot Broker	|2|W	0x401000 (vanilla, the real effect is in "will_of_the_council_impl")
  * Creature - Human Advisor 2/3
  * While voting, you may vote an additional time. (The votes can be for different choices or for the same choice.) */
@@ -540,30 +571,40 @@ int card_conspiracy_summoners_bond(int player, int card, event_t event){
  * Whenever ~ attacks, return target creature card with converted mana cost X or less from your graveyard to the battlefield,
  * where X is the number of players you attacked with a creature this combat. */
 
-int card_liutenants_of_the_guard(int player, int card, event_t event){
-/* Lieutenants of the Guard	|4|W	0x200f057
- * Creature - Human Soldier 2/2
- * Council's dilemma - When ~ enters the battlefield, starting with you, each player votes for strength or numbers.
- * Put a +1/+1 counter on ~ for each strength vote and create a 1/1 |Swhite Soldier creature token for each numbers vote. */
+// WHITE
 
-	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+int card_liutenants_of_the_guard(int player, int card, event_t event)
+{
+  /* Lieutenants of the Guard	|4|W	0x200f057
+   * Creature - Human Soldier 2/2
+   * Council's dilemma - When ~ enters the battlefield, starting with you, each player votes for strength or numbers.
+   * Put a +1/+1 counter on ~ for each strength vote and create a 1/1 |Swhite Soldier creature token for each numbers vote. */
 
-	if( event == EVENT_ETB_ABILITY ){
-		char pos1[100] = "Strenght (+1/+1 counters on this)";
-		char pos2[100] = "Number (1/1 soldier tokens)";
-		int ai_priorities[2] = {10, 5};
-		int result = will_of_the_council(player, card, pos1, pos2, ai_priorities);
-		add_1_1_counters(player, card, BYTE0(result));
+  unsigned int vote_counts;
+  int result;
 
-		token_generation_t token;
-		default_token_definition(player, card, CARD_ID_SOLDIER, &token);
-		token.qty = BYTE1(result);
-		token.pow = token.tou = 1;
-		token.color_forced = get_sleighted_color_test(player, card, COLOR_TEST_WHITE);
-		generate_token(&token);
-	}
+  int ai_priorities[2];
+  token_generation_t token;
 
-	return 0;
+  etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+  if (event != EVENT_ETB)
+  {
+    return 0;
+  }
+  char pos1[100] = "Strenght (+1/+1 counters on this)";
+  char pos2[100] = "Number (1/1 soldier tokens)";
+  result = 0;
+  ai_priorities[0] = 10;
+  ai_priorities[1] = 5;
+  vote_counts = will_of_the_council(player, card, pos1, pos2, ai_priorities);
+  add_counters(player, card, player, card, COUNTER_P1_P1, vote_counts & 0xff);
+  default_token_definition(player, card, CARD_ID_SOLDIER, &token);
+  token.qty = (unsigned char)(vote_counts >> 8);
+  token.tou = 1;
+  token.pow = 1;
+  token.color_forced = ' ';
+  generate_token(&token);
+  return 0;
 }
 
 /* Noble Banneret	|2|W|W	0x0000000
@@ -579,7 +620,7 @@ int card_palace_jailer(int player, int card, event_t event){
  * When ~ enters the battlefield, exile target creature an opponent controls until an opponent becomes the monarch.
  * (That creature returns under its owner's control.) */
 
-	if( event == EVENT_STATIC_EFFECTS && affect_me(player, card) && ! is_humiliated(player, card) ){
+	if( event == EVENT_STATIC_EFFECTS && affect_me(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		if( get_card_instance(player, card)->info_slot == 66 && who_is_the_monarch() != player ){
 			true_return_from_oblivion(player, card);
 		}
@@ -637,7 +678,7 @@ int card_protector_of_the_crown(int player, int card, event_t event){
  * When ~ enters the battlefield, you become the monarch.
  * All damage that would be dealt to you is dealt to ~ instead. */
 
-	if( event == EVENT_PREVENT_DAMAGE && in_play(player, card) && ! is_humiliated(player, card) ){
+	if( event == EVENT_PREVENT_DAMAGE && in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		card_instance_t *damage = get_card_instance(affected_card_controller, affected_card);
 		if( damage->internal_card_id == damage_card && damage->damage_target_player == player &&
 			damage->damage_target_card == -1
@@ -682,7 +723,7 @@ int card_sanctum_prelate(int player, int card, event_t event){
 		get_card_instance(player, card)->info_slot = choose_a_number(player, "Select a number.", internal_rand(6)+1);
 	}
 
-	if( event == EVENT_MODIFY_COST_GLOBAL && in_play(player, card) && ! is_humiliated(player, card) ){
+	if( event == EVENT_MODIFY_COST_GLOBAL && in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		if( ! is_what(affected_card_controller, affected_card, TYPE_CREATURE) ){
 			if( get_cmc(affected_card_controller, affected_card) == get_card_instance(player, card)->info_slot ){
 				infinite_casting_cost();
@@ -700,7 +741,7 @@ int card_spectral_grasp(int player, int card, event_t event){
  * Enchanted creature can't attack you or a planeswalker you control.
  * Enchanted creature can't block creatures you control. */
 
-	if( in_play(player, card) && ! is_humiliated(player, card) && get_card_instance(player, card)->damage_target_player != -1 ){
+	if( in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) && get_card_instance(player, card)->damage_target_player != -1 ){
 		card_instance_t *instance = get_card_instance(player, card);
 
 		int p = instance->damage_target_player;
@@ -712,27 +753,39 @@ int card_spectral_grasp(int player, int card, event_t event){
 		}
 	}
 
+	if (!IS_AURA_EVENT(player, card, event) && event != EVENT_STATIC_EFFECTS){
+		return 0;
+	}
+
 	return disabling_aura(player, card, event);
 }
 
-int card_throne_warden(int player, int card, event_t event){
-/* Throne Warden	|1|W	0x200f07a
- * Creature - Human Soldier 2/2
- * At the beginning of your end step, if you're the monarch, put a +1/+1 counter on ~. */
-	if( current_turn == player && trigger_condition == TRIGGER_EOT && affect_me(player, card) ){
-		if( who_is_the_monarch() == player && eot_trigger(player, card, event) ){
-			add_1_1_counter(player, card);
-		}
-	}
-	return 0;
+int card_throne_warden(int player, int card, event_t event)
+{
+  /* Throne Warden	|1|W	0x200f07a
+   * Creature - Human Soldier 2/2
+   * At the beginning of your end step, if you're the monarch, put a +1/+1 counter on ~. */
+
+  int monarch;
+  if ((((current_turn == player) && (trigger_condition == TRIGGER_EOT)) && (card == affected_card)) &&
+      (player == affected_card_controller))
+  {
+    monarch = who_is_the_monarch();
+    if (monarch == player)
+    {
+      if (eot_trigger(monarch, card, event))
+      {
+        add_counters(monarch, card, monarch, card, COUNTER_P1_P1, 1);
+      }
+    }
+  }
+  return 0;
 }
 
 /* Wings of the Guard	|1|W	0x0000000
  * Creature - Bird 1/1
  * Flying
  * Melee (Whenever this creature attacks, it gets +1/+1 until end of turn for each opponent you attacked with a creature this combat.) */
-
-// BLUE
 
 /* Arcane Savant	|3|U|U	0x0000000
  * Creature - Human Wizard 3/3
@@ -748,6 +801,8 @@ int card_throne_warden(int player, int card, event_t event){
  * Creature - Bird 3/4
  * Flying
  * Whenever ~ attacks, you may goad target creature defending player controls. (Until your next turn, that creature attacks each combat if able and attacks a player other than you if able.) */
+
+// BLUE
 
 int card_expropriate(int player, int card, event_t event){
 /* Expropriate	|7|U|U	0x200f07f
@@ -851,7 +906,7 @@ int card_keeper_of_keys(int player, int card, event_t event){
 		}
 	}
 
-	if( in_play(player, card) && ! is_humiliated(player, card) ){
+	if( in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		if( event == EVENT_BLOCK_LEGALITY && affected_card_controller == 1-player && get_card_instance(player, card)->info_slot == 66 ){
 			event_result = 1;
 		}
@@ -864,29 +919,36 @@ int card_keeper_of_keys(int player, int card, event_t event){
 	return card_palace_sentinels(player, card, event);
 }
 
-int card_messenger_jays(int player, int card, event_t event){
-/* Messenger Jays	|4|U	0x200f08e
- * Creature - Bird 2/1
- * Flying
- * Council's dilemma - When ~ enters the battlefield, starting with you, each player votes for feather or quill.
- * Put a +1/+1 counter on ~ for each feather vote and draw a card for each quill vote.
- * For each card drawn this way, discard a card. */
+int card_messenger_jays(int player, int card, event_t event)
+{
+  /* Messenger Jays	|4|U	0x200f08e
+   * Creature - Bird 2/1
+   * Flying
+   * Council's dilemma - When ~ enters the battlefield, starting with you, each player votes for feather or quill.
+   * Put a +1/+1 counter on ~ for each feather vote and draw a card for each quill vote.
+   * For each card drawn this way, discard a card. */
 
-	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+  unsigned int vote_counts_or_quill_votes;
+  int result;
 
-	if( event == EVENT_ETB_ABILITY ){
-		char pos1[100] = "Feather (+1/+1 counters on this)";
-		char pos2[100] = "Quill (Draw & discard)";
-		int ai_priorities[2] = {10, 5};
-		int result = will_of_the_council(player, card, pos1, pos2, ai_priorities);
-		add_1_1_counters(player, card, BYTE0(result));
+  int ai_priorities[2];
 
-		draw_cards(player, BYTE1(result));
-
-		new_multidiscard(player, BYTE1(result), 0, player);
-	}
-
-	return 0;
+  etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+  if (event != EVENT_ETB)
+  {
+    return 0;
+  }
+  char pos1[100] = "Feather (+1/+1 counters on this)";
+  char pos2[100] = "Quill (Draw & discard)";
+  result = 0;
+  ai_priorities[0] = 10;
+  ai_priorities[1] = 5;
+  vote_counts_or_quill_votes = will_of_the_council(player, card, pos1, pos2, ai_priorities);
+  add_counters(player, card, player, card, COUNTER_P1_P1, vote_counts_or_quill_votes & 0xff);
+  vote_counts_or_quill_votes = vote_counts_or_quill_votes >> 8 & 0xff;
+  draw_cards(player, vote_counts_or_quill_votes);
+  new_multidiscard(player, vote_counts_or_quill_votes, 0, player);
+  return 0;
 }
 
 int card_skittering_crustacean(int player, int card, event_t event){
@@ -895,7 +957,7 @@ int card_skittering_crustacean(int player, int card, event_t event){
  * |6|U: Monstrosity 4. (If this creature isn't monstrous, put four +1/+1 counters on it and it becomes monstrous.)
  * As long as ~ is monstrous, it has hexproof. (It can't be the target of spells or abilities your opponents control.) */
 
-	if( in_play(player, card) && ! is_humiliated(player, card) ){
+	if( in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		if( event == EVENT_ABILITIES && affect_me(player, card) && is_monstrous(player, card) ){
 			hexproof(player, card, event);
 		}
@@ -915,13 +977,13 @@ int card_skittering_crustacean(int player, int card, event_t event){
  * Flash
  * You may have ~ enter the battlefield as a copy of any creature on the battlefield. */
 
-// BLACK
-
 /* Archdemon of Paliano	|2|B|B	0x0000000
  * Creature - Demon 5/4
  * Draft ~ face up.
  * As long as ~ is face up during the draft, you can't look at booster packs and must draft cards at random. After you draft three cards this way, turn ~ face down. (You may look at cards as you draft them.)
  * Flying */
+
+// BLACK
 
 int card_capital_punishment(int player, int card, event_t event){
 /* Capital Punishment	|4|B|B	0x200f098
@@ -948,141 +1010,128 @@ int card_capital_punishment(int player, int card, event_t event){
 	return basic_spell(player, card, event);
 }
 
+int deadly_designs_legacy(int player, int card, event_t event)
+{
+  card_instance_t *instance = get_card_instance(player, card);
+  other_leaves_play(player, card, instance->targets[0].player, instance->targets[0].card, event, 1,
+                    0);
+  if (event == EVENT_LEAVES_PLAY_ABILITY)
+  {
+    int protections = instance->targets[1].player;
+    instance->number_of_targets = 0;
+    target_definition_t td;
+    default_target_definition(player, card, &td, TYPE_CREATURE);
+    td.allow_cancel = 2;
+    td.illegal_abilities = protections < 0 ? KEYWORD_PROT_BLACK : protections;
+    pick_up_to_n_targets(&td, "TARGET_CREATURE", 2);
+    for (int i = 0; i < instance->number_of_targets; ++i)
+      if (validate_target(player, card, &td, i))
+        kill_card(instance->targets[i].player, instance->targets[i].card, KILL_DESTROY);
+  }
+  else if (event != EVENT_CLEANUP)
+    return 0;
+  kill_card(player, card, KILL_EXILE);
+  return 0;
+}
 
 /* Custodi Lich	|3|B|B		0x200f061 (Palace Sentinels, the rest of the effect is in "you_become_the_monarch")
  * Creature - Zombie Cleric 4/2
  * When ~ enters the battlefield, you become the monarch.
  * Whenever you become the monarch, target player sacrifices a creature. */
 
-int deadly_designs_legacy(int player, int card, event_t event){
-
-	if( event == EVENT_GRAVEYARD_FROM_PLAY ){
-		card_instance_t *instance = get_card_instance(player, card);
-
-		int p = instance->targets[0].player;
-		int c = instance->targets[0].card;
-
-		if( affect_me(p, c) ){
-			if( get_card_instance(p, c)->kill_code == KILL_SACRIFICE ){
-
-				target_definition_t td;
-				default_target_definition(player, card, &td, TYPE_CREATURE);
-				td.allow_cancel = 2; // "Done" button
-				td.illegal_abilities = instance->targets[1].player > -1 ?
-										instance->targets[1].player : KEYWORD_PROT_BLACK;
-
-				int i;
-				for(i=0; i<2; i++){
-					new_pick_target(&td, "TARGET_CREATURE", i, 0);
-				}
-				for(i=0; i<instance->number_of_targets; i++){
-					if( validate_target(player, card, &td, i) ){
-						kill_card(instance->targets[i].player, instance->targets[i].card, KILL_DESTROY);
-					}
-				}
-			}
-			kill_card(player, card, KILL_EXILE);
-		}
-	}
-
-	return 0;
+int deadly_designs_effect(int player, int card, event_t event)
+{
+  card_instance_t *instance = get_card_instance(player, card);
+  if (event == EVENT_STATIC_EFFECTS)
+  {
+    if (affect_me(player, card) && stack_size == 0 && instance->targets[0].player >= 0)
+    {
+      if (get_id(instance->targets[0].player, instance->targets[0].card) != CARD_ID_DEADLY_DESIGNS)
+      {
+        instance->targets[0].player = instance->targets[0].card = -1;
+        kill_card(player, card, KILL_EXILE);
+      }
+      int found = 0;
+      for (int p = 0; p < 2; ++p)
+        for (int c = 0; c <= active_cards_count[p]; ++c)
+          if (in_play(p, c) && instance->targets[0].player == p && instance->targets[0].card == c)
+          {
+            found = 1;
+            break;
+          }
+      if (!found)
+        kill_card(player, card, KILL_EXILE);
+    }
+  }
+  else if (IS_GAA_EVENT(event))
+  {
+    int p = instance->targets[0].player, c = instance->targets[0].card;
+    if (event == EVENT_RESOLVE_ACTIVATION && p >= 0)
+      add_counters(player, card, p, c, COUNTER_PLOT, 1);
+    return granted_generic_activated_ability(p, c, player, card, event, 0, MANACOST_X(2), 0, NULL,
+                                             NULL);
+  }
+  return 0;
 }
 
-int deadly_designs_effect(int player, int card, event_t event){
+int card_deadly_designs(int player, int card, event_t event)
+{
+  /* Deadly Designs	|1|B	0x200f09d
+   * Enchantment
+   * |2: Put a plot counter on ~. Any player may activate this ability.
+   * When there are five or more plot counters on ~, sacrifice it. If you do, destroy up to two target creatures. */
 
-	if( trigger_condition == TRIGGER_LEAVE_PLAY ){
-		card_instance_t *instance = get_card_instance(player, card);
-
-		int p = instance->targets[0].player;
-		int c = instance->targets[0].card;
-
-		if( affect_me(p, c) && reason_for_trigger_controller == player ){
-			if( event == EVENT_TRIGGER ){
-				event_result |= RESOLVE_TRIGGER_MANDATORY;
-			}
-
-			if( event == EVENT_RESOLVE_TRIGGER ){
-				kill_card(player, card, KILL_EXILE);
-			}
-		}
-	}
-
-
-	if( ! IS_GAA_EVENT(event) ){
-		return 0;
-	}
-
-	card_instance_t *instance = get_card_instance(player, card);
-
-	int p = instance->targets[0].player;
-	int c = instance->targets[0].card;
-
-	if( event == EVENT_RESOLVE_ACTIVATION ){
-		add_counter(p, c, COUNTER_PLOT);
-	}
-
-	return granted_generic_activated_ability(player, card, p, c, event, 0, MANACOST_X(2), 0, NULL, NULL);
-}
-
-int card_deadly_designs(int player, int card, event_t event){
-/* Deadly Designs	|1|B	0x200f09d
- * Enchantment
- * |2: Put a plot counter on ~. Any player may activate this ability.
- * When there are five or more plot counters on ~, sacrifice it. If you do, destroy up to two target creatures. */
-
-	if( event == EVENT_STATIC_EFFECTS && affect_me(player, card) ){
-		if( ! is_humiliated(player, card) && count_counters(player, card, COUNTER_PLOT) >= 5 ){
-			if( ! check_special_flags2(player, card, SF2_CANNOT_BE_SACRIFICED) ){
-				int legacy = create_legacy_effect(player, card, &deadly_designs_legacy);
-				card_instance_t *leg = get_card_instance(player, legacy);
-				leg->targets[0].player = player;
-				leg->targets[0].card = card;
-				leg->number_of_targets = 0;
-				leg->targets[1].player = get_protections_from(player, card);
-
-				kill_card(player, card, KILL_SACRIFICE);
-			}
-		}
-
-		int marked[2] = {-1, -1};
-		CYCLE_ALL_CARDS(p, c, 	{
-									if( in_play(p, c) && is_what(p, c, TYPE_EFFECT) ){
-										card_instance_t *inst = get_card_instance(p, c);
-										if( inst->info_slot == (int)deadly_designs_effect ){
-											if( inst->targets[0].player == player && inst->targets[0].card == card )
-											{
-												marked[p] = c;
-											}
-										}
-									}
-								}
-		);
-
-		if( marked[player] > -1 ){
-			kill_card(player, marked[player], KILL_EXILE);
-		}
-
-		if( marked[1-player] == -1 ){
-			int fake = add_card_to_hand(1-player, get_card_instance(player, card)->internal_card_id);
-			int legacy = create_legacy_activate(1-player, fake, &deadly_designs_effect);
-			card_instance_t *inst = get_card_instance(player, legacy);
-			inst->targets[0].player = player;
-			inst->targets[0].card = card;
-			inst->number_of_targets = 1;
-			obliterate_card(1-player, fake);
-		}
-	}
-
-	if( ! IS_GAA_EVENT(event) ){
-		return global_enchantment(player, card, event);
-	}
-
-	if( event == EVENT_RESOLVE_ACTIVATION ){
-		card_instance_t *instance = get_card_instance(player, card);
-		add_counter(instance->parent_controller, instance->parent_card, COUNTER_PLOT);
-	}
-
-	return generic_activated_ability(player, card, event, 0, MANACOST_X(2), 0, NULL, NULL);
+  card_instance_t *instance = get_card_instance(player, card);
+  if (event == EVENT_STATIC_EFFECTS)
+  {
+    if (in_play(player, card) && affect_me(player, card))
+    {
+      if (!is_humiliated(player, card, AL_TRIG) &&
+          count_counters(player, card, COUNTER_PLOT) >= 5 && stack_size == 0 &&
+          instance->targets[9].card != 66 &&
+          !check_special_flags2(player, card, SF2_CANNOT_BE_SACRIFICED))
+      {
+        int legacy = create_legacy_effect(player, card, deadly_designs_legacy);
+        card_instance_t *leg = get_card_instance(player, legacy);
+        leg->targets[0].player = player;
+        leg->targets[0].card = card;
+        int protections = get_protections_from(player, card);
+        leg->number_of_targets = 2;
+        leg->targets[1].player = protections;
+        instance->targets[9].card = 66;
+        kill_card(player, card, KILL_SACRIFICE);
+      }
+      int found = 0;
+      for (int p = 0; p < 2; ++p)
+        for (int c = 0; c <= active_cards_count[p]; ++c)
+          if (in_play(p, c) && is_what(p, c, TYPE_EFFECT))
+          {
+            card_instance_t *inst = get_card_instance(p, c);
+            if (inst->info_slot == (int)deadly_designs_effect &&
+                inst->targets[0].player == player && inst->targets[0].card == card)
+            {
+              if (p == player)
+                kill_card(player, c, KILL_EXILE);
+              else
+              {
+                if (p == 1)
+                  return global_enchantment(player, card, event);
+                found = 1;
+              }
+            }
+          }
+      if (!found && instance->targets[9].card != 66)
+        create_legacy_activate_for_opponent(player, card, deadly_designs_effect, player, card);
+    }
+    return global_enchantment(player, card, event);
+  }
+  if (!IS_GAA_EVENT(event))
+    return global_enchantment(player, card, event);
+  if (event == EVENT_ACTIVATE && count_counters(player, card, COUNTER_PLOT) < 5)
+    ai_modifier += count_counters(player, card, COUNTER_PLOT) * 5 + 20;
+  if (event == EVENT_RESOLVE_ACTIVATION)
+    add_counters(player, card, instance->parent_controller, instance->parent_card, COUNTER_PLOT, 1);
+  return generic_activated_ability(player, card, event, 0, MANACOST_X(2), 0, NULL, NULL);
 }
 
 int card_garrulous_sycophant(int player, int card, event_t event){
@@ -1100,23 +1149,43 @@ int card_garrulous_sycophant(int player, int card, event_t event){
 	return 0;
 }
 
-int card_marchesas_decreee(int player, int card, event_t event){
-/* Marchesa's Decree	|3|B	0x200f0a7
- * Enchantment
- * When ~ enters the battlefield, you become the monarch.
- * Whenever a creature attacks you or a planeswalker you control, that creature's controller loses 1 life. */
+int card_marchesas_decreee(int player, int card, event_t event)
+{
+  /* Marchesa's Decree	|3|B	0x200f0a7
+   * Enchantment
+   * When ~ enters the battlefield, you become the monarch.
+   * Whenever a creature attacks you or a planeswalker you control, that creature's controller loses 1 life. */
 
-	if( event == EVENT_CAN_CAST || event == EVENT_SHOULD_AI_PLAY || (event == EVENT_CAST_SPELL && affect_me(player, card)) ){
-		return global_enchantment(player, card, event);
-	}
-
-	if( in_play(player, card) && ! is_humiliated(player, card) ){
-		if( declare_attackers_trigger(player, card, event, DAT_SEPARATE_TRIGGERS, 1-player, -1) ){
-			lose_life(1-player, 1);
-		}
-	}
-
-	return card_palace_sentinels(player, card, event);
+  if ((event != EVENT_CAN_CAST) && (event != EVENT_SHOULD_AI_PLAY))
+  {
+    if (event == EVENT_CAST_SPELL)
+    {
+      if ((card == affected_card) && (player == affected_card_controller))
+        return global_enchantment(player, card, event);
+      store_attackers(player, card, EVENT_CAST_SPELL, DAT_SEPARATE_TRIGGERS, 1 - player, -1, NULL);
+      dat_ability(player, card, EVENT_CAST_SPELL, DAT_RESOLVE_TRIGGER_MANDATORY, 1);
+      etb_ability(player, card, EVENT_CAST_SPELL, RESOLVE_TRIGGER_MANDATORY);
+    }
+    else
+    {
+      store_attackers(player, card, event, DAT_SEPARATE_TRIGGERS, 1 - player, -1, NULL);
+      dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 1);
+      if (event == EVENT_DAT_ABILITY)
+      {
+        lose_life(1 - player, 1);
+        etb_ability(player, card, EVENT_DAT_ABILITY, RESOLVE_TRIGGER_MANDATORY);
+        return 0;
+      }
+      etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+      if (event == EVENT_ETB)
+      {
+        you_become_the_monarch(player);
+        return 0;
+      }
+    }
+    return 0;
+  }
+  return global_enchantment(player, card, event);
 }
 
 /* Regicide	|B	0x0000000
@@ -1124,19 +1193,17 @@ int card_marchesas_decreee(int player, int card, event_t event){
  * Reveal ~ as you draft it. The player to your right chooses a color, you choose another color, then the player to your left chooses a third color.
  * Destroy target creature that's one or more of the colors chosen as you drafted cards named ~. */
 
-int card_sinuous_vermin(int player, int card, event_t event){
-/* Sinuous Vermin	|1|B	0x200f0ac
+int card_sinuous_vermin(int player, int card, event_t event)
+{
+  /* Sinuous Vermin	|1|B	0x200f0ac
  * Creature - Rat Horror 2/2
  * |3|B|B: Monstrosity 3. (If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)
  * As long as ~ is monstrous, it has menace. (It can't be blocked except by two or more creatures.) */
 
-	if( in_play(player, card) && ! is_humiliated(player, card) ){
-		if( event == EVENT_ABILITIES && affect_me(player, card) && is_monstrous(player, card) ){
-			menace(player, card, event);
-		}
-	}
-
-	return monstrosity(player, card, event, MANACOST_XB(3, 2), 3);
+  if (in_play(player, card) && !is_humiliated(player, card, AL_STATIC) &&
+      (event == EVENT_DECLARE_BLOCKERS || event == EVENT_ABILITIES) && is_monstrous(player, card))
+    menace(player, card, event);
+  return monstrosity(player, card, event, MANACOST_XB(3, 2), 3);
 }
 
 /* Smuggler Captain	|3|B	0x0000000
@@ -1154,11 +1221,11 @@ int card_thorn_of_the_black_rose(int player, int card, event_t event){
 	return card_palace_sentinels(player, card, event);
 }
 
-// RED
-
 /* Besmirch	|1|R|R	0x0000000
  * Sorcery
  * Until end of turn, gain control of target creature and it gains haste. Untap and goad that creature. (Until your next turn, that creature attacks each combat if able and attacks a player other than you if able.) */
+
+// RED
 
 int card_crow_hunter_hireling(int player, int card, event_t event){
 /* Crown-Hunter Hireling	|4|R	0x200f0b6
@@ -1172,7 +1239,7 @@ int card_crow_hunter_hireling(int player, int card, event_t event){
 		}
 	}
 
-	if( in_play(player, card) && ! is_humiliated(player, card) ){
+	if( in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		if( event == EVENT_ATTACK_LEGALITY && affect_me(player, card) ){
 			if( who_is_the_monarch() != 1-player ){
 				cannot_attack(player, card, event);
@@ -1216,7 +1283,7 @@ int card_grenzo_havoc_raiser(int player, int card, event_t event){
 
 	if( trigger_condition == TRIGGER_DEAL_DAMAGE && affect_me(player, card) && reason_for_trigger_controller == player ){
 		card_instance_t *instance = get_card_instance(player, card);
-		if( instance->targets[8].player > 0 && ! is_humiliated(player, card) ){
+		if( instance->targets[8].player > 0 && ! is_humiliated(player, card, AL_TRIG) ){
 			if(event == EVENT_TRIGGER){
 				event_result |= RESOLVE_TRIGGER_MANDATORY;
 			}
@@ -1230,14 +1297,14 @@ int card_grenzo_havoc_raiser(int player, int card, event_t event){
 						int iid = deck_ptr[0][0];
 						if( iid > -1 ){
 							rfg_top_card_of_deck(0);
-							create_may_play_card_from_exile_effect(player, card, 0, cards_data[iid].id, MPCFE_FOR_CMC);
+							create_may_play_card_from_exile_effect(player, card, 0, cards_data[iid].id, MPCFE_UNTIL_EOT | MPCFE_FOR_CMC);
 						}
 					}
 					for(i=0; i<BYTE1(damaged_players);i++){
 						int iid = deck_ptr[1][0];
 						if( iid > -1 ){
 							rfg_top_card_of_deck(1);
-							create_may_play_card_from_exile_effect(player, card, 1, cards_data[iid].id, MPCFE_FOR_CMC);
+							create_may_play_card_from_exile_effect(player, card, 1, cards_data[iid].id, MPCFE_UNTIL_EOT | MPCFE_FOR_CMC);
 						}
 					}
 			}
@@ -1278,14 +1345,13 @@ int card_skyline_despot(int player, int card, event_t event){
 		token_generation_t token;
 		default_token_definition(player, card, CARD_ID_DRAGON, &token);
 		token.pow = token.tou = 5;
-		token.color_forced = get_sleighted_color_test(player, card, COLOR_TEST_RED);
+		token.color_forced = COLOR_TEST_RED;
 		token.key_plus = KEYWORD_FLYING;
 		generate_token(&token);
 	}
 
 	return card_palace_sentinels(player, card, event);
 }
-
 
 int card_subterranean_tremors(int player, int card, event_t event){
 /* Subterranean Tremors	|X|R	0x200f0c5
@@ -1301,19 +1367,19 @@ int card_subterranean_tremors(int player, int card, event_t event){
 			this_test.keyword = KEYWORD_FLYING;
 			this_test.keyword_flag = 1;
 
-			APNAP(p, {new_damage_all(player, card, p, instance->info_slot, 0, &this_test);};);
+			new_damage_all(player, card, ANYBODY, instance->info_slot, 0, &this_test);
 
 			if( instance->info_slot >= 4 ){
 				default_test_definition(&this_test, TYPE_ARTIFACT);
 
-				APNAP(p, {new_manipulate_all(player, card, p, &this_test, KILL_DESTROY);};);
+				new_manipulate_all(player, card, ANYBODY, &this_test, ACT_KILL_DESTROY);
 			}
 
 			if( instance->info_slot >= 8 ){
 				token_generation_t token;
 				default_token_definition(player, card, CARD_ID_LIZARD, &token);
 				token.pow = token.tou = 8;
-				token.color_forced = get_sleighted_color_test(player, card, COLOR_TEST_RED);
+				token.color_forced = COLOR_TEST_RED;
 				generate_token(&token);
 			}
 		}
@@ -1322,7 +1388,6 @@ int card_subterranean_tremors(int player, int card, event_t event){
 
 	return generic_spell(player, card, event, GS_X_SPELL, NULL, NULL, 1, NULL);
 }
-
 
 /* Volatile Chimera	|2|R	0x0000000
  * Creature - Elemental Chimera 3/2
@@ -1352,18 +1417,18 @@ int card_borderland_explorer(int player, int card, event_t event){
 						test_definition_t test;
 						default_test_definition(&test, TYPE_LAND);
 						test.zone = TARGET_ZONE_HAND;
-						if( count_subtype(player, TYPE_LAND, -1) < 3 &&
-							! check_battlefield_for_special_card(player, card, player, CBFSC_CHECK_ONLY, &test) )
+						if( count_subtype(p, TYPE_LAND, -1) < 3 &&
+							! check_battlefield_for_special_card(player, card, p, CBFSC_CHECK_ONLY, &test) )
 						{
 							ai_mode = 0;
 						}
 
-						if( player == HUMAN || ai_mode ){
+						if( p == HUMAN || ai_mode ){
 							new_default_test_definition(&test, TYPE_ANY, "Select a card to discard or hit CANCEL");
 							int selected = new_select_a_card(p, p, TUTOR_FROM_HAND, 0, AI_MIN_VALUE, -1, &test);
 							if( selected != -1 ){
 								new_discard_card(p, selected, 0, player);
-								tutor_basic_land(player, 0, 0);
+								tutor_basic_land(p, 0, 0);
 							}
 						}
 					}
@@ -1373,7 +1438,6 @@ int card_borderland_explorer(int player, int card, event_t event){
 
 	return 0;
 }
-
 
 /* Caller of the Untamed	|3|G	0x0000000
  * Creature - Elf Shaman 2/4
@@ -1386,13 +1450,13 @@ int card_domesticated_hydra(int player, int card, event_t event){
  * |X|G|G|G: Monstrosity X. (If this creature isn't monstrous, put X +1/+1 counters on it and it becomes monstrous.)
  * As long as ~ is monstrous, it has trample. */
 
-	if( in_play(player, card) && ! is_humiliated(player, card) ){
+	if( in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		if( event == EVENT_ABILITIES && affect_me(player, card) && is_monstrous(player, card) ){
 			event_result |= KEYWORD_TRAMPLE;
 		}
 	}
 
-	return monstrosity(player, card, event, MANACOST_XG(-2, 3), get_card_instance(player, card)->info_slot);
+	return monstrosity(player, card, event, MANACOST_XG(-1, 3), get_card_instance(player, card)->info_slot);
 }
 
 /* Entourage of Trest	|4|G	0x0000000
@@ -1415,82 +1479,100 @@ int card_domesticated_hydra(int player, int card, event_t event){
  * Trample
  * Melee (Whenever this creature attacks, it gets +1/+1 until end of turn for each opponent you attacked with a creature this combat.) */
 
-int card_orchard_elemental(int player, int card, event_t event){
-/* Orchard Elemental	|5|G	0x200f0d4
- * Creature - Elemental 2/2
- * Council's dilemma - When ~ enters the battlefield, starting with you, each player votes for sprout or harvest.
- * Put two +1/+1 counters on ~ for each sprout vote.
- * You gain 3 life for each harvest vote. */
+int card_orchard_elemental(int player, int card, event_t event)
+{
+  /* Orchard Elemental	|5|G	0x200f0d4
+   * Creature - Elemental 2/2
+   * Council's dilemma - When ~ enters the battlefield, starting with you, each player votes for sprout or harvest.
+   * Put two +1/+1 counters on ~ for each sprout vote.
+   * You gain 3 life for each harvest vote. */
 
-	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+  unsigned int vote_counts;
+  int result;
 
-	if( event == EVENT_ETB_ABILITY ){
-		char pos1[100] = "Sprout (2 +1/+1 counters on this)";
-		char pos2[100] = "Harvest (3 life)";
-		int ai_priorities[2] = {life[player]*3, life[1-player]*3};
-		int result = will_of_the_council(player, card, pos1, pos2, ai_priorities);
+  int ai_priorities[2];
 
-		add_1_1_counters(player, card, 2*BYTE0(result));
-
-		gain_life(player, 3*BYTE1(result));
-	}
-
-	return 0;
+  etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+  if (event != EVENT_ETB)
+  {
+    return 0;
+  }
+  char pos1[100] = "Sprout (2 +1/+1 counters on this)";
+  char pos2[100] = "Harvest (3 life)";
+  result = 0;
+  ai_priorities[0] = life[player] * 3;
+  ai_priorities[1] = life[1 - player] * 3;
+  vote_counts = will_of_the_council(player, card, pos1, pos2, ai_priorities);
+  add_counters(player, card, player, card, COUNTER_P1_P1, (vote_counts & 0xff) * 2);
+  gain_life(player, (vote_counts >> 8 & 0xff) * 3);
+  return 0;
 }
 
-int card_regal_behemoth(int player, int card, event_t event){
-/* Regal Behemoth	|4|G|G	0x200f0d9
- * Creature - Lizard 5/5
- * Trample
- * When ~ enters the battlefield, you become the monarch.
- * Whenever you tap a land for mana while you're the monarch,
- * add one mana of any color to your mana pool (in addition to the mana the land produces). */
+int card_regal_behemoth(int player, int card, event_t event)
+{
+  /* Regal Behemoth	|4|G|G	0x200f0d9
+   * Creature - Lizard 5/5
+   * Trample
+   * When ~ enters the battlefield, you become the monarch.
+   * Whenever you tap a land for mana while you're the monarch,
+   * add one mana of any color to your mana pool (in addition to the mana the land produces). */
 
-	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+  etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
 
-	if( event == EVENT_ETB_ABILITY ){
-		you_become_the_monarch(player);
-	}
+  if (event == EVENT_ETB_ABILITY)
+  {
+    you_become_the_monarch(player);
+  }
 
-	if( in_play(player, card) && ! is_humiliated(player, card) ){
-		switch (event){
-			case EVENT_TAP_CARD:
-				if (!is_what(affected_card_controller, affected_card, TYPE_LAND)){
-					return 0;
-				}
+  if (in_play(player, card) && !is_humiliated(player, card, AL_TRIG))
+  {
+    switch (event)
+    {
+    case EVENT_TAP_CARD:
+      if (!is_what(affected_card_controller, affected_card, TYPE_LAND) ||
+          who_is_the_monarch() != affected_card_controller)
+      {
+        return 0;
+      }
 
-				if (!in_play(player, card)){	// Seems unnecessary, but it's explicitly checked in the exe version, and is harmless
-					return 0;
-				}
+      if (!in_play(player, card))
+      { // Seems unnecessary, but it's explicitly checked in the exe version, and is harmless
+        return 0;
+      }
 
-				produce_mana_all_one_color(player, COLOR_TEST_ANY_COLORED, 1);
+      produce_mana_all_one_color(player, COLOR_TEST_ANY_COLORED, 1);
 
-				return 0;
+      return 0;
 
-			case EVENT_COUNT_MANA:
-				if (!is_what(affected_card_controller, affected_card, TYPE_LAND)){
-					return 0;
-				}
+    case EVENT_COUNT_MANA:
+      if (!is_what(affected_card_controller, affected_card, TYPE_LAND) ||
+          who_is_the_monarch() != affected_card_controller)
+      {
+        return 0;
+      }
 
-				if (!in_play(player, card)){	// Seems unnecessary, but it's explicitly checked in the exe version, and is harmless
-					return 0;
-				}
+      if (!in_play(player, card))
+      { // Seems unnecessary, but it's explicitly checked in the exe version, and is harmless
+        return 0;
+      }
 
-				// A check for EA_MANA_SOURCE is conspicuous by its absence in the exe version.
-				if (is_tapped(affected_card_controller, affected_card) || is_animated_and_sick(affected_card_controller, affected_card)
-					|| !can_produce_mana(affected_card_controller, affected_card) ){
-					return 0;
-				}
+      // A check for EA_MANA_SOURCE is conspicuous by its absence in the exe version.
+      if (is_tapped(affected_card_controller, affected_card) ||
+          is_animated_and_sick(affected_card_controller, affected_card) ||
+          !can_produce_mana(affected_card_controller, affected_card))
+      {
+        return 0;
+      }
 
-				declare_mana_available_hex(affected_card_controller, COLOR_TEST_ANY_COLORED, 1);
-				return 0;
+      declare_mana_available_hex(affected_card_controller, COLOR_TEST_ANY_COLORED, 1);
+      return 0;
 
-			default:
-				return 0;
-		}
-	}
+    default:
+      return 0;
+    }
+  }
 
-	return 0;
+  return 0;
 }
 
 int card_selvala_heart_of_the_wilds(int player, int card, event_t event){
@@ -1504,7 +1586,8 @@ int card_selvala_heart_of_the_wilds(int player, int card, event_t event){
 	if( trigger_condition == TRIGGER_COMES_INTO_PLAY && affect_me(player, card) ){
 		test_definition_t test;
 		default_test_definition(&test, TYPE_CREATURE);
-		int max_pow = check_battlefield_for_special_card(player, card, ANYBODY, CBFSC_GET_MAX_POW, &test);
+		test.not_me = 1;
+		int max_pow = check_battlefield_for_special_card(trigger_cause_controller, trigger_cause, ANYBODY, CBFSC_GET_MAX_POW, &test);
 		test.power = max_pow;
 		test.power_flag = F5_POWER_GREATER_THAN_VALUE;
 
@@ -1512,7 +1595,7 @@ int card_selvala_heart_of_the_wilds(int player, int card, event_t event){
 	}
 
 	if( event == EVENT_ETB_ABILITY ){
-		int choice = DIALOG(player, card, EVENT_ACTIVATE, DLG_NO_STORAGE, DLG_NO_CANCEL, DLG_WHO_CHOOSES(trigger_cause_controller),
+		int choice = DIALOG(player, card, EVENT_CAST_SPELL, DLG_NO_STORAGE, DLG_NO_CANCEL, DLG_WHO_CHOOSES(trigger_cause_controller),
 							"Draw a card", 	1, count_deck(trigger_cause_controller) >= 20 ? 10 : 1,
 							"Decline", 		1, 5);
 
@@ -1529,21 +1612,20 @@ int card_selvala_heart_of_the_wilds(int player, int card, event_t event){
 	default_test_definition(&test, TYPE_CREATURE);
 
 	if( event == EVENT_COUNT_MANA && affect_me(player, card) ){
-		if( mana_producer(player, card, event) && has_mana_for_activated_ability(player, card, MANACOST_G(1)) ){
-			int max_pow = check_battlefield_for_special_card(player, card, ANYBODY, CBFSC_GET_MAX_POW, &test);
+		if (has_mana_for_activated_ability(player, card, MANACOST_G(1)) && !is_tapped(player, card) &&
+			!is_animated_and_sick(player, card) && can_produce_mana(player, card)){
+			int max_pow = check_battlefield_for_special_card(player, card, player, CBFSC_GET_MAX_POW, &test);
 			declare_mana_available_hex(player, COLOR_TEST_ANY_COLORED, max_pow-1);
 		}
 	}
 
 	if( event == EVENT_CAN_ACTIVATE ){
-		if( mana_producer(player, card, event) && has_mana_for_activated_ability(player, card, MANACOST_G(1)) ){
-			return 1;
-		}
+		if (has_mana_for_activated_ability(player, card, MANACOST_G(1))){ return mana_producer(player, card, event); }
 	}
 
 	if( event == EVENT_ACTIVATE ){
 		if( charge_mana_for_activated_ability(player, card, MANACOST_G(1)) ){
-			int max_pow = check_battlefield_for_special_card(player, card, ANYBODY, CBFSC_GET_MAX_POW, &test);
+			int max_pow = check_battlefield_for_special_card(player, card, player, CBFSC_GET_MAX_POW, &test);
 			produce_mana_tapped_any_combination_of_colors(player, card, COLOR_TEST_ANY_COLORED, max_pow, NULL);
 		}
 	}
@@ -1578,8 +1660,8 @@ int card_selvalas_stampede(int player, int card, event_t event){
 					remove_card_from_deck(player, 0);
 					dcc++;
 			}
-			show_deck( player, deck_copy, dcc, "Cards revealed by Selvala's Stampede", 0, 0x7375B0 );
-			show_deck( 1-player, deck_copy, dcc, "Cards revealed by Selvala's Stampede", 0, 0x7375B0 );
+			show_deck( player, deck_copy, dcc, "Cards revealed by Selvala's Stampede", 0, gs_done_008b40e0 );
+			show_deck( 1-player, deck_copy, dcc, "Cards revealed by Selvala's Stampede", 0, gs_done_008b40e0 );
 
 			if( dcc ){
 				int added[dcc];
@@ -1615,7 +1697,6 @@ int card_selvalas_stampede(int player, int card, event_t event){
 	return basic_spell(player, card, event);
 }
 
-
 int card_splitting_slime(int player, int card, event_t event){
 /* Splitting Slime	|3|G|G	0x200f0e8
  * Creature - Ooze 3/3
@@ -1631,21 +1712,24 @@ int card_splitting_slime(int player, int card, event_t event){
 	return monstrosity(player, card, event, MANACOST_XG(4, 2), 3);
 }
 
-
-// GOLD
-
 /* Adriana, Captain of the Guard	|3|R|W	0x0000000
  * Legendary Creature - Human Knight 4/4
  * Melee (Whenever this creature attacks, it gets +1/+1 until end of turn for each opponent you attacked with a creature this combat.)
  * Other creatures you control have melee. (If a creature has multiple instances of melee, each triggers separately.) */
 
+// GOLD
+
 int card_daretti_ingenious_iconoclast(int player, int card, event_t event)
 {
-/* Daretti, Ingenious Iconoclast	|1|B|R
- * Planeswalker - Daretti (3)
- * +1: Create a 1/1 colorless Construct artifact creature token with defender.
- * -1: You may sacrifice an artifact. If you do, destroy target artifact or creature.
- * -6: Choose target artifact card in a graveyard or artifact on the battlefield. Create three tokens that are copies of it. */
+  /* Daretti, Ingenious Iconoclast	|1|B|R
+   * Planeswalker - Daretti (3)
+   * +1: Create a 1/1 colorless Construct artifact creature token with defender.
+   * -1: You may sacrifice an artifact. If you do, destroy target artifact or creature.
+   * -6: Choose target artifact card in a graveyard or artifact on the battlefield. Create three tokens that are copies of it. */
+
+	check_legend_rule(player, card, event);
+
+
 
 	if (IS_ACTIVATING(event))
 	{
@@ -1867,91 +1951,41 @@ int card_kaya_ghost_assassin(int player, int card, event_t event)
  * -1: Each opponent loses 2 life and you gain 2 life.
  * -2: Each opponent discards a card and you draw a card. */
 
-	if (IS_ACTIVATING(event))
-	{
-		card_instance_t* instance = get_card_instance(player, card);
-
-		target_definition_t td;
-		default_target_definition(player, card, &td, TYPE_CREATURE);
-
-		enum
-		{
-			CHOICE_EXILE = 1,
-			CHOICE_SUCK_LIFE,
-			CHOICE_DISCARD_DRAW
-		};
-
-		if( event == EVENT_ACTIVATE ){
-			instance->number_of_targets = instance->info_slot = 0;
-
-			int priority_exile = count_counters(player, card, COUNTER_LOYALTY) < 2 ? 35 : 5;
-			if( priority_exile == 35 && life[player] >= 8 ){
-				ai_modifier += 50;
-			}
-
-			int choice = DIALOG(player, card, event, DLG_RANDOM, DLG_PLANESWALKER,
-								"Exile this or target creature", 1, priority_exile, 0,
-								"Opp. lose 2 life and you gain 2 life", 1, life[1-player]*3, -1,
-								"Opp. discard and you draw", 1, hand_count[1-player]*2, -2);
-			if( ! choice ){
-				cancel = 1;
-				return 0;
-			}
-
-			if( choice == CHOICE_EXILE ){
-				if( priority_exile == 35 && life[player] >= 8 && player == AI ){
-					instance->targets[0].player = player;
-					instance->targets[0].card = card;
-				}
-				else{
-					new_pick_target(&td, "TARGET_CREATURE", 0, 0);
-				}
-			}
-		}
-
-		if( event == EVENT_RESOLVE_ACTIVATION ){
-			int choice = instance->info_slot;
-			switch (choice)
-			{
-				case CHOICE_EXILE:
-				{
-					int valid = 1;
-					if( instance->targets[0].player != player && instance->targets[0].card != card && valid_target(&td) ){
-						valid = 0;
-					}
-					if( valid ){
-						int iid = get_original_internal_card_id(instance->targets[0].player, instance->targets[0].card);
-						int owner = get_owner(instance->targets[0].player, instance->targets[0].card);
-						int legacy = create_legacy_effect(instance->parent_controller, instance->parent_card, kaya_ghost_assassin_legacy);
-						card_instance_t* leg = get_card_instance(instance->parent_controller, legacy);
-						leg->targets[0].player = owner;
-						leg->targets[0].card = iid;
-						if( current_turn == player && current_phase == PHASE_UPKEEP ){
-							leg->targets[1].player = 1;
-						}
-						kill_card(instance->targets[0].player, instance->targets[0].card, KILL_EXILE);
-						lose_life(player, 2);
-					}
-					break;
-				}
-
-				case CHOICE_SUCK_LIFE:
-				{
-					lose_life(1-player, 2);
-					gain_life(player, 2);
-					break;
-				}
-
-				case CHOICE_DISCARD_DRAW:
-				{
-					discard(1-player, 0, player);
-					draw_cards(player, 1);
-					break;
-				}
-			}
-		}
+	check_legend_rule(player, card, event);
+	if (IS_ACTIVATING(event)){
+	    card_instance_t* instance = get_card_instance(player, card);
+	    target_definition_t td;
+	    default_target_definition(player, card, &td, TYPE_CREATURE);
+	    enum { CHOICE_EXILE = 1, CHOICE_SUCK_LIFE, CHOICE_DISCARD_DRAW };
+	    if (event == EVENT_ACTIVATE){
+	        instance->number_of_targets = instance->info_slot = 0;
+	        int priority_exile = count_counters(player, card, COUNTER_LOYALTY) < 2 ? (life[player] >= 8 ? 85 : 35) : 5;
+	        int choice = DIALOG(player, card, event, DLG_RANDOM, DLG_PLANESWALKER,
+	                            "Exile this or target creature", 1, priority_exile, 0,
+	                            "Opp. lose 2 life and you gain 2 life", 1, life[1-player]*3, -1,
+	                            "Opp. discard and you draw", 1, hand_count[1-player]*2, -2);
+	        if (!choice){ spell_fizzled = 1; return 0; }
+	        if (choice == CHOICE_EXILE){
+	            int choice2 = DIALOG(player, card, event, DLG_RANDOM, DLG_NO_STORAGE,
+	                                 "Exile Kaya", 1, priority_exile,
+	                                 "Exile target creature", can_target(&td), 30);
+	            if (!choice2){ spell_fizzled = 1; return 0; }
+	            if (choice2 == 2){ new_pick_target(&td, "TARGET_CREATURE", 0, 0); }
+	            SET_BYTE1(instance->info_slot) = choice2;
+	        }
+	    }
+	    if (event == EVENT_RESOLVE_ACTIVATION){
+	        int choice = BYTE0(instance->info_slot);
+	        if (choice == CHOICE_EXILE){
+	            int choice2 = BYTE1(instance->info_slot);
+	            if (choice2 == 1){ remove_until_upkeep(player, card, instance->parent_controller, instance->parent_card, player); }
+	            else if (choice2 == 2 && valid_target(&td)){ remove_until_upkeep(player, card, instance->targets[0].player, instance->targets[0].card, player); }
+	            lose_life(player, 2);
+	        }
+	        if (choice == CHOICE_SUCK_LIFE){ lose_life(1-player, 2); gain_life(player, 2); }
+	        if (choice == CHOICE_DISCARD_DRAW){ discard(1-player, 0, player); draw_cards(player, 1); }
+	    }
 	}
-
 	return planeswalker(player, card, event, 5);
 }
 
@@ -1962,34 +1996,54 @@ int card_kaya_ghost_assassin(int player, int card, event_t event)
 
 int card_leovold_emissary_of_trest(int player, int card, event_t event)
 {
-/* Leovold, Emissary of Trest	|B|G|U	0x200f0fc
- * Legendary Creature - Elf Advisor 3/3
- * Each opponent can't draw more than one card each turn.
- * Whenever you or a permanent you control becomes the target of a spell or ability an opponent controls, you may draw a card. */
+  /* Leovold, Emissary of Trest	|B|G|U	0x200f0fc
+   * Legendary Creature - Elf Advisor 3/3
+   * Each opponent can't draw more than one card each turn.
+   * Whenever you or a permanent you control becomes the target of a spell or ability an opponent controls, you may draw a card. */
 
-	check_legend_rule(player, card, event);
-
-	if( ! in_play(player, card) || is_humiliated(player, card) ){
-		return 0;
-	}
-
-	if( trigger_condition == TRIGGER_REPLACE_CARD_DRAW && affect_me(player, card) && event == EVENT_TRIGGER &&
-		reason_for_trigger_controller == 1-player && !suppress_draw && in_play(player, card) &&
-		cards_drawn_this_turn[reason_for_trigger_controller] > 0 )
-	{
-		suppress_draw = 1;
-		// Deliberately do this during EVENT_TRIGGER, not EVENT_RESOLVE_TRIGGER, so nothing else can replace the (nonexistent) draw
-	}
-
-	if( any_becomes_target(player, card, event, player, -1, TYPE_PERMANENT, -1, TYPE_ANY, 1-player, RESOLVE_TRIGGER_AI(player)) ){
-		draw_cards(player, 1);
-	}
-
-	if( becomes_target_of_spell_or_effect(player, card, event, player, -1, 1-player) ){
-		draw_cards(player, 1);
-	}
-
-	return 0;
+  card_instance_t *instance;
+  int result;
+  const target_t *targeting_spell_or_effect;
+  check_legend_rule(player, card, event);
+  if (((((trigger_condition == TRIGGER_REPLACE_CARD_DRAW) && (card == affected_card)) &&
+        (affected_card_controller == player)) &&
+       ((event == EVENT_TRIGGER && (1 - player == reason_for_trigger_controller)))) &&
+      (suppress_draw == 0))
+  {
+    instance = in_play(player, card);
+    if ((instance != NULL) && (cards_drawn_this_turn[reason_for_trigger_controller] != 0))
+    {
+      result = is_humiliated(player, card, AL_STATIC);
+      if (result == 0)
+      {
+        suppress_draw = 1;
+      }
+    }
+  }
+  instance = in_play(player, card);
+  if (instance != NULL)
+  {
+    result = is_humiliated(player, card, AL_TRIG);
+    if (result == 0)
+    {
+      result = duh_mode(player);
+      targeting_spell_or_effect =
+          any_becomes_target(player, card, event, player, -1, TYPE_PERMANENT, -1, TYPE_ANY,
+                             1 - player, (result != 0) + RESOLVE_TRIGGER_OPTIONAL);
+      if (targeting_spell_or_effect != NULL)
+      {
+        draw_cards(player, 1);
+      }
+      targeting_spell_or_effect =
+          becomes_target_of_spell_or_effect(player, card, event, player, -1, 1 - player);
+      if (targeting_spell_or_effect != NULL)
+      {
+        draw_cards(player, 1);
+        return 0;
+      }
+    }
+  }
+  return 0;
 }
 
 int card_queen_marchesa(int player, int card, event_t event){
@@ -2013,7 +2067,7 @@ int card_queen_marchesa(int player, int card, event_t event){
 		token_generation_t token;
 		default_token_definition(player, card, CARD_ID_ASSASSIN, &token);
 		token.pow = token.tou = 1;
-		token.color_forced = get_sleighted_color_test(player, card, COLOR_TEST_BLACK);
+		token.color_forced = COLOR_TEST_BLACK;
 		token.s_key_plus = SP_KEYWORD_HASTE | SP_KEYWORD_DEATHTOUCH;
 		generate_token(&token);
 	}
@@ -2021,69 +2075,78 @@ int card_queen_marchesa(int player, int card, event_t event){
 	return card_palace_sentinels(player, card, event);
 }
 
-// ARTIFACT
-
 /* Spy Kit	|2	0x0000000
  * Artifact - Equipment
  * Equipped creature gets +1/+1 and has all names of nonlegendary creature cards in addition to its name.
  * Equip |2 */
 
-int card_throne_of_the_high_city(int player, int card, event_t event){
-/* Throne of the High City	0x200f106
- * Land
- * |T: Add |C to your mana pool.
- * |4, |T, Sacrifice ~: You become the monarch. */
+// ARTIFACT
 
-	if( ! IS_GAA_EVENT(event) || event == EVENT_CAN_ACTIVATE ){
-		return mana_producer(player, card, event);
-	}
+int card_throne_of_the_high_city(int player, int card, event_t event)
+{
+  /* Throne of the High City	0x200f106
+   * Land
+   * |T: Add |C to your mana pool.
+   * |4, |T, Sacrifice ~: You become the monarch. */
 
-	enum{
-		CHOICE_MANA = 1,
-		CHOICE_MONARCH
-	};
+  if (!IS_GAA_EVENT(event) || event == EVENT_CAN_ACTIVATE)
+  {
+    return mana_producer(player, card, event);
+  }
 
-	card_instance_t *instance = get_card_instance( player, card );
+  enum
+  {
+    CHOICE_MANA = 1,
+    CHOICE_MONARCH
+  };
 
-	if( event == EVENT_ACTIVATE ){
-		instance->info_slot = 0;
-		int choice = CHOICE_MANA;
-		if( ! paying_mana() &&
-			generic_activated_ability(player, card, EVENT_CAN_ACTIVATE, GAA_UNTAPPED | GAA_SACRIFICE_ME, MANACOST_X(5), 0, NULL, NULL) )
-		{
-			choice = DIALOG(player, card, event, DLG_RANDOM, DLG_NO_STORAGE,
-							"Produce mana", 1, 5,
-							"You become the monarch", 1,  who_is_the_monarch() != player ? 10 : 1);
-			if( ! choice ){
-				spell_fizzled = 1;
-				return 0;
-			}
-		}
+  card_instance_t *instance = get_card_instance(player, card);
 
-		if( choice == CHOICE_MANA){
-			return mana_producer(player, card, event);
-		}
+  if (event == EVENT_ACTIVATE)
+  {
+    instance->info_slot = 0;
+    int choice = CHOICE_MANA;
+    if (!paying_mana() &&
+        generic_activated_ability(player, card, EVENT_CAN_ACTIVATE, GAA_UNTAPPED | GAA_SACRIFICE_ME,
+                                  MANACOST_X(5), 0, NULL, NULL))
+    {
+      choice = DIALOG(player, card, event, DLG_RANDOM, DLG_NO_STORAGE, "Produce mana", 1, 5,
+                      "You become the monarch", 1, who_is_the_monarch() != player ? 10 : 1);
+      if (!choice)
+      {
+        spell_fizzled = 1;
+        return 0;
+      }
+    }
 
-		if( choice == CHOICE_MONARCH ){
-			instance->state |= STATE_TAPPED;
-			if( charge_mana_for_activated_ability(player, card, MANACOST_X(4)) ){
-				instance->info_slot = 1;
-				tap_card(player, card); // Now get the proper event sent
-				kill_card(player, card, KILL_SACRIFICE);
-			}
-			else{
-				untap_card_no_event(player, card);
-			}
-		}
-	}
+    if (choice == CHOICE_MANA)
+    {
+      return mana_producer(player, card, event);
+    }
 
-	if( event == EVENT_RESOLVE_ACTIVATION ){
-		if( instance->info_slot == CHOICE_MONARCH ){
-			you_become_the_monarch(player);
-		}
-	}
+    if (choice == CHOICE_MONARCH)
+    {
+      instance->state |= STATE_TAPPED;
+      if (charge_mana_for_activated_ability(player, card, MANACOST_X(4)))
+      {
+        instance->info_slot = 1;
+        kill_card(player, card, KILL_SACRIFICE);
+      }
+      else
+      {
+        untap_card_no_event(player, card);
+      }
+      tapped_for_mana_color = -1;
+    }
+  }
 
-	return 0;
+  if (event == EVENT_RESOLVE_ACTIVATION)
+  {
+    if (instance->info_slot == CHOICE_MONARCH)
+    {
+      you_become_the_monarch(player);
+    }
+  }
+
+  return 0;
 }
-
-

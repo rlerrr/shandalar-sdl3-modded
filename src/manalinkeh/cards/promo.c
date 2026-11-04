@@ -2,6 +2,20 @@
 
 // Cards originally printed as promos; Astral cards
 
+/*
+Nalathni Dragon |2|R|R --> Dragon Whelp
+Creature - Dragon 1/1
+Flying; banding
+{R}: Nalathni Dragon gets +1/+0 until end of turn.
+	If this ability has been activated four or more times this turn, sacrifice Nalathni Dragon at the beginning of the next end step.
+*/
+
+/*
+Windseeker Centaur |1|R|R --> Serra Angel
+Creature - Centaur 2/2
+Vigilance
+*/
+
 static int ai_choice_for_arena(int player, int card, target_t* ret_tgt){
 	card_instance_t* instance;
 	int c, best_rating = -1;
@@ -41,9 +55,17 @@ static int ai_choice_for_arena(int player, int card, target_t* ret_tgt){
 }
 
 int card_arena(int player, int card, event_t event){
-	/* Arena	""
-	 * Land
-	 * |3, |T: Tap target creature you control and target creature of an opponent's choice he or she controls. Those creatures fight each other. */
+  /* Arena	""
+   * Land
+   * |3, |T: Tap target creature you control and target creature of an opponent's choice he or she controls. Those creatures fight each other. */
+
+  enum
+  {
+    CHOICE_MANA = 1,
+    CHOICE_ABILITY = 2
+  };
+
+
 	// Used externally
 	if (event == EVENT_CAST_SPELL && affect_me(player, card) && player == AI){
 		ai_modifier += 48;
@@ -55,8 +77,8 @@ int card_arena(int player, int card, event_t event){
 		return 0;
 	}
 
-	if (event != EVENT_CAN_ACTIVATE && event != EVENT_ACTIVATE && event != EVENT_RESOLVE_ACTIVATION){
-		return 0;
+	if (event != EVENT_CAN_ACTIVATE && event != EVENT_ACTIVATE && event != EVENT_RESOLVE_ACTIVATION && event != EVENT_CLEANUP){
+		return mana_colors_added[player] ? mana_producer(player, card, event) : 0;
 	}
 
 	card_instance_t* instance = get_card_instance(player, card);
@@ -71,18 +93,43 @@ int card_arena(int player, int card, event_t event){
 	td_opp.allow_cancel = 0;
 
 	if (event == EVENT_CAN_ACTIVATE){
+		if( mana_colors_added[player] ){
+			return mana_producer(player, card, event);
+		}
 		return (!is_tapped(player, card) && !is_animated_and_sick(player, card) && !paying_mana()
 				&& can_use_activated_abilities(player, card) && has_mana_for_activated_ability(player, card, MANACOST_X(3))
 				&& can_target(&td_me) && can_target(&td_opp));
 	}
 
 	if (event == EVENT_ACTIVATE){
+		int choice = CHOICE_ABILITY;
+		if( mana_colors_added[player] ){
+			if( paying_mana() || is_tapped(player, card) || is_animated_and_sick(player, card) || paying_mana()
+				|| !can_use_activated_abilities(player, card) || !has_mana_for_activated_ability(player, card, MANACOST_X(4))
+				|| !can_target(&td_me) || !can_target(&td_opp) ){
+				choice = CHOICE_MANA;
+			}else if( !IS_AI(player) ){
+				choice = DIALOG(player, card, event, DLG_RANDOM,
+					"Get mana", 1, 1,
+					"Use Ability", 1, 1);
+				if( !choice ){
+					spell_fizzled = 1;
+					return 0;
+				}
+			}
+		}
+		instance->info_slot = choice;
+		if( choice == CHOICE_MANA ){
+			mana_producer(player, card, event);
+			return 0;
+		}
 		if (paying_mana()){
 			cancel = 1;
 			return 0;
 		}
 
 		charge_mana_for_activated_ability(player, card, MANACOST_X(3));
+		tapped_for_mana_color = -1;
 
 		if (cancel != 1){
 			instance->number_of_targets = 0;
@@ -95,9 +142,7 @@ int card_arena(int player, int card, event_t event){
 
 				instance->state |= STATE_TAPPED;
 				if (trace_mode & 2){
-#ifndef MANALINKEH_STATIC
-					((int (*)(int, int))(0x4720E0))(player, 0);	// networking
-#endif
+					send_arena_network_choice(player, 0);
 					new_pick_target(&td_opp, "ARENA", 1, 0);
 				} else {
 					if (!ai_choice_for_arena(player, card, &instance->targets[1])){
@@ -106,7 +151,7 @@ int card_arena(int player, int card, event_t event){
 					}
 					instance->number_of_targets = 2;
 				}
-				do_dialog(player, player, card, instance->targets[1].player, instance->targets[1].card, text_lines[1] /*"Selected for Arena"*/, 0);
+				do_dialog(player, player, card, instance->targets[1].player, instance->targets[1].card, "Selected for Arena", 0);
 			} else {	// player == AI
 				if (trace_mode & 2){
 					cancel = pick_target(&td_me, "ARENA") ? 0 : 1;
@@ -123,13 +168,11 @@ int card_arena(int player, int card, event_t event){
 				if (cancel != 1){
 					instance->state |= STATE_TAPPED;
 
-					do_dialog(player, player, card, instance->targets[0].player, instance->targets[0].card, text_lines[1] /*"Selected for Arena"*/, 0);
+					do_dialog(player, player, card, instance->targets[0].player, instance->targets[0].card, "Selected for Arena", 0);
 					new_pick_target(&td_opp, "ARENA", 1, 0);
 
 					if (trace_mode & 2){
-#ifndef MANALINKEH_STATIC
-						((int (*)(int, int))(0x4720E0))(1 - player, 0);	// networking
-#endif
+						send_arena_network_choice(1 - player, 0);
 					}
 				}
 			}
@@ -142,7 +185,7 @@ int card_arena(int player, int card, event_t event){
 		return 0;
 	}
 
-	if (event == EVENT_RESOLVE_ACTIVATION){
+	if (event == EVENT_RESOLVE_ACTIVATION && instance->info_slot == CHOICE_ABILITY){
 		int target_0_valid = validate_target(player, card, &td_me, 0);
 		int target_1_valid = validate_target(player, card, &td_opp, 1);
 
@@ -267,12 +310,13 @@ int card_call_from_the_grave(int player, int card, event_t event){
 		default_test_definition(&test, TYPE_CREATURE);
 		test.cmc = 3;
 		test.cmc_flag = F5_CMC_GREATER_THAN_VALUE;
-		if( new_special_count_grave(player, &test) || new_special_count_grave(player, &test) ){
+		if( new_special_count_grave(player, &test) != -1 || new_special_count_grave(1-player, &test) != -1 ){
 			ai_modifier += 48;
 		}
 	}
 
 	if( event == EVENT_RESOLVE_SPELL ){
+		if (count_graveyard_by_type(ANYBODY, TYPE_CREATURE) < 1){ kill_card(player, card, KILL_DESTROY); return 0; }
 		int corpses[500];
 		int cc = 0;
 		int i;
@@ -297,6 +341,7 @@ int card_call_from_the_grave(int player, int card, event_t event){
 			pos &= ~(1<<31);
 		}
 		int card_added = reanimate_permanent(player, card, t_player, pos, REANIMATE_DEFAULT);
+		if (card_added < 1){ spell_fizzled = 1; return 0; }
 		damage_player(player, get_cmc(player, card_added), player, card);
 		kill_card(player, card, KILL_DESTROY);
 	}
@@ -306,12 +351,14 @@ int card_call_from_the_grave(int player, int card, event_t event){
 
 int card_faerie_dragon(int player, int card, event_t event)
 {
-  // 0x4735C0
-
   /* Faerie Dragon	|2|G|G
    * Creature - Faerie Dragon 1/3
    * Flying
    * |1|G|G: Play a random effect. */
+
+  // 0x4735C0
+
+
 
   target_t tgts[300]; // [sp+Ch] [bp-960h]@14
 
@@ -323,7 +370,7 @@ int card_faerie_dragon(int player, int card, event_t event)
 
   if (event == EVENT_ACTIVATE && charge_mana_for_activated_ability(player, card, MANACOST_XG(1,2)))
 	{
-	  int abil = (trace_mode & 2) ? network_random(player, 20) : internal_rand(20);	// 0x44E070 either picks a random number and sends it over the network, or awaits a number of the network
+	  int abil = network_rand(player, 20);	// 0x44E070 either picks a random number and sends it over the network, or awaits a number of the network
 
 	  card_instance_t* instance = get_card_instance(player, card);
 
@@ -331,7 +378,7 @@ int card_faerie_dragon(int player, int card, event_t event)
 
 	  int numtgts = choose_orcish_catapult_targets(player, card, tgts);	// picks random targets, sends/receives over network
 
-	  int chosen = (trace_mode & 2) ? network_random(player, numtgts) : internal_rand(numtgts);
+	  int chosen = network_rand(player, numtgts);
 
 	  instance->targets[0].player = tgts[chosen].player;
 	  instance->targets[0].card = tgts[chosen].card;
@@ -366,7 +413,7 @@ int card_faerie_dragon(int player, int card, event_t event)
 
 	  int effect_card = -1;
 
-	  char buf[300];
+	  char buf[301];
 
 	  if (abil >= 0 && abil < 20 && abil != 13 && abil != 1)
 		{
@@ -419,21 +466,18 @@ int card_faerie_dragon(int player, int card, event_t event)
 			break;
 
 		  case 3:
-			change_color(player, card, tgt_player, tgt_card,
-					 get_sleighted_color_test(player, card, COLOR_TEST_GREEN),
-					 CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
+			// change_color_and_kill_other_change_color_effects
+			change_color(player, card,tgt_player, tgt_card, get_sleighted_color_test(player, card, COLOR_TEST_GREEN), CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
 			break;
 
 		  case 4:
-			change_color(player, card, tgt_player, tgt_card,
-					 get_sleighted_color_test(player, card, COLOR_TEST_WHITE),
-					 CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
+			// change_color_and_kill_other_change_color_effects
+			change_color(player, card,tgt_player, tgt_card, get_sleighted_color_test(player, card, COLOR_TEST_WHITE), CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
 			break;
 
 		  case 5:
-			change_color(player, card, tgt_player, tgt_card,
-					 get_sleighted_color_test(player, card, COLOR_TEST_RED),
-					 CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
+			// change_color_and_kill_other_change_color_effects
+			change_color(player, card,tgt_player, tgt_card, get_sleighted_color_test(player, card, COLOR_TEST_RED), CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
 			break;
 
 		  case 6:
@@ -453,15 +497,13 @@ int card_faerie_dragon(int player, int card, event_t event)
 			break;
 
 		  case 10:
-			change_color(player, card, tgt_player, tgt_card,
-					 get_sleighted_color_test(player, card, COLOR_TEST_BLACK),
-					 CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
+			// change_color_and_kill_other_change_color_effects
+			change_color(player, card,tgt_player, tgt_card, get_sleighted_color_test(player, card, COLOR_TEST_BLACK), CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
 			break;
 
 		  case 11:
-			change_color(player, card, tgt_player, tgt_card,
-					 get_sleighted_color_test(player, card, COLOR_TEST_BLUE),
-					 CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
+			// change_color_and_kill_other_change_color_effects
+			change_color(player, card,tgt_player, tgt_card, get_sleighted_color_test(player, card, COLOR_TEST_BLUE), CHANGE_COLOR_SET | CHANGE_COLOR_NO_SLEIGHT);
 			break;
 
 		  case 12:
@@ -507,7 +549,7 @@ int card_faerie_dragon(int player, int card, event_t event)
 				Sleep(3000);	// Sleep(3000);
 			  }
 			++hack_silent_counters;
-			add_counter(tgt_player, tgt_card, COUNTER_M0_M1);
+			add_counters(player, card, tgt_player, tgt_card, COUNTER_M0_M1, 1);
 			--hack_silent_counters;
 			play_sound_effect(WAV_CATATAP);
 			break;
@@ -533,14 +575,22 @@ int card_faerie_dragon(int player, int card, event_t event)
 }
 
 int card_gem_bazaar(int player, int card, event_t event){
+  /* Gem Bazaar	""
+   * Land
+   * When ~ comes into play, choose a random color.
+   * |T: Add to your mana pool one mana of the color last chosen. Then choose a random color. */
+
 	/*
 	  Gem Bazaar
 	  When Gem Bazaar comes into play, choose a random color.
 	  |T: Add to your mana pool one mana of the color last chosen. Then choose a random color.
 	*/
-	if( comes_into_play(player, card, event) ){
+	etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+	if (event == EVENT_ETB_ABILITY){
 		play_sound_effect(WAV_GEMBAZAR);
-		get_card_instance(player, card)->info_slot = 1<<(1+internal_rand(5));
+		if (!is_humiliated(player, card, AL_TRIG)){
+			get_card_instance(player, card)->info_slot = 1<<(1+internal_rand(5));
+		}
 	}
 
 	if( event == EVENT_RESOLVE_ACTIVATION ){
@@ -549,22 +599,15 @@ int card_gem_bazaar(int player, int card, event_t event){
 		get_card_instance(instance->parent_controller, instance->parent_card)->info_slot = 1<<(1+internal_rand(5));
 	}
 
-	return mana_producer(player, card, event);
+	return plain_mana_producer(player, card, event);
 }
 
 int card_giant_badger(int player, int card, event_t event){
-	/*
-	  Giant Badger |1|G|G
-	  Creature - Badger 2/2
-	  Whenever Giant Badger blocks, it gets +2/+2 until end of turn.
-	*/
-	/*
-	  Royal Trooper	|2|W
-	  Creature - Human Soldier 2/2
-	  Whenever ~ blocks, it gets +2/+2 until end of turn.
-	*/
+  /* Giant Badger |1|G|G
+   * 	  Creature - Badger 2/2
+   * 	  Whenever Giant Badger blocks, it gets +2/+2 until end of turn. */
 
-	if( ! is_humiliated(player, card) && blocking(player, card, event) ){
+	if( ! is_humiliated(player, card, AL_TRIG) && blocking(player, card, event) ){
 		int amount = 2*count_creatures_this_is_blocking(player, card);
 		pump_until_eot(player, card, player, card, amount, amount);
 	}
@@ -573,6 +616,10 @@ int card_giant_badger(int player, int card, event_t event){
 
 int card_goblin_polka_band(int player, int card, event_t event)
 {
+  /* Goblin Polka Band	|R|R
+   * Summon Goblin 1/1
+   * |2, |T, Pay |R for each target: Tap any number of random target creatures. Goblins tapped in this way do not untap during their controllers' next untap phases. */
+
   card_instance_t* instance = get_card_instance(player, card);
 
   target_definition_t td;
@@ -632,6 +679,7 @@ int card_goblin_polka_band(int player, int card, event_t event)
 		  max_x_value = old_max_x_value;
 		  if (cancel != 1)
 			{
+			  tapped_for_mana_color = -1;
 			  instance->state |= STATE_TAPPED;
 
 			  if (x_value <= 0)
@@ -689,6 +737,11 @@ int card_goblin_polka_band(int player, int card, event_t event)
 }
 
 int card_mana_crypt(int player, int card, event_t event){
+  /* Mana Crypt	|0
+   * Artifact
+   * At the beginning of your upkeep, flip a coin. If you lose the flip, this artifact deals 3 damage to you.
+   * |T: Add |C|C. */
+
 	/*
 	  Mana Crypt 0
 	  Artifact
@@ -706,159 +759,187 @@ int card_mana_crypt(int player, int card, event_t event){
 	return card_sol_ring(player, card, event);
 }
 
-/*
-Nalathni Dragon |2|R|R --> Dragon Whelp
-Creature - Dragon 1/1
-Flying; banding
-{R}: Nalathni Dragon gets +1/+0 until end of turn.
-	If this ability has been activated four or more times this turn, sacrifice Nalathni Dragon at the beginning of the next end step.
-*/
-
 // Spawn of Azar token --> rhino token
 
 int card_necropolis_of_azar(int player, int card, event_t event)
 {
-  // 0x4bd380
-
   /* Necropolis of Azar	|2|B|B
    * Enchantment
    * Whenever a non|Sblack creature is put into any graveyard from play, put a husk counter on ~.
    * |5, Remove a husk counter from ~: Put a Spawn of Azar token into play. Treat this token as a |Sblack creature with a random power and toughness, each no
    * less than 1 and no greater than 3, that has |H2swampwalk. */
 
-	if (event == EVENT_CAN_CAST)
-		return 1;
+  int parent_controller;
+  unsigned int death_count;
+  int activation_or_counter_count;
+  card_instance_t *instance;
+  int random_power;
+  int random_toughness;
 
-	if( event == EVENT_GRAVEYARD_FROM_PLAY ){
-		test_definition_t test;
-		new_default_test_definition(&test, TYPE_CREATURE, "");
-		test.color = get_sleighted_color_test(player, card, COLOR_TEST_BLACK);
-		test.color_flag = DOESNT_MATCH;
-
-		count_for_gfp_ability(player, card, event, ANYBODY, 0, &test);
-	}
-
-	int result = resolve_gfp_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
-	if( result ){
-		add_counters(player, card, COUNTER_HUSK, BYTE0(result));
-	}
-
-	if (event == EVENT_CAN_ACTIVATE && count_counters(player, card, COUNTER_HUSK) <= 0)
-		return 0;
-	int rval = generic_activated_ability(player, card, event, 0, MANACOST_X(5), 0, NULL, NULL);
-	if (event == EVENT_ACTIVATE && cancel != 1)
-		remove_counter(player, card, COUNTER_HUSK);
-
-	if (event == EVENT_RESOLVE_ACTIVATION)
-	{
-	  play_sound_effect(WAV_NECRAZAR);
-	  int parent_controller = get_card_instance(player, card)->parent_controller;
-
-	  token_generation_t token;
-	  default_token_definition(player, card, CARD_ID_SPAWN_OF_AZAR, &token);
-	  if (trace_mode & 2)
-		{
-		  // 0x44E070 either picks a random number and sends it over the network, or awaits a number of the network
-		  token.pow = 1 + network_random(parent_controller, 3);
-		  token.tou = 1 + network_random(parent_controller, 3);
-		}
-	  else
-		{
-		  token.pow = 1 + internal_rand(3);
-		  token.tou = 1 + internal_rand(3);
-		}
-	  generate_token(&token);
-	}
-
-	return rval;
+  if (event == EVENT_CAN_CAST)
+  {
+    return 1;
+  }
+  if (event == EVENT_GRAVEYARD_FROM_PLAY)
+  {
+    test_definition_t test;
+    new_default_test_definition(&test, 2, "");
+    test.color = get_sleighted_color_test(player, card, 2);
+    test.color_flag = 1;
+    count_for_gfp_ability(player, card, 0x77, 2, 0, &test);
+  }
+  death_count = resolve_gfp_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+  if (death_count != 0)
+  {
+    for (death_count = death_count & 0xff; death_count != 0; death_count = death_count - 1)
+      add_counters(player, card, player, card, COUNTER_HUSK, 1);
+  }
+  if (event == EVENT_CAN_ACTIVATE)
+  {
+    activation_or_counter_count = count_counters(player, card, COUNTER_HUSK);
+    if (activation_or_counter_count < 1)
+      return 0;
+    return generic_activated_ability(player, card, EVENT_CAN_ACTIVATE, 0, 5, 0, 0, 0, 0, 0, 0, NULL,
+                                     NULL);
+  }
+  activation_or_counter_count =
+      generic_activated_ability(player, card, event, 0, 5, 0, 0, 0, 0, 0, 0, NULL, NULL);
+  if (event == EVENT_ACTIVATE)
+  {
+    if (spell_fizzled != 1)
+    {
+      remove_counters(player, card, player, card, COUNTER_HUSK, 1);
+      return activation_or_counter_count;
+    }
+  }
+  else if (event == EVENT_RESOLVE_ACTIVATION)
+  {
+    token_generation_t token;
+    play_sound_effect(WAV_NECRAZAR);
+    instance = get_card_instance(player, card);
+    parent_controller = instance->parent_controller;
+    default_token_definition(player, card, CARD_ID_SPAWN_OF_AZAR, &token);
+    random_power = network_rand(parent_controller, 3);
+    token.pow = (int32_t)(random_power + 1);
+    random_toughness = network_rand(parent_controller, 3);
+    token.tou = (int32_t)(random_toughness + 1);
+    generate_token(&token);
+    return activation_or_counter_count;
+  }
+  return activation_or_counter_count;
 }
 
-int card_orcish_catapult(int player, int card, event_t event){
-	/*
-	  Randomly distribute |X -0/-1 counters among a random number of random target creatures.
-	*/
-	if( ! IS_GS_EVENT(player, card, event) ){
-		return 0;
-	}
+int card_orcish_catapult(int player, int card, event_t event)
+{
+  /* Orcish Catapult	|X|R|R
+   * Instant
+   * Randomly distribute X -0/-1 counters among a random number of random target creatures. */
 
-	target_definition_t td;
-	default_target_definition(player, card, &td, TYPE_CREATURE);
+  /*
+    Randomly distribute |X -0/-1 counters among a random number of random target creatures.
+  */
+  if (!IS_GS_EVENT(player, card, event))
+  {
+    return 0;
+  }
 
-	card_instance_t *instance = get_card_instance(player, card);
+  target_definition_t td;
+  default_target_definition(player, card, &td, TYPE_CREATURE);
 
-	if( event == EVENT_CAN_CAST ){
-		return generic_spell(player, card, event, GS_CAN_TARGET, &td, NULL, 1, NULL);
-	}
+  card_instance_t *instance = get_card_instance(player, card);
 
-	if( event == EVENT_CAST_SPELL && affect_me(player, card) ){
-		instance->number_of_targets = 0;
-		instance->info_slot = x_value;
-		int max_trgs = 0;
-		int trgs[2][18];
-		int p;
-		for(p=0; p<2; p++){
-			int c;
-			for(c = 0; c<active_cards_count[p]; c++){
-				if( in_play(p, c) && is_what(p, c, TYPE_CREATURE) ){
-					if( would_validate_arbitrary_target(&td, p, c) ){
-						trgs[0][max_trgs] = p;
-						trgs[1][max_trgs] = c;
-						max_trgs++;
-					}
-					if( max_trgs == 18 ){
-						break;
-					}
-				}
-			}
-			if( max_trgs == 18 ){
-				break;
-			}
-		}
-		if( max_trgs ){
-			for(p=0; p<max_trgs; p++){
-				if( internal_rand(10)+1 >= 5 ){
-					int pos = instance->number_of_targets;
-					instance->targets[pos].player = trgs[0][p];
-					instance->targets[pos].card = trgs[1][p];
-					instance->number_of_targets++;
-				}
-			}
-		}
-	}
+  if (event == EVENT_CAN_CAST)
+  {
+    return generic_spell(player, card, event, GS_CAN_TARGET, &td, NULL, 1, NULL);
+  }
 
-	if(event == EVENT_RESOLVE_SPELL ){
-		int i, amount = instance->info_slot, sound_played = 0;
-		for(i=0; i<instance->number_of_targets; i++){
-			if( validate_target(player, card, &td, i) ){
-				int cnters = 1;
-				if( amount > 1 ){
-					cnters = internal_rand(amount);
-				}
-				amount-=cnters;
+  if (event == EVENT_CAST_SPELL && affect_me(player, card))
+  {
+    instance->number_of_targets = 0;
+    instance->info_slot = x_value;
+    int max_trgs = 0;
+    int trgs[2][18];
+    int p;
+    for (p = 0; p < 2; p++)
+    {
+      int c;
+      for (c = 0; c < active_cards_count[p]; c++)
+      {
+        if (in_play(p, c) && is_what(p, c, TYPE_CREATURE))
+        {
+          if (would_validate_arbitrary_target(&td, p, c))
+          {
+            trgs[0][max_trgs] = p;
+            trgs[1][max_trgs] = c;
+            max_trgs++;
+          }
+          if (max_trgs == 18)
+          {
+            break;
+          }
+        }
+      }
+      if (max_trgs == 18)
+      {
+        break;
+      }
+    }
+    if (max_trgs)
+    {
+      for (p = 0; p < max_trgs; p++)
+      {
+        if (internal_rand(10) + 1 >= 5)
+        {
+          int pos = instance->number_of_targets;
+          instance->targets[pos].player = trgs[0][p];
+          instance->targets[pos].card = trgs[1][p];
+          instance->number_of_targets++;
+        }
+      }
+    }
+  }
 
-				if (ai_is_speculating != 1 && !sound_played){
-					play_sound_effect(WAV_ORCART);
-					Sleep(3000);	// Sleep(3000);
-				}
-				++hack_silent_counters;
-				add_counters(instance->targets[i].player, instance->targets[i].card, COUNTER_M0_M1, cnters);
-				--hack_silent_counters;
-				if (ai_is_speculating != 1 && !sound_played){
-					sound_played = 1;
-					play_sound_effect(WAV_CATATAP);
-				}
-			}
-			if( amount < 1 ){
-				break;
-			}
-		}
-		kill_card(player, card, KILL_DESTROY);
-	}
-	return 0;
+  if (event == EVENT_RESOLVE_SPELL)
+  {
+    int i, amount = instance->info_slot, sound_played = 0;
+    for (i = 0; i < instance->number_of_targets; i++)
+    {
+      if (validate_target(player, card, &td, i))
+      {
+        int cnters = 1;
+        if (amount > 1)
+        {
+          cnters = internal_rand(amount);
+        }
+        amount -= cnters;
+
+        if (ai_is_speculating != 1 && !sound_played)
+        {
+          play_sound_effect(WAV_ORCART);
+          Sleep(3000); // Sleep(3000);
+        }
+        ++hack_silent_counters;
+        add_counters(player, card, instance->targets[i].player,
+                                 instance->targets[i].card, COUNTER_M0_M1, cnters);
+        --hack_silent_counters;
+        if (ai_is_speculating != 1 && !sound_played)
+        {
+          sound_played = 1;
+          play_sound_effect(WAV_CATATAP);
+        }
+      }
+      if (amount < 1)
+      {
+        break;
+      }
+    }
+    kill_card(player, card, KILL_DESTROY);
+  }
+  return 0;
 }
 
 int card_pandoras_box(int player, int card, event_t event){
-	/*
+  /*
 	  Pandora's Box	|5
 	  |3, |T: Choose a random non-artifact creature card from all players' libraries.
 	  For each player, flip a coin. If the flip ends up heads, put a token creature into play
@@ -882,7 +963,7 @@ int card_pandoras_box(int player, int card, event_t event){
 			}
 		}
 		int revealed_by_pandoras_box[1] = {corpses[internal_rand(cc)]};
-		show_deck( player, revealed_by_pandoras_box, 1, "Pandora's Box chosen...", 0, 0x7375B0 );
+		show_deck( player, revealed_by_pandoras_box, 1, "Pandora's Box chosen...", 0, gs_done_008b40e0 );
 
 		token_generation_t token;
 		default_token_definition(player, card, cards_data[revealed_by_pandoras_box[0]].id, &token);
@@ -901,7 +982,7 @@ int card_pandoras_box(int player, int card, event_t event){
 }
 
 int card_power_struggle(int player, int card, event_t event){
-	/*
+  /*
 	  Power Struggle	|2|U|U|U
 	  At the beginning of each player's upkeep, that player exchanges control of random target artifact, creature or land he or she controls,
 	  for control of random target permanent of the same type that a random opponent controls.
@@ -955,7 +1036,7 @@ int card_prismatic_dragon(int player, int card, event_t event){
 	  At the beginning of your upkeep, Prismatic Dragon becomes a random color permanently.
 	  |2: Prismatic Dragon becomes a random color permanently.
 	*/
-	if( ! is_humiliated(player, card) ){
+	if( ! is_humiliated(player, card, AL_TRIG) ){
 		if( current_turn == player && upkeep_trigger(player, card, event) ){
 			get_card_instance(player, card)->info_slot = 1<<(1+internal_rand(5));
 		}
@@ -975,6 +1056,12 @@ int card_prismatic_dragon(int player, int card, event_t event){
 }
 
 int card_rainbow_knights(int player, int card, event_t event){
+  /* Rainbow Knights	|W|W
+   * Summon Knights 2/1
+   * When ~ comes into play, it gains protection from a random color permanently.
+   * |1: First strike until end of turn.
+   * |W|W: +0/+0, +1/+0 or +2/+0 until end of turn chosen at random. */
+
 	/*
 	  Rainbow Knights	|W|W
 	  When Rainbow Knights comes into play, it gains protection from a random color permanently.
@@ -983,15 +1070,17 @@ int card_rainbow_knights(int player, int card, event_t event){
 	*/
 	card_instance_t *instance = get_card_instance(player, card);
 
-	if( ! is_humiliated(player, card) ){
-		if( comes_into_play(player, card, event) ){
-			instance->targets[1].card = 1<<(11+internal_rand(5));
-		}
-
-		if( event == EVENT_ABILITIES && affect_me(player, card) && instance->targets[1].card > -1 ){
-			event_result |= instance->targets[1].card;
-		}
-	}
+	if (event == EVENT_CAST_SPELL && affect_me(player, card)){
+        instance->targets[1].card = 0;
+    }
+    etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+    if (event == EVENT_ETB_ABILITY){
+        instance->targets[1].card |= 1 << (11 + internal_rand(5));
+    }
+    if (event == EVENT_ABILITIES && affect_me(player, card) && (instance->targets[1].card & 0xf800) &&
+        !is_humiliated(player, card, AL_STATIC)){
+        event_result |= instance->targets[1].card & 0xf800;
+    }
 
 	if( event == EVENT_CAN_ACTIVATE ){
 		if( generic_activated_ability(player, card, event, 0, MANACOST_W(2), 0, NULL, NULL) ){
@@ -1036,6 +1125,10 @@ static void sewers_of_estark_prevent_damage_effect(int player, int card, int t_p
 }
 
 int card_sewers_of_estark(int player, int card, event_t event){
+  /* Sewers of Estark	|2|B|B
+   * Instant
+   * Choose target creature. If it's attacking, it can't be blocked this turn. If it's blocking, prevent all combat damage that would be dealt this combat by it and each creature it's blocking. */
+
 	/*
 	  Sewers of Estark
 	  Instant
@@ -1071,18 +1164,12 @@ int card_sewers_of_estark(int player, int card, event_t event){
 }
 
 int card_whimsy(int player, int card, event_t event){
+  /* Whimsy	|X|U|U
+   * Sorcery
+   * Play X random fast effects. */
+
 	return card_whimsy_exe(player, card, event);
 }
-
-/*
-Windseeker Centaur |1|R|R --> Serra Angel
-Creature - Centaur 2/2
-Vigilance
-*/
-
-/**********************************
- * Heroes of the Realm 2016 cards *
- **********************************/
 
 /* Chandra, Gremlin Wrangler	|2|R|R
  * Legendary Planeswalker - Chandra (3)
@@ -1101,32 +1188,21 @@ Vigilance
  * Flying, trample, haste
  * When ~ enters the battlefield, the next time you would lose the game this turn, instead draw three cards and your life total becomes 5. */
 
-/***********************************************************************************
- * Hascon 2017 cards (except Swords of Dungeons & Dragons, which is in unstable.c) *
- ***********************************************************************************/
-
 /* Grimlock, Dinobot Leader	|1|R|G|W
  * Legendary Artifact Creature - Autobot 4/4
  * Dinosaurs, Vehicles, and other Transformers(R) creatures you control get +2/+0.
  * |2, Convert a Transformers toy you own to its other mode: ~ becomes ~, Ferocious King.
  * (~, Ferocious King - 8/8) Trample
  * |2, Convert a Transformers toy you own to its other mode: ~, Ferocious King becomes ~. */
+
 /* Grimlock, Ferocious King	""
  * Legendary Artifact Creature - Dinosaur 8/8
  * Trample
  * |2, Convert a Transformers toy you own to its other mode: ~ becomes ~, Dinobot Leader. */
-/* Rulings from Maro, for what they're worth, amount to:
- * "Transformers creatures" includes creatures that transform, and creatures that are the backs of double-faced-cards
- * whose front could transform, and melded creatures; but not flip-walkers, the fronts of meld cards, or anything else
- * that reads something like "exile this card, then return it to the battlefield transformed". */
 
 /* Nerf War	|3|U|R
  * Sorcery
  * Fire a Nerf(R) blaster until empty at target library from at least two meters away. For each card knocked off that library, put it into its owner's graveyard and ~ deals 1/2 damage to that player. (Foam darts only.) */
-
-/************************************************
- * MTG:Arena "New Player Experience"-only cards *
- ************************************************/
 
 /* Angelic Reward	|3|W|W
  * Enchantment - Aura
@@ -1199,10 +1275,6 @@ Vigilance
  * Creature - Bird 1/1
  * Flying */
 
-/****************************
- * Game Night box set, 2018 *
- ****************************/
-
 /* Militant Angel	|3|W|W
  * Creature - Angel 3/4
  * Flying, lifelink
@@ -1229,3 +1301,427 @@ Vigilance
  * This spell costs |1 less to cast for each opponent you have.
  * Trample
  * When ~ enters the battlefield, each player searches their library for up to two basic land cards, puts them onto the battlefield, then shuffles their library. */
+
+/* ManalinkEh 2022: 0x2410730; original cards/promo.c:1314. */
+int card_fruitcake_elemental(int player, int card, event_t event)
+{
+  /* Fruitcake Elemental	|1|G|G
+   * Creature - Elemental 7/7
+   * ~ is indestructible.
+   * At the end of your turn, ~ deals 7 damage to you.
+   * |3: Target player gains control of ~. */
+
+  int result;
+  card_instance_t *instance;
+  target_definition_t td;
+
+  indestructible(player, card, event);
+  if ((current_turn == player) && (result = eot_trigger(player, card, event), result != 0))
+  {
+    damage_player(player, 7, player, card);
+  }
+  if (event == EVENT_ACTIVATE)
+  {
+    default_target_definition(player, card, &td, 0);
+    td.zone = TARGET_ZONE_PLAYERS;
+  }
+  else
+  {
+    if ((1 < (uint32_t)(event - EVENT_RESOLVE_ACTIVATION)) && (event != EVENT_CLEANUP))
+    {
+      return 0;
+    }
+    default_target_definition(player, card, &td, 0);
+    td.zone = TARGET_ZONE_PLAYERS;
+
+    if (((event == EVENT_RESOLVE_ACTIVATION) && (result = valid_target(&td), result != 0)) &&
+        (instance = get_card_instance(player, card), instance->targets[0].player == 1 - player))
+    {
+      give_control_of_self(instance->parent_controller, instance->parent_card);
+    }
+  }
+  result =
+      generic_activated_ability(player, card, event, 4, 3, 0, 0, 0, 0, 0, 0, &td, "TARGET_PLAYER");
+  return result;
+}
+
+/* ManalinkEh 2022: 0x24108e0; original cards/promo.c:1353. */
+int card_seasons_beatings(int player, int card, event_t event)
+{
+  /* Season's Beatings	|R|R|R|R
+   * Sorcery
+   * Family gathering - Each creature target player controls deals damage equal to its power to another random creature that player controls. */
+
+  int c;
+  int card_00;
+  int p;
+  card_instance_t *instance;
+  int random_target_or_creature;
+  int amt;
+  int i;
+  int damage_source_index;
+  target_definition_t td;
+  int creatures[151];
+
+  if (!IS_GS_EVENT(player, card, event))
+  {
+    return 0;
+  }
+  default_target_definition(player, card, &td, 0);
+  td.zone = TARGET_ZONE_PLAYERS;
+  if (event == EVENT_RESOLVE_SPELL)
+  {
+    if (valid_target(&td) != 0)
+    {
+
+      instance = get_card_instance(player, card);
+
+      p = instance->targets[0].player;
+      if (0 < active_cards_count[p])
+      {
+        i = 0;
+        c = 0;
+        do
+        {
+          instance = in_play(p, c);
+          if ((instance != NULL) &&
+              (random_target_or_creature = is_what(p, c, 2), random_target_or_creature != 0))
+          {
+            creatures[i] = c;
+            i = i + 1;
+          }
+          c = c + 1;
+        } while (c < active_cards_count[p]);
+        if (1 < i)
+        {
+
+          damage_source_index = 0;
+          do
+          {
+
+            random_target_or_creature = network_rand(player, i + -1);
+            random_target_or_creature = random_target_or_creature + 1;
+            if (random_target_or_creature == damage_source_index)
+            {
+              random_target_or_creature = 0;
+            }
+            card_00 = creatures[damage_source_index];
+            amt = get_power(p, card_00);
+            damage_source_index = damage_source_index + 1;
+            damage_creature(p, creatures[random_target_or_creature], amt, p, card_00);
+          } while (i != damage_source_index);
+        }
+      }
+    }
+    kill_card(player, card, KILL_DESTROY);
+  }
+  return generic_spell(player, card, event, 1, &td, "TARGET_PLAYER", 1, NULL);
+}
+
+/**********************************
+ * Heroes of the Realm 2016 cards *
+ **********************************/
+
+/***********************************************************************************
+ * Hascon 2017 cards (except Swords of Dungeons & Dragons, which is in unstable.c) *
+ ***********************************************************************************/
+
+/* Rulings from Maro, for what they're worth, amount to:
+ * "Transformers creatures" includes creatures that transform, and creatures that are the backs of double-faced-cards
+ * whose front could transform, and melded creatures; but not flip-walkers, the fronts of meld cards, or anything else
+ * that reads something like "exile this card, then return it to the battlefield transformed". */
+
+/************************************************
+ * MTG:Arena "New Player Experience"-only cards *
+ ************************************************/
+
+/****************************
+ * Game Night box set, 2018 *
+ ****************************/
+
+/* ManalinkEh 2022: 0x240d300; original cards/promo.c:1398. */
+static int has_globe_counter(int unused, int unused2, int player, int card)
+{
+  int result;
+  result = count_counters(player, card, COUNTER_GLOBE);
+  return (unsigned int)(result != 0);
+}
+
+#ifndef SHANDALAR
+/* ManalinkEh 2022: 0x2410b40; original cards/promo.c:1401. */
+int card_snow_mercy(int player, int card, event_t event)
+{
+  /* Snow Mercy	|2|W|W
+   * Snow Enchantment
+   * Whenever a creature deals damage to you, put a globe counter on it.
+   * |T, |Q, |T, |Q, |T: Tap all creatures with globe counters on them. */
+
+  unsigned char stored_source_count;
+  card_instance_t *damage_or_enchantment;
+  int result;
+  wav_t soundnum;
+  card_instance_t *source_or_enchantment;
+  unsigned int tap_step_or_ability_flags;
+  test_definition_t test;
+
+  damage_or_enchantment = damage_being_dealt(event);
+  if (((((damage_or_enchantment != NULL) && (damage_or_enchantment->damage_target_card == -1)) &&
+        (damage_or_enchantment->damage_target_player == player)) &&
+       ((result = damage_is_to_planeswalker(damage_or_enchantment),
+         result == 0 && ((damage_or_enchantment->targets[3].player & 2) != 0)))) &&
+      ((source_or_enchantment = in_play((int)damage_or_enchantment->damage_source_player,
+                                        damage_or_enchantment->damage_source_card),
+        source_or_enchantment != NULL &&
+            (result = is_humiliated(player, card, AL_TRIG), result == 0))))
+  {
+    source_or_enchantment = get_card_instance(player, card);
+    stored_source_count = source_or_enchantment->number_of_targets;
+    if (stored_source_count < 10)
+    {
+      source_or_enchantment->targets[stored_source_count].player =
+          (int)damage_or_enchantment->damage_source_player;
+      source_or_enchantment->targets[stored_source_count].card =
+          damage_or_enchantment->damage_source_card;
+      source_or_enchantment->number_of_targets = stored_source_count + 1;
+    }
+    else
+    {
+      add_counters(player, card, (int)damage_or_enchantment->damage_source_player,
+                   damage_or_enchantment->damage_source_card, COUNTER_GLOBE, 1);
+    }
+  }
+  if (((trigger_condition == TRIGGER_DEAL_DAMAGE) && (card == affected_card)) &&
+      ((player == affected_card_controller &&
+        ((reason_for_trigger_controller == player &&
+          (result = is_humiliated(player, card, AL_TRIG), result == 0))))))
+  {
+    damage_or_enchantment = get_card_instance(player, card);
+    if (event == EVENT_TRIGGER)
+    {
+      if (damage_or_enchantment->number_of_targets != '\0')
+        event_result = event_result | 2;
+    }
+    else if (event == EVENT_RESOLVE_TRIGGER)
+    {
+
+      if (damage_or_enchantment->number_of_targets != '\0')
+      {
+        result = 0;
+        do
+        {
+          add_counters(player, card, damage_or_enchantment->targets[result].player,
+                       damage_or_enchantment->targets[result].card, COUNTER_GLOBE, 1);
+          result = result + 1;
+        } while (result < (int)(unsigned int)damage_or_enchantment->number_of_targets);
+      }
+      damage_or_enchantment->number_of_targets = '\0';
+      return global_enchantment(player, card, event);
+    }
+  }
+  if (event == EVENT_ACTIVATE)
+  {
+    damage_or_enchantment = get_card_instance(player, card);
+    damage_or_enchantment->state = damage_or_enchantment->state | 0x10;
+    result =
+        generic_activated_ability(player, card, EVENT_ACTIVATE, 0, 0, 0, 0, 0, 0, 0, 0, NULL, NULL);
+    damage_or_enchantment = get_card_instance(player, card);
+    damage_or_enchantment->state = damage_or_enchantment->state & 0xffffffef;
+    if (result == 0)
+    {
+      return 0;
+    }
+    if (spell_fizzled == 1)
+    {
+      return result;
+    }
+    tap_step_or_ability_flags = 0;
+    do
+    {
+      if ((tap_step_or_ability_flags & 1) == 0)
+        tap_card(player, card);
+      else
+        untap_card(player, card);
+      if (ai_is_speculating != 1)
+      {
+        TENTATIVE_redisplay_all(0, 0xff);
+        soundnum = (tap_step_or_ability_flags & 1) == 0 ? WAV_FASTFX : WAV_UNTAP;
+        play_sound_effect(soundnum);
+        sleepms(0x15e);
+      }
+      tap_step_or_ability_flags = tap_step_or_ability_flags + 1;
+    } while (tap_step_or_ability_flags != 4);
+    damage_or_enchantment = get_card_instance(player, card);
+    damage_or_enchantment->state = damage_or_enchantment->state | 0x10;
+    return result;
+  }
+  if (event != EVENT_CAN_ACTIVATE && event != EVENT_RESOLVE_ACTIVATION && event != EVENT_CLEANUP)
+    return global_enchantment(player, card, event);
+  tap_step_or_ability_flags = 1;
+  result = generic_activated_ability(player, card, event, tap_step_or_ability_flags, 0, 0, 0, 0, 0,
+                                     0, 0, NULL, NULL);
+  if (event != EVENT_RESOLVE_ACTIVATION)
+  {
+    return result;
+  }
+  default_test_definition(&test, 2);
+  test.special_selection_function = has_globe_counter;
+  new_manipulate_all(player, card, 2, &test, ACT_TAP);
+  return result;
+}
+#endif
+
+/* ManalinkEh 2022: 0x2410fc0; original cards/promo.c:1482. */
+int card_yule_ooze(int player, int card, event_t event)
+{
+  /* Yule Ooze	|2|R|G
+   * Creature - Ooze 1/1
+   * At the beginning of your upkeep, destroy another nonland permanent chosen at random, then put a number of +1/+1 counters on ~ equal to that permanent's converted mana cost.
+   * |R|G, Eat some food: Regenerate ~. */
+
+  int p;
+  int c;
+  int scan_player_or_regeneration;
+  card_instance_t *instance;
+  int cmc;
+  int chosen_card_or_index;
+  int nonland_count;
+  target_t nlperms[151];
+
+  upkeep_trigger_ability(player, card, event, player);
+  if (event != EVENT_UPKEEP_TRIGGER_ABILITY)
+  {
+    scan_player_or_regeneration = regeneration(player, card, event, 0, 0, 0, 1, 1, 0);
+    if ((event == EVENT_ACTIVATE) && (spell_fizzled != 1))
+    {
+      play_sound_effect(WAV_DEVOUR);
+      return scan_player_or_regeneration;
+    }
+    return scan_player_or_regeneration;
+  }
+
+  nonland_count = 0;
+  scan_player_or_regeneration = 0;
+  do
+  {
+
+    if (0 < active_cards_count[scan_player_or_regeneration])
+    {
+      c = 0;
+      do
+      {
+        if ((card != c) || (player != scan_player_or_regeneration))
+        {
+          instance = in_play(scan_player_or_regeneration, c);
+          if (instance != NULL)
+          {
+            if (is_what(scan_player_or_regeneration, c, 1) == 0)
+            {
+              if (is_what(scan_player_or_regeneration, c, 0x47) != 0)
+              {
+                nlperms[nonland_count].card = c;
+                nlperms[nonland_count].player = scan_player_or_regeneration;
+                c = c + 1;
+                nonland_count = nonland_count + 1;
+                continue;
+              }
+            }
+          }
+        }
+        c = c + 1;
+      } while (c < active_cards_count[scan_player_or_regeneration]);
+    }
+    scan_player_or_regeneration = scan_player_or_regeneration + 1;
+    if (scan_player_or_regeneration == 2)
+    {
+      if (0 < nonland_count)
+      {
+
+        chosen_card_or_index = network_rand(player, nonland_count);
+        p = nlperms[chosen_card_or_index].player;
+        chosen_card_or_index = nlperms[chosen_card_or_index].card;
+        cmc = get_cmc(p, chosen_card_or_index);
+        kill_card(p, chosen_card_or_index, KILL_DESTROY);
+        add_counters(player, card, player, card, COUNTER_P1_P1, cmc);
+      }
+      return regeneration(player, card, EVENT_UPKEEP_TRIGGER_ABILITY, 0, 0, 0, 1, 1, 0);
+    }
+  } while (true);
+}
+
+#ifndef SHANDALAR
+/* ManalinkEh 2022: 0x2411220; original cards/promo.c:1526. */
+int card_stocking_tiger(int player, int card, event_t event)
+{
+  /* Stocking Tiger	|5
+   * Artifact Creature - Cat Construct 3/3
+   * ~ enters with a sealed Magic booster pack under it.
+   * When ~ deals combat damage to a player, unwrap the booster pack and put it into your hand. */
+
+  if (event == EVENT_RESOLVE_SPELL && !is_humiliated(player, card, AL_STATIC))
+  {
+    EXPANSION_t expansion = (EXPANSION_t)-1;
+    if (ai_is_speculating == 1 || (player == 1 && (trace_mode & 2) == 0))
+    {
+      expansion = EXPANSION_THE_DARK;
+      announce_expansion_choice(player, card, expansion);
+    }
+    else if ((trace_mode & 2) != 0 && player != 0)
+    {
+      TENTATIVE_wait_for_network_result(1, 26);
+      expansion = dblword_628C10;
+      announce_expansion_choice(player, card, expansion);
+    }
+    else
+    {
+      choose_packs(1, PACK_ALLOW_BOOSTER, &expansion, NULL);
+      if ((trace_mode & 2) != 0)
+      {
+        dblword_628C10 = expansion;
+        byte_628C0C = 26;
+        TENTATIVE_send_network_result(0, 26);
+      }
+    }
+    if (is_valid_pack(expansion, 1))
+      get_card_instance(player, card)->targets[3].card =
+          ((uint32_t)expansion & 0xffff) | 0x3f7c0000;
+  }
+  if (has_combat_damage_been_inflicted_to_a_player(player, card, event))
+  {
+    card_instance_t *instance = get_card_instance(player, card);
+    uint32_t stored = instance->targets[3].card;
+    if ((uint16_t)(stored >> 16) == 0x3f7c)
+    {
+      EXPANSION_t expansion = stored & 0xffff;
+      if (is_valid_pack(expansion, 1))
+      {
+        instance->targets[3].card = -1;
+        int capacity = pack_size(expansion, 1);
+        int csvids[capacity];
+        int num_csvids = make_pack(expansion, 1, csvids);
+        for (int i = 0; i < num_csvids; ++i)
+          add_card_to_hand(player, get_internal_card_id_from_csv_id(csvids[i]));
+      }
+    }
+  }
+  return 0;
+}
+#endif
+
+/* ManalinkEh 2022: 0x2411480; original cards/promo.c:1596. */
+int card_bog_humbugs(int player, int card, event_t event)
+{
+  /* Bog Humbugs	|1|B
+   * Creature - Insect 1/1
+   * Flying
+   * Whenever ~ deals combat damage, hum that many notes of a festive song. If you can, put a +1/+1 counter on ~. */
+
+  if (!damage_dealt_by_me(player, card, event, DDBM_MUST_BE_COMBAT_DAMAGE))
+  {
+    return 0;
+  }
+  play_sound_effect(WAV_POLKAMIX);
+  hack_silent_counters = hack_silent_counters + 1;
+  add_counters(player, card, player, card, COUNTER_P1_P1, 1);
+  hack_silent_counters = hack_silent_counters + -1;
+  return 0;
+}

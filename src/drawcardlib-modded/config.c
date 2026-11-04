@@ -1825,3 +1825,19 @@ expansion_category(int expansion)
 	return EXPCAT_NONE;
   return (int)expansion_categories[expansion] >= 0 && expansion_categories[expansion] <= MAX_EXPCAT ? expansion_categories[expansion] : EXPCAT_NONE;
 }
+
+/* Recovered Drawcardlib query API used by Symbol Status. */
+void get_config_data(int config, int item, int *result)
+{
+  if (!result) return;
+  const Config *cfg = &configs[config >= 0 && config <= MAX_CFG ? config : CFG_BASE];
+  if (item == 1) *result = cfg->smallcard_expansion_visible || cfg->fullcard_expansion_visible;
+  else if (item == 2) *result = cfg->fullcard_expansion_no_early_core_sets;
+  else *result = 0;
+}
+
+int printing_rarity(const Rarities *r, int expansion)
+{
+  if (!r || expansion < 1 || expansion > raw_expansions - FAKE_EXPANSIONS + 1) return NONE;
+  return r->rarity_in_expansion[expansion];
+}

@@ -1,6 +1,14 @@
 #include "manalink.h"
 
 int card_lich(int player, int card, event_t event){
+  /* Lich	|B|B|B|B
+   * Enchantment
+   * As ~ enters the battlefield, you lose life equal to your life total.
+   * You don't lose the game for having 0 or less life.
+   * If you would gain life, draw that many cards instead.
+   * Whenever you're dealt damage, sacrifice that many nontoken permanents. If you can't, you lose the game.
+   * When ~ is put into a graveyard from the battlefield, you lose the game. */
+
     if( event == EVENT_GRAVEYARD_FROM_PLAY && get_challenge4() == 2 && is_unlocked(player, card, event, 37) ){
         return 0;
     }
@@ -17,6 +25,11 @@ int effect_necropotence(int player, int card, event_t event){
 }
 
 int card_necropotence(int player, int card, event_t event){
+  /* Necropotence	|B|B|B	0x20011C8
+   * Enchantment
+   * Skip your draw step.
+   * Whenever you discard a card, exile that card from your graveyard.
+   * Pay 1 life: Exile the top card of your library face down. Put that card into your hand at the beginning of your next end step. */
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -61,6 +74,10 @@ int card_necropotence(int player, int card, event_t event){
 }
 
 int card_nether_void(int player, int card, event_t event){
+  /* Nether Void	|3|B
+   * World Enchantment
+   * Whenever a player casts a spell, counter it unless its controller pays |3. */
+
     if( event == EVENT_CAN_CAST ){
         return 1;
     }
@@ -73,6 +90,4 @@ int card_nether_void(int player, int card, event_t event){
     }
     return global_enchantment(player, card, event);
 }
-
-
 

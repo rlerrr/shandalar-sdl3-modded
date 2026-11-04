@@ -173,10 +173,10 @@ def expand(name,csvid,d,p,selected,registry,oracle):
    blocks=False
    if witness and can_attack:
     blocks=not e['tapped'] and ('Flying' in keys or 'Reach' in keys or grant!='Reach') if defending else 'Flying' not in keys or witness in ('Giant Spider','Suntail Hawk')
+    if grant=='Menace' and 'Menace' in keys and v!='two_blockers':blocks=False
     actions += [step('block',ref=blocker,other=attacker,value=int(blocks))]
     if v=='two_blockers':actions += [step('block',ref='second_blocker',other=attacker,value=1)]
    actions += [step('advance_combat')]
-   if grant=='Menace' and blocks and 'Menace' in keys and v!='two_blockers':blocks=False
    if witness and can_attack:actions += [observe(blocker,'blocking_count',int(blocks))]
    if v=='two_blockers':actions += [observe(probe_ref,'blocked',1),observe('second_blocker','blocking_count',1)]
    else:

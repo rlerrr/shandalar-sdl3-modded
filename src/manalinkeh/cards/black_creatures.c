@@ -15,6 +15,12 @@ popup(const char* title, const char* fmt, ...)
 }
 
 int card_horobi_deaths_wail(int player, int card, event_t event){
+  /* CARD_ID_HOROBI_DEATHS_WAIL	7245
+   * Horobi, Death's Wail	|2|B|B
+   * Legendary Creature - Spirit 4/4
+   * Flying
+   * Whenever a creature becomes the target of a spell or ability, destroy that creature. */
+
 	card_instance_t *instance = get_card_instance( player, card );
     check_legend_rule(player, card, event);
     if( in_play(player, card) && ! ai_is_speculating ){
@@ -50,8 +56,13 @@ int card_horobi_deaths_wail(int player, int card, event_t event){
     return 0;
 }
 
-
 int card_swamp_mosquito(int player, int card, event_t event){
+  /* CARD_ID_SWAMP_MOSQUITO	2365
+   * Swamp Mosquito	|1|B
+   * Creature - Insect 0/1
+   * Flying
+   * Whenever ~ attacks and isn't blocked, defending player gets a poison counter. (A player with ten or more poison counters loses the game.) */
+
     if( event == EVENT_DECLARE_BLOCKERS ){
         if( is_unblocked(player, card) ){
             poison_counters[1-player]++;
@@ -61,11 +72,23 @@ int card_swamp_mosquito(int player, int card, event_t event){
 }
 
 int card_suqata_assassin(int player, int card, event_t event){
+  /* CARD_ID_SUQATA_ASSASSIN	2788
+   * Suq'Ata Assassin	|1|B|B
+   * Creature - Human Assassin 1/1
+   * Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)
+   * Whenever ~ attacks and isn't blocked, defending player gets a poison counter. (A player with ten or more poison counters loses the game.) */
+
     fear(player, card, event);
     return card_swamp_mosquito(player, card, event);
 }
 
 int card_zombie_master(int player, int card, event_t event){
+  /* CARD_ID_ZOMBIE_MASTER	291
+   * Zombie Master	|1|B|B
+   * Creature - Zombie 2/3
+   * Other Zombie creatures have |H2swampwalk. (They can't be blocked as long as defending player controls |Ha Swamp.)
+   * Other Zombies have "|B: Regenerate this permanent." */
+
     if( event == EVENT_ABILITIES && affect_me(player, card )){
         return 0;
     }
@@ -73,6 +96,11 @@ int card_zombie_master(int player, int card, event_t event){
 }
 
 int card_nightscape_familiar(int player, int card, event_t event){
+  /* Nightscape Familiar	|1|B
+   * Creature - Zombie 1/1
+   * |SBlue spells and |Sred spells you cast cost |1 less to cast.
+   * |1|B: Regenerate ~. */
+
     if(event == EVENT_MODIFY_COST_GLOBAL && affected_card_controller == player ){
         card_instance_t *instance = get_card_instance( affected_card_controller, affected_card);
         if(  affected_card_controller == player && ((instance->card_color & COLOR_TEST_RED) || (instance->card_color & COLOR_TEST_BLUE)) ){
@@ -94,6 +122,10 @@ void dark_confidant_effect(int player, int card, int t_player){
 }
 
 int card_dark_confidant(int player, int card, event_t event){
+  /* CARD_ID_DARK_CONFIDANT	7811
+   * Dark Confidant	|1|B
+   * Creature - Human Wizard 2/1
+   * At the beginning of your upkeep, reveal the top card of your library and put that card into your hand. You lose life equal to its converted mana cost. */
 
 	upkeep_trigger_ability(player, card, event, player);	
 
@@ -157,6 +189,9 @@ int disciple_of_the_vault_legacy(int player, int card, event_t event){
 }
 
 int card_disciple_of_the_vault(int player, int card, event_t event){
+  /* Disciple of the Vault	|B
+   * Creature - Human Cleric 1/1
+   * Whenever an artifact is put into a graveyard from the battlefield, you may have target opponent lose 1 life. */
 
 	if( event == EVENT_RESOLVE_SPELL ){
 		int legacy = create_legacy_effect(player, card, &disciple_of_the_vault_legacy);
@@ -169,6 +204,12 @@ int card_disciple_of_the_vault(int player, int card, event_t event){
 }
 
 int card_scavenger_drake(int player, int card, event_t event){
+  /* CARD_ID_SCAVENGER_DRAKE	1373
+   * Scavenger Drake	|3|B
+   * Creature - Drake 1/1
+   * Flying
+   * Whenever another creature dies, you may put a +1/+1 counter on ~. */
+
     card_instance_t *instance= get_card_instance(player, card);
     if(event == EVENT_GRAVEYARD_FROM_PLAY){
         if( ! in_play(affected_card_controller, affected_card) ){ return 0; }
@@ -186,7 +227,7 @@ int card_scavenger_drake(int player, int card, event_t event){
     if( resolve_graveyard_trigger(player, card, event) == 1 ){
 		int i;
 		for(i=0; i<instance->targets[11].player; i++){
-			add_1_1_counter(player, card);
+			add_1_1_counter(player, card, player, card);
 		}
         instance->targets[11].player = 0;
     }
@@ -194,6 +235,11 @@ int card_scavenger_drake(int player, int card, event_t event){
 }
 
 int card_demonic_hordes( int player, int card, event_t event){
+  /* Demonic Hordes	|3|B|B|B
+   * Creature - Demon 5/5
+   * |T: Destroy target land.
+   * At the beginning of your upkeep, unless you pay |B|B|B, tap ~ and sacrifice a land of an opponent's choice. */
+
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_LAND);
 
@@ -227,6 +273,10 @@ int card_demonic_hordes( int player, int card, event_t event){
 }
 
 int card_hells_caretaker(int player, int card, event_t event){
+  /* CARD_ID_HELLS_CARETAKER	670
+   * Hell's Caretaker	|3|B
+   * Creature - Horror 1/1
+   * |T, Sacrifice a creature: Return target creature card from your graveyard to the battlefield. Activate this ability only during your upkeep. */
 
 	char msg[100] = "Select a creature card.";
 	test_definition_t this_test;
@@ -276,6 +326,11 @@ int card_hells_caretaker(int player, int card, event_t event){
 }
 
 int card_ashen_ghoul(int player, int card, event_t event){
+  /* Ashen Ghoul	|3|B	0x200210E
+   * Creature - Zombie 3/1
+   * Haste
+   * |B: Return ~ from your graveyard to the battlefield. Activate this ability only during your upkeep and only if three or more creature cards are above ~. */
+
   haste(player, card);
 
   if( event == EVENT_GRAVEYARD_ABILITY_UPKEEP ){
@@ -315,6 +370,11 @@ int card_ashen_ghoul(int player, int card, event_t event){
 }
 
 int card_nshadow(int player, int card, event_t event){
+  /* Nether Shadow	|B|B
+   * Creature - Spirit 1/1
+   * Haste
+   * At the beginning of your upkeep, if this card is in your graveyard with three or more creature cards above it, you may put this card onto the battlefield. */
+
   haste(player, card);
 
   if( event == EVENT_GRAVEYARD_ABILITY_UPKEEP ){
@@ -349,5 +409,4 @@ int card_nshadow(int player, int card, event_t event){
 
  return 0;
 }
-
 

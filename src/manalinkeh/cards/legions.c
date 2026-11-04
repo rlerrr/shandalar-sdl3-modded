@@ -1,67 +1,96 @@
 #include "manalink.h"
 
+/* Canonical recovered helper declarations. */
+static void amplify(int player, int card, event_t event, int amount);
+
 // Functions
 
 static int provoke_impl(int src_player, int src_card, int player, int card, event_t event)
 {
-  // Uses src_player/src_card as the source of the legacy card, but deliberately uses player/card to store targetting
-  if (!is_humiliated(player, card))
-	{
-	  target_definition_t td;
-	  default_target_definition(player, card, &td, TYPE_CREATURE);
-	  td.allowed_controller = 1-player;
-	  td.preferred_controller = 1-player;
+  // Uses src_player/src_card as the source of the legacy card, but deliberately uses player/card to
+  // store targetting
 
-	  card_instance_t* instance = get_card_instance(player, card);
+  target_definition_t td;
+  default_target_definition(player, card, &td, TYPE_CREATURE);
+  td.allowed_controller = 1 - player;
+  td.preferred_controller = 1 - player;
 
-	  char prompt[200];
-	  if (ai_is_speculating == 1)
-		prompt[0] = 0;
-	  else
-		{
-		  load_text(0, "TARGET_CREATURE_OPPONENT_CONTROLS");
-		  scnprintf(prompt, 200, "%s: Provoke: %s", get_card_name_by_instance(instance), text_lines[0]);
-		}
+  card_instance_t *instance = get_card_instance(player, card);
 
-	  instance->number_of_targets = 0;
-	  if (pick_next_target_noload(&td, prompt))
-		{
-		  int leg = target_must_block_me(player, card, instance->targets[0].player, instance->targets[0].card, 1);
-		  if (player != src_player || card != src_card)
-			{
-			  // Reseat the legacy's text and image to the source card's
-			  card_instance_t* legacy = get_card_instance(player, leg);
-			  legacy->display_pic_csv_id = get_id(src_player, src_card);
-			  legacy->display_pic_num = get_card_image_number(legacy->display_pic_csv_id, src_player, src_card);
-			}
+  char prompt[200];
+  if (ai_is_speculating == 1)
+    prompt[0] = 0;
+  else
+  {
+    load_text(0, "TARGET_CREATURE_OPPONENT_CONTROLS");
+    scnprintf(prompt, 200, "%s: Provoke: %s", get_card_name_by_instance(instance), text_lines[0]);
+  }
 
-		  untap_card(instance->targets[0].player, instance->targets[0].card);
-		}
-	}
+  instance->number_of_targets = 0;
+  if (pick_next_target_noload(&td, prompt))
+  {
+    int leg = target_must_block_me(player, card, instance->targets[0].player,
+                                   instance->targets[0].card, 1);
+    if (player != src_player || card != src_card)
+    {
+      // Reseat the legacy's text and image to the source card's
+      card_instance_t *legacy = get_card_instance(player, leg);
+      legacy->display_pic_csv_id = get_id(src_player, src_card);
+      legacy->display_pic_num =
+          get_card_image_number(legacy->display_pic_csv_id, src_player, src_card);
+    }
+
+    untap_card(instance->targets[0].player, instance->targets[0].card);
+  }
 
   return 0;
 }
 
 static int provoke(int player, int card, event_t event)
 {
-  // When this attacks, you may have target creature defending player controls untap and block it if able.
-  if (declare_attackers_trigger(player, card, event, RESOLVE_TRIGGER_AI(player), player, card))
-	provoke_impl(player, card, player, card, event);
-
+  dat_ability(player, card, event, RESOLVE_TRIGGER_AI(player), 0);
+  if (event == EVENT_DAT_ABILITY && !is_humiliated(player, card, AL_TRIG))
+    provoke_impl(player, card, player, card, event);
   return 0;
 }
 
-static void amplify(int player, int card, event_t event, int subtype, int amount){
+/* ManalinkEh 2022: 0x24a5c50; original cards/legions.c:55. */
+static int test_shares_creature_subtype(int iid, int value, int player, int card)
+{
+  int result;
 
-	if( event == EVENT_RESOLVE_SPELL ){
-		add_state(player, card, STATE_OUBLIETTED);
-		test_definition_t this_test;
-		new_default_test_definition(&this_test, 0, get_subtype_text("Select %a card.", subtype));
-		this_test.subtype = subtype;
-		add_1_1_counters(player, card, amount*reveal_cards_from_your_hand(player, card, &this_test));
-		remove_state(player, card, STATE_OUBLIETTED);
-	}
+  result = shares_creature_subtype((unsigned int)value >> 0x10, value & 0xffff, player, card);
+  return result;
 }
+
+#ifndef SHANDALAR
+/* ManalinkEh 2022: 0x24a6470; original cards/legions.c:60. */
+static void amplify(int player, int card, event_t event, int amount)
+{
+  card_instance_t *instance;
+  int result;
+  const char *__format_1;
+  test_definition_t test;
+
+  instance = in_play(player, card);
+  if (instance != NULL)
+  {
+    add_state(player, card, 0x800000);
+    new_default_test_definition(&test, 0, "");
+    if (ai_is_speculating != 1)
+    {
+      __format_1 = get_card_name_by_instance(instance);
+      snprintf(test.message, 100, "Select a card that shares a subtype with %s.", __format_1);
+    }
+    test.value_for_special_selection_function = card & 0xffffU | player << 0x10;
+    test.special_selection_function = test_shares_creature_subtype;
+    result = reveal_cards_from_your_hand(player, card, &test);
+    add_counters(player, card, player, card, COUNTER_P1_P1, amount * result);
+    remove_state(player, card, 0x800000);
+  }
+  return;
+}
+#endif
 
 // Cards
 
@@ -112,6 +141,24 @@ When ~ is turned face up, target creature gets -3/-3 until end of turn. */
 	}
 	return morph(player, card, event, MANACOST_XB(3, 1));
 }
+
+#ifndef SHANDALAR
+/* ManalinkEh 2022: 0x24a67c0; original cards/legions.c:129. */
+int card_aven_warhawk(int player, int card, event_t event)
+{
+  /* Aven Warhawk	|4|W
+   * Creature - Bird Soldier 2/2
+   * Amplify 1 (As this creature enters, put a +1/+1 counter on it for each Bird and/or Soldier card you reveal in your hand.)
+   * Flying */
+
+  if (event != EVENT_RESOLVE_SPELL)
+  {
+    return 0;
+  }
+  amplify(player, card, EVENT_RESOLVE_SPELL, 1);
+  return 0;
+}
+#endif
 
 int card_bane_of_the_living(int player, int card, event_t event)
 {
@@ -178,6 +225,19 @@ All Sliver creatures get +1/+0. */
 	return slivercycling(player, card, event);
 }
 
+/* ManalinkEh 2022: 0x24a6af0; original cards/legions.c:205. */
+int card_branchsnap_lorian(int player, int card, event_t event)
+{
+  /* Branchsnap Lorian	|1|G|G
+   * Creature - Beast 4/1
+   * Trample
+   * Morph |G (You may cast this card face down as a 2/2 creature for |3. Turn it face up any time for its morph cost.) */
+
+  int result;
+  result = morph(player, card, event, 0, 0, 0, 1, 0, 0);
+  return result;
+}
+
 int card_brontotherium(int player, int card, event_t event){
 /* CARD_ID_BRONTOTHERIUM	6344
 Brontotherium	|4|G|G
@@ -218,7 +278,7 @@ int card_brood_sliver(int player, int card, event_t event){
 		}
 	}
 
-	if( resolve_damage_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, card) ){
+	if( resolve_damage_trigger(player, card, event, DDBM_0, player, card) ){
 		card_instance_t *instance = get_card_instance(player, card);
 		int slivers[2] = {BYTE0(instance->targets[1].player), BYTE1(instance->targets[1].player)};
 		instance->targets[1].player = 0;
@@ -270,7 +330,8 @@ Creature - Beast 2/2
 Amplify 1 (As this creature enters the battlefield, put a +1/+1 counter on it for each Beast card you reveal in your hand.)
 |T: Target creature gets +1/+1 until end of turn for each +1/+1 counter on ~. */
 
-	amplify(player, card, event, SUBTYPE_BEAST, 1);
+	if (event == EVENT_RESOLVE_SPELL)
+		amplify(player, card, EVENT_RESOLVE_SPELL, 1);
 
 	if( ! IS_GAA_EVENT(event) ){
 		return 0;
@@ -386,91 +447,128 @@ Then shuffle your library. */
 	return generic_activated_ability(player, card, event, GAA_UNTAPPED | GAA_SACRIFICE_CREATURE, MANACOST_XB(1, 1), 0, NULL, NULL);
 }
 
-int crypt_sliver_shared_ability(int player, int card, event_t event){
-	card_instance_t *instance = get_card_instance(player, card);
+/* ManalinkEh 2022: 0x24a74c0; original cards/legions.c:423. */
+int card_crested_craghorn(int player, int card, event_t event)
+{
+  /* Crested Craghorn	|4|R
+   * Creature - Goat Beast 4/1
+   * Haste
+   * Provoke (Whenever this creature attacks, you may have target creature defending player controls untap and block it if able.) */
 
-	if( instance->targets[1].player > -1 ){
-		int p = instance->targets[1].player;
-		int c = instance->targets[1].card;
+  int result;
 
-		if( leaves_play(p, c, event) ){
-			add_status(player, card, STATUS_INVISIBLE_FX);
-		}
-
-		if( ! in_play(p, c) ){
-			if( event == EVENT_CAN_ACTIVATE ){
-				return 0;
-			}
-
-			if( event == EVENT_CLEANUP ){
-				kill_card(player, card, KILL_EXILE);
-			}
-		}
-
-		if( is_humiliated(p, c) ){
-			return 0;
-		}
-
-		if( ! IS_GAA_EVENT(event) ){
-			return 0;
-		}
-
-		target_definition_t td2;
-		default_target_definition(player, card, &td2, TYPE_CREATURE);
-		td2.preferred_controller = player;
-		td2.required_subtype = SUBTYPE_SLIVER;
-		td2.required_state = TARGET_STATE_DESTROYED;
-		if( player == AI ){
-			td2.special = TARGET_SPECIAL_REGENERATION;
-		}
-
-
-		if( event == EVENT_RESOLVE_ACTIVATION ){
-			if( would_validate_arbitrary_target(&td2, instance->targets[2].player, instance->targets[2].card) ){
-				if( can_be_regenerated(instance->targets[2].player, instance->targets[2].card) ){
-					regenerate_target(instance->targets[2].player, instance->targets[2].card);
-				}
-			}
-		}
-
-		return shared_sliver_activated_ability(player, card, event, GAA_UNTAPPED | GAA_CAN_TARGET | GAA_LITERAL_PROMPT | GAA_REGENERATION,
-												MANACOST0, 0, &td2, "Select target Sliver to regenerate.");
-	}
-
-	return 0;
+  haste(player, card, event);
+  result = provoke(player, card, event);
+  return result;
 }
 
-int card_crypt_sliver(int player, int card, event_t event){
-	/*
-	  Crypt Sliver |1|B
-	  Creature - Sliver 1/1
-	  All Slivers have "{T}: Regenerate target Sliver."
-	*/
+int crypt_sliver_shared_ability(int player, int card, event_t event)
+{
+  int card_00;
+  card_instance_t *instance;
+  card_instance_t *granting_sliver;
+  int result;
+  target_definition_t td2;
 
-	if( event == EVENT_RESOLVE_SPELL ){
-		int legacy = create_legacy_activate(player, card, &crypt_sliver_shared_ability);
-		card_instance_t *instance = get_card_instance(player, legacy);
-		instance->targets[1].player = player;
-		instance->targets[1].card = card;
-		instance->number_of_targets = 1;
-		int fake = add_card_to_hand(1-player, get_card_instance(player, card)->internal_card_id);
-		legacy = create_legacy_activate(1-player, fake, &crypt_sliver_shared_ability);
-		instance = get_card_instance(1-player, legacy);
-		instance->targets[1].player = player;
-		instance->targets[1].card = card;
-		instance->number_of_targets = 1;
-		obliterate_card(1-player, fake);
-	}
+  instance = get_card_instance(player, card);
+  result = instance->targets[1].player;
+  if (result < 0)
+  {
+    return 0;
+  }
+  card_00 = instance->targets[1].card;
+  leaves_play(result, card_00, event, 0, 0);
+  if (event == EVENT_LEAVES_PLAY_ABILITY)
+  {
+    add_status(player, card, 0x10000);
+    in_play(result, card_00);
+    result = is_humiliated(result, card_00, AL_NM_NL_ACT);
+    return 0;
+  }
+  granting_sliver = in_play(result, card_00);
+  if (granting_sliver == NULL)
+  {
+    if (event == EVENT_CAN_ACTIVATE)
+      return 0;
+    if (event == EVENT_CLEANUP)
+      kill_card(player, card, KILL_EXILE);
+  }
+  result = is_humiliated(result, card_00, AL_NM_NL_ACT);
+  if (result != 0)
+    return 0;
+  if (event != EVENT_CAN_ACTIVATE && event != EVENT_ACTIVATE && event != EVENT_RESOLVE_ACTIVATION &&
+      event != EVENT_CLEANUP)
+    return 0;
+  default_target_definition(player, card, &td2, 2);
+  td2.preferred_controller = player;
+  td2.required_subtype = 0xb1;
+  td2.required_state = TARGET_STATE_DESTROYED;
+  if (player == 1)
+  {
+    td2.special = TARGET_SPECIAL_REGENERATION;
+  }
+  if (((event == EVENT_RESOLVE_ACTIVATION) &&
+       (result = would_validate_arbitrary_target(&td2, instance->targets[2].player,
+                                                 instance->targets[2].card),
+        result != 0)) &&
+      (result = can_be_regenerated(instance->targets[2].player, instance->targets[2].card),
+       result != 0))
+  {
+    regenerate_target(instance->targets[2].player, instance->targets[2].card);
+  }
+  return shared_sliver_activated_ability(player, card, event, 0x800007, 0, 0, 0, 0, 0, 0, 0, &td2,
+                                         "Select target Sliver to regenerate.");
+}
 
-	if( ! is_humiliated(player, card) && event == EVENT_ABILITIES ){
-		if( in_play(affected_card_controller, affected_card) && is_what(affected_card_controller, affected_card, TYPE_PERMANENT) &&
-			has_subtype(affected_card_controller, affected_card, SUBTYPE_SLIVER) )
-		{
-			event_result |= KEYWORD_REGENERATION;
-		}
-	}
+int card_crypt_sliver(int player, int card, event_t event)
+{
+  /* Crypt Sliver	|1|B
+   * Creature - Sliver 1/1
+   * All Slivers have "|T: Regenerate target Sliver." */
 
-	return slivercycling(player, card, event);
+  int result;
+  int legacy_card;
+  card_instance_t *instance;
+  int opponent;
+  if (event == EVENT_RESOLVE_SPELL)
+  {
+    result = create_legacy_activate(player, card, crypt_sliver_shared_ability);
+    instance = get_card_instance(player, result);
+    instance->targets[1].player = player;
+    instance->targets[1].card = card;
+    instance->number_of_targets = '\x01';
+    instance = get_card_instance(player, card);
+    opponent = 1 - player;
+    result = add_card_to_hand(opponent, instance->internal_card_id);
+    legacy_card = create_legacy_activate(opponent, result, crypt_sliver_shared_ability);
+    instance = get_card_instance(opponent, legacy_card);
+    instance->targets[1].player = player;
+    instance->targets[1].card = card;
+    instance->number_of_targets = '\x01';
+    obliterate_card(opponent, result);
+    is_humiliated(player, card, AL_NM_NL_ACT);
+  }
+  else
+  {
+    result = is_humiliated(player, card, AL_NM_NL_ACT);
+    if ((event == EVENT_ABILITIES) && (result == 0))
+    {
+      instance = in_play(affected_card_controller, affected_card);
+      if (instance != NULL)
+      {
+        result = is_what(affected_card_controller, affected_card, 0x47);
+        if (result != 0)
+        {
+          result = has_subtype(affected_card_controller, affected_card, SUBTYPE_SLIVER);
+          if (result != 0)
+          {
+            event_result = event_result | 0x200;
+          }
+        }
+      }
+    }
+  }
+  return slivercycling(player, card, event);
 }
 
 int card_dark_supplicant(int player, int card, event_t event){
@@ -533,10 +631,10 @@ If you search your library this way, shuffle it. */
 		if( check_battlefield_for_special_card(player, card, player, 0, &this_test) ){
 			result = new_global_tutor(player, player, TUTOR_FROM_HAND, TUTOR_PLAY, 0, AI_FIRST_FOUND, &this_test);
 		}
-		if( result == -1 && new_special_count_grave(player, &this_test) ){
+		if( result < 0 && new_special_count_grave(player, &this_test) ){
 			new_global_tutor(player, player, TUTOR_FROM_GRAVE, TUTOR_PLAY, 0, AI_FIRST_FOUND, &this_test);
 		}
-		if( result == -1 ){
+		if( result < 0 ){
 			new_global_tutor(player, player, TUTOR_FROM_DECK, TUTOR_PLAY, 0, AI_FIRST_FOUND, &this_test);
 		}
 	}
@@ -582,21 +680,33 @@ When ~ is turned face up, creatures you control get +0/+2 until end of turn. */
 	return morph(player, card, event, MANACOST_W(2));
 }
 
-int card_deftblade_elite(int player, int card, event_t event){
-/* CARD_ID_DEFTBLADE_ELITE	6365
-Deftblade Elite	|W
-Creature - Human Soldier 1/1
-Provoke (Whenever this creature attacks, you may have target creature defending player controls untap and block it if able.)
-|1|W: Prevent all combat damage that would be dealt to and dealt by ~ this turn. */
+int card_deftblade_elite(int player, int card, event_t event)
+{
+  /* CARD_ID_DEFTBLADE_ELITE	6365
+  Deftblade Elite	|W
+  Creature - Human Soldier 1/1
+  Provoke (Whenever this creature attacks, you may have target creature defending player controls
+  untap and block it if able.) |1|W: Prevent all combat damage that would be dealt to and dealt by ~
+  this turn. */
 
-	provoke(player, card, event);
+  if (event == EVENT_CHECK_ABILITIES && affect_me(player, card) &&
+      card_deftblade_elite(player, card, EVENT_CAN_ACTIVATE))
+  {
+    if (current_turn == 1 - player)
+      check_abilities_power -= get_power(player, card);
+    check_abilities_toughness += 0x3fff;
+  }
 
-	if( event == EVENT_RESOLVE_ACTIVATION ){
-		card_instance_t *instance = get_card_instance(player, card);
-		maze_of_ith_effect(instance->parent_controller, instance->parent_card, instance->parent_controller, instance->parent_card);
-	}
+  provoke(player, card, event);
 
-	return generic_activated_ability(player, card, event, 0, MANACOST_XW(1, 1), 0, NULL, NULL);
+  if (event == EVENT_RESOLVE_ACTIVATION)
+  {
+    card_instance_t *instance = get_card_instance(player, card);
+    maze_of_ith_effect(instance->parent_controller, instance->parent_card,
+                       instance->parent_controller, instance->parent_card);
+  }
+
+  return generic_activated_ability(player, card, event, 0, MANACOST_XW(1, 1), 0, NULL, NULL);
 }
 
 int card_dreamborn_muse(int player, int card, event_t event){
@@ -616,12 +726,11 @@ where X is the number of cards in his or her hand. */
 }
 
 int card_drinker_of_sorrow(int player, int card, event_t event){
-/*
-Drinker of Sorrow |2|B
-Creature — Horror 5/3
-Drinker of Sorrow can't block.
-Whenever Drinker of Sorrow deals combat damage, sacrifice a permanent.
-*/
+  /* Drinker of Sorrow |2|B
+   * Creature — Horror 5/3
+   * Drinker of Sorrow can't block.
+   * Whenever Drinker of Sorrow deals combat damage, sacrifice a permanent. */
+
 	cannot_block(player, card, event);
 
 	if( damage_dealt_by_me(player, card, event, DDBM_MUST_BE_COMBAT_DAMAGE) ){
@@ -664,11 +773,13 @@ Creature - Zombie 2/2
 Amplify 1 (As this creature enters the battlefield, put a +1/+1 counter on it for each Zombie card you reveal in your hand.)
 Whenever ~ attacks or blocks, you lose 1 life for each +1/+1 counter on it. */
 
-	amplify(player, card, event, SUBTYPE_ZOMBIE, 1);
+	if (event == EVENT_RESOLVE_SPELL)
+		amplify(player, card, EVENT_RESOLVE_SPELL, 1);
 
 	// Whenever ~ attacks or blocks, you lose 1 life for each +1/+1 counter on it.
-	if( declare_attackers_trigger(player, card, event, 0, player, card) ||
-		(blocking(player, card, event) && !is_humiliated(player, card)) )
+	dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 0);
+	if (event == EVENT_DAT_ABILITY ||
+		(blocking(player, card, event) && !is_humiliated(player, card, AL_TRIG)) )
 	{
 		lose_life(player, count_1_1_counters(player, card));
 	}
@@ -677,11 +788,10 @@ Whenever ~ attacks or blocks, you lose 1 life for each +1/+1 counter on it. */
 }
 
 int card_essence_sliver(int player, int card, event_t event){
-/*
-Essence Sliver |3|W
-Creature — Sliver 3/3
-Whenever a Sliver deals damage, its controller gains that much life.
-*/
+  /* Essence Sliver |3|W
+   * Creature — Sliver 3/3
+   * Whenever a Sliver deals damage, its controller gains that much life. */
+
 	card_instance_t *damage = combat_damage_being_dealt(event);
 	if( damage ){
 		test_definition_t test;
@@ -705,7 +815,7 @@ Whenever a Sliver deals damage, its controller gains that much life.
 		}
 	}
 
-	if( resolve_damage_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, card) ){
+	if( resolve_damage_trigger(player, card, event, DDBM_0, player, card) ){
 		card_instance_t *instance = get_card_instance(player, card);
 		int slivers[2] = {BYTE0(instance->targets[1].player), BYTE1(instance->targets[1].player)};
 		instance->targets[1].player = 0;
@@ -723,7 +833,8 @@ Creature - Beast 3/3
 Amplify 2 (As this creature enters the battlefield, put two +1/+1 counters on it for each Beast card you reveal in your hand.)
 Provoke (Whenever this creature attacks, you may have target creature defending player controls untap and block it if able.) */
 
-	amplify(player, card, event, SUBTYPE_BEAST, 2);
+	if (event == EVENT_RESOLVE_SPELL)
+		amplify(player, card, EVENT_RESOLVE_SPELL, 2);
 
 	provoke(player, card, event);
 
@@ -737,7 +848,7 @@ Creature - Lizard Beast 6/6
 Beasts can't block. */
 
 	if( event == EVENT_BLOCK_LEGALITY && has_subtype(affected_card_controller, affected_card, SUBTYPE_BEAST) &&
-		! is_humiliated(player, card) )
+		! is_humiliated(player, card, AL_STATIC) )
 	{
 		event_result = 1;
 	}
@@ -752,7 +863,8 @@ Creature - Human Soldier 3/5
 Cycling |2|W (|2|W, Discard this card: Draw a card.)
 When you cycle ~, Soldier creatures get +1/+1 and gain first strike until end of turn. */
 
-	if( event == EVENT_RESOLVE_ACTIVATION_FROM_HAND ){
+	if( event == EVENT_RESOLVE_ACTIVATION_FROM_HAND && spell_fizzled != -1 &&
+        !(player_bits[player] & PB_GY_ABILITIES_DISABLED) ){
 		pump_subtype_until_eot(player, card, 2, SUBTYPE_SOLDIER, 1, 1, KEYWORD_FIRST_STRIKE, 0);
 	}
 
@@ -766,7 +878,7 @@ Creature - Goblin 2/1
 Cycling |1|R (|1|R, Discard this card: Draw a card.)
 When you cycle ~, you may have it deal X damage to target creature, where X is the number of Goblins on the battlefield. */
 
-	if( event == EVENT_RESOLVE_ACTIVATION_FROM_HAND ){
+	if (event == EVENT_RESOLVE_ACTIVATION_FROM_HAND && spell_fizzled != 1 && !(player_bits[player] & PB_GY_ABILITIES_DISABLED)){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_CREATURE);
 
@@ -788,7 +900,7 @@ Creature - Zombie 4/3
 Cycling |B|B (|B|B, Discard this card: Draw a card.)
 When you cycle ~, you may have target player lose life equal to the number of Zombies on the battlefield. */
 
-	if( event == EVENT_RESOLVE_ACTIVATION_FROM_HAND ){
+	if (event == EVENT_RESOLVE_ACTIVATION_FROM_HAND && spell_fizzled != 1 && !(player_bits[player] & PB_GY_ABILITIES_DISABLED)){
 		target_definition_t td;
 		default_target_definition(player, card, &td, TYPE_CREATURE);
 		td.zone = TARGET_ZONE_PLAYERS;
@@ -811,7 +923,8 @@ Creature - Human Wizard 2/2
 Cycling |2|U (|2|U, Discard this card: Draw a card.)
 When you cycle ~, Wizard creatures gain flying until end of turn. */
 
-	if( event == EVENT_RESOLVE_ACTIVATION_FROM_HAND ){
+	if( event == EVENT_RESOLVE_ACTIVATION_FROM_HAND && spell_fizzled != 1 &&
+        !(player_bits[player] & PB_GY_ABILITIES_DISABLED) ){
 		pump_subtype_until_eot(player, card, 2, SUBTYPE_WIZARD, 0, 0, KEYWORD_FLYING, 0);
 	}
 
@@ -825,7 +938,8 @@ Creature - Elf 2/2
 Cycling |2|G|G (|2|G|G, Discard this card: Draw a card.)
 When you cycle ~, Elf creatures get +2/+2 until end of turn. */
 
-	if( event == EVENT_RESOLVE_ACTIVATION_FROM_HAND ){
+	if( event == EVENT_RESOLVE_ACTIVATION_FROM_HAND && spell_fizzled != 1 &&
+        !(player_bits[player] & PB_GY_ABILITIES_DISABLED) ){
 		pump_subtype_until_eot(player, card, 2, SUBTYPE_ELF, 2, 2, 0, 0);
 	}
 
@@ -839,7 +953,8 @@ Creature - Zombie 0/0
 Amplify 1 (As this creature enters the battlefield, put a +1/+1 counter on it for each Zombie card you reveal in your hand.)
 At the beginning of your upkeep, if ~ is in your graveyard, you may pay |B|B|B. If you do, return ~ to your hand. */
 
-	amplify(player, card, event, SUBTYPE_ZOMBIE, 1);
+	if (event == EVENT_RESOLVE_SPELL)
+		amplify(player, card, EVENT_RESOLVE_SPELL, 1);
 
 	if( event == EVENT_GRAVEYARD_ABILITY_UPKEEP && has_mana(player, COLOR_BLACK, 3) ){
 		card_instance_t *instance = get_card_instance( player, card );
@@ -896,7 +1011,7 @@ Creature - Goblin Mutant 6/6
 ~ can't attack unless you control more creatures than defending player.
 ~ can't block unless you control more creatures than attacking player. */
 
-	if( ! is_humiliated(player, card) ){
+	if( ! is_humiliated(player, card, AL_STATIC) ){
 		if( event == EVENT_ATTACK_LEGALITY && affect_me(player, card) ){
 			if( count_subtype(player, TYPE_CREATURE, -1) <= count_subtype(1-player, TYPE_CREATURE, -1) ){
 				event_result = 1;
@@ -982,13 +1097,12 @@ static void hollow_specter_ability(int player, int card, int t_player){
 }
 
 int card_hollow_specter(int player, int card, event_t event){
-/*
-Hollow Specter |1|B|B
-Creature — Specter 2/2
-Flying
-Whenever Hollow Specter deals combat damage to a player, you may pay {X}. If you do, that player reveals X cards from his or her hand and
-	you choose one of them. That player discards that card.
-*/
+  /* Hollow Specter |1|B|B
+   * Creature — Specter 2/2
+   * Flying
+   * Whenever Hollow Specter deals combat damage to a player, you may pay {X}. If you do, that player reveals X cards from his or her hand and
+   * 	you choose one of them. That player discards that card. */
+
 	int result = whenever_i_deal_damage_to_a_player(player, card, event, RESOLVE_TRIGGER_AI(player) | DDBM_MUST_BE_COMBAT_DAMAGE);
 	if( result ){
 		int times_damaged[2] = {BYTE0(result), BYTE1(result)};
@@ -1006,29 +1120,47 @@ Whenever Hollow Specter deals combat damage to a player, you may pay {X}. If you
 	return 0;
 }
 
-int card_hunter_sliver(int player, int card, event_t event)
+/* ManalinkEh 2022: 0x24a8d20; original cards/legions.c:1066. */
+int card_hundroog(int player, int card, event_t event, int trigger_mode)
 {
-/* CARD_ID_HUNTER_SLIVER	6400
-Hunter Sliver	|1|R
-Creature - Sliver 1/1
-All Sliver creatures have provoke. (Whenever a Sliver attacks, its controller may have target creature defending player controls untap and block it if able.)*/
+  /* Hundroog	|6|G
+   * Creature - Beast 4/7
+   * Cycling |3 (|3, Discard this card: Draw a card.) */
 
-  if (xtrigger_condition() == XTRIGGER_ATTACKING || event == EVENT_DECLARE_ATTACKERS)
-	{
-	  test_definition_t test;
-	  new_default_test_definition(&test, TYPE_CREATURE, "");
-	  test.subtype = SUBTYPE_SLIVER;
+  int result;
+  result = cycling(player, card, event, 3, 0, 0, 0, 0, 0);
+  return result;
+}
 
-	  int amt;
-	  if ((amt = declare_attackers_trigger_test(player, card, event, RESOLVE_TRIGGER_AI(player) | DAT_TRACK, 2, -1, &test)))
-		{
-		  card_instance_t* instance = get_card_instance(player, card);
-		  unsigned char* attackers = (unsigned char*)(&instance->targets[2].player);
-		  for (--amt; amt >= 0; --amt)
-			provoke_impl(player, card, current_turn, attackers[amt], event);
-		}
-	}
+int card_hunter_sliver(int player, int card, event_t event, int trigger_mode)
+{
+  /* CARD_ID_HUNTER_SLIVER	6400
+   * Hunter Sliver	|1|R
+   * Creature - Sliver 1/1
+   * All Sliver creatures have provoke. (Whenever a Sliver attacks, its controller may have target creature defending player controls untap and block it if able.) */
 
+  if (event == EVENT_DECLARE_ATTACKERS)
+  {
+    test_definition_t test;
+    default_test_definition(&test, TYPE_CREATURE);
+    test.subtype = SUBTYPE_SLIVER;
+    store_attackers(player, card, event, DAT_TRACK, ANYBODY, -1, &test);
+  }
+  dat_ability(player, card, event, DAT_RESOLVE_TRIGGER_MANDATORY, 1);
+  if (event == EVENT_DAT_ABILITY)
+  {
+    card_instance_t *instance = get_card_instance(player, card);
+    // The native handler reads info_slot here despite the default attacker-count storage.
+    int amount = instance->info_slot;
+    unsigned char *attackers = (unsigned char *)&instance->targets[2].player;
+    for (--amount; amount >= 0; --amount)
+    {
+      int p = current_turn;
+      int attacker = attackers[amount];
+      if (!is_humiliated(p, attacker, AL_TRIG))
+        provoke_impl(player, card, p, attacker, event);
+    }
+  }
   return slivercycling(player, card, event);
 }
 
@@ -1149,7 +1281,8 @@ int card_kilnmouth_dragon(int player, int card, event_t event){
 	 * Amplify 3
 	 * Flying
 	 * |T: ~ deals damage equal to the number of +1/+1 counters on it to any target. */
-	amplify(player, card, event, SUBTYPE_DRAGON, 3);
+	if (event == EVENT_RESOLVE_SPELL)
+		amplify(player, card, EVENT_RESOLVE_SPELL, 3);
 
 	if( ! IS_GAA_EVENT(event) ){
 		return 0;
@@ -1182,6 +1315,21 @@ Morph |7|G|G (You may cast this card face down as a 2/2 creature for |3. Turn it
 	return morph(player, card, event, MANACOST_XG(7, 2));
 }
 
+/* ManalinkEh 2022: 0x24a9610; original cards/legions.c:1252. */
+int card_krosan_vorine(int player, int card, event_t event)
+{
+  /* Krosan Vorine	|3|G
+   * Creature - Cat Beast 3/2
+   * Provoke (Whenever this creature attacks, you may have target creature defending player controls untap and block it if able.)
+   * This creature can't be blocked by more than one creature. */
+
+  int result;
+
+  maxblockers_1(player, card, event);
+  result = provoke(player, card, event);
+  return result;
+}
+
 int card_lavaborn_muse(int player, int card, event_t event){
 /* CARD_ID_LAVABORN_MUSE	6408
 Lavaborn Muse	|3|R
@@ -1201,61 +1349,77 @@ At the beginning of each opponent's upkeep, if that player has two or fewer card
 	return 0;
 }
 
-int magma_sliver_shared_ability(int player, int card, event_t event){
-	card_instance_t *instance = get_card_instance(player, card);
+/* ManalinkEh 2022: 0x24a96e0; original cards/legions.c:1282. */
+int card_macetail_hystrodon(int player, int card, event_t event)
+{
+  /* Macetail Hystrodon	|6|R
+   * Creature - Beast 4/4
+   * First strike, haste
+   * Cycling |3 (|3, Discard this card: Draw a card.) */
 
-	if( instance->targets[1].player > -1 ){
-		int p = instance->targets[1].player;
-		int c = instance->targets[1].card;
+  int result;
+  haste(player, card, event);
+  result = cycling(player, card, event, 3, 0, 0, 0, 0, 0);
+  return result;
+}
 
-		if( leaves_play(p, c, event) ){
-			add_status(player, card, STATUS_INVISIBLE_FX);
-		}
+int magma_sliver_shared_ability(int player, int card, event_t event)
+{
+  int card_00;
+  card_instance_t *instance;
+  card_instance_t *granting_sliver;
+  int result;
+  target_definition_t td2;
 
-		if( ! in_play(p, c) ){
-			if( event == EVENT_CAN_ACTIVATE ){
-				return 0;
-			}
-
-			if( event == EVENT_CLEANUP ){
-				kill_card(player, card, KILL_EXILE);
-			}
-		}
-
-		if( is_humiliated(p, c) ){
-			return 0;
-		}
-
-		if( ! IS_GAA_EVENT(event) ){
-			return 0;
-		}
-
-		target_definition_t td2;
-		default_target_definition(player, card, &td2, TYPE_CREATURE);
-		td2.preferred_controller = player;
-		td2.required_subtype = SUBTYPE_SLIVER;
-
-
-		if( event == EVENT_RESOLVE_ACTIVATION ){
-			if( would_validate_arbitrary_target(&td2, instance->targets[2].player, instance->targets[2].card) ){
-				int amount = count_subtype(ANYBODY, TYPE_PERMANENT, SUBTYPE_SLIVER);
-				pump_until_eot(instance->targets[0].player, instance->targets[0].card, instance->targets[2].player, instance->targets[2].card, amount, 0);
-			}
-		}
-
-		return shared_sliver_activated_ability(player, card, event, GAA_UNTAPPED | GAA_CAN_TARGET | GAA_LITERAL_PROMPT, MANACOST0, 0,
-												&td2, "Select target Sliver to pump.");
-	}
-
-	return 0;
+  instance = get_card_instance(player, card);
+  result = instance->targets[1].player;
+  if (result < 0)
+  {
+    return 0;
+  }
+  card_00 = instance->targets[1].card;
+  leaves_play(result, card_00, event, 0, 0);
+  if (event == EVENT_LEAVES_PLAY_ABILITY)
+  {
+    add_status(player, card, 0x10000);
+    in_play(result, card_00);
+    result = is_humiliated(result, card_00, AL_NM_NL_ACT);
+    return 0;
+  }
+  granting_sliver = in_play(result, card_00);
+  if (granting_sliver == NULL)
+  {
+    if (event == EVENT_CAN_ACTIVATE)
+      return 0;
+    if (event == EVENT_CLEANUP)
+      kill_card(player, card, KILL_EXILE);
+  }
+  result = is_humiliated(result, card_00, AL_NM_NL_ACT);
+  if (result != 0)
+    return 0;
+  if (event != EVENT_CAN_ACTIVATE && event != EVENT_ACTIVATE && event != EVENT_RESOLVE_ACTIVATION &&
+      event != EVENT_CLEANUP)
+    return 0;
+  default_target_definition(player, card, &td2, 2);
+  td2.preferred_controller = player;
+  td2.required_subtype = 0xb1;
+  if ((event == EVENT_RESOLVE_ACTIVATION) &&
+      (result = would_validate_arbitrary_target(&td2, instance->targets[2].player,
+                                                instance->targets[2].card),
+       result != 0))
+  {
+    result = count_subtype(2, 0x47, 0xb1);
+    pump_until_eot(instance->targets[0].player, instance->targets[0].card,
+                   instance->targets[2].player, instance->targets[2].card, result, 0);
+  }
+  return shared_sliver_activated_ability(player, card, event, 7, 0, 0, 0, 0, 0, 0, 0, &td2,
+                                         "Select target Sliver to pump.");
 }
 
 int card_magma_sliver(int player, int card, event_t event){
-	/*
-	  Magma Sliver |3|R
-	  Creature - Sliver 3/3
-	  All Slivers have "{T}: Target Sliver creature gets +X/+0 until end of turn, where X is the number of Slivers on the battlefield."
-	*/
+  /* Magma Sliver |3|R
+   * 	  Creature - Sliver 3/3
+   * 	  All Slivers have "{T}: Target Sliver creature gets +X/+0 until end of turn, where X is the number of Slivers on the battlefield." */
 
 	if( event == EVENT_RESOLVE_SPELL ){
 		int legacy = create_legacy_activate(player, card, &magma_sliver_shared_ability);
@@ -1358,13 +1522,12 @@ When ~ is turned face up, target creature gets +3/+3 until end of turn. */
 }
 
 int card_phage_the_untouchable(int player, int card, event_t event){
-/*
-Phage the Untouchable |3|B|B|B|B
-Legendary Creature — Avatar Minion 4/4
-When Phage the Untouchable enters the battlefield, if you didn't cast it from your hand, you lose the game.
-Whenever Phage deals combat damage to a creature, destroy that creature. It can't be regenerated.
-Whenever Phage deals combat damage to a player, that player loses the game.
-*/
+  /* Phage the Untouchable |3|B|B|B|B
+   * Legendary Creature — Avatar Minion 4/4
+   * When Phage the Untouchable enters the battlefield, if you didn't cast it from your hand, you lose the game.
+   * Whenever Phage deals combat damage to a creature, destroy that creature. It can't be regenerated.
+   * Whenever Phage deals combat damage to a player, that player loses the game. */
+
 	check_legend_rule(player, card, event);
 
 	deathtouch(player, card, event);
@@ -1408,6 +1571,9 @@ static const char* is_destroyed_or_buried(int who_chooses, int player, int card,
 }
 
 int card_planar_guide(int player, int card, event_t event){
+  /* Planar Guide	|W
+   * Creature - Human Cleric 1/1
+   * |3|W, Exile this creature: Exile all creatures. At the beginning of the next end step, return those cards to the battlefield under their owners' control. */
 
 	if( ! IS_GAA_EVENT(event) ){
 		return 0;
@@ -1461,7 +1627,7 @@ int card_planar_guide(int player, int card, event_t event){
 
 		test_definition_t this_test;
 		default_test_definition(&this_test, TYPE_CREATURE);
-		APNAP(p,{ new_manipulate_all(instance->parent_controller, instance->parent_card, p, &this_test, ACT_RFG_UNTIL_EOT); };);
+		new_manipulate_all(instance->parent_controller, instance->parent_card, ANYBODY, &this_test, ACT_RFG_UNTIL_EOT);
 	}
 
 	return generic_activated_ability(player, card, event, GAA_RFG_ME, MANACOST_XW(3, 1), 0, NULL, NULL);
@@ -1531,7 +1697,7 @@ Creature - Beast 0/3
 	card_instance_t *instance = get_card_instance(player, card);
 
 	if( event == EVENT_ACTIVATE ){
-		generic_activated_ability(player, card, event, GAA_UNTAPPED | GAA_CAN_TARGET, MANACOST_XU(1, 1), 0, &td, "TARGET_CREATURE");
+		generic_activated_ability(player, card, event, GAA_CAN_TARGET, MANACOST_XU(1, 1), 0, &td, "TARGET_CREATURE");
 		if( spell_fizzled != 1 ){
 			ai_modifier += ((get_power(instance->targets[0].player, instance->targets[0].card)-get_power(player, card))*8);
 		}
@@ -1541,12 +1707,26 @@ Creature - Beast 0/3
 	if( event == EVENT_RESOLVE_ACTIVATION ){
 		if( valid_target(&td) ){
 			int pow = get_power(instance->targets[0].player, instance->targets[0].card);
-			set_pt_and_abilities_until_eot(instance->parent_controller, instance->parent_card,
-											instance->parent_controller, instance->parent_card, pow, 0, 0, 0, 0);
+			int leg = real_set_pt(instance->parent_controller, instance->parent_card,
+								  instance->parent_controller, instance->parent_card, pow, -1, 8);
+			add_status(player, leg, STATUS_INVISIBLE_FX);
 		}
 	}
 
-	return generic_activated_ability(player, card, event, GAA_UNTAPPED | GAA_CAN_TARGET, MANACOST_XU(1, 1), 0, &td, "TARGET_CREATURE");
+	return generic_activated_ability(player, card, event, GAA_CAN_TARGET, MANACOST_XU(1, 1), 0, &td, "TARGET_CREATURE");
+}
+
+/* ManalinkEh 2022: 0x24aa720; original cards/legions.c:1647. */
+int card_rockshard_elemental(int player, int card, event_t event)
+{
+  /* Rockshard Elemental	|5|R|R
+   * Creature - Elemental 4/3
+   * Double strike (This creature deals both first-strike and regular combat damage.)
+   * Morph |4|R|R (You may cast this card face down as a 2/2 creature for |3. Turn it face up any time for its morph cost.) */
+
+  int result;
+  result = morph(player, card, event, 4, 0, 0, 0, 2, 0);
+  return result;
 }
 
 int card_root_sliver(int player, int card, event_t event){
@@ -1557,31 +1737,20 @@ Creature - Sliver 2/2
 Sliver spells can't be countered by spells or abilities. */
 
 	cannot_be_countered(player, card, event);
-
-	if( event == EVENT_CAST_SPELL ){
-		if( ! affect_me(player, card) ){
-			test_definition_t this_test;
-			default_test_definition(&this_test, 0);
-			this_test.subtype = SUBTYPE_SLIVER;
-
-			type_uncounterable(player, card, event, player, 0, &this_test);
-		}
-	}
-
-	type_uncounterable(player, card, event, player, 0, NULL);
-
+	test_definition_t test;
+	default_test_definition(&test, TYPE_NONE);
+	test.subtype = SUBTYPE_SLIVER;
+	type_uncounterable(player, card, event, player, 0, &test);
 	return 0;
 }
 
 int card_scion_of_darkness(int player, int card, event_t event){
-/*
-Scion of Darkness |5|B|B|B
-Creature — Avatar 6/6
-Trample
-Whenever Scion of Darkness deals combat damage to a player, you may put target creature card from that player's graveyard onto
-	the battlefield under your control.
-Cycling {3} ({3}, Discard this card: Draw a card.)
-*/
+  /* Scion of Darkness |5|B|B|B
+   * Creature — Avatar 6/6
+   * Trample
+   * Whenever Scion of Darkness deals combat damage to a player, you may put target creature card from that player's graveyard onto
+   * 	the battlefield under your control.
+   * Cycling {3} ({3}, Discard this card: Draw a card.) */
 
 	int result = whenever_i_deal_damage_to_a_player(player, card, event, DDBM_MUST_BE_COMBAT_DAMAGE);
 	if( result ){
@@ -1622,7 +1791,7 @@ Creature - Sliver 2/2
 Slivers can't be blocked except by Slivers. */
 
 	if( event == EVENT_BLOCK_LEGALITY && has_subtype(attacking_card_controller, attacking_card, SUBTYPE_SLIVER) &&
-		! is_humiliated(player, card) )
+		! is_humiliated(player, card, AL_STATIC) )
 	{
 		if( ! has_subtype(affected_card_controller, affected_card, SUBTYPE_SLIVER) ){
 			event_result = 1;
@@ -1750,7 +1919,7 @@ Creature - Goblin 2/2
 As long as you control a Beast, ~ gets +2/+2 and has trample. */
 
 	if( (event == EVENT_POWER || event == EVENT_TOUGHNESS || event == EVENT_ABILITIES) && affect_me(player, card) &&
-		! is_humiliated(player, card) )
+		! is_humiliated(player, card, AL_STATIC) )
 	{
 		if( check_battlefield_for_subtype(player, TYPE_PERMANENT, SUBTYPE_BEAST) ){
 			switch( event ){
@@ -1770,21 +1939,32 @@ As long as you control a Beast, ~ gets +2/+2 and has trample. */
 	return 0;
 }
 
+/* ManalinkEh 2022: 0x24aafe0; original cards/legions.c:1872. */
+int card_sootfeather_flock(int player, int card, event_t event)
+{
+  /* Sootfeather Flock	|4|B
+   * Creature - Bird 3/2
+   * Flying
+   * Morph |3|B (You may cast this card face down as a 2/2 creature for |3. Turn it face up any time for its morph cost.) */
+
+  int result;
+  result = morph(player, card, event, 3, 1, 0, 0, 0, 0);
+  return result;
+}
+
 int card_spectral_sliver(int player, int card, event_t event){
-	/*
-	  Spectral Sliver |2|B
-	  Creature - Sliver Spirit 2/2
-	  All Sliver creatures have "{2}: This creature gets +1/+1 until end of turn."
-	*/
+  /* Spectral Sliver |2|B
+   * 	  Creature - Sliver Spirit 2/2
+   * 	  All Sliver creatures have "{2}: This creature gets +1/+1 until end of turn." */
+
 	return sliver_with_shared_shade_ability(player, card, event, 1, 1, 0, 0);
 }
 
 int card_synapse_sliver(int player, int card, event_t event){
-/*
-Synapse Sliver |4|U
-Creature — Sliver 3/3
-Whenever a Sliver deals combat damage to a player, its controller may draw a card.
-*/
+  /* Synapse Sliver |4|U
+   * Creature — Sliver 3/3
+   * Whenever a Sliver deals combat damage to a player, its controller may draw a card. */
+
 	card_instance_t *damage = combat_damage_being_dealt(event);
 	if( damage ){
 		test_definition_t test;
@@ -1810,7 +1990,7 @@ Whenever a Sliver deals combat damage to a player, its controller may draw a car
 		}
 	}
 
-	if( resolve_damage_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, card) ){
+	if( resolve_damage_trigger(player, card, event, DDBM_0, player, card) ){
 		card_instance_t *instance = get_card_instance(player, card);
 		int slivers[2] = {BYTE0(instance->targets[1].player), BYTE1(instance->targets[1].player)};
 		instance->targets[1].player = 0;
@@ -1917,7 +2097,7 @@ Morph |1|G (You may cast this card face down as a 2/2 creature for |3. Turn it f
 When ~ is turned face up, creatures of the creature type of your choice get +2/+2 and gain trample until end of turn. */
 
 	if( event == EVENT_TURNED_FACE_UP ){
-		int subt = select_a_subtype(player, card);
+		int subt = select_a_subtype_full_choice(player, card, player, NULL, 2);
 		pump_subtype_until_eot(player, card, 2, subt, 2, 2, KEYWORD_TRAMPLE, 0);
 	}
 	return morph(player, card, event, MANACOST_XG(1, 1));
@@ -1993,14 +2173,13 @@ Morph |U (You may cast this card face down as a 2/2 creature for |3. Turn it fac
 }
 
 int card_wall_of_hope(int player, int card, event_t event){
-/*
-	Wall of Hope |W
-	Creature — Wall 0/3
-	Defender (This creature can't attack.)
-	Whenever Wall of Hope is dealt damage, you gain that much life.
-*/
-	if( ! is_humiliated(player, card) ){
-		if( damage_dealt_to_me_arbitrary(player, card, event, RESOLVE_TRIGGER_MANDATORY, player, card) ){
+  /* Wall of Hope |W
+   * 	Creature — Wall 0/3
+   * 	Defender (This creature can't attack.)
+   * 	Whenever Wall of Hope is dealt damage, you gain that much life. */
+
+	if( ! is_humiliated(player, card, AL_TRIG) ){
+		if( damage_dealt_to_me_arbitrary(player, card, event, DDBM_0, player, card) ){
 			card_instance_t *instance = get_card_instance(player, card);
 			gain_life(player, instance->targets[7].card);
 			instance->targets[7].card = 0;
@@ -2051,7 +2230,7 @@ All Slivers have protection from the chosen color. */
 		get_card_instance(player, card)->info_slot = select_a_protection(player);
 	}
 
-	if( get_card_instance(player, card)->info_slot > 0 && in_play(player, card) && ! is_humiliated(player, card) ){
+	if( get_card_instance(player, card)->info_slot > 0 && in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		boost_creature_type(player, card, event, SUBTYPE_SLIVER, 0, 0, get_card_instance(player, card)->info_slot, BCT_INCLUDE_SELF);
 	}
 
@@ -2120,5 +2299,3 @@ Creature - Zombie Cleric 2/2
 	return generic_activated_ability_with_target_in_grave(player, card, event, 0, MANACOST_X(1), 0, NULL, NULL,
 															0, &test, GS_GRAVE_RECYCLER_BOTH_GRAVES);
 }
-
-

@@ -114,7 +114,7 @@ def generate(source_dir):
                 raise ValueError(f"campaign card {row[2]} exceeds adventure deck ID capacity")
             expansion = campaign_fields[0]
             extra_abilities = (extra_abilities & ~0xf80) | campaign_fields[1]
-        fields = [str(255 if csvid == -1 else 0), c_string(row[1][:17]), "{0}",
+        fields = [str(255 if csvid == -1 else 0), c_string(row[1][:17]),
                   str(csvid), f"0x{bits(row, 3, 8):02x}", str(number(row[11])),
                   str((bits(row, 12, 8) + 128) % 256 - 128),
                   "{ %d, %d, %d }" % (signed_byte(row[21]), signed_byte(row[20]), signed_byte(row[22])),

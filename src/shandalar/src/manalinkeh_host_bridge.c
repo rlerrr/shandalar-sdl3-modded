@@ -5,6 +5,8 @@
 #include "magic/src/network.h"
 #include "magic/src/carddata_generated.h"
 #include "deckdll/src/card_db.h"
+#include "platform/file_io.h"
+#include <stdlib.h>
 #include <string.h>
 
 int pick_internal_card_from_list_dialog(char* prompt, int initial_card_id,
@@ -315,6 +317,91 @@ char* shandalar_opponent_name(void)
 int* shandalar_option_layout(void)
 {
   return &g_duel_interface_options.layout;
+}
+
+int* shandalar_option_show_id_tags(void)
+{
+  return &g_duel_interface_options.show_id_tags_on_cards;
+}
+
+int* shandalar_option_expand_fullcard_text(void)
+{
+  return &g_duel_interface_options.expand_text_box_on_big_card;
+}
+
+int* shandalar_target_pair_packet_value(void)
+{
+  return &g_target_pair_network_packet.target.player;
+}
+
+char* shandalar_target_pair_packet_type(void)
+{
+  return &g_target_pair_network_packet.packet_type;
+}
+
+static void rogue_csv_field(char **cursor, char *output, size_t capacity)
+{
+  char *p = *cursor;
+  int quoted = *p == '"';
+  size_t used = 0;
+  if (quoted) ++p;
+  while (*p && *p != '\r' && *p != '\n') {
+    char c = *p++;
+    if (quoted && c == '"') {
+      if (*p == '"') ++p;
+      else { if (*p == ',') ++p; break; }
+    } else if (!quoted && c == ',') break;
+    if (used + 1 < capacity) output[used++] = c;
+  }
+  output[used] = 0;
+  *cursor = p;
+}
+
+int shandalar_select_random_rogue(int difficulty)
+{
+  typedef struct { int index, difficulty; } RogueChoice;
+  SDL_IOStream *file = shandalar_open_file_io("Rogues.csv", "rb");
+  RogueChoice *choices = NULL;
+  int count = 0, preferred = 0, index = 0, capacity = 0;
+  char line[2048];
+  if (file) {
+    shandalar_io_gets(line, sizeof(line), file); /* CSV column header. */
+    while (shandalar_io_gets(line, sizeof(line), file)) {
+      char name[200], level[32], quote[300], art[268], *cursor = line;
+      rogue_csv_field(&cursor, name, sizeof(name));
+      rogue_csv_field(&cursor, level, sizeof(level));
+      rogue_csv_field(&cursor, quote, sizeof(quote));
+      rogue_csv_field(&cursor, art, sizeof(art));
+      if (name[0] && art[0]) {
+        if (count == capacity) {
+          capacity = capacity ? capacity * 2 : 32;
+          RogueChoice *grown = realloc(choices, capacity * sizeof(*choices));
+          if (!grown) abort();
+          choices = grown;
+        }
+        choices[count].index = index;
+        choices[count].difficulty = atoi(level);
+        preferred += choices[count].difficulty == difficulty;
+        ++count;
+      }
+      ++index;
+    }
+    shandalar_io_close(file);
+  }
+  if (!count) {
+    free(choices);
+    fprintf(stderr, "No valid opponents defined in Rogues.csv.\n");
+    abort();
+  }
+  int choice = internal_rand(preferred ? preferred : count), result = -1;
+  for (int i = 0; i < count; ++i) {
+    if ((!preferred || choices[i].difficulty == difficulty) && choice-- == 0) {
+      result = choices[i].index;
+      break;
+    }
+  }
+  free(choices);
+  return result;
 }
 
 int* shandalar_ante_setting(void)
@@ -783,3 +870,24 @@ int shandalar_create_legacy_effect(int player, int card, int legacy_iid,
 {
   return create_legacy_effect(player, card, legacy_iid, target_player, target_card);
 }
+
+const char* shandalar_legacy_damage_text(int card_id)
+{
+  if (card_id < 0 || card_id >= global_available_slots) return "";
+  const char *text = global_legacy_names[card_id].damage_text;
+  return text ? text : "";
+}
+const char* shandalar_legacy_text(int card_id)
+{
+  if (card_id < 0 || card_id >= global_available_slots) return "";
+  const char *text = global_legacy_names[card_id].legacy_text;
+  return text ? text : "";
+}
+const char* shandalar_effect_text(int card_id)
+{
+  if (card_id < 0 || card_id >= global_available_slots) return "";
+  const char *text = global_legacy_names[card_id].effect_text;
+  return text ? text : "";
+}
+
+int* shandalar_player_damage_totals(void) { return g_duel_summary.player_damage_totals; }

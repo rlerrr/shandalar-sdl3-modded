@@ -1,6 +1,11 @@
 #include "manalink.h"
 
 int card_army_of_allah(int player, int card, event_t event){
+  /* CARD_ID_ARMY_OF_ALLAH	397
+   * Army of Allah	|1|W|W
+   * Instant
+   * Attacking creatures get +2/+0 until end of turn. */
+
     if(event == EVENT_CAN_CAST ){
         return 1;
     }
@@ -25,6 +30,12 @@ int card_army_of_allah(int player, int card, event_t event){
 }
 
 int card_rout(int player, int card, event_t event){
+  /* CARD_ID_ROUT	5097
+   * Rout	|3|W|W
+   * Sorcery
+   * You may cast ~ as though it had flash if you pay |2 more to cast it. (You may cast it any time you could cast an instant.)
+   * Destroy all creatures. They can't be regenerated. */
+
     if( ! is_unlocked(player, card, event, 10) ){ return 0; }
     if( event == EVENT_MODIFY_COST && ! can_sorcery_be_played(player, event) ){
         COST_COLORLESS += 2;
@@ -33,6 +44,9 @@ int card_rout(int player, int card, event_t event){
 }
 
 int card_dust_to_dust(int player, int card, event_t event){
+  /* Dust to Dust	|1|W|W
+   * Sorcery
+   * Exile two target artifacts. */
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_ARTIFACT);
@@ -73,6 +87,10 @@ int card_dust_to_dust(int player, int card, event_t event){
 }
 
 int card_fire_and_brimstone(int player, int card, event_t event){
+  /* Fire and Brimstone	|3|W|W
+   * Instant
+   * ~ deals 4 damage to target player who attacked this turn and 4 damage to you. */
+
 //    target_definition_t td;
 //    default_target_definition(player, card, &td, TYPE_CREATURE);
 //    td.zone = TARGET_ZONE_PLAYERs;
@@ -134,6 +152,12 @@ int effect_festival(int player, int card, event_t event ){
 }
 
 int card_festival(int player, int card, event_t event){
+  /* CARD_ID_FESTIVAL	934
+   * Festival	|W
+   * Instant
+   * Cast ~ only during an opponent's upkeep.
+   * Creatures can't attack this turn. */
+
     if( event == EVENT_CAN_CAST ){
         if( current_turn == 1-player && current_phase == PHASE_UPKEEP ){
             return 1;

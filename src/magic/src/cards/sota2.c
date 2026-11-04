@@ -1183,7 +1183,7 @@ int card_demonic_hordes(int player, int card, event_t event)
   if (event == EVENT_SETUP_UPKEEP_COSTS && card == g_affected_card && player == g_affected_card_controller && player == g_current_player && g_event_player == player)
   {
     PLAYER_CARD_INSTANCE(player, card).upkeep_flags |= 1;
-    PLAYER_CARD_INSTANCE(player, card).upkeep_black += 3;
+    PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[1] += 3;
   }
 
   if (event == EVENT_UPKEEP_COSTS_UNPAID)

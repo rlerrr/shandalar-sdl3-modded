@@ -1499,7 +1499,7 @@ int gain_control(int player, int card)
   s.new_card = add_card_to_hand(s.opponent, PLAYER_CARD_INSTANCE(player, card).internal_card_id);
   if (s.new_card != -1)
   {
-    memcpy(&PLAYER_CARD_INSTANCE(s.opponent, s.new_card), &PLAYER_CARD_INSTANCE(player, card), 0x12c);
+    manalinkeh_memcpy_inst_and_ext(&PLAYER_CARD_INSTANCE(s.opponent, s.new_card), &PLAYER_CARD_INSTANCE(player, card));
     PLAYER_CARD_INSTANCE(s.opponent, s.new_card).state |= 0x30000;
     PLAYER_CARD_INSTANCE(s.opponent, s.new_card).state &= ~(STATE_ATTACKING | STATE_BLOCKING);
     TENTATIVE_timestamp_player[s.timestamp_slot] = s.opponent;
@@ -2445,7 +2445,7 @@ int card_energy_flux(int player, int card, event_t event)
       g_event_player == g_current_player)
   {
     PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).upkeep_flags |= 3;
-    PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).upkeep_colorless += 2;
+    PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).ext->legacy_upkeep_cost[0] += 2;
   }
 
   return 0;
@@ -3600,7 +3600,7 @@ int card_sunken_city(int player, int card, event_t event)
       player == g_event_player)
   {
     PLAYER_CARD_INSTANCE(player, card).upkeep_flags |= 1;
-    PLAYER_CARD_INSTANCE(player, card).upkeep_blue += 2;
+    PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[2] += 2;
     return 0;
   }
 
@@ -4859,8 +4859,8 @@ int card_stasis(int player, int card, event_t event)
   if (event == EVENT_SETUP_UPKEEP_COSTS && card == g_affected_card && player == g_affected_card_controller && player == g_current_player && g_event_player == g_current_player)
   {
     PLAYER_CARD_INSTANCE(player, card).upkeep_flags |= UPKEEP_UPKEEP_TRIGGER;
-    PLAYER_CARD_INSTANCE(player, card).upkeep_blue =
-        PLAYER_CARD_INSTANCE(player, card).upkeep_blue + 1;
+    PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[2] =
+        PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[2] + 1;
     return 0;
   }
 
@@ -4951,7 +4951,7 @@ int card_magnetic_mountain(int player, int card, event_t event)
         ((1 << get_sleighted_color(player, card, COLOR_BLUE)) & (int)(char)PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).color) != 0)
     {
       PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).upkeep_flags |= 0x10;
-      PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).mana_to_untap[COLOR_COLORLESS] += 4;
+      PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).ext->legacy_mana_to_untap[COLOR_COLORLESS] += 4;
     }
     return 0;
   }
@@ -4961,7 +4961,7 @@ int card_magnetic_mountain(int player, int card, event_t event)
     if (((1 << get_sleighted_color(player, card, COLOR_BLUE)) & (int)(char)PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).color) != 0 &&
         (global_cards_data[PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).internal_card_id].type & TYPE_CREATURE) != 0)
     {
-      PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).mana_to_untap[COLOR_COLORLESS] += 4;
+      PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).ext->legacy_mana_to_untap[COLOR_COLORLESS] += 4;
     }
 
     return 0;
@@ -5024,7 +5024,7 @@ int card_paralyze(int player, int card, event_t event)
     {
       PLAYER_CARD_INSTANCE(PLAYER_CARD_INSTANCE(player, card).targets[0].player,
                            PLAYER_CARD_INSTANCE(player, card).targets[0].card)
-          .mana_to_untap[0] += 4;
+          .ext->legacy_mana_to_untap[0] += 4;
 
       if (g_other_player == player && (g_duel_network_flags & 2) == 0)
       {
@@ -5129,7 +5129,7 @@ int card_paralyze(int player, int card, event_t event)
       PLAYER_CARD_INSTANCE(player, card).damage_target_player == g_current_player && g_event_player == g_current_player)
   {
     PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).upkeep_flags |= UPKEEP_UNTAP_TRIGGER;
-    PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).mana_to_untap[0] += 4;
+    PLAYER_CARD_INSTANCE(g_affected_card_controller, g_affected_card).ext->legacy_mana_to_untap[0] += 4;
   }
 
   return 0;
@@ -7175,12 +7175,8 @@ int power_struggle_exchange_permanents(int first_player, int first_card, int sec
     return 0;
   }
 
-  memcpy(&PLAYER_CARD_INSTANCE(first_player, s.new_first_card),
-         &PLAYER_CARD_INSTANCE(second_player, second_card),
-         sizeof(card_instance_t));
-  memcpy(&PLAYER_CARD_INSTANCE(second_player, s.new_second_card),
-         &PLAYER_CARD_INSTANCE(first_player, first_card),
-         sizeof(card_instance_t));
+  manalinkeh_memcpy_inst_and_ext(&PLAYER_CARD_INSTANCE(first_player, s.new_first_card), &PLAYER_CARD_INSTANCE(second_player, second_card));
+  manalinkeh_memcpy_inst_and_ext(&PLAYER_CARD_INSTANCE(second_player, s.new_second_card), &PLAYER_CARD_INSTANCE(first_player, first_card));
 
   PLAYER_CARD_INSTANCE(first_player, s.new_first_card).state |= STATE_SUMMONSICK_BOTH;
   PLAYER_CARD_INSTANCE(second_player, s.new_second_card).state |= STATE_SUMMONSICK_BOTH;
@@ -8145,7 +8141,7 @@ int card_conversion(int player, int card, event_t event)
   if (((event == EVENT_SETUP_UPKEEP_COSTS) && (g_affected_card == card)) && (g_affected_card_controller == player) && player == g_current_player && g_event_player == g_current_player)
   {
     PLAYER_CARD_INSTANCE(player, card).upkeep_flags |= 1;
-    PLAYER_CARD_INSTANCE(player, card).upkeep_white += 2;
+    PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[5] += 2;
     return 0;
   }
 

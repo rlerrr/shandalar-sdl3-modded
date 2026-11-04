@@ -1,7 +1,11 @@
 #include "manalink.h"
 
-
 int card_hammer_of_bogardan(int player, int card, event_t event){
+  /* Hammer of Bogardan	|1|R|R	0x2001db2
+   * Sorcery
+   * ~ deals 3 damage to any target.
+   * |2|R|R|R: Return ~ from your graveyard to your hand. Activate this ability only during your upkeep. */
+
     card_instance_t *instance= get_card_instance(player, card);
     if( event == EVENT_GRAVEYARD_ABILITY_UPKEEP ){
         if( ! has_mana_multi(player, 2, 0, 0, 0, 3, 0) ){
@@ -25,6 +29,10 @@ int card_hammer_of_bogardan(int player, int card, event_t event){
 }
 
 int card_smash_to_smithereens(int player, int card, event_t event){
+  /* Smash to Smithereens	|1|R	=>shadowmoor.c:card_smash_to_smithereens
+   * Instant
+   * Destroy target artifact. ~ deals 3 damage to that artifact's controller. */
+
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_ARTIFACT);
     if( event == EVENT_CAN_CAST ){
@@ -50,6 +58,10 @@ int card_smash_to_smithereens(int player, int card, event_t event){
 }
 
 int card_incinerate(int player, int card, event_t event){
+  /* Incinerate	|1|R	0x20017e0
+   * Instant
+   * ~ deals 3 damage to any target. A creature dealt damage this way can't be regenerated this turn. */
+
     if(event == EVENT_RESOLVE_SPELL){
         if( spell_fizzled != 1 ){
             card_instance_t *instance = get_card_instance(player, card);
@@ -66,7 +78,6 @@ int card_incinerate(int player, int card, event_t event){
     return result;
 }
 
-
 int is_goblin_tutor(int player, int card ){
     card_instance_t *instance = get_card_instance( player, card );
     if( cards_data[ instance->internal_card_id ].id == CARD_ID_GOBLIN_TUTOR ){
@@ -76,6 +87,15 @@ int is_goblin_tutor(int player, int card ){
 }
 
 int card_goblin_tutor(int player, int card, event_t event){
+  /* Goblin Tutor	|R	0x20013fd
+   * Instant
+   * Roll a six-sided die. If you roll a 1, ~ has no effect. Otherwise, search your library for the indicated card, reveal it, put it into your hand, then shuffle your library.
+   * 2 - A card named ~
+   * 3 - An enchantment card
+   * 4 - An artifact card
+   * 5 - A creature card
+   * 6 - An instant or sorcery card */
+
     if(event == EVENT_CAN_CAST){
         return 1;
     }
@@ -123,6 +143,11 @@ int card_goblin_tutor(int player, int card, event_t event){
 }
 
 int card_goblin_grenade(int player, int card, event_t event){
+  /* Goblin Grenade	|R	0x2001227
+   * Sorcery
+   * As an additional cost to cast this spell, sacrifice a Goblin.
+   * ~ deals 5 damage to any target. */
+
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_CREATURE);
     td.required_subtype = SUBTYPE_GOBLIN;
@@ -159,6 +184,11 @@ int card_goblin_grenade(int player, int card, event_t event){
 }
 
 int card_obliterate(int player, int card, event_t event){
+  /* Obliterate	|6|R|R
+   * Sorcery
+   * ~ can't be countered.
+   * Destroy all artifacts, creatures, and lands. They can't be regenerated. */
+
     if(event == EVENT_CAST_SPELL && affect_me(player, card) ){
         card_instance_t *instance = get_card_instance(player, card);
         instance->state |= STATE_CANNOT_TARGET;
@@ -167,6 +197,11 @@ int card_obliterate(int player, int card, event_t event){
 }
 
 int card_fork(int player, int card, event_t event){
+  /* CARD_ID_FORK	92
+   * Fork	|R|R
+   * Instant
+   * Copy target instant or sorcery spell, except that the copy is |Sred. You may choose new targets for the copy. */
+
     int result =  card_fork_orig(player, card, event);
     if(event == EVENT_CAN_CAST ){
         if( result == 0 ){
@@ -179,5 +214,4 @@ int card_fork(int player, int card, event_t event){
     }
     return result;
 }
-
 

@@ -536,7 +536,7 @@ int activate(int who_activates, int player, int card)
 
     for (i = 0; i < 7; i++)
     {
-      g_mana_charge[i] = ((char *)&instance->upkeep_colorless)[i];
+      g_mana_charge[i] = ((char *)&instance->ext->legacy_upkeep_cost[0])[i];
 
       if (i > 0)
       {
@@ -607,7 +607,7 @@ int activate(int who_activates, int player, int card)
   {
     for (untap_color = 0; untap_color < 7; ++untap_color)
     {
-      g_mana_charge[untap_color] = (int)(char)instance->mana_to_untap[untap_color];
+      g_mana_charge[untap_color] = (int)(char)instance->ext->legacy_mana_to_untap[untap_color];
     }
 
     charge_mana(player, 0, 0);
@@ -1508,18 +1508,18 @@ int can_pay_untap_cost(int player, int card)
   current_color = COLOR_BLACK;
   for (; current_color < 7; ++current_color)
   {
-    if (PLAYER_CARD_INSTANCE(player, card).mana_to_untap[current_color] != 0)
+    if (PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[current_color] != 0)
     {
       if (has_mana(player, current_color,
-                   PLAYER_CARD_INSTANCE(player, card).mana_to_untap[current_color]) == 0)
+                   PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[current_color]) == 0)
       {
         return 0;
       }
-      total_paid += PLAYER_CARD_INSTANCE(player, card).mana_to_untap[current_color];
+      total_paid += PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[current_color];
     }
   }
 
-  if (has_mana(player, COLOR_ANY, PLAYER_CARD_INSTANCE(player, card).mana_to_untap[0] + total_paid) == 0)
+  if (has_mana(player, COLOR_ANY, PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[0] + total_paid) == 0)
   {
     return 0;
   }
@@ -1549,8 +1549,8 @@ void reset_upkeep_costs(void)
         {
           for (i = 0; i < 7; ++i)
           {
-            PLAYER_CARD_INSTANCE(player, card).mana_to_untap[i] = 0;
-            PLAYER_CARD_INSTANCE(player, card).upkeep_cost[i] = PLAYER_CARD_INSTANCE(player, card).mana_to_untap[i];
+            PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[i] = 0;
+            PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[i] = PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[i];
           }
 
           PLAYER_CARD_INSTANCE(player, card).upkeep_flags = 0;

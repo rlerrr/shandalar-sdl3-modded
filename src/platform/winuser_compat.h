@@ -31,6 +31,24 @@ typedef INT_PTR(CALLBACK *DLGPROC)(HWND, UINT, WPARAM, LPARAM);
 typedef void(CALLBACK *TIMERPROC)(HWND, UINT, UINT_PTR, DWORD);
 typedef void(CALLBACK *LPTIMECALLBACK)(UINT, UINT, DWORD, DWORD, DWORD);
 
+/* Standard Win32 in-memory dialog template (variable strings follow). */
+#pragma pack(push, 2)
+typedef struct DLGTEMPLATE { DWORD style, dwExtendedStyle; WORD cdit; short x,y,cx,cy; } DLGTEMPLATE;
+#pragma pack(pop)
+typedef const DLGTEMPLATE *LPCDLGTEMPLATE;
+#define LB_SETCOUNT 0x01a7
+#define ODA_DRAWENTIRE 1
+#define ODA_SELECT 2
+#define ODA_FOCUS 4
+#define COLOR_WINDOW 5
+#define COLOR_WINDOWTEXT 8
+#define COLOR_HIGHLIGHT 13
+#define COLOR_HIGHLIGHTTEXT 14
+#define WM_CHARTOITEM 0x002f
+#define WHEEL_DELTA 120
+INT_PTR DialogBoxIndirectParamA(HINSTANCE, LPCDLGTEMPLATE, HWND, DLGPROC, LPARAM);
+HBRUSH GetSysColorBrush(int);
+
 typedef struct tagWNDCLASSA {
   UINT style;
   WNDPROC lpfnWndProc;

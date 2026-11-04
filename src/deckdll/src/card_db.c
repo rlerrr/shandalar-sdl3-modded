@@ -141,8 +141,10 @@ typedef struct card_disk_record_t
   uint32_t mana_cost_text_offset;
   uint32_t ai_modifiers1;
   uint32_t ai_modifiers2;
-  uint16_t ai_inc_power_toughness;
-  uint16_t ai_power_toughness;
+  uint8_t ai_inc_power;
+  uint8_t ai_inc_toughness;
+  uint8_t ai_power;
+  uint8_t ai_toughness;
   int16_t ai_base_value;
   int16_t ai_dependencies;
   int32_t sleight_color;
@@ -158,8 +160,7 @@ typedef struct card_disk_record_t
   uint32_t flavor_text_offset;
   int32_t power;
   int32_t toughness;
-  int16_t types[2];
-  char abilities[10];
+  int16_t types[7];
   int8_t mana_source_colors;
   int8_t inflatable;
   uint8_t hack_colors;
@@ -215,8 +216,10 @@ static int convert_card_disk_record(card_ptr_t *dst, const card_disk_record_t *s
     return 0;
   dst->ai_modifiers1 = src->ai_modifiers1;
   dst->ai_modifiers2 = src->ai_modifiers2;
-  dst->ai_inc_power_toughness = src->ai_inc_power_toughness;
-  dst->ai_power_toughness = src->ai_power_toughness;
+  dst->ai_inc_power = src->ai_inc_power;
+  dst->ai_inc_toughness = src->ai_inc_toughness;
+  dst->ai_power = src->ai_power;
+  dst->ai_toughness = src->ai_toughness;
   dst->ai_base_value = src->ai_base_value;
   dst->ai_dependencies = src->ai_dependencies;
   dst->sleight_color = src->sleight_color;
@@ -231,7 +234,6 @@ static int convert_card_disk_record(card_ptr_t *dst, const card_disk_record_t *s
   dst->power = src->power;
   dst->toughness = src->toughness;
   memcpy(dst->types, src->types, sizeof(dst->types));
-  memcpy(dst->abilities, src->abilities, sizeof(dst->abilities));
   dst->mana_source_colors = src->mana_source_colors;
   dst->inflatable = src->inflatable;
   dst->hack_colors = src->hack_colors;

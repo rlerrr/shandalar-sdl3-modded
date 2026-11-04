@@ -153,6 +153,10 @@ if(SHANDALAR_BUILD_TESTS)
   target_link_libraries(winuser_compat_test PRIVATE shandalar_platform)
   add_test(NAME winuser_compat_test COMMAND winuser_compat_test)
 
+  add_executable(dynamic_dialog_test tests/dynamic_dialog_test.c)
+  target_link_libraries(dynamic_dialog_test PRIVATE shandalar_platform)
+  add_test(NAME dynamic_dialog_test COMMAND dynamic_dialog_test)
+
   add_executable(winuser_caption_test tests/winuser_caption_test.c)
   target_link_libraries(winuser_caption_test PRIVATE shandalar_platform)
   add_test(NAME winuser_caption_test COMMAND winuser_caption_test)

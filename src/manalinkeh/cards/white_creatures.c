@@ -6,7 +6,6 @@ int simple_dialog(int player, int card, const char* string){
     return do_dialog(player, player, card, -1, -1, buffer, 0);
 }
 
-
 int cmc_is_one(int player, int card){
     if( get_cmc(player, card) <= 1 ){
         return 1;
@@ -15,6 +14,11 @@ int cmc_is_one(int player, int card){
 }
 
 int card_auriok_salvagers(int player, int card, event_t event){
+  /* CARD_ID_AURIOK_SALVAGERS	7008
+   * Auriok Salvagers	|3|W
+   * Creature - Human Soldier 2/4
+   * |1|W: Return target artifact card with converted mana cost 1 or less from your graveyard to your hand. */
+
 	char msg[100] = "Select an artifact card with CMC 1 or less.";
 	test_definition_t this_test;
 	new_default_test_definition(&this_test, TYPE_ARTIFACT, msg);
@@ -44,8 +48,12 @@ int card_auriok_salvagers(int player, int card, event_t event){
     return 0;
 }
 
-
 int card_magus_of_the_tabernacle(int player, int card, event_t event){
+  /* CARD_ID_MAGUS_OF_THE_TABERNACLE	1287
+   * Magus of the Tabernacle	|3|W
+   * Creature - Human Wizard 2/6
+   * All creatures have "At the beginning of your upkeep, sacrifice this creature unless you pay |1." */
+
     return card_pendrell_mists(player, card, event);
 }
 
@@ -94,10 +102,22 @@ void double_strike(int player, int card, event_t event){
 }
 
 int card_pearl_dragon(int player, int card, event_t event){
+  /* CARD_ID_PEARL_DRAGON	1670
+   * Pearl Dragon	|4|W|W
+   * Creature - Dragon 4/4
+   * Flying
+   * |1|W: ~ gets +0/+1 until end of turn. */
+
     return generic_shade(player, card, event, 0, 1, 0, 0, 0, 0, 1, 0, 1, 0, 0);
 }
 
 int card_ivory_guardians(int player, int card, event_t event){
+  /* CARD_ID_IVORY_GUARDIANS	686
+   * Ivory Guardians	|4|W|W
+   * Creature - Giant Cleric 3/3
+   * Protection from |Sred
+   * Creatures named ~ get +1/+1 as long as an opponent controls a nontoken |Sred permanent. */
+
     if( event == EVENT_POWER || event == EVENT_TOUGHNESS ){
         if( get_id(affected_card_controller, affected_card ) == get_id(player, card)){
             target_definition_t td;

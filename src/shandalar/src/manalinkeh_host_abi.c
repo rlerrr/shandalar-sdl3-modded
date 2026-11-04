@@ -82,8 +82,9 @@ int manalinkeh_hostabi_DrawSmallCardTitle(HDC dc, const RECT* rect,
                                           const char* title, int color,
                                           int controlled_by_owner,
                                           const card_ptr_t* card, int player,
-                                          int card_index)
+                                          int card_index, int image_version)
 {
+  (void)image_version; /* Title rendering has no art-version-dependent content. */
   return DrawCardModdedSmallCardTitle(dc, rect, title, color,
                                      controlled_by_owner, card, player, card_index);
 }

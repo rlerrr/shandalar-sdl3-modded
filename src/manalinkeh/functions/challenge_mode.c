@@ -1,5 +1,5 @@
-#include "platform/file_io.h"
 #include "manalink.h"
+#include "platform/file_io.h"
 
 int challenge_round = 0;
 int unlocked[50];
@@ -11,7 +11,7 @@ int challenge4 = -1;
 char challenge_names[][50] = {
 	// 1
 	"", "Tribal Trials", "Vanguard Vengeance", "Chipping Away", "Onslaught", "Shandalar 2.0", "BANNED!", "Planeswalker Decimation", "Magic: The Puzzling",
-	"That's Not My Deck!",
+	"",
 	// 2
 	"Super Mulligan", "What Hand?", "That's Big...", "Epic", "There can be only one", "March of the Machines", "Land Ho!", "Dude...", "Face the Hydra", "",
 	// 3
@@ -22,7 +22,7 @@ char challenge_names[][50] = {
 };
 
 char unlock_codes[][10] = {
-	"", "magic", "mtg", "jabber", "begin", "goodwork", "master", "quitter", "nuts", "hardy",
+	"", "magic", "mtg", "jabber", "begin", "goodwork", "master", "quitter", "nuts", "",
 	"routish", "headache", "buuurp", "bondage", "annoying", "wired", "shiny", "keeks", "fangs", "",
 	"diane", "james", "tricia", "greg", "christine", "me", "ryan", "owen", "dylan", "katie",
 	"onna", "monna", "poeia", "clean", "patch", "oath", "nerds", "willy", "wonka", "roskopp"
@@ -39,7 +39,7 @@ static int lock_ids[] = {
 	CARD_ID_CURSED_SCROLL,
 	CARD_ID_SERUM_POWDER,
 	CARD_ID_CONUNDRUM_SPHINX,
-	CARD_ID_MIRARIS_WAKE,
+	-1,
 	//2
 	CARD_ID_ROUT,
 	CARD_ID_BRAIN_FREEZE,
@@ -975,58 +975,74 @@ int is_unlocked_by_challenge(int player, int unlock_level){
 	return 0;
 }
 
-int is_unlocked(int player, int card, event_t event, int unlock_level){
-	if( player == AI || unlocked[unlock_level] == 1 || get_setting(SETTING_TOURNAMENT_MODE) ){
-		return 1;
-	}
+int is_unlocked(int player, int card, event_t event, int unlock_level)
+{
+  if (player == AI || unlocked[unlock_level] == 1 || get_setting(SETTING_TOURNAMENT_MODE))
+  {
+    return 1;
+  }
 
-	if( unlock_level != 31 && unlock_level != 36 && unlock_level != 38 && unlock_level != 39 && player > 0 && card > 0 ){
-		unlock_level = get_unlock_code(get_id(player, card));
-		if( unlock_level == 0 ){
-			return 0;
-		}
-	}
+  if (unlock_level != 31 && unlock_level != 36 && unlock_level != 38 && unlock_level != 39 &&
+      player > 0 && card > 0)
+  {
+    unlock_level = get_unlock_code(get_id(player, card));
+    if (unlock_level == 0)
+    {
+      return 0;
+    }
+  }
 
-	char buffer[200];
+  char buffer[200];
 
-	if( unlocked[unlock_level] == 2 && lock_ids[unlock_level] != -1 && lock_ids[unlock_level] != -2){
-		card_ptr_t* c = cards_ptr[ lock_ids[unlock_level] ];
-		//if( unlock_level >= 10 && unlock_level < 20 ){ unlock_level++; }
-		int challenge_number = unlock_level % 10;
-		int challenge_set = 1+(unlock_level - challenge_number)/10;
-		if( event != 0 ){
-			if( comes_into_play(player, card, event) == 1 || event == EVENT_RESOLVE_ACTIVATION ){
-				int pos = scnprintf(buffer, 200, " You must unlock this card \nby completing challenge\nset %d number %d\n", challenge_set, challenge_number+1);
-				scnprintf(buffer+pos, 200-pos, "%s", challenge_names[unlock_level] );
-				do_dialog(player, player, card , -1, -1, buffer, 0);
-			}
-		}
-		scnprintf(c->name, strlen(c->name)+1,"%d #%d", challenge_set, challenge_number+1);
-		//shandalar_io_printf(file1, "already known as locked %d\n", unlocked[unlock_level] );
-		return 0;
-	}
+  if (unlocked[unlock_level] == 2 && lock_ids[unlock_level] != -1 && lock_ids[unlock_level] != -2)
+  {
+    card_ptr_t *c = cards_ptr[lock_ids[unlock_level]];
+    // if( unlock_level >= 10 && unlock_level < 20 ){ unlock_level++; }
+    int challenge_number = unlock_level % 10;
+    int challenge_set = 1 + (unlock_level - challenge_number) / 10;
+    if (event != 0)
+    {
+      etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+      if (event == EVENT_ETB || event == EVENT_RESOLVE_ACTIVATION)
+      {
+        int pos = scnprintf(
+            buffer, 200, " You must unlock this card \nby completing challenge\nset %d number %d\n",
+            challenge_set, challenge_number + 1);
+        scnprintf(buffer + pos, 200 - pos, "%s", challenge_names[unlock_level]);
+        do_dialog(player, player, card, -1, -1, buffer, 0);
+      }
+    }
+    scnprintf(c->name, strlen(c->name) + 1, "%d #%d", challenge_set, challenge_number + 1);
+    // fprintf(file1, "already known as locked %d\n", unlocked[unlock_level] );
+    return 0;
+  }
 
-	scnprintf(buffer, 200, "Faces//%s.jat", unlock_codes[unlock_level]);
-	SDL_IOStream *file = shandalar_open_file_io(buffer, "r");
-	if( file != NULL  ){
-		shandalar_io_close(file);
-		unlocked[unlock_level] = 1;
-		return 1;
-	}
+  scnprintf(buffer, 200, "Faces//%s.jat", unlock_codes[unlock_level]);
+  SDL_IOStream *file = shandalar_open_file_io(buffer, "r");
+  if (file != NULL)
+  {
+    shandalar_io_close(file);
+    unlocked[unlock_level] = 1;
+    return 1;
+  }
 
-	if( event != 0 && comes_into_play(player, card, event) == 1 && lock_ids[unlock_level] != -1 && lock_ids[unlock_level] != -2){
-		//if( unlock_level >= 10 && unlock_level < 20 ){ unlock_level++; }
-		int challenge_number = unlock_level % 10;
-		int challenge_set = 1+(unlock_level - challenge_number)/10;
-		int pos = scnprintf(buffer, 200, " You must unlock this card \nby completing challenge\nset %d number %d\n", challenge_set, challenge_number+1);
-		scnprintf(buffer+pos, 200-pos, "%s", challenge_names[unlock_level] );
-		do_dialog(player, player, card , -1, -1, buffer, 0);
-	}
-	//shandalar_io_printf(file1, "setting check to failed %d\n", unlocked[unlock_level] );
-	unlocked[unlock_level] = 2;
+  etb_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
+  if (event == EVENT_ETB && lock_ids[unlock_level] != -1 && lock_ids[unlock_level] != -2)
+  {
+    // if( unlock_level >= 10 && unlock_level < 20 ){ unlock_level++; }
+    int challenge_number = unlock_level % 10;
+    int challenge_set = 1 + (unlock_level - challenge_number) / 10;
+    int pos = scnprintf(buffer, 200,
+                        " You must unlock this card \nby completing challenge\nset %d number %d\n",
+                        challenge_set, challenge_number + 1);
+    scnprintf(buffer + pos, 200 - pos, "%s", challenge_names[unlock_level]);
+    do_dialog(player, player, card, -1, -1, buffer, 0);
+  }
+  // fprintf(file1, "setting check to failed %d\n", unlocked[unlock_level] );
+  unlocked[unlock_level] = 2;
 
-	//shandalar_io_close(file1);
-	return 0;
+  // fclose(file1);
+  return 0;
 }
 
 int get_challenge_round(void){
@@ -1182,20 +1198,26 @@ void apply_challenge_10_to_1_upkeep(void){
 }
 #endif
 
-static int warp_card(type_t required_type, type_t illegal_type, const char* text){
-	while (1){
-		if(ai_is_speculating != 1){
-			int iid = choose_a_card(text, -1, -1);
-			if (is_what(-1, iid, required_type)
-				&& !(illegal_type && is_what(-1, iid, illegal_type))
-			   ){
-				update_rules_engine(check_card_for_rules_engine(iid));
-				int card_added = add_card_to_hand(HUMAN, iid);
-				return card_added;
-			}
-		}
-	}
-	return -1;
+static int warp_card(type_t type, test_flags_t type_flag, const char *text)
+{
+  if (ai_is_speculating == 1)
+    return -1;
+  int iid;
+  if (type_flag == MATCH)
+  {
+    // Native passes type as the chooser's color argument; preserve that ordering.
+    iid = choose_a_card_iid((char *)text, type, -1);
+  }
+  else
+  {
+    test_definition_t test;
+    new_default_test_definition(&test, type, "");
+    test.type_flag = DOESNT_MATCH;
+    int csvid = choose_a_card_test_ct((char *)text, &test, -1, ~type);
+    iid = get_internal_card_id_from_csv_id(csvid);
+  }
+  update_rules_engine(check_card_for_rules_engine(iid));
+  return add_card_to_hand(HUMAN, iid);
 }
 
 static int get_card_human(int csvid){
@@ -1263,159 +1285,201 @@ void apply_challenge_not_my_deck_upkeep(void){
 	return;
 }
 
-void apply_challenge_puzzle_upkeep(void){
-	int round = gauntlet_round - 1;
+void apply_challenge_puzzle_upkeep(void)
+{
+  int round = gauntlet_round - 1;
 
-	if( challenge1 == 8 ){
-		if ( POISON_COUNTERS(HUMAN) == 0 ){
-			apply_challenge_not_my_deck_upkeep();
-		}
-		return;
-	}
+  if (challenge1 == 8)
+  {
+    if (POISON_COUNTERS(HUMAN) == 0)
+    {
+      apply_challenge_not_my_deck_upkeep();
+    }
+    return;
+  }
 
-	// Remove our hand and deck
-	if( challenge1 == 7){
-		int count = 0;
-		while( count < active_cards_count[HUMAN]){
-			if(! in_play(HUMAN, count) ){
-				put_on_top_of_deck(HUMAN, count);
-			}
-			count++;
-		}
-		int *deck = deck_ptr[HUMAN];
-		int i;
-		for(i=0;i<10;i++){
-			deck[i] = get_internal_card_id_from_csv_id( CARD_ID_SWAMP );
-		}
-		deck[10]=-1;
+  // Remove our hand and deck
+  if (challenge1 == 7)
+  {
+    int count = 0;
+    while (count < active_cards_count[HUMAN])
+    {
+      if (!in_play(HUMAN, count))
+      {
+        put_on_top_of_deck(HUMAN, count);
+      }
+      count++;
+    }
+    int *deck = deck_ptr[HUMAN];
+    int i;
+    for (i = 0; i < 10; i++)
+    {
+      deck[i] = get_internal_card_id_from_csv_id(CARD_ID_SWAMP);
+    }
+    deck[10] = -1;
 
-		while( count < active_cards_count[AI]){
-			if(! in_play(AI, count) ){
-				put_on_top_of_deck(AI, count);
-			}
-			count++;
-		}
-		deck = deck_ptr[AI];
-		for(i=0;i<60;i++){
-			deck[i] = get_internal_card_id_from_csv_id( CARD_ID_SWAMP );
-		}
+    while (count < active_cards_count[AI])
+    {
+      if (!in_play(AI, count))
+      {
+        put_on_top_of_deck(AI, count);
+      }
+      count++;
+    }
+    deck = deck_ptr[AI];
+    for (i = 0; i < 60; i++)
+    {
+      deck[i] = get_internal_card_id_from_csv_id(CARD_ID_SWAMP);
+    }
+  }
 
-
-	}
-
-	// Add free cards to hand
-	int* deck = deck_ptr[AI];
-	if( round == 70 ){
-		life[AI]=8;
-		life[HUMAN]=9;
-		get_card_human(CARD_ID_SWAMP);
-		get_card_human(CARD_ID_SWAMP);
-		do_dialog(0, 0, 0, -1, -1, "Win the game before your 2nd main phase.  You may add 2 sorcery and 1 creature to your hand.\n\nWarning: the next round requires you to win in your upkeep, so you probably want to set a stop there.", 1);
-		warp_card(TYPE_SORCERY, 0, "Choose sorcery #1");
-		warp_card(TYPE_SORCERY, 0, "Choose sorcery #2");
-		warp_card(TYPE_CREATURE, 0, "Choose a creature");
-	}
-	else if( round == 71 ){
-		life[AI]=8;
-		get_card_human(CARD_ID_BADLANDS);
-		get_card_human(CARD_ID_PLATEAU);
-		do_dialog(0, 0, 0, -1, -1, "Win the game before your draw step.  You may add 2 instants to your hand.", 1);
-		warp_card(TYPE_INSTANT | TYPE_INTERRUPT, 0, "Choose instant #1");
-		warp_card(TYPE_INSTANT | TYPE_INTERRUPT, 0, "Choose instant #2");
-	}
-	else if( round == 72 ){
-		deck[2]=-1;
-		do_dialog(0, 0, 0, -1, -1, "Win the game before your draw step.  You may add any 4 cards to your hand.", 1);
-		warp_card(TYPE_ANY, 0, "Choose card #1");
-		warp_card(TYPE_ANY, 0, "Choose card #2");
-		warp_card(TYPE_ANY, 0, "Choose card #3");
-		warp_card(TYPE_ANY, 0, "Choose card #4");
-	}
-	else if( round == 73 ){
-		life[AI]=72;
-		deck[30]=-1;
-		get_card_human(CARD_ID_ISLAND);
-		get_card_human(CARD_ID_ISLAND);
-		get_card_human(CARD_ID_ISLAND);
-		get_card_human(CARD_ID_ISLAND);
-		get_card_human(CARD_ID_ISLAND);
-		get_card_human(CARD_ID_ISLAND);
-		get_card_human(CARD_ID_ISLAND);
-		get_card_human(CARD_ID_ISLAND);
-		get_card( CARD_ID_WALL_OF_AIR );
-		do_dialog(0, 0, 0, -1, -1, "Win the game before your 2nd main phase.  You may add any 3 non-artifacts to your hand.", 1);
-		warp_card(TYPE_ANY, TYPE_ARTIFACT, "Choose card #1");
-		warp_card(TYPE_ANY, TYPE_ARTIFACT, "Choose card #2");
-		warp_card(TYPE_ANY, TYPE_ARTIFACT, "Choose card #3");
-	}
-	else if( round == 74 ){
-		life[AI]=72;
-		get_card_human(CARD_ID_MOX_SAPPHIRE);
-		get_card_human(CARD_ID_MOX_SAPPHIRE);
-		get_card_human(CARD_ID_MOX_RUBY);
-		get_card_human(CARD_ID_MOX_RUBY);
-		get_card_human(CARD_ID_MOX_RUBY);
-		get_card_human(CARD_ID_MOX_RUBY);
-		get_card_human(CARD_ID_MOX_RUBY);
-		do_dialog(0, 0, 0, -1, -1, "Win the game before your 2nd main phase.  You may add any 3 non-artifacts to your hand.", 1);
-		warp_card(TYPE_ANY, TYPE_ARTIFACT, "Choose card #1");
-		warp_card(TYPE_ANY, TYPE_ARTIFACT, "Choose card #2");
-		warp_card(TYPE_ANY, TYPE_ARTIFACT, "Choose card #3");
-	}
-	else if( round == 75 ){
-		life[AI]=22;
-		do_dialog(0, 0, 0, -1, -1, "Win the game before your 2nd main phase.  You may add 4 creatures, 1 instant, and 1 artifact to your hand.", 1);
-		warp_card(TYPE_CREATURE, 0, "Choose creature #1");
-		warp_card(TYPE_CREATURE, 0, "Choose creature #2");
-		warp_card(TYPE_CREATURE, 0, "Choose creature #3");
-		warp_card(TYPE_CREATURE, 0, "Choose creature #4");
-		warp_card(TYPE_INSTANT | TYPE_INTERRUPT, 0, "Choose an instant");
-		warp_card(TYPE_ARTIFACT, 0, "Choose an artifact");
-	}
-	else if( round == 76 ){
-		life[AI]=12;
-		get_card_human(CARD_ID_TAIGA);
-		get_card_human(CARD_ID_CRUCIBLE_OF_WORLDS);
-		add_card_to_hand( HUMAN, get_internal_card_id_from_csv_id( CARD_ID_FIREBALL  ) );
-		do_dialog(0, 0, 0, -1, -1, "Win the game before your 2nd main phase.  You may add an enchantment and an artifact to your hand.", 1);
-		warp_card(TYPE_ENCHANTMENT, 0, "Choose an enchantment");
-		warp_card(TYPE_ARTIFACT, 0, "Choose an artifact");
-	}
-	else if( round == 77 ){
-		life[HUMAN]=1;
-		life[AI]=36;
-		do_dialog(0, 0, 0, -1, -1, "Win the game before your 2nd main phase.  You may add 3 creatures, 1 instant, 1 enchantment, and 1 artifact to your hand.", 1);
-		warp_card(TYPE_CREATURE, 0, "Choose creature #1");
-		warp_card(TYPE_CREATURE, 0, "Choose creature #2");
-		warp_card(TYPE_CREATURE, 0, "Choose creature #3");
-		warp_card(TYPE_INSTANT | TYPE_INTERRUPT, 0, "Choose an instant");
-		warp_card(TYPE_ENCHANTMENT, 0, "Choose an enchantment");
-		warp_card(TYPE_ARTIFACT, 0, "Choose an artifact");
-	}
-	else if( round == 78 ){
-		life[AI]=16;
-		get_card_human(CARD_ID_BADLANDS);
-		get_card_human(CARD_ID_BADLANDS);
-		get_card_human(CARD_ID_BADLANDS);
-		get_card_human(CARD_ID_BADLANDS);
-		add_card_to_hand( HUMAN, get_internal_card_id_from_csv_id( CARD_ID_EYE_OF_UGIN ) );
-		do_dialog(0, 0, 0, -1, -1, "Win the game before your 2nd main phase.  You may add any 2 cards to your hand.", 1);
-		warp_card(TYPE_ANY, 0, "Choose card #1");
-		warp_card(TYPE_ANY, 0, "Choose card #2");
-	}
-	else if( round == 79 ){
-		life[AI]=34;
-		get_card_human(CARD_ID_SWAMP);
-		get_card_human(CARD_ID_FOREST);
-		get_card_human(CARD_ID_FOREST);
-		do_dialog(0, 0, 0, -1, -1, "Win the game before your 2nd main phase.  You may add 1 creature and 3 sorcery to your hand.", 1);
-		warp_card(TYPE_CREATURE, 0, "Choose a creature");
-		warp_card(TYPE_SORCERY, 0, "Choose sorcery #1");
-		warp_card(TYPE_SORCERY, 0, "Choose sorcery #2");
-		warp_card(TYPE_SORCERY, 0, "Choose sorcery #3");
-	}
+  // Add free cards to hand
+  int *deck = deck_ptr[AI];
+  if (round == 70)
+  {
+    life[AI] = 8;
+    life[HUMAN] = 9;
+    get_card_human(CARD_ID_SWAMP);
+    get_card_human(CARD_ID_SWAMP);
+    do_dialog(0, 0, 0, -1, -1,
+              "Win the game before your 2nd main phase.  You may add 2 sorcery and 1 creature to "
+              "your hand.\n\nWarning: the next round requires you to win in your upkeep, so you "
+              "probably want to set a stop there.",
+              1);
+    warp_card(TYPE_SORCERY, MATCH, "Choose sorcery #1");
+    warp_card(TYPE_SORCERY, MATCH, "Choose sorcery #2");
+    warp_card(TYPE_CREATURE, MATCH, "Choose a creature");
+  }
+  else if (round == 71)
+  {
+    life[AI] = 8;
+    get_card_human(CARD_ID_BADLANDS);
+    get_card_human(CARD_ID_PLATEAU);
+    do_dialog(0, 0, 0, -1, -1,
+              "Win the game before your draw step.  You may add 2 instants to your hand.", 1);
+    warp_card(TYPE_INSTANT, MATCH, "Choose instant #1");
+    warp_card(TYPE_INSTANT, MATCH, "Choose instant #2");
+  }
+  else if (round == 72)
+  {
+    deck[2] = -1;
+    do_dialog(0, 0, 0, -1, -1,
+              "Win the game before your draw step.  You may add any 4 cards to your hand.", 1);
+    warp_card(TYPE_ANY | TARGET_TYPE_PLANESWALKER, MATCH, "Choose card #1");
+    warp_card(TYPE_ANY | TARGET_TYPE_PLANESWALKER, MATCH, "Choose card #2");
+    warp_card(TYPE_ANY | TARGET_TYPE_PLANESWALKER, MATCH, "Choose card #3");
+    warp_card(TYPE_ANY | TARGET_TYPE_PLANESWALKER, MATCH, "Choose card #4");
+  }
+  else if (round == 73)
+  {
+    life[AI] = 72;
+    deck[30] = -1;
+    get_card_human(CARD_ID_ISLAND);
+    get_card_human(CARD_ID_ISLAND);
+    get_card_human(CARD_ID_ISLAND);
+    get_card_human(CARD_ID_ISLAND);
+    get_card_human(CARD_ID_ISLAND);
+    get_card_human(CARD_ID_ISLAND);
+    get_card_human(CARD_ID_ISLAND);
+    get_card_human(CARD_ID_ISLAND);
+    get_card(CARD_ID_WALL_OF_AIR);
+    do_dialog(
+        0, 0, 0, -1, -1,
+        "Win the game before your 2nd main phase.  You may add any 3 non-artifacts to your hand.",
+        1);
+    warp_card(TYPE_ARTIFACT, DOESNT_MATCH, "Choose card #1");
+    warp_card(TYPE_ARTIFACT, DOESNT_MATCH, "Choose card #2");
+    warp_card(TYPE_ARTIFACT, DOESNT_MATCH, "Choose card #3");
+  }
+  else if (round == 74)
+  {
+    life[AI] = 72;
+    get_card_human(CARD_ID_MOX_SAPPHIRE);
+    get_card_human(CARD_ID_MOX_SAPPHIRE);
+    get_card_human(CARD_ID_MOX_RUBY);
+    get_card_human(CARD_ID_MOX_RUBY);
+    get_card_human(CARD_ID_MOX_RUBY);
+    get_card_human(CARD_ID_MOX_RUBY);
+    get_card_human(CARD_ID_MOX_RUBY);
+    do_dialog(
+        0, 0, 0, -1, -1,
+        "Win the game before your 2nd main phase.  You may add any 3 non-artifacts to your hand.",
+        1);
+    warp_card(TYPE_ARTIFACT, DOESNT_MATCH, "Choose card #1");
+    warp_card(TYPE_ARTIFACT, DOESNT_MATCH, "Choose card #2");
+    warp_card(TYPE_ARTIFACT, DOESNT_MATCH, "Choose card #3");
+  }
+  else if (round == 75)
+  {
+    life[AI] = 22;
+    do_dialog(0, 0, 0, -1, -1,
+              "Win the game before your 2nd main phase.  You may add 4 creatures, 1 instant, and 1 "
+              "artifact to your hand.",
+              1);
+    warp_card(TYPE_CREATURE, MATCH, "Choose creature #1");
+    warp_card(TYPE_CREATURE, MATCH, "Choose creature #2");
+    warp_card(TYPE_CREATURE, MATCH, "Choose creature #3");
+    warp_card(TYPE_CREATURE, MATCH, "Choose creature #4");
+    warp_card(TYPE_INSTANT, MATCH, "Choose an instant");
+    warp_card(TYPE_ARTIFACT, MATCH, "Choose an artifact");
+  }
+  else if (round == 76)
+  {
+    life[AI] = 12;
+    get_card_human(CARD_ID_TAIGA);
+    get_card_human(CARD_ID_CRUCIBLE_OF_WORLDS);
+    add_card_to_hand(HUMAN, get_internal_card_id_from_csv_id(CARD_ID_FIREBALL));
+    do_dialog(0, 0, 0, -1, -1,
+              "Win the game before your 2nd main phase.  You may add an enchantment and an "
+              "artifact to your hand.",
+              1);
+    warp_card(TYPE_ENCHANTMENT, MATCH, "Choose an enchantment");
+    warp_card(TYPE_ARTIFACT, MATCH, "Choose an artifact");
+  }
+  else if (round == 77)
+  {
+    life[HUMAN] = 1;
+    life[AI] = 36;
+    do_dialog(0, 0, 0, -1, -1,
+              "Win the game before your 2nd main phase.  You may add 3 creatures, 1 instant, 1 "
+              "enchantment, and 1 artifact to your hand.",
+              1);
+    warp_card(TYPE_CREATURE, MATCH, "Choose creature #1");
+    warp_card(TYPE_CREATURE, MATCH, "Choose creature #2");
+    warp_card(TYPE_CREATURE, MATCH, "Choose creature #3");
+    warp_card(TYPE_INSTANT, MATCH, "Choose an instant");
+    warp_card(TYPE_ENCHANTMENT, MATCH, "Choose an enchantment");
+    warp_card(TYPE_ARTIFACT, MATCH, "Choose an artifact");
+  }
+  else if (round == 78)
+  {
+    life[AI] = 16;
+    get_card_human(CARD_ID_BADLANDS);
+    get_card_human(CARD_ID_BADLANDS);
+    get_card_human(CARD_ID_BADLANDS);
+    get_card_human(CARD_ID_BADLANDS);
+    add_card_to_hand(HUMAN, get_internal_card_id_from_csv_id(CARD_ID_EYE_OF_UGIN));
+    do_dialog(0, 0, 0, -1, -1,
+              "Win the game before your 2nd main phase.  You may add any 2 cards to your hand.", 1);
+    warp_card(TYPE_ANY | TARGET_TYPE_PLANESWALKER, MATCH, "Choose card #1");
+    warp_card(TYPE_ANY | TARGET_TYPE_PLANESWALKER, MATCH, "Choose card #2");
+  }
+  else if (round == 79)
+  {
+    life[AI] = 34;
+    get_card_human(CARD_ID_SWAMP);
+    get_card_human(CARD_ID_FOREST);
+    get_card_human(CARD_ID_FOREST);
+    do_dialog(0, 0, 0, -1, -1,
+              "Win the game before your 2nd main phase.  You may add 1 creature and 3 sorcery to "
+              "your hand.",
+              1);
+    warp_card(TYPE_CREATURE, MATCH, "Choose a creature");
+    warp_card(TYPE_SORCERY, MATCH, "Choose sorcery #1");
+    warp_card(TYPE_SORCERY, MATCH, "Choose sorcery #2");
+    warp_card(TYPE_SORCERY, MATCH, "Choose sorcery #3");
+  }
 }
-
 
 void apply_challenge_vanguard(void){
 	int avatars[] = { CARD_ID_AVATAR_CHAOS_ORB , CARD_ID_AVATAR_SERRA_ANGEL, CARD_ID_AVATAR_MOMIR_VIG,
@@ -1639,7 +1703,7 @@ void check_challenge2_deck_legality(void){
 			else if( challenge2 == 7 && ! ( cards_data[ deck[i] ].type & TYPE_CREATURE ) ){
 				result = i;
 			}
-			else if( challenge2 == 2 && ( (uint8_t)cards_data[ deck[i] ].cc[0] + (uint8_t)cards_data[ deck[i] ].cc[1] < 4 ) && ! ( cards_data[ deck[i] ].type & TYPE_LAND ) ){
+			else if( challenge2 == 2 && ( (uint8_t)cards_data[ deck[i] ].cc[0] + cards_data[ deck[i] ].cc[1] < 4 ) && ! ( cards_data[ deck[i] ].type & TYPE_LAND ) ){
 				result = i;
 			}
 
@@ -1673,7 +1737,7 @@ void check_challenge2_deck_legality(void){
 				result = i;
 			}
 			else if( challenge3 == 7 && ! is_beta_land( cards_data[ deck[i] ].id ) ){
-				int cmc = (uint8_t)cards_data[ deck[i] ].cc[0] + (uint8_t)cards_data[ deck[i] ].cc[1];
+				int cmc = (uint8_t)cards_data[ deck[i] ].cc[0] + cards_data[ deck[i] ].cc[1];
 				if( cmc < 1 || cmc > 10 ){
 					result = i;
 				}

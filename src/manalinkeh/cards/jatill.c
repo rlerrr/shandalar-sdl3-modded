@@ -118,6 +118,11 @@ int generic_legacy_effect(int player, int card, event_t event){
 
 // Flickerwisp goes to card_flickerwhisp() in eventide.c, not this.
 int card_flickerwisp(int player, int card, event_t event){
+  /* CARD_ID_FLICKERWISP	9788
+   * Flickerwisp	|1|W|W
+   * Creature - Elemental 3/1
+   * Flying
+   * When ~ enters the battlefield, exile another target permanent. Return that card to the battlefield under its owner's control at the beginning of the next end step. */
 
 	target_definition_t td;
     default_target_definition(player, card, &td, TYPE_PERMANENT);
@@ -139,6 +144,10 @@ int card_flickerwisp(int player, int card, event_t event){
 }
 
 int card_kami_of_ancient_law(int player, int card, event_t event){
+  /* CARD_ID_KAMI_OF_ANCIENT_LAW	7264
+   * Kami of Ancient Law	|1|W
+   * Creature - Spirit 2/2
+   * Sacrifice ~: Destroy target enchantment. */
 
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_ENCHANTMENT);
@@ -155,6 +164,11 @@ int card_kami_of_ancient_law(int player, int card, event_t event){
 }
 
 int card_eight_and_a_half_tails(int player, int card, event_t event){
+  /* Eight-and-a-Half-Tails	|W|W
+   * Legendary Creature - Fox Cleric 2/2
+   * |1|W: Target permanent you control gains protection from white until end of turn.
+   * |1: Target spell or permanent becomes white until end of turn. */
+
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_PERMANENT);
     td.allowed_controller = player;
@@ -233,6 +247,12 @@ int card_eight_and_a_half_tails(int player, int card, event_t event){
 }
 
 int card_prison_term(int player, int card, event_t event){
+  /* CARD_ID_PRISON_TERM	9634
+   * Prison Term	|1|W|W
+   * Enchantment - Aura
+   * Enchant creature
+   * Enchanted creature can't attack or block, and its activated abilities can't be activated.
+   * Whenever a creature enters the battlefield under an opponent's control, you may attach ~ to that creature. */
 
 	card_instance_t *instance = get_card_instance(player, card);
 
@@ -265,6 +285,10 @@ int card_prison_term(int player, int card, event_t event){
 }
 
 int card_magma_jet(int player, int card, event_t event){
+  /* Magma Jet	|1|R	0x2005476
+   * Instant
+   * ~ deals 2 damage to any target. Scry 2. */
+
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_CREATURE );
     td.zone = TARGET_ZONE_CREATURE_OR_PLAYER;
@@ -290,6 +314,9 @@ int card_magma_jet(int player, int card, event_t event){
 }
 
 int card_flame_slash(int player, int card, event_t event){
+  /* Flame Slash	|R
+   * Sorcery
+   * ~ deals 4 damage to target creature. */
 
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_CREATURE );
@@ -312,6 +339,9 @@ int card_flame_slash(int player, int card, event_t event){
 }
 
 int card_condescend(int player, int card, event_t event){
+  /* Condescend	|X|U
+   * Instant
+   * Counter target spell unless its controller pays |X. Scry 2. */
 
 	card_instance_t *instance = get_card_instance(player, card);
 	
@@ -344,6 +374,9 @@ int card_condescend(int player, int card, event_t event){
 }
 
 int card_magus_of_the_scroll(int player, int card, event_t event){
+  /* Magus of the Scroll	|R	0x2005494
+   * Creature - Human Wizard 1/1
+   * |3, |T: Choose a card name, then reveal a card at random from your hand. If that card has the chosen name, ~ deals 2 damage to any target. */
 
     target_definition_t td1;
     default_target_definition(player, card, &td1, TYPE_CREATURE );
@@ -378,6 +411,16 @@ int card_magus_of_the_scroll(int player, int card, event_t event){
 }
 
 int card_jack_in_the_mox(int player, int card, event_t event){
+  /* Jack-in-the-Mox	|0	0x2005499
+   * Artifact
+   * |T: Roll a six-sided die. This ability has the indicated effect.
+   * 1 - Sacrifice ~ and you lose 5 life.
+   * 2 - Add |W.
+   * 3 - Add |U.
+   * 4 - Add |B.
+   * 5 - Add |R.
+   * 6 - Add |G. */
+
 	if( event == EVENT_ACTIVATE ){
 		tap_card(player, card);
 		int roll = internal_rand(6);
@@ -409,8 +452,11 @@ int card_jack_in_the_mox(int player, int card, event_t event){
 	return result;
 }
 
-
 int card_pulse_of_the_forge(int player, int card, event_t event){
+  /* Pulse of the Forge	|1|R|R	0x20054fd
+   * Instant
+   * ~ deals 4 damage to target player or planeswalker. Then if that player or that planeswalker's controller has more life than you, return ~ to its owner's hand. */
+
     target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE );
     td.zone = TARGET_ZONE_PLAYERS;
@@ -435,8 +481,14 @@ int card_pulse_of_the_forge(int player, int card, event_t event){
     return 0;
 }
 
-
 int card_binding_grasp(int player, int card, event_t event){
+  /* Binding Grasp	|3|U	0x200551b
+   * Enchantment - Aura
+   * Enchant creature
+   * At the beginning of your upkeep, sacrifice ~ unless you pay |1|U.
+   * You control enchanted creature.
+   * Enchanted creature gets +0/+1. */
+
     card_instance_t *instance = get_card_instance(player, card);
 	if( instance->damage_target_player > -1 ){
 		if( event == EVENT_TOUGHNESS && affect_me(instance->damage_target_player, instance->damage_target_card) ){
@@ -448,6 +500,10 @@ int card_binding_grasp(int player, int card, event_t event){
 }
 
 int card_arboria(int player, int card, event_t event){
+  /* CARD_ID_ARBORIA	567
+   * Arboria	|2|G|G
+   * World Enchantment
+   * Creatures can't attack a player unless that player cast a spell or put a nontoken permanent onto the battlefield during his or her last turn. */
 
     card_instance_t *instance = get_card_instance( player, card );
 
@@ -508,6 +564,10 @@ int card_arboria(int player, int card, event_t event){
 }
 
 int card_arrogant_bloodlord(int player, int card, event_t event ){
+  /* Arrogant Bloodlord	|1|B|B
+   * Creature - Vampire Knight 4/4
+   * Whenever this creature blocks or becomes blocked by a creature with power 1 or less, destroy this creature at end of combat. */
+
 	card_instance_t *instance = get_card_instance(player, card);
 	if( current_turn == player && is_attacking(player, card) && event == EVENT_DECLARE_BLOCKERS ){
 		int count = active_cards_count[1-player]-1;
@@ -535,7 +595,6 @@ int card_arrogant_bloodlord(int player, int card, event_t event ){
     return 0;
 }
 
-
 // instance->targets[0].player will hold the player whose yard was chosen
 // instance->targets[10].player will hold the id of the card selected
 // instance->targets[10].card will hold the index of the card in the graveyard
@@ -553,6 +612,12 @@ int effect_exile_at_eot(int player, int card, event_t event ){
 }
 
 int card_teferis_moat(int player, int card, event_t event){
+  /* CARD_ID_TEFERIS_MOAT	5143
+   * Teferi's Moat	|3|W|U
+   * Enchantment
+   * As ~ enters the battlefield, choose a color.
+   * Creatures of the chosen color without flying can't attack you. */
+
     card_instance_t *instance = get_card_instance(player, card);
 	if( event == EVENT_RESOLVE_SPELL && affect_me(player, card) ){
 		 instance->info_slot = select_a_color(player);
@@ -581,6 +646,12 @@ int card_teferis_moat(int player, int card, event_t event){
 }
 
 int card_razormane_masticore(int player, int card, event_t event){
+  /* CARD_ID_RAZORMANE_MASTICORE	7106
+   * Razormane Masticore	|5
+   * Artifact Creature - Masticore 5/5
+   * First strike (This creature deals combat damage before creatures without first strike.)
+   * At the beginning of your upkeep, sacrifice ~ unless you discard a card.
+   * At the beginning of your draw step, you may have ~ deal 3 damage to target creature. */
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_CREATURE);
@@ -613,7 +684,6 @@ int card_razormane_masticore(int player, int card, event_t event){
 	return 0;
 }
 
-
 int get_random_permanent(int p){
 	int count;
     int found = 0;
@@ -642,6 +712,12 @@ int get_random_permanent(int p){
 }
 
 int card_chaos_orb(int player, int card, event_t event){
+  /* CARD_ID_CHAOS_ORB	1748
+   * Chaos Orb	|2
+   * Artifact
+   * |1, |T: If ~ is on the battlefield, flip ~ onto the battlefield from a height of at least one foot.
+   * If ~ turns over completely at least once during the flip, destroy all nontoken permanents it touches. Then destroy ~.
+   * (In-game effect: Probability of destroying target permanent: 75%; two permanents: 5%; your own permanents: 5%; no permanents: 15%.) */
 
 	target_definition_t td;
 	default_target_definition(player, card, &td, TYPE_PERMANENT );

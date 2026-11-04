@@ -48,7 +48,7 @@ else()
 endif()
 if(EMSCRIPTEN)
   set_target_properties(duel_card_tests PROPERTIES SUFFIX ".js")
-  target_link_options(duel_card_tests PRIVATE -sENVIRONMENT=node -sFETCH=1 -sEXIT_RUNTIME=1 -sALLOW_MEMORY_GROWTH=1
+  target_link_options(duel_card_tests PRIVATE -O0 -sENVIRONMENT=node -sFETCH=1 -sEXIT_RUNTIME=1 -sALLOW_MEMORY_GROWTH=1
     -sINITIAL_MEMORY=384MB -sSTACK_SIZE=4MB -sASSERTIONS=1 -sFORCE_FILESYSTEM=1
     -lnodefs.js "--pre-js=${CMAKE_CURRENT_SOURCE_DIR}/node_results.js")
   foreach(asset cards.dat Text.res uistrings.txt MP_UIStrings.txt prompts.txt)
@@ -84,6 +84,10 @@ set_tests_properties(duel.recipes PROPERTIES LABELS "duel;harness" TIMEOUT 60)
 add_test(NAME duel.handler_overrides COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_SOURCE_DIR}/tools/test_import_carddata.py")
 set_tests_properties(duel.handler_overrides PROPERTIES LABELS "duel;harness" TIMEOUT 15)
+
+add_test(NAME duel.exe_carddata_import COMMAND "${Python3_EXECUTABLE}"
+  "${CMAKE_SOURCE_DIR}/tools/test_import_carddata_exe.py")
+set_tests_properties(duel.exe_carddata_import PROPERTIES LABELS "duel;harness" TIMEOUT 15)
 
 add_test(NAME duel.runner_expectations COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/test_run_cases.py")

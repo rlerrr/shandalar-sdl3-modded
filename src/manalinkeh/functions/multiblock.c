@@ -2,12 +2,14 @@
 
 #include "manalink.h"
 
+#define card_multiblocker MANALINKEH_CARD_MULTIBLOCKER
+
 static int is_multiblocker_card(int player, int card)
 {
   return cards_at_7c7000[get_card_instance(player, card)->internal_card_id]->code_pointer == MANALINKEH_CARD_MULTIBLOCKER;
 }
 
-static int is_multiblocker_card_copying(int player, int card, int orig_player, int orig_card)
+int is_multiblocker_card_copying(int player, int card, int orig_player, int orig_card)
 {
   card_instance_t* instance = get_card_instance(player, card);
   return (cards_at_7c7000[instance->internal_card_id]->code_pointer == MANALINKEH_CARD_MULTIBLOCKER

@@ -5280,7 +5280,7 @@ int card_island_fish_jasconius(int player, int card, event_t event)
       player == g_event_player)
   {
     PLAYER_CARD_INSTANCE(player, card).upkeep_flags |= 0x10;
-    PLAYER_CARD_INSTANCE(player, card).mana_to_untap[COLOR_BLUE] += 3;
+    PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[COLOR_BLUE] += 3;
   }
 
   if (event == EVENT_UNTAP_PHASE)
@@ -5302,7 +5302,7 @@ int card_island_fish_jasconius(int player, int card, event_t event)
       g_affected_card == card &&
       g_affected_card_controller == player)
   {
-    PLAYER_CARD_INSTANCE(player, card).mana_to_untap[COLOR_BLUE] += 3;
+    PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[COLOR_BLUE] += 3;
     return 0;
   }
 
@@ -5644,7 +5644,7 @@ int card_junun_efreet(int player, int card, event_t event)
     if (g_current_player == player && player == g_event_player)
     {
       PLAYER_CARD_INSTANCE(player, card).upkeep_flags |= 1;
-      PLAYER_CARD_INSTANCE(player, card).upkeep_black += 2;
+      PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[1] += 2;
     }
     return 0;
   }
@@ -5672,7 +5672,7 @@ int card_phantasmal_forces(int player, int card, event_t event)
     if ((g_current_player == player) && (player == g_event_player))
     {
       PLAYER_CARD_INSTANCE(player, card).upkeep_flags |= 1;
-      PLAYER_CARD_INSTANCE(player, card).upkeep_blue += 1;
+      PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[2] += 1;
     }
     return 0;
   }
@@ -5702,8 +5702,8 @@ int card_force_of_nature(int player, int card, event_t event)
       if (g_event_player == player)
       {
         PLAYER_CARD_INSTANCE(player, card).upkeep_flags |= 1;
-        PLAYER_CARD_INSTANCE(player, card).upkeep_green =
-            PLAYER_CARD_INSTANCE(player, card).upkeep_green + '\x04';
+        PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[3] =
+            PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[3] + '\x04';
       }
     }
 
@@ -5896,8 +5896,8 @@ int card_cosmic_horror(int player, int card, event_t event)
     if (g_current_player == player && player == g_event_player)
     {
       PLAYER_CARD_INSTANCE(player, card).upkeep_flags |= 1;
-      PLAYER_CARD_INSTANCE(player, card).upkeep_black += 3;
-      PLAYER_CARD_INSTANCE(player, card).upkeep_colorless += 3;
+      PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[1] += 3;
+      PLAYER_CARD_INSTANCE(player, card).ext->legacy_upkeep_cost[0] += 3;
     }
     return 0;
   }

@@ -7,6 +7,7 @@
 #include "cardartlib/src/palette.h"
 #include "drawcardlib/Drawcardlib.h"
 #include "deckdll/src/card_db.h"
+extern int global_available_slots;
 #include "game_support.h"
 #include "global_state.h"
 #include "global_strings.h"
@@ -22,6 +23,12 @@ typedef struct
   char *prompt;
   int dialog_mode;
 } dialog_context_t;
+
+int shandalar_big_card_dialog_mode(void)
+{
+  extern dialog_context_t *g_big_card_choice_dialog_context;
+  return g_big_card_choice_dialog_context ? g_big_card_choice_dialog_context->dialog_mode : 0;
+}
 
 typedef struct
 {
@@ -213,7 +220,7 @@ char *get_displayed_card_name(int player, int card)
 
   csvid = CardIDFromInternalIndex(type);
   card_name = "";
-  if (csvid != -1)
+  if (csvid >= 0 && csvid < global_available_slots)
   {
     if (csvid == g_activation_display_internal_card_id)
     {
@@ -238,11 +245,11 @@ char *get_displayed_card_name(int player, int card)
     }
     else if (csvid == g_effect_display_internal_card_id)
     {
-      strcpy(g_dialog_card_title_buffer, global_legacy_names[choice].effect_title);
+      strcpy(g_dialog_card_title_buffer, (choice < (unsigned)global_available_slots && global_legacy_names[choice].effect_title ? global_legacy_names[choice].effect_title : ""));
     }
     else if (csvid == g_legacy_display_internal_card_id)
     {
-      strcpy(g_dialog_card_title_buffer, global_legacy_names[choice].legacy_title);
+      strcpy(g_dialog_card_title_buffer, (choice < (unsigned)global_available_slots && global_legacy_names[choice].legacy_title ? global_legacy_names[choice].legacy_title : ""));
     }
     else if (csvid == g_card_back_display_internal_card_id)
     {
@@ -263,7 +270,7 @@ char *get_displayed_card_name(int player, int card)
     if (transformed_card_id == CARD_ID_FAERIE_DRAGON ||
         transformed_card_id == CARD_ID_WHIMSY)
     {
-      strcpy(g_dialog_card_title_buffer, global_legacy_names[transformed_card_id].effect_title);
+      strcpy(g_dialog_card_title_buffer, (transformed_card_id < (unsigned)global_available_slots && global_legacy_names[transformed_card_id].effect_title ? global_legacy_names[transformed_card_id].effect_title : ""));
     }
 
     if (g_dialog_card_title_buffer[0] == '\0')
@@ -848,7 +855,9 @@ unsigned int refresh_duel_display_cache(void)
   int zone_index;
   unsigned int needs_refresh;
 
-  EnterCriticalSection(&g_duel_render_lock);
+  extern void manalinkeh_copy_to_display_start(void);
+  extern int manalinkeh_copy_to_display_end(int);
+  manalinkeh_copy_to_display_start();
   needs_refresh = memcmp(global_displayed_card_instances, global_card_instances, 0x161e8);
   memcpy(global_displayed_card_instances, global_card_instances,
          sizeof(global_displayed_card_instances));
@@ -991,7 +1000,7 @@ unsigned int refresh_duel_display_cache(void)
     needs_refresh = 1;
   }
   g_duel_cached_response_state = g_response_selection_in_progress;
-  LeaveCriticalSection(&g_duel_render_lock);
+  needs_refresh = manalinkeh_copy_to_display_end(needs_refresh);
   return needs_refresh;
 }
 

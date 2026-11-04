@@ -1,196 +1,175 @@
 #include "manalink.h"
+static int effect_on_all_control_effects_attached_to_me(int player,int card,int this_legacy_player,int this_legacy_card,int effect);
 #include <windows.h>
 
 int suppress_legend_rule = 0;	// temporarily disables
-void check_legend_rule(int player, int card, event_t event){
-	if (suppress_legend_rule || player < 0 || card < 0){
-		return;
-	}
-
-	if( trigger_condition == TRIGGER_COMES_INTO_PLAY && affect_me( player, card ) && reason_for_trigger_controller == player ){
-		if( trigger_cause_controller == player && trigger_cause == card && ! check_battlefield_for_id(2, CARD_ID_MIRROR_GALLERY) ){
-			if( event == EVENT_END_TRIGGER ){
-					int id = get_card_name(player, card);
-					verify_legend_rule(player, card, id);
-#pragma message "'Temporary' hack so the legend's other come-into-play triggers work right, though this should really be checked in EVENT_STATIC_EFFECTS instead - http://www.slightlymagic.net/forum/viewtopic.php?t=13661"
-					/* The kill_card() call in true_verify_legend_rule() overwrites at least affected_card_controller/affected_card and trigger_condition, and
-					 * they don't get restored in time for other come-into-play triggers on this card to recognize them.  We know what almost all the conditions
-					 * for comes_into_play() were at the start of this call, though, so restore them all. */
-					if (in_play(player, card)){
-						trigger_condition = TRIGGER_COMES_INTO_PLAY;
-						affected_card_controller = player;
-						affected_card = card;
-						reason_for_trigger_controller = player;
-						trigger_cause_controller = player;
-						trigger_cause = card;
-					} else {
-						trigger_condition = -1;	// Note that this will only last until the containing function returns; resolve_trigger() restores it.
-					}
-					// end hack
-			}
-		}
-	}
-
-	if (event == EVENT_CARDCONTROLLED && affect_me(player, card)){
-		int id = get_card_name(player, card);
-		verify_legend_rule(player, card, id);
-	}
+int is_legendary(int player, int card)
+{
+  int value;
+  if (player == -1)
+  {
+    if (!has_subtype_by_id(-1, cards_data[card].id, SUBTYPE_LEGEND))
+      return 0;
+    value = cards_data[card].subtype;
+  }
+  else
+  {
+    if (check_special_flags3(player, card, SF3_LEGEND_RULE_DISABLED) ||
+        check_status(player, card, STATUS_TRIGGER_CARD) || get_original_id(player, card) == 0x4e25)
+      return 0;
+    if (get_original_id(player, card) == CARD_ID_SAKASHIMA_THE_IMPOSTOR)
+      return 1;
+    if (!has_subtype(player, card, SUBTYPE_LEGEND))
+      return 0;
+    value = get_card_data(player, card)->subtype;
+  }
+  return value == 0x0e || value == 0x0f;
 }
 
-int true_verify_legend_rule(int player, int card, int id){
-	if( id == -1 ){ //Checking for a card with no name (a face-down card, maybe)
-		return 0;
-	}
-
-	int l_count = 0, c = 0;
-	for (c = 0; c < active_cards_count[player]; ++c){
-		if( in_play(player, c) && !is_what(player, c, TYPE_EFFECT) ){
-			if( get_card_name(player, c) == id ){
-				++l_count;
-			}
-			else{
-				state_untargettable(player, c, 1);
-			}
-		}
-	}
-	if( l_count > 1 ){
-		target_definition_t td;
-		default_target_definition(player, card, &td, TYPE_PERMANENT);
-		td.allowed_controller = player;
-		td.preferred_controller = player;
-		td.illegal_abilities = 0;
-		td.allow_cancel = 0;
-
-		card_instance_t *instance = get_card_instance(player, card);
-
-		instance->number_of_targets = 0;
-
-		if( select_target(player, card, &td, "Legend Rule: choose a permanent to sacrifice.", &(instance->targets[0])) ){
-			remove_state(player, -1, STATE_CANNOT_TARGET);	// before killing, in case it causes a trigger that targets something
-			kill_card(instance->targets[0].player, instance->targets[0].card, KILL_STATE_BASED_ACTION);
-		}
-	}
-	remove_state(player, -1, STATE_CANNOT_TARGET);
-	if( l_count > 1 ){
-		return 1;
-	}
-	return 0;
+void check_legend_rule(int player, int card, event_t event)
+{
+  if (suppress_legend_rule || player < 0 || card < 0)
+    return;
+  if (is_legendary(player, card) && !(player_bits[player] & PB_LEGEND_RULE_DISABLED) &&
+      event == EVENT_STATIC_EFFECTS)
+  {
+    int id = get_card_name(player, card);
+    if (id != -1)
+      true_verify_legend_rule(player, card, id);
+  }
 }
 
-int verify_legend_rule(int player, int card, int id){
-	if( is_legendary(player, card) && !check_battlefield_for_id(2, CARD_ID_MIRROR_GALLERY) ){
-		return true_verify_legend_rule(player, card, id);
-	}
-	return 0;
+int true_verify_legend_rule(int player, int card, int id)
+{
+  if (id == -1)
+    return 0;
+  uint32_t sakashima = get_internal_card_id_from_csv_id(CARD_ID_SAKASHIMA_OF_A_THOUSAND_FACES); /* Sakashima of a Thousand Faces */
+  card_instance_t *inst = get_card_instance(player, card);
+  if (inst && inst->original_internal_card_id == sakashima &&
+      !is_humiliated(player, card, AL_STATIC))
+    return 0;
+  int l_count = 0;
+  for (int c = 0; c < active_cards_count[player]; ++c)
+  {
+    inst = in_play(player, c);
+    if (inst && !is_what(player, c, TYPE_EFFECT))
+    {
+      if (get_card_name(player, c) == id && !is_this_dying(player, c) && is_legendary(player, c) &&
+          (inst->original_internal_card_id != sakashima || is_humiliated(player, c, AL_STATIC)))
+        ++l_count;
+      else
+        state_untargettable(player, c, 1);
+    }
+  }
+  if (l_count > 1)
+  {
+    target_definition_t td;
+    default_target_definition(player, card, &td, TYPE_PERMANENT);
+    td.illegal_abilities = 0;
+    td.allow_cancel = 0;
+    td.allowed_controller = player;
+    td.preferred_controller = player;
+    card_instance_t *instance = get_card_instance(player, card);
+    instance->number_of_targets = 0;
+    if (select_target(player, card, &td, "Legend Rule: choose a permanent to sacrifice.",
+                      &instance->targets[0]))
+    {
+      remove_state(player, -1, STATE_CANNOT_TARGET);
+      kill_card(instance->targets[0].player, instance->targets[0].card, KILL_STATE_BASED_ACTION);
+    }
+  }
+  remove_state(player, -1, STATE_CANNOT_TARGET);
+  return l_count > 1;
+}
+
+int verify_legend_rule(int player, int card, int id)
+{
+  if (is_legendary(player, card) && !suppress_legend_rule &&
+      !(player_bits[player] & PB_LEGEND_RULE_DISABLED) && id != -1)
+    return true_verify_legend_rule(player, card, id);
+  return 0;
 }
 
 extern int timestamp_card[500];
 extern int timestamp_player[500];
 
-static int real_switch_control(int player, int card)
+int gain_control_impl(int player, int card)
 {
-// What this function do: 1-player gains control of (player, card)
-  card_instance_t *v2; // esi
-  int v3; // eax
-  const void *v4; // ST04_4
-  card_instance_t *v5; // esi
-  card_instance_t *v6; // esi
-  signed int i; // ecx
-  card_instance_t *v8; // esi
-  int v9; // ecx
-  int v11; // [sp+Ch] [bp-14h]
-  int v12; // [sp+10h] [bp-10h]
-  int v14; // [sp+18h] [bp-8h]
-  int v15; // [sp+1Ch] [bp-4h]
-
-  v15 = 1 - player;
-  v2 = get_card_instance(player, card);
-  int v13 = v2->timestamp;
-  v3 = add_card_to_hand_exe(1 - player, v2->internal_card_id);
-  v14 = v3;
-  if (v3 != -1)
-    {
-      v4 = v2;
-      v5 = get_card_instance(v15, v3);
-      memcpy(v5, v4, 0x12Cu);
-      v5->state |= STATE_SUMMONSICK | STATE_SUMMONSICK_BOTH;
-      v5->regen_status |= KEYWORD_RECALC_ABILITIES;
-      v5->state &= 0xFFFFFFF3u;                 // ~(STATE_ATTACKING|STATE_BLOCKING)
-      timestamp_player[v13] = v15;
-      timestamp_card[v13] = v14;
-      v12 = -1;
-      while (1)
-	{
-	  ++v12;
-	  if (v12 >= 2)
-	    break;
-	  v11 = -1;
-	  while (1)
-	    {
-	      ++v11;
-	      if (active_cards_count[v12] <= v11)
-		break;
-	      v6 = get_card_instance(v12, v11);
-	      if (v6->damage_target_player == player && v6->damage_target_card == card)
-		{
-		  v6->damage_target_player = v15;
-		  v6->damage_target_card = v14;
-		}
-	      if (v6->damage_source_player == player && v6->damage_source_card == card)
-		{
-		  v6->damage_source_player = v15;
-		  v6->damage_source_card = v14;
-		}
-	      if (v6->number_of_targets)
-		for (i = 0; v6->number_of_targets > i; ++i)
-		  {
-		    if (v6->targets[i].player == player)
-		      if (v6->targets[i].card == card)
-			{
-			  v6->targets[i].player = v15;
-			  v6->targets[i].card = v14;
-			}
-		  }
-	    }
-	}
-    }
-  v8 = get_card_instance(player, card);
-  v9 = cards_data[v8->internal_card_id].type;
-  if (v9 & TYPE_CREATURE)
-    ++creature_count[v15];
-  if (v9 & TYPE_ARTIFACT)
-    ++artifact_count[v15];
-  if (v9 & TYPE_ENCHANTMENT)
-    ++enchantment_count[v15];
-  types_of_cards_on_bf[v15] |= v9;
+  card_instance_t *src = get_card_instance(player, card);
+  uint32_t old_timestamp = src->timestamp;
+  int new_player = 1 - player;
+  int new_card = add_card_to_hand_exe(new_player, src->internal_card_id);
+  if (new_card != -1)
+  {
+    card_instance_t *dest = get_card_instance(new_player, new_card);
+    memcpy_inst_and_ext(dest, src);
+    dest->ext->host_summoning_sickness = 1;
+    dest->regen_status |= KEYWORD_RECALC_ABILITIES;
+    dest->state = (dest->state & 0xfffffff3U) | STATE_SUMMONSICK_BOTH;
+    timestamp_card[old_timestamp] = new_card;
+    timestamp_player[old_timestamp] = new_player;
+    for (int p = 0; p < 2; ++p)
+      for (int c = 0; c < active_cards_count[p]; ++c)
+      {
+        card_instance_t *instance = get_card_instance(p, c);
+        if (instance->damage_target_player == player && instance->damage_target_card == card)
+        {
+          instance->damage_target_player = new_player;
+          instance->damage_target_card = new_card;
+        }
+        if (instance->damage_source_player == player && instance->damage_source_card == card)
+        {
+          instance->damage_source_player = new_player;
+          instance->damage_source_card = new_card;
+        }
+        unsigned int count = instance->number_of_targets;
+        for (unsigned int i = 0; i < count; ++i)
+          if (instance->targets[i].player == player && instance->targets[i].card == card)
+          {
+            instance->targets[i].player = new_player;
+            instance->targets[i].card = new_card;
+          }
+      }
+  }
+  uint8_t type = cards_data[src->internal_card_id].type;
+  if ((type & 2) != 0)
+    ++creature_count[new_player];
+  if ((type & 0x40) != 0)
+    ++artifact_count[new_player];
+  if ((type & 4) != 0)
+    ++enchantment_count[new_player];
+  types_of_cards_on_bf[new_player] |= type;
   redraw_libraries();
-  v8->token_status |= STATUS_CANNOT_LEAVE_PLAY | STATUS_OBLITERATED;
+  src->token_status |= 0x40000008U;
   kill_card_exe(player, card, KILL_EXILE);
-  if (BYTE3(event_flags) & 0x10)                // EA_CONTROLLED
-    dispatch_event(v15, v14, EVENT_CARDCONTROLLED);
-  return v14;
+  if (((uint32_t)event_flags & 0x10000000U) != 0)
+    dispatch_event(new_player, new_card, (event_t)0x94);
+  return new_card;
 }
 
-int switch_control(int player, int card, int tar_player, int tar_card ){
-	int legacy_card = create_legacy_effect_exe(player, card, LEGACY_EFFECT_ALADDIN, tar_player, tar_card );
-	card_instance_t *legacy = get_card_instance(player, legacy_card);
-	legacy->damage_source_player = -1;
-	legacy->damage_source_card = -1;
-	legacy->token_status |= 0x20;
-	legacy->targets[0].player = player;
-	legacy->targets[0].card = card;
-	legacy->number_of_targets = 1;
-	u4585f0(player, legacy_card);
-	legacy->token_status |= 0x1000000;
-	play_sound_effect(WAV_CONTROL);
-	int result = u4b6860(legacy->damage_target_player, legacy->damage_target_card);
-	legacy->damage_target_player = player;
-	legacy->damage_target_card = result;
-	if( check_special_flags(player, result, SF_ECHO_TO_PAY) ){
-		remove_special_flags3(player, result, SF3_ECHO_PAID);
-	}
-	//legacy->info_slot = 333;
-	return legacy_card;
+int switch_control(int player, int card, int tar_player, int tar_card)
+{
+  int legacy_card =
+      create_legacy_effect_exe(player, card, LEGACY_EFFECT_ALADDIN, tar_player, tar_card);
+  card_instance_t *legacy = get_card_instance(player, legacy_card);
+  legacy->damage_source_player = -1;
+  legacy->damage_source_card = -1;
+  legacy->token_status |= 0x20;
+  legacy->targets[0].player = player;
+  legacy->targets[0].card = card;
+  legacy->number_of_targets = 1;
+  u4585f0(player, legacy_card);
+  legacy->token_status |= 0x1000000;
+  play_sound_effect(WAV_CONTROL);
+  int result = gain_control_impl(legacy->damage_target_player, legacy->damage_target_card);
+  legacy->damage_target_player = 1 - tar_player;
+  legacy->damage_target_card = result;
+  if (check_special_flags(1 - tar_player, result, SF_ECHO_TO_PAY))
+  {
+    remove_special_flags3(1 - tar_player, result, SF3_ECHO_PAID);
+  }
+  // legacy->info_slot = 333;
+  return legacy_card;
 }
 
 int gain_control(int player, int card, int tar_player, int tar_card ){
@@ -200,140 +179,212 @@ int gain_control(int player, int card, int tar_player, int tar_card ){
 	return switch_control(player, card, tar_player, tar_card );
 }
 
-static int generic_control_legacy(int player, int card, event_t event){
+static int generic_control_legacy(int player, int card, event_t event)
+{
+  int controlled_card;
+  int source_card;
+  unsigned int spirit_link_flags;
+  card_instance_t *instance;
+  int granted_ability_or_check;
+  int source_player_or_check;
+  int controlled_player;
+  subtype_t encoded_subtypes;
+  unsigned int control_mode;
+  bool abilities_event;
 
-	/* Targets:
-	 * card_instance_t::damage_target_player/card: permanent this is attached to
-	 * 0: source of effect
-	 * 1.player: sp_abilities
-	 * 1.card: at end of turn, kill player/1.card in addition to player/card.
-	 * 2.player: power modification
-	 * 2.card: toughness modification
-	 * 3.player: abilities
-	 * 3.card: csvid of source of effect (also in card_instance_t::display_pic_csv_id)
-	 * 4.card: &1: enable special handling for certain cards (by csvid) */
-
-	if( player < 0 || card < 0 ){
-		return 0;
-	}
-
-	card_instance_t *instance = get_card_instance( player, card );
-
-	if( instance->damage_target_player > -1 ){
-		int t_player = instance->damage_target_player;
-		int t_card = instance->damage_target_card;
-
-		int s_player = instance->targets[0].player;
-		int s_card = instance->targets[0].card;
-
-		int mode = instance->targets[1].card;
-
-		if( instance->targets[1].player > 0 ){
-			special_abilities(t_player, t_card, event, instance->targets[1].player, player, card);
-		}
-
-		if( instance->targets[2].player > 0 && event == EVENT_POWER && affect_me(t_player, t_card) ){
-			event_result += instance->targets[2].player;
-		}
-
-		if( instance->targets[2].card > 0 && event == EVENT_TOUGHNESS && affect_me(t_player, t_card) ){
-			event_result += instance->targets[2].card;
-		}
-
-		if( instance->targets[3].player > 0 && event == EVENT_ABILITIES && affect_me(t_player, t_card) ){
-			event_result += instance->targets[3].player;
-		}
-
-		if (instance->targets[4].card > 0 && (instance->targets[4].card & 1) && instance->targets[3].card == CARD_ID_FLASH_CONSCRIPTION){
-			spirit_link_effect(t_player, t_card, event, instance->targets[0].player);
-		}
-
-		if( event == EVENT_DECLARE_BLOCKERS && instance->targets[3].card == CARD_ID_LOSE_CALM ){
-			fx_menace(player, card, event);
-		}
-
-		if( mode && (mode & GCUS_UNTIL_EOT) && eot_trigger(player, card, event) ){
-			if( instance->targets[3].card == CARD_ID_SLAVE_OF_BOLAS ){
-				kill_card(instance->targets[0].player, instance->targets[0].card, KILL_SACRIFICE);
-				return 0;
-			}
-			if( instance->targets[3].card == CARD_ID_MAGUS_OF_THE_UNSEEN || instance->targets[3].card == CARD_ID_RAY_OF_COMMAND ){
-				tap_card(t_player, t_card);
-			}
-			re_enable_the_other_most_recent_control_effect_attached_to_me(t_player, t_card, player, card);
-			if( check_state(player, card, STATE_POWER_STRUGGLE) && check_status(player, card, STATUS_CONTROLLED) ){
-				real_switch_control(t_player, t_card);
-			}
-			kill_card(player, card, KILL_EXILE);
-		}
-
-		int mode_mask = GCUS_CONTROLLED | GCUS_TAPPED | GCUS_BURY_IF_TAPPED_OR_LEAVE_PLAY | GCUS_CHECK_POWER | GCUS_ENCHANTED |
-						GCUS_SOURCE_IN_PLAY;
-		if( mode && (mode & mode_mask) ){
-			if(	event == EVENT_STATIC_EFFECTS || event == EVENT_CARDCONTROLLED ||
-				(trigger_condition == TRIGGER_LEAVE_PLAY && affect_me(player, card)) )
-			{
-				if( instance->targets[5].player == -1 ){	// hasn't changed control for the first time yet
-					instance->targets[5].player = 1;
-					return 0;
-				}
-
-				int end_effect = 0;
-
-				if (other_leaves_play(player, card, s_player, s_card, event))
-				{
-					if (mode & GCUS_BURY_IF_TAPPED_OR_LEAVE_PLAY){
-						kill_card(t_player, t_card, KILL_BURY);
-						end_effect = 1;
-					}
-					if (mode & GCUS_SOURCE_IN_PLAY){
-						end_effect = 1;
-					}
-				}
-
-				if (event == EVENT_CARDCONTROLLED && affect_me(s_player, s_card) && (mode & GCUS_CONTROLLED))
-				{
-					end_effect = 1;
-				}
-
-				if( event == EVENT_STATIC_EFFECTS && s_player >= 0 && instance->targets[5].player == 1 )
-				{
-					if(! is_tapped(s_player, s_card) ){
-						if (mode & GCUS_BURY_IF_TAPPED_OR_LEAVE_PLAY)
-							kill_card(t_player, t_card, KILL_BURY);
-
-						if (mode & GCUS_TAPPED)
-						{
-							instance->targets[5].player = -1;
-							end_effect = 1;
-						}
-					}
-
-					if( (mode & GCUS_CHECK_POWER) && get_power(t_player, t_card) > get_power(s_player, s_card) ){
-						instance->targets[5].player = -1;
-						end_effect = 1;
-					}
-
-					if( (mode & GCUS_ENCHANTED) && ! is_enchanted(t_player, t_card) ){
-						instance->targets[5].player = -1;
-						end_effect = 1;
-					}
-				}
-
-				if( end_effect ){
-					if( in_play(t_player, t_card) ){
-						re_enable_the_other_most_recent_control_effect_attached_to_me(t_player, t_card, player, card);
-						if( check_state(player, card, STATE_POWER_STRUGGLE) && check_status(player, card, STATUS_CONTROLLED) ){
-							real_switch_control(t_player, t_card);
-						}
-					}
-					kill_card(player, card, KILL_EXILE);
-				}
-			}
-		}
-	}
-
-	return 0;
+  if (player < 0)
+  {
+    return 0;
+  }
+  if (card < 0)
+  {
+    return 0;
+  }
+  instance = get_card_instance(player, card);
+  if (instance->damage_target_player < '\0')
+  {
+    return 0;
+  }
+  controlled_player = (int)instance->damage_target_player;
+  source_player_or_check = instance->targets[0].player;
+  controlled_card = instance->damage_target_card;
+  source_card = instance->targets[0].card;
+  granted_ability_or_check = instance->targets[1].player;
+  control_mode = instance->targets[1].card;
+  if (0 < granted_ability_or_check)
+  {
+    special_abilities(controlled_player, controlled_card, event, granted_ability_or_check, player,
+                      card);
+  }
+  granted_ability_or_check = instance->targets[2].player;
+  if (granted_ability_or_check < 1 || event != EVENT_POWER)
+  {
+    granted_ability_or_check = instance->targets[2].card;
+    if ((event == EVENT_TOUGHNESS) && (0 < granted_ability_or_check))
+    {
+      abilities_event = false;
+      if ((controlled_card == affected_card) && (controlled_player == affected_card_controller))
+      {
+        event_result = event_result + granted_ability_or_check;
+      }
+    }
+    else
+    {
+      granted_ability_or_check = instance->targets[3].player;
+      abilities_event = event == EVENT_ABILITIES;
+      if ((0 < granted_ability_or_check && abilities_event) &&
+          ((abilities_event = true,
+            controlled_card == affected_card && (controlled_player == affected_card_controller))))
+      {
+        event_result = event_result + granted_ability_or_check;
+      }
+    }
+  }
+  else
+  {
+    if ((controlled_card == affected_card) && (controlled_player == affected_card_controller))
+    {
+      event_result = event_result + granted_ability_or_check;
+    }
+    abilities_event = event == EVENT_ABILITIES;
+  }
+  encoded_subtypes = instance->targets[4].player;
+  if (-1 < (int)encoded_subtypes)
+  {
+    if ((char)encoded_subtypes != '\0')
+    {
+      attached_is_additional_subtype(player, card, event, encoded_subtypes & 0xff);
+      encoded_subtypes = instance->targets[4].player;
+    }
+    if ((char)(encoded_subtypes >> 0x10) != '\0')
+    {
+      attached_is_forced_subtype(player, card, event, (int)encoded_subtypes >> 0x10 & 0xff);
+    }
+  }
+  spirit_link_flags = instance->targets[4].card;
+  if (((0 < (int)spirit_link_flags) && ((spirit_link_flags & 1) != 0)) &&
+      (instance->targets[3].card == 0x1ea5))
+  {
+    spirit_link_effect(controlled_player, controlled_card, event, instance->targets[0].player);
+  }
+  if (((event == EVENT_DECLARE_BLOCKERS) || (abilities_event)) &&
+      (instance->targets[3].card == 0x3a6a))
+  {
+    fx_menace(player, card, event);
+  }
+  if (control_mode == 0)
+  {
+    return 0;
+  }
+  if ((((control_mode & 0x81) != 0) && (granted_ability_or_check = eot_trigger(player, card, event),
+                                        granted_ability_or_check != 0)) &&
+      (((control_mode & 0x80) == 0 || (player == current_turn))))
+  {
+    granted_ability_or_check = instance->targets[3].card;
+    if (granted_ability_or_check == 0x286b)
+    {
+      kill_card(instance->targets[0].player, instance->targets[0].card, KILL_SACRIFICE);
+      return 0;
+    }
+    if ((granted_ability_or_check == 0x7e9) || (granted_ability_or_check == 0x81b))
+    {
+      tap_card(controlled_player, controlled_card);
+    }
+    effect_on_all_control_effects_attached_to_me(controlled_player, controlled_card, player, card,
+                                                 1);
+    granted_ability_or_check = check_state(player, card, 0x400000);
+    if ((granted_ability_or_check != 0) &&
+        (granted_ability_or_check = check_status(player, card, 0x1000000),
+         granted_ability_or_check != 0))
+    {
+      gain_control_impl(controlled_player, controlled_card);
+    }
+    kill_card(player, card, KILL_EXILE);
+  }
+  if ((control_mode & 0x7e) == 0)
+  {
+    return 0;
+  }
+  if (event != EVENT_CARDCONTROLLED && event != EVENT_STATIC_EFFECTS &&
+      event != EVENT_LEAVES_PLAY_ABILITY)
+  {
+    if (trigger_condition != TRIGGER_LEAVE_PLAY || card != affected_card || player != affected_card_controller)
+      return 0;
+    if (instance->targets[5].player != -1)
+      other_leaves_play(player, card, source_player_or_check, source_card, event, 0, 0);
+    else
+      instance->targets[5].player = 1;
+    return 0;
+  }
+  if (instance->targets[5].player == -1)
+  {
+    instance->targets[5].player = 1;
+    return 0;
+  }
+  other_leaves_play(player, card, source_player_or_check, source_card, event, 0, 0);
+  if (event == EVENT_LEAVES_PLAY_ABILITY)
+  {
+    if ((control_mode & 8) != 0)
+      kill_card(controlled_player, controlled_card, KILL_BURY);
+    else if ((control_mode & 0x40) == 0)
+      return 0;
+  }
+  else if (event == EVENT_CARDCONTROLLED)
+  {
+    if (source_card != affected_card || source_player_or_check != affected_card_controller ||
+        (control_mode & 2) == 0)
+      return 0;
+  }
+  else
+  {
+    if (source_player_or_check < 0 || instance->targets[5].player != 1)
+      return 0;
+    bool release_control = false;
+    if (is_tapped(source_player_or_check, source_card) == 0)
+    {
+      if ((control_mode & 8) != 0)
+        kill_card(controlled_player, controlled_card, KILL_BURY);
+      if ((control_mode & 4) != 0)
+      {
+        instance->targets[5].player = -1;
+        release_control = true;
+      }
+    }
+    if ((control_mode & 0x10) != 0)
+    {
+      granted_ability_or_check = get_power(controlled_player, controlled_card);
+      source_player_or_check = get_power(source_player_or_check, source_card);
+      if (granted_ability_or_check > source_player_or_check)
+      {
+        instance->targets[5].player = -1;
+        release_control = true;
+      }
+    }
+    if ((control_mode & 0x20) != 0 &&
+        (source_player_or_check = is_enchanted(controlled_player, controlled_card),
+         source_player_or_check == 0))
+    {
+      instance->targets[5].player = -1;
+      release_control = true;
+    }
+    if (!release_control)
+      return 0;
+  }
+  instance = in_play(controlled_player, controlled_card);
+  if (instance != NULL)
+  {
+    effect_on_all_control_effects_attached_to_me(controlled_player, controlled_card, player, card,
+                                                 1);
+    source_player_or_check = check_state(player, card, 0x400000);
+    if ((source_player_or_check != 0) &&
+        (source_player_or_check = check_status(player, card, 0x1000000),
+         source_player_or_check != 0))
+    {
+      gain_control_impl(controlled_player, controlled_card);
+    }
+  }
+  kill_card(player, card, KILL_EXILE);
+  return 0;
 }
 
 static int effect_on_all_control_effects_attached_to_me(int player, int card, int this_legacy_player, int this_legacy_card, int effect){
@@ -401,27 +452,34 @@ int re_enable_the_other_most_recent_control_effect_attached_to_me(int player, in
 	return effect_on_all_control_effects_attached_to_me(player, card, legacy_p, legacy_c, 1);
 }
 
-int gain_control_permanently_impl(int player, int t_player, int t_card, int sound){
-	int result = -1;
-	disable_all_control_effects_attached_to_me(t_player, t_card);
-	if( player == t_player ){
-		result = t_card;
-	}
-	else{
-		if( check_for_guardian_beast_protection(t_player, t_card) ){
-			return -1;
-		}
-		result = real_switch_control(t_player, t_card);
-		if( result > -1 ){
-			if( check_special_flags(player, result, SF_ECHO_TO_PAY) ){
-				remove_special_flags3(player, result, SF3_ECHO_PAID);
-			}
-			if( sound ){
-				play_sound_effect(WAV_CONTROL);
-			}
-		}
-	}
-	return result;
+int gain_control_permanently_impl(int player, int t_player, int t_card, int sound)
+{
+  int result = -1;
+  disable_all_control_effects_attached_to_me(t_player, t_card);
+  if (player == t_player)
+  {
+    result = t_card;
+  }
+  else
+  {
+    if (check_for_guardian_beast_protection(t_player, t_card))
+    {
+      return -1;
+    }
+    result = gain_control_impl(t_player, t_card);
+    if (result > -1)
+    {
+      if (check_special_flags(player, result, SF_ECHO_TO_PAY))
+      {
+        remove_special_flags3(player, result, SF3_ECHO_PAID);
+      }
+      if (sound)
+      {
+        play_sound_effect(WAV_CONTROL);
+      }
+    }
+  }
+  return result;
 }
 
 int gain_control_permanently(int player, int t_player, int t_card){
@@ -450,41 +508,50 @@ void exchange_control_of_target_permanents(int player, int card, int player1, in
 	}
 }
 
-static int gain_control_until_clause(int player, int card, int t_player, int t_card, int mode, int pow, int tou, int key, int s_key){
-// Mode:	see 'gcus_t' in 'defs.h'.
+static int gain_control_until_clause(int player, int card, int t_player, int t_card, int mode,
+                                     int pow, int tou, int key, int s_key)
+{
+  // Mode:	see 'gcus_t' in 'defs.h'.
 
-	int legacy_card = -1;
-	int result = gain_control_permanently(player, t_player, t_card);
-	if( result > -1 ){
-		legacy_card = create_targetted_legacy_effect(player, card, &generic_control_legacy, player, result);
-		if( legacy_card > -1 ){
-			card_instance_t* legacy_instance = get_card_instance(player, legacy_card);
-			if( player != t_player ){
-				//STATUS_POWER_STRUGGLE = this "control legacy" has stolen a permanent from someone
-				add_state(player, legacy_card, STATE_POWER_STRUGGLE);
-				//STATUS_CONTROLLED = this "control legacy" is active and will return the permanent to his previous controller when leave play
-				add_status(player, legacy_card, STATUS_CONTROLLED);
-			}
-			legacy_instance->targets[0].player = player;
-			legacy_instance->targets[0].card = card;
-			legacy_instance->targets[1].player = s_key;
-			legacy_instance->targets[1].card = mode;
-			legacy_instance->targets[2].player = pow;
-			legacy_instance->targets[2].card = tou;
-			legacy_instance->targets[3].player = key;
-			legacy_instance->targets[3].card = get_id(player, card);
-		}
-	}
-	return legacy_card;
+  int legacy_card = -1;
+  int result = gain_control_permanently(player, t_player, t_card);
+  if (result > -1)
+  {
+    legacy_card =
+        create_targetted_legacy_effect(player, card, &generic_control_legacy, player, result);
+    if (legacy_card > -1)
+    {
+      card_instance_t *legacy_instance = get_card_instance(player, legacy_card);
+      if (player != t_player)
+      {
+        // STATUS_POWER_STRUGGLE = this "control legacy" has stolen a permanent from someone
+        add_state(player, legacy_card, STATE_POWER_STRUGGLE);
+        // STATUS_CONTROLLED = this "control legacy" is active and will return the permanent to his
+        // previous controller when leave play
+        add_status(player, legacy_card, STATUS_CONTROLLED);
+      }
+      legacy_instance->targets[0].player = player;
+      legacy_instance->targets[0].card = card;
+      legacy_instance->targets[1].player = s_key;
+      legacy_instance->targets[1].card = mode;
+      legacy_instance->targets[2].player = pow;
+      legacy_instance->targets[2].card = tou;
+      legacy_instance->targets[3].player = key;
+      legacy_instance->targets[3].card = get_id(player, card);
+    }
+    recalculate_all_cards_in_play();
+  }
+  return legacy_card;
 }
 
 int give_control(int effect_source_player, int effect_source_card, int tar_player, int tar_card)
 {
-	disable_all_control_effects_attached_to_me(tar_player, tar_card);
-	int result = real_switch_control(tar_player, tar_card);
-	play_sound_effect(WAV_CONTROL);	// Since removing control effects doesn't do this itself
-	int legacy = create_targetted_legacy_effect(effect_source_player, effect_source_card, &empty, 1-tar_player, result);
-	return legacy;
+  disable_all_control_effects_attached_to_me(tar_player, tar_card);
+  int result = gain_control_impl(tar_player, tar_card);
+  play_sound_effect(WAV_CONTROL); // Since removing control effects doesn't do this itself
+  int legacy = create_targetted_legacy_effect(effect_source_player, effect_source_card, &empty,
+                                              1 - tar_player, result);
+  return legacy;
 }
 
 int give_control_until_eot(int effect_source_player, int effect_source_card, int tar_player, int tar_card)
@@ -506,9 +573,9 @@ int give_control_until_eot(int effect_source_player, int effect_source_card, int
 
 void give_control_of_self(int player, int card)
 {
-	disable_all_control_effects_attached_to_me(player, card);
-	real_switch_control(player, card);
-	play_sound_effect(WAV_CONTROL);	// Since removing control effects doesn't do this itself
+  disable_all_control_effects_attached_to_me(player, card);
+  gain_control_impl(player, card);
+  play_sound_effect(WAV_CONTROL); // Since removing control effects doesn't do this itself
 }
 
 int effect_act_of_treason_and_modify_pt_or_abilities(int player, int card, int t_player, int t_card, int pow, int tou, int key, int s_key){
@@ -534,30 +601,53 @@ int gain_control_until_eot(int player, int card, int t_player, int t_card){
 	return gain_control_until_clause(player, card, t_player, t_card, 1, 0, 0, 0, 0);
 }
 
-void gain_control_until_source_is_in_play_and_tapped(int player, int card, int t_player, int t_card, gcus_t mode)
+/* ManalinkEh 2022: 0x2664aa0; original functions/gain_control_and_legend_rule.c:577. */
+int gain_control_until_eot_haste(int player, int card, int t_player, int t_card)
+{
+  int result;
+
+  result = gain_control_until_clause(player, card, t_player, t_card, 1, 0, 0, 0, 4);
+  return result;
+}
+
+void gain_control_until_source_is_in_play_and_tapped(int player, int card, int t_player, int t_card,
+                                                     gcus_t mode)
 {
   if (in_play(t_player, t_card))
-	{
-	  int source_player, source_card;
-	  card_instance_t* instance = get_card_instance(player, card);
-	  if (instance->internal_card_id == activation_card)
-		{
-		  source_player = instance->parent_controller;
-		  source_card = instance->parent_card;
-		}
-	  else
-		{
-		  source_player = player;
-		  source_card = card;
-		}
+  {
+    int source_player, source_card;
+    card_instance_t *instance = get_card_instance(player, card);
+    if (instance->internal_card_id == activation_card)
+    {
+      source_player = instance->parent_controller;
+      source_card = instance->parent_card;
+    }
+    else
+    {
+      source_player = player;
+      source_card = card;
+    }
 
-	  if (!in_play(player, card)
-		  || ((mode & GCUS_CONTROLLED) && player != source_player)
-		  || ((mode & GCUS_TAPPED) && !is_tapped(player, card)))
-		return;
+    if (!in_play(player, card) || ((mode & GCUS_CONTROLLED) && player != source_player) ||
+        ((mode & GCUS_TAPPED) && !is_tapped(player, card)))
+      return;
 
-	  gain_control_until_clause(source_player, source_card, t_player, t_card, mode, 0, 0, 0, 0);
-	}
+    int leg =
+        gain_control_until_clause(source_player, source_card, t_player, t_card, mode, 0, 0, 0, 0);
+    if (leg != -1)
+      alternate_legacy_text(1, player, leg);
+  }
+}
+
+/* Recovered October 2022 implementations; see docs/recovery-progress.md. */
+
+/* ManalinkEh 2022: 0x2664c10; original functions/gain_control_and_legend_rule.c:611. */
+int gain_control_until_eoyt(int player, int card, int t_player, int t_card)
+{
+  int result;
+
+  result = gain_control_until_clause(player, card, t_player, t_card, 0x80, 0, 0, 0, 0);
+  return result;
 }
 
 void get_back_your_permanents(int player, int card, type_t typ)
@@ -594,5 +684,3 @@ void get_back_your_permanents(int player, int card, type_t typ)
 		}
 	}
 }
-
-

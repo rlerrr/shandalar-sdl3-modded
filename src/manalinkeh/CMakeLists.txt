@@ -11,6 +11,7 @@ file(GLOB manalinkeh_function_sources CONFIGURE_DEPENDS
 # defer them until the live veneer/card registry proves which definitions are
 # still needed.
 set(manalinkeh_deferred_sources
+  "${CMAKE_CURRENT_SOURCE_DIR}/cards/auto_targets.c"
   "${CMAKE_CURRENT_SOURCE_DIR}/cards/artifact_creatures.c"
   "${CMAKE_CURRENT_SOURCE_DIR}/cards/artifacts.c"
   "${CMAKE_CURRENT_SOURCE_DIR}/cards/black_creatures.c"

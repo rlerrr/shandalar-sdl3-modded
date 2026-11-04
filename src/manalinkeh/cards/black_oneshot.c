@@ -1,7 +1,10 @@
 #include "manalink.h"
 
-
 int card_perish(int player, int card, event_t event){
+  /* Perish	|2|B
+   * Sorcery
+   * Destroy all green creatures. They can't be regenerated. */
+
     if(event == EVENT_CAN_CAST ){
         return 1;
     }
@@ -24,6 +27,9 @@ int card_perish(int player, int card, event_t event){
 }
 
 int card_diabolic_edict(int player, int card, event_t event){
+  /* Diabolic Edict	|1|B
+   * Instant
+   * Target player sacrifices a creature of their choice. */
 
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_CREATURE );
@@ -48,6 +54,11 @@ int card_diabolic_edict(int player, int card, event_t event){
 }
 
 int card_infernal_contract(int player, int card, event_t event){
+  /* CARD_ID_INFERNAL_CONTRACT	1501
+   * Infernal Contract	|B|B|B
+   * Sorcery
+   * Draw four cards. You lose half your life, rounded up. */
+
     if( event == EVENT_CAN_CAST ){
 		int result = 1;
 		if( player == AI && !(life[player] > 1 || ! can_pay_life(player, 1)) ){
@@ -64,8 +75,12 @@ int card_infernal_contract(int player, int card, event_t event){
     return 0;
 }
 
-
 int card_unmask(int player, int card, event_t event){
+  /* CARD_ID_UNMASK	4642
+   * Unmask	|3|B
+   * Sorcery
+   * You may exile a |Sblack card from your hand rather than pay ~'s mana cost.
+   * Target player reveals his or her hand. You choose a nonland card from it. That player discards that card. */
 
     target_definition_t td1;
     default_target_definition(player, card, &td1, TYPE_CREATURE);
@@ -97,6 +112,11 @@ int card_unmask(int player, int card, event_t event){
 }
 
 int card_demonic_consultation(int player, int card, event_t event){
+  /* Demonic Consultation	|B	0x20016C3
+   * Instant
+   * Name a card. Exile the top six cards of your library, then reveal cards from the top of your library until you reveal the named card.
+   * Put that card into your hand and exile all other cards revealed this way. */
+
     if(event == EVENT_CAN_CAST ){
         return 1;
     }
@@ -129,8 +149,11 @@ int card_demonic_consultation(int player, int card, event_t event){
     return 0;
 }
 
-
 int card_death_cloud(int player, int card, event_t event){
+  /* CARD_ID_DEATH_CLOUD	6876
+   * Death Cloud	|X|B|B|B
+   * Sorcery
+   * Each player loses X life, discards X cards, sacrifices X creatures, then sacrifices X lands. */
 
     card_instance_t *instance = get_card_instance(player, card);
 
@@ -162,6 +185,11 @@ int card_death_cloud(int player, int card, event_t event){
 }
 
 int card_smallpox(int player, int card, event_t event){
+  /* CARD_ID_SMALLPOX	8669
+   * Smallpox	|B|B
+   * Sorcery
+   * Each player loses 1 life, discards a card, sacrifices a creature, then sacrifices a land. */
+
     if( event == EVENT_CAN_CAST ){
         return 1;
     }
@@ -181,6 +209,10 @@ int card_smallpox(int player, int card, event_t event){
 }
 
 int card_pox(int player, int card, event_t event){
+  /* Pox	|B|B|B	0x200130D
+   * Sorcery
+   * Each player loses a third of his or her life, then discards a third of the cards in his or her hand, then sacrifices a third of the creatures he or she controls, then sacrifices a third of the lands he or she controls. Round up each time. */
+
     if( event == EVENT_RESOLVE_SPELL ){
         int p, j;
         for(j=0;j<2;j++){
@@ -213,6 +245,11 @@ int card_pox(int player, int card, event_t event){
 }
 
 int card_barter_in_blood(int player, int card, event_t event){
+  /* CARD_ID_BARTER_IN_BLOOD	6620
+   * Barter in Blood	|2|B|B
+   * Sorcery
+   * Each player sacrifices two creatures. */
+
     if( event == EVENT_CAN_CAST ){
         return 1;
     }
@@ -229,6 +266,11 @@ int card_barter_in_blood(int player, int card, event_t event){
 }
 
 int card_hellfire(int player, int card, event_t event){
+  /* CARD_ID_HELLFIRE	671
+   * Hellfire	|2|B|B|B
+   * Sorcery
+   * Destroy all non|Sblack creatures. ~ deals X plus 3 damage to you, where X is the number of creatures that died this way. */
+
     if(event == EVENT_RESOLVE_SPELL){
         int p;
         int dead=0 ;
@@ -252,5 +294,4 @@ int card_hellfire(int player, int card, event_t event){
     }
     return 0;
 }
-
 

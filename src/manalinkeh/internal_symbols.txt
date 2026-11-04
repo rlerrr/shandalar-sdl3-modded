@@ -1,3 +1,7 @@
+SetVoidptr_insert
+UnorderedMapIntInt_delete
+UnorderedMapIntInt_fetch
+UnorderedMapIntInt_set
 ability_decompose
 abyss_trigger
 acidic_sliver_shared_ability
@@ -423,9 +427,9 @@ create_subtype_name_legacy
 create_targetted_legacy_activate
 create_targetted_legacy_effect
 create_targetted_legacy_effect_no_repeat
+creature1_cant_block_creature2_until_eot
 creature_can_block_additional
 creature_with_targeted_bestow
-creature1_cant_block_creature2_until_eot
 creatures_cannot_block
 crypt_sliver_shared_ability
 cultivate
@@ -453,8 +457,8 @@ damage_effects
 damage_enchanted_permanent_controller_at_upkeep
 damage_is_to_planeswalker
 damage_redirection
-damage_target_creature_or_player
 damage_target0
+damage_target_creature_or_player
 dark_confidant_effect
 darkheart_sliver_shared_ability
 dash
@@ -700,10 +704,10 @@ get_card_name
 get_card_name_by_id
 get_card_name_by_instance
 get_cd_number
-get_challenge_round
 get_challenge2
 get_challenge3
 get_challenge4
+get_challenge_round
 get_cmc
 get_cmc_by_id
 get_cmc_by_internal_id
@@ -876,6 +880,7 @@ increment_storm_count
 indestructible_until_eot
 infinite_casting_cost
 init_subtype_text
+initialize_card_extensions
 inspired
 insurrection_effect
 intervention_of_keranos_legacy
@@ -987,6 +992,7 @@ make_test_in_play
 mana_battery_generic
 mana_doesnt_drain_until_eot
 mana_into_string
+mana_producer_fixed
 mana_producing_creature
 mana_producing_creature_all_one_color
 mana_producing_creature_multi
@@ -1005,6 +1011,7 @@ mark_up_to_n_targets_noload
 max_can_sacrifice_as_cost
 maze_of_ith_effect
 meddling_mage_effect
+memcpy_inst_and_ext
 memcpy_suppress_size_warning
 memset_suppress_size_warning
 menace
@@ -1180,11 +1187,11 @@ produce_mana_any_combination_of_colors
 produce_mana_multi
 produce_mana_of_any_type_tapped_for
 produce_mana_tapped
+produce_mana_tapped2
 produce_mana_tapped_all_one_color
 produce_mana_tapped_all_one_color_with_default
 produce_mana_tapped_any_combination_of_colors
 produce_mana_tapped_multi
-produce_mana_tapped2
 produce_mana_when_subtype_is_tapped
 produce_mana_your_next_main_phase_this_turn
 proliferate
@@ -1238,6 +1245,7 @@ read_settings
 real_count_colors
 real_counter_a_spell
 real_land_animation2
+real_put_on_top_of_deck
 real_remove_cost_mod_for_activated_abilities
 real_set_cost_mod_for_activated_abilities
 real_set_pt
@@ -1383,7 +1391,6 @@ set_special_infos
 set_starting_life_total
 set_trap_condition
 set_x_for_x_spells
-SetVoidptr_insert
 shapeshift_all
 shapeshift_target
 shared_sliver_activated_ability
@@ -1509,9 +1516,6 @@ undying
 unearth
 unleash
 unlimited_allowed_in_deck
-UnorderedMapIntInt_delete
-UnorderedMapIntInt_fetch
-UnorderedMapIntInt_set
 unquenchable_fury_legacy
 untap_card_no_event
 untap_lands

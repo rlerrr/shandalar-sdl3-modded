@@ -8,8 +8,12 @@ int effect_slowtrip(int player, int card, event_t event){
     return 0;
 }
 
-
 int card_wayfarers_bauble(int player, int card, event_t event){
+  /* CARD_ID_WAYFARERS_BAUBLE	1467
+   * Wayfarer's Bauble	|1
+   * Artifact
+   * |2, |T, Sacrifice ~: Search your library for a basic land card and put that card onto the battlefield tapped. Then shuffle your library. */
+
     if( event == EVENT_RESOLVE_ACTIVATION ){
         tutor_basic_land(player, 1, 1);
     }
@@ -17,6 +21,10 @@ int card_wayfarers_bauble(int player, int card, event_t event){
 }
 
 int card_urzas_bauble(int player, int card, event_t event){
+  /* Urza's Bauble	|0	0x20024F6
+   * Artifact
+   * |T, Sacrifice ~: Look at a card at random in target player's hand. You draw a card at the beginning of the next turn's upkeep. */
+
     if( event == EVENT_RESOLVE_ACTIVATION ){
         int legacy_card = create_legacy_effect(player, card, &effect_slowtrip );
         card_instance_t *legacy = get_card_instance(player, legacy_card);
@@ -41,12 +49,16 @@ int card_urzas_bauble(int player, int card, event_t event){
                 }
             }
         }
-        show_deck( player, cards_array, 1, "Card Revealed at Random", 0, 0x7375B0 );
+        show_deck( player, cards_array, 1, "Card Revealed at Random", 0, gs_done_008b40e0 );
     }
     return generic_activated_ability(player, card, event, GAA_SACRIFICE_ME, 0, 0, 0, 0, 0, 0, 0, 0, 0);
 }
 
 int card_teferis_puzzle_box(int player, int card, event_t event){
+  /* Teferi's Puzzle Box	|4
+   * Artifact
+   * At the beginning of each player's draw step, that player puts the cards in his or her hand on the bottom of his or her library in any order, then draws
+   * that many cards. */
 
     card_instance_t *instance = get_card_instance(player, card);
 
@@ -75,6 +87,11 @@ int card_teferis_puzzle_box(int player, int card, event_t event){
 }
 
 int card_vedalken_shackles(int player, int card, event_t event){
+  /* CARD_ID_VEDALKEN_SHACKLES	7148
+   * Vedalken Shackles	|3
+   * Artifact
+   * You may choose not to untap ~ during your untap step.
+   * |2, |T: Gain control of target creature with power less than or equal to the number of |H1Islands you control for as long as ~ remains tapped. */
 
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_CREATURE);
@@ -94,8 +111,12 @@ int card_vedalken_shackles(int player, int card, event_t event){
 	return generic_activated_ability(player, card, event, GAA_UNTAPPED+GAA_NONSICK+GAA_CAN_TARGET, 2, 0, 0, 0, 0, 0, 0, &td, "TARGET_CREATURE");
 }
 
-
 int card_millstone(int player, int card, event_t event){
+  /* CARD_ID_MILLSTONE	507
+   * Millstone	|2
+   * Artifact
+   * |2, |T: Target player puts the top two cards of his or her library into his or her graveyard. */
+
     target_definition_t td1;
     default_target_definition(player, card, &td1, TYPE_CREATURE );
     td1.zone = TARGET_ZONE_PLAYERS;
@@ -111,11 +132,23 @@ int card_millstone(int player, int card, event_t event){
 }
 
 int card_serum_powder(int player, int card, event_t event){
+  /* CARD_ID_SERUM_POWDER	6953
+   * Serum Powder	|3
+   * Artifact
+   * |T: Add |C to your mana pool.
+   * Any time you could mulligan and ~ is in your hand, you may exile all the cards from your hand, then draw that many cards.
+   * (You can do this in addition to taking mulligans.) */
+
     if( ! is_unlocked(player, card, event, 7) ){ return 0; }
     return mana_producer(player, card, event);
 }
 
 int card_goblin_charbelcher(int player, int card, event_t event){
+  /* Goblin Charbelcher	|4	0x20018b2
+   * Artifact
+   * |3, |T: Reveal cards from the top of your library until you reveal a land card. ~ deals damage equal to the number of nonland cards revealed this way to any target.
+   * 	  If the revealed land card was |Ha Mountain, ~ deals double that damage instead. Put the revealed cards on the bottom of your library in any order. */
+
     if( ! is_unlocked(player, card, event, 12) ){ return 0; }
 
     target_definition_t td1;
@@ -137,7 +170,7 @@ int card_goblin_charbelcher(int player, int card, event_t event){
 						i++;
 				}
 				if( deck[i] != -1 ){
-					if( has_subtype_by_id(cards_data[ deck[i] ].id, SUBTYPE_MOUNTAIN) ){
+					if( has_subtype_by_id(-1, cards_data[ deck[i] ].id, SUBTYPE_MOUNTAIN) ){
 						dmg *= 2;
 					}
 				}
@@ -155,6 +188,9 @@ int card_goblin_charbelcher(int player, int card, event_t event){
 }
 
 int card_jesters_cap(int player, int card, event_t event){
+  /* Jester's Cap	|4	0x2001808
+   * Artifact
+   * |2, |T, Sacrifice ~: Search target player's library for three cards and exile them. Then that player shuffles his or her library. */
 
     target_definition_t td1;
     default_target_definition(player, card, &td1, TYPE_CREATURE );
@@ -252,7 +288,7 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 					cless+=2;
 				}
 
-				if( get_id(i, count) == CARD_ID_BALLYRUSH_BANNERET && (has_subtype_by_id(id, SUBTYPE_SOLDIER) || has_subtype_by_id(id, SUBTYPE_KITHKIN)) ){
+				if( get_id(i, count) == CARD_ID_BALLYRUSH_BANNERET && (has_subtype_by_id(-1, id, SUBTYPE_SOLDIER) || has_subtype_by_id(-1, id, SUBTYPE_KITHKIN)) ){
 					cless--;
 				}
 
@@ -260,11 +296,11 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 					cless+=49;
 				}
 
-				if( get_id(i, count) == CARD_ID_BOSK_BANNERET && (has_subtype_by_id(id, SUBTYPE_TREEFOLK) || has_subtype_by_id(id, SUBTYPE_SHAMAN)) ){
+				if( get_id(i, count) == CARD_ID_BOSK_BANNERET && (has_subtype_by_id(-1, id, SUBTYPE_TREEFOLK) || has_subtype_by_id(-1, id, SUBTYPE_SHAMAN)) ){
 					cless--;
 				}
 
-				if( get_id(i, count) == CARD_ID_BRIGHTHEARTH_BANNERET && (has_subtype_by_id(id, SUBTYPE_ELEMENTAL) || has_subtype_by_id(id, SUBTYPE_WARRIOR)) ){
+				if( get_id(i, count) == CARD_ID_BRIGHTHEARTH_BANNERET && (has_subtype_by_id(-1, id, SUBTYPE_ELEMENTAL) || has_subtype_by_id(-1, id, SUBTYPE_WARRIOR)) ){
 					cless--;
 				}
 
@@ -290,7 +326,7 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 					cless+=3;
 				}
 
-				if( get_id(i, count) == CARD_ID_DRAGONSPEAKER_SHAMAN && i == player && has_subtype_by_id(id, SUBTYPE_DRAGON) ){
+				if( get_id(i, count) == CARD_ID_DRAGONSPEAKER_SHAMAN && i == player && has_subtype_by_id(-1, id, SUBTYPE_DRAGON) ){
 					cless-=2;
 				}
 
@@ -320,13 +356,13 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 					}
 				}
 
-				if( get_id(i, count) == CARD_ID_EYE_OF_UGIN && i == player && has_subtype_by_id(id, SUBTYPE_ELDRAZI) && 
+				if( get_id(i, count) == CARD_ID_EYE_OF_UGIN && i == player && has_subtype_by_id(-1, id, SUBTYPE_ELDRAZI) &&
 					get_color_by_id(player, id) == COLOR_TEST_COLORLESS
 				  ){
 					cless-=2;
 				}
 
-				if( get_id(i, count) == CARD_ID_FROGTOSSER_BANNERET && (has_subtype_by_id(id, SUBTYPE_GOBLIN) || has_subtype_by_id(id, SUBTYPE_ROGUE)) ){
+				if( get_id(i, count) == CARD_ID_FROGTOSSER_BANNERET && (has_subtype_by_id(-1, id, SUBTYPE_GOBLIN) || has_subtype_by_id(-1, id, SUBTYPE_ROGUE)) ){
 					cless--;
 				}
 
@@ -344,7 +380,7 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 					cless--;
 				}
 
-				if( get_id(i, count) == CARD_ID_GOBLIN_WARCHIEF && i == player && has_subtype_by_id(id, CARD_ID_GOBLIN) ){
+				if( get_id(i, count) == CARD_ID_GOBLIN_WARCHIEF && i == player && has_subtype_by_id(-1, id, CARD_ID_GOBLIN) ){
 					cless--;
 				}
 
@@ -378,7 +414,7 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 				}
 
 				if( get_id(i, count) == CARD_ID_HERALD_OF_WAR && i == player && 
-					(has_subtype_by_id(id, SUBTYPE_ANGEL) || has_subtype_by_id(id, SUBTYPE_HUMAN))
+					(has_subtype_by_id(-1, id, SUBTYPE_ANGEL) || has_subtype_by_id(-1, id, SUBTYPE_HUMAN))
 				  ){
 					cless-=count_1_1_counters(i, count);
 				}
@@ -452,7 +488,7 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 					cless-=get_trap_condition(1-player, TRAP_LIFE_LOST);
 				}
 
-				if( get_id(i, count) == CARD_ID_ROOFTOP_STORM && i == player && has_subtype_by_id(id, CARD_ID_ZOMBIE) ){
+				if( get_id(i, count) == CARD_ID_ROOFTOP_STORM && i == player && has_subtype_by_id(-1, id, CARD_ID_ZOMBIE) ){
 					cless-=c->req.req_colorless;
 				}
 
@@ -475,7 +511,7 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 					cless++;
 				}
 
-				if( get_id(i, count) == CARD_ID_STINKDRINKER_DAREDEVIL && i == player && has_subtype_by_id(id, CARD_ID_GIANT) ){
+				if( get_id(i, count) == CARD_ID_STINKDRINKER_DAREDEVIL && i == player && has_subtype_by_id(-1, id, CARD_ID_GIANT) ){
 					cless-=2;
 				}
 
@@ -483,7 +519,7 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 					cless--;
 				}
 
-				if( get_id(i, count) == CARD_ID_STONYBROOK_BANNERET && (has_subtype_by_id(id, SUBTYPE_MERFOLK) || has_subtype_by_id(id, SUBTYPE_WIZARD)) ){
+				if( get_id(i, count) == CARD_ID_STONYBROOK_BANNERET && (has_subtype_by_id(-1, id, SUBTYPE_MERFOLK) || has_subtype_by_id(-1, id, SUBTYPE_WIZARD)) ){
 					cless--;
 				}
 
@@ -499,7 +535,7 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 					cless++;
 				}
 
-				if( get_id(i, count) == CARD_ID_UNDEAD_WARCHIEF && i == player && has_subtype_by_id(id, CARD_ID_ZOMBIE) ){
+				if( get_id(i, count) == CARD_ID_UNDEAD_WARCHIEF && i == player && has_subtype_by_id(-1, id, CARD_ID_ZOMBIE) ){
 					cless--;
 				}
 
@@ -523,6 +559,10 @@ int get_updated_casting_cost_exc_trinisphere(int player, int card, event_t event
 }
 
 int card_trinisphere(int player, int card, event_t event){
+  /* Trinisphere	|3
+   * Artifact
+   * As long as this artifact is untapped, each spell that would cost less than three mana to cast costs three mana to cast. (Additional mana in the cost may be paid with any color of mana or colorless mana. For example, a spell that would cost |1|B to cast costs |2|B to cast instead.) */
+
     if( ! is_tapped(player, card) ){
         if( event == EVENT_MODIFY_COST_GLOBAL && ! is_what(affected_card_controller, affected_card, TYPE_LAND) ){
 			int cless = get_updated_casting_cost_exc_trinisphere(affected_card_controller, affected_card, event, -1);
@@ -537,6 +577,11 @@ int card_trinisphere(int player, int card, event_t event){
 }
 
 int card_crucible_of_worlds(int player, int card, event_t event){
+  /* CARD_ID_CRUCIBLE_OF_WORLDS	7034
+   * Crucible of Worlds	|3
+   * Artifact
+   * You may play land cards from your graveyard. */
+
     card_instance_t *instance= get_card_instance(player, card);
     if( event == EVENT_CAN_ACTIVATE ){
         if( can_sorcery_be_played(player, event) && ( count_cards_by_id(player, CARD_ID_FASTBOND) > 0 || ! ( land_can_be_played & 1 ) ) ){
@@ -570,7 +615,6 @@ int card_crucible_of_worlds(int player, int card, event_t event){
     }
     return 0;
 }
-
 
 int monolith (int player, int card, event_t event, int untap_cost){
     does_not_untap(player, card, event);
@@ -614,6 +658,13 @@ int monolith (int player, int card, event_t event, int untap_cost){
 }
 
 int card_basalt_monolith (int player, int card, event_t event){
+  /* CARD_ID_BASALT_MONOLITH	11
+   * Basalt Monolith	|3
+   * Artifact
+   * ~ doesn't untap during your untap step.
+   * |T: Add |C|C|C to your mana pool.
+   * |3: Untap ~. */
+
     return monolith(player, card, event, 3);
 }
 
@@ -654,46 +705,100 @@ int signet2(int player, int card, event_t event, int c1, int c2){
 }
 
 int card_golgari_signet  (int player, int card, event_t event){
+  /* CARD_ID_GOLGARI_SIGNET	1717
+   * Golgari Signet	|2
+   * Artifact
+   * |1, |T: Add |B|G to your mana pool. */
+
     return signet2(player, card, event, COLOR_BLACK, COLOR_GREEN);
 }
 
 int card_dimir_signet  (int player, int card, event_t event){
+  /* CARD_ID_DIMIR_SIGNET	1719
+   * Dimir Signet	|2
+   * Artifact
+   * |1, |T: Add |U|B to your mana pool. */
+
     return signet2(player, card, event, COLOR_BLACK, COLOR_BLUE);
 }
 
 int card_orzhov_signet  (int player, int card, event_t event){
+  /* CARD_ID_ORZHOV_SIGNET	1721
+   * Orzhov Signet	|2
+   * Artifact
+   * |1, |T: Add |W|B to your mana pool. */
+
     return signet2(player, card, event, COLOR_BLACK, COLOR_WHITE);
 }
 
 int card_rakdos_signet  (int player, int card, event_t event){
+  /* CARD_ID_RAKDOS_SIGNET	1723
+   * Rakdos Signet	|2
+   * Artifact
+   * |1, |T: Add |B|R to your mana pool. */
+
     return signet2(player, card, event, COLOR_BLACK, COLOR_RED);
 }
 
 int card_selesnya_signet(int player, int card, event_t event){
+  /* CARD_ID_SELESNYA_SIGNET	1716
+   * Selesnya Signet	|2
+   * Artifact
+   * |1, |T: Add |G|W to your mana pool. */
+
     return signet2(player, card, event, COLOR_WHITE, COLOR_GREEN);
 }
 
 int card_simic_signet  (int player, int card, event_t event){
+  /* CARD_ID_SIMIC_SIGNET	1724
+   * Simic Signet	|2
+   * Artifact
+   * |1, |T: Add |G|U to your mana pool. */
+
     return signet2(player, card, event, COLOR_BLUE, COLOR_GREEN);
 }
 
 int card_gruul_signet  (int player, int card, event_t event){
+  /* CARD_ID_GRUUL_SIGNET	1720
+   * Gruul Signet	|2
+   * Artifact
+   * |1, |T: Add |R|G to your mana pool. */
+
     return signet2(player, card, event, COLOR_RED, COLOR_GREEN);
 }
 
 int card_azorius_signet  (int player, int card, event_t event){
+  /* CARD_ID_AZORIUS_SIGNET	1722
+   * Azorius Signet	|2
+   * Artifact
+   * |1, |T: Add |W|U to your mana pool. */
+
     return signet2(player, card, event, COLOR_BLUE, COLOR_WHITE);
 }
 
 int card_boros_signet  (int player, int card, event_t event){
+  /* CARD_ID_BOROS_SIGNET	1718
+   * Boros Signet	|2
+   * Artifact
+   * |1, |T: Add |R|W to your mana pool. */
+
     return signet2(player, card, event, COLOR_WHITE, COLOR_RED);
 }
 
 int card_izzet_signet  (int player, int card, event_t event){
+  /* CARD_ID_IZZET_SIGNET	1550
+   * Izzet Signet	|2
+   * Artifact
+   * |1, |T: Add |U|R to your mana pool. */
+
     return signet2(player, card, event, COLOR_BLUE, COLOR_RED);
 }
 
 int card_aether_vial  (int player, int card, event_t event){
+  /* Aether Vial	|1
+   * Artifact
+   * At the beginning of your upkeep, you may put a charge counter on this artifact.
+   * |T: You may put a creature card with mana value equal to the number of charge counters on this artifact from your hand onto the battlefield. */
 
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_CREATURE);
@@ -734,6 +839,9 @@ int card_aether_vial  (int player, int card, event_t event){
 }
 
 int card_tower_of_fortunes( int player, int card, event_t event){
+  /* Tower of Fortunes	|4
+   * Artifact
+   * |8, |T: Draw four cards. */
 
     if(event == EVENT_RESOLVE_ACTIVATION){
         draw_cards(player, 4);
@@ -743,6 +851,11 @@ int card_tower_of_fortunes( int player, int card, event_t event){
 }
 
 int card_mind_stone(int player, int card, event_t event){
+  /* CARD_ID_MIND_STONE	3009
+   * Mind Stone	|2
+   * Artifact
+   * |T: Add |C to your mana pool.
+   * |1, |T, Sacrifice ~: Draw a card. */
 
     card_instance_t *instance = get_card_instance(player, card);
 
@@ -825,6 +938,9 @@ int effect_illusionary_mask(int player, int card, event_t event){
 
 int hack_illusionary_mask_event = EVENT_CAN_ACTIVATE;
 int card_illusionary_mask(int player, int card, event_t event){
+  /* Illusionary Mask	|2
+   * Artifact
+   * |X: You may choose a creature card in your hand whose mana cost could be paid by some amount of, or all of, the mana you spent on |X. If you do, you may cast that card face down as a 2/2 creature spell without paying its mana cost. If the creature that spell becomes as it resolves has not been turned face up and would assign or deal damage, be dealt damage, or become tapped, instead it's turned face up and assigns or deals damage, is dealt damage, or becomes tapped. Activate only as a sorcery. */
 
 	char msg[100] = "Choose a creature card to play face down.";
 	test_definition_t this_test;
@@ -862,6 +978,10 @@ int card_illusionary_mask(int player, int card, event_t event){
 }
 
 int card_isochron_scepter  (int player, int card, event_t event){
+  /* Isochron Scepter	|2
+   * Artifact
+   * Imprint - When ~ enters the battlefield, you may exile an instant card with converted mana cost 2 or less from your hand.
+   * |2, |T: You may copy the exiled card. If you do, you may cast the copy without paying its mana cost. */
 
 	test_definition_t this_test;
 	new_default_test_definition(&this_test, TYPE_INSTANT, "Choose an instant card with CMC 2 or less.");
@@ -903,6 +1023,11 @@ int card_isochron_scepter  (int player, int card, event_t event){
 }
 
 int card_senseis_divining_top  (int player, int card, event_t event){
+  /* CARD_ID_SENSEIS_DIVINING_TOP	1543
+   * Sensei's Divining Top	|1
+   * Artifact
+   * |1: Look at the top three cards of your library, then put them back in any order.
+   * |T: Draw a card, then put ~ on top of its owner's library. */
 
     card_instance_t *instance = get_card_instance(player, card);
 	
@@ -961,6 +1086,10 @@ int card_senseis_divining_top  (int player, int card, event_t event){
 
 int card_chromatic_sphere(int player, int card, event_t event)
 {
+  /* Chromatic Sphere	|1
+   * Artifact
+   * |1, |T, Sacrifice this artifact: Add one mana of any color. Draw a card. (Activate only as an instant.) */
+
   if(event == EVENT_CAN_ACTIVATE && can_produce_mana(player, card) )
   {
     if( is_animated_and_sick(player, card) ){
@@ -987,6 +1116,11 @@ int card_chromatic_sphere(int player, int card, event_t event)
 
 int card_helm_of_awakening(int player, int card, event_t event)
 {
+  /* CARD_ID_HELM_OF_AWAKENING	2719
+   * Helm of Awakening	|2
+   * Artifact
+   * Spells cost |1 less to cast. */
+
     if(event == EVENT_MODIFY_COST_GLOBAL ){
         card_data_t* card_d = get_card_data(affected_card_controller, affected_card);
         if(! (card_d->type & TYPE_LAND) ){
@@ -997,6 +1131,12 @@ int card_helm_of_awakening(int player, int card, event_t event)
 }
 
 int card_chrome_mox(int player, int card, event_t event){
+  /* CARD_ID_CHROME_MOX	6632
+   * Chrome Mox	|0
+   * Artifact
+   * Imprint - When ~ enters the battlefield, you may exile a nonartifact, nonland card from your hand.
+   * |T: Add one mana of any of the exiled card's colors to your mana pool. */
+
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_ANY);
 	td.allowed_controller = player;
@@ -1053,6 +1193,10 @@ int card_chrome_mox(int player, int card, event_t event){
 }
 
 int card_mox_opal(int player, int card, event_t event){
+  /* Mox Opal	|0
+   * Legendary Artifact
+   * Metalcraft - |T: Add one mana of any color to your mana pool. Activate this ability only if you control three or more artifacts. */
+
     check_legend_rule(player, card, event);
     if( metalcraft(player, card) ){
         return mana_producer(player, card, event);
@@ -1060,8 +1204,11 @@ int card_mox_opal(int player, int card, event_t event){
     return 0;
 }
 
-
 int card_door_to_nothingness( int player, int card, event_t event){
+  /* Door to Nothingness	|5
+   * Artifact
+   * ~ enters the battlefield tapped.
+   * |W|W|U|U|B|B|R|R|G|G, |T, Sacrifice ~: Target player loses the game. */
 
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_NONE);
@@ -1080,6 +1227,10 @@ int card_door_to_nothingness( int player, int card, event_t event){
 }
 
 int card_ironworks( int player, int card, event_t event){
+  /* Krark-Clan Ironworks	|4
+   * Artifact
+   * Sacrifice an artifact: Add |C|C. */
+
 	// krark clan ironworks
 	if(event == EVENT_CAN_ACTIVATE && can_produce_mana(player, card) ){
 		return can_sacrifice_as_cost(player, 1, TYPE_ARTIFACT, 0, 0, 0, 0, 0, 0, 0, -1, 0);
@@ -1101,6 +1252,10 @@ int card_ironworks( int player, int card, event_t event){
 }
 
 int card_myr_incubator( int player, int card, event_t event){
+  /* Myr Incubator	|6
+   * Artifact
+   * |6, |T, Sacrifice ~: Search your library for any number of artifact cards, exile them, then put that many 1/1 colorless Myr
+   * 		artifact creature tokens onto the battlefield. Then shuffle your library. */
 
 	if( event == EVENT_RESOLVE_ACTIVATION ){
 		char msg[100] = "Select an artifact card.";
@@ -1141,6 +1296,11 @@ int card_myr_incubator( int player, int card, event_t event){
 }
 
 int card_city_in_a_bottle(int player, int card, event_t event){
+  /* CARD_ID_CITY_IN_A_BOTTLE	402
+   * City in a Bottle	|2
+   * Artifact
+   * Whenever another nontoken permanent with a name originally printed in the Arabian Nights expansion is on the battlefield, its controller sacrifices it.
+   * Players can't cast spells or play lands with a name originally printed in the Arabian Nights expansion. */
 
 	if( event == EVENT_RESOLVE_SPELL ){
 		int i;
@@ -1169,6 +1329,9 @@ int card_city_in_a_bottle(int player, int card, event_t event){
 }
 
 int card_gologothian_sylex(int player, int card, event_t event){
+  /* Golgothian Sylex	|4
+   * Artifact
+   * |1, |T: Each nontoken permanent with a name originally printed in the Antiquities expansion is sacrificed by its controller. */
 
 	if( event == EVENT_CAN_ACTIVATE && ! get_forbid_activation_flag(player, card) && ! is_tapped(player, card) && ! is_animated_and_sick(player, card) ){
 		if( has_mana(player, COLOR_COLORLESS, 1) ){

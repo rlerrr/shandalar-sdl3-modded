@@ -149,6 +149,7 @@ extern card_data_t** shandalar_cards_at_7c7000(void);
 extern card_ptr_t** shandalar_cards_ptr(void);
 extern int** shandalar_deck_ptr(void);
 extern int** shandalar_graveyard_ptr(void);
+extern int* shandalar_player_damage_totals(void);
 extern int** shandalar_rfg_ptr(void);
 extern int* shandalar_creature_count(void);
 extern int* shandalar_artifact_count(void);
@@ -216,6 +217,9 @@ extern void shandalar_draw_special_counters(HDC dc, const RECT* rect,
 extern HBITMAP shandalar_read_graphics_file(const char* path);
 extern void shandalar_redraw_libraries(void);
 extern const char* shandalar_legacy_title(int card_id);
+extern const char* shandalar_legacy_damage_text(int);
+extern const char* shandalar_legacy_text(int);
+extern const char* shandalar_effect_text(int);
 extern const char* shandalar_effect_title(int card_id);
 extern const char* shandalar_hunting_subtype_name(int subtype);
 extern int shandalar_check_mana_multi(int player);
@@ -268,6 +272,20 @@ extern int shandalar_check_mana_multi(int player);
 #define PAY_MANA_ARTIFACT g_mana_charge[6]
 #define pay_mana_xbugrwaU g_mana_charge
 /* Host names distinguish mana already produced from declared source capacity. */
+extern int g_mana_color_conversions[2][11];
+extern int g_lich_active[2];
+extern int g_card_count;
+extern int g_duel_generated_internal_card_id_16;
+extern int g_duel_generated_internal_card_id_24;
+#define raw_mana_may_be_spent_as_color g_mana_color_conversions
+#define life_gain_draw_count g_lich_active
+#define engine_dynamic_iid_start g_card_count
+#define engine_mana_producer_fixed shandalar_mana_producer_fixed
+#define LEGACY_EFFECT_ACTIVATED_PROTECT g_duel_generated_internal_card_id_24
+#define LEGACY_EFFECT_TIME_WALK g_duel_generated_internal_card_id_0f
+#define send_network_packet TENTATIVE_send_network_result
+#define receive_network_packet TENTATIVE_wait_for_network_result
+#define network_rand network_random
 #define mana_pool g_raw_mana_available
 #define needed_mana_colors g_required_mana_color_mask
 #define raw_mana_available g_special_mana_pool
@@ -343,7 +361,7 @@ extern int shandalar_check_mana_multi(int player);
 #define get_displayed_state shandalar_get_displayed_state
 #define display_mana_burn_dialog shandalar_display_mana_burn_dialog
 #define copy_special_counter_rect shandalar_copy_special_counter_rect
-#define mana_producer_fixed shandalar_mana_producer_fixed
+/* The recovered 2022 source owns mana_producer_fixed. */
 #define regenerate_target_exe shandalar_regenerate_target
 #define raw_put_iid_on_top_of_deck shandalar_raw_put_iid_on_top_of_deck
 #define show_deck_exe shandalar_show_deck_exe
@@ -369,11 +387,11 @@ extern int shandalar_check_mana_multi(int player);
 #define is_tapped shandalar_is_tapped
 #define pay_mana_maximally_satisfied is_mana_cost_paid
 #define try_to_pay_for_mana_by_autotapping activate_mana_sources_for_payment
-#define put_card_on_stack2 resolve_cast_card
+/* The recovered 2022 source owns put_card_on_stack2. */
 #define damage_creature_or_player deal_damage_to_selected_target
 #define set_centerwindow_txt shandalar_set_centerwindow_txt
 #define real_gain_life shandalar_real_gain_life
-#define choose_a_card shandalar_choose_a_card
+/* The 2022 card chooser is supplied by the imported C++ source. */
 #define sub_4378E0 run_target_selection_modal
 #define sub_45CEC0 show_spell_window_for_target_selection
 #define sub_45CF00 restore_spell_window_after_target_selection

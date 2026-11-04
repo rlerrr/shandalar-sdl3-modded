@@ -27,10 +27,18 @@ static int choose_target_creature(int player, int card, event_t event, int (*fun
 }
 
 int card_ancestral_recall(int player, int card, event_t event){
+  /* Ancestral Recall	|U
+   * Instant
+   * Target player draws three cards. */
+
 	return choose_target_player(player, card, event, &card_ancestral_recall_exe);
 }
 
 int card_swords_to_plowshares(int player, int card, event_t event){
+  /* Swords to Plowshares	|W	=>unlimited.c:card_swords_to_plowshares
+   * Instant
+   * Exile target creature. Its controller gains life equal to its power. */
+
 	return choose_target_creature(player, card, event, &card_swords_to_plowshares_exe);
 }
 #endif

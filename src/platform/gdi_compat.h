@@ -253,6 +253,7 @@ typedef struct MEASUREITEMSTRUCT {
 #define AC_SRC_OVER 0
 #define AC_SRC_ALPHA 1
 #define LF_FACESIZE 32
+#define ETO_OPAQUE 0x0002
 #define ETO_CLIPPED 0x0004
 #define PC_EXPLICIT 0x02
 #define SRCCOPY 0x00cc0020
@@ -400,6 +401,7 @@ int SetStretchBltMode(HDC dc, int mode);
 COLORREF SetTextColor(HDC dc, COLORREF color);
 COLORREF GetTextColor(HDC dc);
 COLORREF SetBkColor(HDC dc, COLORREF color);
+COLORREF GetBkColor(HDC dc);
 int SetBkMode(HDC dc, int mode);
 int SetROP2(HDC dc, int mode);
 BOOL TextOutA(HDC dc, int x, int y, LPCSTR text, int length);

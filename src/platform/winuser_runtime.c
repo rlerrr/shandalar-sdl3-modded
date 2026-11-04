@@ -347,9 +347,21 @@ BOOL LockWindowUpdate(HWND window) { (void)window; return TRUE; }
 COLORREF GetSysColor(int index)
 {
   switch (index) {
+  case 5: return RGB(255, 255, 255);
+  case 8: return RGB(0, 0, 0);
+  case 13: return RGB(0, 120, 215);
+  case 14: return RGB(255, 255, 255);
   case 15: return RGB(192, 192, 192);
   case 16: return RGB(128, 128, 128);
   case 20: return RGB(255, 255, 255);
   default: return RGB(0, 0, 0);
   }
+}
+
+HBRUSH GetSysColorBrush(int index)
+{
+  static HBRUSH brushes[32];
+  if (index < 0 || index >= 32) return NULL;
+  if (!brushes[index]) brushes[index] = CreateSolidBrush(GetSysColor(index));
+  return brushes[index];
 }

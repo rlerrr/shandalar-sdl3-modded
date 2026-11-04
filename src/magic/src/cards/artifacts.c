@@ -3618,7 +3618,7 @@ int card_meekstone(int player, int card, event_t event)
             ai_delta += PLAYER_CARD_INSTANCE(g_active_player, current_card).power;
           }
         }
-        else if (PLAYER_CARD_INSTANCE(g_active_player, current_card).mana_to_untap[0] == 0)
+        else if (PLAYER_CARD_INSTANCE(g_active_player, current_card).ext->legacy_mana_to_untap[0] == 0)
         {
           ai_delta += PLAYER_CARD_INSTANCE(g_active_player, current_card).power * 2;
         }
@@ -3633,7 +3633,7 @@ int card_meekstone(int player, int card, event_t event)
             ai_delta -= PLAYER_CARD_INSTANCE(g_other_player, current_card).power;
           }
         }
-        else if (PLAYER_CARD_INSTANCE(g_other_player, current_card).mana_to_untap[0] == 0)
+        else if (PLAYER_CARD_INSTANCE(g_other_player, current_card).ext->legacy_mana_to_untap[0] == 0)
         {
           ai_delta += PLAYER_CARD_INSTANCE(g_other_player, current_card).power * -2;
         }
@@ -4727,14 +4727,14 @@ int card_brass_man(int player, int card, event_t event)
       player == g_event_player)
   {
     PLAYER_CARD_INSTANCE(player, card).upkeep_flags |= 0x10;
-    PLAYER_CARD_INSTANCE(player, card).mana_to_untap[COLOR_COLORLESS] =
-        PLAYER_CARD_INSTANCE(player, card).mana_to_untap[COLOR_COLORLESS] + 1;
+    PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[COLOR_COLORLESS] =
+        PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[COLOR_COLORLESS] + 1;
   }
 
   if (event == EVENT_CAST_SPELL && card == g_affected_card && player == g_affected_card_controller)
   {
-    PLAYER_CARD_INSTANCE(player, card).mana_to_untap[COLOR_COLORLESS] =
-        PLAYER_CARD_INSTANCE(player, card).mana_to_untap[COLOR_COLORLESS] + 1;
+    PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[COLOR_COLORLESS] =
+        PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[COLOR_COLORLESS] + 1;
   }
 
   return 0;
@@ -4940,12 +4940,12 @@ int card_colossus_of_sardia(int player, int card, event_t event)
       player == g_event_player)
   {
     PLAYER_CARD_INSTANCE(player, card).upkeep_flags |= 0x10;
-    PLAYER_CARD_INSTANCE(player, card).mana_to_untap[COLOR_COLORLESS] += 9;
+    PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[COLOR_COLORLESS] += 9;
   }
 
   if (event == EVENT_CAST_SPELL && card == g_affected_card && player == g_affected_card_controller)
   {
-    PLAYER_CARD_INSTANCE(player, card).mana_to_untap[COLOR_COLORLESS] += 9;
+    PLAYER_CARD_INSTANCE(player, card).ext->legacy_mana_to_untap[COLOR_COLORLESS] += 9;
   }
 
   return 0;

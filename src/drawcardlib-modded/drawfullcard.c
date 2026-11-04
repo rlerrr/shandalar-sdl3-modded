@@ -1793,8 +1793,8 @@ DrawCardBack(HDC hdc, const RECT* dest_rect,
 }
 
 int
-DrawFullCard(HDC hdc, const RECT* dest_rect, const card_ptr_t* cp, int pic_version, int big_art_style,
-			 int expand_text_box, const char* illus)
+DrawFullCardEx(HDC hdc, const RECT* dest_rect, const card_ptr_t* cp, int pic_version, int big_art_style,
+             int expand_text_box, const char* illus, int expansion)
 {
   /* big_art_style is variously 0, 2, 17, or 18 when called from magic.exe or shandalar.exe, depending on the calling
    * function.
@@ -1869,6 +1869,14 @@ DrawFullCard(HDC hdc, const RECT* dest_rect, const card_ptr_t* cp, int pic_versi
   SetViewportOrgEx(hdc, (dest_rect->right + dest_rect->left) / 2, (dest_rect->bottom + dest_rect->top) / 2, NULL);
 
   const Rarities* r = get_rarity(cp->id);
+  Rarities selected_printing;
+  if (r && expansion > 0 && printing_rarity(r, expansion) != NONE) {
+    selected_printing = *r;
+    selected_printing.default_expansion = expansion;
+    selected_printing.default_rarity = printing_rarity(r, expansion);
+    r = &selected_printing;
+  }
+
   PicHandleNames framenum = select_frame(cp, r, -1, -1);
 
   int is_a_creature = (hack_power || hack_toughness
@@ -1963,4 +1971,10 @@ DrawFullCard(HDC hdc, const RECT* dest_rect, const card_ptr_t* cp, int pic_versi
   RestoreDC(hdc, savedc);
   LeaveCriticalSection(critical_section_for_drawing);
   return big_art_exists;
+}
+
+int DrawFullCard(HDC hdc, const RECT* dest_rect, const card_ptr_t* cp, int pic_version, int big_art_style,
+             int expand_text_box, const char* illus)
+{
+  return DrawFullCardEx(hdc, dest_rect, cp, pic_version, big_art_style, expand_text_box, illus, 0);
 }

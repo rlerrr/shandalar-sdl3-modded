@@ -287,6 +287,8 @@ int duel_test_initialize(const char *assets)
 {
   char path[1024]; int p, c;
   if (initialized) return 1;
+  DuelHost host = {NULL, choose};
+  duel_host_install(&host, 1, 200000);
   shandalar_set_presentation_guard(duel_host_fail);
   shandalar_set_time_hooks(headless_clock, headless_sleep);
   shandalar_assets_set_root(assets);
@@ -370,10 +372,11 @@ DuelTestRef duel_test_add(int player, int zone, int csvid, int state)
   ref.card = manalinkeh_add_card_to_hand(player, id);
   if (zone == DUEL_ZONE_BATTLEFIELD) manalinkeh_put_into_play(player, ref.card);
   card_instance_t *inst = &global_card_instances[player][ref.card];
-  inst->state &= ~(STATE_SUMMONSICK | STATE_SUMMONSICK_BOTH);
+  inst->ext->host_summoning_sickness = 0;
+  inst->state &= ~STATE_SUMMONSICK_BOTH;
   if (state & DUEL_STATE_TAPPED) inst->state |= STATE_TAPPED;
   if (state & DUEL_STATE_UNTAPPED) inst->state &= ~STATE_TAPPED;
-  if (state & DUEL_STATE_SICK) inst->state |= STATE_SUMMONSICK | STATE_SUMMONSICK_BOTH;
+  if (state & DUEL_STATE_SICK) { inst->ext->host_summoning_sickness = 1; inst->state |= STATE_SUMMONSICK_BOTH; }
   if (state & DUEL_STATE_ATTACKING) inst->state |= STATE_ATTACKING;
   /* STATE_OWNED_BY_OPPONENT records player one's ownership, independently
    * of controller.  Toggle the default ownership to construct stolen cards. */

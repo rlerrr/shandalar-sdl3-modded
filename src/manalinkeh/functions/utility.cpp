@@ -6,6 +6,11 @@
 
 #include "manalink.h"
 
+iid_t csvid_t::iid() const
+{
+  return iid_t(get_internal_card_id_from_csv_id(raw));
+}
+
 /*********************************
 * C interface to std::set<void*> *
 *********************************/
@@ -15,7 +20,7 @@ struct SetVoidptr_t
   std::set<void*> m;
 };
 
-// Inserts val into the set described by s, creating the set first if s is NULL.  Returns nonzero if val was already in the set.
+// Inserts val into the set described by s, creating the set first if *s is NULL.  Returns nonzero if val was inserted.
 int
 SetVoidptr_insert(SetVoidptr* s, void* val)
 {
@@ -65,7 +70,7 @@ UnorderedMapIntInt_fetch(UnorderedMapIntInt* m, int key)
 	return &(it->second);
 }
 
-// Returns a pointer to the value for key in the map described by m, creating the map first if m is NULL.  If key isn't in the map, inserts it first.
+// Returns a pointer to the value for key in the map described by m, creating the map first if *m is NULL.  If key isn't in the map, inserts it first.
 int*
 UnorderedMapIntInt_set(UnorderedMapIntInt* m, int key)
 {

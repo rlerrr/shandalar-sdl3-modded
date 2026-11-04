@@ -1,18 +1,24 @@
-#include "magic/src/duel_host.h"
 // -*- c-basic-offset:2 -*-
 // Low-level event, trigger, and card function handling.
 
 #include "manalink.h"
+#include "magic/src/duel_host.h"
+
+/* October 2022 DWARF globals, original events.c:786-787; DLL .data contains 1. */
+int raw_base_pt = 1;              /* 0x02721d64 */
+int raw_characteristic_pt = 1;    /* 0x02721d60 */
 
 // These are fairly common here, but shouldn't be used elsewhere
-
 // A frontend for call_card_fn() where both address and instance should be computed from {player,card}.
 int call_card_function(int player, int card, event_t event)
 {
-  card_instance_t* instance = get_card_instance(player, card);
-
-  CardFunction fn = cards_data[instance->internal_card_id].code_pointer;
-  return call_card_fn(fn, get_card_instance(player, card), player, card, event);
+  card_instance_t *instance = get_card_instance(player, card);
+  int iid = instance->internal_card_id;
+  if (iid == -1)
+    iid = instance->backup_internal_card_id;
+  CardFunction fn = cards_data[iid].code_pointer;
+  instance = get_card_instance(player, card);
+  return call_card_fn(fn, instance, player, card, event);
 }
 
 // A frontend for call_card_fn() where address should be computed from instance.
@@ -24,16 +30,14 @@ int call_card_function_i(card_instance_t* instance, int player, int card, event_
 
 int call_card_fn_impl(CardFunction address, card_instance_t* instance, int player, int card, event_t event);	// never call directly
 // Puts instance into esi, then calls address(player, card, event).
-int call_card_fn(CardFunction address, card_instance_t* instance, int player, int card, event_t event)
+int call_card_fn(CardFunction address, card_instance_t *instance, int player, int card,
+                 event_t event)
 {
   int old_trigger_condition = trigger_condition;
   if (event != EVENT_TRIGGER && event != EVENT_RESOLVE_TRIGGER && event != EVENT_END_TRIGGER)
-	trigger_condition = -1;
-
+    trigger_condition = -1;
   int rval = call_card_fn_impl(address, instance, player, card, event);
-
   trigger_condition = old_trigger_condition;
-
   return rval;
 }
 
@@ -41,12 +45,11 @@ extern int timestamp_card[500];
 extern int timestamp_player[500];
 void dispatch_event_raw(event_t event)
 {
-  if (duel_host_is_headless() && duel_host_capture().remaining_steps < 8)
-    fprintf(stderr,"EVENT budget exhausted: event=%x affected=(%d,%d) trigger=%x phase=%d stack=%d result=%d\n",event,affected_card_controller,affected_card,trigger_condition,current_phase,stack_size,event_result);
-  duel_host_checkpoint("execution budget exhausted during event dispatch");
   // 0x435a40
 
-  minimize_nondraining_mana();	// Needs to happen quite frequently.  This'll do it.
+  if (duel_host_is_headless() && duel_host_capture().remaining_steps < 8)
+    fprintf(stderr,"EVENT budget exhausted: event=%x affected=(%d,%d) trigger=%x phase=%d stack=%d result=%d\n",event,affected_card_controller,affected_card,trigger_condition,current_phase,stack_size,event_result);
+  duel_host_checkpoint("execution budget exhausted during event dispatch");minimize_nondraining_mana();	// Needs to happen quite frequently.  This'll do it.
 
   // Begin additions
   // These two are because something calls this without stashing them when it really should; http://www.slightlymagic.net/forum/viewtopic.php?t=13665 is a symptom.
@@ -137,99 +140,49 @@ void dispatch_event_raw(event_t event)
 }
 
 // dispatch_event() forces the initial value of event_result to 0; this lets you set it arbitrarily.
-int dispatch_event_with_initial_event_result(int new_affected_card_controller, int new_affected_card, event_t event, int initial_event_result)
+int dispatch_event_with_initial_event_result(int new_affected_card_controller,
+                                             int new_affected_card, event_t event,
+                                             int initial_event_result)
 {
-  // When the exe needs to do this, it inlines everything here.  Fugly.
-
-  push_affected_card_stack();
-
-  event_result = initial_event_result;
-  affected_card_controller = new_affected_card_controller;
-  affected_card = new_affected_card;
-  attacking_card_controller = 1 - new_affected_card_controller;
-  attacking_card = -1;
-
-  int old_trigger_condition = trigger_condition;
-  if (event != EVENT_TRIGGER && event != EVENT_RESOLVE_TRIGGER && event != EVENT_END_TRIGGER)
-	trigger_condition = -1;
-
-  dispatch_event_raw(event);
-
-  int new_event_result = event_result;
-
-  trigger_condition = old_trigger_condition;
-  pop_affected_card_stack();
-
-  return new_event_result;
+  return dispatch_event_with_attacker_and_initial_event_result(
+      new_affected_card_controller, new_affected_card, event, 1 - new_affected_card_controller, -1,
+      initial_event_result);
 }
 
 /* dispatch_event() forces attacking_card_controller to 1-player and attacking_card to -1; this lets you set them explicitly.  Returns the value of event_result
  * as set by the cards' functions (before restoring event_result's previous value). */
-int dispatch_event_with_attacker(int new_affected_card_controller, int new_affected_card, event_t event, int new_attacking_card_controller, int new_attacking_card)
+int dispatch_event_with_attacker(int new_affected_card_controller, int new_affected_card,
+                                 event_t event, int new_attacking_card_controller,
+                                 int new_attacking_card)
 {
-  // When the exe needs to do this, it inlines everything here, too.  Still fugly.
-
-  push_affected_card_stack();
-
-  event_result = 0;
-  affected_card_controller = new_affected_card_controller;
-  affected_card = new_affected_card;
-  attacking_card_controller = new_attacking_card_controller;
-  attacking_card = new_attacking_card;
-
-  int old_trigger_condition = trigger_condition;
-  if (event != EVENT_TRIGGER && event != EVENT_RESOLVE_TRIGGER && event != EVENT_END_TRIGGER)
-	trigger_condition = -1;
-
-  dispatch_event_raw(event);
-
-  int new_event_result = event_result;
-
-  trigger_condition = old_trigger_condition;
-  pop_affected_card_stack();
-
-  return new_event_result;
+  return dispatch_event_with_attacker_and_initial_event_result(
+      new_affected_card_controller, new_affected_card, event, new_attacking_card_controller,
+      new_attacking_card, 0);
 }
 
 /* Identical to dispatch_event_with_attacker(), but only sends the event to (new_affeced_card_controller,new_affected_card).  Differs from a bare
  * call_card_function() in that it preserves affected_card_controller, affected_card, trigger_condition, event_result, etc.  Returns the value of event_result
  * as set by the card function (before restoring event_result's previous value). */
-int dispatch_event_with_attacker_to_one_card(int new_affected_card_controller, int new_affected_card, event_t event, int new_attacking_card_controller, int new_attacking_card)
+int dispatch_event_with_attacker_to_one_card(int new_affected_card_controller,
+                                             int new_affected_card, event_t event,
+                                             int new_attacking_card_controller,
+                                             int new_attacking_card)
 {
-  /* 0x435B50 is almost equivalent, but it returns what the card's function does instead of event_result; plus, has a lot of special-casing for specific events
-   * that we don't need. */
-
-  return dispatch_event_arbitrary_to_one_card(new_affected_card_controller, new_affected_card,
-											  event,
-											  new_affected_card_controller, new_affected_card,
-											  new_attacking_card_controller, new_attacking_card);
+  return dispatch_event_arbitrary_to_one_card_with_initial_event_result(
+      new_affected_card_controller, new_affected_card, event, new_affected_card_controller,
+      new_affected_card, new_attacking_card_controller, new_attacking_card, 0);
 }
 
 int event_rval;
 /* Identical to dispatch_event_with_attacker_to_one_card(), but sends the event to an arbitrary (player, card) pair which can differ from
  * (affected_card_controller, affected_card). */
-int dispatch_event_arbitrary_to_one_card(int player, int card, event_t event, int new_affected_card_controller, int new_affected_card, int new_attacking_card_controller, int new_attacking_card)
+int dispatch_event_arbitrary_to_one_card(int player, int card, event_t event,
+                                         int new_affected_card_controller, int new_affected_card,
+                                         int new_attacking_card_controller, int new_attacking_card)
 {
-  push_affected_card_stack();
-
-  event_result = 0;
-  affected_card_controller = new_affected_card_controller;
-  affected_card = new_affected_card;
-  attacking_card_controller = new_attacking_card_controller;
-  attacking_card = new_attacking_card;
-
-  int old_trigger_condition = trigger_condition;
-  if (event != EVENT_TRIGGER && event != EVENT_RESOLVE_TRIGGER && event != EVENT_END_TRIGGER)
-	trigger_condition = -1;
-
-  event_rval = call_card_function(player, card, event);
-
-  int new_event_result = event_result;
-
-  trigger_condition = old_trigger_condition;
-  pop_affected_card_stack();
-
-  return new_event_result;
+  return dispatch_event_arbitrary_to_one_card_with_initial_event_result(
+      player, card, event, new_affected_card_controller, new_affected_card,
+      new_attacking_card_controller, new_attacking_card, 0);
 }
 
 /* The semantics of this one are a bit unusual.  Avoid unless you know exactly why you need it. */
@@ -327,15 +280,69 @@ int dispatch_trigger_to_one_card(int player, int card, event_t event)
 xtrigger_t xtrigger_impl_value_dont_use_directly = 0;
 enable_xtrigger_flags_t enable_xtrigger_flags = 0;
 
-static void dispatch_trigger_impl(int player, trigger_t trig, xtrigger_t xtrig, const char *prompt, int TENTATIVE_allow_response)
+/* ManalinkEh 2022: 0x26cbdb0; original functions/events.c:155. */
+int dispatch_event_with_attacker_and_initial_event_result(int new_affected_card_controller,
+                                                          int new_affected_card, event_t event,
+                                                          int new_attacking_card_controller,
+                                                          int new_attacking_card,
+                                                          int initial_event_result)
+{
+  int result;
+  uint32_t saved_trigger_condition;
+
+  push_affected_card_stack();
+  saved_trigger_condition = trigger_condition;
+  event_result = initial_event_result;
+  affected_card_controller = new_affected_card_controller;
+  affected_card = new_affected_card;
+  attacking_card_controller = new_attacking_card_controller;
+  attacking_card = new_attacking_card;
+  if ((1 < (uint32_t)(event - EVENT_TRIGGER)) && (event != EVENT_END_TRIGGER))
+  {
+    trigger_condition = 0xffffffff;
+  }
+  dispatch_event_raw(event);
+  result = event_result;
+  trigger_condition = saved_trigger_condition;
+  pop_affected_card_stack();
+  return result;
+}
+
+/* ManalinkEh 2022: 0x26cb5b0; original functions/events.c:223. */
+int dispatch_event_arbitrary_to_one_card_with_initial_event_result(
+    int player, int card, event_t event, int new_affected_card_controller, int new_affected_card,
+    int new_attacking_card_controller, int new_attacking_card, int initial_event_result)
+{
+  int result;
+  uint32_t saved_trigger_condition;
+
+  push_affected_card_stack();
+  saved_trigger_condition = trigger_condition;
+  event_result = initial_event_result;
+  affected_card_controller = new_affected_card_controller;
+  affected_card = new_affected_card;
+  attacking_card_controller = new_attacking_card_controller;
+  attacking_card = new_attacking_card;
+  if ((1 < (uint32_t)(event - EVENT_TRIGGER)) && (event != EVENT_END_TRIGGER))
+  {
+    trigger_condition = 0xffffffff;
+  }
+  event_rval = call_card_function(player, card, event);
+  result = event_result;
+  trigger_condition = saved_trigger_condition;
+  pop_affected_card_stack();
+  return result;
+}
+
+static void dispatch_trigger_impl(int player, trigger_t trig, xtrigger_t xtrig, const char *prompt,
+                                  int TENTATIVE_allow_response)
 {
   // Original at 0x4371E0
-#define TRIGGER_DEPTH	g_nested_trigger_depth
+#define TRIGGER_DEPTH g_nested_trigger_depth
 
   ++TRIGGER_DEPTH;
   int orig_tcc = trigger_cause_controller;
   int orig_tc = trigger_cause;
-  int old_life_gained = life_gained;
   int old_62C180 = g_activation_dispatch_flags;
   int old_reason_for_trigger_controller = reason_for_trigger_controller;
   int old_62BCE8 = g_current_action_event_code;
@@ -347,65 +354,63 @@ static void dispatch_trigger_impl(int player, trigger_t trig, xtrigger_t xtrig, 
   char processing[2][150];
   int processing_set = 0;
   if (TRIGGER_DEPTH != 1)
-	{
-	  processing_set = 1;
-	  for (p = 0; p < 2; ++p)
-		{
-		  ASSERT(active_cards_count[p] <= 150);
-		  for (c = 0; c < active_cards_count[p]; ++c)
-			{
-			  card_instance_t* instance = get_card_instance(p, c);
-			  if (instance->internal_card_id == -1)
-				processing[p][c] = 2;
-			  else if (instance->state & STATE_PROCESSING)
-				{
-				  processing[p][c] = 1;
-				  instance->state &= ~STATE_PROCESSING;
-				}
-			  else
-				processing[p][c] = 0;
+  {
+    processing_set = 1;
+    for (p = 0; p < 2; ++p)
+    {
+      ASSERT(active_cards_count[p] <= 150);
+      for (c = 0; c < active_cards_count[p]; ++c)
+      {
+        card_instance_t *instance = get_card_instance(p, c);
+        if (instance->internal_card_id == -1)
+          processing[p][c] = 2;
+        else if (instance->state & STATE_PROCESSING)
+        {
+          processing[p][c] = 1;
+          instance->state &= ~STATE_PROCESSING;
+        }
+        else
+          processing[p][c] = 0;
 
-			  if (instance->state & STATE_IS_TRIGGERING)
-				{
-				  processing[p][c] |= 4;
-				  instance->state &= ~STATE_IS_TRIGGERING;
-				}
-			}
+        if (instance->state & STATE_IS_TRIGGERING)
+        {
+          processing[p][c] |= 4;
+          instance->state &= ~STATE_IS_TRIGGERING;
+        }
+      }
 
-		  for (c = active_cards_count[p]; c < 150; ++c)
-			processing[p][c] = 2;
-		}
-	}
+      for (c = active_cards_count[p]; c < 150; ++c)
+        processing[p][c] = 2;
+    }
+  }
   // End additions
 
+  int old_620860 = g_response_processing_flags;
+  int old_60A554 = g_response_action_mask;
   unsigned int v8;
   do
-	{
-	  int old_620860 = g_response_processing_flags;
-	  if (trace_mode & 2)
-		g_response_processing_flags = 1;
-	  else if (player)
-		g_response_processing_flags = 2;
-	  else
-		g_response_processing_flags = 1;
+  {
+    if (trace_mode & 2)
+      g_response_processing_flags = 1;
+    else if (player)
+      g_response_processing_flags = 2;
+    else
+      g_response_processing_flags = 1;
 
-	  trigger_condition = trig;
-	  xtrigger_impl_value_dont_use_directly = xtrig;
-	  int old_60A554 = g_response_action_mask;
-	  if (TENTATIVE_allow_response)
-		g_response_action_mask = TYPE_INSTANT | TYPE_INTERRUPT;
-	  else
-		g_response_action_mask = 0;
-	  cancel = 0;
-	  g_duel_state_current_card = 0;
-	  g_activation_dispatch_flags = 0;
-	  v8 = process_response_actions(player, prompt);
-	  g_response_action_mask = old_60A554;
-	  g_response_card_type_mask = old_60A554 & (TYPE_INSTANT | TYPE_INTERRUPT);
-	  g_response_processing_flags = old_620860;
-	}
-  while (((v8 < 1 ? 4 : 6) & g_activation_dispatch_flags)
-		 || (TENTATIVE_allow_response && v8));
+    trigger_condition = trig;
+    xtrigger_impl_value_dont_use_directly = xtrig;
+    if (TENTATIVE_allow_response)
+      g_response_action_mask = TYPE_INSTANT | TYPE_INTERRUPT;
+    else
+      g_response_action_mask = 0;
+    cancel = 0;
+    g_duel_state_current_card = 0;
+    g_activation_dispatch_flags = 0;
+    v8 = process_response_actions(player, prompt);
+    g_response_card_type_mask = old_60A554 & (TYPE_INSTANT | TYPE_INTERRUPT);
+  } while (((v8 < 1 ? 4 : 6) & g_activation_dispatch_flags) || (TENTATIVE_allow_response && v8));
+  g_response_action_mask = old_60A554;
+  g_response_processing_flags = old_620860;
 
   // Begin additions
   // Not just dispatch_event(... EVENT_END_TRIGGER), since that'll clear trigger_condition
@@ -416,15 +421,15 @@ static void dispatch_trigger_impl(int player, trigger_t trig, xtrigger_t xtrig, 
   trigger_cause = orig_tc;
   trigger_cause_controller = orig_tcc;
   int old_aff_cc = affected_card_controller, old_aff_c = affected_card, old_ev = event_result;
-  card_instance_t* inst;
+  card_instance_t *inst;
   for (p = 0; p < 2; ++p)
-	for (c = 0; c < active_cards_count[p]; ++c)
-	  if ((inst = in_play(p, c)))
-		{
-		  affected_card_controller = p;
-		  affected_card = c;
-		  call_card_function_i(inst, p, c, EVENT_END_TRIGGER);
-		}
+    for (c = 0; c < active_cards_count[p]; ++c)
+      if ((inst = in_play(p, c)))
+      {
+        affected_card_controller = p;
+        affected_card = c;
+        call_card_function_i(inst, p, c, EVENT_END_TRIGGER);
+      }
   affected_card_controller = old_aff_cc;
   affected_card = old_aff_c;
   event_result = old_ev;
@@ -436,53 +441,54 @@ static void dispatch_trigger_impl(int player, trigger_t trig, xtrigger_t xtrig, 
 
   --TRIGGER_DEPTH;
   if (TRIGGER_DEPTH == 0)
-	{
-	  for (p = 0; p < 2; ++p)
-		for (c = 0; c < active_cards_count[p]; ++c)
-		  get_card_instance(p, c)->state &= ~(STATE_PROCESSING | STATE_IS_TRIGGERING);
+  {
+    for (p = 0; p < 2; ++p)
+      for (c = 0; c < active_cards_count[p]; ++c)
+        get_card_instance(p, c)->state &= ~(STATE_PROCESSING | STATE_IS_TRIGGERING);
 
-	  if (!g_trigger_dispatch_depth)
-		{
-		  g_response_window_serial = 0;
-		  if (ai_is_speculating != 1)
-			g_phase_stop_suppressed = 0;
-		}
-	}
+    if (!g_trigger_dispatch_depth)
+    {
+      g_response_window_serial = 0;
+      if (ai_is_speculating != 1)
+        g_phase_stop_suppressed = 0;
+    }
+  }
   // Begin additions
   else
-	{
-	  ASSERT(processing_set);
-	  for (p = 0; p < 2; ++p)
-		{
-		  ASSERT(active_cards_count[p] <= 150);
-		  for (c = 0; c < active_cards_count[p]; ++c)
-			{
-			  card_instance_t* instance = get_card_instance(p, c);
+  {
+    ASSERT(processing_set);
+    for (p = 0; p < 2; ++p)
+    {
+      ASSERT(active_cards_count[p] <= 150);
+      for (c = 0; c < active_cards_count[p]; ++c)
+      {
+        card_instance_t *instance = get_card_instance(p, c);
 
-			  if (instance->internal_card_id == -1)	// Any newly-obliterated cards always get processing removed.
-				instance->state &= ~(STATE_PROCESSING | STATE_IS_TRIGGERING);
-			  else
-				{
-				  if (processing[p][c] & 4)	// Restore the previous is-triggering state
-					{
-					  instance->state |= STATE_IS_TRIGGERING;
-					  processing[p][c] &= ~4;
-					}
+        if (instance->internal_card_id ==
+            -1) // Any newly-obliterated cards always get processing removed.
+          instance->state &= ~(STATE_PROCESSING | STATE_IS_TRIGGERING);
+        else
+        {
+          if (processing[p][c] & 4) // Restore the previous is-triggering state
+          {
+            instance->state |= STATE_IS_TRIGGERING;
+            processing[p][c] &= ~4;
+          }
 
-				  if (processing[p][c])		// Newly-created cards (processing[p][c] == 2) and cards that had processing before (processing[p][c] == 1)
-					instance->state |= STATE_PROCESSING;
-				  else						// Unprocessed cards that existed before and after get it removed.
-					instance->state &= ~STATE_PROCESSING;
-				}
-			}
-		}
-	}
+          if (processing[p][c]) // Newly-created cards (processing[p][c] == 2) and cards that had
+                                // processing before (processing[p][c] == 1)
+            instance->state |= STATE_PROCESSING;
+          else // Unprocessed cards that existed before and after get it removed.
+            instance->state &= ~STATE_PROCESSING;
+        }
+      }
+    }
+  }
   // End additions
 
   g_activation_dispatch_flags = old_62C180;
   reason_for_trigger_controller = old_reason_for_trigger_controller;
   g_current_action_event_code = old_62BCE8;
-  life_gained = old_life_gained;
 
 #undef TRIGGER_DEPTH
 }
@@ -533,387 +539,577 @@ int dispatch_xtrigger2(int player, xtrigger_t xtrig, const char *prompt, int TEN
   return 0;
 }
 
+// Fixes a bug in the exe.  Do not call directly.
 void resolve_trigger(int player, int card, int TENTATIVE_reason_for_trigger_controller)
 {
-  // Original at 434800
+  if ((uint8_t)trace_mode & 2)
+  {
+    char buf[500];
+    card_instance_t *traced = get_card_instance(player, card);
+    int sequence = g_duel_trace_counter;
+    g_duel_trace_counter = sequence + 1;
+    sprintf(buf, "%d: Player #%d is processing %s(%d).\n", sequence, player,
+            cards_data[traced->internal_card_id].name, card);
+    append_to_trace_txt(buf);
+  }
+  g_ai_search_result = 0;
+  put_card_or_activation_onto_stack(player, card, EVENT_RESOLVE_TRIGGER,
+                                    TENTATIVE_reason_for_trigger_controller, 0);
+  if (spell_fizzled == 1)
+  {
+    obliterate_top_card_of_stack();
+    g_ai_search_result = 0;
+    return;
+  }
+  if (ai_is_speculating != 1)
+  {
+    set_stack_damage_targets();
+    if (reason_for_trigger_controller != 0)
+    {
+      char buf[300];
+      load_text(NULL, "PROMPT_PROC1");
+      sprintf(buf, text_lines[0], opponent_name);
+      raw_do_dialog(player, card, -1, -1, buf, 0);
+    }
+    for (int p = 0; p < 2; ++p)
+      for (int c = 0; c < active_cards_count[p]; ++c)
+      {
+        card_instance_t *instance = get_card_instance(p, c);
+        instance->state &= ~STATE_IS_TRIGGERING;
+      }
+  }
+  card_instance_t *source = get_card_instance(player, card);
+  unsigned int saved_condition = trigger_condition;
+  source->state |= STATE_IS_TRIGGERING | STATE_PROCESSING;
+  xtrigger_t saved_xtrigger = xtrigger_impl_value_dont_use_directly;
+  int saved_cause = trigger_cause;
+  int saved_cause_controller = trigger_cause_controller;
 
-  if (trace_mode & 2)
-	{
-	  char buf[500];
-	  sprintf(buf, "%d: Player #%d is processing %s(%d).\n", g_duel_trace_counter++, player, cards_data[get_card_instance(player, card)->internal_card_id].name, card);
-	  append_to_trace_txt(buf);	// append_to_trace_txt()
-	}
-  g_ai_search_result = 0;	// This is only ever written to, and only ever set to 0, but I'm leaving it in place just in case
+  int proxy_card = -1;
+  card_instance_t *proxy = NULL;
+  unsigned int response_condition = saved_condition;
+  if (!(source->token_status & 0x80) && !source->kill_code && (int)source->token_status >= 0)
+  {
+    if (in_play(player, card))
+    {
+      int iid = source->internal_card_id;
+      uint16_t id = cards_data[iid].id;
+      if (cards_data[iid].cc[2] != 3 && (uint16_t)(id - 901) >= 8 && (uint16_t)(id - 911) >= 19 &&
+          (trigger_condition & ~4U) != 0xd8 && (unsigned int)trigger_condition - 0xd4 >= 2 &&
+          cards_data[iid].type != TYPE_EFFECT && ai_is_speculating != 1 && player != -1 &&
+          card != -1)
+      {
+        proxy_card = create_legacy_effect(player, card, empty);
+        if (proxy_card == -1)
+          backtrace_and_abort("functions/events.c:633\nstack_card != -1");
+        proxy = get_card_instance(player, proxy_card);
+        proxy->state = 0x800022;
+        proxy->token_status = 0x80010000;
+        proxy->damage_source_player = (int8_t)player;
+        proxy->damage_source_card = card;
+        unsigned int timestamp = proxy->timestamp;
+        memcpy_inst_and_ext(proxy, source);
+        proxy->kill_code = 0;
+        proxy->state = 0x800022;
+        unsigned int source_iid = source->internal_card_id;
+        proxy->token_status = 0x80010000;
+        proxy->original_internal_card_id = source_iid;
+        proxy->unknown0x14 = 0;
+        if (source_iid == UINT32_MAX)
+          proxy->original_internal_card_id = source->backup_internal_card_id;
+        int image = get_card_image_number(proxy->display_pic_csv_id, player, card);
+        proxy->parent_controller = player;
+        proxy->display_pic_num = (uint16_t)image;
+        proxy->parent_card = card;
+        proxy->timestamp = timestamp;
+      }
+    }
+    response_condition = trigger_condition;
+  }
+  cant_be_responded_to |= response_condition == 0xcd;
+  if (!cant_be_responded_to)
+    allow_response_to_trigger(player, card);
+  trigger_cause_controller = saved_cause_controller;
+  trigger_cause = saved_cause;
+  trigger_condition = saved_condition;
+  xtrigger_impl_value_dont_use_directly = saved_xtrigger;
 
-  put_card_or_activation_onto_stack(player, card, EVENT_RESOLVE_TRIGGER, TENTATIVE_reason_for_trigger_controller, 0);
-  if (cancel == 1)
-	{
-	  obliterate_top_card_of_stack();
-	  g_ai_search_result = 0;
-	}
+  int completed = 0;
+  if (!source->kill_code && in_play(player, card))
+  {
+    if (!(source->state & 0x40000000U) && (!proxy || !(proxy->state & 0x40000000U)))
+    {
+      resolve_top_card_on_stack();
+      if (proxy)
+        obliterate_card_and_recycle(player, proxy_card);
+      completed = 1;
+    }
+    else if (proxy)
+      obliterate_card_and_recycle(player, proxy_card);
+  }
+  else if (!proxy)
+  {
+    if (!(source->state & 0x40000000U))
+    {
+      resolve_top_card_on_stack();
+      completed = 1;
+    }
+  }
   else
-	{
-	  if (ai_is_speculating != 1)
-		{
-		  set_stack_damage_targets();	// set_stack_damage_targets()
-		  if (reason_for_trigger_controller != 0)
-			{
-			  load_text(0, "PROMPT_PROC1");
-			  char buf[300];
-			  sprintf(buf, text_lines[0], opponent_name);
-			  raw_do_dialog(player, card, -1, -1, buf, 0);	// raw_do_dialog()
-			}
-
-		  int p, c;
-		  for (p = 0; p <= 1; ++p)
-			for (c = 0; c < active_cards_count[p]; ++c)
-			  get_card_instance(p, c)->state &= ~STATE_IS_TRIGGERING;
-		}
-
-	  card_instance_t* instance = get_card_instance(player, card);
-	  instance->state |= STATE_PROCESSING | STATE_IS_TRIGGERING;	// STATE_IS_TRIGGERING added
-
-	  // Begin additions
-	  int old_tcond = trigger_condition;
-	  int old_xtcond = xtrigger_impl_value_dont_use_directly;
-	  int old_tcc = trigger_cause_controller;
-	  int old_tc = trigger_cause;
-	  // End additions
-
-	  resolve_top_card_on_stack();	// resolve_top_card_on_stack();
-
-	  // Begin additions
-	  trigger_condition = old_tcond;
-	  xtrigger_impl_value_dont_use_directly = old_xtcond;
-	  trigger_cause = old_tc;
-	  trigger_cause_controller = old_tcc;
-	  instance->state &= ~STATE_IS_TRIGGERING;
-	  // End additions
-
-	  g_ai_search_result = 0;
-
-	  // Begin additions
-	  dispatch_event(player, card, EVENT_TRIGGER_RESOLVED);
-
-	  trigger_condition = old_tcond;
-	  xtrigger_impl_value_dont_use_directly = old_xtcond;
-	  trigger_cause = old_tc;
-	  trigger_cause_controller = old_tcc;
-	  // End additions
-	}
+  {
+    source->state &= ~(STATE_IS_TRIGGERING | STATE_PROCESSING);
+    proxy->state &= ~0x800022U;
+    proxy->token_status &= ~0x10000U;
+    dispatch_event_to_single_card(player, proxy_card, EVENT_TRIGGER, player, proxy_card);
+    int stack_index = stack_size;
+    stack_data[stack_index].internal_card_id = (int16_t)proxy->internal_card_id;
+    stack_data[stack_index].generating_event = EVENT_RESOLVE_TRIGGER;
+    stack_data[stack_index].unknown_sdt = (uint8_t)TENTATIVE_reason_for_trigger_controller;
+    stack_cards[stack_index].player = player;
+    stack_cards[stack_index].card = proxy_card;
+    stack_damage_targets[stack_index].player = source->damage_target_player;
+    stack_damage_targets[stack_index].card = source->damage_target_card;
+    unsigned int phase = trigger_condition;
+    if (phase == UINT32_MAX)
+      phase = current_phase;
+    stack_phase[stack_index] = phase;
+    if (ai_is_speculating != 1)
+    {
+      g_stack_prompt_flags[stack_index] = 0;
+      stack_index = stack_size;
+    }
+    stack_size = stack_index + 1;
+    stack_cards[stack_size].player = -1;
+    if (affected_card == card)
+      affected_card = proxy_card;
+    if (trigger_cause == card)
+      trigger_cause = saved_cause = proxy_card;
+    proxy->state |= STATE_IS_TRIGGERING | STATE_PROCESSING;
+    if (!cant_be_responded_to)
+      allow_response_to_trigger(player, proxy_card);
+    trigger_cause = saved_cause;
+    trigger_cause_controller = saved_cause_controller;
+    trigger_condition = saved_condition;
+    xtrigger_impl_value_dont_use_directly = saved_xtrigger;
+    if (!(source->state & 0x40000000U) && !(proxy->state & 0x40000000U))
+    {
+      resolve_top_card_on_stack();
+      completed = 1;
+    }
+    obliterate_card_and_recycle(player, proxy_card);
+  }
+  if (completed)
+  {
+    xtrigger_impl_value_dont_use_directly = saved_xtrigger;
+    source->state &= ~STATE_IS_TRIGGERING;
+    trigger_cause = saved_cause;
+    g_ai_search_result = 0;
+    trigger_cause_controller = saved_cause_controller;
+    trigger_condition = saved_condition;
+    dispatch_event(player, card, EVENT_TRIGGER_RESOLVED);
+    trigger_condition = saved_condition;
+    xtrigger_impl_value_dont_use_directly = saved_xtrigger;
+    trigger_cause = saved_cause;
+    trigger_cause_controller = saved_cause_controller;
+  }
+  else
+  {
+    trigger_cause = saved_cause;
+    xtrigger_impl_value_dont_use_directly = saved_xtrigger;
+    source->state &= ~(STATE_IS_TRIGGERING | 0x40000000U);
+    trigger_condition = saved_condition;
+    trigger_cause_controller = saved_cause_controller;
+  }
 }
 
 int get_abilities(int player, int card, event_t event, int new_attacking_card)
 {
-  // 0x4352d0
-
-  card_instance_t* instance = get_card_instance(player, card);
-  int iid = instance->internal_card_id;
-  if (iid == activation_card)
-	{
-	  if (event == EVENT_CHANGE_TYPE)
-		return iid;
-	  else
-		return get_abilities(instance->parent_controller, instance->parent_card, event, new_attacking_card);
-	}
-
+  card_instance_t *inst;
+  unsigned int iid;
+  for (;;)
+  {
+    inst = get_card_instance(player, card);
+    iid = inst->internal_card_id;
+    if (iid != activation_card)
+      break;
+    if (event == EVENT_CHANGE_TYPE)
+      return iid;
+    card = inst->parent_card;
+    player = inst->parent_controller;
+  }
   if (g_duel_active)
-	push_affected_card_stack();
-
+    push_affected_card_stack();
   affected_card_controller = player;
   affected_card = card;
-
-  if (iid == -1)
-	{
-	  iid = instance->backup_internal_card_id;
-	  instance->regen_status &= ~KEYWORD_RECALC_ALL;
-	}
-
-  g_affected_internal_card_id = iid;
+  if (iid == UINT32_MAX)
+  {
+    iid = inst->backup_internal_card_id;
+    inst->regen_status &= ~KEYWORD_RECALC_ALL;
+  }
+  int saved_raw_base = raw_base_pt;
   attacking_card = new_attacking_card;
-
-  int preliminary, recalc = 0;
+  int recalculate = 0;
   switch (event)
-	{
-	  case EVENT_POWER:
-		if (instance->regen_status & KEYWORD_RECALC_POWER)
-		  {
-			instance->regen_status &= ~KEYWORD_RECALC_POWER;
-			preliminary = cards_data[iid].power;
-			if ((instance->state & (STATE_OUBLIETTED|STATE_IN_PLAY)) == STATE_IN_PLAY && preliminary > 0)
-			  preliminary &= ~0x4000;
-			preliminary += instance->counter_power;
-			recalc = 1;
-		  }
-		else
-		  event_result = instance->power;
-		break;
+  {
+  case EVENT_POWER:
+    if (inst->regen_status & KEYWORD_RECALC_POWER)
+    {
+      inst->regen_status &= ~KEYWORD_RECALC_POWER;
+      int swap = get_special_flags3_by_instance(inst) & SF3_SWITCH_POW_TGH;
+      raw_characteristic_pt = swap ? cards_data[iid].toughness : cards_data[iid].power;
+      raw_base_pt = raw_characteristic_pt;
+      if ((inst->state & (STATE_OUBLIETTED | STATE_IN_PLAY)) == STATE_IN_PLAY &&
+          raw_characteristic_pt > 0)
+        raw_base_pt =
+            (int16_t)((swap ? cards_data[iid].toughness : cards_data[iid].power) & 0xbfff);
+      event_result = raw_base_pt + (swap ? inst->counter_toughness : inst->counter_power);
+      if (swap)
+        event = EVENT_TOUGHNESS;
+      recalculate = 1;
+    }
+    else
+      event_result = inst->power;
+    break;
+  case EVENT_TOUGHNESS:
+    if (inst->regen_status & KEYWORD_RECALC_TOUGHNESS)
+    {
+      inst->regen_status &= ~KEYWORD_RECALC_TOUGHNESS;
+      int swap = get_special_flags3_by_instance(inst) & SF3_SWITCH_POW_TGH;
+      raw_characteristic_pt = swap ? cards_data[iid].power : cards_data[iid].toughness;
+      raw_base_pt = raw_characteristic_pt;
+      if ((inst->state & (STATE_OUBLIETTED | STATE_IN_PLAY)) == STATE_IN_PLAY &&
+          raw_characteristic_pt > 0)
+        raw_base_pt =
+            (int16_t)((swap ? cards_data[iid].power : cards_data[iid].toughness) & 0xbfff);
+      event_result = raw_base_pt + (swap ? inst->counter_power : inst->counter_toughness);
+      if (swap)
+        event = EVENT_POWER;
+      recalculate = 1;
+    }
+    else
+      event_result = inst->toughness;
+    break;
+  case EVENT_ABILITIES:
+  {
+    unsigned int keywords = inst->regen_status;
+    if (keywords & KEYWORD_RECALC_ABILITIES)
+    {
+      inst->regen_status = keywords & ~KEYWORD_RECALC_ABILITIES;
+      if (damage_card == iid)
+        keywords &= ~KEYWORD_RECALC_ABILITIES;
+      else
+      {
+        unsigned int base_keywords = cards_data[iid].static_ability;
+        keywords = (keywords & 0x17000000U) | base_keywords;
+        if (base_keywords & 0xf81f)
+        {
+          if (base_keywords & KEYWORD_PROT_COLORED)
+          {
+            unsigned int protections =
+                get_sleighted_protection(player, card, base_keywords & KEYWORD_PROT_COLORED);
+            keywords =
+                (((keywords & 0xffff0000U) | (base_keywords & 0xffffU)) & ~KEYWORD_PROT_COLORED) |
+                protections;
+          }
+          if (keywords & KEYWORD_BASIC_LANDWALK)
+          {
+            unsigned int landwalk =
+                get_hacked_walk(player, card, keywords & KEYWORD_BASIC_LANDWALK);
+            keywords = (keywords & ~KEYWORD_BASIC_LANDWALK) | landwalk;
+          }
+        }
+        if (g_duel_active && (cards_data[iid].type & TYPE_PERMANENT) &&
+            !(cards_data[iid].type & TYPE_EFFECT))
+        {
+          inst->ext->sp_keywords = 0;
+          inst->ext->sp_keywords2 = 0;
+          inst->targets[17].card &= 0xffffff81;
+          inst->state &= ~(STATE_VIGILANCE | STATE_SUMMONSICK_BOTH);
+          if (inst->ext->host_summoning_sickness) inst->state |= STATE_SUMMONSICK_BOTH;
+          inst->token_status &= 0xffff77ff;
+          remove_special_flags(player, card, 0x28000);
+          remove_special_flags2(player, card, 0x1000);
+          /* Haste permissions are owned by their granting effects. */
+        }
+        recalculate = 1;
+      }
+    }
+    event_result = keywords;
+    break;
+  }
+  case EVENT_RECALC_DAMAGE:
+    event_result = inst->damage_on_card;
+    recalculate = 1;
+    break;
+  case EVENT_SET_COLOR:
+    if (!(inst->regen_status & KEYWORD_RECALC_SET_COLOR))
+      event_result = inst->color;
+    else
+    {
+      int is_damage = damage_card == iid;
+      inst->regen_status &= ~KEYWORD_RECALC_SET_COLOR;
+      if (is_damage)
+        event_result = inst->color;
+      else
+      {
+        unsigned char color = inst->initial_color;
+        if (color)
+          event_result = color & COLOR_TEST_ANY_COLORED;
+        else if (cards_data[iid].type & TYPE_LAND)
+          event_result = cards_data[iid].id == CARD_ID_DRYAD_ARBOR ? COLOR_TEST_GREEN : 0;
+        else
+        {
+          int mana_artifact = 0;
+          if ((cards_data[iid].type & TYPE_ARTIFACT) &&
+              (cards_data[iid].extra_ability & EA_MANA_SOURCE))
+          {
+            int original_iid = get_internal_card_id_from_csv_id(cards_data[iid].id);
+            mana_artifact = (cards_data[original_iid].type & TYPE_ARTIFACT) &&
+                            (cards_data[original_iid].extra_ability & EA_MANA_SOURCE);
+          }
+          event_result = mana_artifact ? 0 : cards_data[iid].color & COLOR_TEST_ANY_COLORED;
+        }
+        recalculate = 1;
+      }
+    }
+    break;
+  case EVENT_CHANGE_TYPE:
+    if (inst->internal_card_id == -1)
+      event_result = -1;
+    else if ((inst->regen_status & KEYWORD_RECALC_CHANGE_TYPE) &&
+             ((int)iid < iid_legacy_data_card || (int)iid > iid_legacy_swap_power_toughness))
+    {
+      unsigned int original_iid = inst->original_internal_card_id;
+      inst->regen_status &= ~KEYWORD_RECALC_CHANGE_TYPE;
+      inst->internal_card_id = original_iid;
+      inst->backup_internal_card_id = (uint16_t)original_iid;
+      inst->mana_color = cards_data[original_iid].color;
+      inst->destroys_if_blocked = 0;
+      inst->token_status &= ~STATUS_LEGACY_TYPECHANGE;
+      remove_special_flags2(player, card, 0x484);
+      if (!is_what(player, card, TYPE_EFFECT))
+        reset_subtypes_from_instance(inst, iid);
+      event_result = original_iid;
+      recalculate = 1;
+    }
+    else
+      event_result = iid;
+    break;
+  default:
+    event_result = 0;
+    recalculate = 1;
+    break;
+  }
 
-	  case EVENT_TOUGHNESS:
-		if (instance->regen_status & KEYWORD_RECALC_TOUGHNESS)
-		  {
-			instance->regen_status &= ~KEYWORD_RECALC_TOUGHNESS;
-			preliminary = cards_data[iid].toughness;
-			if ((instance->state & (STATE_OUBLIETTED|STATE_IN_PLAY)) == STATE_IN_PLAY && preliminary > 0)
-			  preliminary &= ~0x4000;
-			preliminary += instance->counter_toughness;
-			recalc = 1;
-		  }
-		else
-		  event_result = instance->toughness;
-		break;
-
-	  case EVENT_ABILITIES:
-		if (instance->regen_status & KEYWORD_RECALC_ABILITIES)
-		  {
-			instance->regen_status &= ~KEYWORD_RECALC_ABILITIES;
-
-			if (iid == damage_card)
-			  {
-				event_result = instance->regen_status;
-				break;
-			  }
-
-			preliminary = ((instance->regen_status & (KEYWORD_RECALC_SET_COLOR|KEYWORD_RECALC_POWER|KEYWORD_RECALC_TOUGHNESS|KEYWORD_RECALC_CHANGE_TYPE))
-						   | cards_data[iid].static_ability);
-			if (preliminary & (KEYWORD_PROT_COLORED | KEYWORD_BASIC_LANDWALK))
-			  {
-				if (preliminary & KEYWORD_PROT_COLORED)
-				  preliminary = (preliminary & ~KEYWORD_PROT_COLORED) | get_sleighted_protection(player, card, (preliminary & KEYWORD_PROT_COLORED));
-
-				if (preliminary & KEYWORD_BASIC_LANDWALK)
-				  preliminary = (preliminary & ~KEYWORD_BASIC_LANDWALK) | get_hacked_walk(player, card, (preliminary & KEYWORD_BASIC_LANDWALK));
-			  }
-
-			if (g_duel_active)
-			  {
-				int typ = cards_data[iid].type;
-				if ((typ & TYPE_PERMANENT) && !(typ & TYPE_EFFECT))
-				  {
-					instance->targets[16].card = 0;
-					// Restore natural restrictions before applying the current haste permissions.
-					instance->state &= ~(STATE_VIGILANCE | STATE_SUMMONSICK_BOTH);
-					if (instance->state & STATE_SUMMONSICK)
-					  instance->state |= STATE_SUMMONSICK_BOTH;
-					instance->token_status &= ~(STATUS_WALL_CAN_ATTACK | STATUS_CANT_ATTACK);
-					remove_special_flags(player, card, SF_MODULAR | SF_HEXPROOF_OVERRIDE);
-				  }
-			  }
-
-			recalc = 1;
-		  }
-		else
-		  event_result = instance->regen_status;
-		break;
-
-	  case EVENT_CHANGE_TYPE:
-		if (instance->internal_card_id == -1)
-		  event_result = -1;
-		else if ((instance->regen_status & KEYWORD_RECALC_CHANGE_TYPE)
-			&& (iid < iid_legacy_data_card/*iid_legacy_data_card*/ || iid > iid_legacy_swap_power_toughness/*iid_legacy_swap_power_toughness*/))
-		  {
-			instance->regen_status &= ~KEYWORD_RECALC_CHANGE_TYPE;
-			instance->backup_internal_card_id = preliminary = instance->internal_card_id = instance->original_internal_card_id;
-			instance->mana_color = cards_data[instance->internal_card_id].color;
-			instance->destroys_if_blocked = 0;
-			instance->token_status &= ~STATUS_LEGACY_TYPECHANGE;
-			remove_special_flags2(player, card, SF2_ENCHANTED_EVENING | SF2_MYCOSYNTH_LATTICE | SF2_TEMPORARY_COPY_OF_TOKEN);
-			recalc = 1;
-		  }
-		else
-		  event_result = iid;
-		break;
-
-	  case EVENT_RECALC_DAMAGE:
-		preliminary = instance->damage_on_card;
-		recalc = 1;
-		break;
-
-	  case EVENT_SET_COLOR:
-		if (instance->regen_status & KEYWORD_RECALC_SET_COLOR)
-		  {
-			instance->regen_status &= ~KEYWORD_RECALC_SET_COLOR;
-
-			if (iid == damage_card)
-			  {
-				event_result = instance->color;
-				break;
-			  }
-
-			if (instance->initial_color)
-			  preliminary = instance->initial_color;
-			else
-			  {
-				card_data_t* cd = &cards_data[iid], *unaltered_cd;
-				// Lands and mana-producing artifacts, stupidly enough, keep their mana color in cd->color.  Actual color is colorless, except for Dryad Arbor.
-				if (cd->type & TYPE_LAND)
-				  preliminary = cards_data[iid].id == CARD_ID_DRYAD_ARBOR ? COLOR_TEST_GREEN : 0;
-				else if ((cd->type & TYPE_ARTIFACT) && (cd->extra_ability & EA_MANA_SOURCE)
-						 /* Only if the unaltered version of the card is both an artifact and a mana source, too; otherwise, it'll make e.g. a Llanowar Elves
-						  * that has been turned into an artifact incorrectly colorless. */
-						 && (unaltered_cd = &cards_data[get_internal_card_id_from_csv_id(cd->id)])
-						 && (unaltered_cd->type & TYPE_ARTIFACT) && (unaltered_cd->extra_ability & EA_MANA_SOURCE))
-				  preliminary = 0;
-				else
-				  preliminary = cd->color;
-			  }
-
-			preliminary &= COLOR_TEST_ANY_COLORED;	// to deal with cards that incorrectly set COLOR_COLORLESS or COLOR_ARTIFACT as color, not mana_color
-
-			recalc = 1;
-		  }
-		else
-		  event_result = instance->color;
-		break;
-
-	  default:
-		preliminary = 0;
-		recalc = 1;
-		break;
-	}
-
-  if (recalc)
-	{
-	  event_result = preliminary;
-	  if (g_duel_active)
-		{
-		  dispatch_event_raw(event);
-
-		  if ((land_can_be_played & LCBP_NEED_EVENT_CHANGE_TYPE_SECOND_PASS) && event == EVENT_CHANGE_TYPE)
-			{
-			  land_can_be_played &= ~LCBP_NEED_EVENT_CHANGE_TYPE_SECOND_PASS;
-			  instance->internal_card_id = event_result;
-			  if (event_result != -1)
-				instance->backup_internal_card_id = event_result;
-
-			  land_can_be_played |= LCBP_DURING_EVENT_CHANGE_TYPE_SECOND_PASS;
-			  dispatch_event_raw(event);
-			  land_can_be_played &= ~LCBP_DURING_EVENT_CHANGE_TYPE_SECOND_PASS;
-			}
-		}
-
-	  if (event == EVENT_ABILITIES && (player_bits[player] & PB_CANT_HAVE_OR_GAIN_ABILITIES_MASK))
-		{
-		  int typ = cards_data[iid].type;
-		  if ((typ & TYPE_PERMANENT) && !(typ & TYPE_EFFECT))
-			{
-			  if (player_bits[player] & PB_CANT_HAVE_OR_GAIN_FIRST_STRIKE)
-				event_result &= ~KEYWORD_FIRST_STRIKE;
-			  if (player_bits[player] & PB_CANT_HAVE_OR_GAIN_FLYING)
-				event_result &= ~KEYWORD_FLYING;
-			  if (player_bits[player] & PB_CANT_HAVE_OR_GAIN_DEATHTOUCH)
-				instance->targets[16].card &= ~SP_KEYWORD_DEATHTOUCH;
-			  if (player_bits[player] & PB_CANT_HAVE_OR_GAIN_TRAMPLE)
-				event_result &= ~KEYWORD_TRAMPLE;
-			  if (player_bits[player] & PB_CANT_HAVE_OR_GAIN_SHROUD)
-				event_result &= ~KEYWORD_SHROUD;
-			  if (player_bits[player] & PB_CANT_HAVE_OR_GAIN_HEXPROOF)
-				instance->targets[16].card &= ~SP_KEYWORD_HEXPROOF;
-			}
-		}
-
-	  if (event == EVENT_POWER)
-		{
-		  /* Power is a signed characteristic.  Damage and other action amounts
-		   * clamp at their own boundaries; queries must retain negative power. */
-		  if (instance->token_status & STATUS_BERSERK)
-			event_result += MAX(0, event_result);
-		}
-	}
-
-  int saved_event_result = event_result;
-  if (event == EVENT_TOUGHNESS
-	  && (instance->state & (STATE_OUBLIETTED|STATE_INVISIBLE|STATE_IN_PLAY)) == STATE_IN_PLAY
-	  && (cards_data[iid].type & TYPE_CREATURE)
-	  && (event_result <= 0
-		  || instance->damage_on_card >= event_result)
-	  && !(instance->token_status & STATUS_CANNOT_BE_DESTROYED)
-	  && g_nested_trigger_depth == 0	// replaces //&& trigger_condition == -1
-	  && !(land_can_be_played & (LCBP_REGENERATION|LCBP_DAMAGE_PREVENTION)))
-	{
-	  if (event_result > 0)
-		kill_card(player, card, KILL_DESTROY);
-	  else
-		kill_card(player, card, KILL_STATE_BASED_ACTION);
-
-	  regenerate_or_graveyard_triggers();	// regenerate_or_graveyard_triggers()
-	}
-
+  if (recalculate)
+  {
+    if (g_duel_active)
+    {
+      dispatch_event_raw(event);
+      if ((land_can_be_played & 0x10000) && event == EVENT_CHANGE_TYPE)
+      {
+        int second_pass_iid = event_result;
+        inst->internal_card_id = second_pass_iid;
+        if (second_pass_iid != -1)
+          inst->backup_internal_card_id = (uint16_t)second_pass_iid;
+        land_can_be_played = (land_can_be_played & ~0x10000U) | 0x20000;
+        dispatch_event_raw(EVENT_CHANGE_TYPE);
+        land_can_be_played &= ~0x20000U;
+      }
+    }
+    if (event == EVENT_ABILITIES)
+    {
+      card_instance_t *counter_instance = get_card_instance(player, card);
+      uint32_t packed_types = counter_instance->targets[18].player;
+      uint32_t packed_counts = counter_instance->targets[18].card;
+      uint8_t counter_types[7] = {counter_instance->special_counter_type,
+                                  packed_types,
+                                  packed_types >> 8,
+                                  packed_types >> 16,
+                                  packed_types >> 24,
+                                  packed_counts >> 16,
+                                  packed_counts >> 24};
+      uint8_t counter_counts[7] = {counter_instance->special_counters_byte,
+                                   counter_instance->counters2,
+                                   counter_instance->counters3,
+                                   counter_instance->counters4,
+                                   counter_instance->counters5,
+                                   packed_counts,
+                                   packed_counts >> 8};
+      int has_ability_counter = 0;
+      for (int i = 0; i < 7; ++i)
+        if ((uint8_t)(counter_types[i] + 0x70U) < 11 && counter_counts[i])
+        {
+          has_ability_counter = 1;
+          break;
+        }
+      if (has_ability_counter && (cards_data[iid].type & TYPE_PERMANENT) &&
+          !(cards_data[iid].type & TYPE_EFFECT))
+      {
+        if (count_counters(player, card, COUNTER_DEATHTOUCH))
+          inst->ext->sp_keywords |= SP_KEYWORD_DEATHTOUCH;
+        if (count_counters(player, card, COUNTER_HEXPROOF))
+          inst->ext->sp_keywords |= SP_KEYWORD_HEXPROOF;
+        if (count_counters(player, card, COUNTER_INDESTRUCTIBLE))
+          inst->ext->sp_keywords |= SP_KEYWORD_INDESTRUCTIBLE;
+        if (count_counters(player, card, COUNTER_LIFELINK))
+          inst->ext->sp_keywords |= SP_KEYWORD_LIFELINK;
+        if (count_counters(player, card, COUNTER_MENACE))
+          inst->ext->sp_keywords |= SP_KEYWORD_MENACE;
+        if (count_counters(player, card, COUNTER_VIGILANCE))
+          inst->ext->sp_keywords |= SP_KEYWORD_VIGILANCE;
+        if (count_counters(player, card, COUNTER_DOUBLE_STRIKE))
+          event_result |= KEYWORD_DOUBLE_STRIKE;
+        if (count_counters(player, card, COUNTER_FIRST_STRIKE))
+          event_result |= KEYWORD_FIRST_STRIKE;
+        if (count_counters(player, card, COUNTER_FLYING))
+          event_result |= KEYWORD_FLYING;
+        if (count_counters(player, card, COUNTER_REACH))
+          event_result |= KEYWORD_REACH;
+        if (count_counters(player, card, COUNTER_TRAMPLE))
+          event_result |= KEYWORD_TRAMPLE;
+      }
+      unsigned int restrictions = player_bits[player];
+      if ((restrictions & 0x1001f0) && (cards_data[iid].type & TYPE_PERMANENT) &&
+          !(cards_data[iid].type & TYPE_EFFECT))
+      {
+        if (restrictions & 0x10)
+          event_result &= ~KEYWORD_FIRST_STRIKE;
+        if (restrictions & 0x20)
+          event_result &= ~KEYWORD_FLYING;
+        if (restrictions & 0x40)
+          inst->ext->sp_keywords &= ~SP_KEYWORD_DEATHTOUCH;
+        if (restrictions & 0x80)
+          event_result &= ~KEYWORD_TRAMPLE;
+        if (restrictions & 0x100000)
+          event_result &= ~KEYWORD_SHROUD;
+        if (restrictions & 0x100)
+          inst->ext->sp_keywords &= ~SP_KEYWORD_HEXPROOF;
+      }
+      if (is_humiliated(player, card, AL_KEY))
+      {
+        if (is_humiliated(player, card, AL_DEFENDER))
+          event_result |= KEYWORD_DEFENDER;
+        if (is_humiliated(player, card, AL_INDESTRUCTIBLE))
+          inst->ext->sp_keywords |= SP_KEYWORD_INDESTRUCTIBLE;
+      }
+      if ((inst->ext->sp_keywords & SP_KEYWORD_HASTE) &&
+          !is_humiliated(player, card, AL_KEY))
+        inst->state &= ~STATE_SUMMONSICK_BOTH;
+    }
+    else if (event == EVENT_POWER)
+    {
+      if (inst->token_status & STATUS_BERSERK)
+        event_result = (unsigned int)event_result * 2U;
+    }
+  }
+  unsigned int result = event_result;
+  if (event == EVENT_TOUGHNESS &&
+      (inst->state & (STATE_OUBLIETTED | STATE_INVISIBLE | STATE_IN_PLAY)) == STATE_IN_PLAY &&
+      (cards_data[iid].type & TYPE_CREATURE) &&
+      (event_result <= 0 || event_result <= inst->damage_on_card) &&
+      !(inst->token_status & STATUS_CANNOT_BE_DESTROYED) && !(land_can_be_played & 0x204) &&
+      !g_nested_trigger_depth)
+  {
+    kill_card(player, card, event_result < 1 ? KILL_STATE_BASED_ACTION : KILL_DESTROY);
+    regenerate_or_graveyard_triggers();
+  }
   if (g_duel_active)
-	pop_affected_card_stack();
-
-  if (event != EVENT_CHANGE_TYPE)
-	{
-	  switch (event)
-		{
-		  case EVENT_POWER:		instance->power = saved_event_result;			break;
-		  case EVENT_TOUGHNESS:	instance->toughness = saved_event_result;		break;
-		  case EVENT_SET_COLOR:	instance->color = saved_event_result & COLOR_TEST_ANY_COLORED;	break;
-		  case EVENT_ABILITIES:
-			instance->regen_status = saved_event_result;
-			// EVENT_CHANGE_TYPE is the canonical location for this, but deathtouch usually is only added during EVENT_ABILITIES, and sometimes can only be.
-			if (instance->targets[16].card & SP_KEYWORD_DEATHTOUCH)
-			  {
-				int typ = cards_data[iid].type;
-				if ((typ & TYPE_PERMANENT) && !(typ & TYPE_EFFECT))
-				  instance->destroys_if_blocked |= DIFB_DESTROYS_UNPROTECTED;
-			  }
-			break;
-		  default:				break;
-		}
-	  return saved_event_result;
-	}
-
-  instance->internal_card_id = saved_event_result;
-  if (saved_event_result != -1)
-	instance->backup_internal_card_id = saved_event_result;
-
-  card_data_t* cd = &cards_data[saved_event_result];
-  if (cd->extra_ability & EA_MANA_SOURCE)
-	{
-	  // There were many special cases here, both before and after the call to get_color_of_mana_produced_by_id(); all are handled by that now.
-	  int csvid = cd->id;
-	  int override = get_color_of_mana_produced_by_id(csvid, instance->info_slot, player);
-	  if (override != -1)
-		instance->mana_color = override;
-	  else
-		instance->mana_color = cards_ptr[csvid]->mana_source_colors;
-
-	  instance->card_color = instance->mana_color;
-#if 0
-	  /* Sends EVENT_MODIFY_MANA_PROD to cards with cc[2] & 2 set.  The only card that has that and responds to EVENT_MODIFY_MANA_PROD is Fertile Ground, so I'm
-	   * not going to bother translating this into C.  Can't be called directly because of its nonstandard calling convention. */
-	  rval_in_eax = TENTATIVE_modify_mana_prod__returns_eax_and_ecx(player, card);
-	  instance->mana_color &= rval_in_ecx;
-	  instance->mana_color |= rval_in_eax;
-#endif
-	}
-
-  // Makes Enchant Creature auras fall off of previously-animated cards that are no longer creatures
-  if (instance->token_status & STATUS_ANIMATED && !(cd->type & TYPE_CREATURE))
-	{
-	  int p, c;
-	  for (p = 0; p <= 1; ++p)
-		for (c = 0; c <= active_cards_count[p]; ++c)
-		  if (in_play(p, c))
-			{
-			  card_instance_t* inst = get_card_instance(p, c);
-			  if (inst->damage_target_player == player && inst->damage_target_card == card
-				  && (cards_data[inst->internal_card_id].type & TYPE_ENCHANTMENT)
-				  && cards_ptr[cards_data[inst->internal_card_id].id]->subtype1 == 44)
-				kill_card(p, c, KILL_STATE_BASED_ACTION);
-			}
-	}
-
-  if (instance->state & STATE_IN_PLAY)
-	event_flags |= cards_data[instance->internal_card_id].extra_ability & (EA_MARTYR|EA_SELECT_ATTACK|EA_SELECT_BLOCK|EA_LICH|EA_PAID_ATTACK|
-																				 EA_PAID_BLOCK|EA_FORCE_ATTACK|EA_BEFORE_COMBAT|EA_DECLARE_ATTACK|
-																				 EA_FELLWAR_STONE|EA_CONTROLLED);
-
-  return saved_event_result;
+    pop_affected_card_stack();
+  if (event == EVENT_CHANGE_TYPE)
+  {
+    inst->internal_card_id = result;
+    if (result != UINT32_MAX)
+      inst->backup_internal_card_id = (uint16_t)result;
+    if ((cards_data[result].extra_ability & EA_MANA_SOURCE) ||
+        (is_what(player, card, TYPE_LAND) && mana_colors_added[player]))
+    {
+      uint16_t id = cards_data[result].id;
+      unsigned int mana = get_color_of_mana_produced_by_id(id, inst->info_slot, player);
+      if (mana == UINT32_MAX)
+        mana = (uint8_t)cards_ptr[id]->mana_source_colors;
+      inst->mana_color = (uint8_t)mana;
+      if (is_what(player, card, TYPE_LAND))
+        inst->mana_color |= (uint8_t)mana_colors_added[player];
+      int override = check_special_flags2(player, card, 0x40);
+      uint8_t current_mana = inst->mana_color;
+      if (override)
+        for (int color = 0; color < 7; ++color)
+        {
+          unsigned int bit = color_to_color_test(color);
+          if (current_mana & bit)
+          {
+            int bit_to_remove = color_to_color_test(color);
+            inst->mana_color &= (uint8_t)bit_to_remove ^ 0xff;
+            unsigned int replacement = color_to_color_test(mana_color_override[player][color]);
+            current_mana = (uint8_t)(replacement | inst->mana_color);
+            inst->mana_color = current_mana;
+          }
+          else
+            current_mana = inst->mana_color;
+        }
+      inst->card_color = current_mana;
+    }
+    if ((inst->token_status & STATUS_ANIMATED) && !(cards_data[result].type & TYPE_CREATURE))
+      for (int p = 0; p < 2; ++p)
+        for (int c = 0; c <= active_cards_count[p]; ++c)
+          if (in_play(p, c))
+          {
+            card_instance_t *aura = get_card_instance(p, c);
+            if (aura->damage_target_player == player && aura->damage_target_card == card &&
+                (cards_data[aura->internal_card_id].type & TYPE_ENCHANTMENT) &&
+                cards_ptr[cards_data[aura->internal_card_id].id]->subtype1 == 44)
+              kill_card(p, c, KILL_STATE_BASED_ACTION);
+          }
+    if (inst->state & STATE_IN_PLAY)
+      event_flags |= cards_data[inst->internal_card_id].extra_ability & 0x1ffc0000;
+    return result;
+  }
+  if (event == EVENT_ABILITIES)
+  {
+    inst->regen_status = result;
+    if ((inst->ext->sp_keywords & SP_KEYWORD_DEATHTOUCH) &&
+        (cards_data[iid].type & TYPE_PERMANENT) && !(cards_data[iid].type & TYPE_EFFECT))
+      inst->destroys_if_blocked |= 0x10;
+  }
+  else if (event == EVENT_POWER)
+    inst->power = (int16_t)result;
+  else if (event == EVENT_TOUGHNESS)
+    inst->toughness = (int16_t)result;
+  else if (event == EVENT_SET_COLOR)
+    inst->color = (uint8_t)result & COLOR_TEST_ANY_COLORED;
+  raw_base_pt = saved_raw_base;
+  return result;
 }
 
-// Fixes a bug in the exe.  Do not call directly.
+/* Recovered October 2022 implementations; see docs/recovery-progress.md. */
+void set_base_pt(int newval);
+void set_characteristic_pt(int newval);
+
+/* ManalinkEh 2022: 0x26cd650; original functions/events.c:1190. */
+void set_base_pt(int newval)
+{
+  int old_base_pt;
+
+  old_base_pt = raw_base_pt;
+  raw_base_pt = newval;
+  raw_characteristic_pt = raw_characteristic_pt & 0xffffbfff;
+  event_result = (int32_t)((uint32_t)event_result +
+                          ((uint32_t)newval - (uint32_t)old_base_pt));
+  return;
+}
+
+/* ManalinkEh 2022: 0x26cd690; original functions/events.c:1200. */
+void set_characteristic_pt(int newval)
+{
+  if ((((unsigned int)raw_characteristic_pt >> 8 & 0xff) & 0x40) != 0)
+  {
+    event_result = event_result + (newval - raw_base_pt);
+    raw_base_pt = newval;
+  }
+  return;
+}
+
 void event_activate_then_duplicate_into_stack(int player, int card, int event, int new_attacking_card_controller, int new_attacking_card)
 {
   /* Normally, when a card is activated, 12 steps happen in activate() (at 0x434040) and two more happen elsewhere:
@@ -993,7 +1189,7 @@ void event_activate_then_duplicate_into_stack(int player, int card, int event, i
 	  else
 		{
 		  STATIC_ASSERT(sizeof(card_instance_t) == 300, card_instance_t_size_differs_from_exe);
-		  memcpy(instance, parent_instance, sizeof(card_instance_t));
+		  memcpy_inst_and_ext(instance, parent_instance);
 		  instance->internal_card_id = activation_card;
 		  instance->unknown0x14 = 0;
 		  instance->kill_code = 0;
@@ -1102,3 +1298,32 @@ int current_trigger_or_event_is_forced(void)
 
   return 0;
 }
+
+#ifndef SHANDALAR
+/* ManalinkEh 2022: 0x26cbf50; original functions/events.c:553. */
+void allow_response_to_trigger(int player, int card)
+{
+  const char *name = get_displayed_card_name(player, card);
+  sprintf((char *)(global_all_purpose_buffer), "Trigger %s", name);
+  int a1 = g_phase_stop_suppressed && (player == 0 || (trace_mode & 2)) ? -1 : -2;
+  allow_response(a1, current_phase, global_all_purpose_buffer,
+                                                     EVENT_RESOLVE_TRIGGER);
+}
+
+#endif
+
+#ifndef SHANDALAR
+/* Recovered October 2022 inline-only helpers; native code remains in their callers. */
+static int has_ability_counters(int player, int card)
+{
+  /* Extra counter slots share the final target entry in the native layout. */
+  const unsigned char *p = (const unsigned char *)get_card_instance(player, card);
+  return (p[0x51] >= COUNTER_DEATHTOUCH && p[0x51] <= COUNTER_VIGILANCE && p[0]) ||
+         (p[0x104] >= COUNTER_DEATHTOUCH && p[0x104] <= COUNTER_VIGILANCE && p[1]) ||
+         (p[0x105] >= COUNTER_DEATHTOUCH && p[0x105] <= COUNTER_VIGILANCE && p[2]) ||
+         (p[0x106] >= COUNTER_DEATHTOUCH && p[0x106] <= COUNTER_VIGILANCE && p[3]) ||
+         (p[0x107] >= COUNTER_DEATHTOUCH && p[0x107] <= COUNTER_VIGILANCE && p[0x121]) ||
+         (p[0x10a] >= COUNTER_DEATHTOUCH && p[0x10a] <= COUNTER_VIGILANCE && p[0x108]) ||
+         (p[0x10b] >= COUNTER_DEATHTOUCH && p[0x10b] <= COUNTER_VIGILANCE && p[0x109]);
+}
+#endif
