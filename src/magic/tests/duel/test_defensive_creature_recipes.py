@@ -16,6 +16,14 @@ class DefensiveCreatureRecipesTest(unittest.TestCase):
         return dict(family='defensive_creature',version=2,oracle_text=self.oracle[name]['oracle_text'],params=p,variants=selected or ['target_growth_0'])
     def cases(self,name,d,registry=None,oracle=None):
         return expand(name,self.registry[name]['csvid'],d,self.oracle[name],registry or self.registry,oracle_context=oracle or self.oracle)
+    def test_protection_after_keywords_preserves_full_category(self):
+        for name,keys,protection in [('Silver Knight',['First strike'],['red']),('Commander Eesha',['Flying'],['creatures']),
+                                      ('Sabertooth Nishoba',['Trample'],['blue','red'])]:
+            d=self.declaration(name,keys,protection,['defense_snapshot'])
+            self.assertEqual(explicit_spec(d,self.oracle[name])['protection'],protection)
+            self.assertEqual(len(self.cases(name,d)),1)
+        d=self.declaration('Commander Eesha',['Flying'],['blue'])
+        with self.assertRaises(ValueError):self.cases('Commander Eesha',d)
     def test_compound_protection_and_explicit_hybrid_payments(self):
         for name,colors,pay in [('Oversoul of Dusk',['black','blue','red'],['G']*5),('Stillmoon Cavalier',['black','white'],['W']*2),('Slippery Bogle',[],['G'])]:
             d=self.declaration(name,['Hexproof'] if name=='Slippery Bogle' else [],colors,['payment','hybrid_payment_other','hybrid_payment_mixed']);d['params']['payment_colors']=pay

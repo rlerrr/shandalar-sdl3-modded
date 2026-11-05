@@ -25,14 +25,15 @@ def spec(declaration, record):
         raise ValueError('explicit entry keywords, draw and life amounts required')
     if any(type(p[k]) is not int or not 0 <= p[k] <= (3 if k == 'draw' else 10) for k in ('draw', 'gain_life', 'lose_life')):
         raise ValueError('bounded integer entry amounts required')
-    if bool(p['draw']) == bool(p['gain_life']) or p['lose_life'] and not p['draw']:
-        raise ValueError('entry value must draw (optionally with life loss) or gain life')
+    if not any(p[k] for k in ('draw','gain_life','lose_life')) or p['gain_life'] and (p['draw'] or p['lose_life']):
+        raise ValueError('entry value must draw (optionally with life loss), gain life, or lose life')
     if p['draw']:
         amount = {1:'a card', 2:'two cards', 3:'three cards'}[p['draw']]
         clauses = ['draw '+amount, 'you draw '+amount]
         if p['lose_life']:
             clauses = [c+' and '+you+'lose '+str(p['lose_life'])+' life' for c in clauses for you in ('', 'you ')]
-    else: clauses = ['you gain '+str(p['gain_life'])+' life']
+    elif p['gain_life']: clauses = ['you gain '+str(p['gain_life'])+' life']
+    else: clauses = ['you lose '+str(p['lose_life'])+' life']
     expected = {f'When {ref} enters{suffix}, {clause}.' for ref in ('this creature', record['name'])
                 for suffix in ('', ' the battlefield') for clause in clauses}
     keys = []; triggers = []; canonical = {k.lower(): k for k in KEYWORDS + ('Hexproof',)}

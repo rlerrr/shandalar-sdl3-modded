@@ -17,6 +17,13 @@ class ValueActivationRecipesTest(unittest.TestCase):
   d=self.declaration()
   for changes in (dict(params={}),dict(params=dict(d['params'],extra=1)),dict(oracle_text='changed')):
    with self.assertRaises(ValueError):explicit_spec(dict(d,**changes),self.oracle['Jayemdae Tome'])
+ def test_single_mana_mode_ai_dialog_is_an_explicit_presentation_choice(self):
+  name='Hedron Archive';d=self.declaration(name,['mana_0_1','insufficient_mana_1'],amount=2,mana_cost='{2}',sacrifice=True,mana_outputs=['{C}{C}'])
+  d['activation_dialogs']={'mana_0_1':0,'insufficient_mana_1':0}
+  cases=expand(name,self.rows[name]['csvid'],d,self.oracle[name],self.rows,oracle_context=self.oracle)
+  for c in cases:self.assertIn(dict(op='choose_dialog',player=1,value=0),c['steps'])
+  for mapping in ({'unknown_0':0},{'mana_0_1':True},{'mana_0_1':-1}):
+   with self.assertRaises(ValueError):explicit_spec(dict(d,activation_dialogs=mapping),self.oracle[name])
  def test_permanent_scope(self):
   for changes in (dict(type_line='Instant'),dict(type_line='Artifact — Equipment'),dict(type_line='Token Artifact'),dict(layout='transform'),dict(card_faces=[{}])):
    with self.assertRaises(ValueError):explicit_spec(self.declaration(),dict(self.oracle['Jayemdae Tome'],**changes))

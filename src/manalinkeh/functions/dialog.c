@@ -3,6 +3,9 @@
 #include <windows.h>
 
 #include "manalink.h"
+#ifdef MANALINKEH_STATIC
+#include "magic/src/duel_host.h"
+#endif
 
 typedef struct
 {
@@ -419,8 +422,14 @@ int dialog_impl(int player, int card, event_t event, ...)
   {
     int i;
     int num_ok = 0, num_ok_99 = 0, needed = second_choice ? 2 : 1;
+    int scripted_activation = 0;
+#ifdef MANALINKEH_STATIC
+    /* Rules tests explicitly drive either controller. AI preference is not
+       activation legality; retain that preference for gameplay and AI search. */
+    scripted_activation = event == EVENT_CAN_ACTIVATE && duel_host_scripted_input();
+#endif
     for (i = 0; i < choices; ++i)
-      if (choice[i].legality && (player != AI || choice[i].ai_priority > 0))
+      if (choice[i].legality && (player != AI || choice[i].ai_priority > 0 || scripted_activation))
       {
         ++num_ok;
         if (choice[i].flags & DF_99)
@@ -493,7 +502,13 @@ int dialog_impl(int player, int card, event_t event, ...)
       if (num_legal < (second_choice ? 2 : 1) && choices > 0)
         goto cancelled;
 
-      if (no_display_for_ai && IS_AI(who_chooses))
+      int use_ai_without_dialog = no_display_for_ai && IS_AI(who_chooses);
+#ifdef MANALINKEH_STATIC
+      /* Opt-in test input exercises an offered mode for either controller. */
+      if (duel_host_presenting_ai_dialogs())
+        use_ai_without_dialog = 0;
+#endif
+      if (use_ai_without_dialog)
         chosen1 = ai_choice1;
       else
         chosen1 = do_dialog(who_chooses, fullcard_player, fullcard_card, smallcard_player,
@@ -507,6 +522,11 @@ int dialog_impl(int player, int card, event_t event, ...)
 
     if (chosen1 < 0 || chosen1 >= choices)
       goto cancelled;
+#ifdef MANALINKEH_STATIC
+    /* Scripted presentation cannot enable a mode the engine disabled. */
+    if (duel_host_presenting_ai_dialogs() && !choice[chosen1].legality)
+      goto cancelled;
+#endif
 
     ++chosen1;
 
@@ -518,7 +538,11 @@ int dialog_impl(int player, int card, event_t event, ...)
         goto cancelled;
 
       int chosen2;
-      if (no_display_for_ai && IS_AI(who_chooses))
+      if (no_display_for_ai && IS_AI(who_chooses)
+#ifdef MANALINKEH_STATIC
+          && !duel_host_presenting_ai_dialogs()
+#endif
+          )
         chosen2 = ai_choice2;
       else
         chosen2 = do_dialog(who_chooses, fullcard_player, fullcard_card, smallcard_player,
@@ -528,6 +552,10 @@ int dialog_impl(int player, int card, event_t event, ...)
 
       if (chosen2 < 0 || chosen2 >= choices)
         goto cancelled;
+#ifdef MANALINKEH_STATIC
+      if (duel_host_presenting_ai_dialogs() && !choice[chosen2].legality)
+        goto cancelled;
+#endif
 
       ++chosen2;
 

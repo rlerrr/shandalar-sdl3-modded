@@ -28,6 +28,15 @@ class PumpCreatureRecipesTest(unittest.TestCase):
         self.assertIn(dict(op='assert_card',ref='source',property='power',value=2),s[pending:resolved])
         self.assertIn(dict(op='assert_card',ref='source',property='power',value=4),s[resolved:])
         self.assertIn(dict(op='assert_mana_total',player=0,value=58),s)
+
+    def test_once_per_turn_keeps_cap_and_reset_without_illegal_double_activation(self):
+        name='Rootwalla';d=dict(family='self_pump_creature',version=2,oracle_text=self.oracle[name]['oracle_text'],params=dict(keywords=[],power=2,toughness=2,activation_cost='{1}{G}',activation_limit=1),variants=['activation_limit','activation_limit_reset'])
+        p=explicit_spec(d,self.oracle[name]);self.assertNotIn('stacked_activations',variants(p))
+        cap,reset=self.cases(name,d)
+        self.assertIn(dict(op='can_activate',ref='source',value=0),cap['steps'])
+        self.assertIn(dict(op='cleanup'),reset['steps'])
+        self.assertIn(dict(op='advance_turn'),reset['steps'])
+        with self.assertRaises(ValueError):self.cases(name,dict(d,params=dict(d['params'],activation_limit=2)))
     def test_tapped_and_fresh_nontapping_abilities_are_legal(self):
         tapped,fresh=self.cases('Furnace Whelp',self.declaration(selected=['tapped_activation','fresh_activation']))
         self.assertEqual(tapped['setup'][0]['state'],['tapped'])

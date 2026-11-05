@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Urborg Elf",
+  "csvid": 5450,
+  "recipes": [
+    {
+      "family": "mana_creature",
+      "version": 2,
+      "params": {
+        "keywords": [],
+        "activation_cost": "{T}",
+        "mana_outputs": [
+          "{B}",
+          "{G}",
+          "{U}"
+        ],
+        "production": "choice"
+      },
+      "oracle_text": "{T}: Add {B}, {G}, or {U}.",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "fresh_activation",
+        "sick_activation",
+        "tapped_activation",
+        "production_0",
+        "payment_0",
+        "repeat_denied_0",
+        "opposing_turn_0",
+        "combat_0",
+        "spend_0",
+        "spend_generic_0",
+        "mana_snapshot_0",
+        "untap_repeat_0",
+        "production_1",
+        "payment_1",
+        "repeat_denied_1",
+        "opposing_turn_1",
+        "combat_1",
+        "spend_1",
+        "spend_generic_1",
+        "mana_snapshot_1",
+        "untap_repeat_1",
+        "production_2",
+        "payment_2",
+        "repeat_denied_2",
+        "opposing_turn_2",
+        "combat_2",
+        "spend_2",
+        "spend_generic_2",
+        "mana_snapshot_2",
+        "untap_repeat_2"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared Oracle-pinned recipe; exact payment, effect receipts, populated zones, both controllers where supported and snapshot replay. Remaining interactions listed in generated provenance are separate; no exhaustive card coverage claim."
+}

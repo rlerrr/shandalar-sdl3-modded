@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Hostile Minotaur",
+  "csvid": 18941,
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Haste"
+        ]
+      },
+      "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Flash timing, keyword removal/granting, and additional combat interactions remain separate."
+}

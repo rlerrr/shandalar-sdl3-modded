@@ -1100,8 +1100,24 @@ int select_card_from_zone(int player, int targ_player, const int *s_location, in
                           test_definition_t *this_test)
 {
   if (duel_host_scripted_input()) {
-    int selected = duel_host_choose_zone(player, this_test->message, zone_count, s_location, must_select);
-    if (selected == -1 && !must_select) return -1;
+    int legal[512] = {0};
+    if (zone_count < 0 || zone_count > 512) duel_host_fail("invalid scripted search zone size");
+    if (duel_host_observing_zone_legality())
+      for (int i=0; i<zone_count && s_location[i]!=-1; ++i)
+        legal[i] = !!new_make_test(targ_player, s_location[i], test_type, this_test);
+    int selected = duel_host_choose_zone(player, this_test->message, zone_count, s_location, must_select,
+                                        duel_host_observing_zone_legality() ? legal : NULL);
+    if (selected == -1) {
+      if (!must_select) return -1;
+      /* Match the ordinary AI path's empty-result behavior when an observed
+         required selector has no legal candidates. Keep must_select visible
+         to the test host so an incorrect requirement remains assertable. */
+      if (duel_host_observing_zone_legality()) {
+        int any_legal=0;
+        for (int i=0;i<zone_count;++i) any_legal |= legal[i];
+        if (!any_legal) return -1;
+      }
+    }
     if (selected < 0 || selected >= zone_count ||
         !new_make_test(targ_player, s_location[selected], test_type, this_test))
       duel_host_fail("illegal scripted zone selection");

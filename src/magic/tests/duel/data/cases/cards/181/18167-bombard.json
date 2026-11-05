@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Bombard",
+  "csvid": 18167,
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 4,
+        "targets": [
+          "creature"
+        ]
+      },
+      "oracle_text": "Bombard deals 4 damage to target creature.",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "survivor",
+        "lethal",
+        "lost_target",
+        "friendly",
+        "empty",
+        "wrong_type",
+        "regenerate"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Additional rules interactions and any gaps listed in generated recipe provenance remain separate."
+}

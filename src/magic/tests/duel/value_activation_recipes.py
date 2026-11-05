@@ -21,6 +21,9 @@ def spec(declaration, record):
     p=declaration.get('params')
     if not isinstance(p,dict) or set(p)!={'effect','amount','mana_cost','tap','sacrifice','pay_life','mana_outputs'}:
         raise ValueError('explicit value, mana, tap, sacrifice, life and alternate mana parameters required')
+    dialogs=declaration.get('activation_dialogs',{})
+    if not isinstance(dialogs,dict) or any(k not in declaration['variants'] or type(v) is not int or not 0<=v<=8 for k,v in dialogs.items()):
+        raise ValueError('activation dialogs require selected variants and bounded explicit presentation choices')
     if p['effect'] not in ('draw','gain_life') or type(p['amount']) is not int or not 1<=p['amount']<=(3 if p['effect']=='draw' else 10):
         raise ValueError('bounded fixed draw/life effect required')
     if any(type(p[k]) is not bool for k in ('tap','sacrifice')) or type(p['pay_life']) is not int or not 0<=p['pay_life']<=5:
@@ -137,7 +140,8 @@ def expand(name,csvid,declaration,p,selected,registry,oracle):
                and not (v=='tapped' and p['tap']) and not (v in ('sick','fresh_activation') and p['creature'] and p['tap']))
         def pending(ref='source'):
             seq=[step('require_can_activate',ref=ref,value=1)]
-            if p['mana_outputs']:seq.append(step('choose_dialog',player=owner,value=1))
+            if variant in declaration.get('activation_dialogs',{}):seq.append(step('choose_dialog',player=owner,value=declaration['activation_dialogs'][variant]))
+            elif p['mana_outputs']:seq.append(step('choose_dialog',player=owner,value=1))
             if v=='red_payment' and owner==0:seq += [step('choose_mana',player=owner,color=4) for _ in range(sum(input_mana))]
             seq += [step('activate',ref=ref,value=1),step('assert_choices_consumed')]
             mana[owner]=[a-b for a,b in zip(mana[owner],[0,0,0,0,sum(input_mana),0] if v=='red_payment' else input_mana)]
@@ -158,6 +162,7 @@ def expand(name,csvid,declaration,p,selected,registry,oracle):
             # With no input mana these enrolled sources expose only their mana
             # ability; no mode-selection dialog is presented.
             actions += [step('require_can_activate',ref='source',value=1)]
+            if variant in declaration.get('activation_dialogs',{}):actions.append(step('choose_dialog',player=owner,value=declaration['activation_dialogs'][variant]))
             if len(p['mana_outputs'])>1:actions.append(step('choose_color',player=owner,value=next(c for c,n in enumerate(p['output_pools'][index]) if n)))
             actions += [step('activate',ref='source',value=1),step('assert_choices_consumed'),step('assert_stack',value=0)]
             entities['source']['tapped']=True;mana[owner]=list(p['output_pools'][index])
@@ -170,7 +175,8 @@ def expand(name,csvid,declaration,p,selected,registry,oracle):
                 # A nonempty wrong-color pool can make the source's cached mana
                 # availability expose a mode menu. Select the legal mana mode;
                 # the completely empty pool routes there without a menu.
-                if v=='wrong_color':actions.append(step('choose_dialog',player=owner,value=0))
+                if variant in declaration.get('activation_dialogs',{}):actions.append(step('choose_dialog',player=owner,value=declaration['activation_dialogs'][variant]))
+                elif v=='wrong_color':actions.append(step('choose_dialog',player=owner,value=0))
                 if len(p['mana_outputs'])>1:actions.append(step('choose_color',player=owner,value=next(c for c,n in enumerate(p['output_pools'][0]) if n)))
                 actions += [step('activate',ref='source',value=1)]
                 entities['source']['tapped']=True;mana[owner]=[a+b for a,b in zip(mana[owner],p['output_pools'][0])]

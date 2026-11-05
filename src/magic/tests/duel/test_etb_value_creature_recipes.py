@@ -58,6 +58,14 @@ class EtbValueCreatureRecipesTest(unittest.TestCase):
             self.assertIn(dict(op='assert_life', player=owner, value=11), c['steps'])
             self.assertIn(dict(op='assert_life', player=1-owner, value=20), c['steps'])
 
+    def test_life_loss_without_draw_is_not_life_gain_or_damage(self):
+        d=self.declaration('Foul Imp',draw=0,gain=0,loss=2,keys=['Flying'],selected=['cast','bounce_recast'])
+        cast,recast=self.cases('Foul Imp',d)
+        self.assertIn(dict(op='assert_life',player=0,value=18),cast['steps'])
+        self.assertIn(dict(op='assert_life',player=0,value=16),recast['steps'])
+        self.assertIn(dict(op='assert_zone',player=0,zone='hand',value=4),cast['steps'])
+        with self.assertRaises(ValueError):self.cases('Foul Imp',dict(d,params=dict(d['params'],gain_life=2,lose_life=0)))
+
     def test_bounce_recasts_real_card_with_fresh_hand_binding(self):
         c = self.cases('Elvish Visionary', self.declaration(selected=['bounce_recast']))[0]
         self.assertIn(dict(op='cast', ref='bounce', value=1), c['steps'])

@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Scorchmark",
+  "csvid": 19728,
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 2,
+        "targets": [
+          "creature"
+        ],
+        "exile_on_death": true
+      },
+      "oracle_text": "Scorchmark deals 2 damage to target creature. If that creature would die this turn, exile it instead.",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "survivor",
+        "lethal",
+        "lost_target",
+        "friendly",
+        "empty",
+        "wrong_type",
+        "later_death",
+        "expired_death",
+        "indestructible",
+        "regenerate"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Additional rules interactions and any gaps listed in generated recipe provenance remain separate."
+}

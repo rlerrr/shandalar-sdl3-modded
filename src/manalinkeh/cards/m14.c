@@ -1,4 +1,7 @@
 #include "manalink.h"
+#ifdef MANALINKEH_STATIC
+#include "magic/src/duel_host.h"
+#endif
 
 // General functions
 
@@ -942,7 +945,11 @@ int card_bogbrew_witch(int player, int card, event_t event){
   else if (event == EVENT_RESOLVE_ACTIVATION)
   {
     test_definition_t this_test;
-    if (player == HUMAN)
+    if (player == HUMAN
+#ifdef MANALINKEH_STATIC
+        || duel_host_scripted_input()
+#endif
+       )
     {
       new_default_test_definition(&this_test, TYPE_ANY,
                                   "Select a Festering Newt Newt or Bubbling Cauldron card.");

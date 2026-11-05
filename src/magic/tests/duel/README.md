@@ -30,6 +30,12 @@ Only cards with authored cases need files; catalog smoke and wording templates
 are generated separately. These folders keep both file lists and agent edit
 assignments small.
 
+Oracle-backed X-spell recipes use `choose_x` to supply the requested amount
+through actual casting and mana payment. Zero retains the printed base cost;
+exact colored receipts check restricted X payments. Ordinary gameplay and AI
+policy retain their usual input paths. Both controllers exercise pending-spell
+and resolved-state snapshot replay, with all queued inputs checked for use.
+
 For common Oracle wording, use [recipe-based authoring](RECIPES.md). A compact
 declaration generates reviewed engine scenarios, and batch tools inventory
 unsupported wording and prepare failure-only review reports. Generated recipes
@@ -425,11 +431,242 @@ so automatic vanilla templates exclude tokens; explicit token-creation cases
 retain their characteristic checks. Smoke checks of null-bound placeholder
 records establish query/snapshot safety only, not implementation of abilities.
 
+The [November Oracle expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11.json)
+records 2,142 additional behavior cases across 84 implemented cards. Existing
+recipes supply the scenarios; each new declaration pins the Scryfall Oracle
+text and records its coverage limits. Null and no-op handlers were excluded
+from this enrollment. Four equipment-tax cases retain their correct assertions
+under the existing Suppression Field known-failure mechanism. Hybrid payment
+scripts cover countered casts and additional copies as well as successful casts.
+
+The [second expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave2.json)
+adds 3,387 cases across another 84 implemented cards, including entry bonuses and
+counters, cycling, three-color mana creatures, once-per-turn pumps, and entry
+life loss. Partial keyword and lord components explicitly list their untested
+activated abilities. Fifty cases retain Oracle expectations under three reviewed
+bug classes. Scripted activation queries distinguish legality from AI preference;
+AI search and gameplay keep their normal preference filtering.
+
+The [third expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave3.json)
+adds 2,384 land entry and mana cases across 44 newly covered cards and five
+Deserts with existing cycling tests. Lands enter through Walking Atlas's real
+hand-to-battlefield ability. Shock, bounce, Lair, scry, life-gain and two-player
+Battlebond entry conditions are exercised alongside mana production/spending.
+Coverage of the printed component remains distinct from land-play timing and
+multiplayer rules.
+
+The [fourth expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave4.json)
+adds 2,880 single-land search cases across 38 new cards and four older ramp/search
+cards. The recipe exercises fetch lands, search artifacts and creatures, and
+simple ramp spells. Oracle-pinned mixed libraries distinguish typed duals,
+basic/snow lands, a nonbasic snow land and nonlands. Read-only selector observations check actual
+engine eligibility without changing which cards it permits.
+
+The [fifth expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave5.json)
+adds 2,044 landcycling cases across 21 new cards and two existing spell cards.
+These use real hand activation and search-predicate observations, with exact
+discard/payment receipts, reductions/taxes, both controllers, combat/opposing
+turns, cancellation, pending graveyard responses and snapshot replay. Other
+printed abilities remain named component gaps.
+
+The [sixth expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave6.json)
+adds 6,624 single-card library-search cases across 72 new cards and six existing
+card homes. Spells, creature-entry triggers and permanent activations use real
+costs and selectors. Mixed Oracle witnesses check accepted and rejected types,
+subtypes/changelings, names, color, legendary status and numeric restrictions,
+alongside destinations, both controllers, repeated searches and snapshots.
+Source removal, bounce/recast and blink are included for entry components.
+
+Correct Oracle assertions remain under 636 exact new baselines across 12 cards:
+unrestricted-search selection rules, Trapmaker's Snare's forced selection,
+Cateran Summons's missing Mercenary filter, Eerie Procession's Spirit/Arcane
+filter mismatch, and Loam Larva's graveyard/library mismatch. Each new failure
+reproduces in isolation on native and Wasm. Card rule fixes remain deferred.
+The suite reaches 129,196 catalog entries with no unexpected outcomes; all
+122,572 prior entries retain their statuses. These expansions now add 343 card
+homes and 19,461 behavior cases. A home can cover only a printed component;
+remaining abilities and per-option affordability gaps stay explicit.
+
+Generation now streams expansions through a bounded cache. The eager loader's
+ordering and validation remain unchanged. Wasm test initial memory is 768 MiB;
+the main game's memory setting is unaffected. Silverglade Elemental's unused
+fourth callback argument was removed after it trapped in Wasm; its card effect
+logic was unchanged.
+
+The [seventh expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave7.json)
+adds 7,388 ordinary targeted-removal cases across 48 new cards and 16 existing
+card files. Independent Oracle witnesses cover destruction/exile, target type
+intersections, color and subtype restrictions, changelings, planeswalkers,
+legendary creatures, Vehicles, fixed characteristic limits, and combat/tap
+states. Real costs, regeneration, indestructible targets, target loss and
+secondary draw/life/mana receipts are checked for both controllers.
+
+All new cases pass natively and in Wasm with identical final states. The full
+136,584-entry native suite has zero unexpected outcomes; all 129,196 prior
+entries keep their statuses and the 1,005 existing failure records are unchanged.
+The cumulative expansion now adds 391 card homes and 26,849 behavior cases.
+Alternative source abilities and the interaction gaps named in the audit remain
+separate from this ordinary-cast component.
+
+The [eighth expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave8.json)
+adds 3,658 hand-exchange cases across 72 new cards and ten existing card files.
+Oracle-pinned draw/discard pipelines exercise spells, entry/death triggers,
+activations, fixed and discard-derived amounts, exact costs, uneven/empty hands,
+source removal/re-entry and snapshots. Both controllers check per-card
+hand/graveyard conservation and ordered libraries without requiring a specific
+AI or random discard outcome.
+
+Native and Wasm each pass 3,614 new cases with identical final observable states.
+The remaining 44 retain correct Oracle assertions and exact known-failure
+records for Ring of Renewal: its handler incorrectly requires and discards a
+card during activation, before the resolving effect. That rule bug is deferred.
+The 1,005 previous baseline records and all existing cases and recipes in the
+ten expanded files are preserved. The cumulative expansion adds 463 card homes
+and 30,507 behavior cases. Missing/no-op handlers remain excluded from new
+enrollment; alternative abilities and the audit's interaction gaps remain
+separate coverage work.
+
+The full 140,242-entry native suite has zero unexpected outcomes and preserves
+every earlier entry's status. Validation also includes 991 recipe guards,
+14 case-file checks, six shard checks and 14 engine controls per runtime.
+All 108 generated native/Wasm files are byte-identical.
+
+The [ninth expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave9.json)
+adds 2,178 fixed draw/mill/life cases across 41 new card files and seven existing
+files. Both runtimes pass every new case, with exact costs, controller/recipient
+life receipts, card multiplicities, ordered libraries, source re-entry/removal
+and snapshot replay. Exact-library draws and short/empty mills have dedicated
+boundary cases. No new failure baselines or rule fixes were needed.
+
+The new `value_flow` family shares the verified pipeline implementation with
+`hand_exchange`; all 115,328 earlier generated case bodies remain unchanged.
+Missing/no-op handlers remain excluded. Source keyword combat, alternative
+abilities/costs, player loss/win-state boundaries, replacement effects and the
+other component gaps in the audit need separate scenarios. The cumulative
+expansion now adds 504 card homes and 32,685 behavior cases.
+
+The full 142,420-entry native suite has zero unexpected outcomes; all 140,242
+earlier entries retain their statuses and all 1,049 failure records are
+byte-identical. Validation includes 1,005 recipe guards, 14 case-file checks,
+six shard checks and 14 engine controls per runtime. All 2,178 final states
+match across runtimes, as do all 112 generated files.
+
+The [tenth expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave10.json)
+adds 1,490 mass-destruction/exile/bounce cases across 33 new card files and four
+existing files. Mixed boards cover permanent type intersections, colors,
+characteristic limits, indestructibility, tokens, actual Auras, owner/controller
+differences, regeneration, exact costs, tapped entry, uncounterable spells and
+destruction-derived draws/life. Both controllers exercise real spells and
+abilities, targeted protection and caller-owned snapshots where applicable.
+
+Both runtimes pass 1,480 cases and match ten exact known failures across five
+cards. Hurkyl's Recall selects by controller rather than owner; River's Rebuke
+does not revalidate a protected player; Winds of Rath misses player one's
+Auras; Kaya's Wrath and Overwhelming Forces count a regenerated creature as
+destroyed. Correct Oracle expectations remain, and these rule fixes are
+deferred. Missing/no-op handlers remain excluded from new enrollment.
+The cumulative expansion adds 537 card homes and 34,175 behavior cases.
+
+The full 143,910-entry native suite has zero unexpected outcomes. All 142,420
+earlier statuses and 117,506 generated case bodies are preserved, and all
+1,049 previous baseline records are byte-identical. Validation includes 1,025
+recipe guards, 14 case-file checks, six shard checks and 14 engine controls per
+runtime. All 1,490 final states and all 125 generated files match across runtimes.
+
+The [eleventh expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave11.json)
+adds 8,472 activated-removal cases across 48 new card files and ten existing
+files. Both controllers cover actual casting/activation costs, source readiness,
+target predicates, attached Auras, combat states, responses, indestructibility,
+regeneration, repeated activations and caller-owned snapshots where applicable.
+The cumulative expansion adds 585 card homes and 42,647 behavior cases.
+
+A snapshot-restored target probe observes each handler's real target definition
+for a named candidate. This avoids mistaking another legal target, including
+the source itself, for acceptance of that candidate. Successful effects still
+use ordinary activation and resolution. Exact fixture receipts replace redundant
+checks of absent witness identities, reducing generated data. The test-only
+WebAssembly arena starts at 1 GiB.
+
+Both runtimes pass 8,460 new cases and reproduce twelve exact known failures.
+Seal of Doom and Notorious Assassin wrongly permit regeneration; Thrashing
+Brontodon sacrifices its target instead of destroying it, defeating
+indestructibility. Correct Oracle expectations remain and game-rule fixes are
+deferred. Missing/no-op handlers are excluded from new enrollment.
+
+The full 152,382-entry native suite finishes in 313 seconds with zero unexpected
+outcomes. All 143,910 previous statuses and 118,996 generated case bodies are
+preserved, and all 1,059 previous failure records remain byte-identical.
+Validation includes 1,039 recipe guards, 14 case-file checks, six shard checks
+and 17 engine controls per runtime. All 8,472 final observable states and 141
+generated case files match across runtimes.
+
+The [twelfth expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave12.json)
+adds 2,430 continuous-stat cases across 40 new card files and eight existing
+files. Both controllers test signed bonuses, overlapping colors and tribes,
+changelings, tokens, source entry/departure, late arrivals, tapping/combat
+predicates, hybrid payments and snapshots. Marked damage followed by loss of
+a toughness bonus exercises real state-based deaths. The cumulative expansion
+adds 625 card homes and 45,077 behavior cases.
+
+Both runtimes pass 2,418 new cases and reproduce twelve exact known failures.
+Builder's Blessing and Sprite Noble apply their static toughness bonuses while
+their spells are still on the stack. Correct pre-resolution expectations remain;
+those card-rule fixes are deferred. Missing/no-op handlers remain excluded.
+
+Crowded-board tests exposed a shared AI evaluator with three scratch arrays
+sized for sixteen creatures and a signed byte index. On larger legal boards
+the arrays overwrite neighboring locals, producing native crashes. The arrays
+and index now cover the actual active-card capacity. This significant testing
+blocker is the only production fix in this batch; the new engine regression
+evaluates 17, 128 and 140 creatures for each player with snapshot replay.
+
+The full 154,812-entry native suite finishes in 335 seconds with zero unexpected
+outcomes. All 152,382 previous statuses, 127,468 generated case bodies and 1,071
+previous baseline records are preserved. Validation includes 1,052 recipe guards,
+14 case-file checks, six shard checks and 18 engine controls per runtime.
+All 2,430 final observable states and 155 generated case files match across
+runtimes. The crowded-board regression is part of `duel.characteristics`,
+alongside the existing characteristic-value controls.
+
+The [thirteenth expansion audit](../../../../docs/test-audits/oracle-expansion-2026-11-wave13.json)
+adds 1,044 single-X spell cases across 18 new card files. Both controllers test
+zero and positive X, printed base costs, black-only X payment, ordered value
+effects, real damage and responses, exact zones and snapshot replay. The
+cumulative expansion adds 643 card homes and 46,121 behavior cases.
+
+Both runtimes pass 1,039 cases and reproduce five exact known failures. In the
+AI-controlled Drudge Skeletons fixtures, the offered regeneration response is
+consumed without activating: no black mana is spent and the creature dies.
+Correct survival, tapping, payment and zone expectations remain. The matching
+human-controlled fixtures pass. These shared activation failures are deferred;
+no card-rule fix was made. Missing/no-op handlers remain excluded.
+
+Explicit scripted X input uses the actual payment engine and stays queued
+through fixed costs and AI searches. Four new characteristic-value controls
+check zero/positive X, real entry counters, repeated-X payment and snapshot
+replay. Validation includes 1,066 recipe guards, 14 case-file checks, six shard
+checks and 22 engine controls per runtime. All 129,898 earlier generated case
+bodies and 1,083 previous baseline records are preserved. The 1,044 final
+observable states and 157 generated files match between runtimes.
+
+The full 155,856-entry native suite finishes in 333 seconds: 154,603 pass,
+1,088 reproduce known failures and 165 retain their existing unimplemented
+expectations, with zero unexpected outcomes. All 154,812 prior case identities
+and statuses are preserved. No new unimplemented card was enrolled.
+
 Combat scripts inspect historical `blocked` state after `advance_combat` finishes
 the declaration. The selector can reject a lone blocker immediately if no second
 eligible blocker exists, while final minimum-blocker validation still handles
 incomplete assignments. After setting mana pools, use `refresh` before querying
 availability so the engine's cached mana options match those pools.
+
+Large generated test binaries may need more link space than the default build
+drive provides. Configure `SHANDALAR_DUEL_TEST_BINARY_DIR` to an absolute output
+directory on another drive when needed. This relocates only `duel_card_tests`;
+generated source/manifest files remain in the build tree, and CTest uses the
+configured executable path automatically. The default empty value retains the
+normal build location. Native and Wasm configurations can share a directory
+because their executable extensions differ.
 
 ## Code coverage
 
@@ -463,9 +700,11 @@ runtime fails configure with a message saying so.
 
 For searches after a shuffle, `choose_zone_card` scripts a CSVID instead of a
 raw `choose_zone` index. The headless host chooses the first offered occurrence
-of that card and fails if it is absent; duplicate copies are interchangeable.
-The engine's usual search filter still validates that selection. A script must
-use `choose_zone` with `value: -1` when explicitly declining a search.
+of that card; duplicate copies are interchangeable. The engine's usual search
+filter still validates that selection. For an observed optional selector, a
+missing or rejected named choice becomes a legal decline so correct eligibility
+and zone assertions can expose a card bug. Required/unobserved selectors retain
+strict input errors. Use `choose_zone` with `value: -1` to explicitly decline.
 
 
 Generated hybrid-payment cases use `choose_payment` to select a requested mana

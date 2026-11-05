@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "card": "Frilled Sandwalla",
+  "csvid": 17136,
+  "recipes": [
+    {
+      "family": "self_pump_creature",
+      "version": 2,
+      "params": {
+        "keywords": [],
+        "power": 2,
+        "toughness": 2,
+        "activation_cost": "{1}{G}",
+        "activation_limit": 1
+      },
+      "oracle_text": "{1}{G}: This creature gets +2/+2 until end of turn. Activate only once each turn.",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "activation",
+        "activation_payment",
+        "repeated_activations",
+        "tapped_activation",
+        "fresh_activation",
+        "opposing_turn_activation",
+        "combat_activation",
+        "lost_source",
+        "activation_snapshot",
+        "activation_insufficient_mana",
+        "activation_wrong_color",
+        "activation_limit",
+        "activation_limit_reset"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared Oracle-pinned recipe; exact payment, effect receipts, populated zones, both controllers where supported and snapshot replay. The once-per-turn limit and its cleanup reset are included; two simultaneous activations are not legal for this limit. Other keyword interactions remain separate."
+}

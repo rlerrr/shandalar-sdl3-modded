@@ -10874,7 +10874,10 @@ int karoo(int player, int card, event_t event, int color1, int color2, int ai_ca
 
     if (can_target(&td))
     {
-      if (IS_AI(player))
+      /* The not-Karoo filter ranks AI choices; it is not a rules restriction.
+         Scripted hosts must be able to select any controlled land, including
+         this one. Normal gameplay and speculative AI retain the preference. */
+      if (IS_AI(player) && !duel_host_scripted_input())
       {
         td.extra = target_predicate_extra(is_not_karoo);
         td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
@@ -22905,6 +22908,15 @@ int evaluate_colors(int color1, int color2)
 /* ManalinkEh 2022: 0x268db60; original functions/functions.c:12601. */
 int charge_mana_for_multi_x(int player, int color, int num_x)
 {
+#ifdef MANALINKEH_STATIC
+  if (duel_host_choice_ready(DUEL_CHOICE_X,player)) {
+    int maximum=has_mana(player,color,1)/num_x;
+    if (max_x_value>=0 && max_x_value/num_x<maximum) maximum=max_x_value/num_x;
+    int chosen=duel_host_choose_x(player,maximum);
+    charge_mana(player,color,chosen*num_x);
+    return spell_fizzled ? 0 : chosen*num_x;
+  }
+#endif
   int old_hack_xx = hack_xx;
   int amount;
   if (player == HUMAN && ai_is_speculating != 1)

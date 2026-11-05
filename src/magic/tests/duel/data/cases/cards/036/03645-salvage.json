@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "card": "Salvage",
+  "csvid": 3645,
+  "recipes": [
+    {
+      "family": "recover_card",
+      "version": 2,
+      "params": {
+        "targets": [
+          "creature",
+          "instant",
+          "sorcery",
+          "artifact",
+          "enchantment",
+          "land"
+        ],
+        "destination": "library_top"
+      },
+      "oracle_text": "Put target card from your graveyard on top of your library.",
+      "variants": [
+        "return",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "lost_target",
+        "snapshot",
+        "alternate",
+        "shifted_target",
+        "wrong_owner",
+        "eligible_type_creature",
+        "type_creature",
+        "eligible_type_instant",
+        "type_instant",
+        "eligible_type_sorcery",
+        "type_sorcery",
+        "eligible_type_artifact",
+        "type_artifact",
+        "eligible_type_enchantment",
+        "type_enchantment",
+        "eligible_type_land"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. The recipe covers its six printed card-type witnesses; planeswalkers and battles remain separate."
+}

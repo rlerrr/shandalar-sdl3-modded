@@ -19,6 +19,13 @@ file(MAKE_DIRECTORY "${duel_generated}")
 option(SHANDALAR_DUEL_EXTENDED_TESTS "Register the full catalog smoke suite in CTest" OFF)
 file(GLOB_RECURSE duel_case_files CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/data/cases/*.json")
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS mana_consequence_recipes.py mana_modes_recipes.py creature_conditions_recipes.py conditional_mana_land_recipes.py conditional_stats_recipes.py conditional_keyword_recipes.py case_shards.py duel_case_types.h)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS entry_stats_creature_recipes.py land_entry_mana_recipes.py land_search_recipes.py landcycling_recipes.py library_search_recipes.py data/library_search_witnesses.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS removal_recipes.py data/removal_witnesses.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS hand_exchange_recipes.py data/hand_exchange_witnesses.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS value_flow_recipes.py variable_value_recipes.py variable_damage_recipes.py)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS mass_removal_recipes.py data/mass_removal_witnesses.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS removal_activation_recipes.py data/removal_activation_witnesses.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS static_stats_recipes.py data/static_stats_witnesses.json)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
   data/fixtures.json data/oracle.json data/oracle_aliases.json generate_cases.py case_files.py recipes.py destruction_recipes.py movement_recipes.py stat_recipes.py creature_recipes.py counter_recipes.py graveyard_recipes.py damage_recipes.py sweep_recipes.py grant_recipes.py pump_creature_recipes.py evasion_creature_recipes.py defensive_creature_recipes.py mana_creature_recipes.py regenerate_creature_recipes.py etb_value_creature_recipes.py blocking_creature_recipes.py tap_damage_creature_recipes.py combat_keyword_creature_recipes.py lord_creature_recipes.py entry_counter_creature_recipes.py cycling_recipes.py permanent_mana_recipes.py equipment_recipes.py
   value_activation_recipes.py mill_recipes.py mass_stats_recipes.py attack_pump_recipes.py trigger_pump_recipes.py hybrid_creature_recipes.py counter_damage_creature_recipes.py etb_removal_creature_recipes.py etb_recovery_creature_recipes.py death_value_creature_recipes.py passive_keyword_creature_recipes.py target_stats_activation_recipes.py target_keyword_activation_recipes.py self_keyword_activation_recipes.py token_creation_recipes.py tap_activation_recipes.py damage_activation_recipes.py ${duel_case_files}
@@ -38,6 +45,10 @@ add_custom_command(OUTPUT "${duel_globals}"
   VERBATIM)
 include("${duel_generated}/duel_case_sources.cmake")
 add_executable(duel_card_tests duel_card_tests.cpp duel_test_api.c headless_shell.c "${duel_globals}" ${duel_generated_case_sources})
+set(SHANDALAR_DUEL_TEST_BINARY_DIR "" CACHE PATH "Optional output directory for large duel test binaries")
+if(SHANDALAR_DUEL_TEST_BINARY_DIR)
+  set_target_properties(duel_card_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${SHANDALAR_DUEL_TEST_BINARY_DIR}")
+endif()
 target_include_directories(duel_card_tests PRIVATE "${duel_generated}" "${CMAKE_CURRENT_SOURCE_DIR}")
 target_link_libraries(duel_card_tests PRIVATE shandalar_duel_engine GTest::gtest)
 if(MSVC)
@@ -48,8 +59,9 @@ else()
 endif()
 if(EMSCRIPTEN)
   set_target_properties(duel_card_tests PROPERTIES SUFFIX ".js")
+  # The generated scenario tables and engine state require a 1 GiB initial arena.
   target_link_options(duel_card_tests PRIVATE -O0 -sENVIRONMENT=node -sFETCH=1 -sEXIT_RUNTIME=1 -sALLOW_MEMORY_GROWTH=1
-    -sINITIAL_MEMORY=384MB -sSTACK_SIZE=4MB -sASSERTIONS=1 -sFORCE_FILESYSTEM=1
+    -sINITIAL_MEMORY=1024MB -sSTACK_SIZE=4MB -sASSERTIONS=1 -sFORCE_FILESYSTEM=1
     -lnodefs.js "--pre-js=${CMAKE_CURRENT_SOURCE_DIR}/node_results.js")
   foreach(asset cards.dat Text.res uistrings.txt MP_UIStrings.txt prompts.txt)
     target_link_options(duel_card_tests PRIVATE "--preload-file=${SHANDALAR_MODDED_ASSET_DIR}/${asset}@/assets_modded/${asset}")

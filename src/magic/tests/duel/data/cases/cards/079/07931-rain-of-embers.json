@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Rain of Embers",
+  "csvid": 7931,
+  "recipes": [
+    {
+      "family": "sweep",
+      "version": 2,
+      "params": {
+        "effect": "damage",
+        "targets": [
+          "creature"
+        ],
+        "amount": 1,
+        "players": "all"
+      },
+      "oracle_text": "Rain of Embers deals 1 damage to each creature and each player.",
+      "variants": [
+        "mixed",
+        "friendly_only",
+        "opponent_only",
+        "empty_board",
+        "empty_zones",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "cleanup",
+        "tapped_all",
+        "untapped_all",
+        "injured"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Additional rules interactions and any gaps listed in generated recipe provenance remain separate."
+}

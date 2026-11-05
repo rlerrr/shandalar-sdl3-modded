@@ -1,5 +1,8 @@
 // -*- c-basic-offset:2 -*-
 #include "manalink.h"
+#ifdef MANALINKEH_STATIC
+#include "magic/src/duel_host.h"
+#endif
 
 /* Canonical recovered helper declarations. */
 void allow_response_to_activation(int player, int card);
@@ -487,10 +490,14 @@ int charge_spell_cost(card_data_t *cd, int player, int card)
       }
     }
     payment_result_or_mana_value = max_x_value;
-    if (player == 0)
+    int scripted_x_choice = 0;
+#ifdef MANALINKEH_STATIC
+    scripted_x_choice = duel_host_choice_ready(DUEL_CHOICE_X,player);
+#endif
+    if (player == 0 || scripted_x_choice)
     {
-      max_x_value = has_mana(0, 7, 1);
-      charge_mana(0, COLOR_COLORLESS, -1);
+      max_x_value = has_mana(player, 7, 1);
+      charge_mana(player, COLOR_COLORLESS, -1);
       max_x_value = payment_result_or_mana_value;
     }
     else
@@ -2098,7 +2105,20 @@ int charge_mana(int player, color_t color, int amount)
         autotap_sources_ai = 1;
     }
 
-    if (player == AI && !(trace_mode & 2))
+    int scripted_x = 0;
+#ifdef MANALINKEH_STATIC
+    if (duel_host_choice_ready(DUEL_CHOICE_X,player))
+      for (int c=COLOR_COLORLESS;c<=COLOR_ARTIFACT;++c)
+        if (pay_mana_xbugrwaU[c]==-1) {
+          max_x_value=duel_host_choose_x(player,max_x_value);
+          /* The chosen amount is input; the ordinary payment engine still
+             spends actual mana, handles restrictions and validates payment. */
+          scripted_x=1;
+          autotap_colored_in_pool_for_colorless=autotap_pool_for_x=1;
+          break;
+        }
+#endif
+    if (!scripted_x && player == AI && !(trace_mode & 2))
     {
       int any_x_cost = 0;
       int x = 0;

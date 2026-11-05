@@ -38,6 +38,7 @@ def script_payments(case,d,r):
  _,_,mana,pairs=normalize(d,r)
  source=next(c for c in case['setup'] if c['ref']=='source')
  if source['player']!=0:return
+ subjects={c['ref'] for c in case['setup'] if c['name']==source['name'] and c['player']==0}
  vectors=set()
  for choices in itertools.product(*pairs):
   _,_,vector,_=normalize(d,r,list(choices));vectors.add(tuple(vector))
@@ -47,7 +48,9 @@ def script_payments(case,d,r):
   if op=='set_mana':pools[action.get('player',0)][action['color']]=action['value']
   elif op=='capture':saved=copy.deepcopy(pools)
   elif op=='restore' and saved is not None:pools=copy.deepcopy(saved)
-  if op=='cast' and action.get('ref')=='source' and action.get('value')==1:
+  # A countered creature still pays its casting cost despite cast returning 0.
+  # Repeated-copy scenarios can cast the same card through another setup ref.
+  if op=='cast' and action.get('ref') in subjects and available(pools[0],mana):
    if sum(available(pools[0],v) for v in vectors)>1:
     choice=step('choose_payment',player=0,value=sum(n<<(4*c) for c,n in enumerate(mana)))
     # ETB target decisions may have been queued before casting. Payment happens

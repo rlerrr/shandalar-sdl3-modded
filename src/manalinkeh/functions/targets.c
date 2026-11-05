@@ -1638,6 +1638,20 @@ static int select_target_maybe_force(
 {
   if (duel_host_scripted_input())
   {
+#ifdef MANALINKEH_STATIC
+    int probe_player,probe_card;
+    if (duel_host_target_probe_candidate(&probe_player,&probe_card)) {
+      /* Read the real selector predicate, then stop this isolated inspection.
+       * The caller restores its complete snapshot; no target is admitted. */
+      int legal=validate_target_impl(player,card,probe_player,probe_card,NULL,
+          who_chooses,allowed_controller,allowed_controller,zone,
+          required_type,illegal_type,required_abilities,illegal_abilities,
+          required_color,illegal_color,extra,required_subtype,power_requirement,
+          toughness_requirement,special,required_state,illegal_state,flags);
+      duel_host_observe_target_legal(legal);
+      return 0;
+    }
+#endif
     int target_card;
     int target_player = duel_host_choose(DUEL_CHOICE_TARGET, who_chooses, prompt, 0, NULL, &target_card);
     if (target_player == -1 && (allow_cancel & 1)) return 0;
@@ -1846,6 +1860,14 @@ void counter_triggered_target_definition(int player, int card, target_definition
 int can_target(target_definition_t *td)
 {
   int result;
+#ifdef MANALINKEH_STATIC
+  int probe_player,probe_card;
+  if (duel_host_target_probe_candidate(&probe_player,&probe_card)) {
+    int saved_card=target_card,saved_controller=target_controller;
+    duel_host_observe_target_legal(validate_arbitrary_target(td,probe_player,probe_card));
+    target_card=saved_card; target_controller=saved_controller;
+  }
+#endif
   result = target_available_maybe_force(td->player, td->card, NULL, 0, td->who_chooses, td->allowed_controller,
       td->preferred_controller, td->zone, td->required_type, td->illegal_type,
       td->required_abilities, td->illegal_abilities, td->required_color, td->illegal_color,

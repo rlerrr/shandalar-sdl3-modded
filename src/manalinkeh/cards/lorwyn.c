@@ -1,4 +1,7 @@
 #include "manalink.h"
+#ifdef MANALINKEH_STATIC
+#include "magic/src/duel_host.h"
+#endif
 
 static int colfenors_urn_effect(int player, int card, event_t event);
 
@@ -6714,7 +6717,11 @@ When ~ enters the battlefield, you may search your library for a Treefolk or |H2
 		test_definition_t this_test;
 		new_default_test_definition(&this_test, 0, get_hacked_land_text(player, card, "Select a Treefolk or %s card.", SUBTYPE_FOREST));
 		this_test.subtype = get_hacked_subtype(player, card, SUBTYPE_FOREST);
-		if (!IS_AI(player) || basiclandtypes_controlled[player][COLOR_ANY] >= 4){
+		if (!IS_AI(player) || basiclandtypes_controlled[player][COLOR_ANY] >= 4
+#ifdef MANALINKEH_STATIC
+            || duel_host_scripted_input()
+#endif
+           ){
 			this_test.sub2 = SUBTYPE_TREEFOLK;
 			this_test.subtype_flag = F2_MULTISUBTYPE;
 		}

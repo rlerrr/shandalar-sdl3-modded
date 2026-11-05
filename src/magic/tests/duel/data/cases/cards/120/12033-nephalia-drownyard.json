@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "card": "Nephalia Drownyard",
+  "csvid": 12033,
+  "recipes": [
+    {
+      "family": "value_flow",
+      "version": 2,
+      "params": {
+        "mode": "activation",
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "mill",
+            "amount": 3,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "cost": {
+          "mana": "{1}{U}{B}",
+          "tap": true,
+          "sacrifice": false,
+          "pay_life": 0,
+          "discard": 0
+        },
+        "keywords": [],
+        "mana_ability": true
+      },
+      "oracle_text": "{T}: Add {C}.\n{1}{U}{B}, {T}: Target player mills three cards.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "bare_zones_0",
+        "empty_hands_0",
+        "one_card_0",
+        "large_hand_0",
+        "uneven_hands_0",
+        "own_empty_0",
+        "opponent_empty_0",
+        "duplicates_0",
+        "last_choice_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "opposing_turn_0",
+        "combat_0",
+        "source_destroyed_pending_0",
+        "tax_0",
+        "two_sources_0",
+        "tapped_0",
+        "repeat_denied_0",
+        "untap_repeat_0",
+        "own_target_0",
+        "effect_1",
+        "payment_1",
+        "bare_zones_1",
+        "empty_hands_1",
+        "one_card_1",
+        "large_hand_1",
+        "uneven_hands_1",
+        "own_empty_1",
+        "opponent_empty_1",
+        "duplicates_1",
+        "last_choice_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "opposing_turn_1",
+        "combat_1",
+        "source_destroyed_pending_1",
+        "tax_1",
+        "two_sources_1",
+        "tapped_1",
+        "repeat_denied_1",
+        "untap_repeat_1",
+        "own_target_1",
+        "exact_library_0",
+        "exact_library_1",
+        "short_library_0",
+        "empty_library_0",
+        "short_library_1",
+        "empty_library_1"
+      ],
+      "activation_dialogs": {
+        "0": [
+          1
+        ],
+        "1": [
+          1
+        ]
+      }
+    }
+  ],
+  "recipe_coverage": "Fixed nondiscard draw, mill and life effects through real spells, activations and creature entry/death. Pinned whole Oracle effects and costs drive both-controller receipts, exact card multiplicities, ordered libraries, legal repeats, real counter/removal responses, exact-library draws, truncated mills, and snapshots. Source passive keywords, alternative costs/abilities, empty-library draw losses, replacement/triggered effects, control changes and multiplayer remain component gaps."
+}

@@ -24,6 +24,11 @@ class CreatureConditionsRecipesTest(unittest.TestCase):
   with self.assertRaises(ValueError):spec(d,r)
   with self.assertRaises(ValueError):spec(declaration(self.o,'Hammerhead Shark'),dict(self.o['Hammerhead Shark'],layout='transform'))
   with self.assertRaises(ValueError):self.cases('Grizzly Bears')
+ def test_untapping_does_not_remove_printed_defender(self):
+  for c in self.cases('Custodian of the Trove',['untap_attack_0','fresh_untapped_attack_0']):
+   self.assertEqual(self.attack(c),[0])
+  d=declaration(self.o,'Custodian of the Trove');d['params']['keywords']=[]
+  with self.assertRaises(ValueError):self.cases('Custodian of the Trove',d=d)
  def test_invalid_variant_lists_rejected(self):
   for vs in ([],['unknown_0'],['entry_0','entry_0']):
    d=declaration(self.o,'Hammerhead Shark');d['variants']=vs

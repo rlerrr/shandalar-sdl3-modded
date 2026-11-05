@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Pitiless Gorgon",
+  "csvid": 19457,
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Deathtouch"
+        ],
+        "payment_colors": [
+          "B",
+          "B"
+        ]
+      },
+      "oracle_text": "Deathtouch",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "deathtouch",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "hybrid_payment_other",
+        "hybrid_payment_mixed"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Flash timing, keyword removal/granting, and additional combat interactions remain separate."
+}

@@ -21,6 +21,13 @@ class ManaCreatureRecipesTest(unittest.TestCase):
             with self.assertRaises(ValueError):self.cases('Elvish Mystic',dict(d,**change))
         for outputs in (['{X}'],['{S}'],['{2}'],['{G}{G}{G}{G}'],['{G}','{G}']):
             with self.assertRaises(ValueError):self.cases('Elvish Mystic',dict(d,params=dict(d['params'],mana_outputs=outputs)))
+
+    def test_three_color_choice_keeps_each_ordinary_output(self):
+        d=self.declaration('Druid of the Anima',['{R}','{G}','{W}'],form='choice',selected=['production_0','production_1','production_2'])
+        cases=self.cases('Druid of the Anima',d)
+        for case,color in zip(cases,(4,3,5)):
+            self.assertIn(dict(op='choose_color',player=0,value=color),case['steps'])
+        with self.assertRaises(ValueError):self.cases('Druid of the Anima',dict(d,params=dict(d['params'],mana_outputs=['{R}','{G}'])))
     def test_triggered_conditional_and_multimode_mana_are_not_certified(self):
         for name in ('Priest of Titania','Millikin','Heart Warden','Skyshroud Elf'):
             with self.assertRaises(ValueError):explicit_spec(self.declaration(name),self.oracle[name])

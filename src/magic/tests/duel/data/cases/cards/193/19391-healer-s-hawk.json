@@ -1,0 +1,33 @@
+{
+  "version": 1,
+  "card": "Healer's Hawk",
+  "csvid": 19391,
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flying",
+          "Lifelink"
+        ]
+      },
+      "oracle_text": "Flying\nLifelink (Damage dealt by this creature also causes you to gain that much life.)",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "flying_evasion",
+        "flying_reach"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Flash timing, keyword removal/granting, and additional combat interactions remain separate."
+}

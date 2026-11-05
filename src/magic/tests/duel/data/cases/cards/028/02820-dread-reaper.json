@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Dread Reaper",
+  "csvid": 2820,
+  "recipes": [
+    {
+      "family": "etb_value_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flying"
+        ],
+        "draw": 0,
+        "gain_life": 0,
+        "lose_life": 5
+      },
+      "oracle_text": "Flying\nWhen this creature enters, you lose 5 life.",
+      "variants": [
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "injured",
+        "opponent_cast",
+        "two_copies",
+        "bounce_recast",
+        "bounce_only",
+        "blink",
+        "blink_snapshot",
+        "countered",
+        "pending_snapshot",
+        "snapshot",
+        "cleanup_once",
+        "destroy",
+        "other_creature",
+        "empty_hand",
+        "empty_graveyard",
+        "empty_exile",
+        "short_library",
+        "opponent_injured",
+        "opponent_bounce",
+        "opponent_pending_snapshot",
+        "fresh_attack",
+        "wrong_color"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared Oracle-pinned recipe; exact payment, effect receipts, populated zones, both controllers where supported and snapshot replay. Remaining interactions listed in generated provenance are separate; no exhaustive card coverage claim."
+}

@@ -1,0 +1,612 @@
+{
+  "version": 1,
+  "source": {
+    "provider": "Scryfall",
+    "bulk_id": "27bf3214-1271-490b-bdfe-c0be6c23d02e",
+    "updated_at": "2026-10-06T05:01:55.462-04:00",
+    "bulk_sha256": "457b0dbd78432750e468b0a505c6ec1c08ee34283aab841443bc9e029f8e0fd0"
+  },
+  "cards": {
+    "Air Elemental": {
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "layout": "normal",
+      "type_line": "Creature — Elemental",
+      "mana_cost": "{3}{U}{U}",
+      "cmc": 5.0,
+      "colors": [
+        "U"
+      ],
+      "power": "4",
+      "toughness": "4",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ]
+    },
+    "Alaborn Trooper": {
+      "oracle_id": "17969b71-9612-45ff-b789-1c033f832154",
+      "layout": "normal",
+      "type_line": "Creature — Human Soldier",
+      "mana_cost": "{2}{W}",
+      "cmc": 3.0,
+      "colors": [
+        "W"
+      ],
+      "power": "2",
+      "toughness": "3",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Alpha Tyrranax": {
+      "oracle_id": "8bed1349-4d0a-4544-ba66-c38e72cd2863",
+      "layout": "normal",
+      "type_line": "Creature — Dinosaur Beast",
+      "mana_cost": "{4}{G}{G}",
+      "cmc": 6.0,
+      "colors": [
+        "G"
+      ],
+      "power": "6",
+      "toughness": "5",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Aven Envoy": {
+      "oracle_id": "73cd8461-7930-4e2d-9a14-4d10db91e93e",
+      "layout": "normal",
+      "type_line": "Creature — Bird Soldier",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "colors": [
+        "U"
+      ],
+      "power": "0",
+      "toughness": "2",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ]
+    },
+    "Avian Changeling": {
+      "oracle_id": "767c1f97-03de-474d-9112-e7521ba3b3f3",
+      "layout": "normal",
+      "type_line": "Creature — Shapeshifter",
+      "mana_cost": "{2}{W}",
+      "cmc": 3.0,
+      "colors": [
+        "W"
+      ],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying",
+      "keywords": [
+        "Changeling",
+        "Flying"
+      ]
+    },
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "cmc": 2.0,
+      "colors": [
+        "U"
+      ],
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "keywords": []
+    },
+    "Cloudshift": {
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{W}",
+      "cmc": 1.0,
+      "colors": [
+        "W"
+      ],
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "keywords": []
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "cmc": 0.0,
+      "colors": [],
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "keywords": [
+        "Indestructible"
+      ]
+    },
+    "Dryad Arbor": {
+      "oracle_id": "e996cd67-739c-40f4-b276-0042acf26c71",
+      "layout": "normal",
+      "type_line": "Land Creature — Forest Dryad",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [
+        "G"
+      ],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": "(This land isn't a spell, it's affected by summoning sickness, and it has \"{T}: Add {G}.\")",
+      "keywords": []
+    },
+    "Flame Slash": {
+      "oracle_id": "8d98d674-6811-4d45-b22a-63792e272a2b",
+      "layout": "normal",
+      "type_line": "Sorcery",
+      "mana_cost": "{R}",
+      "cmc": 1.0,
+      "colors": [
+        "R"
+      ],
+      "oracle_text": "Flame Slash deals 4 damage to target creature.",
+      "keywords": []
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "layout": "normal",
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "oracle_text": "({T}: Add {G}.)",
+      "keywords": []
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "colors": [
+        "G"
+      ],
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "keywords": []
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "layout": "normal",
+      "type_line": "Creature — Bear",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "colors": [
+        "G"
+      ],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "layout": "normal",
+      "type_line": "Creature — Giant",
+      "mana_cost": "{3}{R}",
+      "cmc": 4.0,
+      "colors": [
+        "R"
+      ],
+      "power": "3",
+      "toughness": "3",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Hovermyr": {
+      "oracle_id": "b58722c5-84f2-43c2-be7e-3577c2f2a60a",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Myr",
+      "mana_cost": "{2}",
+      "cmc": 2.0,
+      "colors": [],
+      "power": "1",
+      "toughness": "2",
+      "oracle_text": "Flying, vigilance",
+      "keywords": [
+        "Flying",
+        "Vigilance"
+      ]
+    },
+    "Isamaru, Hound of Konda": {
+      "oracle_id": "cfb756dd-6fe1-430a-8f04-8b10cac62a86",
+      "layout": "normal",
+      "type_line": "Legendary Creature — Dog",
+      "mana_cost": "{W}",
+      "cmc": 1.0,
+      "colors": [
+        "W"
+      ],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "layout": "normal",
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "oracle_text": "({T}: Add {U}.)",
+      "keywords": []
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "cmc": 1.0,
+      "colors": [
+        "R"
+      ],
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "keywords": []
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "layout": "token",
+      "type_line": "Token Creature — Elf Druid",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [
+        "G"
+      ],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": "{T}: Add {G}.",
+      "keywords": []
+    },
+    "Merfolk of the Pearl Trident": {
+      "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+      "layout": "normal",
+      "type_line": "Creature — Merfolk",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "colors": [
+        "U"
+      ],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Metallic Sliver": {
+      "oracle_id": "7cf70a6b-6b55-400c-9a89-b4b85f7a19f5",
+      "layout": "token",
+      "type_line": "Token Artifact Creature — Sliver",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Mons's Goblin Raiders": {
+      "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+      "layout": "normal",
+      "type_line": "Creature — Goblin",
+      "mana_cost": "{R}",
+      "cmc": 1.0,
+      "colors": [
+        "R"
+      ],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Mothdust Changeling": {
+      "oracle_id": "52237e6b-19f6-405c-a668-545c4ccb1b6d",
+      "layout": "normal",
+      "type_line": "Creature — Shapeshifter",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "colors": [
+        "U"
+      ],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": "Changeling (This card is every creature type.)\nTap an untapped creature you control: This creature gains flying until end of turn.",
+      "keywords": [
+        "Changeling"
+      ]
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "layout": "normal",
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "oracle_text": "({T}: Add {R}.)",
+      "keywords": []
+    },
+    "Nyxborn Shieldmate": {
+      "oracle_id": "a1012f33-7ebd-47c6-b670-1b0dc046fbce",
+      "layout": "normal",
+      "type_line": "Enchantment Creature — Human Soldier",
+      "mana_cost": "{W}",
+      "cmc": 1.0,
+      "colors": [
+        "W"
+      ],
+      "power": "1",
+      "toughness": "2",
+      "oracle_text": "Bestow {2}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +1/+2.",
+      "keywords": [
+        "Bestow"
+      ]
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Thopter",
+      "mana_cost": "{0}",
+      "cmc": 0.0,
+      "colors": [],
+      "power": "0",
+      "toughness": "2",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ]
+    },
+    "Phyrexian Hulk": {
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Phyrexian Golem",
+      "mana_cost": "{6}",
+      "cmc": 6.0,
+      "colors": [],
+      "power": "5",
+      "toughness": "4",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "layout": "normal",
+      "type_line": "Basic Land — Plains",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "oracle_text": "({T}: Add {W}.)",
+      "keywords": []
+    },
+    "Savannah Lions": {
+      "oracle_id": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+      "layout": "normal",
+      "type_line": "Creature — Cat",
+      "mana_cost": "{W}",
+      "cmc": 1.0,
+      "colors": [
+        "W"
+      ],
+      "power": "2",
+      "toughness": "1",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Scaled Wurm": {
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "layout": "normal",
+      "type_line": "Creature — Wurm",
+      "mana_cost": "{7}{G}",
+      "cmc": 8.0,
+      "colors": [
+        "G"
+      ],
+      "power": "7",
+      "toughness": "6",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "layout": "normal",
+      "type_line": "Creature — Zombie",
+      "mana_cost": "{2}{B}",
+      "cmc": 3.0,
+      "colors": [
+        "B"
+      ],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Scion of Ugin": {
+      "oracle_id": "7422f43d-0c1e-42cb-864d-1c63f2ec533a",
+      "layout": "normal",
+      "type_line": "Creature — Dragon Spirit",
+      "mana_cost": "{6}",
+      "cmc": 6.0,
+      "colors": [],
+      "power": "4",
+      "toughness": "4",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ]
+    },
+    "Seal of Fire": {
+      "oracle_id": "348a345e-4639-41ca-b015-a5d43459eb64",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{R}",
+      "cmc": 1.0,
+      "colors": [
+        "R"
+      ],
+      "oracle_text": "Sacrifice this enchantment: It deals 2 damage to any target.",
+      "keywords": []
+    },
+    "Shock": {
+      "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "cmc": 1.0,
+      "colors": [
+        "R"
+      ],
+      "oracle_text": "Shock deals 2 damage to any target.",
+      "keywords": []
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "cmc": 1.0,
+      "colors": [],
+      "oracle_text": "{T}: Add {C}{C}.",
+      "keywords": []
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "colors": [
+        "U"
+      ],
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "keywords": []
+    },
+    "Wall of Stone": {
+      "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+      "layout": "normal",
+      "type_line": "Creature — Wall",
+      "mana_cost": "{1}{R}{R}",
+      "cmc": 3.0,
+      "colors": [
+        "R"
+      ],
+      "power": "0",
+      "toughness": "8",
+      "oracle_text": "Defender (This creature can't attack.)",
+      "keywords": [
+        "Defender"
+      ]
+    },
+    "Watchwolf": {
+      "oracle_id": "a35c2e20-eb90-4132-b65f-be1fcb569819",
+      "layout": "normal",
+      "type_line": "Creature — Wolf",
+      "mana_cost": "{G}{W}",
+      "cmc": 2.0,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "power": "3",
+      "toughness": "3",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Phyrexian Broodlings": {
+      "oracle_id": "7d5e4033-bd58-4854-b9d3-a440240995ee",
+      "layout": "normal",
+      "type_line": "Creature — Phyrexian Minion",
+      "mana_cost": "{1}{B}{B}",
+      "cmc": 3.0,
+      "colors": [
+        "B"
+      ],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "{1}, Sacrifice a creature: Put a +1/+1 counter on this creature.",
+      "keywords": []
+    },
+    "Wasp Lancer": {
+      "oracle_id": "12a9a9a4-6b8c-48a1-833f-457a7ece8e7e",
+      "layout": "normal",
+      "type_line": "Creature — Faerie Soldier",
+      "mana_cost": "{U/B}{U/B}{U/B}",
+      "cmc": 3.0,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "power": "3",
+      "toughness": "2",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ]
+    },
+    "Zealous Guardian": {
+      "oracle_id": "508fdfb1-87d6-4342-a05a-01158f253896",
+      "layout": "normal",
+      "type_line": "Creature — Kithkin Soldier",
+      "mana_cost": "{W/U}",
+      "cmc": 1.0,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": "Flash",
+      "keywords": [
+        "Flash"
+      ]
+    },
+    "Woolly Thoctar": {
+      "oracle_id": "220bfa3b-0e17-4350-a967-cfcf05b754ef",
+      "layout": "normal",
+      "type_line": "Creature — Beast",
+      "mana_cost": "{R}{G}{W}",
+      "cmc": 3.0,
+      "colors": [
+        "G",
+        "R",
+        "W"
+      ],
+      "power": "5",
+      "toughness": "4",
+      "oracle_text": "",
+      "keywords": []
+    },
+    "Storm Fleet Sprinter": {
+      "oracle_id": "8d244f4a-1d62-4697-81c7-fbc4de874add",
+      "layout": "normal",
+      "type_line": "Creature — Human Pirate",
+      "mana_cost": "{1}{U}{R}",
+      "cmc": 3.0,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "Haste\nThis creature can't be blocked.",
+      "keywords": [
+        "Haste"
+      ]
+    },
+    "Jasmine Boreal": {
+      "oracle_id": "942407bf-862a-4a0b-b19d-b9f8ee833026",
+      "layout": "normal",
+      "type_line": "Legendary Creature — Human",
+      "mana_cost": "{3}{G}{W}",
+      "cmc": 5.0,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "power": "4",
+      "toughness": "5",
+      "oracle_text": "",
+      "keywords": []
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Wander in Death",
+  "csvid": 17064,
+  "recipes": [
+    {
+      "family": "cycling",
+      "version": 2,
+      "params": {
+        "cycling_cost": "{2}"
+      },
+      "oracle_text": "Return up to two target creature cards from your graveyard to your hand.\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "variants": [
+        "cycle_0",
+        "payment_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "two_copies_0",
+        "bare_zones_0",
+        "duplicate_draw_0",
+        "one_card_library_0",
+        "enemy_turn_0",
+        "combat_0",
+        "cleanup_pending_0",
+        "cancel_0",
+        "insufficient_mana_0",
+        "reducer_0",
+        "opposing_reducer_0",
+        "two_reducers_0",
+        "tax_0",
+        "opposing_tax_0",
+        "two_taxes_0",
+        "reducer_tax_0",
+        "reclaim_pending_0",
+        "crypt_pending_0",
+        "cycle_1",
+        "payment_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "two_copies_1",
+        "bare_zones_1",
+        "duplicate_draw_1",
+        "one_card_library_1",
+        "enemy_turn_1",
+        "combat_1",
+        "cleanup_pending_1",
+        "cancel_1",
+        "insufficient_mana_1",
+        "reducer_1",
+        "opposing_reducer_1",
+        "two_reducers_1",
+        "tax_1",
+        "opposing_tax_1",
+        "two_taxes_1",
+        "reducer_tax_1",
+        "reclaim_pending_1",
+        "crypt_pending_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared Oracle-pinned recipe; exact payment, effect receipts, populated zones, both controllers where supported and snapshot replay. Cycling is covered through actual hand activation, discard, ordered drawing, reductions, taxes and responses. Casting and all other printed rules remain separate coverage gaps."
+}

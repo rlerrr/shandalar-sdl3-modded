@@ -27,7 +27,42 @@
         "tapped_all",
         "untapped_all"
       ]
+    },
+    {
+      "family": "mass_removal",
+      "version": 2,
+      "params": {
+        "mode": "spell",
+        "effect": "destroy",
+        "scope": "creature",
+        "controller": "all",
+        "state": "any",
+        "limit": null,
+        "exclude_self": false,
+        "no_regenerate": false,
+        "gain_per": 0,
+        "gain_scope": "all",
+        "draw_per": 0,
+        "discard_hand": false,
+        "cost": {
+          "mana": "",
+          "tap": false,
+          "self": "none",
+          "discard": 0,
+          "pay_life": 0
+        },
+        "keywords": [],
+        "enters_tapped": false,
+        "uncounterable": true
+      },
+      "oracle_text": "This spell can't be countered.\nDestroy all creatures.",
+      "variants": [
+        "countered_0",
+        "countered_1",
+        "pending_snapshot_0",
+        "pending_snapshot_1"
+      ]
     }
   ],
-  "recipe_coverage": "Reviewed sweep component on both sides of a mixed board, with overlapping permanent types, colors, flying, indestructible witnesses, tapped/untapped variants, empty boards/zones, populated libraries/graveyards/exile, exact normal payment and snapshot/AI replay. Additional Oracle clauses (alternate costs, cycling, flashback, awaken, uncounterability, regeneration prohibition, planeswalker scope) require separate authored cases where present. Graveyards and exile are checked by ownership and contents rather than arbitrary simultaneous-death order."
+  "recipe_coverage": "Reviewed sweep component on both sides of a mixed board, with overlapping permanent types, colors, flying, indestructible witnesses, tapped/untapped variants, empty boards/zones, populated libraries/graveyards/exile, exact normal payment and snapshot/AI replay. Additional Oracle clauses (alternate costs, cycling, flashback, awaken, uncounterability, regeneration prohibition, planeswalker scope) require separate authored cases where present. Graveyards and exile are checked by ownership and contents rather than arbitrary simultaneous-death order. Mass removal additionally covers printed uncounterability through an actual Counterspell response, both controllers and real pending snapshots; alternative abilities, replacements and interaction gaps remain separate."
 }

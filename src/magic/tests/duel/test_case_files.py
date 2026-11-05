@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from pathlib import Path
 
-from case_files import load_cases
+from case_files import load_cases,CaseStream
 
 
 class CaseFilesTest(unittest.TestCase):
@@ -106,6 +106,42 @@ class CaseFilesTest(unittest.TestCase):
                 (Path(self.temp.name) / "registry_kinds.json").write_text(json.dumps(doc), encoding="utf8")
                 with self.assertRaises(ValueError):
                     generate_cases.registry()
+
+    def test_stream_matches_eager_order_and_complete_case_data_with_one_file_cache(self):
+        a=self.card_file(case='Alpha');a['cases'].append(dict(name='Zulu',fixture='combat',steps=[dict(op='assert_life',player=0,value=20)]))
+        b=self.card_file('Furnace Whelp',7059,case='Beta');b['cases'].append(dict(name='Omega',fixture='combat',steps=[]))
+        self.write('cards/a.json',a);self.write('cards/b.json',b)
+        stream=CaseStream(self.directory,self.registry,cache_size=1)
+        expected=load_cases(self.directory,self.registry)
+        self.assertEqual(len(stream),4);self.assertEqual(stream.recipe_count,0)
+        self.assertEqual(list(stream),expected);self.assertEqual(list(stream),expected)
+
+    def test_stream_rejects_duplicate_names_and_card_homes_across_files(self):
+        self.write('cards/a.json',self.card_file())
+        self.write('cards/b.json',self.card_file('Furnace Whelp',7059))
+        with self.assertRaisesRegex(ValueError,'duplicate case'):CaseStream(self.directory,self.registry)
+        self.write('cards/b.json',self.card_file(case='AnotherCase'))
+        with self.assertRaisesRegex(ValueError,'duplicate card home'):CaseStream(self.directory,self.registry)
+
+    def test_stream_preserves_generated_provenance_and_counts_on_reload(self):
+        from unittest.mock import patch
+        def expand(name,csvid,d,record,registry,oracle_context):
+            return [dict(name=d['family'],card=name,fixture='combat',steps=[],_recipe=dict(family=d['family']))]
+        self.write('cards/a.json',dict(version=1,card='Infantry Veteran',csvid=2723,recipes=[dict(family='Alpha'),dict(family='Zulu')]))
+        self.write('cards/b.json',dict(version=1,card='Furnace Whelp',csvid=7059,recipes=[dict(family='Beta'),dict(family='Omega')]))
+        with patch('recipes.expand',side_effect=expand):
+            stream=CaseStream(self.directory,self.registry,{},cache_size=1)
+            self.assertEqual(stream.recipe_count,4)
+            self.assertEqual(list(stream),load_cases(self.directory,self.registry,{}))
+
+    def test_stream_checks_empty_inventory_cache_size_and_changed_names(self):
+        with self.assertRaisesRegex(ValueError,'No behavior'):CaseStream(self.directory,self.registry)
+        for size in (0,-1,True):
+            with self.assertRaises(ValueError):CaseStream(self.directory,self.registry,cache_size=size)
+        self.write('cards/a.json',self.card_file())
+        stream=CaseStream(self.directory,self.registry)
+        self.write('cards/a.json',self.card_file(case='Changed'))
+        with self.assertRaisesRegex(ValueError,'inventory changed'):list(stream)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "card": "Tattered Mummy",
+  "csvid": 17043,
+  "recipes": [
+    {
+      "family": "value_flow",
+      "version": 2,
+      "params": {
+        "mode": "death",
+        "recipient": "opponents",
+        "operations": [
+          {
+            "kind": "lose_life",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "cost": {
+          "mana": "",
+          "tap": false,
+          "sacrifice": false,
+          "pay_life": 0,
+          "discard": 0
+        },
+        "keywords": [],
+        "mana_ability": false
+      },
+      "oracle_text": "When this creature dies, each opponent loses 2 life.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "bare_zones_0",
+        "empty_hands_0",
+        "one_card_0",
+        "large_hand_0",
+        "uneven_hands_0",
+        "own_empty_0",
+        "opponent_empty_0",
+        "duplicates_0",
+        "last_choice_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_cast_0",
+        "insufficient_mana_0",
+        "other_death_0",
+        "source_bounced_0",
+        "source_exiled_0",
+        "wrong_color_0",
+        "effect_1",
+        "payment_1",
+        "bare_zones_1",
+        "empty_hands_1",
+        "one_card_1",
+        "large_hand_1",
+        "uneven_hands_1",
+        "own_empty_1",
+        "opponent_empty_1",
+        "duplicates_1",
+        "last_choice_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_cast_1",
+        "insufficient_mana_1",
+        "other_death_1",
+        "source_bounced_1",
+        "source_exiled_1",
+        "wrong_color_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Fixed nondiscard draw, mill and life effects through real spells, activations and creature entry/death. Pinned whole Oracle effects and costs drive both-controller receipts, exact card multiplicities, ordered libraries, legal repeats, real counter/removal responses, exact-library draws, truncated mills, and snapshots. Source passive keywords, alternative costs/abilities, empty-library draw losses, replacement/triggered effects, control changes and multiplayer remain component gaps."
+}

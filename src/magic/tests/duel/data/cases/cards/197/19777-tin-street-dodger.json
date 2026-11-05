@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Tin Street Dodger",
+  "csvid": 19777,
+  "recipes": [
+    {
+      "family": "passive_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Haste"
+        ],
+        "activated_abilities": [
+          "{R}: This creature can't be blocked this turn except by creatures with defender."
+        ]
+      },
+      "oracle_text": "Haste\n{R}: This creature can't be blocked this turn except by creatures with defender.",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "block_ground_0",
+        "block_flying_0",
+        "tapped_attacker_0",
+        "tapped_blocker_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "block_ground_1",
+        "block_flying_1",
+        "tapped_attacker_1",
+        "tapped_blocker_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared Oracle-pinned recipe; exact payment, effect receipts, populated zones, both controllers where supported and snapshot replay. Only the unconditional printed keyword combat component is covered. The explicitly pinned activated abilities are not exercised; this does not establish complete card behavior."
+}

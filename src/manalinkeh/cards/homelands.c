@@ -3224,7 +3224,7 @@ int card_roots(int player, int card, event_t event)
 	return targeted_aura(player, card, event, &td, "FLOOD");	// Select target creature without flying.
 }
 
-int card_roterothopter(int player, int card, event_t event, int amount)
+int card_roterothopter(int player, int card, event_t event)
 {
   /* Roterothopter	|1	0x200a467
    * Artifact Creature - Thopter 0/2

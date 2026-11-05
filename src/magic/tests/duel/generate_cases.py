@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "tools"))
 from import_duel_oracle import registry
 from import_carddata import load_handler_overrides
-from case_files import load_cases
+from case_files import CaseStream
 from case_shards import CaseShards
 
 ZONES = {"hand": 0, "battlefield": 1, "library": 2, "graveyard": 3, "exile": 4}
@@ -22,16 +22,31 @@ OPS = {"choose_target", "choose_damage_target", "choose_damage_player", "choose_
        "assert_card_name", "assert_payment_source", "set_mana", "set_life", "set_budget", "assert_mana", "assert_mana_at_most", "assert_mana_total", "assert_life", "assert_energy", "assert_poison", "assert_stack", "assert_targets_consumed", "assert_choices_consumed", "capture", "restore", "ai_roundtrip", "ai_turns"}
 PROPERTIES = {"csvid", "power", "toughness", "tapped", "sick", "attacking", "in_play", "in_hand", "damage", "blocking_count", "blocked", "plus1_counters", "minus1_counters"}
 OPS |= {"refresh", "choose_zone_card", "choose_payment", "can_activate_hand", "require_can_activate_hand", "activate_hand", "require_can_activate", "can_target_creature"}
+OPS.add("probe_activation_target")
+OPS.add("choose_x")
 OPS.add("assert_zone_multiplicity")
+OPS |= {"assert_zone_multiplicity_max", "discard_policy", "assert_discard_choices", "present_ai_dialogs"}
 OPS |= {"choose_optional_zone", "assert_forced_zone_choices"}
 OPS |= {"set_card_available", "assert_card_available"}
-OPS |= {"assert_matching_permanents", "bind_permanent_copy"}
+OPS |= {"assert_matching_permanents", "bind_permanent_copy", "bind_hand_copy", "require_can_cast", "assert_unused_choices"}
+OPS |= {"record_library", "assert_scry_result"}
+OPS |= {"observe_search_filters", "assert_offered_legal_card"}
+OPS.add("assert_offered_selection_required")
 TOKEN_PROPERTIES = {"token", "color", "artifact"} | {"subtype_"+n for n in (
     "Angel","Bear","Bird","Centaur","Citizen","Dragon","Drake","Eldrazi","Elf","Goblin",
     "Horror","Human","Insect","Knight","Ally","Minotaur","Myr","Satyr","Servo","Sliver",
     "Soldier","Spirit","Thopter","Warrior","Wurm")}
-REF_OPS = {"choose_regeneration", "choose_target", "choose_damage_target", "choose_trigger", "can_activate", "activate", "can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card", "require_card", "assert_card_name"}
+REF_OPS = {"choose_regeneration", "choose_target", "choose_damage_target", "choose_trigger", "can_activate", "activate", "can_cast", "require_can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card", "require_card", "assert_card_name"}
 REF_OPS |= {"can_activate_hand", "require_can_activate_hand", "activate_hand", "require_can_activate", "can_target_creature"}
+REF_OPS.add("probe_activation_target")
+
+def validate_library_observation(step, recorded):
+    if type(step.get('player')) is not int or step['player'] not in (0,1):
+        raise ValueError('library observations require an explicit player')
+    if step['op'] == 'record_library':
+        recorded.add(step['player'])
+    elif step['player'] not in recorded or type(step.get('value')) is not int or not 0 <= step['value'] <= 20:
+        raise ValueError('scry observations require a prior library record and bounded inspected count')
 
 def read(path):
     value = json.loads(path.read_text(encoding="utf-8"))
@@ -62,8 +77,8 @@ def build(data, output):
     fixtures = read(data / "fixtures.json")["fixtures"]
     if (data / "cases.json").exists():
         raise ValueError("Move the legacy cases.json into individual files under data/cases/")
-    cases = load_cases(data / "cases", by_name, oracle["cards"], aliases)
-    if any("_recipe" in c for c in cases):
+    cases = CaseStream(data / "cases", by_name, oracle["cards"], aliases)
+    if cases.recipe_count:
         from recipes import validate_context
         validate_context(oracle["cards"], by_name, fixtures)
     names = set()
@@ -115,8 +130,21 @@ def build(data, output):
         text = expectations.get("oracle_text", "")
         steps_c = []
         recorded_state = False
+        recorded_libraries = set()
         for step in case["steps"]:
             op = step["op"]
+            if op == 'present_ai_dialogs' and (type(step.get('value')) is not int or step['value'] not in (0,1)):
+                raise ValueError(f'Invalid AI dialog input policy in {name}: {step}')
+            if op == 'discard_policy' and (type(step.get('value')) is not int or step['value'] not in (0,1,2)):
+                raise ValueError(f'Invalid discard selection policy in {name}: {step}')
+            if op == 'assert_discard_choices' and (type(step.get('value')) is not int or step['value']<0):
+                raise ValueError(f'Invalid discard selection count in {name}: {step}')
+            if op in ('record_library','assert_scry_result'):
+                validate_library_observation(step,recorded_libraries)
+            if op in ('observe_search_filters','assert_offered_legal_card','assert_offered_selection_required') and (type(step.get('value')) is not int or step['value'] not in (0,1)):
+                raise ValueError('search filter observations require explicit boolean integers')
+            if op == 'assert_offered_legal_card' and (type(step.get('index')) is not int or step['index'] not in registered_csvids):
+                raise ValueError('search filter observations require a registered card identity')
             if op not in OPS or (op in REF_OPS and step.get("ref") not in refs):
                 raise ValueError(f"Invalid action in {name}: {step}")
             if step.get("property", "power") not in PROPERTIES | (TOKEN_PROPERTIES if op=="assert_matching_permanents" else set()):
@@ -125,6 +153,10 @@ def build(data, output):
                 raise ValueError(f"Unknown reference: {step}")
             if op == "can_target_creature" and step.get("other") not in refs:
                 raise ValueError(f"Creature target probe requires a named target: {step}")
+            if op == 'probe_activation_target' and (step.get('other') not in refs or type(step.get('value')) is not int or step['value'] not in (0,1) or type(step.get('index')) is not int or not -1<=step['index']<=16):
+                raise ValueError(f'Activation target probe requires a named target, boolean result and explicit mode: {step}')
+            if op == 'choose_x' and (type(step.get('value')) is not int or not 0<=step['value']<=20 or type(step.get('player')) is not int or step['player'] not in (0,1)):
+                raise ValueError('X choices require an explicit controller and integer from zero through twenty')
             if op in {"choose_player", "choose_damage_player"} and (step.get("value") not in (0, 1) or step.get("player", -1) not in (-1, 0, 1)):
                 raise ValueError(f"Invalid player target in {name}: {step}")
             if op == "choose_damage_target" and step.get("player", -1) not in (-1, 0, 1):
@@ -148,7 +180,7 @@ def build(data, output):
                 or type(step.get("value")) is not int or step["value"] not in (0, 1)
             ):
                 raise ValueError(f"Invalid fixture card availability in {name}: {step}")
-            if op == "assert_zone_multiplicity" and (
+            if op in {"assert_zone_multiplicity", "assert_zone_multiplicity_max"} and (
                 step.get("player") not in (0, 1) or step.get("zone") not in ZONES
                 or step.get("index") not in registered_csvids
                 or type(step.get("value")) is not int or step["value"] < 0
@@ -159,13 +191,13 @@ def build(data, output):
                 or type(step.get("value")) is not int or "property" not in step
             ):
                 raise ValueError(f"Invalid matching permanent observation in {name}: {step}")
-            if op == "bind_permanent_copy" and (
+            if op in {"bind_permanent_copy", "bind_hand_copy"} and (
                 step.get("player") not in (0,1) or type(step.get("index")) is not int
                 or not 0<=step["index"]<16 or step.get("value") not in registered_csvids
                 or not isinstance(step.get("ref"),str) or not step["ref"]
             ):
-                raise ValueError(f"Invalid permanent copy binding in {name}: {step}")
-            if op == "bind_permanent_copy":refs.add(step["ref"])
+                raise ValueError(f"Invalid card copy binding in {name}: {step}")
+            if op in {"bind_permanent_copy", "bind_hand_copy"}:refs.add(step["ref"])
             if op == "assert_targets_consumed" and step.get("value", 0) != 0:
                 raise ValueError(f"Target plans must consume every planned target in {name}")
             if op in {"bind_permanent", "bind_hand"} and (
@@ -260,7 +292,7 @@ def build(data, output):
     inventory = {"version":1,"records":rows,"oracle_mapped_names":len(oracle["cards"]),
                  "behavior_cases":len(cases),"template_cases":len(templates),"smoke_cards":len(smoke),
                  "oracle_sha256":hashlib.sha256((data / "oracle.json").read_bytes()).hexdigest()}
-    inventory["recipe_cases"] = sum("_recipe" in c for c in cases)
+    inventory["recipe_cases"] = cases.recipe_count
     (output / "inventory.json").write_text(json.dumps(inventory,indent=2)+"\n")
     # Configure-time CTest inventory: every case gets its own failure-contained process.
     cmake = []

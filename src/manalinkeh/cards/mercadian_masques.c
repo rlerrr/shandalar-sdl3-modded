@@ -4348,7 +4348,7 @@ Destroy target non|Sblack creature. It can't be regenerated. You gain life equal
 						get_sleighted_color_text(player, card, "Select target non%s creature.", COLOR_BLACK), 1, NULL);
 }
 
-int card_silverglade_elemental(int player, int card, event_t event, int mana_req){
+int card_silverglade_elemental(int player, int card, event_t event){
   /* Silverglade Elemental |4|G
    * Creature — Elemental 4/4
    * When Silverglade Elemental enters the battlefield, you may search your library for a Forest card and put that card onto the battlefield.

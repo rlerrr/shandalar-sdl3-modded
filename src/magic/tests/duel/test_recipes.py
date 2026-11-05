@@ -20,6 +20,32 @@ DATA = Path(__file__).parent / "data"
 
 
 class RecipesTest(unittest.TestCase):
+    def test_variable_mana_input_requires_bounded_integer_and_explicit_controller(self):
+        from generate_cases import build
+        with tempfile.TemporaryDirectory(dir=Path.cwd()) as temporary:
+            data=Path(temporary);cases=data/'cases';cases.mkdir()
+            (data/'oracle.json').write_text(json.dumps(dict(version=1,cards={'Braingeyser':self.oracle['Braingeyser']},source={})))
+            (data/'oracle_aliases.json').write_text(json.dumps(dict(version=1,aliases={})))
+            (data/'fixtures.json').write_text(json.dumps(dict(version=1,fixtures={'empty_main':dict(cards=[])})))
+            for patch in (dict(value=True),dict(value=-1),dict(value=21),dict(value=None),dict(player=-1),dict(player=True),dict(player=2)):
+                case=dict(name='VariableManaBoundary',fixture='empty_main',steps=[dict(op='choose_x',player=0,value=3,**{})])
+                case['steps'][0].update(patch)
+                (cases/'braingeyser.json').write_text(json.dumps(dict(version=1,card='Braingeyser',csvid=self.registry['Braingeyser']['csvid'],cases=[case])))
+                with self.assertRaisesRegex(ValueError,'X choices'):build(data,data/'generated')
+
+    def test_activation_target_probe_requires_named_candidate_boolean_and_mode(self):
+        from generate_cases import build
+        with tempfile.TemporaryDirectory(dir=Path.cwd()) as temporary:
+            data=Path(temporary);cases=data/'cases';cases.mkdir()
+            (data/'oracle.json').write_text(json.dumps(dict(version=1,cards={'Royal Assassin':self.oracle['Royal Assassin']},source={})))
+            (data/'oracle_aliases.json').write_text(json.dumps(dict(version=1,aliases={})))
+            (data/'fixtures.json').write_text(json.dumps(dict(version=1,fixtures={'empty_main':dict(cards=[])})))
+            action=dict(op='probe_activation_target',ref='source',other='source',value=1,index=-1)
+            for patch in (dict(other='missing'),dict(value=True),dict(value=2),dict(index=True),dict(index=-2),dict(index=17),dict(index=None)):
+                case=dict(name='ActivationProbeBoundary',fixture='empty_main',setup=[dict(name='Royal Assassin',ref='source',player=0,zone='battlefield')],steps=[dict(action,**patch)])
+                (cases/'assassin.json').write_text(json.dumps(dict(version=1,card='Royal Assassin',csvid=self.registry['Royal Assassin']['csvid'],cases=[case])))
+                with self.assertRaises(ValueError):build(data,data/'generated')
+
     def test_creature_target_probe_requires_a_named_existing_target(self):
         from generate_cases import build
         with tempfile.TemporaryDirectory(dir=Path.cwd()) as temporary:

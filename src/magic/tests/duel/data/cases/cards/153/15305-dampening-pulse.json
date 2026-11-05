@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "card": "Dampening Pulse",
+  "csvid": 15305,
+  "recipes": [
+    {
+      "family": "static_stats",
+      "version": 2,
+      "params": {
+        "clauses": [
+          {
+            "scope": "opponents",
+            "other": false,
+            "state": "all",
+            "predicate": "all",
+            "value": "",
+            "power": -1,
+            "toughness": 0
+          }
+        ],
+        "keywords": [],
+        "activated_abilities": []
+      },
+      "oracle_text": "Creatures your opponents control get -1/-0.",
+      "variants": [
+        "static_0",
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "tapped_source_0",
+        "source_bounced_0",
+        "source_destroyed_0",
+        "bounce_recast_0",
+        "late_arrival_0",
+        "blink_witness_0",
+        "pump_0",
+        "change_tapping_0",
+        "attackers_0",
+        "blockers_0",
+        "combat_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "two_sources_0",
+        "remove_one_source_0",
+        "opposing_source_0",
+        "wrong_color_0",
+        "static_1",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "tapped_source_1",
+        "source_bounced_1",
+        "source_destroyed_1",
+        "bounce_recast_1",
+        "late_arrival_1",
+        "blink_witness_1",
+        "pump_1",
+        "change_tapping_1",
+        "attackers_1",
+        "blockers_1",
+        "combat_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "two_sources_1",
+        "remove_one_source_1",
+        "opposing_source_1",
+        "wrong_color_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Continuous signed creature stats from complete pinned Oracle clauses. Both controllers exercise overlapping color/subtype/state/controller predicates, source entry and departure, stacking, changelings, real token copies, exact costs and zones, late arrivals, combat states, damage followed by toughness-bonus loss, and caller-owned snapshots. Inactive activated abilities, source keyword combat/timing, replacement effects, live color/type/control changes and multiplayer remain component gaps."
+}

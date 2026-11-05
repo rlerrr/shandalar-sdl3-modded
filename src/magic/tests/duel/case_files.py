@@ -1,17 +1,18 @@
 """Load small, independently authored card and scenario case files."""
 import json
 import re
+from functools import lru_cache
 from pathlib import Path
 
 
-def load_cases(directory, registry, oracle=None, aliases=None):
+def load_cases(directory, registry, oracle=None, aliases=None, *, _files=None, _homes=None):
     directory = Path(directory)
-    files = sorted(directory.rglob("*.json"))
+    files = sorted(directory.rglob("*.json")) if _files is None else _files
     if not files:
         raise ValueError(f"No behavior case files found in {directory}")
     cases = []
     names = {}
-    card_homes = {}
+    card_homes = {} if _homes is None else _homes
     for path in files:
         source = path.relative_to(directory.parent).as_posix()
         try:
@@ -69,3 +70,42 @@ def load_cases(directory, registry, oracle=None, aliases=None):
             cases.append(case)
     # Moving files or assigning a set must not change execution order or generated IDs.
     return sorted(cases, key=lambda case: case["name"])
+
+
+class CaseStream:
+    """Index names once, then expand only a bounded number of card files.
+
+    Global name order and generated IDs match load_cases exactly. Keeping the
+    index separate from full step dictionaries avoids retaining the expanded
+    catalog in memory during C++ emission.
+    """
+    def __init__(self, directory, registry, oracle=None, aliases=None, cache_size=4):
+        if type(cache_size) is not int or cache_size < 1:
+            raise ValueError('case stream cache requires a positive file count')
+        self.directory=Path(directory)
+        self.arguments=(registry,oracle,aliases)
+        files=sorted(self.directory.rglob('*.json'))
+        if not files:raise ValueError(f'No behavior case files found in {self.directory}')
+        self.index=[];self.recipe_count=0;homes={};names={}
+        for path in files:
+            cases=load_cases(self.directory,*self.arguments,_files=[path],_homes=homes)
+            for i,case in enumerate(cases):
+                name=case['name'];source=case['_source_file']
+                if name in names:raise ValueError(f'{source}: duplicate case {name}, also defined in {names[name]}')
+                names[name]=source
+                self.index.append((name,path,i))
+                self.recipe_count += '_recipe' in case
+        self.index.sort()
+        self.cache_size=cache_size
+
+    def __len__(self):return len(self.index)
+
+    def __iter__(self):
+        @lru_cache(maxsize=self.cache_size)
+        def expand_file(path):
+            return load_cases(self.directory,*self.arguments,_files=[path])
+        for name,path,index in self.index:
+            cases=expand_file(path)
+            if index>=len(cases) or cases[index]['name']!=name:
+                raise ValueError(f'{path}: case inventory changed during generation')
+            yield cases[index]

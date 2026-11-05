@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "card": "Vampire Champion",
+  "csvid": 18323,
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Deathtouch"
+        ]
+      },
+      "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "deathtouch"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Flash timing, keyword removal/granting, and additional combat interactions remain separate."
+}

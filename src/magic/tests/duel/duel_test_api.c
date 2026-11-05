@@ -72,14 +72,16 @@ static Global globals[] = {
 typedef struct { DuelChoiceKind kind; int player, value, card, damage_recipient, regeneration_window; } Decision;
 static Decision decisions[128];
 static int decision_count, decision_cursor;
-static int offered_count, offered_csvids[512];
+static int offered_count, offered_csvids[512], offered_legal[512], offered_selection_required;
 static int forced_zone_choices;
+static int discard_policy, discard_choice_count;
 struct DuelTestSnapshot {
   DuelHostState host;
   int decision_count, decision_cursor;
   Decision decisions[128];
-  int offered_count, offered_csvids[512];
+  int offered_count, offered_csvids[512], offered_legal[512], offered_selection_required;
   int forced_zone_choices;
+  int discard_policy, discard_choice_count;
   int unlocked[50];
   unsigned char data[];
 };
@@ -107,9 +109,12 @@ DuelTestSnapshot *duel_test_capture(void)
   s->host = duel_host_capture(); s->decision_count = decision_count; s->decision_cursor = decision_cursor;
   memcpy(s->decisions, decisions, sizeof(decisions));
   s->offered_count = offered_count;
+  s->offered_selection_required = offered_selection_required;
   s->forced_zone_choices = forced_zone_choices;
+  s->discard_policy = discard_policy; s->discard_choice_count = discard_choice_count;
   memcpy(s->unlocked, unlocked, sizeof(s->unlocked));
   memcpy(s->offered_csvids, offered_csvids, sizeof(offered_csvids));
+  memcpy(s->offered_legal, offered_legal, sizeof(offered_legal));
   duel_engine_capture_ai_snapshot(s->data);
   duel_manalink_snapshot_capture(s->data + core);
   cursor = s->data + core + supplemental;
@@ -126,11 +131,20 @@ void duel_test_restore(const DuelTestSnapshot *s)
   duel_host_restore(s->host); decision_count = s->decision_count; decision_cursor = s->decision_cursor;
   memcpy(decisions, s->decisions, sizeof(decisions));
   offered_count = s->offered_count;
+  offered_selection_required = s->offered_selection_required;
   forced_zone_choices = s->forced_zone_choices;
+  discard_policy = s->discard_policy; discard_choice_count = s->discard_choice_count;
   memcpy(unlocked, s->unlocked, sizeof(s->unlocked));
   memcpy(offered_csvids, s->offered_csvids, sizeof(offered_csvids));
+  memcpy(offered_legal, s->offered_legal, sizeof(offered_legal));
 }
 void duel_test_free_snapshot(DuelTestSnapshot *s) { free(s); }
+static int choice_ready(void *context, DuelChoiceKind kind, int player)
+{
+  (void)context;
+  return decision_cursor<decision_count && decisions[decision_cursor].kind==kind &&
+    (decisions[decision_cursor].player==-1 || decisions[decision_cursor].player==player);
+}
 static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAnswer *answer)
 {
   (void)context;
@@ -138,7 +152,8 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
      notices carry no gameplay choice; other dialogs remain scripted. */
   if (request->kind == DUEL_CHOICE_DIALOG && request->player == 1 && request->prompt) {
     static const char *notices[] = {"to produce black mana.", "to produce blue mana.",
-      "to produce green mana.", "to produce red mana.", "to produce white mana.", "to produce colorless mana.", "reveals:"};
+      "to produce green mana.", "to produce red mana.", "to produce white mana.", "to produce colorless mana.", "reveals:",
+      "at random to discard.", "to discard."};
     for (unsigned i=0; i<sizeof(notices)/sizeof(*notices); ++i) {
       if (!strcmp(request->prompt,notices[i]) &&
           (decision_cursor>=decision_count || decisions[decision_cursor].kind!=DUEL_CHOICE_DIALOG ||
@@ -161,13 +176,23 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
     if (request->count < 0 || request->count > 512 || (request->count && !request->cards))
       duel_host_fail("invalid offered zone cards");
     offered_count = 0;
+    offered_selection_required = request->zone_must_select;
     for (int c = 0; c < request->count && request->cards[c] != -1; ++c) {
       int id = request->cards[c];
       if (id < 0 || id >= g_card_count + 16) duel_host_fail("invalid offered card id");
+      offered_legal[offered_count] = request->zone_legal ? !!request->zone_legal[c] : -1;
       offered_csvids[offered_count++] = global_cards_data[id].id;
     }
   }
   if (getenv("DUEL_TEST_TRACE")) fprintf(stderr,"CHOICE kind=%d player=%d prompt=%s\n",request->kind,request->player,request->prompt?request->prompt:"");
+  if (request->kind == DUEL_CHOICE_ZONE && discard_policy && request->prompt &&
+      (!strcmp(request->prompt,"Select a card to discard.") || !strcmp(request->prompt,"Select card to discard."))) {
+    int chosen=-1;
+    for (int c=0;c<offered_count;++c) if (!request->zone_legal || request->zone_legal[c])
+      if (chosen<0 || (discard_policy==1 ? offered_csvids[c]<offered_csvids[chosen] : offered_csvids[c]>offered_csvids[chosen])) chosen=c;
+    if (chosen<0) duel_host_fail("discard policy has no legal offered card");
+    ++discard_choice_count; answer->value=chosen; answer->card=-1; return 1;
+  }
   /* Explicit policy: pass priority unless the script requests this player's
      response. Other players' passes must not consume that planned response. */
   if (request->kind == DUEL_CHOICE_PRIORITY &&
@@ -178,6 +203,18 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
   if (decision_cursor >= decision_count) return 0;
   Decision *d = &decisions[decision_cursor];
   if (d->kind != request->kind || (d->player != -1 && d->player != request->player)) return 0;
+  if (request->kind == DUEL_CHOICE_PRIORITY && d->regeneration_window) {
+    /* A destruction window can still exclude this particular creature (for
+       example, "can't be regenerated"). Use the actual offered responses,
+       retaining the attempted regeneration so the case can assert it unused. */
+    int legal = 0;
+    if (manalinkeh_in_play(request->player, d->value)) {
+      if (request->cards) {
+        for (int c=0;c<request->count;++c) if (request->cards[c]==d->value) { legal=1; break; }
+      } else legal = !!get_card_response_action_type(request->player, d->value);
+    }
+    if (!legal) { answer->value=-2; answer->card=-1; return 1; }
+  }
   if (request->kind == DUEL_CHOICE_COLOR &&
       (d->value < 0 || d->value > 6 || !(request->count & (1u << d->value))))
     duel_host_fail("illegal scripted mana color");
@@ -210,7 +247,13 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
       ++forced_zone_choices;
       int found = -1;
       for (int c=0;c<offered_count;++c) if (offered_csvids[c]==d->card) { found=c; break; }
-      if (found == -1) duel_host_fail("optional zone fallback is not offered");
+      if (request->zone_legal && (found == -1 || !request->zone_legal[found])) {
+        /* An incorrect mandatory filter can reject the Oracle fallback.
+           Preserve that predicate and select another actually legal card,
+           or return no selection when the offered zone has no legal cards. */
+        found = -1;
+        for (int c=0;c<offered_count;++c) if (request->zone_legal[c]) { found=c; break; }
+      } else if (found == -1) duel_host_fail("optional zone fallback is not offered");
       answer->value = found;
     }
   }
@@ -264,8 +307,17 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
     for (int c = 0; c < offered_count; ++c) {
       if (offered_csvids[c] == d->card) { found = c; break; }
     }
-    if (found == -1) duel_host_fail("scripted zone card is not offered");
-    answer->value = found; answer->card = -1;
+    /* In observation mode, an Oracle-legal planned choice may expose an
+       incorrect engine predicate. Decline only when the engine permits it,
+       so the case can assert the rejected eligibility/effect rather than abort.
+       No candidate is admitted past the ordinary legality validator. */
+    if (request->zone_legal && !request->zone_must_select &&
+        (found == -1 || !request->zone_legal[found])) answer->value = -1;
+    else {
+      if (found == -1) duel_host_fail("scripted zone card is not offered");
+      answer->value = found;
+    }
+    answer->card = -1;
   }
   if (d->damage_recipient) {
     int found_player = -1, found_card = -1;
@@ -288,7 +340,7 @@ int duel_test_initialize(const char *assets)
 {
   char path[1024]; int p, c;
   if (initialized) return 1;
-  DuelHost host = {NULL, choose};
+  DuelHost host = {NULL, choose, choice_ready};
   duel_host_install(&host, 1, 200000);
   shandalar_set_presentation_guard(duel_host_fail);
   shandalar_set_time_hooks(headless_clock, headless_sleep);
@@ -326,7 +378,7 @@ int duel_test_initialize(const char *assets)
 }
 void duel_test_reset(uint32_t seed)
 {
-  DuelHost host = {NULL, choose};
+  DuelHost host = {NULL, choose, choice_ready};
   if (!initialized) duel_host_fail("engine not initialized");
   duel_test_restore(baseline); decision_count = decision_cursor = forced_zone_choices = 0;
   duel_host_install(&host, seed, 200000);
@@ -434,7 +486,17 @@ void duel_test_damage_decision(int player, DuelTestRef recipient) {
   decisions[decision_count - 1].damage_recipient = 1;
 }
 int duel_test_offered_count(void) { return offered_count; }
+int duel_test_offered_selection_required(void) { return offered_selection_required; }
+int duel_test_offered_legal(int index) {
+  if (index < 0 || index >= offered_count) duel_host_fail("offered legality index out of range");
+  return offered_legal[index];
+}
 int duel_test_forced_zone_choices(void) { return forced_zone_choices; }
+void duel_test_set_discard_policy(int policy) {
+  if (policy<0 || policy>2) duel_host_fail("invalid scripted discard policy");
+  discard_policy=policy; discard_choice_count=0;
+}
+int duel_test_discard_choice_count(void) { return discard_choice_count; }
 int duel_test_offered_csvid(int index) {
   if (index < 0 || index >= offered_count) duel_host_fail("offered card index out of range");
   return offered_csvids[index];
@@ -490,6 +552,20 @@ int duel_test_can_target_creature(DuelTestRef source, DuelTestRef target) {
   target_definition_t td;
   manalinkeh_default_target_definition(source.player, source.card, &td, TYPE_CREATURE);
   return manalinkeh_validate_arbitrary_target(&td, target.player, target.card);
+}
+int duel_test_probe_activation_target(DuelTestRef source, DuelTestRef target, int mode_choice) {
+  DuelTestSnapshot *saved=duel_test_capture();
+  decision_count=decision_cursor=0;
+  duel_host_set_ai_choices(0); duel_host_present_ai_dialogs(1);
+  duel_host_probe_target(target.player,target.card);
+  duel_test_set_discard_policy(1);
+  if (mode_choice>=0) duel_test_decision(DUEL_CHOICE_DIALOG,source.player,mode_choice,-1);
+  int available=duel_test_can_activate(source);
+  if (duel_host_target_probe_result()==-1 && available)
+    duel_test_activate(source);
+  int result=duel_host_target_probe_result();
+  duel_test_restore(saved); duel_test_free_snapshot(saved);
+  return result;
 }
 static DuelTestRef hand_ability_proxy(int player) {
   for (int card=0; card<g_active_cards_count[player]; ++card) {

@@ -35,11 +35,12 @@ def spec(declaration, record):
         if not re.fullmatch(r'\d+',record.get(field,'')) or not 0<=int(record[field])<=20:
             raise ValueError('self-pump needs bounded numeric Oracle base characteristics')
     if int(record['toughness'])==0:raise ValueError('self-pump host must survive entry')
-    if 'activation_limit' in p and (type(p['activation_limit']) is not int or not 2<=p['activation_limit']<=3):
-        raise ValueError('self-pump requires a reviewed per-turn limit of two or three')
+    if 'activation_limit' in p and (type(p['activation_limit']) is not int or not 1<=p['activation_limit']<=3):
+        raise ValueError('self-pump requires a reviewed per-turn limit from one to three')
     if not isinstance(p['activation_cost'],str):raise ValueError('self-pump requires a structured activation cost')
     reviewed=f"{p['activation_cost']}: This creature gets +{p['power']}/+{p['toughness']} until end of turn."
-    if p.get('activation_limit'):reviewed += ' Activate no more than '+{2:'twice',3:'three times'}[p['activation_limit']]+' each turn.'
+    if p.get('activation_limit')==1:reviewed += ' Activate only once each turn.'
+    elif p.get('activation_limit'):reviewed += ' Activate no more than '+{2:'twice',3:'three times'}[p['activation_limit']]+' each turn.'
     if reviewed not in abilities:
         raise ValueError('self-pump clause differs from its explicitly reviewed cost, bonus, or limit')
     dialog=declaration.get('activation_dialog')
@@ -67,6 +68,7 @@ def variants(p):
         if any(p['activation_mana'][1:]):result.append('activation_wrong_color')
     if p['limit']:result += ['activation_limit','activation_limit_reset']
     else:result.append('five_activations')
+    if p['limit']==1:result.remove('stacked_activations')
     return result
 
 
@@ -164,7 +166,7 @@ def expand(name,csvid,declaration,p,selected,registry,oracle):
         cleanup=[] if lost else [step('cleanup'),observe('source','in_play',1),observe('source','power',p['power']),observe('source','toughness',p['toughness']),
             observe('source','tapped',int(variant=='tapped_activation' or combat and 'Defender' not in p['keywords'] and 'Vigilance' not in p['keywords']))]
         if variant=='activation_limit_reset':
-            cleanup += activation()+[step('resolve'),step('assert_choices_consumed'),observe('source','power',p['power']+boost),observe('source','toughness',p['toughness']+boost_t),
+            cleanup += [step('advance_turn')]+activation()+[step('resolve'),step('assert_choices_consumed'),observe('source','power',p['power']+boost),observe('source','toughness',p['toughness']+boost_t),
                                      step('assert_mana_total',player=0,value=mana[0]-sum(p['activation_mana']))]
         if variant=='activation_snapshot':
             steps=pre+[step('capture')]+actions+resolved_checks+[step('record_state'),step('ai_roundtrip'),step('restore')]+actions+resolved_checks+[step('assert_recorded_state')]+cleanup

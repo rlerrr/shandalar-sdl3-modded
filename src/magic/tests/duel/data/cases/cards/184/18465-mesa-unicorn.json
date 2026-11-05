@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "card": "Mesa Unicorn",
+  "csvid": 18465,
+  "recipes": [
+    {
+      "family": "creature_keywords",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Lifelink"
+        ]
+      },
+      "oracle_text": "Lifelink (Damage dealt by this creature also causes you to gain that much life.)",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Flash timing, keyword removal/granting, and additional combat interactions remain separate."
+}

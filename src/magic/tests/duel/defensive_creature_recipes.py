@@ -95,6 +95,11 @@ def spec(declaration, record):
         text=text.strip()
         if text.startswith('Protection from '):
             protection.extend(protection_values(text[len('Protection from '):]));continue
+        # Oracle sometimes puts protection after ordinary keywords on one line.
+        # Keep the protection list intact: its own commas have different grammar.
+        if ', protection from ' in text:
+            text, protected = text.split(', protection from ', 1)
+            protection.extend(protection_values(protected))
         tokens=[t.strip().lower() for t in text.split(',')]
         if any(t not in canonical for t in tokens):raise ValueError('unreviewed defensive passive or triggered rules')
         keys.extend(canonical[t] for t in tokens)

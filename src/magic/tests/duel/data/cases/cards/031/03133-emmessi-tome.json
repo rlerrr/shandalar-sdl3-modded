@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "card": "Emmessi Tome",
+  "csvid": 3133,
+  "recipes": [
+    {
+      "family": "hand_exchange",
+      "version": 2,
+      "params": {
+        "mode": "activation",
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          },
+          {
+            "kind": "discard",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "cost": {
+          "mana": "{5}",
+          "tap": true,
+          "sacrifice": false,
+          "pay_life": 0,
+          "discard": 0
+        },
+        "keywords": [],
+        "mana_ability": false
+      },
+      "oracle_text": "{5}, {T}: Draw two cards, then discard a card.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "bare_zones_0",
+        "empty_hands_0",
+        "one_card_0",
+        "large_hand_0",
+        "uneven_hands_0",
+        "own_empty_0",
+        "opponent_empty_0",
+        "duplicates_0",
+        "last_choice_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "opposing_turn_0",
+        "combat_0",
+        "source_destroyed_pending_0",
+        "tax_0",
+        "two_sources_0",
+        "tapped_0",
+        "repeat_denied_0",
+        "untap_repeat_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "insufficient_mana_0",
+        "effect_1",
+        "payment_1",
+        "bare_zones_1",
+        "empty_hands_1",
+        "one_card_1",
+        "large_hand_1",
+        "uneven_hands_1",
+        "own_empty_1",
+        "opponent_empty_1",
+        "duplicates_1",
+        "last_choice_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "opposing_turn_1",
+        "combat_1",
+        "source_destroyed_pending_1",
+        "tax_1",
+        "two_sources_1",
+        "tapped_1",
+        "repeat_denied_1",
+        "untap_repeat_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "insufficient_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Ordinary draw/discard pipelines through real spells, activations and creature entry/death. Oracle-pinned ordered operations distinguish costs from effects, recipients, fixed/discard-derived amounts and random subsets. Both controllers exercise exact costs, empty/short/uneven/duplicate hands, legal human choices, per-card hand/grave conservation, exact remaining libraries, source removal/re-entry, and caller-owned snapshots where applicable. Random distribution, alternate source abilities/costs, replacement/discard triggers, control changes and multiplayer remain component gaps."
+}

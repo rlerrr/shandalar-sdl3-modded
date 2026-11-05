@@ -1200,6 +1200,9 @@ int ai_opinion_of_gamestate(int player)
 // FUNCTION: SHANDALAR 0x004c501b
 int ai_opinion_of_gamestate_continued(int player, int score)
 {
+  /* A crowded battlefield can use every active card slot. The old sixteen-
+     creature scratch arrays overwrote neighboring locals during evaluation. */
+  enum { creature_capacity = sizeof(global_card_instances[0]) / sizeof(global_card_instances[0][0]) };
   int damage_to_player_score;
   int blocker_trade_score;
   int attacker_power;
@@ -1213,14 +1216,14 @@ int ai_opinion_of_gamestate_continued(int player, int score)
   int card;
   int internal_card_id;
   unsigned int attacker_abilities;
-  int blocker_toughness[16];
+  int blocker_toughness[creature_capacity];
   int ranked_attackers[24];
   int creature_index;
-  int blocker_power[16];
+  int blocker_power[creature_capacity];
   int test_toughness;
-  char creature_index_by_card[152];
+  int creature_index_by_card[creature_capacity];
   int smallest_blocker_score;
-  int blocker_scores[16];
+  int blocker_scores[creature_capacity];
   int test_power;
   int ranked_index;
   int creature_count;
@@ -1251,7 +1254,7 @@ int ai_opinion_of_gamestate_continued(int player, int score)
       continue;
     }
 
-    creature_index_by_card[test_card] = (char)creature_count;
+    creature_index_by_card[test_card] = creature_count;
     blocker_power[creature_count] = C_get_abilities(player, test_card, EVENT_POWER, -1);
     blocker_toughness[creature_count] = C_get_abilities(player, test_card, EVENT_TOUGHNESS, -1);
     blocker_scores[creature_count] = (int)global_card_instances[player][test_card].attack_rating;

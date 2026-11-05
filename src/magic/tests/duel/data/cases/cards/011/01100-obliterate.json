@@ -427,5 +427,77 @@
         }
       ]
     }
-  ]
+  ],
+  "recipes": [
+    {
+      "family": "mass_removal",
+      "version": 2,
+      "params": {
+        "mode": "spell",
+        "effect": "destroy",
+        "scope": "artifact_creature_land",
+        "controller": "all",
+        "state": "any",
+        "limit": null,
+        "exclude_self": false,
+        "no_regenerate": true,
+        "gain_per": 0,
+        "gain_scope": "all",
+        "draw_per": 0,
+        "discard_hand": false,
+        "cost": {
+          "mana": "",
+          "tap": false,
+          "self": "none",
+          "discard": 0,
+          "pay_life": 0
+        },
+        "keywords": [],
+        "enters_tapped": false,
+        "uncounterable": true
+      },
+      "oracle_text": "This spell can't be countered.\nDestroy all artifacts, creatures, and lands. They can't be regenerated.",
+      "variants": [
+        "mixed_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "bare_zones_0",
+        "empty_board_0",
+        "own_only_0",
+        "opponent_only_0",
+        "tapped_all_0",
+        "untapped_all_0",
+        "stolen_0",
+        "tokens_0",
+        "aura_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "wrong_color_0",
+        "countered_0",
+        "regeneration_0",
+        "mixed_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "bare_zones_1",
+        "empty_board_1",
+        "own_only_1",
+        "opponent_only_1",
+        "tapped_all_1",
+        "untapped_all_1",
+        "stolen_1",
+        "tokens_1",
+        "aura_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "wrong_color_1",
+        "countered_1",
+        "regeneration_1"
+      ]
+    }
+  ],
+  "recipe_coverage": " Mass removal additionally covers printed uncounterability through an actual Counterspell response, both controllers and real pending snapshots; alternative abilities, replacements and interaction gaps remain separate."
 }

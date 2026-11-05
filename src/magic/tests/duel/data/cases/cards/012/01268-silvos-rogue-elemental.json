@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Silvos, Rogue Elemental",
+  "csvid": 1268,
+  "recipes": [
+    {
+      "family": "regenerate_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Trample"
+        ],
+        "activation_cost": "{G}",
+        "timing": "pre_sixth_destruction_window"
+      },
+      "oracle_text": "Trample\n{G}: Regenerate Silvos.",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "block_ground",
+        "block_flying",
+        "tapped_attacker",
+        "tapped_blocker",
+        "legacy_timing",
+        "destroy",
+        "regeneration_payment",
+        "sick",
+        "tapped",
+        "tapped_sick",
+        "opposing_turn",
+        "repeat",
+        "spent_mana",
+        "insufficient",
+        "no_response",
+        "regeneration_snapshot",
+        "cleanup_reuse",
+        "combat_block",
+        "lethal_damage",
+        "cannot_regenerate",
+        "wrong_color",
+        "combat_attack",
+        "nonlethal_damage",
+        "heal_existing_damage"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Regeneration follows the documented pre-Sixth destruction-window exception; modern proactive shields remain outside this suite."
+}

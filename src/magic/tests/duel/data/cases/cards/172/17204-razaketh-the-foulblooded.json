@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Razaketh, the Foulblooded",
+  "csvid": 17204,
+  "recipes": [
+    {
+      "family": "passive_keyword_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Flying",
+          "Trample"
+        ],
+        "activated_abilities": [
+          "Pay 2 life, Sacrifice another creature: Search your library for a card, put that card into your hand, then shuffle."
+        ]
+      },
+      "oracle_text": "Flying, trample\nPay 2 life, Sacrifice another creature: Search your library for a card, put that card into your hand, then shuffle.",
+      "variants": [
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "block_ground_0",
+        "block_flying_0",
+        "tapped_attacker_0",
+        "tapped_blocker_0",
+        "flying_evasion_0",
+        "flying_reach_0",
+        "trample_0",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "block_ground_1",
+        "block_flying_1",
+        "tapped_attacker_1",
+        "tapped_blocker_1",
+        "flying_evasion_1",
+        "flying_reach_1",
+        "trample_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared Oracle-pinned recipe; exact payment, effect receipts, populated zones, both controllers where supported and snapshot replay. Only the unconditional printed keyword combat component is covered. The explicitly pinned activated abilities are not exercised; this does not establish complete card behavior."
+}

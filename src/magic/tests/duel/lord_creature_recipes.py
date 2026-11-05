@@ -67,6 +67,9 @@ def spec(declaration, record):
     text += f" get +{p['power']}/+{p['toughness']}."
     expected = {text[0].upper()+text[1:]}
     if not p['other']: expected.add('All '+noun+'creatures'+(' you control' if p['scope']=='own' else '')+f" get +{p['power']}/+{p['toughness']}.")
+    if kind == 'subtype':
+        plural = {'Elf':'Elves','Merfolk':'Merfolk','Myr':'Myr','Faerie':'Faeries'}.get(value,value+'s')
+        expected |= {s.replace(value+' creatures',plural) for s in tuple(expected)}
     rules=[];keys=[];abilities=[];canonical={k.lower():k for k in KEYWORDS}
     for line in record['oracle_text'].splitlines():
         if line in expected:rules.append(line);continue

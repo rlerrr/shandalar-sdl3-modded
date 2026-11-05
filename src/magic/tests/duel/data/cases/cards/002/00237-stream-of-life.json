@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "card": "Stream of Life",
+  "csvid": 237,
+  "recipes": [
+    {
+      "family": "variable_value",
+      "version": 2,
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": "X",
+            "scope": "recipient",
+            "random": false
+          }
+        ]
+      },
+      "oracle_text": "Target player gains X life.",
+      "variants": [
+        "effect_x0_0",
+        "payment_x0_0",
+        "effect_x1_0",
+        "payment_x1_0",
+        "effect_x2_0",
+        "payment_x2_0",
+        "effect_x3_0",
+        "payment_x3_0",
+        "effect_x5_0",
+        "payment_x5_0",
+        "effect_x8_0",
+        "payment_x8_0",
+        "ready_snapshot_x0_0",
+        "pending_snapshot_x0_0",
+        "resolved_snapshot_x0_0",
+        "ready_snapshot_x5_0",
+        "pending_snapshot_x5_0",
+        "resolved_snapshot_x5_0",
+        "bare_zones_x3_0",
+        "cleanup_x3_0",
+        "countered_cast_x3_0",
+        "insufficient_mana_x3_0",
+        "wrong_color_x3_0",
+        "own_target_x3_0",
+        "target_shrouded_pending_x3_0",
+        "effect_x0_1",
+        "payment_x0_1",
+        "effect_x1_1",
+        "payment_x1_1",
+        "effect_x2_1",
+        "payment_x2_1",
+        "effect_x3_1",
+        "payment_x3_1",
+        "effect_x5_1",
+        "payment_x5_1",
+        "effect_x8_1",
+        "payment_x8_1",
+        "ready_snapshot_x0_1",
+        "pending_snapshot_x0_1",
+        "resolved_snapshot_x0_1",
+        "ready_snapshot_x5_1",
+        "pending_snapshot_x5_1",
+        "resolved_snapshot_x5_1",
+        "bare_zones_x3_1",
+        "cleanup_x3_1",
+        "countered_cast_x3_1",
+        "insufficient_mana_x3_1",
+        "wrong_color_x3_1",
+        "own_target_x3_1",
+        "target_shrouded_pending_x3_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Ordinary single-X value and targeted-damage spells, validated against complete pinned Oracle text. Both controllers exercise zero and positive X, actual variable payment and fixed colored costs, player/creature targets, counters and protection responses, snapshots, exact zones/resources and bounded legal discard subsets. Alternative costs, planeswalkers, replacement/triggered effects and multiplayer remain separate components."
+}

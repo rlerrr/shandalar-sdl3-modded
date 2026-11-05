@@ -43,7 +43,13 @@ void duel_test_damage_decision(int player, DuelTestRef recipient);
 /* Activate only in the legacy destruction window; pass earlier responses. */
 void duel_test_regeneration_decision(DuelTestRef source);
 int duel_test_offered_count(void);
+int duel_test_offered_selection_required(void);
+int duel_test_offered_legal(int index);
 int duel_test_forced_zone_choices(void);
+/* 0 disables; 1/2 choose the lowest/highest CSVID actually offered for discard.
+   Starts a fresh counted policy; both fields are caller-snapshot state. */
+void duel_test_set_discard_policy(int policy);
+int duel_test_discard_choice_count(void);
 int duel_test_offered_csvid(int index);
 void duel_test_finish_decisions(void);
 int duel_test_finish_target_plan(void);
@@ -61,6 +67,9 @@ int duel_test_can_cast(DuelTestRef source);
 /* Normal unrestricted creature-spell targeting, independent of AI strategy.
    Suitable for Unsummon; does not model card-specific targeting restrictions. */
 int duel_test_can_target_creature(DuelTestRef source, DuelTestRef target);
+/* Inspect an actual ability definition without keeping costs or decisions.
+ * Returns -1 if none was exposed, -2 for conflicting definitions, else 0/1. */
+int duel_test_probe_activation_target(DuelTestRef source, DuelTestRef target, int mode_choice);
 int duel_test_cast(DuelTestRef source);
 void duel_test_resolve(void);
 void duel_test_cleanup(void);

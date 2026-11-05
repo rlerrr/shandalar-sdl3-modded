@@ -41,7 +41,8 @@ def spec(declaration,record):
     if not isinstance(outputs,list) or not outputs or any(not isinstance(o,str) for o in outputs) or len(set(outputs))!=len(outputs):raise ValueError('unique explicit mana outputs required')
     pools=[output_pool(o) for o in outputs]
     if form=='fixed' and len(outputs)==1:wording=outputs[0]
-    elif form=='choice' and len(outputs)==2 and all(sum(o)==1 for o in pools):wording=' or '.join(outputs)
+    elif form=='choice' and 2<=len(outputs)<=3 and all(sum(o)==1 for o in pools):
+        wording=' or '.join(outputs) if len(outputs)==2 else ', '.join(outputs[:-1])+', or '+outputs[-1]
     elif form=='any_color' and outputs==ANY_COLOR:wording='one mana of any color'
     else:raise ValueError('unreviewed mana production form')
     cost=p['activation_cost']

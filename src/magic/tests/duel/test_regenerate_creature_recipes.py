@@ -50,6 +50,13 @@ class RegenerateCreatureRecipesTest(unittest.TestCase):
         self.assertIn(dict(op='activate', ref='source', value=0), c['steps'])
         self.assertEqual(c['_recipe']['legacy_exception'], TIMING)
 
+    def test_legendary_short_self_reference_is_not_a_target(self):
+        d=self.declaration('Silvos, Rogue Elemental','{G}',['Trample'])
+        self.assertEqual(explicit_spec(d,self.oracle['Silvos, Rogue Elemental'])['activation_mana'],[0,0,0,1,0,0])
+        self.assertEqual(len(self.cases('Silvos, Rogue Elemental',d)),1)
+        r=dict(self.oracle['Silvos, Rogue Elemental'],oracle_text='Trample\n{G}: Regenerate target creature.')
+        with self.assertRaises(ValueError):explicit_spec(dict(d,oracle_text=r['oracle_text']),r)
+
     def test_destruction_uses_real_priority_and_verifies_all_effects(self):
         c = self.cases('Drudge Skeletons', self.declaration())[0]
         self.assertLess(c['steps'].index(dict(op='choose_regeneration', ref='source')), c['steps'].index(dict(op='destroy', ref='source')))

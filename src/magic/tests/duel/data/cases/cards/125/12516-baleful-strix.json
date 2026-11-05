@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "card": "Baleful Strix",
+  "csvid": 12516,
+  "recipes": [
+    {
+      "family": "value_flow",
+      "version": 2,
+      "params": {
+        "mode": "entry",
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "cost": {
+          "mana": "",
+          "tap": false,
+          "sacrifice": false,
+          "pay_life": 0,
+          "discard": 0
+        },
+        "keywords": [
+          "Deathtouch",
+          "Flying"
+        ],
+        "mana_ability": false
+      },
+      "oracle_text": "Flying, deathtouch\nWhen this creature enters, draw a card.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "bare_zones_0",
+        "empty_hands_0",
+        "one_card_0",
+        "large_hand_0",
+        "uneven_hands_0",
+        "own_empty_0",
+        "opponent_empty_0",
+        "duplicates_0",
+        "last_choice_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_cast_0",
+        "insufficient_mana_0",
+        "source_destroyed_0",
+        "bounce_recast_0",
+        "blink_source_0",
+        "wrong_color_0",
+        "effect_1",
+        "payment_1",
+        "bare_zones_1",
+        "empty_hands_1",
+        "one_card_1",
+        "large_hand_1",
+        "uneven_hands_1",
+        "own_empty_1",
+        "opponent_empty_1",
+        "duplicates_1",
+        "last_choice_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_cast_1",
+        "insufficient_mana_1",
+        "source_destroyed_1",
+        "bounce_recast_1",
+        "blink_source_1",
+        "wrong_color_1",
+        "exact_library_0",
+        "exact_library_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Fixed nondiscard draw, mill and life effects through real spells, activations and creature entry/death. Pinned whole Oracle effects and costs drive both-controller receipts, exact card multiplicities, ordered libraries, legal repeats, real counter/removal responses, exact-library draws, truncated mills, and snapshots. Source passive keywords, alternative costs/abilities, empty-library draw losses, replacement/triggered effects, control changes and multiplayer remain component gaps."
+}

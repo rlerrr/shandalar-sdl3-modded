@@ -1,4 +1,7 @@
 #include "manalink.h"
+#ifdef MANALINKEH_STATIC
+#include "magic/src/duel_host.h"
+#endif
 #include <stddef.h>
 
 /* Canonical recovered helper declarations. */
@@ -3520,7 +3523,11 @@ int card_gatecreeper_vine(int player, int card, event_t event){
 		unsigned int subt = SUBTYPE_GATE;
 		int type = TYPE_PERMANENT;
 		const char* msg = "Select a Gate card.";
-		if( !IS_AI(player) ){
+		if( !IS_AI(player)
+#ifdef MANALINKEH_STATIC
+            || duel_host_scripted_input()
+#endif
+          ){
 			choice = do_dialog(player, player, card, -1, -1, " Tutor a Gate card\n Tutor a basic land", 0);
 		}
 		if( choice == 1 ){

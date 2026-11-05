@@ -11,6 +11,19 @@ VERSION = 1
 COLORS = {"B": 1, "U": 2, "G": 3, "R": 4, "W": 5}
 WORDS = {"a": 1, "two": 2, "three": 3, "four": 4}
 VARIANTS = {
+    "variable_damage": ("survivor_x0_0", "payment_x3_0", "snapshot_x5_0"),
+    "variable_value": ("effect_x0_0", "payment_x3_0", "pending_snapshot_x5_0"),
+    "static_stats": ("static_0", "payment_0", "pending_snapshot_0"),
+    "removal_activation": ("effect_0", "payment_0", "pending_snapshot_0"),
+    "mass_removal": ("mixed_0", "payment_0", "pending_snapshot_0"),
+    "value_flow": ("effect_0", "payment_0", "pending_snapshot_0"),
+    "hand_exchange": ("effect_0", "payment_0", "pending_snapshot_0"),
+    "target_removal": ("effect_0", "payment_0", "pending_snapshot_0"),
+    "library_search": ("search_0", "payment_0", "pending_snapshot_0"),
+    "landcycling": ("search_0", "payment_0", "pending_snapshot_0"),
+    "land_search": ("search_0", "payment_0", "pending_snapshot_0"),
+    "land_entry_mana": ("entry_0", "production_0_0", "pending_snapshot_0"),
+    "entry_stats_creature": ("cast_0", "payment_0", "pending_snapshot_0", "blink_0"),
     "creature_conditions": ("entry_0", "cast_0", "combat_0", "untap_attack_0"),
     "mana_modes": ("entry_0", "zero_pool_fallback_0", "production_0_0_0_0"),
     "conditional_keyword": ("effect_0_0", "effect_3_0", "increase_0", "decrease_0"),
@@ -191,6 +204,45 @@ def explicit_spec(declaration, oracle):
     """
     from hybrid_creature_recipes import applies, specification
     if applies(declaration):return specification(declaration,oracle)
+    if declaration.get('family')=='variable_damage':
+        from variable_damage_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='variable_value':
+        from variable_value_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='static_stats':
+        from static_stats_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='removal_activation':
+        from removal_activation_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='mass_removal':
+        from mass_removal_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='value_flow':
+        from value_flow_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='hand_exchange':
+        from hand_exchange_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='target_removal':
+        from removal_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='library_search':
+        from library_search_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='landcycling':
+        from landcycling_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='land_search':
+        from land_search_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='land_entry_mana':
+        from land_entry_mana_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='entry_stats_creature':
+        from entry_stats_creature_recipes import spec
+        return spec(declaration,oracle)
     if declaration.get('family')=='creature_conditions':
         from creature_conditions_recipes import spec
         return spec(declaration,oracle)
@@ -399,8 +451,14 @@ def _expand_plain(card_name, csvid, declaration, oracle, registry, oracle_contex
     if type(version) is not int or version not in (VERSION, 2):
         raise ValueError("recipe requires explicit supported version")
     allowed = {"family", "version", "variants"} | ({"params", "oracle_text", "resolve_dialogs", "resolve_zones", "cast_dialogs", "repeat_cast_dialogs", "setup", "eligibility_only", "cast_target_first", "cast_target_count"} if version == 2 else set())
-    if version == 2 and declaration.get('family') in ('etb_removal_creature','etb_recovery_creature'):allowed |= {'trigger_priority'}
+    if version == 2 and declaration.get('family') in ('etb_removal_creature','etb_recovery_creature','library_search'):allowed |= {'trigger_priority'}
     if version == 2 and declaration.get('family') == 'self_pump_creature':allowed |= {'activation_dialog','activation_dialogs','activation_cancel_mana'}
+    if version == 2 and declaration.get('family') in ('value_activation','hand_exchange','value_flow'):allowed |= {'activation_dialogs'}
+    if version == 2 and declaration.get('family') in ('hand_exchange','value_flow'):allowed |= {'target_choices'}
+    if version == 2 and declaration.get('family') == 'mass_removal':allowed |= {'target_choices'}
+    if version == 2 and declaration.get('family') == 'removal_activation':allowed |= {'activation_dialogs'}
+    if version == 2 and declaration.get('family') == 'land_search':allowed |= {'activation_dialogs'}
+    if version == 2 and declaration.get('family') == 'library_search':allowed |= {'activation_dialogs','entry_dialogs','decline_entry_dialogs','trigger_players','gate_menu'}
     if set(declaration) - allowed:
         raise ValueError("unknown recipe declaration fields")
     dialogs = declaration.get("resolve_dialogs", [])
@@ -423,6 +481,56 @@ def _expand_plain(card_name, csvid, declaration, oracle, registry, oracle_contex
     family = spec["family"]
     variants = declaration.get("variants", list(VARIANTS[family]))
     supported_variants = set(VARIANTS[family]) | ({"lost_target"} if version == 2 and family == "pump_creature" else set())
+    if family == 'variable_damage':
+        from variable_damage_recipes import variants as damage_variants,validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(damage_variants(spec))
+    if family == 'variable_value':
+        from variable_value_recipes import variants as value_variants,validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(value_variants(spec))
+    if family == 'static_stats':
+        from static_stats_recipes import variants as static_variants,validate_witnesses
+        validate_witnesses(oracle_context,registry,spec)
+        supported_variants=set(static_variants(spec))
+    if family == 'removal_activation':
+        from removal_activation_recipes import variants as removal_activation_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(removal_activation_variants(spec))
+    if family == 'mass_removal':
+        from mass_removal_recipes import variants as mass_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(mass_variants(spec))
+    if family in ('hand_exchange','value_flow'):
+        from hand_exchange_recipes import variants as exchange_variants, validate_witnesses
+        if family == 'value_flow':
+            from value_flow_recipes import variants as exchange_variants
+        validate_witnesses(oracle_context,registry)
+        supported_variants = set(exchange_variants(spec))
+    if family == 'target_removal':
+        from removal_recipes import variants as removal_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants = set(removal_variants(spec))
+    if family == 'library_search':
+        from library_search_recipes import variants as library_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry,spec)
+        supported_variants = set(library_variants(spec))
+    if family == 'landcycling':
+        from landcycling_recipes import variants as landcycling_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants = set(landcycling_variants(spec))
+    if family == 'land_search':
+        from land_search_recipes import variants as search_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants = set(search_variants(spec))
+    if family == 'land_entry_mana':
+        from land_entry_mana_recipes import variants as land_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants = set(land_variants(spec))
+    if family == 'entry_stats_creature':
+        from entry_stats_creature_recipes import variants as entry_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants = set(entry_variants(spec))
     if family in ("grant_creature", "aura_creature", "aura_control"):
         from grant_recipes import variants as grant_variants, validate_witnesses
         validate_witnesses(oracle_context, registry)
@@ -665,6 +773,63 @@ def _expand_plain(card_name, csvid, declaration, oracle, registry, oracle_contex
             raise ValueError(f"recipe witness missing from registry: {name}")
         return registry[name]["csvid"]
 
+    if family == 'variable_damage':
+        if dialogs or support or resolve_zones or cast_dialogs:raise ValueError('variable damage needs dedicated cases for custom setup/decisions')
+        from variable_damage_recipes import expand as variable_damage
+        return variable_damage(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'variable_value':
+        if dialogs or support or resolve_zones or cast_dialogs:raise ValueError('variable values need dedicated cases for custom setup/decisions')
+        from variable_value_recipes import expand as variable_values
+        return variable_values(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'static_stats':
+        if dialogs or support or resolve_zones or cast_dialogs:raise ValueError('static stats need dedicated cases for custom setup/decisions')
+        from static_stats_recipes import expand as statics
+        return statics(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'removal_activation':
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('removal activation custom setup and decisions require dedicated cases')
+        from removal_activation_recipes import expand as removal_activation_expand
+        return removal_activation_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'mass_removal':
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('mass removal custom setup and decisions require dedicated cases')
+        from mass_removal_recipes import expand as mass_expand
+        return mass_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family in ('hand_exchange','value_flow'):
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('hand exchange custom setup and decisions require dedicated cases')
+        from hand_exchange_recipes import expand as exchange_expand
+        return exchange_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'target_removal':
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('removal custom setup and decisions require dedicated cases')
+        from removal_recipes import expand as removal_expand
+        return removal_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'library_search':
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('library tutor custom setup and decisions require dedicated cases')
+        from library_search_recipes import expand as library_expand
+        return library_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'landcycling':
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('landcycling custom setup and decisions require dedicated cases')
+        from landcycling_recipes import expand as landcycling_expand
+        return landcycling_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'land_search':
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('search custom setup and resolution decisions require dedicated cases')
+        from land_search_recipes import expand as search_expand
+        return search_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'land_entry_mana':
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('land entry custom decisions and support require dedicated cases')
+        from land_entry_mana_recipes import expand as land_entry_expand
+        return land_entry_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'entry_stats_creature':
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('entry stat custom decisions and support require dedicated cases')
+        from entry_stats_creature_recipes import expand as entry_stats_expand
+        return entry_stats_expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
     if family == "creature_conditions":
         if dialogs or support or resolve_zones or cast_dialogs:
             raise ValueError('creature-condition custom setup and decisions require dedicated cases')

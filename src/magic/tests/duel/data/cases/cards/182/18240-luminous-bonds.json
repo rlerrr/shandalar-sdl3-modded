@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Luminous Bonds",
+  "csvid": 18240,
+  "recipes": [
+    {
+      "family": "aura_control",
+      "version": 2,
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [],
+        "scope": "creature",
+        "no_attack": true,
+        "no_block": true
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+      "variants": [
+        "friendly_cleanup",
+        "opponent_cleanup",
+        "payment",
+        "insufficient_mana",
+        "empty",
+        "lost_target",
+        "snapshot",
+        "tapped",
+        "large_target",
+        "unblocked",
+        "opponent_unblocked",
+        "empty_zones",
+        "aura_removed",
+        "aura_bounced",
+        "host_bounced",
+        "host_destroyed",
+        "removed_attack",
+        "block_ground",
+        "removed_block",
+        "wrong_type"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Additional rules interactions and any gaps listed in generated recipe provenance remain separate."
+}

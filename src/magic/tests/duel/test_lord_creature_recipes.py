@@ -27,6 +27,14 @@ class LordCreatureRecipesTest(unittest.TestCase):
         for change in (dict(oracle_text='changed'),dict(params={}),dict(params=dict(d['params'],extra=True)),dict(variants=['unknown'])):
             with self.assertRaises(ValueError):self.cases('Battle Sliver',dict(d,**change))
 
+    def test_plural_subtype_wording_keeps_controller_and_exclusion(self):
+        for name,subtype in [('Merfolk Mistbinder','Merfolk'),('Legion Lieutenant','Vampire')]:
+            d=self.declaration(name,value=subtype,other=True,power=1,toughness=1)
+            self.assertEqual(explicit_spec(d,self.oracle[name])['value'],subtype)
+            self.assertEqual(len(self.cases(name,d)),1)
+            for change in (dict(other=False),dict(scope='both')):
+                with self.assertRaises(ValueError):self.cases(name,dict(d,params=dict(d['params'],**change)))
+
     def test_scope_and_self_exclusion_cannot_be_inferred(self):
         for p in (dict(scope='both'),dict(other=True),dict(value='Myr'),dict(predicate='color',value='blue')):
             with self.assertRaises(ValueError):self.cases('Battle Sliver',self.declaration(**p))

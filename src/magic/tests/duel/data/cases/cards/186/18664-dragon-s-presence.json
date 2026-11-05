@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "card": "Dragon's Presence",
+  "csvid": 18664,
+  "recipes": [
+    {
+      "family": "damage_spell",
+      "version": 2,
+      "params": {
+        "amount": 5,
+        "targets": [
+          "creature"
+        ],
+        "combat": "attacking_or_blocking"
+      },
+      "oracle_text": "Dragon's Presence deals 5 damage to target attacking or blocking creature.",
+      "variants": [
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "survivor",
+        "lethal",
+        "lost_target",
+        "friendly",
+        "empty",
+        "wrong_type",
+        "noncombat",
+        "lost_combat",
+        "blocking"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Additional rules interactions and any gaps listed in generated recipe provenance remain separate."
+}

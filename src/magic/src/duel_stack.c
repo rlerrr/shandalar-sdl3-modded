@@ -182,7 +182,7 @@ int put_card_on_stack(int player, int card, int mode)
 
       if ((char)card_data->cc[1] == -1)
       {
-        if (player != g_active_player)
+        if (player != g_active_player && !duel_host_choice_ready(DUEL_CHOICE_X,player))
         {
           if (g_duel_ai_mode_state == 1)
           {

@@ -40,5 +40,15 @@ class HybridCreatureRecipesTest(unittest.TestCase):
   c=self.cases()[0];self.assertEqual(c['fixture'],'stocked_zones');self.assertTrue(any(s['op']=='assert_zone_card' and s['zone']=='library' for s in c['steps']))
  def test_normalized_cost_preserves_characteristics(self):
   _,r,mana,_=normalize(self.declaration(),self.oracle['Nip Gwyllion']);self.assertEqual(mana,[0,0,0,0,0,1]);self.assertEqual(r['colors'],self.oracle['Nip Gwyllion']['colors']);self.assertEqual(r['oracle_text'],self.oracle['Nip Gwyllion']['oracle_text'])
+ def test_etb_hybrid_choices_cover_countered_and_second_copy(self):
+  name='Wistful Selkie';d=dict(family='etb_value_creature',version=2,params=dict(keywords=[],draw=1,gain_life=0,lose_life=0,payment_colors=['G']*3),oracle_text=self.oracle[name]['oracle_text'],variants=['countered','two_copies','insufficient_mana'])
+  cases=expand(name,self.rows[name]['csvid'],d,self.oracle[name],self.rows,oracle_context=self.oracle)
+  by={c['_recipe']['variant']:c for c in cases}
+  for variant,expected in [('countered',1),('two_copies',2),('insufficient_mana',0)]:
+   payments=[s for s in by[variant]['steps'] if s['op']=='choose_payment']
+   self.assertEqual(len(payments),expected)
+   self.assertTrue(all(s==dict(op='choose_payment',player=0,value=3<<(4*3)) for s in payments))
+  countered=by['countered']['steps'];self.assertIn(dict(op='cast',ref='source',value=0),countered)
+  self.assertLess(next(i for i,s in enumerate(countered) if s['op']=='choose_payment'),next(i for i,s in enumerate(countered) if s['op']=='choose_priority'))
 
 if __name__=='__main__':unittest.main()

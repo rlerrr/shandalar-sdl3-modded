@@ -5,6 +5,313 @@ distinct from the older card-ID templates. A reviewed recipe costs authoring and
 review work once; matching cards get its scenarios without model-written JSON.
 Existing authored cases remain in their card files alongside the declaration.
 
+`variable_value` and `variable_damage` version 2 cover complete ordinary
+single-X instant and sorcery effects. Parameters must match the entire pinned
+Oracle text and printed base cost. Value operations include ordered draw,
+discard, mill and life changes, twice X, X plus a constant, and life gained from
+the actual life loss. Damage scopes distinguish creatures from any target;
+declared life gain and black-only X payment have separate receipts.
+
+Both controllers choose X = 0, 1, 2, 3, 5 and 8 through the real payment engine.
+Cases check base costs at X=0, exact colored payment, legal targets, pending
+target protection/departure, lethal damage, regeneration, short hands and mill
+libraries, countered spells, timing, cleanup and snapshot replay as applicable.
+The lost-target damage fixture casts a real Unsummon onto the pending spell
+and checks the two-spell stack. Random discards permit any legal identities
+while preserving exact conservation and zone receipts.
+
+`choose_x` is an explicit queued input with a controller and a nonnegative
+integer value. The engine consumes it only for an actual variable payment;
+fixed costs and ordinary AI searches do not consume it. Snapshots restore the
+input queue. Actual cost computation, mana spending, restrictions and spell
+resolution remain in the engine. Tests reject unconsumed inputs.
+
+Multiple-X card handlers, alternative costs, planeswalker targets, damage
+replacement/prevention, draw beyond an empty library, randomness distribution,
+trigger interactions and multiplayer remain separate coverage gaps. A direct
+engine control verifies repeated-X payment without claiming such card coverage.
+
+`static_stats` version 2 covers one to three complete continuous creature-stat
+clauses on a normal standalone permanent. Parameters pin signed bonuses,
+controller/other restrictions, combat/tapping states, and color, subtype,
+artifact, token, legendary or flying predicates. Source keywords and inactive
+activated clauses are explicit; additional conditions or triggered clauses are
+rejected. Two-color hybrid sources use reviewed payment colors, with alternate
+and mixed exact-payment scenarios.
+
+Both controllers face mixed creature boards, changelings and token copies.
+Separate clauses add independently when colors or creature types overlap.
+Tests inspect characteristics before the source resolves, after entry,
+source removal/re-entry, additional copies, late arrivals, tapping changes,
+combat and cleanup. Marked damage followed by source bounce tests state-based
+death when a toughness bonus disappears. Exact zones distinguish a dead card
+from a token that vanishes, and snapshots replay actual pending spells.
+Late arrivals avoid duplicate legends and unscripted alternative casting modes.
+Declaration-only combat participants are removed before cleanup; separate
+combat cases resolve actual damage and end combat normally.
+
+Full-pool AI hybrid casts may choose any legal allocation, so those cases check
+the total payment; exact-payment cases still check each color. World sources
+and legendary sources have different duplicate-fixture limits. Source keyword
+combat/timing, inactive activated abilities, live color/type/control changes,
+replacement effects and multiplayer remain explicit component gaps.
+
+`removal_activation` version 2 pins one complete targeted destruction or exile
+ability on a normal permanent. Explicit fields describe the removal predicate,
+ordinary mana/tap/discard/life/self-sacrifice or exile costs, passive keywords,
+printed tapped entry and an optional colorless mana ability. Unreviewed costs,
+additional abilities and changes to the pinned source or witnesses fail closed.
+
+Both controllers exercise casting the source, actual activation costs,
+insufficient resources, fresh/tapped sources, opposing turns, Suppression Field,
+target predicates, lost or changed targets, source removal, regeneration,
+indestructibility, repeated activations and snapshot replay where applicable.
+Aura and enchanted-creature targets use real cast Auras. Combat witnesses use
+real attack/block declarations; land creatures must be untapped before attacking.
+Each fixture checks exact zone counts and the identities of every card it uses,
+including nonselected duplicates, ordered libraries and hand/grave conservation.
+
+`probe_activation_target` inspects the handler's actual target definition for a
+named candidate, independently of other legal targets such as the source itself.
+It snapshots all engine/input state, observes the real query or selection path,
+then restores costs, random state and the caller's planned input. An absent or
+ambiguous definition is a test failure. Successful removals still run through
+normal activation and resolution. Exact-payment tests for mana producers skip
+this probe and exercise the real activation directly. Optional per-controller
+`activation_dialogs` annotations describe mode presentation, not target legality.
+
+Mana-producing siblings can mask ability availability, so insufficient-removal
+query cases are omitted for them; exact payment and resulting stack/effects are
+still checked. Source keyword combat, alternate abilities/land play, protection,
+live numeric/control changes, replacement/triggered effects and multiplayer
+remain explicit component gaps.
+
+`mass_removal` version 2 pins complete ordinary destruction, exile and bounce
+effects from spells and permanent activations. Explicit parameters describe
+type/color/state/characteristic filters, controller or owner selection, source
+exclusion, regeneration clauses, destruction-derived draws/life and discard-all
+receipts. Mana, tapping, self-sacrifice/exile, discard and life costs are kept
+separate from resolution; printed tapped entry is checked by real source casts.
+
+Both controllers face mixed boards with intersecting permanent types,
+indestructible creatures/artifacts/lands, token copies and real cast Auras.
+Stolen-card fixtures distinguish ownership from control and send bounced or
+destroyed cards to their owner's zones. An Aura whose creature leaves the
+battlefield enters the graveyard even when the Aura itself was not selected.
+Actual attack declarations and offered regeneration responses exercise those
+rules. Exact payments, single-zone multiplicities, combined hand/grave totals,
+ordered libraries and caller-owned snapshots check complete receipts. AI
+discard costs allow any legal subset; human minimum/maximum identity policies
+exercise actual offered choices. Fixture mana sources stay tapped so they
+cannot hide insufficient pools or alter exact payment receipts.
+
+Alternative abilities/costs, entry/death removal triggers, variable limits,
+late arrivals/state changes while pending, conditional replacement/triggered
+effects, control changes during resolution and multiplayer remain separate
+components. Preset stolen-card ownership tests are covered.
+
+`value_flow` version 2 covers fixed nondiscard draw, mill and life effects from
+ordinary spells, creature entry/death triggers and permanent activations. Its
+whole-text validator uses the same ordered operation and cost machinery as
+`hand_exchange`, with separate family names and explicit source/recipient
+parameters. `value_flow` rejects every discard effect or cost;
+`hand_exchange` still requires one.
+Prior generated hand-exchange cases remain unchanged.
+
+Both controllers check exact costs, zone multiplicities, ordered libraries,
+controller/recipient life deltas, repeat activations, source removal/re-entry,
+countered spells, pending target protection and snapshot replay where applicable.
+Exact-library fixtures exercise drawing the last cards without drawing beyond
+the library. Short/empty-library mill fixtures require milling only the cards
+remaining. Higher starting life totals keep repeated loss effects within a
+live duel. Draw attempts beyond an empty library, source keyword combat,
+alternative abilities/costs, replacement/triggered effects, control changes and
+multiplayer remain named coverage gaps.
+
+`hand_exchange` version 2 covers ordered draw/discard operations from ordinary
+spells, creature entry/death triggers and permanent activations. Parameters
+must match the complete pinned effect, recipient and costs, including fixed
+mill/life effects and draw amounts derived from earlier discards. Additional
+discard costs are checked before resolution. Flashback, madness, cycling,
+miracle and the separate mana ability of a looting land are named component
+gaps rather than inferred coverage.
+
+Both controllers exercise empty, short, uneven, duplicate and large hands,
+exact costs, source removal/re-entry, counters and snapshot replay where
+applicable. Human discard policies select the lowest or highest CSVID actually
+offered by the engine. AI and random discards allow any legal subset; exact
+hand/graveyard totals for every identity, zone counts, upper bounds on remaining
+hand copies and ordered libraries detect lost, duplicated or unrelated cards
+without assuming a particular random outcome. These tests do not establish
+randomness distribution or cover discard/replacement triggers, control changes
+or multiplayer.
+
+Pending-spell cost receipts account for the legacy active-zone counter, which
+includes the spell's physical slot in its hand count until resolution. Creature
+casts use the normal cast path directly; their handlers need not implement the
+instant/sorcery `EVENT_CAN_CAST` query.
+
+Reviewed `target_choices` and `activation_dialogs` annotations describe the
+handler's input presentation separately from the Oracle effect. Sole-opponent
+handlers can select implicitly; Wistful Thinking currently asks twice for the
+same target. `present_ai_dialogs` opts in to presenting normally hidden AI mode
+dialogs, preserving the engine's disabled-option checks and snapshot state.
+AI searches retain their usual internal mode selection.
+
+`target_removal` version 2 covers ordinary single-target destruction or exile.
+The complete effect must match explicit type/color/subtype, controller, combat
+or tapped-state, and fixed mana value/power/toughness restrictions. Secondary
+fixed draw, life, damage and mana receipts are explicit too. Cycling, flashback,
+madness and splice remain named component gaps; they are not exercised by
+ordinary casts from hand. Other clauses and casting mechanics fail closed.
+
+An independent normal-card palette exercises eligibility one candidate at a
+time, including artifact lands, artifact/enchantment creatures, planeswalkers,
+legendary creatures, multicolored and colorless cards, changelings, Vehicles,
+and indestructible permanents. Negative queries have no additional legal target
+that could mask an incorrect predicate. Positive tests use real targeting and
+payment for both controllers. Identical extra targets verify single-target
+removal; exact zone multiplicities distinguish battlefield, hand, graveyard and
+exile copies. Countering, target loss/bounce, live tap-state changes and real
+attacker/blocker declarations test resolution legality and secondary effects.
+
+Regeneration attempts select only actual engine-offered responses. A blocked
+attempt remains queued, and `assert_unused_choices` checks and retires exactly
+that many choices. This proves that exile or a no-regeneration clause prevents
+regeneration without submitting illegal input. Ordinary destruction consumes
+the planned regeneration and checks its payment and surviving creature.
+`require_can_cast` stops a scenario at an incorrect positive permission query,
+allowing a card bug to retain a precise assertion instead of causing a later
+invalid target-input error. Snapshots replay through the real engine and verify
+complete observable results. Alternative source abilities, multiple targets,
+pre-existing regeneration shields, protection/hexproof/shroud, numeric target
+changes while pending, replacement effects, control changes and multiplayer
+need separate scenarios.
+
+`library_search` version 2 covers single-card tutors cast as spells, triggered
+by creature entry, or activated from a permanent. Reviewed parameters pin the
+entire Oracle text, search scope and any fixed mana value/power/toughness limit,
+destination, optional trigger, exact costs, source keywords, named cards and
+separate life loss. Additional abilities remain explicit component gaps.
+
+Mixed, Oracle-pinned witnesses check the actual selector's accepted and rejected
+cards: type unions/intersections, subtypes and changelings, legendary status,
+color, names and numeric boundaries. Both controllers exercise payment, exact
+zone receipts, empty/duplicate libraries, declining qualified searches, repeated
+searches, snapshots, countering spells and entry-source removal/reentry where
+applicable. Unrestricted searches must select a card when one exists; hidden
+quality searches may fail to find. `assert_offered_selection_required` observes
+the actual selection policy separately from its eligibility predicate.
+
+Optional trigger/menu annotations script presentation only. In scripted tests,
+Bogbrew Witch, Treefolk Harbinger and Gatecreeper Vine/District Guide expose the
+full legal choices instead of their AI-preferred subset. Normal gameplay and
+speculative AI retain their preferences. If a named choice is rejected by an
+observed optional selector, the host legally declines it, leaving eligibility
+and exact outcome assertions to report the defect. Required or unobserved
+selectors retain strict input errors. This does not override the engine filter.
+If a required observed selector has no legal candidates, the scripted selector
+returns no card as the ordinary AI path does. Its incorrect required policy
+and forced-choice count remain visible to assertions. A missing optional
+fallback can select another actually legal offered card; it never admits an
+illegal candidate. These paths allow exact failures for impossible searches.
+
+`bind_hand_copy` selects a CSVID's zero-based occurrence in hand, analogous to
+`bind_permanent_copy`. Namesake tutors use it when bounce/recast leaves both
+the fetched copy and bounced source in hand. Fetched Aura attachment, extra
+triggers, source keyword combat, other activated abilities, replacement effects,
+multiplayer and shuffle distribution require separate scenarios.
+For Blightspeaker, per-option unaffordable tutor queries are also deferred:
+its separate free life-loss ability keeps the card-level activation query true.
+Exact funded tutor payments and shared tap/sickness restrictions remain tested.
+
+Generation streams card files through a bounded LRU cache while retaining the
+existing globally sorted case order. This avoids keeping every expanded recipe
+in memory during configure. The eager loader remains available to authoring
+tools and unit checks. Streaming and eager generation produced 96 byte-identical
+outputs before the library-search presentation updates. The enlarged Wasm test
+binary starts with 768 MiB; this setting is confined to `duel_card_tests`.
+
+`landcycling` version 2 declares `cycling_cost`, `basic`, and `types`. The
+complete pinned Oracle text must contain exactly the reviewed basic-landcycling
+or one/two-type cycling clause. Additional cycling/discard triggers fail closed.
+Other spell, battlefield, combat and upkeep/graveyard rules are retained as
+explicit untested text; the component never casts its source card.
+
+The shared search scenarios activate the real hand-ability proxy, pay mana and
+discard before resolution, and inspect actual basic/type eligibility in mixed
+libraries. They cover both controllers, opposing-turn/combat timing, canceling
+the activation, declining the search, empty/duplicate libraries, two sources,
+Fluctuator reductions, Suppression Field taxes, mandatory colored mana, cleanup
+with a pending ability, and snapshots. Reclaim and Tormod's Crypt can move the
+discarded card while its search is pending; the ability still resolves. The
+existing 2,880 ordinary search scenarios remain semantically unchanged.
+
+`land_search` version 2 covers an ordinary single-land search spell or activated
+permanent ability. Explicit parameters describe basic/snow restrictions, a union
+of printed land types, hand/battlefield destination, entry tapping, ordinary
+mana/tap/sacrifice/life costs, and an optional separate colorless mana ability.
+The complete Oracle text must match. Optional `activation_dialogs` are menu
+annotations for each controller, not effect expectations.
+
+A mixed library contains all five basics, snow basics, typed original duals,
+an untyped artifact land, a nonbasic snow land, nonlands, and a duplicate. Spells and activations pay
+real costs; sacrifice is checked before the search resolves. Both controllers
+exercise exact payments, failure to find, empty/short libraries, duplicates,
+repeat searches, destination state, taxes, legal untapping, countering, and
+snapshot replay where applicable. Sources that enter tapped have a distinct
+entry-state case; ordinary activation fixtures represent ready permanents.
+
+`observe_search_filters` opts into read-only copies of the actual engine
+selector predicate results. `assert_offered_legal_card` checks every offered
+copy of a named card, allowing library order to change after shuffling. This
+verifies exclusions as well as successful selection; voluntarily declining a
+search alone does not prove its filter. Observation is disabled for other
+cases, normal gameplay and speculative AI. Its flag and recorded offers are
+preserved by test snapshots. Shuffle distribution, replacement effects, source
+casting/combat for activated components, and additional triggers remain gaps.
+
+`land_entry_mana` version 2 requires explicit `entry`, `outputs`, `production`,
+and `life` parameters matching the complete Oracle land text. Supported entry
+forms are life-payment shock lands, bounce lands, Lairs, scry, life gain,
+two-player Battlebond lands, and unconditional tapped entry. Cycling may remain
+a separately declared component. Snow/legendary lands retain their printed
+types; simultaneous-copy scenarios are excluded for legendary sources.
+
+Walking Atlas puts the actual card from hand onto the battlefield. No land is
+cast as a spell. Scenarios cover entry decisions, both controllers, tapped and
+untapped return choices, returning the source itself where legal, repeated
+entry, other land arrivals, cleanup, empty/populated zones, mana abilities under
+Suppression Field, actual spending, and snapshot replay. Returned cards are
+rebound to their new hand slots before observation. Human scry explicitly keeps
+or bottoms the viewed card; AI scripts permit a legal optional selection to be
+skipped. `record_library` and `assert_scry_result` verify card multiplicities and
+preservation of the uninspected suffix, allowing either legal scry outcome.
+Empty and one-card libraries are included. Land play allowances/timing, other
+replacement effects, trigger ordering, and multiplayer counts remain separate.
+
+`entry_stats_creature` covers unconditional creature entry triggers that give a
+target or the controller's team a temporary positive bonus, or put fixed +1/+1
+counters on a target creature. Version 2 parameters are `effect` (`target_pump`,
+`team_pump`, or `counter`), `power`, `toughness`, `amount`, and explicit source
+`keywords`. Counter recipes use zero temporary stats; pump recipes use zero
+counter amount. The full Oracle clause and all remaining passive text must match.
+
+Its scenarios check casting and exact payment, pre-resolution state, both
+controllers, self and opposing targets, unchanged creatures/noncreatures,
+cleanup, later arrivals, re-entry, source removal, beneficiary combat, and
+snapshot replay. Temporary team bonuses affect the resolution cohort; permanent
+counters survive cleanup. Source keyword combat mechanics, target loss after
+trigger targeting, replacement effects, and trigger ordering remain separate.
+
+Once-per-turn self-pumps include a real turn advance before testing reuse.
+Three-color mana creatures check each offered output. Entry-value recipes also
+support pure life-loss triggers. Optional `activation_dialogs` on value abilities
+maps selected variants to explicit presentation choices, including AI single-mode
+menus; it supplies no rules expectations. Scripted activation queries ignore AI
+desirability while retaining every legality check. Gameplay and AI search retain
+their preference filtering.
+
 ```json
 {
   "version": 1,

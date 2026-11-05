@@ -11,7 +11,7 @@ def spec(d,r):
      r.get('type_line','').startswith('Token ') or d.get('oracle_text')!=r.get('oracle_text') or 'variants' not in d):raise ValueError('whole normal creature Oracle pin required')
  p=d.get('params')
  if not isinstance(p,dict) or set(p)!={'keywords','enters_tapped','attack_land'}:raise ValueError('explicit static keywords, entry tapping and attack condition required')
- if type(p['enters_tapped']) is not bool or not isinstance(p['keywords'],list) or p['keywords'] not in ([],['Flying'],['Trample']):raise ValueError('reviewed entry state and Flying/Trample static keywords required')
+ if type(p['enters_tapped']) is not bool or not isinstance(p['keywords'],list) or p['keywords'] not in ([],['Flying'],['Trample'],['Defender']):raise ValueError('reviewed entry state and Flying/Trample/Defender static keywords required')
  land=p['attack_land']
  if land is not None and (not isinstance(land,dict) or set(land)!={'type','scope'} or land['type'] not in ('Island','Mountain') or land['scope'] not in ('defender','battlefield')):raise ValueError('reviewed explicit land type and controller scope required')
  if land is None and not p['enters_tapped']:raise ValueError('at least one reviewed condition required')
@@ -82,7 +82,7 @@ def expand(name,csvid,d,p,selected,registry,oracle):
    return s
   def can_attack():
    src=entities['source']
-   if not src['alive'] or src['tapped'] or src['sick']:return False
+   if not src['alive'] or src['tapped'] or src['sick'] or 'Defender' in p['keywords']:return False
    cond=p['attack_land']
    return cond is None or any(e['alive'] and ('Land' in oracle[e['name']]['type_line']) and cond['type'] in e.get('land_types',oracle[e['name']]['type_line'].split(' — ')[-1].split()) and (cond['scope']=='battlefield' or e['player']==1-owner) for e in entities.values())
   land=p['attack_land'];base=land['type'] if land else 'Island'

@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Azorius Knight-Arbiter",
+  "csvid": 19546,
+  "recipes": [
+    {
+      "family": "evasion_creature",
+      "version": 2,
+      "params": {
+        "keywords": [
+          "Vigilance"
+        ],
+        "unblockable": true
+      },
+      "oracle_text": "Vigilance\nThis creature can't be blocked.",
+      "variants": [
+        "cast",
+        "payment",
+        "insufficient_mana",
+        "snapshot",
+        "fresh_attack",
+        "unblocked",
+        "tapped_attacker",
+        "tapped_blocker",
+        "attack_white",
+        "attack_blue",
+        "attack_black",
+        "attack_red",
+        "attack_green",
+        "attack_artifact",
+        "attack_colored_artifact",
+        "attack_colorless",
+        "attack_flying",
+        "attack_reach",
+        "attack_shadow",
+        "attack_shadow_flying",
+        "attack_horse",
+        "defend_green",
+        "defend_flying",
+        "defend_shadow",
+        "defend_shadow_flying",
+        "defend_horse",
+        "opponent_attack",
+        "opponent_defend",
+        "cleanup_evasion",
+        "evasion_damage",
+        "combat_snapshot"
+      ]
+    }
+  ],
+  "recipe_coverage": "All reviewed variants of the declared recipe; Oracle supplies costs, base characteristics and effect parameters. Additional rules interactions and any gaps listed in generated recipe provenance remain separate."
+}

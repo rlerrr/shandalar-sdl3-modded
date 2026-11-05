@@ -29,7 +29,7 @@ def spec(declaration, record):
     cost = p['activation_cost']
     if not isinstance(cost, str) or not re.fullmatch(r'(?:\{[1-9BUGRW]\})+', cost):
         raise ValueError('regeneration component supports ordinary mana-only costs')
-    expected = [cost + ': Regenerate ' + ref + '.' for ref in ('this creature', record['name'])]
+    expected = [cost + ': Regenerate ' + ref + '.' for ref in ('this creature', record['name'], record['name'].split(',')[0])]
     keys = []; abilities = []; canonical = {k.lower(): k for k in KEYWORDS + ('Hexproof',)}
     for line in record['oracle_text'].splitlines():
         text = line
