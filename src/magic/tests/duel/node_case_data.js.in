@@ -1,0 +1,7 @@
+// Mount read-only generated scenarios through NodeFS instead of preloading the
+// complete archive into WebAssembly memory. Case records are read on demand.
+Module.preRun = Module.preRun || [];
+Module.preRun.push(function () {
+  FS.mkdir('/test-cases');
+  FS.mount(NODEFS, {root: process.env.DUEL_TEST_CASE_DIR || '@duel_generated@'}, '/test-cases');
+});

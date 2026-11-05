@@ -11,7 +11,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 from import_duel_oracle import registry
 from import_carddata import load_handler_overrides
 from case_files import CaseStream
-from case_shards import CaseShards
+from case_archive import CaseArchiveWriter, legacy_case_hash, write_text_if_changed
 
 ZONES = {"hand": 0, "battlefield": 1, "library": 2, "graveyard": 3, "exile": 4}
 STATES = {"tapped": 1, "sick": 2, "attacking": 4, "untapped": 8, "opponent_owned": 16, "token": 32}
@@ -69,7 +69,7 @@ def template_stats(face):
     return int(face["power"]), int(face["toughness"])
 
 
-def build(data, output):
+def build(data, output, legacy_fingerprints=False):
     rows = registry()
     by_name = {r["name"]: r for r in rows if r["kind"] != "internal"}
     oracle = read(data / "oracle.json")
@@ -110,7 +110,8 @@ def build(data, output):
                           "{" + ",".join("{" + ",".join(map(str, p)) + "}" for p in mana) + "}"]) + "}")
     chunks.append("static const Fixture fixtures[] = {" + ",".join(fixtures_c) + "};\n")
     manifest = []
-    case_shards = CaseShards(output)
+    archive = CaseArchiveWriter(output / "duel_cases.bin")
+    semantic_hashes = {}
     for i, case in enumerate(cases):
         name = case["name"]
         if name in names or not re.fullmatch(r"[A-Za-z][A-Za-z0-9_]*", name):
@@ -128,7 +129,7 @@ def build(data, output):
             raise ValueError(f"Missing Oracle mapping for {case['card']}")
         expectations = o.get("selected_face", o)
         text = expectations.get("oracle_text", "")
-        steps_c = []
+        step_rows = []
         recorded_state = False
         recorded_libraries = set()
         for step in case["steps"]:
@@ -228,21 +229,23 @@ def build(data, output):
                 recorded_state = True
             elif op == "assert_recorded_state" and not recorded_state:
                 raise ValueError(f"Record a result before comparing it in {name}")
-            steps_c.append("{" + ",".join([quoted(op), quoted(step.get("ref", "")), quoted(step.get("other", "")),
-              quoted(step.get("property", "")), str(step.get("player", 0)), str(step.get("value", 0)),
-              str(ZONES.get(step.get("zone", "hand"), 0)), str(step.get("index", -1 if op in {"bind_permanent", "bind_hand"} else 0)), str(step.get("color", 0))]) + "}")
-        case_chunks.append(f"static const Step case_steps_{i}[] = {{" + ",".join(steps_c) + "};\n")
-        case_chunks.append(f"static const Case case_{i} = {{" + ",".join([quoted(name),quoted(case["card"]),
-          quoted(o["oracle_id"]),quoted(text),quoted(case["fixture"]),str(case.get("seed",123)),
-          f"case_cards_{i}",str(count),f"case_steps_{i}",str(len(steps_c))]) + "};\n")
-        case_shards.add(i, case_chunks)
+            step_rows.append((op,step.get("ref", ""),step.get("other", ""),step.get("property", ""),
+                step.get("player",0),step.get("value",0),ZONES.get(step.get("zone","hand"),0),
+                step.get("index",-1 if op in {"bind_permanent","bind_hand"} else 0),step.get("color",0)))
+        metadata=(name,case["card"],o["oracle_id"],text,case["fixture"],case.get("seed",123))
+        card_rows=[(c["ref"],c["player"],ZONES[c["zone"]],by_name[c["name"]]["csvid"],sum(STATES[x] for x in c.get("state",[]))) for c in case.get("setup",[])]
+        archive.add(metadata,card_rows,step_rows)
+        if legacy_fingerprints:
+            semantic_hashes[name]=legacy_case_hash(i,metadata,card_rows,step_rows)
         manifest.append({"filter": f"Behavior.{name}", "card": case["card"], "csvid": by_name[case["card"]]["csvid"],
                          "oracle_id": o["oracle_id"], "handler": by_name[case["card"]]["handler"], "fixture":case["fixture"], "seed":case.get("seed",123), "tier":"behavior",
                          "source_file":case["_source_file"]})
         if "_recipe" in case:
             manifest[-1]["recipe"] = case["_recipe"]
-    chunks.append(case_shards.finish())
-    chunks.append("static const Case *cases[] = {" + ",".join(f"&case_{i}" for i in range(len(cases))) + "};\n")
+    archive.finish()
+    write_text_if_changed(output / "duel_case_sources.cmake", "set(duel_generated_case_sources)\n")
+    if legacy_fingerprints:
+        write_text_if_changed(output / "case_semantics_sha256.json",json.dumps(semantic_hashes,indent=2)+"\n")
     # Deliberately narrow templates: numeric vanilla creatures and flying-only creatures.
     templates = []
     seen = set()
@@ -280,20 +283,20 @@ def build(data, output):
     for seed in (1,123,999):
         manifest.append({"filter":f"AI.Seed_{seed}","card":"Seeded engine duel","csvid":-1,"fixture":"stocked_zones","seed":seed,"tier":"ai"})
     output.mkdir(parents=True, exist_ok=True)
-    (output / "duel_handler_bindings.inc").write_text("".join(declarations) +
+    write_text_if_changed(output / "duel_handler_bindings.inc","".join(declarations) +
         "int duel_test_handler_matches_override(int csvid) {\n"
         "  for (int iid = 0; iid < SHANDALAR_CARD_DATA_ACTIVE_COUNT; ++iid) {\n"
         "    if ((int)global_cards_data[iid].id != csvid) continue;\n"
         "    int (*actual)(int, int, event_t) = global_cards_data[iid].code_pointer;\n"
         "    switch (csvid) {\n" + "".join(checks) +
         "    default: return 0;\n    }\n  }\n  return 0;\n}\n")
-    (output / "duel_cases.inc").write_text("".join(chunks), encoding="utf-8")
-    (output / "manifest.json").write_text(json.dumps({"version":1,"source":oracle["source"],"cases":manifest},indent=2)+"\n")
+    write_text_if_changed(output / "duel_cases.inc","".join(chunks), encoding="utf-8")
+    write_text_if_changed(output / "manifest.json",json.dumps({"version":1,"source":oracle["source"],"cases":manifest},indent=2)+"\n")
     inventory = {"version":1,"records":rows,"oracle_mapped_names":len(oracle["cards"]),
                  "behavior_cases":len(cases),"template_cases":len(templates),"smoke_cards":len(smoke),
                  "oracle_sha256":hashlib.sha256((data / "oracle.json").read_bytes()).hexdigest()}
     inventory["recipe_cases"] = cases.recipe_count
-    (output / "inventory.json").write_text(json.dumps(inventory,indent=2)+"\n")
+    write_text_if_changed(output / "inventory.json",json.dumps(inventory,indent=2)+"\n")
     # Configure-time CTest inventory: every case gets its own failure-contained process.
     cmake = []
     for item in manifest:
@@ -306,12 +309,13 @@ def build(data, output):
             cmake.append('set_property(TEST "duel.'+item["filter"]+'" APPEND PROPERTY LABELS "recipe;recipe_'+item["recipe"]["family"]+'")\n')
         if tier == "smoke":
             cmake.append("endif()\n")
-    (output / "cases.cmake").write_text("".join(cmake))
+    write_text_if_changed(output / "cases.cmake","".join(cmake))
     print(f"Generated {len(cases)} behavior, {len(templates)} template, {len(smoke)} catalog smoke cases")
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--data", type=Path, default=Path(__file__).parent / "data")
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--legacy-fingerprints", action="store_true", help="emit migration fingerprints matching the former C++ arrays")
     args = parser.parse_args()
-    build(args.data, args.output)
+    build(args.data, args.output, args.legacy_fingerprints)

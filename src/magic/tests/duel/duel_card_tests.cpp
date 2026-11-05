@@ -17,6 +17,7 @@
 #define DUEL_TEST_ASSETS "/assets_modded"
 #endif
 #include "duel_case_types.h"
+#include "case_archive.h"
 #include "duel_cases.inc"
 extern "C" int ai_opinion_of_gamestate_continued(int player, int score);
 extern "C" int manalinkeh_charge_mana_for_multi_x(int player, int color, int count);
@@ -67,10 +68,13 @@ static int property(const DuelTestCard &c,const char *name) {
   ADD_FAILURE()<<"Unknown observation "<<name; return -99999;
 }
 class BehaviorTest:public testing::Test {
- const Case *spec;
+ CaseArchive *archive;
+ const CaseArchive::Entry *entry;
  public:
- explicit BehaviorTest(const Case *c):spec(c){}
+ BehaviorTest(CaseArchive *a,const CaseArchive::Entry *e):archive(a),entry(e){}
  void TestBody() override {
+  auto loaded=archive->load(*entry);
+  const Case *spec=&loaded.spec;
   std::cerr<<"CASE: "<<spec->name<<" CARD: "<<spec->card<<" ORACLE: "<<spec->oracle_id<<" FIXTURE: "<<spec->fixture<<" SEED: "<<spec->seed<<"\n";
   SCOPED_TRACE(std::string(spec->card)+" Oracle "+spec->oracle_id+" "+spec->oracle_text);
   Refs refs; load_fixture(refs,spec->fixture,spec->seed); add_cards(refs,spec->cards,spec->count); duel_test_prepare_fixture();
@@ -666,11 +670,12 @@ int main(int argc,char**argv) {
  _CrtSetReportMode(_CRT_ASSERT, _CRTDBG_MODE_FILE);
  _CrtSetReportFile(_CRT_ASSERT, _CRTDBG_FILE_STDERR);
 #endif
- std::string case_list,journal;
+ std::string case_list,journal,case_data=DUEL_TEST_CASE_DATA;
  for(int i=1;i<argc;++i) {
   std::string arg=argv[i];
   if(arg.rfind("--duel-case-list=",0)==0)case_list=arg.substr(17);
   if(arg.rfind("--duel-batch-journal=",0)==0)journal=arg.substr(21);
+  if(arg.rfind("--duel-case-data=",0)==0)case_data=arg.substr(17);
  }
  testing::InitGoogleTest(&argc,argv);
  std::unordered_set<std::string> requested;
@@ -697,7 +702,14 @@ int main(int argc,char**argv) {
  auto selected=[&](const char *s,const char *n){return !requested.empty()?requested.count(std::string(s)+'.'+n)!=0:!exact || (suite==s && name==n);};
  if(!exact || suite=="Bindings")for(const auto &t:handler_bindings) { auto *s=&t; auto n="Card_"+std::to_string(t.csvid); if(selected("Bindings",n.c_str()))testing::RegisterTest("Bindings",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new BindingTest(s);}); }
  if(!exact || suite=="AI")for(unsigned seed:{1u,123u,999u}) { auto n="Seed_"+std::to_string(seed); if(selected("AI",n.c_str()))testing::RegisterTest("AI",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[seed](){return new AITest(seed);}); }
- if(!exact || suite=="Behavior")for(const auto *c:cases)if(selected("Behavior",c->name))testing::RegisterTest("Behavior",c->name,nullptr,nullptr,__FILE__,__LINE__,[c](){return new BehaviorTest(c);});
+ std::unique_ptr<CaseArchive> archive;
+ if(!exact || suite=="Behavior") {
+  archive.reset(new CaseArchive(case_data));
+  for(const auto &entry:archive->entries)if(selected("Behavior",entry.name)) {
+   auto *a=archive.get();auto *e=&entry;
+   testing::RegisterTest("Behavior",entry.name,nullptr,nullptr,__FILE__,__LINE__,[a,e](){return new BehaviorTest(a,e);});
+  }
+ }
  if(!exact || suite=="Templates")for(const auto &t:templates) { auto *s=&t; auto n="Card_"+std::to_string(t.csvid); if(selected("Templates",n.c_str()))testing::RegisterTest("Templates",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new TemplateTest(s);}); }
  if(!exact || suite=="Smoke")for(const auto &t:smoke_cards) { auto *s=&t; auto n="Card_"+std::to_string(t.csvid); if(selected("Smoke",n.c_str()))testing::RegisterTest("Smoke",n.c_str(),nullptr,nullptr,__FILE__,__LINE__,[s](){return new SmokeTest(s);}); }
  if(!requested.empty()) {

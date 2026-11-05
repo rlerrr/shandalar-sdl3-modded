@@ -660,13 +660,46 @@ eligible blocker exists, while final minimum-blocker validation still handles
 incomplete assignments. After setting mana pools, use `refresh` before querying
 availability so the engine's cached mana options match those pools.
 
-Large generated test binaries may need more link space than the default build
-drive provides. Configure `SHANDALAR_DUEL_TEST_BINARY_DIR` to an absolute output
-directory on another drive when needed. This relocates only `duel_card_tests`;
-generated source/manifest files remain in the build tree, and CTest uses the
-configured executable path automatically. The default empty value retains the
-normal build location. Native and Wasm configurations can share a directory
-because their executable extensions differ.
+Expanded behavior data lives in `generated/duel_cases.bin`. It contains a shared
+UTF-8 string table, an index and independently compressed case records. The
+runner reads the index for discovery, then decompresses only the selected case
+while it executes. Setup cards, all nine step fields, operation order, names,
+Oracle text, seeds and fixture references are preserved. The C++ driver keeps
+only the small shared fixtures and catalog tables; no expanded data shards are
+compiled or linked. Generator outputs retain their timestamps when unchanged,
+so a data-only fixture edit does not force a driver rebuild.
+
+Native runners use their configured generated archive by default. Pass
+`--duel-case-data=PATH` to select another archive. Node/Wasm mounts the generated
+directory at `/test-cases` using NodeFS, with `DUEL_TEST_CASE_DIR` available to
+override its host directory. The archive is not preloaded into Wasm memory.
+Keep the generated archive available when moving a test executable. Configure
+`SHANDALAR_DUEL_TEST_BINARY_DIR` to relocate the executable; its default archive
+location remains the generated directory in that build tree.
+
+Archive format version 1 has a 48-byte little-endian header (`DUELCASE`, version,
+case count, string/index offsets, total length and metadata CRCs). Each 24-byte
+index entry records a name ID, file offset, compressed/raw lengths and a raw
+record CRC. Each record stores five metadata string IDs, seed and setup/step
+counts, followed by 20-byte setups and 36-byte steps using string IDs instead
+of pointers. Records use standard zlib compression. The reader rejects wrong
+versions, malformed bounds, invalid IDs, truncation and checksum failures.
+Changes to this layout require a format version bump.
+
+The batched build target defaults to four native workers or two Node/Wasm
+workers. Four concurrent Node workers can exhaust this VM's memory when other
+validation tools are active. An infrastructure failure must be rerun at lower
+concurrency and recorded separately from card-rule failure baselines.
+
+`python src/magic/tests/duel/test_case_archive.py` checks the format, lazy reads,
+malformed data and unchanged-output timestamps. The optional generator flag
+`--legacy-fingerprints` emits audit hashes compatible with the former C++ data
+arrays; normal generation omits that migration-only serialization work.
+
+The [external-data migration audit](../../../../docs/test-audits/external-case-data-2026-11.json)
+records the unchanged 130,942 behavior cases and observable states, complete
+155,856-entry native/Wasm verification, exact binary/archive sizes, and the
+separately recorded VM memory-pressure retry.
 
 ## Code coverage
 
