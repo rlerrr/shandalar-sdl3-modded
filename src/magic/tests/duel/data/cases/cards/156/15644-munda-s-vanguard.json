@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "card": "Munda's Vanguard",
+  "csvid": 15644,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "tap_cost_growth",
+        "effect": "team",
+        "modes": [
+          "effect",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "fresh_source",
+          "fresh_ally",
+          "tapped_source",
+          "tapped_ally",
+          "source_alone",
+          "opponent_ally_only",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "ally_bounced_pending",
+          "repeat",
+          "zero_mana"
+        ],
+        "gaps": [
+          "No upkeep or draw steps are emitted.",
+          "Additional Ally tap cost under shroud and creatures entering while the activation is pending are untested."
+        ]
+      },
+      "oracle_text": "Cohort — {T}, Tap an untapped Ally you control: Put a +1/+1 counter on each creature you control.",
+      "variants": [
+        "effect_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "fresh_source_0",
+        "fresh_ally_0",
+        "tapped_source_0",
+        "tapped_ally_0",
+        "source_alone_0",
+        "opponent_ally_only_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "ally_bounced_pending_0",
+        "repeat_0",
+        "zero_mana_0",
+        "effect_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "fresh_source_1",
+        "fresh_ally_1",
+        "tapped_source_1",
+        "tapped_ally_1",
+        "source_alone_1",
+        "opponent_ally_only_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "ally_bounced_pending_1",
+        "repeat_1",
+        "zero_mana_1"
+      ]
+    }
+  ]
+}

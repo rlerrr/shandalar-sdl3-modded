@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "card": "Honored Hierarch",
+  "csvid": 15152,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "mana_growth",
+        "entry": "renown",
+        "modes": [
+          "effect",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "tapped_source",
+          "repeat",
+          "next_turn",
+          "spend_output",
+          "source_bounced_after_mana",
+          "source_destroyed_after_mana",
+          "resolved_snapshot",
+          "not_renowned",
+          "counter_is_not_renown",
+          "second_attack",
+          "color_B",
+          "color_U",
+          "color_R",
+          "color_W",
+          "counter_removed"
+        ],
+        "gaps": [
+          "No upkeep or draw step is emitted.",
+          "Mana abilities resolve atomically; no fabricated pending stack window is claimed.",
+          "Summoning sickness with an already renowned fresh object is untested; renown is earned through actual combat before a real turn/untap cycle."
+        ]
+      },
+      "oracle_text": "Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\nAs long as this creature is renowned, it has vigilance and \"{T}: Add one mana of any color.\"",
+      "variants": [
+        "effect_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "tapped_source_0",
+        "repeat_0",
+        "next_turn_0",
+        "spend_output_0",
+        "source_bounced_after_mana_0",
+        "source_destroyed_after_mana_0",
+        "resolved_snapshot_0",
+        "not_renowned_0",
+        "counter_is_not_renown_0",
+        "second_attack_0",
+        "color_B_0",
+        "color_U_0",
+        "color_R_0",
+        "color_W_0",
+        "counter_removed_0",
+        "effect_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "tapped_source_1",
+        "repeat_1",
+        "next_turn_1",
+        "spend_output_1",
+        "source_bounced_after_mana_1",
+        "source_destroyed_after_mana_1",
+        "resolved_snapshot_1",
+        "not_renowned_1",
+        "counter_is_not_renown_1",
+        "second_attack_1",
+        "color_B_1",
+        "color_U_1",
+        "color_R_1",
+        "color_W_1",
+        "counter_removed_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Longtusk Cub",
+  "csvid": 16437,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "energy_cub",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "tap": false,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "no_energy",
+          "short_energy",
+          "fresh_source",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "repeat"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects.",
+          "Blocked combat and energy from other simultaneous combat-damage sources are not exercised."
+        ]
+      },
+      "oracle_text": "Whenever this creature deals combat damage to a player, you get {E}{E} (two energy counters).\nPay {E}{E}: Put a +1/+1 counter on this creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "no_energy_0",
+        "short_energy_0",
+        "fresh_source_0",
+        "pending_snapshot_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "repeat_0",
+        "effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "no_energy_1",
+        "short_energy_1",
+        "fresh_source_1",
+        "pending_snapshot_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

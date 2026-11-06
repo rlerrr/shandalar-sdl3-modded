@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "card": "Ghoulraiser",
+  "csvid": 11968,
+  "recipes": [
+    {
+      "family": "etb_recovery_creature",
+      "version": 2,
+      "oracle_text": "When this creature enters, return a Zombie card at random from your graveyard to your hand.",
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "zombie",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false,
+        "random_recovery": true
+      },
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_0",
+        "opponent_only_0",
+        "wrong_type_0",
+        "duplicates_0",
+        "cleanup_0",
+        "repeat_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "countered_0",
+        "wrong_color_0",
+        "destroy_source_0",
+        "kindred_card_0",
+        "changeling_card_0",
+        "effect_1",
+        "alternate_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_1",
+        "opponent_only_1",
+        "wrong_type_1",
+        "duplicates_1",
+        "cleanup_1",
+        "repeat_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "countered_1",
+        "wrong_color_1",
+        "destroy_source_1",
+        "kindred_card_1",
+        "changeling_card_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "card": "Golgari Grave-Troll",
+  "csvid": 7862,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "self_regeneration",
+        "entry": "own_grave_creatures",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "remove": 1,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "tapped_source",
+          "insufficient_mana",
+          "opponent_graves_ignored",
+          "zero_own_creatures",
+          "last_counter",
+          "resolved_snapshot"
+        ],
+        "gaps": [
+          "Proactive shield creation and nested response windows are untested; regeneration is exercised in the real destruction window.",
+          "Upkeep and draw are not simulated.",
+          "Dredge is dormant because no card draw occurs while the source is in the graveyard."
+        ]
+      },
+      "oracle_text": "This creature enters with a +1/+1 counter on it for each creature card in your graveyard.\n{1}, Remove a +1/+1 counter from this creature: Regenerate this creature.\nDredge 6 (If you would draw a card, you may mill six cards instead. If you do, return this card from your graveyard to your hand.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "second_destruction_0",
+        "damaged_regen_0",
+        "tapped_source_0",
+        "insufficient_mana_0",
+        "opponent_graves_ignored_0",
+        "zero_own_creatures_0",
+        "last_counter_0",
+        "resolved_snapshot_0",
+        "effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "second_destruction_1",
+        "damaged_regen_1",
+        "tapped_source_1",
+        "insufficient_mana_1",
+        "opponent_graves_ignored_1",
+        "zero_own_creatures_1",
+        "last_counter_1",
+        "resolved_snapshot_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "card": "Wall of Limbs",
+  "csvid": 14198,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_value",
+        "effect": "power_loss",
+        "cost": [
+          5,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "remove": 0,
+        "life_trigger": 1,
+        "entry": "none",
+        "sacrifice": true,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "wrong_color",
+          "opponent_gain",
+          "zero_life_events",
+          "two_life_events",
+          "own_player",
+          "boosted_power"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects.",
+          "No source attacks are emitted; defender is not independently probed."
+        ]
+      },
+      "oracle_text": "Defender (This creature can't attack.)\nWhenever you gain life, put a +1/+1 counter on this creature.\n{5}{B}{B}, Sacrifice this creature: Target player loses X life, where X is this creature's power.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "wrong_color_0",
+        "opponent_gain_0",
+        "zero_life_events_0",
+        "two_life_events_0",
+        "own_player_0",
+        "boosted_power_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "wrong_color_1",
+        "opponent_gain_1",
+        "zero_life_events_1",
+        "two_life_events_1",
+        "own_player_1",
+        "boosted_power_1"
+      ]
+    }
+  ]
+}

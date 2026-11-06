@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Undercity Troll",
+  "csvid": 15242,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "regeneration_combat",
+        "entry": "renown",
+        "cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "insufficient_mana",
+          "wrong_color",
+          "resolved_snapshot",
+          "repeat_combat",
+          "no_combat_growth"
+        ],
+        "gaps": [
+          "Regeneration is tested in the actual destruction window; proactive shields, nested windows and removal from combat are untested.",
+          "No upkeep or draw step is emitted."
+        ]
+      },
+      "oracle_text": "Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\n{2}{G}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "second_destruction_0",
+        "damaged_regen_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "resolved_snapshot_0",
+        "repeat_combat_0",
+        "no_combat_growth_0",
+        "effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "second_destruction_1",
+        "damaged_regen_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "resolved_snapshot_1",
+        "repeat_combat_1",
+        "no_combat_growth_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "card": "Karlov of the Ghost Council",
+  "csvid": 15523,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_value",
+        "effect": "exile",
+        "cost": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "remove": 6,
+        "life_trigger": 2,
+        "entry": "none",
+        "sacrifice": false,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "wrong_color",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "own_target",
+          "self_target",
+          "target_bounced_pending",
+          "opponent_gain",
+          "zero_life_events",
+          "one_life_event",
+          "two_life_events",
+          "indestructible_target"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects."
+        ]
+      },
+      "oracle_text": "Whenever you gain life, put two +1/+1 counters on Karlov.\n{W}{B}, Remove six +1/+1 counters from Karlov: Exile target creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "wrong_color_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "own_target_0",
+        "self_target_0",
+        "target_bounced_pending_0",
+        "opponent_gain_0",
+        "zero_life_events_0",
+        "one_life_event_0",
+        "two_life_events_0",
+        "indestructible_target_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "wrong_color_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "own_target_1",
+        "self_target_1",
+        "target_bounced_pending_1",
+        "opponent_gain_1",
+        "zero_life_events_1",
+        "one_life_event_1",
+        "two_life_events_1",
+        "indestructible_target_1"
+      ]
+    }
+  ]
+}

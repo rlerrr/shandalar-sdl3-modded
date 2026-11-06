@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "card": "Spiritmonger",
+  "csvid": 5435,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "regeneration_combat",
+        "entry": "creature_damage",
+        "cost": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "insufficient_mana",
+          "wrong_color",
+          "resolved_snapshot",
+          "unblocked_combat",
+          "prevented_combat",
+          "no_combat_growth"
+        ],
+        "gaps": [
+          "Regeneration is tested in the actual destruction window; proactive shields, nested windows and removal from combat are untested.",
+          "No upkeep or draw step is emitted.",
+          "The optional green color-changing activation is untested; the regeneration window has no green mana.",
+          "Simultaneous damage to multiple creatures and lethal reciprocal damage are untested."
+        ]
+      },
+      "oracle_text": "Whenever this creature deals damage to a creature, put a +1/+1 counter on this creature.\n{B}: Regenerate this creature.\n{G}: This creature becomes the color of your choice until end of turn.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "second_destruction_0",
+        "damaged_regen_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "resolved_snapshot_0",
+        "unblocked_combat_0",
+        "prevented_combat_0",
+        "no_combat_growth_0",
+        "effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "second_destruction_1",
+        "damaged_regen_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "resolved_snapshot_1",
+        "unblocked_combat_1",
+        "prevented_combat_1",
+        "no_combat_growth_1"
+      ]
+    }
+  ]
+}

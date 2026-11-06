@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "card": "Etched Oracle",
+  "csvid": 7049,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_value",
+        "effect": "draw_three",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "remove": 4,
+        "life_trigger": 0,
+        "entry": "sunburst",
+        "sacrifice": false,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "opponent_draw",
+          "three_colors",
+          "two_colors",
+          "zero_colors"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects."
+        ]
+      },
+      "oracle_text": "Sunburst (This creature enters with a +1/+1 counter on it for each color of mana spent to cast it.)\n{1}, Remove four +1/+1 counters from this creature: Target player draws three cards.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "opponent_draw_0",
+        "three_colors_0",
+        "two_colors_0",
+        "zero_colors_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "opponent_draw_1",
+        "three_colors_1",
+        "two_colors_1",
+        "zero_colors_1"
+      ]
+    }
+  ]
+}

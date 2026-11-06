@@ -17,6 +17,9 @@ def eligible(r,p):
   (p['targets']==['card'] or (all(t in present for t in p['targets']) if p['type_match']=='all' else any(t in present for t in p['targets']))))
 
 def spec(d,r):
+ if isinstance(d.get('params'),dict) and d['params'].get('wave')==6:
+  from graveyard_recovery_extension_recipes import wave6_spec
+  return wave6_spec(d,r,'etb_recovery_creature')
  from recipes import cost_from_oracle
  if not r or r.get('layout')!='normal' or r.get('card_faces') or r.get('selected_face') or 'Creature' not in r.get('type_line','') or d.get('oracle_text')!=r.get('oracle_text') or 'variants' not in d:
   raise ValueError('entry recovery requires a whole pinned normal creature and explicit variants')
@@ -54,6 +57,9 @@ def spec(d,r):
  return dict(p,family='etb_recovery_creature',power=int(r['power']),toughness=int(r['toughness']),mana=cost_from_oracle(r),remaining_abilities=abilities)
 
 def variants(p):
+ if p.get('_wave6'):
+  from graveyard_recovery_extension_recipes import wave6_variants
+  return wave6_variants(p)
  modes=['entry','alternate','payment','insufficient_mana','empty_graveyard','other_graveyard','countered','cleanup_once','other_creature','bounce_only','bounce_recast','blink','destroy_source','ready_snapshot','pending_snapshot','resolved_snapshot','blink_snapshot','bare_zones','graveyard_shroud']
  if p['targets']!=['card'] or p['exclude_types']:modes.append('wrong_type')
  if p['optional']:modes.append('decline')
@@ -62,6 +68,8 @@ def variants(p):
  return [v+'_'+str(owner) for owner in (0,1) for v in modes]
 
 def validate_witnesses(o,registry):
+ from graveyard_recovery_extension_recipes import wave6_validate_witnesses
+ wave6_validate_witnesses(o,registry)
  for nm in WITNESSES:
   r=o.get(nm,{})
   if nm not in registry or r.get('layout')!='normal' or not any(t.title() in r.get('type_line','') for t in TYPES):raise ValueError('entry recovery witness changed: '+nm)
@@ -71,6 +79,9 @@ def validate_witnesses(o,registry):
  if 'Ground Seal' not in registry or o.get('Ground Seal',{}).get('oracle_text')!="When this enchantment enters, draw a card.\nCards in graveyards can't be the targets of spells or abilities.":raise ValueError('graveyard protection witness changed')
 
 def expand(name,csvid,d,p,selected,registry,oracle):
+ if p.get('_wave6'):
+  from graveyard_recovery_extension_recipes import wave6_expand
+  return wave6_expand(name,csvid,d,p,selected,registry,oracle)
  from recipes import card,step,observe,cost_from_oracle
  result=[];candidates=[nm for nm in WITNESSES if eligible(oracle[nm],p)]
  if len(candidates)<2:raise ValueError('entry recovery needs two independently eligible witnesses')

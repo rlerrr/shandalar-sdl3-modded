@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "card": "Drakestown Forgotten",
+  "csvid": 14032,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_value",
+        "effect": "shrink",
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "remove": 1,
+        "life_trigger": 0,
+        "entry": "all_grave_creatures",
+        "sacrifice": false,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "wrong_color",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "own_target",
+          "self_target",
+          "target_bounced_pending",
+          "opponent_graves_only",
+          "no_grave_creatures",
+          "lethal_shrink",
+          "repeat"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects."
+        ]
+      },
+      "oracle_text": "This creature enters with X +1/+1 counters on it, where X is the number of creature cards in all graveyards.\n{2}{B}, Remove a +1/+1 counter from this creature: Target creature gets -1/-1 until end of turn.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "wrong_color_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "own_target_0",
+        "self_target_0",
+        "target_bounced_pending_0",
+        "opponent_graves_only_0",
+        "no_grave_creatures_0",
+        "lethal_shrink_0",
+        "repeat_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "wrong_color_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "own_target_1",
+        "self_target_1",
+        "target_bounced_pending_1",
+        "opponent_graves_only_1",
+        "no_grave_creatures_1",
+        "lethal_shrink_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

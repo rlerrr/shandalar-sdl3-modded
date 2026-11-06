@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Solarion",
+  "csvid": 7123,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "sunburst_double",
+        "modes": [
+          "effect",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "three_colors",
+          "two_colors",
+          "zero_colors",
+          "fresh_source",
+          "tapped_source",
+          "repeat",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "more_counters_pending",
+          "counter_removed_pending",
+          "pending_snapshot",
+          "cleanup"
+        ],
+        "gaps": [
+          "Sunburst is checked with actual distinct-color payment; colorless contributions do not add counters.",
+          "No upkeep or draw steps; untap uses actual next-turn wrappers.",
+          "Combat and source removal/reentry while a pending parent refers to a newly reused battlefield slot are untested.",
+          "Interleaved resolution above a pending activated ability is untested because the existing response helper supports a spell parent only; response variants inspect final whole-stack outcomes."
+        ]
+      },
+      "oracle_text": "Sunburst (This creature enters with a +1/+1 counter on it for each color of mana spent to cast it.)\n{T}: Double the number of +1/+1 counters on this creature.",
+      "variants": [
+        "effect_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "three_colors_0",
+        "two_colors_0",
+        "zero_colors_0",
+        "fresh_source_0",
+        "tapped_source_0",
+        "repeat_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "more_counters_pending_0",
+        "counter_removed_pending_0",
+        "pending_snapshot_0",
+        "cleanup_0",
+        "effect_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "three_colors_1",
+        "two_colors_1",
+        "zero_colors_1",
+        "fresh_source_1",
+        "tapped_source_1",
+        "repeat_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "more_counters_pending_1",
+        "counter_removed_pending_1",
+        "pending_snapshot_1",
+        "cleanup_1"
+      ]
+    }
+  ]
+}

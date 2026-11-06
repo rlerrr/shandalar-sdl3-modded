@@ -1,0 +1,3920 @@
+{
+  "version": 1,
+  "cards": {
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Mana Vault": {
+      "oracle_id": "736892cb-a34b-4bb9-b56c-e26e3db207a2",
+      "name": "Mana Vault",
+      "oracle_text": "This artifact doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {4}. If you do, untap this artifact.\nAt the beginning of your draw step, if this artifact is tapped, it deals 1 damage to you.\n{T}: Add {C}{C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/2x2/308/mana-vault?utm_source=api"
+    },
+    "Howling Mine": {
+      "oracle_id": "d26b27db-a567-4631-b4b6-7294222fbdd1",
+      "name": "Howling Mine",
+      "oracle_text": "At the beginning of each player's draw step, if this artifact is untapped, that player draws an additional card.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/c16/257/howling-mine?utm_source=api"
+    },
+    "Fellwar Stone": {
+      "oracle_id": "95560508-7ac9-4be9-8a3f-3c7d5b52807b",
+      "name": "Fellwar Stone",
+      "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mbc/74/fellwar-stone?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Divination": {
+      "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+      "name": "Divination",
+      "oracle_text": "Draw two cards.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Seal of Cleansing": {
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "name": "Seal of Cleansing",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mkc/80/seal-of-cleansing?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Reclaim": {
+      "oracle_id": "797155cd-faf4-4321-8629-c8c352392748",
+      "name": "Reclaim",
+      "oracle_text": "Put target card from your graveyard on top of your library.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ori/195/reclaim?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Cloudshift": {
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "name": "Cloudshift",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Lantern Kami": {
+      "oracle_id": "bddb6b9b-5120-48d2-a57f-eb5d46d38cec",
+      "name": "Lantern Kami",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Spirit",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/chk/32/lantern-kami?utm_source=api"
+    },
+    "Kami of Ancient Law": {
+      "oracle_id": "e937e0f5-ca35-4dce-9f05-8f2075731628",
+      "name": "Kami of Ancient Law",
+      "oracle_text": "Sacrifice this creature: Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Spirit",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/soc/150/kami-of-ancient-law?utm_source=api"
+    },
+    "Mothdust Changeling": {
+      "oracle_id": "52237e6b-19f6-405c-a668-545c4ccb1b6d",
+      "name": "Mothdust Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nTap an untapped creature you control: This creature gains flying until end of turn.",
+      "mana_cost": "{U}",
+      "type_line": "Creature — Shapeshifter",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Changeling"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mma/53/mothdust-changeling?utm_source=api"
+    },
+    "Nameless Inversion": {
+      "oracle_id": "d6911456-42cb-4b23-a560-dc98784530f5",
+      "name": "Nameless Inversion",
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn.",
+      "mana_cost": "{1}{B}",
+      "type_line": "Kindred Instant — Shapeshifter",
+      "keywords": [
+        "Changeling"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ecl/113/nameless-inversion?utm_source=api"
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+    },
+    "Walking Corpse": {
+      "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+      "name": "Walking Corpse",
+      "oracle_text": "",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+    },
+    "Coral Merfolk": {
+      "oracle_id": "4ed27607-21a8-4bc3-997e-6d2242313f6d",
+      "name": "Coral Merfolk",
+      "oracle_text": "",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Merfolk",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m20/315/coral-merfolk?utm_source=api"
+    },
+    "Goblin Piker": {
+      "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+      "name": "Goblin Piker",
+      "oracle_text": "",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m12/141/goblin-piker?utm_source=api"
+    },
+    "Holy Strength": {
+      "oracle_id": "9357de36-f8be-4f49-b2c8-9fe9eaf82b07",
+      "name": "Holy Strength",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +1/+2.",
+      "mana_cost": "{W}",
+      "type_line": "Enchantment — Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m11/16/holy-strength?utm_source=api"
+    },
+    "Bonesplitter": {
+      "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+      "name": "Bonesplitter",
+      "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+      "mana_cost": "{1}",
+      "type_line": "Artifact — Equipment",
+      "keywords": [
+        "Equip"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmr/458/bonesplitter?utm_source=api"
+    },
+    "Jace Beleren": {
+      "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "name": "Jace Beleren",
+      "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Legendary Planeswalker — Jace",
+      "loyalty": "3",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+    },
+    "Gnarled Mass": {
+      "oracle_id": "18202185-f9d4-446a-b34e-fae9800240f9",
+      "name": "Gnarled Mass",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}{G}",
+      "type_line": "Creature — Spirit",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bok/127/gnarled-mass?utm_source=api"
+    },
+    "Raging Poltergeist": {
+      "oracle_id": "15d460da-9110-4f33-a24f-8582a2bcd96f",
+      "name": "Raging Poltergeist",
+      "oracle_text": "",
+      "mana_cost": "{4}{R}",
+      "type_line": "Creature — Spirit",
+      "power": "6",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/avr/150/raging-poltergeist?utm_source=api"
+    },
+    "Ashen Monstrosity": {
+      "oracle_id": "01906aae-fc53-40b0-a386-dae43e4f437f",
+      "name": "Ashen Monstrosity",
+      "oracle_text": "Haste\nThis creature attacks each combat if able.",
+      "mana_cost": "{5}{R}{R}",
+      "type_line": "Creature — Spirit",
+      "power": "7",
+      "toughness": "4",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 7.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bok/93/ashen-monstrosity?utm_source=api"
+    },
+    "Kami of Lunacy": {
+      "oracle_id": "5c848e4a-f0f7-4659-b7b1-f468efba9563",
+      "name": "Kami of Lunacy",
+      "oracle_text": "Flying\nSoulshift 5 (When this creature dies, you may return target Spirit card with mana value 5 or less from your graveyard to your hand.)",
+      "mana_cost": "{4}{B}{B}",
+      "type_line": "Creature — Spirit",
+      "power": "4",
+      "toughness": "1",
+      "keywords": [
+        "Flying",
+        "Soulshift"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/chk/119/kami-of-lunacy?utm_source=api"
+    },
+    "Thousand-legged Kami": {
+      "oracle_id": "2f3bd1fc-387e-41b7-b19b-62dd9fbe2d10",
+      "name": "Thousand-legged Kami",
+      "oracle_text": "Soulshift 7 (When this creature dies, you may return target Spirit card with mana value 7 or less from your graveyard to your hand.)",
+      "mana_cost": "{6}{G}{G}",
+      "type_line": "Creature — Spirit",
+      "power": "6",
+      "toughness": "6",
+      "keywords": [
+        "Soulshift"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 8.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/chk/246/thousand-legged-kami?utm_source=api"
+    },
+    "Font of Return": {
+      "oracle_id": "b8805aa6-fa5f-4c70-ad90-8502611bef5a",
+      "name": "Font of Return",
+      "oracle_text": "{3}{B}, Sacrifice this enchantment: Return up to three target creature cards from your graveyard to your hand.",
+      "mana_cost": "{1}{B}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/jou/71/font-of-return?utm_source=api"
+    },
+    "Tortured Existence": {
+      "oracle_id": "fa9dfcf7-069c-4441-9ea0-133de47ecada",
+      "name": "Tortured Existence",
+      "oracle_text": "{B}, Discard a creature card: Return target creature card from your graveyard to your hand.",
+      "mana_cost": "{B}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/sth/74/tortured-existence?utm_source=api"
+    },
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    }
+  },
+  "profiles": {
+    "Dutiful Return": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "c8f958da-3a31-4064-9a78-66e9b65b85ab",
+        "name": "Dutiful Return",
+        "oracle_text": "Return up to two target creature cards from your graveyard to your hand.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/110/dutiful-return?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell",
+        "scope": "creature",
+        "minimum": 0,
+        "maximum": 2,
+        "value_max": null,
+        "life_mana_value": false
+      }
+    },
+    "Death's Duet": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "28d24add-da3a-4697-8fd2-5106c9225c0e",
+        "name": "Death's Duet",
+        "oracle_text": "Return two target creature cards from your graveyard to your hand.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/101/deaths-duet?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell",
+        "scope": "creature",
+        "minimum": 2,
+        "maximum": 2,
+        "value_max": null,
+        "life_mana_value": false
+      }
+    },
+    "Leonin Squire": {
+      "family": "etb_recovery_creature",
+      "source": {
+        "oracle_id": "fa19c9d7-fe93-4e93-a5ef-9af9c6cd1a5e",
+        "name": "Leonin Squire",
+        "oracle_text": "When this creature enters, return target artifact card with mana value 1 or less from your graveyard to your hand.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Cat Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/9/leonin-squire?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "artifact",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": 1,
+        "life_mana_value": false
+      }
+    },
+    "Razor Hippogriff": {
+      "family": "etb_recovery_creature",
+      "source": {
+        "oracle_id": "d121108e-f0bc-469b-bf94-e5e5308014a2",
+        "name": "Razor Hippogriff",
+        "oracle_text": "Flying\nWhen this creature enters, return target artifact card from your graveyard to your hand. You gain life equal to that card's mana value.",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Hippogriff",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/19/razor-hippogriff?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "artifact",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": true
+      }
+    },
+    "Myr Retriever": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "d07d3be3-f69d-4484-8467-cffd43871788",
+        "name": "Myr Retriever",
+        "oracle_text": "When this creature dies, return another target artifact card from your graveyard to your hand.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/277/myr-retriever?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "artifact",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false
+      }
+    },
+    "Roar of Reclamation": {
+      "family": "reanimation",
+      "source": {
+        "oracle_id": "a4372c4c-3577-43ca-a801-1f2bd1488a2f",
+        "name": "Roar of Reclamation",
+        "oracle_text": "Each player returns all artifact cards from their graveyard to the battlefield.",
+        "mana_cost": "{5}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/14/roar-of-reclamation?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "all_battlefield",
+        "scope": "artifact",
+        "minimum": 0,
+        "maximum": 0,
+        "value_max": null,
+        "life_mana_value": false
+      }
+    },
+    "March of the Returned": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "53a40369-0e62-4ad2-a6bd-65a5ff0da65e",
+        "name": "March of the Returned",
+        "oracle_text": "Return up to two target creature cards from your graveyard to your hand.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/96/march-of-the-returned?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell",
+        "scope": "creature",
+        "minimum": 0,
+        "maximum": 2,
+        "value_max": null,
+        "life_mana_value": false
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Morbid Plunder": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "1bb7009b-aeb0-4545-be4c-c8c5d723bcf5",
+        "name": "Morbid Plunder",
+        "oracle_text": "Return up to two target creature cards from your graveyard to your hand.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/72/morbid-plunder?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell",
+        "scope": "creature",
+        "minimum": 0,
+        "maximum": 2,
+        "value_max": null,
+        "life_mana_value": false
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Soul Salvage": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "60b6bd93-3eb3-4b81-bc4d-1e3351ee2e64",
+        "name": "Soul Salvage",
+        "oracle_text": "Return up to two target creature cards from your graveyard to your hand.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/280/soul-salvage?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell",
+        "scope": "creature",
+        "minimum": 0,
+        "maximum": 2,
+        "value_max": null,
+        "life_mana_value": false
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Restock": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "8b641cd3-bb08-4f2e-9dad-24f58a9c32e1",
+        "name": "Restock",
+        "oracle_text": "Return two target cards from your graveyard to your hand. Exile Restock.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/195/restock?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell",
+        "scope": "card",
+        "minimum": 2,
+        "maximum": 2,
+        "value_max": null,
+        "life_mana_value": false,
+        "self_destination": "exile"
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Baloth Null": {
+      "family": "etb_recovery_creature",
+      "source": {
+        "oracle_id": "55a0a40c-cb40-469d-9bf3-9c33b378f4f7",
+        "name": "Baloth Null",
+        "oracle_text": "When this creature enters, return up to two target creature cards from your graveyard to your hand.",
+        "mana_cost": "{4}{B}{G}",
+        "type_line": "Creature — Zombie Beast",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/197/baloth-null?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "creature",
+        "minimum": 0,
+        "maximum": 2,
+        "value_max": null,
+        "life_mana_value": false
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Tilling Treefolk": {
+      "family": "etb_recovery_creature",
+      "source": {
+        "oracle_id": "8a011d0d-da29-4287-b50c-12746abfa38c",
+        "name": "Tilling Treefolk",
+        "oracle_text": "When this creature enters, you may return up to two target land cards from your graveyard to your hand.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Treefolk Druid",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/78/tilling-treefolk?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "land",
+        "minimum": 0,
+        "maximum": 2,
+        "value_max": null,
+        "life_mana_value": false,
+        "optional": true,
+        "legacy_fixed_selection_count": 2
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Golgari Findbroker": {
+      "family": "etb_recovery_creature",
+      "source": {
+        "oracle_id": "e5456b35-d7a9-4717-90df-c6c46f1ec437",
+        "name": "Golgari Findbroker",
+        "oracle_text": "When this creature enters, return target permanent card from your graveyard to your hand.",
+        "mana_cost": "{B}{B}{G}{G}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/187/golgari-findbroker?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "permanent",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Ironclad Slayer": {
+      "family": "etb_recovery_creature",
+      "source": {
+        "oracle_id": "964e20e2-2947-4d8a-a0a2-b8b5fde27ff8",
+        "name": "Ironclad Slayer",
+        "oracle_text": "When this creature enters, you may return target Aura or Equipment card from your graveyard to your hand.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Warrior",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/376/ironclad-slayer?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "aura_equipment",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false,
+        "optional": true,
+        "legacy_optional_trigger_prompt": true
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {
+        "optional_empty_selector_ai": true
+      }
+    },
+    "Lotus-Eye Mystics": {
+      "family": "etb_recovery_creature",
+      "source": {
+        "oracle_id": "efb11270-4b5a-4c52-862f-1d24c6b95d73",
+        "name": "Lotus-Eye Mystics",
+        "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhen this creature enters, return target enchantment card from your graveyard to your hand.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Monk",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Prowess"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/23/lotus-eye-mystics?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "enchantment",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false,
+        "inactive_components": [
+          "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)"
+        ]
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Possessed Skaab": {
+      "family": "etb_recovery_creature",
+      "source": {
+        "oracle_id": "a42b567d-6bfc-49e7-8f91-917e2bb3046c",
+        "name": "Possessed Skaab",
+        "oracle_text": "When this creature enters, return target instant, sorcery, or creature card from your graveyard to your hand.\nIf this creature would die, exile it instead.",
+        "mana_cost": "{3}{U}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/215/possessed-skaab?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "instant_sorcery_creature",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false,
+        "source_death_destination": "exile",
+        "legacy_optional_trigger_prompt": true
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Crypt Angel": {
+      "family": "etb_recovery_creature",
+      "source": {
+        "oracle_id": "665f3e52-c536-481b-8b29-fe68f08d1fdf",
+        "name": "Crypt Angel",
+        "oracle_text": "Flying, protection from white\nWhen this creature enters, return target blue or red creature card from your graveyard to your hand.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Angel",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Protection"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/97/crypt-angel?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "blue_red_creature",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false,
+        "inactive_components": [
+          "Flying, protection from white"
+        ]
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Pit Keeper": {
+      "family": "etb_recovery_creature",
+      "source": {
+        "oracle_id": "e1c5bfae-07cb-4194-8a86-201503e17085",
+        "name": "Pit Keeper",
+        "oracle_text": "When this creature enters, if you have four or more creature cards in your graveyard, you may return target creature card from your graveyard to your hand.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/130/pit-keeper?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "creature",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false,
+        "optional": true,
+        "minimum_grave_creatures": 4
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Ghoulraiser": {
+      "family": "etb_recovery_creature",
+      "source": {
+        "oracle_id": "614f748b-5d31-440d-a7c0-3ba12dc63c24",
+        "name": "Ghoulraiser",
+        "oracle_text": "When this creature enters, return a Zombie card at random from your graveyard to your hand.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/238/ghoulraiser?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "entry",
+        "scope": "zombie",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false,
+        "random_recovery": true
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Junk Diver": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "08c595da-9305-42a9-b72f-5ccc546edc01",
+        "name": "Junk Diver",
+        "oracle_text": "Flying\nWhen this creature dies, return another target artifact card from your graveyard to your hand.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh3/293/junk-diver?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "artifact",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false,
+        "inactive_components": [
+          "Flying"
+        ]
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Dutiful Attendant": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "e9195f10-8cc2-482a-9e28-0be9a37099b4",
+        "name": "Dutiful Attendant",
+        "oracle_text": "When this creature dies, return another target creature card from your graveyard to your hand.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Human Warrior",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/226/dutiful-attendant?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "creature",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Workshop Assistant": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "319ee221-bace-41e9-b386-6b528bd780c1",
+        "name": "Workshop Assistant",
+        "oracle_text": "When this creature dies, return another target artifact card from your graveyard to your hand.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/348/workshop-assistant?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "artifact",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Nightsoil Kami": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "2efd1c86-41ba-4b86-bf63-e60e3263cb06",
+        "name": "Nightsoil Kami",
+        "oracle_text": "Soulshift 5 (When this creature dies, you may return target Spirit card with mana value 5 or less from your graveyard to your hand.)",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Spirit",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [
+          "Soulshift"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/139/nightsoil-kami?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "spirit",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": 5,
+        "life_mana_value": false,
+        "optional": true,
+        "soulshift": true,
+        "inactive_components": []
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Promised Kannushi": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "b92bd85f-20c4-410e-af19-77d987d7dc02",
+        "name": "Promised Kannushi",
+        "oracle_text": "Soulshift 7 (When this creature dies, you may return target Spirit card with mana value 7 or less from your graveyard to your hand.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Soulshift"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/141/promised-kannushi?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "spirit",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": 7,
+        "life_mana_value": false,
+        "optional": true,
+        "soulshift": true,
+        "inactive_components": []
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Kami of Lunacy": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "5c848e4a-f0f7-4659-b7b1-f468efba9563",
+        "name": "Kami of Lunacy",
+        "oracle_text": "Flying\nSoulshift 5 (When this creature dies, you may return target Spirit card with mana value 5 or less from your graveyard to your hand.)",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Creature — Spirit",
+        "power": "4",
+        "toughness": "1",
+        "keywords": [
+          "Flying",
+          "Soulshift"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/119/kami-of-lunacy?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "spirit",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": 5,
+        "life_mana_value": false,
+        "optional": true,
+        "soulshift": true,
+        "inactive_components": [
+          "Flying"
+        ]
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Kami of the Palace Fields": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "e8d44867-9519-41f2-aa0f-4079444aeef9",
+        "name": "Kami of the Palace Fields",
+        "oracle_text": "Flying, first strike\nSoulshift 5 (When this creature dies, you may return target Spirit card with mana value 5 or less from your graveyard to your hand.)",
+        "mana_cost": "{5}{W}",
+        "type_line": "Creature — Spirit",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "First strike",
+          "Soulshift"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/24/kami-of-the-palace-fields?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "spirit",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": 5,
+        "life_mana_value": false,
+        "optional": true,
+        "soulshift": true,
+        "inactive_components": [
+          "Flying, first strike"
+        ]
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Thousand-legged Kami": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "2f3bd1fc-387e-41b7-b19b-62dd9fbe2d10",
+        "name": "Thousand-legged Kami",
+        "oracle_text": "Soulshift 7 (When this creature dies, you may return target Spirit card with mana value 7 or less from your graveyard to your hand.)",
+        "mana_cost": "{6}{G}{G}",
+        "type_line": "Creature — Spirit",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Soulshift"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/246/thousand-legged-kami?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "spirit",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": 7,
+        "life_mana_value": false,
+        "optional": true,
+        "soulshift": true,
+        "inactive_components": []
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Burr Grafter": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "eb527a7d-8957-4667-b50d-ed4398418664",
+        "name": "Burr Grafter",
+        "oracle_text": "Sacrifice this creature: Target creature gets +2/+2 until end of turn.\nSoulshift 3 (When this creature dies, you may return target Spirit card with mana value 3 or less from your graveyard to your hand.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Soulshift"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/203/burr-grafter?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "spirit",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": 3,
+        "life_mana_value": false,
+        "optional": true,
+        "soulshift": true,
+        "inactive_components": [
+          "Sacrifice this creature: Target creature gets +2/+2 until end of turn."
+        ]
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Elder Pine of Jukai": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "1658528b-df40-44fd-b3f6-eb042706c522",
+        "name": "Elder Pine of Jukai",
+        "oracle_text": "Whenever you cast a Spirit or Arcane spell, reveal the top three cards of your library. Put all land cards revealed this way into your hand and the rest on the bottom of your library in any order.\nSoulshift 2 (When this creature dies, you may return target Spirit card with mana value 2 or less from your graveyard to your hand.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Soulshift"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/128/elder-pine-of-jukai?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "spirit",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": 2,
+        "life_mana_value": false,
+        "optional": true,
+        "soulshift": true,
+        "inactive_components": [
+          "Whenever you cast a Spirit or Arcane spell, reveal the top three cards of your library. Put all land cards revealed this way into your hand and the rest on the bottom of your library in any order."
+        ]
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Moonlit Strider": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "8524a6a9-4d4c-4796-aad3-0f08f825a239",
+        "name": "Moonlit Strider",
+        "oracle_text": "Sacrifice this creature: Target creature you control gains protection from the color of your choice until end of turn.\nSoulshift 3 (When this creature dies, you may return target Spirit card with mana value 3 or less from your graveyard to your hand.)",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Spirit",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Soulshift"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/27/moonlit-strider?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "spirit",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": 3,
+        "life_mana_value": false,
+        "optional": true,
+        "soulshift": true,
+        "inactive_components": [
+          "Sacrifice this creature: Target creature you control gains protection from the color of your choice until end of turn."
+        ]
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Rootrunner": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "9c83c32e-798e-40aa-9bb6-6ef5500d273b",
+        "name": "Rootrunner",
+        "oracle_text": "{G}{G}, Sacrifice this creature: Put target land on top of its owner's library.\nSoulshift 3 (When this creature dies, you may return target Spirit card with mana value 3 or less from your graveyard to your hand.)",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Spirit",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Soulshift"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/237/rootrunner?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "spirit",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": 3,
+        "life_mana_value": false,
+        "optional": true,
+        "soulshift": true,
+        "inactive_components": [
+          "{G}{G}, Sacrifice this creature: Put target land on top of its owner's library."
+        ]
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Thief of Hope": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "d3fa1320-9e95-437a-aa36-102a2722fc42",
+        "name": "Thief of Hope",
+        "oracle_text": "Whenever you cast a Spirit or Arcane spell, target opponent loses 1 life and you gain 1 life.\nSoulshift 2 (When this creature dies, you may return target Spirit card with mana value 2 or less from your graveyard to your hand.)",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Soulshift"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/100/thief-of-hope?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "death",
+        "scope": "spirit",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": 2,
+        "life_mana_value": false,
+        "optional": true,
+        "soulshift": true,
+        "inactive_components": [
+          "Whenever you cast a Spirit or Arcane spell, target opponent loses 1 life and you gain 1 life."
+        ]
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Twilight's Call": {
+      "family": "reanimation",
+      "source": {
+        "oracle_id": "ae0a1d9c-19cb-42ee-97c3-464e38e84615",
+        "name": "Twilight's Call",
+        "oracle_text": "You may cast this spell as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)\nEach player returns all creature cards from their graveyard to the battlefield.",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddj/76/twilights-call?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "all_battlefield",
+        "scope": "creature",
+        "minimum": 0,
+        "maximum": 0,
+        "value_max": null,
+        "life_mana_value": false,
+        "inactive_components": [
+          "You may cast this spell as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)"
+        ],
+        "legacy_cast_speed_prompt": true
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ]
+    },
+    "Font of Return": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "b8805aa6-fa5f-4c70-ad90-8502611bef5a",
+        "name": "Font of Return",
+        "oracle_text": "{3}{B}, Sacrifice this enchantment: Return up to three target creature cards from your graveyard to your hand.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/71/font-of-return?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "activation",
+        "scope": "creature",
+        "minimum": 0,
+        "maximum": 3,
+        "value_max": null,
+        "life_mana_value": false,
+        "selection": "up_to",
+        "activation": {
+          "mana": "{3}{B}",
+          "tap": false,
+          "self_sacrifice": true,
+          "creature_sacrifice": false,
+          "discard": ""
+        }
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {}
+    },
+    "Crystal Chimes": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "fbff7452-1da4-4cd0-8247-a625e4b4da2b",
+        "name": "Crystal Chimes",
+        "oracle_text": "{3}, {T}, Sacrifice this artifact: Return all enchantment cards from your graveyard to your hand.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c15/250/crystal-chimes?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "activation",
+        "scope": "enchantment",
+        "minimum": 0,
+        "maximum": 0,
+        "value_max": null,
+        "life_mana_value": false,
+        "selection": "all",
+        "activation": {
+          "mana": "{3}",
+          "tap": true,
+          "self_sacrifice": true,
+          "creature_sacrifice": false,
+          "discard": ""
+        }
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami",
+        "Font of Return",
+        "Tortured Existence"
+      ],
+      "inputs": {}
+    },
+    "Tortured Existence": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "fa9dfcf7-069c-4441-9ea0-133de47ecada",
+        "name": "Tortured Existence",
+        "oracle_text": "{B}, Discard a creature card: Return target creature card from your graveyard to your hand.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sth/74/tortured-existence?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "activation",
+        "scope": "creature",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false,
+        "selection": "single",
+        "activation": {
+          "mana": "{B}",
+          "tap": false,
+          "self_sacrifice": false,
+          "creature_sacrifice": false,
+          "discard": "creature"
+        }
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {
+        "discard_before_grave": true
+      }
+    },
+    "Undertaker": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "a8ffbf6d-44e9-44e4-846c-4f894078130e",
+        "name": "Undertaker",
+        "oracle_text": "{B}, {T}, Discard a card: Return target creature card from your graveyard to your hand.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Human Spellshaper",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/53/undertaker?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "activation",
+        "scope": "creature",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false,
+        "selection": "single",
+        "activation": {
+          "mana": "{B}",
+          "tap": true,
+          "self_sacrifice": false,
+          "creature_sacrifice": false,
+          "discard": "card"
+        }
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {
+        "ai_discard_ack": true
+      }
+    },
+    "Malevolent Awakening": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "522fc178-d11a-4919-83b0-e58453e3a160",
+        "name": "Malevolent Awakening",
+        "oracle_text": "{1}{B}{B}, Sacrifice a creature: Return target creature card from your graveyard to your hand.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/147/malevolent-awakening?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "activation",
+        "scope": "creature",
+        "minimum": 1,
+        "maximum": 1,
+        "value_max": null,
+        "life_mana_value": false,
+        "selection": "single",
+        "activation": {
+          "mana": "{1}{B}{B}",
+          "tap": false,
+          "self_sacrifice": false,
+          "creature_sacrifice": true,
+          "discard": ""
+        }
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {
+        "creature_before_grave": true,
+        "ai_creature_sacrifice_auto": true
+      }
+    },
+    "Restoration Specialist": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "36f71d49-0f64-4b5d-b1ee-bb0af5e9db9a",
+        "name": "Restoration Specialist",
+        "oracle_text": "{W}, Sacrifice this creature: Return up to one target artifact card and up to one target enchantment card from your graveyard to your hand.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Dwarf Artificer",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/21/restoration-specialist?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "activation",
+        "scope": "artifact_or_enchantment",
+        "minimum": 0,
+        "maximum": 2,
+        "value_max": null,
+        "life_mana_value": false,
+        "selection": "paired",
+        "activation": {
+          "mana": "{W}",
+          "tap": false,
+          "self_sacrifice": true,
+          "creature_sacrifice": false,
+          "discard": ""
+        }
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {
+        "sacrifice_before_selection": true
+      }
+    },
+    "Urborg Uprising": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "882d3be7-1c0f-4d2b-8f2e-32369488ef82",
+        "name": "Urborg Uprising",
+        "oracle_text": "Return up to two target creature cards from your graveyard to your hand.\nDraw a card.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/107/urborg-uprising?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell_extended",
+        "scope": "creature",
+        "selection": "up_to",
+        "quantity": 2,
+        "value_max": null,
+        "draw": 1,
+        "discard": false,
+        "lose_x_life": false,
+        "self_destination": "graveyard"
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {}
+    },
+    "Macabre Waltz": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "cf75dbd8-b65a-48d9-b96b-4afb43f336d1",
+        "name": "Macabre Waltz",
+        "oracle_text": "Return up to two target creature cards from your graveyard to your hand, then discard a card.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/177/macabre-waltz?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell_extended",
+        "scope": "creature",
+        "selection": "up_to",
+        "quantity": 2,
+        "value_max": null,
+        "draw": 0,
+        "discard": true,
+        "lose_x_life": false,
+        "self_destination": "graveyard"
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {
+        "ai_discard_ack": true
+      }
+    },
+    "Life from the Loam": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "ac8fba34-512c-4f24-999a-ab72f1ce4acb",
+        "name": "Life from the Loam",
+        "oracle_text": "Return up to three target land cards from your graveyard to your hand.\nDredge 3 (If you would draw a card, you may mill three cards instead. If you do, return this card from your graveyard to your hand.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Dredge",
+          "Mill"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/96/life-from-the-loam?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell_extended",
+        "scope": "land",
+        "selection": "up_to",
+        "quantity": 3,
+        "value_max": null,
+        "draw": 0,
+        "discard": false,
+        "lose_x_life": false,
+        "self_destination": "graveyard",
+        "inactive_after_components": [
+          "Dredge 3 (If you would draw a card, you may mill three cards instead. If you do, return this card from your graveyard to your hand.)"
+        ]
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {}
+    },
+    "Death Denied": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "94f23a93-cd98-4ee7-9e62-9b7b49ace6fd",
+        "name": "Death Denied",
+        "oracle_text": "Return X target creature cards from your graveyard to your hand.",
+        "mana_cost": "{X}{B}{B}",
+        "type_line": "Instant — Arcane",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/92/death-denied?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell_extended",
+        "scope": "creature",
+        "selection": "x",
+        "quantity": "X",
+        "value_max": null,
+        "draw": 0,
+        "discard": false,
+        "lose_x_life": false,
+        "self_destination": "graveyard"
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {
+        "quantity_by_selection": true
+      }
+    },
+    "Shattered Crypt": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "77bef290-7229-420a-a5c6-8c1b6fea63df",
+        "name": "Shattered Crypt",
+        "oracle_text": "Return X target creature cards from your graveyard to your hand. You lose X life.",
+        "mana_cost": "{X}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/80/shattered-crypt?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell_extended",
+        "scope": "creature",
+        "selection": "x",
+        "quantity": "X",
+        "value_max": null,
+        "draw": 0,
+        "discard": false,
+        "lose_x_life": true,
+        "self_destination": "graveyard"
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {
+        "quantity_by_selection": true
+      }
+    },
+    "Wildest Dreams": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "0a25a72e-5603-4b50-ac20-36b286cc1a2b",
+        "name": "Wildest Dreams",
+        "oracle_text": "Return X target cards from your graveyard to your hand. Exile Wildest Dreams.",
+        "mana_cost": "{X}{X}{G}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/174/wildest-dreams?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell_extended",
+        "scope": "card",
+        "selection": "x",
+        "quantity": "X",
+        "value_max": null,
+        "draw": 0,
+        "discard": false,
+        "lose_x_life": false,
+        "self_destination": "exile"
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {
+        "double_x_human": true,
+        "ai_x_by_mana_hand": true
+      }
+    },
+    "Pull from the Deep": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "1c0a72dc-4756-4d60-b6b4-4c2c69699efd",
+        "name": "Pull from the Deep",
+        "oracle_text": "Return up to one target instant card and up to one target sorcery card from your graveyard to your hand. Exile Pull from the Deep.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/47/pull-from-the-deep?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell_extended",
+        "scope": "instant_or_sorcery",
+        "selection": "paired",
+        "quantity": 2,
+        "value_max": null,
+        "draw": 0,
+        "discard": false,
+        "lose_x_life": false,
+        "self_destination": "exile"
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {
+        "paired_offer_only_eligible": true
+      }
+    },
+    "Shreds of Sanity": {
+      "family": "graveyard_recovery_extension",
+      "source": {
+        "oracle_id": "6eaa343d-0097-4f05-80ab-deb016d4e15e",
+        "name": "Shreds of Sanity",
+        "oracle_text": "Return up to one target instant card and up to one target sorcery card from your graveyard to your hand, then discard a card. Exile Shreds of Sanity.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/emn/141/shreds-of-sanity?utm_source=api"
+      },
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell_extended",
+        "scope": "instant_or_sorcery",
+        "selection": "paired",
+        "quantity": 2,
+        "value_max": null,
+        "draw": 0,
+        "discard": true,
+        "lose_x_life": false,
+        "self_destination": "exile"
+      },
+      "witnesses": [
+        "Grizzly Bears",
+        "Hill Giant",
+        "Ornithopter",
+        "Sol Ring",
+        "Mana Vault",
+        "Howling Mine",
+        "Fellwar Stone",
+        "Giant Growth",
+        "Divination",
+        "Lightning Bolt",
+        "Seal of Cleansing",
+        "Forest",
+        "Plains",
+        "Island",
+        "Mountain",
+        "Counterspell",
+        "Reclaim",
+        "Unsummon",
+        "Cloudshift",
+        "Swords to Plowshares",
+        "Lantern Kami",
+        "Kami of Ancient Law",
+        "Mothdust Changeling",
+        "Nameless Inversion",
+        "Scathe Zombies",
+        "Walking Corpse",
+        "Coral Merfolk",
+        "Goblin Piker",
+        "Holy Strength",
+        "Bonesplitter",
+        "Jace Beleren",
+        "Gnarled Mass",
+        "Raging Poltergeist",
+        "Ashen Monstrosity",
+        "Kami of Lunacy",
+        "Thousand-legged Kami"
+      ],
+      "inputs": {
+        "ai_discard_ack": true
+      }
+    }
+  }
+}

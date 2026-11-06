@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Ashnod's Transmogrant",
+  "csvid": 476,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "tap_cost_growth",
+        "effect": "artifact",
+        "modes": [
+          "effect",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "tapped_source",
+          "opponent_target",
+          "artifact_only",
+          "target_bounced_pending",
+          "target_destroyed_pending",
+          "shroud_probe",
+          "opponent_hexproof_probe",
+          "own_hexproof_target",
+          "artifact_destroy_probe"
+        ],
+        "gaps": [
+          "The source is actually sacrificed as a cost before its effect resolves.",
+          "Creature-to-artifact conversion is observed directly and through actual Shatter; color and noncreature type-changing interactions are untested."
+        ]
+      },
+      "oracle_text": "{T}, Sacrifice this artifact: Put a +1/+1 counter on target nonartifact creature. That creature becomes an artifact in addition to its other types.",
+      "variants": [
+        "effect_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "tapped_source_0",
+        "opponent_target_0",
+        "artifact_only_0",
+        "target_bounced_pending_0",
+        "target_destroyed_pending_0",
+        "shroud_probe_0",
+        "opponent_hexproof_probe_0",
+        "own_hexproof_target_0",
+        "artifact_destroy_probe_0",
+        "effect_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "tapped_source_1",
+        "opponent_target_1",
+        "artifact_only_1",
+        "target_bounced_pending_1",
+        "target_destroyed_pending_1",
+        "shroud_probe_1",
+        "opponent_hexproof_probe_1",
+        "own_hexproof_target_1",
+        "artifact_destroy_probe_1"
+      ]
+    }
+  ]
+}

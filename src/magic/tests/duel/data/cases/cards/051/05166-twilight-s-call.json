@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Twilight's Call",
+  "csvid": 5166,
+  "recipes": [
+    {
+      "family": "reanimation",
+      "version": 2,
+      "oracle_text": "You may cast this spell as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)\nEach player returns all creature cards from their graveyard to the battlefield.",
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "all_battlefield",
+        "scope": "creature",
+        "minimum": 0,
+        "maximum": 0,
+        "value_max": null,
+        "life_mana_value": false,
+        "inactive_components": [
+          "You may cast this spell as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)"
+        ],
+        "legacy_cast_speed_prompt": true
+      },
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_0",
+        "opponent_only_0",
+        "wrong_type_0",
+        "duplicates_0",
+        "cleanup_0",
+        "repeat_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "countered_0",
+        "wrong_color_0",
+        "effect_1",
+        "alternate_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_1",
+        "opponent_only_1",
+        "wrong_type_1",
+        "duplicates_1",
+        "cleanup_1",
+        "repeat_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "countered_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

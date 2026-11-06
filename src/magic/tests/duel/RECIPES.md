@@ -3200,3 +3200,27 @@ counter restoration. Retained calls made under AI policies still count.
 `subtype_Frog` and `subtype_Lizard`. These read the matching permanent's real
 subtypes and are not `assert_card` properties. A Frog Lizard has both its Frog
 and Lizard observations set; the keys are independent.
+
+### Wave 6 counter activations and graveyard recovery
+
+The final 76 card homes use the existing growth-activation and recovery families
+with explicit `params.wave = 6` profiles. Their private witness files pin the
+whole cached Oracle record and the real registry identity. Growth cases cover
+printed activation costs, counter changes, regeneration windows, creature-entry
+growth, renown, and actual mana production. Recovery cases cover printed spell
+or activation costs, entry/death triggers, target type and ownership, partial
+target loss, source loss, and physical graveyard-card identity.
+
+Generated receipt order must be independent of Python's hash seed. Sort sets
+before emitting assertions: failure baselines identify exact step numbers, and
+snapshot replays must execute the same checks in the same order. The recovery
+regression compares representative expansions in three fresh Python processes.
+
+Seven exact AI eligibility-policy controls for Gyre Sage and Pull from the Deep
+are preserved in `data/pending_cases/large-batch-6/ai-eligibility-components.json`.
+Their printed legal expectations remain unchanged. The AI's zero-output or
+zero-target permission filter prevents the ordinary test entry point from
+performing those actions; no policy override is used and these controls are not
+gameplay-failure baselines. Both card homes remain active, including human zero
+controls and productive AI actions. The pending package retains the complete
+scripts, full source Oracle records, and all four original/isolated diagnostics.

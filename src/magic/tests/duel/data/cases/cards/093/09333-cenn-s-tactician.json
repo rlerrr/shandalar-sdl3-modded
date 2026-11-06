@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "card": "Cenn's Tactician",
+  "csvid": 9333,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "soldier_lord",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "tap": true,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "wrong_color",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "tapped_source",
+          "fresh_source",
+          "untap_repeat",
+          "opponent_target",
+          "target_bounced_pending",
+          "grant_nonsoldier",
+          "grant_counterless_soldier",
+          "grant_opponent",
+          "grant_removed"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects.",
+          "Additional-block legality is checked by real block declarations; multi-block combat-damage assignment is not exercised.",
+          "Direct rejection of a chosen non-Soldier activation target is not probed; source itself remains a legal Soldier alternative."
+        ]
+      },
+      "oracle_text": "{W}, {T}: Put a +1/+1 counter on target Soldier creature.\nEach creature you control with a +1/+1 counter on it can block an additional creature each combat.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "tapped_source_0",
+        "fresh_source_0",
+        "untap_repeat_0",
+        "opponent_target_0",
+        "target_bounced_pending_0",
+        "grant_nonsoldier_0",
+        "grant_counterless_soldier_0",
+        "grant_opponent_0",
+        "grant_removed_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "tapped_source_1",
+        "fresh_source_1",
+        "untap_repeat_1",
+        "opponent_target_1",
+        "target_bounced_pending_1",
+        "grant_nonsoldier_1",
+        "grant_counterless_soldier_1",
+        "grant_opponent_1",
+        "grant_removed_1"
+      ]
+    }
+  ]
+}

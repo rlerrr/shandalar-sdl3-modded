@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Slith Bloodletter",
+  "csvid": 1477,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "regeneration_combat",
+        "entry": "combat_each",
+        "cost": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "insufficient_mana",
+          "wrong_color",
+          "resolved_snapshot",
+          "repeat_combat",
+          "no_combat_growth"
+        ],
+        "gaps": [
+          "Regeneration is tested in the actual destruction window; proactive shields, nested windows and removal from combat are untested.",
+          "No upkeep or draw step is emitted."
+        ]
+      },
+      "oracle_text": "Whenever this creature deals combat damage to a player, put a +1/+1 counter on it.\n{1}{B}: Regenerate this creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "second_destruction_0",
+        "damaged_regen_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "resolved_snapshot_0",
+        "repeat_combat_0",
+        "no_combat_growth_0",
+        "effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "second_destruction_1",
+        "damaged_regen_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "resolved_snapshot_1",
+        "repeat_combat_1",
+        "no_combat_growth_1"
+      ]
+    }
+  ]
+}

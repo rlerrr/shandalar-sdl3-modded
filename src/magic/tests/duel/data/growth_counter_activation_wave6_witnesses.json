@@ -1,0 +1,3403 @@
+{
+  "version": 1,
+  "profiles": {
+    "Implement of Ferocity": {
+      "csvid": 16729,
+      "oracle": {
+        "oracle_id": "b92629c0-1619-4214-929f-4404992fabeb",
+        "name": "Implement of Ferocity",
+        "oracle_text": "{G}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/157/implement-of-ferocity?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "implement",
+        "cost": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "tap": false,
+        "sacrifice": true,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "wrong_color",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "opponent_target",
+          "target_bounced_pending",
+          "opposing_turn",
+          "combat_timing",
+          "destroy_draw",
+          "target_shroud_probe"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects.",
+          "Separate death-draw trigger response windows and ordering while the growth activation is pending are not observed; completed draw/growth and an independent real destruction draw are checked."
+        ]
+      }
+    },
+    "Cenn's Tactician": {
+      "csvid": 9333,
+      "oracle": {
+        "oracle_id": "9c4a3ca6-dcf9-4986-81da-bcfd46414bee",
+        "name": "Cenn's Tactician",
+        "oracle_text": "{W}, {T}: Put a +1/+1 counter on target Soldier creature.\nEach creature you control with a +1/+1 counter on it can block an additional creature each combat.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Kithkin Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mor/5/cenns-tactician?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "soldier_lord",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "tap": true,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "wrong_color",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "tapped_source",
+          "fresh_source",
+          "untap_repeat",
+          "opponent_target",
+          "target_bounced_pending",
+          "grant_nonsoldier",
+          "grant_counterless_soldier",
+          "grant_opponent",
+          "grant_removed"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects.",
+          "Additional-block legality is checked by real block declarations; multi-block combat-damage assignment is not exercised.",
+          "Direct rejection of a chosen non-Soldier activation target is not probed; source itself remains a legal Soldier alternative."
+        ]
+      }
+    },
+    "Realm Seekers": {
+      "csvid": 14051,
+      "oracle": {
+        "oracle_id": "ccb66cdc-909a-42c1-a10f-3886e9ed1936",
+        "name": "Realm Seekers",
+        "oracle_text": "This creature enters with X +1/+1 counters on it, where X is the total number of cards in all players' hands.\n{2}{G}, Remove a +1/+1 counter from this creature: Search your library for a land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Elf Scout",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/162/realm-seekers?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "hand_search",
+        "cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "tap": false,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "wrong_color",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "repeat",
+          "empty_library",
+          "no_land_library",
+          "decline_search",
+          "entry_fewer_hands",
+          "entry_more_hands"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects."
+        ]
+      }
+    },
+    "Fabrication Module": {
+      "csvid": 16370,
+      "oracle": {
+        "oracle_id": "b057c8ff-f169-41cd-a594-026f1a6cb0f9",
+        "name": "Fabrication Module",
+        "oracle_text": "Whenever you get one or more {E} (energy counters), put a +1/+1 counter on target creature you control.\n{4}, {T}: You get {E}.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/211/fabrication-module?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "energy_module",
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "tap": true,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "tapped_source",
+          "fresh_source",
+          "untap_repeat",
+          "no_own_creatures",
+          "trigger_opponent_control"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects.",
+          "Separate energy-trigger response timing and multiple modules are not exercised."
+        ]
+      }
+    },
+    "Longtusk Cub": {
+      "csvid": 16437,
+      "oracle": {
+        "oracle_id": "d2e78392-096a-4bd0-be19-9c54dfb8451f",
+        "name": "Longtusk Cub",
+        "oracle_text": "Whenever this creature deals combat damage to a player, you get {E}{E} (two energy counters).\nPay {E}{E}: Put a +1/+1 counter on this creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Cat",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/161/longtusk-cub?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "energy_cub",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "tap": false,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "no_energy",
+          "short_energy",
+          "fresh_source",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "repeat"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects.",
+          "Blocked combat and energy from other simultaneous combat-damage sources are not exercised."
+        ]
+      }
+    },
+    "Zegana, Utopian Speaker": {
+      "csvid": 19797,
+      "oracle": {
+        "oracle_id": "04260930-ff38-4b35-9ec4-e89196a4f2c7",
+        "name": "Zegana, Utopian Speaker",
+        "oracle_text": "When Zegana enters, if you control another creature with a +1/+1 counter on it, draw a card.\n{4}{G}{U}: Adapt 4. (If this creature has no +1/+1 counters on it, put four +1/+1 counters on it.)\nEach creature you control with a +1/+1 counter on it has trample.",
+        "mana_cost": "{2}{G}{U}",
+        "type_line": "Legendary Creature — Merfolk Wizard",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Adapt"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lcc/298/zegana-utopian-speaker?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "adapt_trample",
+        "cost": [
+          4,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "tap": false,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "wrong_color",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "repeat",
+          "entry_qualified",
+          "entry_counterless",
+          "entry_opponent",
+          "preexisting_counter",
+          "grant_source",
+          "grant_ally",
+          "grant_counterless",
+          "grant_opponent",
+          "grant_removed"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects.",
+          "Counter replacement and simultaneous enter/depart triggers are not exercised."
+        ]
+      }
+    },
+    "Apocalypse Hydra": {
+      "csvid": 10108,
+      "oracle": {
+        "oracle_id": "1a840210-204d-41cd-afc0-46abf7ea5f87",
+        "name": "Apocalypse Hydra",
+        "oracle_text": "This creature enters with X +1/+1 counters on it. If X is 5 or more, it enters with an additional X +1/+1 counters on it.\n{1}{R}, Remove a +1/+1 counter from this creature: It deals 1 damage to any target.",
+        "mana_cost": "{X}{R}{G}",
+        "type_line": "Creature — Hydra",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/217/apocalypse-hydra?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_damage",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "tap": false,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "wrong_color",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "entry_x0",
+          "entry_x4",
+          "entry_x5",
+          "last_counter",
+          "cleanup",
+          "repeat",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "target_bounced_pending",
+          "self_target",
+          "opponent_target",
+          "player_target",
+          "pending_snapshot",
+          "tapped_source"
+        ],
+        "gaps": [
+          "Multiplayer, counter replacement effects and planeswalker targets."
+        ]
+      }
+    },
+    "Sporeback Troll": {
+      "csvid": 8292,
+      "oracle": {
+        "oracle_id": "339bddf5-a8fb-46d3-877e-b0441ca8a597",
+        "name": "Sporeback Troll",
+        "oracle_text": "Graft 2 (This creature enters with two +1/+1 counters on it. Whenever another creature enters, you may move a +1/+1 counter from this creature onto it.)\n{1}{G}: Regenerate target creature with a +1/+1 counter on it.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Troll Mutant",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Graft",
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dis/94/sporeback-troll?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_regeneration",
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "tap": false,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "wrong_color",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "counterless_target",
+          "cannot_regenerate",
+          "second_destruction",
+          "cleanup",
+          "opponent_target",
+          "tapped_source"
+        ],
+        "gaps": [
+          "Optional graft transfers are dormant: every other creature and Hexmage is present before sourcecast; no creature enters afterward.",
+          "Regeneration is executed in an actual destruction window; proactive shield creation, pending target/source loss and nested response windows are untested.",
+          "Creature damage-clearing and combat-removal side effects require a later dedicated combat-destruction scenario; this first probe observes tapping, survival, retained counters, payment and second destruction."
+        ]
+      }
+    },
+    "Karlov of the Ghost Council": {
+      "csvid": 15523,
+      "oracle": {
+        "oracle_id": "647d7988-9a5d-4700-9238-938d0d5fae12",
+        "name": "Karlov of the Ghost Council",
+        "oracle_text": "Whenever you gain life, put two +1/+1 counters on Karlov.\n{W}{B}, Remove six +1/+1 counters from Karlov: Exile target creature.",
+        "mana_cost": "{W}{B}",
+        "type_line": "Legendary Creature — Spirit Advisor",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/193/karlov-of-the-ghost-council?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_value",
+        "effect": "exile",
+        "cost": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          1
+        ],
+        "remove": 6,
+        "life_trigger": 2,
+        "entry": "none",
+        "sacrifice": false,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "wrong_color",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "own_target",
+          "self_target",
+          "target_bounced_pending",
+          "opponent_gain",
+          "zero_life_events",
+          "one_life_event",
+          "two_life_events",
+          "indestructible_target"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects."
+        ]
+      }
+    },
+    "Wall of Limbs": {
+      "csvid": 14198,
+      "oracle": {
+        "oracle_id": "1aabb6bd-8061-42a5-9a71-f9eac718bd22",
+        "name": "Wall of Limbs",
+        "oracle_text": "Defender (This creature can't attack.)\nWhenever you gain life, put a +1/+1 counter on this creature.\n{5}{B}{B}, Sacrifice this creature: Target player loses X life, where X is this creature's power.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie Wall",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/200/wall-of-limbs?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_value",
+        "effect": "power_loss",
+        "cost": [
+          5,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "remove": 0,
+        "life_trigger": 1,
+        "entry": "none",
+        "sacrifice": true,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "wrong_color",
+          "opponent_gain",
+          "zero_life_events",
+          "two_life_events",
+          "own_player",
+          "boosted_power"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects.",
+          "No source attacks are emitted; defender is not independently probed."
+        ]
+      }
+    },
+    "Drakestown Forgotten": {
+      "csvid": 14032,
+      "oracle": {
+        "oracle_id": "b3c8d9ef-4ffb-482b-8859-486e7dc4621e",
+        "name": "Drakestown Forgotten",
+        "oracle_text": "This creature enters with X +1/+1 counters on it, where X is the number of creature cards in all graveyards.\n{2}{B}, Remove a +1/+1 counter from this creature: Target creature gets -1/-1 until end of turn.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/117/drakestown-forgotten?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_value",
+        "effect": "shrink",
+        "cost": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "remove": 1,
+        "life_trigger": 0,
+        "entry": "all_grave_creatures",
+        "sacrifice": false,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "wrong_color",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "own_target",
+          "self_target",
+          "target_bounced_pending",
+          "opponent_graves_only",
+          "no_grave_creatures",
+          "lethal_shrink",
+          "repeat"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects."
+        ]
+      }
+    },
+    "Etched Oracle": {
+      "csvid": 7049,
+      "oracle": {
+        "oracle_id": "7ecfa47e-1165-46a6-884c-290b1c14d020",
+        "name": "Etched Oracle",
+        "oracle_text": "Sunburst (This creature enters with a +1/+1 counter on it for each color of mana spent to cast it.)\n{1}, Remove four +1/+1 counters from this creature: Target player draws three cards.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Wizard",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Sunburst"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/136/etched-oracle?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_value",
+        "effect": "draw_three",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "remove": 4,
+        "life_trigger": 0,
+        "entry": "sunburst",
+        "sacrifice": false,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "opponent_draw",
+          "three_colors",
+          "two_colors",
+          "zero_colors"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects."
+        ]
+      }
+    },
+    "Blood Cultist": {
+      "csvid": 9923,
+      "oracle": {
+        "oracle_id": "031ddf1e-afcf-4b09-8859-4df0f0ab5dcf",
+        "name": "Blood Cultist",
+        "oracle_text": "{T}: This creature deals 1 damage to target creature.\nWhenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+        "mana_cost": "{1}{B}{R}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ala/157/blood-cultist?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "damage_growth",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "tap": true,
+        "flying_target": false,
+        "growth": "damaged_dies",
+        "damage": 1,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "target_bounced_pending",
+          "own_target",
+          "surviving_target",
+          "shroud_probe",
+          "opponent_hexproof_probe",
+          "own_hexproof_target",
+          "fresh_source",
+          "tapped_source",
+          "untap_repeat",
+          "kill_later",
+          "undamaged_death",
+          "after_turn_kill",
+          "prevented_then_kill",
+          "source_recast_before_death"
+        ],
+        "gaps": [
+          "Multiplayer, counter replacement and simultaneous multi-victim damage."
+        ]
+      }
+    },
+    "Trophy Hunter": {
+      "csvid": 7991,
+      "oracle": {
+        "oracle_id": "d2c68c15-761e-4aea-89d8-f7fe8f44905c",
+        "name": "Trophy Hunter",
+        "oracle_text": "{1}{G}: This creature deals 1 damage to target creature with flying.\nWhenever a creature with flying dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Archer",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rav/187/trophy-hunter?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "damage_growth",
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "tap": false,
+        "flying_target": true,
+        "growth": "damaged_dies",
+        "damage": 1,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "target_bounced_pending",
+          "own_target",
+          "surviving_target",
+          "shroud_probe",
+          "opponent_hexproof_probe",
+          "own_hexproof_target",
+          "insufficient_mana",
+          "wrong_color",
+          "fresh_source",
+          "tapped_source",
+          "repeat",
+          "kill_later",
+          "undamaged_death",
+          "after_turn_kill",
+          "no_flying",
+          "prevented_then_kill",
+          "source_recast_before_death"
+        ],
+        "gaps": [
+          "Multiplayer, counter replacement and simultaneous multi-victim damage."
+        ]
+      }
+    },
+    "Kazarov, Sengir Pureblood": {
+      "csvid": 18443,
+      "oracle": {
+        "oracle_id": "3067c653-ac29-4f1d-822f-7e2e5bb38a62",
+        "name": "Kazarov, Sengir Pureblood",
+        "oracle_text": "Flying\nWhenever a creature an opponent controls is dealt damage, put a +1/+1 counter on Kazarov.\n{3}{R}: Kazarov deals 2 damage to target creature.",
+        "mana_cost": "{5}{B}{B}",
+        "type_line": "Legendary Creature — Vampire",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/96/kazarov-sengir-pureblood?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "damage_growth",
+        "cost": [
+          3,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "tap": false,
+        "flying_target": false,
+        "growth": "opponent_damage",
+        "damage": 2,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "target_bounced_pending",
+          "own_target",
+          "surviving_target",
+          "shroud_probe",
+          "opponent_hexproof_probe",
+          "own_hexproof_target",
+          "insufficient_mana",
+          "wrong_color",
+          "fresh_source",
+          "tapped_source",
+          "repeat",
+          "other_source_damage",
+          "prevented_then_kill",
+          "source_recast_before_death",
+          "simultaneous_damage"
+        ],
+        "gaps": [
+          "Multiplayer, counter replacement and simultaneous multi-victim damage.",
+          "Source flying is not independently tested; no source attacks occur in these activation cases."
+        ]
+      }
+    },
+    "Krakilin": {
+      "csvid": 3186,
+      "oracle": {
+        "oracle_id": "3eb49097-42f8-4388-907d-32a738749d8a",
+        "name": "Krakilin",
+        "oracle_text": "This creature enters with X +1/+1 counters on it.\n{1}{G}: Regenerate this creature.",
+        "mana_cost": "{X}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/177/krakilin?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "self_regeneration",
+        "entry": "x",
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "remove": 0,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "tapped_source",
+          "insufficient_mana",
+          "wrong_color",
+          "entry_x0",
+          "entry_x4",
+          "resolved_snapshot"
+        ],
+        "gaps": [
+          "Proactive shield creation and nested response windows are untested; regeneration is exercised in the real destruction window.",
+          "Upkeep and draw are not simulated."
+        ]
+      }
+    },
+    "Golgari Grave-Troll": {
+      "csvid": 7862,
+      "oracle": {
+        "oracle_id": "686f4a37-b5e4-46d4-9e0e-11794b2d12cd",
+        "name": "Golgari Grave-Troll",
+        "oracle_text": "This creature enters with a +1/+1 counter on it for each creature card in your graveyard.\n{1}, Remove a +1/+1 counter from this creature: Regenerate this creature.\nDredge 6 (If you would draw a card, you may mill six cards instead. If you do, return this card from your graveyard to your hand.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Troll Skeleton",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Dredge",
+          "Regenerate",
+          "Mill"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/144/golgari-grave-troll?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "self_regeneration",
+        "entry": "own_grave_creatures",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "remove": 1,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "tapped_source",
+          "insufficient_mana",
+          "opponent_graves_ignored",
+          "zero_own_creatures",
+          "last_counter",
+          "resolved_snapshot"
+        ],
+        "gaps": [
+          "Proactive shield creation and nested response windows are untested; regeneration is exercised in the real destruction window.",
+          "Upkeep and draw are not simulated.",
+          "Dredge is dormant because no card draw occurs while the source is in the graveyard."
+        ]
+      }
+    },
+    "Experiment One": {
+      "csvid": 12940,
+      "oracle": {
+        "oracle_id": "8520ee67-439b-4f15-838b-420bacbb8b13",
+        "name": "Experiment One",
+        "oracle_text": "Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)\nRemove two +1/+1 counters from this creature: Regenerate it. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Human Ooze",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Evolve",
+          "Heal",
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/137/experiment-one?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "self_regeneration",
+        "entry": "evolve",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "remove": 2,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "tapped_source",
+          "no_evolve",
+          "one_evolve",
+          "equal_evolve",
+          "opponent_entry",
+          "resolved_snapshot"
+        ],
+        "gaps": [
+          "Proactive shield creation and nested response windows are untested; regeneration is exercised in the real destruction window.",
+          "Upkeep and draw are not simulated."
+        ]
+      }
+    },
+    "Vampiric Dragon": {
+      "csvid": 5746,
+      "oracle": {
+        "oracle_id": "e8941499-2b31-417b-b2d2-10a144826703",
+        "name": "Vampiric Dragon",
+        "oracle_text": "Flying\nWhenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.\n{1}{R}: This creature deals 1 damage to target creature.",
+        "mana_cost": "{6}{B}{R}",
+        "type_line": "Creature — Vampire Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/voc/158/vampiric-dragon?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "damage_growth",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "tap": false,
+        "flying_target": false,
+        "growth": "damaged_dies",
+        "damage": 1,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "target_bounced_pending",
+          "own_target",
+          "surviving_target",
+          "shroud_probe",
+          "opponent_hexproof_probe",
+          "own_hexproof_target",
+          "fresh_source",
+          "tapped_source",
+          "repeat",
+          "kill_later",
+          "undamaged_death",
+          "after_turn_kill",
+          "prevented_then_kill",
+          "source_recast_before_death",
+          "insufficient_mana",
+          "wrong_color"
+        ],
+        "gaps": [
+          "Multiplayer, counter replacement and simultaneous multi-victim damage.",
+          "Flying is dormant because this source never attacks or blocks."
+        ]
+      }
+    },
+    "Grim Roustabout": {
+      "csvid": 12738,
+      "oracle": {
+        "oracle_id": "1adcc4a8-b2dd-4d9a-bded-188b81c84a10",
+        "name": "Grim Roustabout",
+        "oracle_text": "Unleash (You may have this creature enter with a +1/+1 counter on it. It can't block as long as it has a +1/+1 counter on it.)\n{1}{B}: Regenerate this creature.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Skeleton Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate",
+          "Unleash"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/68/grim-roustabout?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "regeneration_combat",
+        "entry": "unleash",
+        "cost": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "insufficient_mana",
+          "wrong_color",
+          "resolved_snapshot",
+          "decline",
+          "tapped_source",
+          "block_countered",
+          "block_decline",
+          "block_counter_removed"
+        ],
+        "gaps": [
+          "Regeneration is tested in the actual destruction window; proactive shields, nested windows and removal from combat are untested.",
+          "No upkeep or draw step is emitted.",
+          "Unleash legality probes stop after real block declarations; combat damage in those probes is untested."
+        ]
+      }
+    },
+    "Slith Bloodletter": {
+      "csvid": 1477,
+      "oracle": {
+        "oracle_id": "fbad6038-93ed-4a28-b1f0-ada54608758b",
+        "name": "Slith Bloodletter",
+        "oracle_text": "Whenever this creature deals combat damage to a player, put a +1/+1 counter on it.\n{1}{B}: Regenerate this creature.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Creature — Slith",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/77/slith-bloodletter?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "regeneration_combat",
+        "entry": "combat_each",
+        "cost": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "insufficient_mana",
+          "wrong_color",
+          "resolved_snapshot",
+          "repeat_combat",
+          "no_combat_growth"
+        ],
+        "gaps": [
+          "Regeneration is tested in the actual destruction window; proactive shields, nested windows and removal from combat are untested.",
+          "No upkeep or draw step is emitted."
+        ]
+      }
+    },
+    "Undercity Troll": {
+      "csvid": 15242,
+      "oracle": {
+        "oracle_id": "b7851b17-faa2-4767-9716-86997b882690",
+        "name": "Undercity Troll",
+        "oracle_text": "Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\n{2}{G}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Troll",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Renown",
+          "Heal",
+          "Regenerate"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/188/undercity-troll?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "regeneration_combat",
+        "entry": "renown",
+        "cost": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "insufficient_mana",
+          "wrong_color",
+          "resolved_snapshot",
+          "repeat_combat",
+          "no_combat_growth"
+        ],
+        "gaps": [
+          "Regeneration is tested in the actual destruction window; proactive shields, nested windows and removal from combat are untested.",
+          "No upkeep or draw step is emitted."
+        ]
+      }
+    },
+    "Spiritmonger": {
+      "csvid": 5435,
+      "oracle": {
+        "oracle_id": "3913c7f2-86b7-4dd4-84a6-9bd4c1c66781",
+        "name": "Spiritmonger",
+        "oracle_text": "Whenever this creature deals damage to a creature, put a +1/+1 counter on this creature.\n{B}: Regenerate this creature.\n{G}: This creature becomes the color of your choice until end of turn.",
+        "mana_cost": "{3}{B}{G}",
+        "type_line": "Creature — Beast",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plst/DMR-202/spiritmonger?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "regeneration_combat",
+        "entry": "creature_damage",
+        "cost": [
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "insufficient_mana",
+          "wrong_color",
+          "resolved_snapshot",
+          "unblocked_combat",
+          "prevented_combat",
+          "no_combat_growth"
+        ],
+        "gaps": [
+          "Regeneration is tested in the actual destruction window; proactive shields, nested windows and removal from combat are untested.",
+          "No upkeep or draw step is emitted.",
+          "The optional green color-changing activation is untested; the regeneration window has no green mana.",
+          "Simultaneous damage to multiple creatures and lethal reciprocal damage are untested."
+        ]
+      }
+    },
+    "Solarion": {
+      "csvid": 7123,
+      "oracle": {
+        "oracle_id": "4022e540-8fa0-4eee-bcf1-df5046289f2b",
+        "name": "Solarion",
+        "oracle_text": "Sunburst (This creature enters with a +1/+1 counter on it for each color of mana spent to cast it.)\n{T}: Double the number of +1/+1 counters on this creature.",
+        "mana_cost": "{7}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Sunburst",
+          "Double"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/153/solarion?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "sunburst_double",
+        "modes": [
+          "effect",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "three_colors",
+          "two_colors",
+          "zero_colors",
+          "fresh_source",
+          "tapped_source",
+          "repeat",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "more_counters_pending",
+          "counter_removed_pending",
+          "pending_snapshot",
+          "cleanup"
+        ],
+        "gaps": [
+          "Sunburst is checked with actual distinct-color payment; colorless contributions do not add counters.",
+          "No upkeep or draw steps; untap uses actual next-turn wrappers.",
+          "Combat and source removal/reentry while a pending parent refers to a newly reused battlefield slot are untested.",
+          "Interleaved resolution above a pending activated ability is untested because the existing response helper supports a spell parent only; response variants inspect final whole-stack outcomes."
+        ]
+      }
+    },
+    "Munda's Vanguard": {
+      "csvid": 15644,
+      "oracle": {
+        "oracle_id": "1d7ee372-3a3d-4e23-a1ce-b8b8cdd4bdae",
+        "name": "Munda's Vanguard",
+        "oracle_text": "Cohort — {T}, Tap an untapped Ally you control: Put a +1/+1 counter on each creature you control.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Kor Knight Ally",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Cohort"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/29/mundas-vanguard?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "tap_cost_growth",
+        "effect": "team",
+        "modes": [
+          "effect",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "fresh_source",
+          "fresh_ally",
+          "tapped_source",
+          "tapped_ally",
+          "source_alone",
+          "opponent_ally_only",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "ally_bounced_pending",
+          "repeat",
+          "zero_mana"
+        ],
+        "gaps": [
+          "No upkeep or draw steps are emitted.",
+          "Additional Ally tap cost under shroud and creatures entering while the activation is pending are untested."
+        ]
+      }
+    },
+    "Ashnod's Transmogrant": {
+      "csvid": 476,
+      "oracle": {
+        "oracle_id": "1a8072c9-e2b8-4173-af88-ed0dd64d10fe",
+        "name": "Ashnod's Transmogrant",
+        "oracle_text": "{T}, Sacrifice this artifact: Put a +1/+1 counter on target nonartifact creature. That creature becomes an artifact in addition to its other types.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/152/ashnods-transmogrant?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "tap_cost_growth",
+        "effect": "artifact",
+        "modes": [
+          "effect",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "tapped_source",
+          "opponent_target",
+          "artifact_only",
+          "target_bounced_pending",
+          "target_destroyed_pending",
+          "shroud_probe",
+          "opponent_hexproof_probe",
+          "own_hexproof_target",
+          "artifact_destroy_probe"
+        ],
+        "gaps": [
+          "The source is actually sacrificed as a cost before its effect resolves.",
+          "Creature-to-artifact conversion is observed directly and through actual Shatter; color and noncreature type-changing interactions are untested."
+        ]
+      }
+    },
+    "Gyre Sage": {
+      "csvid": 12970,
+      "oracle": {
+        "oracle_id": "e3aa16cf-079b-4737-9ffd-7bfdffef0cb2",
+        "name": "Gyre Sage",
+        "oracle_text": "Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)\n{T}: Add {G} for each +1/+1 counter on this creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Evolve"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/300/gyre-sage?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "mana_growth",
+        "entry": "evolve",
+        "modes": [
+          "effect",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "tapped_source",
+          "repeat",
+          "next_turn",
+          "spend_output",
+          "source_bounced_after_mana",
+          "source_destroyed_after_mana",
+          "resolved_snapshot",
+          "fresh_source",
+          "no_growth",
+          "nonmatching_entry",
+          "opponent_entry",
+          "power_axis",
+          "toughness_axis",
+          "equal_entry",
+          "counter_removed",
+          "power_boost"
+        ],
+        "gaps": [
+          "No upkeep or draw step is emitted.",
+          "Mana abilities resolve atomically; no fabricated pending stack window is claimed."
+        ]
+      }
+    },
+    "Marwyn, the Nurturer": {
+      "csvid": 18458,
+      "oracle": {
+        "oracle_id": "ee35de1c-aef1-4bd4-85fd-fe77bc927790",
+        "name": "Marwyn, the Nurturer",
+        "oracle_text": "Whenever another Elf you control enters, put a +1/+1 counter on Marwyn.\n{T}: Add an amount of {G} equal to Marwyn's power.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Legendary Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khc/68/marwyn-the-nurturer?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "mana_growth",
+        "entry": "elf",
+        "modes": [
+          "effect",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "tapped_source",
+          "repeat",
+          "next_turn",
+          "spend_output",
+          "source_bounced_after_mana",
+          "source_destroyed_after_mana",
+          "resolved_snapshot",
+          "fresh_source",
+          "no_growth",
+          "nonmatching_entry",
+          "opponent_entry",
+          "counter_removed",
+          "power_boost"
+        ],
+        "gaps": [
+          "No upkeep or draw step is emitted.",
+          "Mana abilities resolve atomically; no fabricated pending stack window is claimed.",
+          "Elf recognition covers an actual Elf and actual Changeling; other type-changing interactions are untested."
+        ]
+      }
+    },
+    "Honored Hierarch": {
+      "csvid": 15152,
+      "oracle": {
+        "oracle_id": "ae42fa8a-b0f6-43dc-a4c6-e2531890ca3a",
+        "name": "Honored Hierarch",
+        "oracle_text": "Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\nAs long as this creature is renowned, it has vigilance and \"{T}: Add one mana of any color.\"",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Renown"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/182/honored-hierarch?utm_source=api"
+      },
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "mana_growth",
+        "entry": "renown",
+        "modes": [
+          "effect",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "tapped_source",
+          "repeat",
+          "next_turn",
+          "spend_output",
+          "source_bounced_after_mana",
+          "source_destroyed_after_mana",
+          "resolved_snapshot",
+          "not_renowned",
+          "counter_is_not_renown",
+          "second_attack",
+          "color_B",
+          "color_U",
+          "color_R",
+          "color_W",
+          "counter_removed"
+        ],
+        "gaps": [
+          "No upkeep or draw step is emitted.",
+          "Mana abilities resolve atomically; no fabricated pending stack window is claimed.",
+          "Summoning sickness with an already renowned fresh object is untested; renown is earned through actual combat before a real turn/untap cycle."
+        ]
+      }
+    }
+  },
+  "witnesses": {
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    },
+    "Bristling Hydra": {
+      "oracle_id": "b3b23c58-0b7a-4fe4-a8e8-5320a7605724",
+      "name": "Bristling Hydra",
+      "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).\nPay {E}{E}{E}: Put a +1/+1 counter on this creature. It gains hexproof until end of turn.",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Creature — Hydra",
+      "power": "4",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/kld/147/bristling-hydra?utm_source=api"
+    },
+    "Cenn's Tactician": {
+      "oracle_id": "9c4a3ca6-dcf9-4986-81da-bcfd46414bee",
+      "name": "Cenn's Tactician",
+      "oracle_text": "{W}, {T}: Put a +1/+1 counter on target Soldier creature.\nEach creature you control with a +1/+1 counter on it can block an additional creature each combat.",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Kithkin Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mor/5/cenns-tactician?utm_source=api"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+    },
+    "Deadly Insect": {
+      "oracle_id": "98273b0d-2b41-486b-9498-30a692c03982",
+      "name": "Deadly Insect",
+      "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Insect",
+      "power": "6",
+      "toughness": "1",
+      "keywords": [
+        "Shroud"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mmq/238/deadly-insect?utm_source=api"
+    },
+    "Eager Cadet": {
+      "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+      "name": "Eager Cadet",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+    },
+    "Fabrication Module": {
+      "oracle_id": "b057c8ff-f169-41cd-a594-026f1a6cb0f9",
+      "name": "Fabrication Module",
+      "oracle_text": "Whenever you get one or more {E} (energy counters), put a +1/+1 counter on target creature you control.\n{4}, {T}: You get {E}.",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/kld/211/fabrication-module?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Gladecover Scout": {
+      "oracle_id": "385c1208-bfea-44e2-b236-4f38bc90db9f",
+      "name": "Gladecover Scout",
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Scout",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Hexproof"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m14/176/gladecover-scout?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Hunger of the Howlpack": {
+      "oracle_id": "296dee6b-6ec1-4ea4-8dc3-23080dd37646",
+      "name": "Hunger of the Howlpack",
+      "oracle_text": "Put a +1/+1 counter on target creature.\nMorbid — Put three +1/+1 counters on that creature instead if a creature died this turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [
+        "Morbid"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cns/168/hunger-of-the-howlpack?utm_source=api"
+    },
+    "Implement of Ferocity": {
+      "oracle_id": "b92629c0-1619-4214-929f-4404992fabeb",
+      "name": "Implement of Ferocity",
+      "oracle_text": "{G}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/aer/157/implement-of-ferocity?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Kiora's Follower": {
+      "oracle_id": "22c044ad-77d7-4c93-953d-e2daa9686ff7",
+      "name": "Kiora's Follower",
+      "oracle_text": "{T}: Untap another target permanent.",
+      "mana_cost": "{G}{U}",
+      "type_line": "Creature — Merfolk",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/lcc/273/kioras-follower?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Longtusk Cub": {
+      "oracle_id": "d2e78392-096a-4bd0-be19-9c54dfb8451f",
+      "name": "Longtusk Cub",
+      "oracle_text": "Whenever this creature deals combat damage to a player, you get {E}{E} (two energy counters).\nPay {E}{E}: Put a +1/+1 counter on this creature.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Cat",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/kld/161/longtusk-cub?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Realm Seekers": {
+      "oracle_id": "ccb66cdc-909a-42c1-a10f-3886e9ed1936",
+      "name": "Realm Seekers",
+      "oracle_text": "This creature enters with X +1/+1 counters on it, where X is the total number of cards in all players' hands.\n{2}{G}, Remove a +1/+1 counter from this creature: Search your library for a land card, reveal it, put it into your hand, then shuffle.",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature — Elf Scout",
+      "power": "0",
+      "toughness": "0",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/c16/162/realm-seekers?utm_source=api"
+    },
+    "Scaled Wurm": {
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "name": "Scaled Wurm",
+      "oracle_text": "",
+      "mana_cost": "{7}{G}",
+      "type_line": "Creature — Wurm",
+      "power": "7",
+      "toughness": "6",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 8.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cns/178/scaled-wurm?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Vampire Hexmage": {
+      "oracle_id": "fcb2a95b-cef0-4b29-8b2b-538f380aff2b",
+      "name": "Vampire Hexmage",
+      "oracle_text": "First strike\nSacrifice this creature: Remove all counters from target permanent.",
+      "mana_cost": "{B}{B}",
+      "type_line": "Creature — Vampire Shaman",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [
+        "First strike"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/2xm/112/vampire-hexmage?utm_source=api"
+    },
+    "Zegana, Utopian Speaker": {
+      "oracle_id": "04260930-ff38-4b35-9ec4-e89196a4f2c7",
+      "name": "Zegana, Utopian Speaker",
+      "oracle_text": "When Zegana enters, if you control another creature with a +1/+1 counter on it, draw a card.\n{4}{G}{U}: Adapt 4. (If this creature has no +1/+1 counters on it, put four +1/+1 counters on it.)\nEach creature you control with a +1/+1 counter on it has trample.",
+      "mana_cost": "{2}{G}{U}",
+      "type_line": "Legendary Creature — Merfolk Wizard",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Adapt"
+      ],
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/lcc/298/zegana-utopian-speaker?utm_source=api"
+    },
+    "Apocalypse Hydra": {
+      "oracle_id": "1a840210-204d-41cd-afc0-46abf7ea5f87",
+      "name": "Apocalypse Hydra",
+      "oracle_text": "This creature enters with X +1/+1 counters on it. If X is 5 or more, it enters with an additional X +1/+1 counters on it.\n{1}{R}, Remove a +1/+1 counter from this creature: It deals 1 damage to any target.",
+      "mana_cost": "{X}{R}{G}",
+      "type_line": "Creature — Hydra",
+      "power": "0",
+      "toughness": "0",
+      "keywords": [],
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bbd/217/apocalypse-hydra?utm_source=api"
+    },
+    "Sporeback Troll": {
+      "oracle_id": "339bddf5-a8fb-46d3-877e-b0441ca8a597",
+      "name": "Sporeback Troll",
+      "oracle_text": "Graft 2 (This creature enters with two +1/+1 counters on it. Whenever another creature enters, you may move a +1/+1 counter from this creature onto it.)\n{1}{G}: Regenerate target creature with a +1/+1 counter on it.",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Troll Mutant",
+      "power": "0",
+      "toughness": "0",
+      "keywords": [
+        "Graft",
+        "Regenerate"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dis/94/sporeback-troll?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Terminate": {
+      "oracle_id": "6257c2fd-005f-41e3-8a72-af76df1eb134",
+      "name": "Terminate",
+      "oracle_text": "Destroy target creature. It can't be regenerated.",
+      "mana_cost": "{B}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/189/terminate?utm_source=api"
+    },
+    "Icy Manipulator": {
+      "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+      "name": "Icy Manipulator",
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "mana_cost": "{4}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+    },
+    "Karlov of the Ghost Council": {
+      "oracle_id": "647d7988-9a5d-4700-9238-938d0d5fae12",
+      "name": "Karlov of the Ghost Council",
+      "oracle_text": "Whenever you gain life, put two +1/+1 counters on Karlov.\n{W}{B}, Remove six +1/+1 counters from Karlov: Exile target creature.",
+      "mana_cost": "{W}{B}",
+      "type_line": "Legendary Creature — Spirit Advisor",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/rvr/193/karlov-of-the-ghost-council?utm_source=api"
+    },
+    "Wall of Limbs": {
+      "oracle_id": "1aabb6bd-8061-42a5-9a71-f9eac718bd22",
+      "name": "Wall of Limbs",
+      "oracle_text": "Defender (This creature can't attack.)\nWhenever you gain life, put a +1/+1 counter on this creature.\n{5}{B}{B}, Sacrifice this creature: Target player loses X life, where X is this creature's power.",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie Wall",
+      "power": "0",
+      "toughness": "3",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tdc/200/wall-of-limbs?utm_source=api"
+    },
+    "Drakestown Forgotten": {
+      "oracle_id": "b3c8d9ef-4ffb-482b-8859-486e7dc4621e",
+      "name": "Drakestown Forgotten",
+      "oracle_text": "This creature enters with X +1/+1 counters on it, where X is the number of creature cards in all graveyards.\n{2}{B}, Remove a +1/+1 counter from this creature: Target creature gets -1/-1 until end of turn.",
+      "mana_cost": "{4}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "0",
+      "toughness": "0",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/vma/117/drakestown-forgotten?utm_source=api"
+    },
+    "Etched Oracle": {
+      "oracle_id": "7ecfa47e-1165-46a6-884c-290b1c14d020",
+      "name": "Etched Oracle",
+      "oracle_text": "Sunburst (This creature enters with a +1/+1 counter on it for each color of mana spent to cast it.)\n{1}, Remove four +1/+1 counters from this creature: Target player draws three cards.",
+      "mana_cost": "{4}",
+      "type_line": "Artifact Creature — Wizard",
+      "power": "0",
+      "toughness": "0",
+      "keywords": [
+        "Sunburst"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/eoc/136/etched-oracle?utm_source=api"
+    },
+    "Sacred Nectar": {
+      "oracle_id": "30870ee5-6ad7-48a9-983e-d3b018f2344f",
+      "name": "Sacred Nectar",
+      "oracle_text": "You gain 4 life.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/38/sacred-nectar?utm_source=api"
+    },
+    "Darksteel Myr": {
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "name": "Darksteel Myr",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Myr",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+    },
+    "Blood Cultist": {
+      "oracle_id": "031ddf1e-afcf-4b09-8859-4df0f0ab5dcf",
+      "name": "Blood Cultist",
+      "oracle_text": "{T}: This creature deals 1 damage to target creature.\nWhenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+      "mana_cost": "{1}{B}{R}",
+      "type_line": "Creature — Human Wizard",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ala/157/blood-cultist?utm_source=api"
+    },
+    "Trophy Hunter": {
+      "oracle_id": "d2c68c15-761e-4aea-89d8-f7fe8f44905c",
+      "name": "Trophy Hunter",
+      "oracle_text": "{1}{G}: This creature deals 1 damage to target creature with flying.\nWhenever a creature with flying dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Human Archer",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/rav/187/trophy-hunter?utm_source=api"
+    },
+    "Kazarov, Sengir Pureblood": {
+      "oracle_id": "3067c653-ac29-4f1d-822f-7e2e5bb38a62",
+      "name": "Kazarov, Sengir Pureblood",
+      "oracle_text": "Flying\nWhenever a creature an opponent controls is dealt damage, put a +1/+1 counter on Kazarov.\n{3}{R}: Kazarov deals 2 damage to target creature.",
+      "mana_cost": "{5}{B}{B}",
+      "type_line": "Legendary Creature — Vampire",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 7.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dom/96/kazarov-sengir-pureblood?utm_source=api"
+    },
+    "Shock": {
+      "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+      "name": "Shock",
+      "oracle_text": "Shock deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+    },
+    "Air Elemental": {
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "name": "Air Elemental",
+      "oracle_text": "Flying",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Elemental",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+    },
+    "Sphinx of Jwar Isle": {
+      "oracle_id": "3951f13e-f6dd-4d67-a088-23925baaf99b",
+      "name": "Sphinx of Jwar Isle",
+      "oracle_text": "Flying\nShroud (This creature can't be the target of spells or abilities.)\nYou may look at the top card of your library any time.",
+      "mana_cost": "{4}{U}{U}",
+      "type_line": "Creature — Sphinx",
+      "power": "5",
+      "toughness": "5",
+      "keywords": [
+        "Flying",
+        "Shroud"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/c18/103/sphinx-of-jwar-isle?utm_source=api"
+    },
+    "Aven Fleetwing": {
+      "oracle_id": "37ad9318-6690-4a8d-bcea-9fcbca58769d",
+      "name": "Aven Fleetwing",
+      "oracle_text": "Flying\nHexproof (This creature can't be the target of spells or abilities your opponents control.)",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Bird Soldier",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flying",
+        "Hexproof"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m12/44/aven-fleetwing?utm_source=api"
+    },
+    "Lymph Sliver": {
+      "oracle_id": "c3469de8-4bdb-42d4-9fc0-75fe31c3f6e5",
+      "name": "Lymph Sliver",
+      "oracle_text": "All Sliver creatures have absorb 1. (If a source would deal damage to a Sliver, prevent 1 of that damage.)",
+      "mana_cost": "{4}{W}",
+      "type_line": "Creature — Sliver",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tsr/25/lymph-sliver?utm_source=api"
+    },
+    "Winged Sliver": {
+      "oracle_id": "24e96682-14ca-4a62-a920-2d686c8a5dbf",
+      "name": "Winged Sliver",
+      "oracle_text": "All Sliver creatures have flying.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Sliver",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/860/winged-sliver?utm_source=api"
+    },
+    "Pyroclasm": {
+      "oracle_id": "e4bcd4ea-e7cd-4471-8f3b-18bb51d3d70c",
+      "name": "Pyroclasm",
+      "oracle_text": "Pyroclasm deals 2 damage to each creature.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/149/pyroclasm?utm_source=api"
+    },
+    "Krakilin": {
+      "oracle_id": "3eb49097-42f8-4388-907d-32a738749d8a",
+      "name": "Krakilin",
+      "oracle_text": "This creature enters with X +1/+1 counters on it.\n{1}{G}: Regenerate this creature.",
+      "mana_cost": "{X}{G}{G}",
+      "type_line": "Creature — Beast",
+      "power": "0",
+      "toughness": "0",
+      "keywords": [
+        "Regenerate"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tpr/177/krakilin?utm_source=api"
+    },
+    "Golgari Grave-Troll": {
+      "oracle_id": "686f4a37-b5e4-46d4-9e0e-11794b2d12cd",
+      "name": "Golgari Grave-Troll",
+      "oracle_text": "This creature enters with a +1/+1 counter on it for each creature card in your graveyard.\n{1}, Remove a +1/+1 counter from this creature: Regenerate this creature.\nDredge 6 (If you would draw a card, you may mill six cards instead. If you do, return this card from your graveyard to your hand.)",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Troll Skeleton",
+      "power": "0",
+      "toughness": "0",
+      "keywords": [
+        "Dredge",
+        "Regenerate",
+        "Mill"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/rvr/144/golgari-grave-troll?utm_source=api"
+    },
+    "Experiment One": {
+      "oracle_id": "8520ee67-439b-4f15-838b-420bacbb8b13",
+      "name": "Experiment One",
+      "oracle_text": "Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)\nRemove two +1/+1 counters from this creature: Regenerate it. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Human Ooze",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Evolve",
+        "Heal",
+        "Regenerate"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/rvr/137/experiment-one?utm_source=api"
+    },
+    "Vampiric Dragon": {
+      "oracle_id": "e8941499-2b31-417b-b2d2-10a144826703",
+      "name": "Vampiric Dragon",
+      "oracle_text": "Flying\nWhenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.\n{1}{R}: This creature deals 1 damage to target creature.",
+      "mana_cost": "{6}{B}{R}",
+      "type_line": "Creature — Vampire Dragon",
+      "power": "5",
+      "toughness": "5",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 8.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/voc/158/vampiric-dragon?utm_source=api"
+    },
+    "Hornet Sting": {
+      "oracle_id": "25edeff3-7727-4b80-9459-2bb6b8587fb9",
+      "name": "Hornet Sting",
+      "oracle_text": "Hornet Sting deals 1 damage to any target.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m11/181/hornet-sting?utm_source=api"
+    },
+    "Grim Roustabout": {
+      "oracle_id": "1adcc4a8-b2dd-4d9a-bded-188b81c84a10",
+      "name": "Grim Roustabout",
+      "oracle_text": "Unleash (You may have this creature enter with a +1/+1 counter on it. It can't block as long as it has a +1/+1 counter on it.)\n{1}{B}: Regenerate this creature.",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Skeleton Warrior",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Regenerate",
+        "Unleash"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/rtr/68/grim-roustabout?utm_source=api"
+    },
+    "Slith Bloodletter": {
+      "oracle_id": "fbad6038-93ed-4a28-b1f0-ada54608758b",
+      "name": "Slith Bloodletter",
+      "oracle_text": "Whenever this creature deals combat damage to a player, put a +1/+1 counter on it.\n{1}{B}: Regenerate this creature.",
+      "mana_cost": "{B}{B}",
+      "type_line": "Creature — Slith",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Regenerate"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mrd/77/slith-bloodletter?utm_source=api"
+    },
+    "Undercity Troll": {
+      "oracle_id": "b7851b17-faa2-4767-9716-86997b882690",
+      "name": "Undercity Troll",
+      "oracle_text": "Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\n{2}{G}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Troll",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Renown",
+        "Heal",
+        "Regenerate"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ima/188/undercity-troll?utm_source=api"
+    },
+    "Spiritmonger": {
+      "oracle_id": "3913c7f2-86b7-4dd4-84a6-9bd4c1c66781",
+      "name": "Spiritmonger",
+      "oracle_text": "Whenever this creature deals damage to a creature, put a +1/+1 counter on this creature.\n{B}: Regenerate this creature.\n{G}: This creature becomes the color of your choice until end of turn.",
+      "mana_cost": "{3}{B}{G}",
+      "type_line": "Creature — Beast",
+      "power": "6",
+      "toughness": "6",
+      "keywords": [
+        "Regenerate"
+      ],
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/plst/DMR-202/spiritmonger?utm_source=api"
+    },
+    "Wall of Tanglecord": {
+      "oracle_id": "423bebcc-8fa0-49c4-aa22-728bf51a535b",
+      "name": "Wall of Tanglecord",
+      "oracle_text": "Defender\n{G}: This creature gains reach until end of turn. (It can block creatures with flying.)",
+      "mana_cost": "{2}",
+      "type_line": "Artifact Creature — Wall",
+      "power": "0",
+      "toughness": "6",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/222/wall-of-tanglecord?utm_source=api"
+    },
+    "Fog": {
+      "oracle_id": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+      "name": "Fog",
+      "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ema/167/fog?utm_source=api"
+    },
+    "Solarion": {
+      "oracle_id": "4022e540-8fa0-4eee-bcf1-df5046289f2b",
+      "name": "Solarion",
+      "oracle_text": "Sunburst (This creature enters with a +1/+1 counter on it for each color of mana spent to cast it.)\n{T}: Double the number of +1/+1 counters on this creature.",
+      "mana_cost": "{7}",
+      "type_line": "Artifact Creature — Construct",
+      "power": "0",
+      "toughness": "0",
+      "keywords": [
+        "Sunburst",
+        "Double"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 7.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/5dn/153/solarion?utm_source=api"
+    },
+    "Munda's Vanguard": {
+      "oracle_id": "1d7ee372-3a3d-4e23-a1ce-b8b8cdd4bdae",
+      "name": "Munda's Vanguard",
+      "oracle_text": "Cohort — {T}, Tap an untapped Ally you control: Put a +1/+1 counter on each creature you control.",
+      "mana_cost": "{4}{W}",
+      "type_line": "Creature — Kor Knight Ally",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Cohort"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ogw/29/mundas-vanguard?utm_source=api"
+    },
+    "Ashnod's Transmogrant": {
+      "oracle_id": "1a8072c9-e2b8-4173-af88-ed0dd64d10fe",
+      "name": "Ashnod's Transmogrant",
+      "oracle_text": "{T}, Sacrifice this artifact: Put a +1/+1 counter on target nonartifact creature. That creature becomes an artifact in addition to its other types.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me1/152/ashnods-transmogrant?utm_source=api"
+    },
+    "Stonework Puma": {
+      "oracle_id": "841b1010-a7d3-415e-b76d-7b50fea909cb",
+      "name": "Stonework Puma",
+      "oracle_text": "",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Cat Ally",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ddp/30/stonework-puma?utm_source=api"
+    },
+    "Shatter": {
+      "oracle_id": "84d32e68-72b9-432d-a023-7bc6a26b8ad0",
+      "name": "Shatter",
+      "oracle_text": "Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/rix/114/shatter?utm_source=api"
+    },
+    "Gyre Sage": {
+      "oracle_id": "e3aa16cf-079b-4737-9ffd-7bfdffef0cb2",
+      "name": "Gyre Sage",
+      "oracle_text": "Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)\n{T}: Add {G} for each +1/+1 counter on this creature.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf Druid",
+      "power": "1",
+      "toughness": "2",
+      "keywords": [
+        "Evolve"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/moc/300/gyre-sage?utm_source=api"
+    },
+    "Marwyn, the Nurturer": {
+      "oracle_id": "ee35de1c-aef1-4bd4-85fd-fe77bc927790",
+      "name": "Marwyn, the Nurturer",
+      "oracle_text": "Whenever another Elf you control enters, put a +1/+1 counter on Marwyn.\n{T}: Add an amount of {G} equal to Marwyn's power.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Legendary Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/khc/68/marwyn-the-nurturer?utm_source=api"
+    },
+    "Honored Hierarch": {
+      "oracle_id": "ae42fa8a-b0f6-43dc-a4c6-e2531890ca3a",
+      "name": "Honored Hierarch",
+      "oracle_text": "Renown 1 (When this creature deals combat damage to a player, if it isn't renowned, put a +1/+1 counter on it and it becomes renowned.)\nAs long as this creature is renowned, it has vigilance and \"{T}: Add one mana of any color.\"",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Human Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Renown"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ori/182/honored-hierarch?utm_source=api"
+    },
+    "Elvish Mystic": {
+      "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+      "name": "Elvish Mystic",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+    },
+    "Woodland Changeling": {
+      "oracle_id": "338f0ab6-f744-4e5a-a358-05e71b93758d",
+      "name": "Woodland Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Shapeshifter",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Changeling"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/lrw/242/woodland-changeling?utm_source=api"
+    }
+  },
+  "registry": {
+    "Boomerang": {
+      "csvid": 585,
+      "iid": 1233,
+      "handler": "manalinkeh_card_boomerang",
+      "kind": "card"
+    },
+    "Bristling Hydra": {
+      "csvid": 16304,
+      "iid": 16393,
+      "handler": "manalinkeh_card_bristling_hydra",
+      "kind": "card"
+    },
+    "Cenn's Tactician": {
+      "csvid": 9333,
+      "iid": 1591,
+      "handler": "manalinkeh_card_cenns_tactician",
+      "kind": "card"
+    },
+    "Darksteel Relic": {
+      "csvid": 11586,
+      "iid": 2259,
+      "handler": "manalinkeh_card_darksteel_myr",
+      "kind": "card"
+    },
+    "Deadly Insect": {
+      "csvid": 1684,
+      "iid": 2311,
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Eager Cadet": {
+      "csvid": 4363,
+      "iid": 12406,
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Fabrication Module": {
+      "csvid": 16370,
+      "iid": 16457,
+      "handler": "manalinkeh_card_fabrication_module",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Giant Growth": {
+      "csvid": 97,
+      "iid": 3862,
+      "handler": "manalinkeh_card_giant_growth",
+      "kind": "card"
+    },
+    "Gladecover Scout": {
+      "csvid": 11810,
+      "iid": 3912,
+      "handler": "manalinkeh_card_aven_fleetwing",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "iid": 4570,
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Hunger of the Howlpack": {
+      "csvid": 12212,
+      "iid": 4700,
+      "handler": "manalinkeh_card_hunger_of_the_howlpack",
+      "kind": "card"
+    },
+    "Implement of Ferocity": {
+      "csvid": 16729,
+      "iid": 16822,
+      "handler": "manalinkeh_card_implement_of_ferocity",
+      "kind": "card"
+    },
+    "Island": {
+      "csvid": 126,
+      "iid": 1,
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Kiora's Follower": {
+      "csvid": 13743,
+      "iid": 5273,
+      "handler": "manalinkeh_card_kioras_follower",
+      "kind": "card"
+    },
+    "Lightning Bolt": {
+      "csvid": 145,
+      "iid": 5596,
+      "handler": "manalinkeh_card_lightning_bolt",
+      "kind": "card"
+    },
+    "Longtusk Cub": {
+      "csvid": 16437,
+      "iid": 16524,
+      "handler": "manalinkeh_card_longtusk_cub",
+      "kind": "card"
+    },
+    "Ornithopter": {
+      "csvid": 514,
+      "iid": 6907,
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Plains": {
+      "csvid": 188,
+      "iid": 4,
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Realm Seekers": {
+      "csvid": 14051,
+      "iid": 7728,
+      "handler": "manalinkeh_card_realm_seeker",
+      "kind": "card"
+    },
+    "Scaled Wurm": {
+      "csvid": 2085,
+      "iid": 8287,
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "iid": 10388,
+      "handler": "manalinkeh_card_unsummon",
+      "kind": "card"
+    },
+    "Vampire Hexmage": {
+      "csvid": 10701,
+      "iid": 10453,
+      "handler": "manalinkeh_card_vampire_hexmage",
+      "kind": "card"
+    },
+    "Zegana, Utopian Speaker": {
+      "csvid": 19797,
+      "iid": 19731,
+      "handler": "manalinkeh_card_zegana_utopian_speaker",
+      "kind": "card"
+    },
+    "Apocalypse Hydra": {
+      "csvid": 10108,
+      "iid": 503,
+      "handler": "manalinkeh_card_apocalypse_hydra",
+      "kind": "card"
+    },
+    "Sporeback Troll": {
+      "csvid": 8292,
+      "iid": 9246,
+      "handler": "manalinkeh_card_sporeback_troll",
+      "kind": "card"
+    },
+    "Murder": {
+      "csvid": 12594,
+      "iid": 6382,
+      "handler": "manalinkeh_card_murder2",
+      "kind": "card"
+    },
+    "Terminate": {
+      "csvid": 1471,
+      "iid": 9812,
+      "handler": "manalinkeh_card_terminate",
+      "kind": "card"
+    },
+    "Icy Manipulator": {
+      "csvid": 119,
+      "iid": 4775,
+      "handler": "manalinkeh_card_icy_manipulator",
+      "kind": "card"
+    },
+    "Karlov of the Ghost Council": {
+      "csvid": 15523,
+      "iid": 13240,
+      "handler": "manalinkeh_card_karlov_of_the_ghost_council",
+      "kind": "card"
+    },
+    "Wall of Limbs": {
+      "csvid": 14198,
+      "iid": 10769,
+      "handler": "manalinkeh_card_wall_of_limbs",
+      "kind": "card"
+    },
+    "Drakestown Forgotten": {
+      "csvid": 14032,
+      "iid": 2709,
+      "handler": "manalinkeh_card_drakestown_forgotten",
+      "kind": "card"
+    },
+    "Etched Oracle": {
+      "csvid": 7049,
+      "iid": 3137,
+      "handler": "manalinkeh_card_etched_oracle",
+      "kind": "card"
+    },
+    "Sacred Nectar": {
+      "csvid": 1137,
+      "iid": 8161,
+      "handler": "manalinkeh_card_sacred_nectar",
+      "kind": "card"
+    },
+    "Darksteel Myr": {
+      "csvid": 11238,
+      "iid": 2255,
+      "handler": "manalinkeh_card_darksteel_myr",
+      "kind": "card"
+    },
+    "Blood Cultist": {
+      "csvid": 9923,
+      "iid": 1108,
+      "handler": "manalinkeh_card_blood_cultist",
+      "kind": "card"
+    },
+    "Trophy Hunter": {
+      "csvid": 7991,
+      "iid": 10236,
+      "handler": "manalinkeh_card_trophy_hunter",
+      "kind": "card"
+    },
+    "Kazarov, Sengir Pureblood": {
+      "csvid": 18443,
+      "iid": 18550,
+      "handler": "manalinkeh_card_kazarov_sengir_pureblood",
+      "kind": "card"
+    },
+    "Shock": {
+      "csvid": 1147,
+      "iid": 8661,
+      "handler": "manalinkeh_card_shock2",
+      "kind": "card"
+    },
+    "Air Elemental": {
+      "csvid": 0,
+      "iid": 298,
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Suntail Hawk": {
+      "csvid": 1195,
+      "iid": 9548,
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Sphinx of Jwar Isle": {
+      "csvid": 10671,
+      "iid": 9136,
+      "handler": "manalinkeh_card_sphinx_of_jwar_isle",
+      "kind": "card"
+    },
+    "Aven Fleetwing": {
+      "csvid": 11780,
+      "iid": 756,
+      "handler": "manalinkeh_card_aven_fleetwing",
+      "kind": "card"
+    },
+    "Lymph Sliver": {
+      "csvid": 8968,
+      "iid": 5760,
+      "handler": "manalinkeh_card_lymph_sliver",
+      "kind": "card"
+    },
+    "Winged Sliver": {
+      "csvid": 1392,
+      "iid": 11014,
+      "handler": "manalinkeh_card_winged_sliver",
+      "kind": "card"
+    },
+    "Pyroclasm": {
+      "csvid": 1121,
+      "iid": 7515,
+      "handler": "manalinkeh_card_pyroclasm",
+      "kind": "card"
+    },
+    "Krakilin": {
+      "csvid": 3186,
+      "iid": 5381,
+      "handler": "manalinkeh_card_krakilin",
+      "kind": "card"
+    },
+    "Golgari Grave-Troll": {
+      "csvid": 7862,
+      "iid": 4104,
+      "handler": "manalinkeh_card_golgari_grave_troll",
+      "kind": "card"
+    },
+    "Experiment One": {
+      "csvid": 12940,
+      "iid": 3195,
+      "handler": "manalinkeh_card_experiment_one",
+      "kind": "card"
+    },
+    "Vampiric Dragon": {
+      "csvid": 5746,
+      "iid": 10462,
+      "handler": "manalinkeh_card_vampiric_dragon",
+      "kind": "card"
+    },
+    "Hornet Sting": {
+      "csvid": 11131,
+      "iid": 4660,
+      "handler": "manalinkeh_card_hornet_sting",
+      "kind": "card"
+    },
+    "Grim Roustabout": {
+      "csvid": 12738,
+      "iid": 4235,
+      "handler": "manalinkeh_card_grim_roustabout",
+      "kind": "card"
+    },
+    "Slith Bloodletter": {
+      "csvid": 1477,
+      "iid": 8914,
+      "handler": "manalinkeh_card_slith_bloodletter",
+      "kind": "card"
+    },
+    "Undercity Troll": {
+      "csvid": 15242,
+      "iid": 15231,
+      "handler": "manalinkeh_card_undercity_troll",
+      "kind": "card"
+    },
+    "Spiritmonger": {
+      "csvid": 5435,
+      "iid": 9209,
+      "handler": "manalinkeh_card_spiritmonger",
+      "kind": "card"
+    },
+    "Wall of Tanglecord": {
+      "csvid": 11409,
+      "iid": 10785,
+      "handler": "manalinkeh_card_wall_of_tanglecord",
+      "kind": "card"
+    },
+    "Fog": {
+      "csvid": 88,
+      "iid": 3563,
+      "handler": "manalinkeh_card_fog",
+      "kind": "card"
+    },
+    "Solarion": {
+      "csvid": 7123,
+      "iid": 8972,
+      "handler": "manalinkeh_card_solarion",
+      "kind": "card"
+    },
+    "Munda's Vanguard": {
+      "csvid": 15644,
+      "iid": 15719,
+      "handler": "manalinkeh_card_mundas_vanguard",
+      "kind": "card"
+    },
+    "Ashnod's Transmogrant": {
+      "csvid": 476,
+      "iid": 665,
+      "handler": "manalinkeh_card_ashnods_transmogrant",
+      "kind": "card"
+    },
+    "Stonework Puma": {
+      "csvid": 10677,
+      "iid": 9397,
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Shatter": {
+      "csvid": 223,
+      "iid": 8597,
+      "handler": "manalinkeh_card_shatter",
+      "kind": "card"
+    },
+    "Gyre Sage": {
+      "csvid": 12970,
+      "iid": 4329,
+      "handler": "manalinkeh_card_gyre_sage",
+      "kind": "card"
+    },
+    "Marwyn, the Nurturer": {
+      "csvid": 18458,
+      "iid": 18565,
+      "handler": "manalinkeh_card_marwyn_the_nurturer",
+      "kind": "card"
+    },
+    "Honored Hierarch": {
+      "csvid": 15152,
+      "iid": 13044,
+      "handler": "manalinkeh_card_honored_hierarch",
+      "kind": "card"
+    },
+    "Elvish Mystic": {
+      "csvid": 13284,
+      "iid": 2982,
+      "handler": "manalinkeh_card_elvish_mystic",
+      "kind": "card"
+    },
+    "Woodland Changeling": {
+      "csvid": 9315,
+      "iid": 11079,
+      "handler": "card_dummy",
+      "kind": "card"
+    }
+  }
+}

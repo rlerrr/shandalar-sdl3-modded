@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "card": "Krakilin",
+  "csvid": 3186,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "self_regeneration",
+        "entry": "x",
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "remove": 0,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "tapped_source",
+          "insufficient_mana",
+          "wrong_color",
+          "entry_x0",
+          "entry_x4",
+          "resolved_snapshot"
+        ],
+        "gaps": [
+          "Proactive shield creation and nested response windows are untested; regeneration is exercised in the real destruction window.",
+          "Upkeep and draw are not simulated."
+        ]
+      },
+      "oracle_text": "This creature enters with X +1/+1 counters on it.\n{1}{G}: Regenerate this creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "second_destruction_0",
+        "damaged_regen_0",
+        "tapped_source_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "entry_x0_0",
+        "entry_x4_0",
+        "resolved_snapshot_0",
+        "effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "second_destruction_1",
+        "damaged_regen_1",
+        "tapped_source_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "entry_x0_1",
+        "entry_x4_1",
+        "resolved_snapshot_1"
+      ]
+    }
+  ]
+}

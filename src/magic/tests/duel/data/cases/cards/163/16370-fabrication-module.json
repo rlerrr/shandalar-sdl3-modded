@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "card": "Fabrication Module",
+  "csvid": 16370,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "energy_module",
+        "cost": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "tap": true,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "pending_snapshot",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "tapped_source",
+          "fresh_source",
+          "untap_repeat",
+          "no_own_creatures",
+          "trigger_opponent_control"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects.",
+          "Separate energy-trigger response timing and multiple modules are not exercised."
+        ]
+      },
+      "oracle_text": "Whenever you get one or more {E} (energy counters), put a +1/+1 counter on target creature you control.\n{4}, {T}: You get {E}.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "tapped_source_0",
+        "fresh_source_0",
+        "untap_repeat_0",
+        "no_own_creatures_0",
+        "trigger_opponent_control_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "tapped_source_1",
+        "fresh_source_1",
+        "untap_repeat_1",
+        "no_own_creatures_1",
+        "trigger_opponent_control_1"
+      ]
+    }
+  ]
+}

@@ -874,4 +874,212 @@ class GrowthSelectionActivationTests(unittest.TestCase):
 
 
 
+class Wave6GrowthTests(unittest.TestCase):
+ @classmethod
+ def setUpClass(cls):
+  cls.o=json.loads((ROOT/'data/oracle.json').read_text(encoding='utf8'))['cards'];cls.rows={r['name']:r for r in registry()}
+ def declaration(self,name,variant):
+  pin=growth.WAVE6_PINS['profiles'][name]
+  return dict(family=growth.FAMILY,version=2,params=copy.deepcopy(pin['params']),oracle_text=self.o[name]['oracle_text'],variants=[variant])
+ def case(self,name,variant):
+  from recipes import expand
+  return expand(name,self.rows[name]['csvid'],self.declaration(name,variant),self.o[name],self.rows,self.o)[0]
+ def test_all_staged_variants_use_public_expansion_and_whole_pins(self):
+  for name,pin in growth.WAVE6_PINS['profiles'].items():
+   for variant in growth.variants(pin['params']):
+    c=self.case(name,variant);self.assertEqual(c['_recipe']['oracle_text'],self.o[name]['oracle_text']);self.assertTrue(c['steps']);self.assertEqual(next(e['player'] for e in c['setup'] if e['ref']=='source'),int(variant.rsplit('_',1)[1]))
+ def test_profile_and_oracle_mutations_fail_closed(self):
+  for name,pin in growth.WAVE6_PINS['profiles'].items():
+   d=self.declaration(name,'effect_0')
+   for key in pin['params']:
+    broken=copy.deepcopy(d);broken['params'][key]=None
+    with self.assertRaises(ValueError):growth.spec(broken,self.o[name])
+   with self.assertRaises(ValueError):growth.spec(d,dict(self.o[name],oracle_text='Changed'))
+ def test_recursive_types_reject_bool_integer_and_list_aliases(self):
+  name='Fabrication Module';d=self.declaration(name,'effect_0')
+  for mutate in ('tap','zero_cost','integer_cost','modes_tuple'):
+   bad=copy.deepcopy(d)
+   if mutate=='tap':bad['params']['tap']=1
+   elif mutate=='zero_cost':bad['params']['cost'][1]=False
+   elif mutate=='integer_cost':bad['params']['cost'][0]=4.0
+   else:bad['params']['modes']=tuple(bad['params']['modes'])
+   with self.assertRaises(ValueError):growth.spec(bad,self.o[name])
+ def test_implement_independent_death_draw_and_printed_sorcery_cost(self):
+  s=self.case('Implement of Ferocity','effect_0')['steps'];a=next(i for i,x in enumerate(s) if x['op']=='activate');r=next(i for i in range(a,len(s)) if s[i]['op']=='resolve')
+  self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=16729,value=1),s[a:r]);self.assertIn(dict(op='assert_card',ref='recipient',property='plus1_counters',value=0),s[a:r]);self.assertIn(dict(op='assert_card',ref='recipient',property='plus1_counters',value=1),s[r:])
+  death=self.case('Implement of Ferocity','destroy_draw_1')['steps'];self.assertFalse(any(x['op']=='activate' for x in death));self.assertIn(dict(op='destroy',ref='source'),death)
+ def test_countered_nonsoldier_positive_and_uncountered_soldier_negative(self):
+  yes=self.case("Cenn's Tactician",'grant_nonsoldier_0');self.assertEqual(next(e['name'] for e in yes['setup'] if e['ref']=='control'),'Hill Giant');self.assertIn(dict(op='block',ref='control',other='attacker1',value=1),yes['steps'])
+  no=self.case("Cenn's Tactician",'grant_counterless_soldier_1');self.assertEqual(next(e['name'] for e in no['setup'] if e['ref']=='counterless_soldier'),'Eager Cadet');self.assertIn(dict(op='block',ref='counterless_soldier',other='attacker1',value=0),no['steps'])
+ def test_hand_count_excludes_resolving_source_and_search_spends_counter_before_resolution(self):
+  for variant,expected in [('effect_0',6),('entry_fewer_hands_1',2),('entry_more_hands_0',9)]:
+   s=self.case('Realm Seekers',variant)['steps'];a=next(i for i,x in enumerate(s) if x['op']=='activate');r=next(i for i in range(a,len(s)) if s[i]['op']=='resolve')
+   self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=expected),s[:a]);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=expected-1),s[a:r]);self.assertTrue(any(x['op']=='choose_zone_card' for x in s[a:r]))
+ def test_energy_earned_by_real_combat_and_paid_before_growth(self):
+  s=self.case('Longtusk Cub','effect_1')['steps'];damage=next(i for i,x in enumerate(s) if x['op']=='combat_damage');a=next(i for i,x in enumerate(s) if x['op']=='activate');self.assertLess(damage,a);self.assertIn(dict(op='assert_energy',player=1,value=2),s[damage:a]);self.assertIn(dict(op='assert_energy',player=1,value=0),s[a:]);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=1),s[a:])
+ def test_module_trigger_selection_follows_actual_energy_activation(self):
+  s=self.case('Fabrication Module','effect_0')['steps'];a=next(i for i,x in enumerate(s) if x['op']=='activate');t=next(i for i,x in enumerate(s) if x['op']=='choose_target');self.assertLess(a,t);self.assertIn(dict(op='assert_energy',player=0,value=1),s[t:]);self.assertIn(dict(op='assert_card',ref='recipient',property='plus1_counters',value=1),s[t:])
+ def test_zegana_another_and_controller_entry_scopes(self):
+  for mode,hand in [('entry_qualified',4),('entry_counterless',3),('entry_opponent',3)]:
+   s=self.case('Zegana, Utopian Speaker',mode+'_0')['steps'];self.assertIn(dict(op='assert_zone',player=0,zone='hand',value=hand),s)
+ def test_source_removal_grants_have_positive_same_board_capture(self):
+  for name in ("Cenn's Tactician",'Zegana, Utopian Speaker'):
+   s=self.case(name,'grant_removed_0')['steps'];capture=next(i for i,x in enumerate(s) if x['op']=='capture');restore=next(i for i,x in enumerate(s) if x['op']=='restore');self.assertTrue(any(x['op']=='block' for x in s[capture:restore]));self.assertTrue(any(x['op']=='cast' and x.get('ref')=='response' for x in s[restore:]))
+ def test_pending_snapshot_replays_real_resolution(self):
+  s=self.case('Realm Seekers','pending_snapshot_1')['steps'];self.assertEqual(sum(x['op']=='activate' for x in s),1);self.assertEqual(sum(x['op']=='resolve' for x in s),3);self.assertEqual(s[-1],dict(op='assert_recorded_state'))
+ def test_artifact_bounce_and_actual_zone_change_rebind(self):
+  c=self.case('Fabrication Module','source_bounced_pending_0');self.assertEqual(next(x['name'] for x in c['setup'] if x['ref']=='response'),'Boomerang');self.assertIn(dict(op='bind_hand',ref='source',player=0,value=16370),c['steps'])
+  self.assertIn(dict(op='bind_hand',ref='recipient',player=1,value=self.rows['Eager Cadet']['csvid']),self.case("Cenn's Tactician",'target_bounced_pending_1')['steps'])
+ def test_cleanup_keeps_pretransition_payment_and_has_no_unrun_pool_clear_claim(self):
+  s=self.case('Realm Seekers','cleanup_0')['steps'];c=next(i for i,x in enumerate(s) if x['op']=='cleanup');self.assertTrue(any(x['op']=='assert_mana' for x in s[:c]));self.assertFalse(any(x['op']=='assert_mana' for x in s[c:]));self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=5),s[c:])
+ def test_fresh_artifact_flag_does_not_invent_creature_tap_restriction(self):
+  s=self.case('Fabrication Module','fresh_source_1')['steps'];self.assertIn(dict(op='assert_card',ref='source',property='sick',value=1),s);self.assertIn(dict(op='activate',ref='source',value=1),s)
+ def test_hydra_actual_x_threshold_cast_and_zero_entry_death(self):
+  for mode,x,counters in [('entry_x4',4,4),('entry_x5',5,10)]:
+   s=self.case('Apocalypse Hydra',mode+'_0')['steps'];self.assertIn(dict(op='choose_x',player=0,value=x),s);self.assertIn(dict(op='cast',ref='source',value=1),s);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=counters),s)
+  s=self.case('Apocalypse Hydra','entry_x0_1')['steps'];self.assertIn(dict(op='choose_x',player=1,value=0),s);self.assertIn(dict(op='assert_zone_multiplicity',player=1,zone='graveyard',index=10108,value=1),s);self.assertFalse(any(x['op']=='activate' for x in s))
+ def test_hydra_last_counter_cost_death_precedes_retained_damage(self):
+  s=self.case('Apocalypse Hydra','last_counter_0')['steps'];a=next(i for i,x in enumerate(s) if x['op']=='activate');r=next(i for i in range(a,len(s)) if s[i]['op']=='resolve');self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=10108,value=1),s[a:r]);self.assertIn(dict(op='assert_card',ref='recipient',property='damage',value=0),s[a:r]);self.assertIn(dict(op='assert_card',ref='recipient',property='damage',value=1),s[r:])
+ def test_regeneration_uses_actual_destroy_window_and_target(self):
+  s=self.case('Sporeback Troll','effect_1')['steps'];cast=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='removal');choice=next(i for i,x in enumerate(s) if x['op']=='choose_regeneration');self.assertLess(cast,choice);self.assertIn(dict(op='choose_target',player=1,ref='recipient'),s[choice:]);self.assertIn(dict(op='assert_card',ref='recipient',property='tapped',value=1),s[choice:]);self.assertFalse(any(x['op']=='activate' for x in s))
+ def test_graft_stays_dormant_and_second_destruction_is_unprotected(self):
+  c=self.case('Sporeback Troll','second_destruction_0');s=c['steps'];sourcecast=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='source');self.assertEqual(sum(x['op']=='choose_regeneration' for x in s),1);self.assertTrue(any(x['op']=='cast' and x.get('ref')=='second_removal' for x in s));self.assertFalse(any(x['op']=='cast' and x.get('ref') not in ('removal','second_removal') for x in s[sourcecast+1:]));self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=self.rows['Hill Giant']['csvid'],value=1),s)
+ def test_denied_regeneration_cost_retains_real_unavailable_response(self):
+  for mode in ('insufficient_mana','wrong_color','counterless_target','cannot_regenerate'):
+   s=self.case('Sporeback Troll',mode+'_0')['steps'];self.assertIn(dict(op='choose_regeneration',ref='source'),s);self.assertIn(dict(op='assert_unused_choices',value=1),s);r=next(i for i,x in enumerate(s) if x['op']=='choose_regeneration');self.assertFalse(any(x['op']=='choose_target' and x.get('player')==0 for x in s[r:]))
+ def test_life_events_are_not_life_amounts(self):
+  for name,count in [('Karlov of the Ghost Council',2),('Wall of Limbs',1)]:
+   mode='one_life_event_0' if name.startswith('Karlov') else 'effect_0';s=self.case(name,mode)['steps'];n=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='nectar_0');self.assertIn(dict(op='assert_life',player=0,value=24),s[n:]);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=count),s[n:])
+ def test_opponent_life_gain_does_not_fund_own_trigger(self):
+  for name in ('Karlov of the Ghost Council','Wall of Limbs'):
+   s=self.case(name,'opponent_gain_1')['steps'];self.assertIn(dict(op='assert_life',player=0,value=24),s);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=0),s)
+ def test_wall_sacrifice_uses_counter_and_growth_lki_power(self):
+  s=self.case('Wall of Limbs','boosted_power_0')['steps'];a=next(i for i,x in enumerate(s) if x['op']=='activate');self.assertIn(dict(op='cast',ref='boost',value=1),s[:a]);self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=14198,value=1),s[a:]);self.assertIn(dict(op='assert_life',player=1,value=16),s[a:])
+ def test_wall_printed_target_player_includes_self(self):
+  s=self.case('Wall of Limbs','own_player_1')['steps'];self.assertIn(dict(op='choose_player',player=1,value=1),s);self.assertIn(dict(op='assert_life',player=1,value=23),s)
+ def test_drakestown_counts_only_graves_and_shrink_expires(self):
+  for mode,entry in [('effect',2),('opponent_graves_only',1)]:
+   s=self.case('Drakestown Forgotten',mode+'_0')['steps'];self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=entry),s)
+  s=self.case('Drakestown Forgotten','cleanup_0')['steps'];c=next(i for i,x in enumerate(s) if x['op']=='cleanup');self.assertIn(dict(op='assert_card',ref='recipient',property='power',value=6),s[:c]);self.assertIn(dict(op='assert_card',ref='recipient',property='power',value=7),s[c:])
+ def test_sunburst_counts_distinct_colors_not_total_mana(self):
+  for mode,counters in [('effect',4),('three_colors',3),('two_colors',2)]:
+   s=self.case('Etched Oracle',mode+'_0')['steps'];self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=counters),s)
+   if counters<4:self.assertIn(dict(op='activate',ref='source',value=0),s)
+ def test_sunburst_uses_actual_human_colored_mana_clicks(self):
+  for mode,colors in [('effect',[1,2,3,4]),('three_colors',[1,1,2,3]),('two_colors',[1,1,2,2]),('zero_colors',[])]:
+   s=self.case('Etched Oracle',mode+'_0')['steps'];self.assertEqual([x['color'] for x in s if x['op']=='choose_mana'],colors)
+  self.assertFalse(any(x['op']=='choose_mana' for x in self.case('Etched Oracle','effect_1')['steps']))
+ def test_etched_last_four_counters_are_cost_before_draw(self):
+  s=self.case('Etched Oracle','effect_0')['steps'];a=next(i for i,x in enumerate(s) if x['op']=='activate');r=next(i for i in range(a,len(s)) if s[i]['op']=='resolve');self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=7049,value=1),s[a:r]);self.assertIn(dict(op='assert_zone',player=0,zone='hand',value=3),s[a:r]);self.assertIn(dict(op='assert_zone',player=0,zone='hand',value=6),s[r:])
+ def test_damage_growth_tap_freshness_and_real_counter_effect(self):
+  s=self.case('Blood Cultist','fresh_source_0')['steps'];self.assertIn(dict(op='activate',ref='source',value=0),s)
+  s=self.case('Blood Cultist','effect_1')['steps'];self.assertIn(dict(op='assert_card',ref='source',property='tapped',value=1),s);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=1),s);self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=self.rows['Eager Cadet']['csvid'],value=1),s)
+ def test_flying_only_negative_has_no_other_flying_creature(self):
+  c=self.case('Trophy Hunter','no_flying_0');self.assertIn(dict(op='activate',ref='source',value=0),c['steps']);self.assertFalse(any('Flying' in self.o[x['name']]['keywords'] for x in c['setup'] if x['zone']=='battlefield'))
+ def test_kazarov_counts_damage_events_not_amount_or_death(self):
+  s=self.case('Kazarov, Sengir Pureblood','effect_0')['steps'];self.assertIn(dict(op='assert_card',ref='recipient',property='damage',value=2),s);self.assertIn(dict(op='assert_card',ref='recipient',property='in_play',value=1),s);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=1),s)
+  own=self.case('Kazarov, Sengir Pureblood','own_target_1')['steps'];self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=0),own)
+ def test_delayed_death_uses_same_turn_and_actual_next_turn_control(self):
+  s=self.case('Blood Cultist','kill_later_0')['steps'];self.assertIn(dict(op='cast',ref='removal',value=1),s);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=1),s)
+  s=self.case('Trophy Hunter','after_turn_kill_1')['steps'];a=next(i for i,x in enumerate(s) if x['op']=='advance_turn');self.assertEqual(s[a+1],dict(op='untap_step',player=0));self.assertEqual(s[a+2],dict(op='turn',player=0,value=0));self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=0),s[a:])
+ def test_undamaged_same_name_copy_does_not_give_counter(self):
+  c=self.case('Blood Cultist','undamaged_death_0');names={x['ref']:x['name'] for x in c['setup']};self.assertEqual(names['recipient'],names['enemy_control']);self.assertIn(dict(op='choose_target',player=1,ref='enemy_control'),c['steps']);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=0),c['steps'])
+ def test_absorb_prevents_real_damage_before_later_death(self):
+  for n,count in [('Blood Cultist',1),('Trophy Hunter',1),('Kazarov, Sengir Pureblood',2)]:
+   c=self.case(n,'prevented_then_kill_0');self.assertEqual(sum(x['name']=='Lymph Sliver' and x['zone']=='battlefield' for x in c['setup']),count);self.assertEqual(next(x['name'] for x in c['setup'] if x['ref']=='recipient'),'Winged Sliver');self.assertIn(dict(op='assert_card',ref='recipient',property='damage',value=0),c['steps']);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=0),c['steps'])
+ def test_source_recast_does_not_inherit_prior_object_damage_history(self):
+  s=self.case('Trophy Hunter','source_recast_before_death_0')['steps'];b=next(i for i,x in enumerate(s) if x['op']=='bind_hand' and x['ref']=='source');self.assertIn(dict(op='cast',ref='source',value=1),s[b:]);self.assertIn(dict(op='assert_card',ref='source',property='sick',value=1),s[b:]);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=0),s[b:])
+ def test_kazarov_two_damaged_opposing_creatures_give_two_counters(self):
+  c=self.case('Kazarov, Sengir Pureblood','simultaneous_damage_0');self.assertEqual(next(x['name'] for x in c['setup'] if x['ref']=='other_damage'),'Pyroclasm');self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=2),c['steps']);self.assertIn(dict(op='assert_card',ref='source',property='damage',value=2),c['steps']);self.assertFalse(any(x['op']=='activate' for x in c['steps']))
+
+ def test_self_regeneration_uses_actual_entry_and_destruction_response(self):
+  for name in ('Krakilin','Golgari Grave-Troll','Experiment One'):
+   s=self.case(name,'effect_0')['steps'];cast=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='source');murder=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='removal');regen=next(i for i,x in enumerate(s) if x['op']=='choose_regeneration');self.assertLess(cast,murder);self.assertLess(murder,regen);self.assertFalse(any(x['op']=='activate' for x in s));self.assertFalse(any(x['op']=='choose_target' for x in s[regen:]));self.assertIn(dict(op='assert_card',ref='source',property='tapped',value=1),s[regen:])
+ def test_experiment_real_evolve_requires_greater_owned_entry(self):
+  for mode,count in [('effect',2),('one_evolve',1),('equal_evolve',1),('opponent_entry',1),('no_evolve',0)]:
+   s=self.case('Experiment One',mode+'_1')['steps'];m=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='removal');self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=count),s[:m]);self.assertEqual(sum(x['op']=='cast' and x.get('ref','').startswith('entrant') for x in s),0 if mode=='no_evolve' else 1 if mode=='one_evolve' else 2)
+ def test_grave_troll_last_counter_is_paid_without_saving_zero_toughness(self):
+  s=self.case('Golgari Grave-Troll','last_counter_0')['steps'];r=next(i for i,x in enumerate(s) if x['op']=='choose_regeneration');self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=1),s[:r]);self.assertIn(dict(op='assert_mana',player=0,color=0,value=25),s[r:]);self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=7862,value=1),s[r:])
+ def test_regeneration_heals_real_nonlethal_damage_after_counter_cost(self):
+  for name in ('Krakilin','Golgari Grave-Troll','Experiment One'):
+   s=self.case(name,'damaged_regen_0')['steps'];r=next(i for i,x in enumerate(s) if x['op']=='choose_regeneration');self.assertIn(dict(op='cast',ref='warmup',value=1),s[:r]);self.assertIn(dict(op='assert_card',ref='source',property='damage',value=1),s[:r]);self.assertIn(dict(op='assert_card',ref='source',property='damage',value=0),s[r:]);self.assertIn(dict(op='assert_card',ref='source',property='in_play',value=1),s[r:])
+ def test_regeneration_second_destruction_has_live_positive_control(self):
+  for name in ('Krakilin','Golgari Grave-Troll','Experiment One'):
+   s=self.case(name,'second_destruction_1')['steps'];second=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='second_removal');self.assertEqual(sum(x['op']=='choose_regeneration' for x in s),1);self.assertIn(dict(op='require_card',ref='source',property='in_play',value=1),s[:second]);self.assertIn(dict(op='assert_zone_multiplicity',player=1,zone='graveyard',index=self.rows[name]['csvid'],value=1),s[second:])
+ def test_self_regeneration_denials_keep_unconsumed_real_response(self):
+  for name,mode in [('Krakilin','wrong_color'),('Golgari Grave-Troll','insufficient_mana'),('Experiment One','one_evolve')]:
+   s=self.case(name,mode+'_1')['steps'];self.assertIn(dict(op='choose_regeneration',ref='source'),s);self.assertIn(dict(op='assert_unused_choices',value=1),s);self.assertIn(dict(op='assert_zone_multiplicity',player=1,zone='graveyard',index=self.rows[name]['csvid'],value=1),s)
+ def test_vampiric_non_tap_cost_allows_real_fresh_and_tapped_activations(self):
+  for mode in ('fresh_source','tapped_source'):
+   s=self.case('Vampiric Dragon',mode+'_0')['steps'];self.assertIn(dict(op='activate',ref='source',value=1),s);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=1),s)
+  for mode in ('insufficient_mana','wrong_color'):
+   self.assertIn(dict(op='activate',ref='source',value=0),self.case('Vampiric Dragon',mode+'_1')['steps'])
+
+ def test_regeneration_combat_growth_uses_real_cast_and_turn_untap(self):
+  for name in ('Slith Bloodletter','Undercity Troll','Spiritmonger'):
+   s=self.case(name,'effect_0')['steps'];cast=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='source');untap=next(i for i,x in enumerate(s) if x['op']=='untap_step');attack=next(i for i,x in enumerate(s) if x['op']=='attack' and x['ref']=='source');regen=next(i for i,x in enumerate(s) if x['op']=='choose_regeneration');self.assertLess(cast,untap);self.assertLess(untap,attack);self.assertLess(attack,regen);self.assertIn(dict(op='assert_card',ref='source',property='tapped',value=1),s[attack:regen])
+ def test_each_combat_damage_and_renown_once_have_distinct_counters(self):
+  for name,counters in [('Slith Bloodletter',2),('Undercity Troll',1)]:
+   s=self.case(name,'repeat_combat_1')['steps'];self.assertEqual(sum(x['op']=='combat_damage' for x in s),2);self.assertEqual(sum(x['op']=='untap_step' for x in s),4);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=counters),s)
+ def test_unleash_decline_and_real_counter_loss_restore_blocking(self):
+  for mode,allowed in [('block_countered',0),('block_decline',1),('block_counter_removed',1)]:
+   s=self.case('Grim Roustabout',mode+'_0')['steps'];self.assertIn(dict(op='block',ref='source',other='attacker',value=allowed),s);self.assertFalse(any(x['op']=='combat_damage' for x in s))
+  s=self.case('Grim Roustabout','block_counter_removed_0')['steps'];self.assertIn(dict(op='activate',ref='counter_remover',value=1),s);self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=self.rows['Vampire Hexmage']['csvid'],value=1),s);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=0),s)
+ def test_spiritmonger_counts_real_creature_damage_events(self):
+  for mode,count in [('effect',1),('unblocked_combat',0),('prevented_combat',0)]:
+   s=self.case('Spiritmonger',mode+'_0')['steps'];self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=count),s)
+  s=self.case('Spiritmonger','effect_0')['steps'];self.assertIn(dict(op='block',ref='blocker',other='source',value=1),s);self.assertIn(dict(op='assert_zone_multiplicity',player=1,zone='graveyard',index=self.rows['Wall of Tanglecord']['csvid'],value=1),s)
+  self.assertIn(dict(op='cast',ref='preventer',value=1),self.case('Spiritmonger','prevented_combat_0')['steps']);self.assertIn(dict(op='assert_life',player=1,value=14),self.case('Spiritmonger','unblocked_combat_0')['steps'])
+ def test_spiritmonger_regeneration_does_not_offer_optional_green_mode(self):
+  s=self.case('Spiritmonger','effect_1')['steps'];r=next(i for i,x in enumerate(s) if x['op']=='choose_regeneration');self.assertIn(dict(op='set_mana',player=1,color=3,value=0),s[:r]);self.assertFalse(any(x['op']=='choose_color' for x in s));self.assertIn(dict(op='assert_mana',player=1,color=1,value=9),s[r:])
+ def test_regeneration_followups_heal_real_damage_without_tap_cost(self):
+  for name in ('Grim Roustabout','Slith Bloodletter','Undercity Troll','Spiritmonger'):
+   s=self.case(name,'damaged_regen_1')['steps'];r=next(i for i,x in enumerate(s) if x['op']=='choose_regeneration');self.assertIn(dict(op='cast',ref='warmup',value=1),s[:r]);self.assertIn(dict(op='assert_card',ref='source',property='damage',value=1),s[:r]);self.assertIn(dict(op='assert_card',ref='source',property='damage',value=0),s[r:]);self.assertIn(dict(op='assert_card',ref='source',property='in_play',value=1),s[r:])
+
+ def test_solarion_actual_sunburst_payment_and_zero_entry_death(self):
+  s=self.case('Solarion','effect_0')['steps'];self.assertEqual([x['color'] for x in s if x['op']=='choose_mana'],[1,2,3,4]);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=4),s)
+  s=self.case('Solarion','zero_colors_1')['steps'];self.assertIn(dict(op='assert_zone_multiplicity',player=1,zone='graveyard',index=7123,value=1),s);self.assertFalse(any(x['op']=='activate' for x in s))
+ def test_solarion_doubles_current_counters_after_real_growth_response(self):
+  s=self.case('Solarion','more_counters_pending_1')['steps'];a=next(i for i,x in enumerate(s) if x['op']=='activate' and x['ref']=='source');g=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='growth');self.assertLess(a,g);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=4),s[a:g]);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=10),s[g:]);self.assertFalse(any(x['op']=='resolve_response' for x in s));self.assertFalse(any(x.get('property')=='plus1_counters' and x.get('ref')=='source' and x.get('value')==5 for x in s[g:]))
+ def test_solarion_counter_removal_causes_real_zero_toughness_death(self):
+  s=self.case('Solarion','counter_removed_pending_0')['steps'];a=next(i for i,x in enumerate(s) if x['op']=='activate' and x['ref']=='counter_remover');self.assertIn(dict(op='assert_stack',value=2),s[a:]);self.assertIn(dict(op='assert_zone_multiplicity',player=1,zone='graveyard',index=self.rows['Vampire Hexmage']['csvid'],value=1),s[a:]);self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=7123,value=1),s[a:])
+ def test_solarion_repeat_uses_real_untapper_after_first_resolution(self):
+  s=self.case('Solarion','repeat_0')['steps'];self.assertEqual(sum(x['op']=='activate' and x['ref']=='source' for x in s),2);self.assertIn(dict(op='activate',ref='untapper',value=1),s);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=16),s);self.assertNotIn('stacked',self.declaration('Solarion','effect_0')['params']['modes'])
+ def test_cohort_actual_cost_taps_distinct_fresh_ally_and_source(self):
+  s=self.case("Munda's Vanguard",'fresh_ally_0')['steps'];c=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='ally');a=next(i for i,x in enumerate(s) if x['op']=='activate' and x['ref']=='source');r=next(i for i in range(a,len(s)) if s[i]['op']=='resolve');self.assertLess(c,a);self.assertIn(dict(op='assert_card',ref='ally',property='sick',value=1),s[c:a]);self.assertIn(dict(op='assert_card',ref='source',property='tapped',value=1),s[a:r]);self.assertIn(dict(op='assert_card',ref='ally',property='tapped',value=1),s[a:r]);self.assertIn(dict(op='assert_card',ref='artifact_control',property='plus1_counters',value=1),s[r:]);self.assertIn(dict(op='assert_card',ref='enemy_control',property='plus1_counters',value=0),s[r:])
+ def test_cohort_unavailable_costs_deny_actual_activation(self):
+  for mode in ('source_alone','opponent_ally_only','tapped_ally','tapped_source','fresh_source'):
+   s=self.case("Munda's Vanguard",mode+'_1')['steps'];self.assertIn(dict(op='activate',ref='source',value=0),s);self.assertFalse(any(x['op']=='choose_target' and x['player']==1 for x in s))
+ def test_transmogrant_pays_self_sacrifice_and_keeps_creature_subtypes(self):
+  s=self.case("Ashnod's Transmogrant",'effect_1')['steps'];a=next(i for i,x in enumerate(s) if x['op']=='activate' and x['ref']=='source');r=next(i for i in range(a,len(s)) if s[i]['op']=='resolve');self.assertIn(dict(op='assert_zone_multiplicity',player=1,zone='graveyard',index=476,value=1),s[a:r]);self.assertIn(dict(op='assert_card',ref='recipient',property='plus1_counters',value=0),s[a:r]);self.assertIn(dict(op='assert_card',ref='recipient',property='plus1_counters',value=1),s[r:])
+  for prop in ('artifact','subtype_Human','subtype_Soldier'):self.assertIn(dict(op='assert_matching_permanents',player=1,index=self.rows['Eager Cadet']['csvid'],property=prop,value=1),s[r:])
+ def test_transmogrant_new_artifact_has_actual_shatter_control(self):
+  c=self.case("Ashnod's Transmogrant",'artifact_destroy_probe_0');s=c['steps'];cast=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='artifact_removal');self.assertIn(dict(op='require_can_cast',ref='artifact_removal',value=1),s[:cast]);self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=self.rows['Eager Cadet']['csvid'],value=1),s[cast:]);self.assertEqual(next(x['name'] for x in c['setup'] if x['ref']=='artifact_removal'),'Shatter')
+ def test_next_three_responses_use_only_supported_whole_drain(self):
+  for name in ('Solarion',"Munda's Vanguard","Ashnod's Transmogrant"):
+   for variant in growth.variants(growth.WAVE6_PINS['profiles'][name]['params']):self.assertFalse(any(s['op']=='resolve_response' for s in self.case(name,variant)['steps']))
+
+ def test_gyre_evolve_axes_are_separate_and_zero_output_still_pays_tap(self):
+  for mode in ('power_axis','toughness_axis'):
+   s=self.case('Gyre Sage',mode+'_0')['steps'];self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=1),s);self.assertIn(dict(op='assert_mana',player=0,color=3,value=1),s)
+  s=self.case('Gyre Sage','no_growth_1')['steps'];self.assertIn(dict(op='require_can_activate',ref='source',value=1),s);self.assertIn(dict(op='activate',ref='source',value=1),s);self.assertIn(dict(op='assert_card',ref='source',property='tapped',value=1),s);self.assertIn(dict(op='assert_mana',player=1,color=3,value=0),s)
+ def test_marwyn_counts_actual_owned_elf_and_changeling_entries(self):
+  c=self.case('Marwyn, the Nurturer','effect_1');self.assertEqual([e['name'] for e in c['setup'] if e['ref'].startswith('entrant')],['Elvish Mystic','Woodland Changeling']);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=2),c['steps']);self.assertIn(dict(op='assert_mana',player=1,color=3,value=3),c['steps'])
+  for mode in ('nonmatching_entry','opponent_entry'):
+   s=self.case('Marwyn, the Nurturer',mode+'_1')['steps'];self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=0),s);self.assertIn(dict(op='assert_mana',player=1,color=3,value=1),s)
+ def test_mana_growth_uses_counter_count_or_current_power_as_printed(self):
+  for name,output in [('Gyre Sage',2),('Marwyn, the Nurturer',6)]:
+   s=self.case(name,'power_boost_0')['steps'];a=next(i for i,x in enumerate(s) if x['op']=='activate' and x['ref']=='source');self.assertIn(dict(op='cast',ref='boost',value=1),s[:a]);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=2),s[a:]);self.assertIn(dict(op='assert_mana',player=0,color=3,value=output),s[a:]);self.assertEqual(s[a+1],dict(op='assert_stack',value=0))
+ def test_hierarch_real_renown_then_vigilance_and_all_color_choices(self):
+  s=self.case('Honored Hierarch','second_attack_0')['steps'];attacks=[i for i,x in enumerate(s) if x['op']=='attack' and x['ref']=='source'];self.assertEqual(len(attacks),2);self.assertEqual(s[attacks[0]+1],dict(op='assert_card',ref='source',property='tapped',value=1));self.assertEqual(s[attacks[1]+1],dict(op='assert_card',ref='source',property='tapped',value=0));self.assertIn(dict(op='assert_life',player=1,value=17),s);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=1),s)
+  for mode,color in [('effect',3),('color_B',1),('color_U',2),('color_R',4),('color_W',5)]:
+   s=self.case('Honored Hierarch',mode+'_1')['steps'];self.assertIn(dict(op='choose_color',player=1,value=color),s);self.assertIn(dict(op='assert_mana',player=1,color=color,value=1),s)
+ def test_hierarch_counter_without_renown_has_no_granted_mana_ability(self):
+  s=self.case('Honored Hierarch','counter_is_not_renown_0')['steps'];self.assertIn(dict(op='cast',ref='growth',value=1),s);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=1),s);self.assertIn(dict(op='activate',ref='source',value=0),s);self.assertFalse(any(x['op']=='choose_color' for x in s))
+ def test_hierarch_remains_renowned_after_actual_counter_removal(self):
+  s=self.case('Honored Hierarch','counter_removed_1')['steps'];r=next(i for i,x in enumerate(s) if x['op']=='activate' and x['ref']=='counter_remover');self.assertIn(dict(op='combat_damage'),s[:r]);self.assertIn(dict(op='assert_card',ref='source',property='plus1_counters',value=0),s[r:]);self.assertIn(dict(op='activate',ref='source',value=1),s[r:]);self.assertIn(dict(op='assert_mana',player=1,color=3,value=1),s[r:])
+ def test_produced_mana_is_spent_and_persists_after_actual_source_loss(self):
+  for name,output in [('Gyre Sage',2),('Marwyn, the Nurturer',3),('Honored Hierarch',1)]:
+   s=self.case(name,'spend_output_0')['steps'];cast=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='spender');self.assertIn(dict(op='assert_mana',player=0,color=3,value=output-1),s[cast:]);s=self.case(name,'source_destroyed_after_mana_0')['steps'];cast=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='response');self.assertIn(dict(op='assert_mana',player=0,color=3,value=output),s[cast:]);self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=self.rows[name]['csvid'],value=1),s[cast:])
+
 if __name__=='__main__':unittest.main()

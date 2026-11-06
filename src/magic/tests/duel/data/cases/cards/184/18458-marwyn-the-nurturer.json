@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "card": "Marwyn, the Nurturer",
+  "csvid": 18458,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "mana_growth",
+        "entry": "elf",
+        "modes": [
+          "effect",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "tapped_source",
+          "repeat",
+          "next_turn",
+          "spend_output",
+          "source_bounced_after_mana",
+          "source_destroyed_after_mana",
+          "resolved_snapshot",
+          "fresh_source",
+          "no_growth",
+          "nonmatching_entry",
+          "opponent_entry",
+          "counter_removed",
+          "power_boost"
+        ],
+        "gaps": [
+          "No upkeep or draw step is emitted.",
+          "Mana abilities resolve atomically; no fabricated pending stack window is claimed.",
+          "Elf recognition covers an actual Elf and actual Changeling; other type-changing interactions are untested."
+        ]
+      },
+      "oracle_text": "Whenever another Elf you control enters, put a +1/+1 counter on Marwyn.\n{T}: Add an amount of {G} equal to Marwyn's power.",
+      "variants": [
+        "effect_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "tapped_source_0",
+        "repeat_0",
+        "next_turn_0",
+        "spend_output_0",
+        "source_bounced_after_mana_0",
+        "source_destroyed_after_mana_0",
+        "resolved_snapshot_0",
+        "fresh_source_0",
+        "no_growth_0",
+        "nonmatching_entry_0",
+        "opponent_entry_0",
+        "counter_removed_0",
+        "power_boost_0",
+        "effect_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "tapped_source_1",
+        "repeat_1",
+        "next_turn_1",
+        "spend_output_1",
+        "source_bounced_after_mana_1",
+        "source_destroyed_after_mana_1",
+        "resolved_snapshot_1",
+        "fresh_source_1",
+        "no_growth_1",
+        "nonmatching_entry_1",
+        "opponent_entry_1",
+        "counter_removed_1",
+        "power_boost_1"
+      ]
+    }
+  ]
+}

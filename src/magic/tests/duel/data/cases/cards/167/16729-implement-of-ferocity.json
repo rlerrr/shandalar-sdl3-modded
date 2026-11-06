@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "card": "Implement of Ferocity",
+  "csvid": 16729,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "implement",
+        "cost": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "tap": false,
+        "sacrifice": true,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "wrong_color",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "opponent_target",
+          "target_bounced_pending",
+          "opposing_turn",
+          "combat_timing",
+          "destroy_draw",
+          "target_shroud_probe"
+        ],
+        "gaps": [
+          "Multiplayer and counter replacement effects.",
+          "Separate death-draw trigger response windows and ordering while the growth activation is pending are not observed; completed draw/growth and an independent real destruction draw are checked."
+        ]
+      },
+      "oracle_text": "{G}, Sacrifice this artifact: Put a +1/+1 counter on target creature. Activate only as a sorcery.\nWhen this artifact is put into a graveyard from the battlefield, draw a card.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "opponent_target_0",
+        "target_bounced_pending_0",
+        "opposing_turn_0",
+        "combat_timing_0",
+        "destroy_draw_0",
+        "target_shroud_probe_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "opponent_target_1",
+        "target_bounced_pending_1",
+        "opposing_turn_1",
+        "combat_timing_1",
+        "destroy_draw_1",
+        "target_shroud_probe_1"
+      ]
+    }
+  ]
+}

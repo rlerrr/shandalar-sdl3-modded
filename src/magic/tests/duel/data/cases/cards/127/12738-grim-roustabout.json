@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "card": "Grim Roustabout",
+  "csvid": 12738,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "regeneration_combat",
+        "entry": "unleash",
+        "cost": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "insufficient_mana",
+          "wrong_color",
+          "resolved_snapshot",
+          "decline",
+          "tapped_source",
+          "block_countered",
+          "block_decline",
+          "block_counter_removed"
+        ],
+        "gaps": [
+          "Regeneration is tested in the actual destruction window; proactive shields, nested windows and removal from combat are untested.",
+          "No upkeep or draw step is emitted.",
+          "Unleash legality probes stop after real block declarations; combat damage in those probes is untested."
+        ]
+      },
+      "oracle_text": "Unleash (You may have this creature enter with a +1/+1 counter on it. It can't block as long as it has a +1/+1 counter on it.)\n{1}{B}: Regenerate this creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "second_destruction_0",
+        "damaged_regen_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "resolved_snapshot_0",
+        "decline_0",
+        "tapped_source_0",
+        "block_countered_0",
+        "block_decline_0",
+        "block_counter_removed_0",
+        "effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "second_destruction_1",
+        "damaged_regen_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "resolved_snapshot_1",
+        "decline_1",
+        "tapped_source_1",
+        "block_countered_1",
+        "block_decline_1",
+        "block_counter_removed_1"
+      ]
+    }
+  ]
+}

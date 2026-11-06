@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Sporeback Troll",
+  "csvid": 8292,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_regeneration",
+        "cost": [
+          1,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "tap": false,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "wrong_color",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "counterless_target",
+          "cannot_regenerate",
+          "second_destruction",
+          "cleanup",
+          "opponent_target",
+          "tapped_source"
+        ],
+        "gaps": [
+          "Optional graft transfers are dormant: every other creature and Hexmage is present before sourcecast; no creature enters afterward.",
+          "Regeneration is executed in an actual destruction window; proactive shield creation, pending target/source loss and nested response windows are untested.",
+          "Creature damage-clearing and combat-removal side effects require a later dedicated combat-destruction scenario; this first probe observes tapping, survival, retained counters, payment and second destruction."
+        ]
+      },
+      "oracle_text": "Graft 2 (This creature enters with two +1/+1 counters on it. Whenever another creature enters, you may move a +1/+1 counter from this creature onto it.)\n{1}{G}: Regenerate target creature with a +1/+1 counter on it.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "counterless_target_0",
+        "cannot_regenerate_0",
+        "second_destruction_0",
+        "cleanup_0",
+        "opponent_target_0",
+        "tapped_source_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "counterless_target_1",
+        "cannot_regenerate_1",
+        "second_destruction_1",
+        "cleanup_1",
+        "opponent_target_1",
+        "tapped_source_1"
+      ]
+    }
+  ]
+}

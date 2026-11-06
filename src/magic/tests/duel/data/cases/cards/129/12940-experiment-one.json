@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "card": "Experiment One",
+  "csvid": 12940,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "self_regeneration",
+        "entry": "evolve",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "remove": 2,
+        "tap": false,
+        "modes": [
+          "effect",
+          "payment",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "cleanup",
+          "second_destruction",
+          "damaged_regen",
+          "tapped_source",
+          "no_evolve",
+          "one_evolve",
+          "equal_evolve",
+          "opponent_entry",
+          "resolved_snapshot"
+        ],
+        "gaps": [
+          "Proactive shield creation and nested response windows are untested; regeneration is exercised in the real destruction window.",
+          "Upkeep and draw are not simulated."
+        ]
+      },
+      "oracle_text": "Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)\nRemove two +1/+1 counters from this creature: Regenerate it. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "second_destruction_0",
+        "damaged_regen_0",
+        "tapped_source_0",
+        "no_evolve_0",
+        "one_evolve_0",
+        "equal_evolve_0",
+        "opponent_entry_0",
+        "resolved_snapshot_0",
+        "effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "second_destruction_1",
+        "damaged_regen_1",
+        "tapped_source_1",
+        "no_evolve_1",
+        "one_evolve_1",
+        "equal_evolve_1",
+        "opponent_entry_1",
+        "resolved_snapshot_1"
+      ]
+    }
+  ]
+}

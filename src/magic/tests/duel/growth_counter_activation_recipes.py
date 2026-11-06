@@ -13,6 +13,7 @@ WORDS = {1:'a',2:'two',3:'three',4:'four',5:'five',6:'six',10:'ten'}
 
 
 def spec(d,r):
+ if isinstance(d.get('params'),dict) and d['params'].get('profile')=='wave6_growth':return _wave6_spec(d,r)
  if isinstance(d.get('params'),dict) and d['params'].get('profile')=='selection_growth':return _selection_spec(d,r)
  if isinstance(d.get('params'),dict) and d['params'].get('profile')=='counter_draw':return _counter_draw_spec(d,r)
  if isinstance(d.get('params'),dict) and d['params'].get('profile')=='graft_activation':return _graft_spec(d,r)
@@ -82,6 +83,7 @@ def spec(d,r):
 
 
 def variants(p):
+ if p.get('profile')=='wave6_growth':return _wave6_variants(p)
  if p.get('profile')=='selection_growth':return _selection_variants(p)
  if p.get('profile')=='counter_draw':return _counter_draw_variants(p)
  if p.get('profile')=='graft_activation':return _graft_variants(p)
@@ -107,6 +109,7 @@ def variants(p):
 
 
 def validate_witnesses(o,rows):
+ _wave6_validate_witnesses(o,rows)
  _selection_validate_witnesses(o,rows)
  _counter_draw_validate_witnesses(o,rows)
  _graft_validate_witnesses(o,rows)
@@ -117,6 +120,7 @@ def validate_witnesses(o,rows):
 
 
 def expand(name,csvid,d,p,selected,rows,o):
+ if p.get('profile')=='wave6_growth':return _wave6_expand(name,csvid,d,p,selected,rows,o)
  if p.get('profile')=='selection_growth':return _selection_expand(name,csvid,d,p,selected,rows,o)
  if p.get('profile')=='counter_draw':return _counter_draw_expand(name,csvid,d,p,selected,rows,o)
  if p.get('profile')=='graft_activation':return _graft_expand(name,csvid,d,p,selected,rows,o)
@@ -1406,4 +1410,858 @@ def _selection_expand(name,csvid,d,p,selected,rows,o):
    proof=_selection_expand(name,csvid,d,p,['entry_pay_'+str(owner)],rows,o)[0];assert proof['setup']==w.setup
    steps=[_transfer_step('capture')]+copy.deepcopy(proof['steps'])+[_transfer_step('restore')]+steps
   out.append(dict(name=f'SelectionGrowthActivationRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=w.setup,steps=steps,_recipe=dict(family=FAMILY,version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],scope_gaps=p['gaps']+['control changes','counter replacement','multiplayer'])))
+ return out
+
+
+# Wave 6 has its own palette; old cohorts never inherit this witness universe.
+WAVE6_PINS=json.loads((Path(__file__).parent/'data/growth_counter_activation_wave6_witnesses.json').read_text(encoding='utf8'))
+
+def _wave6_same(a,b):
+ if type(a) is not type(b):return False
+ if isinstance(a,dict):return a.keys()==b.keys() and all(_wave6_same(a[k],b[k]) for k in a)
+ if isinstance(a,list):return len(a)==len(b) and all(_wave6_same(x,y) for x,y in zip(a,b))
+ return a==b
+
+def _wave6_spec(d,o):
+ pin=WAVE6_PINS['profiles'].get(o.get('name')) if isinstance(o,dict) else None
+ if not pin or not _wave6_same(o,pin['oracle']) or o.get('layout')!='normal' or o.get('card_faces'):raise ValueError('whole normal wave6 Oracle source required')
+ if set(d)!={'family','version','params','oracle_text','variants'} or d['family']!=FAMILY or type(d['version']) is not int or d['version']!=2:raise ValueError('explicit version2 wave6 growth declaration required')
+ if d['oracle_text']!=o['oracle_text'] or not _wave6_same(d['params'],pin['params']):raise ValueError('reviewed wave6 parameters changed')
+ return dict(copy.deepcopy(pin['params']),name=o['name'],family=FAMILY)
+
+def _wave6_variants(p):return [m+'_'+str(owner) for owner in (0,1) for m in p['modes']]
+
+def _wave6_validate_witnesses(o,rows):
+ for n,pin in WAVE6_PINS['witnesses'].items():
+  if not _wave6_same(o.get(n),pin) or any(not _wave6_same(rows.get(n,{}).get(k),v) for k,v in WAVE6_PINS['registry'][n].items()):raise ValueError('wave6 growth source/witness changed: '+n)
+
+class _Wave6World(_TransferWorld):
+ def __init__(self,owner):
+  super().__init__(owner,WAVE6_PINS);self.life=[20,20];self.energy=[0,0];self.unordered=[False,False]
+ def add(self,*args,**kw):
+  super().add(*args,**kw);self.entities[args[1]].update(damage=0,pump=0)
+ def stats(self):
+  out=[]
+  for ref,e in self.entities.items():
+   if e['zone']=='battlefield':
+    out.extend(_transfer_observe(ref,k,int(e[k])) for k in ('tapped','sick'))
+    out.extend([_transfer_observe(ref,'in_play',1),_transfer_observe(ref,'plus1_counters',e['counters'])])
+    o=self.pins['witnesses'][e['name']]
+    if 'Creature' in o['type_line']:
+     out.extend(_transfer_observe(ref,k,int(o[k])+e['counters']+e['pump']) for k in ('power','toughness'))
+     out.append(_transfer_observe(ref,'damage',e['damage']))
+   elif e['zone']=='hand':out.append(_transfer_observe(ref,'in_hand',1))
+  return out
+ def receipts(self):
+  out=self.stats()+([] if getattr(self,'omit_mana',False) else self.mana_receipts());universe={x['name'] for x in self.setup}
+  for pl in (0,1):
+   out += [_transfer_step('assert_life',player=pl,value=self.life[pl]),_transfer_step('assert_energy',player=pl,value=self.energy[pl]),_transfer_step('assert_zone',player=pl,zone='battlefield',value=sum(e['zone']=='battlefield' and e['player']==pl for e in self.entities.values()))]
+   for n in sorted(universe):out.append(_transfer_step('assert_zone_multiplicity',player=pl,zone='battlefield',index=self.pins['registry'][n]['csvid'],value=sum(e['zone']=='battlefield' and e['player']==pl and e['name']==n for e in self.entities.values())))
+   for zone,players in self.zones.items():
+    ns=players[pl];out.append(_transfer_step('assert_zone',player=pl,zone=zone,value=len(ns)))
+    out += [_transfer_step('assert_zone_multiplicity',player=pl,zone=zone,index=self.pins['registry'][n]['csvid'],value=ns.count(n)) for n in sorted(universe)]
+    if zone=='library' and not self.unordered[pl]:out += [_transfer_step('assert_zone_card',player=pl,zone=zone,index=i,value=self.pins['registry'][n]['csvid']) for i,n in enumerate(ns)]
+  return out
+ def draw(self,pl,n=1):
+  for _ in range(n):self.zones['hand'][pl].append(self.zones['library'][pl].pop(0))
+ def cast_named(self,ref):
+  e=self.entities[ref];pl=e['player'];name=e['name'];cost=_transfer_fixed_cost(name,self.pins)
+  self.steps += [_transfer_step('cast',ref=ref,value=1),_transfer_step('assert_stack',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')]
+  # The raw snapshot sickness flag is set on every newly cast permanent;
+  # the engine independently applies the tap restriction only to creatures.
+  self.pay(pl,cost);self.zones['hand'][pl].remove(name);e.update(zone='battlefield',sick=1,tapped=False)
+ def untap_cycle(self):
+  for pl in (0,1):self.set_mana(pl,[0]*6)
+  for pl in (1-self.owner,self.owner):
+   self.steps += [_transfer_step('advance_turn'),_transfer_step('untap_step',player=pl)]
+   for e in self.entities.values():
+    if e['zone']=='battlefield' and e['player']==pl:e.update(tapped=False,sick=0)
+  self.steps.append(_transfer_step('turn',player=self.owner,value=0))
+
+def _wave6_combat_energy(w):
+ e=w.entities['source'];power=int(WAVE6_PINS['witnesses'][e['name']]['power'])+e['counters']
+ w.steps += [_transfer_step('turn',player=w.owner,value=0),_transfer_step('begin_attackers'),_transfer_step('attack',ref='source',value=1),_transfer_step('finish_attackers'),_transfer_step('begin_blockers'),_transfer_step('advance_combat'),_transfer_step('combat_damage'),_transfer_step('resolve'),_transfer_step('assert_choices_consumed'),_transfer_step('end_combat')]
+ e['tapped']=True;w.life[1-w.owner]-=power;w.energy[w.owner]+=2
+ w.steps += [_transfer_step('assert_energy',player=w.owner,value=w.energy[w.owner]),_transfer_step('assert_life',player=1-w.owner,value=w.life[1-w.owner])]
+
+def _wave6_block_function(w,ref,active):
+ """Real block declarations prove capacity; damage assignment is a scope gap."""
+ actor=w.entities[ref]['player']
+ w.steps += [_transfer_step('turn',player=1-actor,value=0),_transfer_step('begin_attackers')]
+ for attacker in ('attacker0','attacker1'):w.steps.append(_transfer_step('attack',ref=attacker,value=1));w.entities[attacker]['tapped']=True
+ w.steps += [_transfer_step('finish_attackers'),_transfer_step('begin_blockers'),_transfer_step('block',ref=ref,other='attacker0',value=1),_transfer_step('block',ref=ref,other='attacker1',value=int(active)),_transfer_observe(ref,'blocking_count',2 if active else 1)]
+
+def _wave6_trample_function(w,ref,active):
+ e=w.entities[ref];actor=e['player'];power=int(WAVE6_PINS['witnesses'][e['name']]['power'])+e['counters'];blocker=w.entities['attacker0']
+ w.steps += [_transfer_step('turn',player=actor,value=0),_transfer_step('begin_attackers'),_transfer_step('attack',ref=ref,value=1),_transfer_step('finish_attackers'),_transfer_step('begin_blockers'),_transfer_step('block',ref='attacker0',other=ref,value=1),_transfer_step('advance_combat'),_transfer_step('combat_damage'),_transfer_step('resolve'),_transfer_step('assert_choices_consumed'),_transfer_step('end_combat')]
+ e['tapped']=True;blocker['damage']=2 if active else power
+ if active:w.life[1-actor]-=max(0,power-2)
+ w.move_zone('attacker0','graveyard');w.steps += [_transfer_step('assert_life',player=1-actor,value=w.life[1-actor])]
+
+def _wave6_expand(name,csvid,d,p,selected,rows,o):
+ if p['kind'] in ('counter_damage','counter_regeneration'):return _wave6_counter_action_expand(name,csvid,d,p,selected,rows,o)
+ if p['kind']=='counter_value':return _wave6_value_expand(name,csvid,d,p,selected,rows,o)
+ if p['kind']=='damage_growth':return _wave6_damage_growth_expand(name,csvid,d,p,selected,rows,o)
+ if p['kind']=='self_regeneration':return _wave6_self_regeneration_expand(name,csvid,d,p,selected,rows,o)
+ if p['kind']=='mana_growth':return _wave6_mana_growth_expand(name,csvid,d,p,selected,rows,o)
+ if p['kind']=='tap_cost_growth':return _wave6_tap_cost_growth_expand(name,csvid,d,p,selected,rows,o)
+ if p['kind']=='sunburst_double':return _wave6_solarion_expand(name,csvid,d,p,selected,rows,o)
+ if p['kind']=='regeneration_combat':return _wave6_regeneration_combat_expand(name,csvid,d,p,selected,rows,o)
+ _wave6_validate_witnesses(o,rows)
+ if csvid!=WAVE6_PINS['profiles'][name]['csvid'] or not selected or len(set(selected))!=len(selected) or any(v not in _wave6_variants(p) for v in selected):raise ValueError('unique reviewed wave6 growth variants required')
+ out=[]
+ for variant in selected:
+  mode,owner=variant.rsplit('_',1);owner=int(owner);w=_Wave6World(owner);kind=p['kind'];cast_only=mode in ('cast_payment','insufficient_cast_mana');realm=kind=='hand_search';module=kind=='energy_module';cub=kind=='energy_cub';soldier=kind=='soldier_lord';adapt=kind=='adapt_trample';implement=kind=='implement'
+  casting=realm or cast_only or mode=='fresh_source' or adapt and mode.startswith('entry_')
+  grant=mode.startswith('grant_');target_actor=1-owner if mode in ('opponent_target','grant_opponent') else owner
+  recipient_name='Deadly Insect' if mode=='target_shroud_probe' else 'Eager Cadet' if soldier or implement else 'Scaled Wurm'
+  if mode!='no_own_creatures':w.add(recipient_name,'recipient',target_actor)
+  w.add('Hill Giant' if mode!='no_own_creatures' else 'Darksteel Relic','control',owner)
+  w.add('Grizzly Bears','enemy_control',1-owner)
+  if mode=='untap_repeat':w.add("Kiora's Follower",'untapper',owner)
+  if grant:
+   # These are present before the source enters; no new creature-entry trigger is hidden.
+   w.add('Grizzly Bears' if soldier else 'Ornithopter','attacker0',owner if mode=='grant_opponent' else 1-owner)
+   if soldier:w.add('Grizzly Bears','attacker1',owner if mode=='grant_opponent' else 1-owner)
+   if soldier and mode=='grant_counterless_soldier':w.add('Eager Cadet','counterless_soldier',owner)
+  response=mode in ('source_bounced_pending','target_bounced_pending','grant_removed')
+  response_name='Boomerang' if mode=='source_bounced_pending' and 'Creature' not in o[name]['type_line'] else 'Unsummon'
+  if response:w.add(response_name,'response',1-owner,'hand')
+  if cub and mode=='fresh_source':w.add('Bristling Hydra','energy_donor',owner,'hand')
+  if module and mode=='trigger_opponent_control':w.add('Bristling Hydra','energy_donor',1-owner,'hand')
+  if realm and mode=='entry_fewer_hands':
+   w.setup=[x for x in w.setup if x['zone']!='hand'];w.zones['hand']=[[],[]]
+   for pl in (0,1):w.add('Forest','small_hand_'+str(pl),pl,'hand')
+  if realm and mode=='entry_more_hands':
+   for i in range(3):w.add('Forest','extra_hand_'+str(i),1-owner,'hand')
+  if realm and mode in ('empty_library','no_land_library'):
+   w.setup=[x for x in w.setup if not(x['zone']=='library' and x['player']==owner)];ns=[] if mode=='empty_library' else ['Lightning Bolt','Grizzly Bears'];w.zones['library'][owner]=[]
+   for i,n in enumerate(ns):w.add(n,'library_'+str(i),owner,'library')
+  w.add(name,'source',owner,'hand' if casting else 'battlefield',tapped=mode=='tapped_source')
+  w.steps += [_transfer_step('reset_death_history'),_transfer_step('turn',player=owner,value=0),_transfer_step('present_ai_dialogs',value=1)]
+  for pl in (0,1):w.set_mana(pl,w.mana[pl])
+  if adapt and mode in ('entry_qualified','entry_opponent'):w.grow('recipient' if mode=='entry_qualified' else 'enemy_control',1)
+  if soldier and grant and mode!='grant_counterless_soldier':w.grow('control' if mode!='grant_opponent' else 'enemy_control',1)
+  if adapt and grant and mode not in ('grant_source','grant_counterless'):w.grow('recipient',1)
+  if adapt and mode=='preexisting_counter':w.grow('source',1)
+  if cub and mode=='fresh_source':w.cast_named('energy_donor');w.energy[owner]+=3
+  source_cost=_transfer_fixed_cost(name,WAVE6_PINS)
+  if cast_only:w.set_mana(owner,[0]*6 if mode=='insufficient_cast_mana' else source_cost)
+  if casting:
+   if mode=='insufficient_cast_mana':w.steps += [_transfer_step('cast',ref='source',value=0),_transfer_step('assert_choices_consumed')]
+   else:
+    # The resolving source has already left the hand when Realm Seekers counts.
+    entry=sum(map(len,w.zones['hand']))-1 if realm else 0
+    w.cast_named('source');w.entities['source']['counters']=entry
+    if adapt and any(e['zone']=='battlefield' and e['player']==owner and ref!='source' and e['counters'] and 'Creature' in o[e['name']]['type_line'] for ref,e in w.entities.items()):w.draw(owner)
+    w.steps+=w.receipts()
+  if cast_only:
+   out.append(dict(name=f'Wave6GrowthActivationRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=w.setup,steps=w.steps+w.receipts(),_recipe=dict(family=FAMILY,version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],scope_gaps=p['gaps'])))
+   continue
+  if cub and mode!='fresh_source' and mode!='no_energy':_wave6_combat_energy(w)
+  if module and mode=='trigger_opponent_control':
+   w.cast_named('energy_donor');w.energy[1-owner]+=3
+  if mode=='destroy_draw':
+   w.steps += [_transfer_step('destroy',ref='source'),_transfer_step('refresh'),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.move_zone('source','graveyard');w.draw(owner)
+  else:
+   if mode=='payment':w.set_mana(owner,p['cost'])
+   if mode=='insufficient_mana':w.set_mana(owner,[0]*6)
+   if mode=='wrong_color':w.set_mana(owner,[sum(p['cost']),0,0,0,0,0])
+   if mode=='opposing_turn':w.steps.append(_transfer_step('turn',player=1-owner,value=0))
+   if mode=='combat_timing':w.steps += [_transfer_step('begin_attackers'),_transfer_step('finish_attackers'),_transfer_step('begin_blockers'),_transfer_step('advance_combat')]
+   denied=mode in ('insufficient_mana','wrong_color','no_energy','opposing_turn','combat_timing') or p['tap'] and mode=='tapped_source' or soldier and mode=='fresh_source'
+   target='control' if mode=='target_shroud_probe' else 'recipient';cut=None
+   if mode=='target_shroud_probe':w.steps += [_transfer_step('can_target_creature',ref='source',other='recipient',value=0)]
+   def activate():
+    nonlocal cut
+    w.steps.append(_transfer_step('require_can_activate',ref='source',value=0 if denied else 1))
+    if not denied and (implement or soldier):w.steps.append(_transfer_step('choose_target',player=owner,ref=target))
+    w.steps.append(_transfer_step('activate',ref='source',value=0 if denied else 1))
+    if denied:w.steps.append(_transfer_step('assert_choices_consumed'));return
+    w.pay(owner,p['cost'])
+    if cub:w.energy[owner]-=2
+    if p['tap']:w.entities['source']['tapped']=True
+    if realm:w.entities['source']['counters']-=1
+    if implement:w.move_zone('source','graveyard')
+    if not implement:w.steps += [_transfer_step('assert_stack',value=1)]+w.receipts()
+    else:w.steps += [_transfer_step('assert_zone_multiplicity',player=owner,zone='graveyard',index=csvid,value=w.zones['graveyard'][owner].count(name)),_transfer_observe(target,'plus1_counters',w.entities[target]['counters'])]
+    cut=len(w.steps)
+   def finish():
+    if realm:
+     lands=[n for n in w.zones['library'][owner] if 'Land' in o[n]['type_line']];chosen=None if mode=='decline_search' or not lands else lands[0]
+     if chosen:w.steps.append(_transfer_step('choose_zone_card',player=owner,value=rows[chosen]['csvid']))
+     elif w.zones['library'][owner]:w.steps.append(_transfer_step('choose_optional_zone',player=owner,value=rows[w.zones['library'][owner][0]]['csvid']))
+    else:chosen=None
+    active_source=w.entities['source']['zone']=='battlefield'
+    if module and active_source and mode!='no_own_creatures':w.steps.append(_transfer_step('choose_target',player=owner,ref='recipient'))
+    w.steps += [_transfer_step('resolve'),_transfer_step('assert_choices_consumed')]
+    if implement:w.draw(owner)
+    if implement or soldier:
+     if w.entities[target]['zone']=='battlefield':w.entities[target]['counters']+=1
+    elif realm:
+     if chosen:w.zones['library'][owner].remove(chosen);w.zones['hand'][owner].append(chosen)
+     w.unordered[owner]=True
+    elif cub:
+     if active_source:w.entities['source']['counters']+=1
+    elif module:
+     w.energy[owner]+=1
+     if active_source and mode!='no_own_creatures':w.entities['recipient']['counters']+=1
+    elif adapt and active_source and not w.entities['source']['counters']:w.entities['source']['counters']+=4
+   if module and mode=='trigger_opponent_control':pass
+   else:
+    activate()
+    if not denied:
+     bounced=None
+     if mode=='source_destroyed_pending':w.steps += [_transfer_step('destroy',ref='source'),_transfer_step('refresh')];w.move_zone('source','graveyard')
+     if mode in ('source_bounced_pending','target_bounced_pending'):
+      bounced='source' if mode=='source_bounced_pending' else target
+      w.steps += [_transfer_step('choose_target',player=1-owner,ref=bounced),_transfer_step('cast',ref='response',value=1)];w.pay(1-owner,_transfer_fixed_cost(response_name,WAVE6_PINS));w.zones['hand'][1-owner].remove(response_name);w.zones['graveyard'][1-owner].append(response_name);w.entities['response']['zone']='graveyard';w.move_zone(bounced,'hand')
+     finish()
+     if bounced:w.steps.append(_transfer_step('bind_hand',ref=bounced,player=w.entities[bounced]['player'],value=rows[w.entities[bounced]['name']]['csvid']))
+     if mode in ('repeat','untap_repeat'):
+      w.steps+=w.receipts()
+      if mode=='untap_repeat':
+       w.steps += [_transfer_step('choose_target',player=owner,ref='source'),_transfer_step('activate',ref='untapper',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.entities['source']['tapped']=False;w.entities['untapper']['tapped']=True
+      if cub:w.untap_cycle();_wave6_combat_energy(w)
+      activate();finish()
+     if mode=='short_energy':w.steps += [_transfer_step('require_can_activate',ref='source',value=0),_transfer_step('activate',ref='source',value=0),_transfer_step('assert_choices_consumed')]
+   if mode=='combat_timing':w.steps += [_transfer_step('combat_damage'),_transfer_step('resolve'),_transfer_step('end_combat')]
+   if mode=='cleanup':
+    w.steps += w.receipts()+[_transfer_step('cleanup'),_transfer_step('refresh')]
+    # Direct cleanup/end-step dispatch omits mana-emptying phase boundaries.
+    # Payment is checked before it; this persistence probe makes no pool claim.
+    w.omit_mana=True
+   if grant:
+    ref=('source' if mode=='grant_source' else 'recipient') if adapt else 'counterless_soldier' if mode=='grant_counterless_soldier' else 'enemy_control' if mode=='grant_opponent' else 'control'
+    active=mode not in ('grant_counterless','grant_counterless_soldier','grant_opponent')
+    probe=_wave6_trample_function if adapt else _wave6_block_function
+    if mode=='grant_removed':
+     proof=copy.deepcopy(w);start=len(proof.steps);probe(proof,ref,True);w.steps += [_transfer_step('capture')]+proof.steps[start:]+[_transfer_step('restore')]
+     w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('cast',ref='response',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost('Unsummon',WAVE6_PINS));w.move_zone('source','hand');w.zones['hand'][1-owner].remove('Unsummon');w.zones['graveyard'][1-owner].append('Unsummon');w.entities['response']['zone']='graveyard';active=False
+     w.steps.append(_transfer_step('bind_hand',ref='source',player=owner,value=csvid))
+    probe(w,ref,active)
+  checks=[_transfer_step('assert_stack',value=0),_transfer_step('assert_choices_consumed')]+w.receipts();steps=w.steps+checks
+  if mode=='pending_snapshot':
+   assert cut is not None
+   tail=w.steps[cut:]+checks;steps=w.steps[:cut]+[_transfer_step('capture')]+copy.deepcopy(tail)+[_transfer_step('record_state'),_transfer_step('ai_roundtrip'),_transfer_step('restore')]+copy.deepcopy(tail)+[_transfer_step('assert_recorded_state')]
+  out.append(dict(name=f'Wave6GrowthActivationRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=w.setup,steps=steps,_recipe=dict(family=FAMILY,version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],scope_gaps=p['gaps'])))
+ return out
+
+
+# Reviewed wave6 variable-entry damage and counter-qualified regeneration.
+def _wave6_counter_action_expand(name,csvid,d,p,selected,rows,o):
+ _wave6_validate_witnesses(o,rows)
+ if csvid!=WAVE6_PINS['profiles'][name]['csvid'] or not selected or len(set(selected))!=len(selected) or any(v not in _wave6_variants(p) for v in selected):raise ValueError('explicit next-two selection required')
+ out=[]
+ for variant in selected:
+  mode,owner=variant.rsplit('_',1);owner=int(owner);w=_Wave6World(owner);hydra=p['kind']=='counter_damage';regen=p['kind']=='counter_regeneration';actor=1-owner if mode=='opponent_target' else owner;player_target=mode=='player_target';self_target=mode=='self_target'
+  w.add('Hill Giant','recipient',actor);w.add('Scaled Wurm','control',owner);w.add('Ornithopter','enemy_control',1-owner)
+  if regen:w.add('Vampire Hexmage','hexmage',1-owner)
+  if mode=='tapped_source':w.add('Icy Manipulator','tapper',1-owner)
+  response=mode in ('source_bounced_pending','target_bounced_pending')
+  if response:w.add('Unsummon','response',1-owner,'hand')
+  if regen:
+   removal='Terminate' if mode=='cannot_regenerate' else 'Murder';w.add(removal,'removal',1-owner,'hand')
+   if mode=='second_destruction':w.add('Murder','second_removal',1-owner,'hand')
+  w.add(name,'source',owner,'hand');w.steps=[_transfer_step('reset_death_history'),_transfer_step('turn',player=owner,value=0),_transfer_step('present_ai_dialogs',value=1)]
+  for pl in (0,1):w.set_mana(pl,w.mana[pl])
+  if regen and mode!='counterless_target':w.grow('recipient',1)
+  x=5 if mode=='entry_x5' else 4 if mode=='entry_x4' else 1 if mode=='last_counter' else 0 if mode=='entry_x0' else 2
+  vector=[x,0,0,1,1,0] if hydra else [3,0,0,1,0,0]
+  cast_only=mode in ('cast_payment','insufficient_cast_mana','entry_x0','entry_x4','entry_x5')
+  if mode=='cast_payment':w.set_mana(owner,vector)
+  if mode=='insufficient_cast_mana':w.set_mana(owner,[0]*6);w.steps += [_transfer_step('cast',ref='source',value=0),_transfer_step('assert_choices_consumed')]
+  else:
+   if hydra:w.steps.append(_transfer_step('choose_x',player=owner,value=x))
+   w.steps += [_transfer_step('cast',ref='source',value=1),_transfer_step('assert_stack',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(owner,vector);w.zones['hand'][owner].remove(name);w.entities['source'].update(zone='battlefield',counters=(2*x if x>=5 else x) if hydra else 2,sick=1)
+   if hydra and not x:w.move_zone('source','graveyard')
+   w.steps+=w.receipts()
+  if not cast_only:
+   if mode=='payment':w.set_mana(owner,p['cost'])
+   if mode=='insufficient_mana':w.set_mana(owner,[0]*6)
+   if mode=='wrong_color':w.set_mana(owner,[sum(p['cost']),0,0,0,0,0])
+   if mode=='tapped_source':
+    w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('activate',ref='tapper',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,[1,0,0,0,0,0]);w.entities['tapper']['tapped']=True;w.entities['source']['tapped']=True
+   if hydra:
+    target='source' if self_target else 'recipient';denied=mode in ('insufficient_mana','wrong_color');cut=None
+    def activation():
+     nonlocal cut
+     w.steps.append(_transfer_step('require_can_activate',ref='source',value=0 if denied else 1))
+     if not denied:w.steps.append(_transfer_step('choose_player',player=owner,value=1-owner) if player_target else _transfer_step('choose_target',player=owner,ref=target))
+     w.steps.append(_transfer_step('activate',ref='source',value=0 if denied else 1))
+     if denied:w.steps.append(_transfer_step('assert_choices_consumed'));return
+     w.pay(owner,p['cost']);w.entities['source']['counters']-=1
+     if not w.entities['source']['counters']:w.move_zone('source','graveyard')
+     w.steps += [_transfer_step('assert_stack',value=1)]+w.receipts();cut=len(w.steps)
+    def finish():
+     w.steps += [_transfer_step('resolve'),_transfer_step('assert_choices_consumed')]
+     if player_target:w.life[1-owner]-=1
+     elif w.entities[target]['zone']=='battlefield':
+      e=w.entities[target];e['damage']+=1
+      if e['damage']>=int(o[e['name']]['toughness'])+e['counters']:w.move_zone(target,'graveyard')
+    activation()
+    if not denied:
+     if mode=='source_destroyed_pending':w.steps += [_transfer_step('destroy',ref='source'),_transfer_step('refresh')];w.move_zone('source','graveyard')
+     if response:
+      moved='source' if mode=='source_bounced_pending' else target;w.steps += [_transfer_step('choose_target',player=1-owner,ref=moved),_transfer_step('cast',ref='response',value=1)];w.pay(1-owner,_transfer_fixed_cost('Unsummon',WAVE6_PINS));w.zones['hand'][1-owner].remove('Unsummon');w.zones['graveyard'][1-owner].append('Unsummon');w.entities['response']['zone']='graveyard';w.move_zone(moved,'hand')
+     finish()
+     if response:w.steps.append(_transfer_step('bind_hand',ref=moved,player=w.entities[moved]['player'],value=rows[w.entities[moved]['name']]['csvid']))
+     if mode=='repeat':activation();finish()
+   else:
+    protected=mode not in ('counterless_target','insufficient_mana','wrong_color','cannot_regenerate');w.steps += [_transfer_step('choose_target',player=1-owner,ref='recipient'),_transfer_step('cast',ref='removal',value=1),_transfer_step('assert_stack',value=1),_transfer_step('choose_regeneration',ref='source')]
+    if protected:w.steps.append(_transfer_step('choose_target',player=owner,ref='recipient'))
+    w.steps += [_transfer_step('resolve'),_transfer_step('assert_choices_consumed') if protected else _transfer_step('assert_unused_choices',value=1)]
+    w.pay(1-owner,_transfer_fixed_cost(removal,WAVE6_PINS));w.zones['hand'][1-owner].remove(removal);w.zones['graveyard'][1-owner].append(removal);w.entities['removal']['zone']='graveyard'
+    if protected:w.pay(owner,p['cost']);w.entities['recipient']['tapped']=True;w.entities['recipient']['damage']=0
+    else:w.move_zone('recipient','graveyard')
+    if mode=='second_destruction':
+     w.steps += [_transfer_step('choose_target',player=1-owner,ref='recipient'),_transfer_step('cast',ref='second_removal',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost('Murder',WAVE6_PINS));w.zones['hand'][1-owner].remove('Murder');w.zones['graveyard'][1-owner].append('Murder');w.entities['second_removal']['zone']='graveyard';w.move_zone('recipient','graveyard')
+   if mode=='cleanup':
+    w.steps += w.receipts()+[_transfer_step('cleanup'),_transfer_step('refresh')]
+    w.omit_mana=True
+    for e in w.entities.values():e['damage']=0
+  checks=[_transfer_step('assert_stack',value=0),_transfer_step('assert_choices_consumed')]+w.receipts();steps=w.steps+checks
+  if hydra and mode=='pending_snapshot':
+   tail=w.steps[cut:]+checks;steps=w.steps[:cut]+[_transfer_step('capture')]+copy.deepcopy(tail)+[_transfer_step('record_state'),_transfer_step('ai_roundtrip'),_transfer_step('restore')]+copy.deepcopy(tail)+[_transfer_step('assert_recorded_state')]
+  out.append(dict(name=f'Wave6GrowthActivationRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=w.setup,steps=steps,_recipe=dict(family=FAMILY,version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],scope_gaps=p['gaps'])))
+ return out
+
+# Real life-gain events and variable-entry counter costs, isolated from prior palettes.
+def _wave6_value_expand(name,csvid,d,p,selected,rows,o):
+ _wave6_validate_witnesses(o,rows)
+ if csvid!=WAVE6_PINS['profiles'][name]['csvid'] or not selected or len(set(selected))!=len(selected) or any(v not in _wave6_variants(p) for v in selected):raise ValueError('explicit counter-value selection required')
+ out=[]
+ for variant in selected:
+  mode,owner=variant.rsplit('_',1);owner=int(owner);w=_Wave6World(owner);effect=p['effect'];etched=effect=='draw_three';wall=effect=='power_loss';shrink=effect=='shrink';karlov=effect=='exile';target_actor=owner if mode=='own_target' else 1-owner
+  w.add('Darksteel Myr' if mode=='indestructible_target' else 'Eager Cadet' if mode=='lethal_shrink' else 'Scaled Wurm','recipient',target_actor);w.add('Hill Giant','control',owner);w.add('Grizzly Bears','enemy_control',1-owner)
+  if shrink and mode in ('opponent_graves_only','no_grave_creatures'):
+   for who in ((owner,) if mode=='opponent_graves_only' else (0,1)):
+    w.setup=[x for x in w.setup if not(x['zone']=='graveyard' and x['player']==who and 'Creature' in o[x['name']]['type_line'])];w.zones['graveyard'][who]=[n for n in w.zones['graveyard'][who] if 'Creature' not in o[n]['type_line']]
+  events=0 if not p['life_trigger'] or mode in ('zero_life_events','opponent_gain') else 1 if mode=='one_life_event' else 2 if mode=='two_life_events' else 3 if karlov else 1
+  nectar_actor=1-owner if mode=='opponent_gain' else owner
+  if mode=='opponent_gain':events=1
+  for i in range(events):w.add('Sacred Nectar','nectar_'+str(i),nectar_actor,'hand')
+  if mode=='boosted_power':w.add('Giant Growth','boost',owner,'hand')
+  response=mode in ('source_bounced_pending','target_bounced_pending')
+  if response:w.add('Unsummon','response',1-owner,'hand')
+  if etched and mode in ('source_bounced_pending','source_destroyed_pending'):w.add('Hunger of the Howlpack','extra_counter',owner,'hand')
+  w.add(name,'source',owner,'hand');w.steps=[_transfer_step('reset_death_history'),_transfer_step('turn',player=owner,value=0),_transfer_step('present_ai_dialogs',value=1)]
+  for who in (0,1):w.set_mana(who,w.mana[who])
+  vector=[0,2,1,1,0,0] if mode=='three_colors' else [0,2,2,0,0,0] if mode=='two_colors' else [4,0,0,0,0,0] if mode=='zero_colors' else [0,1,1,1,1,0] if etched else _transfer_fixed_cost(name,WAVE6_PINS)
+  if etched or mode=='cast_payment':w.set_mana(owner,vector)
+  if mode=='insufficient_cast_mana':w.set_mana(owner,[0]*6);w.steps += [_transfer_step('cast',ref='source',value=0),_transfer_step('assert_choices_consumed')]
+  else:
+   entry=sum(1 for ns in w.zones['graveyard'] for n in ns if 'Creature' in o[n]['type_line']) if shrink else sum(v>0 for v in vector[1:]) if etched else 0
+   if etched and owner==0:
+    # Generic casting cost paid with explicit colored pools uses the real
+    # human mana-pool UI. Each click spends one mana, including repeated colors.
+    w.steps += [_transfer_step('choose_mana',player=owner,color=color) for color in range(1,6) for _ in range(vector[color])]
+   w.steps += [_transfer_step('cast',ref='source',value=1),_transfer_step('assert_stack',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(owner,vector);w.zones['hand'][owner].remove(name);w.entities['source'].update(zone='battlefield',counters=entry,sick=1)
+   if int(o[name]['toughness'])+entry<=0:w.move_zone('source','graveyard')
+   w.steps+=w.receipts()
+  cast_only=mode in ('cast_payment','insufficient_cast_mana','zero_colors','no_grave_creatures')
+  cut=None
+  if not cast_only:
+   if etched:w.set_mana(owner,[30,10,10,10,10,10])
+   for i in range(events):
+    ref='nectar_'+str(i);w.steps += [_transfer_step('cast',ref=ref,value=1),_transfer_step('assert_stack',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(nectar_actor,_transfer_fixed_cost('Sacred Nectar',WAVE6_PINS));w.zones['hand'][nectar_actor].remove('Sacred Nectar');w.zones['graveyard'][nectar_actor].append('Sacred Nectar');w.entities[ref]['zone']='graveyard';w.life[nectar_actor]+=4
+    if nectar_actor==owner:w.entities['source']['counters']+=p['life_trigger']
+    w.steps += [_transfer_step('assert_life',player=nectar_actor,value=w.life[nectar_actor]),_transfer_observe('source','plus1_counters',w.entities['source']['counters'])]
+   if mode=='boosted_power' or etched and mode in ('source_bounced_pending','source_destroyed_pending'):
+    ref='boost' if mode=='boosted_power' else 'extra_counter';spell='Giant Growth' if ref=='boost' else 'Hunger of the Howlpack';w.steps += [_transfer_step('choose_target',player=owner,ref='source'),_transfer_step('cast',ref=ref,value=1),_transfer_step('assert_stack',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(owner,_transfer_fixed_cost(spell,WAVE6_PINS));w.zones['hand'][owner].remove(spell);w.zones['graveyard'][owner].append(spell);w.entities[ref]['zone']='graveyard'
+    if ref=='boost':w.entities['source']['pump']+=3
+    else:w.entities['source']['counters']+=1
+   if mode=='payment':w.set_mana(owner,p['cost'])
+   if mode=='insufficient_mana':w.set_mana(owner,[0]*6)
+   if mode=='wrong_color':w.set_mana(owner,[sum(p['cost']),0,0,0,0,0])
+   target='source' if mode=='self_target' else 'recipient';target_player=owner if mode=='own_player' or etched and mode!='opponent_draw' else 1-owner
+   denied=mode in ('insufficient_mana','wrong_color') or p['remove']>w.entities['source']['counters']
+   loss=0
+   def activate():
+    nonlocal cut,loss
+    w.steps.append(_transfer_step('require_can_activate',ref='source',value=0 if denied else 1))
+    if not denied:w.steps.append(_transfer_step('choose_player',player=owner,value=target_player) if wall or etched else _transfer_step('choose_target',player=owner,ref=target))
+    w.steps.append(_transfer_step('activate',ref='source',value=0 if denied else 1))
+    if denied:w.steps.append(_transfer_step('assert_choices_consumed'));return
+    w.pay(owner,p['cost']);loss=int(o[name]['power'])+w.entities['source']['counters']+w.entities['source']['pump'];w.entities['source']['counters']-=p['remove']
+    if p['sacrifice'] or int(o[name]['toughness'])+w.entities['source']['counters']+w.entities['source']['pump']<=0:w.move_zone('source','graveyard')
+    w.steps += [_transfer_step('assert_stack',value=1)]+w.receipts();cut=len(w.steps)
+   def finish():
+    w.steps += [_transfer_step('resolve'),_transfer_step('assert_choices_consumed')]
+    if wall:w.life[target_player]-=loss
+    elif etched:w.draw(target_player,3)
+    elif w.entities[target]['zone']=='battlefield':
+     if karlov:w.move_zone(target,'exile')
+     else:
+      w.entities[target]['pump']-=1;e=w.entities[target]
+      if int(o[e['name']]['toughness'])+e['counters']+e['pump']<=0:w.move_zone(target,'graveyard')
+   activate()
+   if not denied:
+    moved=None
+    if mode=='source_destroyed_pending':w.steps += [_transfer_step('destroy',ref='source'),_transfer_step('refresh')];w.move_zone('source','graveyard')
+    if response:
+     moved='source' if mode=='source_bounced_pending' else target;w.steps += [_transfer_step('choose_target',player=1-owner,ref=moved),_transfer_step('cast',ref='response',value=1)];w.pay(1-owner,_transfer_fixed_cost('Unsummon',WAVE6_PINS));w.zones['hand'][1-owner].remove('Unsummon');w.zones['graveyard'][1-owner].append('Unsummon');w.entities['response']['zone']='graveyard';w.move_zone(moved,'hand')
+    finish()
+    if moved:w.steps.append(_transfer_step('bind_hand',ref=moved,player=w.entities[moved]['player'],value=rows[w.entities[moved]['name']]['csvid']))
+    if mode=='repeat':activate();finish()
+   if mode=='cleanup':
+    w.steps += w.receipts()+[_transfer_step('cleanup'),_transfer_step('refresh')];w.omit_mana=True
+    for e in w.entities.values():e['pump']=0;e['damage']=0
+  checks=[_transfer_step('assert_stack',value=0),_transfer_step('assert_choices_consumed')]+w.receipts();steps=w.steps+checks
+  if mode=='pending_snapshot':
+   assert cut is not None
+   tail=w.steps[cut:]+checks;steps=w.steps[:cut]+[_transfer_step('capture')]+copy.deepcopy(tail)+[_transfer_step('record_state'),_transfer_step('ai_roundtrip'),_transfer_step('restore')]+copy.deepcopy(tail)+[_transfer_step('assert_recorded_state')]
+  out.append(dict(name=f'Wave6GrowthActivationRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=w.setup,steps=steps,_recipe=dict(family=FAMILY,version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],scope_gaps=p['gaps'])))
+ return out
+
+def _wave6_damage_growth_expand(name,csvid,d,p,selected,rows,o):
+ _wave6_validate_witnesses(o,rows)
+ if csvid!=WAVE6_PINS['profiles'][name]['csvid'] or not selected or len(set(selected))!=len(selected) or any(v not in _wave6_variants(p) for v in selected):raise ValueError('explicit damage-growth selection required')
+ out=[]
+ for variant in selected:
+  mode,owner=variant.rsplit('_',1);owner=int(owner);w=_Wave6World(owner);death=p['growth']=='damaged_dies';repeat=mode in ('repeat','untap_repeat');later=mode in ('kill_later','undamaged_death','after_turn_kill','prevented_then_kill','source_recast_before_death') or repeat and death;probe=mode in ('shroud_probe','opponent_hexproof_probe');actor=owner if mode in ('own_target','own_hexproof_target') else 1-owner
+  large=mode in ('surviving_target','kill_later','undamaged_death','after_turn_kill','repeat','untap_repeat','source_recast_before_death')
+  victim='Winged Sliver' if mode=='prevented_then_kill' else 'Sphinx of Jwar Isle' if mode=='shroud_probe' else 'Aven Fleetwing' if mode in ('opponent_hexproof_probe','own_hexproof_target') else 'Eager Cadet' if mode=='no_flying' else 'Air Elemental' if p['flying_target'] and large else 'Suntail Hawk' if p['flying_target'] else 'Scaled Wurm' if large and death else 'Hill Giant' if not death else 'Eager Cadet'
+  w.add(victim,'recipient',actor);w.add('Hill Giant','control',owner);w.add(victim if mode=='undamaged_death' else 'Grizzly Bears','enemy_control',1-owner)
+  if mode=='prevented_then_kill':
+   # Separate absorb 1 instances each prevent one actual damage; the Slivers'
+   # static grants change no modeled power/toughness or zone receipts.
+   for i in range(p['damage']):w.add('Lymph Sliver','absorb_'+str(i),actor)
+  if probe:w.add('Suntail Hawk','legal_control',1-owner)
+  if repeat and p['tap']:w.add("Kiora's Follower",'untapper',owner)
+  if later:w.add('Murder','removal',1-owner,'hand')
+  if mode=='other_source_damage':w.add('Shock','other_damage',owner,'hand')
+  if mode=='simultaneous_damage':w.add('Pyroclasm','other_damage',owner,'hand')
+  response=mode in ('source_bounced_pending','target_bounced_pending','source_recast_before_death')
+  if response:w.add('Unsummon','response',1-owner,'hand')
+  casting=mode in ('cast_payment','insufficient_cast_mana','fresh_source');w.add(name,'source',owner,'hand' if casting else 'battlefield',tapped=mode=='tapped_source')
+  w.steps=[_transfer_step('reset_death_history'),_transfer_step('turn',player=owner,value=0),_transfer_step('present_ai_dialogs',value=1)]
+  for who in (0,1):w.set_mana(who,w.mana[who])
+  cast_only=mode in ('cast_payment','insufficient_cast_mana')
+  if casting:
+   if cast_only:w.set_mana(owner,[0]*6 if mode=='insufficient_cast_mana' else _transfer_fixed_cost(name,WAVE6_PINS))
+   if mode=='insufficient_cast_mana':w.steps += [_transfer_step('cast',ref='source',value=0),_transfer_step('assert_choices_consumed')]
+   else:w.cast_named('source')
+   w.steps+=w.receipts()
+  cut=None;source_damaged=set()
+  def damage(target,amount,by_source=True):
+   e=w.entities[target]
+   if e['zone']!='battlefield':return
+   e['damage']+=amount
+   if amount and by_source:source_damaged.add(target)
+   if amount and not death and e['player']==1-owner and w.entities['source']['zone']=='battlefield':w.entities['source']['counters']+=1
+   if e['damage']>=int(o[e['name']]['toughness'])+e['counters']:
+    w.move_zone(target,'graveyard')
+    if death and target in source_damaged and w.entities['source']['zone']=='battlefield':w.entities['source']['counters']+=1
+  if not cast_only:
+   if mode=='payment':w.set_mana(owner,p['cost'])
+   if mode=='insufficient_mana':w.set_mana(owner,[0]*6)
+   if mode=='wrong_color':w.set_mana(owner,[sum(p['cost']),0,0,0,0,0])
+   denied=mode in ('insufficient_mana','wrong_color','no_flying') or p['tap'] and mode in ('fresh_source','tapped_source')
+   target='legal_control' if probe else 'recipient'
+   if probe or mode=='own_hexproof_target':w.steps.append(_transfer_step('can_target_creature',ref='source',other='recipient',value=0 if probe else 1))
+   def activate():
+    nonlocal cut
+    w.steps.append(_transfer_step('require_can_activate',ref='source',value=0 if denied else 1))
+    if not denied:w.steps.append(_transfer_step('choose_target',player=owner,ref=target))
+    w.steps.append(_transfer_step('activate',ref='source',value=0 if denied else 1))
+    if denied:w.steps.append(_transfer_step('assert_choices_consumed'));return
+    w.pay(owner,p['cost'])
+    if p['tap']:w.entities['source']['tapped']=True
+    w.steps += [_transfer_step('assert_stack',value=1)]+w.receipts();cut=len(w.steps)
+   def finish():
+    w.steps += [_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];damage(target,0 if mode=='prevented_then_kill' else p['damage'])
+   if mode=='simultaneous_damage':
+    w.steps += [_transfer_step('cast',ref='other_damage',value=1),_transfer_step('assert_stack',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(owner,_transfer_fixed_cost('Pyroclasm',WAVE6_PINS));w.zones['hand'][owner].remove('Pyroclasm');w.zones['graveyard'][owner].append('Pyroclasm');w.entities['other_damage']['zone']='graveyard'
+    for ref in ('recipient','control','enemy_control','source'):damage(ref,2,False)
+   elif mode=='other_source_damage':
+    w.steps += [_transfer_step('choose_target',player=owner,ref='recipient'),_transfer_step('cast',ref='other_damage',value=1),_transfer_step('assert_stack',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(owner,_transfer_fixed_cost('Shock',WAVE6_PINS));w.zones['hand'][owner].remove('Shock');w.zones['graveyard'][owner].append('Shock');w.entities['other_damage']['zone']='graveyard';damage('recipient',2,False)
+   else:
+    activate()
+    if not denied:
+     moved=None
+     if mode=='source_destroyed_pending':w.steps += [_transfer_step('destroy',ref='source'),_transfer_step('refresh')];w.move_zone('source','graveyard')
+     if mode in ('source_bounced_pending','target_bounced_pending'):
+      moved='source' if mode=='source_bounced_pending' else target;w.steps += [_transfer_step('choose_target',player=1-owner,ref=moved),_transfer_step('cast',ref='response',value=1)];w.pay(1-owner,_transfer_fixed_cost('Unsummon',WAVE6_PINS));w.zones['hand'][1-owner].remove('Unsummon');w.zones['graveyard'][1-owner].append('Unsummon');w.entities['response']['zone']='graveyard';w.move_zone(moved,'hand')
+     finish()
+     if moved:w.steps.append(_transfer_step('bind_hand',ref=moved,player=w.entities[moved]['player'],value=rows[w.entities[moved]['name']]['csvid']))
+     if repeat:
+      w.steps+=w.receipts()
+      if p['tap']:
+       w.steps += [_transfer_step('choose_target',player=owner,ref='source'),_transfer_step('activate',ref='untapper',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.entities['source']['tapped']=False;w.entities['untapper']['tapped']=True
+      activate();finish()
+     if later:
+      w.steps+=w.receipts();victim='enemy_control' if mode=='undamaged_death' else 'recipient'
+      if mode=='source_recast_before_death':
+       w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('cast',ref='response',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost('Unsummon',WAVE6_PINS));w.zones['hand'][1-owner].remove('Unsummon');w.zones['graveyard'][1-owner].append('Unsummon');w.entities['response']['zone']='graveyard';w.move_zone('source','hand');w.steps.append(_transfer_step('bind_hand',ref='source',player=owner,value=csvid));w.cast_named('source');source_damaged.clear()
+      if mode=='after_turn_kill':
+       for who in (0,1):w.set_mana(who,[0]*6)
+       w.steps += [_transfer_step('advance_turn'),_transfer_step('untap_step',player=1-owner),_transfer_step('turn',player=1-owner,value=0)]
+       for e in w.entities.values():
+        e['damage']=0;e['pump']=0
+        if e['zone']=='battlefield' and e['player']==1-owner:e.update(tapped=False,sick=0)
+       source_damaged.clear();w.set_mana(1-owner,_transfer_fixed_cost('Murder',WAVE6_PINS))
+      w.steps += [_transfer_step('choose_target',player=1-owner,ref=victim),_transfer_step('cast',ref='removal',value=1),_transfer_step('assert_stack',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost('Murder',WAVE6_PINS));w.zones['hand'][1-owner].remove('Murder');w.zones['graveyard'][1-owner].append('Murder');w.entities['removal']['zone']='graveyard';w.move_zone(victim,'graveyard')
+      if victim in source_damaged and w.entities['source']['zone']=='battlefield':w.entities['source']['counters']+=1
+   if mode=='cleanup':
+    w.steps += w.receipts()+[_transfer_step('cleanup'),_transfer_step('refresh')];w.omit_mana=True
+    for e in w.entities.values():e['damage']=0;e['pump']=0
+  checks=[_transfer_step('assert_stack',value=0),_transfer_step('assert_choices_consumed')]+w.receipts();steps=w.steps+checks
+  if mode=='pending_snapshot':
+   assert cut is not None
+   tail=w.steps[cut:]+checks;steps=w.steps[:cut]+[_transfer_step('capture')]+copy.deepcopy(tail)+[_transfer_step('record_state'),_transfer_step('ai_roundtrip'),_transfer_step('restore')]+copy.deepcopy(tail)+[_transfer_step('assert_recorded_state')]
+  out.append(dict(name=f'Wave6GrowthActivationRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=w.setup,steps=steps,_recipe=dict(family=FAMILY,version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],scope_gaps=p['gaps'])))
+ return out
+
+def _wave6_self_regeneration_expand(name,csvid,d,p,selected,rows,o):
+ _wave6_validate_witnesses(o,rows)
+ if csvid!=WAVE6_PINS['profiles'][name]['csvid'] or not selected or len(set(selected))!=len(selected) or any(v not in _wave6_variants(p) for v in selected):raise ValueError('explicit self-regeneration selection required')
+ out=[]
+ for variant in selected:
+  mode,owner=variant.rsplit('_',1);owner=int(owner);w=_Wave6World(owner);entry=p['entry'];grave=entry=='own_grave_creatures';evolve=entry=='evolve';x=4 if mode=='entry_x4' else 0 if mode=='entry_x0' else 2
+  w.add('Grizzly Bears','control',owner);w.add('Hill Giant','enemy_control',1-owner)
+  if grave:
+   if mode=='zero_own_creatures':
+    w.setup=[e for e in w.setup if not(e['zone']=='graveyard' and e['player']==owner and 'Creature' in o[e['name']]['type_line'])];w.zones['graveyard'][owner]=[n for n in w.zones['graveyard'][owner] if 'Creature' not in o[n]['type_line']]
+   elif mode!='last_counter':w.add('Hill Giant','grave_extra',owner,'graveyard')
+   if mode=='damaged_regen':w.add('Scaled Wurm','grave_extra2',owner,'graveyard')
+   if mode=='opponent_graves_ignored':
+    for i in range(3):w.add('Scaled Wurm','opponent_grave_'+str(i),1-owner,'graveyard')
+  creators=[]
+  if evolve:
+   count=0 if mode=='no_evolve' else 1 if mode=='one_evolve' else 3 if mode=='damaged_regen' else 2
+   for i in range(count):
+    nm='Grizzly Bears' if mode=='equal_evolve' else 'Hill Giant' if i==0 else 'Scaled Wurm';pl=1-owner if mode=='opponent_entry' and i==1 else owner;ref='entrant'+str(i);w.add(nm,ref,pl,'hand');creators.append(ref)
+  if mode=='damaged_regen':w.add('Hornet Sting','warmup',1-owner,'hand')
+  if mode=='tapped_source':w.add('Icy Manipulator','tapper',1-owner)
+  w.add('Murder','removal',1-owner,'hand')
+  if mode=='second_destruction':w.add('Murder','second_removal',1-owner,'hand')
+  w.add(name,'source',owner,'hand');w.steps=[_transfer_step('reset_death_history'),_transfer_step('turn',player=owner,value=0),_transfer_step('present_ai_dialogs',value=1)]
+  for pl in (0,1):w.set_mana(pl,w.mana[pl])
+  if entry=='x':
+   from recipes import cost_from_oracle
+   vector=cost_from_oracle(dict(mana_cost=o[name]['mana_cost'].replace('{X}','{'+str(x)+'}')))
+  else:vector=_transfer_fixed_cost(name,WAVE6_PINS)
+  cast_only=mode in ('cast_payment','insufficient_cast_mana','entry_x0','entry_x4','zero_own_creatures')
+  if mode=='cast_payment':w.set_mana(owner,vector)
+  if mode=='insufficient_cast_mana':w.set_mana(owner,[0]*6);w.steps += [_transfer_step('cast',ref='source',value=0),_transfer_step('assert_choices_consumed')]
+  else:
+   if entry=='x':w.steps.append(_transfer_step('choose_x',player=owner,value=x))
+   n=x if entry=='x' else sum('Creature' in o[nm]['type_line'] for nm in w.zones['graveyard'][owner]) if grave else 0
+   w.steps += [_transfer_step('cast',ref='source',value=1),_transfer_step('assert_stack',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(owner,vector);w.zones['hand'][owner].remove(name);w.entities['source'].update(zone='battlefield',counters=n,sick=1)
+   if int(o[name]['toughness'])+n<=0:w.move_zone('source','graveyard')
+   else:w.steps.append(_transfer_step('require_card',ref='source',property='in_play',value=1))
+   w.steps+=w.receipts()
+  if not cast_only:
+   for ref in creators:
+    e=w.entities[ref];pl=e['player'];r=o[e['name']];s=w.entities['source'];power=int(o[name]['power'])+s['counters'];toughness=int(o[name]['toughness'])+s['counters']
+    if pl!=owner:w.steps.append(_transfer_step('turn',player=pl,value=0))
+    w.cast_named(ref)
+    if pl==owner and (int(r['power'])>power or int(r['toughness'])>toughness):s['counters']+=1
+    w.steps+=w.receipts()
+   if mode=='damaged_regen':
+    w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('cast',ref='warmup',value=1),_transfer_step('assert_stack',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost('Hornet Sting',WAVE6_PINS));w.zones['hand'][1-owner].remove('Hornet Sting');w.zones['graveyard'][1-owner].append('Hornet Sting');w.entities['warmup']['zone']='graveyard';w.entities['source']['damage']=1;w.steps+=w.receipts()
+    assert int(o[name]['toughness'])+w.entities['source']['counters']-p['remove']>1, 'warmup must not make the real counter cost lethal'
+   if mode=='tapped_source':
+    w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('activate',ref='tapper',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,[1,0,0,0,0,0]);w.entities['source']['tapped']=True;w.entities['tapper']['tapped']=True
+   if mode=='payment':w.set_mana(owner,p['cost'])
+   if mode=='insufficient_mana':w.set_mana(owner,[0]*6)
+   if mode=='wrong_color':w.set_mana(owner,[sum(p['cost']),0,0,0,0,0])
+   allowed=mode not in ('insufficient_mana','wrong_color') and w.entities['source']['counters']>=p['remove']
+   w.steps+=w.receipts()+[_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('cast',ref='removal',value=1),_transfer_step('assert_stack',value=1),_transfer_step('choose_regeneration',ref='source'),_transfer_step('resolve'),_transfer_step('assert_choices_consumed') if allowed else _transfer_step('assert_unused_choices',value=1)]
+   w.pay(1-owner,_transfer_fixed_cost('Murder',WAVE6_PINS));w.zones['hand'][1-owner].remove('Murder');w.zones['graveyard'][1-owner].append('Murder');w.entities['removal']['zone']='graveyard'
+   if allowed:
+    w.pay(owner,p['cost']);w.entities['source']['counters']-=p['remove']
+    if int(o[name]['toughness'])+w.entities['source']['counters']<=0:w.move_zone('source','graveyard')
+    else:w.entities['source'].update(tapped=True,damage=0)
+   else:w.move_zone('source','graveyard')
+   if mode=='second_destruction':
+    w.steps += w.receipts()+[_transfer_step('require_card',ref='source',property='in_play',value=1)]
+    w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('cast',ref='second_removal',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost('Murder',WAVE6_PINS));w.zones['hand'][1-owner].remove('Murder');w.zones['graveyard'][1-owner].append('Murder');w.entities['second_removal']['zone']='graveyard';w.move_zone('source','graveyard')
+   if mode=='cleanup':w.steps+=w.receipts()+[_transfer_step('cleanup'),_transfer_step('refresh')];w.omit_mana=True
+  steps=w.steps+[_transfer_step('assert_stack',value=0),_transfer_step('assert_choices_consumed')]+w.receipts()
+  if mode=='resolved_snapshot':steps += [_transfer_step('capture'),_transfer_step('record_state'),_transfer_step('ai_roundtrip'),_transfer_step('restore'),_transfer_step('assert_recorded_state')]
+  out.append(dict(name=f'Wave6GrowthActivationRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=w.setup,steps=steps,_recipe=dict(family=FAMILY,version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],scope_gaps=p['gaps'])))
+ return out
+
+def _wave6_regeneration_combat_expand(name,csvid,d,p,selected,rows,o):
+ _wave6_validate_witnesses(o,rows)
+ if csvid!=WAVE6_PINS['profiles'][name]['csvid'] or not selected or len(set(selected))!=len(selected) or any(v not in _wave6_variants(p) for v in selected):raise ValueError('explicit regeneration combat selection required')
+ out=[]
+ for variant in selected:
+  mode,owner=variant.rsplit('_',1);owner=int(owner);w=_Wave6World(owner);entry=p['entry'];unleash=entry=='unleash';spirit=entry=='creature_damage';block_only=mode.startswith('block_');cast_only=mode in ('cast_payment','insufficient_cast_mana');combat=not unleash and not cast_only and mode!='no_combat_growth';decline=mode in ('decline','block_decline')
+  w.add('Grizzly Bears','control',owner);w.add('Hill Giant','enemy_control',1-owner)
+  if spirit:w.add('Wall of Tanglecord','blocker',1-owner)
+  if block_only:w.add('Grizzly Bears','attacker',1-owner)
+  if mode=='block_counter_removed':w.add('Vampire Hexmage','counter_remover',owner)
+  if mode=='damaged_regen':w.add('Hornet Sting','warmup',1-owner,'hand')
+  if mode=='prevented_combat':w.add('Fog','preventer',owner,'hand')
+  if mode=='tapped_source':w.add('Icy Manipulator','tapper',1-owner)
+  if not block_only:w.add('Murder','removal',1-owner,'hand')
+  if mode=='second_destruction':w.add('Murder','second_removal',1-owner,'hand')
+  w.add(name,'source',owner,'hand');w.steps=[_transfer_step('reset_death_history'),_transfer_step('turn',player=owner,value=0),_transfer_step('present_ai_dialogs',value=1)]
+  for pl in (0,1):w.set_mana(pl,w.mana[pl])
+  if cast_only:w.set_mana(owner,[0]*6 if mode=='insufficient_cast_mana' else _transfer_fixed_cost(name,WAVE6_PINS))
+  if mode=='insufficient_cast_mana':w.steps += [_transfer_step('cast',ref='source',value=0),_transfer_step('assert_choices_consumed')]
+  else:
+   if unleash:w.steps.append(_transfer_step('choose_dialog',player=owner,value=1 if decline else 0))
+   w.cast_named('source');w.entities['source']['counters']=int(unleash and not decline);w.steps+=w.receipts()
+  if not cast_only:
+   if combat:
+    w.untap_cycle()
+    for pl in (0,1):w.set_mana(pl,[30,10,10,10,10,10])
+    hits=2 if mode=='repeat_combat' else 1
+    for hit in range(hits):
+     if hit:
+      w.steps+=w.receipts()+[_transfer_step('cleanup'),_transfer_step('refresh')]
+      for e in w.entities.values():e['damage']=0;e['pump']=0
+      w.untap_cycle()
+      for pl in (0,1):w.set_mana(pl,[30,10,10,10,10,10])
+     s=w.entities['source'];power=int(o[name]['power'])+s['counters'];blocked=spirit and mode!='unblocked_combat';prevented=mode=='prevented_combat'
+     w.steps += [_transfer_step('begin_attackers'),_transfer_step('attack',ref='source',value=1),_transfer_step('finish_attackers'),_transfer_step('begin_blockers')]
+     if blocked:w.steps.append(_transfer_step('block',ref='blocker',other='source',value=1))
+     w.steps.append(_transfer_step('advance_combat'))
+     if prevented:
+      w.steps += [_transfer_step('cast',ref='preventer',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(owner,_transfer_fixed_cost('Fog',WAVE6_PINS));w.zones['hand'][owner].remove('Fog');w.zones['graveyard'][owner].append('Fog');w.entities['preventer']['zone']='graveyard'
+     w.steps += [_transfer_step('combat_damage'),_transfer_step('resolve'),_transfer_step('assert_choices_consumed'),_transfer_step('end_combat')];s['tapped']=True
+     if not prevented:
+      if blocked:
+       w.entities['blocker']['damage']=power
+       if power>=6:w.move_zone('blocker','graveyard')
+       s['counters']+=1
+      else:
+       w.life[1-owner]-=power
+       if not spirit and (entry=='combat_each' or hit==0):s['counters']+=1
+     w.steps+=w.receipts()
+   if block_only:
+    if mode=='block_counter_removed':
+     w.steps += [_transfer_step('choose_target',player=owner,ref='source'),_transfer_step('activate',ref='counter_remover',value=1),_transfer_step('assert_stack',value=1)];w.move_zone('counter_remover','graveyard');w.steps+=w.receipts()+[_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.entities['source']['counters']=0
+    allowed=w.entities['source']['counters']==0;w.steps += w.receipts()+[_transfer_step('turn',player=1-owner,value=0),_transfer_step('begin_attackers'),_transfer_step('attack',ref='attacker',value=1),_transfer_step('finish_attackers'),_transfer_step('begin_blockers'),_transfer_step('block',ref='source',other='attacker',value=int(allowed)),_transfer_observe('source','blocking_count',int(allowed))];w.entities['attacker']['tapped']=True
+   else:
+    if mode=='damaged_regen':
+     w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('cast',ref='warmup',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost('Hornet Sting',WAVE6_PINS));w.zones['hand'][1-owner].remove('Hornet Sting');w.zones['graveyard'][1-owner].append('Hornet Sting');w.entities['warmup']['zone']='graveyard';w.entities['source']['damage']=1;assert int(o[name]['toughness'])+w.entities['source']['counters']>1
+    if mode=='tapped_source':
+     w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('activate',ref='tapper',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,[1,0,0,0,0,0]);w.entities['source']['tapped']=True;w.entities['tapper']['tapped']=True
+    if mode=='payment':w.set_mana(owner,p['cost'])
+    if mode=='insufficient_mana':w.set_mana(owner,[0]*6)
+    if mode=='wrong_color':w.set_mana(owner,[sum(p['cost']),0,0,0,0,0])
+    if spirit and mode not in ('payment','insufficient_mana','wrong_color'):w.set_mana(owner,[30,10,0,0,0,0])
+    allowed=mode not in ('insufficient_mana','wrong_color');w.steps += w.receipts()+[_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('cast',ref='removal',value=1),_transfer_step('assert_stack',value=1),_transfer_step('choose_regeneration',ref='source'),_transfer_step('resolve'),_transfer_step('assert_choices_consumed') if allowed else _transfer_step('assert_unused_choices',value=1)];w.pay(1-owner,_transfer_fixed_cost('Murder',WAVE6_PINS));w.zones['hand'][1-owner].remove('Murder');w.zones['graveyard'][1-owner].append('Murder');w.entities['removal']['zone']='graveyard'
+    if allowed:w.pay(owner,p['cost']);w.entities['source'].update(tapped=True,damage=0)
+    else:w.move_zone('source','graveyard')
+    if mode=='second_destruction':
+     w.steps+=w.receipts()+[_transfer_step('require_card',ref='source',property='in_play',value=1),_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('cast',ref='second_removal',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost('Murder',WAVE6_PINS));w.zones['hand'][1-owner].remove('Murder');w.zones['graveyard'][1-owner].append('Murder');w.entities['second_removal']['zone']='graveyard';w.move_zone('source','graveyard')
+    if mode=='cleanup':w.steps+=w.receipts()+[_transfer_step('cleanup'),_transfer_step('refresh')];w.omit_mana=True
+  steps=w.steps+[_transfer_step('assert_stack',value=0),_transfer_step('assert_choices_consumed')]+w.receipts()
+  if mode=='resolved_snapshot':steps += [_transfer_step('capture'),_transfer_step('record_state'),_transfer_step('ai_roundtrip'),_transfer_step('restore'),_transfer_step('assert_recorded_state')]
+  out.append(dict(name=f'Wave6GrowthActivationRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=w.setup,steps=steps,_recipe=dict(family=FAMILY,version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],scope_gaps=p['gaps'])))
+ return out
+
+def _wave6_solarion_expand(name,csvid,d,p,selected,rows,o):
+ _wave6_validate_witnesses(o,rows)
+ if csvid!=WAVE6_PINS['profiles'][name]['csvid'] or not selected or len(set(selected))!=len(selected) or any(v not in _wave6_variants(p) for v in selected):raise ValueError('explicit sunburst doubling selection required')
+ out=[]
+ for variant in selected:
+  mode,owner=variant.rsplit('_',1);owner=int(owner);w=_Wave6World(owner);repeat=mode=='repeat';casting_only=mode in ('cast_payment','insufficient_cast_mana','zero_colors','three_colors','two_colors');vector=[7,0,0,0,0,0] if mode=='zero_colors' else [0,3,2,2,0,0] if mode=='three_colors' else [0,4,3,0,0,0] if mode=='two_colors' else [3,1,1,1,1,0]
+  w.add('Grizzly Bears','control',owner);w.add('Hill Giant','enemy_control',1-owner)
+  if repeat:w.add("Kiora's Follower",'untapper',owner)
+  if mode=='counter_removed_pending':w.add('Vampire Hexmage','counter_remover',1-owner)
+  if mode=='more_counters_pending':w.add('Hunger of the Howlpack','growth',owner,'hand')
+  if mode=='source_bounced_pending':w.add('Unsummon','response',1-owner,'hand')
+  w.add(name,'source',owner,'hand');w.steps=[_transfer_step('reset_death_history'),_transfer_step('turn',player=owner,value=0),_transfer_step('present_ai_dialogs',value=1)]
+  for pl in (0,1):w.set_mana(pl,w.mana[pl])
+  w.set_mana(owner,[0]*6 if mode=='insufficient_cast_mana' else vector)
+  if mode=='insufficient_cast_mana':w.steps += [_transfer_step('cast',ref='source',value=0),_transfer_step('assert_choices_consumed')]
+  else:
+   if owner==0 and mode!='zero_colors':w.steps += [_transfer_step('choose_mana',player=owner,color=color) for color in range(1,6) for _ in range(vector[color])]
+   w.steps += [_transfer_step('cast',ref='source',value=1),_transfer_step('assert_stack',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(owner,vector);w.zones['hand'][owner].remove(name);w.entities['source'].update(zone='battlefield',sick=1,counters=sum(bool(x) for x in vector[1:]))
+   if mode=='zero_colors':w.move_zone('source','graveyard')
+   else:w.steps.append(_transfer_step('require_card',ref='source',property='in_play',value=1))
+   w.steps+=w.receipts()
+  cut=None
+  if not casting_only:
+   if mode!='fresh_source':w.untap_cycle()
+   if mode=='tapped_source':
+    # A real free source activation first proves readiness and taps it.
+    w.steps += [_transfer_step('require_can_activate',ref='source',value=1),_transfer_step('activate',ref='source',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.entities['source'].update(tapped=True,counters=8);w.steps+=w.receipts()
+   denied=mode in ('fresh_source','tapped_source');w.steps += [_transfer_step('require_can_activate',ref='source',value=0 if denied else 1),_transfer_step('activate',ref='source',value=0 if denied else 1)]
+   if not denied:
+    w.entities['source']['tapped']=True;w.steps += [_transfer_step('assert_stack',value=1)]+w.receipts();cut=len(w.steps)
+    response_drained=False
+    if mode=='source_destroyed_pending':w.steps += [_transfer_step('destroy',ref='source'),_transfer_step('refresh')];w.move_zone('source','graveyard')
+    if mode=='source_bounced_pending':
+     w.set_mana(1-owner,[0,0,1,0,0,0])
+     w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('cast',ref='response',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost('Unsummon',WAVE6_PINS));w.zones['hand'][1-owner].remove('Unsummon');w.zones['graveyard'][1-owner].append('Unsummon');w.entities['response']['zone']='graveyard';w.move_zone('source','hand');w.steps.append(_transfer_step('bind_hand',ref='source',player=owner,value=csvid));response_drained=True
+    if mode=='more_counters_pending':
+     w.set_mana(owner,[0,0,0,1,0,0]);w.steps += [_transfer_step('choose_target',player=owner,ref='source'),_transfer_step('cast',ref='growth',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(owner,_transfer_fixed_cost('Hunger of the Howlpack',WAVE6_PINS));w.zones['hand'][owner].remove('Hunger of the Howlpack');w.zones['graveyard'][owner].append('Hunger of the Howlpack');w.entities['growth']['zone']='graveyard';w.entities['source']['counters']+=1;response_drained=True
+    if mode=='counter_removed_pending':
+     w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('activate',ref='counter_remover',value=1),_transfer_step('assert_stack',value=2)];w.move_zone('counter_remover','graveyard');w.steps+=w.receipts()+[_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.entities['source']['counters']=0;w.move_zone('source','graveyard');response_drained=True
+    if not response_drained:w.steps += [_transfer_step('resolve'),_transfer_step('assert_choices_consumed')]
+    if w.entities['source']['zone']=='battlefield':w.entities['source']['counters']*=2
+    if mode=='repeat':
+     w.steps+=w.receipts()+[_transfer_step('choose_target',player=owner,ref='source'),_transfer_step('activate',ref='untapper',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.entities['source']['tapped']=False;w.entities['untapper']['tapped']=True;w.steps+=w.receipts()+[_transfer_step('activate',ref='source',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.entities['source'].update(tapped=True,counters=16)
+    if mode=='cleanup':w.steps+=w.receipts()+[_transfer_step('cleanup'),_transfer_step('refresh')];w.omit_mana=True
+  checks=[_transfer_step('assert_stack',value=0),_transfer_step('assert_choices_consumed')]+w.receipts();steps=w.steps+checks
+  if mode=='pending_snapshot':
+   tail=w.steps[cut:]+checks;steps=w.steps[:cut]+[_transfer_step('capture')]+copy.deepcopy(tail)+[_transfer_step('record_state'),_transfer_step('ai_roundtrip'),_transfer_step('restore')]+copy.deepcopy(tail)+[_transfer_step('assert_recorded_state')]
+  out.append(dict(name=f'Wave6GrowthActivationRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=w.setup,steps=steps,_recipe=dict(family=FAMILY,version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],scope_gaps=p['gaps'])))
+ return out
+
+def _wave6_tap_cost_growth_expand(name,csvid,d,p,selected,rows,o):
+ _wave6_validate_witnesses(o,rows)
+ if csvid!=WAVE6_PINS['profiles'][name]['csvid'] or not selected or len(set(selected))!=len(selected) or any(v not in _wave6_variants(p) for v in selected):raise ValueError('explicit tap-cost growth selection required')
+ out=[]
+ for variant in selected:
+  mode,owner=variant.rsplit('_',1);owner=int(owner);w=_Wave6World(owner);team=p['effect']=='team';actor=1-owner if mode=='opponent_target' else owner;cast_only=mode in ('cast_payment','insufficient_cast_mana');artifact_only=mode=='artifact_only';probe=mode in ('shroud_probe','opponent_hexproof_probe');target='legal_control' if probe else 'recipient'
+  if team:
+   if mode!='source_alone':w.add('Hill Giant','control',owner);w.add('Ornithopter','artifact_control',owner)
+   w.add('Stonework Puma','enemy_control',1-owner)
+   if mode not in ('source_alone','opponent_ally_only'):w.add('Stonework Puma','ally',owner,'hand' if mode=='fresh_ally' else 'battlefield')
+  else:
+   victim='Ornithopter' if artifact_only else 'Sphinx of Jwar Isle' if mode=='shroud_probe' else 'Aven Fleetwing' if mode in ('opponent_hexproof_probe','own_hexproof_target') else 'Eager Cadet';actor=1-owner if probe else actor
+   w.add(victim,'recipient',actor);w.add('Wall of Tanglecord' if artifact_only else 'Hill Giant','control',owner);w.add('Ornithopter' if artifact_only else 'Grizzly Bears','enemy_control',1-owner)
+   if probe:w.add('Eager Cadet','legal_control',owner)
+   if mode=='artifact_destroy_probe':w.add('Shatter','artifact_removal',1-owner,'hand')
+  if mode in ('tapped_source','tapped_ally'):w.add('Icy Manipulator','tapper',1-owner)
+  if mode in ('source_bounced_pending','ally_bounced_pending','target_bounced_pending'):w.add('Unsummon','response',1-owner,'hand')
+  if mode=='target_destroyed_pending':w.add('Murder','response',1-owner,'hand')
+  if mode=='repeat':w.add("Kiora's Follower",'source_untapper',owner);w.add("Kiora's Follower",'ally_untapper',owner)
+  w.add(name,'source',owner,'hand');w.steps=[_transfer_step('reset_death_history'),_transfer_step('turn',player=owner,value=0),_transfer_step('present_ai_dialogs',value=1)]
+  for pl in (0,1):w.set_mana(pl,w.mana[pl])
+  if cast_only:w.set_mana(owner,[0]*6 if mode=='insufficient_cast_mana' else _transfer_fixed_cost(name,WAVE6_PINS))
+  if mode=='insufficient_cast_mana':w.steps += [_transfer_step('cast',ref='source',value=0),_transfer_step('assert_choices_consumed')]
+  else:w.cast_named('source');w.steps+=w.receipts()
+  cut=None
+  if not cast_only:
+   if team and mode!='fresh_source':
+    w.untap_cycle()
+    for pl in (0,1):w.set_mana(pl,[30,10,10,10,10,10])
+   if mode=='fresh_ally':w.cast_named('ally');w.steps+=w.receipts()
+   if not team:w.set_mana(owner,[0]*6)
+   if team and mode=='zero_mana':w.set_mana(owner,[0]*6)
+   if mode in ('tapped_source','tapped_ally'):
+    tapped='ally' if mode=='tapped_ally' else 'source';w.steps += [_transfer_step('choose_target',player=1-owner,ref=tapped),_transfer_step('activate',ref='tapper',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,[1,0,0,0,0,0]);w.entities['tapper']['tapped']=True;w.entities[tapped]['tapped']=True
+   denied=mode in ('tapped_source','tapped_ally','source_alone','opponent_ally_only','artifact_only') or team and mode=='fresh_source'
+   if probe or mode=='own_hexproof_target':w.steps.append(_transfer_step('can_target_creature',ref='source',other='recipient',value=0 if probe else 1))
+   def activate():
+    nonlocal cut
+    w.steps.append(_transfer_step('require_can_activate',ref='source',value=0 if denied else 1))
+    if not denied:w.steps.append(_transfer_step('choose_target',player=owner,ref='ally' if team else target))
+    w.steps.append(_transfer_step('activate',ref='source',value=0 if denied else 1))
+    if denied:w.steps.append(_transfer_step('assert_choices_consumed'));return
+    w.entities['source']['tapped']=True
+    if team:w.entities['ally']['tapped']=True
+    else:w.move_zone('source','graveyard')
+    w.steps += [_transfer_step('assert_stack',value=1)]+w.receipts();cut=len(w.steps)
+   def finish(drained=False):
+    if not drained:w.steps += [_transfer_step('resolve'),_transfer_step('assert_choices_consumed')]
+    if team:
+     for e in w.entities.values():
+      if e['zone']=='battlefield' and e['player']==owner and 'Creature' in o[e['name']]['type_line']:e['counters']+=1
+    elif w.entities[target]['zone']=='battlefield':
+     w.entities[target]['counters']+=1;w.steps += [_transfer_step('assert_matching_permanents',player=w.entities[target]['player'],index=rows[w.entities[target]['name']]['csvid'],property='artifact',value=1)]
+     if w.entities[target]['name']=='Eager Cadet':
+      for prop in ('subtype_Human','subtype_Soldier'):w.steps.append(_transfer_step('assert_matching_permanents',player=w.entities[target]['player'],index=rows['Eager Cadet']['csvid'],property=prop,value=1))
+   activate()
+   if not denied:
+    moved=None;drained=False
+    if mode=='source_destroyed_pending':w.steps += [_transfer_step('destroy',ref='source'),_transfer_step('refresh')];w.move_zone('source','graveyard')
+    if mode in ('source_bounced_pending','ally_bounced_pending','target_bounced_pending','target_destroyed_pending'):
+     moved='source' if mode=='source_bounced_pending' else 'ally' if mode=='ally_bounced_pending' else target;spell='Murder' if mode=='target_destroyed_pending' else 'Unsummon';w.steps += [_transfer_step('choose_target',player=1-owner,ref=moved),_transfer_step('cast',ref='response',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost(spell,WAVE6_PINS));w.zones['hand'][1-owner].remove(spell);w.zones['graveyard'][1-owner].append(spell);w.entities['response']['zone']='graveyard';w.move_zone(moved,'graveyard' if spell=='Murder' else 'hand')
+     if spell=='Unsummon':w.steps.append(_transfer_step('bind_hand',ref=moved,player=w.entities[moved]['player'],value=rows[w.entities[moved]['name']]['csvid']))
+     drained=True
+    finish(drained)
+    if mode=='repeat':
+     w.steps+=w.receipts()
+     for ref,payer in [('source','source_untapper'),('ally','ally_untapper')]:w.steps += [_transfer_step('choose_target',player=owner,ref=ref),_transfer_step('activate',ref=payer,value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.entities[ref]['tapped']=False;w.entities[payer]['tapped']=True
+     activate();finish()
+    if mode=='artifact_destroy_probe':
+     # After the source sacrifice the converted target is the sole artifact.
+     # The real permission guard prevents a missing conversion from creating
+     # an invalid target-plan harness error before the functional Shatter.
+     w.steps+=w.receipts()+[_transfer_step('require_can_cast',ref='artifact_removal',value=1),_transfer_step('choose_target',player=1-owner,ref=target),_transfer_step('cast',ref='artifact_removal',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost('Shatter',WAVE6_PINS));w.zones['hand'][1-owner].remove('Shatter');w.zones['graveyard'][1-owner].append('Shatter');w.entities['artifact_removal']['zone']='graveyard';w.move_zone(target,'graveyard')
+    if mode=='cleanup':
+     w.steps+=w.receipts()+[_transfer_step('cleanup'),_transfer_step('refresh')];w.omit_mana=True
+     if not team:w.steps.append(_transfer_step('assert_matching_permanents',player=w.entities[target]['player'],index=rows[w.entities[target]['name']]['csvid'],property='artifact',value=1))
+  checks=[_transfer_step('assert_stack',value=0),_transfer_step('assert_choices_consumed')]+w.receipts();steps=w.steps+checks
+  if mode=='pending_snapshot':
+   tail=w.steps[cut:]+checks;steps=w.steps[:cut]+[_transfer_step('capture')]+copy.deepcopy(tail)+[_transfer_step('record_state'),_transfer_step('ai_roundtrip'),_transfer_step('restore')]+copy.deepcopy(tail)+[_transfer_step('assert_recorded_state')]
+  out.append(dict(name=f'Wave6GrowthActivationRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=w.setup,steps=steps,_recipe=dict(family=FAMILY,version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],scope_gaps=p['gaps'])))
+ return out
+
+def _wave6_mana_growth_expand(name,csvid,d,p,selected,rows,o):
+ _wave6_validate_witnesses(o,rows)
+ if csvid!=WAVE6_PINS['profiles'][name]['csvid'] or not selected or len(set(selected))!=len(selected) or any(v not in _wave6_variants(p) for v in selected):raise ValueError('explicit counter-mana selection required')
+ out=[]
+ for variant in selected:
+  mode,owner=variant.rsplit('_',1);owner=int(owner);w=_Wave6World(owner);entry=p['entry'];renown=entry=='renown';elf=entry=='elf';cast_only=mode in ('cast_payment','insufficient_cast_mana');creators=[]
+  w.add('Grizzly Bears','control',owner);w.add('Hill Giant','enemy_control',1-owner)
+  if not renown and not cast_only and mode!='no_growth':
+   names=['Elvish Mystic','Woodland Changeling'] if elf else ['Grizzly Bears','Hill Giant']
+   if mode=='nonmatching_entry':names=['Grizzly Bears'] if elf else ['Eager Cadet']
+   if mode=='opponent_entry':names=['Elvish Mystic'] if elf else ['Scaled Wurm']
+   if mode=='power_axis':names=['Grizzly Bears']
+   if mode=='toughness_axis':names=['Wall of Tanglecord']
+   if mode=='equal_entry':names=['Grizzly Bears','Grizzly Bears']
+   for i,nm in enumerate(names):
+    ref='entrant'+str(i);pl=1-owner if mode=='opponent_entry' else owner;w.add(nm,ref,pl,'hand');creators.append(ref)
+  if mode=='repeat':w.add("Kiora's Follower",'untapper',owner)
+  if mode=='counter_removed':w.add('Vampire Hexmage','counter_remover',1-owner)
+  if mode=='power_boost':w.add('Giant Growth','boost',owner,'hand')
+  if mode=='counter_is_not_renown':w.add('Hunger of the Howlpack','growth',owner,'hand')
+  if mode=='tapped_source':w.add('Icy Manipulator','tapper',1-owner)
+  if mode=='spend_output':w.add('Giant Growth','spender',owner,'hand')
+  if mode=='source_bounced_after_mana':w.add('Unsummon','response',1-owner,'hand')
+  if mode=='source_destroyed_after_mana':w.add('Murder','response',1-owner,'hand')
+  w.add(name,'source',owner,'hand');w.steps=[_transfer_step('reset_death_history'),_transfer_step('turn',player=owner,value=0),_transfer_step('present_ai_dialogs',value=1)]
+  for pl in (0,1):w.set_mana(pl,w.mana[pl])
+  if cast_only:w.set_mana(owner,[0]*6 if mode=='insufficient_cast_mana' else _transfer_fixed_cost(name,WAVE6_PINS))
+  if mode=='insufficient_cast_mana':w.steps += [_transfer_step('cast',ref='source',value=0),_transfer_step('assert_choices_consumed')]
+  else:w.cast_named('source');w.steps+=w.receipts()
+  if not cast_only:
+   for i,ref in enumerate(creators):
+    e=w.entities[ref];pl=e['player'];r=o[e['name']];s=w.entities['source'];power=int(o[name]['power'])+s['counters'];toughness=int(o[name]['toughness'])+s['counters']
+    if i and e['name']==w.entities[creators[i-1]]['name']:w.steps.append(_transfer_step('bind_hand',ref=ref,player=pl,value=rows[e['name']]['csvid']))
+    if pl!=owner:w.steps.append(_transfer_step('turn',player=pl,value=0))
+    w.cast_named(ref)
+    if pl==owner and (elf and e['name'] in ('Elvish Mystic','Woodland Changeling') or not elf and (int(r['power'])>power or int(r['toughness'])>toughness)):s['counters']+=1
+    w.steps+=w.receipts()
+   if creators and w.entities[creators[-1]]['player']!=owner:w.steps.append(_transfer_step('turn',player=owner,value=0))
+   if mode!='fresh_source':w.untap_cycle()
+   if renown and mode not in ('not_renowned','counter_is_not_renown'):
+    hits=2 if mode=='second_attack' else 1
+    for hit in range(hits):
+     s=w.entities['source'];power=int(o[name]['power'])+s['counters'];w.steps += [_transfer_step('begin_attackers'),_transfer_step('attack',ref='source',value=1),_transfer_observe('source','tapped',0 if hit else 1),_transfer_step('finish_attackers'),_transfer_step('begin_blockers'),_transfer_step('advance_combat'),_transfer_step('combat_damage'),_transfer_step('resolve'),_transfer_step('assert_choices_consumed'),_transfer_step('end_combat')];s['tapped']=not bool(hit);w.life[1-owner]-=power
+     if hit==0:s['counters']+=1
+     w.steps+=w.receipts()
+     if hit==0:w.untap_cycle()
+   if mode in ('power_boost','counter_is_not_renown'):
+    spell='Giant Growth' if mode=='power_boost' else 'Hunger of the Howlpack';ref='boost' if mode=='power_boost' else 'growth';w.set_mana(owner,[0,0,0,1,0,0]);w.steps += [_transfer_step('choose_target',player=owner,ref='source'),_transfer_step('cast',ref=ref,value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(owner,_transfer_fixed_cost(spell,WAVE6_PINS));w.zones['hand'][owner].remove(spell);w.zones['graveyard'][owner].append(spell);w.entities[ref]['zone']='graveyard'
+    if mode=='power_boost':w.entities['source']['pump']=3
+    else:w.entities['source']['counters']+=1
+   if mode=='counter_removed':
+    w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('activate',ref='counter_remover',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.move_zone('counter_remover','graveyard');w.entities['source']['counters']=0
+   if mode=='tapped_source':
+    w.set_mana(1-owner,[1,0,0,0,0,0]);w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('activate',ref='tapper',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,[1,0,0,0,0,0]);w.entities['tapper']['tapped']=True;w.entities['source']['tapped']=True
+   denied=mode in ('fresh_source','tapped_source','not_renowned','counter_is_not_renown');color={'color_B':1,'color_U':2,'color_G':3,'color_R':4,'color_W':5}.get(mode,3)
+   def activate():
+    s=w.entities['source'];amount=1 if renown else int(o[name]['power'])+s['counters']+s['pump'] if elf else s['counters'];w.steps.append(_transfer_step('require_can_activate',ref='source',value=0 if denied else 1))
+    if renown and not denied:w.steps.append(_transfer_step('choose_color',player=owner,value=color))
+    w.steps += [_transfer_step('activate',ref='source',value=0 if denied else 1),_transfer_step('assert_stack',value=0),_transfer_step('assert_choices_consumed')]
+    if not denied:s['tapped']=True;w.mana[owner][color]+=amount
+    w.steps+=w.receipts()
+   activate()
+   if not denied:
+    if mode=='repeat':
+     w.steps += [_transfer_step('choose_target',player=owner,ref='source'),_transfer_step('activate',ref='untapper',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.entities['untapper']['tapped']=True;w.entities['source']['tapped']=False;w.steps+=w.receipts();activate()
+    if mode=='next_turn':w.untap_cycle();activate()
+    if mode=='spend_output':
+     w.steps += [_transfer_step('choose_target',player=owner,ref='control'),_transfer_step('cast',ref='spender',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(owner,[0,0,0,1,0,0]);w.zones['hand'][owner].remove('Giant Growth');w.zones['graveyard'][owner].append('Giant Growth');w.entities['spender']['zone']='graveyard';w.entities['control']['pump']=3
+    if mode in ('source_bounced_after_mana','source_destroyed_after_mana'):
+     spell='Unsummon' if mode=='source_bounced_after_mana' else 'Murder';w.set_mana(1-owner,_transfer_fixed_cost(spell,WAVE6_PINS));w.steps += [_transfer_step('choose_target',player=1-owner,ref='source'),_transfer_step('cast',ref='response',value=1),_transfer_step('resolve'),_transfer_step('assert_choices_consumed')];w.pay(1-owner,_transfer_fixed_cost(spell,WAVE6_PINS));w.zones['hand'][1-owner].remove(spell);w.zones['graveyard'][1-owner].append(spell);w.entities['response']['zone']='graveyard';w.move_zone('source','hand' if spell=='Unsummon' else 'graveyard')
+     if spell=='Unsummon':w.steps.append(_transfer_step('bind_hand',ref='source',player=owner,value=csvid))
+    if mode=='cleanup':w.steps+=w.receipts()+[_transfer_step('cleanup'),_transfer_step('refresh')];w.omit_mana=True
+  steps=w.steps+[_transfer_step('assert_stack',value=0),_transfer_step('assert_choices_consumed')]+w.receipts()
+  if mode=='resolved_snapshot':steps += [_transfer_step('capture'),_transfer_step('record_state'),_transfer_step('ai_roundtrip'),_transfer_step('restore'),_transfer_step('assert_recorded_state')]
+  out.append(dict(name=f'Wave6GrowthActivationRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=w.setup,steps=steps,_recipe=dict(family=FAMILY,version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],scope_gaps=p['gaps'])))
  return out

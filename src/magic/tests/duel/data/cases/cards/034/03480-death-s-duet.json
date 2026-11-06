@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Death's Duet",
+  "csvid": 3480,
+  "recipes": [
+    {
+      "family": "graveyard_recovery_extension",
+      "version": 2,
+      "oracle_text": "Return two target creature cards from your graveyard to your hand.",
+      "params": {
+        "wave": 6,
+        "schema": 3,
+        "mode": "spell",
+        "scope": "creature",
+        "minimum": 2,
+        "maximum": 2,
+        "value_max": null,
+        "life_mana_value": false
+      },
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_0",
+        "opponent_only_0",
+        "wrong_type_0",
+        "duplicates_0",
+        "cleanup_0",
+        "repeat_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "countered_0",
+        "wrong_color_0",
+        "one_available_0",
+        "partial_loss_0",
+        "effect_1",
+        "alternate_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_1",
+        "opponent_only_1",
+        "wrong_type_1",
+        "duplicates_1",
+        "cleanup_1",
+        "repeat_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "countered_1",
+        "wrong_color_1",
+        "one_available_1",
+        "partial_loss_1"
+      ]
+    }
+  ]
+}

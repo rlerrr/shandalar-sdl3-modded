@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "card": "Apocalypse Hydra",
+  "csvid": 10108,
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "wave6_growth",
+        "kind": "counter_damage",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "tap": false,
+        "sacrifice": false,
+        "modes": [
+          "effect",
+          "payment",
+          "insufficient_mana",
+          "wrong_color",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "entry_x0",
+          "entry_x4",
+          "entry_x5",
+          "last_counter",
+          "cleanup",
+          "repeat",
+          "source_bounced_pending",
+          "source_destroyed_pending",
+          "target_bounced_pending",
+          "self_target",
+          "opponent_target",
+          "player_target",
+          "pending_snapshot",
+          "tapped_source"
+        ],
+        "gaps": [
+          "Multiplayer, counter replacement effects and planeswalker targets."
+        ]
+      },
+      "oracle_text": "This creature enters with X +1/+1 counters on it. If X is 5 or more, it enters with an additional X +1/+1 counters on it.\n{1}{R}, Remove a +1/+1 counter from this creature: It deals 1 damage to any target.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "entry_x0_0",
+        "entry_x4_0",
+        "entry_x5_0",
+        "last_counter_0",
+        "cleanup_0",
+        "repeat_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "target_bounced_pending_0",
+        "self_target_0",
+        "opponent_target_0",
+        "player_target_0",
+        "pending_snapshot_0",
+        "tapped_source_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "entry_x0_1",
+        "entry_x4_1",
+        "entry_x5_1",
+        "last_counter_1",
+        "cleanup_1",
+        "repeat_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "target_bounced_pending_1",
+        "self_target_1",
+        "opponent_target_1",
+        "player_target_1",
+        "pending_snapshot_1",
+        "tapped_source_1"
+      ]
+    }
+  ]
+}

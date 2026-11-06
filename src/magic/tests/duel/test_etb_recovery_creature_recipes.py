@@ -7,7 +7,7 @@ from etb_recovery_creature_recipes import eligible,validate_witnesses
 class EntryRecoveryRecipesTest(unittest.TestCase):
  @classmethod
  def setUpClass(cls):
-  cls.oracle=json.loads((Path(__file__).parent/'data/oracle.json').read_text())['cards'];cls.rows={r['name']:r for r in registry()}
+  cls.oracle=json.loads((Path(__file__).parent/'data/oracle.json').read_text(encoding='utf8'))['cards'];cls.rows={r['name']:r for r in registry()}
  def declaration(self,name='Gravedigger'):
   types=['instant','sorcery'] if name=='Archaeomancer' else ['card'] if name=='Eternal Witness' else ['creature','enchantment'] if name=='Odunos River Trawler' else ['creature']
   return dict(family='etb_recovery_creature',version=2,params=dict(targets=types,type_match='all' if name=='Odunos River Trawler' else 'any',exclude_types=[],optional=name in ('Gravedigger','Eternal Witness'),keywords=sorted(self.oracle[name]['keywords'])),oracle_text=self.oracle[name]['oracle_text'],variants=['entry_0'])

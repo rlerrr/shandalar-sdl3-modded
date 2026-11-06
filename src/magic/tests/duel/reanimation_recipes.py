@@ -70,6 +70,9 @@ def primary_texts(p):
 
 
 def spec(d,r):
+ if isinstance(d.get('params'),dict) and d['params'].get('wave')==6:
+  from graveyard_recovery_extension_recipes import wave6_spec
+  return wave6_spec(d,r,'reanimation')
  from recipes import cost_from_oracle
  if not r or r.get('layout')!='normal' or r.get('card_faces') or r.get('selected_face') or r.get('type_line') not in ('Instant','Sorcery') or d.get('oracle_text')!=r.get('oracle_text') or 'variants' not in d:raise ValueError('reanimation requires a whole pinned normal instant/sorcery and explicit variants')
  p=d.get('params')
@@ -117,6 +120,9 @@ def spec(d,r):
 
 
 def variants(p):
+ if p.get('_wave6'):
+  from graveyard_recovery_extension_recipes import wave6_variants
+  return wave6_variants(p)
  modes=['effect','payment','insufficient_mana','wrong_color','empty','wrong_type','countered','cleanup','repeat','ready_snapshot','pending_snapshot','resolved_snapshot','bare_zones']
  if p['mode']!='mass':modes+=['alternate','lost_target','death_owner']
  if p['graveyard'] in ('self','opponent'):modes.append('wrong_owner')
@@ -131,11 +137,16 @@ def variants(p):
 
 
 def validate_witnesses(o,rows):
+ from graveyard_recovery_extension_recipes import wave6_validate_witnesses
+ wave6_validate_witnesses(o,rows)
  for n,pin in PINS.items():
   if n not in rows or any(o.get(n,{}).get(k)!=v for k,v in pin.items()) or o[n].get('card_faces') or o[n].get('selected_face'):raise ValueError('reanimation witness Oracle characteristics changed: '+n)
 
 
 def expand(name,csvid,d,p,selected,rows,o):
+ if p.get('_wave6'):
+  from graveyard_recovery_extension_recipes import wave6_expand
+  return wave6_expand(name,csvid,d,p,selected,rows,o)
  from recipes import card,step,observe,cost_from_oracle
  result=[]
  for variant in selected:
