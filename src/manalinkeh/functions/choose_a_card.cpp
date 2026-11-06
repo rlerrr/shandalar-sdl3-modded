@@ -145,13 +145,11 @@ static int dlgproc_choose_a_card_helper(HWND hwnd, color_test_t want_col,
             [](const StrCsvid &a, const StrCsvid &b) {
               return _stricmp(a.first, b.first) < 0;
             });
-#ifdef __EMSCRIPTEN__
+  /* Native and browser builds both use the SDL control shim. */
   SendMessageA(hwnd, LB_RESETCONTENT, 0, 0);
   for (const auto &entry : choose_a_card_strcsvids)
     SendMessageA(hwnd, LB_ADDSTRING, 0, (LPARAM)entry.first);
-#else
-  SendMessageA(hwnd, LB_SETCOUNT, choose_a_card_strcsvids.size(), 0);
-#endif
+
   return choose_a_card_strcsvids.size();
 }
 
@@ -247,7 +245,7 @@ static INT_PTR CALLBACK dlgproc_choose_a_card(HWND hwnd, UINT msg, WPARAM wparam
     case WM_DRAWITEM:
     {
       DRAWITEMSTRUCT *dis = reinterpret_cast<DRAWITEMSTRUCT *>(lparam);
-      if (wparam != CTL_LISTBOX ||
+      if (wparam != CTL_LISTBOX || dis->itemID >= choose_a_card_strcsvids.size() ||
           (dis->itemAction != ODA_DRAWENTIRE && dis->itemAction != ODA_SELECT && dis->itemAction != ODA_FOCUS))
         return FALSE;
       COLORREF old_bk = SetBkColor(dis->hDC, GetSysColor((dis->itemState & ODS_SELECTED) ? COLOR_HIGHLIGHT : COLOR_WINDOW));
@@ -260,7 +258,8 @@ static INT_PTR CALLBACK dlgproc_choose_a_card(HWND hwnd, UINT msg, WPARAM wparam
       if (dis->itemState & ODS_SELECTED)
       {
         LRESULT selected = SendDlgItemMessageA(hwnd, CTL_LISTBOX, LB_GETCURSEL, 0, 0);
-        if (prev_drawn_selected != selected)
+        if (selected >= 0 && static_cast<size_t>(selected) < choose_a_card_strcsvids.size() &&
+            prev_drawn_selected != selected)
         {
           SendDlgItemMessageA(hwnd, CTL_FULLCARD, WM_USER + 1,
                               choose_a_card_strcsvids[selected].second.raw, 0);
@@ -322,7 +321,8 @@ static INT_PTR CALLBACK dlgproc_choose_a_card(HWND hwnd, UINT msg, WPARAM wparam
         if (control == CTL_OK)
         {
           LRESULT selected = SendDlgItemMessageA(hwnd, CTL_LISTBOX, LB_GETCURSEL, 0, 0);
-          result = choose_a_card_strcsvids[selected].second.raw;
+          if (selected >= 0 && static_cast<size_t>(selected) < choose_a_card_strcsvids.size())
+            result = choose_a_card_strcsvids[selected].second.raw;
         }
         if (winbk_chooseacard)
         {
@@ -338,7 +338,8 @@ static INT_PTR CALLBACK dlgproc_choose_a_card(HWND hwnd, UINT msg, WPARAM wparam
         {
           LRESULT selected = SendDlgItemMessageA(hwnd, CTL_LISTBOX, LB_GETCURSEL, 0, 0);
           SendDlgItemMessageA(hwnd, CTL_FULLCARD, WM_USER + 1,
-                              choose_a_card_strcsvids[selected].second.raw, 0);
+                              selected >= 0 && static_cast<size_t>(selected) < choose_a_card_strcsvids.size()
+                                  ? choose_a_card_strcsvids[selected].second.raw : -1, 0);
           if (!reset_keys_input || prev_selected == selected)
             reset_keys_input = true;
           else

@@ -1,5 +1,6 @@
 #include "defs.h"
 #include "magic/src/duel_engine.h"
+#include "magic/src/carddata_generated.h"
 #include "magic/src/global_duel_ui_ids.h"
 #include "magic/src/global_other.h"
 #include "magic/src/global_state.h"
@@ -38,6 +39,7 @@ extern int register_MAGICGAME_FullCardClass(LPCSTR class_name);
 extern int pick_internal_card_from_list_dialog_for_owner(
     HWND owner, char *prompt, int initial_card_id, int filter);
 extern char global_base_directory[0x105];
+extern int global_available_slots;
 extern int g_selected_wizard_color;
 extern int g_name_entry_cursor;
 extern char manalinkeh_legacy_effect_name[51];
@@ -61,6 +63,14 @@ int CardTypeFromID(int csvid);
 
 void shandalar_initialize_modded_card_database(void)
 {
+  extern char card_coded[30000 / 8];
+  memset(card_coded, 0, 30000 / 8);
+  for (int iid = 0; iid < SHANDALAR_CARD_DATA_ACTIVE_COUNT; ++iid) {
+    int csvid = global_cards_data[iid].id;
+    if (csvid >= 0 && csvid < global_available_slots && csvid < 30000 &&
+        global_cards_data[iid].code_pointer && (global_cards_data[iid].type & 0x7f))
+      card_coded[csvid / 8] |= 1 << (csvid % 8);
+  }
   initialize_for_shandalar(global_cards_data, global_raw_cards_storage);
   DrawCardModded_SetDisplayedCards(global_displayed_card_instances);
   DrawCardModded_SetInternalIdLookup(CardTypeFromID);

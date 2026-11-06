@@ -25,6 +25,7 @@
 #endif
 
 /* Legacy Manalink spellings for state now owned by the SDL host. */
+extern int global_available_slots;
 extern int g_active_cards_count[2];
 extern int g_affected_card;
 extern int g_affected_card_controller;
@@ -242,6 +243,7 @@ extern int shandalar_check_mana_multi(int player);
  * duel UI recognize and remove the copies created by Manalink. */
 #define activation_card g_stack_proxy_internal_card_id
 #define cards_data global_cards_data
+#define available_slots global_available_slots
 #define raw_mana_available_hex g_raw_mana_available_hex
 #define text_lines g_text_lines
 #define wndproc_CardClass wndproc_MAGICGAME_CardClass

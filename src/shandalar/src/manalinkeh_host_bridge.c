@@ -107,7 +107,6 @@ int g_deck_rating_multipliers[16];
 int opponent_skill;
 int LEGACY_EFFECT_CUSTOM = SHANDALAR_CUSTOM_LEGACY_CARD_IID;
 int LEGACY_EFFECT_ACTIVATED = SHANDALAR_ACTIVATED_LEGACY_CARD_IID;
-int available_slots;
 int colors_of_lands_in_play[2];
 player_bits_t player_bits[2];
 int lands_played;

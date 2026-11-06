@@ -58,6 +58,9 @@ int save_or_load_data(void *data, unsigned int size)
   return 1;
 }
 
+int graveyard_source[2][500], next_graveyard_source_id, turn_count, counters_added;
+char always_prompt_for_color;
+int mulligans_complete[2], challenge_round, challenge1, challenge2, challenge3, challenge4;
 static unsigned char test_rules_state[32];
 size_t duel_rules_snapshot_size(void) { return sizeof(test_rules_state); }
 void duel_rules_snapshot_capture(void *p) { memcpy(p, test_rules_state, sizeof(test_rules_state)); }
@@ -438,17 +441,29 @@ static void test_extension_state(void)
   dest->ext->sp_keywords2 = 456;
   check(source->ext->sp_keywords2 == 123, "Copied extensions must not alias their source");
   test_rules_state[0] = 17;
+  graveyard_source[1][499] = 12345;
+  next_graveyard_source_id = 42;
+  turn_count = 8;
+  counters_added = 3;
+  always_prompt_for_color = 1;
   save_ai_search_state();
   source->ext->sp_keywords2 = 999;
   source->ext->legacy_upkeep_cost[2] = 99;
   test_rules_state[0] = 0;
+  graveyard_source[1][499] = next_graveyard_source_id = turn_count = counters_added = 0;
+  always_prompt_for_color = 0;
   restore_ai_search_state();
+  check(graveyard_source[1][499] == 12345 && next_graveyard_source_id == 42 &&
+        turn_count == 8 && counters_added == 3 && always_prompt_for_color == 1,
+        "AI rollback must restore source IDs, turn counters, and mana prompting");
   check(source->ext->sp_keywords2 == 123 && source->ext->legacy_upkeep_cost[2] == 7 &&
         test_rules_state[0] == 17, "AI rollback must restore extensions and imported rules state");
   save_combat_simulation_state();
+  graveyard_source[1][499] = turn_count = 0;
   source->ext->sp_keywords2 = 999;
   restore_combat_simulation_state();
-  check(source->ext->sp_keywords2 == 123, "Combat rollback must restore extension state");
+  check(source->ext->sp_keywords2 == 123 && graveyard_source[1][499] == 12345 && turn_count == 8,
+        "Combat rollback must restore extension and supplemental AI state");
   InitializeCriticalSection(&g_duel_render_lock);
   refresh_duel_display_cache();
   check(global_displayed_card_instances[0][0].ext != source->ext &&

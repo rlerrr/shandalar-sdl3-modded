@@ -1195,7 +1195,7 @@ void draw_special_effect_full_card(HDC dc, RECT *rect, card_id_t card_id, int pl
   unsigned int display_info;
   int displayed_player_and_card[2];
   int ability_index;
-  card_ptr_t card_data;
+  card_ptr_t card_data = {0};
   unsigned int display_version;
 
   if (dc == NULL || rect == NULL)
@@ -1261,7 +1261,7 @@ void draw_special_effect_full_card(HDC dc, RECT *rect, card_id_t card_id, int pl
   card_data.color = 0xffffffff;
   card_data.card_type = 0;
   card_data.subtype = 0xffffffff;
-  card_data.type_text = NULL;
+  card_data.type_text = "";
   card_data.db_card_type_2 = 0xffffffff;
   card_data.rarity = 0;
   for (ability_index = 0; ability_index < 10; ++ability_index)

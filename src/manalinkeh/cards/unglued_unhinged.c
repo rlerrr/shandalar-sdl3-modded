@@ -2686,16 +2686,21 @@ int card_booster_tutor(int player, int card, event_t event)
       int num_csvids = make_pack(expansion, 1, csvids);
       for (int i = 0; i < num_csvids; ++i)
         iids[i] = get_internal_card_id_from_csv_id(csvids[i]);
+      if (num_csvids == 0)
+      {
+        kill_card(player, card, KILL_DESTROY);
+        return 0;
+      }
       if (ai_is_speculating != 1 && player == 1)
-        show_deck(0, iids, capacity, "Booster contents", 0, gs_done_008b40e0);
+        show_deck(0, iids, num_csvids, "Booster contents", 0, gs_done_008b40e0);
       test_definition_t test;
       _Static_assert(sizeof(test) == 216, "native Booster Tutor filter");
       default_test_definition(&test, 0xff);
       int selected;
       do
       {
-        selected = select_card_from_zone(player, player, iids, capacity, 1, 1, -1, &test);
-      } while (selected < 0 || selected >= capacity);
+        selected = select_card_from_zone(player, player, iids, num_csvids, 1, 1, -1, &test);
+      } while (selected < 0 || selected >= num_csvids);
       int added = add_card_to_hand(player, iids[selected]);
       if (player == 1)
         reveal_card(1, card, 1, added);

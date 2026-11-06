@@ -16,6 +16,13 @@
 #include <string.h>
 
 int g_duel_ai_mode_state;
+extern int global_available_slots;
+char card_coded[30000 / 8];
+void shandalar_initialize_modded_card_database(void);
+void initialize_for_shandalar(card_data_t *data, card_ptr_t *cards) { (void)data; (void)cards; }
+void Cardartlib_initialize_for_shandalar(card_data_t *data, card_ptr_t *cards) { (void)data; (void)cards; }
+void DrawCardModded_SetDisplayedCards(card_instance_t (*cards)[151]) { (void)cards; }
+void DrawCardModded_SetInternalIdLookup(int (*lookup)(int)) { (void)lookup; }
 int g_duel_special_rules_by_color[7];
 int g_last_matching_deck_card_index;
 int AddCardToDeckSorted(int);
@@ -138,6 +145,22 @@ int main(int argc, char **argv)
   int configured_pool;
   char fixture_directory[1024], fixture_ini[1100];
   FILE *fixture;
+  if (argc == 2 && strcmp(argv[1], "--coded-mask-only") == 0) {
+    global_available_slots = 30000;
+    memset(card_coded, 0xff, sizeof(card_coded));
+    shandalar_initialize_modded_card_database();
+    check((card_coded[239 / 8] & (1 << (239 % 8))) != 0,
+          "Database initialization must expose implemented cards to Wish and booster searches");
+    check((card_coded[10440 / 8] & (1 << (10440 % 8))) == 0,
+          "A null registry binding must remain unavailable to outside-game searches");
+    check(card_coded[sizeof(card_coded) - 1] == 0,
+          "Database reloads must clear stale availability bits");
+    global_available_slots = 100;
+    shandalar_initialize_modded_card_database();
+    check((card_coded[239 / 8] & (1 << (239 % 8))) == 0,
+          "Availability must respect the loaded database boundary on reload");
+    return failures ? 1 : 0;
+  }
   if (!_getcwd(fixture_directory, sizeof(fixture_directory) - 64)) return 2;
   strcat(fixture_directory, "/campaign_card_pool_test_assets");
   _mkdir(fixture_directory);

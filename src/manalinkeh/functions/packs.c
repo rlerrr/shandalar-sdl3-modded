@@ -2720,7 +2720,7 @@ static INT_PTR __stdcall dlgproc_choose_a_pack(HWND hwnd, UINT msg, WPARAM wpara
       ShowWindow(GetDlgItem(hwnd, i + 0x44d), 0);
     int num_textlines;
     expansion_names = load_text_nocopy_from_file("Menus.txt", "EXPANSIONNAMES", &num_textlines);
-    for (int expansion = 1; expansion < 198 && num_textlines > expansion + 6; ++expansion)
+    for (int expansion = 1; expansion_names && expansion < 198 && expansion + 7 < num_textlines; ++expansion)
     {
       char buf[300];
       if (args->allow_boosters != 0 && is_valid_pack(expansion, 1))

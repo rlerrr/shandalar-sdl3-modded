@@ -22,6 +22,7 @@ char ability_tooltip_names_exe[17][50];
 void manalinkeh_initialize_ability_tooltip_names(void) {}
 void backtrace_and_abort(const char *message) { fprintf(stderr, "%s\n", message); abort(); }
 HBITMAP load_legacy_pic(char *filename);
+HANDLE LoadImage(const char *path, HPALETTE palette, int width, int height);
 
 static int entries;
 static void collect(void *context, const char *section, const char *key, const char *value)
@@ -187,6 +188,24 @@ int main(int argc, char **argv)
   CHECK(bitmap && GetObject(bitmap, sizeof(info), &info));
   CHECK(info.bmWidth == 1 && info.bmHeight == 1 && ((unsigned char *)info.bmBits)[0] == 7);
   DeleteObject(bitmap);
+  {
+    struct { WORD version, count; PALETTEENTRY entries[256]; } colors = {0};
+    HPALETTE palette;
+    unsigned char *pixel;
+    colors.version = 0x300;
+    colors.count = 256;
+    colors.entries[7].peRed = 47;
+    colors.entries[7].peGreen = 109;
+    colors.entries[7].peBlue = 211;
+    palette = CreatePalette((LOGPALETTE *)&colors);
+    CHECK(palette);
+    bitmap = LoadImage("test.pic", palette, 0, 0);
+    CHECK(bitmap && GetObject(bitmap, sizeof(info), &info) && info.bmBitsPixel == 32);
+    pixel = info.bmBits;
+    CHECK(pixel[0] == 211 && pixel[1] == 109 && pixel[2] == 47);
+    DeleteObject(bitmap);
+    DeleteObject(palette);
+  }
   bitmap = load_legacy_pic("test.pcx");
   CHECK(bitmap && GetObject(bitmap, sizeof(info), &info));
   CHECK(info.bmWidth == 4 && info.bmHeight == 1 && ((unsigned char *)info.bmBits)[0] == 9);

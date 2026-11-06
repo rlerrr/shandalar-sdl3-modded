@@ -354,6 +354,12 @@ INT_PTR DialogBoxIndirectParamA(HINSTANCE instance, LPCDLGTEMPLATE templ, HWND p
   HWND dialog = shandalar_win32_create_dialog(instance, parent, title,
       templ->x * 2, templ->y * 2, templ->cx * 2, templ->cy * 2);
   if (!dialog) return -1;
+  /* Templates size the client area. Dialogs use the shim-rendered caption,
+   * whose insets differ from custom-painted game windows. */
+  RECT client;
+  GetClientRect(dialog, &client);
+  SetWindowPos(dialog, NULL, 0, 0, templ->cx * 4 - client.right,
+               templ->cy * 4 - client.bottom, SWP_NOMOVE | SWP_NOZORDER | SWP_NOACTIVATE);
   if (*font) shandalar_win32_set_dialog_template_font(dialog, font, font_size);
   for (unsigned i = 0; i < templ->cdit; ++i) {
     p = (const WORD *)(((uintptr_t)p + 3) & ~(uintptr_t)3);

@@ -22,7 +22,8 @@ void generic_wish_effect(int player, int card, test_definition_t *test, int ai_c
   if (player == 0)
   {
     result = new_card_from_list(0, 5, test);
-    add_card_to_hand(0, result);
+    if (result >= 0)
+      add_card_to_hand(0, result);
   }
   else
   {

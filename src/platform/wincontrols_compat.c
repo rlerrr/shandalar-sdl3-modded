@@ -279,9 +279,11 @@ LRESULT shandalar_control_message(HWND window, UINT message, WPARAM wparam,
     strcpy((char *)lparam, state->items[wparam].text);
     return (LRESULT)strlen(state->items[wparam].text);
   case LB_GETITEMDATA:
+  case CB_GETITEMDATA:
     *handled = TRUE;
     return valid_index(state, wparam) ? state->items[wparam].data : -1;
   case LB_SETITEMDATA:
+  case CB_SETITEMDATA:
     *handled = TRUE;
     if (!valid_index(state, wparam)) return -1;
     state->items[wparam].data = lparam;

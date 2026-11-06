@@ -8,7 +8,7 @@
 
 HBITMAP load_legacy_pic(char *filename);
 
-static HBITMAP convert_legacy_bitmap(HBITMAP source)
+static HBITMAP convert_legacy_bitmap(HBITMAP source, HPALETTE palette)
 {
   BITMAP source_info;
   BITMAPINFO destination_info;
@@ -57,6 +57,10 @@ static HBITMAP convert_legacy_bitmap(HBITMAP source)
   }
 
   old_source = SelectObject(source_dc, source);
+  if (palette) {
+    SelectPalette(source_dc, palette, FALSE);
+    RealizePalette(source_dc);
+  }
   old_destination = SelectObject(destination_dc, destination);
   BitBlt(destination_dc, 0, 0, source_info.bmWidth, source_info.bmHeight,
          source_dc, 0, 0, SRCCOPY);
@@ -77,7 +81,6 @@ HANDLE LoadImage(const char *path, HPALETTE palette, int unused_width,
   HBITMAP bitmap;
   unsigned char *pixels;
   int y;
-  (void)palette;
   (void)unused_width;
   (void)unused_height;
 
@@ -104,7 +107,7 @@ HANDLE LoadImage(const char *path, HPALETTE palette, int unused_width,
     const char *extension = strrchr(path, '.');
     if (extension && (SDL_strcasecmp(extension, ".pic") == 0 ||
                       SDL_strcasecmp(extension, ".pcx") == 0))
-      return convert_legacy_bitmap(load_legacy_pic((char *)path));
+      return convert_legacy_bitmap(load_legacy_pic((char *)path), palette);
   }
   return NULL;
 

@@ -315,7 +315,7 @@ if(SHANDALAR_BUILD_TESTS AND WIN32)
   add_custom_command(OUTPUT "${campaign_test_source}"
     COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/tests/select_campaign_functions.py"
             "${SHANDALAR_SRC_ROOT}" "${campaign_test_source}"
-    DEPENDS tests/select_campaign_functions.py src/adventure_new_game.c src/shandalar.c src/visitLocation.c
+    DEPENDS tests/select_campaign_functions.py src/adventure_new_game.c src/shandalar.c src/visitLocation.c src/magic_runtime.c
             ../magic/src/carddata.c ../magic/src/duel.c ../magic/src/duel_card_state.c
             ../magic/src/duel_engine_main_wndproc.c ../magic/src/shared_startup.c
             ../magic/src/duel_ai_support.c
@@ -329,6 +329,7 @@ if(SHANDALAR_BUILD_TESTS AND WIN32)
   target_include_directories(campaign_new_game_test BEFORE PRIVATE "${SHANDALAR_SRC_ROOT}/magic/compat")
   target_compile_definitions(campaign_new_game_test PRIVATE SHANDALAR MODERN_FIXES)
   target_link_libraries(campaign_new_game_test PRIVATE shandalar_platform)
+  add_test(NAME coded_card_mask_test COMMAND campaign_new_game_test --coded-mask-only)
   if(EXISTS "${SHANDALAR_MODDED_ASSET_DIR}/concise.csv")
     add_test(NAME campaign_new_game_test COMMAND campaign_new_game_test "${SHANDALAR_MODDED_ASSET_DIR}")
     set_tests_properties(campaign_new_game_test PROPERTIES TIMEOUT 20)
@@ -372,8 +373,8 @@ if(SHANDALAR_BUILD_TESTS AND WIN32)
   set(mok_legacy_text_source "${CMAKE_CURRENT_BINARY_DIR}/generated/mok_legacy_text.c")
   add_custom_command(OUTPUT "${mok_legacy_text_source}"
     COMMAND "${Python3_EXECUTABLE}" "${SHANDALAR_SRC_ROOT}/manalinkeh/tests/select_legacy_text_functions.py"
-            "${SHANDALAR_SRC_ROOT}/manalinkeh/functions/functions.c" "${mok_legacy_text_source}"
-    DEPENDS ../manalinkeh/tests/select_legacy_text_functions.py ../manalinkeh/functions/functions.c
+            "${SHANDALAR_SRC_ROOT}/manalinkeh/functions/windows.c" "${mok_legacy_text_source}"
+    DEPENDS ../manalinkeh/tests/select_legacy_text_functions.py ../manalinkeh/functions/windows.c
     VERBATIM
   )
   add_executable(mok_legacy_text_test ../manalinkeh/tests/mok_legacy_text_test.c "${mok_legacy_text_source}")

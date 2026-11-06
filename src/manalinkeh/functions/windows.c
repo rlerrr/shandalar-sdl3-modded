@@ -2452,7 +2452,7 @@ void legacy_name_or_text(char *str, int player, int card, event_t event)
   {
     set_legacy_effect_name_addr = str;
     instance->info_slot_fn(player, card, event);
-    set_legacy_effect_name_addr[event == EVENT_SET_LEGACY_EFFECT_NAME ? 51 : 999] = 0;
+    set_legacy_effect_name_addr[event == EVENT_SET_LEGACY_EFFECT_NAME ? 51 : 399] = 0;
   }
   if ((unsigned)(alternative - 1) < 9)
     for (char *p = str; *p;)
@@ -2479,7 +2479,9 @@ void legacy_name_or_text(char *str, int player, int card, event_t event)
 /* Native October 2022: 0x2659710. */
 void legacy_name(char *name, int player, int card)
 {
-  legacy_name_or_text(name, player, card, EVENT_SET_LEGACY_EFFECT_NAME);
+  extern int shandalar_is_legacy_effect_text_buffer(const char *text);
+  legacy_name_or_text(name, player, card, shandalar_is_legacy_effect_text_buffer(name)
+                      ? EVENT_SET_LEGACY_EFFECT_TEXT : EVENT_SET_LEGACY_EFFECT_NAME);
 }
 
 #endif

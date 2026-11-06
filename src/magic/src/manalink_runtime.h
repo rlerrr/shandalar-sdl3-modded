@@ -16,6 +16,14 @@ typedef struct ManalinkRuntimeSnapshot {
   int dice_adjustments[2];
   int extra_dice[2];
   uint8_t type_counts[2][7];
+  int graveyard_sources[2][500];
+  int next_graveyard_source;
+  int turns;
+  char prompt_for_color;
+  int mulligans[2];
+  int challenge_round;
+  int challenge_modes[4];
+  int added_counters;
   unsigned char rules[1024];
 } ManalinkRuntimeSnapshot;
 

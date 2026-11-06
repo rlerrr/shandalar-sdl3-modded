@@ -1967,7 +1967,7 @@ void draw_special_effect_small_card(HDC dc, RECT *rect, card_id_t card_id, unsig
   int single_color;
   unsigned int display_info;
   int displayed_player_and_card[2];
-  card_ptr_t card_data;
+  card_ptr_t card_data = {0};
   unsigned int display_version;
 
   if (dc == (HDC)0 || rect == NULL)

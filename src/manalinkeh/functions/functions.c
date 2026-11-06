@@ -19502,6 +19502,8 @@ int new_card_from_list(int player, int mode, test_definition_t *test)
   else
     selected = choose_a_card_test_ct_allow_cancel(test->message, test, colors, types);
 
+  if (selected < 0)
+    return -1;
   if ((mode & 6) == 4)
     return get_internal_card_id_from_csv_id(selected);
   return selected;

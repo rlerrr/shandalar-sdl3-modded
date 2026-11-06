@@ -9,6 +9,12 @@ static char text_buffer[400];
 static int last_event;
 static int failures;
 
+void backtrace_and_abort(const char *message)
+{
+  fprintf(stderr, "%s\n", message);
+  abort();
+}
+
 static void check(int condition, const char *message)
 {
   if (!condition)

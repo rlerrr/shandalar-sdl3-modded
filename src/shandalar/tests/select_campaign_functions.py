@@ -4,6 +4,7 @@ import sys
 from pathlib import Path
 
 FUNCTIONS = {
+    "shandalar/src/magic_runtime.c": ["shandalar_initialize_modded_card_database"],
     "shandalar/src/adventure_new_game.c": ["LoadCardRaritiesAndCsvOffsets", "InitializeNewGameState",
         "PickRandomColorBitExcludingMask", "PickConfiguredStarterCard", "AddConfiguredStarterDeckCards", "AddRandomStarterDeckCards",
         "PickRandomCardMatchingTypeAndColor", "GetRemainingAllowedCardCopies",
@@ -63,6 +64,10 @@ output.write_text('#include <stdlib.h>\n#include <string.h>\n'
     'int GetCardRarity(int);\nint AddCardToDeckSorted(int);\n'
     'extern char g_last_parsed_deck_path[];\n'
     'extern int global_available_slots;\nint CardTypeFromID(int);\n'
+    'void initialize_for_shandalar(card_data_t *, card_ptr_t *);\n'
+    'void Cardartlib_initialize_for_shandalar(card_data_t *, card_ptr_t *);\n'
+    'void DrawCardModded_SetDisplayedCards(card_instance_t (*)[151]);\n'
+    'void DrawCardModded_SetInternalIdLookup(int (*)(int));\n'
     'int card_dummy(int, int, event_t);\nint campaign_test_handler(int, int, event_t);\n'
     'color_t single_color_test_bit_to_color_t(color_test_t);\n'
     'extern int g_showlist_card_window_extra_bytes;\nextern HWND g_duel_window_hwnd;\n'
