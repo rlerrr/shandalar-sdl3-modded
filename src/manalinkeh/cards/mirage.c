@@ -2887,7 +2887,7 @@ int card_grim_feast(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)grim_feast_effect)
+        if (inst->info_slot == (intptr_t)grim_feast_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))
@@ -3132,7 +3132,7 @@ int card_hakim_loreweaver(int player, int card, event_t event)
             if ((((aura != NULL) && (offset_or_result = is_what(p, c, 4), offset_or_result != 0)) &&
                  (offset_or_result = has_subtype(p, c, SUBTYPE_AURA), offset_or_result != 0)) &&
                 ((aura = get_card_instance(p, c),
-                  (int)aura->damage_target_player == instance->parent_controller &&
+                  (intptr_t)aura->damage_target_player == instance->parent_controller &&
                       (aura->damage_target_card == instance->parent_card))))
             {
               kill_card(p, c, KILL_DESTROY);
@@ -7595,7 +7595,7 @@ int card_ethereal_champion(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_must_be_damage_targeting_this_ethereal_champion;
+    td.extra = (intptr_t)target_must_be_damage_targeting_this_ethereal_champion;
     if (event == EVENT_CAN_ACTIVATE)
     {
       result = generic_activated_ability(player, card, EVENT_CAN_ACTIVATE, 0x1000004, 0, 0, 0, 0, 0,
@@ -7622,7 +7622,7 @@ int card_ethereal_champion(int player, int card, event_t event)
     default_target_definition(player, card, &td, 0);
   }
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)target_must_be_damage_targeting_this_ethereal_champion;
+  td.extra = (intptr_t)target_must_be_damage_targeting_this_ethereal_champion;
   if (event == EVENT_RESOLVE_ACTIVATION)
   {
     instance = get_card_instance(player, card);
@@ -9664,7 +9664,7 @@ int card_urborg_panther(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td2, 2);
     td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td2.extra = (int32_t)is_blocking_urborg_panther;
+    td2.extra = (intptr_t)is_blocking_urborg_panther;
     instance = get_card_instance(player, card);
     if (event == EVENT_CAN_ACTIVATE)
     {
@@ -9764,7 +9764,7 @@ int card_urborg_panther(int player, int card, event_t event)
     }
     default_target_definition(player, card, &td2, 2);
     td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td2.extra = (int32_t)is_blocking_urborg_panther;
+    td2.extra = (intptr_t)is_blocking_urborg_panther;
     instance = get_card_instance(player, card);
   }
   if (event == EVENT_RESOLVE_ACTIVATION)
@@ -10184,7 +10184,7 @@ int card_barbed_back_wurm(int player, int card, event_t event)
   td2.preferred_controller = td2.allowed_controller;
   td2.required_color = get_sleighted_color_test(player, card, 8);
   td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td2.extra = (int32_t)is_blocking_kod;
+  td2.extra = (intptr_t)is_blocking_kod;
   instance = get_card_instance(player, card);
   if ((event == EVENT_RESOLVE_ACTIVATION) && (result = valid_target(&td2), result != 0))
   {
@@ -10256,7 +10256,7 @@ int card_builders_bane(int player, int card, event_t event)
     td.allow_cancel = 0;
     td.illegal_abilities = get_protections_from(1, card);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)not_indestructible;
+    td.extra = (intptr_t)not_indestructible;
   }
   card_instance_t *instance = get_card_instance(player, card);
   if (event == EVENT_CAN_CAST)
@@ -10729,7 +10729,7 @@ int card_prismatic_circle(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)colored_damage_source_that_damages_me;
+    td.extra = (intptr_t)colored_damage_source_that_damages_me;
     instance = get_card_instance(player, card);
     if ((event == EVENT_RESOLVE_ACTIVATION) && (result = valid_target(&td), result != 0))
     {
@@ -10966,7 +10966,7 @@ int card_seedling_charm(int player, int card, event_t event)
     default_target_definition(player, card, &td, 4);
     td.required_subtype = 0x4000;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_is_attached_to_creature;
+    td.extra = (intptr_t)target_is_attached_to_creature;
     default_target_definition(player, card, &td1, 2);
     td1.preferred_controller = player;
     td1.required_color = get_sleighted_color_test(player, card, 8);
@@ -11022,7 +11022,7 @@ int card_seedling_charm(int player, int card, event_t event)
   default_target_definition(player, card, td_00, 4);
   td.required_subtype = 0x4000;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)target_is_attached_to_creature;
+  td.extra = (intptr_t)target_is_attached_to_creature;
   default_target_definition(player, card, &td1, 2);
   td1.preferred_controller = player;
   td1.required_color = get_sleighted_color_test(player, card, 8);

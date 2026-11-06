@@ -191,7 +191,7 @@ extern void shandalar_copy_special_counter_rect(RECT*, RECT*, int);
 extern int shandalar_mana_producer_fixed(int, int, event_t, int);
 extern int shandalar_regenerate_target(int, int);
 extern int shandalar_raw_put_iid_on_top_of_deck(int, int);
-extern int shandalar_show_deck_exe(int, const int*, int, const char*, int, int);
+extern int shandalar_show_deck_exe(int, const int*, int, const char*, int, const char*);
 extern void shandalar_refresh_unless_ai_speculating(void);
 extern int shandalar_redisplay_all(int, int);
 extern void shandalar_real_lose_the_game(int);

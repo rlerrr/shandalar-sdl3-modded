@@ -8,6 +8,8 @@
 #include <SDL3/SDL.h>
 #include <SDL3_image/SDL_image.h>
 #include "platform/file_io.h"
+#include "platform/cards_dat.h"
+#include <vector>
 
 #ifndef _MSC_VER
 #include <unistd.h>
@@ -22,42 +24,59 @@ static bool images_counted = false;
 
 static card_ptr_t* cards_ptr_shandalar_dll = NULL;
 
-static void loadDat(const char* fname){
-	bool okchar[256] = {0};
-	for (int i = 'a'; i <= 'z'; ++i)
-		okchar[i] = true;
-	for (int i = 'A'; i <= 'Z'; ++i)
-		okchar[i] = true;
-	for (int i = '0'; i <= '9'; ++i)
-		okchar[i] = true;
-	okchar[','] = true;
-	okchar[' '] = true;
-	okchar['\''] = true;
-	okchar['-'] = true;
+static bool loadDat(const char* fname)
+{
+  SDL_IOStream* f = shandalar_open_file_io(fname, "rb");
+  if (!f)
+    return false;
+  uint32_t cardCount = 0, stringDataSize = 0;
+  bool header_ok = shandalar_io_read(&cardCount, sizeof(cardCount), 1, f) == 1 &&
+                   shandalar_io_read(&stringDataSize, sizeof(stringDataSize), 1, f) == 1;
+  Sint64 fileSize = SDL_GetIOSize(f);
+  if (!header_ok || !cardCount || !stringDataSize || fileSize < 8 ||
+      uint64_t(cardCount) * sizeof(card_disk_record_t) + stringDataSize > uint64_t(fileSize - 8)) {
+    shandalar_io_close(f);
+    return SDL_SetError("Invalid Cards.dat name-table header");
+  }
+  std::vector<card_disk_record_t> cardData(cardCount);
+  std::vector<char> stringData(stringDataSize);
+  bool data_ok = shandalar_io_read(cardData.data(), sizeof(cardData[0]), cardCount, f) == cardCount &&
+                 shandalar_io_read(stringData.data(), 1, stringDataSize, f) == stringDataSize;
+  shandalar_io_close(f);
+  if (!data_ok)
+    return SDL_SetError("Incomplete Cards.dat name table");
 
-	SDL_IOStream* f = shandalar_open_file_io(fname, "rb");
-	size_t stringDataSize;
-	shandalar_io_read(&numberOfCards, 4, 1, f);
-	shandalar_io_read(&stringDataSize, 4, 1, f);
-	char* stringData = (char*)malloc(stringDataSize);
-	card_ptr_t* cardData = (card_ptr_t*)malloc(sizeof(card_ptr_t)*numberOfCards);
-	shandalar_io_read(cardData, sizeof(card_ptr_t), numberOfCards, f);
-	shandalar_io_read(stringData, 1, stringDataSize, f);
-	shandalar_io_close(f);
-	idToName = (char**)calloc(numberOfCards, sizeof(char*));
+  bool okchar[256] = {0};
+  for (int i = 'a'; i <= 'z'; ++i) okchar[i] = true;
+  for (int i = 'A'; i <= 'Z'; ++i) okchar[i] = true;
+  for (int i = '0'; i <= '9'; ++i) okchar[i] = true;
+  for (unsigned char ch : {',', ' ', '\'', '-'}) okchar[ch] = true;
 
-	for (unsigned int i = 0; i < numberOfCards; i++) {
-		int id = cardData[i].id;//*((int*)cardData + 38*i);
-		char* name = (stringData + (int)(cardData[i].full_name));//*((int*)cardData + 1 + 38*i));
-		//replace characters
-		for (char* p = name; *p; ++p)
-		  if (!okchar[(int)(unsigned char)(*p)])
-			*p = '_';
-		idToName[id] = (char*)malloc(strlen(name) + 1);
-		strcpy(idToName[id], name);
-	}
-	free(cardData);
-	free(stringData);
+  for (const card_disk_record_t& entry : cardData) {
+    if (entry.id < 0 || uint32_t(entry.id) >= cardCount || entry.full_name_offset >= stringDataSize ||
+        !memchr(stringData.data() + entry.full_name_offset, 0, stringDataSize - entry.full_name_offset))
+      return SDL_SetError("Invalid Cards.dat card-name offset or ID");
+  }
+  char** names = (char**)calloc(cardCount, sizeof(*names));
+  if (!names)
+    return SDL_SetError("Could not allocate card-art name table");
+  for (const card_disk_record_t& entry : cardData) {
+    const char* name = stringData.data() + entry.full_name_offset;
+    char* copy = (char*)malloc(strlen(name) + 1);
+    if (!copy) {
+      for (uint32_t i = 0; i < cardCount; ++i) free(names[i]);
+      free(names);
+      return SDL_SetError("Could not allocate card-art name");
+    }
+    strcpy(copy, name);
+    for (char* p = copy; *p; ++p)
+      if (!okchar[(unsigned char)*p]) *p = '_';
+    free(names[entry.id]);
+    names[entry.id] = copy;
+  }
+  numberOfCards = cardCount;
+  idToName = names;
+  return true;
 }
 
 static void load_names(void)
@@ -84,6 +103,8 @@ static std::string idToNameFun(int id, int version) {
 	if (idToName == NULL){
 		load_names();
 	}
+	if (!idToName || id < 0 || (size_t)id >= numberOfCards || !idToName[id])
+		return std::string();
 	char tmp[254];
 	if (version > 0) {
 		sprintf(tmp, "CardArtManalink/%s (%d).jpg", idToName[id], version);
@@ -126,10 +147,13 @@ static void count_images(void)
 	if (idToName == NULL)
 		load_names();
 
+	if (!idToName)
+		return;
 	std::unordered_map<std::string, int> name_to_csvid;
 	char buf[200];	// Manalink itself will crash for names much shorter than this
 	for (unsigned int i = 0; i < numberOfCards; ++i) {
 		const char* name = idToName[i];
+		if (!name) continue;
 		for (char* p = buf; (*p = tolower(*name)); ++p, ++name){}
 		name_to_csvid[buf] = i;
 		card_ptrs[i].num_pics = 1;	// Always assume at least one image; it would have been corrected to 1 if initially set to 0 anyway

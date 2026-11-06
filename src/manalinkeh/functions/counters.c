@@ -918,7 +918,7 @@ int get_counter_type_by_instance(card_instance_t* instance)
   int csvid;
   if (iid == LEGACY_EFFECT_CUSTOM)
 	{
-	  if (instance->info_slot == (int)generic_suspend_legacy)
+	  if (instance->info_slot == (intptr_t)generic_suspend_legacy)
 		return COUNTER_TIME;
 	  else
 		csvid = instance->display_pic_csv_id;
@@ -2229,7 +2229,7 @@ int raw_counter_value(int player, int t_player, int t_card, counter_t counter_ty
     }
     return 0;
   case COUNTER_TIME:
-    if (LEGACY_EFFECT_CUSTOM == iid && instance->info_slot == (int)generic_suspend_legacy)
+    if (LEGACY_EFFECT_CUSTOM == iid && instance->info_slot == (intptr_t)generic_suspend_legacy)
       return -901;
     if (get_counter_type_by_instance(instance) != COUNTER_TIME)
       return 0;

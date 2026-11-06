@@ -13,9 +13,9 @@ typedef struct
   const char **lines;
 } LoadText;
 
-_Static_assert(sizeof(LoadText) == 12, "LoadText size");
-_Static_assert(offsetof(LoadText, key) == 0 && offsetof(LoadText, num) == 4 &&
-               offsetof(LoadText, lines) == 8, "LoadText fields");
+_Static_assert(sizeof(LoadText) == (sizeof(void *) == 8 ? 24 : 12), "LoadText size");
+_Static_assert(offsetof(LoadText, key) == 0 && offsetof(LoadText, num) == sizeof(void *) &&
+               offsetof(LoadText, lines) == 2 * sizeof(void *), "LoadText fields");
 
 /* Recovered private caches; retained raw buffers own the borrowed strings. */
 static LoadText *loadtexts;
@@ -73,10 +73,10 @@ static void load_text_stash(const char *filename, LoadText **out_loadtexts, int 
   file_length = used;
   current_line_or_error[file_length] = '\n';
   current_line_or_error[file_length + 1] = '\0';
-  lt = malloc(0x1c20);
+  lt = malloc(600 * sizeof(*lt));
   if (lt == NULL)
   {
-    fatal("Couldn\'t malloc %d*%d entries for LoadText", 600, 0xc);
+    fatal("Couldn\'t malloc %d*%d entries for LoadText", 600, (int)sizeof(*lt));
   }
   line_end_or_scan = strchr(current_line_or_error, 10);
   entry_index = 0;
@@ -84,7 +84,7 @@ static void load_text_stash(const char *filename, LoadText **out_loadtexts, int 
   next_entry_count = 1;
   while (line_end_or_scan != NULL)
   {
-    line_count_or_entry_offset = entry_index * 0xc;
+    line_count_or_entry_offset = entry_index * sizeof(*lt);
     *line_end_or_scan = '\0';
     next_line_or_escape = line_end_or_scan + 1;
     if ((*current_line_or_error == '@') && (current_line_or_error[1] != '\0'))
@@ -92,16 +92,16 @@ static void load_text_stash(const char *filename, LoadText **out_loadtexts, int 
       if (entry_capacity == entry_index)
       {
         entry_capacity = (int)((double)entry_capacity * 1.5);
-        lt = realloc(lt, entry_capacity * 0xc);
+        lt = realloc(lt, entry_capacity * sizeof(*lt));
         if (lt == NULL)
         {
-          fatal("Couldn\'t realloc %d*%d entries for LoadText", entry_capacity, 0xc);
+          fatal("Couldn\'t realloc %d*%d entries for LoadText", entry_capacity, (int)sizeof(*lt));
         }
       }
       text_line = strchr(next_line_or_escape, 10);
       if (text_line == NULL)
       {
-        line_count_or_entry_offset = entry_index * 0xc;
+        line_count_or_entry_offset = entry_index * sizeof(*lt);
         break;
       }
       *text_line = '\0';
@@ -112,7 +112,7 @@ static void load_text_stash(const char *filename, LoadText **out_loadtexts, int 
         entry_or_reduced_stash->key = current_line_or_error + 1;
         line_count_or_entry_offset = atoi(next_line_or_escape);
         entry_or_reduced_stash->num = line_count_or_entry_offset;
-        entry_lines = malloc(line_count_or_entry_offset * 4);
+        entry_lines = malloc(line_count_or_entry_offset * sizeof(*entry_lines));
         entry_or_reduced_stash->lines = entry_lines;
         if (entry_lines == NULL)
         {
@@ -173,7 +173,7 @@ static void load_text_stash(const char *filename, LoadText **out_loadtexts, int 
           if (line_count_or_entry_offset <= stored_lines_or_entry_index)
           {
             stored_lines_or_entry_index = next_entry_count;
-            line_count_or_entry_offset = next_entry_count * 0xc;
+            line_count_or_entry_offset = next_entry_count * sizeof(*lt);
             next_entry_count = entry_index + 2;
             entry_index = stored_lines_or_entry_index;
             break;
@@ -200,14 +200,14 @@ static void load_text_stash(const char *filename, LoadText **out_loadtexts, int 
     line_end_or_scan = strchr(next_line_or_escape, 10);
     current_line_or_error = next_line_or_escape;
   }
-  line_count_or_entry_offset = entry_index * 0xc;
+  line_count_or_entry_offset = entry_index * sizeof(*lt);
   if (entry_capacity == entry_index)
   {
-    lt = realloc(lt, (int)((double)entry_capacity * 1.5) * 0xc);
+    lt = realloc(lt, (int)((double)entry_capacity * 1.5) * sizeof(*lt));
     if (lt == NULL)
     {
       fatal("Couldn\'t realloc %d*%d entries for LoadText", (int)((double)entry_capacity * 1.5),
-            0xc);
+            (int)sizeof(*lt));
     }
   }
   LoadText *sentinel = (LoadText *)((char *)lt + line_count_or_entry_offset);
@@ -223,16 +223,16 @@ static void load_text_stash(const char *filename, LoadText **out_loadtexts, int 
       *empty_lines = "";
       empty_lines = empty_lines + 1;
     } while (empty_lines != end_lines);
-    entry_or_reduced_stash = malloc(next_entry_count * 0xc);
+    entry_or_reduced_stash = malloc(next_entry_count * sizeof(*lt));
     *out_loadtexts = entry_or_reduced_stash;
     if (entry_or_reduced_stash != NULL)
     {
-      memcpy(entry_or_reduced_stash, lt, next_entry_count * 0xc);
+      memcpy(entry_or_reduced_stash, lt, next_entry_count * sizeof(*lt));
       free(lt);
       *out_num_loadtexts = next_entry_count;
       return;
     }
-    fatal("Couldn\'t malloc %d*%d entries for LoadText reduction", next_entry_count, 0xc);
+    fatal("Couldn\'t malloc %d*%d entries for LoadText reduction", next_entry_count, (int)sizeof(*lt));
   }
   fatal("Couldn\'t malloc %d lines for LoadText(ai speculation)", 0xfa);
 }

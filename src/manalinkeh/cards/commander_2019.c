@@ -602,7 +602,7 @@ static void ghireds_special_populate(int player, int card)
     td.allowed_controller = td.preferred_controller = player;
     td.allow_cancel = 0;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_is_token_too;
+    td.extra = (intptr_t)target_is_token_too;
     target_t tgt;
     if (can_target(&td) && select_target(player, card - 1000, &td,
                                         "Select a creature token you control.", &tgt))
@@ -1036,7 +1036,7 @@ int card_sanctum_of_eternity(int player, int card, event_t event)
     {
       default_target_definition(player, card, &td, 0x47);
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-      td.extra = (int32_t)commander_you_own;
+      td.extra = (intptr_t)commander_you_own;
       instance = get_card_instance(player, card);
 
       instance->info_slot = 0;
@@ -1074,7 +1074,7 @@ int card_sanctum_of_eternity(int player, int card, event_t event)
     {
       default_target_definition(player, card, &td, 0x47);
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-      td.extra = (int32_t)commander_you_own;
+      td.extra = (intptr_t)commander_you_own;
       instance = get_card_instance(player, card);
       if ((event == EVENT_RESOLVE_ACTIVATION) && (0 < instance->info_slot))
       {

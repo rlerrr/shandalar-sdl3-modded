@@ -1209,7 +1209,7 @@ int clot_sliver_shared_ability(int player, int card, event_t event)
       td.required_state = TARGET_STATE_DESTROYED;
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
       td.required_subtype = 0xb1;
-      td.extra = (int32_t)sliver_to_regenerate;
+      td.extra = (intptr_t)sliver_to_regenerate;
       td.illegal_abilities = 0;
       if (event != EVENT_ACTIVATE)
       {
@@ -2535,7 +2535,7 @@ int card_field_of_souls(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)field_of_souls_effect ){
+				if( inst->info_slot == (intptr_t)field_of_souls_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -4590,7 +4590,7 @@ int card_sadistic_glee(int player, int card, event_t event){
         for (int c = 0; c < active_cards_count[player]; ++c){
             if (in_play(player, c) && is_what(player, c, TYPE_EFFECT)){
                 card_instance_t* legacy = get_card_instance(player, c);
-                if (legacy->info_slot == (int)sadistic_glee_effect
+                if (legacy->info_slot == (intptr_t)sadistic_glee_effect
                     && ((legacy->damage_target_player == player && legacy->damage_target_card == card)
                         || (legacy->targets[0].player == player && legacy->targets[0].card == card))){
                     found = 1;
@@ -6574,7 +6574,7 @@ int card_circle_of_protection_shadow(int player, int card, event_t event)
   target_definition_t td;
   default_target_definition(player, card, &td, TYPE_EFFECT);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)prevent_damage_from_shadow_creature;
+  td.extra = (intptr_t)prevent_damage_from_shadow_creature;
   td.illegal_abilities = 0;
   card_instance_t *instance = get_card_instance(player, card);
   if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td))
@@ -6935,7 +6935,7 @@ int card_flowstone_salamander(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td2, 2);
     td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td2.extra = (int32_t)is_blocking_flowstone_salamander;
+    td2.extra = (intptr_t)is_blocking_flowstone_salamander;
     if ((event == EVENT_RESOLVE_ACTIVATION) && (result = valid_target(&td2), result != 0))
     {
       damage_target0(player, card, 1);
@@ -7619,7 +7619,7 @@ int card_maze_of_shadows(int player, int card, event_t event)
     {
       default_target_definition(player, card, &td, 2);
       td.required_state = TARGET_STATE_ATTACKING;
-      td.extra = (int32_t)with_shadow;
+      td.extra = (intptr_t)with_shadow;
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
       instance = get_card_instance(player, card);
 
@@ -7658,7 +7658,7 @@ int card_maze_of_shadows(int player, int card, event_t event)
     {
       default_target_definition(player, card, &td, 2);
       td.required_state = TARGET_STATE_ATTACKING;
-      td.extra = (int32_t)with_shadow;
+      td.extra = (intptr_t)with_shadow;
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
       instance = get_card_instance(player, card);
       if (event != EVENT_RESOLVE_ACTIVATION)
@@ -7782,7 +7782,7 @@ int card_opportunist(int player, int card, event_t event)
   if (event == EVENT_ACTIVATE)
   {
     default_target_definition(player, card, &td, 2);
-    td.extra = (int32_t)is_already_damaged;
+    td.extra = (intptr_t)is_already_damaged;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
   }
   else
@@ -7792,7 +7792,7 @@ int card_opportunist(int player, int card, event_t event)
       return 0;
     }
     default_target_definition(player, card, &td, 2);
-    td.extra = (int32_t)is_already_damaged;
+    td.extra = (intptr_t)is_already_damaged;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     if ((event == EVENT_RESOLVE_ACTIVATION) && (result = valid_target(&td), result != 0))
     {

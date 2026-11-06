@@ -17,36 +17,38 @@ STATIC_ASSERT(PB_SEND_EVENT_UNTAP_CARD_TO_ALL == root_untap_flag, shared_untap_f
 #include <stdio.h>
 #include <string.h>
 
-STATIC_ASSERT(sizeof(card_instance_t) == 300, host_instance_size);
-STATIC_ASSERT(sizeof(card_data_t) == 72, host_engine_record_size);
+#define HOST_ABI(x86, x64) (sizeof(void *) == 8 ? (x64) : (x86))
+
+STATIC_ASSERT(sizeof(card_instance_t) == HOST_ABI(300, 320), host_instance_size);
+STATIC_ASSERT(sizeof(card_data_t) == HOST_ABI(72, 80), host_engine_record_size);
 STATIC_ASSERT(offsetof(card_data_t, id) == 0x24, engine_id_offset);
 STATIC_ASSERT(sizeof(((card_data_t *)0)->id) == 4, engine_id_width);
 STATIC_ASSERT(offsetof(card_data_t, type) == 0x28, engine_type_offset);
 STATIC_ASSERT(offsetof(card_data_t, cc) == 0x2b, engine_cost_offset);
-STATIC_ASSERT(offsetof(card_data_t, unused0x43) == 0x43, engine_reserved_byte_offset);
-STATIC_ASSERT(offsetof(card_data_t, ai_base_value) == 0x44, engine_rating_offset);
+STATIC_ASSERT(offsetof(card_data_t, unused0x43) == HOST_ABI(0x43, 0x4b), engine_reserved_byte_offset);
+STATIC_ASSERT(offsetof(card_data_t, ai_base_value) == HOST_ABI(0x44, 0x4c), engine_rating_offset);
 STATIC_ASSERT(sizeof(((card_data_t *)0)->ai_base_value) == 4, engine_rating_width);
-STATIC_ASSERT(sizeof(card_ptr_t) == 152, host_cards_dat_record_size);
+STATIC_ASSERT(sizeof(card_ptr_t) == HOST_ABI(152, 192), host_cards_dat_record_size);
 STATIC_ASSERT(sizeof(stack_data_t) == 4, host_stack_record_size);
 STATIC_ASSERT(offsetof(stack_data_t, internal_card_id) == 0, stack_card_id_offset);
 STATIC_ASSERT(offsetof(stack_data_t, generating_event) == 2, stack_event_offset);
 STATIC_ASSERT(offsetof(stack_data_t, unknown_sdt) == 3, stack_trigger_argument_offset);
-STATIC_ASSERT(_Alignof(card_instance_t) == 4, host_instance_alignment);
-STATIC_ASSERT(_Alignof(card_data_t) == 4, host_engine_record_alignment);
-STATIC_ASSERT(_Alignof(card_ptr_t) == 4, host_cards_dat_record_alignment);
+STATIC_ASSERT(_Alignof(card_instance_t) == HOST_ABI(4, 8), host_instance_alignment);
+STATIC_ASSERT(_Alignof(card_data_t) == HOST_ABI(4, 8), host_engine_record_alignment);
+STATIC_ASSERT(_Alignof(card_ptr_t) == HOST_ABI(4, 8), host_cards_dat_record_alignment);
 STATIC_ASSERT(_Alignof(stack_data_t) == 2, host_stack_record_alignment);
-STATIC_ASSERT(offsetof(card_instance_t, targets) == 0x74, host_target_offset);
-STATIC_ASSERT(offsetof(card_data_t, code_pointer) == 0x34, host_handler_offset);
-STATIC_ASSERT(offsetof(card_ptr_t, types) == 0x84, host_subtype_offset);
-STATIC_ASSERT(offsetof(card_ptr_t, subtype1) == 0x18, cards_dat_first_subtype);
-STATIC_ASSERT(offsetof(card_ptr_t, subtype2) == 0x1a, cards_dat_second_subtype);
-STATIC_ASSERT(offsetof(card_ptr_t, req) == 0x28, cards_dat_casting_cost);
-STATIC_ASSERT(offsetof(card_ptr_t, ai_inc_power) == 0x54, cards_dat_ai_power_increment);
-STATIC_ASSERT(offsetof(card_ptr_t, ai_inc_toughness) == 0x55, cards_dat_ai_toughness_increment);
-STATIC_ASSERT(offsetof(card_ptr_t, ai_power) == 0x56, cards_dat_ai_power);
-STATIC_ASSERT(offsetof(card_ptr_t, ai_toughness) == 0x57, cards_dat_ai_toughness);
+STATIC_ASSERT(offsetof(card_instance_t, targets) == HOST_ABI(0x74, 0x88), host_target_offset);
+STATIC_ASSERT(offsetof(card_data_t, code_pointer) == HOST_ABI(0x34, 0x38), host_handler_offset);
+STATIC_ASSERT(offsetof(card_ptr_t, types) == HOST_ABI(0x84, 0xa8), host_subtype_offset);
+STATIC_ASSERT(offsetof(card_ptr_t, subtype1) == HOST_ABI(0x18, 0x24), cards_dat_first_subtype);
+STATIC_ASSERT(offsetof(card_ptr_t, subtype2) == HOST_ABI(0x1a, 0x26), cards_dat_second_subtype);
+STATIC_ASSERT(offsetof(card_ptr_t, req) == HOST_ABI(0x28, 0x38), cards_dat_casting_cost);
+STATIC_ASSERT(offsetof(card_ptr_t, ai_inc_power) == HOST_ABI(0x54, 0x70), cards_dat_ai_power_increment);
+STATIC_ASSERT(offsetof(card_ptr_t, ai_inc_toughness) == HOST_ABI(0x55, 0x71), cards_dat_ai_toughness_increment);
+STATIC_ASSERT(offsetof(card_ptr_t, ai_power) == HOST_ABI(0x56, 0x72), cards_dat_ai_power);
+STATIC_ASSERT(offsetof(card_ptr_t, ai_toughness) == HOST_ABI(0x57, 0x73), cards_dat_ai_toughness);
 STATIC_ASSERT(sizeof(((card_ptr_t *)0)->types) == 14, cards_dat_expanded_subtypes);
-STATIC_ASSERT(offsetof(card_ptr_t, mana_source_colors) == 0x92, cards_dat_after_subtypes);
+STATIC_ASSERT(offsetof(card_ptr_t, mana_source_colors) == HOST_ABI(0x92, 0xb6), cards_dat_after_subtypes);
 STATIC_ASSERT(sizeof(((card_instance_t *)0)->special_counters) == 4, host_counter_word);
 STATIC_ASSERT(sizeof(((card_instance_t *)0)->special_counters_byte) == 1, imported_counter_byte);
 STATIC_ASSERT(offsetof(card_instance_t, special_counters_byte) == 0, special_counter_byte_offset);
@@ -55,13 +57,13 @@ STATIC_ASSERT(offsetof(card_instance_t, counters3) == 2, counter3_offset);
 STATIC_ASSERT(offsetof(card_instance_t, counters4) == 3, counter4_offset);
 STATIC_ASSERT(offsetof(card_instance_t, damage_on_card) == 0x10, unsigned_damage_offset);
 STATIC_ASSERT(offsetof(card_instance_t, blocking) == 0x24, unsigned_blocking_offset);
-STATIC_ASSERT(offsetof(card_instance_t, counters) == 0x120, counter_word_offset);
-STATIC_ASSERT(offsetof(card_instance_t, counters_byte) == 0x120, counter_byte_offset);
+STATIC_ASSERT(offsetof(card_instance_t, counters) == HOST_ABI(0x120, 0x134), counter_word_offset);
+STATIC_ASSERT(offsetof(card_instance_t, counters_byte) == HOST_ABI(0x120, 0x134), counter_byte_offset);
 STATIC_ASSERT(sizeof(((card_instance_t *)0)->counters_byte) == 1, imported_plus_one_counter_byte);
-STATIC_ASSERT(offsetof(card_instance_t, counters5) == 0x121, counter5_offset);
-STATIC_ASSERT(offsetof(card_instance_t, unknown0x122) == 0x122, counter_padding_offset);
-STATIC_ASSERT(offsetof(card_instance_t, upkeep_cost) == 0x124, upkeep_array_offset);
-STATIC_ASSERT(offsetof(card_instance_t, counters_m1m1) == 0x12b, minus_one_counter_offset);
+STATIC_ASSERT(offsetof(card_instance_t, counters5) == HOST_ABI(0x121, 0x135), counter5_offset);
+STATIC_ASSERT(offsetof(card_instance_t, unknown0x122) == HOST_ABI(0x122, 0x136), counter_padding_offset);
+STATIC_ASSERT(offsetof(card_instance_t, upkeep_cost) == HOST_ABI(0x124, 0x138), upkeep_array_offset);
+STATIC_ASSERT(offsetof(card_instance_t, counters_m1m1) == HOST_ABI(0x12b, 0x13f), minus_one_counter_offset);
 STATIC_ASSERT(TARGET_TYPE_PLANESWALKER == 0x100, host_planeswalker_bit);
 STATIC_ASSERT(COUNTER_end == COUNTER_STASH + 1, complete_counter_range);
 STATIC_ASSERT(DFC_SYMBOL_MAX == DFC_SYMBOL_FAN_OPEN, complete_dfc_range);
@@ -141,6 +143,11 @@ static int check_trigger_constants(void)
   return 0;
 }
 
+static int abi_callback(int player, int card, event_t event)
+{
+  return player + card + event;
+}
+
 int main(void)
 {
   card_instance_t host = {0}, restored;
@@ -155,6 +162,14 @@ int main(void)
   int lower = 2, upper = 3;
 
   if (check_trigger_constants()) return 1;
+
+  /* Function addresses must survive snapshots without losing their upper bits. */
+  host.info_slot = (intptr_t)abi_callback;
+  memcpy(&imported, &host, sizeof(imported));
+  if (imported.info_slot_fn != abi_callback ||
+      imported.info_slot_fn(2, 3, EVENT_CAN_CAST) != 5 + EVENT_CAN_CAST)
+    return 1;
+
 
   /* The host saves stack entries as dwords; imported code accesses their fields. */
   memcpy(stack, saved_stack, sizeof(stack));
@@ -175,9 +190,9 @@ int main(void)
     return 1;
   }
 
-  /* Alternate field views must describe the same little-endian asset bytes. */
+  /* Alternate field views must share native structure bytes on either ABI. */
   metadata.subtype = 0x33441122u;
-  memcpy((unsigned char *)&metadata + 0x54, ai_bytes, sizeof(ai_bytes));
+  memcpy((unsigned char *)&metadata + offsetof(card_ptr_t, ai_inc_power), ai_bytes, sizeof(ai_bytes));
   if (metadata.subtype1 != 0x1122 || metadata.subtype2 != 0x3344 ||
       metadata.ai_inc_power != 0x80 || metadata.ai_inc_toughness != 0x7f ||
       metadata.ai_power != 1 || metadata.ai_toughness != 0xff)
@@ -236,9 +251,9 @@ int main(void)
   engine_bytes[0x25] = 0x12;
   engine_bytes[0x28] = TYPE_CREATURE;
   engine_bytes[0x2c] = 0xff;
-  engine_bytes[0x43] = 4;
-  engine_bytes[0x44] = 0xfe;
-  engine_bytes[0x45] = engine_bytes[0x46] = engine_bytes[0x47] = 0xff;
+  engine_bytes[offsetof(card_data_t, unused0x43)] = 4;
+  engine_bytes[offsetof(card_data_t, ai_base_value)] = 0xfe;
+  engine_bytes[offsetof(card_data_t, ai_base_value) + 1] = engine_bytes[offsetof(card_data_t, ai_base_value) + 2] = engine_bytes[offsetof(card_data_t, ai_base_value) + 3] = 0xff;
   memcpy(&host_data, engine_bytes, sizeof(host_data));
   if (host_data.id != 0x1234 || host_data.type != TYPE_CREATURE ||
       host_data.cc[1] != -1 || (uint8_t)host_data.cc[1] != 255 ||
@@ -257,8 +272,8 @@ int main(void)
   if (engine_bytes[0x24] != 0x8b || engine_bytes[0x25] != 3 ||
       engine_bytes[0x26] != 0 || engine_bytes[0x27] != 0 ||
       engine_bytes[0x28] != TYPE_CREATURE || engine_bytes[0x2c] != 0xff ||
-      engine_bytes[0x43] != 4 || engine_bytes[0x44] != 0xff ||
-      engine_bytes[0x45] != 0xff || engine_bytes[0x46] != 0xff || engine_bytes[0x47] != 0xff)
+      engine_bytes[offsetof(card_data_t, unused0x43)] != 4 || engine_bytes[offsetof(card_data_t, ai_base_value)] != 0xff ||
+      engine_bytes[offsetof(card_data_t, ai_base_value) + 1] != 0xff || engine_bytes[offsetof(card_data_t, ai_base_value) + 2] != 0xff || engine_bytes[offsetof(card_data_t, ai_base_value) + 3] != 0xff)
   {
     fprintf(stderr, "Engine field writes changed neighboring record bytes\n");
     return 1;

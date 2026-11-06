@@ -576,7 +576,7 @@ Whenever a creature is put into your graveyard from the battlefield, you may sac
         for (int c = 0; c < active_cards_count[player]; ++c){
             if (in_play(player, c) && is_what(player, c, TYPE_EFFECT)){
                 card_instance_t* legacy = get_card_instance(player, c);
-                if (legacy->info_slot == (int)angelic_renewal_effect
+                if (legacy->info_slot == (intptr_t)angelic_renewal_effect
                     && ((legacy->damage_target_player == player && legacy->damage_target_card == card)
                         || (legacy->targets[0].player == player && legacy->targets[0].card == card))){
                     found = 1;
@@ -1450,7 +1450,7 @@ int card_dingus_staff(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)dingus_staff_effect)
+        if (inst->info_slot == (intptr_t)dingus_staff_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))
@@ -4810,7 +4810,7 @@ int card_fatal_blow(int player, int card, event_t event)
     return 0;
   }
   default_target_definition(player, card, &td, 2);
-  td.extra = (int32_t)is_already_damaged;
+  td.extra = (intptr_t)is_already_damaged;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
   instance = get_card_instance(player, card);
   if (event == EVENT_RESOLVE_SPELL)
@@ -5272,7 +5272,7 @@ int card_master_of_arms(int player, int card, event_t event)
     default_target_definition(player, card, &td2, 2);
     td2.allowed_controller = 1 - player;
     td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td2.extra = (int32_t)is_blocking_master_of_arms;
+    td2.extra = (intptr_t)is_blocking_master_of_arms;
     td2.preferred_controller = td2.allowed_controller;
     get_card_instance(player, card);
   }
@@ -5285,7 +5285,7 @@ int card_master_of_arms(int player, int card, event_t event)
     default_target_definition(player, card, &td2, 2);
     td2.allowed_controller = 1 - player;
     td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td2.extra = (int32_t)is_blocking_master_of_arms;
+    td2.extra = (intptr_t)is_blocking_master_of_arms;
     td2.preferred_controller = td2.allowed_controller;
     instance = get_card_instance(player, card);
     if ((event == EVENT_RESOLVE_ACTIVATION) && (result = valid_target(&td2), result != 0))

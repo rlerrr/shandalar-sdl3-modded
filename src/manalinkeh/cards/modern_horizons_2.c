@@ -771,7 +771,7 @@ int card_arcus_acolyte(int player, int card, event_t event)
     default_target_definition(player, card, &td, 2);
     td.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONING_SICK;
     td.special = TARGET_SPECIAL_NOT_ME | TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)doesnt_have_p1_p1_counter_and_can_be_activated;
+    td.extra = (intptr_t)doesnt_have_p1_p1_counter_and_can_be_activated;
     td.illegal_abilities = 0;
     td.preferred_controller = player;
     td.allowed_controller = player;
@@ -896,7 +896,7 @@ int card_arcus_acolyte(int player, int card, event_t event)
     default_target_definition(player, card, &td, 2);
     td.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONING_SICK;
     td.special = TARGET_SPECIAL_NOT_ME | TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)doesnt_have_p1_p1_counter_and_can_be_activated;
+    td.extra = (intptr_t)doesnt_have_p1_p1_counter_and_can_be_activated;
     td.illegal_abilities = 0;
     td.preferred_controller = player;
     td.allowed_controller = player;
@@ -8092,7 +8092,7 @@ int card_sword_of_hearth_and_home(int player, int card, event_t event)
 
     default_target_definition(player, card, &td, 2);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_you_own;
+    td.extra = (intptr_t)target_you_own;
     td.allow_cancel = 2;
     new_default_test_definition(&this_test, 1, "Select a basic land card.");
     this_test.subtype = 0x2000;
@@ -10057,7 +10057,7 @@ int card_break_the_ice(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 1);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_is_snow_or_can_produce_colorless;
+    td.extra = (intptr_t)target_is_snow_or_can_produce_colorless;
     instance = get_card_instance(player, card);
     result = basic_spell(player, card, EVENT_CAN_CAST);
     if (result != 0)
@@ -10075,7 +10075,7 @@ int card_break_the_ice(int player, int card, event_t event)
     {
       default_target_definition(player, card, &td, 1);
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-      td.extra = (int32_t)target_is_snow_or_can_produce_colorless;
+      td.extra = (intptr_t)target_is_snow_or_can_produce_colorless;
       instance = get_card_instance(player, card);
       if ((card == affected_card) && (player == affected_card_controller))
       {
@@ -10100,7 +10100,7 @@ int card_break_the_ice(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 1);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_is_snow_or_can_produce_colorless;
+    td.extra = (intptr_t)target_is_snow_or_can_produce_colorless;
     instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_SPELL)
     {

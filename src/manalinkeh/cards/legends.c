@@ -1370,7 +1370,7 @@ int card_brine_hag(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)brine_hag_effect ){
+				if( inst->info_slot == (intptr_t)brine_hag_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -4838,7 +4838,7 @@ int card_lands_edge(int player, int card, event_t event ){
             for (int c = 0; c <= active_cards_count[p]; ++c){
                 if (in_play(p, c) && is_what(p, c, TYPE_EFFECT)){
                     card_instance_t *inst = get_card_instance(p, c);
-                    if (inst->info_slot == (int)lands_edge_effect && inst->targets[0].player == player && inst->targets[0].card == card){
+                    if (inst->info_slot == (intptr_t)lands_edge_effect && inst->targets[0].player == player && inst->targets[0].card == card){
                         if (p == player){ kill_card(player, c, KILL_EXILE); }
                         else { found = 1; if (p == 1){ break; } }
                     }

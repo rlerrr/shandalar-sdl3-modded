@@ -1360,7 +1360,7 @@ int destroy_attached_auras_and_obliterate_card(int player, int card)
 													 * http://www.slightlymagic.net/forum/tracker.php?t=987 */
 				  }
 				else if (!(instance->internal_card_id == LEGACY_EFFECT_CUSTOM
-						   && instance->info_slot == (int)effect_this_dies))
+						   && instance->info_slot == (intptr_t)effect_this_dies))
 				  {
 					auras_to_destroy[count].player = p;
 					auras_to_destroy[count].card = c;

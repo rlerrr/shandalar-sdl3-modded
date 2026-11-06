@@ -1203,7 +1203,7 @@ int card_wayward_disciple(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)wayward_disciple_effect ){
+				if( inst->info_slot == (intptr_t)wayward_disciple_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -2001,7 +2001,7 @@ int card_fleeting_memories(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t* legacy = get_card_instance(player, c);
-        if (legacy->info_slot == (int32_t)fleeting_memories_effect &&
+        if (legacy->info_slot == (intptr_t)fleeting_memories_effect &&
             ((legacy->damage_target_player == player && legacy->damage_target_card == card) ||
              (legacy->targets[0].player == player && legacy->targets[0].card == card)))
         {
@@ -5690,7 +5690,7 @@ int card_graf_mole(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t* legacy = get_card_instance(player, c);
-        if (legacy->info_slot == (int32_t)graf_mole_effect &&
+        if (legacy->info_slot == (intptr_t)graf_mole_effect &&
             ((legacy->damage_target_player == player && legacy->damage_target_card == card) ||
              (legacy->targets[0].player == player && legacy->targets[0].card == card)))
         {
@@ -6480,7 +6480,7 @@ int card_ulvenwald_mysteries(int player, int card, event_t event){
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t* legacy = get_card_instance(player, c);
-        if (legacy->info_slot == (int32_t)ulvenwald_mysteries_effect &&
+        if (legacy->info_slot == (intptr_t)ulvenwald_mysteries_effect &&
             ((legacy->damage_target_player == player && legacy->damage_target_card == card) ||
              (legacy->targets[0].player == player && legacy->targets[0].card == card)))
         {

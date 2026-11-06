@@ -1862,7 +1862,7 @@ int card_mizzium_transreliquat(int player, int card, event_t event)
 				card_instance_t* inst;
 				int cc;
 				for (cc = 0; cc < active_cards_count[p]; ++cc)
-				  if ((inst = in_play(p, cc)) && inst->internal_card_id == LEGACY_EFFECT_ACTIVATED && inst->info_slot == (int)effect_mizzium_transreliquat
+				  if ((inst = in_play(p, cc)) && inst->internal_card_id == LEGACY_EFFECT_ACTIVATED && inst->info_slot == (intptr_t)effect_mizzium_transreliquat
 					  && inst->damage_target_player == p && inst->damage_target_card == c)
 					{
 					  kill_card(p, cc, KILL_EXILE);
@@ -1875,7 +1875,7 @@ int card_mizzium_transreliquat(int player, int card, event_t event)
 				  {
 					set_legacy_image(p, CARD_ID_MIZZIUM_TRANSRELIQUAT, leg);
 					card_instance_t* legacy = get_card_instance(p, leg);
-					legacy->targets[2].player = (int)effect_mizzium_transreliquat;
+					legacy->targets[2].player = (intptr_t)effect_mizzium_transreliquat;
 				  }
 				break;
 
@@ -2120,7 +2120,7 @@ int card_necromancers_magemark(int player, int card, event_t event)
         if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
         {
           card_instance_t *inst = get_card_instance(player, c);
-          if (inst->info_slot == (int)necromancers_magemark_effect)
+          if (inst->info_slot == (intptr_t)necromancers_magemark_effect)
           {
             if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
                 (inst->targets[0].player == player && inst->targets[0].card == card))
@@ -2924,7 +2924,7 @@ int card_seize_the_soul(int player, int card, event_t event){
 			default_target_definition(player, card, &td1, TYPE_CREATURE );
 			td1.allow_cancel = 0;
 			td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-			td1.extra = (int32_t)not_already_dying;
+			td1.extra = (intptr_t)not_already_dying;
 			if( can_target(&td1) && pick_target(&td1, "TARGET_CREATURE") ){
 				create_targetted_legacy_effect(player, card, &seize_the_soul_legacy, instance->targets[0].player, instance->targets[0].card);
 				kill_card(player, card, KILL_EXILE);
@@ -3542,7 +3542,7 @@ int card_teysa_orzhov_scion(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)teysa_orzhov_scion_effect ){
+				if( inst->info_slot == (intptr_t)teysa_orzhov_scion_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{

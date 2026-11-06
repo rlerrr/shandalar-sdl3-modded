@@ -1034,7 +1034,7 @@ typedef struct card_instance_struct
 	int16_t power;								   /*  0x34 */
 	int8_t number_of_targets;					   /*  0x36 */
 	union { int8_t unknown0x37; uint8_t mode; }; /*  0x37 */				   // Used only on damage cards, apparently for temporary storage
-	union { int32_t info_slot; CardFunction info_slot_fn; };							   /*  0x38 */
+	union { intptr_t info_slot; CardFunction info_slot_fn; };							   /*  0x38 */
 	int32_t original_internal_card_id; /*  0x3C */ // Mok : CD_CardIDinCT_Parent
 	int8_t color_id[6]; /*  0x40 */				   // cless -> black -> blue -> green -> red -> white - Sleight of Mind data
 	uint16_t backup_internal_card_id; /*  0x46 */  // internal_card_id is stored here at the end of EVENT_CHANGE_TYPE.  A crutch to deal with the poor design decision of setting internal_card_id == -1 to indicate a card's left play.
@@ -1117,7 +1117,7 @@ typedef struct card_instance_struct
 		uint32_t unused0x124; /* Native token special-keyword mirror. */
 	};
 } PACKED card_instance_t;
-STATIC_ASSERT(sizeof(card_instance_t) == 300, card_instance_t_wrong_size);
+STATIC_ASSERT(sizeof(card_instance_t) == (sizeof(void *) == 8 ? 320 : 300), card_instance_t_wrong_size);
 
 /* Extra ability is cards_data */
 typedef enum
@@ -1191,7 +1191,7 @@ typedef struct
 	uint8_t unused0x43; /* 0x43 */				// reserved padding in the engine record
 	int32_t ai_base_value; /* 0x44 */			// ct_all.csv Creature Rating Mod; separate from card_ptr_t's AI score
 } PACKED card_data_t;
-STATIC_ASSERT(sizeof(card_data_t) == 72, card_data_t_wrong_size);
+STATIC_ASSERT(sizeof(card_data_t) == (sizeof(void *) == 8 ? 80 : 72), card_data_t_wrong_size);
 
 typedef enum
 {
@@ -1374,7 +1374,7 @@ typedef struct
 	uint8_t enchant_type; // // bits 0-3: Enchant Type OWN; bits 4-7: Enchant Type OPP.  In Shandalar: zero.
 	uint8_t hack_mode;	  // In Shandalar: zero
 } card_ptr_t;			  /* need better name here */
-STATIC_ASSERT(sizeof(card_ptr_t) == 152, card_ptr_t_wrong_size);
+STATIC_ASSERT(sizeof(card_ptr_t) == (sizeof(void *) == 8 ? 192 : 152), card_ptr_t_wrong_size);
 
 typedef struct
 {
@@ -2522,7 +2522,7 @@ typedef struct
 	int32_t illegal_abilities;
 	int32_t required_color;
 	int32_t illegal_color;
-	int32_t extra;
+	intptr_t extra;
 	int32_t required_subtype;
 	int32_t power_requirement;
 	int32_t toughness_requirement;
@@ -3356,10 +3356,10 @@ OP_BITWISE(CardPtrFlags);
 typedef const char* (*target_predicate_t)(int who_chooses, int player, int card,
                                         int targeting_player, int targeting_card);
 
-static inline int32_t target_predicate_extra(target_predicate_t predicate)
+static inline intptr_t target_predicate_extra(target_predicate_t predicate)
 {
-  STATIC_ASSERT(sizeof(int32_t) == sizeof(target_predicate_t), target_predicate_must_fit_extra);
-  return (int32_t)predicate;
+  STATIC_ASSERT(sizeof(intptr_t) == sizeof(target_predicate_t), target_predicate_must_fit_extra);
+  return (intptr_t)predicate;
 }
 
 #define RESOLVE_TRIGGER_AI(p_)	(duh_mode(p_) ? RESOLVE_TRIGGER_MANDATORY : RESOLVE_TRIGGER_OPTIONAL)

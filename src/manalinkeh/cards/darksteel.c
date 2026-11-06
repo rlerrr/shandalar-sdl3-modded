@@ -21,7 +21,7 @@ int modular(int player, int card, event_t event, int initial_counters)
     td.preferred_controller = player;
     td.special =
         TARGET_SPECIAL_NOT_ME | TARGET_SPECIAL_ARTIFACT_CREATURE | TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)not_already_dying;
+    td.extra = (intptr_t)not_already_dying;
 
     card_instance_t *instance = get_card_instance(player, card);
 
@@ -705,7 +705,7 @@ int card_coretapper(int player, int card, event_t event)
     td.preferred_controller = player;
     if ((ai_is_speculating == 1) || ((player == 1 && (((unsigned char)trace_mode & 2) == 0))))
     {
-      td.extra = (int32_t)target_must_natively_use_charge_counters;
+      td.extra = (intptr_t)target_must_natively_use_charge_counters;
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     }
     result = can_sacrifice_this_as_cost(player, card);
@@ -947,7 +947,7 @@ int card_dismantle(int player, int card, event_t event)
           td.special = TARGET_SPECIAL_ARTIFACT_CREATURE;
           if (can_target(&td) == 0)
           {
-            td.extra = (int32_t)target_must_natively_use_charge_counters;
+            td.extra = (intptr_t)target_must_natively_use_charge_counters;
             td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
             target_id_or_available = can_target(&td);
             target_card_or_priority = 1;

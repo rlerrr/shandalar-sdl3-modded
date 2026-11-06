@@ -1780,7 +1780,10 @@ Seedborn Muse	|3|G|G
 Creature - Spirit 2/4
 Untap all permanents you control during each other player's untap step. */
 
-	untap_permanents_during_opponents_untap(player, card, TYPE_PERMANENT, &get_card_instance(player, card)->info_slot);
+	card_instance_t *instance = get_card_instance(player, card);
+	int last_untap = (int)instance->info_slot;
+	untap_permanents_during_opponents_untap(player, card, TYPE_PERMANENT, &last_untap);
+	instance->info_slot = last_untap;
 	return 0;
 }
 

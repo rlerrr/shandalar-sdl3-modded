@@ -74,7 +74,7 @@ static void modify_cost_for_improvise(int player, int card, event_t event)
   if (player == 1)
   {
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)non_mana_source;
+    td.extra = (intptr_t)non_mana_source;
   }
   td.allowed_controller = player;
   cost_or_id = get_id(player, card);
@@ -1727,7 +1727,7 @@ int card_daring_demolition(int player, int card, event_t event)
   }
   default_target_definition(player, card, &td, 0x47);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)is_creature_or_vehicle;
+  td.extra = (intptr_t)is_creature_or_vehicle;
   instance = get_card_instance(player, card);
   if (event == EVENT_RESOLVE_SPELL)
   {
@@ -3220,7 +3220,7 @@ int card_indomitable_creativity(int player, int card, event_t event)
   {
     td.preferred_controller = 1;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)not_indestructible;
+    td.extra = (intptr_t)not_indestructible;
   }
   if (event == EVENT_CAN_CAST)
     return generic_spell(player, card, EVENT_CAN_CAST, 5, &td, NULL, 1, NULL);
@@ -3472,7 +3472,7 @@ int card_kari_zevs_expertise(int player, int card, event_t event)
   target_definition_t td;
   default_target_definition(player, card, &td, 0x47);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)is_creature_or_vehicle;
+  td.extra = (intptr_t)is_creature_or_vehicle;
   card_instance_t *instance = get_card_instance(player, card);
   if (event == EVENT_RESOLVE_SPELL)
   {
@@ -4223,7 +4223,7 @@ int card_monstrous_onslaught(int player, int card, event_t event)
     td.preferred_controller = 1 - player;
     td.illegal_abilities = get_protections_from(player, card);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)not_indestructible;
+    td.extra = (intptr_t)not_indestructible;
   }
   card_instance_t *instance = get_card_instance(player, card);
   if (event == EVENT_CAN_CAST)
@@ -5104,7 +5104,7 @@ int card_release_the_gremlins(int player, int card, event_t event)
     td.allow_cancel = 3;
     td.illegal_abilities = get_protections_from(1, card);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)not_indestructible;
+    td.extra = (intptr_t)not_indestructible;
   }
   card_instance_t *instance = get_card_instance(player, card);
   if (event == EVENT_CAN_CAST)
@@ -5647,7 +5647,7 @@ int card_rishkar_peema_renegade(int player, int card, event_t event)
     td.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONING_SICK;
     td.illegal_abilities = 0;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)has_a_counter_and_not_mana_src;
+    td.extra = (intptr_t)has_a_counter_and_not_mana_src;
     if (event == EVENT_CAN_ACTIVATE)
     {
       return can_target(&td);
@@ -6190,7 +6190,7 @@ int card_siege_modification(int player, int card, event_t event)
   target_definition_t td;
   default_target_definition(player, card, &td, 0x47);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)is_creature_or_vehicle;
+  td.extra = (intptr_t)is_creature_or_vehicle;
   int attached_player = instance->damage_target_player;
   int attached_card = instance->damage_target_card;
   if (event == EVENT_POWER && attached_card == affected_card &&

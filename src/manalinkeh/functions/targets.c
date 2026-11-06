@@ -48,26 +48,26 @@ static int target_available_maybe_force(
     int player, int card, int *return_count, int test_damage_target_or_source,
     int who_chooses, int allowed_controller, int preferred_controller, int zone,
     int required_type, int illegal_type, int required_abilities, int illegal_abilities,
-    int required_color, int illegal_color, int extra, int required_subtype, int power_requirement,
+    int required_color, int illegal_color, intptr_t extra, int required_subtype, int power_requirement,
     int toughness_requirement, int special, int required_state, int illegal_state, int flags,
     int allow_cancel);
 int real_validate_target(int tgt_player, int tgt_card, char *return_error_str, int who_chooses,
                               int allowed_controller, int preferred_controller, int zone,
                               int required_type, int illegal_type, int required_abilities,
                               int illegal_abilities, int required_color, int illegal_color,
-                              int extra, int required_subtype, int power_requirement,
+                              intptr_t extra, int required_subtype, int power_requirement,
                               int toughness_requirement, int special, int required_state,
                               int illegal_state);
 int real_target_available(int *return_count, int test_damage_target_or_source, int who_chooses,
                                int allowed_controller, int preferred_controller, int zone,
                                int required_type, int illegal_type, int required_abilities,
                                int illegal_abilities, int required_color, int illegal_color,
-                               int extra, int required_subtype, int power_requirement,
+                               intptr_t extra, int required_subtype, int power_requirement,
                                int toughness_requirement, int special, int required_state,
                                int illegal_state);
 int real_select_target(int who_chooses, int allowed_controller, int preferred_controller,
                             int zone, int required_type, int illegal_type, int required_abilities,
-                            int illegal_abilities, int required_color, int illegal_color, int extra,
+                            int illegal_abilities, int required_color, int illegal_color, intptr_t extra,
                             int required_subtype, int power_requirement, int toughness_requirement,
                             int special, int required_state, int illegal_state, const char *prompt,
                             int allow_cancel, target_t *ret_tgt);
@@ -78,7 +78,7 @@ static int validate_target_impl(int player, int card, int tgt_player, int tgt_ca
                                      int allowed_controller, int preferred_controller, int zone,
                                      int required_type, int illegal_type, int required_abilities,
                                      int illegal_abilities, int required_color, int illegal_color,
-                                     int extra, int required_subtype, int power_requirement,
+                                     intptr_t extra, int required_subtype, int power_requirement,
                                      int toughness_requirement, int special, int required_state,
                                      int illegal_state, int flags);
 static int target_available_impl(int player, int card, int *return_count,
@@ -86,13 +86,13 @@ static int target_available_impl(int player, int card, int *return_count,
                                       int allowed_controller, int preferred_controller, int zone,
                                       int required_type, int illegal_type, int required_abilities,
                                       int illegal_abilities, int required_color, int illegal_color,
-                                      int extra, int required_subtype, int power_requirement,
+                                      intptr_t extra, int required_subtype, int power_requirement,
                                       int toughness_requirement, int special, int required_state,
                                       int illegal_state, int flags);
 static int select_target_impl(int player, int card, int who_chooses, int allowed_controller,
                                    int preferred_controller, int zone, int required_type,
                                    int illegal_type, int required_abilities, int illegal_abilities,
-                                   int required_color, int illegal_color, int extra,
+                                   int required_color, int illegal_color, intptr_t extra,
                                    int required_subtype, int power_requirement,
                                    int toughness_requirement, int special, int required_state,
                                    int illegal_state, int flags, const char *prompt,
@@ -100,13 +100,13 @@ static int select_target_impl(int player, int card, int who_chooses, int allowed
 static int select_target_maybe_force(
     int player, int card, int who_chooses, int allowed_controller, int preferred_controller,
     int zone, int required_type, int illegal_type, int required_abilities, int illegal_abilities,
-    int required_color, int illegal_color, int extra, int required_subtype, int power_requirement,
+    int required_color, int illegal_color, intptr_t extra, int required_subtype, int power_requirement,
     int toughness_requirement, int special, int required_state, int illegal_state, int flags,
     const char *prompt, int allow_cancel, target_t *ret_tgt);
 int autoselect_target(int player, int card, int i, int j, int k, int who_chooses,
                            int allowed_controller, int preferred_controller, int zone,
                            int required_type, int illegal_type, int required_abilities,
-                           int illegal_abilities, int required_color, int illegal_color, int extra,
+                           int illegal_abilities, int required_color, int illegal_color, intptr_t extra,
                            int required_subtype, int power_requirement, int toughness_requirement,
                            int special, int required_state, int illegal_state, int flags,
                            int prompt, int allow_cancel, int ret_location);
@@ -398,7 +398,7 @@ const target_t* becomes_target_of_spell_or_effect(int player, int card, event_t 
   if ((event == EVENT_PLAY_ABILITY || event == EVENT_TAPPED_TO_PLAY_ABILITY || event == EVENT_TRIGGER_RESOLVED)
 	  && (controlled_by == ANYBODY || affected_card_controller == controlled_by)
 	  && target_me(t_player, t_card, affected_card_controller, affected_card)
-	  && get_card_instance(affected_card_controller, affected_card)->info_slot != (int)legacy_effect_pump_ability_until_eot
+	  && get_card_instance(affected_card_controller, affected_card)->info_slot != (intptr_t)legacy_effect_pump_ability_until_eot
 	  )
 	{
 	  rval.player = affected_card_controller;
@@ -669,7 +669,7 @@ static int validate_target_impl(int player, int card, int tgt_player, int tgt_ca
                                 char *return_error_str, int who_chooses, int allowed_controller,
                                 int preferred_controller, int zone, int required_type,
                                 int illegal_type, int required_abilities, int illegal_abilities,
-                                int required_color, int illegal_color, int extra,
+                                int required_color, int illegal_color, intptr_t extra,
                                 int required_subtype, int power_requirement,
                                 int toughness_requirement, int special, int required_state,
                                 int illegal_state, int flags)
@@ -875,7 +875,7 @@ static int validate_target_impl(int player, int card, int tgt_player, int tgt_ca
         backtrace_and_abort("functions/targets.c:450\nextra != -1 && extra != 0");
 
       typedef const char *(*Predicate)(int, int, int, int, int);
-      STATIC_ASSERT(sizeof(int32_t) == sizeof(Predicate), Predicate_type_must_fit_into_an_int32_t);
+      STATIC_ASSERT(sizeof(intptr_t) == sizeof(Predicate), Predicate_type_must_fit_extra);
 
       Predicate predicate = (Predicate)extra;
       int p = player, c = card;
@@ -1255,7 +1255,7 @@ epilog:
 int real_validate_target(int tgt_player, int tgt_card, char *return_error_str, int who_chooses,
                          int allowed_controller, int preferred_controller, int zone,
                          int required_type, int illegal_type, int required_abilities,
-                         int illegal_abilities, int required_color, int illegal_color, int extra,
+                         int illegal_abilities, int required_color, int illegal_color, intptr_t extra,
                          int required_subtype, int power_requirement, int toughness_requirement,
                          int special, int required_state, int illegal_state)
 {
@@ -1283,7 +1283,7 @@ static int target_available_impl(int player, int card, int *return_count,
     int test_damage_target_or_source, int who_chooses, int allowed_controller,
     int preferred_controller, int zone, int required_type, int illegal_type,
     int required_abilities, int illegal_abilities, int required_color, int illegal_color,
-    int extra, int required_subtype, int power_requirement, int toughness_requirement,
+    intptr_t extra, int required_subtype, int power_requirement, int toughness_requirement,
     int special, int required_state, int illegal_state, int flags)
 {
   if (g_ai_search_flags & 1)
@@ -1350,7 +1350,7 @@ static int target_available_impl(int player, int card, int *return_count,
 int real_target_available(int *return_count, int test_damage_target_or_source, int who_chooses,
                           int allowed_controller, int preferred_controller, int zone,
                           int required_type, int illegal_type, int required_abilities,
-                          int illegal_abilities, int required_color, int illegal_color, int extra,
+                          int illegal_abilities, int required_color, int illegal_color, intptr_t extra,
                           int required_subtype, int power_requirement, int toughness_requirement,
                           int special, int required_state, int illegal_state)
 {
@@ -1387,7 +1387,7 @@ static int target_available_maybe_force(
     int player, int card, int *return_count, int test_damage_target_or_source,
     int who_chooses, int allowed_controller, int preferred_controller, int zone,
     int required_type, int illegal_type, int required_abilities, int illegal_abilities,
-    int required_color, int illegal_color, int extra, int required_subtype, int power_requirement,
+    int required_color, int illegal_color, intptr_t extra, int required_subtype, int power_requirement,
     int toughness_requirement, int special, int required_state, int illegal_state, int flags,
     int allow_cancel)
 {
@@ -1424,7 +1424,7 @@ static int target_available_maybe_force(
 static int select_target_impl(int player, int card, int who_chooses, int allowed_controller,
                               int preferred_controller, int zone, int required_type,
                               int illegal_type, int required_abilities, int illegal_abilities,
-                              int required_color, int illegal_color, int extra,
+                              int required_color, int illegal_color, intptr_t extra,
                               int required_subtype, int power_requirement,
                               int toughness_requirement, int special, int required_state,
                               int illegal_state, int flags, const char *prompt, int allow_cancel,
@@ -1632,7 +1632,7 @@ static int select_target_impl(int player, int card, int who_chooses, int allowed
 static int select_target_maybe_force(
     int player, int card, int who_chooses, int allowed_controller, int preferred_controller,
     int zone, int required_type, int illegal_type, int required_abilities, int illegal_abilities,
-    int required_color, int illegal_color, int extra, int required_subtype, int power_requirement,
+    int required_color, int illegal_color, intptr_t extra, int required_subtype, int power_requirement,
     int toughness_requirement, int special, int required_state, int illegal_state, int flags,
     const char *prompt, int allow_cancel, target_t *ret_tgt)
 {
@@ -1698,7 +1698,7 @@ static int select_target_maybe_force(
 /* ManalinkEh 2022: 0x2660010; original functions/targets.c:1295. */
 int real_select_target(int who_chooses, int allowed_controller, int preferred_controller, int zone,
                        int required_type, int illegal_type, int required_abilities,
-                       int illegal_abilities, int required_color, int illegal_color, int extra,
+                       int illegal_abilities, int required_color, int illegal_color, intptr_t extra,
                        int required_subtype, int power_requirement, int toughness_requirement,
                        int special, int required_state, int illegal_state, const char *prompt,
                        int allow_cancel, target_t *ret_tgt)
@@ -2429,7 +2429,7 @@ int validate_target(int player, int card, target_definition_t *td, int target_nu
 int autoselect_target(int player, int card, int i, int j, int k, int who_chooses,
                            int allowed_controller, int preferred_controller, int zone,
                            int required_type, int illegal_type, int required_abilities,
-                           int illegal_abilities, int required_color, int illegal_color, int extra,
+                           int illegal_abilities, int required_color, int illegal_color, intptr_t extra,
                            int required_subtype, int power_requirement, int toughness_requirement,
                            int special, int required_state, int illegal_state, int flags,
                            int prompt, int allow_cancel, int ret_location)

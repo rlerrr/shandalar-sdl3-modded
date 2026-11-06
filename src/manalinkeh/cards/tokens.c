@@ -487,7 +487,7 @@ int card_assassin_token(int player, int card, event_t event)
           {
             card_instance_t* legacy = in_play(player, c);
             if (legacy && legacy->internal_card_id == LEGACY_EFFECT_CUSTOM &&
-                legacy->info_slot == (int32_t)attacking_planeswalker &&
+                legacy->info_slot == (intptr_t)attacking_planeswalker &&
                 legacy->damage_target_player == player && legacy->damage_target_card == card)
             {
               legacy = get_card_instance(player, c);

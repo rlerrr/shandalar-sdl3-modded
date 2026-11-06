@@ -53,7 +53,7 @@ typedef enum {
 typedef struct rarity_num_t { draftrarity_t rarity; int num; } rarity_num_t;
 typedef struct booster_t { EXPANSION_t expansion; const rarity_num_t *booster; const rarity_num_t *starter; } booster_t;
 typedef struct csvid_choices_t { int num; card_id_t *csvids; } csvid_choices_t;
-_Static_assert(sizeof(rarity_num_t)==8 && sizeof(booster_t)==12 && sizeof(csvid_choices_t)==8, "native pack description layouts");
+_Static_assert(sizeof(rarity_num_t)==8 && sizeof(booster_t)==3*sizeof(void *) && sizeof(csvid_choices_t)==2*sizeof(void *), "native pack description layouts");
 
 static const rarity_num_t no_boosters[1] = {
   {0, 0},
@@ -888,7 +888,7 @@ void announce_expansion_choice(int player, int card, EXPANSION_t expansion)
 #ifndef SHANDALAR
 typedef struct count_and_card_t { int count; card_id_t csvid; } count_and_card_t;
 typedef struct varying_copies_entry_t { draftrarity_t rarity; const count_and_card_t *counts_and_cards; } varying_copies_entry_t;
-_Static_assert(sizeof(count_and_card_t)==8 && sizeof(varying_copies_entry_t)==8, "native collation record widths");
+_Static_assert(sizeof(count_and_card_t)==8 && sizeof(varying_copies_entry_t)==2*sizeof(void *), "native collation record widths");
 
 static const count_and_card_t copies_common_arabian_nights[28] = {
   {4, 397},
@@ -2121,8 +2121,8 @@ static void get_csvid_choices(EXPANSION_t expansion, csvid_choices_t *choices)
   static const int contraption_copies[3] = {16, 7, 2};
   _Static_assert(sizeof(Rarities) == 5 && offsetof(Rarities, rarity_in_expansion) == 5,
                  "native rarity byte tail");
-  _Static_assert(offsetof(card_ptr_t, types) == 132 &&
-                     offsetof(card_ptr_t, mana_source_colors) == 146,
+  _Static_assert(offsetof(card_ptr_t, types) == (sizeof(void *) == 8 ? 168 : 132) &&
+                     offsetof(card_ptr_t, mana_source_colors) == (sizeof(void *) == 8 ? 182 : 146),
                  "native seven subtypes");
   uint8_t base_rarity;
   unsigned char symbol_or_index;
@@ -2645,9 +2645,10 @@ static INT_PTR __stdcall dlgproc_choose_a_pack(HWND hwnd, UINT msg, WPARAM wpara
   _Static_assert(sizeof(choose_a_pack_args_t) == 64 &&
                      offsetof(choose_a_pack_args_t, results) == 16,
                  "native six-pack argument record");
-  _Static_assert(sizeof(DRAWITEMSTRUCT) == 48 && offsetof(DRAWITEMSTRUCT, hDC) == 24 &&
-                     offsetof(DRAWITEMSTRUCT, rcItem) == 28 &&
-                     offsetof(DRAWITEMSTRUCT, itemData) == 44,
+  _Static_assert(sizeof(DRAWITEMSTRUCT) == (sizeof(void *) == 8 ? 64 : 48) &&
+                     offsetof(DRAWITEMSTRUCT, hDC) == (sizeof(void *) == 8 ? 32 : 24) &&
+                     offsetof(DRAWITEMSTRUCT, rcItem) == (sizeof(void *) == 8 ? 40 : 28) &&
+                     offsetof(DRAWITEMSTRUCT, itemData) == (sizeof(void *) == 8 ? 56 : 44),
                  "native owner-draw record");
   _Static_assert(sizeof(RECT) == 16, "drawing rectangle");
   if (msg == WM_COMMAND)

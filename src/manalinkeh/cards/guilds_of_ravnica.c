@@ -2914,7 +2914,7 @@ int card_pelt_collector(int player, int card, event_t event)
    * Whenever another creature you control enters or dies, if that creature's power is greater than this creature's, put a +1/+1 counter on this creature.
    * As long as this creature has three or more +1/+1 counters on it, it has trample. */
 
-  _Static_assert(offsetof(card_instance_t, targets) == 116 && sizeof(target_t) == 8,
+  _Static_assert(offsetof(card_instance_t, targets) == (sizeof(void *) == 8 ? 136 : 116) && sizeof(target_t) == 8,
                  "native split power slots");
   if (trigger_condition == TRIGGER_COMES_INTO_PLAY && affect_me(player, card))
   {

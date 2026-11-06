@@ -2908,7 +2908,7 @@ int card_vampire_hexmage(int player, int card, event_t event)
       (ai_is_speculating == 1 || (player == 1 && ((unsigned char)trace_mode & 2) == 0)))
   {
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_must_have_counters;
+    td.extra = (intptr_t)target_must_have_counters;
   }
   if (event == EVENT_RESOLVE_ACTIVATION)
   {

@@ -1778,7 +1778,7 @@ int card_double_header(int player, int card, event_t event)
 
   default_target_definition(player, card, &td, 0x47);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)target_has_2_word_name;
+  td.extra = (intptr_t)target_has_2_word_name;
   instance = get_card_instance(player, card);
   result = can_target(&td);
   if (result != 0)
@@ -2069,7 +2069,7 @@ int card_ass_whuppin(int player, int card, event_t event)
   }
   default_target_definition(player, card, &td, 0x47);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)target_has_silver_border;
+  td.extra = (intptr_t)target_has_silver_border;
   if (event == EVENT_RESOLVE_SPELL)
   {
     if (valid_target(&td))
@@ -2458,7 +2458,7 @@ int card_hungry_hungry_heifer(int player, int card, event_t event)
   td.preferred_controller = player;
   td.allowed_controller = player;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)target_must_have_counters;
+  td.extra = (intptr_t)target_must_have_counters;
   instance = get_card_instance(player, card);
   instance->number_of_targets = '\0';
   result = can_target(&td);
@@ -2694,7 +2694,7 @@ int card_booster_tutor(int player, int card, event_t event)
       if (ai_is_speculating != 1 && player == 1)
         show_deck(0, iids, num_csvids, "Booster contents", 0, gs_done_008b40e0);
       test_definition_t test;
-      _Static_assert(sizeof(test) == 216, "native Booster Tutor filter");
+      _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Booster Tutor filter");
       default_test_definition(&test, 0xff);
       int selected;
       do

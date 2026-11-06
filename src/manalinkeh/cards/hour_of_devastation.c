@@ -4278,7 +4278,7 @@ int card_abandoned_sarcophagus(int player, int card, event_t event)
     }
   }
   test_definition_t test;
-  _Static_assert(sizeof(test) == 216, "native Sarcophagus filter");
+  _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Sarcophagus filter");
   new_default_test_definition(&test, 0xff, "Select a card to play.");
   int selected = select_card_from_zone(player, player, playable[0], count, 0, 1, -1, &test);
   if (selected != -1 && charge_mana_from_id(player, -1, EVENT_ACTIVATE,

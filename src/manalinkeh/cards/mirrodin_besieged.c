@@ -141,7 +141,7 @@ int card_glissa_the_traitor(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)glissa_the_traitor_effect ){
+				if( inst->info_slot == (intptr_t)glissa_the_traitor_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -769,7 +769,7 @@ int card_sangromancer(int player, int card, event_t event ){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)sangromancer_effect ){
+				if( inst->info_slot == (intptr_t)sangromancer_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -1124,7 +1124,7 @@ Whenever a creature an opponent controls dies, that player loses 2 life. */
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)massacre_wurm_effect ){
+				if( inst->info_slot == (intptr_t)massacre_wurm_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -2224,7 +2224,7 @@ Whenever an artifact is put into a graveyard from the battlefield, you may gain 
 		for (c = 0; c < active_cards_count[player]; ++c){
 			if (in_play(player, c) && is_what(player, c, TYPE_EFFECT)){
 				card_instance_t* inst = get_card_instance(player, c);
-				if (inst->info_slot == (int)fangren_marauder_effect
+				if (inst->info_slot == (intptr_t)fangren_marauder_effect
 					&& ((inst->damage_target_player == player && inst->damage_target_card == card)
 						|| (inst->targets[0].player == player && inst->targets[0].card == card))){
 					found = 1;
@@ -2623,7 +2623,7 @@ int card_magnetic_mine(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)magnetic_mine_effect ){
+				if( inst->info_slot == (intptr_t)magnetic_mine_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{

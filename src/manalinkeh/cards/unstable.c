@@ -1168,7 +1168,7 @@ int card_old_guard(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 2);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_hasnt_reminder_text;
+    td.extra = (intptr_t)target_hasnt_reminder_text;
   }
   else
   {
@@ -1178,7 +1178,7 @@ int card_old_guard(int player, int card, event_t event)
     }
     default_target_definition(player, card, &td, 2);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_hasnt_reminder_text;
+    td.extra = (intptr_t)target_hasnt_reminder_text;
     if ((event == EVENT_RESOLVE_ACTIVATION) && (result = valid_target(&td), result != 0))
     {
 
@@ -1682,7 +1682,7 @@ int card_rumors_of_my_death(int player, int card, event_t event)
     td.preferred_controller = player;
     td.allowed_controller = player;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_has_league_watermark;
+    td.extra = (intptr_t)target_has_league_watermark;
     new_default_test_definition(
         &test, 0x47, "Select target permanent card with a League of Dastardly Doom watermark.");
     test.special_selection_function = test_has_watermark_val;
@@ -1738,7 +1738,7 @@ int card_rumors_of_my_death(int player, int card, event_t event)
     td.preferred_controller = player;
     td.allowed_controller = player;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_has_league_watermark;
+    td.extra = (intptr_t)target_has_league_watermark;
     new_default_test_definition(
         &test, 0x47, "Select target permanent card with a League of Dastardly Doom watermark.");
   }
@@ -2773,7 +2773,7 @@ int card_very_cryptic_command_e(int player, int card, event_t event)
   {
     counterspell_target_definition(player, card, &td_spell, 0);
     td_spell.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td_spell.extra = (int32_t)target_has_black_border;
+    td_spell.extra = (intptr_t)target_has_black_border;
     counter_available_or_target_index = counterspell(player, card, EVENT_CAN_CAST, &td_spell, -1);
     default_target_definition(player, card, &td_creature, 2);
     creature_available_or_target_player = can_target(&td_creature);
@@ -2794,7 +2794,7 @@ int card_very_cryptic_command_e(int player, int card, event_t event)
     {
       counterspell_target_definition(player, card, &td_spell, 0);
       td_spell.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-      td_spell.extra = (int32_t)target_has_black_border;
+      td_spell.extra = (intptr_t)target_has_black_border;
       counter_available_or_target_index = counterspell(player, card, EVENT_CAN_CAST, &td_spell, -1);
       default_target_definition(player, card, &td_creature, 2);
       creature_available_or_target_player = can_target(&td_creature);
@@ -2854,7 +2854,7 @@ int card_very_cryptic_command_e(int player, int card, event_t event)
   {
     counterspell_target_definition(player, card, &td_spell, 0);
     td_spell.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td_spell.extra = (int32_t)target_has_black_border;
+    td_spell.extra = (intptr_t)target_has_black_border;
     counter_available_or_target_index = counterspell(player, card, EVENT_CAN_CAST, &td_spell, -1);
     default_target_definition(player, card, &td_creature, 2);
     creature_available_or_target_player = can_target(&td_creature);

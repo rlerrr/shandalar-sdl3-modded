@@ -610,7 +610,7 @@ int card_brudiclad_telchor_engineer(int player, int card, event_t event)
     td.allowed_controller = player;
     td.illegal_abilities = 0;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)is_token_targ;
+    td.extra = (intptr_t)is_token_targ;
     result = can_target(&td);
     if (result != 0)
     {
@@ -1139,7 +1139,7 @@ static int totem_armor_any(int player, int card, event_t event)
   target_definition_t td;
 
   aura = get_card_instance(player, card);
-  player_00 = (int)aura->damage_target_player;
+  player_00 = (intptr_t)aura->damage_target_player;
   attached_card_or_result = aura->damage_target_card;
   attached_or_aura = in_play(player, card);
   if ((attached_or_aura != NULL) && (player_00 != -1))
@@ -1642,7 +1642,7 @@ int card_heavenly_blademaster(int player, int card, event_t event)
   td.allowed_controller = player;
   td.illegal_abilities = 0;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)is_aura_or_equipment;
+  td.extra = (intptr_t)is_aura_or_equipment;
   td.allow_cancel = 2;
   i = 0;
   do

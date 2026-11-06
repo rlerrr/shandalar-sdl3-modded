@@ -28,7 +28,7 @@ int companion_effect(int player, int card, event_t event);
 #ifdef CARDS_IN_HAND_THIS_TURN	// unused
 static int cards_in_hand_this_turn[2][100];
 #endif
-static int settings[SETTING_MAX_PLUS_1] = { 0 };
+static intptr_t settings[SETTING_MAX_PLUS_1] = { 0 };
 static event_t actual_event = -1;
 static int challenge = 0;
 static int rules_engine_card[2] = {-1,-1};
@@ -65,7 +65,7 @@ typedef struct
 
 STATIC_ASSERT(sizeof(rules_engine_globals_t) == sizeof(((card_instance_t*)(NULL))->targets), sizeof_rules_engine_globals_t_must_match_target_array);
 
-int get_setting(int thing){
+intptr_t get_setting(int thing){
 	return settings[thing];
 }
 
@@ -161,7 +161,7 @@ void read_settings(void)
     settings[SETTING_SETTING_FILE_READ] = 1;
 
     // Default values
-    settings[SETTING_ABILITY_ICON_FILE] = (int)("Abilities.pic");
+    settings[SETTING_ABILITY_ICON_FILE] = (intptr_t)("Abilities.pic");
     settings[SETTING_ABILITY_ICON_MAX] = 26;
     settings[SETTING_HAND_SIZE] = 8;
     settings[SETTING_MIN_PICS_TO_RANDOMIZE] = 15;
@@ -204,7 +204,7 @@ void read_settings(void)
       --r;                                                                                         \
     }                                                                                              \
     if (*dup)                                                                                      \
-      settings[settingnum] = (int)dup;                                                             \
+      settings[settingnum] = (intptr_t)dup;                                                             \
     continue;                                                                                      \
   }
         case '/':

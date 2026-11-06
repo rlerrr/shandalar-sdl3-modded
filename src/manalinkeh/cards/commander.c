@@ -932,7 +932,7 @@ int card_martyrs_bond(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)martyrs_bond_effect)
+        if (inst->info_slot == (intptr_t)martyrs_bond_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))

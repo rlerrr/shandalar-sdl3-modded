@@ -2094,7 +2094,7 @@ int card_saproling_cluster(int player, int card, event_t event)
       if (in_play(p, c) && is_what(p, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(p, c);
-        if (inst->info_slot == (int)saproling_cluster_legacy)
+        if (inst->info_slot == (intptr_t)saproling_cluster_legacy)
         {
           if (inst->targets[0].player == player && inst->targets[0].card == card)
           {
@@ -4528,7 +4528,7 @@ int card_topple(int player, int card, event_t event)
   }
   default_target_definition(player, card, &td, 2);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)greatest_power_among_creatures;
+  td.extra = (intptr_t)greatest_power_among_creatures;
   instance = get_card_instance(player, card);
   if (event == EVENT_RESOLVE_SPELL)
   {

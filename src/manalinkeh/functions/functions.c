@@ -1368,28 +1368,28 @@ int legacy_effect_activated(int player, int card, event_t event){
 int create_legacy_effect(int player, int card, int (*func_ptr)(int, int, event_t) ){
 	int result = create_legacy_effect_exe(player, card, LEGACY_EFFECT_CUSTOM, -1, -1);
 	card_instance_t *instance = get_card_instance(player, result);
-	instance->info_slot = (int) func_ptr;
+	instance->info_slot = (intptr_t) func_ptr;
 	return result;
 }
 
 int create_legacy_activate(int player, int card, int (*func_ptr)(int, int, event_t) ){
 	int result = create_legacy_effect_exe(player, card, LEGACY_EFFECT_ACTIVATED, -1, -1);
 	card_instance_t *instance = get_card_instance(player, result);
-	instance->info_slot = (int)func_ptr;
+	instance->info_slot = (intptr_t)func_ptr;
 	return result;
 }
 
 int create_targetted_legacy_activate(int player, int card, int (*func_ptr)(int, int, event_t), int t_player, int t_card){
 	int result = create_legacy_effect_exe(player, card, LEGACY_EFFECT_ACTIVATED, t_player, t_card);
 	card_instance_t *instance = get_card_instance(player, result);
-	instance->info_slot = (int)func_ptr;
+	instance->info_slot = (intptr_t)func_ptr;
 	return result;
 }
 
 int create_targetted_legacy_effect(int player, int card, int (*func_ptr)(int, int, event_t), int target_player_id, int target_card ){
 	int result = create_legacy_effect_exe(player, card, LEGACY_EFFECT_CUSTOM, target_player_id, target_card);
 	card_instance_t *instance = get_card_instance(player, result);
-	instance->info_slot =  (int) func_ptr;
+	instance->info_slot =  (intptr_t) func_ptr;
 	instance->targets[0].player = target_player_id;
 	instance->targets[0].card = target_card;
 	instance->number_of_targets = 1;
@@ -1485,7 +1485,7 @@ int effect_follows_control_of_attachment(int player, int card, int event)
 int create_my_legacy(int player, int card, int (*func_ptr)(int, int, event_t)){
 	int result = create_legacy_effect_exe(player, card, LEGACY_EFFECT_CUSTOM, -1, -1);
 	card_instance_t *instance = get_card_instance(player, result);
-	instance->info_slot =  (int) func_ptr;
+	instance->info_slot =  (intptr_t) func_ptr;
 	instance->targets[0].player = player;
 	instance->targets[0].card = card;
 	instance->number_of_targets = 1;
@@ -1502,7 +1502,7 @@ void add_legacy_effect_to_all(int player, int card, int (*func_ptr)(int, int, ev
 					if( in_play(i, count) && new_make_test_in_play(i, count, -1, this_test) ){
 						int result = create_legacy_effect_exe(player, card, LEGACY_EFFECT_CUSTOM, i, count);
 						card_instance_t *instance = get_card_instance(player, result);
-						instance->info_slot =  (int) func_ptr;
+						instance->info_slot =  (intptr_t) func_ptr;
 						instance->targets[0].player = i;
 						instance->targets[0].card = count;
 					}
@@ -5900,7 +5900,7 @@ static int create_time_walk_legacy(int player, int card){
 		for (p = 0; p < 2; ++p){
 			for (c = 0; c < active_cards_count[p]; ++c){
 				card_instance_t* instance = get_card_instance(p, c);
-				if (instance->info_slot == (int)timewalk_legacy && (instance->token_status & STATUS_TIMEWALK)){
+				if (instance->info_slot == (intptr_t)timewalk_legacy && (instance->token_status & STATUS_TIMEWALK)){
 					goto found;
 				}
 			}
@@ -5997,7 +5997,7 @@ int this_turn_is_being_skipped(void)
 	  if (in_play(p, c))
 		{
 		  card_instance_t* inst = get_card_instance(p, c);
-		  if (inst->internal_card_id == LEGACY_EFFECT_CUSTOM && inst->info_slot == (int)skip_next_turn_legacy && inst->targets[0].player == current_turn)
+		  if (inst->internal_card_id == LEGACY_EFFECT_CUSTOM && inst->info_slot == (intptr_t)skip_next_turn_legacy && inst->targets[0].player == current_turn)
 			return 1;
 		}
 
@@ -10162,7 +10162,7 @@ int deflect_one_target(int player, int card, event_t event, target_definition_t 
   }
   if ((td->extra == 0) && (td->special == 0))
   {
-    td->extra = (int32_t)has_only_1_target_and_could_legally_change_target;
+    td->extra = (intptr_t)has_only_1_target_and_could_legally_change_target;
     td->special = 0x8000;
   }
   instance = get_card_instance(player, card);
@@ -14559,6 +14559,20 @@ int charge_mana_from_id_with_cost_mod(int player, int card, event_t event, int c
   return result;
 }
 
+/* Attack counts may use a 32-bit target field or the pointer-sized info slot. */
+static int32_t read_attack_count(card_instance_t *instance, int32_t *storage)
+{
+  return storage ? *storage : (int32_t)instance->info_slot;
+}
+
+static void write_attack_count(card_instance_t *instance, int32_t *storage, int32_t count)
+{
+  if (storage)
+    *storage = count;
+  else
+    instance->info_slot = count;
+}
+
 /* ManalinkEh 2022: 0x268d340; original functions/functions.c:12407. */
 void store_attackers(int player, int card, event_t event, declare_attackers_trigger_t mode,
                           int attacker_player, int attacker_card, test_definition_t *test)
@@ -14591,12 +14605,12 @@ void store_attackers(int player, int card, event_t event, declare_attackers_trig
       }
       else
       {
-        storage = &instance->info_slot;
+        storage = NULL;
         stored_count = instance->info_slot;
       }
       if (stored_count < 0)
       {
-        (*storage) = 0;
+        write_attack_count(instance, storage, 0);
       }
       if ((mode & DAT_ATTACKS_ALONE) == 0)
       {
@@ -14657,13 +14671,13 @@ void store_attackers(int player, int card, event_t event, declare_attackers_trig
                                                                  (current_turn != player)))))) &&
                   (new_make_test_in_play(current_turn, attacker_card, -1, test) != 0))))))
           {
-            count = (*storage);
+            count = read_attack_count(instance, storage);
             if (((mode & DAT_TRACK) != 0) && ((int)count < 0x40))
             {
               ((unsigned char *)&instance->targets[2].player)[count] = (unsigned char)attacker_card;
-              count = (*storage);
+              count = read_attack_count(instance, storage);
             }
-            (*storage) = count + 1;
+            write_attack_count(instance, storage, count + 1);
           }
           attacker_card = attacker_card + 1;
         } while (attacker_card <= result);
@@ -14673,13 +14687,13 @@ void store_attackers(int player, int card, event_t event, declare_attackers_trig
   else if (event == EVENT_CLEANUP)
   {
     instance = get_card_instance(player, card);
-    storage = &instance->info_slot;
+    storage = NULL;
     if (((mode & DAT_STORE_IN_INFO_SLOT) == 0) &&
         (storage = &instance->targets[1].player, (mode & DAT_STORE_IN_TARGETS_3) != 0))
     {
       storage = &instance->targets[3].player;
     }
-    (*storage) = 0;
+    write_attack_count(instance, storage, 0);
     return;
   }
   return;
@@ -14730,7 +14744,7 @@ int resolve_declare_attackers_trigger(int player, int card, event_t event,
   }
   else
   {
-    storage = &instance->info_slot;
+    storage = NULL;
     stored_count = instance->info_slot;
   }
   if (stored_count < 1)
@@ -14742,7 +14756,7 @@ int resolve_declare_attackers_trigger(int player, int card, event_t event,
   {
     if (event == EVENT_RESOLVE_TRIGGER)
     {
-      result = (*storage);
+      result = read_attack_count(instance, storage);
       if ((mode & DAT_SEPARATE_TRIGGERS) != 0)
       {
         attacker = ((unsigned char *)&instance->targets[2].player)[result];
@@ -14750,7 +14764,7 @@ int resolve_declare_attackers_trigger(int player, int card, event_t event,
         {
           instance->state = instance->state & 0xfffffeff;
         }
-        (*storage) = (*storage) + -1;
+        write_attack_count(instance, storage, read_attack_count(instance, storage) - 1);
         return attacker + 1;
       }
     }
@@ -14758,7 +14772,7 @@ int resolve_declare_attackers_trigger(int player, int card, event_t event,
     {
       return 0;
     }
-    (*storage) = 0;
+    write_attack_count(instance, storage, 0);
     return result;
   }
   trigger_mode = mode & 0xf;
@@ -15854,7 +15868,7 @@ int deflect_away_from_me(int player, int card, event_t event, int mode, int cles
     td = &td_default;
     counterspell_target_definition(player, card, td, 0xff);
     td_default.special = td_default.special | 0x8000;
-    td_default.extra = (int32_t)has_only_1_target_and_could_legally_change_target_and_targets_me;
+    td_default.extra = (intptr_t)has_only_1_target_and_could_legally_change_target_and_targets_me;
   }
   instance = get_card_instance(player, card);
   if (event != EVENT_CAN_ACTIVATE)
@@ -19712,7 +19726,7 @@ int can_play_cards_as_though_they_had_flash(int player, int card, event_t event,
   if ((automatic || event == EVENT_CAN_ACTIVATE) && td->extra == -1)
   {
     td->special |= 0x8000;
-    td->extra = (int32_t)has_mana_to_cast_target;
+    td->extra = (intptr_t)has_mana_to_cast_target;
   }
   hack_current_event = event;
   if (event == EVENT_CAN_ACTIVATE)

@@ -2593,7 +2593,7 @@ int card_tales_end(int player, int card, event_t event)
   instance = get_card_instance(player, card);
   counterspell_target_definition(player, card, &td_spell, 0);
   td_spell.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td_spell.extra = (int32_t)is_legendary_by_iid;
+  td_spell.extra = (intptr_t)is_legendary_by_iid;
   if (event == EVENT_CAN_CAST)
   {
     result = counterspell(player, card, EVENT_CAN_CAST, &td_spell, 0);

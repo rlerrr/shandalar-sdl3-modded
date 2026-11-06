@@ -1450,7 +1450,7 @@ int card_boggart_shenanigans(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)boggart_shenanigans_effect ){
+				if( inst->info_slot == (intptr_t)boggart_shenanigans_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -2143,7 +2143,7 @@ At the beginning of the end step, if three or more cards have been exiled with C
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)colfenors_urn_effect ){
+				if( inst->info_slot == (intptr_t)colfenors_urn_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -4264,7 +4264,7 @@ int card_kithkin_mourncaller(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)kithkin_mourncaller_effect ){
+				if( inst->info_slot == (intptr_t)kithkin_mourncaller_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -5071,7 +5071,7 @@ int card_oonas_prowler(int player, int card, event_t event ){
 		CYCLE_ALL_CARDS(p, c, 	{
 									if( in_play(p, c) && is_what(p, c, TYPE_EFFECT) ){
 										card_instance_t *inst = get_card_instance(p, c);
-										if( inst->info_slot == (int)oonas_prowler_effect ){
+										if( inst->info_slot == (intptr_t)oonas_prowler_effect ){
 											if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 												(inst->targets[0].player == player && inst->targets[0].card == card) )
 											{
@@ -5733,7 +5733,7 @@ int card_prowess_of_the_fair(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)prowess_of_the_fair_effect ){
+				if( inst->info_slot == (intptr_t)prowess_of_the_fair_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{

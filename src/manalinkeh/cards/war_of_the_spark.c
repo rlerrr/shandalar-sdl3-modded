@@ -2906,7 +2906,7 @@ static int effect_yanggu_mana(int player, int card, event_t event)
   td.illegal_state = TARGET_STATE_TAPPED | TARGET_STATE_SUMMONING_SICK;
   td.illegal_abilities = 0;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)has_a_counter_and_not_mana_src;
+  td.extra = (intptr_t)has_a_counter_and_not_mana_src;
   if (event == EVENT_COUNT_MANA)
   {
 
@@ -8138,7 +8138,7 @@ static int vivien_flash_ability(int player, int card, event_t event)
   bool ai = ai_is_speculating == 1 || (player == 1 && ((unsigned char)trace_mode & 2) == 0);
   if (td.extra == -1 && (ai || event == EVENT_CAN_ACTIVATE))
   {
-    td.extra = (int32_t)vivien_has_mana_to_cast_target;
+    td.extra = (intptr_t)vivien_has_mana_to_cast_target;
     td.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
   }
   if (event != EVENT_CAN_ACTIVATE && event != EVENT_ACTIVATE && event != EVENT_RESOLVE_ACTIVATION &&

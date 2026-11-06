@@ -8,6 +8,9 @@
 #ifdef _WIN32
 #include <direct.h>
 #include <io.h>
+
+/* Native Windows callers retain paths relative to the asset directory. */
+static inline const char *shandalar_user_data_root(void) { return "."; }
 #else
 #include <dirent.h>
 #include <strings.h>

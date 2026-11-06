@@ -3236,7 +3236,7 @@ int card_sek_kuar_death_keeper(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)sek_kuar_deathkeeper_effect ){
+				if( inst->info_slot == (intptr_t)sek_kuar_deathkeeper_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -3336,7 +3336,7 @@ static int can_put_p1_p1_counter_on_opp(int player, int card, int number_of_age_
   target_definition_t td;
   base_target_definition(player, card, &td, TYPE_CREATURE);
   td.allowed_controller = td.preferred_controller = 1 - player;
-  td.extra = (int32_t)can_have_counters_placed_on_it_shim;
+  td.extra = (intptr_t)can_have_counters_placed_on_it_shim;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
   return can_target(&td);
 }
@@ -3348,7 +3348,7 @@ static int put_p1_p1_counter_on_opp(int player, int card, int number_of_age_coun
   target_definition_t td;
 
   base_target_definition(player, card, &td, 2);
-  td.extra = (int32_t)can_have_counters_placed_on_it_shim;
+  td.extra = (intptr_t)can_have_counters_placed_on_it_shim;
   td.allowed_controller = 1 - player;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
   td.allow_cancel = 0;

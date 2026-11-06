@@ -162,7 +162,7 @@ void choose_who_attack(int player, int card)
       if (in_play(player, count) && is_what(player, count, TYPE_EFFECT))
       {
         card_instance_t *instance = get_card_instance(player, count);
-        if (instance->info_slot == (int)attacking_planeswalker)
+        if (instance->info_slot == (intptr_t)attacking_planeswalker)
         {
           planeswalkers[instance->targets[2].card][1] -=
               get_attack_power(instance->damage_target_player, instance->damage_target_card);
@@ -236,7 +236,7 @@ int planeswalker_its_attacking(int player, int card){
 	for (i = 0, p = player; i <= 1; ++i, p = 1-p){
 		for (c = 0; c < active_cards_count[p]; ++c){
 			card_instance_t* fx = in_play(p, c);
-			if (fx && fx->internal_card_id == LEGACY_EFFECT_CUSTOM && fx->info_slot == (int)attacking_planeswalker &&
+			if (fx && fx->internal_card_id == LEGACY_EFFECT_CUSTOM && fx->info_slot == (intptr_t)attacking_planeswalker &&
 				fx->damage_target_player == player && fx->damage_target_card == card)
 			{
 				if (fx->targets[1].player != 1-player ||	// pw changed control

@@ -1291,7 +1291,7 @@ Flying
 	        for (c = 0; c <= active_cards_count[p]; ++c){
 	            if (in_play(p, c) && is_what(p, c, TYPE_EFFECT)){
 	                card_instance_t* legacy = get_card_instance(p, c);
-	                if (legacy->info_slot == (int)effect_ifh_biff_efreet && legacy->targets[0].player == player && legacy->targets[0].card == card){
+	                if (legacy->info_slot == (intptr_t)effect_ifh_biff_efreet && legacy->targets[0].player == player && legacy->targets[0].card == card){
 	                    if (p == player){ kill_card(p, c, KILL_EXILE); }
 	                    else if (p == 1){ goto ability; }
 	                    else { found = 1; }

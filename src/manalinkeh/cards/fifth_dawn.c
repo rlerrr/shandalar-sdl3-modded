@@ -2651,7 +2651,7 @@ int card_ion_storm(int player, int card, event_t event)
     td_counter.allowed_controller = player;
     td_counter.preferred_controller = player;
     td_counter.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td_counter.extra = (int32_t)target_has_charge_or_1_1_counter;
+    td_counter.extra = (intptr_t)target_has_charge_or_1_1_counter;
     default_target_definition(player, card, &td_dmg, 0x102);
     td_dmg.zone = TARGET_ZONE_CREATURE_OR_PLAYER;
     if (event == EVENT_CAN_ACTIVATE)
@@ -3694,7 +3694,7 @@ Whenever a creature you control is dealt damage, put a +1/+1 counter on it. (The
 					card_instance_t* instance = get_card_instance(p, c);
 					if (instance->damage_source_card == card && instance->damage_source_player == player
 						&& instance->damage_target_card == damage->damage_target_card && instance->damage_target_player == damage->damage_target_player
-						&& instance->internal_card_id == LEGACY_EFFECT_CUSTOM && instance->info_slot == (int)effect_rite_of_passage){
+						&& instance->internal_card_id == LEGACY_EFFECT_CUSTOM && instance->info_slot == (intptr_t)effect_rite_of_passage){
 						return 0;
 					}
 				}

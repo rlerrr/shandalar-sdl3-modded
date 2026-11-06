@@ -3655,7 +3655,7 @@ wndproc_CueCardClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	PAINTSTRUCT paint;
 	if (HDC paintdc = BeginPaint(hwnd, &paint))
 	  {
-	    HFONT font = reinterpret_cast<HFONT>(GetWindowLong(hwnd, CUECARD_FONT_INDEX));
+	    HFONT font = reinterpret_cast<HFONT>(GetWindowLongPtr(hwnd, CUECARD_FONT_INDEX));
 
 	    gdi_flush(paintdc);
 
@@ -3688,14 +3688,14 @@ wndproc_CueCardClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	if (HFONT font = CreateFont(16, 0, 0, 0, FW_NORMAL, FALSE, FALSE, FALSE, ANSI_CHARSET,
 				    OUT_TT_PRECIS, CLIP_DEFAULT_PRECIS, DEFAULT_QUALITY, DEFAULT_PITCH|FF_DONTCARE, "Verdana"))
 	  {
-	    SetWindowLong(hwnd, CUECARD_FONT_INDEX, reinterpret_cast<int>(font));
+	    SetWindowLongPtr(hwnd, CUECARD_FONT_INDEX, reinterpret_cast<LONG_PTR>(font));
 	    return 0;
 	  }
 	else
 	  return -1;
 
       case WM_DESTROY:
-	if (HFONT font = reinterpret_cast<HFONT>(GetWindowLong(hwnd, CUECARD_FONT_INDEX)))
+	if (HFONT font = reinterpret_cast<HFONT>(GetWindowLongPtr(hwnd, CUECARD_FONT_INDEX)))
 	  DeleteObject(font);
 	return 0;
 
@@ -3706,7 +3706,7 @@ wndproc_CueCardClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
       case 0x8400:
 	HFONT font;
-	font = reinterpret_cast<HFONT>(GetWindowLong(hwnd, CUECARD_FONT_INDEX));
+	font = reinterpret_cast<HFONT>(GetWindowLongPtr(hwnd, CUECARD_FONT_INDEX));
 
 	int x, y;
 	x = LOWORD(wparam);
@@ -4574,7 +4574,7 @@ wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
       case WM_PAINT:
 	last_pic_index = GetWindowLong(hwnd, HORZLIST_LASTPIC_INDEX);
-	horz_list_addr = reinterpret_cast<int*>(GetWindowLong(hwnd, HORZLIST_ADDR_INDEX));
+	horz_list_addr = reinterpret_cast<int*>(GetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX));
 	left_pic_index = GetWindowLong(hwnd, HORZLIST_LEFTPIC_INDEX);
 	pics_inline = GetWindowLong(hwnd, HORZLIST_PICSINLINE_INDEX);
 
@@ -4651,7 +4651,7 @@ wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	  }
 
 	SetWindowLong(hwnd, HORZLIST_LASTPIC_INDEX, 0);
-	SetWindowLong(hwnd, HORZLIST_ADDR_INDEX, reinterpret_cast<int>(malloc(sizeof(int))));
+	SetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX, reinterpret_cast<LONG_PTR>(malloc(sizeof(int))));
 	SetWindowLong(hwnd, HORZLIST_CURRSEL_INDEX, -1);
 	SetWindowLong(hwnd, HORZLIST_LEFTPIC_INDEX, 0);
 	SetWindowLong(hwnd, HORZLIST_WIDTHPLUSSPACE_INDEX, global_smallcard_piclist_width);
@@ -4671,7 +4671,7 @@ wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	return 0;
 
       case WM_DESTROY:
-	free(reinterpret_cast<int*>(GetWindowLong(hwnd, HORZLIST_ADDR_INDEX)));
+	free(reinterpret_cast<int*>(GetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX)));
 	DESTROY_MENU(global_horzlist_popup);
 	DELETE_DC(comphdc);
 	return 0;
@@ -4893,14 +4893,14 @@ wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
       case 0x8001:
 	last_pic_index = GetWindowLong(hwnd, HORZLIST_LASTPIC_INDEX);
-	horz_list_addr = reinterpret_cast<int*>(GetWindowLong(hwnd, HORZLIST_ADDR_INDEX));
+	horz_list_addr = reinterpret_cast<int*>(GetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX));
 	horz_list_addr = reinterpret_cast<int*>(realloc(horz_list_addr, 4 * last_pic_index + 4));
 	if (!horz_list_addr)
 	  return 0;
 
 	horz_list_addr[last_pic_index++] = lparam;
 	SetWindowLong(hwnd, HORZLIST_LASTPIC_INDEX, last_pic_index);
-	SetWindowLong(hwnd, HORZLIST_ADDR_INDEX, reinterpret_cast<LONG>(horz_list_addr));
+	SetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX, reinterpret_cast<LONG_PTR>(horz_list_addr));
 	update_scroll_range();
 	InvalidateRect(hwnd, NULL, TRUE);
 	return last_pic_index;
@@ -4910,7 +4910,7 @@ wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	if (static_cast<int>(wparam) >= last_pic_index)
 	  return -1;
 
-	horz_list_addr = reinterpret_cast<int*>(GetWindowLong(hwnd, HORZLIST_ADDR_INDEX));
+	horz_list_addr = reinterpret_cast<int*>(GetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX));
 	currsel = GetWindowLong(hwnd, HORZLIST_CURRSEL_INDEX);
 	left_pic_index = GetWindowLong(hwnd, HORZLIST_LEFTPIC_INDEX);
 
@@ -4955,7 +4955,7 @@ wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	if (static_cast<int>(wparam) < 0 || static_cast<int>(wparam) >= last_pic_index)
 	  return -1;
 
-	horz_list_addr = reinterpret_cast<int*>(GetWindowLong(hwnd, HORZLIST_ADDR_INDEX));
+	horz_list_addr = reinterpret_cast<int*>(GetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX));
 	return horz_list_addr[wparam];
 
       case 0x8005:
@@ -4965,7 +4965,7 @@ wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	if (insert_index >= last_pic_index)
 	  return SendMessage(hwnd, 0x8001, 0, lparam);
 
-	horz_list_addr = reinterpret_cast<int*>(GetWindowLong(hwnd, HORZLIST_ADDR_INDEX));
+	horz_list_addr = reinterpret_cast<int*>(GetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX));
 	horz_list_addr = reinterpret_cast<int*>(realloc(horz_list_addr, 4 * last_pic_index + 4));
 
 	if (!horz_list_addr)
@@ -4977,14 +4977,14 @@ wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
 	horz_list_addr[idx] = lparam;
 	SetWindowLong(hwnd, HORZLIST_LASTPIC_INDEX, last_pic_index + 1);
-	SetWindowLong(hwnd, HORZLIST_ADDR_INDEX, reinterpret_cast<LONG>(horz_list_addr));
+	SetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX, reinterpret_cast<LONG_PTR>(horz_list_addr));
 	update_scroll_range();
 	InvalidateRect(hwnd, NULL, TRUE);
 	return insert_index;
 
       case 0x8006:
 	last_pic_index = GetWindowLong(hwnd, HORZLIST_LASTPIC_INDEX);
-	horz_list_addr = reinterpret_cast<int*>(GetWindowLong(hwnd, HORZLIST_ADDR_INDEX));
+	horz_list_addr = reinterpret_cast<int*>(GetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX));
 
 	for (int i = 0; i < last_pic_index; ++i)
 	  {
@@ -4999,7 +4999,7 @@ wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	  }
 
 	horz_list_addr = reinterpret_cast<int*>(realloc(horz_list_addr, 4));
-	SetWindowLong(hwnd, HORZLIST_ADDR_INDEX, reinterpret_cast<LONG>(horz_list_addr));
+	SetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX, reinterpret_cast<LONG_PTR>(horz_list_addr));
 	SetWindowLong(hwnd, HORZLIST_LASTPIC_INDEX, 0);
 	SetWindowLong(hwnd, HORZLIST_CURRSEL_INDEX, -1);
 	SetWindowLong(hwnd, HORZLIST_LEFTPIC_INDEX, 0);
@@ -5038,7 +5038,7 @@ wndproc_HorzListClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 
       case 0x8466:
 	last_pic_index = GetWindowLong(hwnd, HORZLIST_LASTPIC_INDEX);
-	horz_list_addr = reinterpret_cast<int*>(GetWindowLong(hwnd, HORZLIST_ADDR_INDEX));
+	horz_list_addr = reinterpret_cast<int*>(GetWindowLongPtr(hwnd, HORZLIST_ADDR_INDEX));
 	left_pic_index = GetWindowLong(hwnd, HORZLIST_LEFTPIC_INDEX);
 	pics_inline = GetWindowLong(hwnd, HORZLIST_PICSINLINE_INDEX);
 
@@ -5931,7 +5931,7 @@ BOOL CALLBACK
 enumfunc_change_buttonclass_wndproc(HWND hwnd, LPARAM lparam)
 {
   if (is_buttonclass(hwnd))
-    global_wndproc_std_ButtonClass = reinterpret_cast<WNDPROC>(SetWindowLong(hwnd, GWL_WNDPROC, reinterpret_cast<LONG>(wndproc_ButtonClass)));
+    global_wndproc_std_ButtonClass = reinterpret_cast<WNDPROC>(SetWindowLongPtr(hwnd, GWL_WNDPROC, reinterpret_cast<LONG_PTR>(wndproc_ButtonClass)));
   return TRUE;
 }
 
@@ -6487,7 +6487,7 @@ wndproc_MainClass(HWND hwnd, UINT msg, WPARAM wparam, LPARAM lparam)
 	    return -1;
 	  }
 
-	global_wndproc_std_SearchClass = reinterpret_cast<WNDPROC>(SetWindowLong(search_hwnd, GWL_WNDPROC, reinterpret_cast<LONG>(wndproc_SearchClass)));
+	global_wndproc_std_SearchClass = reinterpret_cast<WNDPROC>(SetWindowLongPtr(search_hwnd, GWL_WNDPROC, reinterpret_cast<LONG_PTR>(wndproc_SearchClass)));
 
 	SendMessage(global_listbox_hwnd, LB_SETTOPINDEX, 0, 0);
 	SendMessage(global_listbox_hwnd, LB_SETCURSEL, 0, 0);

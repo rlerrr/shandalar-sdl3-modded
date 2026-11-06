@@ -290,8 +290,8 @@ int is_being_cast(int player, int card);
 /* ManalinkEh 2022: 0x26a83e0; original functions/engine.c:2539. */
 static int qsort_compare_attacker_effectiveness(const void *lhs, const void *rhs)
 {
-  return (unsigned int)(*(int *)((int)lhs + 4) < *(int *)((int)rhs + 4)) -
-         (unsigned int)(*(int *)((int)rhs + 4) < *(int *)((int)lhs + 4));
+  return (unsigned int)(((const int *)lhs)[1] < ((const int *)rhs)[1]) -
+         (unsigned int)(((const int *)rhs)[1] < ((const int *)lhs)[1]);
 }
 
 /* ManalinkEh 2022: 0x26a8410; original functions/engine.c:2547. */
@@ -368,7 +368,7 @@ int charge_spell_cost(card_data_t *cd, int player, int card)
   unsigned int available_color_bits;
   int *mana_value_cursor;
   int *engine_paid_cursor;
-  int (*pool_clear_cursor)[8];
+  int *pool_clear_cursor;
   int chosen_x_or_mana_adjustment;
   int payment_result_or_mana_value;
   int saved_mana_adjustments[8];
@@ -583,12 +583,12 @@ int charge_spell_cost(card_data_t *cd, int player, int card)
       } while (payment_result_or_mana_value != 8);
       payment_result_or_mana_value = (int)(char)available_color_bits;
       record_paid_mana(0, payment_result_or_mana_value);
-      pool_clear_cursor = mana_pool + player;
+      pool_clear_cursor = mana_pool[player];
       for (chosen_x_or_mana_adjustment = 8; chosen_x_or_mana_adjustment != 0;
            chosen_x_or_mana_adjustment = chosen_x_or_mana_adjustment + -1)
       {
-        (*pool_clear_cursor)[0] = 0;
-        pool_clear_cursor = (int (*)[8])((int)pool_clear_cursor + 4u);
+        *pool_clear_cursor = 0;
+        ++pool_clear_cursor;
       }
     }
     else
@@ -3367,7 +3367,7 @@ int create_legacy_effect_from_iid(int player, int iid, int (*func_ptr)(int, int,
     attached_to->regen_status |= KEYWORD_RECALC_ALL;
   }
 
-  legacy->info_slot = (int)func_ptr;
+  legacy->info_slot = (intptr_t)func_ptr;
 
   return legacy_card;
 }
@@ -3974,7 +3974,7 @@ int untap_phase(int player)
         if (p == player)
           instance->state &= ~STATE_SUMMON_SICK_BACKUP;
         if (instance->internal_card_id == LEGACY_EFFECT_CUSTOM &&
-            instance->info_slot == (int)target_player_skips_untap &&
+            instance->info_slot == (intptr_t)target_player_skips_untap &&
             instance->targets[0].player == player && !skip)
         {
           kill_card(p, c, KILL_EXILE);

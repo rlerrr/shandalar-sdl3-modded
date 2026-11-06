@@ -716,7 +716,7 @@ int card_hex_parasite(int player, int card, event_t event)
   if (ai && event != EVENT_RESOLVE_ACTIVATION)
   {
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_must_have_counters;
+    td.extra = (intptr_t)target_must_have_counters;
   }
   if (event == EVENT_CAN_ACTIVATE)
   {

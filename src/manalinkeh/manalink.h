@@ -46,7 +46,7 @@ extern int stack_size;				// number of cards on the stack
 /* Packed card/player used by EVENT_GET_SELECTED_CARD; see original auras.c. */
 #ifndef SHANDALAR
 #define engine_selected_card g_ai_recorded_action
-/* Fixed EXE addresses for localized Done/OK labels. */
+/* Host-owned labels loaded from UIStrings.txt / DIALOGBUTTONS. */
 #define ENGINE_DONE_LABEL gs_done_008b40e0
 #define ENGINE_OK_LABEL gs_ok_00924800
 #endif
@@ -530,7 +530,7 @@ int generic_wish(int, int, event_t, int, int);
 
 int was_card_in_hand(int, int);
 int evoke(int, int, event_t, int, int, int, int, int, int);
-int get_setting(int);
+intptr_t get_setting(int);
 void read_settings(void);
 void set_opponent_deck(int);
 void shuffle_vanguard(int, int);
@@ -2728,14 +2728,14 @@ int real_validate_target(int tgt_player, int tgt_card, char *return_error_str, i
                               int allowed_controller, int preferred_controller, int zone,
                               int required_type, int illegal_type, int required_abilities,
                               int illegal_abilities, int required_color, int illegal_color,
-                              int extra, int required_subtype, int power_requirement,
+                              intptr_t extra, int required_subtype, int power_requirement,
                               int toughness_requirement, int special, int required_state,
                               int illegal_state);
 int real_target_available(int *return_count, int test_damage_target_or_source, int who_chooses,
                                int allowed_controller, int preferred_controller, int zone,
                                int required_type, int illegal_type, int required_abilities,
                                int illegal_abilities, int required_color, int illegal_color,
-                               int extra, int required_subtype, int power_requirement,
+                               intptr_t extra, int required_subtype, int power_requirement,
                                int toughness_requirement, int special, int required_state,
                                int illegal_state);
 int can_target(target_definition_t *td);
@@ -2754,7 +2754,7 @@ int valid_target(target_definition_t *td);
 #ifndef SHANDALAR
 int real_select_target(int who_chooses, int allowed_controller, int preferred_controller,
                             int zone, int required_type, int illegal_type, int required_abilities,
-                            int illegal_abilities, int required_color, int illegal_color, int extra,
+                            int illegal_abilities, int required_color, int illegal_color, intptr_t extra,
                             int required_subtype, int power_requirement, int toughness_requirement,
                             int special, int required_state, int illegal_state, const char *prompt,
                             int allow_cancel, target_t *ret_tgt);
@@ -2776,7 +2776,7 @@ int mark_up_to_n_targets_noload(target_definition_t *td, const char *prompt, int
 int autoselect_target(int player, int card, int i, int j, int k, int who_chooses,
                            int allowed_controller, int preferred_controller, int zone,
                            int required_type, int illegal_type, int required_abilities,
-                           int illegal_abilities, int required_color, int illegal_color, int extra,
+                           int illegal_abilities, int required_color, int illegal_color, intptr_t extra,
                            int required_subtype, int power_requirement, int toughness_requirement,
                            int special, int required_state, int illegal_state, int flags,
                            int prompt, int allow_cancel, int ret_location);
@@ -3529,7 +3529,7 @@ void test_enters_the_battlefield_with_counters(int player, int card, event_t eve
 
 /* October 2022 native hand reveal and counter-based continuous boosts. */
 #ifndef SHANDALAR
-typedef char recovery_ec_definition_layout[(sizeof(ec_definition_t) == 28 && offsetof(ec_definition_t, target_player) == 0 && offsetof(ec_definition_t, who_choses) == 4 && offsetof(ec_definition_t, effect) == 8 && offsetof(ec_definition_t, cards_to_reveal) == 12 && offsetof(ec_definition_t, qty) == 16 && offsetof(ec_definition_t, ai_selection_mode) == 20 && offsetof(ec_definition_t, special_selection_function) == 24) ? 1 : -1];
+typedef char recovery_ec_definition_layout[(sizeof(ec_definition_t) == (sizeof(void *) == 8 ? 32 : 28) && offsetof(ec_definition_t, target_player) == 0 && offsetof(ec_definition_t, who_choses) == 4 && offsetof(ec_definition_t, effect) == 8 && offsetof(ec_definition_t, cards_to_reveal) == 12 && offsetof(ec_definition_t, qty) == 16 && offsetof(ec_definition_t, ai_selection_mode) == 20 && offsetof(ec_definition_t, special_selection_function) == 24) ? 1 : -1];
 int reveal_cards_from_your_hand(int player, int card, test_definition_t *this_test);
 void boost_creatures_by_counters(int player, int card, event_t event, int counter_type,
                                       int amount, int pow, int tou, int key, int s_key, bct_t flags);

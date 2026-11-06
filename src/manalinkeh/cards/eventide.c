@@ -2915,7 +2915,7 @@ int card_necroskitter(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)necroskitter_effect)
+        if (inst->info_slot == (intptr_t)necroskitter_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))
@@ -4304,7 +4304,7 @@ int card_stigma_lasher(int player, int card, event_t event){
 		CYCLE_ALL_CARDS(p, c, 	{
 									if( in_play(p, c) && is_what(p, c, TYPE_EFFECT) ){
 										card_instance_t *inst = get_card_instance(p, c);
-										if( inst->info_slot == (int)stigma_lasher_legacy ){
+										if( inst->info_slot == (intptr_t)stigma_lasher_legacy ){
 											found[p] = 1;
 										}
 									}

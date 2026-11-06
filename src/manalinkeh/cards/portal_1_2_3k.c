@@ -2770,7 +2770,7 @@ int card_stream_of_acid(int player, int card, event_t event)
   }
   default_target_definition(player, card, &td, 0x47);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)is_land_or_nonblack_creature;
+  td.extra = (intptr_t)is_land_or_nonblack_creature;
   instance = get_card_instance(player, card);
   if (event == EVENT_RESOLVE_SPELL)
   {
@@ -5088,7 +5088,7 @@ int card_broken_dam(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 2);
     td.preferred_controller = player;
-    td.extra = (int32_t)without_horsemanship;
+    td.extra = (intptr_t)without_horsemanship;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     get_card_instance(player, card);
     return generic_spell(player, card, EVENT_CAN_CAST, 1, &td, "TARGET_CREATURE", 1, NULL);
@@ -5098,7 +5098,7 @@ int card_broken_dam(int player, int card, event_t event)
     if ((card == affected_card) && (player == affected_card_controller))
     {
       default_target_definition(player, card, &td, 2);
-      td.extra = (int32_t)without_horsemanship;
+      td.extra = (intptr_t)without_horsemanship;
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
       td.preferred_controller = player;
       instance = get_card_instance(player, card);
@@ -5121,7 +5121,7 @@ int card_broken_dam(int player, int card, event_t event)
   else if ((event == EVENT_RESOLVE_SPELL) || (event == EVENT_CAN_CHANGE_TARGET))
   {
     default_target_definition(player, card, &td, 2);
-    td.extra = (int32_t)without_horsemanship;
+    td.extra = (intptr_t)without_horsemanship;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     td.preferred_controller = player;
     instance = get_card_instance(player, card);
@@ -5142,7 +5142,7 @@ int card_broken_dam(int player, int card, event_t event)
   else if (event == EVENT_CHANGE_TARGET)
   {
     default_target_definition(player, card, &td, 2);
-    td.extra = (int32_t)without_horsemanship;
+    td.extra = (intptr_t)without_horsemanship;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     td.preferred_controller = player;
     get_card_instance(player, card);
@@ -5638,7 +5638,7 @@ int card_trip_wire(int player, int card, event_t event)
   }
   default_target_definition(player, card, &td, 2);
   td.preferred_controller = 1 - player;
-  td.extra = (int32_t)with_horsemanship;
+  td.extra = (intptr_t)with_horsemanship;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
   instance = get_card_instance(player, card);
   if (event == EVENT_RESOLVE_SPELL)

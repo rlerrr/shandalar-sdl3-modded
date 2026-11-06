@@ -1286,7 +1286,7 @@ int card_charming_prince(int player, int card, event_t event)
 
     default_target_definition(player, card, &td, 2);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)another_you_own;
+    td.extra = (intptr_t)another_you_own;
     td.allow_cancel = 0;
     result = can_target(&td);
     result = dialog_impl(player, card, EVENT_ACTIVATE, DLG_RANDOM, "Scry 2", 1, 8, "Gain 3 life", 1,
@@ -1664,10 +1664,10 @@ int card_drown_in_the_loch(int player, int card, event_t event)
   target_definition_t td, spell_target;
   default_target_definition(player, card, &td, 2);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)ditl_graveyard_count;
+  td.extra = (intptr_t)ditl_graveyard_count;
   counterspell_target_definition(player, card, &spell_target, 0xff);
   spell_target.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  spell_target.extra = (int32_t)ditl_graveyard_count;
+  spell_target.extra = (intptr_t)ditl_graveyard_count;
   card_instance_t *instance = get_card_instance(player, card);
   if (event == EVENT_CAN_CAST)
   {
@@ -2270,7 +2270,7 @@ int card_fires_of_invention(int player, int card, event_t event)
       scnprintf(buffer, 100,
                 "Select a non-land card with mana value less than or equal to %d to play.", lands);
       test_definition_t test;
-      _Static_assert(sizeof(test) == 216, "native Fires of Invention filter");
+      _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Fires of Invention filter");
       new_default_test_definition(&test, 1, buffer);
       test.cmc = lands + 1;
       test.cmc_flag = 3;

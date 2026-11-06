@@ -26,7 +26,7 @@ static int aura_swap(int player, int card, event_t event, int cless, int black, 
 				target_definition_t td;
 				base_target_definition(player, card, &td, TYPE_ENCHANTMENT);
 				td.zone = TARGET_ZONE_HAND;
-				td.extra = (int32_t)exchangeable_aura;
+				td.extra = (intptr_t)exchangeable_aura;
 				td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 				td.illegal_abilities = 0;
 
@@ -42,7 +42,7 @@ static int aura_swap(int player, int card, event_t event, int cless, int black, 
 			target_definition_t td;
 			base_target_definition(player, card, &td, TYPE_ENCHANTMENT);
 			td.zone = TARGET_ZONE_HAND;
-			td.extra = (int32_t)exchangeable_aura;
+			td.extra = (intptr_t)exchangeable_aura;
 			td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
 			td.illegal_abilities = 0;
 
@@ -2821,7 +2821,7 @@ int card_rift_elemental(int player, int card, event_t event)
   td.preferred_controller = player;
   td.allowed_controller = player;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)target_has_a_time_counter;
+  td.extra = (intptr_t)target_has_a_time_counter;
   instance = get_card_instance(player, card);
   counter_count_or_ability_result =
       generic_activated_ability(player, card, event, 4, 1, 0, 0, 0, 1, 0, 0, &td, "TARGET_CARD");
@@ -3521,7 +3521,7 @@ int card_sporoloth_ancient(int player, int card, event_t event)
     td.preferred_controller = player;
     td.allowed_controller = player;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_has_2_spore_counters_and_can_activate;
+    td.extra = (intptr_t)target_has_2_spore_counters_and_can_activate;
     if (event == EVENT_CAN_ACTIVATE)
     {
       result = is_humiliated(player, card, AL_STATIC);
@@ -4216,7 +4216,7 @@ int card_shivan_sand_mage(int player, int card, event_t event)
     default_target_definition(player, card, &td, 199);
     td.preferred_controller = 2;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)is_permanent_or_suspend_legacy;
+    td.extra = (intptr_t)is_permanent_or_suspend_legacy;
     instance = get_card_instance(player, card);
     result =
         do_dialog(player, player, card, -1, -1, " Add 2 Time Counters\n Remove 2 Time Counters", 0);

@@ -1228,7 +1228,7 @@ int card_overseer_of_the_damned(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)overseer_of_the_damned_effect)
+        if (inst->info_slot == (intptr_t)overseer_of_the_damned_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))
@@ -2306,7 +2306,7 @@ int card_titania_protector_of_argoth(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)titania_effect ){
+				if( inst->info_slot == (intptr_t)titania_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{

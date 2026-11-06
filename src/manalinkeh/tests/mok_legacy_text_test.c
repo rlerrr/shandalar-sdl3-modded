@@ -48,7 +48,7 @@ int main(void)
   char title[52];
   char modifiers[400];
   instance.internal_card_id = LEGACY_EFFECT_CUSTOM;
-  instance.info_slot = (int)callback;
+  instance.info_slot = (intptr_t)callback;
   instance.eot_toughness = EVENT_SET_LEGACY_EFFECT_NAME | EVENT_SET_LEGACY_EFFECT_TEXT;
   legacy_name(title, 1, 4);
   check(last_event == EVENT_SET_LEGACY_EFFECT_NAME && strlen(title) == 51,

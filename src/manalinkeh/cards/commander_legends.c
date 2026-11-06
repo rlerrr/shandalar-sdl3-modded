@@ -1081,7 +1081,7 @@ int card_ardenn_intrepid_archaeologist(int player, int card, event_t event)
         td.allowed_controller = player;
         td.illegal_abilities = 0;
         td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-        td.extra = (int32_t)aura_enchanting_player;
+        td.extra = (intptr_t)aura_enchanting_player;
         while (true)
         {
           if (can_target(&td) == 0)
@@ -1107,7 +1107,7 @@ int card_ardenn_intrepid_archaeologist(int player, int card, event_t event)
         td.allowed_controller = player;
         td.illegal_abilities = 0;
         td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-        td.extra = (int32_t)aura_or_equipment;
+        td.extra = (intptr_t)aura_or_equipment;
         td.allow_cancel = 2;
         while (true)
         {
@@ -2553,7 +2553,7 @@ int card_commanders_plate(int player, int card, event_t event)
   td.preferred_controller = player;
   default_target_definition(player, card, &td1, 2);
   td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td1.extra = (int32_t)is_commander;
+  td1.extra = (intptr_t)is_commander;
   td1.allowed_controller = player;
   td1.preferred_controller = player;
   if (event == EVENT_CAN_ACTIVATE)
@@ -5443,7 +5443,7 @@ int card_kitesail_skirmisher(int player, int card, event_t event)
     td.preferred_controller = player;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     td.required_state = TARGET_STATE_ATTACKING;
-    td.extra = (int32_t)attacking_the_same_player_or_planeswalker;
+    td.extra = (intptr_t)attacking_the_same_player_or_planeswalker;
     result = can_target(&td);
     if (result != 0)
     {
@@ -6836,7 +6836,7 @@ int card_plague_reaver(int player, int card, event_t event)
   legacy->targets[1].card = instance->targets[1].card;
   upkeep_phase = current_phase == 4;
   legacy->targets[0].player = target_player;
-  legacy->targets[1].player = (unsigned int)upkeep_phase;
+  legacy->targets[1].player = (intptr_t)upkeep_phase;
   return 0;
 }
 #endif
@@ -7569,7 +7569,7 @@ int card_sakashimas_protege(int player, int card, event_t event)
     base_target_definition(player, card, &td, 0x47);
     td.preferred_controller = player;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)is_entered_the_battlefield_this_turn;
+    td.extra = (intptr_t)is_entered_the_battlefield_this_turn;
     card_instance_t *instance = get_card_instance(player, card);
     instance->state |= STATE_OUBLIETTED;
     int selected = new_pick_target(
@@ -8148,7 +8148,7 @@ int card_stumpsquall_hydra(int player, int card, event_t event)
       td.preferred_controller = player;
       td.illegal_abilities = 0;
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-      td.extra = (int32_t)me_or_commander;
+      td.extra = (intptr_t)me_or_commander;
       td.allow_cancel = 2;
       if (0 < total_counters)
       {
@@ -8193,7 +8193,7 @@ int card_sweet_gum_recluse(int player, int card, event_t event)
     default_target_definition(player, card, &td, TYPE_CREATURE);
     td.preferred_controller = player;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)is_entered_the_battlefield_this_turn;
+    td.extra = (intptr_t)is_entered_the_battlefield_this_turn;
     card_instance_t *instance = get_card_instance(player, card);
 
     while (instance->number_of_targets < 10 && can_target(&td) &&

@@ -1060,7 +1060,7 @@ static int dimensional_breach_effect_legacy(int player, int card, event_t event)
 		for(c = 0; c < active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)dimensional_breach_storing_legacy ){
+				if( inst->info_slot == (intptr_t)dimensional_breach_storing_legacy ){
 					int any_iid_still_exiled_on_this_legacy = 0;
 					int i;
 					for(i=0; i<19; i++){
@@ -1934,7 +1934,7 @@ int card_lethal_vapors(int player, int card, event_t event)
         if (in_play(p, c) && is_what(p, c, TYPE_EFFECT))
         {
           card_instance_t *inst = get_card_instance(p, c);
-          if (inst->info_slot == (int)effect_lethal_vapors && inst->targets[0].player == player &&
+          if (inst->info_slot == (intptr_t)effect_lethal_vapors && inst->targets[0].player == player &&
               inst->targets[0].card == card)
             found[p] = c;
         }
@@ -2965,7 +2965,7 @@ int card_vengeful_dead(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)vengeful_dead_effect)
+        if (inst->info_slot == (intptr_t)vengeful_dead_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))

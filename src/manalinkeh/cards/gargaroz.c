@@ -97,7 +97,7 @@ int card_misdirection(int player, int card, event_t event){
 	target_definition_t td;
 	counterspell_target_definition(player, card, &td, TYPE_ANY);
 	td.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
-	td.extra = (int32_t)has_only_1_target_and_could_legally_change_target;
+	td.extra = (intptr_t)has_only_1_target_and_could_legally_change_target;
 	if (event == EVENT_CAN_CAST){ return deflect_one_target(player, card, event, &td); }
 	if (event == EVENT_CAST_SPELL && affect_me(player, card)){
 		if (casting_al_pitchspell(player, card, event, COLOR_BLUE, 0)){ deflect_one_target(player, card, event, &td); }
@@ -137,7 +137,7 @@ int card_imps_mischief(int player, int card, event_t event)
       }
       counterspell_target_definition(player, card, &td_spell, 0xff);
       td_spell.special = td_spell.special | 0x8000;
-      td_spell.extra = (int32_t)has_only_1_target_and_could_legally_change_target;
+      td_spell.extra = (intptr_t)has_only_1_target_and_could_legally_change_target;
       get_card_instance(player, card);
       if (((card == affected_card) && (player == affected_card_controller)) &&
           (current_life = life[player],
@@ -152,7 +152,7 @@ int card_imps_mischief(int player, int card, event_t event)
     {
       counterspell_target_definition(player, card, &td_spell, 0xff);
       td_spell.special = td_spell.special | 0x8000;
-      td_spell.extra = (int32_t)has_only_1_target_and_could_legally_change_target;
+      td_spell.extra = (intptr_t)has_only_1_target_and_could_legally_change_target;
       instance = get_card_instance(player, card);
       if (event == EVENT_RESOLVE_SPELL)
       {
@@ -173,7 +173,7 @@ int card_imps_mischief(int player, int card, event_t event)
   }
   counterspell_target_definition(player, card, &td_spell, 0xff);
   td_spell.special = td_spell.special | 0x8000;
-  td_spell.extra = (int32_t)has_only_1_target_and_could_legally_change_target;
+  td_spell.extra = (intptr_t)has_only_1_target_and_could_legally_change_target;
   get_card_instance(player, card);
   return deflect_one_target(player, card, event, &td_spell);
 }
@@ -280,7 +280,7 @@ int card_ricochet_trap(int player, int card, event_t event)
     return 0;
   counterspell_target_definition(player, card, &td_spell, 0xff);
   td_spell.special = td_spell.special | 0x8000;
-  td_spell.extra = (int32_t)has_only_1_target_and_could_legally_change_target;
+  td_spell.extra = (intptr_t)has_only_1_target_and_could_legally_change_target;
   if (event == EVENT_RESOLVE_SPELL)
   {
     deflect_one_target(player, card, EVENT_RESOLVE_SPELL, &td_spell);
@@ -333,7 +333,7 @@ int card_meddle(int player, int card, event_t event)
     counterspell_target_definition(player, card, &td_spell, 0xff);
     td_spell.special = td_spell.special | 0x8000;
     td_spell.extra =
-        (int32_t)has_only_1_target_and_could_legally_change_target_and_targets_a_creature;
+        (intptr_t)has_only_1_target_and_could_legally_change_target_and_targets_a_creature;
     result = deflect_one_target(player, card, EVENT_CAN_CAST, &td_spell);
     return result;
   }
@@ -344,7 +344,7 @@ int card_meddle(int player, int card, event_t event)
       counterspell_target_definition(player, card, &td_spell, 0xff);
       td_spell.special = td_spell.special | 0x8000;
       td_spell.extra =
-          (int32_t)has_only_1_target_and_could_legally_change_target_and_targets_a_creature;
+          (intptr_t)has_only_1_target_and_could_legally_change_target_and_targets_a_creature;
       if ((card == affected_card) && (player == affected_card_controller))
       {
         set_special_flags2(card_on_stack_controller, card_on_stack, 0x4000);
@@ -358,7 +358,7 @@ int card_meddle(int player, int card, event_t event)
     counterspell_target_definition(player, card, &td_spell, 0xff);
     td_spell.special = td_spell.special | 0x8000;
     td_spell.extra =
-        (int32_t)has_only_1_target_and_could_legally_change_target_and_targets_a_creature;
+        (intptr_t)has_only_1_target_and_could_legally_change_target_and_targets_a_creature;
     if (event == EVENT_RESOLVE_SPELL)
     {
       deflect_one_target(player, card, EVENT_RESOLVE_SPELL, &td_spell);
@@ -628,7 +628,7 @@ int card_muck_drubb(int player, int card, event_t event)
   target_definition_t td;
   counterspell_target_definition(player, card, &td, TYPE_ANY);
   td.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)has_only_1_target_and_targets_a_creature_and_can_legally_change_target_to_me;
+  td.extra = (intptr_t)has_only_1_target_and_targets_a_creature_and_can_legally_change_target_to_me;
   card_instance_t *instance = get_card_instance(player, card);
   if (event == EVENT_CAN_CAST)
   {
@@ -721,7 +721,7 @@ int card_captured_by_the_consulate(int player, int card, event_t event)
 
       counterspell_target_definition(player, card, &td, 0xff);
       td.illegal_abilities = 0;
-      td.extra = (int32_t)has_only_1_target_and_can_legally_change_target_to_attached;
+      td.extra = (intptr_t)has_only_1_target_and_can_legally_change_target_to_attached;
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
       instance->targets[0].player = trigger_cause_controller;
       trigger_card_or_result = trigger_cause;
@@ -934,7 +934,7 @@ int card_mizzium_meddler(int player, int card, event_t event)
   target_definition_t td;
   counterspell_target_definition(player, card, &td, TYPE_ANY);
   td.special |= TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)can_legally_change_target_to_me;
+  td.extra = (intptr_t)can_legally_change_target_to_me;
   card_instance_t *instance = get_card_instance(player, card);
   etb_ability(player, card, event, RESOLVE_TRIGGER_AI(player));
 

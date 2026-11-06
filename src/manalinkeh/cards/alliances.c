@@ -1710,7 +1710,7 @@ int card_inheritance(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)inheritance_effect ){
+				if( inst->info_slot == (intptr_t)inheritance_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -3430,7 +3430,7 @@ void spiny_starfish_splitting_ability(int player, int card)
     if (in_play(p, c) && is_what(p, c, TYPE_EFFECT))
     {
       card_instance_t *inst = get_card_instance(p, c);
-      if (inst->info_slot == (int)spiny_starfish_legacy)
+      if (inst->info_slot == (intptr_t)spiny_starfish_legacy)
       {
         if (inst->targets[0].player == player && inst->targets[0].card == card)
         {
@@ -4646,7 +4646,7 @@ int card_kjeldoran_pride(int player, int card, event_t event)
     default_target_definition(player, card, &td, 2);
     td.preferred_controller = player;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)not_the_enchanted;
+    td.extra = (intptr_t)not_the_enchanted;
     if ((event == EVENT_CAN_ACTIVATE) || (event == EVENT_ACTIVATE))
     {
       return generic_activated_ability(player, card, event, 6, 2, 0, 1, 0, 0, 0, 0, &td,
@@ -5964,12 +5964,12 @@ int card_sworn_defender(int player, int card, event_t event)
     default_target_definition(player, card, td_00, 2);
     opponent_or_toughness = 1 - player;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)is_blocking_sd;
+    td.extra = (intptr_t)is_blocking_sd;
     td.allowed_controller = opponent_or_toughness;
     td.preferred_controller = opponent_or_toughness;
     default_target_definition(player, card, &td1, 2);
     td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td1.extra = (int32_t)sd_is_blocking_him;
+    td1.extra = (intptr_t)sd_is_blocking_him;
     td1.allowed_controller = opponent_or_toughness;
     td1.preferred_controller = opponent_or_toughness;
     if (event == EVENT_CAN_ACTIVATE)
@@ -6030,14 +6030,14 @@ int card_sworn_defender(int player, int card, event_t event)
     default_target_definition(player, card, &td, 2);
     opponent_or_toughness = 1 - player;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)is_blocking_sd;
+    td.extra = (intptr_t)is_blocking_sd;
     td.allowed_controller = opponent_or_toughness;
     td.preferred_controller = opponent_or_toughness;
     default_target_definition(player, card, &td1, 2);
     td1.preferred_controller = opponent_or_toughness;
   }
   td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td1.extra = (int32_t)sd_is_blocking_him;
+  td1.extra = (intptr_t)sd_is_blocking_him;
   if (event == EVENT_RESOLVE_ACTIVATION)
   {
     td1.allowed_controller = td1.preferred_controller;
@@ -6314,7 +6314,7 @@ int card_veterans_voice(int player, int card, event_t event)
     default_target_definition(player, card, &td, 2);
     td.preferred_controller = player;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)not_the_enchanted;
+    td.extra = (intptr_t)not_the_enchanted;
     if (event == EVENT_CAN_ACTIVATE)
     {
       available_or_paid = is_tapped(argument1, attached_card_or_result);
@@ -6643,10 +6643,10 @@ int card_wandering_mage(int player, int card, event_t event)
     td.special = TARGET_SPECIAL_DAMAGE_CREATURE;
     default_target_definition(player, card, &td1, 0);
     td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td1.extra = (int32_t)damage_to_cleric_or_wizard;
+    td1.extra = (intptr_t)damage_to_cleric_or_wizard;
     default_target_definition(player, card, &td2, 0xff);
     td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td2.extra = (int32_t)is_damage_to_player_or_planeswalker;
+    td2.extra = (intptr_t)is_damage_to_player_or_planeswalker;
     base_target_definition(player, card, &td3, 2);
     td3.allowed_controller = player;
     td3.preferred_controller = player;

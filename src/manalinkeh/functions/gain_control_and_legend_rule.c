@@ -399,7 +399,7 @@ static int effect_on_all_control_effects_attached_to_me(int player, int card, in
 	for (p = 0; p <= 1; ++p){
 		for (c = active_cards_count[p]; c > -1; c--){
 			if ( (inst = in_play(p, c)) && inst->damage_target_player == player && inst->damage_target_card == card ){
-				if( is_what(p, c, TYPE_EFFECT) && inst->info_slot == (int)generic_control_legacy ){
+				if( is_what(p, c, TYPE_EFFECT) && inst->info_slot == (intptr_t)generic_control_legacy ){
 					//STATE_POWER_STRUGGLE = This "control legacy" has stolen a permanent from someone, so it needs to be processed.
 					if( check_state(p, c, STATE_POWER_STRUGGLE) ){
 						if( effect == 1 ){
@@ -660,7 +660,7 @@ void get_back_your_permanents(int player, int card, type_t typ)
 	for(c=0; c<active_cards_count[p]; c++){
 		if( in_play(p, c) && is_what(p, c, TYPE_EFFECT) ){
 			card_instance_t *inst = get_card_instance(p, c);
-			if( inst->info_slot == (int)generic_control_legacy ){
+			if( inst->info_slot == (intptr_t)generic_control_legacy ){
 				if( is_stolen(inst->damage_target_player, inst->damage_target_card) && 
 					is_what(inst->damage_target_player, inst->damage_target_card, typ) )
 				{

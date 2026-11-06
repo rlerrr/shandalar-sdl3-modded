@@ -518,31 +518,10 @@ int shandalar_raw_put_iid_on_top_of_deck(int player, int internal_card_id)
 
 int shandalar_show_deck_exe(int player, const int* cards, int count,
                             const char* title, int require_selection,
-                            int prompt_address)
+                            const char* done_label)
 {
-  char* prompt;
-
-  switch (prompt_address)
-  {
-    case 0:
-      prompt = NULL;
-      break;
-    case 0x7375b0:
-      prompt = "Done";
-      break;
-    case 0x7281a4:
-      prompt = "Cancel";
-      break;
-    case 0x78f0a8:
-      prompt = "OK";
-      break;
-    default:
-      prompt = (char*)prompt_address;
-      break;
-  }
-
   return show_deck(player, (int*)cards, count, (char*)title,
-                   require_selection, prompt);
+                   require_selection, (char*)done_label);
 }
 
 void shandalar_refresh_unless_ai_speculating(void)

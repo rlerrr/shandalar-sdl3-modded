@@ -1908,7 +1908,7 @@ int card_infinite_reflection(int player, int card, event_t event)
           (legendary_or_humiliated = is_what(affected_card_controller, affected_card, 2),
            legendary_or_humiliated != 0))
       {
-        cloning(affected_card_controller, affected_card, (int)aura->damage_target_player,
+        cloning(affected_card_controller, affected_card, (intptr_t)aura->damage_target_player,
                 aura->damage_target_card);
         set_special_flags2(affected_card_controller, affected_card, 0x200);
         instance = get_card_instance(affected_card_controller, affected_card);
@@ -2786,7 +2786,7 @@ Whenever ~ or another creature dies, target player loses 1 life and you gain 1 l
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)blood_artist_effect ){
+				if( inst->info_slot == (intptr_t)blood_artist_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -3507,7 +3507,7 @@ int card_harvester_of_souls(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)harvester_of_souls_legacy ){
+				if( inst->info_slot == (intptr_t)harvester_of_souls_legacy ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{

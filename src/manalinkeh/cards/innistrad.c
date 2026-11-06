@@ -726,7 +726,7 @@ int card_essence_of_the_wild(int player, int card, event_t event)
 	  // Prevent a redundant effect card from being added each time a creature is cast (even though it'll be invisible)
 	  int c;
 	  for (c = 0; c < active_cards_count[player]; ++c)
-		if ((instance = in_play(player, c)) && instance->internal_card_id == LEGACY_EFFECT_CUSTOM && instance->info_slot == (int)effect_essence_of_the_wild)
+		if ((instance = in_play(player, c)) && instance->internal_card_id == LEGACY_EFFECT_CUSTOM && instance->info_slot == (intptr_t)effect_essence_of_the_wild)
 		  goto found;
 
 	  //otherwise
@@ -4211,7 +4211,7 @@ Whenever ~ or another creature dies, target player loses 1 life and you gain 1 l
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)falkenrath_noble_effect ){
+				if( inst->info_slot == (intptr_t)falkenrath_noble_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -5428,7 +5428,7 @@ int card_murder_of_crows(int player, int card, event_t event ){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)murder_of_crows_legacy ){
+				if( inst->info_slot == (intptr_t)murder_of_crows_legacy ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -5897,7 +5897,7 @@ int card_rage_thrower(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)rage_thrower_legacy ){
+				if( inst->info_slot == (intptr_t)rage_thrower_legacy ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -6238,7 +6238,7 @@ int card_selhoff_occultist(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)selhoff_occultist_legacy ){
+				if( inst->info_slot == (intptr_t)selhoff_occultist_legacy ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{

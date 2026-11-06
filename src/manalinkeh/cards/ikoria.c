@@ -1414,7 +1414,7 @@ int card_lurrus_of_the_dream_den(int player, int card, event_t event)
       }
     }
     test_definition_t test;
-    _Static_assert(sizeof(test) == 216, "native Lurrus filter");
+    _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Lurrus filter");
     new_default_test_definition(&test, 0xff, "Select a permanent card to play.");
     int selected = select_card_from_zone(player, player, playable[0], count, 0, 1, -1, &test);
     if (selected != -1 && charge_mana_from_id(player, -1, EVENT_ACTIVATE,
@@ -2251,7 +2251,7 @@ int card_yorion_sky_nomad(int player, int card, event_t event)
     td.allowed_controller = player;
     td.preferred_controller = player;
     td.special = TARGET_SPECIAL_NOT_ME | TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)permanent_you_control_and_own;
+    td.extra = (intptr_t)permanent_you_control_and_own;
     td.illegal_abilities = 0;
     td.allow_cancel = 3;
     char flicker_array[2][151];

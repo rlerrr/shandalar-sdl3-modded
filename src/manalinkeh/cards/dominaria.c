@@ -1036,16 +1036,16 @@ int card_curators_ward(int player, int card, event_t event)
   target_definition_t td;
 
   ward = get_card_instance(player, card);
-  other_leaves_play(player, card, (int)ward->damage_target_player, ward->damage_target_card, event,
+  other_leaves_play(player, card, (intptr_t)ward->damage_target_player, ward->damage_target_card, event,
                     1, 1);
   if (event == EVENT_LEAVES_PLAY_ABILITY)
   {
-    result = is_what((int)ward->damage_target_player, ward->damage_target_card, 0x40);
+    result = is_what((intptr_t)ward->damage_target_player, ward->damage_target_card, 0x40);
     if (((result != 0) ||
-         (result = is_legendary((int)ward->damage_target_player, ward->damage_target_card),
+         (result = is_legendary((intptr_t)ward->damage_target_player, ward->damage_target_card),
           result != 0)) ||
         (result =
-             has_subtype((int)ward->damage_target_player, ward->damage_target_card, SUBTYPE_SAGA),
+             has_subtype((intptr_t)ward->damage_target_player, ward->damage_target_card, SUBTYPE_SAGA),
          result != 0))
     {
       draw_cards(player, 2);
@@ -1067,7 +1067,7 @@ int card_curators_ward(int player, int card, event_t event)
           source_in_play != NULL &&
               (result = is_humiliated(player, card, AL_STATIC), result == 0))))
     {
-      hexproof((int)ward->damage_target_player, ward->damage_target_card, EVENT_ABILITIES);
+      hexproof((intptr_t)ward->damage_target_player, ward->damage_target_card, EVENT_ABILITIES);
     }
   }
   default_target_definition(player, card, &td, 0x47);
@@ -2121,7 +2121,7 @@ int card_jodah_archmage_eternal(int player, int card, event_t event)
         }
       }
       test_definition_t test;
-      _Static_assert(sizeof(test) == 216, "native Jodah filter");
+      _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Jodah filter");
       new_default_test_definition(&test, 0xff, "Select a card to play.");
       test.zone = 0x100;
       int selected =
@@ -2766,7 +2766,7 @@ void lichs_mastery_lifeloss_trigger(int player, int card, int amount)
   td.illegal_abilities = 0;
   td.allow_cancel = 0;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)dominaria_target_only_permanents_unless_in_hand;
+  td.extra = (intptr_t)dominaria_target_only_permanents_unless_in_hand;
   int grave[amount];
   target_t tgts[amount + 1];
   card_instance_t *instance = get_card_instance(player, card);
@@ -3284,7 +3284,7 @@ int card_muldrotha_the_gravetide(int player, int card, event_t event)
       }
     }
     test_definition_t test;
-    _Static_assert(sizeof(test) == 216, "native Muldrotha filter");
+    _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Muldrotha filter");
     new_default_test_definition(&test, 0xff, "Select a permanent card to play.");
     int selected = select_card_from_zone(player, player, playable[0], count, 0, 1, -1, &test);
     if (selected != -1 && charge_mana_from_id(player, -1, EVENT_ACTIVATE,
@@ -3860,7 +3860,7 @@ int card_raff_capashen_ships_mage(int player, int card, event_t event)
   td.preferred_controller = player;
   td.allowed_controller = player;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)can_cast_historic_spell;
+  td.extra = (intptr_t)can_cast_historic_spell;
   td.zone = TARGET_ZONE_HAND;
   const char *prompt = event == EVENT_ACTIVATE ? "Select an historic card." : NULL;
   return can_play_cards_as_though_they_had_flash(player, card, event, &td, prompt, 1);
@@ -5838,7 +5838,7 @@ int card_triumph_of_gerrard(int player, int card, event_t event)
   td.preferred_controller = player;
   td.allowed_controller = player;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)has_highest_power;
+  td.extra = (intptr_t)has_highest_power;
   td.allow_cancel = 0;
   if ((event == EVENT_CHAPTER3) || ((event & ~EVENT_SET_LEGACY_EFFECT_NAME) == EVENT_CHAPTER1))
   {

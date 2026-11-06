@@ -1472,7 +1472,7 @@ int card_error_trial(int player, int card, event_t event)
     default_target_definition(player, card, &td, 2);
     td.preferred_controller = player;
     counterspell_target_definition(player, card, &td2, 0x38);
-    td2.extra = (int32_t)is_multicolored;
+    td2.extra = (intptr_t)is_multicolored;
     td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     target_player_or_result = counterspell(player, card, EVENT_CAN_CAST, &td2, 0);
     return generic_split_card(player, card, EVENT_MODIFY_COST, 0x4b3f, can_target(&td), 0, 0x4af6,
@@ -1490,7 +1490,7 @@ int card_error_trial(int player, int card, event_t event)
   {
 
     counterspell_target_definition(player, card, &td2, 0x38);
-    td2.extra = (int32_t)is_multicolored;
+    td2.extra = (intptr_t)is_multicolored;
     td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     counterspell(player, card, EVENT_CAST_SPELL, &td2, 0);
     return 0;
@@ -1506,7 +1506,7 @@ int card_error_trial(int player, int card, event_t event)
   default_target_definition(player, card, &td, 2);
   td.preferred_controller = player;
   counterspell_target_definition(player, card, &td2, 0x38);
-  td2.extra = (int32_t)is_multicolored;
+  td2.extra = (intptr_t)is_multicolored;
   td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
   if (event == EVENT_RESOLVE_SPELL)
   {
@@ -3582,7 +3582,7 @@ Whenever a creature you control dies, you gain life equal to that creature's tou
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)proper_burial_effect ){
+				if( inst->info_slot == (intptr_t)proper_burial_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -3726,7 +3726,7 @@ int card_pure_simple(int player, int card, event_t event)
   {
     target_definition_t td2;
     default_target_definition(player, card, &td2, 0x47);
-    td2.extra = (int32_t)is_multicolored;
+    td2.extra = (intptr_t)is_multicolored;
     td2.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     return generic_split_card(player, card, EVENT_MODIFY_COST, 0x4b21, can_target(&td2), 0, 0x4b33,
                               1, 0);
@@ -3736,7 +3736,7 @@ int card_pure_simple(int player, int card, event_t event)
   {
     target_definition_t td3;
     default_target_definition(player, card, &td3, 0x47);
-    td3.extra = (int32_t)is_multicolored;
+    td3.extra = (intptr_t)is_multicolored;
     td3.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     new_pick_target(&td3, "Select target multicolored permanent.", 0, 0x81);
     return 0;
@@ -4529,7 +4529,7 @@ int card_simic_guildmage(int player, int card, event_t event)
     td1.required_subtype = 0x4002;
     td1.preferred_controller = player;
     td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td1.extra = (int32_t)can_move_aura_same_controller;
+    td1.extra = (intptr_t)can_move_aura_same_controller;
     instance = get_card_instance(player, card);
     if (event == EVENT_CAN_ACTIVATE)
     {
@@ -4659,7 +4659,7 @@ int card_simic_guildmage(int player, int card, event_t event)
     td1.required_subtype = 0x4002;
     td1.preferred_controller = player;
     td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td1.extra = (int32_t)can_move_aura_same_controller;
+    td1.extra = (intptr_t)can_move_aura_same_controller;
     instance = get_card_instance(player, card);
   }
   counter_source_target = &td;
@@ -5050,7 +5050,7 @@ int card_stalking_vengeance(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)stalking_vengeance_effect)
+        if (inst->info_slot == (intptr_t)stalking_vengeance_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))

@@ -1017,7 +1017,7 @@ int card_merseine(int player, int card, event_t event){
 			CYCLE_ALL_CARDS(p, c, 	{
 										if( in_play(p, c) && is_what(p, c, TYPE_EFFECT) ){
 											card_instance_t *inst = get_card_instance(p, c);
-											if( inst->info_slot == (int)merseine_ability ){
+											if( inst->info_slot == (intptr_t)merseine_ability ){
 												if( (inst->targets[0].player == player && inst->targets[0].card == card) )
 												{
 													found[p] = c;

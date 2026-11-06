@@ -2371,7 +2371,7 @@ int card_patron_of_the_nezumi(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)patron_of_the_nezumi_effect)
+        if (inst->info_slot == (intptr_t)patron_of_the_nezumi_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))
@@ -3888,7 +3888,7 @@ Whenever a legendary permanent other than ~ is put into a graveyard from the bat
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)yomiji_who_bars_the_way_effect ){
+				if( inst->info_slot == (intptr_t)yomiji_who_bars_the_way_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{

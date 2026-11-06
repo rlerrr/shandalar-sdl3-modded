@@ -1065,7 +1065,7 @@ if (IS_GAA_EVENT(event))
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_EFFECT);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)black_damage_source;
+    td.extra = (intptr_t)black_damage_source;
     card_instance_t* instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td))
       get_card_instance(instance->targets[0].player, instance->targets[0].card)->info_slot = 0;
@@ -1087,7 +1087,7 @@ if (IS_GAA_EVENT(event))
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_EFFECT);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)blue_damage_source;
+    td.extra = (intptr_t)blue_damage_source;
     card_instance_t* instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td))
       get_card_instance(instance->targets[0].player, instance->targets[0].card)->info_slot = 0;
@@ -1109,7 +1109,7 @@ if (IS_GAA_EVENT(event))
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_EFFECT);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)green_damage_source;
+    td.extra = (intptr_t)green_damage_source;
     card_instance_t* instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td))
       get_card_instance(instance->targets[0].player, instance->targets[0].card)->info_slot = 0;
@@ -1131,7 +1131,7 @@ if (IS_GAA_EVENT(event))
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_EFFECT);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)red_damage_source;
+    td.extra = (intptr_t)red_damage_source;
     card_instance_t* instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td))
       get_card_instance(instance->targets[0].player, instance->targets[0].card)->info_slot = 0;
@@ -1153,7 +1153,7 @@ if (IS_GAA_EVENT(event))
     target_definition_t td;
     default_target_definition(player, card, &td, TYPE_EFFECT);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)white_damage_source;
+    td.extra = (intptr_t)white_damage_source;
     card_instance_t* instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION && valid_target(&td))
       get_card_instance(instance->targets[0].player, instance->targets[0].card)->info_slot = 0;
@@ -1771,7 +1771,7 @@ Whenever a land is put into a graveyard from the battlefield, ~ deals 2 damage t
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)dingus_egg_effect ){
+				if( inst->info_slot == (intptr_t)dingus_egg_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -2878,7 +2878,7 @@ int card_guardian_angel(int player, int card, event_t event)
                                    aff->damage_target_card >= 0 ? aff->damage_target_player : -1,
                                    aff->damage_target_card >= 0 ? aff->damage_target_card : -1);
       card_instance_t *fx = get_card_instance(player, leg);
-      fx->info_slot = (int)guardian_angel_legacy;
+      fx->info_slot = (intptr_t)guardian_angel_legacy;
       fx->targets[9].player = aff->damage_target_player;
       fx->targets[9].card = aff->damage_target_card;
     }
@@ -3521,7 +3521,7 @@ int enchanted_land_is_basic_land_type(int player, int card, event_t event, subty
       return 0;
     }
 
-    instance = get_card_instance((int)aura->damage_target_player, aura->damage_target_card);
+    instance = get_card_instance((intptr_t)aura->damage_target_player, aura->damage_target_card);
     if (hackable != 0)
     {
       subtype = get_hacked_subtype(player, card, subtype);
@@ -6372,7 +6372,7 @@ Whenever a creature dies, you may pay |1. If you do, you gain 1 life. */
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)soul_net_effect ){
+				if( inst->info_slot == (intptr_t)soul_net_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -7478,7 +7478,7 @@ int zombie_master_shared_ability(int player, int card, event_t event)
   td.required_state = TARGET_STATE_DESTROYED;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
   td.required_subtype = 0xde;
-  td.extra = (int32_t)zombie_to_regenerate;
+  td.extra = (intptr_t)zombie_to_regenerate;
   td.illegal_abilities = 0;
   if (((event == EVENT_RESOLVE_ACTIVATION) &&
        (master_player_or_result = validate_target(player, card, &td, 0),

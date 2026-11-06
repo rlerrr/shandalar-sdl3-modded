@@ -2020,7 +2020,7 @@ int card_fecundity(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)fecundity_effect)
+        if (inst->info_slot == (intptr_t)fecundity_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))
@@ -4336,7 +4336,7 @@ int card_remembrance(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)remembrance_effect)
+        if (inst->info_slot == (intptr_t)remembrance_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))
@@ -5427,7 +5427,7 @@ int card_temporal_aperture(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *eff = get_card_instance(player, c);
-        if (eff->info_slot == (int)temporal_aperture_legacy)
+        if (eff->info_slot == (intptr_t)temporal_aperture_legacy)
         {
           found = 1;
           break;
@@ -7232,7 +7232,7 @@ int card_rune_of_protection_artifacts(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)damage_from_artifact_source;
+    td.extra = (intptr_t)damage_from_artifact_source;
     get_card_instance(player, card);
   }
   else
@@ -7243,7 +7243,7 @@ int card_rune_of_protection_artifacts(int player, int card, event_t event)
     }
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)damage_from_artifact_source;
+    td.extra = (intptr_t)damage_from_artifact_source;
     instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION)
     {
@@ -7280,7 +7280,7 @@ int card_rune_of_protection_black(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)black_damage_source;
+    td.extra = (intptr_t)black_damage_source;
     get_card_instance(player, card);
   }
   else
@@ -7292,7 +7292,7 @@ int card_rune_of_protection_black(int player, int card, event_t event)
     }
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)black_damage_source;
+    td.extra = (intptr_t)black_damage_source;
     instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION)
     {
@@ -7330,7 +7330,7 @@ int card_rune_of_protection_blue(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)blue_damage_source;
+    td.extra = (intptr_t)blue_damage_source;
     get_card_instance(player, card);
   }
   else
@@ -7342,7 +7342,7 @@ int card_rune_of_protection_blue(int player, int card, event_t event)
     }
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)blue_damage_source;
+    td.extra = (intptr_t)blue_damage_source;
     instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION)
     {
@@ -7380,7 +7380,7 @@ int card_rune_of_protection_green(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)green_damage_source;
+    td.extra = (intptr_t)green_damage_source;
     get_card_instance(player, card);
   }
   else
@@ -7392,7 +7392,7 @@ int card_rune_of_protection_green(int player, int card, event_t event)
     }
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)green_damage_source;
+    td.extra = (intptr_t)green_damage_source;
     instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION)
     {
@@ -7469,7 +7469,7 @@ int card_rune_of_protection_lands(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)damage_from_land_source;
+    td.extra = (intptr_t)damage_from_land_source;
     get_card_instance(player, card);
   }
   else
@@ -7480,7 +7480,7 @@ int card_rune_of_protection_lands(int player, int card, event_t event)
     }
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)damage_from_land_source;
+    td.extra = (intptr_t)damage_from_land_source;
     instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION)
     {
@@ -7516,7 +7516,7 @@ int card_rune_of_protection_red(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)red_damage_source;
+    td.extra = (intptr_t)red_damage_source;
     get_card_instance(player, card);
   }
   else
@@ -7528,7 +7528,7 @@ int card_rune_of_protection_red(int player, int card, event_t event)
     }
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)red_damage_source;
+    td.extra = (intptr_t)red_damage_source;
     instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION)
     {
@@ -7566,7 +7566,7 @@ int card_rune_of_protection_white(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)white_damage_source;
+    td.extra = (intptr_t)white_damage_source;
     get_card_instance(player, card);
   }
   else
@@ -7578,7 +7578,7 @@ int card_rune_of_protection_white(int player, int card, event_t event)
     }
     default_target_definition(player, card, &td, 0x80);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)white_damage_source;
+    td.extra = (intptr_t)white_damage_source;
     instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION)
     {

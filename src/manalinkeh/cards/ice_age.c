@@ -973,7 +973,7 @@ int card_balduvian_hydra(int player, int card, event_t event)
     if ((event == EVENT_CAN_ACTIVATE) || (event == EVENT_ACTIVATE))
     {
       default_target_definition(player, card, &td, 0);
-      td.extra = (int32_t)target_is_damaging_balduvian_hydra;
+      td.extra = (intptr_t)target_is_damaging_balduvian_hydra;
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
       balduvian_hydra_player = player;
       balduvian_hydra_card = card;
@@ -1025,7 +1025,7 @@ int card_balduvian_hydra(int player, int card, event_t event)
         return 0;
       }
       default_target_definition(player, card, &td, 0);
-      td.extra = (int32_t)target_is_damaging_balduvian_hydra;
+      td.extra = (intptr_t)target_is_damaging_balduvian_hydra;
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
       balduvian_hydra_player = player;
       balduvian_hydra_card = card;
@@ -3173,7 +3173,7 @@ int card_enduring_renewal(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)enduring_renewal_effect ){
+				if( inst->info_slot == (intptr_t)enduring_renewal_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -3594,7 +3594,7 @@ int card_fire_covenant(int player, int card, event_t event)
     {
       td.illegal_abilities = get_protections_from(1, card);
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-      td.extra = (int32_t)not_indestructible;
+      td.extra = (intptr_t)not_indestructible;
     }
     if (basic_spell(player, card, EVENT_CAN_CAST) != 0)
     {
@@ -3625,7 +3625,7 @@ int card_fire_covenant(int player, int card, event_t event)
     {
       td.illegal_abilities = get_protections_from(1, card);
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-      td.extra = (int32_t)not_indestructible;
+      td.extra = (intptr_t)not_indestructible;
     }
     if (event == EVENT_CAST_SPELL)
     {
@@ -11392,7 +11392,7 @@ int card_balduvian_shaman(int player, int card, event_t event)
   td.required_color = get_sleighted_color_test(player, card, 0x20);
   td.preferred_controller = player;
   td.allowed_controller = player;
-  td.extra = (int32_t)doesnt_have_cumulative_upkeep;
+  td.extra = (intptr_t)doesnt_have_cumulative_upkeep;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
   instance = get_card_instance(player, card);
   if (event == EVENT_RESOLVE_ACTIVATION)
@@ -11616,7 +11616,7 @@ int card_hallowed_ground(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 1);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_is_nonsnow;
+    td.extra = (intptr_t)target_is_nonsnow;
     td.allowed_controller = player;
     td.preferred_controller = player;
   }
@@ -11631,7 +11631,7 @@ int card_hallowed_ground(int player, int card, event_t event)
     td.preferred_controller = player;
     td.allowed_controller = player;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_is_nonsnow;
+    td.extra = (intptr_t)target_is_nonsnow;
     if (event == EVENT_RESOLVE_ACTIVATION)
     {
       action_on_target(player, card, 0, ACT_BOUNCE);

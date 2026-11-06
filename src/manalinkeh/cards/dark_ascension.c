@@ -543,7 +543,7 @@ int card_requiem_angel(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)requiem_angel_effect ){
+				if( inst->info_slot == (intptr_t)requiem_angel_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -1184,7 +1184,7 @@ Flashback |W (You may cast this card from your graveyard for its flashback cost.
 		default_target_definition(player, card, &td, TYPE_CREATURE);
 		td.preferred_controller = 1-player;
 		td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-		td.extra = (int32_t)you_own;
+		td.extra = (intptr_t)you_own;
 
 		card_instance_t *instance = get_card_instance(player, card);
 
@@ -3629,7 +3629,7 @@ int card_diregraf_captain(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)diregraf_captain_effect ){
+				if( inst->info_slot == (intptr_t)diregraf_captain_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{

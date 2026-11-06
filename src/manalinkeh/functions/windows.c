@@ -488,7 +488,7 @@ static void draw_abilities(HDC hdc, RECT* rect, int player, int card, int is_dam
       once = 0;
 
 	  char path[MAX_PATH];
-	  int ability_icon_file_as_int = get_setting(SETTING_ABILITY_ICON_FILE);
+	  intptr_t ability_icon_file_as_int = get_setting(SETTING_ABILITY_ICON_FILE);
 	  scnprintf(path, MAX_PATH, "%s\\%s", path_CardArt, (const char*)ability_icon_file_as_int);
 	  bmp_abilities_pic = read_graphics_file2(path);
 	  premultiply_alpha_hbitmap(bmp_abilities_pic);
@@ -675,7 +675,7 @@ LRESULT __stdcall wndproc_CardClass_hook(HWND hwnd, UINT msg, WPARAM wparam, LPA
     SetWindowLongA(hwnd, cardclass_offset_card, target->card);
     SetWindowLongA(hwnd, cardclass_offset_unk1, 0);
     inst_and_ext_t *xstashed = calloc(1, sizeof(inst_and_ext_t));
-    SetWindowLongA(hwnd, cardclass_offset_instance_copy, (LONG)xstashed);
+    SetWindowLongPtrA(hwnd, cardclass_offset_instance_copy, (LONG_PTR)xstashed);
     SetWindowLongA(hwnd, 16, 0);
     if (!xstashed)
       return -1;
@@ -683,7 +683,7 @@ LRESULT __stdcall wndproc_CardClass_hook(HWND hwnd, UINT msg, WPARAM wparam, LPA
     return 0;
   }
   case WM_DESTROY:
-    free((void *)GetWindowLongA(hwnd, cardclass_offset_instance_copy));
+    free((void *)GetWindowLongPtrA(hwnd, cardclass_offset_instance_copy));
     return 0;
   case WM_PAINT:
   {
@@ -735,7 +735,7 @@ LRESULT __stdcall wndproc_CardClass_hook(HWND hwnd, UINT msg, WPARAM wparam, LPA
             break;
           }
           inst_and_ext_t *xstashed =
-              (inst_and_ext_t *)GetWindowLongA(hwnd, cardclass_offset_instance_copy);
+              (inst_and_ext_t *)GetWindowLongPtrA(hwnd, cardclass_offset_instance_copy);
           memcpy_displayed_inst_and_ext(xstashed, player, card);
           if (g_duel_dialog_refresh_state)
             draw_card_debug_id_tag(hdc, &card_rect, player, card);
@@ -754,7 +754,7 @@ LRESULT __stdcall wndproc_CardClass_hook(HWND hwnd, UINT msg, WPARAM wparam, LPA
     if (card == -1 && player != -1)
       return 0;
     inst_and_ext_t *xstashed =
-        (inst_and_ext_t *)GetWindowLongA(hwnd, cardclass_offset_instance_copy);
+        (inst_and_ext_t *)GetWindowLongPtrA(hwnd, cardclass_offset_instance_copy);
     memcpy_displayed_inst_and_ext(&xactual, player, card);
     // Compare the records after accounting for each snapshot's own extension pointer.
     xactual.inst.ext = xstashed->inst.ext;

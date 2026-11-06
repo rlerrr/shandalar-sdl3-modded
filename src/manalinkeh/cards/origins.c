@@ -2954,7 +2954,7 @@ int card_shadows_of_the_past(int player, int card, event_t event)
     for (int c = 0; c < active_cards_count[player]; ++c){
         if (in_play(player, c) && is_what(player, c, TYPE_EFFECT)){
             card_instance_t* legacy = get_card_instance(player, c);
-            if (legacy->info_slot == (int)shadows_of_the_past_effect
+            if (legacy->info_slot == (intptr_t)shadows_of_the_past_effect
                 && ((legacy->damage_target_player == player && legacy->damage_target_card == card)
                     || (legacy->targets[0].player == player && legacy->targets[0].card == card))){ found = 1; break; }
         }

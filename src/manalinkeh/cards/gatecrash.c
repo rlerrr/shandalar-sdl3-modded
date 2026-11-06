@@ -2050,7 +2050,7 @@ int card_ogre_slumlord(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)ogre_slumlord_effect ){
+				if( inst->info_slot == (intptr_t)ogre_slumlord_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -2226,7 +2226,7 @@ int card_thrull_parasite(int player, int card, event_t event)
       (ai_is_speculating == 1 || (player == 1 && ((unsigned char)trace_mode & 2) == 0)))
   {
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_must_have_counters;
+    td.extra = (intptr_t)target_must_have_counters;
   }
   if (event == EVENT_RESOLVE_ACTIVATION)
   {

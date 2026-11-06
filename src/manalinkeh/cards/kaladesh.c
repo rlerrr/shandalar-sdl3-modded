@@ -2121,7 +2121,7 @@ Whenever another creature dies, you get |E (an energy counter).
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)demon_of_dark_schemes_legacy ){
+				if( inst->info_slot == (intptr_t)demon_of_dark_schemes_legacy ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -2726,7 +2726,7 @@ Whenever an artifact you control is put into a graveyard from the battlefield, t
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)marionette_master_legacy ){
+				if( inst->info_slot == (intptr_t)marionette_master_legacy ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -6020,7 +6020,7 @@ int card_aetherworks_marvel(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)aetherworks_marvel_legacy ){
+				if( inst->info_slot == (intptr_t)aetherworks_marvel_legacy ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{

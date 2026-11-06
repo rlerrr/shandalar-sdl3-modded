@@ -1,6 +1,11 @@
 #ifndef SHANDALAR_GDI_COMPAT_H
 #define SHANDALAR_GDI_COMPAT_H
 
+#define FreeLibrary ShandalarFreeLibrary
+#define GetUpdateRect ShandalarGetUpdateRect
+#define IntersectRect ShandalarIntersectRect
+#define LoadLibraryA ShandalarLoadLibraryA
+#define SystemParametersInfoA ShandalarSystemParametersInfoA
 #define BeginPaint ShandalarBeginPaint
 #define BitBlt ShandalarBitBlt
 #define ClientToScreen ShandalarClientToScreen

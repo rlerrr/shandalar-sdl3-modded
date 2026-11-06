@@ -1172,7 +1172,7 @@ int card_as_foretold(int player, int card, event_t event)
       }
     }
     test_definition_t test;
-    _Static_assert(sizeof(test) == 216, "native As Foretold filter");
+    _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native As Foretold filter");
     new_default_test_definition(&test, 1, "Select a spell to cast.");
     test.type_flag = 1;
     int selected = select_card_from_zone(player, player, playable[0], count, 0, 2, -1, &test);
@@ -6156,7 +6156,7 @@ int card_temmet_vizier_of_naktamun(int player, int card, event_t event)
     td.preferred_controller = player;
     td.allow_cancel = 0;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_is_token_too;
+    td.extra = (intptr_t)target_is_token_too;
     result = can_target(&td);
     if (result != 0)
     {

@@ -1816,7 +1816,7 @@ int card_foster(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)foster_effect)
+        if (inst->info_slot == (intptr_t)foster_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))
@@ -2721,7 +2721,7 @@ int card_liability(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)liability_effect)
+        if (inst->info_slot == (intptr_t)liability_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))
@@ -3346,7 +3346,7 @@ int card_monlit_wake(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)moonlit_wake_effect)
+        if (inst->info_slot == (intptr_t)moonlit_wake_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))
@@ -5487,7 +5487,7 @@ int card_barbed_wire(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)damage_must_be_from_barbed_wire;
+    td.extra = (intptr_t)damage_must_be_from_barbed_wire;
     instance = get_card_instance(player, card);
     if (event == EVENT_RESOLVE_ACTIVATION)
     {
@@ -6521,13 +6521,13 @@ int card_diplomatic_escort(int player, int card, event_t event)
   {
     counter_activated_target_definition(player, card, &td_effect, 0);
     td_effect.special = td_effect.special | 0x8000;
-    td_effect.extra = (int32_t)targets_a_creature;
+    td_effect.extra = (intptr_t)targets_a_creature;
     counterspell_target_definition(player, card, &td_spell, 0);
     td_spell.special = td_spell.special | 0x8000;
-    td_spell.extra = (int32_t)targets_a_creature;
+    td_spell.extra = (intptr_t)targets_a_creature;
     counter_triggered_target_definition(player, card, &td_trig, 0);
     td_trig.special = td_trig.special | 0x8000;
-    td_trig.extra = (int32_t)targets_a_creature;
+    td_trig.extra = (intptr_t)targets_a_creature;
     instance = get_card_instance(player, card);
     if (event == EVENT_CAN_ACTIVATE)
     {
@@ -8661,7 +8661,7 @@ int card_revered_elder(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)target_must_be_damage_targeting_this_revered_elder;
+    td.extra = (intptr_t)target_must_be_damage_targeting_this_revered_elder;
     if (event == EVENT_CAN_ACTIVATE)
     {
       result = generic_activated_ability(player, card, EVENT_CAN_ACTIVATE, 0x1000004, 1, 0, 0, 0, 0,
@@ -8688,7 +8688,7 @@ int card_revered_elder(int player, int card, event_t event)
     default_target_definition(player, card, &td, 0);
   }
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)target_must_be_damage_targeting_this_revered_elder;
+  td.extra = (intptr_t)target_must_be_damage_targeting_this_revered_elder;
   if (event == EVENT_RESOLVE_ACTIVATION)
   {
     instance = get_card_instance(player, card);
@@ -10671,7 +10671,7 @@ int card_volcanic_wind(int player, int card, event_t event)
     td.preferred_controller = 1 - player;
     td.illegal_abilities = get_protections_from(player, card);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)not_indestructible;
+    td.extra = (intptr_t)not_indestructible;
   }
   instance = get_card_instance(player, card);
   if (event == EVENT_CAN_CAST)

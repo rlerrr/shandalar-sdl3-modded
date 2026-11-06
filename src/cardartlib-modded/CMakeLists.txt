@@ -33,3 +33,13 @@ target_link_libraries(cardart_modded PUBLIC
 if(TARGET shandalar_llvm_coverage)
   target_link_libraries(cardart_modded PRIVATE shandalar_llvm_coverage)
 endif()
+
+# A tiny disk-format fixture catches pointer-size regressions without game assets.
+add_executable(cardart_name_table_test EXCLUDE_FROM_ALL tests/name_table_test.cpp)
+target_include_directories(cardart_name_table_test PRIVATE "${CMAKE_CURRENT_SOURCE_DIR}")
+target_compile_definitions(cardart_name_table_test PRIVATE SHANDALAR_SDL_WIN32_COMPAT)
+target_link_libraries(cardart_name_table_test PRIVATE shandalar_platform SDL3_image::SDL3_image)
+if(SHANDALAR_BUILD_TESTS AND NOT EMSCRIPTEN)
+  add_test(NAME cardart_name_table_test COMMAND cardart_name_table_test
+    "${CMAKE_CURRENT_BINARY_DIR}/cardart-name-table-test.dat")
+endif()

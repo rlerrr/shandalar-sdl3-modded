@@ -20,7 +20,7 @@ static int exiledby_legacymatches(card_instance_t* instance, int player, int car
   if (instance->internal_card_id != LEGACY_EFFECT_CUSTOM)
 	return 0;
 
-  if (instance->info_slot != (int)exiledby_legacy)
+  if (instance->info_slot != (intptr_t)exiledby_legacy)
 	return 0;
 
   if ((instance->state & (STATE_OUBLIETTED | STATE_INVISIBLE | STATE_IN_PLAY)) != STATE_IN_PLAY)	// not just in_play(player, card), since player may be -1 or -2
@@ -467,7 +467,7 @@ int exiledby_detach(int player, int card)
 	{
 	  instance = get_card_instance(player, leg);
 	  if (instance->internal_card_id == LEGACY_EFFECT_CUSTOM
-		  && instance->info_slot == (int)exiledby_legacy
+		  && instance->info_slot == (intptr_t)exiledby_legacy
 		  && instance->targets[18].card > detach_id)
 		detach_id = instance->targets[18].card;
 	}

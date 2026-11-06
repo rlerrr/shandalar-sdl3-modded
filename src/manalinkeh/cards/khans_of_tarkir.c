@@ -1778,7 +1778,7 @@ int card_grim_haruspex(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)grim_haruspex_effect ){
+				if( inst->info_slot == (intptr_t)grim_haruspex_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -1924,7 +1924,7 @@ int card_kheru_bloodsucker(int player, int card, event_t event){
         for (int c = 0; c < active_cards_count[player]; ++c){
             if (in_play(player, c) && is_what(player, c, TYPE_EFFECT)){
                 card_instance_t* legacy = get_card_instance(player, c);
-                if (legacy->info_slot == (int)kheru_bloodsucker_effect
+                if (legacy->info_slot == (intptr_t)kheru_bloodsucker_effect
                     && ((legacy->damage_target_player == player && legacy->damage_target_card == card)
                         || (legacy->targets[0].player == player && legacy->targets[0].card == card))){
                     found = 1;
@@ -2120,7 +2120,7 @@ int card_molting_snakeskin(int player, int card, event_t event){
 			for(c=active_cards_count[p]-1; c > -1; c--){
 				if( in_play(p, c) && is_what(p, c, TYPE_EFFECT) ){
 					card_instance_t *eff = get_card_instance( p, c );
-					if( eff->info_slot == (int)molting_snakeskin_ability ){
+					if( eff->info_slot == (intptr_t)molting_snakeskin_ability ){
 						if( eff->damage_target_player == player && eff->damage_target_card == card ){
 							found = 1;
 							break;
@@ -4105,7 +4105,7 @@ int card_abzan_ascendancy(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)abzan_ascendancy_effect ){
+				if( inst->info_slot == (intptr_t)abzan_ascendancy_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{

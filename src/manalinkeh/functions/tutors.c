@@ -44,7 +44,7 @@ int reveal_top_cards_of_library_and_choose_type(int src_player, int src_card, in
                                                      tutor_t destination_rest,
                                                      int reveal_rest, type_t legal_types);
 
-int show_deck_exe(int player, const int* deck, int num_cards, const char* prompt, int suppress_done_label, /* const char* */int done_label);
+int show_deck_exe(int player, const int* deck, int num_cards, const char* prompt, int suppress_done_label, const char* done_label);
 
 const char* hack_override_show_deck_done_button_label = NULL;
 
@@ -1061,7 +1061,7 @@ int show_deck(int player, const int *deck, int num_cards, const char *prompt,
   int result;
   call_sub_437E20_unless_ai_is_speculating();
   hack_show_deck_force_expansion = 0;
-  result = show_deck_exe(player, deck, num_cards, prompt, suppress_done_label, (int32_t)(intptr_t)done_label);
+  result = show_deck_exe(player, deck, num_cards, prompt, suppress_done_label, done_label);
   return result;
 }
 
@@ -1072,7 +1072,7 @@ int show_deck_force_expansion(int player, const int *deck, int num_cards, const 
   call_sub_437E20_unless_ai_is_speculating();
   hack_show_deck_force_expansion = expansion;
   int result = show_deck_exe(player, deck, num_cards, prompt, suppress_done_label,
-                             (int32_t)(intptr_t)done_label);
+                             done_label);
   hack_show_deck_force_expansion = 0;
   return result;
 }
@@ -1129,11 +1129,11 @@ int select_card_from_zone(int player, int targ_player, const int *s_location, in
     {
       const char *label = hack_override_show_deck_done_button_label;
       if (!label)
-        label = (const char *)ENGINE_DONE_LABEL;
+        label = ENGINE_DONE_LABEL;
       call_sub_437E20_unless_ai_is_speculating();
       hack_show_deck_force_expansion = 0;
       int selected =
-          show_deck_exe(player, s_location, zone_count, this_test->message, 0, (int)label);
+          show_deck_exe(player, s_location, zone_count, this_test->message, 0, label);
       if (selected != -1 && new_make_test(targ_player, s_location[selected], test_type, this_test))
         return selected;
       if (!must_select)
@@ -1714,7 +1714,7 @@ int reveal_top_cards_of_library(int player, int num_cards)
     int *deck = deck_ptr[player];
     call_sub_437E20_unless_ai_is_speculating();
     hack_show_deck_force_expansion = 0;
-    show_deck_exe(0, deck, count, buffer, 0, 0x78f0a8);
+    show_deck_exe(0, deck, count, buffer, 0, ENGINE_OK_LABEL);
   }
   return count;
 }
@@ -1747,7 +1747,7 @@ int reveal_top_cards_of_library_and_choose_fn_who_chooses(
               " %s reveals:", cards_ptr[get_id(src_player, src_card)]->name);
     call_sub_437E20_unless_ai_is_speculating();
     hack_show_deck_force_expansion = 0;
-    show_deck_exe(who_chooses, deck_ptr[t_player], num_cards, buffer, 0, 0x7375b0);
+    show_deck_exe(who_chooses, deck_ptr[t_player], num_cards, buffer, 0, ENGINE_DONE_LABEL);
     return -1;
   }
 

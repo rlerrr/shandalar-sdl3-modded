@@ -140,8 +140,13 @@ BOOL CopyFileA(LPCSTR existing_filename, LPCSTR new_filename, BOOL fail_if_exist
   char destination[1024];
   if (!existing_filename || !new_filename)
     return FALSE;
+#ifdef _WIN32
+  SDL_strlcpy(source, existing_filename, sizeof(source));
+  SDL_strlcpy(destination, new_filename, sizeof(destination));
+#else
   shandalar_map_file_path(existing_filename, source, sizeof(source));
   shandalar_map_file_path(new_filename, destination, sizeof(destination));
+#endif
   if (fail_if_exists && SDL_GetPathInfo(destination, &info))
     return FALSE;
   return SDL_CopyFile(source, destination) ? TRUE : FALSE;

@@ -3229,7 +3229,7 @@ static int check_for_stensia_legacy(int player, int card){
 	for(c=0; c<active_cards_count[player]; c++){
 		if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 			card_instance_t *inst = get_card_instance(player, c);
-			if( inst->info_slot == (int)stensia_legacy ){
+			if( inst->info_slot == (intptr_t)stensia_legacy ){
 				if( inst->damage_target_player == player && inst->damage_target_card == card ){
 					return 1;
 				}

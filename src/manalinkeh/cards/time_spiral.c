@@ -231,7 +231,7 @@ int generic_suspend_legacy(int player, int card, event_t event)
 
 int is_suspend_legacy(int player, int card){
 	if( is_what(player, card, TYPE_EFFECT) ){
-		return get_card_instance(player, card)->info_slot == (int)generic_suspend_legacy ? 1 : 0;
+		return get_card_instance(player, card)->info_slot == (intptr_t)generic_suspend_legacy ? 1 : 0;
 	}
 	return 0;
 }
@@ -4006,7 +4006,7 @@ int card_lim_dul_the_necromancer(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)lim_dul_the_necromancer_effect ){
+				if( inst->info_slot == (intptr_t)lim_dul_the_necromancer_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -5273,7 +5273,7 @@ int card_pulmonic_sliver(int player, int card, event_t event)
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)pulmonic_sliver_effect ){
+				if( inst->info_slot == (intptr_t)pulmonic_sliver_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -6046,7 +6046,7 @@ int sedge_sliver_shared_ability(int player, int card, event_t event)
       td.required_state = TARGET_STATE_DESTROYED;
       td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
       td.required_subtype = 0xb1;
-      td.extra = (int32_t)sliver_to_regenerate;
+      td.extra = (intptr_t)sliver_to_regenerate;
       td.illegal_abilities = 0;
       if (event != EVENT_ACTIVATE)
       {

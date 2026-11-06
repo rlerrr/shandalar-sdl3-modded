@@ -1520,7 +1520,7 @@ int card_daughter_of_autumn(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)damage_dealt_to_white_creature;
+    td.extra = (intptr_t)damage_dealt_to_white_creature;
     instance = get_card_instance(player, card);
     if (event == EVENT_CAN_ACTIVATE)
     {
@@ -1581,7 +1581,7 @@ int card_daughter_of_autumn(int player, int card, event_t event)
     }
     default_target_definition(player, card, &td, 0);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)damage_dealt_to_white_creature;
+    td.extra = (intptr_t)damage_dealt_to_white_creature;
     instance = get_card_instance(player, card);
   }
   if ((event == EVENT_RESOLVE_ACTIVATION) &&
@@ -1721,7 +1721,7 @@ fx_dwarven_sea_clan(int player, int card, event_t event)
   default_target_definition(player, card, &td, TYPE_CREATURE);
   td.required_state = TARGET_STATE_IN_COMBAT;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int)target_controls_island;
+  td.extra = (intptr_t)target_controls_island;
   if ((trigger_condition == TRIGGER_END_COMBAT || event == EVENT_SHOULD_AI_PLAY) && affect_me(player, card) && valid_target(&td))
 	{
 	  if (event == EVENT_TRIGGER)
@@ -2212,7 +2212,7 @@ int card_hazduhr_the_abbot(int player, int card, event_t event)
   {
     default_target_definition(player, card, &td, 0);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)damage_dealt_to_white_creature;
+    td.extra = (intptr_t)damage_dealt_to_white_creature;
     instance = get_card_instance(player, card);
     if (event == EVENT_CAN_ACTIVATE)
     {
@@ -2298,7 +2298,7 @@ int card_hazduhr_the_abbot(int player, int card, event_t event)
     }
     default_target_definition(player, card, &td, 0);
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td.extra = (int32_t)damage_dealt_to_white_creature;
+    td.extra = (intptr_t)damage_dealt_to_white_creature;
     instance = get_card_instance(player, card);
   }
   damage_target = &td;

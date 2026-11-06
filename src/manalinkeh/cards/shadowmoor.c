@@ -5205,7 +5205,7 @@ int card_resplendant_mentor(int player, int card, event_t event)
     default_target_definition(player, card, &td, 2);
     td.preferred_controller = player;
     td.allowed_controller = player;
-    td.extra = (int32_t)can_be_activated;
+    td.extra = (intptr_t)can_be_activated;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     td.illegal_abilities = 0;
     td.required_color = get_sleighted_color_test(player, card, 0x20);
@@ -5245,7 +5245,7 @@ int card_resplendant_mentor(int player, int card, event_t event)
     default_target_definition(player, card, &td, 2);
     td.preferred_controller = player;
     td.allowed_controller = player;
-    td.extra = (int32_t)can_be_activated;
+    td.extra = (intptr_t)can_be_activated;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     td.illegal_abilities = 0;
     td.required_color = get_sleighted_color_test(player, card, 0x20);

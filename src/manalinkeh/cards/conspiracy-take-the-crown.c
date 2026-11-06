@@ -1107,7 +1107,7 @@ int card_deadly_designs(int player, int card, event_t event)
           if (in_play(p, c) && is_what(p, c, TYPE_EFFECT))
           {
             card_instance_t *inst = get_card_instance(p, c);
-            if (inst->info_slot == (int)deadly_designs_effect &&
+            if (inst->info_slot == (intptr_t)deadly_designs_effect &&
                 inst->targets[0].player == player && inst->targets[0].card == card)
             {
               if (p == player)

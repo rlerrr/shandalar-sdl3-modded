@@ -626,7 +626,7 @@ static int effect_my_undead_horde_awakens_target(int player, int card, event_t e
 			{
 			  card_instance_t* eff = get_card_instance(p, c);
 			  if (eff->internal_card_id == LEGACY_EFFECT_CUSTOM
-				  && eff->info_slot == (int)effect_my_undead_horde_awakens_target
+				  && eff->info_slot == (intptr_t)effect_my_undead_horde_awakens_target
 				  && eff->targets[1].player == instance->targets[1].player
 				  && eff->targets[1].card == instance->targets[1].card)
 				kill_card(p, c, KILL_EXILE);
@@ -1250,10 +1250,10 @@ static void set_scheme_in_motion(int player, int card, int csvid)
 		card_instance_t* inst = get_card_instance(player, c);
 		if (inst->internal_card_id == LEGACY_EFFECT_CUSTOM)
 		  {
-			if (inst->info_slot == (int)effect_all_in_good_time && inst->targets[1].card == 42)
+			if (inst->info_slot == (intptr_t)effect_all_in_good_time && inst->targets[1].card == 42)
 			  return;
 
-			if (plots_legacy == -1 && inst->info_slot == (int)effect_plots_that_span_centuries)
+			if (plots_legacy == -1 && inst->info_slot == (intptr_t)effect_plots_that_span_centuries)
 			  plots_legacy = c;
 		  }
 	  }

@@ -9762,7 +9762,7 @@ int card_team_pennant(int player, int card, event_t event)
     td.preferred_controller = player;
     default_target_definition(player, card, &td1, 2);
     td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td1.extra = (int32_t)target_is_token_too;
+    td1.extra = (intptr_t)target_is_token_too;
     instance = get_card_instance(player, card);
     if (event == EVENT_CAN_ACTIVATE)
     {
@@ -9832,7 +9832,7 @@ int card_team_pennant(int player, int card, event_t event)
     td.preferred_controller = player;
     default_target_definition(player, card, &td1, 2);
     td1.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-    td1.extra = (int32_t)target_is_token_too;
+    td1.extra = (intptr_t)target_is_token_too;
     instance = get_card_instance(player, card);
   }
   normal_target = &td;
@@ -10504,7 +10504,7 @@ int card_vanishing_verse(int player, int card, event_t event)
   }
   default_target_definition(player, card, &td, 0x47);
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)is_monocolored;
+  td.extra = (intptr_t)is_monocolored;
   instance = get_card_instance(player, card);
   if (event == EVENT_RESOLVE_SPELL)
   {

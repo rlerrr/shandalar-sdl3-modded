@@ -1188,7 +1188,7 @@ void event_activate_then_duplicate_into_stack(int player, int card, int event, i
 		parent_instance->state &= ~STATE_DONT_RECOPY_ONTO_STACK;
 	  else
 		{
-		  STATIC_ASSERT(sizeof(card_instance_t) == 300, card_instance_t_size_differs_from_exe);
+		  STATIC_ASSERT(sizeof(card_instance_t) == (sizeof(void *) == 8 ? 320 : 300), card_instance_t_host_size);
 		  memcpy_inst_and_ext(instance, parent_instance);
 		  instance->internal_card_id = activation_card;
 		  instance->unknown0x14 = 0;

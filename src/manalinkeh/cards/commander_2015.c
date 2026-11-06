@@ -2050,7 +2050,7 @@ int card_mazirek_kraul_death_priest(int player, int card, event_t event){
 		for(c=0; c<active_cards_count[player]; c++){
 			if( in_play(player, c) && is_what(player, c, TYPE_EFFECT) ){
 				card_instance_t *inst = get_card_instance(player, c);
-				if( inst->info_slot == (int)mazirek_kraul_death_priest_effect ){
+				if( inst->info_slot == (intptr_t)mazirek_kraul_death_priest_effect ){
 					if( (inst->damage_target_player == player && inst->damage_target_card == card) ||
 						(inst->targets[0].player == player && inst->targets[0].card == card) )
 					{
@@ -2176,7 +2176,7 @@ int card_meren_of_clan_nel_toth(int player, int card, event_t event)
       if (in_play(player, c) && is_what(player, c, TYPE_EFFECT))
       {
         card_instance_t *inst = get_card_instance(player, c);
-        if (inst->info_slot == (int)meren_of_clan_nel_toth_effect)
+        if (inst->info_slot == (intptr_t)meren_of_clan_nel_toth_effect)
         {
           if ((inst->damage_target_player == player && inst->damage_target_card == card) ||
               (inst->targets[0].player == player && inst->targets[0].card == card))

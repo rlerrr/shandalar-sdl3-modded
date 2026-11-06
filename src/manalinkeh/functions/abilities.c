@@ -126,7 +126,7 @@ int set_pt_legacy(int player, int card, event_t event)
 
 static int is_pt_effect(int player, int card){
 	card_instance_t* inst = get_card_instance(player, card);
-	if( is_what(player, card, TYPE_EFFECT) && (inst->info_slot == (int)set_pt_legacy || inst->display_pic_csv_id == CARD_ID_GIGANTOPLASM) ){
+	if( is_what(player, card, TYPE_EFFECT) && (inst->info_slot == (intptr_t)set_pt_legacy || inst->display_pic_csv_id == CARD_ID_GIGANTOPLASM) ){
 		return 1;
 	}
 	return 0;
@@ -2609,7 +2609,7 @@ int effect_on_all_negate_ability_and_special_ability_legacy_attached_to_me(int p
           inst->damage_target_card == card)
       {
         if (is_what(p, c, TYPE_EFFECT) &&
-            inst->info_slot == (int)legacy_negate_ability_and_special_ability)
+            inst->info_slot == (intptr_t)legacy_negate_ability_and_special_ability)
         {
           if (effect == 1 && !check_status(p, c, STATUS_CONTROLLED))
           {
@@ -3257,7 +3257,7 @@ static void lure_effect_part(int player, int card, event_t event, int luring_pla
       td.required_abilities = (int)(ability ^ 0xffffffffU) >> 0x1f & ability;
       td.illegal_abilities = 0;
       td.special = TARGET_SPECIAL_ALLOW_MULTIBLOCKER | TARGET_SPECIAL_EXTRA_FUNCTION;
-      td.extra = (int32_t)target_must_be_able_to_block_me;
+      td.extra = (intptr_t)target_must_be_able_to_block_me;
       td.who_chooses = chooser_or_result;
       td.preferred_controller = td.allowed_controller;
       td.required_subtype = subtype;

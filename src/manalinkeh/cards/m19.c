@@ -3795,7 +3795,7 @@ int card_vivien_reid(int player, int card, event_t event)
   {
     instance = get_card_instance(player, card);
     default_target_definition(player, card, &td, 0x47);
-    td.extra = (int32_t)is_artifact_or_enchantment_or_flying_creature;
+    td.extra = (intptr_t)is_artifact_or_enchantment_or_flying_creature;
     td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
     if (event == EVENT_ACTIVATE)
     {
@@ -3829,7 +3829,7 @@ int card_vivien_reid(int player, int card, event_t event)
   }
   permanent_target = &td;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
-  td.extra = (int32_t)is_artifact_or_enchantment_or_flying_creature;
+  td.extra = (intptr_t)is_artifact_or_enchantment_or_flying_creature;
   if (event == EVENT_RESOLVE_ACTIVATION)
   {
 

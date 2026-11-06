@@ -3186,7 +3186,7 @@ int card_volraths_dungeon(int player, int card, event_t event)
           if (in_play(p, c) && is_what(p, c, TYPE_EFFECT))
           {
             card_instance_t *inst = get_card_instance(p, c);
-            if (inst->info_slot == (int)volraths_dungeon_legacy &&
+            if (inst->info_slot == (intptr_t)volraths_dungeon_legacy &&
                 inst->targets[0].player == player && inst->targets[0].card == card)
             {
               if (p == player)
@@ -3902,7 +3902,7 @@ int card_dauthi_cutthroat(int player, int card, event_t event)
     return 0;
   target_definition_t td;
   default_target_definition(player, card, &td, TYPE_CREATURE);
-  td.extra = (int32_t)with_shadow;
+  td.extra = (intptr_t)with_shadow;
   td.special = TARGET_SPECIAL_EXTRA_FUNCTION;
   card_instance_t *instance = get_card_instance(player, card);
   if (event == EVENT_ACTIVATE)
