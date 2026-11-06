@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Inquisition of Kozilek",
+  "csvid": 10958,
+  "recipes": [
+    {
+      "family": "discard_spell_extension",
+      "version": 2,
+      "params": {
+        "kind": "chosen",
+        "recipient": "any",
+        "operations": [],
+        "scope": "nonland_mv3",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      },
+      "oracle_text": "Target player reveals their hand. You choose a nonland card from it with mana value 3 or less. That player discards that card.",
+      "variants": [
+        "effect_0",
+        "alternate_choice_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "empty_hand_0",
+        "no_eligible_0",
+        "one_card_0",
+        "duplicates_0",
+        "bare_zones_0",
+        "countered_0",
+        "target_shrouded_pending_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "value_boundary_0",
+        "own_target_0",
+        "effect_1",
+        "alternate_choice_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "empty_hand_1",
+        "no_eligible_1",
+        "one_card_1",
+        "duplicates_1",
+        "bare_zones_1",
+        "countered_1",
+        "target_shrouded_pending_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "value_boundary_1",
+        "own_target_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Pinned ordinary printed discard component through actual casting/payment, exact hand/grave/library conservation, type predicates and selected card identities, protected recipients, countering and caller snapshots. All additional clauses and deferred mechanics are enumerated by the declaration."
+}

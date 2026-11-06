@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Force Void",
+  "csvid": 1930,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Other parent card types; upkeep response windows, replacement/prevention and countered delayed-effect sources.",
+          "Actual ai_turns phases explicitly run player zero; extra-turn scheduling and choosing a different next active player remain outside this fixture."
+        ],
+        "extension": {
+          "wave": 5,
+          "delayed_counter": {
+            "tax": 1,
+            "source_draw": 1,
+            "timing": "next_turn_upkeep"
+          }
+        }
+      },
+      "oracle_text": "Counter target spell unless its controller pays {1}.\nDraw a card at the beginning of the next turn's upkeep.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "tax_paid_0",
+        "tax_exact_0",
+        "tax_unaffordable_0",
+        "delayed_once_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "tax_paid_1",
+        "tax_exact_1",
+        "tax_unaffordable_1",
+        "delayed_once_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Real fixed-tax response with pre-upkeep no-draw receipts; quiet actual ai_turns untap/upkeep/draw/main/cleanup with delayed plus normal draws distinguished, second-upkeep expiry, failed-source no-delayed control and populated replay. Other parent card types; upkeep response windows, replacement/prevention and countered delayed-effect sources. Actual ai_turns phases explicitly run player zero; extra-turn scheduling and choosing a different next active player remain outside this fixture."
+}

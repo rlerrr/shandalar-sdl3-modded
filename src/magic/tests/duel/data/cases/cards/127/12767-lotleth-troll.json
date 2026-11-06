@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "card": "Lotleth Troll",
+  "csvid": 12767,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "resource_growth",
+        "kind": "discard",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scope": "self",
+        "tap": false,
+        "random_discard": false,
+        "creature_discard": true,
+        "activation_menu": true,
+        "resolution_menu": false,
+        "unused": [
+          "trample combat",
+          "regeneration mode"
+        ],
+        "conditions": [
+          "no damage or regeneration window"
+        ]
+      },
+      "oracle_text": "Trample\nDiscard a creature card: Put a +1/+1 counter on this creature.\n{B}: Regenerate this creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "source_destroyed_pending_0",
+        "source_bounced_pending_0",
+        "repeat_0",
+        "cast_payment_0",
+        "tapped_source_0",
+        "empty_hand_0",
+        "noncreature_hand_0",
+        "effect_1",
+        "payment_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "source_destroyed_pending_1",
+        "source_bounced_pending_1",
+        "repeat_1",
+        "cast_payment_1",
+        "tapped_source_1",
+        "empty_hand_1",
+        "noncreature_hand_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle resource growth: actual source casts, printed discard or mana/tap costs, exact pending and resolved counter/zone/life receipts, typed cost and target controls, source/target loss, cleanup, repeat and replay. Elective alternate modes and dormant combat/upkeep clauses are explicit component gaps. Random discard uses uniform hands; Ooze noncreature selections use creature-free graveyards. Shauku actual cast and real untap readiness are exercised. Authoritative native/Wasm validation is recorded in the wave5 report."
+}

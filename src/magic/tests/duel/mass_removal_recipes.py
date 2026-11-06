@@ -73,6 +73,9 @@ def effects(p,name):
 
 
 def spec(d,r):
+ if isinstance(d.get('params'),dict) and d['params'].get('schema')=='removal_wave6':
+  from removal_recipes import wave6_spec
+  return wave6_spec(d,r,'mass_removal')
  from recipes import cost_from_oracle
  if not r or r.get('layout')!='normal' or r.get('card_faces') or r.get('selected_face') or d.get('oracle_text')!=r.get('oracle_text') or 'variants' not in d:raise ValueError('mass removal requires pinned normal whole text and explicit variants')
  p=d.get('params');fields={'mode','effect','scope','controller','state','limit','exclude_self','no_regenerate','gain_per','gain_scope','draw_per','discard_hand','cost','keywords','enters_tapped','uncounterable'}
@@ -129,6 +132,9 @@ def spec(d,r):
 
 
 def variants(p):
+ if p.get('_wave6'):
+  from removal_recipes import wave6_variants
+  return wave6_variants(p)
  vs=['mixed','payment','insufficient_mana','bare_zones','empty_board','own_only','opponent_only','tapped_all','untapped_all','stolen','tokens','aura','cleanup','ready_snapshot','pending_snapshot','resolved_snapshot']
  if any((p['activation_mana'] if p['mode']=='activation' else p['mana'])[1:]):vs.append('wrong_color')
  if p['mode']=='spell':vs+=['countered']+(['opposing_turn'] if p['instant'] else [])
@@ -147,9 +153,14 @@ def variants(p):
 def validate_witnesses(o,rows):
  for name,fields in PINS.items():
   if name not in rows or any(o.get(name,{}).get(k)!=v for k,v in fields.items() if k!='board_witness'):raise ValueError('mass removal witness changed: '+name)
+ from removal_recipes import wave6_validate_witnesses
+ wave6_validate_witnesses(o,rows)
 
 
 def expand(name,csvid,d,p,selected,rows,o):
+ if p.get('_wave6'):
+  from removal_recipes import wave6_expand
+  return wave6_expand(name,csvid,d,p,selected,rows,o)
  from recipes import card,step,observe,cost_from_oracle
  result=[]
  for variant in selected:

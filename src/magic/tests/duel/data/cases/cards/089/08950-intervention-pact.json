@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Intervention Pact",
+  "csvid": 8950,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Additional damage episodes from the same chosen source",
+          "Next-upkeep payment and lose-the-game trigger; no upkeep is advanced"
+        ],
+        "binding": "packet",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "",
+        "tap": false,
+        "gain_prevented": true
+      },
+      "oracle_text": "The next time a source of your choice would deal damage to you this turn, prevent that damage. You gain life equal to the damage prevented this way.\nAt the beginning of your next upkeep, pay {1}{W}{W}. If you don't, you lose the game.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "other_damage_0",
+        "repeat_damage_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "cast_payment_0",
+        "small_damage_0",
+        "effect_1",
+        "payment_1",
+        "other_damage_1",
+        "repeat_damage_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "cast_payment_1",
+        "small_damage_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "card": "Wolfbriar Elemental",
+  "csvid": 10862,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 4,
+        "mechanism": "wolf_creator",
+        "wolf_kind": "multikicker_wolves",
+        "token": {
+          "name": "Wolf",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Wolf"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "tokens": [
+          {
+            "token": {
+              "name": "Wolf",
+              "power": 2,
+              "toughness": 2,
+              "colors": [
+                "G"
+              ],
+              "subtypes": [
+                "Wolf"
+              ],
+              "artifact": false,
+              "keywords": []
+            },
+            "count": 1
+          }
+        ],
+        "amount": {
+          "basis": "kicker_count"
+        },
+        "activation": null,
+        "operative": [
+          {
+            "kind": "multikicker",
+            "mana": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Multikicker"
+        ],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Multikicker {G} (You may pay an additional {G} any number of times as you cast this spell.)\nWhen this creature enters, create a 2/2 green Wolf creature token for each time it was kicked.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "ready_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "zero_kicker_0",
+        "larger_kicker_0",
+        "kicker_snapshot_0",
+        "bounce_recast_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "ready_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "zero_kicker_1",
+        "larger_kicker_1",
+        "kicker_snapshot_1",
+        "bounce_recast_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

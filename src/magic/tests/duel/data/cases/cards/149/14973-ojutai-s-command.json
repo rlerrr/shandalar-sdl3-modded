@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Ojutai's Command",
+  "csvid": 14973,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature"
+          ],
+          "draw": 1
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Unselected creature reanimation and gain-four-life modes."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              2,
+              3
+            ],
+            "1": [
+              2,
+              3
+            ]
+          },
+          "auxiliary": [],
+          "wave": 4,
+          "present_ai_dialogs": true
+        }
+      },
+      "oracle_text": "Choose two \u2014\n\u2022 Return target creature card with mana value 2 or less from your graveyard to the battlefield.\n\u2022 You gain 4 life.\n\u2022 Counter target creature spell.\n\u2022 Draw a card.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source Oracle identity/text and independent witnesses are pinned. Both controllers cast actual parent and response spells through stack1/stack2 and full drain, checking printed payment, denied payment/legality, typed targets, own/opposing parents, exact zones and libraries, and populated snapshot replay. Optional controller draw acceptance/decline, draw-before-discard with legal-card hand/grave conservation, discard after tax payment, token identity/characteristics/real sacrifice-for-mana, optional selected/unselected creature counters and persistence through cleanup are checked where printed. Unselected creature reanimation and gain-four-life modes. Countered response source, lost targets, replacement/prevention, simultaneous responses and multiplayer remain separate gaps."
+}

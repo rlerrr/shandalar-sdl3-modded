@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Armored Transport",
+  "csvid": 12883,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "oracle_text": "Prevent all combat damage that would be dealt to this creature by creatures blocking it.",
+      "params": {
+        "kind": "self",
+        "scope": "self_blockers",
+        "gain": "none",
+        "activation_cost": "",
+        "tap": false,
+        "sacrifice": false,
+        "keywords": [],
+        "inactive_clauses": []
+      },
+      "variants": [
+        "blocked_0",
+        "noncombat_0",
+        "cleanup_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "source_removed_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "attacking_0",
+        "blocked_1",
+        "noncombat_1",
+        "cleanup_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "source_removed_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "attacking_1"
+      ]
+    }
+  ]
+}

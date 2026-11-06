@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "card": "Abstruse Interference",
+  "csvid": 15550,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 1
+        },
+        "token": {
+          "name": "Eldrazi Scion",
+          "count": 1,
+          "power": 1,
+          "toughness": 1,
+          "colors": [],
+          "subtypes": [
+            "Eldrazi",
+            "Scion"
+          ],
+          "artifact": false,
+          "flying": false,
+          "from_value": false,
+          "recipient": "self"
+        },
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Devoid color interactions.",
+          "Token control/copy/doubling effects and sacrifice prevention."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4
+        }
+      },
+      "oracle_text": "Devoid (This card has no color.)\nCounter target spell unless its controller pays {1}. You create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\" ({C} represents colorless mana.)",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "tax_paid_0",
+        "tax_exact_0",
+        "tax_unaffordable_0",
+        "token_mana_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_instant_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1",
+        "tax_paid_1",
+        "tax_exact_1",
+        "tax_unaffordable_1",
+        "token_mana_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source Oracle identity/text and independent witnesses are pinned. Both controllers cast actual parent and response spells through stack1/stack2 and full drain, checking printed payment, denied payment/legality, typed targets, own/opposing parents, exact zones and libraries, and populated snapshot replay. Optional controller draw acceptance/decline, draw-before-discard with legal-card hand/grave conservation, discard after tax payment, token identity/characteristics/real sacrifice-for-mana, optional selected/unselected creature counters and persistence through cleanup are checked where printed. Devoid color interactions. Token control/copy/doubling effects and sacrifice prevention. Countered response source, lost targets, replacement/prevention, simultaneous responses and multiplayer remain separate gaps."
+}

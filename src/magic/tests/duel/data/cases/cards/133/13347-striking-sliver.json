@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "card": "Striking Sliver",
+  "csvid": 13347,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "tribal_static_extension",
+      "version": 2,
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Sliver"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "First strike"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears"
+      },
+      "oracle_text": "Sliver creatures you control have first strike. (They deal combat damage before creatures without first strike.)",
+      "variants": [
+        "effect_0",
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "pending_snapshot_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "tapped_source_0",
+        "sick_source_0",
+        "source_bounce_0",
+        "bounce_recast_0",
+        "source_destroyed_0",
+        "opponent_recipient_0",
+        "nonmatching_0",
+        "changeling_0",
+        "wrong_color_0",
+        "two_sources_0",
+        "remove_one_source_0",
+        "opposing_source_0",
+        "effect_1",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "pending_snapshot_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "tapped_source_1",
+        "sick_source_1",
+        "source_bounce_1",
+        "bounce_recast_1",
+        "source_destroyed_1",
+        "opponent_recipient_1",
+        "nonmatching_1",
+        "changeling_1",
+        "wrong_color_1",
+        "two_sources_1",
+        "remove_one_source_1",
+        "opposing_source_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole Oracle pinned continuous tribal keyword component; matching/nonmatching/opposing and changeling recipients, real casting/payment, functional combat, source removal/re-entry and snapshot replay. Source intrinsic keyword combat, additional combat interactions and live type/color/control changes remain gaps."
+}

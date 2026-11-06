@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Mystic Genesis",
+  "csvid": 13015,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": {
+          "name": "Ooze",
+          "power": null,
+          "toughness": null,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Ooze"
+          ],
+          "count": 1,
+          "recipient": "self",
+          "artifact": false,
+          "flying": false,
+          "from_value": true
+        },
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": []
+      },
+      "oracle_text": "Counter target spell. Create an X/X green Ooze creature token, where X is that spell's mana value.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "value_high_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_instant_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1",
+        "value_high_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole Oracle text and source characteristics are pinned against the reviewed counter extension profile. Real casting/response windows cover both source controllers, own and opposing spells, full costs, insufficient mana, no stack, legal target relationships, exact zone receipts, populated-zone snapshots and printed immediate secondary effects.  Token creation checks exact counts, recipient, color, artifact status, printed power/toughness and exposed subtypes. Token combat and token activated abilities remain separate gaps. Countered source spells, pending-target departure, protection/prevention interactions, replacement effects, other stack objects, control changes and multiplayer remain separate gaps."
+}

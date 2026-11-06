@@ -4239,7 +4239,7 @@ Whenever ~ deals combat damage to a player, put a +1/+1 counter on it. */
 
 // Hound of Griselbrand --> Young Wolf
 
-int card_kessig_malcontents(int player, int card, event_t event, int amount){
+int card_kessig_malcontents(int player, int card, event_t event){
 	/* Kessig Malcontents	|2|R	0x2005c96
 	 * Creature - Human Warrior 3/1
 	 * When ~ enters the battlefield, it deals damage to target player or planeswalker equal to the number of Humans you control. */

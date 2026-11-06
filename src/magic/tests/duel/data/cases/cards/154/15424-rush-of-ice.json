@@ -1,0 +1,42 @@
+{
+  "version": 1,
+  "card": "Rush of Ice",
+  "csvid": 15424,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "untap_lock",
+        "inactive_components": [
+          "Only normal-cost component is selected; no controlled battlefield lands exist, so Awaken 3 for {4}{U} is unavailable. Late entrants, blink and control changes while locked are not selected. Faithful untap steps exercise one skipped step and later expiry."
+        ]
+      },
+      "oracle_text": "Tap target creature. It doesn't untap during its controller's next untap step.\nAwaken 3—{4}{U} (If you cast this spell for {4}{U}, also put three +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+      "variants": [
+        "next_step_0",
+        "target_self_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "lost_target_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "locked_snapshot_0",
+        "next_step_1",
+        "target_self_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "lost_target_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "locked_snapshot_1"
+      ]
+    }
+  ]
+}

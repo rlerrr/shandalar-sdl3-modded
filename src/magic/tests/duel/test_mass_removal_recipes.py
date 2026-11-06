@@ -156,4 +156,66 @@ class MassRemovalRecipesTest(unittest.TestCase):
   self.assertTrue(self.copies(s,'Grizzly Bears',0,'battlefield',1))
 
 
+class Wave6MassRemovalRecipesTest(unittest.TestCase):
+ @classmethod
+ def setUpClass(cls):
+  import removal_recipes,mass_removal_recipes
+  cls.module=mass_removal_recipes;cls.pins=removal_recipes.WAVE6_PINS;cls.oracle=json.loads((Path(__file__).parent/'data/oracle.json').read_text(encoding='utf8'))['cards'];cls.rows={r['name']:r for r in registry()}
+ def declaration(self,name='Forced March',selected=None):return dict(family='mass_removal',version=2,params=copy.deepcopy(self.pins['profiles'][name]['params']),oracle_text=self.oracle[name]['oracle_text'],variants=selected or ['effect_0'])
+ def cases(self,name='Forced March',selected=None,d=None):return expand(name,self.rows[name]['csvid'],d or self.declaration(name,selected),self.oracle[name],self.rows,self.oracle)
+ def has(self,s,**fields):return any(all(x.get(k)==v for k,v in fields.items()) for x in s)
+ def test_wave6_whole_mass_predicate_and_cost_pin_rejected(self):
+  for patch in ({'scope':'permanent'},{'secondary':{}},{'cost':{}},{'mode':'target'}):
+   d=self.declaration('Fracturing Gust');d['params'].update(patch)
+   with self.assertRaises(ValueError):self.cases('Fracturing Gust',d=d)
+ def test_wave6_x_has_real_choice_and_colored_exact_payment(self):
+  for pl in (0,1):
+   s=self.cases(selected=[f'payment_x3_{pl}'])[0]['steps'];self.assertTrue(self.has(s,op='choose_x',player=pl,value=3));self.assertTrue(self.has(s,op='set_mana',player=pl,color=0,value=3));self.assertTrue(self.has(s,op='set_mana',player=pl,color=1,value=3))
+   for color in range(6):self.assertTrue(self.has(s,op='assert_mana',player=pl,color=color,value=0))
+ def test_wave6_zero_x_hits_zero_value_creatures_but_not_lands(self):
+  s=self.cases(selected=['effect_x0_0'])[0]['steps']
+  self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=1,zone='graveyard',index=self.rows['Memnite']['csvid'],value=1))
+  self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=1,zone='battlefield',index=self.rows['Forest']['csvid'],value=1))
+ def test_wave6_hybrid_both_routes_use_distinct_exact_pools(self):
+  for v,c in [('payment_1',3),('payment_other_hybrid_1',5)]:
+   s=self.cases('Fracturing Gust',[v])[0]['steps'];self.assertTrue(self.has(s,op='set_mana',player=1,color=c,value=3));self.assertTrue(self.has(s,op='set_mana',player=1,color=0,value=2))
+   for color in range(6):self.assertTrue(self.has(s,op='assert_mana',player=1,color=color,value=0))
+ def test_wave6_artifact_enchantment_overlap_counts_once_and_indestructible_zero(self):
+  c=self.cases('Fracturing Gust')[0];s=c['steps'];destroyed=[x for x in c['setup'] if x['zone']=='battlefield' and ('Artifact' in self.oracle[x['name']]['type_line'] or 'Enchantment' in self.oracle[x['name']]['type_line']) and 'Indestructible' not in self.oracle[x['name']].get('keywords',[])]
+  self.assertTrue(self.has(s,op='assert_life',player=0,value=20+2*len(destroyed)))
+  self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=0,zone='battlefield',index=self.rows['Darksteel Relic']['csvid'],value=1))
+ def test_wave6_stolen_mass_cards_go_to_original_owner(self):
+  s=self.cases(selected=['stolen_0'])[0]['steps'];self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=1,zone='graveyard',index=self.rows['Memnite']['csvid'],value=2));self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=0,zone='graveyard',index=self.rows['Memnite']['csvid'],value=0))
+ def test_wave6_public_mass_expand_rejects_unknown_and_empty_selection(self):
+  d=self.declaration();p=self.module.spec(d,self.oracle['Forced March'])
+  for v in ([],['effect_0','effect_0'],['no_0']):
+   with self.assertRaises(ValueError):self.module.expand('Forced March',4470,d,p,v,self.rows,self.oracle)
+ def test_wave6_seeds_life_counts_all_affected_artifacts_including_indestructible(self):
+  c=self.cases('Seeds of Innocence')[0];s=c['steps']
+  for pl in (0,1):
+   amount=sum(int(self.oracle[x['name']]['cmc']) for x in c['setup'] if x['zone']=='battlefield' and x['player']==pl and 'Artifact' in self.oracle[x['name']]['type_line'])
+   self.assertTrue(self.has(s,op='assert_life',player=pl,value=20+amount))
+ def test_wave6_gust_regenerated_artifact_adds_no_destroyed_life(self):
+  c=self.cases('Fracturing Gust',['regeneration_0'])[0];s=c['steps'];destroyed=[x for x in c['setup'] if x['zone']=='battlefield' and x['ref']!='regenerator' and ('Artifact' in self.oracle[x['name']]['type_line'] or 'Enchantment' in self.oracle[x['name']]['type_line']) and 'Indestructible' not in self.oracle[x['name']].get('keywords',[])]
+  self.assertTrue(self.has(s,op='assert_life',player=0,value=20+2*len(destroyed)));self.assertTrue(self.has(s,op='assert_card',ref='regenerator',property='in_play',value=1));self.assertTrue(self.has(s,op='assert_mana',player=1,color=0,value=28))
+ def test_wave6_targeted_mass_only_replaces_actual_deaths_under_target_controller(self):
+  c=self.cases('Mogg Infestation',['effect_0'])[0];s=c['steps'];destroyed=[x for x in c['setup'] if x['zone']=='battlefield' and x['player']==1 and 'Creature' in self.oracle[x['name']]['type_line'] and 'Indestructible' not in self.oracle[x['name']].get('keywords',[])]
+  self.assertTrue(self.has(s,op='choose_player',player=0,value=1));self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=1,zone='battlefield',index=self.rows['Goblin']['csvid'],value=2*len(destroyed)));self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=0,zone='battlefield',index=self.rows['Goblin']['csvid'],value=0))
+ def test_wave6_target_player_shroud_suppresses_whole_replacement(self):
+  s=self.cases('Mogg Infestation',['target_shrouded_1'])[0]['steps'];self.assertTrue(self.has(s,op='cast_response',ref='response',value=1));self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=0,zone='battlefield',index=self.rows['Goblin']['csvid'],value=0))
+ def test_wave6_numeric_sweeps_have_exact_upper_and_lower_mana_boundaries(self):
+  for n in ('Consume the Meek','Culling Sun'):
+   s=self.cases(n)[0]['steps'];self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=1,zone='graveyard',index=self.rows['Wall of Spears']['csvid'],value=1));self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=1,zone='battlefield',index=self.rows['Phyrexian Hulk']['csvid'],value=1))
+  s=self.cases('Gaze of Granite',['effect_x0_0'])[0]['steps'];self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=1,zone='graveyard',index=self.rows['Memnite']['csvid'],value=1));self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=1,zone='battlefield',index=self.rows['Forest']['csvid'],value=1))
+ def test_wave6_nonland_artifact_filter_has_destructible_artifact_land_control(self):
+  c=self.cases('Granulate',['scope_boundary_0'])[0];s=c['steps'];self.assertTrue(any(x['name']=='Great Furnace' for x in c['setup']));self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=1,zone='battlefield',index=self.rows['Great Furnace']['csvid'],value=1))
+ def test_wave6_destroyed_creature_tokens_receive_current_controller_and_flying_proofs(self):
+  c=self.cases('March of Souls',['stolen_0'])[0];s=c['steps']
+  for pl in (0,1):
+   expected=sum(x['player']==pl and 'Creature' in self.oracle[x['name']]['type_line'] and 'Indestructible' not in self.oracle[x['name']].get('keywords',[]) for x in c['setup'] if x['zone']=='battlefield')
+   self.assertTrue(self.has(s,op='assert_zone_multiplicity',player=pl,zone='battlefield',index=self.rows['Spirit']['csvid'],value=expected))
+  for variant,w in [('token_flying_0','flyer'),('token_evasion_1','ground_blocker')]:
+   s=self.cases('March of Souls',[variant])[0]['steps'];self.assertTrue(self.has(s,op='cast',ref=w,value=1));self.assertEqual(len([x for x in s if x['op']=='advance_turn']),2)
+
+
 if __name__=='__main__':unittest.main()

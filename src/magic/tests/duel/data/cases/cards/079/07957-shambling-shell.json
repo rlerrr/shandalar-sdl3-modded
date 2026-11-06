@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Shambling Shell",
+  "csvid": 7957,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "mechanic": "ordinary",
+        "amount": 1,
+        "mana_cost": "",
+        "tap": false,
+        "sacrifice": "self",
+        "pay_life": 0,
+        "gain_life": 0,
+        "scope": "target",
+        "keywords": [],
+        "entry": 0,
+        "inactive": [
+          "Dredge 3 (If you would draw a card, you may mill three cards instead. If you do, return this card from your graveyard to your hand.)"
+        ]
+      },
+      "oracle_text": "Sacrifice this creature: Put a +1/+1 counter on target creature.\nDredge 3 (If you would draw a card, you may mill three cards instead. If you do, return this card from your graveyard to your hand.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "tapped_source_0",
+        "sick_source_0",
+        "opposing_turn_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "fresh_activation_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "own_target_0",
+        "shroud_target_0",
+        "hexproof_target_0",
+        "target_bounced_0",
+        "target_destroyed_0",
+        "effect_1",
+        "payment_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "tapped_source_1",
+        "sick_source_1",
+        "opposing_turn_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "fresh_activation_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "own_target_1",
+        "shroud_target_1",
+        "hexproof_target_1",
+        "target_bounced_1",
+        "target_destroyed_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Pinned permanent +1/+1 counter activation component. Both controllers, real casting/payment and ability costs, persistent counters, timing, target/source departure, populated zones and snapshots. Printed passive keywords and explicitly listed inactive abilities remain gaps; not whole-card certification."
+}

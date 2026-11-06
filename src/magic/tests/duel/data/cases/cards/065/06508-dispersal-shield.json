@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Dispersal Shield",
+  "csvid": 6508,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "resolution_condition": "maximum_permanent_value"
+        }
+      },
+      "oracle_text": "Counter target spell if its mana value is less than or equal to the greatest mana value among permanents you control.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "condition_none_0",
+        "condition_opponent_0",
+        "value_high_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_instant_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1",
+        "condition_none_1",
+        "condition_opponent_1",
+        "value_high_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source Oracle identity/text and independent witnesses are pinned. Both controllers cast actual parent and response spells through stack1/stack2 and full drain, checking printed payment, denied payment/legality, typed targets, own/opposing parents, exact zones and libraries, and populated snapshot replay. Optional controller draw acceptance/decline, draw-before-discard with legal-card hand/grave conservation, discard after tax payment, token identity/characteristics/real sacrifice-for-mana, optional selected/unselected creature counters and persistence through cleanup are checked where printed.  Countered response source, lost targets, replacement/prevention, simultaneous responses and multiplayer remain separate gaps."
+}

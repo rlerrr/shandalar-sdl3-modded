@@ -1,0 +1,1475 @@
+{
+  "version": 1,
+  "sources": {
+    "Buoyancy": {
+      "oracle": {
+        "oracle_id": "f4e4060d-bfff-4991-9ae5-8f848304cd1e",
+        "name": "Buoyancy",
+        "oracle_text": "Flash\nEnchant creature\nEnchanted creature has flying.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "Flying"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Flash casting timing"
+        ]
+      },
+      "excluded": []
+    },
+    "Epic Proportions": {
+      "oracle": {
+        "oracle_id": "ad8edfdf-6915-4fc2-9226-3aae95951935",
+        "name": "Epic Proportions",
+        "oracle_text": "Flash\nEnchant creature\nEnchanted creature gets +5/+5 and has trample.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 5,
+        "toughness": 5,
+        "keywords": [
+          "Trample"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Flash casting timing"
+        ]
+      },
+      "excluded": []
+    },
+    "Aether Web": {
+      "oracle": {
+        "oracle_id": "97e7778f-971c-4425-8f6d-f4ff3fae000f",
+        "name": "Aether Web",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature\nEnchanted creature gets +1/+1, has reach, and can block creatures with shadow as though they didn't have shadow. (Creatures with reach can block creatures with flying.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 1,
+        "toughness": 1,
+        "keywords": [
+          "Reach"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Flash casting timing",
+          "Blocking creatures with shadow as though they did not have shadow"
+        ]
+      },
+      "excluded": []
+    },
+    "Spiteful Motives": {
+      "oracle": {
+        "oracle_id": "a8f259b5-ef01-4f30-baa1-1b2a5419e61e",
+        "name": "Spiteful Motives",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature\nEnchanted creature gets +3/+0 and has first strike.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 3,
+        "toughness": 0,
+        "keywords": [
+          "First strike"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Flash casting timing"
+        ]
+      },
+      "excluded": []
+    },
+    "Mageta's Boon": {
+      "oracle": {
+        "oracle_id": "e3e5b12c-2103-4b40-83d8-6d5449179b6f",
+        "name": "Mageta's Boon",
+        "oracle_text": "Flash\nEnchant creature\nEnchanted creature gets +1/+2.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 1,
+        "toughness": 2,
+        "keywords": [],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Flash casting timing"
+        ]
+      },
+      "excluded": []
+    },
+    "Alexi's Cloak": {
+      "oracle": {
+        "oracle_id": "e52eb1a6-fff1-4a47-b434-31a74d76231c",
+        "name": "Alexi's Cloak",
+        "oracle_text": "Flash\nEnchant creature\nEnchanted creature has shroud. (It can't be the target of spells or abilities.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "Shroud"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Flash casting timing"
+        ]
+      },
+      "excluded": []
+    },
+    "Aggression": {
+      "oracle": {
+        "oracle_id": "b6c38a2b-2fe8-4080-80ce-cfa12aaf57f0",
+        "name": "Aggression",
+        "oracle_text": "Enchant non-Wall creature\nEnchanted creature has first strike and trample.\nAt the beginning of the end step of enchanted creature's controller, destroy that creature if it didn't attack this turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "First strike",
+          "Trample"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Non-Wall enchant restriction",
+          "End-step destruction if enchanted creature did not attack"
+        ]
+      },
+      "excluded": [
+        "friendly_cleanup",
+        "opponent_cleanup"
+      ]
+    },
+    "Alpha Authority": {
+      "oracle": {
+        "oracle_id": "538fa2e0-d225-4232-b243-38868b695e26",
+        "name": "Alpha Authority",
+        "oracle_text": "Enchant creature\nEnchanted creature has hexproof and can't be blocked by more than one creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "Hexproof"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "More than one blocker restriction"
+        ]
+      },
+      "excluded": []
+    },
+    "Angelic Destiny": {
+      "oracle": {
+        "oracle_id": "8ba36878-0816-44c7-b543-8ebfc28c2ecd",
+        "name": "Angelic Destiny",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +4/+4, has flying and first strike, and is an Angel in addition to its other types.\nWhen enchanted creature dies, return this card to its owner's hand.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 4,
+        "toughness": 4,
+        "keywords": [
+          "Flying",
+          "First strike"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Angel subtype addition",
+          "Aura return when enchanted creature dies"
+        ]
+      },
+      "excluded": [
+        "host_destroyed"
+      ]
+    },
+    "Arcane Teachings": {
+      "oracle": {
+        "oracle_id": "0b633017-bfdf-47cd-a60f-c93816b47e9c",
+        "name": "Arcane Teachings",
+        "oracle_text": "Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nEnchanted creature gets +2/+2 and has \"{T}: This creature deals 1 damage to any target.\"",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 2,
+        "toughness": 2,
+        "keywords": [],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Granted tap damage activation"
+        ]
+      },
+      "excluded": []
+    },
+    "Boar Umbra": {
+      "oracle": {
+        "oracle_id": "75e4448b-5bd7-4ed4-8db8-820cd6d04c12",
+        "name": "Boar Umbra",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +3/+3.\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Umbra armor",
+          "Enchant"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 3,
+        "toughness": 3,
+        "keywords": [],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Umbra armor replacement"
+        ]
+      },
+      "excluded": [
+        "host_destroyed"
+      ]
+    },
+    "Call to Serve": {
+      "oracle": {
+        "oracle_id": "bb4be6b2-507c-4d7c-bea4-010670dce3da",
+        "name": "Call to Serve",
+        "oracle_text": "Enchant nonblack creature\nEnchanted creature gets +1/+2, has flying, and is an Angel in addition to its other types.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 1,
+        "toughness": 2,
+        "keywords": [
+          "Flying"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Nonblack enchant restriction",
+          "Angel subtype addition"
+        ]
+      },
+      "excluded": []
+    },
+    "Diplomatic Immunity": {
+      "oracle": {
+        "oracle_id": "f1a3153c-0200-4ff2-b7d5-48d23920bb3c",
+        "name": "Diplomatic Immunity",
+        "oracle_text": "Enchant creature\nShroud (A permanent with shroud can't be the target of spells or abilities.)\nEnchanted creature has shroud.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Shroud",
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "Shroud"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Aura's own shroud"
+        ]
+      },
+      "excluded": [
+        "aura_removed",
+        "aura_bounced",
+        "expired_targeting"
+      ]
+    },
+    "Dragon Grip": {
+      "oracle": {
+        "oracle_id": "1e83a750-bf86-468e-8342-2c4eb7700dfd",
+        "name": "Dragon Grip",
+        "oracle_text": "Ferocious — If you control a creature with power 4 or greater, you may cast this spell as though it had flash. (You may cast it any time you could cast an instant.)\nEnchant creature\nEnchanted creature gets +2/+0 and has first strike.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Ferocious",
+          "Enchant"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 2,
+        "toughness": 0,
+        "keywords": [
+          "First strike"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Ferocious flash permission"
+        ]
+      },
+      "excluded": []
+    },
+    "Drake Umbra": {
+      "oracle": {
+        "oracle_id": "2b143ef1-afbb-499c-9189-1009105b406b",
+        "name": "Drake Umbra",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +3/+3 and has flying.\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+        "mana_cost": "{4}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Umbra armor",
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 3,
+        "toughness": 3,
+        "keywords": [
+          "Flying"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Umbra armor replacement"
+        ]
+      },
+      "excluded": [
+        "host_destroyed"
+      ]
+    },
+    "Eternal Thirst": {
+      "oracle": {
+        "oracle_id": "a1b66fbf-14a3-4582-8414-53f432f96dad",
+        "name": "Eternal Thirst",
+        "oracle_text": "Enchant creature\nEnchanted creature has lifelink and \"Whenever a creature an opponent controls dies, put a +1/+1 counter on this creature.\" (Damage dealt by a creature with lifelink also causes its controller to gain that much life.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "Lifelink"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Opponent-creature death counter trigger"
+        ]
+      },
+      "excluded": []
+    },
+    "Felidar Umbra": {
+      "oracle": {
+        "oracle_id": "278574f6-e083-461b-8bac-52ed51f0cf63",
+        "name": "Felidar Umbra",
+        "oracle_text": "Enchant creature\nEnchanted creature has lifelink.\n{1}{W}: Attach this Aura to target creature you control.\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Umbra armor",
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "Lifelink"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Activated reattachment",
+          "Umbra armor replacement"
+        ]
+      },
+      "excluded": [
+        "host_destroyed"
+      ]
+    },
+    "Feral Invocation": {
+      "oracle": {
+        "oracle_id": "5b3c069b-5bed-4b70-b04c-b7143a4a6e96",
+        "name": "Feral Invocation",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature\nEnchanted creature gets +2/+2.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 2,
+        "toughness": 2,
+        "keywords": [],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Flash casting timing"
+        ]
+      },
+      "excluded": []
+    },
+    "Hyena Umbra": {
+      "oracle": {
+        "oracle_id": "354affb3-1be7-4a9e-91da-2989eb54f62d",
+        "name": "Hyena Umbra",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +1/+1 and has first strike.\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+        "mana_cost": "{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Umbra armor",
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 1,
+        "toughness": 1,
+        "keywords": [
+          "First strike"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Umbra armor replacement"
+        ]
+      },
+      "excluded": [
+        "host_destroyed"
+      ]
+    },
+    "Indrik Umbra": {
+      "oracle": {
+        "oracle_id": "b585c218-1793-49a0-8a16-cb23b6efcc3c",
+        "name": "Indrik Umbra",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +4/+4 and has first strike, and all creatures able to block it do so.\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+        "mana_cost": "{4}{G}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Umbra armor",
+          "Enchant"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 4,
+        "toughness": 4,
+        "keywords": [
+          "First strike"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "All able creatures must block enchanted attacker",
+          "Umbra armor replacement"
+        ]
+      },
+      "excluded": [
+        "host_destroyed"
+      ]
+    },
+    "Kamahl's Desire": {
+      "oracle": {
+        "oracle_id": "6cbe54e0-5d62-4aad-ad9c-98b70defbf96",
+        "name": "Kamahl's Desire",
+        "oracle_text": "Enchant creature\nEnchanted creature has first strike.\nThreshold — Enchanted creature gets +3/+0 as long as there are seven or more cards in your graveyard.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Threshold"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "First strike"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Threshold bonus; stocked graveyards remain below seven cards"
+        ]
+      },
+      "excluded": []
+    },
+    "Mammoth Umbra": {
+      "oracle": {
+        "oracle_id": "cd0e6cdb-9b7f-47d6-9478-fb50003165af",
+        "name": "Mammoth Umbra",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +3/+3 and has vigilance.\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+        "mana_cost": "{4}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Umbra armor",
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 3,
+        "toughness": 3,
+        "keywords": [
+          "Vigilance"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Umbra armor replacement"
+        ]
+      },
+      "excluded": [
+        "host_destroyed"
+      ]
+    },
+    "Spider Umbra": {
+      "oracle": {
+        "oracle_id": "f32aaa81-96bd-4213-b0b8-8c021f3cea57",
+        "name": "Spider Umbra",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +1/+1 and has reach. (It can block creatures with flying.)\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+        "mana_cost": "{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Umbra armor",
+          "Enchant"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 1,
+        "toughness": 1,
+        "keywords": [
+          "Reach"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Umbra armor replacement"
+        ]
+      },
+      "excluded": [
+        "host_destroyed"
+      ]
+    },
+    "Uncontrollable Anger": {
+      "oracle": {
+        "oracle_id": "6e3befe3-38c1-42d1-8825-c40eb0c6adec",
+        "name": "Uncontrollable Anger",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature\nEnchanted creature gets +2/+2 and attacks each combat if able.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 2,
+        "toughness": 2,
+        "keywords": [],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Flash casting timing",
+          "Attack each combat if able requirement"
+        ]
+      },
+      "excluded": []
+    },
+    "Vampiric Embrace": {
+      "oracle": {
+        "oracle_id": "c7a50ece-4fe4-4e54-9319-b92a4144445d",
+        "name": "Vampiric Embrace",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2 and has flying.\nWhenever a creature dealt damage by enchanted creature this turn dies, put a +1/+1 counter on that creature.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 2,
+        "toughness": 2,
+        "keywords": [
+          "Flying"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Counter trigger when a creature damaged by enchanted creature dies"
+        ]
+      },
+      "excluded": []
+    },
+    "Vow of Duty": {
+      "oracle": {
+        "oracle_id": "1e7bddbd-e448-4aea-9d18-b44bd45837c5",
+        "name": "Vow of Duty",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2, has vigilance, and can't attack you or planeswalkers you control.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 2,
+        "toughness": 2,
+        "keywords": [
+          "Vigilance"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Cannot attack Aura controller or planeswalkers they control"
+        ]
+      },
+      "excluded": [
+        "opponent_unblocked"
+      ]
+    },
+    "Vow of Flight": {
+      "oracle": {
+        "oracle_id": "81fe554a-5257-446c-ad53-ee45bf5edb40",
+        "name": "Vow of Flight",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2, has flying, and can't attack you or planeswalkers you control.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 2,
+        "toughness": 2,
+        "keywords": [
+          "Flying"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Cannot attack Aura controller or planeswalkers they control"
+        ]
+      },
+      "excluded": [
+        "opponent_unblocked"
+      ]
+    },
+    "Vow of Lightning": {
+      "oracle": {
+        "oracle_id": "bfed67f3-70d2-49c2-8f25-16e4d10fa5be",
+        "name": "Vow of Lightning",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2, has first strike, and can't attack you or planeswalkers you control.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 2,
+        "toughness": 2,
+        "keywords": [
+          "First strike"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Cannot attack Aura controller or planeswalkers they control"
+        ]
+      },
+      "excluded": [
+        "opponent_unblocked"
+      ]
+    },
+    "Vow of Wildness": {
+      "oracle": {
+        "oracle_id": "569a65fb-e35f-4388-ab49-f57be46b4889",
+        "name": "Vow of Wildness",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +3/+3, has trample, and can't attack you or planeswalkers you control.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 3,
+        "toughness": 3,
+        "keywords": [
+          "Trample"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Cannot attack Aura controller or planeswalkers they control"
+        ]
+      },
+      "excluded": [
+        "opponent_unblocked"
+      ]
+    },
+    "Eel Umbra": {
+      "oracle": {
+        "oracle_id": "4be1ecd0-ee41-4ac0-9155-0fcae7a4d337",
+        "name": "Eel Umbra",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature\nEnchanted creature gets +1/+1.\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Umbra armor",
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 1,
+        "toughness": 1,
+        "keywords": [],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Flash casting timing",
+          "Umbra armor replacement"
+        ]
+      },
+      "excluded": [
+        "host_destroyed"
+      ]
+    },
+    "Infectious Bloodlust": {
+      "oracle": {
+        "oracle_id": "9cd8ca01-e8a9-47ea-8899-b016a2dcaea8",
+        "name": "Infectious Bloodlust",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+1, has haste, and attacks each combat if able.\nWhen enchanted creature dies, you may search your library for a card named Infectious Bloodlust, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 2,
+        "toughness": 1,
+        "keywords": [
+          "Haste"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Attack each combat if able requirement",
+          "Death-triggered library search"
+        ]
+      },
+      "excluded": [
+        "host_destroyed"
+      ]
+    },
+    "Snow Devil": {
+      "oracle": {
+        "oracle_id": "e743b4ec-65bf-4e8d-ad87-6746a2e6ba73",
+        "name": "Snow Devil",
+        "oracle_text": "Enchant creature\nEnchanted creature has flying.\nEnchanted creature has first strike as long as it's blocking and you control a snow land.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "Flying"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Conditional first strike while blocking with a snow land"
+        ]
+      },
+      "excluded": []
+    },
+    "Iona's Blessing": {
+      "oracle": {
+        "oracle_id": "fc5bde87-231e-424a-a8fa-cd9910a09d43",
+        "name": "Iona's Blessing",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2, has vigilance, and can block an additional creature each combat.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 2,
+        "toughness": 2,
+        "keywords": [
+          "Vigilance"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Additional blocker permission"
+        ]
+      },
+      "excluded": []
+    },
+    "On Serra's Wings": {
+      "oracle": {
+        "oracle_id": "f43584de-4f60-46e6-9e6b-e704bc3ecd59",
+        "name": "On Serra's Wings",
+        "oracle_text": "Enchant creature\nEnchanted creature is legendary, gets +1/+1, and has flying, vigilance, and lifelink.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Legendary Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 1,
+        "toughness": 1,
+        "keywords": [
+          "Flying",
+          "Vigilance",
+          "Lifelink"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Legendary status of enchanted creature"
+        ]
+      },
+      "excluded": []
+    },
+    "Infernal Scarring": {
+      "oracle": {
+        "oracle_id": "3fc640dd-6292-4d36-82fb-bd366bc00bd3",
+        "name": "Infernal Scarring",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+0 and has \"When this creature dies, draw a card.\"",
+        "mana_cost": "{1}{B}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "power": 2,
+        "toughness": 0,
+        "keywords": [],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Granted death draw trigger"
+        ]
+      },
+      "excluded": [
+        "host_destroyed"
+      ]
+    }
+  },
+  "witnesses": {
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "2"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "power": "3",
+      "toughness": "3"
+    },
+    "Scaled Wurm": {
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "name": "Scaled Wurm",
+      "oracle_text": "",
+      "mana_cost": "{7}{G}",
+      "type_line": "Creature — Wurm",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 8.0,
+      "layout": "normal",
+      "power": "7",
+      "toughness": "6"
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": "1",
+      "toughness": "1"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Spider",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "4"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "power": "1",
+      "toughness": "1"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Flame Slash": {
+      "oracle_id": "8d98d674-6811-4d45-b22a-63792e272a2b",
+      "name": "Flame Slash",
+      "oracle_text": "Flame Slash deals 4 damage to target creature.",
+      "mana_cost": "{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Grasp of Darkness": {
+      "oracle_id": "494c819d-7d73-432b-8c96-4cb9dcd31094",
+      "name": "Grasp of Darkness",
+      "oracle_text": "Target creature gets -4/-4 until end of turn.",
+      "mana_cost": "{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Humble": {
+      "oracle_id": "d2d41f12-18d8-473b-9308-3f02d7d791f0",
+      "name": "Humble",
+      "oracle_text": "Until end of turn, target creature loses all abilities and has base power and toughness 0/1.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Disenchant": {
+      "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+      "name": "Disenchant",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Disperse": {
+      "oracle_id": "9d8fe3f8-5027-4f9e-999e-e277caa96478",
+      "name": "Disperse",
+      "oracle_text": "Return target nonland permanent to its owner's hand.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    }
+  }
+}

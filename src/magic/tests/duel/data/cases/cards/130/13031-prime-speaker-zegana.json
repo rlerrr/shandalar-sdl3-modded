@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Prime Speaker Zegana",
+  "csvid": 13031,
+  "recipes": [
+    {
+      "family": "entry_value_extension",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "profile": "Prime Speaker Zegana"
+      },
+      "oracle_text": "Prime Speaker Zegana enters with X +1/+1 counters on it, where X is the greatest power among other creatures you control.\nWhen Prime Speaker Zegana enters, draw cards equal to its power.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blink_0",
+        "blink_snapshot_0",
+        "bounce_recast_0",
+        "bounce_only_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "bare_zones_0",
+        "no_qualifier_0",
+        "enemy_only_0",
+        "boost_before_entry_0",
+        "late_creature_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blink_1",
+        "blink_snapshot_1",
+        "bounce_recast_1",
+        "bounce_only_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "bare_zones_1",
+        "no_qualifier_1",
+        "enemy_only_1",
+        "boost_before_entry_1",
+        "late_creature_1"
+      ]
+    }
+  ]
+}

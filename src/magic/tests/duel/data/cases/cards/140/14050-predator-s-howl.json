@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "card": "Predator's Howl",
+  "csvid": 14050,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 4,
+        "mechanism": "wolf_creator",
+        "wolf_kind": "morbid_wolves",
+        "token": {
+          "name": "Wolf",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Wolf"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "tokens": [
+          {
+            "token": {
+              "name": "Wolf",
+              "power": 2,
+              "toughness": 2,
+              "colors": [
+                "G"
+              ],
+              "subtypes": [
+                "Wolf"
+              ],
+              "artifact": false,
+              "keywords": []
+            },
+            "count": 1
+          },
+          {
+            "token": {
+              "name": "Wolf",
+              "power": 2,
+              "toughness": 2,
+              "colors": [
+                "G"
+              ],
+              "subtypes": [
+                "Wolf"
+              ],
+              "artifact": false,
+              "keywords": []
+            },
+            "count": 3
+          }
+        ],
+        "amount": {
+          "normal": 1,
+          "morbid": 3
+        },
+        "activation": null,
+        "operative": [
+          {
+            "kind": "any_creature_death_this_turn"
+          }
+        ],
+        "source_keywords": [
+          "Morbid"
+        ],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Create a 2/2 green Wolf creature token.\nMorbid — Create three 2/2 green Wolf creature tokens instead if a creature died this turn.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "zero_input_0",
+        "opponent_input_0",
+        "ownership_0",
+        "prior_input_removed_0",
+        "token_death_0",
+        "opponent_token_death_0",
+        "noncreature_death_0",
+        "prior_turn_expired_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "zero_input_1",
+        "opponent_input_1",
+        "ownership_1",
+        "prior_input_removed_1",
+        "token_death_1",
+        "opponent_token_death_1",
+        "noncreature_death_1",
+        "prior_turn_expired_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

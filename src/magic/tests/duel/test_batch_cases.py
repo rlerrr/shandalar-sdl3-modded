@@ -15,7 +15,8 @@ from pathlib import Path
 import xml.etree.ElementTree as ET
 args = dict(arg[2:].split('=', 1) for arg in sys.argv[1:] if '=' in arg)
 def path(value):
-    return Path(value.replace('/test-output/', os.environ['DUEL_TEST_OUTPUT_DIR'] + '/'))
+    return Path(value.replace('/test-output/', os.environ['DUEL_TEST_OUTPUT_DIR'] + '/')
+                     .replace('/test-cases/', os.environ.get('DUEL_TEST_CASE_DIR', '') + '/'))
 batch = 'duel-case-list' in args
 names = path(args['duel-case-list']).read_text().splitlines() if batch else [args['gtest_filter']]
 stream = path(args['duel-batch-journal']).open('w') if batch else None
@@ -84,6 +85,25 @@ class BatchTests(unittest.TestCase):
         self.assertEqual(results[1]['failure_kind'], 'isolation')
         self.assertEqual(results[1]['isolated']['status'], 'passed')
         self.assertEqual(results[2]['status'], 'passed')
+
+    def test_selected_archive_and_asset_cwd_survive_batch_restart_and_isolation(self):
+        archive = self.root / 'worker archives' / 'selected cases.bin'
+        archive.parent.mkdir(); archive.write_text('selected worker archive')
+        self.args.case_data = archive
+        (self.root/'asset receipt').write_text('engine asset')
+        check = """
+assert 'duel-case-data' in args, 'selected archive argument lost'
+assert path(args['duel-case-data']).read_text() == 'selected worker archive'
+assert Path('asset receipt').read_text() == 'engine asset', 'engine cwd lost'
+print('selected archive verified', flush=True)
+"""
+        self.args.binary.write_text(CHILD.replace("batch = 'duel-case-list' in args", check+"\nbatch = 'duel-case-list' in args"))
+        results = self.run_cases(['Before', 'Leak', 'After'])
+        self.assertEqual([r['status'] for r in results], ['passed', 'failed', 'passed'])
+        self.assertEqual(results[1]['isolated']['status'], 'passed')
+        self.assertEqual(len(list(self.args.output.glob('batch-*.log'))), 2)
+        for log in list(self.args.output.glob('batch-*.log')) + list((self.args.output/'isolated').glob('*.log')):
+            self.assertIn('selected archive verified', log.read_text())
 
     def test_timeout_does_not_bound_the_combined_batch_duration(self):
         results = self.run_cases(['SlowOne', 'SlowTwo', 'SlowThree'])

@@ -17,15 +17,52 @@ find_package(Python3 REQUIRED COMPONENTS Interpreter)
 set(duel_generated "${CMAKE_CURRENT_BINARY_DIR}/generated")
 file(MAKE_DIRECTORY "${duel_generated}")
 option(SHANDALAR_DUEL_EXTENDED_TESTS "Register the full catalog smoke suite in CTest" OFF)
+option(SHANDALAR_DUEL_AUTHORING_BUILD "Build a reusable engine without generating or registering the behavior catalog" OFF)
+if(SHANDALAR_DUEL_AUTHORING_BUILD AND SHANDALAR_DUEL_EXTENDED_TESTS)
+  message(FATAL_ERROR "SHANDALAR_DUEL_EXTENDED_TESTS requires a full catalog build; disable SHANDALAR_DUEL_AUTHORING_BUILD")
+endif()
+if(NOT SHANDALAR_DUEL_AUTHORING_BUILD)
 file(GLOB_RECURSE duel_case_files CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/data/cases/*.json")
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS mana_consequence_recipes.py mana_modes_recipes.py creature_conditions_recipes.py conditional_mana_land_recipes.py conditional_stats_recipes.py conditional_keyword_recipes.py duel_case_types.h)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS entry_stats_creature_recipes.py land_entry_mana_recipes.py land_search_recipes.py landcycling_recipes.py library_search_recipes.py data/library_search_witnesses.json)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS removal_recipes.py data/removal_witnesses.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  mana_spell_extension_recipes.py entry_value_extension_recipes.py static_effect_extension_recipes.py
+  data/mana_effects_extension_witnesses.json data/entry_value_wave6_witnesses.json
+  data/static_effect_extension_witnesses.json data/growth_counter_activation_wave6_witnesses.json
+  data/removal_wave6_profiles.json data/library_search_wave6_profiles.json
+  data/library_search_wave6_witnesses.json data/graveyard_recovery_wave6_witnesses.json
+  data/token_creator_wave6_witnesses.json)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS hand_exchange_recipes.py data/hand_exchange_witnesses.json)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS value_flow_recipes.py variable_value_recipes.py variable_damage_recipes.py case_archive.py)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS mass_removal_recipes.py data/mass_removal_witnesses.json)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS removal_activation_recipes.py data/removal_activation_witnesses.json)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS static_stats_recipes.py data/static_stats_witnesses.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  etb_damage_creature_recipes.py data/etb_damage_witnesses.json
+  death_damage_recipes.py data/death_damage_witnesses.json variable_sweep_recipes.py)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  growth_counter_spell_recipes.py
+  counterspell_extension_recipes.py data/counterspell_extension_witnesses.json
+  edict_recipes.py data/edict_witnesses.json
+  growth_counter_activation_recipes.py data/growth_counter_activation_witnesses.json
+  reanimation_recipes.py data/reanimation_witnesses.json
+  token_trigger_creation_recipes.py token_trigger_creation_spec.py data/token_trigger_creation_witnesses.json
+  prevention_recipes.py
+  tap_spell_recipes.py data/tap_spell_reviews.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  token_spell_extension_recipes.py data/token_spell_extension_witnesses.json
+  etb_removal_extension_recipes.py data/etb_removal_extension_witnesses.json
+  graveyard_recovery_extension_recipes.py data/graveyard_recovery_extension_witnesses.json
+  damage_spell_extension_recipes.py data/damage_spell_extension_witnesses.json
+  discard_spell_extension_recipes.py data/discard_spell_extension_witnesses.json
+  life_spell_extension_recipes.py data/life_spell_extension_witnesses.json
+  aura_keyword_extension_recipes.py data/aura_keyword_extension_witnesses.json
+  tribal_static_extension_recipes.py data/tribal_static_extension_witnesses.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  graveyard_exile_recipes.py data/graveyard_exile_witnesses.json
+  data/edict_extension_profiles.json data/edict_wave4_profiles.json data/edict_wave5_profiles.json data/prevention_extension_witnesses.json
+  data/growth_counter_spell_extension_witnesses.json)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
   data/fixtures.json data/oracle.json data/oracle_aliases.json generate_cases.py case_files.py recipes.py destruction_recipes.py movement_recipes.py stat_recipes.py creature_recipes.py counter_recipes.py graveyard_recipes.py damage_recipes.py sweep_recipes.py grant_recipes.py pump_creature_recipes.py evasion_creature_recipes.py defensive_creature_recipes.py mana_creature_recipes.py regenerate_creature_recipes.py etb_value_creature_recipes.py blocking_creature_recipes.py tap_damage_creature_recipes.py combat_keyword_creature_recipes.py lord_creature_recipes.py entry_counter_creature_recipes.py cycling_recipes.py permanent_mana_recipes.py equipment_recipes.py
   value_activation_recipes.py mill_recipes.py mass_stats_recipes.py attack_pump_recipes.py trigger_pump_recipes.py hybrid_creature_recipes.py counter_damage_creature_recipes.py etb_removal_creature_recipes.py etb_recovery_creature_recipes.py death_value_creature_recipes.py passive_keyword_creature_recipes.py target_stats_activation_recipes.py target_keyword_activation_recipes.py self_keyword_activation_recipes.py token_creation_recipes.py tap_activation_recipes.py damage_activation_recipes.py ${duel_case_files}
@@ -35,8 +72,24 @@ set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
   "${CMAKE_SOURCE_DIR}/tools/import_carddata.py"
   "${CMAKE_SOURCE_DIR}/tools/import_duel_oracle.py"
   data/registry_kinds.json)
+endif()
+# Shared-engine rebuilds depend on compiled fixtures and registry tables only.
+# Editing an author's card declarations or recipe module must not regenerate
+# the entire catalog, or reconfigure another author's immutable engine.
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  data/fixtures.json data/oracle.json data/oracle_aliases.json
+  generate_cases.py case_files.py case_archive.py data/registry_kinds.json
+  "${SHANDALAR_SRC_ROOT}/magic/src/carddata.c"
+  "${CMAKE_SOURCE_DIR}/tools/carddata_handler_overrides.json"
+  "${CMAKE_SOURCE_DIR}/tools/import_carddata.py"
+  "${CMAKE_SOURCE_DIR}/tools/import_duel_oracle.py")
+set(duel_generation_args)
+if(SHANDALAR_DUEL_AUTHORING_BUILD)
+  list(APPEND duel_generation_args --driver-only)
+  message(STATUS "Duel authoring engine: generate worker archives separately and pass --duel-case-data at runtime")
+endif()
 execute_process(COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/generate_cases.py"
-  --output "${duel_generated}" COMMAND_ERROR_IS_FATAL ANY)
+  --output "${duel_generated}" ${duel_generation_args} COMMAND_ERROR_IS_FATAL ANY)
 set(duel_globals "${duel_generated}/duel_snapshot_globals.inc")
 add_custom_command(OUTPUT "${duel_globals}"
   COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/generate_snapshot_globals.py"
@@ -61,7 +114,7 @@ if(EMSCRIPTEN)
   configure_file(node_case_data.js.in "${duel_generated}/node_case_data.js" @ONLY)
   target_compile_definitions(duel_card_tests PRIVATE DUEL_TEST_CASE_DATA="/test-cases/duel_cases.bin")
   set_target_properties(duel_card_tests PROPERTIES SUFFIX ".js")
-  # The generated scenario tables and engine state require a 1 GiB initial arena.
+  # Case bodies are loaded on demand; grow the engine arena when needed.
   target_link_options(duel_card_tests PRIVATE -O0 -sENVIRONMENT=node -sFETCH=1 -sEXIT_RUNTIME=1 -sALLOW_MEMORY_GROWTH=1
     -sINITIAL_MEMORY=256MB -sSTACK_SIZE=4MB -sASSERTIONS=1 -sFORCE_FILESYSTEM=1
     -lnodefs.js "--pre-js=${CMAKE_CURRENT_SOURCE_DIR}/node_results.js"
@@ -81,6 +134,12 @@ else()
   target_compile_definitions(duel_card_tests PRIVATE DUEL_TEST_ASSETS="${SHANDALAR_MODDED_ASSET_DIR}"
     DUEL_TEST_CASE_DATA="${duel_generated}/duel_cases.bin")
 endif()
+if(SHANDALAR_DUEL_AUTHORING_BUILD)
+  add_custom_target(duel_tests_batched
+    COMMAND "${CMAKE_COMMAND}" -E echo "duel_tests_batched requires the full catalog. Generate a worker archive and run run_cases.py with --case-data and --manifest, or configure SHANDALAR_DUEL_AUTHORING_BUILD=OFF."
+    COMMAND "${CMAKE_COMMAND}" -E false
+    VERBATIM)
+else()
 include("${duel_generated}/cases.cmake")
 add_custom_target(duel_tests_batched
   COMMAND "${Python3_EXECUTABLE}" "${CMAKE_CURRENT_SOURCE_DIR}/run_cases.py"
@@ -92,13 +151,16 @@ add_custom_target(duel_tests_batched
   DEPENDS duel_card_tests
   WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>"
   USES_TERMINAL VERBATIM)
+endif()
 if(TARGET shandalar_llvm_coverage)
   target_link_libraries(duel_card_tests PRIVATE shandalar_llvm_coverage)
 endif()
+if(NOT SHANDALAR_DUEL_AUTHORING_BUILD)
 add_test(NAME duel.presentation_guard COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/verify_presentation_guard.py"
   --binary "$<TARGET_FILE:duel_card_tests>" ${duel_node_args})
 set_tests_properties(duel.presentation_guard PROPERTIES LABELS "duel;harness" TIMEOUT 15)
+endif()
 add_test(NAME duel.case_files COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/test_case_files.py")
 set_tests_properties(duel.case_files PROPERTIES LABELS "duel;harness" TIMEOUT 15)
@@ -107,7 +169,10 @@ add_test(NAME duel.case_archive COMMAND "${Python3_EXECUTABLE}"
 set_tests_properties(duel.case_archive PROPERTIES LABELS "duel;harness" TIMEOUT 15)
 add_test(NAME duel.recipes COMMAND "${Python3_EXECUTABLE}"
   -m unittest discover -s "${CMAKE_CURRENT_SOURCE_DIR}" -p "test_*recipes.py")
-set_tests_properties(duel.recipes PROPERTIES LABELS "duel;harness" TIMEOUT 60)
+set_tests_properties(duel.recipes PROPERTIES LABELS "duel;harness" TIMEOUT 180)
+add_test(NAME duel.growth_counter_spell_witnesses COMMAND "${Python3_EXECUTABLE}"
+  "${CMAKE_CURRENT_SOURCE_DIR}/test_growth_counter_spell_witnesses.py")
+set_tests_properties(duel.growth_counter_spell_witnesses PROPERTIES LABELS "duel;harness" TIMEOUT 15)
 
 add_test(NAME duel.handler_overrides COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_SOURCE_DIR}/tools/test_import_carddata.py")
@@ -127,6 +192,7 @@ add_test(NAME duel.template_oracle COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/test_template_oracle.py")
 set_tests_properties(duel.template_oracle PROPERTIES LABELS "duel;harness" TIMEOUT 15)
 
+if(NOT SHANDALAR_DUEL_AUTHORING_BUILD)
 if(EMSCRIPTEN)
   add_test(NAME duel.summoning_sickness COMMAND "${duel_node}" "$<TARGET_FILE:duel_card_tests>"
     --gtest_filter=SummoningSickness.SuspendHasteEndsOnControlLoss)
@@ -141,3 +207,54 @@ set_tests_properties(duel.characteristics PROPERTIES LABELS "duel;engine" TIMEOU
   WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>")
 set_tests_properties(duel.summoning_sickness PROPERTIES LABELS "duel;engine" TIMEOUT 15
   WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>")
+foreach(untap_case IN ITEMS
+    RealPreparationAndSnapshotsPreserveTheOneStepBoundary
+    FloatingPoolsAndPendingSpellsRejectWithoutChangingTheBoard
+    TheFullWrapperHonorsARealSkippedUntap)
+  if(EMSCRIPTEN)
+    add_test(NAME "duel.untap_step.${untap_case}" COMMAND "${duel_node}" "$<TARGET_FILE:duel_card_tests>"
+      "--gtest_filter=UntapStep.${untap_case}")
+  else()
+    add_test(NAME "duel.untap_step.${untap_case}" COMMAND duel_card_tests
+      "--gtest_filter=UntapStep.${untap_case}")
+  endif()
+  set_tests_properties("duel.untap_step.${untap_case}" PROPERTIES LABELS "duel;engine" TIMEOUT 15
+    WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>")
+endforeach()
+foreach(flashback_case IN ITEMS
+    QueryPreservesCallerChoicesAndRealCastCompletesUnderSnapshotReplay
+    CostTimingAndPendingStackDenialsLeaveCallerStateUntouched
+    ActualMenuSelectsTheRequestedDuplicateAmongOtherLegalSpells)
+  if(EMSCRIPTEN)
+    add_test(NAME "duel.flashback.${flashback_case}" COMMAND "${duel_node}" "$<TARGET_FILE:duel_card_tests>"
+      "--gtest_filter=Flashback.${flashback_case}")
+  else()
+    add_test(NAME "duel.flashback.${flashback_case}" COMMAND duel_card_tests
+      "--gtest_filter=Flashback.${flashback_case}")
+  endif()
+  set_tests_properties("duel.flashback.${flashback_case}" PROPERTIES LABELS "duel;engine" TIMEOUT 15
+    WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>")
+endforeach()
+foreach(observation_case IN ITEMS
+    CardCallbackAbi.RegisteredHandlersUseThreeArgumentsForBothControllers
+    FiresOfYavimaya.ExileNotificationUsesIidWhileSurvivorStillGrantsHaste
+    FiresOfYavimaya.SacrificePumpKeepsCostsAndTemporaryEffect
+    MysticDecree.CanonicalCallbackCastRemovesFlyingForBothControllers
+    TokenCharacteristics.RealReplacementTokensExposeApeAndFrogLizard
+    GraveyardProvenance.LookupIgnoresUnusedSlotsIncludingSourceZero
+    GraveyardProvenance.LookupKeepsNewestLiveMatchAndIgnoresGenerationBits
+    ShuffleObservation.ActualEntriesCountTheLibraryOwnerForBothPathsAndSmallDecks
+    ShuffleObservation.TestAndBothAiSnapshotsRestoreCountsWithoutRefundingWork
+    ShuffleObservation.RealTutorShufflesAfterResolutionAndReplaysUnderSnapshot
+    TokenCharacteristics.GeneratedWolvesExposeWolfWithoutChangingOtherSubtypes)
+  if(EMSCRIPTEN)
+    add_test(NAME "duel.observation.${observation_case}" COMMAND "${duel_node}" "$<TARGET_FILE:duel_card_tests>"
+      "--gtest_filter=${observation_case}")
+  else()
+    add_test(NAME "duel.observation.${observation_case}" COMMAND duel_card_tests
+      "--gtest_filter=${observation_case}")
+  endif()
+  set_tests_properties("duel.observation.${observation_case}" PROPERTIES LABELS "duel;engine" TIMEOUT 15
+    WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>")
+endforeach()
+endif()

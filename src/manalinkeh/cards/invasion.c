@@ -2141,7 +2141,7 @@ int card_fires_of_yavimaya(int player, int card, event_t event){
    * Creatures you control have haste.
    * Sacrifice this enchantment: Target creature gets +2/+2 until end of turn. */
 
-	if( in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
+	if( event == EVENT_ABILITIES && in_play(player, card) && ! is_humiliated(player, card, AL_STATIC) ){
 		if( affected_card_controller == player && in_play(affected_card_controller, affected_card) &&
 			is_what(affected_card_controller, affected_card, TYPE_CREATURE) )
 		{
@@ -5048,7 +5048,7 @@ int card_andradite_leech(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x2495b40; original cards/invasion.c:4756. */
-int card_archaeological_dig(int player, int card, event_t event, int color1)
+int card_archaeological_dig(int player, int card, event_t event)
 {
   /* Archaeological Dig	""
    * Land

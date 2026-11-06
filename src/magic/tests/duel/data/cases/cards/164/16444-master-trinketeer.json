@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "card": "Master Trinketeer",
+  "csvid": 16444,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 1,
+        "mechanism": "servo_lord",
+        "token": {
+          "name": "Servo",
+          "power": 1,
+          "toughness": 1,
+          "colors": [],
+          "subtypes": [
+            "Servo"
+          ],
+          "artifact": true,
+          "keywords": []
+        },
+        "amount": {
+          "fixed": 1
+        },
+        "activation": {
+          "mana": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "tap": false,
+          "sacrifice": false
+        },
+        "operative": [
+          {
+            "kind": "own_servo_thopter_static",
+            "power": 1,
+            "toughness": 1
+          }
+        ],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Servos and Thopters you control get +1/+1.\n{3}{W}: Create a 1/1 colorless Servo artifact creature token.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "ready_snapshot_0",
+        "cleanup_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "static_scope_0",
+        "static_removed_0",
+        "source_removed_0",
+        "repeat_0",
+        "activation_snapshot_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "ready_snapshot_1",
+        "cleanup_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "static_scope_1",
+        "static_removed_1",
+        "source_removed_1",
+        "repeat_1",
+        "activation_snapshot_1"
+      ]
+    }
+  ]
+}

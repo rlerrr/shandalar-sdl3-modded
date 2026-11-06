@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Sheer Drop",
+  "csvid": 15437,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "normal_component",
+        "amounts": [],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": [
+          "Awaken alternative cost, land animation, haste and its additional counters; all cases cast the ordinary spell without a controlled battlefield land."
+        ],
+        "component_family": "destroy_permanent",
+        "component_params": {
+          "targets": [
+            "creature"
+          ],
+          "target_tapped": true
+        },
+        "component_text": "Destroy target tapped creature."
+      },
+      "oracle_text": "Destroy target tapped creature.\nAwaken 3—{5}{W} (If you cast this spell for {5}{W}, also put three +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "friendly_0",
+        "empty_0",
+        "wrong_target_0",
+        "lost_target_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "friendly_1",
+        "empty_1",
+        "wrong_target_1",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

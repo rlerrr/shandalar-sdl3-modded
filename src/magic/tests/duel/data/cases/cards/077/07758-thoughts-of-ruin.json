@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Thoughts of Ruin",
+  "csvid": 7758,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Thoughts of Ruin",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "land",
+        "quantity": "hand",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      },
+      "oracle_text": "Each player sacrifices a land of their choice for each card in your hand.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_recipients_0",
+        "wide_board_0",
+        "one_recipient_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_recipients_1",
+        "wide_board_1",
+        "one_recipient_1",
+        "alternate_choice_0",
+        "alternate_choice_1"
+      ]
+    }
+  ]
+}

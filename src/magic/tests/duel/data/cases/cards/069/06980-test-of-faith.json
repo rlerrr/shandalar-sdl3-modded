@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Test of Faith",
+  "csvid": 6980,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_counter_combat",
+        "mode": "shield_counters",
+        "inactive_components": [
+          "Multiple prevention shields, damage greater than three in one event and noncreature damage sources other than red spells are not selected."
+        ]
+      },
+      "oracle_text": "Prevent the next 3 damage that would be dealt to target creature this turn. For each 1 damage prevented this way, put a +1/+1 counter on that creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "preexisting_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "countered_0",
+        "opponent_0",
+        "opposing_turn_0",
+        "combat_0",
+        "expired_0",
+        "lost_target_0",
+        "selection_pending_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "preexisting_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "countered_1",
+        "opponent_1",
+        "opposing_turn_1",
+        "combat_1",
+        "expired_1",
+        "lost_target_1",
+        "selection_pending_1"
+      ]
+    }
+  ]
+}

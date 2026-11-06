@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "card": "Ancient Stone Idol",
+  "csvid": 19077,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "entry_component",
+        "keywords": [
+          "Flash",
+          "Trample"
+        ],
+        "token": {
+          "name": "Construct",
+          "count": 1,
+          "power": 6,
+          "toughness": 12,
+          "colors": [],
+          "subtypes": [
+            "Construct"
+          ],
+          "artifact": true,
+          "keywords": [
+            "Trample"
+          ]
+        },
+        "inactive_clauses": [
+          "This spell costs {1} less to cast for each attacking creature."
+        ],
+        "fabricate": 0
+      },
+      "oracle_text": "Flash\nThis spell costs {1} less to cast for each attacking creature.\nTrample\nWhen this creature dies, create a 6/12 colorless Construct artifact creature token with trample.",
+      "variants": [
+        "create_0",
+        "cast_only_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "two_casts_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "effect_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "wrath_0",
+        "other_creature_0",
+        "murder_0",
+        "bounce_only_0",
+        "bounce_recast_0",
+        "blink_only_0",
+        "blink_destroy_0",
+        "exile_source_0",
+        "trample_0",
+        "create_1",
+        "cast_only_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "two_casts_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "effect_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "wrath_1",
+        "other_creature_1",
+        "murder_1",
+        "bounce_only_1",
+        "bounce_recast_1",
+        "blink_only_1",
+        "blink_destroy_1",
+        "exile_source_1",
+        "trample_1"
+      ]
+    }
+  ]
+}

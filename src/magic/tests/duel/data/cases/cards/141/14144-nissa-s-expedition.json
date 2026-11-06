@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Nissa's Expedition",
+  "csvid": 14144,
+  "recipes": [
+    {
+      "family": "tap_spell",
+      "version": 2,
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nSearch your library for up to two basic land cards, put them onto the battlefield tapped, then shuffle.",
+      "params": {
+        "scope": "basic_land",
+        "zone": "library",
+        "count": 2,
+        "destination": "battlefield_tapped",
+        "variable": false,
+        "normal_dialog": null,
+        "gaps": [
+          "convoke resource payment",
+          "replacement effects and multiplayer"
+        ],
+        "schema": 8,
+        "instant": false
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "decline_0",
+        "empty_zone_0",
+        "no_match_0",
+        "one_match_0",
+        "duplicates_0",
+        "cleanup_0",
+        "two_copies_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "one_selected_0",
+        "found_destroyed_0",
+        "found_bounced_0",
+        "snow_basic_0",
+        "nonbasic_control_0",
+        "tapped_entry_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "decline_1",
+        "empty_zone_1",
+        "no_match_1",
+        "one_match_1",
+        "duplicates_1",
+        "cleanup_1",
+        "two_copies_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "one_selected_1",
+        "found_destroyed_1",
+        "found_bounced_1",
+        "snow_basic_1",
+        "nonbasic_control_1",
+        "tapped_entry_1"
+      ]
+    }
+  ]
+}

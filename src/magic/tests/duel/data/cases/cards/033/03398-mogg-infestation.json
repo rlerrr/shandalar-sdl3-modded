@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "card": "Mogg Infestation",
+  "csvid": 3398,
+  "recipes": [
+    {
+      "family": "mass_removal",
+      "version": 2,
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Mogg Infestation",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 0,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "token": {
+            "name": "Goblin",
+            "power": 1,
+            "toughness": 1,
+            "colors": [
+              "R"
+            ],
+            "subtypes": [
+              "Goblin"
+            ],
+            "flying": false,
+            "count": 2,
+            "for_each": "died"
+          }
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "controller": "target_player"
+      },
+      "oracle_text": "Destroy all creatures target player controls. For each creature that died this way, that player creates two 1/1 red Goblin creature tokens.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_board_0",
+        "own_only_0",
+        "opponent_only_0",
+        "stolen_0",
+        "tokens_0",
+        "regeneration_0",
+        "own_target_0",
+        "target_shrouded_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_board_1",
+        "own_only_1",
+        "opponent_only_1",
+        "stolen_1",
+        "tokens_1",
+        "regeneration_1",
+        "own_target_1",
+        "target_shrouded_1"
+      ]
+    }
+  ]
+}

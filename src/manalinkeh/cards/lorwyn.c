@@ -5692,6 +5692,11 @@ static int prowess_of_the_fair_effect(int player, int card, event_t event)
     }
   }
 
+  /* The attached collector must not force the source's optional trigger.
+     EVENT_END_TRIGGER must still clear its parallel death count. */
+  if (event == EVENT_TRIGGER && check_status(player, card, STATUS_INVISIBLE_FX))
+    return 0;
+
   int result = resolve_gfp_ability(player, card, event, RESOLVE_TRIGGER_MANDATORY);
   if (result && !check_status(player, card, STATUS_INVISIBLE_FX))
   {

@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "card": "Spider Spawning",
+  "csvid": 12084,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "noncreature_amount",
+        "basis": "creature_cards_in_own_graveyard",
+        "token": {
+          "name": "Spider",
+          "power": 1,
+          "toughness": 2,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Spider"
+          ],
+          "artifact": false,
+          "keywords": [
+            "Reach"
+          ]
+        },
+        "inactive_clauses": [
+          "Flashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+        ],
+        "entry_tapped": false,
+        "activation": null,
+        "fixed_count": null
+      },
+      "oracle_text": "Create a 1/2 green Spider creature token with reach for each creature card in your graveyard.\nFlashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "effect_snapshot_0",
+        "wrong_color_0",
+        "minimum_0",
+        "larger_amount_0",
+        "opponent_state_0",
+        "ownership_0",
+        "token_input_0",
+        "purged_input_0",
+        "amount_locked_0",
+        "two_casts_0",
+        "response_count_0",
+        "response_snapshot_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "effect_snapshot_1",
+        "wrong_color_1",
+        "minimum_1",
+        "larger_amount_1",
+        "opponent_state_1",
+        "ownership_1",
+        "token_input_1",
+        "purged_input_1",
+        "amount_locked_1",
+        "two_casts_1",
+        "response_count_1",
+        "response_snapshot_1"
+      ]
+    }
+  ]
+}

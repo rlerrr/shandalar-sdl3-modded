@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Mental Misstep",
+  "csvid": 11636,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Source/target departure, uncounterable parents, replacement effects and multiple simultaneous responses.",
+          "Lethal two-life payment and life-loss replacement/prevention."
+        ],
+        "extension": {
+          "wave": 5,
+          "resource_counter": {
+            "kind": "phyrexian_blue"
+          }
+        }
+      },
+      "oracle_text": "({U/P} can be paid with either {U} or 2 life.)\nCounter target spell with mana value 1.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "life_payment_0",
+        "life_snapshot_0",
+        "insufficient_life_0",
+        "wrong_value_0",
+        "sorcery_parent_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "life_payment_1",
+        "life_snapshot_1",
+        "insufficient_life_1",
+        "wrong_value_1",
+        "sorcery_parent_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Real resource choices and timing: unchanged revealed blue hand, selected resolution-time discard and three-per-card tax, cast-time delve exiles with intended X cash/exile arithmetic, or printed blue/two-life Phyrexian payment; zero/one/many resource and parent effect/payment boundaries where printed. Source/target departure, uncounterable parents, replacement effects and multiple simultaneous responses. Lethal two-life payment and life-loss replacement/prevention."
+}

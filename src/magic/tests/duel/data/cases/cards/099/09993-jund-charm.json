@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Jund Charm",
+  "csvid": 9993,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell_extension",
+      "version": 2,
+      "params": {
+        "kind": "sweep",
+        "effect": {
+          "effect": "damage",
+          "amount": 2,
+          "targets": [
+            "creature"
+          ],
+          "scope": "all",
+          "players": "none"
+        },
+        "gain_life": 0,
+        "inactive_components": [
+          "Other modes: exile target player graveyard; put two +1/+1 counters on target creature."
+        ],
+        "choices_before_target": [
+          1
+        ],
+        "choices_after_target": [],
+        "skip_before_choices_on_exact_payment": false,
+        "skip_after_choices_on_exact_payment": false,
+        "omit_variants": []
+      },
+      "oracle_text": "Choose one —\n• Exile target player's graveyard.\n• Jund Charm deals 2 damage to each creature.\n• Put two +1/+1 counters on target creature.",
+      "variants": [
+        "mixed_0",
+        "friendly_only_0",
+        "opponent_only_0",
+        "empty_board_0",
+        "empty_zones_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "cleanup_0",
+        "tapped_all_0",
+        "untapped_all_0",
+        "injured_0",
+        "pending_snapshot_0",
+        "wrong_payment_color_0",
+        "other_turn_0",
+        "mixed_1",
+        "friendly_only_1",
+        "opponent_only_1",
+        "empty_board_1",
+        "empty_zones_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "cleanup_1",
+        "tapped_all_1",
+        "untapped_all_1",
+        "injured_1",
+        "pending_snapshot_1",
+        "wrong_payment_color_1",
+        "other_turn_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed fixed damage component through ordinary mana-paid casting; all other named clauses are explicit recipe metadata gaps."
+}

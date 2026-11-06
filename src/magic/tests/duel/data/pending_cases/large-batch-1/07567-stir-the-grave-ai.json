@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "card": "Stir the Grave",
+  "csvid": 7567,
+  "status": "pending",
+  "controller": 1,
+  "pending_variant_count": 28,
+  "recipes": [
+    {
+      "family": "reanimation",
+      "version": 2,
+      "params": {
+        "mode": "single",
+        "scope": "creature",
+        "graveyard": "self",
+        "control": "self",
+        "tapped": false,
+        "limit": "x_le",
+        "history": false,
+        "self_destination": "graveyard",
+        "extras": [],
+        "legacy_x_payment_prompt": false
+      },
+      "oracle_text": "Return target creature card with mana value X or less from your graveyard to the battlefield.",
+      "variants": [
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "empty_1",
+        "wrong_type_1",
+        "countered_1",
+        "cleanup_1",
+        "repeat_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "alternate_1",
+        "lost_target_1",
+        "death_owner_1",
+        "wrong_owner_1",
+        "wrong_value_1",
+        "effect_x0_1",
+        "payment_x0_1",
+        "effect_x1_1",
+        "payment_x1_1",
+        "effect_x2_1",
+        "payment_x2_1",
+        "effect_x5_1",
+        "payment_x5_1",
+        "effect_x8_1",
+        "payment_x8_1"
+      ]
+    }
+  ],
+  "reason": "Controller 1 casting cannot currently complete a clean cross-platform scenario: the corrected effect_1 probe reproduces native SEH 0xc0000005 and Wasm harness input failure in both original and isolated runs. These outcomes are preserved here, not accepted into known failures. All 28 controller-one variants remain pending; controller-zero scenarios retain their original Oracle expectations.",
+  "source_review": "The AI-specific handler scans grave[count] starting at count_graveyard(), a sentinel slot. This is a source concern; differing platform outcomes preclude a shared exact failure classification.",
+  "validation": "H:\\shandalar-test-scratch\\large-batch-1\\reanimation-stir-ai-pilot\\validation.json",
+  "evidence": {
+    "native": {
+      "original": {
+        "filter": "Behavior.ReanimationRecipe_7567_effect_1",
+        "failure_kind": "crash",
+        "assertion_count": 0,
+        "exit_code": 1,
+        "log": "H:\\shandalar-test-scratch\\large-batch-1\\reanimation-stir-ai-pilot\\native\\Behavior.ReanimationRecipe_7567_effect_1.log",
+        "xml": "H:\\shandalar-test-scratch\\large-batch-1\\reanimation-stir-ai-pilot\\native\\Behavior.ReanimationRecipe_7567_effect_1.xml",
+        "log_text": "[ RUN      ] Behavior.ReanimationRecipe_7567_effect_1\nCASE: ReanimationRecipe_7567_effect_1 CARD: Stir the Grave ORACLE: 296dcc57-5651-4cb1-b89c-fcdd3f5311bd FIXTURE: empty_main SEED: 123\nunknown file: error: SEH exception with code 0xc0000005 thrown in the test body.\nStack trace:\n\nGoogle Test trace:\nC:\\dev\\shandalar-sdl3-priv\\src\\magic\\tests\\duel\\duel_card_tests.cpp(93): step 3 cast source\nC:\\dev\\shandalar-sdl3-priv\\src\\magic\\tests\\duel\\duel_card_tests.cpp(79): Stir the Grave Oracle 296dcc57-5651-4cb1-b89c-fcdd3f5311bd Return target creature card with mana value X or less from your graveyard to the battlefield.\n\n[  FAILED  ] Behavior.ReanimationRecipe_7567_effect_1 (1 ms)\n[----------] 1 test from Behavior (1 ms total)\n\n[----------] Global test environment tear-down\n[==========] 1 test from 1 test suite ran. (1 ms total)\n[  PASSED  ] 0 tests.\n[  FAILED  ] 1 test, listed below:\n[  FAILED  ] Behavior.ReanimationRecipe_7567_effect_1\n\n 1 FAILED TEST\n"
+      },
+      "isolated": {
+        "filter": "Behavior.ReanimationRecipe_7567_effect_1",
+        "failure_kind": "crash",
+        "assertion_count": 0,
+        "exit_code": 1,
+        "log": "H:\\shandalar-test-scratch\\large-batch-1\\reanimation-stir-ai-pilot\\native\\isolated\\Behavior.ReanimationRecipe_7567_effect_1.log",
+        "xml": "H:\\shandalar-test-scratch\\large-batch-1\\reanimation-stir-ai-pilot\\native\\isolated\\Behavior.ReanimationRecipe_7567_effect_1.xml",
+        "log_text": "Note: Google Test filter = Behavior.ReanimationRecipe_7567_effect_1\n[==========] Running 1 test from 1 test suite.\n[----------] Global test environment set-up.\n[----------] 1 test from Behavior\n[ RUN      ] Behavior.ReanimationRecipe_7567_effect_1\nunknown file: error: SEH exception with code 0xc0000005 thrown in the test body.\nStack trace:\n\nGoogle Test trace:\nC:\\dev\\shandalar-sdl3-priv\\src\\magic\\tests\\duel\\duel_card_tests.cpp(93): step 3 cast source\nC:\\dev\\shandalar-sdl3-priv\\src\\magic\\tests\\duel\\duel_card_tests.cpp(79): Stir the Grave Oracle 296dcc57-5651-4cb1-b89c-fcdd3f5311bd Return target creature card with mana value X or less from your graveyard to the battlefield.\n\n[  FAILED  ] Behavior.ReanimationRecipe_7567_effect_1 (1 ms)\n[----------] 1 test from Behavior (1 ms total)\n\n[----------] Global test environment tear-down\n[==========] 1 test from 1 test suite ran. (1 ms total)\n[  PASSED  ] 0 tests.\n[  FAILED  ] 1 test, listed below:\n[  FAILED  ] Behavior.ReanimationRecipe_7567_effect_1\n\n 1 FAILED TEST\nCASE: ReanimationRecipe_7567_effect_1 CARD: Stir the Grave ORACLE: 296dcc57-5651-4cb1-b89c-fcdd3f5311bd FIXTURE: empty_main SEED: 123\n"
+      }
+    },
+    "wasm": {
+      "original": {
+        "filter": "Behavior.ReanimationRecipe_7567_effect_1",
+        "failure_kind": "harness",
+        "assertion_count": 0,
+        "exit_code": 1,
+        "log": "H:\\shandalar-test-scratch\\large-batch-1\\reanimation-stir-ai-pilot\\wasm\\Behavior.ReanimationRecipe_7567_effect_1.log",
+        "xml": null,
+        "log_text": "[ RUN      ] Behavior.ReanimationRecipe_7567_effect_1\nCASE: ReanimationRecipe_7567_effect_1 CARD: Stir the Grave ORACLE: 296dcc57-5651-4cb1-b89c-fcdd3f5311bd FIXTURE: empty_main SEED: 123\nDUEL_HARNESS_ERROR: unscripted choice kind=1 player=1 prompt=Select target creature card with CMC 0 or less.\nAborted(native code called abort())\nH:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743\n  var e = new WebAssembly.RuntimeError(what);\n          ^\n\nRuntimeError: Aborted(native code called abort())\n    at abort (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743:11)\n    at __abort_js (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:4615:7)\n    at duel_card_tests.wasm.abort (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[23909]:0x71485f)\n    at duel_card_tests.wasm.duel_host_fail (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[1126]:0x6aaee)\n    at duel_card_tests.wasm.choose_with_policy (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[1125]:0x6aaa7)\n    at duel_card_tests.wasm.duel_host_choose_zone (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[1138]:0x6ad10)\n    at duel_card_tests.wasm.manalinkeh_select_card_from_zone (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[20020]:0x57a323)\n    at duel_card_tests.wasm.manalinkeh_new_select_a_card (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[19994]:0x5787ec)\n    at duel_card_tests.wasm.manalinkeh_select_target_from_grave_source (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[18884]:0x520811)\n    at duel_card_tests.wasm.manalinkeh_card_stir_the_grave (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[3153]:0x103ecc)\n\nNode.js v24.12.0\n"
+      },
+      "isolated": {
+        "filter": "Behavior.ReanimationRecipe_7567_effect_1",
+        "failure_kind": "harness",
+        "assertion_count": 0,
+        "exit_code": 1,
+        "log": "H:\\shandalar-test-scratch\\large-batch-1\\reanimation-stir-ai-pilot\\wasm\\isolated\\Behavior.ReanimationRecipe_7567_effect_1.log",
+        "xml": "H:\\shandalar-test-scratch\\large-batch-1\\reanimation-stir-ai-pilot\\wasm\\isolated\\Behavior.ReanimationRecipe_7567_effect_1.xml",
+        "log_text": "Note: Google Test filter = Behavior.ReanimationRecipe_7567_effect_1\n[==========] Running 1 test from 1 test suite.\n[----------] Global test environment set-up.\n[----------] 1 test from Behavior\n[ RUN      ] Behavior.ReanimationRecipe_7567_effect_1\ndeck: fopen failed Cards.dat rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX2.txt rb\nCASE: ReanimationRecipe_7567_effect_1 CARD: Stir the Grave ORACLE: 296dcc57-5651-4cb1-b89c-fcdd3f5311bd FIXTURE: empty_main SEED: 123\nDUEL_HARNESS_ERROR: unscripted choice kind=1 player=1 prompt=Select target creature card with CMC 0 or less.\nAborted(native code called abort())\nH:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743\n  var e = new WebAssembly.RuntimeError(what);\n          ^\n\nRuntimeError: Aborted(native code called abort())\n    at abort (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743:11)\n    at __abort_js (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:4615:7)\n    at duel_card_tests.wasm.abort (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[23909]:0x71485f)\n    at duel_card_tests.wasm.duel_host_fail (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[1126]:0x6aaee)\n    at duel_card_tests.wasm.choose_with_policy (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[1125]:0x6aaa7)\n    at duel_card_tests.wasm.duel_host_choose_zone (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[1138]:0x6ad10)\n    at duel_card_tests.wasm.manalinkeh_select_card_from_zone (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[20020]:0x57a323)\n    at duel_card_tests.wasm.manalinkeh_new_select_a_card (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[19994]:0x5787ec)\n    at duel_card_tests.wasm.manalinkeh_select_target_from_grave_source (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[18884]:0x520811)\n    at duel_card_tests.wasm.manalinkeh_card_stir_the_grave (wasm://wasm/duel_card_tests.wasm-02c06cfa:wasm-function[3153]:0x103ecc)\n\nNode.js v24.12.0\n"
+      }
+    }
+  }
+}

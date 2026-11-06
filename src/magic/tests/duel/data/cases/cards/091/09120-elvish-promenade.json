@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "card": "Elvish Promenade",
+  "csvid": 9120,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 2,
+        "mechanism": "spell_count",
+        "token": {
+          "name": "Elf Warrior",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Elf",
+            "Warrior"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "amount": {
+          "basis": "controlled_elf_permanents"
+        },
+        "activation": null,
+        "operative": [],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Create a 1/1 green Elf Warrior creature token for each Elf you control.",
+      "variants": [
+        "create_0",
+        "zero_0",
+        "larger_amount_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "opponent_state_0",
+        "ownership_0",
+        "amount_locked_0",
+        "token_input_0",
+        "create_1",
+        "zero_1",
+        "larger_amount_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "opponent_state_1",
+        "ownership_1",
+        "amount_locked_1",
+        "token_input_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

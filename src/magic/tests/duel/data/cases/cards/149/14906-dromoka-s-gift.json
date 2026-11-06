@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Dromoka's Gift",
+  "csvid": 14906,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "scope": "bolster",
+        "amount": 4,
+        "tail": "none",
+        "untap": false,
+        "condition": "none",
+        "followup": "none",
+        "draw": 0
+      },
+      "oracle_text": "Bolster 4. (Choose a creature with the least toughness among creatures you control and put four +1/+1 counters on it.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "two_copies_0",
+        "cleanup_0",
+        "pump_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "preexisting_0",
+        "opposing_turn_0",
+        "stacked_spells_0",
+        "empty_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "two_copies_1",
+        "cleanup_1",
+        "pump_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "preexisting_1",
+        "opposing_turn_1",
+        "stacked_spells_1",
+        "empty_1"
+      ]
+    }
+  ]
+}

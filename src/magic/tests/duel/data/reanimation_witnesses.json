@@ -1,0 +1,330 @@
+{
+  "version": 1,
+  "cards": {
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bear",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": ""
+    },
+    "Hill Giant": {
+      "name": "Hill Giant",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Giant",
+      "mana_cost": "{3}{R}",
+      "cmc": 4.0,
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": "3",
+      "toughness": "3",
+      "oracle_text": ""
+    },
+    "Ornithopter": {
+      "name": "Ornithopter",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "mana_cost": "{0}",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [
+        "Flying"
+      ],
+      "power": "0",
+      "toughness": "2",
+      "oracle_text": "Flying"
+    },
+    "Phyrexian Hulk": {
+      "name": "Phyrexian Hulk",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Phyrexian Golem",
+      "mana_cost": "{6}",
+      "cmc": 6.0,
+      "colors": [],
+      "keywords": [],
+      "power": "5",
+      "toughness": "4",
+      "oracle_text": ""
+    },
+    "Scathe Zombies": {
+      "name": "Scathe Zombies",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Zombie",
+      "mana_cost": "{2}{B}",
+      "cmc": 3.0,
+      "colors": [
+        "B"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": ""
+    },
+    "Walking Corpse": {
+      "name": "Walking Corpse",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Zombie",
+      "mana_cost": "{1}{B}",
+      "cmc": 2.0,
+      "colors": [
+        "B"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": ""
+    },
+    "Eager Cadet": {
+      "name": "Eager Cadet",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Human Soldier",
+      "mana_cost": "{W}",
+      "cmc": 1.0,
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": ""
+    },
+    "Abyssal Nightstalker": {
+      "name": "Abyssal Nightstalker",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Nightstalker",
+      "mana_cost": "{3}{B}",
+      "cmc": 4.0,
+      "colors": [
+        "B"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "Whenever this creature attacks and isn't blocked, defending player discards a card."
+    },
+    "Raiding Nightstalker": {
+      "name": "Raiding Nightstalker",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Nightstalker",
+      "mana_cost": "{2}{B}",
+      "cmc": 3.0,
+      "colors": [
+        "B"
+      ],
+      "keywords": [
+        "Landwalk",
+        "Swampwalk"
+      ],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": "Swampwalk (This creature can't be blocked as long as defending player controls a Swamp.)"
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "cmc": 1.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "{T}: Add {C}{C}."
+    },
+    "Darksteel Relic": {
+      "name": "Darksteel Relic",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [
+        "Indestructible"
+      ],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)"
+    },
+    "Seal of Cleansing": {
+      "name": "Seal of Cleansing",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}",
+      "cmc": 2.0,
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment."
+    },
+    "Seal of Primordium": {
+      "name": "Seal of Primordium",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment."
+    },
+    "Forest": {
+      "name": "Forest",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Forest",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {G}.)"
+    },
+    "Plains": {
+      "name": "Plains",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Plains",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {W}.)"
+    },
+    "Swamp": {
+      "name": "Swamp",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Swamp",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {B}.)"
+    },
+    "Island": {
+      "name": "Island",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Island",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {U}.)"
+    },
+    "Mountain": {
+      "name": "Mountain",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Mountain",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {R}.)"
+    },
+    "Darksteel Citadel": {
+      "name": "Darksteel Citadel",
+      "layout": "normal",
+      "type_line": "Artifact Land",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [
+        "Indestructible"
+      ],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Indestructible\n{T}: Add {C}."
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "cmc": 1.0,
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Lightning Bolt deals 3 damage to any target."
+    },
+    "Giant Growth": {
+      "name": "Giant Growth",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Target creature gets +3/+3 until end of turn."
+    },
+    "Divination": {
+      "name": "Divination",
+      "layout": "normal",
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{U}",
+      "cmc": 3.0,
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Draw two cards."
+    },
+    "Reclaim": {
+      "name": "Reclaim",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Put target card from your graveyard on top of your library."
+    },
+    "Counterspell": {
+      "name": "Counterspell",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "cmc": 2.0,
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Counter target spell."
+    }
+  }
+}

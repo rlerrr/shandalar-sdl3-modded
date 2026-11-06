@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "card": "Kefnet's Last Word",
+  "csvid": 17164,
+  "recipes": [
+    {
+      "family": "tap_spell",
+      "version": 2,
+      "oracle_text": "Gain control of target artifact, creature, or enchantment. Lands you control don't untap during your next untap step.",
+      "params": {
+        "schema": 5,
+        "model": "player_next_untap",
+        "recipient": "self",
+        "types": [
+          "Land"
+        ],
+        "steps": 1,
+        "tap": false,
+        "own_land_lock": true,
+        "persistent_theft": true,
+        "theft_types": [
+          "Artifact",
+          "Creature",
+          "Enchantment"
+        ]
+      },
+      "variants": [
+        "next_step_0",
+        "countered_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "locked_snapshot_0",
+        "artifact_function_0",
+        "artifact_target_0",
+        "artifact_creature_target_0",
+        "enchantment_target_0",
+        "own_target_0",
+        "foreign_target_0",
+        "lost_target_0",
+        "bounced_target_0",
+        "stolen_destroyed_0",
+        "stolen_bounced_0",
+        "stolen_sick_0",
+        "retained_attack_0",
+        "wrong_land_0",
+        "wrong_planeswalker_0",
+        "next_step_1",
+        "countered_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "locked_snapshot_1",
+        "artifact_function_1",
+        "artifact_target_1",
+        "artifact_creature_target_1",
+        "enchantment_target_1",
+        "own_target_1",
+        "foreign_target_1",
+        "lost_target_1",
+        "bounced_target_1",
+        "stolen_destroyed_1",
+        "stolen_bounced_1",
+        "stolen_sick_1",
+        "retained_attack_1",
+        "wrong_land_1",
+        "wrong_planeswalker_1"
+      ]
+    }
+  ]
+}

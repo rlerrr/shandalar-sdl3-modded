@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Exile into Darkness",
+  "csvid": 7638,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Exile into Darkness",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature_mv3",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "Next-upkeep optional graveyard return",
+          "replacement and death triggers",
+          "multiplayer"
+        ]
+      },
+      "oracle_text": "Target player sacrifices a creature of their choice with mana value 3 or less.\nAt the beginning of your upkeep, if you have more cards in hand than each opponent, you may return this card from your graveyard to your hand.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_recipients_0",
+        "own_target_0",
+        "target_shrouded_pending_0",
+        "wrong_value_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_recipients_1",
+        "own_target_1",
+        "target_shrouded_pending_1",
+        "wrong_value_1",
+        "alternate_choice_1"
+      ]
+    }
+  ]
+}

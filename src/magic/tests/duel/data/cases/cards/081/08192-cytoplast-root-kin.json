@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "card": "Cytoplast Root-Kin",
+  "csvid": 8192,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "counter_transfer",
+        "transfer": 1,
+        "direction": "target_to_source",
+        "tap": false,
+        "entry": 4,
+        "entry_bonus": 1,
+        "graft": 4,
+        "evolve": false,
+        "relation": "own_origin",
+        "cast_vectors": [
+          [
+            2,
+            0,
+            0,
+            2,
+            0,
+            0
+          ]
+        ],
+        "activation_vectors": [
+          [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        ],
+        "unused_modes": []
+      },
+      "oracle_text": "Graft 4 (This creature enters with four +1/+1 counters on it. Whenever another creature enters, you may move a +1/+1 counter from this creature onto it.)\nWhen this creature enters, put a +1/+1 counter on each other creature you control with a +1/+1 counter on it.\n{2}: Move a +1/+1 counter from target creature you control onto this creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "cleanup_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "pending_snapshot_0",
+        "repeat_0",
+        "origin_bounced_pending_0",
+        "cast_payment_0",
+        "entry_controls_0",
+        "origin_zero_probe_0",
+        "self_target_probe_0",
+        "origin_enemy_probe_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "cleanup_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "pending_snapshot_1",
+        "repeat_1",
+        "origin_bounced_pending_1",
+        "cast_payment_1",
+        "entry_controls_1",
+        "origin_zero_probe_1",
+        "self_target_probe_1",
+        "origin_enemy_probe_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle counter transfer profile: actual casts and entry effects; printed costs, pending counters, conservation, endpoint/source loss, payment denials, cleanup, repeat and replay. Combat, replacement and control changes remain component gaps; Root-Kin graft transfers are dormant because no creature enters after it. Two-target slot-specific illegal selection probes are deferred. Authoritative native/Wasm validation is recorded in the wave5 report."
+}

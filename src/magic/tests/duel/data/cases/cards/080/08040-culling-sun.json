@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Culling Sun",
+  "csvid": 8040,
+  "recipes": [
+    {
+      "family": "mass_removal",
+      "version": 2,
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Culling Sun",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 0,
+        "variable": false,
+        "limit": {
+          "field": "mana_value",
+          "op": "le",
+          "value": 3
+        },
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      },
+      "oracle_text": "Destroy each creature with mana value 3 or less.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_board_0",
+        "own_only_0",
+        "opponent_only_0",
+        "stolen_0",
+        "tokens_0",
+        "regeneration_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_board_1",
+        "own_only_1",
+        "opponent_only_1",
+        "stolen_1",
+        "tokens_1",
+        "regeneration_1"
+      ]
+    }
+  ]
+}

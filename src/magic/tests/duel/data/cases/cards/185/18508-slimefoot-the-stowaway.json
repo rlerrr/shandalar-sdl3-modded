@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "card": "Slimefoot, the Stowaway",
+  "csvid": 18508,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 3,
+        "mechanism": "cost_creator",
+        "token": {
+          "name": "Saproling",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Saproling"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "amount": {
+          "fixed": 1
+        },
+        "activation": {
+          "mana": [
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "tap": false,
+          "untap": false,
+          "sacrifice": false,
+          "additional": null,
+          "additional_count": 0,
+          "only_sorcery": false
+        },
+        "operative": [
+          {
+            "kind": "controlled_saproling_death_drain"
+          }
+        ],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Whenever a Saproling you control dies, Slimefoot deals 1 damage to each opponent and you gain 1 life.\n{4}: Create a 1/1 green Saproling creature token.",
+      "variants": [
+        "create_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "saproling_death_0",
+        "opponent_saproling_death_0",
+        "ordinary_death_0",
+        "source_removed_death_0",
+        "wrath_death_0",
+        "death_snapshot_0",
+        "create_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "saproling_death_1",
+        "opponent_saproling_death_1",
+        "ordinary_death_1",
+        "source_removed_death_1",
+        "wrath_death_1",
+        "death_snapshot_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,3863 @@
+{
+  "version": 1,
+  "cards": {
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Giant Spider": {
+      "name": "Giant Spider",
+      "mana_cost": "{3}{G}",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "type_line": "Creature — Spider",
+      "power": "2",
+      "toughness": "4",
+      "colors": [
+        "G"
+      ],
+      "keywords": [
+        "Reach"
+      ],
+      "layout": "normal"
+    },
+    "Suntail Hawk": {
+      "name": "Suntail Hawk",
+      "mana_cost": "{W}",
+      "oracle_text": "Flying",
+      "type_line": "Creature — Bird",
+      "power": "1",
+      "toughness": "1",
+      "colors": [
+        "W"
+      ],
+      "keywords": [
+        "Flying"
+      ],
+      "layout": "normal"
+    },
+    "Unsummon": {
+      "name": "Unsummon",
+      "mana_cost": "{U}",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Cloudshift": {
+      "name": "Cloudshift",
+      "mana_cost": "{W}",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Swords to Plowshares": {
+      "name": "Swords to Plowshares",
+      "mana_cost": "{W}",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Wrath of God": {
+      "name": "Wrath of God",
+      "mana_cost": "{2}{W}{W}",
+      "oracle_text": "Destroy all creatures. They can't be regenerated.",
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Counterspell": {
+      "name": "Counterspell",
+      "mana_cost": "{U}{U}",
+      "oracle_text": "Counter target spell.",
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Murder": {
+      "name": "Murder",
+      "mana_cost": "{1}{B}{B}",
+      "oracle_text": "Destroy target creature.",
+      "type_line": "Instant",
+      "colors": [
+        "B"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "mana_cost": "{R}",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "type_line": "Instant",
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Scaled Wurm": {
+      "name": "Scaled Wurm",
+      "mana_cost": "{7}{G}",
+      "oracle_text": "",
+      "type_line": "Creature — Wurm",
+      "power": "7",
+      "toughness": "6",
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Twiddle": {
+      "name": "Twiddle",
+      "mana_cost": "{U}",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Myr Retriever": {
+      "name": "Myr Retriever",
+      "mana_cost": "{2}",
+      "oracle_text": "When this creature dies, return another target artifact card from your graveyard to your hand.",
+      "type_line": "Artifact Creature — Myr",
+      "power": "1",
+      "toughness": "1",
+      "colors": [],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Bone Saw": {
+      "oracle_id": "16e555f2-5aa8-4100-a036-eed48db0e84a",
+      "name": "Bone Saw",
+      "oracle_text": "Equipped creature gets +1/+0.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact — Equipment",
+      "keywords": [
+        "Equip"
+      ],
+      "colors": [],
+      "layout": "normal"
+    },
+    "Orbs of Warding": {
+      "oracle_id": "c420d9c8-dc54-46b8-bd22-39c21019c3d7",
+      "name": "Orbs of Warding",
+      "oracle_text": "You have hexproof. (You can't be the target of spells or abilities your opponents control.)\nIf a creature would deal damage to you, prevent 1 of that damage.",
+      "mana_cost": "{5}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "layout": "normal"
+    },
+    "Walking Atlas": {
+      "name": "Walking Atlas",
+      "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+      "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact Creature — Construct",
+      "power": "1",
+      "toughness": "1",
+      "colors": [],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Ashcoat Bear": {
+      "oracle_id": "e6d13c0d-23ed-41f5-a726-f18d4bb44c9a",
+      "name": "Ashcoat Bear",
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flash"
+      ],
+      "colors": [
+        "G"
+      ],
+      "layout": "normal"
+    },
+    "Chatter of the Squirrel": {
+      "oracle_id": "b0aaa4b1-5188-43a6-997d-7a9b2ad452bc",
+      "name": "Chatter of the Squirrel",
+      "oracle_text": "Create a 1/1 green Squirrel creature token.\nFlashback {1}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "colors": [
+        "G"
+      ],
+      "layout": "normal"
+    },
+    "Raise the Alarm": {
+      "oracle_id": "5b2364d7-a811-4595-a1b4-224c70555ffa",
+      "name": "Raise the Alarm",
+      "oracle_text": "Create two 1/1 white Soldier creature tokens.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "layout": "normal"
+    },
+    "Cathodion": {
+      "name": "Cathodion",
+      "oracle_id": "fcd4f816-2de1-4b30-82fb-cb87f45747ea",
+      "oracle_text": "When this creature dies, add {C}{C}{C}.",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Construct",
+      "power": "3",
+      "toughness": "3",
+      "colors": [],
+      "keywords": [],
+      "layout": "normal"
+    }
+  },
+  "profiles": {
+    "Cloudgoat Ranger": {
+      "source": {
+        "name": "Cloudgoat Ranger",
+        "oracle_id": "e1c13a19-46cd-474b-a46b-a483be6b91bb",
+        "oracle_text": "When this creature enters, create three 1/1 white Kithkin Soldier creature tokens.\nTap three untapped Kithkin you control: This creature gets +2/+0 and gains flying until end of turn.",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Giant Warrior Ranger",
+        "power": "3",
+        "toughness": "3",
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create three 1/1 white Kithkin Soldier creature tokens.",
+      "inactive_clauses": [
+        "Tap three untapped Kithkin you control: This creature gets +2/+0 and gains flying until end of turn."
+      ],
+      "mode": "entry"
+    },
+    "Siege-Gang Commander": {
+      "source": {
+        "name": "Siege-Gang Commander",
+        "oracle_id": "ddc7f59a-bbb1-4ba1-82c8-6813fd191940",
+        "oracle_text": "When this creature enters, create three 1/1 red Goblin creature tokens.\n{1}{R}, Sacrifice a Goblin: This creature deals 2 damage to any target.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Creature — Goblin",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "R"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create three 1/1 red Goblin creature tokens.",
+      "inactive_clauses": [
+        "{1}{R}, Sacrifice a Goblin: This creature deals 2 damage to any target."
+      ],
+      "mode": "entry"
+    },
+    "Whirler Rogue": {
+      "source": {
+        "name": "Whirler Rogue",
+        "oracle_id": "7060f2c8-fca0-4b7a-bddf-37682f434596",
+        "oracle_text": "When this creature enters, create two 1/1 colorless Thopter artifact creature tokens with flying.\nTap two untapped artifacts you control: Target creature can't be blocked this turn.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Human Rogue Artificer",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "U"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create two 1/1 colorless Thopter artifact creature tokens with flying.",
+      "inactive_clauses": [
+        "Tap two untapped artifacts you control: Target creature can't be blocked this turn."
+      ],
+      "mode": "entry"
+    },
+    "Drunau Corpse Trawler": {
+      "source": {
+        "name": "Drunau Corpse Trawler",
+        "oracle_id": "870ca989-0e72-4e74-9570-57e129298f2e",
+        "oracle_text": "When this creature enters, create a 2/2 black Zombie creature token.\n{2}{B}: Target Zombie gains deathtouch until end of turn.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Zombie",
+        "power": "1",
+        "toughness": "1",
+        "colors": [
+          "U"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 2/2 black Zombie creature token.",
+      "inactive_clauses": [
+        "{2}{B}: Target Zombie gains deathtouch until end of turn."
+      ],
+      "mode": "entry"
+    },
+    "Haunted Dead": {
+      "source": {
+        "name": "Haunted Dead",
+        "oracle_id": "03259490-a789-4f96-8c5b-b410425bdd02",
+        "oracle_text": "When this creature enters, create a 1/1 white Spirit creature token with flying.\n{1}{B}, Discard two cards: Return this card from your graveyard to the battlefield tapped.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 1/1 white Spirit creature token with flying.",
+      "inactive_clauses": [
+        "{1}{B}, Discard two cards: Return this card from your graveyard to the battlefield tapped."
+      ],
+      "mode": "entry"
+    },
+    "Visionary Augmenter": {
+      "source": {
+        "name": "Visionary Augmenter",
+        "oracle_id": "1782bfd7-7d8f-4ed2-9d45-ba9adb41e996",
+        "oracle_text": "Fabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Dwarf Artificer",
+        "power": "2",
+        "toughness": "1",
+        "colors": [
+          "W"
+        ],
+        "keywords": [
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)",
+      "inactive_clauses": [],
+      "mode": "fabricate"
+    },
+    "Master Splicer": {
+      "source": {
+        "name": "Master Splicer",
+        "oracle_id": "9e0c5919-aed6-4d98-85c8-2658be78bdf0",
+        "oracle_text": "When this creature enters, create a 3/3 colorless Phyrexian Golem artifact creature token.\nGolems you control get +1/+1.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Phyrexian Human Artificer",
+        "power": "1",
+        "toughness": "1",
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 3/3 colorless Phyrexian Golem artifact creature token.",
+      "inactive_clauses": [],
+      "mode": "entry",
+      "active_static_clause": "Golems you control get +1/+1."
+    },
+    "Marsh Flitter": {
+      "source": {
+        "name": "Marsh Flitter",
+        "oracle_id": "02f8ec49-f490-408b-a76e-58e160a5a5a7",
+        "oracle_text": "Flying\nWhen this creature enters, create two 1/1 black Goblin Rogue creature tokens.\nSacrifice a Goblin: This creature has base power and toughness 3/3 until end of turn.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Faerie Rogue",
+        "power": "1",
+        "toughness": "1",
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create two 1/1 black Goblin Rogue creature tokens.",
+      "inactive_clauses": [
+        "Sacrifice a Goblin: This creature has base power and toughness 3/3 until end of turn."
+      ],
+      "mode": "entry"
+    },
+    "Carrier Thrall": {
+      "source": {
+        "name": "Carrier Thrall",
+        "oracle_id": "b3e0b8a6-5de4-4988-b042-2641b1ed3e32",
+        "oracle_text": "When this creature dies, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Vampire",
+        "power": "2",
+        "toughness": "1",
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature dies, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"",
+      "inactive_clauses": [],
+      "mode": "death",
+      "token_mana": true
+    },
+    "Nest Invader": {
+      "source": {
+        "name": "Nest Invader",
+        "oracle_id": "a7584a28-0829-4897-abf4-6be1a9232347",
+        "oracle_text": "When this creature enters, create a 0/1 colorless Eldrazi Spawn creature token. It has \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 0/1 colorless Eldrazi Spawn creature token. It has \"Sacrifice this token: Add {C}.\"",
+      "inactive_clauses": [],
+      "mode": "entry",
+      "token_mana": true
+    },
+    "Accomplished Automaton": {
+      "source": {
+        "name": "Accomplished Automaton",
+        "oracle_id": "f5af0d1b-531e-4053-848a-5e0fa1022f9a",
+        "oracle_text": "Fabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+        "mana_cost": "{7}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "5",
+        "toughness": "7",
+        "colors": [],
+        "keywords": [
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+      "inactive_clauses": [],
+      "mode": "fabricate"
+    },
+    "Ambitious Aetherborn": {
+      "source": {
+        "name": "Ambitious Aetherborn",
+        "oracle_id": "31f54f88-85a6-43f4-a6de-fb6ef5f0c38d",
+        "oracle_text": "Fabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Aetherborn Artificer",
+        "power": "4",
+        "toughness": "3",
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+      "inactive_clauses": [],
+      "mode": "fabricate"
+    },
+    "Elegant Edgecrafters": {
+      "source": {
+        "name": "Elegant Edgecrafters",
+        "oracle_id": "eeb3d282-97df-4df2-8bea-9432e21b6d62",
+        "oracle_text": "This creature can't be blocked by creatures with power 2 or less.\nFabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Elf Artificer",
+        "power": "3",
+        "toughness": "4",
+        "colors": [
+          "G"
+        ],
+        "keywords": [
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)",
+      "inactive_clauses": [
+        "This creature can't be blocked by creatures with power 2 or less."
+      ],
+      "mode": "fabricate"
+    },
+    "Glint-Sleeve Artisan": {
+      "source": {
+        "name": "Glint-Sleeve Artisan",
+        "oracle_id": "b5f35577-3d94-4835-bfca-3090cb0c63ff",
+        "oracle_text": "Fabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Dwarf Artificer",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "W"
+        ],
+        "keywords": [
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+      "inactive_clauses": [],
+      "mode": "fabricate"
+    },
+    "Highspire Artisan": {
+      "source": {
+        "name": "Highspire Artisan",
+        "oracle_id": "fc8c54c4-a436-43cc-888b-f4ba3e751c16",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nFabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Elf Artificer",
+        "power": "0",
+        "toughness": "3",
+        "colors": [
+          "G"
+        ],
+        "keywords": [
+          "Reach",
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+      "inactive_clauses": [],
+      "mode": "fabricate"
+    },
+    "Iron League Steed": {
+      "source": {
+        "name": "Iron League Steed",
+        "oracle_id": "bafeab74-918b-4fcd-8057-55922dbc1784",
+        "oracle_text": "Haste\nFabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "2",
+        "toughness": "2",
+        "colors": [],
+        "keywords": [
+          "Haste",
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+      "inactive_clauses": [],
+      "mode": "fabricate"
+    },
+    "Maulfist Squad": {
+      "source": {
+        "name": "Maulfist Squad",
+        "oracle_id": "2a8ec988-b513-4e66-b7f5-b2196b4bbff2",
+        "oracle_text": "Menace\nFabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Human Artificer",
+        "power": "3",
+        "toughness": "1",
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Menace",
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+      "inactive_clauses": [],
+      "mode": "fabricate"
+    },
+    "Peema Outrider": {
+      "source": {
+        "name": "Peema Outrider",
+        "oracle_id": "7747e94c-35a7-4e3b-956b-339a16634502",
+        "oracle_text": "Trample\nFabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Elf Artificer",
+        "power": "3",
+        "toughness": "3",
+        "colors": [
+          "G"
+        ],
+        "keywords": [
+          "Trample",
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+      "inactive_clauses": [],
+      "mode": "fabricate"
+    },
+    "Propeller Pioneer": {
+      "source": {
+        "name": "Propeller Pioneer",
+        "oracle_id": "d17a9750-a89f-4ad1-9c15-7ccffc554ee5",
+        "oracle_text": "Flying\nFabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Artificer",
+        "power": "2",
+        "toughness": "1",
+        "colors": [
+          "W"
+        ],
+        "keywords": [
+          "Flying",
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 1 (When this creature enters, put a +1/+1 counter on it or create a 1/1 colorless Servo artifact creature token.)",
+      "inactive_clauses": [],
+      "mode": "fabricate"
+    },
+    "Weaponcraft Enthusiast": {
+      "source": {
+        "name": "Weaponcraft Enthusiast",
+        "oracle_id": "7c27136a-bf9d-4f42-9c37-abe347fad1bb",
+        "oracle_text": "Fabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Aetherborn Artificer",
+        "power": "0",
+        "toughness": "1",
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)",
+      "inactive_clauses": [],
+      "mode": "fabricate"
+    },
+    "Knight-Captain of Eos": {
+      "source": {
+        "name": "Knight-Captain of Eos",
+        "oracle_id": "611f1714-a8bb-4ce4-a810-4d26fe64e358",
+        "oracle_text": "When this creature enters, create two 1/1 white Soldier creature tokens.\n{W}, Sacrifice a Soldier: Prevent all combat damage that would be dealt this turn.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create two 1/1 white Soldier creature tokens.",
+      "inactive_clauses": [
+        "{W}, Sacrifice a Soldier: Prevent all combat damage that would be dealt this turn."
+      ],
+      "mode": "entry"
+    },
+    "Myr Battlesphere": {
+      "source": {
+        "name": "Myr Battlesphere",
+        "oracle_id": "c53ba31a-ba27-4e17-9a92-311acb1cab29",
+        "oracle_text": "When this creature enters, create four 1/1 colorless Myr artifact creature tokens.\nWhenever this creature attacks, you may tap X untapped Myr you control. If you do, this creature gets +X/+0 until end of turn and deals X damage to the player or planeswalker it's attacking.",
+        "mana_cost": "{7}",
+        "type_line": "Artifact Creature — Myr Construct",
+        "power": "4",
+        "toughness": "7",
+        "colors": [],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create four 1/1 colorless Myr artifact creature tokens.",
+      "inactive_clauses": [
+        "Whenever this creature attacks, you may tap X untapped Myr you control. If you do, this creature gets +X/+0 until end of turn and deals X damage to the player or planeswalker it's attacking."
+      ],
+      "mode": "entry"
+    },
+    "Skeletal Vampire": {
+      "source": {
+        "name": "Skeletal Vampire",
+        "oracle_id": "7ed8a69b-fba0-4d4d-98b2-311a92373669",
+        "oracle_text": "Flying\nWhen this creature enters, create two 1/1 black Bat creature tokens with flying.\n{3}{B}{B}, Sacrifice a Bat: Create two 1/1 black Bat creature tokens with flying.\nSacrifice a Bat: Regenerate this creature.",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Creature — Vampire Skeleton",
+        "power": "3",
+        "toughness": "3",
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Flying",
+          "Regenerate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create two 1/1 black Bat creature tokens with flying.",
+      "inactive_clauses": [
+        "{3}{B}{B}, Sacrifice a Bat: Create two 1/1 black Bat creature tokens with flying.",
+        "Sacrifice a Bat: Regenerate this creature."
+      ],
+      "mode": "entry",
+      "inactive_keywords": [
+        "Regenerate"
+      ]
+    },
+    "Vital Splicer": {
+      "source": {
+        "name": "Vital Splicer",
+        "oracle_id": "e1899133-635d-46ff-b90d-6f8d46a1ffe1",
+        "oracle_text": "When this creature enters, create a 3/3 colorless Phyrexian Golem artifact creature token.\n{1}: Regenerate target Golem you control.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Phyrexian Human Artificer",
+        "power": "1",
+        "toughness": "1",
+        "colors": [
+          "G"
+        ],
+        "keywords": [
+          "Regenerate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 3/3 colorless Phyrexian Golem artifact creature token.",
+      "inactive_clauses": [
+        "{1}: Regenerate target Golem you control."
+      ],
+      "mode": "entry",
+      "inactive_keywords": [
+        "Regenerate"
+      ]
+    },
+    "Ghirapur Gearcrafter": {
+      "source": {
+        "name": "Ghirapur Gearcrafter",
+        "oracle_id": "710dc9b1-7d32-4330-95a8-3e91a668202a",
+        "oracle_text": "When this creature enters, create a 1/1 colorless Thopter artifact creature token with flying. (A creature with flying can't be blocked except by creatures with flying or reach.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Artificer",
+        "power": "2",
+        "toughness": "1",
+        "colors": [
+          "R"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 1/1 colorless Thopter artifact creature token with flying. (A creature with flying can't be blocked except by creatures with flying or reach.)",
+      "inactive_clauses": [],
+      "mode": "entry"
+    },
+    "Pia and Kiran Nalaar": {
+      "source": {
+        "name": "Pia and Kiran Nalaar",
+        "oracle_id": "86084ed9-b8bb-4289-9579-6056194787bc",
+        "oracle_text": "When Pia and Kiran Nalaar enters, create two 1/1 colorless Thopter artifact creature tokens with flying.\n{2}{R}, Sacrifice an artifact: Pia and Kiran Nalaar deals 2 damage to any target.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Legendary Creature — Human Artificer",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "R"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When Pia and Kiran Nalaar enters, create two 1/1 colorless Thopter artifact creature tokens with flying.",
+      "inactive_clauses": [
+        "{2}{R}, Sacrifice an artifact: Pia and Kiran Nalaar deals 2 damage to any target."
+      ],
+      "mode": "entry"
+    },
+    "Pia Nalaar": {
+      "source": {
+        "name": "Pia Nalaar",
+        "oracle_id": "715336f5-a708-488b-9f30-5702a9013af0",
+        "oracle_text": "When Pia Nalaar enters, create a 1/1 colorless Thopter artifact creature token with flying.\n{1}{R}: Target artifact creature gets +1/+0 until end of turn.\n{1}, Sacrifice an artifact: Target creature can't block this turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Legendary Creature — Human Artificer",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "R"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When Pia Nalaar enters, create a 1/1 colorless Thopter artifact creature token with flying.",
+      "inactive_clauses": [
+        "{1}{R}: Target artifact creature gets +1/+0 until end of turn.",
+        "{1}, Sacrifice an artifact: Target creature can't block this turn."
+      ],
+      "mode": "entry"
+    },
+    "Breya, Etherium Shaper": {
+      "source": {
+        "name": "Breya, Etherium Shaper",
+        "oracle_id": "d460a9e2-5a7d-4562-880e-45174be19a9d",
+        "oracle_text": "When Breya enters, create two 1/1 blue Thopter artifact creature tokens with flying.\n{2}, Sacrifice two artifacts: Choose one —\n• Breya deals 3 damage to target player or planeswalker.\n• Target creature gets -4/-4 until end of turn.\n• You gain 5 life.",
+        "mana_cost": "{W}{U}{B}{R}",
+        "type_line": "Legendary Artifact Creature — Human",
+        "power": "4",
+        "toughness": "4",
+        "colors": [
+          "B",
+          "R",
+          "U",
+          "W"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When Breya enters, create two 1/1 blue Thopter artifact creature tokens with flying.",
+      "inactive_clauses": [
+        "{2}, Sacrifice two artifacts: Choose one —",
+        "• Breya deals 3 damage to target player or planeswalker.",
+        "• Target creature gets -4/-4 until end of turn.",
+        "• You gain 5 life."
+      ],
+      "mode": "entry"
+    },
+    "Yavimaya Sapherd": {
+      "source": {
+        "name": "Yavimaya Sapherd",
+        "oracle_id": "42a1954f-774e-4d80-98b3-a736f23e2060",
+        "oracle_text": "When this creature enters, create a 1/1 green Saproling creature token.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Fungus",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 1/1 green Saproling creature token.",
+      "inactive_clauses": [],
+      "mode": "entry"
+    },
+    "Blisterpod": {
+      "source": {
+        "name": "Blisterpod",
+        "oracle_id": "2a62b226-d317-4212-9781-9c1d72056f11",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature dies, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "1",
+        "toughness": "1",
+        "colors": [],
+        "keywords": [
+          "Devoid"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature dies, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"",
+      "inactive_clauses": [],
+      "mode": "death",
+      "token_mana": true,
+      "devoid_clause": "Devoid (This card has no color.)"
+    },
+    "Brood Monitor": {
+      "source": {
+        "name": "Brood Monitor",
+        "oracle_id": "9a08bb4b-46df-4b99-8f86-670d07e900ba",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, create three 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "3",
+        "toughness": "3",
+        "colors": [],
+        "keywords": [
+          "Devoid"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create three 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+      "inactive_clauses": [],
+      "mode": "entry",
+      "token_mana": true,
+      "devoid_clause": "Devoid (This card has no color.)"
+    },
+    "Brood Butcher": {
+      "source": {
+        "name": "Brood Butcher",
+        "oracle_id": "a20edb8d-219d-4d0f-8346-0c31064eb49f",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"\n{B}{G}, Sacrifice a creature: Target creature gets -2/-2 until end of turn.",
+        "mana_cost": "{3}{B}{G}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "3",
+        "toughness": "3",
+        "colors": [],
+        "keywords": [
+          "Devoid"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"",
+      "inactive_clauses": [
+        "{B}{G}, Sacrifice a creature: Target creature gets -2/-2 until end of turn."
+      ],
+      "mode": "entry",
+      "token_mana": true,
+      "devoid_clause": "Devoid (This card has no color.)"
+    },
+    "Drowner of Hope": {
+      "source": {
+        "name": "Drowner of Hope",
+        "oracle_id": "2b3f2e85-5ea4-44d6-86e8-e8ce6d4f98c0",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, create two 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this token: Add {C}.\"\nSacrifice an Eldrazi Scion: Tap target creature.",
+        "mana_cost": "{5}{U}",
+        "type_line": "Creature — Eldrazi",
+        "power": "5",
+        "toughness": "5",
+        "colors": [],
+        "keywords": [
+          "Devoid"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create two 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+      "inactive_clauses": [
+        "Sacrifice an Eldrazi Scion: Tap target creature."
+      ],
+      "mode": "entry",
+      "token_mana": true,
+      "devoid_clause": "Devoid (This card has no color.)"
+    },
+    "Eldrazi Skyspawner": {
+      "source": {
+        "name": "Eldrazi Skyspawner",
+        "oracle_id": "b5661289-a03c-40fc-a1e4-f602adb56f81",
+        "oracle_text": "Devoid (This card has no color.)\nFlying\nWhen this creature enters, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "1",
+        "colors": [],
+        "keywords": [
+          "Flying",
+          "Devoid"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"",
+      "inactive_clauses": [],
+      "mode": "entry",
+      "token_mana": true,
+      "devoid_clause": "Devoid (This card has no color.)"
+    },
+    "Eyeless Watcher": {
+      "source": {
+        "name": "Eyeless Watcher",
+        "oracle_id": "ba047b0b-d451-4566-8656-00b00611de8c",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, create two 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "1",
+        "toughness": "1",
+        "colors": [],
+        "keywords": [
+          "Devoid"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create two 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+      "inactive_clauses": [],
+      "mode": "entry",
+      "token_mana": true,
+      "devoid_clause": "Devoid (This card has no color.)"
+    },
+    "Incubator Drone": {
+      "source": {
+        "name": "Incubator Drone",
+        "oracle_id": "088d63ec-bd5e-4e80-acf9-2af270a9b395",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "3",
+        "colors": [],
+        "keywords": [
+          "Devoid"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"",
+      "inactive_clauses": [],
+      "mode": "entry",
+      "token_mana": true,
+      "devoid_clause": "Devoid (This card has no color.)"
+    },
+    "Birthing Hulk": {
+      "source": {
+        "name": "Birthing Hulk",
+        "oracle_id": "33899675-0de2-4adb-bf3f-55e18b493015",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, create two 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this token: Add {C}.\" ({C} represents colorless mana.)\n{1}{C}: Regenerate this creature.",
+        "mana_cost": "{6}{G}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "5",
+        "toughness": "4",
+        "colors": [],
+        "keywords": [
+          "Devoid",
+          "Regenerate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create two 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this token: Add {C}.\" ({C} represents colorless mana.)",
+      "inactive_clauses": [
+        "{1}{C}: Regenerate this creature."
+      ],
+      "mode": "entry",
+      "token_mana": true,
+      "devoid_clause": "Devoid (This card has no color.)",
+      "inactive_keywords": [
+        "Regenerate"
+      ]
+    },
+    "Scion Summoner": {
+      "source": {
+        "name": "Scion Summoner",
+        "oracle_id": "fa60f3a6-5834-4059-adea-dd17366b7885",
+        "oracle_text": "Devoid (This card has no color.)\nWhen this creature enters, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\" ({C} represents colorless mana.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "2",
+        "colors": [],
+        "keywords": [
+          "Devoid"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\" ({C} represents colorless mana.)",
+      "inactive_clauses": [],
+      "mode": "entry",
+      "token_mana": true,
+      "devoid_clause": "Devoid (This card has no color.)"
+    },
+    "Kozilek's Predator": {
+      "source": {
+        "name": "Kozilek's Predator",
+        "oracle_id": "452ef7d0-1351-40e6-9379-59cd8bb31da5",
+        "oracle_text": "When this creature enters, create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "3",
+        "toughness": "3",
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+      "inactive_clauses": [],
+      "mode": "entry",
+      "token_mana": true
+    },
+    "Dread Drone": {
+      "source": {
+        "name": "Dread Drone",
+        "oracle_id": "b6821131-9ae1-4a3c-8235-90deae33c05f",
+        "oracle_text": "When this creature enters, create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "4",
+        "toughness": "1",
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+      "inactive_clauses": [],
+      "mode": "entry",
+      "token_mana": true
+    },
+    "Wing Splicer": {
+      "profile": "grant_component",
+      "source": {
+        "name": "Wing Splicer",
+        "oracle_id": "7fbf6afc-8a16-447b-bdef-b7d0b640f76c",
+        "oracle_text": "When this creature enters, create a 3/3 colorless Phyrexian Golem artifact creature token.\nGolem creatures you control have flying.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Phyrexian Human Artificer",
+        "power": "1",
+        "toughness": "1",
+        "colors": [
+          "U"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 3/3 colorless Phyrexian Golem artifact creature token.",
+      "active_static_clause": "Golem creatures you control have flying.",
+      "inactive_clauses": [],
+      "mode": "entry"
+    },
+    "Blade Splicer": {
+      "profile": "grant_component",
+      "source": {
+        "name": "Blade Splicer",
+        "oracle_id": "194166ad-0179-42a3-86b9-ba7f322ec576",
+        "oracle_text": "When this creature enters, create a 3/3 colorless Phyrexian Golem artifact creature token.\nGolems you control have first strike.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Phyrexian Human Artificer",
+        "power": "1",
+        "toughness": "1",
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 3/3 colorless Phyrexian Golem artifact creature token.",
+      "active_static_clause": "Golems you control have first strike.",
+      "inactive_clauses": [],
+      "mode": "entry"
+    },
+    "Maul Splicer": {
+      "profile": "grant_component",
+      "source": {
+        "name": "Maul Splicer",
+        "oracle_id": "b0d0c534-8bd2-4801-aadd-dcc9c92d6ec3",
+        "oracle_text": "When this creature enters, create two 3/3 colorless Phyrexian Golem artifact creature tokens.\nGolem creatures you control have trample.",
+        "mana_cost": "{6}{G}",
+        "type_line": "Creature — Phyrexian Human Artificer",
+        "power": "1",
+        "toughness": "1",
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create two 3/3 colorless Phyrexian Golem artifact creature tokens.",
+      "active_static_clause": "Golem creatures you control have trample.",
+      "inactive_clauses": [],
+      "mode": "entry"
+    },
+    "Sensor Splicer": {
+      "profile": "grant_component",
+      "source": {
+        "name": "Sensor Splicer",
+        "oracle_id": "9676da93-1e17-4f6c-b610-a242b78c71ab",
+        "oracle_text": "When this creature enters, create a 3/3 colorless Phyrexian Golem artifact creature token.\nGolem creatures you control have vigilance.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Phyrexian Artificer",
+        "power": "1",
+        "toughness": "1",
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 3/3 colorless Phyrexian Golem artifact creature token.",
+      "active_static_clause": "Golem creatures you control have vigilance.",
+      "inactive_clauses": [],
+      "mode": "entry"
+    },
+    "Thopter Engineer": {
+      "profile": "grant_component",
+      "source": {
+        "name": "Thopter Engineer",
+        "oracle_id": "4ac53b34-20d2-4a53-bade-4f998fb6ae67",
+        "oracle_text": "When this creature enters, create a 1/1 colorless Thopter artifact creature token with flying.\nArtifact creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Artificer",
+        "power": "1",
+        "toughness": "3",
+        "colors": [
+          "R"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create a 1/1 colorless Thopter artifact creature token with flying.",
+      "active_static_clause": "Artifact creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+      "inactive_clauses": [],
+      "mode": "entry"
+    },
+    "Angel of Invention": {
+      "profile": "grant_component",
+      "source": {
+        "name": "Angel of Invention",
+        "oracle_id": "28c7f2b6-ba67-4ccf-9e1b-99c89a9d1f72",
+        "oracle_text": "Flying, vigilance, lifelink\nFabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)\nOther creatures you control get +1/+1.",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "2",
+        "toughness": "1",
+        "colors": [
+          "W"
+        ],
+        "keywords": [
+          "Flying",
+          "Lifelink",
+          "Vigilance",
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 2 (When this creature enters, put two +1/+1 counters on it or create two 1/1 colorless Servo artifact creature tokens.)",
+      "active_static_clause": "Other creatures you control get +1/+1.",
+      "inactive_clauses": [],
+      "mode": "fabricate"
+    },
+    "Captain of the Watch": {
+      "profile": "grant_component",
+      "source": {
+        "name": "Captain of the Watch",
+        "oracle_id": "9f2af06d-8fb7-4276-bb92-3559a6d1fa18",
+        "oracle_text": "Vigilance (Attacking doesn't cause this creature to tap.)\nOther Soldier creatures you control get +1/+1 and have vigilance.\nWhen this creature enters, create three 1/1 white Soldier creature tokens.",
+        "mana_cost": "{4}{W}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "3",
+        "toughness": "3",
+        "colors": [
+          "W"
+        ],
+        "keywords": [
+          "Vigilance"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create three 1/1 white Soldier creature tokens.",
+      "mode": "entry",
+      "inactive_clauses": [],
+      "active_static_clause": "Other Soldier creatures you control get +1/+1 and have vigilance."
+    },
+    "Deranged Hermit": {
+      "profile": "grant_component",
+      "source": {
+        "name": "Deranged Hermit",
+        "oracle_id": "b9cd714b-2ad8-4fdb-a8aa-82b17730e071",
+        "oracle_text": "Echo {3}{G}{G} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, create four 1/1 green Squirrel creature tokens.\nSquirrel creatures get +1/+1.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Elf",
+        "power": "1",
+        "toughness": "1",
+        "colors": [
+          "G"
+        ],
+        "keywords": [
+          "Echo"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create four 1/1 green Squirrel creature tokens.",
+      "mode": "entry",
+      "inactive_clauses": [
+        "Echo {3}{G}{G} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)"
+      ],
+      "active_static_clause": "Squirrel creatures get +1/+1.",
+      "inactive_keywords": [
+        "Echo"
+      ]
+    },
+    "Ancient Stone Idol": {
+      "profile": "entry_component",
+      "source": {
+        "name": "Ancient Stone Idol",
+        "oracle_id": "5f981cca-5cd9-49e4-ab1a-bbbf6fc7e737",
+        "oracle_text": "Flash\nThis spell costs {1} less to cast for each attacking creature.\nTrample\nWhen this creature dies, create a 6/12 colorless Construct artifact creature token with trample.",
+        "mana_cost": "{10}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "12",
+        "toughness": "12",
+        "colors": [],
+        "keywords": [
+          "Trample",
+          "Flash"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature dies, create a 6/12 colorless Construct artifact creature token with trample.",
+      "mode": "death",
+      "inactive_clauses": [
+        "This spell costs {1} less to cast for each attacking creature."
+      ]
+    },
+    "Maverick Thopterist": {
+      "profile": "entry_component",
+      "source": {
+        "name": "Maverick Thopterist",
+        "oracle_id": "71ba6f1b-2fa6-4d4c-8778-f0765b1a5d8e",
+        "oracle_text": "Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}.)\nWhen this creature enters, create two 1/1 colorless Thopter artifact creature tokens with flying.",
+        "mana_cost": "{3}{U}{R}",
+        "type_line": "Creature — Human Artificer",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "R",
+          "U"
+        ],
+        "keywords": [
+          "Improvise"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters, create two 1/1 colorless Thopter artifact creature tokens with flying.",
+      "mode": "entry",
+      "inactive_clauses": [
+        "Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}.)"
+      ],
+      "inactive_keywords": [
+        "Improvise"
+      ]
+    },
+    "Goblin Marshal": {
+      "profile": "event_component",
+      "source": {
+        "name": "Goblin Marshal",
+        "oracle_id": "4bc91d7d-37aa-475c-8fe9-763975d51add",
+        "oracle_text": "Echo {4}{R}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters or dies, create two 1/1 red Goblin creature tokens.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "3",
+        "toughness": "3",
+        "colors": [
+          "R"
+        ],
+        "keywords": [
+          "Echo"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters or dies, create two 1/1 red Goblin creature tokens.",
+      "mode": "entry_death",
+      "inactive_clauses": [
+        "Echo {4}{R}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)"
+      ],
+      "inactive_keywords": [
+        "Echo"
+      ]
+    },
+    "Mogg War Marshal": {
+      "profile": "event_component",
+      "source": {
+        "name": "Mogg War Marshal",
+        "oracle_id": "7b8f4879-578e-40e4-863a-41d0c32c6bdd",
+        "oracle_text": "Echo {1}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters or dies, create a 1/1 red Goblin creature token.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "1",
+        "toughness": "1",
+        "colors": [
+          "R"
+        ],
+        "keywords": [
+          "Echo"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "When this creature enters or dies, create a 1/1 red Goblin creature token.",
+      "mode": "entry_death",
+      "inactive_clauses": [
+        "Echo {1}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)"
+      ],
+      "inactive_keywords": [
+        "Echo"
+      ]
+    },
+    "Jund Battlemage": {
+      "profile": "event_component",
+      "source": {
+        "name": "Jund Battlemage",
+        "oracle_id": "d2567448-f8a5-4bf3-9804-f5aac3b645ce",
+        "oracle_text": "{B}, {T}: Target player loses 1 life.\n{G}, {T}: Create a 1/1 green Saproling creature token.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Shaman",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "R"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "{G}, {T}: Create a 1/1 green Saproling creature token.",
+      "mode": "activation",
+      "inactive_clauses": [
+        "{B}, {T}: Target player loses 1 life."
+      ],
+      "activation_menu": 1
+    },
+    "Nemata, Grove Guardian": {
+      "profile": "event_component",
+      "source": {
+        "name": "Nemata, Grove Guardian",
+        "oracle_id": "5ce58279-7f1e-4ef7-a352-ecbaee31b6ff",
+        "oracle_text": "{2}{G}: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: Saproling creatures get +1/+1 until end of turn.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Legendary Creature — Treefolk",
+        "power": "4",
+        "toughness": "5",
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "entry_clause": "{2}{G}: Create a 1/1 green Saproling creature token.",
+      "mode": "activation",
+      "inactive_clauses": [
+        "Sacrifice a Saproling: Saproling creatures get +1/+1 until end of turn."
+      ],
+      "activation_menu": 0
+    },
+    "Spawnsire of Ulamog": {
+      "profile": "event_component",
+      "source": {
+        "name": "Spawnsire of Ulamog",
+        "oracle_id": "b90d2f4d-b4ea-40af-aea0-1ab4234ab80f",
+        "oracle_text": "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent of their choice.)\n{4}: Create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this token: Add {C}.\"\n{20}: Cast any number of Eldrazi spells from among cards you own outside the game without paying their mana costs.",
+        "mana_cost": "{10}",
+        "type_line": "Creature — Eldrazi",
+        "power": "7",
+        "toughness": "11",
+        "colors": [],
+        "keywords": [
+          "Annihilator"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "{4}: Create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+      "mode": "activation",
+      "inactive_clauses": [
+        "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent of their choice.)",
+        "{20}: Cast any number of Eldrazi spells from among cards you own outside the game without paying their mana costs."
+      ],
+      "inactive_keywords": [
+        "Annihilator"
+      ],
+      "token_mana": true,
+      "activation_menu": 0
+    },
+    "Marionette Master": {
+      "profile": "followup_component",
+      "source": {
+        "name": "Marionette Master",
+        "oracle_id": "dabbf796-3b88-499e-8839-06fa36fe01ac",
+        "oracle_text": "Fabricate 3 (When this creature enters, put three +1/+1 counters on it or create three 1/1 colorless Servo artifact creature tokens.)\nWhenever an artifact you control is put into a graveyard from the battlefield, target opponent loses life equal to this creature's power.",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Creature — Human Artificer",
+        "power": "1",
+        "toughness": "3",
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Fabricate"
+        ],
+        "layout": "normal"
+      },
+      "entry_clause": "Fabricate 3 (When this creature enters, put three +1/+1 counters on it or create three 1/1 colorless Servo artifact creature tokens.)",
+      "mode": "fabricate",
+      "followup_clause": "Whenever an artifact you control is put into a graveyard from the battlefield, target opponent loses life equal to this creature's power.",
+      "inactive_clauses": []
+    },
+    "Lich Lord of Unx": {
+      "profile": "event_component",
+      "source": {
+        "name": "Lich Lord of Unx",
+        "oracle_id": "6643fc8e-548e-48db-9f67-ffbca9e57016",
+        "oracle_text": "{U}{B}, {T}: Create a 1/1 blue and black Zombie Wizard creature token.\n{U}{U}{B}{B}: Target player loses X life and mills X cards, where X is the number of Zombies you control.",
+        "mana_cost": "{1}{U}{B}",
+        "type_line": "Creature — Zombie Wizard",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "B",
+          "U"
+        ],
+        "keywords": [
+          "Mill"
+        ],
+        "layout": "normal"
+      },
+      "mode": "activation",
+      "entry_clause": "{U}{B}, {T}: Create a 1/1 blue and black Zombie Wizard creature token.",
+      "inactive_clauses": [
+        "{U}{U}{B}{B}: Target player loses X life and mills X cards, where X is the number of Zombies you control."
+      ],
+      "activation_menu": 0,
+      "menu_other_cost": [
+        0,
+        2,
+        2,
+        0,
+        0,
+        0
+      ],
+      "inactive_keywords": [
+        "Mill"
+      ]
+    },
+    "Sunhome Guildmage": {
+      "profile": "event_component",
+      "source": {
+        "name": "Sunhome Guildmage",
+        "oracle_id": "f211d21f-7d78-4435-a592-a6896023af3b",
+        "oracle_text": "{1}{R}{W}: Creatures you control get +1/+0 until end of turn.\n{2}{R}{W}: Create a 1/1 red and white Soldier creature token with haste.",
+        "mana_cost": "{R}{W}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "R",
+          "W"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "mode": "activation",
+      "entry_clause": "{2}{R}{W}: Create a 1/1 red and white Soldier creature token with haste.",
+      "inactive_clauses": [
+        "{1}{R}{W}: Creatures you control get +1/+0 until end of turn."
+      ],
+      "activation_menu": 1
+    },
+    "Vitu-Ghazi Guildmage": {
+      "profile": "event_component",
+      "source": {
+        "name": "Vitu-Ghazi Guildmage",
+        "oracle_id": "da6f79ec-5f7e-4099-89c5-6d2bfc14d957",
+        "oracle_text": "{4}{G}{W}: Create a 3/3 green Centaur creature token.\n{2}{G}{W}: Populate. (Create a token that's a copy of a creature token you control.)",
+        "mana_cost": "{G}{W}",
+        "type_line": "Creature — Dryad Shaman",
+        "power": "2",
+        "toughness": "2",
+        "colors": [
+          "G",
+          "W"
+        ],
+        "keywords": [
+          "Populate"
+        ],
+        "layout": "normal"
+      },
+      "mode": "activation",
+      "entry_clause": "{4}{G}{W}: Create a 3/3 green Centaur creature token.",
+      "inactive_clauses": [
+        "{2}{G}{W}: Populate. (Create a token that's a copy of a creature token you control.)"
+      ],
+      "activation_menu": 0,
+      "inactive_keywords": [
+        "Populate"
+      ]
+    },
+    "Oviya Pashiri, Sage Lifecrafter": {
+      "profile": "event_component",
+      "source": {
+        "name": "Oviya Pashiri, Sage Lifecrafter",
+        "oracle_id": "41e03224-bcdd-4127-a19a-fe66196339b9",
+        "oracle_text": "{2}{G}, {T}: Create a 1/1 colorless Servo artifact creature token.\n{4}{G}, {T}: Create an X/X colorless Construct artifact creature token, where X is the number of creatures you control.",
+        "mana_cost": "{G}",
+        "type_line": "Legendary Creature — Human Artificer",
+        "power": "1",
+        "toughness": "2",
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "mode": "activation",
+      "entry_clause": "{2}{G}, {T}: Create a 1/1 colorless Servo artifact creature token.",
+      "inactive_clauses": [
+        "{4}{G}, {T}: Create an X/X colorless Construct artifact creature token, where X is the number of creatures you control."
+      ],
+      "activation_menu": 0
+    },
+    "Sporemound": {
+      "profile": "event_component",
+      "source": {
+        "name": "Sporemound",
+        "oracle_id": "1be56a3d-a6c0-4b65-ae71-3d90ceefc6c0",
+        "oracle_text": "Landfall — Whenever a land you control enters, create a 1/1 green Saproling creature token.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Fungus",
+        "power": "3",
+        "toughness": "3",
+        "colors": [
+          "G"
+        ],
+        "keywords": [
+          "Landfall"
+        ],
+        "layout": "normal"
+      },
+      "mode": "landfall",
+      "entry_clause": "Landfall — Whenever a land you control enters, create a 1/1 green Saproling creature token.",
+      "inactive_clauses": []
+    },
+    "Emeria Angel": {
+      "profile": "event_component",
+      "source": {
+        "name": "Emeria Angel",
+        "oracle_id": "ea6616e4-db8d-4905-80f8-cb0162906850",
+        "oracle_text": "Flying\nLandfall — Whenever a land you control enters, you may create a 1/1 white Bird creature token with flying.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "3",
+        "toughness": "3",
+        "colors": [
+          "W"
+        ],
+        "keywords": [
+          "Landfall",
+          "Flying"
+        ],
+        "layout": "normal"
+      },
+      "mode": "landfall",
+      "entry_clause": "Landfall — Whenever a land you control enters, you may create a 1/1 white Bird creature token with flying.",
+      "inactive_clauses": []
+    },
+    "Rampaging Baloths": {
+      "profile": "event_component",
+      "source": {
+        "name": "Rampaging Baloths",
+        "oracle_id": "2d3e6549-6cc6-434f-a189-ba3b55e64c34",
+        "oracle_text": "Trample\nLandfall — Whenever a land you control enters, create a 4/4 green Beast creature token.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "6",
+        "toughness": "6",
+        "colors": [
+          "G"
+        ],
+        "keywords": [
+          "Trample",
+          "Landfall"
+        ],
+        "layout": "normal"
+      },
+      "mode": "landfall",
+      "entry_clause": "Landfall — Whenever a land you control enters, create a 4/4 green Beast creature token.",
+      "inactive_clauses": [],
+      "functional_trigger_priority": true
+    },
+    "Trostani Discordant": {
+      "profile": "grant_component",
+      "source": {
+        "name": "Trostani Discordant",
+        "oracle_id": "9a2fdc0e-e0de-47fc-95e4-04e725ddf060",
+        "oracle_text": "Other creatures you control get +1/+1.\nWhen Trostani enters, create two 1/1 white Soldier creature tokens with lifelink.\nAt the beginning of your end step, each player gains control of all creatures they own.",
+        "mana_cost": "{3}{G}{W}",
+        "type_line": "Legendary Creature — Dryad",
+        "power": "1",
+        "toughness": "4",
+        "colors": [
+          "G",
+          "W"
+        ],
+        "keywords": [],
+        "layout": "normal"
+      },
+      "mode": "entry",
+      "entry_clause": "When Trostani enters, create two 1/1 white Soldier creature tokens with lifelink.",
+      "active_static_clause": "Other creatures you control get +1/+1.",
+      "owner_return_clause": "At the beginning of your end step, each player gains control of all creatures they own.",
+      "inactive_clauses": []
+    }
+  },
+  "variable_profiles": {
+    "Avenger of Zendikar": {
+      "basis": "controlled_lands",
+      "event": "entry",
+      "token": {
+        "name": "Plant",
+        "power": 0,
+        "toughness": 1,
+        "colors": [
+          "G"
+        ],
+        "subtypes": [
+          "Plant"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "source_keywords": [],
+      "mandatory_followups": [
+        {
+          "kind": "landfall_counter_all_controlled_plants",
+          "amount": 1,
+          "optional": true
+        }
+      ],
+      "inactive_clauses": [],
+      "source": {
+        "oracle_id": "4ba5b3f6-503b-43e6-b66e-4f8c55cffed7",
+        "name": "Avenger of Zendikar",
+        "oracle_text": "When this creature enters, create a 0/1 green Plant creature token for each land you control.\nLandfall — Whenever a land you control enters, you may put a +1/+1 counter on each Plant creature you control.",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecc/98/avenger-of-zendikar?utm_source=api"
+      },
+      "csvid": 10726,
+      "profile": "variable_amount"
+    },
+    "Evangel of Heliod": {
+      "basis": "devotion_white",
+      "event": "entry",
+      "token": {
+        "name": "Soldier",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "W"
+        ],
+        "subtypes": [
+          "Soldier"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "source_keywords": [],
+      "mandatory_followups": [],
+      "inactive_clauses": [],
+      "source": {
+        "oracle_id": "4fbe1c02-f5bf-47c7-80de-09a32d01e5db",
+        "name": "Evangel of Heliod",
+        "oracle_text": "When this creature enters, create a number of 1/1 white Soldier creature tokens equal to your devotion to white. (Each {W} in the mana costs of permanents you control counts toward your devotion to white.)",
+        "mana_cost": "{4}{W}{W}",
+        "type_line": "Creature — Human Cleric",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khc/23/evangel-of-heliod?utm_source=api"
+      },
+      "csvid": 13434,
+      "profile": "variable_amount"
+    },
+    "Caller of the Claw": {
+      "basis": "own_grave_nontoken_deaths_this_turn",
+      "event": "entry",
+      "token": {
+        "name": "Bear",
+        "power": 2,
+        "toughness": 2,
+        "colors": [
+          "G"
+        ],
+        "subtypes": [
+          "Bear"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "source_keywords": [
+        "Flash"
+      ],
+      "mandatory_followups": [],
+      "inactive_clauses": [],
+      "source": {
+        "oracle_id": "ec79255f-4b4d-4a0a-89d8-c59ba640275b",
+        "name": "Caller of the Claw",
+        "oracle_text": "Flash\nWhen this creature enters, create a 2/2 green Bear creature token for each nontoken creature put into your graveyard from the battlefield this turn.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Elf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c15/177/caller-of-the-claw?utm_source=api"
+      },
+      "csvid": 6346,
+      "profile": "variable_amount"
+    },
+    "Hallowed Spiritkeeper": {
+      "basis": "creature_cards_in_own_graveyard",
+      "event": "death",
+      "token": {
+        "name": "Spirit",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "W"
+        ],
+        "subtypes": [
+          "Spirit"
+        ],
+        "artifact": false,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "source_keywords": [
+        "Vigilance"
+      ],
+      "mandatory_followups": [],
+      "inactive_clauses": [],
+      "source": {
+        "oracle_id": "5852ed2f-4332-4c30-b145-373deea471d9",
+        "name": "Hallowed Spiritkeeper",
+        "oracle_text": "Vigilance\nWhen this creature dies, create X 1/1 white Spirit creature tokens with flying, where X is the number of creature cards in your graveyard.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Avatar",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Vigilance"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/voc/88/hallowed-spiritkeeper?utm_source=api"
+      },
+      "csvid": 14465,
+      "profile": "variable_amount"
+    },
+    "Izoni, Thousand-Eyed": {
+      "basis": "creature_cards_in_own_graveyard",
+      "event": "entry",
+      "token": {
+        "name": "Insect",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "B",
+          "G"
+        ],
+        "subtypes": [
+          "Insect"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "source_keywords": [],
+      "mandatory_followups": [],
+      "inactive_clauses": [
+        "{B}{G}, Sacrifice another creature: You gain 1 life and draw a card."
+      ],
+      "source": {
+        "oracle_id": "5a210b32-6e1f-4578-bd8b-4e481b761159",
+        "name": "Izoni, Thousand-Eyed",
+        "oracle_text": "Undergrowth — When Izoni enters, create a 1/1 black and green Insect creature token for each creature card in your graveyard.\n{B}{G}, Sacrifice another creature: You gain 1 life and draw a card.",
+        "mana_cost": "{2}{B}{B}{G}{G}",
+        "type_line": "Legendary Creature — Elf Shaman",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Undergrowth"
+        ],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/grn/180/izoni-thousand-eyed?utm_source=api"
+      },
+      "csvid": 19408,
+      "profile": "variable_amount"
+    }
+  },
+  "variable_witnesses": {
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Ashcoat Bear": {
+      "oracle_id": "e6d13c0d-23ed-41f5-a726-f18d4bb44c9a",
+      "name": "Ashcoat Bear",
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flash"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tsp/190/ashcoat-bear?utm_source=api"
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+    },
+    "Benevolent Bodyguard": {
+      "oracle_id": "c8c38570-0b42-4bfc-896f-f57f9a11ba9d",
+      "name": "Benevolent Bodyguard",
+      "oracle_text": "Sacrifice this creature: Target creature you control gains protection from the color of your choice until end of turn.",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Cleric",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ema/4/benevolent-bodyguard?utm_source=api"
+    },
+    "Walking Atlas": {
+      "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+      "name": "Walking Atlas",
+      "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact Creature — Construct",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+    },
+    "Tormod's Crypt": {
+      "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+      "name": "Tormod's Crypt",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/235/tormods-crypt?utm_source=api"
+    },
+    "Khalni Garden": {
+      "oracle_id": "b2d5ba45-8674-4428-89db-c2bbbf0bf5c5",
+      "name": "Khalni Garden",
+      "oracle_text": "This land enters tapped.\nWhen this land enters, create a 0/1 green Plant creature token.\n{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Land",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/c18/262/khalni-garden?utm_source=api"
+    },
+    "Raise the Alarm": {
+      "oracle_id": "5b2364d7-a811-4595-a1b4-224c70555ffa",
+      "name": "Raise the Alarm",
+      "oracle_text": "Create two 1/1 white Soldier creature tokens.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmr/41/raise-the-alarm?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Wrath of God": {
+      "oracle_id": "34515b16-c9a4-4f98-8c77-416a7a523407",
+      "name": "Wrath of God",
+      "oracle_text": "Destroy all creatures. They can't be regenerated.",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/70/wrath-of-god?utm_source=api"
+    },
+    "Bone Saw": {
+      "oracle_id": "16e555f2-5aa8-4100-a036-eed48db0e84a",
+      "name": "Bone Saw",
+      "oracle_text": "Equipped creature gets +1/+0.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact — Equipment",
+      "keywords": [
+        "Equip"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ogw/161/bone-saw?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Lantern Kami": {
+      "oracle_id": "bddb6b9b-5120-48d2-a57f-eb5d46d38cec",
+      "name": "Lantern Kami",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Spirit",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/chk/32/lantern-kami?utm_source=api"
+    },
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    },
+    "Revoke Existence": {
+      "oracle_id": "289e1a7c-b301-4395-baf8-e9a1c6d38aab",
+      "name": "Revoke Existence",
+      "oracle_text": "Exile target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/2xm/28/revoke-existence?utm_source=api"
+    },
+    "Elvish Mystic": {
+      "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+      "name": "Elvish Mystic",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "name": "Twiddle",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+    },
+    "Disenchant": {
+      "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+      "name": "Disenchant",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+    },
+    "Walking Corpse": {
+      "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+      "name": "Walking Corpse",
+      "oracle_text": "",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m21/128/walking-corpse?utm_source=api"
+    },
+    "Infantry Veteran": {
+      "oracle_id": "42798e2b-9a5c-4f93-8f77-b7bb7a916d07",
+      "name": "Infantry Veteran",
+      "oracle_text": "{T}: Target attacking creature gets +1/+1 until end of turn.",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ima/24/infantry-veteran?utm_source=api"
+    },
+    "Crown of Empires": {
+      "oracle_id": "b1298ce8-b318-4d5b-83f2-e274726dfca5",
+      "name": "Crown of Empires",
+      "oracle_text": "{3}, {T}: Tap target creature. Gain control of that creature instead if you control artifacts named Scepter of Empires and Throne of Empires.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m12/203/crown-of-empires?utm_source=api"
+    },
+    "Scepter of Empires": {
+      "oracle_id": "377d9245-9a70-4e35-9ed1-308565fc1acc",
+      "name": "Scepter of Empires",
+      "oracle_text": "{T}: This artifact deals 1 damage to target player or planeswalker. It deals 3 damage instead if you control artifacts named Crown of Empires and Throne of Empires.",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m12/216/scepter-of-empires?utm_source=api"
+    }
+  },
+  "variable_registry_identity": {
+    "Ashcoat Bear": {
+      "csvid": 1663
+    },
+    "Avenger of Zendikar": {
+      "csvid": 10726
+    },
+    "Bear": {
+      "csvid": 18694
+    },
+    "Benevolent Bodyguard": {
+      "csvid": 5912
+    },
+    "Bone Saw": {
+      "csvid": 10117
+    },
+    "Caller of the Claw": {
+      "csvid": 6346
+    },
+    "Counterspell": {
+      "csvid": 48
+    },
+    "Evangel of Heliod": {
+      "csvid": 13434
+    },
+    "Forest": {
+      "csvid": 91
+    },
+    "Giant Growth": {
+      "csvid": 97
+    },
+    "Grizzly Bears": {
+      "csvid": 106
+    },
+    "Hallowed Spiritkeeper": {
+      "csvid": 14465
+    },
+    "Insect": {
+      "csvid": 18770
+    },
+    "Island": {
+      "csvid": 126
+    },
+    "Izoni, Thousand-Eyed": {
+      "csvid": 19408
+    },
+    "Khalni Garden": {
+      "csvid": 10787
+    },
+    "Mountain": {
+      "csvid": 164
+    },
+    "Murder": {
+      "csvid": 12594
+    },
+    "Plains": {
+      "csvid": 188
+    },
+    "Plant": {
+      "csvid": 18803
+    },
+    "Raise the Alarm": {
+      "csvid": 1450
+    },
+    "Soldier": {
+      "csvid": 18822
+    },
+    "Spirit": {
+      "csvid": 18829
+    },
+    "Suntail Hawk": {
+      "csvid": 1195
+    },
+    "Swords to Plowshares": {
+      "csvid": 240
+    },
+    "Tormod's Crypt": {
+      "csvid": 368
+    },
+    "Unsummon": {
+      "csvid": 260
+    },
+    "Walking Atlas": {
+      "csvid": 10860
+    },
+    "Wrath of God": {
+      "csvid": 290
+    },
+    "Spider Spawning": {
+      "csvid": 12084
+    },
+    "Spider": {
+      "csvid": 18827
+    },
+    "Rise from the Tides": {
+      "csvid": 15933
+    },
+    "Zombie": {
+      "csvid": 18860
+    },
+    "Saproling Symbiosis": {
+      "csvid": 5104
+    },
+    "Saproling": {
+      "csvid": 18813
+    },
+    "Centaur Glade": {
+      "csvid": 1490
+    },
+    "Centaur": {
+      "csvid": 18708
+    },
+    "Dragon Roost": {
+      "csvid": 1492
+    },
+    "Dragon": {
+      "csvid": 18719
+    },
+    "Whirlermaker": {
+      "csvid": 16575
+    },
+    "Thopter": {
+      "csvid": 18837
+    },
+    "Rotlung Reanimator": {
+      "csvid": 6243
+    },
+    "Eldrazi Spawn": {
+      "csvid": 18725
+    },
+    "Field of Souls": {
+      "csvid": 3143
+    },
+    "Sifter of Skulls": {
+      "csvid": 15679
+    },
+    "Pawn of Ulamog": {
+      "csvid": 11014
+    },
+    "Golgari Germination": {
+      "csvid": 7861
+    },
+    "Eldrazi Scion": {
+      "csvid": 18724
+    },
+    "Revoke Existence": {
+      "csvid": 11347
+    },
+    "Elf Warrior": {
+      "csvid": 18732
+    },
+    "Requiem Angel": {
+      "csvid": 12248
+    },
+    "Open the Graves": {
+      "csvid": 18975
+    },
+    "Boomerang": {
+      "csvid": 585
+    },
+    "Lantern Kami": {
+      "csvid": 7294
+    },
+    "Prowess of the Fair": {
+      "csvid": 9240
+    },
+    "Elvish Mystic": {
+      "csvid": 13284
+    },
+    "Forlorn Pseudamma": {
+      "csvid": 13718
+    },
+    "Walking Corpse": {
+      "csvid": 12124
+    },
+    "Satyr Nyx-Smith": {
+      "csvid": 13795
+    },
+    "Bird": {
+      "csvid": 18696
+    },
+    "Aerie Worshippers": {
+      "csvid": 13657
+    },
+    "Pheres-Band Raiders": {
+      "csvid": 13782
+    },
+    "Disenchant": {
+      "csvid": 64
+    },
+    "Swamp": {
+      "csvid": 239
+    },
+    "Twiddle": {
+      "csvid": 256
+    },
+    "God-Favored General": {
+      "csvid": 13724
+    },
+    "Elemental": {
+      "csvid": 18726
+    },
+    "Throne of Empires": {
+      "csvid": 11857
+    },
+    "Myr Turbine": {
+      "csvid": 11488
+    },
+    "Cogworker's Puzzleknot": {
+      "csvid": 16319
+    },
+    "Myr": {
+      "csvid": 18792
+    },
+    "Vessel of Ephemera": {
+      "csvid": 16009
+    },
+    "Servo": {
+      "csvid": 18816
+    },
+    "Mobilization": {
+      "csvid": 6212
+    },
+    "Infantry Veteran": {
+      "csvid": 2723
+    },
+    "Scepter of Empires": {
+      "csvid": 11841
+    },
+    "Crown of Empires": {
+      "csvid": 11794
+    }
+  },
+  "variable_witness_tokens": {
+    "Raise the Alarm": {
+      "token": {
+        "name": "Soldier",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "W"
+        ],
+        "subtypes": [
+          "Soldier"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "count": 2
+    },
+    "Khalni Garden": {
+      "token": {
+        "name": "Plant",
+        "power": 0,
+        "toughness": 1,
+        "colors": [
+          "G"
+        ],
+        "subtypes": [
+          "Plant"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "count": 1
+    }
+  },
+  "noncreature_profiles": {
+    "Spider Spawning": {
+      "profile": "noncreature_amount",
+      "basis": "creature_cards_in_own_graveyard",
+      "token": {
+        "name": "Spider",
+        "power": 1,
+        "toughness": 2,
+        "colors": [
+          "G"
+        ],
+        "subtypes": [
+          "Spider"
+        ],
+        "artifact": false,
+        "keywords": [
+          "Reach"
+        ]
+      },
+      "inactive_clauses": [
+        "Flashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+      ],
+      "entry_tapped": false,
+      "activation": null,
+      "fixed_count": null,
+      "keyword_metadata": [
+        "Flashback"
+      ],
+      "source": {
+        "oracle_id": "da113cc9-bb2b-4af4-9c43-32c165b87363",
+        "name": "Spider Spawning",
+        "oracle_text": "Create a 1/2 green Spider creature token with reach for each creature card in your graveyard.\nFlashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/216/spider-spawning?utm_source=api"
+      },
+      "csvid": 12084
+    },
+    "Rise from the Tides": {
+      "profile": "noncreature_amount",
+      "basis": "instant_sorcery_cards_in_own_graveyard",
+      "token": {
+        "name": "Zombie",
+        "power": 2,
+        "toughness": 2,
+        "colors": [
+          "B"
+        ],
+        "subtypes": [
+          "Zombie"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "inactive_clauses": [],
+      "entry_tapped": true,
+      "activation": null,
+      "fixed_count": null,
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "390b862a-2a85-44bd-832c-f5bbd3eb4ea0",
+        "name": "Rise from the Tides",
+        "oracle_text": "Create a tapped 2/2 black Zombie creature token for each instant and sorcery card in your graveyard.",
+        "mana_cost": "{5}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/82/rise-from-the-tides?utm_source=api"
+      },
+      "csvid": 15933
+    },
+    "Saproling Symbiosis": {
+      "profile": "noncreature_amount",
+      "basis": "controlled_creatures",
+      "token": {
+        "name": "Saproling",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "G"
+        ],
+        "subtypes": [
+          "Saproling"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "inactive_clauses": [
+        "You may cast this spell as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)"
+      ],
+      "entry_tapped": false,
+      "activation": null,
+      "fixed_count": null,
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "69d22037-fbf7-44d2-81a7-7ce8e32f06ec",
+        "name": "Saproling Symbiosis",
+        "oracle_text": "You may cast this spell as though it had flash if you pay {2} more to cast it. (You may cast it any time you could cast an instant.)\nCreate a 1/1 green Saproling creature token for each creature you control.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/175/saproling-symbiosis?utm_source=api"
+      },
+      "csvid": 5104
+    },
+    "Centaur Glade": {
+      "profile": "noncreature_amount",
+      "basis": "fixed",
+      "token": {
+        "name": "Centaur",
+        "power": 3,
+        "toughness": 3,
+        "colors": [
+          "G"
+        ],
+        "subtypes": [
+          "Centaur"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "inactive_clauses": [],
+      "entry_tapped": false,
+      "activation": {
+        "mana": [
+          2,
+          0,
+          0,
+          2,
+          0,
+          0
+        ],
+        "tap": false,
+        "sacrifice": false
+      },
+      "fixed_count": 1,
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "369c3b6c-6715-4b6a-89d2-e7542400ba8f",
+        "name": "Centaur Glade",
+        "oracle_text": "{2}{G}{G}: Create a 3/3 green Centaur creature token.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ons/251/centaur-glade?utm_source=api"
+      },
+      "csvid": 1490
+    },
+    "Dragon Roost": {
+      "profile": "noncreature_amount",
+      "basis": "fixed",
+      "token": {
+        "name": "Dragon",
+        "power": 5,
+        "toughness": 5,
+        "colors": [
+          "R"
+        ],
+        "subtypes": [
+          "Dragon"
+        ],
+        "artifact": false,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "inactive_clauses": [],
+      "entry_tapped": false,
+      "activation": {
+        "mana": [
+          5,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "tap": false,
+        "sacrifice": false
+      },
+      "fixed_count": 1,
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "6dc98143-7c4c-4b75-9bbb-5226d800b1d6",
+        "name": "Dragon Roost",
+        "oracle_text": "{5}{R}{R}: Create a 5/5 red Dragon creature token with flying. (It can't be blocked except by creatures with flying or reach.)",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/197/dragon-roost?utm_source=api"
+      },
+      "csvid": 1492
+    },
+    "Whirlermaker": {
+      "profile": "noncreature_amount",
+      "basis": "fixed",
+      "token": {
+        "name": "Thopter",
+        "power": 1,
+        "toughness": 1,
+        "colors": [],
+        "subtypes": [
+          "Thopter"
+        ],
+        "artifact": true,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "inactive_clauses": [],
+      "entry_tapped": false,
+      "activation": {
+        "mana": [
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "tap": true,
+        "sacrifice": false
+      },
+      "fixed_count": 1,
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "bdf28770-0962-4317-822f-c187bc6706d1",
+        "name": "Whirlermaker",
+        "oracle_text": "{4}, {T}: Create a 1/1 colorless Thopter artifact creature token with flying.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/239/whirlermaker?utm_source=api"
+      },
+      "csvid": 16575
+    },
+    "Myr Turbine": {
+      "profile": "noncreature_amount",
+      "basis": "fixed",
+      "token": {
+        "name": "Myr",
+        "power": 1,
+        "toughness": 1,
+        "colors": [],
+        "subtypes": [
+          "Myr"
+        ],
+        "artifact": true,
+        "keywords": []
+      },
+      "inactive_clauses": [
+        "{T}, Tap five untapped Myr you control: Search your library for a Myr creature card, put it onto the battlefield, then shuffle."
+      ],
+      "entry_tapped": false,
+      "activation": {
+        "mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "tap": true,
+        "sacrifice": false
+      },
+      "fixed_count": 1,
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "b9043dcd-234f-4144-80db-1cb903c009ea",
+        "name": "Myr Turbine",
+        "oracle_text": "{T}: Create a 1/1 colorless Myr artifact creature token.\n{T}, Tap five untapped Myr you control: Search your library for a Myr creature card, put it onto the battlefield, then shuffle.",
+        "mana_cost": "{5}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/117/myr-turbine?utm_source=api"
+      },
+      "csvid": 11488
+    },
+    "Vessel of Ephemera": {
+      "profile": "noncreature_amount",
+      "basis": "fixed",
+      "token": {
+        "name": "Spirit",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "W"
+        ],
+        "subtypes": [
+          "Spirit"
+        ],
+        "artifact": false,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "inactive_clauses": [],
+      "entry_tapped": false,
+      "activation": {
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "tap": false,
+        "sacrifice": true
+      },
+      "fixed_count": 2,
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "bfddc488-ab38-4e6d-8dfc-22bf1a8e03fa",
+        "name": "Vessel of Ephemera",
+        "oracle_text": "{2}{W}, Sacrifice this enchantment: Create two 1/1 white Spirit creature tokens with flying.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/48/vessel-of-ephemera?utm_source=api"
+      },
+      "csvid": 16009
+    },
+    "Cogworker's Puzzleknot": {
+      "profile": "noncreature_amount",
+      "basis": "fixed",
+      "token": {
+        "name": "Servo",
+        "power": 1,
+        "toughness": 1,
+        "colors": [],
+        "subtypes": [
+          "Servo"
+        ],
+        "artifact": true,
+        "keywords": []
+      },
+      "inactive_clauses": [],
+      "entry_tapped": false,
+      "activation": {
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "tap": false,
+        "sacrifice": true
+      },
+      "fixed_count": 1,
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "2065e9d0-c6e9-4270-898e-9822b532d467",
+        "name": "Cogworker's Puzzleknot",
+        "oracle_text": "When this artifact enters, create a 1/1 colorless Servo artifact creature token.\n{1}{W}, Sacrifice this artifact: Create a 1/1 colorless Servo artifact creature token.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/201/cogworkers-puzzleknot?utm_source=api"
+      },
+      "csvid": 16319,
+      "entry_creation": {
+        "count": 1
+      }
+    },
+    "Mobilization": {
+      "profile": "noncreature_amount",
+      "basis": "fixed",
+      "token": {
+        "name": "Soldier",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "W"
+        ],
+        "subtypes": [
+          "Soldier"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "inactive_clauses": [],
+      "entry_tapped": false,
+      "activation": {
+        "mana": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "tap": false,
+        "sacrifice": false
+      },
+      "fixed_count": 1,
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "6b8119e9-a9a9-4349-be32-adcb84b8eb79",
+        "name": "Mobilization",
+        "oracle_text": "Soldier creatures have vigilance.\n{2}{W}: Create a 1/1 white Soldier creature token.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/81/mobilization?utm_source=api"
+      },
+      "csvid": 6212,
+      "active_static": {
+        "subtype": "Soldier",
+        "keyword": "Vigilance",
+        "controller": "all"
+      }
+    },
+    "Throne of Empires": {
+      "profile": "noncreature_amount",
+      "basis": "fixed",
+      "token": {
+        "name": "Soldier",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "W"
+        ],
+        "subtypes": [
+          "Soldier"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "inactive_clauses": [],
+      "entry_tapped": false,
+      "activation": {
+        "mana": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "tap": true,
+        "sacrifice": false
+      },
+      "fixed_count": 1,
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "12afe8e6-eaf0-45c9-8086-4c658db7cb7e",
+        "name": "Throne of Empires",
+        "oracle_text": "{1}, {T}: Create a 1/1 white Soldier creature token. Create five of those tokens instead if you control artifacts named Crown of Empires and Scepter of Empires.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/221/throne-of-empires?utm_source=api"
+      },
+      "csvid": 11857,
+      "empire_replacement": {
+        "required_artifacts": [
+          "Crown of Empires",
+          "Scepter of Empires"
+        ],
+        "count": 5
+      }
+    }
+  },
+  "death_watch_profiles": {
+    "Field of Souls": {
+      "profile": "death_watch",
+      "predicate": "owner_grave_nontoken_creature",
+      "token": {
+        "name": "Spirit",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "W"
+        ],
+        "subtypes": [
+          "Spirit"
+        ],
+        "artifact": false,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "optional": false,
+      "token_mana": false,
+      "source_keywords": [],
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "4d7a5b14-8fce-41f2-a0d5-fff3d15f41f6",
+        "name": "Field of Souls",
+        "oracle_text": "Whenever a nontoken creature is put into your graveyard from the battlefield, create a 1/1 white Spirit creature token with flying.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/voc/86/field-of-souls?utm_source=api"
+      },
+      "csvid": 3143
+    },
+    "Golgari Germination": {
+      "profile": "death_watch",
+      "predicate": "controller_nontoken_creature",
+      "token": {
+        "name": "Saproling",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "G"
+        ],
+        "subtypes": [
+          "Saproling"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "optional": false,
+      "token_mana": false,
+      "source_keywords": [],
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "3f9cf871-7df6-49d5-aab3-ad945571b707",
+        "name": "Golgari Germination",
+        "oracle_text": "Whenever a nontoken creature you control dies, create a 1/1 green Saproling creature token.",
+        "mana_cost": "{1}{B}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm3/167/golgari-germination?utm_source=api"
+      },
+      "csvid": 7861
+    },
+    "Open the Graves": {
+      "profile": "death_watch",
+      "predicate": "controller_nontoken_creature",
+      "token": {
+        "name": "Zombie",
+        "power": 2,
+        "toughness": 2,
+        "colors": [
+          "B"
+        ],
+        "subtypes": [
+          "Zombie"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "optional": false,
+      "token_mana": false,
+      "source_keywords": [],
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "28778958-a1f9-4fea-b551-c193d1257f18",
+        "name": "Open the Graves",
+        "oracle_text": "Whenever a nontoken creature you control dies, create a 2/2 black Zombie creature token.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mic/126/open-the-graves?utm_source=api"
+      },
+      "csvid": 18975
+    },
+    "Requiem Angel": {
+      "profile": "death_watch",
+      "predicate": "another_controller_nonspirit_creature",
+      "token": {
+        "name": "Spirit",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "W"
+        ],
+        "subtypes": [
+          "Spirit"
+        ],
+        "artifact": false,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "optional": false,
+      "token_mana": false,
+      "source_keywords": [
+        "Flying"
+      ],
+      "keyword_metadata": [
+        "Flying"
+      ],
+      "source": {
+        "oracle_id": "59f10ddb-8287-4d2c-8c60-1080b108fa78",
+        "name": "Requiem Angel",
+        "oracle_text": "Flying\nWhenever another non-Spirit creature you control dies, create a 1/1 white Spirit creature token with flying.",
+        "mana_cost": "{5}{W}",
+        "type_line": "Creature — Angel",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/84/requiem-angel?utm_source=api"
+      },
+      "csvid": 12248
+    },
+    "Pawn of Ulamog": {
+      "profile": "death_watch",
+      "predicate": "self_or_controller_nontoken_creature",
+      "token": {
+        "name": "Eldrazi Spawn",
+        "power": 0,
+        "toughness": 1,
+        "colors": [],
+        "subtypes": [
+          "Eldrazi",
+          "Spawn"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "optional": true,
+      "token_mana": true,
+      "source_keywords": [],
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "9bcaf141-1f1f-491f-aced-13dc093b9e2c",
+        "name": "Pawn of Ulamog",
+        "oracle_text": "Whenever this creature or another nontoken creature you control dies, you may create a 0/1 colorless Eldrazi Spawn creature token. It has \"Sacrifice this token: Add {C}.\"",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Vampire Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/223/pawn-of-ulamog?utm_source=api"
+      },
+      "csvid": 11014
+    },
+    "Sifter of Skulls": {
+      "profile": "death_watch",
+      "predicate": "another_controller_nontoken_creature",
+      "token": {
+        "name": "Eldrazi Scion",
+        "power": 1,
+        "toughness": 1,
+        "colors": [],
+        "subtypes": [
+          "Eldrazi",
+          "Scion"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "optional": false,
+      "token_mana": true,
+      "source_keywords": [
+        "Devoid (This card has no color.)"
+      ],
+      "keyword_metadata": [
+        "Devoid"
+      ],
+      "source": {
+        "oracle_id": "688e5e19-8f28-45c4-ace4-a38144f494f1",
+        "name": "Sifter of Skulls",
+        "oracle_text": "Devoid (This card has no color.)\nWhenever another nontoken creature you control dies, create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\" ({C} represents colorless mana.)",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Eldrazi",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/77/sifter-of-skulls?utm_source=api"
+      },
+      "csvid": 15679
+    },
+    "Rotlung Reanimator": {
+      "profile": "death_watch",
+      "predicate": "self_or_global_cleric",
+      "token": {
+        "name": "Zombie",
+        "power": 2,
+        "toughness": 2,
+        "colors": [
+          "B"
+        ],
+        "subtypes": [
+          "Zombie"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "optional": false,
+      "token_mana": false,
+      "source_keywords": [],
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "de7f1725-833c-4784-94b1-7a33e36aec94",
+        "name": "Rotlung Reanimator",
+        "oracle_text": "Whenever this creature or another Cleric dies, create a 2/2 black Zombie creature token.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ons/164/rotlung-reanimator?utm_source=api"
+      },
+      "csvid": 6243
+    },
+    "Prowess of the Fair": {
+      "profile": "death_watch",
+      "predicate": "another_owner_grave_nontoken_elf",
+      "token": {
+        "name": "Elf Warrior",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "G"
+        ],
+        "subtypes": [
+          "Elf",
+          "Warrior"
+        ],
+        "artifact": false,
+        "keywords": []
+      },
+      "optional": true,
+      "token_mana": false,
+      "source_keywords": [],
+      "keyword_metadata": [],
+      "source": {
+        "oracle_id": "31324235-8a2b-4ce4-b0d4-6d947489b930",
+        "name": "Prowess of the Fair",
+        "oracle_text": "Whenever another nontoken Elf is put into your graveyard from the battlefield, you may create a 1/1 green Elf Warrior creature token.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Kindred Enchantment — Elf",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khc/53/prowess-of-the-fair?utm_source=api"
+      },
+      "csvid": 9240
+    }
+  },
+  "inspired_profiles": {
+    "Aerie Worshippers": {
+      "profile": "inspired_payment",
+      "token": {
+        "name": "Bird",
+        "power": 2,
+        "toughness": 2,
+        "colors": [
+          "U"
+        ],
+        "subtypes": [
+          "Bird"
+        ],
+        "artifact": false,
+        "keywords": [
+          "Flying"
+        ],
+        "enchantment": true
+      },
+      "count": 1,
+      "payment": [
+        2,
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "source_keywords": [],
+      "keyword_metadata": [
+        "Inspired"
+      ],
+      "source": {
+        "oracle_id": "674c34eb-1080-4811-8f2a-5006e08d98b8",
+        "name": "Aerie Worshippers",
+        "oracle_text": "Inspired — Whenever this creature becomes untapped, you may pay {2}{U}. If you do, create a 2/2 blue Bird enchantment creature token with flying.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Human Cleric",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Inspired"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/30/aerie-worshippers?utm_source=api"
+      },
+      "csvid": 13657
+    },
+    "Forlorn Pseudamma": {
+      "profile": "inspired_payment",
+      "token": {
+        "name": "Zombie",
+        "power": 2,
+        "toughness": 2,
+        "colors": [
+          "B"
+        ],
+        "subtypes": [
+          "Zombie"
+        ],
+        "artifact": false,
+        "keywords": [],
+        "enchantment": true
+      },
+      "count": 1,
+      "payment": [
+        2,
+        1,
+        0,
+        0,
+        0,
+        0
+      ],
+      "source_keywords": [
+        "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)"
+      ],
+      "keyword_metadata": [
+        "Inspired",
+        "Intimidate"
+      ],
+      "source": {
+        "oracle_id": "92680de3-6ee2-4b73-b0f5-38383482dcca",
+        "name": "Forlorn Pseudamma",
+        "oracle_text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nInspired — Whenever this creature becomes untapped, you may pay {2}{B}. If you do, create a 2/2 black Zombie enchantment creature token.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Inspired",
+          "Intimidate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/71/forlorn-pseudamma?utm_source=api"
+      },
+      "csvid": 13718
+    },
+    "God-Favored General": {
+      "profile": "inspired_payment",
+      "token": {
+        "name": "Soldier",
+        "power": 1,
+        "toughness": 1,
+        "colors": [
+          "W"
+        ],
+        "subtypes": [
+          "Soldier"
+        ],
+        "artifact": false,
+        "keywords": [],
+        "enchantment": true
+      },
+      "count": 2,
+      "payment": [
+        2,
+        0,
+        0,
+        0,
+        0,
+        1
+      ],
+      "source_keywords": [],
+      "keyword_metadata": [
+        "Inspired"
+      ],
+      "source": {
+        "oracle_id": "e861ddd5-64f7-4c59-ab96-0c69ef74febe",
+        "name": "God-Favored General",
+        "oracle_text": "Inspired — Whenever this creature becomes untapped, you may pay {2}{W}. If you do, create two 1/1 white Soldier enchantment creature tokens.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Inspired"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/14/god-favored-general?utm_source=api"
+      },
+      "csvid": 13724
+    },
+    "Pheres-Band Raiders": {
+      "profile": "inspired_payment",
+      "token": {
+        "name": "Centaur",
+        "power": 3,
+        "toughness": 3,
+        "colors": [
+          "G"
+        ],
+        "subtypes": [
+          "Centaur"
+        ],
+        "artifact": false,
+        "keywords": [],
+        "enchantment": true
+      },
+      "count": 1,
+      "payment": [
+        2,
+        0,
+        0,
+        1,
+        0,
+        0
+      ],
+      "source_keywords": [],
+      "keyword_metadata": [
+        "Inspired"
+      ],
+      "source": {
+        "oracle_id": "2fb54c18-f69b-4712-af36-14d8a6d4df2b",
+        "name": "Pheres-Band Raiders",
+        "oracle_text": "Inspired — Whenever this creature becomes untapped, you may pay {2}{G}. If you do, create a 3/3 green Centaur enchantment creature token.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Centaur Warrior",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Inspired"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/133/pheres-band-raiders?utm_source=api"
+      },
+      "csvid": 13782
+    },
+    "Satyr Nyx-Smith": {
+      "profile": "inspired_payment",
+      "token": {
+        "name": "Elemental",
+        "power": 3,
+        "toughness": 1,
+        "colors": [
+          "R"
+        ],
+        "subtypes": [
+          "Elemental"
+        ],
+        "artifact": false,
+        "keywords": [
+          "Haste"
+        ],
+        "enchantment": true
+      },
+      "count": 1,
+      "payment": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        0
+      ],
+      "source_keywords": [
+        "Haste"
+      ],
+      "keyword_metadata": [
+        "Inspired",
+        "Haste"
+      ],
+      "source": {
+        "oracle_id": "3ad9d55d-02f7-412e-8756-6a026f8e68d7",
+        "name": "Satyr Nyx-Smith",
+        "oracle_text": "Haste\nInspired — Whenever this creature becomes untapped, you may pay {2}{R}. If you do, create a 3/1 red Elemental enchantment creature token with haste.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Satyr Shaman",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Inspired",
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/109/satyr-nyx-smith?utm_source=api"
+      },
+      "csvid": 13795
+    }
+  }
+}

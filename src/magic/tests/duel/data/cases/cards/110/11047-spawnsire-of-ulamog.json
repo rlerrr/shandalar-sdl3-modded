@@ -1,0 +1,102 @@
+{
+  "version": 1,
+  "card": "Spawnsire of Ulamog",
+  "csvid": 11047,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "event_component",
+        "keywords": [],
+        "token": {
+          "name": "Eldrazi Spawn",
+          "count": 2,
+          "power": 0,
+          "toughness": 1,
+          "colors": [],
+          "subtypes": [
+            "Eldrazi",
+            "Spawn"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "inactive_clauses": [
+          "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent of their choice.)",
+          "{20}: Cast any number of Eldrazi spells from among cards you own outside the game without paying their mana costs."
+        ],
+        "activation": {
+          "mana": [
+            4,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "tap": false,
+          "sacrifice": false
+        },
+        "token_mana": true
+      },
+      "oracle_text": "Annihilator 1 (Whenever this creature attacks, defending player sacrifices a permanent of their choice.)\n{4}: Create two 0/1 colorless Eldrazi Spawn creature tokens. They have \"Sacrifice this token: Add {C}.\"\n{20}: Cast any number of Eldrazi spells from among cards you own outside the game without paying their mana costs.",
+      "variants": [
+        "create_0",
+        "cast_only_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "effect_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "wrath_0",
+        "other_creature_0",
+        "source_loss_0",
+        "activation_payment_0",
+        "activation_insufficient_0",
+        "repeat_activation_0",
+        "create_1",
+        "cast_only_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "effect_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "wrath_1",
+        "other_creature_1",
+        "source_loss_1",
+        "activation_payment_1",
+        "activation_insufficient_1",
+        "repeat_activation_1",
+        "token_mana_0",
+        "token_mana_all_0",
+        "token_mana_snapshot_0",
+        "token_mana_1",
+        "token_mana_all_1",
+        "token_mana_snapshot_1"
+      ]
+    }
+  ]
+}

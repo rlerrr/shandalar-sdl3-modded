@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Mutant's Prey",
+  "csvid": 13184,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "fight",
+        "amounts": [
+          0
+        ],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": []
+      },
+      "oracle_text": "Target creature you control with a +1/+1 counter on it fights target creature an opponent controls. (Each deals damage equal to its power to the other.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "two_copies_0",
+        "countered_0",
+        "opposing_turn_0",
+        "fight_both_die_0",
+        "fight_first_dies_0",
+        "no_counter_0",
+        "wrong_controller_0",
+        "lost_target_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "two_copies_1",
+        "countered_1",
+        "opposing_turn_1",
+        "fight_both_die_1",
+        "fight_first_dies_1",
+        "no_counter_1",
+        "wrong_controller_1",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

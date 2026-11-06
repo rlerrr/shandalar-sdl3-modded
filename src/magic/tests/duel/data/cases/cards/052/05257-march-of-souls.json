@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "card": "March of Souls",
+  "csvid": 5257,
+  "recipes": [
+    {
+      "family": "mass_removal",
+      "version": 2,
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "March of Souls",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 0,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": true,
+        "secondary": {
+          "token": {
+            "name": "Spirit",
+            "power": 1,
+            "toughness": 1,
+            "colors": [
+              "W"
+            ],
+            "subtypes": [
+              "Spirit"
+            ],
+            "flying": true,
+            "count": 1,
+            "for_each": "destroyed"
+          }
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      },
+      "oracle_text": "Destroy all creatures. They can't be regenerated. For each creature destroyed this way, its controller creates a 1/1 white Spirit creature token with flying.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_board_0",
+        "own_only_0",
+        "opponent_only_0",
+        "stolen_0",
+        "tokens_0",
+        "regeneration_0",
+        "token_evasion_0",
+        "token_flying_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_board_1",
+        "own_only_1",
+        "opponent_only_1",
+        "stolen_1",
+        "tokens_1",
+        "regeneration_1",
+        "token_evasion_1",
+        "token_flying_1"
+      ]
+    }
+  ]
+}

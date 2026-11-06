@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Forbidden Alchemy",
+  "csvid": 11949,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "flashback",
+        "effect": "select_four",
+        "additional_components": []
+      },
+      "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest into your graveyard.\nFlashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "short_library_0",
+        "opposing_turn_0",
+        "query_purity_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "repeat_0",
+        "empty_library_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "short_library_1",
+        "opposing_turn_1",
+        "query_purity_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "repeat_1",
+        "empty_library_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1430 @@
+{
+  "version": 1,
+  "cards": {
+    "Ancient Craving": {
+      "oracle": {
+        "oracle_id": "78725353-9274-420a-b722-add0f43c444e",
+        "name": "Ancient Craving",
+        "oracle_text": "You draw three cards and you lose 3 life.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/voc/117/ancient-craving?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 3,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "lose_life",
+            "amount": 3,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Healing Hands": {
+      "oracle": {
+        "oracle_id": "3cc48835-3ac0-4774-b380-f9b21d2dc974",
+        "name": "Healing Hands",
+        "oracle_text": "Target player gains 4 life.\nDraw a card.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/17/healing-hands?utm_source=api"
+      },
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 4,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "draw",
+            "amount": 1,
+            "scope": "self",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Abuna's Chant": {
+      "oracle": {
+        "oracle_id": "2d4721f1-1a49-45aa-99d5-ab8c6f3f3ab6",
+        "name": "Abuna's Chant",
+        "oracle_text": "Choose one \u2014\n\u2022 You gain 5 life.\n\u2022 Prevent the next 5 damage that would be dealt to target creature this turn.\nEntwine {2} (Choose both if you pay the entwine cost.)",
+        "mana_cost": "{3}{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Entwine"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/1/abunas-chant?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 5,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [
+          1
+        ],
+        "cast_after": [],
+        "gaps": [
+          "damage prevention mode",
+          "entwine"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Blood Tithe": {
+      "oracle": {
+        "oracle_id": "c82665b7-d011-4bdc-b4a2-eca5861b16d2",
+        "name": "Blood Tithe",
+        "oracle_text": "Each opponent loses 3 life. You gain life equal to the life lost this way.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m11/84/blood-tithe?utm_source=api"
+      },
+      "params": {
+        "recipient": "opponents",
+        "operations": [
+          {
+            "kind": "lose_life",
+            "amount": 3,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "gain_life",
+            "amount": 3,
+            "scope": "self",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "life-loss replacement and prevention"
+        ],
+        "inactive": [
+          "one opponent loses the full3 life"
+        ],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Ancestral Tribute": {
+      "oracle": {
+        "oracle_id": "380ea3b6-8eb4-466a-8680-ce5cfed9b8c4",
+        "name": "Ancestral Tribute",
+        "oracle_text": "You gain 2 life for each card in your graveyard.\nFlashback {9}{W}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{5}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/2/ancestral-tribute?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "grave_cards"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "flashback"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Festival of Trokin": {
+      "oracle": {
+        "oracle_id": "a5a3cd2c-20ae-49a8-88fa-e8e3e7cc50db",
+        "name": "Festival of Trokin",
+        "oracle_text": "You gain 2 life for each creature you control.",
+        "mana_cost": "{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/p02/16/festival-of-trokin?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "own_creatures"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Abzan Charm": {
+      "oracle": {
+        "oracle_id": "4137a22c-f793-4e27-a9b2-72740a6e2121",
+        "name": "Abzan Charm",
+        "oracle_text": "Choose one \u2014\n\u2022 Exile target creature with power 3 or greater.\n\u2022 You draw two cards and you lose 2 life.\n\u2022 Distribute two +1/+1 counters among one or two target creatures.",
+        "mana_cost": "{W}{B}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmc/138/abzan-charm?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "lose_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [
+          1
+        ],
+        "cast_after": [],
+        "gaps": [
+          "exile mode",
+          "counter distribution mode"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Dromar's Charm": {
+      "oracle": {
+        "oracle_id": "e9950393-8458-4132-9dc7-01246282a41a",
+        "name": "Dromar's Charm",
+        "oracle_text": "Choose one \u2014\n\u2022 You gain 5 life.\n\u2022 Counter target spell.\n\u2022 Target creature gets -2/-2 until end of turn.",
+        "mana_cost": "{W}{U}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/187/dromars-charm?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 5,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [
+          0
+        ],
+        "cast_after": [],
+        "gaps": [
+          "counterspell mode",
+          "creature penalty mode"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Healing Leaves": {
+      "oracle": {
+        "oracle_id": "9c675e7a-1d68-44b2-9c1a-543b73782437",
+        "name": "Healing Leaves",
+        "oracle_text": "Choose one \u2014\n\u2022 Target player gains 3 life.\n\u2022 Prevent the next 3 damage that would be dealt to any target this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/150/healing-leaves?utm_source=api"
+      },
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 3,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [
+          1
+        ],
+        "cast_after": [],
+        "gaps": [
+          "damage prevention mode"
+        ],
+        "inactive": [
+          "no pending damage object"
+        ],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Healing Salve": {
+      "oracle": {
+        "oracle_id": "8da8644c-75a1-4fe9-8e94-900d948d631c",
+        "name": "Healing Salve",
+        "oracle_text": "Choose one \u2014\n\u2022 Target player gains 3 life.\n\u2022 Prevent the next 3 damage that would be dealt to any target this turn.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dvd/14/healing-salve?utm_source=api"
+      },
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 3,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [
+          1
+        ],
+        "cast_after": [],
+        "gaps": [
+          "damage prevention mode"
+        ],
+        "inactive": [
+          "no pending damage object"
+        ],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Heroes Remembered": {
+      "oracle": {
+        "oracle_id": "2f30ffd2-9910-4fbd-96f9-d66f1da506e9",
+        "name": "Heroes Remembered",
+        "oracle_text": "You gain 20 life.\nSuspend 10\u2014{W} (Rather than cast this card from your hand, you may pay {W} and exile it with ten time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)",
+        "mana_cost": "{6}{W}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Suspend"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/7/heroes-remembered?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 20,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [
+          0
+        ],
+        "cast_after": [],
+        "gaps": [
+          "suspend"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Brush with Death": {
+      "oracle": {
+        "oracle_id": "d87e580f-eca1-4f91-962b-82d684cba5e7",
+        "name": "Brush with Death",
+        "oracle_text": "Buyback {2}{B}{B} (You may pay an additional {2}{B}{B} as you cast this spell. If you do, put this card into your hand as it resolves.)\nTarget opponent loses 2 life. You gain 2 life.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sth/52/brush-with-death?utm_source=api"
+      },
+      "params": {
+        "recipient": "opponent",
+        "operations": [
+          {
+            "kind": "lose_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "self",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [
+          1
+        ],
+        "gaps": [
+          "buyback payment"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 0
+      }
+    },
+    "Reaping the Rewards": {
+      "oracle": {
+        "oracle_id": "b4177445-46d8-4427-a345-d786c820c3af",
+        "name": "Reaping the Rewards",
+        "oracle_text": "Buyback\u2014Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell. If you do, put this card into your hand as it resolves.)\nYou gain 2 life.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/exo/16/reaping-the-rewards?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "buyback sacrifice"
+        ],
+        "inactive": [
+          "no lands controlled"
+        ],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Refreshing Rain": {
+      "oracle": {
+        "oracle_id": "c6f69168-71c2-41a2-ab95-cfd7baf0ba68",
+        "name": "Refreshing Rain",
+        "oracle_text": "If an opponent controls a Swamp and you control a Forest, you may cast this spell without paying its mana cost.\nTarget player gains 6 life.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nem/110/refreshing-rain?utm_source=api"
+      },
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 6,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "alternative free casting"
+        ],
+        "inactive": [
+          "no Forest controlled and no opposing Swamp"
+        ],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Rest for the Weary": {
+      "oracle": {
+        "oracle_id": "c7f08962-6c54-4fd5-a55e-7513e758af32",
+        "name": "Rest for the Weary",
+        "oracle_text": "Target player gains 4 life.\nLandfall \u2014 If you had a land enter the battlefield under your control this turn, that player gains 8 life instead.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/18/rest-for-the-weary?utm_source=api"
+      },
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 4,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "landfall gain8 branch"
+        ],
+        "inactive": [
+          "no land entered this turn"
+        ],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Syphon Life": {
+      "oracle": {
+        "oracle_id": "c9367dd3-1a50-4eae-993e-c055dc6c4dc5",
+        "name": "Syphon Life",
+        "oracle_text": "Target player loses 2 life and you gain 2 life.\nRetrace (You may cast this card from your graveyard by discarding a land card in addition to paying its other costs.)",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Retrace"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/100/syphon-life?utm_source=api"
+      },
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "lose_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "self",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "retrace"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Tendrils of Agony": {
+      "oracle": {
+        "oracle_id": "78db3190-59bc-4033-95bc-32d8ed872b6a",
+        "name": "Tendrils of Agony",
+        "oracle_text": "Target player loses 2 life and you gain 2 life.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Storm"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/142/tendrils-of-agony?utm_source=api"
+      },
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "lose_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "self",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "storm copies",
+          "responses above a pending storm source (preserved pending scripts)"
+        ],
+        "inactive": [
+          "zero spells cast before source"
+        ],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Succumb to Temptation": {
+      "oracle": {
+        "oracle_id": "c8e21bc4-ea57-46d6-9e7e-ad95e17ea0fd",
+        "name": "Succumb to Temptation",
+        "oracle_text": "You draw two cards and you lose 2 life.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/emn/107/succumb-to-temptation?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "lose_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Live Fast": {
+      "oracle": {
+        "oracle_id": "04d02394-e17f-43cd-932f-f58e8cc56629",
+        "name": "Live Fast",
+        "oracle_text": "You draw two cards, lose 2 life, and get {E}{E} (two energy counters).",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/87/live-fast?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "lose_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 2,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Caress of Phyrexia": {
+      "oracle": {
+        "oracle_id": "8253fcac-0c07-41e8-afa4-34021f9ef6f4",
+        "name": "Caress of Phyrexia",
+        "oracle_text": "Target player draws three cards, loses 3 life, and gets three poison counters.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/53/caress-of-phyrexia?utm_source=api"
+      },
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 3,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "lose_life",
+            "amount": 3,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 3,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Gnaw to the Bone": {
+      "oracle": {
+        "oracle_id": "7b92ac54-3883-48cf-b01e-be9797dc1649",
+        "name": "Gnaw to the Bone",
+        "oracle_text": "You gain 2 life for each creature card in your graveyard.\nFlashback {2}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/183/gnaw-to-the-bone?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "grave_creatures"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "flashback"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Gerrard's Wisdom": {
+      "oracle": {
+        "oracle_id": "3e30e8f2-f437-4620-a3bc-dd9c29ae6570",
+        "name": "Gerrard's Wisdom",
+        "oracle_text": "You gain 2 life for each card in your hand.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/7ed/16/gerrards-wisdom?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "hand_cards"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Presence of the Wise": {
+      "oracle": {
+        "oracle_id": "6728064e-1d4e-4d4f-a0ab-127c23478f3b",
+        "name": "Presence of the Wise",
+        "oracle_text": "You gain 2 life for each card in your hand.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/23/presence-of-the-wise?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "hand_cards"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Congregate": {
+      "oracle": {
+        "oracle_id": "d139294c-36bb-4a1e-800d-50c4a4ae9877",
+        "name": "Congregate",
+        "oracle_text": "Target player gains 2 life for each creature on the battlefield.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plst/DMR-4/congregate?utm_source=api"
+      },
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "all_creatures"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Bountiful Harvest": {
+      "oracle": {
+        "oracle_id": "2dc94a25-4e35-4277-8eba-b8d0b293ff7b",
+        "name": "Bountiful Harvest",
+        "oracle_text": "You gain 1 life for each land you control.",
+        "mana_cost": "{4}{G}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/163/bountiful-harvest?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 1,
+            "scope": "recipient",
+            "quantity": "own_lands"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [
+          "Forest",
+          "Plains",
+          "Island"
+        ],
+        "target_choices": 1
+      }
+    },
+    "Landbind Ritual": {
+      "oracle": {
+        "oracle_id": "63500b81-8fac-4208-91d3-0fe642899d87",
+        "name": "Landbind Ritual",
+        "oracle_text": "You gain 2 life for each Plains you control.",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/24/landbind-ritual?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "own_plains"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [
+          "Plains",
+          "Plains",
+          "Forest",
+          "Island"
+        ],
+        "target_choices": 1
+      }
+    },
+    "Dryad's Caress": {
+      "oracle": {
+        "oracle_id": "7df07d16-e5cf-4c58-980a-632909aa1357",
+        "name": "Dryad's Caress",
+        "oracle_text": "You gain 1 life for each creature on the battlefield. If {W} was spent to cast this spell, untap all creatures you control.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rav/160/dryads-caress?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 1,
+            "scope": "recipient",
+            "quantity": "all_creatures"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "white-spent conditional untapping"
+        ],
+        "inactive": [
+          "no white mana spent"
+        ],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Stronghold Discipline": {
+      "oracle": {
+        "oracle_id": "90e46d04-9d53-4a24-aff0-f8c61e1db97d",
+        "name": "Stronghold Discipline",
+        "oracle_text": "Each player loses 1 life for each creature they control.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/126/stronghold-discipline?utm_source=api"
+      },
+      "params": {
+        "recipient": "both",
+        "operations": [
+          {
+            "kind": "lose_life",
+            "amount": 1,
+            "scope": "self",
+            "quantity": "own_creatures"
+          },
+          {
+            "kind": "lose_life",
+            "amount": 1,
+            "scope": "opponents",
+            "quantity": "opponent_creatures"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "simultaneous life-loss triggers and player elimination"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    },
+    "Minions' Murmurs": {
+      "oracle": {
+        "oracle_id": "fd755ec1-6727-4165-a7fd-5d9b59754ada",
+        "name": "Minions' Murmurs",
+        "oracle_text": "You draw X cards and you lose X life, where X is the number of creatures you control.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/124/minions-murmurs?utm_source=api"
+      },
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 1,
+            "scope": "recipient",
+            "quantity": "own_creatures"
+          },
+          {
+            "kind": "lose_life",
+            "amount": 1,
+            "scope": "recipient",
+            "quantity": "own_creatures"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      }
+    }
+  },
+  "witnesses": {
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature \u2014 Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    }
+  }
+}

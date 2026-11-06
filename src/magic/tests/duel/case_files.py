@@ -5,6 +5,48 @@ from functools import lru_cache
 from pathlib import Path
 
 
+def select_case_files(directory, *, case_files=None, csvids=None):
+    """Select whole authoring files without expanding recipes outside the selection.
+
+    File selectors are relative to data/cases (or use manifest paths beginning
+    with cases/). CSVID selectors refer to file-level card homes, not scenarios
+    which happen to mention the card. Selectors are a union, and every requested
+    file/card must exist so a typo cannot silently produce an incomplete run.
+    """
+    directory = Path(directory).resolve()
+    selected = set()
+    if not case_files and not csvids:
+        raise ValueError('A case subset requires at least one case file or CSVID')
+    for value in case_files or ():
+        relative = Path(value)
+        if relative.is_absolute() or '..' in relative.parts:
+            raise ValueError(f'Case file selectors must stay relative to {directory}: {value}')
+        if relative.parts and relative.parts[0] == directory.name:
+            relative = Path(*relative.parts[1:])
+        path = (directory / relative).resolve()
+        if not path.is_relative_to(directory) or path.suffix != '.json' or not path.is_file():
+            raise ValueError(f'Unknown case file selector: {value}')
+        selected.add(path)
+    wanted = set(csvids or ())
+    if any(type(value) is not int or value < 0 for value in wanted):
+        raise ValueError('Case subset CSVIDs must be nonnegative integers')
+    if wanted:
+        found = set()
+        # Reading the small declarations is cheap; expanding all their recipes
+        # here would defeat source-only authoring on the full catalog.
+        for path in sorted(directory.rglob('*.json')):
+            try:
+                document = json.loads(path.read_text(encoding='utf-8'))
+            except (OSError, ValueError) as error:
+                raise ValueError(f'{path}: {error}') from error
+            if isinstance(document, dict) and document.get('card') is not None and document.get('csvid') in wanted:
+                selected.add(path.resolve())
+                found.add(document['csvid'])
+        if wanted - found:
+            raise ValueError(f'No card case home for CSVID selectors: {sorted(wanted - found)}')
+    return sorted(selected)
+
+
 def load_cases(directory, registry, oracle=None, aliases=None, *, _files=None, _homes=None):
     directory = Path(directory)
     files = sorted(directory.rglob("*.json")) if _files is None else _files
@@ -79,12 +121,12 @@ class CaseStream:
     index separate from full step dictionaries avoids retaining the expanded
     catalog in memory during C++ emission.
     """
-    def __init__(self, directory, registry, oracle=None, aliases=None, cache_size=4):
+    def __init__(self, directory, registry, oracle=None, aliases=None, cache_size=4, *, files=None):
         if type(cache_size) is not int or cache_size < 1:
             raise ValueError('case stream cache requires a positive file count')
         self.directory=Path(directory)
         self.arguments=(registry,oracle,aliases)
-        files=sorted(self.directory.rglob('*.json'))
+        files=sorted(self.directory.rglob('*.json')) if files is None else sorted(files)
         if not files:raise ValueError(f'No behavior case files found in {self.directory}')
         self.index=[];self.recipe_count=0;homes={};names={}
         for path in files:

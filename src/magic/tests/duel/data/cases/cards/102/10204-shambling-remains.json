@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "card": "Shambling Remains",
+  "csvid": 10204,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{B}{R}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Functional inability to block."
+        ]
+      },
+      "oracle_text": "This creature can't block.\nUnearth {B}{R} ({B}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "haste_attack_0",
+        "destroy_source_0",
+        "bounce_source_0",
+        "exile_source_0",
+        "opposing_turn_0",
+        "combat_timing_0",
+        "stack_timing_0",
+        "cannot_repeat_0",
+        "query_purity_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "missing_color_1_0",
+        "missing_color_4_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "haste_attack_1",
+        "destroy_source_1",
+        "bounce_source_1",
+        "exile_source_1",
+        "opposing_turn_1",
+        "combat_timing_1",
+        "stack_timing_1",
+        "cannot_repeat_1",
+        "query_purity_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "missing_color_1_1",
+        "missing_color_4_1"
+      ]
+    }
+  ]
+}

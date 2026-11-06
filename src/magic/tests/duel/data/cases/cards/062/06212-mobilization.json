@@ -1,0 +1,103 @@
+{
+  "version": 1,
+  "card": "Mobilization",
+  "csvid": 6212,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "noncreature_amount",
+        "basis": "fixed",
+        "token": {
+          "name": "Soldier",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "W"
+          ],
+          "subtypes": [
+            "Soldier"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "inactive_clauses": [],
+        "entry_tapped": false,
+        "activation": {
+          "mana": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "tap": false,
+          "sacrifice": false
+        },
+        "fixed_count": 1,
+        "active_static": {
+          "subtype": "Soldier",
+          "keyword": "Vigilance",
+          "controller": "all"
+        }
+      },
+      "oracle_text": "Soldier creatures have vigilance.\n{2}{W}: Create a 1/1 white Soldier creature token.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "effect_snapshot_0",
+        "wrong_color_0",
+        "cast_only_0",
+        "activation_payment_0",
+        "activation_insufficient_0",
+        "repeat_0",
+        "source_removed_0",
+        "source_removed_pending_0",
+        "activation_snapshot_0",
+        "activation_wrong_color_0",
+        "grant_scope_0",
+        "grant_lost_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "effect_snapshot_1",
+        "wrong_color_1",
+        "cast_only_1",
+        "activation_payment_1",
+        "activation_insufficient_1",
+        "repeat_1",
+        "source_removed_1",
+        "source_removed_pending_1",
+        "activation_snapshot_1",
+        "activation_wrong_color_1",
+        "grant_scope_1",
+        "grant_lost_1"
+      ]
+    }
+  ]
+}

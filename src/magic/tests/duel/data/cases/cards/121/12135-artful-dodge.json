@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Artful Dodge",
+  "csvid": 12135,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "flashback",
+        "effect": "unblockable",
+        "additional_components": [
+          "The unblockability combat recipient is caster-controlled; functional opponent-controlled recipients are not exercised."
+        ]
+      },
+      "oracle_text": "Target creature can't be blocked this turn.\nFlashback {U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "opposing_turn_0",
+        "query_purity_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "no_targets_0",
+        "repeat_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "opposing_turn_1",
+        "query_purity_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "no_targets_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

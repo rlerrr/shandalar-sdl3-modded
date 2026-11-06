@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Ondu Rising",
+  "csvid": 15393,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "attack_lifelink",
+        "inactive_components": [
+          "Only normal-cost component is selected: no controlled battlefield land makes Awaken 4 for {4}{W} unavailable. Opponents declaring attackers during the caster's own turn, future combat phases and late-entry attackers are not selected. Actual attack triggers, blocked/unblocked lifelink, duplicate grants, noncombat and expiry are selected."
+        ]
+      },
+      "oracle_text": "Whenever a creature attacks this turn, it gains lifelink until end of turn.\nAwaken 4—{4}{W} (If you cast this spell for {4}{W}, also put four +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "countered_0",
+        "unblocked_0",
+        "noncombat_0",
+        "two_copies_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "countered_1",
+        "unblocked_1",
+        "noncombat_1",
+        "two_copies_1"
+      ]
+    }
+  ]
+}

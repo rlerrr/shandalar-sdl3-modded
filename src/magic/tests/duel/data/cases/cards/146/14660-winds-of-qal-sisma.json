@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Winds of Qal Sisma",
+  "csvid": 14660,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "amount": "all",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Ferocious changes due to control changes or characteristic changes other than the tested power reduction"
+        ],
+        "binding": "field_combat",
+        "scope": "any",
+        "damage_rule": "ferocious"
+      },
+      "oracle_text": "Prevent all combat damage that would be dealt this turn.\nFerocious — If you control a creature with power 4 or greater, instead prevent all combat damage that would be dealt this turn by creatures your opponents control.",
+      "variants": [
+        "effect_0",
+        "without_effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blocked_0",
+        "no_ferocious_0",
+        "lose_ferocious_0",
+        "effect_1",
+        "without_effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blocked_1",
+        "no_ferocious_1",
+        "lose_ferocious_1"
+      ]
+    }
+  ]
+}

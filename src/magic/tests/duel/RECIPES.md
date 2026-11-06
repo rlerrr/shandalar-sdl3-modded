@@ -5,6 +5,88 @@ distinct from the older card-ID templates. A reviewed recipe costs authoring and
 review work once; matching cards get its scenarios without model-written JSON.
 Existing authored cases remain in their card files alongside the declaration.
 
+For parallel authoring, configure the shared native/Wasm engines once with
+`SHANDALAR_DUEL_AUTHORING_BUILD=ON` and
+`SHANDALAR_DUEL_EXTENDED_TESTS=OFF`. This uses `generate_cases.py --driver-only`
+to emit only compiled fixtures, templates, smoke tables and handler bindings.
+It skips behavior expansion and catalog CTest registration. Authors then generate
+complete selected card homes into separate directories with `--csvid` or
+`--case-file` and run their archives against the immutable engine using
+`run_cases.py --case-data ... --manifest ...`. The same archive works on native
+and Node/Wasm. See the [independent authoring workflow](README.md#independent-authoring)
+for commands and output details. The integrator owns engine rebuilds; switch
+authoring mode off for full-catalog generation and integration validation.
+
+Start a new adapter with four to eight cards covering its distinct profiles.
+Freeze the module and declarations, then run both controllers, payment,
+responses and snapshot replay through the central native/Wasm queue before
+enrolling a larger group. Record hashes of the selected declarations and adapter
+inputs during generation. Correct fixture errors before expanding the pattern;
+only reviewed Oracle mismatches belong in the known-failure baseline.
+
+Older expanders may reuse the same step dictionaries before and after snapshot
+restore. When mirroring players or adjusting receipts, process each object once
+by identity, or copy each occurrence independently. Guard both replay payment
+receipts and decision owners; checking only source ownership misses double flips.
+
+Explicit pending-spell responses can opt into `cast_response` and
+`resolve_response` when the ordinary nested response UI is not driving the case.
+The first casts a real response against the pending top spell; the second drains
+the response and parent stack in the parent's casting context. Both reject
+missing spell context, and ordinary costs, targeting and resolution still run.
+`resolve_response` is currently validated only for one response above its parent
+spell; do not use it for deeper response chains.
+Do not substitute them for ordinary `cast`/`resolve` globally. Assert the actual
+pending stack and consumed choices. Pending spell cards remain physically counted
+in hand until resolution, so intermediate zone models must retain them there.
+
+Recipes depending on this-turn death history opt into `reset_death_history` as
+the first step, with an empty stack, before any authored deaths. It initializes
+the same Deadbox history that normal turn startup clears, avoiding reserved-token
+metadata being mistaken for a dead card. Destroy real battlefield witnesses
+afterward and keep older graveyard cards as negative controls. Do not reset after
+those deaths, on refresh, or when replay must preserve captured history.
+
+For nonmana `GA_BASIC` abilities and creature Unearth seeded in a graveyard, begin
+with `prepare_graveyard_abilities` on an empty stack. Normal startup registers
+RulesEngine needs from decks and active cards; a graveyard-only fixture has not
+passed through that lifecycle. This opt-in operation uses the ordinary card flag
+query and RulesEngine registration. It does not pay costs or perform effects.
+`can_activate_graveyard` and `require_can_activate_graveyard` take the setup's
+graveyard-index ref and preserve the full state and decision queue while querying.
+`activate_graveyard` uses the real RulesEngine menu; queue its actual option,
+assert pending stack/cost/exile receipts, then resolve normally. The helper
+verifies the resulting activation's source and available mode. Unearth uses the
+real paid removal and RulesEngine return/haste/exile lifecycle; it does not cast
+the card. Other graveyard casting and return/play modes are unsupported. The
+Unearth query honors the real creature-return cage restriction. Graveyard indexes can
+shift when cards move, so do not reuse a stale index for another activation.
+These queries describe the engine's actual menu availability, not independent
+Oracle legality. Card tests must retain Oracle expectations if that menu is
+wrong, including Unearth's mana-only cost leaving its source in the graveyard
+until resolution. The helper does not repair premature engine zone movement.
+If a handler chooses targets too late, preserve a separate pending-selection
+assertion and end that scenario pending rather than clearing a choice plan and
+then forcing an unscripted resolution.
+
+`etb_damage_creature`, `death_damage_creature` and `variable_sweep` version 2
+cover fixed creature entry/death damage and ordinary single-X creature damage
+sweeps. Each declaration must match the complete pinned Oracle text; passive
+keywords, cycling and other accepted inactive components remain explicit gaps.
+Both controllers exercise real casts, payment, zone receipts, selected and
+unselected recipients, lethal damage, indestructibility, countered casts and
+snapshot replay. Entry tests distinguish re-entry from other creatures entering
+or dying. Death tests distinguish destruction, lethal damage and combat from
+bounce, blink and exile, including optional target cancellation and both hybrid
+payment colors where printed. Sweeps cover zero and positive X, flying filters,
+both players, mixed boards and cleanup. Damage is checked before cleanup heals
+survivors. Planeswalker targets, prevention/replacement, control changes and
+multiplayer remain separate components; each case records its specific gaps.
+
+Scripted inputs apply to actual resolution. Nested AI damage-prevention searches
+use ordinary AI choices, preserving the caller's queued response while engine
+snapshots are replayed. The damage-caused death cases exercise this boundary.
+
 `variable_value` and `variable_damage` version 2 cover complete ordinary
 single-X instant and sorcery effects. Parameters must match the entire pinned
 Oracle text and printed base cost. Value operations include ordered draw,
@@ -3080,3 +3162,41 @@ catalog entries are preserved. The 66 generated outputs match independent
 hashes, with 60 data shards below 8 MiB. Typed OFF/ON/OFF build settings are
 restored. The report is
 `out/duel-tests/recipe-creature-conditions/validation.json`.
+
+
+`untap_step` takes only an explicit `player` (0 or1). Call it after
+`advance_turn`, with that player current, an empty stack and zero floating
+mana for both players. It invokes the complete real untap wrapper, including
+begin-turn notification, untap restrictions, actual untaps and end-of-untap
+expiry; it does not dispatch upkeep or draw. Each prepared turn permits one
+call. Snapshots preserve both prepared and consumed states. A `turn` setter
+invalidates preparation and cannot create another untap. Only untap UI stop
+preferences/requests are temporarily suppressed and restored; rules choices
+remain subject to the ordinary headless input contract.
+
+
+`can_cast_graveyard`, `require_can_cast_graveyard`, and `cast_graveyard`
+use a graveyard-index reference for the bounded noncreature Flashback path.
+Call `prepare_graveyard_abilities` after seeding the graveyard. Entry requires
+an empty stack; this interface does not model Flashback responses. The query
+preserves game state and scripted decisions. The real RulesEngine menu selects
+the named source (and its occurrence among identical copies); callers still
+supply targets, payment choices and any inner dialogs. Do not queue a numeric
+choice for the outer Flashback menu. Its native callback pays costs, casts and
+resolves the spell, so success returns after full resolution and draining the
+real proxy activation. There is no synthetic pending-spell checkpoint. Retrace,
+Aftermath, Escape and creature casting are outside this initial interface.
+
+`assert_shuffle_count` accepts only `player` (integer 0 or 1) and `value`
+(a nonnegative integer). It observes actual calls to the shared library-shuffle
+entry, indexed by the library's owner rather than the computer making the
+choice. Empty and one-card libraries still count. This receipt proves entry
+and recipient, not a uniform random distribution or delivery of shuffle
+triggers. Counts start at zero on reset and follow test snapshots and both AI
+rollback paths; RNG work, time and execution budgets are not refunded by AI
+counter restoration. Retained calls made under AI policies still count.
+
+`assert_matching_permanents` also accepts `subtype_Wolf`, `subtype_Ape`,
+`subtype_Frog` and `subtype_Lizard`. These read the matching permanent's real
+subtypes and are not `assert_card` properties. A Frog Lizard has both its Frog
+and Lizard observations set; the keys are independent.

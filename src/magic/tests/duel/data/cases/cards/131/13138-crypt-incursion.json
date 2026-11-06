@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Crypt Incursion",
+  "csvid": 13138,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "spell",
+        "quantity": "all",
+        "scope": "creature",
+        "graveyard": "target_player",
+        "draw": 0,
+        "life_per": 3,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": []
+      },
+      "oracle_text": "Exile all creature cards from target player's graveyard. You gain 3 life for each card exiled this way.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "empty_graveyards_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "own_target_0",
+        "sole_own_graveyard_0",
+        "sole_opponent_graveyard_0",
+        "wrong_type_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "wrong_color_0",
+        "repeat_0",
+        "effect_1",
+        "payment_1",
+        "empty_graveyards_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "own_target_1",
+        "sole_own_graveyard_1",
+        "sole_opponent_graveyard_1",
+        "wrong_type_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "wrong_color_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

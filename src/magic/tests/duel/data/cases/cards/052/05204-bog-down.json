@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "card": "Bog Down",
+  "csvid": 5204,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Bog Down",
+        "kind": "cost_effect",
+        "cost_scope": "land",
+        "cost_count": 2,
+        "effect": "discard",
+        "target": "player",
+        "amount": "kicked",
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "optional_payment": {
+          "kind": "kicker_sacrifice",
+          "mana": 0,
+          "dialog_first": true
+        }
+      },
+      "oracle_text": "Kicker\u2014Sacrifice two lands. (You may sacrifice two lands in addition to any other costs as you cast this spell.)\nTarget player discards two cards. If this spell was kicked, that player discards three cards instead.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_cost_0",
+        "stolen_cost_0",
+        "short_cost_0",
+        "indestructible_cost_0",
+        "own_target_0",
+        "target_shrouded_pending_0",
+        "empty_hand_0",
+        "one_card_0",
+        "large_hand_0",
+        "last_choice_0",
+        "ordinary_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_cost_1",
+        "stolen_cost_1",
+        "short_cost_1",
+        "indestructible_cost_1",
+        "own_target_1",
+        "target_shrouded_pending_1",
+        "empty_hand_1",
+        "one_card_1",
+        "large_hand_1",
+        "last_choice_1",
+        "ordinary_1",
+        "alternate_choice_0"
+      ]
+    }
+  ]
+}

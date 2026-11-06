@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Elven Rite",
+  "csvid": 3365,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "distribute",
+        "amounts": [
+          1,
+          1
+        ],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": []
+      },
+      "oracle_text": "Distribute two +1/+1 counters among one or two target creatures.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "two_copies_0",
+        "countered_0",
+        "opponent_0",
+        "preexisting_0",
+        "lost_target_0",
+        "one_target_0",
+        "partial_target_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "two_copies_1",
+        "countered_1",
+        "opponent_1",
+        "preexisting_1",
+        "lost_target_1",
+        "one_target_1",
+        "partial_target_1"
+      ]
+    }
+  ]
+}

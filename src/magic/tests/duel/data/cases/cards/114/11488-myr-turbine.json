@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "card": "Myr Turbine",
+  "csvid": 11488,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "noncreature_amount",
+        "basis": "fixed",
+        "token": {
+          "name": "Myr",
+          "power": 1,
+          "toughness": 1,
+          "colors": [],
+          "subtypes": [
+            "Myr"
+          ],
+          "artifact": true,
+          "keywords": []
+        },
+        "inactive_clauses": [
+          "{T}, Tap five untapped Myr you control: Search your library for a Myr creature card, put it onto the battlefield, then shuffle."
+        ],
+        "entry_tapped": false,
+        "activation": {
+          "mana": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "tap": true,
+          "sacrifice": false
+        },
+        "fixed_count": 1
+      },
+      "oracle_text": "{T}: Create a 1/1 colorless Myr artifact creature token.\n{T}, Tap five untapped Myr you control: Search your library for a Myr creature card, put it onto the battlefield, then shuffle.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "effect_snapshot_0",
+        "cast_only_0",
+        "activation_payment_0",
+        "repeat_0",
+        "source_removed_0",
+        "source_removed_pending_0",
+        "activation_snapshot_0",
+        "tapped_denied_0",
+        "untap_repeat_0",
+        "untap_snapshot_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "effect_snapshot_1",
+        "cast_only_1",
+        "activation_payment_1",
+        "repeat_1",
+        "source_removed_1",
+        "source_removed_pending_1",
+        "activation_snapshot_1",
+        "tapped_denied_1",
+        "untap_repeat_1",
+        "untap_snapshot_1"
+      ]
+    }
+  ]
+}

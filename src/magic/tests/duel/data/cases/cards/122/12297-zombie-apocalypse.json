@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Zombie Apocalypse",
+  "csvid": 12297,
+  "recipes": [
+    {
+      "family": "reanimation",
+      "version": 2,
+      "params": {
+        "mode": "mass",
+        "scope": "zombie_creature",
+        "graveyard": "self",
+        "control": "self",
+        "tapped": true,
+        "limit": null,
+        "history": false,
+        "self_destination": "graveyard",
+        "extras": [
+          "humans"
+        ],
+        "legacy_x_payment_prompt": false
+      },
+      "oracle_text": "Return all Zombie creature cards from your graveyard to the battlefield tapped, then destroy all Humans.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "empty_0",
+        "wrong_type_0",
+        "countered_0",
+        "cleanup_0",
+        "repeat_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "wrong_owner_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "empty_1",
+        "wrong_type_1",
+        "countered_1",
+        "cleanup_1",
+        "repeat_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "wrong_owner_1"
+      ]
+    }
+  ]
+}

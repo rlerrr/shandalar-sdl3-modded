@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "card": "Khalni Garden",
+  "csvid": 10787,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 3,
+        "mechanism": "land_creator",
+        "token": {
+          "name": "Plant",
+          "power": 0,
+          "toughness": 1,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Plant"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "amount": {
+          "fixed": 1
+        },
+        "activation": null,
+        "operative": [
+          {
+            "kind": "source_enters_tapped"
+          },
+          {
+            "kind": "entry_creation",
+            "count": 1
+          },
+          {
+            "kind": "tap_mana",
+            "color": "G",
+            "amount": 1
+          }
+        ],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "This land enters tapped.\nWhen this land enters, create a 0/1 green Plant creature token.\n{T}: Add {G}.",
+      "variants": [
+        "create_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "mana_ability_0",
+        "entry_tapped_denied_0",
+        "create_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "mana_ability_1",
+        "entry_tapped_denied_1"
+      ]
+    }
+  ]
+}

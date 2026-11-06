@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Moonmist",
+  "csvid": 12029,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "amount": "all",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Transformation of Humans; no Human or double-faced card is on these battlefields",
+          "Werewolf damage sources"
+        ],
+        "binding": "field_combat",
+        "scope": "any",
+        "damage_rule": "non_wolves",
+        "unselected": "Watchwolf"
+      },
+      "oracle_text": "Transform all Humans. Prevent all combat damage that would be dealt this turn by creatures other than Werewolves and Wolves. (Only double-faced cards can be transformed.)",
+      "variants": [
+        "effect_0",
+        "without_effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blocked_0",
+        "effect_1",
+        "without_effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blocked_1"
+      ]
+    }
+  ]
+}

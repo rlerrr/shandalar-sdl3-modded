@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Filigree Angel",
+  "csvid": 10275,
+  "recipes": [
+    {
+      "family": "entry_value_extension",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "profile": "Filigree Angel"
+      },
+      "oracle_text": "Flying\nWhen this creature enters, you gain 3 life for each artifact you control.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blink_0",
+        "blink_snapshot_0",
+        "bounce_recast_0",
+        "bounce_only_0",
+        "two_copies_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "bare_zones_0",
+        "no_qualifier_0",
+        "enemy_only_0",
+        "late_creature_0",
+        "destroy_other_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blink_1",
+        "blink_snapshot_1",
+        "bounce_recast_1",
+        "bounce_only_1",
+        "two_copies_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "bare_zones_1",
+        "no_qualifier_1",
+        "enemy_only_1",
+        "late_creature_1",
+        "destroy_other_1"
+      ]
+    }
+  ]
+}

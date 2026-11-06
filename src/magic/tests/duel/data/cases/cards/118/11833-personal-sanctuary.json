@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Personal Sanctuary",
+  "csvid": 11833,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "oracle_text": "During your turn, prevent all damage that would be dealt to you.",
+      "params": {
+        "kind": "static",
+        "scope": "own_turn",
+        "gain": "none",
+        "activation_cost": "",
+        "tap": false,
+        "sacrifice": false,
+        "keywords": [],
+        "inactive_clauses": []
+      },
+      "variants": [
+        "unblocked_0",
+        "blocked_0",
+        "reverse_combat_0",
+        "reverse_blocked_0",
+        "red_source_0",
+        "trample_source_0",
+        "small_source_0",
+        "human_source_0",
+        "noncombat_player_0",
+        "noncombat_friendly_0",
+        "noncombat_enemy_0",
+        "friendly_damage_0",
+        "opposing_turn_damage_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "unblocked_1",
+        "blocked_1",
+        "reverse_combat_1",
+        "reverse_blocked_1",
+        "red_source_1",
+        "trample_source_1",
+        "small_source_1",
+        "human_source_1",
+        "noncombat_player_1",
+        "noncombat_friendly_1",
+        "noncombat_enemy_1",
+        "friendly_damage_1",
+        "opposing_turn_damage_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1"
+      ]
+    }
+  ]
+}

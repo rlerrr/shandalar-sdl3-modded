@@ -1,0 +1,4880 @@
+{
+  "version": 1,
+  "card": "Tendrils of Agony",
+  "csvid": 6589,
+  "status": "pending",
+  "pending_variant_count": 2,
+  "oracle": {
+    "oracle_id": "78db3190-59bc-4033-95bc-32d8ed872b6a",
+    "name": "Tendrils of Agony",
+    "oracle_text": "Target player loses 2 life and you gain 2 life.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+    "mana_cost": "{2}{B}{B}",
+    "type_line": "Sorcery",
+    "keywords": [
+      "Storm"
+    ],
+    "colors": [
+      "B"
+    ],
+    "color_identity": [
+      "B"
+    ],
+    "cmc": 4.0,
+    "layout": "normal",
+    "scryfall_uri": "https://scryfall.com/card/vma/142/tendrils-of-agony?utm_source=api"
+  },
+  "recipes": [
+    {
+      "family": "life_spell_extension",
+      "version": 2,
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "lose_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "self",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "storm copies"
+        ],
+        "inactive": [
+          "zero spells cast before source"
+        ],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      },
+      "oracle_text": "Target player loses 2 life and you gain 2 life.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "variants": [
+        "target_shrouded_pending_0",
+        "target_shrouded_pending_1"
+      ]
+    }
+  ],
+  "pending_reason": "Only these two explicit shroud-response scenarios reach a late storm-copy path under the scripted pending-spell lifecycle. Gilded Light is cast after the original Tendrils cast; the original therefore has zero preceding spells for storm. Current resolution instead requests additional player targets. No completed rules-assertion outcome exists and these harness failures must not enter a known-failure baseline.",
+  "source_evidence": [
+    {
+      "file": "src/manalinkeh/cards/scourge.c",
+      "line": 2765,
+      "detail": "Tendrils exposes QUERY_STORM to the shared casting implementation."
+    },
+    {
+      "file": "src/manalinkeh/functions/engine.c",
+      "line": 2747,
+      "detail": "put_card_on_stack3 queries storm, obtains the current get_storm_count at line2748 and creates copies at line2753; the observed extra target requests occur after casting the response."
+    },
+    {
+      "file": "src/magic/tests/duel/duel_test_api.c",
+      "line": 631,
+      "detail": "resolve_response restores the parent context and drains response plus parent; no single-top response lifecycle is available to this authoring pass."
+    }
+  ],
+  "resolution_policy": "Preserve both controllers and original zero-prior-spell Oracle assertions. Review lifecycle/timing and validate without unscripted choices on both runtimes before promotion. This archive makes no observer, API or gameplay change.",
+  "runtime_report": "H:\\shandalar-test-scratch\\large-batch-2\\life_spells-final\\validation.json",
+  "runtime_evidence": [
+    {
+      "case": "Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0",
+      "platform": "native",
+      "run": "original",
+      "log": "H:\\shandalar-test-scratch\\large-batch-2\\life_spells-final\\native\\Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0.log",
+      "sha256": "0c8f502e482dce044cf7c8e22dc2a23f65e3338e1d3e09eb62dbf08b6b22b624",
+      "failure_kind": "harness",
+      "assertion_count": 0,
+      "log_text": "[ RUN      ] Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0\nCASE: LifeSpellExtensionRecipe_6589_target_shrouded_pending_0 CARD: Tendrils of Agony ORACLE: 78db3190-59bc-4033-95bc-32d8ed872b6a FIXTURE: empty_main SEED: 123\nDUEL_HARNESS_ERROR: unscripted choice kind=0 player=0 prompt=Select target player.\n"
+    },
+    {
+      "case": "Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0",
+      "platform": "native",
+      "run": "isolated",
+      "log": "H:\\shandalar-test-scratch\\large-batch-2\\life_spells-final\\native\\isolated\\Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0.log",
+      "sha256": "2c27e14d7167a2c139fd5eeb8ff0312d134b70ceaf7d845d33af841a8999c9ad",
+      "failure_kind": "harness",
+      "assertion_count": 0,
+      "log_text": "Note: Google Test filter = Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0\n[==========] Running 1 test from 1 test suite.\n[----------] Global test environment set-up.\n[----------] 1 test from Behavior\n[ RUN      ] Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0\nCASE: LifeSpellExtensionRecipe_6589_target_shrouded_pending_0 CARD: Tendrils of Agony ORACLE: 78db3190-59bc-4033-95bc-32d8ed872b6a FIXTURE: empty_main SEED: 123\nDUEL_HARNESS_ERROR: unscripted choice kind=0 player=0 prompt=Select target player.\n"
+    },
+    {
+      "case": "Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1",
+      "platform": "native",
+      "run": "original",
+      "log": "H:\\shandalar-test-scratch\\large-batch-2\\life_spells-final\\native\\Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1.log",
+      "sha256": "d37413a03d465884bb3c5cbfbf7a4d36e6f011f1838bb540db887e14717ca969",
+      "failure_kind": "harness",
+      "assertion_count": 0,
+      "log_text": "[ RUN      ] Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1\nCASE: LifeSpellExtensionRecipe_6589_target_shrouded_pending_1 CARD: Tendrils of Agony ORACLE: 78db3190-59bc-4033-95bc-32d8ed872b6a FIXTURE: empty_main SEED: 123\nDUEL_HARNESS_ERROR: unscripted choice kind=0 player=1 prompt=Select target player.\n"
+    },
+    {
+      "case": "Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1",
+      "platform": "native",
+      "run": "isolated",
+      "log": "H:\\shandalar-test-scratch\\large-batch-2\\life_spells-final\\native\\isolated\\Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1.log",
+      "sha256": "02618893ad691e2ff042e24e1a938f88d0bea68e5a8824f078b40dbbb81acbb4",
+      "failure_kind": "harness",
+      "assertion_count": 0,
+      "log_text": "Note: Google Test filter = Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1\n[==========] Running 1 test from 1 test suite.\n[----------] Global test environment set-up.\n[----------] 1 test from Behavior\n[ RUN      ] Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1\nCASE: LifeSpellExtensionRecipe_6589_target_shrouded_pending_1 CARD: Tendrils of Agony ORACLE: 78db3190-59bc-4033-95bc-32d8ed872b6a FIXTURE: empty_main SEED: 123\nDUEL_HARNESS_ERROR: unscripted choice kind=0 player=1 prompt=Select target player.\n"
+    },
+    {
+      "case": "Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0",
+      "platform": "wasm",
+      "run": "original",
+      "log": "H:\\shandalar-test-scratch\\large-batch-2\\life_spells-final\\wasm\\Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0.log",
+      "sha256": "0285fa71400c0b3981668b0cf692a69b8dc4d8a0d36f2430d800c0e46ca821c6",
+      "failure_kind": "harness",
+      "assertion_count": 0,
+      "log_text": "[ RUN      ] Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0\nCASE: LifeSpellExtensionRecipe_6589_target_shrouded_pending_0 CARD: Tendrils of Agony ORACLE: 78db3190-59bc-4033-95bc-32d8ed872b6a FIXTURE: empty_main SEED: 123\nDUEL_HARNESS_ERROR: unscripted choice kind=0 player=0 prompt=Select target player.\nAborted(native code called abort())\nH:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743\n  var e = new WebAssembly.RuntimeError(what);\n          ^\n\nRuntimeError: Aborted(native code called abort())\n    at abort (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743:11)\n    at __abort_js (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:4615:7)\n    at duel_card_tests.wasm.abort (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[23909]:0x71485f)\n    at duel_card_tests.wasm.duel_host_fail (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1126]:0x6aaee)\n    at duel_card_tests.wasm.choose_with_policy (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1125]:0x6aaa7)\n    at duel_card_tests.wasm.duel_host_choose (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1127]:0x6ab08)\n    at duel_card_tests.wasm.select_target_maybe_force (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19928]:0x573e87)\n    at duel_card_tests.wasm.manalinkeh_select_target (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19922]:0x571fe4)\n    at duel_card_tests.wasm.manalinkeh_generic_spell (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19240]:0x53cc93)\n    at duel_card_tests.wasm.manalinkeh_card_tendrils_of_agony (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[14473]:0x3f2442)\n\nNode.js v24.12.0\n"
+    },
+    {
+      "case": "Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0",
+      "platform": "wasm",
+      "run": "isolated",
+      "log": "H:\\shandalar-test-scratch\\large-batch-2\\life_spells-final\\wasm\\isolated\\Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0.log",
+      "sha256": "5ea3129673abf35ade5456eb30a411002536f8aa376d31fb3339d67d1965d9a1",
+      "failure_kind": "harness",
+      "assertion_count": 0,
+      "log_text": "Note: Google Test filter = Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0\n[==========] Running 1 test from 1 test suite.\n[----------] Global test environment set-up.\n[----------] 1 test from Behavior\n[ RUN      ] Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_0\ndeck: fopen failed Cards.dat rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX2.txt rb\nCASE: LifeSpellExtensionRecipe_6589_target_shrouded_pending_0 CARD: Tendrils of Agony ORACLE: 78db3190-59bc-4033-95bc-32d8ed872b6a FIXTURE: empty_main SEED: 123\nDUEL_HARNESS_ERROR: unscripted choice kind=0 player=0 prompt=Select target player.\nAborted(native code called abort())\nH:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743\n  var e = new WebAssembly.RuntimeError(what);\n          ^\n\nRuntimeError: Aborted(native code called abort())\n    at abort (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743:11)\n    at __abort_js (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:4615:7)\n    at duel_card_tests.wasm.abort (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[23909]:0x71485f)\n    at duel_card_tests.wasm.duel_host_fail (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1126]:0x6aaee)\n    at duel_card_tests.wasm.choose_with_policy (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1125]:0x6aaa7)\n    at duel_card_tests.wasm.duel_host_choose (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1127]:0x6ab08)\n    at duel_card_tests.wasm.select_target_maybe_force (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19928]:0x573e87)\n    at duel_card_tests.wasm.manalinkeh_select_target (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19922]:0x571fe4)\n    at duel_card_tests.wasm.manalinkeh_generic_spell (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19240]:0x53cc93)\n    at duel_card_tests.wasm.manalinkeh_card_tendrils_of_agony (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[14473]:0x3f2442)\n\nNode.js v24.12.0\n"
+    },
+    {
+      "case": "Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1",
+      "platform": "wasm",
+      "run": "original",
+      "log": "H:\\shandalar-test-scratch\\large-batch-2\\life_spells-final\\wasm\\Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1.log",
+      "sha256": "2c2bd9942d866d9d52198876032203bbb15b9e11eb6037fe9b72a8dd57438134",
+      "failure_kind": "harness",
+      "assertion_count": 0,
+      "log_text": "[ RUN      ] Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1\nCASE: LifeSpellExtensionRecipe_6589_target_shrouded_pending_1 CARD: Tendrils of Agony ORACLE: 78db3190-59bc-4033-95bc-32d8ed872b6a FIXTURE: empty_main SEED: 123\nDUEL_HARNESS_ERROR: unscripted choice kind=0 player=1 prompt=Select target player.\nAborted(native code called abort())\nH:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743\n  var e = new WebAssembly.RuntimeError(what);\n          ^\n\nRuntimeError: Aborted(native code called abort())\n    at abort (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743:11)\n    at __abort_js (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:4615:7)\n    at duel_card_tests.wasm.abort (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[23909]:0x71485f)\n    at duel_card_tests.wasm.duel_host_fail (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1126]:0x6aaee)\n    at duel_card_tests.wasm.choose_with_policy (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1125]:0x6aaa7)\n    at duel_card_tests.wasm.duel_host_choose (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1127]:0x6ab08)\n    at duel_card_tests.wasm.select_target_maybe_force (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19928]:0x573e87)\n    at duel_card_tests.wasm.manalinkeh_select_target (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19922]:0x571fe4)\n    at duel_card_tests.wasm.manalinkeh_generic_spell (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19240]:0x53cc93)\n    at duel_card_tests.wasm.manalinkeh_card_tendrils_of_agony (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[14473]:0x3f2442)\n\nNode.js v24.12.0\n"
+    },
+    {
+      "case": "Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1",
+      "platform": "wasm",
+      "run": "isolated",
+      "log": "H:\\shandalar-test-scratch\\large-batch-2\\life_spells-final\\wasm\\isolated\\Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1.log",
+      "sha256": "b37e7109fc885af2c446ea34542062e56760cf710846f83f53b65d21a7209c39",
+      "failure_kind": "harness",
+      "assertion_count": 0,
+      "log_text": "Note: Google Test filter = Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1\n[==========] Running 1 test from 1 test suite.\n[----------] Global test environment set-up.\n[----------] 1 test from Behavior\n[ RUN      ] Behavior.LifeSpellExtensionRecipe_6589_target_shrouded_pending_1\ndeck: fopen failed Cards.dat rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX1.txt rb\ndeck: fopen failed /assets_modded/promptsX2.txt rb\nCASE: LifeSpellExtensionRecipe_6589_target_shrouded_pending_1 CARD: Tendrils of Agony ORACLE: 78db3190-59bc-4033-95bc-32d8ed872b6a FIXTURE: empty_main SEED: 123\nDUEL_HARNESS_ERROR: unscripted choice kind=0 player=1 prompt=Select target player.\nAborted(native code called abort())\nH:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743\n  var e = new WebAssembly.RuntimeError(what);\n          ^\n\nRuntimeError: Aborted(native code called abort())\n    at abort (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:743:11)\n    at __abort_js (H:\\shandalar-test-scratch\\engine\\duel_card_tests.js:4615:7)\n    at duel_card_tests.wasm.abort (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[23909]:0x71485f)\n    at duel_card_tests.wasm.duel_host_fail (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1126]:0x6aaee)\n    at duel_card_tests.wasm.choose_with_policy (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1125]:0x6aaa7)\n    at duel_card_tests.wasm.duel_host_choose (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[1127]:0x6ab08)\n    at duel_card_tests.wasm.select_target_maybe_force (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19928]:0x573e87)\n    at duel_card_tests.wasm.manalinkeh_select_target (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19922]:0x571fe4)\n    at duel_card_tests.wasm.manalinkeh_generic_spell (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[19240]:0x53cc93)\n    at duel_card_tests.wasm.manalinkeh_card_tendrils_of_agony (wasm://wasm/duel_card_tests.wasm-02c06fba:wasm-function[14473]:0x3f2442)\n\nNode.js v24.12.0\n"
+    }
+  ],
+  "preserved_expanded_cases": [
+    {
+      "name": "LifeSpellExtensionRecipe_6589_target_shrouded_pending_0",
+      "card": "Tendrils of Agony",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_hand_0",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "p0_hand_1",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p0_hand_2",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0_hand_3",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_graveyard_0",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "p0_graveyard_1",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_graveyard_2",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "p0_graveyard_3",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0_library_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_library_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_3",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p0_library_4",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p0_library_5",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p0_library_6",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_7",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0_library_8",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_library_9",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_10",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p0_library_11",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p0_library_12",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p0_library_13",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_14",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0_library_15",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_library_16",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_17",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p0_library_18",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p0_library_19",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p0_library_20",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_21",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0_library_22",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_library_23",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_24",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p0_library_25",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p0_library_26",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p0_library_27",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p0_exile_0",
+          "player": 0,
+          "zone": "exile"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "p0_exile_1",
+          "player": 0,
+          "zone": "exile"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_hand_0",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "p1_hand_1",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p1_hand_2",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "p1_hand_3",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_graveyard_0",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "p1_graveyard_1",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_graveyard_2",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "p1_graveyard_3",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_0",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p1_library_1",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_library_2",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_3",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p1_library_4",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p1_library_5",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p1_library_6",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_7",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p1_library_8",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_library_9",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_10",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p1_library_11",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p1_library_12",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p1_library_13",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_14",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p1_library_15",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_library_16",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_17",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p1_library_18",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p1_library_19",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p1_library_20",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_21",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p1_library_22",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_library_23",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_24",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p1_library_25",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p1_library_26",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p1_library_27",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p1_exile_0",
+          "player": 1,
+          "zone": "exile"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "p1_exile_1",
+          "player": 1,
+          "zone": "exile"
+        },
+        {
+          "name": "Tendrils of Agony",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "friendly",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "enemy",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Gilded Light",
+          "ref": "shield",
+          "player": 1,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "discard_policy",
+          "value": 1
+        },
+        {
+          "op": "set_life",
+          "player": 0,
+          "value": 50
+        },
+        {
+          "op": "set_life",
+          "player": 1,
+          "value": 50
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 0,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 1,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 5,
+          "value": 20
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "choose_player",
+          "player": 0,
+          "value": 1
+        },
+        {
+          "op": "require_can_cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 50
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 50
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 20
+        },
+        {
+          "op": "cast_response",
+          "ref": "shield",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 2
+        },
+        {
+          "op": "resolve_response"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_hand",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "minus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_hand",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "minus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 50
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 20
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 97,
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 97,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 97,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 6533,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 6533,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 6533,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 106,
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 106,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 145,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 145,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 149,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 149,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 149,
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 230,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 6589,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 6589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 6589,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 28
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 7,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 8,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 9,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 10,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 11,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 12,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 13,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 14,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 15,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 16,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 17,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 18,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 19,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 20,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 21,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 22,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 23,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 24,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 25,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 26,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 27,
+          "value": 145
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 50
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 0,
+          "value": 19
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 19
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 97,
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 97,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 97,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 6533,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 6533,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 6533,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 106,
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 106,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 145,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 145,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 149,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 149,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 149,
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 230,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 6589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 6589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 6589,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 28
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 7,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 8,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 9,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 10,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 11,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 12,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 13,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 14,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 15,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 16,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 17,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 18,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 19,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 20,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 21,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 22,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 23,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 24,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 25,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 26,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 27,
+          "value": 145
+        },
+        {
+          "op": "assert_energy",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_poison",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_energy",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "assert_poison",
+          "player": 1,
+          "value": 0
+        }
+      ],
+      "_recipe": {
+        "family": "life_spell_extension",
+        "version": 2,
+        "variant": "target_shrouded_pending_0",
+        "params": {
+          "recipient": "any",
+          "operations": [
+            {
+              "kind": "lose_life",
+              "amount": 2,
+              "scope": "recipient",
+              "quantity": "fixed"
+            },
+            {
+              "kind": "gain_life",
+              "amount": 2,
+              "scope": "self",
+              "quantity": "fixed"
+            }
+          ],
+          "cast_before": [],
+          "cast_after": [],
+          "gaps": [
+            "storm copies"
+          ],
+          "inactive": [
+            "zero spells cast before source"
+          ],
+          "energy": 0,
+          "poison": 0,
+          "lands": [],
+          "target_choices": 1
+        },
+        "oracle_text": "Target player loses 2 life and you gain 2 life.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+        "untested_components": [
+          "storm copies",
+          "life and draw replacement effects",
+          "multiplayer",
+          "combat damage followups"
+        ],
+        "inactive_conditions": [
+          "zero spells cast before source"
+        ]
+      }
+    },
+    {
+      "name": "LifeSpellExtensionRecipe_6589_target_shrouded_pending_1",
+      "card": "Tendrils of Agony",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_hand_0",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "p0_hand_1",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p0_hand_2",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0_hand_3",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_graveyard_0",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "p0_graveyard_1",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_graveyard_2",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "p0_graveyard_3",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0_library_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_library_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_3",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p0_library_4",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p0_library_5",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p0_library_6",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_7",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0_library_8",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_library_9",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_10",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p0_library_11",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p0_library_12",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p0_library_13",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_14",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0_library_15",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_library_16",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_17",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p0_library_18",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p0_library_19",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p0_library_20",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_21",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p0_library_22",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p0_library_23",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p0_library_24",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p0_library_25",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p0_library_26",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p0_library_27",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p0_exile_0",
+          "player": 0,
+          "zone": "exile"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "p0_exile_1",
+          "player": 0,
+          "zone": "exile"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_hand_0",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "p1_hand_1",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p1_hand_2",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "p1_hand_3",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_graveyard_0",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "p1_graveyard_1",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_graveyard_2",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "p1_graveyard_3",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_0",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p1_library_1",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_library_2",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_3",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p1_library_4",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p1_library_5",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p1_library_6",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_7",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p1_library_8",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_library_9",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_10",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p1_library_11",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p1_library_12",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p1_library_13",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_14",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p1_library_15",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_library_16",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_17",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p1_library_18",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p1_library_19",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p1_library_20",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_21",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "p1_library_22",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "p1_library_23",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "p1_library_24",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "p1_library_25",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p1_library_26",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "p1_library_27",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "p1_exile_0",
+          "player": 1,
+          "zone": "exile"
+        },
+        {
+          "name": "Llanowar Elves",
+          "ref": "p1_exile_1",
+          "player": 1,
+          "zone": "exile"
+        },
+        {
+          "name": "Tendrils of Agony",
+          "ref": "source",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "friendly",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Hill Giant",
+          "ref": "enemy",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Gilded Light",
+          "ref": "shield",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "discard_policy",
+          "value": 1
+        },
+        {
+          "op": "set_life",
+          "player": 0,
+          "value": 50
+        },
+        {
+          "op": "set_life",
+          "player": 1,
+          "value": 50
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 0,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 1,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 5,
+          "value": 20
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "choose_player",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "require_can_cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 50
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 20
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 50
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 4
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 20
+        },
+        {
+          "op": "cast_response",
+          "ref": "shield",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 2
+        },
+        {
+          "op": "resolve_response"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "in_hand",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "friendly",
+          "property": "minus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "in_hand",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "power",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "enemy",
+          "property": "minus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 50
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 19
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 19
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 97,
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 97,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 97,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 6533,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 6533,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 6533,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 106,
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 106,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 145,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 145,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 149,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 149,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 149,
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 230,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 6589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 6589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 6589,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 0,
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 28
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 7,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 8,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 9,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 10,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 11,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 12,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 13,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 14,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 15,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 16,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 17,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 18,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 19,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 20,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 21,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 22,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 23,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 24,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 25,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 26,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 27,
+          "value": 145
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 50
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 2,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 4,
+          "value": 20
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 20
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 4
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 5
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 585,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 12330,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 15589,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 3489,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 97,
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 97,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 97,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 6533,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 6533,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 6533,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 106,
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 106,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 110,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 13743,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 145,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 145,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 149,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 149,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 149,
+          "value": 1
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 12594,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 230,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 7975,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 240,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 1170,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 6589,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 6589,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 6589,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 256,
+          "value": 0
+        },
+        {
+          "op": "assert_hand_graveyard_total",
+          "player": 1,
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 260,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 28
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 7,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 8,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 9,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 10,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 11,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 12,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 13,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 14,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 15,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 16,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 17,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 18,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 19,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 20,
+          "value": 145
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 21,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 22,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 23,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 24,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 25,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 26,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 27,
+          "value": 145
+        },
+        {
+          "op": "assert_energy",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_poison",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_energy",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "assert_poison",
+          "player": 1,
+          "value": 0
+        }
+      ],
+      "_recipe": {
+        "family": "life_spell_extension",
+        "version": 2,
+        "variant": "target_shrouded_pending_1",
+        "params": {
+          "recipient": "any",
+          "operations": [
+            {
+              "kind": "lose_life",
+              "amount": 2,
+              "scope": "recipient",
+              "quantity": "fixed"
+            },
+            {
+              "kind": "gain_life",
+              "amount": 2,
+              "scope": "self",
+              "quantity": "fixed"
+            }
+          ],
+          "cast_before": [],
+          "cast_after": [],
+          "gaps": [
+            "storm copies"
+          ],
+          "inactive": [
+            "zero spells cast before source"
+          ],
+          "energy": 0,
+          "poison": 0,
+          "lands": [],
+          "target_choices": 1
+        },
+        "oracle_text": "Target player loses 2 life and you gain 2 life.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+        "untested_components": [
+          "storm copies",
+          "life and draw replacement effects",
+          "multiplayer",
+          "combat damage followups"
+        ],
+        "inactive_conditions": [
+          "zero spells cast before source"
+        ]
+      }
+    }
+  ]
+}

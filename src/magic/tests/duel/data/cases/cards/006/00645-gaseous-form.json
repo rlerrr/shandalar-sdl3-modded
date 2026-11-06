@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Gaseous Form",
+  "csvid": 645,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "oracle_text": "Enchant creature\nPrevent all combat damage that would be dealt to and dealt by enchanted creature.",
+      "params": {
+        "kind": "aura",
+        "scope": "aura_both",
+        "gain": "none",
+        "activation_cost": "",
+        "tap": false,
+        "sacrifice": false,
+        "keywords": [],
+        "inactive_clauses": []
+      },
+      "variants": [
+        "blocked_0",
+        "unblocked_0",
+        "noncombat_0",
+        "cleanup_0",
+        "source_removed_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "blocked_1",
+        "unblocked_1",
+        "noncombat_1",
+        "cleanup_1",
+        "source_removed_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1"
+      ]
+    }
+  ]
+}

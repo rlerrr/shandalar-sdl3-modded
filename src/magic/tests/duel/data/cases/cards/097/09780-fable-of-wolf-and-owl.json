@@ -1,0 +1,122 @@
+{
+  "version": 1,
+  "card": "Fable of Wolf and Owl",
+  "csvid": 9780,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 4,
+        "mechanism": "wolf_creator",
+        "wolf_kind": "two_color_cast",
+        "token": {
+          "name": "Wolf",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Wolf"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "tokens": [
+          {
+            "token": {
+              "name": "Wolf",
+              "power": 2,
+              "toughness": 2,
+              "colors": [
+                "G"
+              ],
+              "subtypes": [
+                "Wolf"
+              ],
+              "artifact": false,
+              "keywords": []
+            },
+            "count": 1
+          },
+          {
+            "token": {
+              "name": "Bird",
+              "power": 1,
+              "toughness": 1,
+              "colors": [
+                "U"
+              ],
+              "subtypes": [
+                "Bird"
+              ],
+              "artifact": false,
+              "keywords": [
+                "Flying"
+              ]
+            },
+            "count": 1
+          }
+        ],
+        "amount": {
+          "basis": "spell_colors"
+        },
+        "activation": null,
+        "operative": [
+          {
+            "kind": "independent_green_blue_cast_creators",
+            "optional": true
+          },
+          {
+            "kind": "legal_hybrid_payment_choice",
+            "mana": [
+              3,
+              0,
+              0,
+              3,
+              0,
+              0
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Whenever you cast a green spell, you may create a 2/2 green Wolf creature token.\nWhenever you cast a blue spell, you may create a 1/1 blue Bird creature token with flying.",
+      "variants": [
+        "create_0",
+        "green_spell_0",
+        "blue_spell_0",
+        "wrong_spell_0",
+        "opponent_spell_0",
+        "source_removed_0",
+        "repeat_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "bird_evasion_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "create_1",
+        "green_spell_1",
+        "blue_spell_1",
+        "wrong_spell_1",
+        "opponent_spell_1",
+        "source_removed_1",
+        "repeat_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "bird_evasion_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1"
+      ]
+    }
+  ]
+}

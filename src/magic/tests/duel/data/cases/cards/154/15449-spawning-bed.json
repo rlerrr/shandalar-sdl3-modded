@@ -1,0 +1,97 @@
+{
+  "version": 1,
+  "card": "Spawning Bed",
+  "csvid": 15449,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 3,
+        "mechanism": "land_creator",
+        "token": {
+          "name": "Eldrazi Scion",
+          "power": 1,
+          "toughness": 1,
+          "colors": [],
+          "subtypes": [
+            "Eldrazi",
+            "Scion"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "amount": {
+          "fixed": 3
+        },
+        "activation": {
+          "mana": [
+            6,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "tap": true,
+          "untap": false,
+          "sacrifice": true,
+          "additional": null,
+          "additional_count": 0,
+          "only_sorcery": false
+        },
+        "operative": [
+          {
+            "kind": "tap_mana",
+            "color": "C",
+            "amount": 1
+          },
+          {
+            "kind": "token_sacrifice_colorless",
+            "amount": 1
+          }
+        ],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "{T}: Add {C}.\n{6}, {T}, Sacrifice this land: Create three 1/1 colorless Eldrazi Scion creature tokens. They have \"Sacrifice this token: Add {C}.\"",
+      "variants": [
+        "create_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "mana_ability_0",
+        "payment_0",
+        "tapped_or_untapped_denied_0",
+        "foreign_source_0",
+        "token_mana_0",
+        "token_mana_snapshot_0",
+        "create_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "mana_ability_1",
+        "payment_1",
+        "tapped_or_untapped_denied_1",
+        "foreign_source_1",
+        "token_mana_1",
+        "token_mana_snapshot_1"
+      ]
+    }
+  ]
+}

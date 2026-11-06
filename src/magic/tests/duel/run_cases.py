@@ -9,7 +9,7 @@ import sys
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import xml.etree.ElementTree as ET
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 
 ACCEPTED_STATUSES = ("passed", "known_failure", "unimplemented")
 
@@ -33,6 +33,15 @@ def expectations_for_platform(records, platform):
             else record for name, record in selected.items()}
 
 
+def expectation_pattern_counts(name, record):
+    counts = record.get("pattern_counts")
+    if "pattern_counts" in record and (
+            not isinstance(counts, list) or len(counts) != len(record.get("patterns", []))
+            or any(type(count) is not int or count < 1 for count in counts)):
+        raise ValueError(f"Expectation {name} needs one positive occurrence count per pattern")
+    return counts
+
+
 def classify_outcome(name, kind, assertion_count, text, baseline, unimplemented=None):
     missing = (unimplemented or {}).get(name)
     expected = baseline.get(name) or missing
@@ -42,16 +51,66 @@ def classify_outcome(name, kind, assertion_count, text, baseline, unimplemented=
             expected["kind"] == "assertion" and expected.get("assertion_count", 0) < 1
         ):
             raise ValueError(f"Expectation {name} needs a reason, matching patterns, and a positive count for assertion failures")
+        counts = expectation_pattern_counts(name, expected)
         if kind == "passed":
             status = "unexpected_pass"
-        elif kind == expected["kind"] and kind != "harness" and all(re.search(p, text) for p in expected["patterns"]) and (
+        elif kind == expected["kind"] and kind != "harness" and all(
+            re.search(pattern, text) if counts is None else sum(1 for _ in re.finditer(pattern, text)) == counts[index]
+            for index, pattern in enumerate(expected["patterns"])) and (
             kind != "assertion" or assertion_count == expected["assertion_count"]
         ):
             status = "unimplemented" if missing else "known_failure"
     return status
 
 
+def partial_manifest_sources(manifest):
+    """Only an explicit, complete source-file selection relaxes stale-name checks.
+
+    This is an authoring gate for the selected files. The ordinary full manifest
+    remains the authority for stale expectations in the rest of the catalog.
+    """
+    if "selection" not in manifest:
+        return None
+    selection = manifest["selection"]
+    if (not isinstance(selection, dict) or set(selection) != {"version", "complete", "source_files"}
+            or type(selection["version"]) is not int or selection["version"] != 1
+            or selection["complete"] is not False):
+        raise ValueError("Invalid partial manifest selection metadata")
+    sources = selection["source_files"]
+    if not isinstance(sources, list) or not sources or any(
+            not isinstance(source, str) or "\\" in source
+            or PurePosixPath(source).as_posix() != source
+            or not source.startswith("cases/") or not source.endswith(".json")
+            or ".." in PurePosixPath(source).parts for source in sources):
+        raise ValueError("Invalid partial manifest source files")
+    if len(set(sources)) != len(sources):
+        raise ValueError("Duplicate partial manifest source files")
+    if not manifest.get("cases") or any(case.get("tier") != "behavior"
+            or case.get("source_file") not in sources for case in manifest["cases"]):
+        raise ValueError("Partial manifest must contain only selected behavior cases")
+    if {case["source_file"] for case in manifest["cases"]} != set(sources):
+        raise ValueError("Partial manifest contains an empty selected source file")
+    return set(sources)
+
+
+def validate_expectation_signature(name, record):
+    if (not isinstance(record, dict) or record.get("kind") not in ("assertion", "crash", "timeout", "budget")
+            or not isinstance(record.get("reason"), str) or not record["reason"].strip()
+            or not isinstance(record.get("patterns"), list) or not record["patterns"]
+            or any(not isinstance(pattern, str) or not pattern for pattern in record["patterns"])
+            or (record["kind"] == "assertion" and (type(record.get("assertion_count")) is not int
+                                                    or record["assertion_count"] < 1))):
+        raise ValueError(f"Expectation {name} needs a reason, matching patterns, and a positive count for assertion failures")
+    expectation_pattern_counts(name, record)
+    try:
+        for pattern in record["patterns"]:
+            re.compile(pattern)
+    except re.error as error:
+        raise ValueError(f"Expectation {name} has an invalid pattern: {error}") from error
+
+
 def validate_expectations(manifest, baseline, unimplemented):
+    partial = partial_manifest_sources(manifest) is not None
     expectations_for_platform(baseline, "native")
     expectations_for_platform(unimplemented, "native")
     cases = {c["filter"]: c for c in manifest["cases"]}
@@ -60,9 +119,20 @@ def validate_expectations(manifest, baseline, unimplemented):
         raise ValueError(f"Cases appear in both known failures and unimplemented: {sorted(overlap)}")
     for label, records in (("known-failure", baseline), ("unimplemented", unimplemented)):
         unknown = set(records) - set(cases)
-        if unknown:
+        if unknown and not partial:
             raise ValueError(f"Stale {label} entries: {sorted(unknown)}")
+        for name, record in records.items():
+            if label == "unimplemented" and name in cases and (
+                    record.get("handler") != "card_dummy" or record.get("kind") != "assertion"):
+                raise ValueError(f"Unimplemented case {name} must document missing card_dummy behavior with assertions")
+            validate_expectation_signature(name, record)
+            if name in cases:
+                for key in ("card", "csvid", "oracle_id", "handler"):
+                    if key in record and record[key] != cases[name].get(key):
+                        raise ValueError(f"Stale {label} entry {name}: {key} changed")
     for name, record in unimplemented.items():
+        if name not in cases:
+            continue  # Explicit partial manifest: this expectation belongs to another source.
         case = cases[name]
         if record.get("handler") != "card_dummy" or record.get("kind") != "assertion":
             raise ValueError(f"Unimplemented case {name} must document missing card_dummy behavior with assertions")
@@ -79,6 +149,24 @@ def load_unimplemented(baseline_path, explicit_path=None):
     if data.get("version") != 1 or not isinstance(data.get("cases"), dict):
         raise ValueError(f"Unsupported unimplemented schema: {path}")
     return data["cases"]
+
+
+def child_launch(args, output):
+    """Use one immutable engine with a caller-owned archive on either platform."""
+    command = ([str(args.node)] if args.node else []) + [str(args.binary.resolve())]
+    env = dict(os.environ, DUEL_TEST_OUTPUT_DIR=str(output))
+    case_data = getattr(args, "case_data", None)
+    if case_data is not None:
+        case_data = case_data.resolve()
+        if not case_data.is_file():
+            raise ValueError(f"Case archive does not exist: {case_data}")
+        if args.node:
+            env["DUEL_TEST_CASE_DIR"] = str(case_data.parent)
+            archive_path = "/test-cases/" + case_data.name
+        else:
+            archive_path = str(case_data)
+        command.append("--duel-case-data=" + archive_path)
+    return command, env
 
 
 def process_outcome(code, xml, text):
@@ -100,10 +188,11 @@ def process_outcome(code, xml, text):
             return ("passed" if count == 1 and not failures and not tree.findall(".//skipped") else "harness"), 0
         if failures:
             return "assertion", len(failures)
-    # A Wasm trap prevents GoogleTest from flushing XML. Preserve any preceding
-    # rules failures in the console instead of accepting a known trap alone.
-    if "RuntimeError:" in text:
-        prior_assertions = re.findall(r"(?m)^[^\r\n]*duel_card_tests\.cpp:\d+: Failure\s*$", text)
+    # A trap or fatal engine error prevents GoogleTest from flushing XML.
+    # Preserve earlier rules failures in either native or Wasm console format.
+    if "RuntimeError:" in text or "DUEL_ENGINE_ERROR:" in text:
+        prior_assertions = re.findall(
+            r"(?m)^[^\r\n]*duel_card_tests\.cpp(?::\d+: Failure|\(\d+\): error:)[^\r\n]*$", text)
         if prior_assertions:
             return "assertion", len(prior_assertions) + 1
     return "crash", 0
@@ -119,9 +208,9 @@ def run_case(args, case, baseline, unimplemented=None):
     xml = output / (name + ".xml")
     log = output / (name + ".log")
     xml.unlink(missing_ok=True)
-    command = ([str(args.node)] if args.node else []) + [str(args.binary.resolve()),
-      "--gtest_filter=" + name, "--gtest_output=xml:" + ("/test-output/" + xml.name if args.node else str(xml))]
-    env = dict(os.environ, DUEL_TEST_OUTPUT_DIR=str(output))
+    command, env = child_launch(args, output)
+    command += ["--gtest_filter=" + name,
+                "--gtest_output=xml:" + ("/test-output/" + xml.name if args.node else str(xml))]
     started = time.monotonic()
     assertion_count = 0
     try:
@@ -158,6 +247,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--binary", type=Path, required=True)
     parser.add_argument("--node", type=Path)
+    parser.add_argument("--case-data", type=Path, help="external case archive on the host (native or Node/Wasm)")
     parser.add_argument("--manifest", type=Path, required=True)
     parser.add_argument("--baseline", type=Path, required=True)
     parser.add_argument("--unimplemented", type=Path, help="missing-implementation expectations (default: beside --baseline, if present)")
@@ -180,6 +270,7 @@ def main():
     try:
         unimplemented = load_unimplemented(args.baseline, args.unimplemented)
         validate_expectations(manifest, baseline, unimplemented)
+        child_launch(args, args.output.resolve())
     except (OSError, ValueError) as error:
         parser.error(str(error))
     cases = [c for c in manifest["cases"] if fnmatch.fnmatchcase(c["filter"],args.filter) and (not args.tier or c["tier"]==args.tier)]
@@ -221,6 +312,10 @@ def main():
     summary = {"source":manifest["source"], "results":results,
                "batch_size":args.batch_size, "jobs":args.jobs, "elapsed_seconds":round(time.monotonic()-started, 3),
                "counts":{status:sum(r["status"]==status for r in results) for status in ("passed","known_failure","unimplemented","failed","unexpected_pass")}}
+    if "selection" in manifest:
+        summary["selection"] = manifest["selection"]
+    if args.case_data is not None:
+        summary["case_data"] = str(args.case_data.resolve())
     summary_name = cases[0]["filter"] if len(cases) == 1 else f"shard-{args.shard_index}"
     (args.output / f"summary-{summary_name}.json").write_text(json.dumps(summary,indent=2)+"\n")
     print(json.dumps(summary["counts"]))

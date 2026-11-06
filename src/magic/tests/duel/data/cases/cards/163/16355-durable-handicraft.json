@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "card": "Durable Handicraft",
+  "csvid": 16355,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "selection_growth",
+        "kind": "team",
+        "cost": [
+          5,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "sacrifice": true,
+        "amount": 1,
+        "limit": 1,
+        "entry_pay": 1,
+        "entry_ui": {
+          "trigger_players": [
+            0
+          ],
+          "pay_dialog": 0,
+          "decline_dialog": 1
+        },
+        "gaps": [
+          "separate ETB trigger priority windows"
+        ]
+      },
+      "oracle_text": "Whenever a creature you control enters, you may pay {1}. If you do, put a +1/+1 counter on that creature.\n{5}{G}, Sacrifice this enchantment: Put a +1/+1 counter on each creature you control.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cast_payment_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "tapped_source_0",
+        "opposing_turn_0",
+        "empty_team_0",
+        "recipient_bounced_pending_0",
+        "preexisting_0",
+        "entry_pay_0",
+        "entry_decline_0",
+        "entry_no_mana_0",
+        "entry_opponent_0",
+        "entry_source_removed_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cast_payment_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "tapped_source_1",
+        "opposing_turn_1",
+        "empty_team_1",
+        "recipient_bounced_pending_1",
+        "preexisting_1",
+        "entry_pay_1",
+        "entry_decline_1",
+        "entry_no_mana_1",
+        "entry_opponent_1",
+        "entry_source_removed_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle selection/team growth: actual source casts and printed payments, non-targeting bolster recomputed from current toughness with ties/protection/response controls, support choices queued at Oracle activation time with a clean pending timing assertion, or actual source sacrifice as a cost and creature-team counter placement including artifact creatures. Durable Handicraft operative entry payments, declines, no funds, opposing entry and source removal include actual casts and a same-board functional positive. Costs, counters, complete zones, repeated use, cleanup and snapshots are asserted. Support target-loss/protection responses are deferred while actual handler selection occurs at resolution. Authoritative validation is recorded in the wave5 report."
+}

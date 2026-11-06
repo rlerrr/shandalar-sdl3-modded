@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Savage Summoning",
+  "csvid": 13329,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "next_creature",
+        "inactive_components": [
+          "Normal-main next-creature entry, first-only consumption, intervening noncreature, expiry and source uncounterability are selected. Flash permission itself cannot be established by this wrapper, which permits direct scripted creature casts without a no-source timing denial. The creature-counter pending branch checks legal Counterspell targeting; resolution of that pending response is deferred."
+        ]
+      },
+      "oracle_text": "This spell can't be countered.\nThe next creature spell you cast this turn can be cast as though it had flash. That spell can't be countered. That creature enters with an additional +1/+1 counter on it.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "countered_0",
+        "expired_0",
+        "intervening_0",
+        "creature_counter_pending_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "countered_1",
+        "expired_1",
+        "intervening_1",
+        "creature_counter_pending_1"
+      ]
+    }
+  ]
+}

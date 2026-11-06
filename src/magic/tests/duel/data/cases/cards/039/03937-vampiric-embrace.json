@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Vampiric Embrace",
+  "csvid": 3937,
+  "recipes": [
+    {
+      "family": "aura_keyword_extension",
+      "version": 2,
+      "params": {
+        "power": 2,
+        "toughness": 2,
+        "keywords": [
+          "Flying"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Counter trigger when a creature damaged by enchanted creature dies"
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature gets +2/+2 and has flying.\nWhenever a creature dealt damage by enchanted creature this turn dies, put a +1/+1 counter on that creature.",
+      "variants": [
+        "friendly_cleanup_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_0",
+        "wrong_type_0",
+        "lost_target_0",
+        "snapshot_0",
+        "tapped_0",
+        "large_target_0",
+        "unblocked_0",
+        "opponent_cleanup_0",
+        "opponent_unblocked_0",
+        "empty_zones_0",
+        "flying_evasion_0",
+        "flying_reach_0",
+        "expired_flying_0",
+        "block_flying_0",
+        "expired_block_flying_0",
+        "aura_removed_0",
+        "aura_bounced_0",
+        "host_bounced_0",
+        "host_destroyed_0",
+        "friendly_cleanup_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_1",
+        "wrong_type_1",
+        "lost_target_1",
+        "snapshot_1",
+        "tapped_1",
+        "large_target_1",
+        "unblocked_1",
+        "opponent_cleanup_1",
+        "opponent_unblocked_1",
+        "empty_zones_1",
+        "flying_evasion_1",
+        "flying_reach_1",
+        "expired_flying_1",
+        "block_flying_1",
+        "expired_block_flying_1",
+        "aura_removed_1",
+        "aura_bounced_1",
+        "host_bounced_1",
+        "host_destroyed_1"
+      ]
+    }
+  ]
+}

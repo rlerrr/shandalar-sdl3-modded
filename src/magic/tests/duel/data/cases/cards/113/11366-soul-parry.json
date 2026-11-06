@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Soul Parry",
+  "csvid": 11366,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "amount": "all",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Noncombat damage from selected creatures"
+        ],
+        "binding": "chosen_combat",
+        "scope": "source",
+        "optional_second_target": true
+      },
+      "oracle_text": "Prevent all damage one or two target creatures would deal this turn.",
+      "variants": [
+        "effect_0",
+        "without_effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blocked_0",
+        "two_targets_0",
+        "effect_1",
+        "without_effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blocked_1",
+        "two_targets_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Azorius Ploy",
+  "csvid": 8174,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Damage dealt outside combat by qualified creatures"
+        ],
+        "binding": "chosen_combat",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "",
+        "tap": false,
+        "prevent_incoming": true
+      },
+      "oracle_text": "Prevent all combat damage target creature would deal this turn.\nPrevent all combat damage that would be dealt to target creature this turn.",
+      "variants": [
+        "effect_0",
+        "without_effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blocked_0",
+        "split_targets_0",
+        "effect_1",
+        "without_effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blocked_1",
+        "split_targets_1"
+      ]
+    }
+  ]
+}

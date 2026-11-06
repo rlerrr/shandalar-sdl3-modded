@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "card": "Tangle",
+  "csvid": 5140,
+  "recipes": [
+    {
+      "family": "tap_spell",
+      "version": 2,
+      "oracle_text": "Prevent all combat damage that would be dealt this turn.\nEach attacking creature doesn't untap during its controller's next untap step.",
+      "params": {
+        "schema": 4,
+        "kind": "mass",
+        "effect": "preserve",
+        "scope": "creatures",
+        "controller": "any",
+        "state": "any",
+        "count": 0,
+        "optional": false,
+        "stats": [
+          0,
+          0
+        ],
+        "mana_gain": 0,
+        "controller_damage": 0,
+        "life_loss": 0,
+        "draw": 0,
+        "scry": 0,
+        "token": null,
+        "source_destination": "graveyard",
+        "return_tap": false,
+        "power_limit": null,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "after": [],
+        "menu": "",
+        "payment_mana": "",
+        "gaps": [
+          "next untap steps"
+        ],
+        "inactive": [],
+        "combat_prevention": "all",
+        "must_blocked": true
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "two_copies_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "empty_battlefield_0",
+        "prevent_unblocked_0",
+        "prevent_blocked_0",
+        "prevent_expired_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "two_copies_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "empty_battlefield_1",
+        "prevent_unblocked_1",
+        "prevent_blocked_1",
+        "prevent_expired_1"
+      ]
+    }
+  ]
+}

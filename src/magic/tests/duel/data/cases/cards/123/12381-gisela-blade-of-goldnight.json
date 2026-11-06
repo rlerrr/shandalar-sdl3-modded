@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Gisela, Blade of Goldnight",
+  "csvid": 12381,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "modifier",
+        "damage_rule": "opponent_double_own_half",
+        "gaps": [
+          "Flying and first-strike combat as participant",
+          "Noncombat creature-ability damage"
+        ]
+      },
+      "oracle_text": "Flying, first strike\nIf a source would deal damage to an opponent or a permanent an opponent controls, that source deals double that damage to that player or permanent instead.\nIf a source would deal damage to you or a permanent you control, prevent half that damage, rounded up.",
+      "variants": [
+        "effect_0",
+        "small_damage_0",
+        "repeat_damage_0",
+        "source_damage_0",
+        "opponent_creature_0",
+        "self_player_0",
+        "opponent_player_0",
+        "friendly_source_0",
+        "creature_damage_0",
+        "cleanup_0",
+        "source_removed_0",
+        "payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "damaged_snapshot_0",
+        "bare_zones_0",
+        "untargeted_spell_0",
+        "creature_ability_0",
+        "effect_1",
+        "small_damage_1",
+        "repeat_damage_1",
+        "source_damage_1",
+        "opponent_creature_1",
+        "self_player_1",
+        "opponent_player_1",
+        "friendly_source_1",
+        "creature_damage_1",
+        "cleanup_1",
+        "source_removed_1",
+        "payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "damaged_snapshot_1",
+        "bare_zones_1",
+        "untargeted_spell_1",
+        "creature_ability_1"
+      ]
+    }
+  ]
+}

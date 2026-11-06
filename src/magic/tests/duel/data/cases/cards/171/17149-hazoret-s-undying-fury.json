@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Hazoret's Undying Fury",
+  "csvid": 17149,
+  "recipes": [
+    {
+      "family": "tap_spell",
+      "version": 2,
+      "oracle_text": "Shuffle your library, then exile the top four cards. You may cast any number of spells with mana value 5 or less from among them without paying their mana costs. Lands you control don't untap during your next untap step.",
+      "params": {
+        "schema": 5,
+        "model": "player_next_untap",
+        "recipient": "self",
+        "types": [
+          "Land"
+        ],
+        "steps": 1,
+        "tap": false,
+        "own_land_lock": true,
+        "exile_top": 4,
+        "exile_cast_inactive": "all cards in caster library are lands"
+      },
+      "variants": [
+        "next_step_0",
+        "countered_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "locked_snapshot_0",
+        "artifact_function_0",
+        "small_library_0",
+        "empty_library_0",
+        "next_step_1",
+        "countered_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "locked_snapshot_1",
+        "artifact_function_1",
+        "small_library_1",
+        "empty_library_1"
+      ]
+    }
+  ]
+}

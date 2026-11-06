@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Take into Custody",
+  "csvid": 16807,
+  "recipes": [
+    {
+      "family": "tap_spell",
+      "version": 2,
+      "oracle_text": "Tap target creature. It doesn't untap during its controller's next untap step.",
+      "params": {
+        "effect": "tap",
+        "scope": "creature",
+        "controller": "any",
+        "count": 1,
+        "optional": false,
+        "draw": 0,
+        "cast_before": [],
+        "cast_after": [],
+        "resolve_dialogs": [],
+        "gaps": [
+          "next untap lock"
+        ],
+        "inactive": []
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "already_in_state_0",
+        "cleanup_0",
+        "two_copies_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "combat_attack_0",
+        "opposing_turn_0",
+        "lost_target_0",
+        "bounced_target_0",
+        "own_target_0",
+        "wrong_type_0",
+        "no_targets_0",
+        "target_shrouded_pending_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "already_in_state_1",
+        "cleanup_1",
+        "two_copies_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "combat_attack_1",
+        "opposing_turn_1",
+        "lost_target_1",
+        "bounced_target_1",
+        "own_target_1",
+        "wrong_type_1",
+        "no_targets_1",
+        "target_shrouded_pending_1"
+      ]
+    }
+  ]
+}

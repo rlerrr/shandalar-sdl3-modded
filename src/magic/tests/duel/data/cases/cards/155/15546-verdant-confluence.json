@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "card": "Verdant Confluence",
+  "csvid": 15546,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "allocated",
+        "amounts": [
+          2,
+          2,
+          2
+        ],
+        "strive_cost": "",
+        "mode_choices": [
+          0,
+          0,
+          0
+        ],
+        "inactive_components": [
+          "The graveyard recovery and land search modes are not selected; counter mode is selected three times."
+        ],
+        "target_roles": [
+          "first",
+          "second",
+          "third"
+        ]
+      },
+      "oracle_text": "Choose three. You may choose the same mode more than once.\n• Put two +1/+1 counters on target creature.\n• Return target permanent card from your graveyard to your hand.\n• Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "two_copies_0",
+        "countered_0",
+        "one_target_0",
+        "opponent_0",
+        "preexisting_0",
+        "lost_target_0",
+        "partial_target_0",
+        "selection_pending_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "two_copies_1",
+        "countered_1",
+        "one_target_1",
+        "opponent_1",
+        "preexisting_1",
+        "lost_target_1",
+        "partial_target_1",
+        "selection_pending_1"
+      ]
+    }
+  ]
+}

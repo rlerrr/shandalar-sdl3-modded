@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Stir the Grave",
+  "csvid": 7567,
+  "recipes": [
+    {
+      "family": "reanimation",
+      "version": 2,
+      "params": {
+        "mode": "single",
+        "scope": "creature",
+        "graveyard": "self",
+        "control": "self",
+        "tapped": false,
+        "limit": "x_le",
+        "history": false,
+        "self_destination": "graveyard",
+        "extras": [],
+        "legacy_x_payment_prompt": false
+      },
+      "oracle_text": "Return target creature card with mana value X or less from your graveyard to the battlefield.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "empty_0",
+        "wrong_type_0",
+        "countered_0",
+        "cleanup_0",
+        "repeat_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "alternate_0",
+        "lost_target_0",
+        "death_owner_0",
+        "wrong_owner_0",
+        "wrong_value_0",
+        "effect_x0_0",
+        "payment_x0_0",
+        "effect_x1_0",
+        "payment_x1_0",
+        "effect_x2_0",
+        "payment_x2_0",
+        "effect_x5_0",
+        "payment_x5_0",
+        "effect_x8_0",
+        "payment_x8_0"
+      ]
+    }
+  ]
+}

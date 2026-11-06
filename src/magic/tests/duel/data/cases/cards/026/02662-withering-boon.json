@@ -1,0 +1,43 @@
+{
+  "version": 1,
+  "card": "Withering Boon",
+  "csvid": 2662,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature"
+          ]
+        },
+        "token": null,
+        "life_cost": 3,
+        "relationship": null,
+        "inactive_components": []
+      },
+      "oracle_text": "As an additional cost to cast this spell, pay 3 life.\nCounter target creature spell.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "wrong_type_0",
+        "insufficient_life_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "wrong_type_1",
+        "insufficient_life_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole Oracle text and source characteristics are pinned against the reviewed counter extension profile. Real casting/response windows cover both source controllers, own and opposing spells, full costs, insufficient mana, no stack, legal target relationships, exact zone receipts, populated-zone snapshots and printed immediate secondary effects.  Printed additional life cost and insufficient-life legality are checked separately. Countered source spells, pending-target departure, protection/prevention interactions, replacement effects, other stack objects, control changes and multiplayer remain separate gaps."
+}

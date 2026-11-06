@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "card": "Fury Sliver",
+  "csvid": 8557,
+  "recipes": [
+    {
+      "family": "static_effect_extension",
+      "version": 2,
+      "oracle_text": "All Sliver creatures have double strike.",
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Sliver",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Double strike"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Double strike",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "source_bounced_0",
+        "source_destroyed_0",
+        "bounce_recast_0",
+        "late_arrival_0",
+        "opponent_recipient_0",
+        "foreign_recipient_0",
+        "foreign_destroyed_0",
+        "two_sources_0",
+        "remove_one_source_0",
+        "opposing_source_0",
+        "tapped_source_0",
+        "source_recipient_0",
+        "nonmatching_0",
+        "changeling_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "source_bounced_1",
+        "source_destroyed_1",
+        "bounce_recast_1",
+        "late_arrival_1",
+        "opponent_recipient_1",
+        "foreign_recipient_1",
+        "foreign_destroyed_1",
+        "two_sources_1",
+        "remove_one_source_1",
+        "opposing_source_1",
+        "tapped_source_1",
+        "source_recipient_1",
+        "nonmatching_1",
+        "changeling_1"
+      ]
+    }
+  ]
+}

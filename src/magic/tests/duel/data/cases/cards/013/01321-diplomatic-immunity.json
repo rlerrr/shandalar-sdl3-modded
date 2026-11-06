@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Diplomatic Immunity",
+  "csvid": 1321,
+  "recipes": [
+    {
+      "family": "aura_keyword_extension",
+      "version": 2,
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "Shroud"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Aura's own shroud"
+        ]
+      },
+      "oracle_text": "Enchant creature\nShroud (A permanent with shroud can't be the target of spells or abilities.)\nEnchanted creature has shroud.",
+      "variants": [
+        "friendly_cleanup_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_0",
+        "wrong_type_0",
+        "lost_target_0",
+        "snapshot_0",
+        "tapped_0",
+        "large_target_0",
+        "unblocked_0",
+        "opponent_cleanup_0",
+        "opponent_unblocked_0",
+        "empty_zones_0",
+        "opponent_targeting_0",
+        "owner_targeting_0",
+        "host_destroyed_0",
+        "friendly_cleanup_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_1",
+        "wrong_type_1",
+        "lost_target_1",
+        "snapshot_1",
+        "tapped_1",
+        "large_target_1",
+        "unblocked_1",
+        "opponent_cleanup_1",
+        "opponent_unblocked_1",
+        "empty_zones_1",
+        "opponent_targeting_1",
+        "owner_targeting_1",
+        "host_destroyed_1"
+      ]
+    }
+  ]
+}

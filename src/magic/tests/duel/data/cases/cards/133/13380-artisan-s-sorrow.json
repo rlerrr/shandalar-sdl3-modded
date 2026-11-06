@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Artisan's Sorrow",
+  "csvid": 13380,
+  "recipes": [
+    {
+      "family": "target_removal",
+      "version": 2,
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Artisan's Sorrow",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "artifact_or_enchantment",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "scry": 2
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      },
+      "oracle_text": "Destroy target artifact or enchantment. Scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "own_target_0",
+        "stolen_target_0",
+        "lost_all_0",
+        "bounced_target_0",
+        "wrong_type_0",
+        "indestructible_target_0",
+        "target_hexproof_0",
+        "regeneration_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "own_target_1",
+        "stolen_target_1",
+        "lost_all_1",
+        "bounced_target_1",
+        "wrong_type_1",
+        "indestructible_target_1",
+        "target_hexproof_1",
+        "regeneration_1"
+      ]
+    }
+  ]
+}

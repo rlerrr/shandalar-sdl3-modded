@@ -8,7 +8,7 @@ import time
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
-from run_cases import ACCEPTED_STATUSES, classify_outcome, process_outcome, run_case
+from run_cases import ACCEPTED_STATUSES, child_launch, classify_outcome, process_outcome, run_case
 
 
 def read_journal(path, names):
@@ -61,8 +61,8 @@ def execute_batch(args, cases, prefix):
     listing.write_text("".join(c["filter"] + "\n" for c in cases), encoding="utf-8")
     journal.unlink(missing_ok=True)
     child_path = lambda path: "/test-output/" + path.name if args.node else str(path)
-    command = ([str(args.node)] if args.node else []) + [str(args.binary.resolve()),
-               "--gtest_filter=__DUEL_BATCH_REQUIRES_UPDATED_RUNNER__", "--gtest_fail_fast",
+    command, env = child_launch(args, output)
+    command += ["--gtest_filter=__DUEL_BATCH_REQUIRES_UPDATED_RUNNER__", "--gtest_fail_fast",
                "--duel-case-list=" + child_path(listing), "--duel-batch-journal=" + child_path(journal)]
     started = time.monotonic()
     last_progress, active_since, timed_out = (0, None), started, False
@@ -70,7 +70,7 @@ def execute_batch(args, cases, prefix):
     with log.open("w", encoding="utf-8") as stream:
         proc = subprocess.Popen(command, stdout=stream, stderr=subprocess.STDOUT,
                                 cwd=args.binary.resolve().parent,
-                                env=dict(os.environ, DUEL_TEST_OUTPUT_DIR=str(output)))
+                                env=env)
         try:
             while proc.poll() is None:
                 ended, active = read_journal(journal, names)

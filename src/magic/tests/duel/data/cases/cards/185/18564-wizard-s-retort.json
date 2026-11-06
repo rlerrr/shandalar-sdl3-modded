@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Wizard's Retort",
+  "csvid": 18564,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Wizard discount: fixtures control no Wizards."
+        ]
+      },
+      "oracle_text": "This spell costs {1} less to cast if you control a Wizard.\nCounter target spell.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_instant_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole Oracle text and source characteristics are pinned against the reviewed counter extension profile. Real casting/response windows cover both source controllers, own and opposing spells, full costs, insufficient mana, no stack, legal target relationships, exact zone receipts, populated-zone snapshots and printed immediate secondary effects. Wizard discount: fixtures control no Wizards. Countered source spells, pending-target departure, protection/prevention interactions, replacement effects, other stack objects, control changes and multiplayer remain separate gaps."
+}

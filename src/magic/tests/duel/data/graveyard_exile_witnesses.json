@@ -1,0 +1,3557 @@
+{
+  "version": 1,
+  "palette": [
+    "Grizzly Bears",
+    "Hill Giant",
+    "Ornithopter",
+    "Phyrexian Hulk",
+    "Giant Growth",
+    "Lightning Bolt",
+    "Divination",
+    "Mind Rot",
+    "Sol Ring",
+    "Fellwar Stone",
+    "Darksteel Relic",
+    "Seal of Cleansing",
+    "Forest",
+    "Plains",
+    "Island",
+    "Swamp",
+    "Darksteel Citadel"
+  ],
+  "cards": {
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bear",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": ""
+    },
+    "Hill Giant": {
+      "name": "Hill Giant",
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Giant",
+      "mana_cost": "{3}{R}",
+      "cmc": 4.0,
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": "3",
+      "toughness": "3",
+      "oracle_text": ""
+    },
+    "Ornithopter": {
+      "name": "Ornithopter",
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "mana_cost": "{0}",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [
+        "Flying"
+      ],
+      "power": "0",
+      "toughness": "2",
+      "oracle_text": "Flying"
+    },
+    "Phyrexian Hulk": {
+      "name": "Phyrexian Hulk",
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Phyrexian Golem",
+      "mana_cost": "{6}",
+      "cmc": 6.0,
+      "colors": [],
+      "keywords": [],
+      "power": "5",
+      "toughness": "4",
+      "oracle_text": ""
+    },
+    "Giant Growth": {
+      "name": "Giant Growth",
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Target creature gets +3/+3 until end of turn."
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "cmc": 1.0,
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Lightning Bolt deals 3 damage to any target."
+    },
+    "Divination": {
+      "name": "Divination",
+      "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+      "layout": "normal",
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{U}",
+      "cmc": 3.0,
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Draw two cards."
+    },
+    "Mind Rot": {
+      "name": "Mind Rot",
+      "oracle_id": "ad44cf74-b717-48fb-9fa2-77512024d76a",
+      "layout": "normal",
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{B}",
+      "cmc": 3.0,
+      "colors": [
+        "B"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Target player discards two cards."
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "cmc": 1.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "{T}: Add {C}{C}."
+    },
+    "Fellwar Stone": {
+      "name": "Fellwar Stone",
+      "oracle_id": "95560508-7ac9-4be9-8a3f-3c7d5b52807b",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{2}",
+      "cmc": 2.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce."
+    },
+    "Darksteel Relic": {
+      "name": "Darksteel Relic",
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [
+        "Indestructible"
+      ],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)"
+    },
+    "Seal of Cleansing": {
+      "name": "Seal of Cleansing",
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}",
+      "cmc": 2.0,
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment."
+    },
+    "Forest": {
+      "name": "Forest",
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Forest",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {G}.)"
+    },
+    "Plains": {
+      "name": "Plains",
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Plains",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {W}.)"
+    },
+    "Island": {
+      "name": "Island",
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Island",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {U}.)"
+    },
+    "Swamp": {
+      "name": "Swamp",
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Swamp",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {B}.)"
+    },
+    "Darksteel Citadel": {
+      "name": "Darksteel Citadel",
+      "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+      "layout": "normal",
+      "type_line": "Artifact Land",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [
+        "Indestructible"
+      ],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Indestructible\n{T}: Add {C}."
+    },
+    "Counterspell": {
+      "name": "Counterspell",
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "cmc": 2.0,
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Counter target spell."
+    },
+    "Reclaim": {
+      "name": "Reclaim",
+      "oracle_id": "797155cd-faf4-4321-8629-c8c352392748",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Put target card from your graveyard on top of your library."
+    },
+    "Mountain": {
+      "name": "Mountain",
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Mountain",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {R}.)"
+    },
+    "Llanowar Elves": {
+      "name": "Llanowar Elves",
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": "{T}: Add {G}."
+    }
+  },
+  "profiles": {
+    "Morningtide": {
+      "source": {
+        "name": "Morningtide",
+        "oracle_id": "a8432372-672b-4bf7-9000-17e43356f149",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{W}",
+        "cmc": 2.0,
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile all graveyards."
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "all",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": []
+      }
+    },
+    "Cremate": {
+      "source": {
+        "name": "Cremate",
+        "oracle_id": "c6a2e410-b182-48d1-aeb2-bc8de27e9cd2",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{B}",
+        "cmc": 1.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile target card from a graveyard.\nDraw a card."
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 1,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": []
+      }
+    },
+    "Crypt Incursion": {
+      "source": {
+        "name": "Crypt Incursion",
+        "oracle_id": "ce00e0d0-c6f4-4fe8-97c3-7279b06d8fdb",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{B}",
+        "cmc": 3.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile all creature cards from target player's graveyard. You gain 3 life for each card exiled this way."
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "all",
+        "scope": "creature",
+        "graveyard": "target_player",
+        "draw": 0,
+        "life_per": 3,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": []
+      }
+    },
+    "Crypt Creeper": {
+      "source": {
+        "name": "Crypt Creeper",
+        "oracle_id": "00b3971b-5bf7-4a3f-9607-6265f9af9098",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie",
+        "mana_cost": "{1}{B}",
+        "cmc": 2.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "1",
+        "oracle_text": "Sacrifice this creature: Exile target card from a graveyard."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "",
+          "tap": false,
+          "sacrifice": true,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": []
+      }
+    },
+    "Relic of Progenitus": {
+      "source": {
+        "name": "Relic of Progenitus",
+        "oracle_id": "6a9c3401-570c-41cb-a605-75dfa57d6ab7",
+        "layout": "normal",
+        "type_line": "Artifact",
+        "mana_cost": "{1}",
+        "cmc": 1.0,
+        "colors": [],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "{T}: Target player exiles a card from their graveyard.\n{1}, Exile this artifact: Exile all graveyards. Draw a card."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "all",
+        "draw": 1,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": true,
+          "pay_life": 0
+        },
+        "setup_tapped": true,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [
+            1
+          ]
+        },
+        "additional_components": [
+          "The tap ability in which a target player chooses a card to exile. Source setup is tapped for the untargeted ability controls; fresh-source cases select the printed second ability."
+        ]
+      }
+    },
+    "Rotfeaster Maggot": {
+      "source": {
+        "name": "Rotfeaster Maggot",
+        "oracle_id": "67d0df0f-37d1-46da-b1c3-4fc9d1e3cc05",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Insect",
+        "mana_cost": "{4}{B}",
+        "cmc": 5.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": "3",
+        "toughness": "5",
+        "oracle_text": "When this creature enters, exile target creature card from a graveyard. You gain life equal to that card's toughness."
+      },
+      "params": {
+        "mode": "entry",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": "toughness",
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": []
+      }
+    },
+    "Coffin Purge": {
+      "source": {
+        "name": "Coffin Purge",
+        "oracle_id": "9db5aa54-3deb-45ee-82a2-e88a4367c6d9",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{B}",
+        "cmc": 1.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Flashback"
+        ],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile target card from a graveyard.\nFlashback {B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Flashback casting from the graveyard is not exercised."
+        ]
+      }
+    },
+    "Honor the Fallen": {
+      "source": {
+        "name": "Honor the Fallen",
+        "oracle_id": "db557d5e-eecd-4891-90fa-c5bcb8532015",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{W}",
+        "cmc": 2.0,
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile all creature cards from all graveyards. You gain 1 life for each card exiled this way."
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "all",
+        "scope": "creature",
+        "graveyard": "all",
+        "draw": 0,
+        "life_per": 1,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": []
+      }
+    },
+    "Withered Wretch": {
+      "source": {
+        "name": "Withered Wretch",
+        "oracle_id": "29e13ec1-a239-4217-a2bd-24ff90745ec0",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Cleric",
+        "mana_cost": "{B}{B}",
+        "cmc": 2.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "2",
+        "oracle_text": "{1}: Exile target card from a graveyard."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": []
+      }
+    },
+    "Heap Doll": {
+      "source": {
+        "name": "Heap Doll",
+        "oracle_id": "aa7f0f15-bcbb-4af5-ad31-ff215dd81e71",
+        "layout": "normal",
+        "type_line": "Artifact Creature \u2014 Scarecrow",
+        "mana_cost": "{1}",
+        "cmc": 1.0,
+        "colors": [],
+        "keywords": [],
+        "power": "1",
+        "toughness": "1",
+        "oracle_text": "Sacrifice this creature: Exile target card from a graveyard."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "",
+          "tap": false,
+          "sacrifice": true,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": []
+      }
+    },
+    "Thraben Heretic": {
+      "source": {
+        "name": "Thraben Heretic",
+        "oracle_id": "67247945-17b7-4cb8-ba65-d0dfec367b77",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Wizard",
+        "mana_cost": "{1}{W}",
+        "cmc": 2.0,
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "2",
+        "oracle_text": "{T}: Exile target creature card from a graveyard."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "",
+          "tap": true,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": []
+      }
+    },
+    "Purify the Grave": {
+      "source": {
+        "name": "Purify the Grave",
+        "oracle_id": "1dafc03b-6c45-4f28-8a1f-b4f1044adc97",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{W}",
+        "cmc": 1.0,
+        "colors": [
+          "W"
+        ],
+        "keywords": [
+          "Flashback"
+        ],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile target card from a graveyard.\nFlashback {W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)"
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Flashback casting from the graveyard."
+        ]
+      }
+    },
+    "Moratorium Stone": {
+      "source": {
+        "name": "Moratorium Stone",
+        "oracle_id": "bb0d89e7-4ae6-4ac2-a0e6-51ab08226069",
+        "layout": "normal",
+        "type_line": "Artifact",
+        "mana_cost": "{1}",
+        "cmc": 1.0,
+        "colors": [],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "{2}, {T}: Exile target card from a graveyard.\n{2}{W}{B}, {T}, Sacrifice this artifact: Exile target nonland card from a graveyard, all other cards from graveyards with the same name as that card, and all permanents with that name."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{2}",
+          "tap": true,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [
+            0
+          ]
+        },
+        "additional_components": [
+          "The sacrifice ability that also exiles matching graveyard cards and battlefield permanents."
+        ]
+      }
+    },
+    "Phyrexian Furnace": {
+      "source": {
+        "name": "Phyrexian Furnace",
+        "oracle_id": "4aafb7e7-b9fc-44ae-9c54-da11fd9dcc17",
+        "layout": "normal",
+        "type_line": "Artifact",
+        "mana_cost": "{1}",
+        "cmc": 1.0,
+        "colors": [],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "{T}: Exile the bottom card of target player's graveyard.\n{1}, Sacrifice this artifact: Exile target card from a graveyard. Draw a card."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 1,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}",
+          "tap": false,
+          "sacrifice": true,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": true,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [
+            1
+          ]
+        },
+        "additional_components": [
+          "The bottom-card, player-targeted tap ability."
+        ]
+      }
+    },
+    "Mortiphobia": {
+      "source": {
+        "name": "Mortiphobia",
+        "oracle_id": "4fb8312c-058a-415c-93ab-59d37ebad270",
+        "layout": "normal",
+        "type_line": "Enchantment",
+        "mana_cost": "{1}{B}{B}",
+        "cmc": 3.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "{1}{B}, Discard a card: Exile target card from a graveyard.\n{1}{B}, Sacrifice this enchantment: Exile target card from a graveyard."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}{B}",
+          "tap": false,
+          "sacrifice": true,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [
+            1
+          ],
+          "dialogs_require_hand": true
+        },
+        "additional_components": [
+          "The discard-card alternative ability."
+        ]
+      }
+    },
+    "Crook of Condemnation": {
+      "source": {
+        "name": "Crook of Condemnation",
+        "oracle_id": "afc8df6d-7291-400e-b768-0c0c3e3fdc32",
+        "layout": "normal",
+        "type_line": "Artifact",
+        "mana_cost": "{2}",
+        "cmc": 2.0,
+        "colors": [],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "{1}, {T}: Exile target card from a graveyard.\n{1}, Exile this artifact: Exile all graveyards."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "all",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": true,
+          "pay_life": 0
+        },
+        "setup_tapped": true,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [
+            1
+          ]
+        },
+        "additional_components": [
+          "The targeted card-exile tap ability."
+        ]
+      }
+    },
+    "Silent Gravestone": {
+      "source": {
+        "name": "Silent Gravestone",
+        "oracle_id": "803815c5-12be-48b3-a101-f416c1ef9b7b",
+        "layout": "normal",
+        "type_line": "Artifact",
+        "mana_cost": "{1}",
+        "cmc": 1.0,
+        "colors": [],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Cards in graveyards can't be the targets of spells or abilities.\n{4}, {T}: Exile this artifact and all cards from all graveyards. Draw a card."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "all",
+        "draw": 1,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{4}",
+          "tap": true,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Protection from targeting cards in graveyards; the tested whole-graveyard ability targets no cards."
+        ],
+        "effect_self_exile": true
+      }
+    },
+    "Bazaar of Wonders": {
+      "source": {
+        "name": "Bazaar of Wonders",
+        "oracle_id": "7fca65b8-01fe-4858-97c6-f97ae82cd801",
+        "layout": "normal",
+        "type_line": "World Enchantment",
+        "mana_cost": "{3}{U}{U}",
+        "cmc": 5.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "When this enchantment enters, exile all graveyards.\nWhenever a player casts a spell, counter it if a card with the same name is in a graveyard or a nontoken permanent with the same name is on the battlefield."
+      },
+      "params": {
+        "mode": "entry",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "all",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": true,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "The name-matching countering trigger. No post-entry spells with matching names are cast in these scenarios."
+        ]
+      }
+    },
+    "Rest in Peace": {
+      "source": {
+        "name": "Rest in Peace",
+        "oracle_id": "087f9ad7-e74f-40e2-8102-1ed2925d0418",
+        "layout": "normal",
+        "type_line": "Enchantment",
+        "mana_cost": "{1}{W}",
+        "cmc": 2.0,
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "When this enchantment enters, exile all graveyards.\nIf a card or token would be put into a graveyard from anywhere, exile it instead."
+      },
+      "params": {
+        "mode": "entry",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "all",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Replacement interactions beyond ordinary source/control deaths and a resolving draw spell."
+        ],
+        "graveyard_replacement": true
+      }
+    },
+    "Headless Skaab": {
+      "source": {
+        "name": "Headless Skaab",
+        "oracle_id": "203365d4-4793-47af-840e-418bd5569d50",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Warrior",
+        "mana_cost": "{2}{U}",
+        "cmc": 3.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [],
+        "power": "3",
+        "toughness": "6",
+        "oracle_text": "As an additional cost to cast this spell, exile a creature card from your graveyard.\nThis creature enters tapped."
+      },
+      "params": {
+        "mode": "entry",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [],
+        "cast_exile_count": 1,
+        "enters_tapped": true
+      }
+    },
+    "Makeshift Mauler": {
+      "source": {
+        "name": "Makeshift Mauler",
+        "oracle_id": "03025ec0-75fe-439d-b0c1-9bdb0f0ff336",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Horror",
+        "mana_cost": "{3}{U}",
+        "cmc": 4.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [],
+        "power": "4",
+        "toughness": "5",
+        "oracle_text": "As an additional cost to cast this spell, exile a creature card from your graveyard."
+      },
+      "params": {
+        "mode": "entry",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [],
+        "cast_exile_count": 1
+      }
+    },
+    "Stitched Drake": {
+      "source": {
+        "name": "Stitched Drake",
+        "oracle_id": "10fd868f-45b3-4e2f-89d9-5c0b8a92f9fe",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Drake",
+        "mana_cost": "{1}{U}{U}",
+        "cmc": 3.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "power": "3",
+        "toughness": "4",
+        "oracle_text": "As an additional cost to cast this spell, exile a creature card from your graveyard.\nFlying"
+      },
+      "params": {
+        "mode": "entry",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Functional flying combat."
+        ],
+        "cast_exile_count": 1
+      }
+    },
+    "Skaab Goliath": {
+      "source": {
+        "name": "Skaab Goliath",
+        "oracle_id": "498707db-258f-423a-9ff6-9e294fce84d6",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Giant",
+        "mana_cost": "{5}{U}",
+        "cmc": 6.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [
+          "Trample"
+        ],
+        "power": "6",
+        "toughness": "9",
+        "oracle_text": "As an additional cost to cast this spell, exile two creature cards from your graveyard.\nTrample"
+      },
+      "params": {
+        "mode": "entry",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Functional trample combat."
+        ],
+        "cast_exile_count": 2
+      }
+    },
+    "Skaab Ruinator": {
+      "source": {
+        "name": "Skaab Ruinator",
+        "oracle_id": "83734824-1cad-4649-87ae-a5c338771c4c",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Horror",
+        "mana_cost": "{1}{U}{U}",
+        "cmc": 3.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "power": "5",
+        "toughness": "6",
+        "oracle_text": "As an additional cost to cast this spell, exile three creature cards from your graveyard.\nFlying\nYou may cast this card from your graveyard."
+      },
+      "params": {
+        "mode": "entry",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Casting from the graveyard; functional flying combat."
+        ],
+        "cast_exile_count": 3
+      }
+    },
+    "Relentless Skaabs": {
+      "source": {
+        "name": "Relentless Skaabs",
+        "oracle_id": "5089cd0f-1338-4ecd-bb1b-664d7e72f8fc",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie",
+        "mana_cost": "{3}{U}{U}",
+        "cmc": 5.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [
+          "Undying"
+        ],
+        "power": "4",
+        "toughness": "4",
+        "oracle_text": "As an additional cost to cast this spell, exile a creature card from your graveyard.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)"
+      },
+      "params": {
+        "mode": "entry",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Undying death and return trigger. No source death is authored."
+        ],
+        "cast_exile_count": 1,
+        "skip_destroy": true
+      }
+    },
+    "Mardu Woe-Reaper": {
+      "source": {
+        "name": "Mardu Woe-Reaper",
+        "oracle_id": "636ed3e3-c31d-403a-a3e7-03e01350ce4f",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Warrior",
+        "mana_cost": "{W}",
+        "cmc": 1.0,
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "1",
+        "oracle_text": "Whenever this creature or another Warrior you control enters, you may exile target creature card from a graveyard. If you do, you gain 1 life."
+      },
+      "params": {
+        "mode": "entry",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 1,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": true,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Other Warrior entries and the optional decline of its self-entry trigger. Repeated source casting is omitted to avoid unmodeled additional Warrior triggers."
+        ]
+      }
+    },
+    "Dire Fleet Daredevil": {
+      "source": {
+        "name": "Dire Fleet Daredevil",
+        "oracle_id": "7a3e50a5-c163-4c41-b62d-d52c233c55b7",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Pirate",
+        "mana_cost": "{1}{R}",
+        "cmc": 2.0,
+        "colors": [
+          "R"
+        ],
+        "keywords": [
+          "First strike"
+        ],
+        "power": "2",
+        "toughness": "1",
+        "oracle_text": "First strike\nWhen this creature enters, exile target instant or sorcery card from an opponent's graveyard. You may cast it this turn, and mana of any type can be spent to cast that spell. If that spell would be put into a graveyard, exile it instead."
+      },
+      "params": {
+        "mode": "entry",
+        "quantity": "one",
+        "scope": "instant_or_sorcery",
+        "graveyard": "opponent",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Optional later casting permission, alternative mana spending and the replacement effect for that optional cast; functional first strike combat."
+        ]
+      }
+    },
+    "Myr Welder": {
+      "source": {
+        "name": "Myr Welder",
+        "oracle_id": "ea2cbf5a-2def-450b-9db8-40a5b6a604d0",
+        "layout": "normal",
+        "type_line": "Artifact Creature \u2014 Myr",
+        "mana_cost": "{3}",
+        "cmc": 3.0,
+        "colors": [],
+        "keywords": [
+          "Imprint"
+        ],
+        "power": "1",
+        "toughness": "4",
+        "oracle_text": "Imprint \u2014 {T}: Exile target artifact card from a graveyard.\nThis creature has all activated abilities of all cards exiled with it."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "artifact",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "",
+          "tap": true,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [
+            0
+          ]
+        },
+        "additional_components": [
+          "Using activated abilities inherited from imprinted cards. The first imprint is exercised before any inherited ability exists."
+        ]
+      }
+    },
+    "Vile Rebirth": {
+      "source": {
+        "name": "Vile Rebirth",
+        "oracle_id": "6845a62f-e0f1-448c-beeb-abac2dabd975",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{B}",
+        "cmc": 1.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile target creature card from a graveyard. Create a 2/2 black Zombie creature token."
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [],
+        "token": {
+          "name": "Zombie",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "B"
+          ],
+          "artifact": false,
+          "subtypes": [
+            "Zombie"
+          ]
+        }
+      }
+    },
+    "Shamble Back": {
+      "source": {
+        "name": "Shamble Back",
+        "oracle_id": "11a20648-fdb6-4f52-8fda-c66985e0c044",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{B}",
+        "cmc": 1.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile target creature card from a graveyard. Create a 2/2 black Zombie creature token. You gain 2 life."
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 2,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [],
+        "token": {
+          "name": "Zombie",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "B"
+          ],
+          "artifact": false,
+          "subtypes": [
+            "Zombie"
+          ]
+        }
+      }
+    },
+    "Necrogenesis": {
+      "source": {
+        "name": "Necrogenesis",
+        "oracle_id": "ad08952a-bcae-41d6-8093-c18535dad7d5",
+        "layout": "normal",
+        "type_line": "Enchantment",
+        "mana_cost": "{B}{G}",
+        "cmc": 2.0,
+        "colors": [
+          "B",
+          "G"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "{2}: Exile target creature card from a graveyard. Create a 1/1 green Saproling creature token."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{2}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [],
+        "token": {
+          "name": "Saproling",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "G"
+          ],
+          "artifact": false,
+          "subtypes": [
+            "Saproling"
+          ]
+        }
+      }
+    },
+    "Ritual of the Returned": {
+      "source": {
+        "name": "Ritual of the Returned",
+        "oracle_id": "c74e7441-7563-4954-a1d3-3c0463294455",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{3}{B}",
+        "cmc": 4.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile target creature card from your graveyard. Create a black Zombie creature token. Its power is equal to that card's power and its toughness is equal to that card's toughness."
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [],
+        "token": {
+          "name": "Zombie",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "B"
+          ],
+          "artifact": false,
+          "subtypes": [
+            "Zombie"
+          ],
+          "selected_stats": true
+        }
+      }
+    },
+    "Bearscape": {
+      "source": {
+        "name": "Bearscape",
+        "oracle_id": "7e481e22-4122-4259-8978-4727eb307195",
+        "layout": "normal",
+        "type_line": "Enchantment",
+        "mana_cost": "{1}{G}{G}",
+        "cmc": 3.0,
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "{1}{G}, Exile two cards from your graveyard: Create a 2/2 green Bear creature token."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}{G}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [],
+        "activation_exile_count": 2,
+        "token": {
+          "name": "Bear",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "G"
+          ],
+          "artifact": false,
+          "subtypes": [
+            "Bear"
+          ]
+        }
+      }
+    },
+    "Graf Harvest": {
+      "source": {
+        "name": "Graf Harvest",
+        "oracle_id": "d3ba6922-c2f7-45ab-87a3-d4bbd770d1ba",
+        "layout": "normal",
+        "type_line": "Enchantment",
+        "mana_cost": "{B}",
+        "cmc": 1.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Zombies you control have menace. (They can't be blocked except by two or more creatures.)\n{3}{B}, Exile a creature card from your graveyard: Create a 2/2 black Zombie creature token."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{3}{B}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Functional menace of the created Zombies."
+        ],
+        "activation_exile_count": 1,
+        "token": {
+          "name": "Zombie",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "B"
+          ],
+          "artifact": false,
+          "subtypes": [
+            "Zombie"
+          ]
+        }
+      }
+    },
+    "Corpseweft": {
+      "source": {
+        "name": "Corpseweft",
+        "oracle_id": "9ffb5615-124e-4848-9e0d-120851bd50e5",
+        "layout": "normal",
+        "type_line": "Enchantment",
+        "mana_cost": "{2}{B}",
+        "cmc": 3.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "{1}{B}, Exile one or more creature cards from your graveyard: Create a tapped X/X black Zombie Horror creature token, where X is twice the number of cards exiled this way."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}{B}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [],
+        "activation_exile_count": 1,
+        "variable_exile_count": 3,
+        "token": {
+          "name": "Zombie Horror",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "B"
+          ],
+          "artifact": false,
+          "subtypes": [
+            "Zombie",
+            "Horror"
+          ],
+          "per_cost": 2,
+          "tapped": true
+        }
+      }
+    },
+    "Ongoing Investigation": {
+      "source": {
+        "name": "Ongoing Investigation",
+        "oracle_id": "68227832-2916-49b9-92bb-c09b8a0c13f5",
+        "layout": "normal",
+        "type_line": "Enchantment",
+        "mana_cost": "{1}{U}",
+        "cmc": 2.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [
+          "Investigate"
+        ],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Whenever one or more creatures you control deal combat damage to a player, investigate. (Create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")\n{1}{G}, Exile a creature card from your graveyard: Investigate. You gain 2 life."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 2,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}{G}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Combat-damage investigate trigger and later Clue sacrifice/draw ability."
+        ],
+        "activation_exile_count": 1,
+        "token": {
+          "name": "Clue",
+          "creature": false,
+          "power": 0,
+          "toughness": 0,
+          "colors": [],
+          "artifact": true,
+          "subtypes": [
+            "Clue"
+          ]
+        }
+      }
+    },
+    "Decompose": {
+      "source": {
+        "name": "Decompose",
+        "oracle_id": "12c2b6bb-05f8-4291-b9a5-c4ddb7a69b9e",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{B}",
+        "cmc": 2.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile up to three target cards from a single graveyard."
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "upto",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [],
+          "always_grave_player": true
+        },
+        "additional_components": [],
+        "limit": 3
+      }
+    },
+    "Carrion Beetles": {
+      "source": {
+        "name": "Carrion Beetles",
+        "oracle_id": "d64a51be-2dd1-485f-98fa-c93d4c296e68",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Insect",
+        "mana_cost": "{B}",
+        "cmc": 1.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": "1",
+        "toughness": "1",
+        "oracle_text": "{2}{B}, {T}: Exile up to three target cards from a single graveyard."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "upto",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{2}{B}",
+          "tap": true,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [],
+          "always_grave_player": true
+        },
+        "additional_components": [],
+        "limit": 3
+      }
+    },
+    "Rag Dealer": {
+      "source": {
+        "name": "Rag Dealer",
+        "oracle_id": "493acba2-92b0-43a4-9f4b-d49a91ca77f5",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Rogue",
+        "mana_cost": "{B}",
+        "cmc": 1.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": "1",
+        "toughness": "1",
+        "oracle_text": "{2}{B}, {T}: Exile up to three target cards from a single graveyard."
+      },
+      "params": {
+        "mode": "activation",
+        "quantity": "upto",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{2}{B}",
+          "tap": true,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [],
+          "always_grave_player": true
+        },
+        "additional_components": [],
+        "limit": 3
+      }
+    },
+    "Shred Memory": {
+      "source": {
+        "name": "Shred Memory",
+        "oracle_id": "16cae855-d93a-445d-9cac-dbc5a7c18cb1",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{B}",
+        "cmc": 2.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Transmute"
+        ],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile up to four target cards from a single graveyard.\nTransmute {1}{B}{B} ({1}{B}{B}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)"
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "upto",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Transmute hand activation and library search."
+        ],
+        "limit": 4
+      }
+    },
+    "Identity Crisis": {
+      "source": {
+        "name": "Identity Crisis",
+        "oracle_id": "0abe0584-d876-4827-972b-589da53dbe96",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{W}{W}{B}{B}",
+        "cmc": 6.0,
+        "colors": [
+          "B",
+          "W"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile all cards from target player's hand and graveyard."
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "target_player",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [],
+        "exile_hands": true,
+        "battlefield_controls": true
+      }
+    },
+    "Worldfire": {
+      "source": {
+        "name": "Worldfire",
+        "oracle_id": "ae0b8c13-0a71-4a60-bf9f-6e2da9503e9c",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{6}{R}{R}{R}",
+        "cmc": 9.0,
+        "colors": [
+          "R"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile all permanents. Exile all cards from all hands and graveyards. Each player's life total becomes 1."
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "all",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": true,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Repeated hand casting is omitted because the first mandatory effect exiles the second source copy from hand."
+        ],
+        "exile_hands": true,
+        "battlefield_controls": true,
+        "exile_battlefield": "all",
+        "set_life": 1
+      }
+    },
+    "Decree of Annihilation": {
+      "source": {
+        "name": "Decree of Annihilation",
+        "oracle_id": "6679b462-3c90-418c-8727-acd1a61d988b",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{8}{R}{R}",
+        "cmc": 10.0,
+        "colors": [
+          "R"
+        ],
+        "keywords": [
+          "Cycling"
+        ],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Exile all artifacts, creatures, and lands from the battlefield, all cards from all graveyards, and all cards from all hands.\nCycling {5}{R}{R} ({5}{R}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, destroy all lands."
+      },
+      "params": {
+        "mode": "spell",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "all",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": true,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Cycling and its separate land-destruction trigger. Repeated hand casting is omitted because the first mandatory effect exiles the second source copy from hand."
+        ],
+        "exile_hands": true,
+        "battlefield_controls": true,
+        "exile_battlefield": [
+          "Artifact",
+          "Creature",
+          "Land"
+        ]
+      }
+    },
+    "Dregscape Zombie": {
+      "source": {
+        "name": "Dregscape Zombie",
+        "oracle_id": "be9d1346-4416-4ade-ae84-7a4121e0bd12",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie",
+        "mana_cost": "{1}{B}",
+        "cmc": 2.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Unearth"
+        ],
+        "power": "2",
+        "toughness": "1",
+        "oracle_text": "Unearth {B} ({B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{B}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": []
+      }
+    },
+    "Viscera Dragger": {
+      "source": {
+        "name": "Viscera Dragger",
+        "oracle_id": "77630700-3828-4063-95a7-f6283f0f9da5",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Ogre Warrior",
+        "mana_cost": "{3}{B}",
+        "cmc": 4.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Unearth",
+          "Cycling"
+        ],
+        "power": "3",
+        "toughness": "3",
+        "oracle_text": "Cycling {2} ({2}, Discard this card: Draw a card.)\nUnearth {1}{B} ({1}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}{B}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Cycling hand activation and draw."
+        ]
+      }
+    },
+    "Fatestitcher": {
+      "source": {
+        "name": "Fatestitcher",
+        "oracle_id": "55765934-07be-4f03-a2e8-8292c0b601ae",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Wizard",
+        "mana_cost": "{3}{U}",
+        "cmc": 4.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [
+          "Unearth"
+        ],
+        "power": "1",
+        "toughness": "2",
+        "oracle_text": "{T}: You may tap or untap another target permanent.\nUnearth {U} ({U}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{U}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "The voluntary battlefield tap/untap ability."
+        ]
+      }
+    },
+    "Fire-Field Ogre": {
+      "source": {
+        "name": "Fire-Field Ogre",
+        "oracle_id": "343a258e-ea46-4acb-8543-9f869e43bc59",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Ogre Mutant",
+        "mana_cost": "{1}{U}{B}{R}",
+        "cmc": 4.0,
+        "colors": [
+          "B",
+          "R",
+          "U"
+        ],
+        "keywords": [
+          "First strike",
+          "Unearth"
+        ],
+        "power": "4",
+        "toughness": "2",
+        "oracle_text": "First strike\nUnearth {U}{B}{R} ({U}{B}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{U}{B}{R}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [],
+          "unearth_payment_reserve": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "additional_components": [
+          "Functional first-strike combat."
+        ]
+      }
+    },
+    "Hell's Thunder": {
+      "source": {
+        "name": "Hell's Thunder",
+        "oracle_id": "5aad3485-47c1-4d87-b340-61d7003cd786",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Elemental",
+        "mana_cost": "{1}{R}{R}",
+        "cmc": 3.0,
+        "colors": [
+          "R"
+        ],
+        "keywords": [
+          "Flying",
+          "Unearth",
+          "Haste"
+        ],
+        "power": "4",
+        "toughness": "4",
+        "oracle_text": "Flying, haste\nAt the beginning of the end step, sacrifice this creature.\nUnearth {4}{R} ({4}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{4}{R}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Functional flying combat; the normal hand-cast end-step sacrifice is outside hand-cast-only controls. Unearth end-step and early-leave exile remain asserted."
+        ]
+      }
+    },
+    "Hellspark Elemental": {
+      "source": {
+        "name": "Hellspark Elemental",
+        "oracle_id": "a7ba88c6-81e7-4ab7-9c9b-308831e56833",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Elemental",
+        "mana_cost": "{1}{R}",
+        "cmc": 2.0,
+        "colors": [
+          "R"
+        ],
+        "keywords": [
+          "Unearth",
+          "Haste",
+          "Trample"
+        ],
+        "power": "3",
+        "toughness": "1",
+        "oracle_text": "Trample, haste\nAt the beginning of the end step, sacrifice this creature.\nUnearth {1}{R} ({1}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}{R}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Functional trample combat; the normal hand-cast end-step sacrifice is outside hand-cast-only controls. Unearth end-step and early-leave exile remain asserted."
+        ]
+      }
+    },
+    "Shambling Remains": {
+      "source": {
+        "name": "Shambling Remains",
+        "oracle_id": "5a29fe9f-89bf-405e-acf6-1b56435cb9ee",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Horror",
+        "mana_cost": "{1}{B}{R}",
+        "cmc": 3.0,
+        "colors": [
+          "B",
+          "R"
+        ],
+        "keywords": [
+          "Unearth"
+        ],
+        "power": "4",
+        "toughness": "3",
+        "oracle_text": "This creature can't block.\nUnearth {B}{R} ({B}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{B}{R}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Functional inability to block."
+        ]
+      }
+    },
+    "Extractor Demon": {
+      "source": {
+        "name": "Extractor Demon",
+        "oracle_id": "1fb5c014-9366-4f9e-9728-303ff766002b",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Demon",
+        "mana_cost": "{4}{B}{B}",
+        "cmc": 6.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Flying",
+          "Unearth",
+          "Mill"
+        ],
+        "power": "5",
+        "toughness": "5",
+        "oracle_text": "Flying\nWhenever another creature leaves the battlefield, you may have target player mill two cards.\nUnearth {2}{B} ({2}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{2}{B}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [],
+          "leave_player_sentinel_capacity": 8
+        },
+        "additional_components": [
+          "Functional flying combat and the optional mill trigger when another creature leaves. No other creature leaves while this source is on the battlefield."
+        ]
+      }
+    },
+    "Sedraxis Specter": {
+      "source": {
+        "name": "Sedraxis Specter",
+        "oracle_id": "eccc1230-df5a-44a0-859b-9e1e0d176dff",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Specter",
+        "mana_cost": "{U}{B}{R}",
+        "cmc": 3.0,
+        "colors": [
+          "B",
+          "R",
+          "U"
+        ],
+        "keywords": [
+          "Flying",
+          "Unearth"
+        ],
+        "power": "3",
+        "toughness": "2",
+        "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, that player discards a card.\nUnearth {1}{B} ({1}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}{B}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Functional flying and combat-damage discard trigger. The fresh haste attacker is withdrawn before combat damage."
+        ]
+      }
+    },
+    "Hooting Mandrills": {
+      "source": {
+        "name": "Hooting Mandrills",
+        "oracle_id": "70e35385-6129-4bd1-861c-df04469566b7",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Ape",
+        "mana_cost": "{5}{G}",
+        "cmc": 6.0,
+        "colors": [
+          "G"
+        ],
+        "keywords": [
+          "Delve",
+          "Trample"
+        ],
+        "power": "4",
+        "toughness": "4",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nTrample"
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "additional_components": [
+          "Printed Trample combat behavior is not exercised in this initial Delve cost component."
+        ]
+      }
+    },
+    "Shambling Attendants": {
+      "source": {
+        "name": "Shambling Attendants",
+        "oracle_id": "cd17bd00-90b1-4b89-9368-2d8735159e47",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie",
+        "mana_cost": "{7}{B}",
+        "cmc": 8.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Delve",
+          "Deathtouch"
+        ],
+        "power": "3",
+        "toughness": "5",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)"
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "additional_components": [
+          "Printed Deathtouch combat behavior is not exercised in this initial Delve cost component."
+        ]
+      }
+    },
+    "Sultai Scavenger": {
+      "source": {
+        "name": "Sultai Scavenger",
+        "oracle_id": "837f72a9-9522-46e9-a48c-c6ff6d0bbe67",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Bird Warrior",
+        "mana_cost": "{5}{B}",
+        "cmc": 6.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Flying",
+          "Delve"
+        ],
+        "power": "3",
+        "toughness": "3",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nFlying"
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "additional_components": [
+          "Printed Flying combat behavior is not exercised in this initial Delve cost component."
+        ]
+      }
+    },
+    "Tombstalker": {
+      "source": {
+        "name": "Tombstalker",
+        "oracle_id": "944735ad-3f17-421a-b8fa-40f3bb8456f2",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Demon",
+        "mana_cost": "{6}{B}{B}",
+        "cmc": 8.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Flying",
+          "Delve"
+        ],
+        "power": "5",
+        "toughness": "5",
+        "oracle_text": "Flying\nDelve (Each card you exile from your graveyard while casting this spell pays for {1}.)"
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "additional_components": [
+          "Printed Flying combat behavior is not exercised in this initial Delve cost component."
+        ]
+      }
+    },
+    "Gurmag Angler": {
+      "source": {
+        "name": "Gurmag Angler",
+        "oracle_id": "315772f2-abd2-4681-b8c8-1db4b0ccbbcd",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Fish",
+        "mana_cost": "{6}{B}",
+        "cmc": 7.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Delve"
+        ],
+        "power": "5",
+        "toughness": "5",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)"
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "additional_components": []
+      }
+    },
+    "Soulflayer": {
+      "source": {
+        "name": "Soulflayer",
+        "oracle_id": "d45cf9b1-d916-48bf-8b99-60cd09230a4b",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Demon",
+        "mana_cost": "{4}{B}{B}",
+        "cmc": 6.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Delve"
+        ],
+        "power": "4",
+        "toughness": "4",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nIf a creature card with flying was exiled with this creature's delve ability, this creature has flying. The same is true for first strike, double strike, deathtouch, haste, hexproof, indestructible, lifelink, reach, trample, and vigilance."
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "additional_components": [
+          "Keyword inheritance from exiled keyword-bearing creatures is not exercised in this initial cost-only pilot; selected creatures have no printed keyword abilities."
+        ]
+      }
+    },
+    "Anathemancer": {
+      "source": {
+        "name": "Anathemancer",
+        "oracle_id": "137b5708-50a9-4f4c-84e6-9043be9f1989",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Wizard",
+        "mana_cost": "{1}{B}{R}",
+        "cmc": 3.0,
+        "colors": [
+          "B",
+          "R"
+        ],
+        "keywords": [
+          "Unearth"
+        ],
+        "power": "2",
+        "toughness": "2",
+        "oracle_text": "When this creature enters, it deals damage to target player equal to the number of nonbasic lands that player controls.\nUnearth {5}{B}{R} ({5}{B}{R}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{5}{B}{R}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Controller1 self-target selection is untested because the normal AI selector automatically chooses the opponent; activation permission is unchanged."
+        ],
+        "entry_effect": "nonbasic_damage"
+      }
+    },
+    "Rotting Rats": {
+      "source": {
+        "name": "Rotting Rats",
+        "oracle_id": "1f361ae9-98a2-40ff-a579-fa5b9f510df4",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Rat",
+        "mana_cost": "{1}{B}",
+        "cmc": 2.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Unearth"
+        ],
+        "power": "1",
+        "toughness": "1",
+        "oracle_text": "When this creature enters, each player discards a card.\nUnearth {1}{B} ({1}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}{B}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "AI discard among distinct identities is untested; its legal hand contains duplicate copies of one identity."
+        ],
+        "entry_effect": "both_discard"
+      }
+    },
+    "Kederekt Leviathan": {
+      "source": {
+        "name": "Kederekt Leviathan",
+        "oracle_id": "edf459c0-53e4-47e8-8098-105656f9b49c",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Leviathan",
+        "mana_cost": "{6}{U}{U}",
+        "cmc": 8.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [
+          "Unearth"
+        ],
+        "power": "5",
+        "toughness": "5",
+        "oracle_text": "When this creature enters, return all other nonland permanents to their owners' hands.\nUnearth {6}{U} ({6}{U}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{6}{U}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [],
+        "entry_effect": "bounce_nonlands"
+      }
+    },
+    "Chill of Foreboding": {
+      "source": {
+        "oracle_id": "cd1677e4-c356-43cd-9766-5fb8a1e64249",
+        "name": "Chill of Foreboding",
+        "oracle_text": "Each player mills five cards.\nFlashback {7}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback",
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/32/chill-of-foreboding?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "mill_all",
+        "additional_components": []
+      }
+    },
+    "Deep Analysis": {
+      "source": {
+        "oracle_id": "579cbd92-797f-4cdf-91ed-fca7a523eae5",
+        "name": "Deep Analysis",
+        "oracle_text": "Target player draws two cards.\nFlashback\u2014{1}{U}, Pay 3 life. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/149/deep-analysis?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "draw_player",
+        "additional_components": []
+      }
+    },
+    "Dream Twist": {
+      "source": {
+        "oracle_id": "d569d969-ce39-4314-b5f0-76b45f5c4c7f",
+        "name": "Dream Twist",
+        "oracle_text": "Target player mills three cards.\nFlashback {1}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback",
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/47/dream-twist?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "mill_player",
+        "additional_components": []
+      }
+    },
+    "Forbidden Alchemy": {
+      "source": {
+        "oracle_id": "66d65cda-e3d1-4a00-8ff3-c6d5ef0ab0c1",
+        "name": "Forbidden Alchemy",
+        "oracle_text": "Look at the top four cards of your library. Put one of them into your hand and the rest into your graveyard.\nFlashback {6}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/152/forbidden-alchemy?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "select_four",
+        "additional_components": []
+      }
+    },
+    "Saving Grasp": {
+      "source": {
+        "oracle_id": "f7a4458a-7e8a-46bb-b62d-991c606c7a15",
+        "name": "Saving Grasp",
+        "oracle_text": "Return target creature you own to your hand.\nFlashback {W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/46/saving-grasp?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "bounce_owned",
+        "additional_components": []
+      }
+    },
+    "Necropolis Fiend": {
+      "source": {
+        "name": "Necropolis Fiend",
+        "oracle_id": "bb714bc6-9f32-42f6-9064-f28a383675b5",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Demon",
+        "mana_cost": "{7}{B}{B}",
+        "cmc": 9.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Flying",
+          "Delve"
+        ],
+        "power": "4",
+        "toughness": "5",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nFlying\n{X}, {T}, Exile X cards from your graveyard: Target creature gets -X/-X until end of turn."
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "additional_components": [
+          "Printed activated abilities are not activated by this casting-cost component.",
+          "Flying combat behavior is not exercised by this component."
+        ]
+      }
+    },
+    "Tasigur, the Golden Fang": {
+      "source": {
+        "name": "Tasigur, the Golden Fang",
+        "oracle_id": "837e3fde-241f-4826-ad04-f146fdcf2278",
+        "layout": "normal",
+        "type_line": "Legendary Creature \u2014 Human Shaman",
+        "mana_cost": "{5}{B}",
+        "cmc": 6.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Delve",
+          "Mill"
+        ],
+        "power": "4",
+        "toughness": "5",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\n{2}{G/U}{G/U}: Mill two cards, then return a nonland card of an opponent's choice from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "additional_components": [
+          "Printed activated abilities are not activated by this casting-cost component.",
+          "Legend-rule choices with another Tasigur are not exercised; only one source is present."
+        ],
+        "disable_repeat": true
+      }
+    },
+    "Become Immense": {
+      "source": {
+        "oracle_id": "40e5b83e-5f53-4b15-8bfd-c0c0b8355a6f",
+        "name": "Become Immense",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nTarget creature gets +6/+6 until end of turn.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Delve"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/157/become-immense?utm_source=api"
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "spell_effect": "pump_six",
+        "additional_components": [
+          "Functional combat with the temporary pump is not exercised; printed statistics and cleanup duration are asserted."
+        ]
+      }
+    },
+    "Death Rattle": {
+      "source": {
+        "oracle_id": "ae327976-1026-4318-8846-f6b0cac373a7",
+        "name": "Death Rattle",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nDestroy target nongreen creature. It can't be regenerated.",
+        "mana_cost": "{5}{B}",
+        "type_line": "Instant",
+        "keywords": [
+          "Delve"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/78/death-rattle?utm_source=api"
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "spell_effect": "destroy_nongreen",
+        "additional_components": [
+          "Regeneration and indestructible target interactions are not exercised by the vanilla target boards."
+        ]
+      }
+    },
+    "Murderous Cut": {
+      "source": {
+        "oracle_id": "c0ce7d5a-68fd-41f3-b5ba-a1a178cee9ec",
+        "name": "Murderous Cut",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nDestroy target creature.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Instant",
+        "keywords": [
+          "Delve"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/81/murderous-cut?utm_source=api"
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "spell_effect": "destroy_creature",
+        "additional_components": [
+          "Regeneration and indestructible target interactions are not exercised by the vanilla target boards."
+        ]
+      }
+    },
+    "Treasure Cruise": {
+      "source": {
+        "oracle_id": "5b6bdf5a-2742-4851-92cd-a857a3852836",
+        "name": "Treasure Cruise",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nDraw three cards.",
+        "mana_cost": "{7}{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Delve"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/205/treasure-cruise?utm_source=api"
+      },
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "spell_effect": "draw_three",
+        "additional_components": []
+      }
+    },
+    "Mystical Teachings": {
+      "source": {
+        "oracle_id": "81d72511-88b4-45ec-a5a9-e722caf55577",
+        "name": "Mystical Teachings",
+        "oracle_text": "Search your library for an instant card or a card with flash, reveal it, put it into your hand, then shuffle.\nFlashback {5}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/594/mystical-teachings?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "search_instant",
+        "additional_components": [
+          "Public reveal UI is not observed; selected identity and complete hand/library conservation are asserted."
+        ],
+        "flash_witness": "Ashcoat Bear"
+      }
+    },
+    "Increasing Ambition": {
+      "source": {
+        "oracle_id": "09027657-bc9a-4702-88c1-e5b3534ad188",
+        "name": "Increasing Ambition",
+        "oracle_text": "Search your library for a card and put that card into your hand. If this spell was cast from a graveyard, instead search your library for two cards and put those cards into your hand. Then shuffle.\nFlashback {7}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{4}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/69/increasing-ambition?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "search_ambition",
+        "additional_components": []
+      }
+    },
+    "Krosan Reclamation": {
+      "source": {
+        "oracle_id": "e69252a6-8c27-4af9-8cbe-11eb416a6a46",
+        "name": "Krosan Reclamation",
+        "oracle_text": "Target player shuffles up to two target cards from their graveyard into their library.\nFlashback {1}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jud/122/krosan-reclamation?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "shuffle_grave",
+        "additional_components": []
+      }
+    },
+    "Memory's Journey": {
+      "source": {
+        "oracle_id": "75e9ac31-5993-4039-93b2-9380ced2499a",
+        "name": "Memory's Journey",
+        "oracle_text": "Target player shuffles up to three target cards from their graveyard into their library.\nFlashback {G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/66/memorys-journey?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "shuffle_grave",
+        "additional_components": []
+      }
+    },
+    "Creeping Renaissance": {
+      "source": {
+        "oracle_id": "e2375f13-fd45-4087-abd1-c884acc6c736",
+        "name": "Creeping Renaissance",
+        "oracle_text": "Choose a permanent type. Return all cards of the chosen type from your graveyard to your hand.\nFlashback {5}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c18/137/creeping-renaissance?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "recover_type",
+        "additional_components": [
+          "Choosing Battle as a permanent type is not exposed by the native five-choice menu and is not exercised here."
+        ]
+      }
+    },
+    "Corpse Connoisseur": {
+      "source": {
+        "name": "Corpse Connoisseur",
+        "oracle_id": "f39e2611-c837-4ad7-b3a8-1ee48b74777c",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Zombie Wizard",
+        "mana_cost": "{4}{B}",
+        "cmc": 5.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Unearth"
+        ],
+        "power": "3",
+        "toughness": "3",
+        "oracle_text": "When this creature enters, you may search your library for a creature card, put that card into your graveyard, then shuffle.\nUnearth {3}{B} ({3}{B}: Return this card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step or if it would leave the battlefield. Unearth only as a sorcery.)"
+      },
+      "params": {
+        "mode": "unearth",
+        "quantity": "one",
+        "scope": "creature",
+        "graveyard": "self",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{3}{B}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [],
+          "trigger_identity": "same_named_real_hand_copy"
+        },
+        "additional_components": [
+          "Choosing not to put the optional ETB trigger on the stack is not exercised; decline cases choose the actual trigger and legally fail to find a creature."
+        ],
+        "entry_effect": "tutor_creature"
+      }
+    },
+    "Momentary Blink": {
+      "source": {
+        "oracle_id": "a3ec6b5d-08ec-4ae0-b1db-c4b87a1849c7",
+        "name": "Momentary Blink",
+        "oracle_text": "Exile target creature you control, then return it to the battlefield under its owner's control.\nFlashback {3}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/15/momentary-blink?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "blink_controlled",
+        "additional_components": [
+          "Tokens and nonvanilla enters/leaves triggers are untested; tap, temporary pump reset, summoning sickness and original-owner return are exercised."
+        ]
+      }
+    },
+    "Artful Dodge": {
+      "source": {
+        "oracle_id": "c174dcbb-03a0-439c-b3d8-ed61bd46dc67",
+        "name": "Artful Dodge",
+        "oracle_text": "Target creature can't be blocked this turn.\nFlashback {U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/27/artful-dodge?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "unblockable",
+        "additional_components": [
+          "The unblockability combat recipient is caster-controlled; functional opponent-controlled recipients are not exercised."
+        ]
+      }
+    },
+    "Nightbird's Clutches": {
+      "source": {
+        "oracle_id": "d12b875c-0056-4a57-a7ff-09c73d00f8cc",
+        "name": "Nightbird's Clutches",
+        "oracle_text": "Up to two target creatures can't block this turn.\nFlashback {3}{R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/141/nightbirds-clutches?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "cannot_block",
+        "additional_components": [
+          "The blocking-restriction combat recipients are opponent-controlled; functional caster-controlled blocking recipients are not exercised."
+        ]
+      }
+    },
+    "Sever the Bloodline": {
+      "source": {
+        "oracle_id": "b9019332-2f02-48d9-be0a-a2b41b79e136",
+        "name": "Sever the Bloodline",
+        "oracle_text": "Exile target creature and all other creatures with the same name as that creature.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{3}{B}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/130/sever-the-bloodline?utm_source=api"
+      },
+      "params": {
+        "mode": "flashback",
+        "effect": "sever_names",
+        "additional_components": []
+      }
+    }
+  },
+  "extra_cards": {
+    "Zombie": {
+      "name": "Zombie",
+      "oracle_id": "ec6e76e8-e80e-4534-990a-03c3bbeda53a",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Zombie",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [
+        "B"
+      ],
+      "keywords": [],
+      "power": "*",
+      "toughness": "*",
+      "oracle_text": ""
+    },
+    "Saproling": {
+      "name": "Saproling",
+      "oracle_id": "2b7dba01-b08c-4218-9fc1-da55559d9155",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Saproling",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": ""
+    },
+    "Unsummon": {
+      "name": "Unsummon",
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Return target creature to its owner's hand."
+    },
+    "Bear": {
+      "name": "Bear",
+      "oracle_id": "af4bd34a-0a0b-4c53-8f13-579c45ab471a",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Bear",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": "4",
+      "toughness": "4",
+      "oracle_text": ""
+    },
+    "Zombie Horror": {
+      "name": "Zombie Horror",
+      "oracle_id": "866e3d56-d400-49d3-ae9d-6298c3f9f3ff",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Zombie Horror",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [
+        "B"
+      ],
+      "keywords": [],
+      "power": "*",
+      "toughness": "*",
+      "oracle_text": ""
+    },
+    "Clue": {
+      "name": "Clue",
+      "oracle_id": "496e1083-c792-40a4-adf4-fec1d559cd5e",
+      "layout": "token",
+      "type_line": "Token Artifact \u2014 Clue",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "{2}, Sacrifice this token: Draw a card."
+    },
+    "Swords to Plowshares": {
+      "name": "Swords to Plowshares",
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{W}",
+      "cmc": 1.0,
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power."
+    },
+    "Ashcoat Bear": {
+      "oracle_id": "e6d13c0d-23ed-41f5-a726-f18d4bb44c9a",
+      "name": "Ashcoat Bear",
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flash"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tsp/190/ashcoat-bear?utm_source=api"
+    },
+    "Jace Beleren": {
+      "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "name": "Jace Beleren",
+      "oracle_text": "+2: Each player draws a card.\n\u22121: Target player draws a card.\n\u221210: Target player mills twenty cards.",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Legendary Planeswalker \u2014 Jace",
+      "loyalty": "3",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+    }
+  },
+  "components": {
+    "myr_capacity": {
+      "source": {
+        "oracle_id": "ea2cbf5a-2def-450b-9db8-40a5b6a604d0",
+        "name": "Myr Welder",
+        "oracle_text": "Imprint \u2014 {T}: Exile target artifact card from a graveyard.\nThis creature has all activated abilities of all cards exiled with it.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature \u2014 Myr",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Imprint"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/118/myr-welder?utm_source=api"
+      },
+      "witnesses": {
+        "Sol Ring": {
+          "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+          "name": "Sol Ring",
+          "oracle_text": "{T}: Add {C}{C}.",
+          "mana_cost": "{1}",
+          "type_line": "Artifact",
+          "keywords": [],
+          "colors": [],
+          "color_identity": [],
+          "cmc": 1.0,
+          "layout": "normal",
+          "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+        },
+        "Mana Vault": {
+          "oracle_id": "736892cb-a34b-4bb9-b56c-e26e3db207a2",
+          "name": "Mana Vault",
+          "oracle_text": "This artifact doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {4}. If you do, untap this artifact.\nAt the beginning of your draw step, if this artifact is tapped, it deals 1 damage to you.\n{T}: Add {C}{C}{C}.",
+          "mana_cost": "{1}",
+          "type_line": "Artifact",
+          "keywords": [],
+          "colors": [],
+          "color_identity": [],
+          "cmc": 1.0,
+          "layout": "normal",
+          "scryfall_uri": "https://scryfall.com/card/2x2/308/mana-vault?utm_source=api"
+        }
+      },
+      "params": {
+        "mode": "myr_capacity",
+        "imprints": 16,
+        "slots": [
+          14,
+          15
+        ],
+        "menu_page_size": 14,
+        "witness": "Mana Vault",
+        "ordinary_witness": "Sol Ring",
+        "additional_components": [
+          "Inherited abilities beyond sixteen retained imprints; nonmana inherited abilities; unrelated triggered and static abilities of the imprinted cards."
+        ]
+      }
+    }
+  }
+}

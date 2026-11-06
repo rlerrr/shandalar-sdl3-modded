@@ -1,0 +1,1309 @@
+{
+  "version": 1,
+  "cards": {
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bear",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": ""
+    },
+    "Hill Giant": {
+      "name": "Hill Giant",
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Giant",
+      "mana_cost": "{3}{R}",
+      "cmc": 4.0,
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": "3",
+      "toughness": "3",
+      "oracle_text": ""
+    },
+    "Ornithopter": {
+      "name": "Ornithopter",
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "mana_cost": "{0}",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [
+        "Flying"
+      ],
+      "power": "0",
+      "toughness": "2",
+      "oracle_text": "Flying"
+    },
+    "Phyrexian Hulk": {
+      "name": "Phyrexian Hulk",
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Phyrexian Golem",
+      "mana_cost": "{6}",
+      "cmc": 6.0,
+      "colors": [],
+      "keywords": [],
+      "power": "5",
+      "toughness": "4",
+      "oracle_text": ""
+    },
+    "Giant Growth": {
+      "name": "Giant Growth",
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "cmc": 1.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Target creature gets +3/+3 until end of turn."
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "cmc": 1.0,
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Lightning Bolt deals 3 damage to any target."
+    },
+    "Divination": {
+      "name": "Divination",
+      "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+      "layout": "normal",
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{U}",
+      "cmc": 3.0,
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Draw two cards."
+    },
+    "Mind Rot": {
+      "name": "Mind Rot",
+      "oracle_id": "ad44cf74-b717-48fb-9fa2-77512024d76a",
+      "layout": "normal",
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{B}",
+      "cmc": 3.0,
+      "colors": [
+        "B"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Target player discards two cards."
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "cmc": 1.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "{T}: Add {C}{C}."
+    },
+    "Darksteel Relic": {
+      "name": "Darksteel Relic",
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [
+        "Indestructible"
+      ],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)"
+    },
+    "Seal of Cleansing": {
+      "name": "Seal of Cleansing",
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}",
+      "cmc": 2.0,
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment."
+    },
+    "Seal of Primordium": {
+      "name": "Seal of Primordium",
+      "oracle_id": "f14dbb39-c9f9-4f64-b22a-38dba28f5b1e",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{G}",
+      "cmc": 2.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment."
+    },
+    "Forest": {
+      "name": "Forest",
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Forest",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {G}.)"
+    },
+    "Plains": {
+      "name": "Plains",
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Plains",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "({T}: Add {W}.)"
+    },
+    "Mons's Goblin Raiders": {
+      "name": "Mons's Goblin Raiders",
+      "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Goblin",
+      "mana_cost": "{R}",
+      "cmc": 1.0,
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": ""
+    },
+    "Goblin Piker": {
+      "name": "Goblin Piker",
+      "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Goblin Warrior",
+      "mana_cost": "{1}{R}",
+      "cmc": 2.0,
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "1",
+      "oracle_text": ""
+    },
+    "Tarfire": {
+      "name": "Tarfire",
+      "oracle_id": "f07b821c-bbc1-4def-b009-6c03689478d0",
+      "layout": "normal",
+      "type_line": "Kindred Instant \u2014 Goblin",
+      "mana_cost": "{R}",
+      "cmc": 1.0,
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Tarfire deals 2 damage to any target."
+    },
+    "Nameless Inversion": {
+      "name": "Nameless Inversion",
+      "oracle_id": "d6911456-42cb-4b23-a560-dc98784530f5",
+      "layout": "normal",
+      "type_line": "Kindred Instant \u2014 Shapeshifter",
+      "mana_cost": "{1}{B}",
+      "cmc": 2.0,
+      "colors": [
+        "B"
+      ],
+      "keywords": [
+        "Changeling"
+      ],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Changeling (This card is every creature type.)\nTarget creature gets +3/-3 and loses all creature types until end of turn."
+    },
+    "Mothdust Changeling": {
+      "name": "Mothdust Changeling",
+      "oracle_id": "52237e6b-19f6-405c-a668-545c4ccb1b6d",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Shapeshifter",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "colors": [
+        "U"
+      ],
+      "keywords": [
+        "Changeling"
+      ],
+      "power": "1",
+      "toughness": "1",
+      "oracle_text": "Changeling (This card is every creature type.)\nTap an untapped creature you control: This creature gains flying until end of turn."
+    },
+    "Counterspell": {
+      "name": "Counterspell",
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "cmc": 2.0,
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Counter target spell."
+    },
+    "Reach Through Mists": {
+      "name": "Reach Through Mists",
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "layout": "normal",
+      "type_line": "Instant \u2014 Arcane",
+      "mana_cost": "{U}",
+      "cmc": 1.0,
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Draw a card."
+    },
+    "Kodama's Reach": {
+      "name": "Kodama's Reach",
+      "oracle_id": "1593ea18-2f2f-4ab4-83fb-6ccc0bec8a90",
+      "layout": "normal",
+      "type_line": "Sorcery \u2014 Arcane",
+      "mana_cost": "{2}{G}",
+      "cmc": 3.0,
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Search your library for up to two basic land cards, reveal those cards, put one onto the battlefield tapped and the other into your hand, then shuffle."
+    },
+    "Fellwar Stone": {
+      "name": "Fellwar Stone",
+      "oracle_id": "95560508-7ac9-4be9-8a3f-3c7d5b52807b",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{2}",
+      "cmc": 2.0,
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce."
+    },
+    "Scathe Zombies": {
+      "name": "Scathe Zombies",
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Zombie",
+      "mana_cost": "{2}{B}",
+      "cmc": 3.0,
+      "colors": [
+        "B"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": ""
+    },
+    "Walking Corpse": {
+      "name": "Walking Corpse",
+      "oracle_id": "fea95888-e16a-4209-9cd4-623f7f4d2f67",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Zombie",
+      "mana_cost": "{1}{B}",
+      "cmc": 2.0,
+      "colors": [
+        "B"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "2",
+      "oracle_text": ""
+    },
+    "Darksteel Citadel": {
+      "name": "Darksteel Citadel",
+      "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+      "layout": "normal",
+      "type_line": "Artifact Land",
+      "mana_cost": "",
+      "cmc": 0.0,
+      "colors": [],
+      "keywords": [
+        "Indestructible"
+      ],
+      "power": null,
+      "toughness": null,
+      "oracle_text": "Indestructible\n{T}: Add {C}."
+    }
+  },
+  "profiles": {
+    "Boggart Birth Rite": {
+      "source": {
+        "name": "Boggart Birth Rite",
+        "oracle_id": "030e9e3e-ce78-4c3b-bd83-969c07c70459",
+        "layout": "normal",
+        "type_line": "Kindred Sorcery \u2014 Goblin",
+        "mana_cost": "{B}",
+        "cmc": 1.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Return target Goblin card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "goblin",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": []
+      }
+    },
+    "Disturbed Burial": {
+      "source": {
+        "name": "Disturbed Burial",
+        "oracle_id": "cdbaa21d-5896-4b8b-9a08-f0839ccfddfc",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{B}",
+        "cmc": 2.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Buyback"
+        ],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nReturn target creature card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [
+            1
+          ],
+          "after_zone_min_mana": 3
+        },
+        "additional_components": [
+          "Buyback {3}: optional payment and returning the spell to hand are not exercised."
+        ]
+      }
+    },
+    "Soulless Revival": {
+      "source": {
+        "name": "Soulless Revival",
+        "oracle_id": "5f00dcc4-38e7-4dde-96d4-f8d4c08b334a",
+        "layout": "normal",
+        "type_line": "Instant \u2014 Arcane",
+        "mana_cost": "{1}{B}",
+        "cmc": 2.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Splice"
+        ],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Return target creature card from your graveyard to your hand.\nSplice onto Arcane {1}{B} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)"
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null,
+          "repeat_first_before_zone": [
+            0
+          ]
+        },
+        "additional_components": [
+          "Splice onto Arcane {1}{B}: splice and adding this effect to another spell are not exercised."
+        ]
+      }
+    },
+    "Flood of Recollection": {
+      "source": {
+        "name": "Flood of Recollection",
+        "oracle_id": "02393093-e970-40a0-848b-9cd758450cbb",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{U}{U}",
+        "cmc": 2.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Return target instant or sorcery card from your graveyard to your hand. Exile Flood of Recollection."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "instant_or_sorcery",
+        "value_max": null,
+        "self_destination": "exile",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": []
+      }
+    },
+    "Resourceful Return": {
+      "source": {
+        "name": "Resourceful Return",
+        "oracle_id": "952ef791-5c89-4965-9f34-0228acb18bc4",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{B}",
+        "cmc": 2.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Return target creature card from your graveyard to your hand. If you control an artifact, draw a card."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": true,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": []
+      }
+    },
+    "Entomber Exarch": {
+      "source": {
+        "name": "Entomber Exarch",
+        "oracle_id": "e820296a-81b0-401f-959c-7aed8abefce1",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Phyrexian Cleric",
+        "mana_cost": "{2}{B}{B}",
+        "cmc": 4.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "2",
+        "oracle_text": "When this creature enters, choose one \u2014\n\u2022 Return target creature card from your graveyard to your hand.\n\u2022 Target opponent reveals their hand. You choose a noncreature card from it. That player discards that card."
+      },
+      "params": {
+        "mode": "entry",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": true,
+        "selection": {
+          "before_zone": [
+            0
+          ],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [
+          "The opponent-reveal, noncreature-choice and discard mode.",
+          "Recovery-mode availability when the graveyard has no eligible creature; the other printed mode can remain legal."
+        ]
+      }
+    },
+    "Auriok Salvagers": {
+      "source": {
+        "name": "Auriok Salvagers",
+        "oracle_id": "db2f3a06-f75e-4689-b147-9820aebb30e2",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Soldier",
+        "mana_cost": "{3}{W}",
+        "cmc": 4.0,
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "4",
+        "oracle_text": "{1}{W}: Return target artifact card with mana value 1 or less from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "activation",
+        "scope": "artifact",
+        "value_max": 1,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [],
+        "activation": {
+          "mana": "{1}{W}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        }
+      }
+    },
+    "Corpse Hauler": {
+      "source": {
+        "name": "Corpse Hauler",
+        "oracle_id": "c2ba1c3b-08c7-4835-81f4-2f98843fb7b8",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Rogue",
+        "mana_cost": "{1}{B}",
+        "cmc": 2.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "1",
+        "oracle_text": "{2}{B}, Sacrifice this creature: Return target creature card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "activation",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [],
+        "activation": {
+          "mana": "{2}{B}",
+          "tap": false,
+          "sacrifice": true,
+          "exile": false,
+          "pay_life": 0
+        }
+      }
+    },
+    "Hana Kami": {
+      "source": {
+        "name": "Hana Kami",
+        "oracle_id": "7ac433a7-c107-46de-b36b-d7419c9ec565",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Spirit",
+        "mana_cost": "{G}",
+        "cmc": 1.0,
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "power": "1",
+        "toughness": "1",
+        "oracle_text": "{1}{G}, Sacrifice this creature: Return target Arcane card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "activation",
+        "scope": "arcane",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [],
+        "activation": {
+          "mana": "{1}{G}",
+          "tap": false,
+          "sacrifice": true,
+          "exile": false,
+          "pay_life": 0
+        }
+      }
+    },
+    "Phyrexian Reclamation": {
+      "source": {
+        "name": "Phyrexian Reclamation",
+        "oracle_id": "647ca69e-cc01-4b2b-b376-bee2a98331e8",
+        "layout": "normal",
+        "type_line": "Enchantment",
+        "mana_cost": "{B}",
+        "cmc": 1.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "{1}{B}, Pay 2 life: Return target creature card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "activation",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [],
+        "activation": {
+          "mana": "{1}{B}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 2
+        }
+      }
+    },
+    "Darigaaz's Charm": {
+      "source": {
+        "name": "Darigaaz's Charm",
+        "oracle_id": "7ee01801-5e42-4916-a359-64e9975090a7",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{B}{R}{G}",
+        "cmc": 3.0,
+        "colors": [
+          "B",
+          "G",
+          "R"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Choose one \u2014\n\u2022 Return target creature card from your graveyard to your hand.\n\u2022 Darigaaz's Charm deals 3 damage to any target.\n\u2022 Target creature gets +3/+3 until end of turn."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": true,
+        "selection": {
+          "before_zone": [
+            0
+          ],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [
+          "The damage mode and the temporary +3/+3 mode.",
+          "Recovery-mode availability when other printed modes are legal."
+        ]
+      }
+    },
+    "Dawn to Dusk": {
+      "source": {
+        "name": "Dawn to Dusk",
+        "oracle_id": "c7a98058-b40d-4d74-9b97-6f04adf3c684",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{W}{W}",
+        "cmc": 4.0,
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Choose one or both \u2014\n\u2022 Return target enchantment card from your graveyard to your hand.\n\u2022 Destroy target enchantment."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "enchantment",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": true,
+        "selection": {
+          "before_zone": [
+            0
+          ],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [
+          "The destruction mode and choosing both modes.",
+          "Recovery-mode availability when other printed modes are legal."
+        ]
+      }
+    },
+    "Evolution Charm": {
+      "source": {
+        "name": "Evolution Charm",
+        "oracle_id": "5f73fd4e-0d24-4daa-8d82-73c0cf7f801d",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{G}",
+        "cmc": 2.0,
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Choose one \u2014\n\u2022 Search your library for a basic land card, reveal it, put it into your hand, then shuffle.\n\u2022 Return target creature card from your graveyard to your hand.\n\u2022 Target creature gains flying until end of turn."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": true,
+        "selection": {
+          "before_zone": [
+            1
+          ],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [
+          "The basic-land search mode and flying-grant mode.",
+          "Recovery-mode availability when other printed modes are legal."
+        ]
+      }
+    },
+    "Ghoulcaller's Chant": {
+      "source": {
+        "name": "Ghoulcaller's Chant",
+        "oracle_id": "b685fff3-f1b4-42d5-9b7b-e0885bcc92d2",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{B}",
+        "cmc": 1.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Choose one \u2014\n\u2022 Return target creature card from your graveyard to your hand.\n\u2022 Return two target Zombie cards from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": true,
+        "selection": {
+          "before_zone": [
+            0
+          ],
+          "after_zone": [],
+          "after_zone_min_mana": null,
+          "before_zone_when": {
+            "scope": "zombie",
+            "minimum": 2,
+            "autoselect_controllers": [
+              0
+            ]
+          }
+        },
+        "additional_components": [
+          "The mode returning two Zombie cards.",
+          "Recovery-mode availability and empty-graveyard mode handling."
+        ]
+      }
+    },
+    "Grim Discovery": {
+      "source": {
+        "name": "Grim Discovery",
+        "oracle_id": "be78d7ca-b904-452f-b9eb-34792e588986",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{B}",
+        "cmc": 2.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Choose one or both \u2014\n\u2022 Return target creature card from your graveyard to your hand.\n\u2022 Return target land card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": true,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null,
+          "decline_second_scope": "land"
+        },
+        "additional_components": [
+          "The land-card mode and choosing both modes.",
+          "Recovery-mode availability when only the other mode has legal targets."
+        ]
+      }
+    },
+    "Remember the Fallen": {
+      "source": {
+        "name": "Remember the Fallen",
+        "oracle_id": "7ed3918d-509a-4fe6-a32d-5899df8f9046",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{W}",
+        "cmc": 3.0,
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Choose one or both \u2014\n\u2022 Return target creature card from your graveyard to your hand.\n\u2022 Return target artifact card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": true,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null,
+          "decline_second_scope": "artifact"
+        },
+        "additional_components": [
+          "The artifact-card mode and choosing both modes.",
+          "Recovery-mode availability when only the other mode has legal targets."
+        ]
+      }
+    },
+    "Reviving Melody": {
+      "source": {
+        "name": "Reviving Melody",
+        "oracle_id": "4834e6f2-1544-4e58-9092-ecc136cc0dee",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{G}",
+        "cmc": 3.0,
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Choose one or both \u2014\n\u2022 Return target creature card from your graveyard to your hand.\n\u2022 Return target enchantment card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": true,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null,
+          "decline_second_scope": "enchantment"
+        },
+        "additional_components": [
+          "The enchantment-card mode and choosing both modes.",
+          "Recovery-mode availability when only the other mode has legal targets."
+        ]
+      }
+    },
+    "Fortuitous Find": {
+      "source": {
+        "name": "Fortuitous Find",
+        "oracle_id": "8cd3815d-92a6-4336-9da7-b18b1afd5460",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{B}",
+        "cmc": 3.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Choose one or both \u2014\n\u2022 Return target artifact card from your graveyard to your hand.\n\u2022 Return target creature card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "artifact",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": true,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null,
+          "decline_second_scope": "creature"
+        },
+        "additional_components": [
+          "The creature-card mode and choosing both modes.",
+          "Recovery-mode availability when only the other mode has legal targets."
+        ]
+      }
+    },
+    "Soul Manipulation": {
+      "source": {
+        "name": "Soul Manipulation",
+        "oracle_id": "419c2ae1-fec7-4c27-a7a0-99f777abb4de",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{B}",
+        "cmc": 3.0,
+        "colors": [
+          "B",
+          "U"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Choose one or both \u2014\n\u2022 Counter target creature spell.\n\u2022 Return target creature card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": true,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [
+          "The creature-spell countering mode and choosing both modes.",
+          "Recovery-mode availability while a creature spell is pending."
+        ]
+      }
+    },
+    "Grave Exchange": {
+      "source": {
+        "name": "Grave Exchange",
+        "oracle_id": "cc7d902e-c86e-4771-ba66-2f63e847cff1",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{B}{B}",
+        "cmc": 6.0,
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": null,
+        "toughness": null,
+        "oracle_text": "Return target creature card from your graveyard to your hand. Target player sacrifices a creature of their choice."
+      },
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null,
+          "before_zone_players": [
+            "opponent"
+          ]
+        },
+        "additional_components": [
+          "The targeted player-sacrifice component when creatures are present; these fixtures legally target an opponent with an empty battlefield."
+        ]
+      }
+    },
+    "Hanna, Ship's Navigator": {
+      "source": {
+        "name": "Hanna, Ship's Navigator",
+        "oracle_id": "3b008c71-e2a0-4f56-83d3-655c5dd58e0e",
+        "layout": "normal",
+        "type_line": "Legendary Creature \u2014 Human Artificer",
+        "mana_cost": "{1}{W}{U}",
+        "cmc": 3.0,
+        "colors": [
+          "U",
+          "W"
+        ],
+        "keywords": [],
+        "power": "1",
+        "toughness": "2",
+        "oracle_text": "{1}{W}{U}, {T}: Return target artifact or enchantment card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "activation",
+        "scope": "artifact_or_enchantment",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [],
+        "activation": {
+          "mana": "{1}{W}{U}",
+          "tap": true,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        }
+      }
+    },
+    "Salvage Scout": {
+      "source": {
+        "name": "Salvage Scout",
+        "oracle_id": "502e991c-f4de-4095-adac-cb0c25e44a7c",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Scout",
+        "mana_cost": "{W}",
+        "cmc": 1.0,
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "power": "1",
+        "toughness": "1",
+        "oracle_text": "{W}, Sacrifice this creature: Return target artifact card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "activation",
+        "scope": "artifact",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [],
+        "activation": {
+          "mana": "{W}",
+          "tap": false,
+          "sacrifice": true,
+          "exile": false,
+          "pay_life": 0
+        }
+      }
+    },
+    "Groundskeeper": {
+      "source": {
+        "name": "Groundskeeper",
+        "oracle_id": "f2c19fba-9b06-461f-bb5e-e827ba41204d",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Druid",
+        "mana_cost": "{G}",
+        "cmc": 1.0,
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "power": "1",
+        "toughness": "1",
+        "oracle_text": "{1}{G}: Return target basic land card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "activation",
+        "scope": "basic_land",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [],
+        "activation": {
+          "mana": "{1}{G}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        }
+      }
+    },
+    "Scribe of the Mindful": {
+      "source": {
+        "name": "Scribe of the Mindful",
+        "oracle_id": "019a3229-dd1c-4f70-a8fb-e33dbc54df39",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Cleric",
+        "mana_cost": "{2}{U}",
+        "cmc": 3.0,
+        "colors": [
+          "U"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "2",
+        "oracle_text": "{1}, {T}, Sacrifice this creature: Return target instant or sorcery card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "activation",
+        "scope": "instant_or_sorcery",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [],
+        "activation": {
+          "mana": "{1}",
+          "tap": true,
+          "sacrifice": true,
+          "exile": false,
+          "pay_life": 0
+        }
+      }
+    },
+    "Nyx Weaver": {
+      "source": {
+        "name": "Nyx Weaver",
+        "oracle_id": "6f8bf968-0571-4582-8c04-9791e44d5df0",
+        "layout": "normal",
+        "type_line": "Enchantment Creature \u2014 Spider",
+        "mana_cost": "{1}{B}{G}",
+        "cmc": 3.0,
+        "colors": [
+          "B",
+          "G"
+        ],
+        "keywords": [
+          "Reach",
+          "Mill"
+        ],
+        "power": "2",
+        "toughness": "3",
+        "oracle_text": "Reach\nAt the beginning of your upkeep, mill two cards. (Put the top two cards of your library into your graveyard.)\n{1}{B}{G}, Exile this creature: Return target card from your graveyard to your hand."
+      },
+      "params": {
+        "mode": "activation",
+        "scope": "card",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": false,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": [
+          "Reach combat.",
+          "The upkeep mill-two trigger; these activation and casting fixtures remain in main phase."
+        ],
+        "activation": {
+          "mana": "{1}{B}{G}",
+          "tap": false,
+          "sacrifice": false,
+          "exile": true,
+          "pay_life": 0
+        }
+      }
+    }
+  }
+}

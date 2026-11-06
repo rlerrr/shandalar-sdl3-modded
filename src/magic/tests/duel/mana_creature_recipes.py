@@ -172,3 +172,29 @@ def expand(name,csvid,declaration,p,selected,registry,oracle):
                            _recipe=dict(family='mana_creature',version=2,variant=variant,params=declaration['params'],oracle_text=declaration['oracle_text'],
                                         untested_keywords=['Flash'] if 'Flash' in keys else [])))
     return result
+
+
+# Wave-six opt-in branches keep every old declaration on its original path.
+_wave6_original_spec = spec
+_wave6_original_variants = variants
+_wave6_original_expand = expand
+_wave6_original_validate = validate_witnesses
+
+def spec(d, o):
+    from mana_spell_extension_recipes import applies, spec as extension_spec
+    return extension_spec(d, o) if applies(d) else _wave6_original_spec(d, o)
+
+def variants(p):
+    if p.get('wave') == 6:
+        from mana_spell_extension_recipes import variants as extension_variants
+        return extension_variants(p)
+    return _wave6_original_variants(p)
+
+def validate_witnesses(o, registry):
+    _wave6_original_validate(o, registry)
+
+def expand(name, csvid, d, p, selected, registry, o):
+    if p.get('wave') == 6:
+        from mana_spell_extension_recipes import expand as extension_expand
+        return extension_expand(name, csvid, d, p, selected, registry, o)
+    return _wave6_original_expand(name, csvid, d, p, selected, registry, o)

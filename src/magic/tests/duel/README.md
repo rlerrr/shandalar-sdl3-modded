@@ -166,6 +166,8 @@ the integrating agent. Validate new cases with the generator, then run their iso
 native and Node/Wasm tests before merging the case files.
 
 During parallel test authoring, agents edit only their assigned card case files.
+New recipe families can be assigned separately, with exclusive ownership of
+their module, witness data and guards; the integrator owns dispatcher wiring.
 They must not change engine/card implementations, shared fixtures, harness code,
 Oracle data, or the known-failure manifest to make tests pass. Preserve expectations
 derived from Oracle text and report failures with the case name, expected behavior,
@@ -173,6 +175,85 @@ actual result, and any suspected harness limitation. The integrating agent revie
 and classifies failures; production fixes are handled separately. Only the integrating
 agent rebuilds shared native/Wasm binaries, so concurrent authors cannot invalidate
 one another's test runs.
+
+The integrator can build that reusable engine with
+`SHANDALAR_DUEL_AUTHORING_BUILD=ON` in each configured native/Wasm build directory:
+
+```powershell
+cmake -S . -B out/build/shandalar-clang-x86 -DSHANDALAR_BUILD_TESTS=ON -DSHANDALAR_BUILD_DUEL_TESTS=ON -DSHANDALAR_DUEL_AUTHORING_BUILD=ON -DSHANDALAR_DUEL_EXTENDED_TESTS=OFF
+cmake --build out/build/shandalar-clang-x86 --target duel_card_tests -j6
+```
+
+Authoring configuration generates only compiled fixtures, templates, smoke tables
+and handler bindings. It does not expand behavior recipes or emit their archive,
+manifest, inventory or CTest entries. Recipe/card/witness edits therefore do not
+reconfigure these shared engines. Fixture, Oracle, registry, generator and runtime
+changes still require the integrator to regenerate/rebuild as appropriate.
+Supply a worker archive explicitly with the runner's `--case-data`; an authoring
+build does not create its default archive. `duel_tests_batched` fails with guidance
+in this mode, and `SHANDALAR_DUEL_EXTENDED_TESTS=ON` is incompatible. Default
+`SHANDALAR_DUEL_AUTHORING_BUILD=OFF` retains full generation and catalog targets;
+use that mode for the final full-catalog integration check.
+
+The equivalent generator-only operation is:
+
+```powershell
+python src/magic/tests/duel/generate_cases.py --driver-only --output H:/shandalar-test-scratch/engine/driver
+```
+
+It writes `duel_cases.inc`, `duel_handler_bindings.inc` and
+`duel_case_sources.cmake`, preserving unchanged timestamps and any existing
+behavior archive/catalog files. `--driver-only` cannot be combined with source
+selectors or legacy behavior fingerprints. Generate a worker subset separately.
+
+For an authoring pass, select complete source files before expanding recipes:
+
+```powershell
+python src/magic/tests/duel/generate_cases.py --output H:/shandalar-test-scratch/worker-a/generated --csvid 2723
+python src/magic/tests/duel/run_cases.py --binary H:/shandalar-test-scratch/engine/duel_card_tests.exe --case-data H:/shandalar-test-scratch/worker-a/generated/duel_cases.bin --manifest H:/shandalar-test-scratch/worker-a/generated/manifest.json --baseline src/magic/tests/duel/data/known_failures.json --output H:/shandalar-test-scratch/worker-a/native --batch-size 128 --jobs 1 --timeout 45 --quiet
+```
+
+Repeat `--csvid` to select several card homes, or use repeatable `--case-file`
+paths relative to `data/cases` (the manifest's `cases/...` spelling also works).
+Selectors form a union, and each must match. A subset generates only the case
+archive, manifest and inventory; it does not replace the shared build's includes
+or CTest catalog. Every case in a selected source file is included.
+
+Each author uses a separate output directory and the same immutable engine.
+For Node/Wasm, replace `--binary` with the shared `.js` and add `--node` with the
+Node executable. The runner mounts the selected archive's host directory through
+NodeFS and keeps the binary directory as the asset working directory. Batches,
+restarts and isolated failure checks all use the same archive.
+
+Subset manifests explicitly identify their selected sources. The runner checks
+expectation signatures and selected identities while allowing unrelated baseline
+entries. This is a local authoring check: regenerate and run the complete manifest
+at integration to detect stale expectations elsewhere in the catalog. Coordinate
+process counts across authors; `--jobs` applies to each runner, not to the entire
+VM. Prefer one process per author, with shared builds owned by the integrator.
+
+For explicit responses outside a nested casting callback, `cast_response` opts
+into the pending top spell's real response context. It requires a pending spell,
+not an activation; ordinary casting, legal targeting and mana payment still run.
+`resolve_response` requires a response above a pending parent spell and drains
+the stack with that parent's response context restored. It does not resolve only
+one object. It is currently validated only for one response above its parent
+spell; do not use it for deeper response chains. Keep ordinary `cast`/`resolve`
+for scenarios that do not need this context. Check stack size, queued choices
+and printed costs on either side of
+the response. While a spell is pending, the engine still physically counts its
+source card in hand; move it in the expected zone model only after resolution.
+
+History-sensitive cases use `reset_death_history` as their first step, before
+any authored destruction or other death. This explicit, empty-stack operation
+performs the normal turn-start Deadbox reset omitted by fixture preparation.
+It removes reserved-token initialization metadata that could appear as a phantom
+death. Never reset after the deaths being tested, during refresh, or during a
+snapshot replay that must retain those deaths. Create real battlefield deaths
+after the reset; preloaded graveyard cards are not this-turn death history.
+
+The first parallel pilot and complete native/Wasm verification are recorded in
+[the pilot audit](../../../../docs/test-audits/parallel-oracle-pilot-2026-11.json).
 
 From the repository root:
 
@@ -184,7 +265,11 @@ python src/magic/tests/duel/generate_cases.py --output out/duel-tests/generated
 The loader regression tests are also registered as `duel.case_files` in CTest.
 
 Known assertion failures specify an exact `assertion_count` as well as matching
-diagnostic patterns. Additional or missing failures do not match that baseline;
+diagnostic patterns. An optional `pattern_counts` list pins the exact number of
+matches for each pattern. Use it when repeated token or replay assertions share
+the same diagnostic and step, so an unchanged occurrence cannot hide a changed
+failure elsewhere. Older entries without counts retain their matching behavior.
+Additional or missing failures do not match that baseline;
 an unexpected pass also fails the gate. Harness errors cannot be baselined.
 
 `known_failures.json` contains defects in implemented behavior. Missing handlers

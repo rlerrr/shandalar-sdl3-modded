@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "card": "Sharding Sphinx",
+  "csvid": 10060,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 4,
+        "mechanism": "damage_creator",
+        "token": {
+          "name": "Thopter",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "U"
+          ],
+          "subtypes": [
+            "Thopter"
+          ],
+          "artifact": true,
+          "keywords": [
+            "Flying"
+          ]
+        },
+        "amount": {
+          "basis": "events"
+        },
+        "activation": null,
+        "operative": [
+          {
+            "kind": "damage_trigger",
+            "predicate": "controlled_artifact_creature_combat_player",
+            "optional": true,
+            "token_controller": "source_controller"
+          }
+        ],
+        "source_keywords": [
+          "Flying"
+        ],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Flying\nWhenever an artifact creature you control deals combat damage to a player, you may create a 1/1 blue Thopter artifact creature token with flying.",
+      "variants": [
+        "create_0",
+        "blocked_0",
+        "opponent_creature_0",
+        "source_removed_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "damage_snapshot_0",
+        "cleanup_0",
+        "token_attack_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "fresh_denied_0",
+        "flying_evasion_0",
+        "artifact_creature_0",
+        "nonartifact_creature_0",
+        "noncombat_damage_0",
+        "create_1",
+        "blocked_1",
+        "opponent_creature_1",
+        "source_removed_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "damage_snapshot_1",
+        "cleanup_1",
+        "token_attack_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "fresh_denied_1",
+        "flying_evasion_1",
+        "artifact_creature_1",
+        "nonartifact_creature_1",
+        "noncombat_damage_1",
+        "decline_0"
+      ]
+    }
+  ]
+}

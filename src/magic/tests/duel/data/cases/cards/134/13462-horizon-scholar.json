@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Horizon Scholar",
+  "csvid": 13462,
+  "recipes": [
+    {
+      "family": "entry_value_extension",
+      "version": 2,
+      "params": {
+        "schema": 1,
+        "profile": "Horizon Scholar"
+      },
+      "oracle_text": "Flying\nWhen this creature enters, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blink_0",
+        "blink_snapshot_0",
+        "bounce_recast_0",
+        "bounce_only_0",
+        "two_copies_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "bare_zones_0",
+        "keep_0",
+        "reorder_0",
+        "short_library_0",
+        "empty_library_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blink_1",
+        "blink_snapshot_1",
+        "bounce_recast_1",
+        "bounce_only_1",
+        "two_copies_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "bare_zones_1",
+        "keep_1",
+        "reorder_1",
+        "short_library_1",
+        "empty_library_1"
+      ]
+    }
+  ]
+}

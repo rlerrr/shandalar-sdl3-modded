@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "card": "Scavenging Ooze",
+  "csvid": 11748,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "resource_growth",
+        "kind": "grave_exile",
+        "cost": [
+          0,
+          0,
+          0,
+          1,
+          0,
+          0
+        ],
+        "scope": "grave",
+        "tap": false,
+        "random_discard": false,
+        "creature_discard": false,
+        "activation_menu": false,
+        "resolution_menu": false,
+        "unused": [],
+        "conditions": []
+      },
+      "oracle_text": "{G}: Exile target card from a graveyard. If it was a creature card, put a +1/+1 counter on this creature and you gain 1 life.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "source_destroyed_pending_0",
+        "source_bounced_pending_0",
+        "repeat_0",
+        "cast_payment_0",
+        "tapped_source_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "own_grave_0",
+        "land_exile_0",
+        "instant_exile_0",
+        "empty_graves_0",
+        "grave_target_lost_0",
+        "effect_1",
+        "payment_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "source_destroyed_pending_1",
+        "source_bounced_pending_1",
+        "repeat_1",
+        "cast_payment_1",
+        "tapped_source_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "own_grave_1",
+        "land_exile_1",
+        "instant_exile_1",
+        "empty_graves_1",
+        "grave_target_lost_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle resource growth: actual source casts, printed discard or mana/tap costs, exact pending and resolved counter/zone/life receipts, typed cost and target controls, source/target loss, cleanup, repeat and replay. Elective alternate modes and dormant combat/upkeep clauses are explicit component gaps. Random discard uses uniform hands; Ooze noncreature selections use creature-free graveyards. Shauku actual cast and real untap readiness are exercised. Authoritative native/Wasm validation is recorded in the wave5 report."
+}

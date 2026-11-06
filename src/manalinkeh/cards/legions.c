@@ -1121,7 +1121,7 @@ int card_hollow_specter(int player, int card, event_t event){
 }
 
 /* ManalinkEh 2022: 0x24a8d20; original cards/legions.c:1066. */
-int card_hundroog(int player, int card, event_t event, int trigger_mode)
+int card_hundroog(int player, int card, event_t event)
 {
   /* Hundroog	|6|G
    * Creature - Beast 4/7
@@ -1132,7 +1132,7 @@ int card_hundroog(int player, int card, event_t event, int trigger_mode)
   return result;
 }
 
-int card_hunter_sliver(int player, int card, event_t event, int trigger_mode)
+int card_hunter_sliver(int player, int card, event_t event)
 {
   /* CARD_ID_HUNTER_SLIVER	6400
    * Hunter Sliver	|1|R

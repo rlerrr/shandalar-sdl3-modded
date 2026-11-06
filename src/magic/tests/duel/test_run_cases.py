@@ -3,12 +3,54 @@ import json
 import tempfile
 import unittest
 from pathlib import Path
-from run_cases import classify_outcome, load_unimplemented, validate_expectations, expectations_for_platform, process_outcome
+from types import SimpleNamespace
+from run_cases import child_launch, classify_outcome, load_unimplemented, validate_expectations, validate_expectation_signature, expectations_for_platform, process_outcome
 import xml.etree.ElementTree as ET
 import re
 
 
 class RunnerExpectationsTest(unittest.TestCase):
+    def test_fatal_engine_error_without_xml_cannot_hide_earlier_assertions(self):
+        error = 'DUEL_ENGINE_ERROR: bad parameters: get_card_instance(-1, -1)'
+        record = dict(kind='crash', reason='Reviewed zero-target engine error', patterns=[re.escape(error)], pattern_counts=[1])
+        with tempfile.TemporaryDirectory() as temporary:
+            xml = Path(temporary)/'missing.xml'
+            self.assertEqual(process_outcome(1, xml, error), ('crash', 0))
+            self.assertEqual(classify_outcome('case', 'crash', 0, error, {'case': record}), 'known_failure')
+            for prefix in ('C:/src/duel_card_tests.cpp(246): error: Expected equality of these values:',
+                           'C:/src/duel_card_tests.cpp:246: Failure'):
+                for crash in (error, 'RuntimeError: memory access out of bounds'):
+                    text = prefix + '\nWhich is: 0\n' + prefix + '\nWhich is: 1\n' + crash
+                    kind, count = process_outcome(1, xml, text)
+                    self.assertEqual((kind, count), ('assertion', 3))
+                    self.assertEqual(classify_outcome('case', kind, count, text, {'case': record}), 'failed')
+
+    def test_repeated_same_step_failures_require_every_reviewed_occurrence(self):
+        block = 'Which is: 0\n  1\nGoogle Test trace:\nstep 37 token subtype\n'
+        pattern = re.escape(block)
+        record = dict(kind='assertion', assertion_count=2, reason='Reviewed missing token subtype',
+                      patterns=[pattern], pattern_counts=[2])
+        baseline = {'case': record}
+        text = block + block
+        self.assertEqual(classify_outcome('case', 'assertion', 2, text, baseline), 'known_failure')
+        for original, altered in (('Which is: 0', 'Which is: 1'), ('  1\n', '  2\n'), ('step 37', 'step 38')):
+            for index in (0, len(block)):
+                mutated = text[:index] + text[index:].replace(original, altered, 1)
+                self.assertEqual(classify_outcome('case', 'assertion', 2, mutated, baseline), 'failed')
+        self.assertEqual(classify_outcome('case', 'assertion', 2, text + block, baseline), 'failed')
+        self.assertEqual(classify_outcome('case', 'harness', 2, text, baseline), 'failed')
+        self.assertEqual(classify_outcome('case', 'passed', 0, '', baseline), 'unexpected_pass')
+
+    def test_pattern_occurrence_counts_are_optional_and_strict(self):
+        record = dict(kind='assertion', assertion_count=2, reason='Reviewed bug', patterns=['signature'])
+        self.assertEqual(classify_outcome('case', 'assertion', 2, 'signature signature', {'case': record}), 'known_failure')
+        for counts in (None, [], [0], [-1], [True], [1.0], [1, 2], '1'):
+            bad = dict(record, pattern_counts=counts)
+            with self.subTest(counts=counts), self.assertRaisesRegex(ValueError, 'occurrence count'):
+                validate_expectation_signature('case', bad)
+            with self.subTest(counts=counts), self.assertRaisesRegex(ValueError, 'occurrence count'):
+                classify_outcome('case', 'assertion', 2, 'signature', {'case': bad})
+
     def test_known_crash_cannot_hide_a_preceding_rules_failure(self):
         with tempfile.TemporaryDirectory() as temporary:
             xml=Path(temporary)/'result.xml';root=ET.Element('testsuites',tests='1');case=ET.SubElement(root,'testcase')
@@ -130,6 +172,70 @@ class RunnerExpectationsTest(unittest.TestCase):
             other.write_text(json.dumps(dict(version=2, cases={})))
             with self.assertRaisesRegex(ValueError, "Unsupported unimplemented schema"):
                 load_unimplemented(baseline, other)
+
+    def partial_manifest(self):
+        source = "cases/cards/001/00100-missing-spell.json"
+        return dict(cases=[dict(self.case, tier="behavior", source_file=source)],
+                    selection=dict(version=1, complete=False, source_files=[source]))
+
+    def test_explicit_partial_selection_ignores_unrelated_expectations_only(self):
+        manifest = self.partial_manifest()
+        unrelated = {"Behavior.Unrelated": dict(self.record, card="Another card", csvid=101)}
+        validate_expectations(manifest, unrelated, self.missing)
+        validate_expectations(manifest, self.missing, unrelated)
+        with self.assertRaisesRegex(ValueError, "both known failures"):
+            validate_expectations(manifest, unrelated, unrelated)
+        for field, value in (("card", "Wrong card"), ("csvid", 123), ("oracle_id", "wrong"), ("handler", "card_wrong")):
+            with self.subTest(field=field), self.assertRaisesRegex(ValueError, "Stale known-failure"):
+                validate_expectations(manifest, {self.name: dict(self.record, **{field: value})}, {})
+        with self.assertRaisesRegex(ValueError, "Stale known-failure entries"):
+            validate_expectations(self.manifest, unrelated, {})
+
+    def test_partial_selection_metadata_cannot_silently_relax_full_gate(self):
+        manifest = self.partial_manifest()
+        invalid = (None, {}, dict(manifest["selection"], complete=True),
+                   dict(manifest["selection"], version=True),
+                   dict(manifest["selection"], extra=True),
+                   dict(manifest["selection"], source_files=[]),
+                   dict(manifest["selection"], source_files=["cases/../outside.json"]),
+                   dict(manifest["selection"], source_files=["cases//cards/file.json"]),
+                   dict(manifest["selection"], source_files=["cases\\cards\\file.json"]),
+                   dict(manifest["selection"], source_files=manifest["selection"]["source_files"]*2),
+                   dict(manifest["selection"], source_files=["cases/other.json"]))
+        for selection in invalid:
+            with self.subTest(selection=selection), self.assertRaises(ValueError):
+                validate_expectations(dict(manifest, selection=selection), {}, {})
+        for case in (dict(manifest["cases"][0], tier="smoke"),
+                     dict(manifest["cases"][0], source_file="cases/unselected.json")):
+            with self.subTest(case=case), self.assertRaises(ValueError):
+                validate_expectations(dict(manifest, cases=[case]), {}, {})
+        with self.assertRaises(ValueError):
+            validate_expectations(dict(manifest, cases=[]), {}, {})
+
+    def test_partial_gate_still_checks_failure_signatures_outside_selection(self):
+        for field, value in (("kind", "harness"), ("reason", ""), ("patterns", []),
+                             ("patterns", [""]), ("patterns", ["["]),
+                             ("assertion_count", 0), ("assertion_count", True)):
+            with self.subTest(field=field, value=value), self.assertRaises(ValueError):
+                validate_expectations(self.partial_manifest(),
+                    {"Behavior.Unrelated": dict(self.record, **{field: value})}, {})
+
+    def test_external_archive_argument_maps_host_path_without_shell_quoting(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            archive = root / "case archives" / "worker data.bin"
+            archive.parent.mkdir(); archive.write_bytes(b"archive")
+            args = SimpleNamespace(binary=root/"engine files"/"engine.exe", node=None, case_data=archive)
+            command, env = child_launch(args, root/"output")
+            self.assertEqual(command, [str(args.binary.resolve()), "--duel-case-data="+str(archive.resolve())])
+            self.assertEqual(env["DUEL_TEST_OUTPUT_DIR"], str(root/"output"))
+            args.node = root/"Node files"/"node.exe"
+            command, env = child_launch(args, root/"output")
+            self.assertEqual(command, [str(args.node), str(args.binary.resolve()), "--duel-case-data=/test-cases/worker data.bin"])
+            self.assertEqual(env["DUEL_TEST_CASE_DIR"], str(archive.parent.resolve()))
+            archive.unlink()
+            with self.assertRaisesRegex(ValueError, "Case archive does not exist"):
+                child_launch(args, root/"output")
 
 
 if __name__ == "__main__":

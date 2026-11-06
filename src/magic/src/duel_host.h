@@ -32,11 +32,14 @@ typedef struct {
   int observe_zone_legality;
   int present_ai_dialogs;
   int target_probe_player, target_probe_card, target_probe_seen, target_probe_result;
+  uint32_t shuffle_count[2];
 } DuelHostState;
 
 void duel_host_install(const DuelHost *host, uint32_t seed, uint32_t step_budget);
 void duel_host_uninstall(void);
 int duel_host_is_headless(void);
+/* Passive receipts; simulation snapshots roll these back with the libraries. */
+void duel_host_record_shuffle(int player);
 int duel_host_scripted_input(void);
 /* Opt-in inspection of the next planned input, without consuming it. */
 int duel_host_choice_ready(DuelChoiceKind kind, int player);

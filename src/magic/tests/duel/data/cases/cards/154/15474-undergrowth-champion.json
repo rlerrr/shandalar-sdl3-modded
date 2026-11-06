@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "card": "Undergrowth Champion",
+  "csvid": 15474,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "replacement",
+        "replacement": "conditional_phantom",
+        "entry_counters": 0,
+        "casting_cost": "{1}{G}{G}",
+        "gaps": [
+          "Multiple lands entering simultaneously",
+          "Other counter sources and counter cancellation",
+          "Post-search shuffle order unconstrained; exact library multiplicities retained"
+        ]
+      },
+      "oracle_text": "If damage would be dealt to this creature while it has a +1/+1 counter on it, prevent that damage and remove a +1/+1 counter from this creature.\nLandfall — Whenever a land you control enters, put a +1/+1 counter on this creature.",
+      "variants": [
+        "effect_0",
+        "small_damage_0",
+        "repeat_damage_0",
+        "other_damage_0",
+        "friendly_source_0",
+        "cleanup_0",
+        "payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "damaged_snapshot_0",
+        "bare_zones_0",
+        "blocking_0",
+        "combat_snapshot_0",
+        "exhaustion_0",
+        "without_counter_0",
+        "opponent_land_0",
+        "failed_search_0",
+        "nonland_spell_0",
+        "effect_1",
+        "small_damage_1",
+        "repeat_damage_1",
+        "other_damage_1",
+        "friendly_source_1",
+        "cleanup_1",
+        "payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "damaged_snapshot_1",
+        "bare_zones_1",
+        "blocking_1",
+        "combat_snapshot_1",
+        "exhaustion_1",
+        "without_counter_1",
+        "opponent_land_1",
+        "failed_search_1",
+        "nonland_spell_1"
+      ]
+    }
+  ]
+}

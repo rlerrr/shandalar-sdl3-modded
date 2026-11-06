@@ -1,0 +1,101 @@
+{
+  "version": 1,
+  "card": "Trostani Discordant",
+  "csvid": 19508,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "grant_component",
+        "keywords": [],
+        "token": {
+          "name": "Soldier",
+          "count": 2,
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "W"
+          ],
+          "subtypes": [
+            "Soldier"
+          ],
+          "artifact": false,
+          "keywords": [
+            "Lifelink"
+          ]
+        },
+        "inactive_clauses": [],
+        "fabricate": 0,
+        "owner_return": true,
+        "active_static": {
+          "scope": "all_other",
+          "power": 1,
+          "toughness": 1,
+          "keywords": []
+        }
+      },
+      "oracle_text": "Other creatures you control get +1/+1.\nWhen Trostani enters, create two 1/1 white Soldier creature tokens with lifelink.\nAt the beginning of your end step, each player gains control of all creatures they own.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "wrath_0",
+        "other_creature_0",
+        "source_destroyed_0",
+        "source_bounced_0",
+        "bounce_recast_0",
+        "blink_0",
+        "blink_snapshot_0",
+        "preloaded_source_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "wrath_1",
+        "other_creature_1",
+        "source_destroyed_1",
+        "source_bounced_1",
+        "bounce_recast_1",
+        "blink_1",
+        "blink_snapshot_1",
+        "preloaded_source_1",
+        "owner_return_0",
+        "owner_return_snapshot_0",
+        "owner_return_wrong_turn_0",
+        "owner_return_source_lost_0",
+        "owner_return_1",
+        "owner_return_snapshot_1",
+        "owner_return_wrong_turn_1",
+        "owner_return_source_lost_1"
+      ]
+    }
+  ]
+}

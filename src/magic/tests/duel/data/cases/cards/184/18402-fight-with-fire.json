@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Fight with Fire",
+  "csvid": 18402,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell_extension",
+      "version": 2,
+      "params": {
+        "kind": "targeted",
+        "effect": {
+          "amount": 5,
+          "targets": [
+            "creature"
+          ]
+        },
+        "gain_life": 0,
+        "inactive_components": [
+          "Kicker {5}{R} and its ten-damage divided replacement; fixtures use the ordinary unkicked spell."
+        ],
+        "choices_before_target": [
+          1
+        ],
+        "choices_after_target": [],
+        "skip_before_choices_on_exact_payment": true,
+        "skip_after_choices_on_exact_payment": false,
+        "omit_variants": [
+          "empty",
+          "wrong_type"
+        ]
+      },
+      "oracle_text": "Kicker {5}{R} (You may pay an additional {5}{R} as you cast this spell.)\nFight with Fire deals 5 damage to target creature. If this spell was kicked, it deals 10 damage divided as you choose among any number of targets instead. (Those targets can include players and planeswalkers.)",
+      "variants": [
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "survivor_0",
+        "lethal_0",
+        "lost_target_0",
+        "friendly_0",
+        "regenerate_0",
+        "pending_snapshot_0",
+        "wrong_payment_color_0",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "survivor_1",
+        "lethal_1",
+        "lost_target_1",
+        "friendly_1",
+        "regenerate_1",
+        "pending_snapshot_1",
+        "wrong_payment_color_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed fixed damage component through ordinary mana-paid casting; all other named clauses are explicit recipe metadata gaps."
+}

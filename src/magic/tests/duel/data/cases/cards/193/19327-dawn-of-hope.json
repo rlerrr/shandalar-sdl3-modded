@@ -1,0 +1,100 @@
+{
+  "version": 1,
+  "card": "Dawn of Hope",
+  "csvid": 19327,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 3,
+        "mechanism": "cost_creator",
+        "token": {
+          "name": "Soldier",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "W"
+          ],
+          "subtypes": [
+            "Soldier"
+          ],
+          "artifact": false,
+          "keywords": [
+            "Lifelink"
+          ]
+        },
+        "amount": {
+          "fixed": 1
+        },
+        "activation": {
+          "mana": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "tap": false,
+          "untap": false,
+          "sacrifice": false,
+          "additional": null,
+          "additional_count": 0,
+          "only_sorcery": false
+        },
+        "operative": [
+          {
+            "kind": "own_lifegain_optional_pay2_draw1"
+          }
+        ],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Whenever you gain life, you may pay {2}. If you do, draw a card.\n{3}{W}: Create a 1/1 white Soldier creature token with lifelink.",
+      "variants": [
+        "create_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "lifelink_draw_0",
+        "lifelink_no_payment_0",
+        "normal_lifegain_draw_0",
+        "opponent_lifegain_0",
+        "source_removed_lifegain_0",
+        "create_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "lifelink_draw_1",
+        "lifelink_no_payment_1",
+        "normal_lifegain_draw_1",
+        "opponent_lifegain_1",
+        "source_removed_lifegain_1"
+      ]
+    }
+  ]
+}

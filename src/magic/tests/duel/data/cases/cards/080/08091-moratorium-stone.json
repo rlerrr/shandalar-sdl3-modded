@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "card": "Moratorium Stone",
+  "csvid": 8091,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{2}",
+          "tap": true,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [
+            0
+          ]
+        },
+        "additional_components": [
+          "The sacrifice ability that also exiles matching graveyard cards and battlefield permanents."
+        ]
+      },
+      "oracle_text": "{2}, {T}: Exile target card from a graveyard.\n{2}{W}{B}, {T}, Sacrifice this artifact: Exile target nonland card from a graveyard, all other cards from graveyards with the same name as that card, and all permanents with that name.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "empty_graveyards_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "alternate_0",
+        "own_target_0",
+        "sole_own_graveyard_0",
+        "sole_opponent_graveyard_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "fresh_activation_0",
+        "insufficient_mana_0",
+        "tapped_0",
+        "destroy_source_pending_0",
+        "effect_1",
+        "payment_1",
+        "empty_graveyards_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "alternate_1",
+        "own_target_1",
+        "sole_own_graveyard_1",
+        "sole_opponent_graveyard_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "fresh_activation_1",
+        "insufficient_mana_1",
+        "tapped_1",
+        "destroy_source_pending_1"
+      ]
+    }
+  ]
+}

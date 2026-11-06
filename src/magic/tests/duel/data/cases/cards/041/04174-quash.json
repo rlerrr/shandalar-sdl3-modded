@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Quash",
+  "csvid": 4174,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "instant",
+            "sorcery"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Hidden-zone fail-to-find decisions for mandatory all-match searches; source/target departure, uncounterable parents and replacement effects."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "search_same_name": {
+            "delirium": false,
+            "optional": false
+          }
+        }
+      },
+      "oracle_text": "Counter target instant or sorcery spell. Search its controller's graveyard, hand, and library for all cards with the same name as that spell and exile them. Then that player shuffles.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_sorcery_0",
+        "wrong_type_0",
+        "search_none_0",
+        "search_many_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_sorcery_1",
+        "wrong_type_1",
+        "search_none_1",
+        "search_many_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Actual parent/response spell casts; selected same-name cards exiled from target hand/grave/library including the countered parent, other names/player and battlefield controls, shuffled library identities, no-additional-match and multiplicity controls; independent before-source-finish delirium thresholds and optional none/partial search where printed. Hidden-zone fail-to-find decisions for mandatory all-match searches; source/target departure, uncounterable parents and replacement effects."
+}

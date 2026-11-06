@@ -10,7 +10,7 @@ ROOT = Path(__file__).resolve().parents[4]
 sys.path.insert(0, str(ROOT / "tools"))
 from import_duel_oracle import registry
 from import_carddata import load_handler_overrides
-from case_files import CaseStream
+from case_files import CaseStream, select_case_files
 from case_archive import CaseArchiveWriter, legacy_case_hash, write_text_if_changed
 
 ZONES = {"hand": 0, "battlefield": 1, "library": 2, "graveyard": 3, "exile": 4}
@@ -32,13 +32,29 @@ OPS |= {"assert_matching_permanents", "bind_permanent_copy", "bind_hand_copy", "
 OPS |= {"record_library", "assert_scry_result"}
 OPS |= {"observe_search_filters", "assert_offered_legal_card"}
 OPS.add("assert_offered_selection_required")
+OPS |= {"cast_response", "resolve_response", "reset_death_history"}
+OPS |= {"can_activate_graveyard", "require_can_activate_graveyard", "activate_graveyard", "prepare_graveyard_abilities"}
+OPS.add("untap_step")
+OPS |= {"can_cast_graveyard", "require_can_cast_graveyard", "cast_graveyard"}
+OPS.add("assert_shuffle_count")
 TOKEN_PROPERTIES = {"token", "color", "artifact"} | {"subtype_"+n for n in (
     "Angel","Bear","Bird","Centaur","Citizen","Dragon","Drake","Eldrazi","Elf","Goblin",
     "Horror","Human","Insect","Knight","Ally","Minotaur","Myr","Satyr","Servo","Sliver",
-    "Soldier","Spirit","Thopter","Warrior","Wurm")}
+    "Soldier","Spirit","Thopter","Warrior","Wurm",
+    "Boar","Cat","Spider","Saproling","Phyrexian","Zombie","Construct","Beast","Illusion","Ooze","Squirrel","Plant","Bat","Elemental","Clue",
+    "Elephant","Kithkin","Treefolk","Shaman","Snake","Merfolk","Wizard","Golem","Rogue","Scion","Spawn","Wolf","Ape","Frog","Lizard")}
 REF_OPS = {"choose_regeneration", "choose_target", "choose_damage_target", "choose_trigger", "can_activate", "activate", "can_cast", "require_can_cast", "cast", "remove_from_combat", "destroy", "attack", "block", "assert_card", "require_card", "assert_card_name"}
 REF_OPS |= {"can_activate_hand", "require_can_activate_hand", "activate_hand", "require_can_activate", "can_target_creature"}
 REF_OPS.add("probe_activation_target")
+REF_OPS.add("cast_response")
+REF_OPS |= {"can_activate_graveyard", "require_can_activate_graveyard", "activate_graveyard"}
+REF_OPS |= {"can_cast_graveyard", "require_can_cast_graveyard", "cast_graveyard"}
+
+def validate_shuffle_observation(step):
+    if (set(step) != {'op', 'player', 'value'}
+            or type(step.get('player')) is not int or step['player'] not in (0, 1)
+            or type(step.get('value')) is not int or not 0 <= step['value'] <= 2147483647):
+        raise ValueError('shuffle observations require only an explicit player and nonnegative count')
 
 def validate_library_observation(step, recorded):
     if type(step.get('player')) is not int or step['player'] not in (0,1):
@@ -47,6 +63,10 @@ def validate_library_observation(step, recorded):
         recorded.add(step['player'])
     elif step['player'] not in recorded or type(step.get('value')) is not int or not 0 <= step['value'] <= 20:
         raise ValueError('scry observations require a prior library record and bounded inspected count')
+
+def validate_untap_step(step):
+    if type(step.get('player')) is not int or step['player'] not in (0,1) or set(step) != {'op','player'}:
+        raise ValueError('untap_step requires only an explicit player zero or one')
 
 def read(path):
     value = json.loads(path.read_text(encoding="utf-8"))
@@ -69,16 +89,23 @@ def template_stats(face):
     return int(face["power"]), int(face["toughness"])
 
 
-def build(data, output, legacy_fingerprints=False):
+def build(data, output, legacy_fingerprints=False, *, case_files=None, csvids=None, driver_only=False):
+    partial = case_files is not None or csvids is not None
+    if driver_only and (partial or legacy_fingerprints):
+        raise ValueError("driver-only generation cannot select behavior cases or emit behavior fingerprints")
+    if driver_only:
+        output.mkdir(parents=True, exist_ok=True)
     rows = registry()
     by_name = {r["name"]: r for r in rows if r["kind"] != "internal"}
     oracle = read(data / "oracle.json")
     aliases = read(data / "oracle_aliases.json")["aliases"]
     fixtures = read(data / "fixtures.json")["fixtures"]
-    if (data / "cases.json").exists():
+    if not driver_only and (data / "cases.json").exists():
         raise ValueError("Move the legacy cases.json into individual files under data/cases/")
-    cases = CaseStream(data / "cases", by_name, oracle["cards"], aliases)
-    if cases.recipe_count:
+    files = select_case_files(data / "cases", case_files=case_files, csvids=csvids) if partial else None
+    case_directory = (data / "cases").resolve() if partial else data / "cases"
+    cases = () if driver_only else CaseStream(case_directory, by_name, oracle["cards"], aliases, files=files)
+    if not driver_only and cases.recipe_count:
         from recipes import validate_context
         validate_context(oracle["cards"], by_name, fixtures)
     names = set()
@@ -110,7 +137,7 @@ def build(data, output, legacy_fingerprints=False):
                           "{" + ",".join("{" + ",".join(map(str, p)) + "}" for p in mana) + "}"]) + "}")
     chunks.append("static const Fixture fixtures[] = {" + ",".join(fixtures_c) + "};\n")
     manifest = []
-    archive = CaseArchiveWriter(output / "duel_cases.bin")
+    archive = None if driver_only else CaseArchiveWriter(output / "duel_cases.bin")
     semantic_hashes = {}
     for i, case in enumerate(cases):
         name = case["name"]
@@ -134,6 +161,10 @@ def build(data, output, legacy_fingerprints=False):
         recorded_libraries = set()
         for step in case["steps"]:
             op = step["op"]
+            if op == 'assert_shuffle_count':
+                validate_shuffle_observation(step)
+            if op == 'untap_step':
+                validate_untap_step(step)
             if op == 'present_ai_dialogs' and (type(step.get('value')) is not int or step['value'] not in (0,1)):
                 raise ValueError(f'Invalid AI dialog input policy in {name}: {step}')
             if op == 'discard_policy' and (type(step.get('value')) is not int or step['value'] not in (0,1,2)):
@@ -242,7 +273,20 @@ def build(data, output, legacy_fingerprints=False):
                          "source_file":case["_source_file"]})
         if "_recipe" in case:
             manifest[-1]["recipe"] = case["_recipe"]
-    archive.finish()
+    if archive is not None:
+        archive.finish()
+    if partial:
+        selection = {"version":1,"complete":False,"source_files":[path.relative_to(case_directory.parent).as_posix() for path in files]}
+        # Subset archives run with an existing driver. They deliberately do not
+        # emit build inputs or a partial CTest catalog into its generated tree.
+        write_text_if_changed(output / "manifest.json",json.dumps({"version":1,"source":oracle["source"],"selection":selection,"cases":manifest},indent=2)+"\n")
+        inventory = {"version":1,"selection":selection,"behavior_cases":len(cases),"recipe_cases":cases.recipe_count,
+                     "oracle_sha256":hashlib.sha256((data / "oracle.json").read_bytes()).hexdigest()}
+        write_text_if_changed(output / "inventory.json",json.dumps(inventory,indent=2)+"\n")
+        if legacy_fingerprints:
+            write_text_if_changed(output / "case_semantics_sha256.json",json.dumps(semantic_hashes,indent=2)+"\n")
+        print(f"Generated {len(cases)} behavior cases from {len(files)} selected source files")
+        return
     write_text_if_changed(output / "duel_case_sources.cmake", "set(duel_generated_case_sources)\n")
     if legacy_fingerprints:
         write_text_if_changed(output / "case_semantics_sha256.json",json.dumps(semantic_hashes,indent=2)+"\n")
@@ -291,6 +335,11 @@ def build(data, output, legacy_fingerprints=False):
         "    switch (csvid) {\n" + "".join(checks) +
         "    default: return 0;\n    }\n  }\n  return 0;\n}\n")
     write_text_if_changed(output / "duel_cases.inc","".join(chunks), encoding="utf-8")
+    if driver_only:
+        # These are the only inputs compiled into the reusable engine. Behavior
+        # archives and their manifests are generated independently by authors.
+        print(f"Generated driver inputs: {len(fixtures)} fixtures, {len(templates)} templates, {len(smoke)} smoke cards")
+        return
     write_text_if_changed(output / "manifest.json",json.dumps({"version":1,"source":oracle["source"],"cases":manifest},indent=2)+"\n")
     inventory = {"version":1,"records":rows,"oracle_mapped_names":len(oracle["cards"]),
                  "behavior_cases":len(cases),"template_cases":len(templates),"smoke_cards":len(smoke),
@@ -317,5 +366,8 @@ if __name__ == "__main__":
     parser.add_argument("--data", type=Path, default=Path(__file__).parent / "data")
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument("--legacy-fingerprints", action="store_true", help="emit migration fingerprints matching the former C++ arrays")
+    parser.add_argument("--case-file", action="append", help="only this whole case file, relative to data/cases; repeat to select a union")
+    parser.add_argument("--csvid", type=int, action="append", help="only this card's whole case home; repeat to select a union")
+    parser.add_argument("--driver-only", action="store_true", help="emit only compiled driver inputs; do not load or expand behavior cases")
     args = parser.parse_args()
-    build(args.data, args.output, args.legacy_fingerprints)
+    build(args.data, args.output, args.legacy_fingerprints, case_files=args.case_file, csvids=args.csvid, driver_only=args.driver_only)

@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "card": "Reign of the Pit",
+  "csvid": 14052,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Reign of the Pit",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "tokens",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": {
+          "name": "Demon",
+          "count": 1,
+          "power": "sacrificed_power",
+          "toughness": "sacrificed_power",
+          "colors": [
+            "B"
+          ],
+          "subtypes": [
+            "Demon"
+          ]
+        },
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "Demon subtype through exact named token identity; direct subtype observer unavailable",
+          "zero-toughness token creation event; final state-based death checked",
+          "replacement and triggered effects",
+          "multiplayer",
+          "ground-blocker evasion; real flyer-blocking action tested"
+        ],
+        "recipient_checks": true,
+        "one_sided": true,
+        "flying_proof": true
+      },
+      "oracle_text": "Each player sacrifices a creature of their choice. Create an X/X black Demon creature token with flying, where X is the total power of the creatures sacrificed this way.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_recipients_0",
+        "indestructible_recipients_0",
+        "stolen_recipients_0",
+        "hexproof_recipients_0",
+        "one_empty_0",
+        "flying_token_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_recipients_1",
+        "indestructible_recipients_1",
+        "stolen_recipients_1",
+        "hexproof_recipients_1",
+        "one_empty_1",
+        "flying_token_1",
+        "alternate_choice_0",
+        "alternate_choice_1"
+      ]
+    }
+  ]
+}

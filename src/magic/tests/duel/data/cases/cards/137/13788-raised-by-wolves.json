@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "card": "Raised by Wolves",
+  "csvid": 13788,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 4,
+        "mechanism": "wolf_creator",
+        "wolf_kind": "aura_wolf_lord",
+        "token": {
+          "name": "Wolf",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Wolf"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "tokens": [
+          {
+            "token": {
+              "name": "Wolf",
+              "power": 2,
+              "toughness": 2,
+              "colors": [
+                "G"
+              ],
+              "subtypes": [
+                "Wolf"
+              ],
+              "artifact": false,
+              "keywords": []
+            },
+            "count": 2
+          }
+        ],
+        "amount": {
+          "fixed": 2
+        },
+        "activation": null,
+        "operative": [
+          {
+            "kind": "enchant_creature"
+          },
+          {
+            "kind": "enchanted_creature_bonus_per_controlled_wolf",
+            "power": 1,
+            "toughness": 1
+          }
+        ],
+        "source_keywords": [
+          "Enchant"
+        ],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Enchant creature\nWhen this Aura enters, create two 2/2 green Wolf creature tokens.\nEnchanted creature gets +1/+1 for each Wolf you control.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "normal_wolf_0",
+        "opponent_wolf_0",
+        "foreign_wolf_0",
+        "opposing_bearer_0",
+        "wolf_removed_0",
+        "aura_removed_0",
+        "bearer_removed_0",
+        "bearer_attack_0",
+        "aura_lost_attack_0",
+        "grant_snapshot_0",
+        "bounce_recast_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "normal_wolf_1",
+        "opponent_wolf_1",
+        "foreign_wolf_1",
+        "opposing_bearer_1",
+        "wolf_removed_1",
+        "aura_removed_1",
+        "bearer_removed_1",
+        "bearer_attack_1",
+        "aura_lost_attack_1",
+        "grant_snapshot_1",
+        "bounce_recast_1",
+        "countered_0",
+        "lost_target_0",
+        "countered_1",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

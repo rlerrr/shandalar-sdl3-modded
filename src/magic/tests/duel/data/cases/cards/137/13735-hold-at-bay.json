@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Hold at Bay",
+  "csvid": 13735,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "binding": "recipient",
+        "amount": 7,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": []
+      },
+      "oracle_text": "Prevent the next 7 damage that would be dealt to any target this turn.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "other_damage_0",
+        "repeat_damage_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "self_player_0",
+        "opponent_player_0",
+        "opponent_creature_0",
+        "cleanup_0",
+        "overflow_damage_0",
+        "effect_1",
+        "payment_1",
+        "other_damage_1",
+        "repeat_damage_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "self_player_1",
+        "opponent_player_1",
+        "opponent_creature_1",
+        "cleanup_1",
+        "overflow_damage_1"
+      ]
+    }
+  ]
+}

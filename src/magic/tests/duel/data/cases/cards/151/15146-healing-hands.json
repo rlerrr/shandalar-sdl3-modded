@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Healing Hands",
+  "csvid": 15146,
+  "recipes": [
+    {
+      "family": "life_spell_extension",
+      "version": 2,
+      "oracle_text": "Target player gains 4 life.\nDraw a card.",
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 4,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "draw",
+            "amount": 1,
+            "scope": "self",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_cast_0",
+        "own_target_0",
+        "target_shrouded_pending_0",
+        "exact_library_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_cast_1",
+        "own_target_1",
+        "target_shrouded_pending_1",
+        "exact_library_1"
+      ]
+    }
+  ]
+}

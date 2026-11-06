@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Brush with Death",
+  "csvid": 3342,
+  "recipes": [
+    {
+      "family": "life_spell_extension",
+      "version": 2,
+      "oracle_text": "Buyback {2}{B}{B} (You may pay an additional {2}{B}{B} as you cast this spell. If you do, put this card into your hand as it resolves.)\nTarget opponent loses 2 life. You gain 2 life.",
+      "params": {
+        "recipient": "opponent",
+        "operations": [
+          {
+            "kind": "lose_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "self",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [
+          1
+        ],
+        "gaps": [
+          "buyback payment"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 0
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_cast_0",
+        "target_shrouded_pending_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_cast_1",
+        "target_shrouded_pending_1"
+      ]
+    }
+  ]
+}

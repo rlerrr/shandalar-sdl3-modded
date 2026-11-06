@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Rude Awakening",
+  "csvid": 7112,
+  "recipes": [
+    {
+      "family": "tap_spell",
+      "version": 2,
+      "oracle_text": "Choose one \u2014\n\u2022 Untap all lands you control.\n\u2022 Until end of turn, lands you control become 2/2 creatures that are still lands.\nEntwine {2}{G} (Choose both if you pay the entwine cost.)",
+      "params": {
+        "effect": "untap",
+        "scope": "lands",
+        "controller": "self",
+        "count": 1,
+        "optional": false,
+        "draw": 0,
+        "cast_before": [
+          0
+        ],
+        "cast_after": [],
+        "resolve_dialogs": [],
+        "gaps": [
+          "animation mode",
+          "entwine"
+        ],
+        "inactive": []
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "already_in_state_0",
+        "cleanup_0",
+        "two_copies_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "empty_battlefield_0",
+        "removed_before_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "already_in_state_1",
+        "cleanup_1",
+        "two_copies_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "empty_battlefield_1",
+        "removed_before_1"
+      ]
+    }
+  ]
+}

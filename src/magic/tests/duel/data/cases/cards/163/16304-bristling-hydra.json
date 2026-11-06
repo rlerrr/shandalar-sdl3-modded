@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Bristling Hydra",
+  "csvid": 16304,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "energy",
+        "cost": "",
+        "amount": 1,
+        "recipient": "self",
+        "target": "none",
+        "sacrifice": "none",
+        "tap": false,
+        "sorcery": false,
+        "entry": 0,
+        "keywords": [],
+        "extras": [
+          {
+            "event": "resolution",
+            "effect": "source_hexproof_until_cleanup"
+          }
+        ],
+        "inactive": [],
+        "entry_energy": 3,
+        "energy_cost": 3
+      },
+      "oracle_text": "When this creature enters, you get {E}{E}{E} (three energy counters).\nPay {E}{E}{E}: Put a +1/+1 counter on this creature. It gains hexproof until end of turn.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "opposing_turn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "tapped_source_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "repeat_0",
+        "stacked_activations_0",
+        "blink_repeat_0",
+        "effect_1",
+        "payment_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "opposing_turn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "tapped_source_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "repeat_1",
+        "stacked_activations_1",
+        "blink_repeat_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole Oracle pinned counter activation component with explicit mandatory companion effects, actual mana and source sacrifice/discard/exile receipts, printed source casting, both controllers, target controls, persistent counters, cleanup and snapshot replay. Source intrinsic keyword combat and other named ability modes remain gaps; no whole-card certification."
+}

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Dire Fleet Daredevil",
+  "csvid": 18189,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "entry",
+        "quantity": "one",
+        "scope": "instant_or_sorcery",
+        "graveyard": "opponent",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Optional later casting permission, alternative mana spending and the replacement effect for that optional cast; functional first strike combat."
+        ]
+      },
+      "oracle_text": "First strike\nWhen this creature enters, exile target instant or sorcery card from an opponent's graveyard. You may cast it this turn, and mana of any type can be spent to cast that spell. If that spell would be put into a graveyard, exile it instead.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "empty_graveyards_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "alternate_0",
+        "wrong_type_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "wrong_color_0",
+        "repeat_0",
+        "destroy_source_0",
+        "effect_1",
+        "payment_1",
+        "empty_graveyards_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "alternate_1",
+        "wrong_type_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "wrong_color_1",
+        "repeat_1",
+        "destroy_source_1"
+      ]
+    }
+  ]
+}

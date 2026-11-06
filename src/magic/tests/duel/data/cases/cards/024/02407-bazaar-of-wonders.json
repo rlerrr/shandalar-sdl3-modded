@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Bazaar of Wonders",
+  "csvid": 2407,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "entry",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "all",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": true,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "The name-matching countering trigger. No post-entry spells with matching names are cast in these scenarios."
+        ]
+      },
+      "oracle_text": "When this enchantment enters, exile all graveyards.\nWhenever a player casts a spell, counter it if a card with the same name is in a graveyard or a nontoken permanent with the same name is on the battlefield.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "empty_graveyards_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "wrong_color_0",
+        "destroy_source_0",
+        "effect_1",
+        "payment_1",
+        "empty_graveyards_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "wrong_color_1",
+        "destroy_source_1"
+      ]
+    }
+  ]
+}

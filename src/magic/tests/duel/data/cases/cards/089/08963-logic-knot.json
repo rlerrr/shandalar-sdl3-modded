@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Logic Knot",
+  "csvid": 8963,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Source/target departure, uncounterable parents, replacement effects and multiple simultaneous responses.",
+          "Alternative graveyard card types and exiling a different subset at the same intended X."
+        ],
+        "extension": {
+          "wave": 5,
+          "resource_counter": {
+            "kind": "delve"
+          }
+        }
+      },
+      "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nCounter target spell unless its controller pays {X}.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "resource_none_0",
+        "resource_one_0",
+        "resource_many_0",
+        "tax_paid_0",
+        "tax_exact_0",
+        "tax_unaffordable_0",
+        "instant_parent_0",
+        "cash_only_0",
+        "delve_only_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "resource_none_1",
+        "resource_one_1",
+        "resource_many_1",
+        "tax_paid_1",
+        "tax_exact_1",
+        "tax_unaffordable_1",
+        "instant_parent_1",
+        "cash_only_1",
+        "delve_only_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Real resource choices and timing: unchanged revealed blue hand, selected resolution-time discard and three-per-card tax, cast-time delve exiles with intended X cash/exile arithmetic, or printed blue/two-life Phyrexian payment; zero/one/many resource and parent effect/payment boundaries where printed. Source/target departure, uncounterable parents, replacement effects and multiple simultaneous responses. Alternative graveyard card types and exiling a different subset at the same intended X."
+}

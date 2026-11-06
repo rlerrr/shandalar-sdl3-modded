@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "card": "Cruel Sadist",
+  "csvid": 14090,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "permanent",
+        "cost": "{B}",
+        "amount": 1,
+        "recipient": "self",
+        "target": "none",
+        "sacrifice": "none",
+        "tap": true,
+        "sorcery": false,
+        "entry": 0,
+        "keywords": [],
+        "extras": [],
+        "inactive": [
+          "{2}{B}, {T}, Remove X +1/+1 counters from this creature: It deals X damage to target creature."
+        ],
+        "pay_life": 1,
+        "activation_dialog": 0,
+        "dialog_when_countered": true,
+        "inactive_conditions": [
+          "secondary damage mode is not selected"
+        ]
+      },
+      "oracle_text": "{B}, {T}, Pay 1 life: Put a +1/+1 counter on this creature.\n{2}{B}, {T}, Remove X +1/+1 counters from this creature: It deals X damage to target creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "opposing_turn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "insufficient_mana_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "wrong_color_0",
+        "fresh_source_0",
+        "tapped_source_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "untap_repeat_0",
+        "stacked_activations_0",
+        "sick_source_0",
+        "repeat_denied_0",
+        "insufficient_life_0",
+        "effect_1",
+        "payment_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "opposing_turn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "insufficient_mana_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "wrong_color_1",
+        "fresh_source_1",
+        "tapped_source_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "untap_repeat_1",
+        "stacked_activations_1",
+        "sick_source_1",
+        "repeat_denied_1",
+        "insufficient_life_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Pinned growth component with actual source casting, printed costs, both controllers, pending states, cleanup and replay. Mandatory monstrous companion effects have independent matching/nonmatching controller/type/subtype/indestructibility and survival/death controls. Explicit gaps: {2}{B}, {T}, Remove X +1/+1 counters from this creature: It deals X damage to target creature.; source keyword combat; control changes; multiplayer."
+}

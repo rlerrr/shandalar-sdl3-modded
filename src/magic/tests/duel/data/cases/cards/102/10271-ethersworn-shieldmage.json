@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Ethersworn Shieldmage",
+  "csvid": 10271,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "entry_shield",
+        "effect": "artifact_creatures",
+        "gaps": [
+          "Flash UI permission outside explicit cast/response actions",
+          "Artifact creatures losing artifact status after the shield resolves",
+          "Brass Man upkeep and untap restrictions, inactive on untapped blockers"
+        ]
+      },
+      "oracle_text": "Flash\nWhen this creature enters, prevent all damage that would be dealt to artifact creatures this turn.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "source_removed_0",
+        "response_cast_0",
+        "small_damage_0",
+        "repeat_damage_0",
+        "source_damage_0",
+        "opponent_creature_0",
+        "nonartifact_0",
+        "self_player_0",
+        "opponent_player_0",
+        "friendly_source_0",
+        "late_artifact_0",
+        "type_changed_0",
+        "creature_damage_0",
+        "combat_snapshot_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "source_removed_1",
+        "response_cast_1",
+        "small_damage_1",
+        "repeat_damage_1",
+        "source_damage_1",
+        "opponent_creature_1",
+        "nonartifact_1",
+        "self_player_1",
+        "opponent_player_1",
+        "friendly_source_1",
+        "late_artifact_1",
+        "type_changed_1",
+        "creature_damage_1",
+        "combat_snapshot_1"
+      ]
+    }
+  ]
+}

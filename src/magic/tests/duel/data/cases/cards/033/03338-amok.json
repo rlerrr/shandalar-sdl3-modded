@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "card": "Amok",
+  "csvid": 3338,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "resource_growth",
+        "kind": "discard",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scope": "target",
+        "tap": false,
+        "random_discard": true,
+        "creature_discard": false,
+        "activation_menu": false,
+        "resolution_menu": false,
+        "unused": [
+          "mixed-type random-discard distributions; singleton or uniform hands used"
+        ],
+        "conditions": []
+      },
+      "oracle_text": "{1}, Discard a card at random: Put a +1/+1 counter on target creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "source_destroyed_pending_0",
+        "source_bounced_pending_0",
+        "repeat_0",
+        "cast_payment_0",
+        "tapped_source_0",
+        "insufficient_mana_0",
+        "empty_hand_0",
+        "land_discard_0",
+        "own_target_0",
+        "target_bounced_pending_0",
+        "target_shroud_probe_0",
+        "target_hexproof_probe_0",
+        "target_noncreature_probe_0",
+        "effect_1",
+        "payment_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "source_destroyed_pending_1",
+        "source_bounced_pending_1",
+        "repeat_1",
+        "cast_payment_1",
+        "tapped_source_1",
+        "insufficient_mana_1",
+        "empty_hand_1",
+        "land_discard_1",
+        "own_target_1",
+        "target_bounced_pending_1",
+        "target_shroud_probe_1",
+        "target_hexproof_probe_1",
+        "target_noncreature_probe_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle resource growth: actual source casts, printed discard or mana/tap costs, exact pending and resolved counter/zone/life receipts, typed cost and target controls, source/target loss, cleanup, repeat and replay. Elective alternate modes and dormant combat/upkeep clauses are explicit component gaps. Random discard uses uniform hands; Ooze noncreature selections use creature-free graveyards. Shauku actual cast and real untap readiness are exercised. Authoritative native/Wasm validation is recorded in the wave5 report."
+}

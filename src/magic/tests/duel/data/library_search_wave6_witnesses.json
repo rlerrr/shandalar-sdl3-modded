@@ -1,0 +1,974 @@
+{
+  "version": 1,
+  "cards": {
+    "Ancient Brontodon": {
+      "name": "Ancient Brontodon",
+      "oracle_id": "745be03c-69dc-4239-a5e7-38587b56eac0",
+      "layout": "normal",
+      "type_line": "Creature — Dinosaur",
+      "mana_cost": "{6}{G}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 8.0,
+      "power": "9",
+      "toughness": "9"
+    },
+    "Aurochs Herd": {
+      "name": "Aurochs Herd",
+      "oracle_id": "b07bd1cd-4000-4e6b-b16b-283c76593377",
+      "layout": "normal",
+      "type_line": "Creature — Aurochs",
+      "mana_cost": "{5}{G}",
+      "oracle_text": "Trample\nWhen this creature enters, you may search your library for an Aurochs card, reveal it, put it into your hand, then shuffle.\nWhenever this creature attacks, it gets +1/+0 until end of turn for each other attacking Aurochs.",
+      "keywords": [
+        "Trample"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "power": "4",
+      "toughness": "4"
+    },
+    "Avian Changeling": {
+      "name": "Avian Changeling",
+      "oracle_id": "767c1f97-03de-474d-9112-e7521ba3b3f3",
+      "layout": "normal",
+      "type_line": "Creature — Shapeshifter",
+      "mana_cost": "{2}{W}",
+      "oracle_text": "Changeling (This card is every creature type.)\nFlying",
+      "keywords": [
+        "Changeling",
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Azorius Guildgate": {
+      "name": "Azorius Guildgate",
+      "oracle_id": "ad1712d8-809f-410c-8b91-ffe6fb8a69a1",
+      "layout": "normal",
+      "type_line": "Land — Gate",
+      "mana_cost": "",
+      "oracle_text": "This land enters tapped.\n{T}: Add {W} or {U}.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Badlands": {
+      "name": "Badlands",
+      "oracle_id": "13ff3222-91cb-4796-a34e-899ed817694c",
+      "layout": "normal",
+      "type_line": "Land — Swamp Mountain",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B} or {R}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Black Knight": {
+      "name": "Black Knight",
+      "oracle_id": "9456c5b6-946d-403a-8ed0-dff9f921d98c",
+      "layout": "normal",
+      "type_line": "Creature — Human Knight",
+      "mana_cost": "{B}{B}",
+      "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nProtection from white (This creature can't be blocked, targeted, dealt damage, or enchanted by anything white.)",
+      "keywords": [
+        "First strike",
+        "Protection"
+      ],
+      "colors": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Bonesplitter": {
+      "name": "Bonesplitter",
+      "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+      "layout": "normal",
+      "type_line": "Artifact — Equipment",
+      "mana_cost": "{1}",
+      "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+      "keywords": [
+        "Equip"
+      ],
+      "colors": [],
+      "cmc": 1.0
+    },
+    "Bull Aurochs": {
+      "name": "Bull Aurochs",
+      "oracle_id": "edd5b228-f19f-4b27-8b92-75545389da14",
+      "layout": "normal",
+      "type_line": "Creature — Aurochs",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "Trample\nWhenever this creature attacks, it gets +1/+0 until end of turn for each other attacking Aurochs.",
+      "keywords": [
+        "Trample"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "1"
+    },
+    "Cancel": {
+      "name": "Cancel",
+      "oracle_id": "7d00fb28-ea6c-49a9-b4af-ffb38860a9a7",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}{U}",
+      "oracle_text": "Counter target spell.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0
+    },
+    "Chandra, Pyromaster": {
+      "name": "Chandra, Pyromaster",
+      "oracle_id": "68e12748-9a7b-4e99-a6de-be097a269342",
+      "layout": "normal",
+      "type_line": "Legendary Planeswalker — Chandra",
+      "mana_cost": "{2}{R}{R}",
+      "oracle_text": "+1: Chandra deals 1 damage to target player or planeswalker and 1 damage to up to one target creature that player or that planeswalker's controller controls. That creature can't block this turn.\n0: Exile the top card of your library. You may play it this turn.\n−7: Exile the top ten cards of your library. Choose an instant or sorcery card exiled this way and copy it three times. You may cast the copies without paying their mana costs.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "loyalty": "4"
+    },
+    "Cloudshift": {
+      "name": "Cloudshift",
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{W}",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 1.0
+    },
+    "Coiling Oracle": {
+      "name": "Coiling Oracle",
+      "oracle_id": "69fd4ddf-9ed8-4c56-bef3-9944daf05e4f",
+      "layout": "normal",
+      "type_line": "Creature — Snake Elf Druid",
+      "mana_cost": "{G}{U}",
+      "oracle_text": "When this creature enters, reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put that card into your hand.",
+      "keywords": [],
+      "colors": [
+        "G",
+        "U"
+      ],
+      "cmc": 2.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Counterspell": {
+      "name": "Counterspell",
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "oracle_text": "Counter target spell.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 2.0
+    },
+    "Craw Wurm": {
+      "name": "Craw Wurm",
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "layout": "normal",
+      "type_line": "Creature — Wurm",
+      "mana_cost": "{4}{G}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "power": "6",
+      "toughness": "4"
+    },
+    "Crib Swap": {
+      "name": "Crib Swap",
+      "oracle_id": "2987c385-011a-4032-a516-a46d1e9dc9e8",
+      "layout": "normal",
+      "type_line": "Kindred Instant — Shapeshifter",
+      "mana_cost": "{2}{W}",
+      "oracle_text": "Changeling (This card is every creature type.)\nExile target creature. Its controller creates a 1/1 colorless Shapeshifter creature token with changeling.",
+      "keywords": [
+        "Changeling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 3.0
+    },
+    "Dark Ritual": {
+      "name": "Dark Ritual",
+      "oracle_id": "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{B}",
+      "oracle_text": "Add {B}{B}{B}.",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 1.0
+    },
+    "Darksteel Axe": {
+      "name": "Darksteel Axe",
+      "oracle_id": "3b7ea3ac-ac0a-40aa-b743-d153e1c47d8c",
+      "layout": "normal",
+      "type_line": "Artifact — Equipment",
+      "mana_cost": "{1}",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this Equipment.)\nEquipped creature gets +2/+0.\nEquip {2}",
+      "keywords": [
+        "Indestructible",
+        "Equip"
+      ],
+      "colors": [],
+      "cmc": 1.0
+    },
+    "Darksteel Citadel": {
+      "name": "Darksteel Citadel",
+      "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+      "layout": "normal",
+      "type_line": "Artifact Land",
+      "mana_cost": "",
+      "oracle_text": "Indestructible\n{T}: Add {C}.",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Darksteel Relic": {
+      "name": "Darksteel Relic",
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Divination": {
+      "name": "Divination",
+      "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+      "layout": "normal",
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{U}",
+      "oracle_text": "Draw two cards.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0
+    },
+    "Elvish Mystic": {
+      "name": "Elvish Mystic",
+      "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+      "layout": "normal",
+      "type_line": "Creature — Elf Druid",
+      "mana_cost": "{G}",
+      "oracle_text": "{T}: Add {G}.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Forest": {
+      "name": "Forest",
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "layout": "normal",
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Giant Growth": {
+      "name": "Giant Growth",
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Giant Spider": {
+      "name": "Giant Spider",
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "layout": "normal",
+      "type_line": "Creature — Spider",
+      "mana_cost": "{3}{G}",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "power": "2",
+      "toughness": "4"
+    },
+    "Gilded Light": {
+      "name": "Gilded Light",
+      "oracle_id": "f7e7b2aa-9fd2-41dd-b11e-3a233530dc83",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "You gain shroud until end of turn. (You can't be the target of spells or abilities.)\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Goblin Trailblazer": {
+      "name": "Goblin Trailblazer",
+      "oracle_id": "38f66ef9-6afc-478b-a1d4-a9d42c31dfc9",
+      "layout": "normal",
+      "type_line": "Creature — Goblin Pirate",
+      "mana_cost": "{1}{R}",
+      "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)",
+      "keywords": [
+        "Menace"
+      ],
+      "colors": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "1"
+    },
+    "Gravedigger": {
+      "name": "Gravedigger",
+      "oracle_id": "1a2030cc-d7ee-4059-b2d7-fb95ea8e267b",
+      "layout": "normal",
+      "type_line": "Creature — Zombie",
+      "mana_cost": "{3}{B}",
+      "oracle_text": "When this creature enters, you may return target creature card from your graveyard to your hand.",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "layout": "normal",
+      "type_line": "Creature — Bear",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Harabaz Druid": {
+      "name": "Harabaz Druid",
+      "oracle_id": "ead985ec-f29f-4a3b-b8b1-061142cc5bd1",
+      "layout": "normal",
+      "type_line": "Creature — Human Druid Ally",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "{T}: Add X mana of any one color, where X is the number of Allies you control.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "power": "0",
+      "toughness": "1"
+    },
+    "Hill Giant": {
+      "name": "Hill Giant",
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "layout": "normal",
+      "type_line": "Creature — Giant",
+      "mana_cost": "{3}{R}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Holy Strength": {
+      "name": "Holy Strength",
+      "oracle_id": "9357de36-f8be-4f49-b2c8-9fe9eaf82b07",
+      "layout": "normal",
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{W}",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +1/+2.",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 1.0
+    },
+    "Isamaru, Hound of Konda": {
+      "name": "Isamaru, Hound of Konda",
+      "oracle_id": "cfb756dd-6fe1-430a-8f04-8b10cac62a86",
+      "layout": "normal",
+      "type_line": "Legendary Creature — Dog",
+      "mana_cost": "{W}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Island": {
+      "name": "Island",
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "layout": "normal",
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Jace Beleren": {
+      "name": "Jace Beleren",
+      "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "layout": "normal",
+      "type_line": "Legendary Planeswalker — Jace",
+      "mana_cost": "{1}{U}{U}",
+      "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "loyalty": "3"
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0
+    },
+    "Merfolk of the Pearl Trident": {
+      "name": "Merfolk of the Pearl Trident",
+      "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+      "layout": "normal",
+      "type_line": "Creature — Merfolk",
+      "mana_cost": "{U}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mountain": {
+      "name": "Mountain",
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "layout": "normal",
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {R}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Negate": {
+      "name": "Negate",
+      "oracle_id": "3407fe41-fdd3-4119-8f70-4bc4590a379f",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "oracle_text": "Counter target noncreature spell.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 2.0
+    },
+    "Ondu Cleric": {
+      "name": "Ondu Cleric",
+      "oracle_id": "f4232466-dd6a-49bf-be6c-95905c3ded17",
+      "layout": "normal",
+      "type_line": "Creature — Kor Cleric Ally",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Whenever this creature or another Ally you control enters, you may gain life equal to the number of Allies you control.",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Ornithopter": {
+      "name": "Ornithopter",
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Thopter",
+      "mana_cost": "{0}",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "cmc": 0.0,
+      "power": "0",
+      "toughness": "2"
+    },
+    "Pacifism": {
+      "name": "Pacifism",
+      "oracle_id": "5f5e0b10-c8cf-450c-bfd3-bcb0528ec330",
+      "layout": "normal",
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Phyrexian Hulk": {
+      "name": "Phyrexian Hulk",
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Phyrexian Golem",
+      "mana_cost": "{6}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [],
+      "cmc": 6.0,
+      "power": "5",
+      "toughness": "4"
+    },
+    "Plains": {
+      "name": "Plains",
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "layout": "normal",
+      "type_line": "Basic Land — Plains",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Primal Huntbeast": {
+      "name": "Primal Huntbeast",
+      "oracle_id": "44350127-f6b6-458f-8f2f-e57a78d83303",
+      "layout": "normal",
+      "type_line": "Creature — Beast",
+      "mana_cost": "{3}{G}",
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)",
+      "keywords": [
+        "Hexproof"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Psychogenic Probe": {
+      "name": "Psychogenic Probe",
+      "oracle_id": "1beb81a8-b4aa-4964-93d2-2b5414fc6ce3",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{2}",
+      "oracle_text": "Whenever a spell or ability causes a player to shuffle their library, this artifact deals 2 damage to that player.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 2.0
+    },
+    "Ravenous Daggertooth": {
+      "name": "Ravenous Daggertooth",
+      "oracle_id": "f5ef25fb-545e-41b7-8fed-d3cfff3d8668",
+      "layout": "normal",
+      "type_line": "Creature — Dinosaur",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "Enrage — Whenever this creature is dealt damage, you gain 2 life.",
+      "keywords": [
+        "Enrage"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "power": "3",
+      "toughness": "2"
+    },
+    "Rishadan Cutpurse": {
+      "name": "Rishadan Cutpurse",
+      "oracle_id": "147e0e74-f76b-4f0a-951f-d39afdd72c02",
+      "layout": "normal",
+      "type_line": "Creature — Human Pirate",
+      "mana_cost": "{2}{U}",
+      "oracle_text": "When this creature enters, each opponent sacrifices a permanent of their choice unless they pay {1}.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Savannah": {
+      "name": "Savannah",
+      "oracle_id": "703243f0-8cb3-420f-958f-5fd4bde30293",
+      "layout": "normal",
+      "type_line": "Land — Forest Plains",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G} or {W}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Scathe Zombies": {
+      "name": "Scathe Zombies",
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "layout": "normal",
+      "type_line": "Creature — Zombie",
+      "mana_cost": "{2}{B}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Seal of Cleansing": {
+      "name": "Seal of Cleansing",
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Sengir Vampire": {
+      "name": "Sengir Vampire",
+      "oracle_id": "749141aa-f6c4-4ad8-b146-406e68ae9b0b",
+      "layout": "normal",
+      "type_line": "Creature — Vampire",
+      "mana_cost": "{3}{B}{B}",
+      "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B"
+      ],
+      "cmc": 5.0,
+      "power": "4",
+      "toughness": "4"
+    },
+    "Silvergill Adept": {
+      "name": "Silvergill Adept",
+      "oracle_id": "cb66c5ec-e7a4-4bd2-b825-6c9b846ba40d",
+      "layout": "normal",
+      "type_line": "Creature — Merfolk Wizard",
+      "mana_cost": "{1}{U}",
+      "oracle_text": "As an additional cost to cast this spell, reveal a Merfolk card from your hand or pay {3}.\nWhen this creature enters, draw a card.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "1"
+    },
+    "Slaughter Pact": {
+      "name": "Slaughter Pact",
+      "oracle_id": "67c4b1d5-757c-46cf-8bb1-9889d9ed1a1f",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{0}",
+      "oracle_text": "Destroy target nonblack creature.\nAt the beginning of your next upkeep, pay {2}{B}. If you don't, you lose the game.",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 0.0
+    },
+    "Snow-Covered Forest": {
+      "name": "Snow-Covered Forest",
+      "oracle_id": "5f0d3be8-e63e-4ade-ae58-6b0c14f2ce6d",
+      "layout": "normal",
+      "type_line": "Basic Snow Land — Forest",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Snow-Covered Island": {
+      "name": "Snow-Covered Island",
+      "oracle_id": "5b2460a5-6ae5-4cad-ba94-1a9e98e6e4c0",
+      "layout": "normal",
+      "type_line": "Basic Snow Land — Island",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 1.0
+    },
+    "Steadfast Guard": {
+      "name": "Steadfast Guard",
+      "oracle_id": "0c3b3c04-017d-4741-90c8-4b6c0bd46e49",
+      "layout": "normal",
+      "type_line": "Creature — Human Rebel",
+      "mana_cost": "{W}{W}",
+      "oracle_text": "Vigilance (Attacking doesn't cause this creature to tap.)",
+      "keywords": [
+        "Vigilance"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Suntail Hawk": {
+      "name": "Suntail Hawk",
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "layout": "normal",
+      "type_line": "Creature — Bird",
+      "mana_cost": "{W}",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Suppression Field": {
+      "name": "Suppression Field",
+      "oracle_id": "63439f19-01e5-4ae1-9841-90493d62d0c8",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Activated abilities cost {2} more to activate unless they're mana abilities.",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Swamp": {
+      "name": "Swamp",
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "layout": "normal",
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Taiga": {
+      "name": "Taiga",
+      "oracle_id": "22e3cf1d-3559-4ce1-954c-8dc815342979",
+      "layout": "normal",
+      "type_line": "Land — Mountain Forest",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {R} or {G}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Tundra": {
+      "name": "Tundra",
+      "oracle_id": "02418479-9455-417f-a6a1-004356faff37",
+      "layout": "normal",
+      "type_line": "Land — Plains Island",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W} or {U}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Twiddle": {
+      "name": "Twiddle",
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 1.0
+    },
+    "Typhoid Rats": {
+      "name": "Typhoid Rats",
+      "oracle_id": "d6ee6cc1-902d-4f56-afa5-6fa4813bfbbc",
+      "layout": "normal",
+      "type_line": "Creature — Rat",
+      "mana_cost": "{B}",
+      "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+      "keywords": [
+        "Deathtouch"
+      ],
+      "colors": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Underground Sea": {
+      "name": "Underground Sea",
+      "oracle_id": "4b22be3a-8ce1-47d1-b82e-6c3ccfb0548b",
+      "layout": "normal",
+      "type_line": "Land — Island Swamp",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U} or {B}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Unsummon": {
+      "name": "Unsummon",
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 1.0
+    },
+    "Vampire Interloper": {
+      "name": "Vampire Interloper",
+      "oracle_id": "b753d7dd-4c6b-4472-a009-671572f927eb",
+      "layout": "normal",
+      "type_line": "Creature — Vampire Scout",
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Flying\nThis creature can't block.",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "1"
+    },
+    "Vulshok Morningstar": {
+      "name": "Vulshok Morningstar",
+      "oracle_id": "12a8adc4-927f-4314-b2ef-9c647ace68d5",
+      "layout": "normal",
+      "type_line": "Artifact — Equipment",
+      "mana_cost": "{2}",
+      "oracle_text": "Equipped creature gets +2/+2.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "keywords": [
+        "Equip"
+      ],
+      "colors": [],
+      "cmc": 2.0
+    },
+    "War Mammoth": {
+      "name": "War Mammoth",
+      "oracle_id": "b2a8fcf9-2ec2-40a9-9955-90f8605b11a3",
+      "layout": "normal",
+      "type_line": "Creature — Elephant",
+      "mana_cost": "{3}{G}",
+      "oracle_text": "Trample",
+      "keywords": [
+        "Trample"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "3"
+    }
+  }
+}

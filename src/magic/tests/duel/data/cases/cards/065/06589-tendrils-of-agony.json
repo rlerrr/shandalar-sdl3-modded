@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Tendrils of Agony",
+  "csvid": 6589,
+  "recipes": [
+    {
+      "family": "life_spell_extension",
+      "version": 2,
+      "oracle_text": "Target player loses 2 life and you gain 2 life.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+      "params": {
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "lose_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "self",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "storm copies",
+          "responses above a pending storm source (preserved pending scripts)"
+        ],
+        "inactive": [
+          "zero spells cast before source"
+        ],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_cast_0",
+        "own_target_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_cast_1",
+        "own_target_1"
+      ]
+    }
+  ]
+}

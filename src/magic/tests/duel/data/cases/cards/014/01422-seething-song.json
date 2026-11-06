@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Seething Song",
+  "csvid": 1422,
+  "recipes": [
+    {
+      "family": "mana_spell_extension",
+      "version": 2,
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      },
+      "oracle_text": "Add {R}{R}{R}{R}{R}.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "pending_snapshot_0",
+        "countered_0",
+        "spend_colored_0",
+        "spend_generic_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "pending_snapshot_1",
+        "countered_1",
+        "spend_colored_1",
+        "spend_generic_1"
+      ]
+    }
+  ]
+}

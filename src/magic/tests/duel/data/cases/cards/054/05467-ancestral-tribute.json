@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Ancestral Tribute",
+  "csvid": 5467,
+  "recipes": [
+    {
+      "family": "life_spell_extension",
+      "version": 2,
+      "oracle_text": "You gain 2 life for each card in your graveyard.\nFlashback {9}{W}{W}{W} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "grave_cards"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "flashback"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_cast_0",
+        "grave_extra_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_cast_1",
+        "grave_extra_1"
+      ]
+    }
+  ]
+}

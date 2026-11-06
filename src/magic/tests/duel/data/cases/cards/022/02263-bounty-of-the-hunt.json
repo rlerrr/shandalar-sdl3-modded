@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Bounty of the Hunt",
+  "csvid": 2263,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "temporary_allocation",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": [
+          "The exile-green-card alternative cost is not selected. Every positive cast explicitly selects and pays the printed normal mana cost; generic whole-spell denied-payment cases are omitted because the alternative remains available."
+        ],
+        "normal_cost_choice": 1
+      },
+      "oracle_text": "You may exile a green card from your hand rather than pay this spell's mana cost.\nDistribute three +1/+1 counters among one, two, or three target creatures. For each +1/+1 counter you put on a creature this way, remove a +1/+1 counter from that creature at the beginning of the next cleanup step.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "preexisting_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "two_copies_0",
+        "countered_0",
+        "opposing_turn_0",
+        "one_target_0",
+        "lost_target_0",
+        "partial_target_0",
+        "selection_pending_0",
+        "preexisting_cleanup_0",
+        "effect_1",
+        "payment_1",
+        "preexisting_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "two_copies_1",
+        "countered_1",
+        "opposing_turn_1",
+        "one_target_1",
+        "lost_target_1",
+        "partial_target_1",
+        "selection_pending_1",
+        "preexisting_cleanup_1"
+      ]
+    }
+  ]
+}

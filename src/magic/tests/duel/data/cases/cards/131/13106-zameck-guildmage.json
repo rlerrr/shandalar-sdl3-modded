@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "card": "Zameck Guildmage",
+  "csvid": 13106,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "counter_draw",
+        "cost": [
+          0,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "remove": 1,
+        "scope": "controlled_creatures",
+        "entry": "optional_mode",
+        "discard": 0,
+        "menu": 1,
+        "gaps": []
+      },
+      "oracle_text": "{G}{U}: This turn, each creature you control enters with an additional +1/+1 counter on it.\n{G}{U}, Remove a +1/+1 counter from a creature you control: Draw a card.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "cast_payment_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "source_destroyed_pending_0",
+        "repeat_0",
+        "tapped_source_0",
+        "opposing_turn_0",
+        "wrong_color_0",
+        "source_bounced_pending_0",
+        "payer_bounced_pending_0",
+        "payer_destroyed_pending_0",
+        "entry_mode_0",
+        "entry_mode_empty_0",
+        "entry_mode_cleanup_0",
+        "entry_mode_source_loss_0",
+        "entry_mode_twice_0",
+        "entry_mode_enemy_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "cast_payment_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "source_destroyed_pending_1",
+        "repeat_1",
+        "tapped_source_1",
+        "opposing_turn_1",
+        "wrong_color_1",
+        "source_bounced_pending_1",
+        "payer_bounced_pending_1",
+        "payer_destroyed_pending_1",
+        "entry_mode_1",
+        "entry_mode_empty_1",
+        "entry_mode_cleanup_1",
+        "entry_mode_source_loss_1",
+        "entry_mode_twice_1",
+        "entry_mode_enemy_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle counter-cost draw: actual source casting and entry counters, real counter removal as a paid activation cost, pending mana/counter/library receipts, actual drawing/discarding with ordered library and full zone identity, payer/source loss, repeated use and replay. Academy entry counts both graveyards and last-counter or zero-entry deaths. Novijen pays counters from one or multiple creatures. Sage actual Wizard/non-Wizard/opposing entry and Zameck both modes, stacked entry effects and functional cleanup are modeled. Novijen graft transfers remain dormant because no later creature enters. Replacement, control changes, and ambiguous mixed-hand source-bounce looting are explicit gaps. Authoritative native/Wasm validation is recorded in the wave5 report."
+}

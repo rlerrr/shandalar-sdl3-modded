@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Righteous Aura",
+  "csvid": 2769,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{W}",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Multiple damage packets from the same chosen source"
+        ],
+        "pay_life": 2
+      },
+      "oracle_text": "{W}, Pay 2 life: The next time a source of your choice would deal damage to you this turn, prevent that damage.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "other_damage_0",
+        "repeat_damage_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "small_damage_0",
+        "source_removed_0",
+        "effect_1",
+        "payment_1",
+        "other_damage_1",
+        "repeat_damage_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "small_damage_1",
+        "source_removed_1"
+      ]
+    }
+  ]
+}

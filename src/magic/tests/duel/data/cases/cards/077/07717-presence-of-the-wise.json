@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Presence of the Wise",
+  "csvid": 7717,
+  "recipes": [
+    {
+      "family": "life_spell_extension",
+      "version": 2,
+      "oracle_text": "You gain 2 life for each card in your hand.",
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "hand_cards"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_cast_0",
+        "one_card_0",
+        "large_hand_0",
+        "own_empty_0",
+        "opponent_empty_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_cast_1",
+        "one_card_1",
+        "large_hand_1",
+        "own_empty_1",
+        "opponent_empty_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "version": 1,
+  "card": "Smallpox",
+  "csvid": 8669,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Smallpox",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "ordered",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "creature_land",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "value_operations": [
+          {
+            "kind": "lose_life",
+            "amount": 1
+          },
+          {
+            "kind": "discard",
+            "amount": 1
+          }
+        ],
+        "life_totals": [
+          23,
+          20
+        ]
+      },
+      "oracle_text": "Each player loses 1 life, discards a card, sacrifices a creature of their choice, then sacrifices a land of their choice.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_recipients_0",
+        "empty_hand_0",
+        "one_card_0",
+        "large_hand_0",
+        "last_choice_0",
+        "uneven_hands_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_recipients_1",
+        "empty_hand_1",
+        "one_card_1",
+        "large_hand_1",
+        "last_choice_1",
+        "uneven_hands_1",
+        "alternate_choice_0",
+        "alternate_choice_1"
+      ]
+    }
+  ]
+}

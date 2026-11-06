@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Collective Effort",
+  "csvid": 16057,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "team",
+        "amounts": [
+          1
+        ],
+        "strive_cost": "",
+        "mode_choices": [
+          2,
+          1
+        ],
+        "inactive_components": [
+          "Other modes and Escalate are declined; only the chosen-player team counter mode is selected."
+        ]
+      },
+      "oracle_text": "Escalate—Tap an untapped creature you control. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Destroy target creature with power 4 or greater.\n• Destroy target enchantment.\n• Put a +1/+1 counter on each creature target player controls.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "two_copies_0",
+        "countered_0",
+        "opponent_0",
+        "preexisting_0",
+        "selection_pending_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "two_copies_1",
+        "countered_1",
+        "opponent_1",
+        "preexisting_1",
+        "selection_pending_1"
+      ]
+    }
+  ]
+}

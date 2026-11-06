@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Silent Gravestone",
+  "csvid": 18287,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "activation",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "all",
+        "draw": 1,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{4}",
+          "tap": true,
+          "sacrifice": false,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Protection from targeting cards in graveyards; the tested whole-graveyard ability targets no cards."
+        ],
+        "effect_self_exile": true
+      },
+      "oracle_text": "Cards in graveyards can't be the targets of spells or abilities.\n{4}, {T}: Exile this artifact and all cards from all graveyards. Draw a card.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "empty_graveyards_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "fresh_activation_0",
+        "insufficient_mana_0",
+        "tapped_0",
+        "destroy_source_pending_0",
+        "effect_1",
+        "payment_1",
+        "empty_graveyards_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "fresh_activation_1",
+        "insufficient_mana_1",
+        "tapped_1",
+        "destroy_source_pending_1"
+      ]
+    }
+  ]
+}

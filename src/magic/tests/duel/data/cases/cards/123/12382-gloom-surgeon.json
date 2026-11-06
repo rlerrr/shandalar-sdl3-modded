@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Gloom Surgeon",
+  "csvid": 12382,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "replacement",
+        "replacement": "exile_combat",
+        "entry_counters": 0,
+        "casting_cost": "{1}{B}",
+        "gaps": [
+          "Attacking combat roles",
+          "Multiple attackers and blockers",
+          "Exile replacement effects and later reuse of exiled cards"
+        ]
+      },
+      "oracle_text": "If combat damage would be dealt to this creature, prevent that damage and exile that many cards from the top of your library.",
+      "variants": [
+        "effect_0",
+        "small_damage_0",
+        "short_library_0",
+        "bare_zones_0",
+        "noncombat_0",
+        "friendly_source_0",
+        "payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "combat_snapshot_0",
+        "effect_1",
+        "small_damage_1",
+        "short_library_1",
+        "bare_zones_1",
+        "noncombat_1",
+        "friendly_source_1",
+        "payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "combat_snapshot_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Feral Lightning",
+  "csvid": 7639,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 2,
+        "mechanism": "fixed_followup",
+        "token": {
+          "name": "Elemental",
+          "power": 3,
+          "toughness": 1,
+          "colors": [
+            "R"
+          ],
+          "subtypes": [
+            "Elemental"
+          ],
+          "artifact": false,
+          "keywords": [
+            "Haste"
+          ]
+        },
+        "amount": {
+          "fixed": 3
+        },
+        "activation": null,
+        "operative": [
+          {
+            "kind": "exile_next_end_step"
+          }
+        ],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Create three 3/1 red Elemental creature tokens with haste. Exile them at the beginning of the next end step.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "expiry_snapshot_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "expiry_snapshot_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

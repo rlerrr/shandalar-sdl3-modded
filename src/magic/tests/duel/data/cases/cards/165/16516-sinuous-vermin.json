@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "card": "Sinuous Vermin",
+  "csvid": 16516,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "monstrosity",
+        "cost": "{3}{B}{B}",
+        "amount": 3,
+        "recipient": "self",
+        "target": "none",
+        "sacrifice": "none",
+        "tap": false,
+        "sorcery": false,
+        "entry": 0,
+        "keywords": [],
+        "extras": [
+          {
+            "event": "static",
+            "effect": "monstrous_keywords",
+            "keywords": [
+              "Menace"
+            ]
+          }
+        ],
+        "inactive": []
+      },
+      "oracle_text": "{3}{B}{B}: Monstrosity 3. (If this creature isn't monstrous, put three +1/+1 counters on it and it becomes monstrous.)\nAs long as this creature is monstrous, it has menace. (It can't be blocked except by two or more creatures.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "opposing_turn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "insufficient_mana_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "wrong_color_0",
+        "fresh_source_0",
+        "tapped_source_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "repeat_0",
+        "stacked_activations_0",
+        "empty_opponent_hand_0",
+        "large_opponent_hand_0",
+        "preexisting_counter_0",
+        "bounce_recast_0",
+        "monstrous_menace_0",
+        "monstrous_menace_pair_0",
+        "effect_1",
+        "payment_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "opposing_turn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "insufficient_mana_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "wrong_color_1",
+        "fresh_source_1",
+        "tapped_source_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "repeat_1",
+        "stacked_activations_1",
+        "empty_opponent_hand_1",
+        "large_opponent_hand_1",
+        "preexisting_counter_1",
+        "bounce_recast_1",
+        "monstrous_menace_1",
+        "monstrous_menace_pair_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole Oracle pinned counter activation component with explicit mandatory companion effects, actual mana and source sacrifice/discard/exile receipts, printed source casting, both controllers, target controls, persistent counters, cleanup and snapshot replay. Source intrinsic keyword combat and other named ability modes remain gaps; no whole-card certification."
+}

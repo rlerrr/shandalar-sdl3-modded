@@ -1,0 +1,1959 @@
+{
+  "version": 1,
+  "cards": {
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "mana_cost": "{0}",
+      "oracle_text": "Flying",
+      "colors": [],
+      "keywords": [
+        "Flying"
+      ],
+      "power": "0",
+      "toughness": "2",
+      "cmc": 0.0
+    },
+    "Phyrexian Hulk": {
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "name": "Phyrexian Hulk",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Phyrexian Golem",
+      "mana_cost": "{6}",
+      "oracle_text": "",
+      "colors": [],
+      "keywords": [],
+      "power": "5",
+      "toughness": "4",
+      "cmc": 6.0
+    },
+    "Seal of Cleansing": {
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "name": "Seal of Cleansing",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 2.0
+    },
+    "Seal of Primordium": {
+      "oracle_id": "f14dbb39-c9f9-4f64-b22a-38dba28f5b1e",
+      "name": "Seal of Primordium",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 2.0
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Giant",
+      "mana_cost": "{3}{R}",
+      "oracle_text": "",
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": "3",
+      "toughness": "3",
+      "cmc": 4.0
+    },
+    "Craw Wurm": {
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "name": "Craw Wurm",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Wurm",
+      "mana_cost": "{4}{G}{G}",
+      "oracle_text": "",
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": "6",
+      "toughness": "4",
+      "cmc": 6.0
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Forest",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 0.0
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Plains",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 0.0
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 1.0
+    },
+    "Cloudshift": {
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "name": "Cloudshift",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{W}",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 1.0
+    },
+    "Essence Scatter": {
+      "oracle_id": "46665089-aa3d-44c3-964d-6638dfbb5782",
+      "name": "Essence Scatter",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "oracle_text": "Counter target creature spell.",
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 2.0
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bear",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "2",
+      "cmc": 2.0
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 1.0
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 1.0
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 1.0
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Island",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 0.0
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Mountain",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {R}.)",
+      "colors": [],
+      "keywords": [],
+      "power": null,
+      "toughness": null,
+      "cmc": 0.0
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "mana_cost": "",
+      "oracle_text": "{T}: Add {G}.",
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": "1",
+      "toughness": "1",
+      "cmc": 0.0
+    },
+    "Bog Imp": {
+      "oracle_id": "45b94e3c-a905-435b-aee5-bec9239fd24c",
+      "name": "Bog Imp",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Imp",
+      "mana_cost": "{1}{B}",
+      "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)",
+      "colors": [
+        "B"
+      ],
+      "keywords": [
+        "Flying"
+      ],
+      "power": "1",
+      "toughness": "1",
+      "cmc": 2.0
+    },
+    "Bonesplitter": {
+      "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+      "name": "Bonesplitter",
+      "layout": "normal",
+      "type_line": "Artifact \u2014 Equipment",
+      "mana_cost": "{1}",
+      "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+      "colors": [],
+      "keywords": [
+        "Equip"
+      ],
+      "power": null,
+      "toughness": null,
+      "cmc": 1.0
+    },
+    "Elvish Warrior": {
+      "oracle_id": "da587161-da7e-48ae-8af6-7f02ee71afd8",
+      "name": "Elvish Warrior",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Elf Warrior",
+      "mana_cost": "{G}{G}",
+      "oracle_text": "",
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "3",
+      "cmc": 2.0
+    },
+    "Goblin Piker": {
+      "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+      "name": "Goblin Piker",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Goblin Warrior",
+      "mana_cost": "{1}{R}",
+      "oracle_text": "",
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "1",
+      "cmc": 2.0
+    },
+    "Goblin Roughrider": {
+      "oracle_id": "a920d37e-e172-41f7-bfbf-c18821dcbed7",
+      "name": "Goblin Roughrider",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Goblin Knight",
+      "mana_cost": "{2}{R}",
+      "oracle_text": "",
+      "colors": [
+        "R"
+      ],
+      "keywords": [],
+      "power": "3",
+      "toughness": "2",
+      "cmc": 3.0
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Zombie",
+      "mana_cost": "{2}{B}",
+      "oracle_text": "",
+      "colors": [
+        "B"
+      ],
+      "keywords": [],
+      "power": "2",
+      "toughness": "2",
+      "cmc": 3.0
+    },
+    "Serra Angel": {
+      "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+      "name": "Serra Angel",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Angel",
+      "mana_cost": "{3}{W}{W}",
+      "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "colors": [
+        "W"
+      ],
+      "keywords": [
+        "Flying",
+        "Vigilance"
+      ],
+      "power": "4",
+      "toughness": "4",
+      "cmc": 5.0
+    },
+    "Serra Avenger": {
+      "oracle_id": "b91b65b3-b35c-460e-a49b-333000a9a519",
+      "name": "Serra Avenger",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Angel",
+      "mana_cost": "{W}{W}",
+      "oracle_text": "You can't cast Serra Avenger during your first, second, or third turns of the game.\nFlying, vigilance",
+      "colors": [
+        "W"
+      ],
+      "keywords": [
+        "Flying",
+        "Vigilance"
+      ],
+      "power": "3",
+      "toughness": "3",
+      "cmc": 2.0
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bird",
+      "mana_cost": "{W}",
+      "oracle_text": "Flying",
+      "colors": [
+        "W"
+      ],
+      "keywords": [
+        "Flying"
+      ],
+      "power": "1",
+      "toughness": "1",
+      "cmc": 1.0
+    },
+    "Vampire Nighthawk": {
+      "oracle_id": "feb244f8-bcb1-44cf-9940-2719221a7309",
+      "name": "Vampire Nighthawk",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Vampire Shaman",
+      "mana_cost": "{1}{B}{B}",
+      "oracle_text": "Flying\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)",
+      "colors": [
+        "B"
+      ],
+      "keywords": [
+        "Deathtouch",
+        "Flying",
+        "Lifelink"
+      ],
+      "power": "2",
+      "toughness": "3",
+      "cmc": 3.0
+    },
+    "Vulshok Morningstar": {
+      "oracle_id": "12a8adc4-927f-4314-b2ef-9c647ace68d5",
+      "name": "Vulshok Morningstar",
+      "layout": "normal",
+      "type_line": "Artifact \u2014 Equipment",
+      "mana_cost": "{2}",
+      "oracle_text": "Equipped creature gets +2/+2.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+      "colors": [],
+      "keywords": [
+        "Equip"
+      ],
+      "power": null,
+      "toughness": null,
+      "cmc": 2.0
+    },
+    "Wall of Air": {
+      "oracle_id": "b2d3da40-e2f7-4480-9da9-33019d6f4071",
+      "name": "Wall of Air",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Wall",
+      "mana_cost": "{1}{U}{U}",
+      "oracle_text": "Defender, flying (This creature can't attack, and it can block creatures with flying.)",
+      "colors": [
+        "U"
+      ],
+      "keywords": [
+        "Flying",
+        "Defender"
+      ],
+      "power": "1",
+      "toughness": "5",
+      "cmc": 3.0
+    },
+    "Wind Drake": {
+      "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+      "name": "Wind Drake",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Drake",
+      "mana_cost": "{2}{U}",
+      "oracle_text": "Flying",
+      "colors": [
+        "U"
+      ],
+      "keywords": [
+        "Flying"
+      ],
+      "power": "2",
+      "toughness": "2",
+      "cmc": 3.0
+    }
+  },
+  "profiles": {
+    "Ingot Chewer": {
+      "source": {
+        "oracle_id": "127795e6-3f0e-4318-95ad-ccb1912580ac",
+        "name": "Ingot Chewer",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Elemental",
+        "mana_cost": "{4}{R}",
+        "oracle_text": "When this creature enters, destroy target artifact.\nEvoke {R} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+        "colors": [
+          "R"
+        ],
+        "keywords": [
+          "Evoke"
+        ],
+        "power": "3",
+        "toughness": "3",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "artifact"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [
+          "Evoke"
+        ],
+        "cast_dialogs": [
+          0
+        ],
+        "alternate_mana": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Evoke alternative cost and evoke sacrifice: casts select the printed normal cost."
+        ]
+      }
+    },
+    "Wispmare": {
+      "source": {
+        "oracle_id": "a3bb8ce0-e61e-438d-8875-32473bb5b61c",
+        "name": "Wispmare",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Elemental",
+        "mana_cost": "{2}{W}",
+        "oracle_text": "Flying\nWhen this creature enters, destroy target enchantment.\nEvoke {W} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+        "colors": [
+          "W"
+        ],
+        "keywords": [
+          "Flying",
+          "Evoke"
+        ],
+        "power": "1",
+        "toughness": "3",
+        "cmc": 3.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "enchantment"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [
+          "Evoke",
+          "Flying"
+        ],
+        "cast_dialogs": [
+          0
+        ],
+        "alternate_mana": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Flying combat.",
+          "Evoke alternative cost and evoke sacrifice: casts select the printed normal cost."
+        ]
+      }
+    },
+    "Goblin Settler": {
+      "source": {
+        "oracle_id": "04dd449f-ff3a-4ed7-8241-244d58b371dc",
+        "name": "Goblin Settler",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Goblin",
+        "mana_cost": "{3}{R}",
+        "oracle_text": "When this creature enters, destroy target land.",
+        "colors": [
+          "R"
+        ],
+        "keywords": [],
+        "power": "1",
+        "toughness": "1",
+        "cmc": 4.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "land"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": []
+      }
+    },
+    "Aethersnipe": {
+      "source": {
+        "oracle_id": "3e0be003-4f42-4917-b85d-46baf2afd734",
+        "name": "Aethersnipe",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Elemental",
+        "mana_cost": "{5}{U}",
+        "oracle_text": "When this creature enters, return target nonland permanent to its owner's hand.\nEvoke {1}{U}{U} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+        "colors": [
+          "U"
+        ],
+        "keywords": [
+          "Evoke"
+        ],
+        "power": "4",
+        "toughness": "4",
+        "cmc": 6.0
+      },
+      "params": {
+        "effect": "bounce",
+        "targets": [
+          "creature",
+          "artifact",
+          "enchantment"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [
+          "Evoke"
+        ],
+        "cast_dialogs": [
+          0
+        ],
+        "alternate_mana": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          0
+        ],
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Evoke alternative cost and evoke sacrifice: casts select the printed normal cost."
+        ]
+      }
+    },
+    "Bone Shredder": {
+      "source": {
+        "oracle_id": "69aa1ac7-17da-4fc9-a3dc-df8a52841f4a",
+        "name": "Bone Shredder",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Phyrexian Minion",
+        "mana_cost": "{2}{B}",
+        "oracle_text": "Flying\nEcho {2}{B} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, destroy target nonartifact, nonblack creature.",
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Echo",
+          "Flying"
+        ],
+        "power": "1",
+        "toughness": "1",
+        "cmc": 3.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": "nonartifact_nonblack",
+        "opponent_only": false,
+        "keywords": [
+          "Echo",
+          "Flying"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {
+          "black": "Bog Imp",
+          "artifact": "Ornithopter"
+        },
+        "excluded_variants": [],
+        "inactive_components": [
+          "Flying combat.",
+          "Echo upkeep payment and sacrifice: no upkeep is advanced."
+        ]
+      }
+    },
+    "Stingscourger": {
+      "source": {
+        "oracle_id": "3e8d1051-1739-4a10-9cef-78f7333b4979",
+        "name": "Stingscourger",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Goblin Warrior",
+        "mana_cost": "{1}{R}",
+        "oracle_text": "Echo {3}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, return target creature an opponent controls to its owner's hand.",
+        "colors": [
+          "R"
+        ],
+        "keywords": [
+          "Echo"
+        ],
+        "power": "2",
+        "toughness": "2",
+        "cmc": 2.0
+      },
+      "params": {
+        "effect": "bounce",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": true,
+        "keywords": [
+          "Echo"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Echo upkeep payment and sacrifice: no upkeep is advanced."
+        ]
+      }
+    },
+    "Keldon Vandals": {
+      "source": {
+        "oracle_id": "0aa7bd6a-0a8d-4413-a9e8-b7a459300841",
+        "name": "Keldon Vandals",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Rogue",
+        "mana_cost": "{2}{R}",
+        "oracle_text": "Echo {2}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, destroy target artifact.",
+        "colors": [
+          "R"
+        ],
+        "keywords": [
+          "Echo"
+        ],
+        "power": "4",
+        "toughness": "1",
+        "cmc": 3.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "artifact"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [
+          "Echo"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Echo upkeep payment and sacrifice: no upkeep is advanced."
+        ]
+      }
+    },
+    "Nikko-Onna": {
+      "source": {
+        "oracle_id": "f5cf3f74-e497-46d0-acfb-3b57ee27a314",
+        "name": "Nikko-Onna",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Spirit",
+        "mana_cost": "{2}{W}",
+        "oracle_text": "When this creature enters, destroy target enchantment.\nWhenever you cast a Spirit or Arcane spell, you may return this creature to its owner's hand.",
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "2",
+        "cmc": 3.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "enchantment"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Spirit/Arcane cast-triggered self-return: no such spell is cast while the source is on the battlefield."
+        ]
+      }
+    },
+    "Yuki-Onna": {
+      "source": {
+        "oracle_id": "8f867a2c-f17b-4608-bca7-5b49d1387bc7",
+        "name": "Yuki-Onna",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Spirit",
+        "mana_cost": "{3}{R}",
+        "oracle_text": "When this creature enters, destroy target artifact.\nWhenever you cast a Spirit or Arcane spell, you may return this creature to its owner's hand.",
+        "colors": [
+          "R"
+        ],
+        "keywords": [],
+        "power": "3",
+        "toughness": "1",
+        "cmc": 4.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "artifact"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Spirit/Arcane cast-triggered self-return: no such spell is cast while the source is on the battlefield."
+        ]
+      }
+    },
+    "Kiri-Onna": {
+      "source": {
+        "oracle_id": "e09661d4-858b-43a8-b6a4-ba76f7a69777",
+        "name": "Kiri-Onna",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Spirit",
+        "mana_cost": "{4}{U}",
+        "oracle_text": "When this creature enters, return target creature to its owner's hand.\nWhenever you cast a Spirit or Arcane spell, you may return this creature to its owner's hand.",
+        "colors": [
+          "U"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "2",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "bounce",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Spirit/Arcane cast-triggered self-return: no such spell is cast while the source is on the battlefield."
+        ]
+      }
+    },
+    "Ogre Arsonist": {
+      "source": {
+        "oracle_id": "00af96af-5eae-4044-a2f7-a08cd0699d1e",
+        "name": "Ogre Arsonist",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Ogre",
+        "mana_cost": "{4}{R}",
+        "oracle_text": "When this creature enters, destroy target land.",
+        "colors": [
+          "R"
+        ],
+        "keywords": [],
+        "power": "3",
+        "toughness": "3",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "land"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": []
+      }
+    },
+    "Ravaging Horde": {
+      "source": {
+        "oracle_id": "b775b83c-0c3d-437d-9d3c-1d5c9cd418a8",
+        "name": "Ravaging Horde",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Soldier",
+        "mana_cost": "{3}{R}{R}",
+        "oracle_text": "When this creature enters, destroy target land.",
+        "colors": [
+          "R"
+        ],
+        "keywords": [],
+        "power": "3",
+        "toughness": "3",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "land"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": []
+      }
+    },
+    "Avalanche Riders": {
+      "source": {
+        "oracle_id": "c9048d35-aff7-45ae-ae97-db89397b3e74",
+        "name": "Avalanche Riders",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Nomad",
+        "mana_cost": "{3}{R}",
+        "oracle_text": "Haste\nEcho {3}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, destroy target land.",
+        "colors": [
+          "R"
+        ],
+        "keywords": [
+          "Haste",
+          "Echo"
+        ],
+        "power": "2",
+        "toughness": "2",
+        "cmc": 4.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "land"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [
+          "Echo",
+          "Haste"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Haste combat.",
+          "Echo upkeep payment and sacrifice: no upkeep is advanced."
+        ]
+      }
+    },
+    "Angel of Despair": {
+      "source": {
+        "oracle_id": "02520741-d7f0-46e6-acbe-010b65fc24c0",
+        "name": "Angel of Despair",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Angel",
+        "mana_cost": "{3}{W}{W}{B}{B}",
+        "oracle_text": "Flying\nWhen this creature enters, destroy target permanent.",
+        "colors": [
+          "B",
+          "W"
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "power": "5",
+        "toughness": "5",
+        "cmc": 7.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature",
+          "artifact",
+          "enchantment",
+          "land"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [
+          "Flying"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Flying combat.",
+          "Planeswalker targets are not represented."
+        ]
+      }
+    },
+    "Riftwing Cloudskate": {
+      "source": {
+        "oracle_id": "ae2e6ffd-fb93-4c47-88e7-e84460eefbe5",
+        "name": "Riftwing Cloudskate",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Illusion",
+        "mana_cost": "{3}{U}{U}",
+        "oracle_text": "Flying\nWhen this creature enters, return target permanent to its owner's hand.\nSuspend 3\u2014{1}{U} (Rather than cast this card from your hand, you may pay {1}{U} and exile it with three time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost. It has haste.)",
+        "colors": [
+          "U"
+        ],
+        "keywords": [
+          "Flying",
+          "Suspend"
+        ],
+        "power": "2",
+        "toughness": "2",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "bounce",
+        "targets": [
+          "creature",
+          "artifact",
+          "enchantment",
+          "land"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [
+          "Flying",
+          "Suspend"
+        ],
+        "cast_dialogs": [
+          0
+        ],
+        "alternate_mana": [
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Flying combat.",
+          "Suspend alternative play, time counters and haste: only normal-cost creature casts are exercised.",
+          "Planeswalker targets are not represented."
+        ]
+      }
+    },
+    "Woodfall Primus": {
+      "source": {
+        "oracle_id": "2f70f1bb-29fa-4abb-afc2-653acd0a08b9",
+        "name": "Woodfall Primus",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Treefolk Shaman",
+        "mana_cost": "{5}{G}{G}{G}",
+        "oracle_text": "Trample\nWhen this creature enters, destroy target noncreature permanent.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+        "colors": [
+          "G"
+        ],
+        "keywords": [
+          "Persist",
+          "Trample"
+        ],
+        "power": "6",
+        "toughness": "6",
+        "cmc": 8.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "artifact",
+          "enchantment",
+          "land"
+        ],
+        "optional": false,
+        "predicate": "noncreature",
+        "opponent_only": false,
+        "keywords": [
+          "Persist",
+          "Trample"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {
+          "artifact": [
+            "Bonesplitter",
+            "Vulshok Morningstar"
+          ]
+        },
+        "negative_witnesses": {
+          "artifact_creature": "Ornithopter"
+        },
+        "excluded_variants": [
+          "destroy_source"
+        ],
+        "inactive_components": [
+          "Trample combat.",
+          "Persist: source destruction is excluded; bounce, blink and countering do not cause the creature to die.",
+          "Planeswalker targets are not represented."
+        ]
+      }
+    },
+    "Venser, Shaper Savant": {
+      "source": {
+        "oracle_id": "0f41cefc-d6ff-4db7-ba35-502b7e081de1",
+        "name": "Venser, Shaper Savant",
+        "layout": "normal",
+        "type_line": "Legendary Creature \u2014 Human Wizard",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen Venser enters, return target spell or permanent to its owner's hand.",
+        "colors": [
+          "U"
+        ],
+        "keywords": [
+          "Flash"
+        ],
+        "power": "2",
+        "toughness": "2",
+        "cmc": 4.0
+      },
+      "params": {
+        "effect": "bounce",
+        "targets": [
+          "creature",
+          "artifact",
+          "enchantment",
+          "land"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [
+          "Flash"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Flash timing.",
+          "Spell targets: fixtures exercise permanent targets only.",
+          "Planeswalker targets are not represented."
+        ]
+      }
+    },
+    "Shriekmaw": {
+      "source": {
+        "oracle_id": "717bbb9d-0a5b-4979-a24b-9d54aac7657a",
+        "name": "Shriekmaw",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Elemental",
+        "mana_cost": "{4}{B}",
+        "oracle_text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nWhen this creature enters, destroy target nonartifact, nonblack creature.\nEvoke {1}{B} (You may cast this spell for its evoke cost. If you do, it's sacrificed when it enters.)",
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Evoke",
+          "Fear"
+        ],
+        "power": "3",
+        "toughness": "2",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": "nonartifact_nonblack",
+        "opponent_only": false,
+        "keywords": [
+          "Evoke",
+          "Fear"
+        ],
+        "cast_dialogs": [
+          0
+        ],
+        "alternate_mana": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {
+          "black": "Bog Imp",
+          "artifact": "Ornithopter"
+        },
+        "excluded_variants": [],
+        "inactive_components": [
+          "Fear combat.",
+          "Evoke alternative cost and sacrifice: casts select the normal printed cost."
+        ]
+      }
+    },
+    "Dark Hatchling": {
+      "source": {
+        "oracle_id": "36633b43-855b-4620-8afb-70c39fc07280",
+        "name": "Dark Hatchling",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Horror",
+        "mana_cost": "{4}{B}{B}",
+        "oracle_text": "Flying\nWhen this creature enters, destroy target nonblack creature. It can't be regenerated.",
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Flying"
+        ],
+        "power": "3",
+        "toughness": "3",
+        "cmc": 6.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": "nonblack",
+        "opponent_only": false,
+        "keywords": [
+          "Flying"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {
+          "black": "Bog Imp"
+        },
+        "excluded_variants": [],
+        "inactive_components": [
+          "Flying combat.",
+          "Regeneration prohibition: fixtures do not offer regeneration."
+        ]
+      }
+    },
+    "Serpent Assassin": {
+      "source": {
+        "oracle_id": "3bc7d3a7-ddb4-4eaa-882e-404d8f2926fb",
+        "name": "Serpent Assassin",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Snake Assassin",
+        "mana_cost": "{3}{B}{B}",
+        "oracle_text": "When this creature enters, you may destroy target nonblack creature.",
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "2",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": true,
+        "predicate": "nonblack",
+        "opponent_only": false,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {
+          "black": "Bog Imp"
+        },
+        "excluded_variants": [],
+        "inactive_components": []
+      }
+    },
+    "Hammerheim Deadeye": {
+      "source": {
+        "oracle_id": "a6962ccc-9883-48ca-9a5f-aeb68e66fd97",
+        "name": "Hammerheim Deadeye",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Giant Warrior",
+        "mana_cost": "{3}{R}",
+        "oracle_text": "Echo {5}{R} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, destroy target creature with flying.",
+        "colors": [
+          "R"
+        ],
+        "keywords": [
+          "Echo"
+        ],
+        "power": "3",
+        "toughness": "3",
+        "cmc": 4.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": "flying",
+        "opponent_only": false,
+        "keywords": [
+          "Echo"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {
+          "creature": [
+            "Suntail Hawk",
+            "Wind Drake"
+          ]
+        },
+        "negative_witnesses": {
+          "ground": "Hill Giant"
+        },
+        "excluded_variants": [],
+        "inactive_components": [
+          "Echo upkeep payment and sacrifice: no upkeep is advanced."
+        ]
+      }
+    },
+    "Stingerfling Spider": {
+      "source": {
+        "oracle_id": "056770e2-8ab7-424d-a2d8-7be6d6cc73f1",
+        "name": "Stingerfling Spider",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Spider",
+        "mana_cost": "{4}{G}",
+        "oracle_text": "Reach\nWhen this creature enters, you may destroy target creature with flying.",
+        "colors": [
+          "G"
+        ],
+        "keywords": [
+          "Reach"
+        ],
+        "power": "2",
+        "toughness": "5",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": true,
+        "predicate": "flying",
+        "opponent_only": false,
+        "keywords": [
+          "Reach"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": true,
+        "positive_witnesses": {
+          "creature": [
+            "Suntail Hawk",
+            "Wind Drake"
+          ]
+        },
+        "negative_witnesses": {
+          "ground": "Hill Giant"
+        },
+        "excluded_variants": [],
+        "inactive_components": [
+          "Reach combat."
+        ]
+      }
+    },
+    "Acid Web Spider": {
+      "source": {
+        "oracle_id": "23d4f436-a417-4a26-b5b8-c698f11a186b",
+        "name": "Acid Web Spider",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Spider",
+        "mana_cost": "{3}{G}{G}",
+        "oracle_text": "Reach\nWhen this creature enters, you may destroy target Equipment.",
+        "colors": [
+          "G"
+        ],
+        "keywords": [
+          "Reach"
+        ],
+        "power": "3",
+        "toughness": "5",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "artifact"
+        ],
+        "optional": true,
+        "predicate": "equipment",
+        "opponent_only": false,
+        "keywords": [
+          "Reach"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": true,
+        "positive_witnesses": {
+          "artifact": [
+            "Bonesplitter",
+            "Vulshok Morningstar"
+          ]
+        },
+        "negative_witnesses": {
+          "not_equipment": "Ornithopter"
+        },
+        "excluded_variants": [],
+        "inactive_components": [
+          "Reach combat."
+        ]
+      }
+    },
+    "Halo Hunter": {
+      "source": {
+        "oracle_id": "293560ec-accf-49c6-9bf4-6d37f56a4eb7",
+        "name": "Halo Hunter",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Demon",
+        "mana_cost": "{2}{B}{B}{B}",
+        "oracle_text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nWhen this creature enters, destroy target Angel.",
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Intimidate"
+        ],
+        "power": "6",
+        "toughness": "3",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": "angel",
+        "opponent_only": false,
+        "keywords": [
+          "Intimidate"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {
+          "creature": [
+            "Serra Angel",
+            "Serra Avenger"
+          ]
+        },
+        "negative_witnesses": {
+          "not_angel": "Hill Giant"
+        },
+        "excluded_variants": [],
+        "inactive_components": [
+          "Intimidate combat."
+        ]
+      }
+    },
+    "Slayer of the Wicked": {
+      "source": {
+        "oracle_id": "d93299d4-3aaf-48fb-8227-26203963c8b9",
+        "name": "Slayer of the Wicked",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Soldier",
+        "mana_cost": "{3}{W}",
+        "oracle_text": "When this creature enters, you may destroy target Vampire, Werewolf, or Zombie.",
+        "colors": [
+          "W"
+        ],
+        "keywords": [],
+        "power": "3",
+        "toughness": "2",
+        "cmc": 4.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": true,
+        "predicate": "vampire_werewolf_zombie",
+        "opponent_only": false,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": true,
+        "positive_witnesses": {
+          "creature": [
+            "Vampire Nighthawk",
+            "Scathe Zombies"
+          ]
+        },
+        "negative_witnesses": {
+          "unrelated": "Hill Giant"
+        },
+        "excluded_variants": [],
+        "inactive_components": [
+          "Werewolf targets have no separate witness."
+        ]
+      }
+    },
+    "Tivadar of Thorn": {
+      "source": {
+        "oracle_id": "c2c09308-988b-4d71-83c8-e2a2dc19a0d9",
+        "name": "Tivadar of Thorn",
+        "layout": "normal",
+        "type_line": "Legendary Creature \u2014 Human Knight",
+        "mana_cost": "{1}{W}{W}",
+        "oracle_text": "First strike, protection from red\nWhen Tivadar enters, destroy target Goblin.",
+        "colors": [
+          "W"
+        ],
+        "keywords": [
+          "First strike",
+          "Protection"
+        ],
+        "power": "2",
+        "toughness": "2",
+        "cmc": 3.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": "goblin",
+        "opponent_only": false,
+        "keywords": [
+          "First strike",
+          "Protection"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {
+          "creature": [
+            "Goblin Piker",
+            "Goblin Roughrider"
+          ]
+        },
+        "negative_witnesses": {
+          "not_goblin": "Hill Giant"
+        },
+        "excluded_variants": [],
+        "inactive_components": [
+          "First strike combat and protection from red interactions."
+        ]
+      }
+    },
+    "Sun Ce, Young Conquerer": {
+      "source": {
+        "oracle_id": "93b0185c-b86f-4137-bc6d-96212eee1708",
+        "name": "Sun Ce, Young Conquerer",
+        "layout": "normal",
+        "type_line": "Legendary Creature \u2014 Human Soldier",
+        "mana_cost": "{3}{U}{U}",
+        "oracle_text": "Horsemanship (This creature can't be blocked except by creatures with horsemanship.)\nWhen Sun Ce enters, you may return target creature to its owner's hand.",
+        "colors": [
+          "U"
+        ],
+        "keywords": [
+          "Horsemanship"
+        ],
+        "power": "3",
+        "toughness": "3",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "bounce",
+        "targets": [
+          "creature"
+        ],
+        "optional": true,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [
+          "Horsemanship"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Horsemanship combat.",
+          "Legendary duplicate permanents: only one source is present."
+        ]
+      }
+    },
+    "Dispersal Technician": {
+      "source": {
+        "oracle_id": "47a66451-8a4e-4fc6-8685-96e1feb8f997",
+        "name": "Dispersal Technician",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Vedalken Artificer",
+        "mana_cost": "{4}{U}",
+        "oracle_text": "When this creature enters, you may return target artifact to its owner's hand.",
+        "colors": [
+          "U"
+        ],
+        "keywords": [],
+        "power": "3",
+        "toughness": "2",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "bounce",
+        "targets": [
+          "artifact"
+        ],
+        "optional": true,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": true,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": []
+      }
+    },
+    "Manglehorn": {
+      "source": {
+        "oracle_id": "b67db32b-30a9-49d2-b4c2-90a9f80c36eb",
+        "name": "Manglehorn",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Beast",
+        "mana_cost": "{2}{G}",
+        "oracle_text": "When this creature enters, you may destroy target artifact.\nArtifacts your opponents control enter tapped.",
+        "colors": [
+          "G"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "2",
+        "cmc": 3.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "artifact"
+        ],
+        "optional": true,
+        "predicate": null,
+        "opponent_only": false,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Opposing artifacts entering tapped: target artifacts entered before the source and no further artifacts enter."
+        ]
+      }
+    },
+    "Gilt-Leaf Winnower": {
+      "source": {
+        "oracle_id": "53b99846-3f80-4e9d-ad3c-52a4906b8823",
+        "name": "Gilt-Leaf Winnower",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Elf Warrior",
+        "mana_cost": "{3}{B}{B}",
+        "oracle_text": "Menace (This creature can't be blocked except by two or more creatures.)\nWhen this creature enters, you may destroy target non-Elf creature whose power and toughness aren't equal.",
+        "colors": [
+          "B"
+        ],
+        "keywords": [
+          "Menace"
+        ],
+        "power": "4",
+        "toughness": "3",
+        "cmc": 5.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": true,
+        "predicate": "nonelf_unequal_stats",
+        "opponent_only": false,
+        "keywords": [
+          "Menace"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": true,
+        "positive_witnesses": {
+          "creature": [
+            "Craw Wurm",
+            "Wall of Air"
+          ]
+        },
+        "negative_witnesses": {
+          "elf": "Elvish Warrior",
+          "equal_stats": "Hill Giant"
+        },
+        "excluded_variants": [],
+        "inactive_components": [
+          "Menace combat."
+        ]
+      }
+    },
+    "Ravenous Chupacabra": {
+      "source": {
+        "oracle_id": "7b459306-149b-4f43-abc1-2dd70c748c0e",
+        "name": "Ravenous Chupacabra",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Beast Horror",
+        "mana_cost": "{2}{B}{B}",
+        "oracle_text": "When this creature enters, destroy target creature an opponent controls.",
+        "colors": [
+          "B"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "2",
+        "cmc": 4.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": true,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": []
+      }
+    },
+    "Exclusion Mage": {
+      "source": {
+        "oracle_id": "fd28fe55-36cd-4242-8dd4-edb58fbb9895",
+        "name": "Exclusion Mage",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Wizard",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "When this creature enters, return target creature an opponent controls to its owner's hand.",
+        "colors": [
+          "U"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "2",
+        "cmc": 3.0
+      },
+      "params": {
+        "effect": "bounce",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": true,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": []
+      }
+    },
+    "Meteor Golem": {
+      "source": {
+        "oracle_id": "d9f11aa1-9219-42a8-85a9-a8f204160706",
+        "name": "Meteor Golem",
+        "layout": "normal",
+        "type_line": "Artifact Creature \u2014 Golem",
+        "mana_cost": "{7}",
+        "oracle_text": "When this creature enters, destroy target nonland permanent an opponent controls.",
+        "colors": [],
+        "keywords": [],
+        "power": "3",
+        "toughness": "3",
+        "cmc": 7.0
+      },
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": true,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Planeswalker targets are not represented."
+        ]
+      }
+    },
+    "Reflector Mage": {
+      "source": {
+        "oracle_id": "5398362d-c45e-4d56-a622-8be1124730b9",
+        "name": "Reflector Mage",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Wizard",
+        "mana_cost": "{1}{W}{U}",
+        "oracle_text": "When this creature enters, return target creature an opponent controls to its owner's hand. That creature's owner can't cast spells with the same name as that creature until your next turn.",
+        "colors": [
+          "U",
+          "W"
+        ],
+        "keywords": [],
+        "power": "2",
+        "toughness": "3",
+        "cmc": 3.0
+      },
+      "params": {
+        "effect": "bounce",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": true,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "The returned creature owner cannot cast spells with its name until your next turn: returned cards are not recast in these scenarios."
+        ]
+      }
+    }
+  }
+}

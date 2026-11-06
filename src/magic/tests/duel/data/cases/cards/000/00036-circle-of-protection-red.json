@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Circle of Protection: Red",
+  "csvid": 36,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Additional damage episodes from the same chosen source",
+          "Illegal color/artifact/recipient selection during the live damage callback",
+          "Activation availability queries inside the live damage callback",
+          "Snapshot while the damage callback is suspended",
+          "Noncombat damage from qualified sources"
+        ],
+        "binding": "packet_combat",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{1}",
+        "tap": false,
+        "attacker": "Hill Giant",
+        "source_predicate": "red"
+      },
+      "oracle_text": "{1}: The next time a red source of your choice would deal damage to you this turn, prevent that damage.",
+      "variants": [
+        "effect_0",
+        "without_effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "effect_1",
+        "without_effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1"
+      ]
+    }
+  ]
+}

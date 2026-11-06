@@ -1,0 +1,94 @@
+{
+  "version": 1,
+  "card": "Voice of the Woods",
+  "csvid": 6311,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 3,
+        "mechanism": "cost_creator",
+        "token": {
+          "name": "Elemental",
+          "power": 7,
+          "toughness": 7,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Elemental"
+          ],
+          "artifact": false,
+          "keywords": [
+            "Trample"
+          ]
+        },
+        "amount": {
+          "fixed": 1
+        },
+        "activation": {
+          "mana": [
+            0,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "tap": false,
+          "untap": false,
+          "sacrifice": false,
+          "additional": "tap_elf",
+          "additional_count": 5,
+          "only_sorcery": false
+        },
+        "operative": [],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Tap five untapped Elves you control: Create a 7/7 green Elemental creature token with trample. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
+      "variants": [
+        "create_0",
+        "ready_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "payment_0",
+        "activation_snapshot_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "missing_cost_0",
+        "opponent_cost_0",
+        "foreign_cost_0",
+        "fresh_other_cost_0",
+        "trample_damage_0",
+        "create_1",
+        "ready_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "payment_1",
+        "activation_snapshot_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "missing_cost_1",
+        "opponent_cost_1",
+        "foreign_cost_1",
+        "fresh_other_cost_1",
+        "trample_damage_1"
+      ]
+    }
+  ]
+}

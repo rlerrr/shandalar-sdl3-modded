@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Decree of Annihilation",
+  "csvid": 6502,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "spell",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "all",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": true,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Cycling and its separate land-destruction trigger. Repeated hand casting is omitted because the first mandatory effect exiles the second source copy from hand."
+        ],
+        "exile_hands": true,
+        "battlefield_controls": true,
+        "exile_battlefield": [
+          "Artifact",
+          "Creature",
+          "Land"
+        ]
+      },
+      "oracle_text": "Exile all artifacts, creatures, and lands from the battlefield, all cards from all graveyards, and all cards from all hands.\nCycling {5}{R}{R} ({5}{R}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, destroy all lands.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "empty_graveyards_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "wrong_color_0",
+        "effect_1",
+        "payment_1",
+        "empty_graveyards_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

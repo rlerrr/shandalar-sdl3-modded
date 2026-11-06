@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "card": "Caller of the Claw",
+  "csvid": 6346,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "variable_amount",
+        "basis": "own_grave_nontoken_deaths_this_turn",
+        "token": {
+          "name": "Bear",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Bear"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "source_keywords": [
+          "Flash"
+        ],
+        "inactive_clauses": [],
+        "mandatory_followups": []
+      },
+      "oracle_text": "Flash\nWhen this creature enters, create a 2/2 green Bear creature token for each nontoken creature put into your graveyard from the battlefield this turn.",
+      "variants": [
+        "create_0",
+        "minimum_0",
+        "larger_amount_0",
+        "opponent_state_0",
+        "ownership_0",
+        "tokens_do_not_contribute_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "amount_locked_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "event_snapshot_0",
+        "source_removed_0",
+        "reentry_changed_input_0",
+        "prior_turn_expired_0",
+        "purged_history_0",
+        "death_via_spell_0",
+        "create_1",
+        "minimum_1",
+        "larger_amount_1",
+        "opponent_state_1",
+        "ownership_1",
+        "tokens_do_not_contribute_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "amount_locked_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "event_snapshot_1",
+        "source_removed_1",
+        "reentry_changed_input_1",
+        "prior_turn_expired_1",
+        "purged_history_1",
+        "death_via_spell_1"
+      ]
+    }
+  ]
+}

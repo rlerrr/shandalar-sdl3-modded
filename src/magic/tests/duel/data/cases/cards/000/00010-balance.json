@@ -1,0 +1,108 @@
+{
+  "version": 1,
+  "card": "Balance",
+  "csvid": 10,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Balance",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "ordered",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "creature_land",
+        "quantity": "surplus_min",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "edict_counts": [
+          5,
+          2
+        ],
+        "hand_counts": [
+          4,
+          2
+        ],
+        "value_operations": [
+          {
+            "kind": "discard",
+            "amount": "surplus_min"
+          }
+        ],
+        "recipient_checks": true,
+        "sacrifice_order": [
+          "land",
+          "creature"
+        ]
+      },
+      "oracle_text": "Each player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_recipients_0",
+        "empty_hand_0",
+        "one_card_0",
+        "large_hand_0",
+        "last_choice_0",
+        "uneven_hands_0",
+        "reverse_board_0",
+        "equal_board_0",
+        "one_empty_0",
+        "wide_board_0",
+        "one_recipient_0",
+        "indestructible_recipients_0",
+        "stolen_recipients_0",
+        "hexproof_recipients_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_recipients_1",
+        "empty_hand_1",
+        "one_card_1",
+        "large_hand_1",
+        "last_choice_1",
+        "uneven_hands_1",
+        "reverse_board_1",
+        "equal_board_1",
+        "one_empty_1",
+        "wide_board_1",
+        "one_recipient_1",
+        "indestructible_recipients_1",
+        "stolen_recipients_1",
+        "hexproof_recipients_1",
+        "alternate_choice_0",
+        "alternate_choice_1"
+      ]
+    }
+  ]
+}

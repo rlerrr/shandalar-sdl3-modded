@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Strength of the Tajuru",
+  "csvid": 10842,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "multikicker",
+        "inactive_components": [
+          "More than one kicker payment, X=0 and changed target selection are not selected. Normal and once-kicked costs are explicit."
+        ]
+      },
+      "oracle_text": "Multikicker {1} (You may pay an additional {1} any number of times as you cast this spell.)\nChoose target creature, then choose another target creature for each time this spell was kicked. Put X +1/+1 counters on each of them.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "countered_0",
+        "selection_pending_0",
+        "lost_target_0",
+        "two_copies_0",
+        "preexisting_0",
+        "kicked_0",
+        "x_one_0",
+        "x_five_0",
+        "opponent_0",
+        "partial_target_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "countered_1",
+        "selection_pending_1",
+        "lost_target_1",
+        "two_copies_1",
+        "preexisting_1",
+        "kicked_1",
+        "x_one_1",
+        "x_five_1",
+        "opponent_1",
+        "partial_target_1"
+      ]
+    }
+  ]
+}

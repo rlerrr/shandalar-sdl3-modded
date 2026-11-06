@@ -5572,6 +5572,7 @@ int flip_a_coin(int player, int card){
 
 void shuffle_for_exe(int whose_computer_shuffles, int whose_library)
 {
+  duel_host_record_shuffle(whose_library);
   if (ai_is_speculating != 1)
 	{
 	  play_sound_effect(WAV_SHUFFLE);
@@ -22914,7 +22915,7 @@ int charge_mana_for_multi_x(int player, int color, int num_x)
     if (max_x_value>=0 && max_x_value/num_x<maximum) maximum=max_x_value/num_x;
     int chosen=duel_host_choose_x(player,maximum);
     charge_mana(player,color,chosen*num_x);
-    return spell_fizzled ? 0 : chosen*num_x;
+    return spell_fizzled == 1 ? 0 : chosen*num_x;
   }
 #endif
   int old_hack_xx = hack_xx;

@@ -1,0 +1,346 @@
+{
+  "version": 1,
+  "cards": {
+    "Aven Fleetwing": {
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bird Soldier",
+      "mana_cost": "{3}{U}",
+      "oracle_text": "Flying\nHexproof (This creature can't be the target of spells or abilities your opponents control.)",
+      "colors": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flying",
+        "Hexproof"
+      ]
+    },
+    "Counterspell": {
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "oracle_text": "Counter target spell.",
+      "colors": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "keywords": []
+    },
+    "Darksteel Citadel": {
+      "layout": "normal",
+      "type_line": "Artifact Land",
+      "mana_cost": "",
+      "oracle_text": "Indestructible\n{T}: Add {C}.",
+      "colors": [],
+      "cmc": 0.0,
+      "keywords": [
+        "Indestructible"
+      ]
+    },
+    "Darksteel Gargoyle": {
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Gargoyle",
+      "mana_cost": "{7}",
+      "oracle_text": "Flying\nIndestructible (Damage and effects that say \"destroy\" don't destroy this creature.)",
+      "colors": [],
+      "cmc": 7.0,
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Flying",
+        "Indestructible"
+      ]
+    },
+    "Darksteel Myr": {
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Myr",
+      "mana_cost": "{3}",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "colors": [],
+      "cmc": 3.0,
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Indestructible"
+      ]
+    },
+    "Forest": {
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Forest",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "colors": [],
+      "cmc": 0.0,
+      "keywords": []
+    },
+    "Fountain of Youth": {
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "oracle_text": "{2}, {T}: You gain 1 life.",
+      "colors": [],
+      "cmc": 0.0,
+      "keywords": []
+    },
+    "Giant Growth": {
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "keywords": []
+    },
+    "Gilded Light": {
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "You gain shroud until end of turn. (You can't be the target of spells or abilities.)\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "keywords": [
+        "Cycling"
+      ]
+    },
+    "Gladecover Scout": {
+      "layout": "normal",
+      "type_line": "Creature \u2014 Elf Scout",
+      "mana_cost": "{G}",
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)",
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Hexproof"
+      ]
+    },
+    "Goblin Deathraiders": {
+      "layout": "normal",
+      "type_line": "Creature \u2014 Goblin Warrior",
+      "mana_cost": "{B}{R}",
+      "oracle_text": "Trample",
+      "colors": [
+        "B",
+        "R"
+      ],
+      "cmc": 2.0,
+      "power": "3",
+      "toughness": "1",
+      "keywords": [
+        "Trample"
+      ]
+    },
+    "Grizzly Bears": {
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bear",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "2",
+      "keywords": []
+    },
+    "Hill Giant": {
+      "layout": "normal",
+      "type_line": "Creature \u2014 Giant",
+      "mana_cost": "{3}{R}",
+      "oracle_text": "",
+      "colors": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "3",
+      "keywords": []
+    },
+    "Island": {
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Island",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "colors": [],
+      "cmc": 0.0,
+      "keywords": []
+    },
+    "Lightning Bolt": {
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "keywords": []
+    },
+    "Llanowar Elves": {
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "mana_cost": "",
+      "oracle_text": "{T}: Add {G}.",
+      "colors": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1",
+      "keywords": []
+    },
+    "Memnite": {
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Construct",
+      "mana_cost": "{0}",
+      "oracle_text": "",
+      "colors": [],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1",
+      "keywords": []
+    },
+    "Mountain": {
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Mountain",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {R}.)",
+      "colors": [],
+      "cmc": 0.0,
+      "keywords": []
+    },
+    "Phantom Monster": {
+      "layout": "normal",
+      "type_line": "Creature \u2014 Illusion",
+      "mana_cost": "{3}{U}",
+      "oracle_text": "Flying",
+      "colors": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Flying"
+      ]
+    },
+    "Plains": {
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Plains",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "colors": [],
+      "cmc": 0.0,
+      "keywords": []
+    },
+    "Savannah Lions": {
+      "layout": "normal",
+      "type_line": "Creature \u2014 Cat",
+      "mana_cost": "{W}",
+      "oracle_text": "",
+      "colors": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "power": "2",
+      "toughness": "1",
+      "keywords": []
+    },
+    "Scathe Zombies": {
+      "layout": "normal",
+      "type_line": "Creature \u2014 Zombie",
+      "mana_cost": "{2}{B}",
+      "oracle_text": "",
+      "colors": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "2",
+      "keywords": []
+    },
+    "Seal of Cleansing": {
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "keywords": []
+    },
+    "Seal of Fire": {
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{R}",
+      "oracle_text": "Sacrifice this enchantment: It deals 2 damage to any target.",
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "keywords": []
+    },
+    "Sol Ring": {
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "colors": [],
+      "cmc": 1.0,
+      "keywords": []
+    },
+    "Wall of Spears": {
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Wall",
+      "mana_cost": "{3}",
+      "oracle_text": "Defender (This creature can't attack.)\nFirst strike",
+      "colors": [],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "First strike",
+        "Defender"
+      ]
+    },
+    "Watchwolf": {
+      "layout": "normal",
+      "type_line": "Creature \u2014 Wolf",
+      "mana_cost": "{G}{W}",
+      "oracle_text": "",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "cmc": 2.0,
+      "power": "3",
+      "toughness": "3",
+      "keywords": []
+    },
+    "Wind Drake": {
+      "layout": "normal",
+      "type_line": "Creature \u2014 Drake",
+      "mana_cost": "{2}{U}",
+      "oracle_text": "Flying",
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ]
+    }
+  }
+}

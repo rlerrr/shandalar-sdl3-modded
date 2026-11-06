@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "card": "Brood Sliver",
+  "csvid": 6345,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 4,
+        "mechanism": "damage_creator",
+        "token": {
+          "name": "Sliver",
+          "power": 1,
+          "toughness": 1,
+          "colors": [],
+          "subtypes": [
+            "Sliver"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "amount": {
+          "basis": "events"
+        },
+        "activation": null,
+        "operative": [
+          {
+            "kind": "damage_trigger",
+            "predicate": "global_sliver_combat_player",
+            "optional": true,
+            "token_controller": "damaging_creature_controller"
+          }
+        ],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Whenever a Sliver deals combat damage to a player, its controller may create a 1/1 colorless Sliver creature token.",
+      "variants": [
+        "create_0",
+        "blocked_0",
+        "other_creature_0",
+        "opponent_creature_0",
+        "source_removed_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "damage_snapshot_0",
+        "cleanup_0",
+        "token_attack_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "fresh_denied_0",
+        "own_sliver_0",
+        "opponent_sliver_0",
+        "foreign_sliver_0",
+        "create_1",
+        "blocked_1",
+        "other_creature_1",
+        "opponent_creature_1",
+        "source_removed_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "damage_snapshot_1",
+        "cleanup_1",
+        "token_attack_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "fresh_denied_1",
+        "own_sliver_1",
+        "opponent_sliver_1",
+        "foreign_sliver_1"
+      ]
+    }
+  ]
+}

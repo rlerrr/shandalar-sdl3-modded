@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Plaxcaster Frogling",
+  "csvid": 8254,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "graft_activation",
+        "entry": 3,
+        "cost": [
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "effect": "Shroud",
+        "inactive": [
+          "optional graft transfers; no other creature enters after source"
+        ]
+      },
+      "oracle_text": "Graft 3 (This creature enters with three +1/+1 counters on it. Whenever another creature enters, you may move a +1/+1 counter from this creature onto it.)\n{2}: Target creature with a +1/+1 counter on it gains shroud until end of turn. (It can't be the target of spells or abilities.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "target_bounced_pending_0",
+        "counter_removed_pending_0",
+        "cast_payment_0",
+        "tapped_source_0",
+        "opponent_target_0",
+        "zero_counter_probe_0",
+        "shroud_probe_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "target_bounced_pending_1",
+        "counter_removed_pending_1",
+        "cast_payment_1",
+        "tapped_source_1",
+        "opponent_target_1",
+        "zero_counter_probe_1",
+        "shroud_probe_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle graft activation: actual source casts and fixed entry counters, counter-qualified targets and controls, printed activation payments, source/target loss, real counter-removal response, cleanup and pending replay. Combat life/damage/zones, unrestricted Unsummon protection probes with actual legal control casting, or actual target untap check the granted effect. Cleanup keywords include a same-board functional positive before restore and expiration. No creature enters after the source, leaving optional graft transfers dormant. Source-self combat, replacement and control changes remain component gaps. Authoritative native/Wasm validation is recorded in the wave5 report."
+}

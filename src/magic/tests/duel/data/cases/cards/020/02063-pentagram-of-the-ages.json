@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Pentagram of the Ages",
+  "csvid": 2063,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{4}",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Multiple damage packets from the same chosen source"
+        ]
+      },
+      "oracle_text": "{4}, {T}: The next time a source of your choice would deal damage to you this turn, prevent that damage.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "other_damage_0",
+        "repeat_damage_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "source_removed_0",
+        "effect_1",
+        "payment_1",
+        "other_damage_1",
+        "repeat_damage_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "source_removed_1"
+      ]
+    }
+  ]
+}

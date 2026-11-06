@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Destructive Force",
+  "csvid": 11114,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Destructive Force",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "mass_damage",
+        "target": "none",
+        "amount": 5,
+        "recipient": "both",
+        "scope": "land",
+        "quantity": 5,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "edict_board_count": 6,
+        "creature_controls": true,
+        "scripted_sacrifice": {
+          "0": true,
+          "1": true
+        },
+        "scripted_order_apnap": true
+      },
+      "oracle_text": "Each player sacrifices five lands of their choice. Destructive Force deals 5 damage to each creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_recipients_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_recipients_1",
+        "alternate_choice_0",
+        "alternate_choice_1"
+      ]
+    }
+  ]
+}

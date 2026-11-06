@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "card": "Meteor Golem",
+  "csvid": 18963,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "etb_removal_extension",
+      "version": 2,
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "artifact",
+          "enchantment",
+          "creature"
+        ],
+        "optional": false,
+        "predicate": null,
+        "opponent_only": true,
+        "keywords": [],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {},
+        "excluded_variants": [],
+        "inactive_components": [
+          "Planeswalker targets are not represented."
+        ]
+      },
+      "oracle_text": "When this creature enters, destroy target nonland permanent an opponent controls.",
+      "variants": [
+        "entry_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_other_targets_0",
+        "wrong_type_0",
+        "countered_0",
+        "cleanup_once_0",
+        "other_creature_0",
+        "bounce_only_0",
+        "bounce_recast_0",
+        "blink_0",
+        "destroy_source_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blink_snapshot_0",
+        "bare_zones_0",
+        "own_only_0",
+        "target_artifact_0",
+        "target_enchantment_0",
+        "target_creature_0",
+        "entry_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_other_targets_1",
+        "wrong_type_1",
+        "countered_1",
+        "cleanup_once_1",
+        "other_creature_1",
+        "bounce_only_1",
+        "bounce_recast_1",
+        "blink_1",
+        "destroy_source_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blink_snapshot_1",
+        "bare_zones_1",
+        "own_only_1",
+        "target_artifact_1",
+        "target_enchantment_1",
+        "target_creature_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole Oracle identity/text, printed full casting cost and reviewed entry-removal component are pinned. Both controllers perform actual casts, target choices, payment denial, selected/unselected target zone receipts, re-entry through bounce/recast and blink, unrelated-creature controls and snapshot replay. Explicit control and predicate negatives cast the source beside an ineligible witness and assert it remains. Planeswalker targets are not represented. Pending-target departure, regeneration/replacement, protection, trigger ordering, control changes and multiplayer remain separate gaps."
+}

@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Songstitcher",
+  "csvid": 3912,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Targeting restrictions under control changes",
+          "Damage dealt outside combat by qualified creatures"
+        ],
+        "binding": "chosen_combat",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "{1}{W}",
+        "tap": false,
+        "attacker": "Air Elemental",
+        "target_predicate": "attacking_flying"
+      },
+      "oracle_text": "{1}{W}: Prevent all combat damage that would be dealt this turn by target attacking creature with flying.",
+      "variants": [
+        "effect_0",
+        "without_effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blocked_0",
+        "wrong_role_0",
+        "wrong_ability_0",
+        "activation_insufficient_0",
+        "activation_wrong_color_0",
+        "fresh_cast_0",
+        "source_lost_pending_0",
+        "effect_1",
+        "without_effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blocked_1",
+        "wrong_role_1",
+        "wrong_ability_1",
+        "activation_insufficient_1",
+        "activation_wrong_color_1",
+        "fresh_cast_1",
+        "source_lost_pending_1"
+      ]
+    }
+  ]
+}

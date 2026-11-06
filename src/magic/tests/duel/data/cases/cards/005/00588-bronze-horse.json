@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Bronze Horse",
+  "csvid": 588,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "modifier",
+        "damage_rule": "targeted_self_with_ally",
+        "gaps": [
+          "Attacking trample allocation",
+          "Mixed-source single damage events"
+        ]
+      },
+      "oracle_text": "Trample\nAs long as you control another creature, prevent all damage that would be dealt to this creature by spells that target it.",
+      "variants": [
+        "effect_0",
+        "small_damage_0",
+        "repeat_damage_0",
+        "opponent_creature_0",
+        "self_player_0",
+        "opponent_player_0",
+        "friendly_source_0",
+        "creature_damage_0",
+        "cleanup_0",
+        "payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "damaged_snapshot_0",
+        "bare_zones_0",
+        "nonmatching_recipient_0",
+        "without_condition_0",
+        "ally_removed_0",
+        "untargeted_spell_0",
+        "creature_ability_0",
+        "effect_1",
+        "small_damage_1",
+        "repeat_damage_1",
+        "opponent_creature_1",
+        "self_player_1",
+        "opponent_player_1",
+        "friendly_source_1",
+        "creature_damage_1",
+        "cleanup_1",
+        "payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "damaged_snapshot_1",
+        "bare_zones_1",
+        "nonmatching_recipient_1",
+        "without_condition_1",
+        "ally_removed_1",
+        "untargeted_spell_1",
+        "creature_ability_1"
+      ]
+    }
+  ]
+}

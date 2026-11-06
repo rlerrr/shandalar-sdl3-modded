@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Gird for Battle",
+  "csvid": 19374,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "scope": "up_to_two",
+        "amount": 1,
+        "tail": "none",
+        "untap": false,
+        "condition": "none",
+        "followup": "none",
+        "draw": 0
+      },
+      "oracle_text": "Put a +1/+1 counter on each of up to two target creatures.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "two_copies_0",
+        "cleanup_0",
+        "pump_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "preexisting_0",
+        "opponent_0",
+        "bounce_after_0",
+        "empty_0",
+        "selection_pending_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "two_copies_1",
+        "cleanup_1",
+        "pump_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "preexisting_1",
+        "opponent_1",
+        "bounce_after_1",
+        "empty_1",
+        "selection_pending_1"
+      ]
+    }
+  ]
+}

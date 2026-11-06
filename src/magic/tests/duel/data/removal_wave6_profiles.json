@@ -1,0 +1,2238 @@
+{
+  "version": 1,
+  "cards": {
+    "Air Elemental": {
+      "name": "Air Elemental",
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "layout": "normal",
+      "type_line": "Creature — Elemental",
+      "mana_cost": "{3}{U}{U}",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "power": "4",
+      "toughness": "4"
+    },
+    "Ape": {
+      "name": "Ape",
+      "oracle_id": "6736e171-ed7d-4259-8a42-f5936ebad532",
+      "layout": "token",
+      "type_line": "Token Creature — Ape",
+      "mana_cost": "",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Beast": {
+      "name": "Beast",
+      "oracle_id": "d2f35b1a-1eba-4007-8f27-737d26b7a6a2",
+      "layout": "token",
+      "type_line": "Token Creature — Beast",
+      "mana_cost": "",
+      "oracle_text": "This creature can't attack or block alone.",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "power": "4",
+      "toughness": "4"
+    },
+    "Boomerang": {
+      "name": "Boomerang",
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 2.0
+    },
+    "Centaur Courser": {
+      "name": "Centaur Courser",
+      "oracle_id": "2f5bf099-2e01-4e1c-9ebf-0ce0ac66939e",
+      "layout": "normal",
+      "type_line": "Creature — Centaur Warrior",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Clay Statue": {
+      "name": "Clay Statue",
+      "oracle_id": "cc1ba59c-bb70-4da9-bbd0-a466075f9053",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Golem",
+      "mana_cost": "{4}",
+      "oracle_text": "{2}: Regenerate this creature.",
+      "keywords": [
+        "Regenerate"
+      ],
+      "colors": [],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "1"
+    },
+    "Counterspell": {
+      "name": "Counterspell",
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "oracle_text": "Counter target spell.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 2.0
+    },
+    "Craw Wurm": {
+      "name": "Craw Wurm",
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "layout": "normal",
+      "type_line": "Creature — Wurm",
+      "mana_cost": "{4}{G}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "power": "6",
+      "toughness": "4"
+    },
+    "Darksteel Citadel": {
+      "name": "Darksteel Citadel",
+      "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+      "layout": "normal",
+      "type_line": "Artifact Land",
+      "mana_cost": "",
+      "oracle_text": "Indestructible\n{T}: Add {C}.",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Darksteel Gargoyle": {
+      "name": "Darksteel Gargoyle",
+      "oracle_id": "73010421-374f-458e-aa88-248ef8ae4f8b",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Gargoyle",
+      "mana_cost": "{7}",
+      "oracle_text": "Flying\nIndestructible (Damage and effects that say \"destroy\" don't destroy this creature.)",
+      "keywords": [
+        "Flying",
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 7.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Darksteel Myr": {
+      "name": "Darksteel Myr",
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Myr",
+      "mana_cost": "{3}",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 3.0,
+      "power": "0",
+      "toughness": "1"
+    },
+    "Darksteel Relic": {
+      "name": "Darksteel Relic",
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Drudge Skeletons": {
+      "name": "Drudge Skeletons",
+      "oracle_id": "c180ed02-07f4-4538-9bea-8c249234a8e2",
+      "layout": "normal",
+      "type_line": "Creature — Skeleton",
+      "mana_cost": "{1}{B}",
+      "oracle_text": "{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "keywords": [
+        "Heal",
+        "Regenerate"
+      ],
+      "colors": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Dryad Arbor": {
+      "name": "Dryad Arbor",
+      "oracle_id": "e996cd67-739c-40f4-b276-0042acf26c71",
+      "layout": "normal",
+      "type_line": "Land Creature — Forest Dryad",
+      "mana_cost": "",
+      "oracle_text": "(This land isn't a spell, it's affected by summoning sickness, and it has \"{T}: Add {G}.\")",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Etherwrought Page": {
+      "name": "Etherwrought Page",
+      "oracle_id": "f1c87913-9374-41d7-ae70-444d427290b4",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}{W}{U}{B}",
+      "oracle_text": "At the beginning of your upkeep, choose one —\n• You gain 2 life.\n• Surveil 1. (Look at the top card of your library. You may put that card into your graveyard.)\n• Each opponent loses 1 life.",
+      "keywords": [
+        "Surveil"
+      ],
+      "colors": [
+        "B",
+        "U",
+        "W"
+      ],
+      "cmc": 4.0
+    },
+    "Fires of Yavimaya": {
+      "name": "Fires of Yavimaya",
+      "oracle_id": "e23d6f3b-0e18-423b-943b-15db7837255b",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{R}{G}",
+      "oracle_text": "Creatures you control have haste.\nSacrifice this enchantment: Target creature gets +2/+2 until end of turn.",
+      "keywords": [],
+      "colors": [
+        "G",
+        "R"
+      ],
+      "cmc": 3.0
+    },
+    "Forest": {
+      "name": "Forest",
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "layout": "normal",
+      "type_line": "Basic Land — Forest",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Frog Lizard": {
+      "name": "Frog Lizard",
+      "oracle_id": "8653c69b-99a9-4881-a14c-68ba928c34d5",
+      "layout": "token",
+      "type_line": "Token Creature — Frog Lizard",
+      "mana_cost": "",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Giant Growth": {
+      "name": "Giant Growth",
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Gilded Light": {
+      "name": "Gilded Light",
+      "oracle_id": "f7e7b2aa-9fd2-41dd-b11e-3a233530dc83",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "You gain shroud until end of turn. (You can't be the target of spells or abilities.)\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Gilded Lotus": {
+      "name": "Gilded Lotus",
+      "oracle_id": "9a02a9a7-39d9-4763-85d3-747a0540b60b",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{5}",
+      "oracle_text": "{T}: Add three mana of any one color.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 5.0
+    },
+    "Goblin": {
+      "name": "Goblin",
+      "oracle_id": "fa8ea5cd-b390-41a1-9a2a-11af1bc6bfd0",
+      "layout": "token",
+      "type_line": "Token Creature — Goblin",
+      "mana_cost": "",
+      "oracle_text": "Haste",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "power": "2",
+      "toughness": "1"
+    },
+    "Great Furnace": {
+      "name": "Great Furnace",
+      "oracle_id": "f4819061-b0b5-48ab-af7b-6525c3d2eab7",
+      "layout": "normal",
+      "type_line": "Artifact Land",
+      "mana_cost": "",
+      "oracle_text": "{T}: Add {R}.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "layout": "normal",
+      "type_line": "Creature — Bear",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Horned Troll": {
+      "name": "Horned Troll",
+      "oracle_id": "6ecc61ff-719a-405d-b02a-01607729d05c",
+      "layout": "normal",
+      "type_line": "Creature — Troll",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "{G}: Regenerate this creature.",
+      "keywords": [
+        "Regenerate"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Island": {
+      "name": "Island",
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "layout": "normal",
+      "type_line": "Basic Land — Island",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Jace Beleren": {
+      "name": "Jace Beleren",
+      "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "layout": "normal",
+      "type_line": "Legendary Planeswalker — Jace",
+      "mana_cost": "{1}{U}{U}",
+      "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "loyalty": "3"
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0
+    },
+    "Memnite": {
+      "name": "Memnite",
+      "oracle_id": "7663ac7c-1de3-4250-b96a-fae9dbd66a27",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Construct",
+      "mana_cost": "{0}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mountain": {
+      "name": "Mountain",
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "layout": "normal",
+      "type_line": "Basic Land — Mountain",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {R}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Nyxborn Shieldmate": {
+      "name": "Nyxborn Shieldmate",
+      "oracle_id": "a1012f33-7ebd-47c6-b670-1b0dc046fbce",
+      "layout": "normal",
+      "type_line": "Enchantment Creature — Human Soldier",
+      "mana_cost": "{W}",
+      "oracle_text": "Bestow {2}{W} (If you cast this card for its bestow cost, it's an Aura spell with enchant creature. It becomes a creature again if it's not attached.)\nEnchanted creature gets +1/+2.",
+      "keywords": [
+        "Bestow"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "2"
+    },
+    "Ornithopter": {
+      "name": "Ornithopter",
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Thopter",
+      "mana_cost": "{0}",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "cmc": 0.0,
+      "power": "0",
+      "toughness": "2"
+    },
+    "Pacifism": {
+      "name": "Pacifism",
+      "oracle_id": "5f5e0b10-c8cf-450c-bfd3-bcb0528ec330",
+      "layout": "normal",
+      "type_line": "Enchantment — Aura",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Phyrexian Hulk": {
+      "name": "Phyrexian Hulk",
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Phyrexian Golem",
+      "mana_cost": "{6}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [],
+      "cmc": 6.0,
+      "power": "5",
+      "toughness": "4"
+    },
+    "Plains": {
+      "name": "Plains",
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "layout": "normal",
+      "type_line": "Basic Land — Plains",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Predator Ooze": {
+      "name": "Predator Ooze",
+      "oracle_id": "a51ec70d-1356-4403-a858-b99445bac54a",
+      "layout": "normal",
+      "type_line": "Creature — Ooze",
+      "mana_cost": "{G}{G}{G}",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature.)\nWhenever this creature attacks, put a +1/+1 counter on it.\nWhenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Ranger's Guile": {
+      "name": "Ranger's Guile",
+      "oracle_id": "694cb93a-bcc5-44b0-a76c-19ae4a4e5e0f",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Scaled Wurm": {
+      "name": "Scaled Wurm",
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "layout": "normal",
+      "type_line": "Creature — Wurm",
+      "mana_cost": "{7}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 8.0,
+      "power": "7",
+      "toughness": "6"
+    },
+    "Scathe Zombies": {
+      "name": "Scathe Zombies",
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "layout": "normal",
+      "type_line": "Creature — Zombie",
+      "mana_cost": "{2}{B}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Seal of Cleansing": {
+      "name": "Seal of Cleansing",
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 1.0
+    },
+    "Spirit": {
+      "name": "Spirit",
+      "oracle_id": "f39a3005-bc92-49bf-9e32-28e99c4de5c5",
+      "layout": "token",
+      "type_line": "Token Creature — Spirit",
+      "mana_cost": "",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Suntail Hawk": {
+      "name": "Suntail Hawk",
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "layout": "normal",
+      "type_line": "Creature — Bird",
+      "mana_cost": "{W}",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Swamp": {
+      "name": "Swamp",
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "layout": "normal",
+      "type_line": "Basic Land — Swamp",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Wall of Ice": {
+      "name": "Wall of Ice",
+      "oracle_id": "1945e165-7636-4727-89ba-3811251ef175",
+      "layout": "normal",
+      "type_line": "Creature — Wall",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "Defender (This creature can't attack.)",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "power": "0",
+      "toughness": "7"
+    },
+    "Wall of Spears": {
+      "name": "Wall of Spears",
+      "oracle_id": "ed836d84-ff1e-4af8-b4b8-314569b3faec",
+      "layout": "normal",
+      "type_line": "Artifact Creature — Wall",
+      "mana_cost": "{3}",
+      "oracle_text": "Defender (This creature can't attack.)\nFirst strike",
+      "keywords": [
+        "First strike",
+        "Defender"
+      ],
+      "colors": [],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "3"
+    },
+    "Watchwolf": {
+      "name": "Watchwolf",
+      "oracle_id": "a35c2e20-eb90-4132-b65f-be1fcb569819",
+      "layout": "normal",
+      "type_line": "Creature — Wolf",
+      "mana_cost": "{G}{W}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "cmc": 2.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Whip of Erebos": {
+      "name": "Whip of Erebos",
+      "oracle_id": "53987a39-c18c-4c13-b1ea-fd1b2a369f9e",
+      "layout": "normal",
+      "type_line": "Legendary Enchantment Artifact",
+      "mana_cost": "{2}{B}{B}",
+      "oracle_text": "Creatures you control have lifelink.\n{2}{B}{B}, {T}: Return target creature card from your graveyard to the battlefield. It gains haste. Exile it at the beginning of the next end step. If it would leave the battlefield, exile it instead of putting it anywhere else. Activate only as a sorcery.",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 4.0
+    },
+    "White Knight": {
+      "name": "White Knight",
+      "oracle_id": "ddb021df-ae4a-4ac1-8353-d0b375761714",
+      "layout": "normal",
+      "type_line": "Creature — Human Knight",
+      "mana_cost": "{W}{W}",
+      "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nProtection from black (This creature can't be blocked, targeted, dealt damage, or enchanted by anything black.)",
+      "keywords": [
+        "First strike",
+        "Protection"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "2"
+    }
+  },
+  "profiles": {
+    "Afterlife": {
+      "csvid": 2389,
+      "source": {
+        "name": "Afterlife",
+        "oracle_id": "4c13e2b5-961a-4031-84b1-15bd19b94286",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{W}",
+        "oracle_text": "Destroy target creature. It can't be regenerated. Its controller creates a 1/1 white Spirit creature token with flying.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Afterlife",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": true,
+        "secondary": {
+          "token": {
+            "name": "Spirit",
+            "power": 1,
+            "toughness": 1,
+            "colors": [
+              "W"
+            ],
+            "subtypes": [
+              "Spirit"
+            ],
+            "flying": true,
+            "count": 1
+          }
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Beast Within": {
+      "csvid": 11565,
+      "source": {
+        "name": "Beast Within",
+        "oracle_id": "7735eeba-693b-47e2-bd51-414379cf1016",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{G}",
+        "oracle_text": "Destroy target permanent. Its controller creates a 3/3 green Beast creature token.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Beast Within",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "permanent",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "token": {
+            "name": "Beast",
+            "power": 3,
+            "toughness": 3,
+            "colors": [
+              "G"
+            ],
+            "subtypes": [
+              "Beast"
+            ],
+            "flying": false,
+            "count": 1
+          }
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Peace and Quiet": {
+      "csvid": 4031,
+      "source": {
+        "name": "Peace and Quiet",
+        "oracle_id": "0517f736-e6eb-4fdb-8288-e0c8a9a44379",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{W}",
+        "oracle_text": "Destroy two target enchantments.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Peace and Quiet",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "enchantment",
+        "count": 2,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Into the Core": {
+      "csvid": 11465,
+      "source": {
+        "name": "Into the Core",
+        "oracle_id": "ad08ad3a-bc58-43da-b7f3-4a478132da8a",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{R}{R}",
+        "oracle_text": "Exile two target artifacts.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Into the Core",
+        "mode": "target",
+        "effect": "exile",
+        "scope": "artifact",
+        "count": 2,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Artisan's Sorrow": {
+      "csvid": 13380,
+      "source": {
+        "name": "Artisan's Sorrow",
+        "oracle_id": "115fd5ac-460b-49a3-83ed-9d56a7aecb14",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{3}{G}",
+        "oracle_text": "Destroy target artifact or enchantment. Scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "G"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Artisan's Sorrow",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "artifact_or_enchantment",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "scry": 2
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Anguished Unmaking": {
+      "csvid": 15736,
+      "source": {
+        "name": "Anguished Unmaking",
+        "oracle_id": "ad09b3c3-c8e7-481c-8c45-e7f234935117",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{W}{B}",
+        "oracle_text": "Exile target nonland permanent. You lose 3 life.",
+        "keywords": [],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Anguished Unmaking",
+        "mode": "target",
+        "effect": "exile",
+        "scope": "nonland_permanent",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "lose_life": 3
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Forced March": {
+      "csvid": 4470,
+      "source": {
+        "name": "Forced March",
+        "oracle_id": "457dc141-bc72-42ad-b482-c78183462e34",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{X}{B}{B}{B}",
+        "oracle_text": "Destroy all creatures with mana value X or less.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Forced March",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 0,
+        "variable": true,
+        "limit": {
+          "field": "mana_value",
+          "op": "le",
+          "value": "x"
+        },
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Fracturing Gust": {
+      "csvid": 9538,
+      "source": {
+        "name": "Fracturing Gust",
+        "oracle_id": "011d4f47-c6fd-434b-98f2-2f558fbff40b",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{G/W}{G/W}{G/W}",
+        "oracle_text": "Destroy all artifacts and enchantments. You gain 2 life for each permanent destroyed this way.",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Fracturing Gust",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "artifact_or_enchantment",
+        "count": 0,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "gain_per": 2
+        },
+        "cost": {
+          "hybrid": [
+            "G",
+            "W"
+          ]
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Complete Disregard": {
+      "csvid": 15298,
+      "source": {
+        "name": "Complete Disregard",
+        "oracle_id": "b0bd842c-d518-42b3-850c-22a70f7f1436",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{B}",
+        "oracle_text": "Devoid (This card has no color.)\nExile target creature with power 3 or less.",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Complete Disregard",
+        "mode": "target",
+        "effect": "exile",
+        "scope": "creature",
+        "count": 1,
+        "variable": false,
+        "limit": {
+          "field": "power",
+          "op": "le",
+          "value": 3
+        },
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "devoid": true
+      }
+    },
+    "Oblivion Strike": {
+      "csvid": 15654,
+      "source": {
+        "name": "Oblivion Strike",
+        "oracle_id": "ad3564f5-11f7-456b-8881-4db00a18a2ed",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{3}{B}",
+        "oracle_text": "Devoid (This card has no color.)\nExile target creature.",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "cmc": 4.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Oblivion Strike",
+        "mode": "target",
+        "effect": "exile",
+        "scope": "creature",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "devoid": true
+      }
+    },
+    "Return to the Earth": {
+      "csvid": 14612,
+      "source": {
+        "name": "Return to the Earth",
+        "oracle_id": "722f2965-a1ec-4b97-a4bd-b99364f58b1e",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{3}{G}",
+        "oracle_text": "Destroy target artifact, enchantment, or creature with flying.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Return to the Earth",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "artifact_enchantment_or_flying_creature",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Radiant Purge": {
+      "csvid": 14986,
+      "source": {
+        "name": "Radiant Purge",
+        "oracle_id": "b61718ad-7102-4ed2-b884-733bc46df715",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{W}",
+        "oracle_text": "Exile target multicolored creature or multicolored enchantment.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Radiant Purge",
+        "mode": "target",
+        "effect": "exile",
+        "scope": "multicolored_creature_or_enchantment",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Rack and Ruin": {
+      "csvid": 4042,
+      "source": {
+        "name": "Rack and Ruin",
+        "oracle_id": "e04552f4-41c1-40f3-996e-de796c9967e4",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{R}",
+        "oracle_text": "Destroy two target artifacts.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Rack and Ruin",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "artifact",
+        "count": 2,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Hex": {
+      "csvid": 7877,
+      "source": {
+        "name": "Hex",
+        "oracle_id": "89457fa8-b0e2-4277-b6a9-c6601c59b46d",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{B}{B}",
+        "oracle_text": "Destroy six target creatures.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 6.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Hex",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 6,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Violent Ultimatum": {
+      "csvid": 10096,
+      "source": {
+        "name": "Violent Ultimatum",
+        "oracle_id": "a04cfcc5-7bb4-4352-ad8d-9d625585e656",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{B}{B}{R}{R}{R}{G}{G}",
+        "oracle_text": "Destroy three target permanents.",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G",
+          "R"
+        ],
+        "cmc": 7.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Violent Ultimatum",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "permanent",
+        "count": 3,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Relic Crush": {
+      "csvid": 10647,
+      "source": {
+        "name": "Relic Crush",
+        "oracle_id": "92381398-94f6-471f-874a-b5894e6f9487",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{4}{G}",
+        "oracle_text": "Destroy target artifact or enchantment and up to one other target artifact or enchantment.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Relic Crush",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "artifact_or_enchantment",
+        "count": 2,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "optional_second": true
+      }
+    },
+    "Wicked Pact": {
+      "csvid": 2840,
+      "source": {
+        "name": "Wicked Pact",
+        "oracle_id": "39e21a5a-b278-478a-854c-17695c0f6246",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{B}{B}",
+        "oracle_text": "Destroy two target nonblack creatures. You lose 5 life.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Wicked Pact",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "nonblack_creature",
+        "count": 2,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "lose_life": 5
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Reckless Spite": {
+      "csvid": 3242,
+      "source": {
+        "name": "Reckless Spite",
+        "oracle_id": "a684df3a-5441-4daa-86d1-c47a91b35e6a",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{B}{B}",
+        "oracle_text": "Destroy two target nonblack creatures. You lose 5 life.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Reckless Spite",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "nonblack_creature",
+        "count": 2,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "lose_life": 5
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Fumarole": {
+      "csvid": 1938,
+      "source": {
+        "name": "Fumarole",
+        "oracle_id": "a9e33138-e1c0-4b69-b868-1ce8493c073d",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{3}{B}{R}",
+        "oracle_text": "As an additional cost to cast this spell, pay 3 life.\nDestroy target creature and target land.",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Fumarole",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 2,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {
+          "pay_life": 3
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "target_scopes": [
+          "creature",
+          "land"
+        ]
+      }
+    },
+    "Plague Spores": {
+      "csvid": 5066,
+      "source": {
+        "name": "Plague Spores",
+        "oracle_id": "f79f5cb7-d238-41ab-85f0-eb21cc6bf561",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{B}{R}",
+        "oracle_text": "Destroy target nonblack creature and target land. They can't be regenerated.",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "cmc": 6.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Plague Spores",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "nonblack_creature",
+        "count": 2,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": true,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "target_scopes": [
+          "nonblack_creature",
+          "land"
+        ]
+      }
+    },
+    "Stomp and Howl": {
+      "csvid": 8298,
+      "source": {
+        "name": "Stomp and Howl",
+        "oracle_id": "7cc809ed-5ce1-40d1-896d-014ca8e2b5a6",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{G}",
+        "oracle_text": "Destroy target artifact and target enchantment.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Stomp and Howl",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "artifact",
+        "count": 2,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "target_scopes": [
+          "artifact",
+          "enchantment"
+        ]
+      }
+    },
+    "Decimate": {
+      "csvid": 5531,
+      "source": {
+        "name": "Decimate",
+        "oracle_id": "a4e5693f-12a0-451e-818d-d6efc7b4ed25",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{R}{G}",
+        "oracle_text": "Destroy target artifact, target creature, target enchantment, and target land. (You can't cast this spell unless you have legal choices for all its targets.)",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Decimate",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "artifact",
+        "count": 4,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "target_scopes": [
+          "artifact",
+          "creature",
+          "enchantment",
+          "land"
+        ]
+      }
+    },
+    "Grip of Desolation": {
+      "csvid": 15338,
+      "source": {
+        "name": "Grip of Desolation",
+        "oracle_id": "a7c8d026-b5b0-4912-a4a0-4c35df5f8899",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{4}{B}{B}",
+        "oracle_text": "Devoid (This card has no color.)\nExile target creature and target land.",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "cmc": 6.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Grip of Desolation",
+        "mode": "target",
+        "effect": "exile",
+        "scope": "creature",
+        "count": 2,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "target_scopes": [
+          "creature",
+          "land"
+        ],
+        "devoid": true
+      }
+    },
+    "By Force": {
+      "csvid": 16856,
+      "source": {
+        "name": "By Force",
+        "oracle_id": "7ce950fb-e065-45d3-aeff-f8c475460754",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{X}{R}",
+        "oracle_text": "Destroy X target artifacts.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "By Force",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "artifact",
+        "count": "x",
+        "variable": true,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {
+          "x_selection": "targets"
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Pongify": {
+      "csvid": 8822,
+      "source": {
+        "name": "Pongify",
+        "oracle_id": "05849bd6-8f38-4031-be2b-e2aa03beb8cc",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "Destroy target creature. It can't be regenerated. Its controller creates a 3/3 green Ape creature token.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Pongify",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": true,
+        "secondary": {
+          "token": {
+            "name": "Ape",
+            "power": 3,
+            "toughness": 3,
+            "colors": [
+              "G"
+            ],
+            "subtypes": [
+              "Ape"
+            ],
+            "observed_subtypes": [
+              "Ape"
+            ],
+            "flying": false,
+            "count": 1
+          }
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Rapid Hybridization": {
+      "csvid": 13034,
+      "source": {
+        "name": "Rapid Hybridization",
+        "oracle_id": "06692cd9-ac2f-4a32-8fd1-043ba3c0fe71",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "Destroy target creature. It can't be regenerated. That creature's controller creates a 3/3 green Frog Lizard creature token.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Rapid Hybridization",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": true,
+        "secondary": {
+          "token": {
+            "name": "Frog Lizard",
+            "power": 3,
+            "toughness": 3,
+            "colors": [
+              "G"
+            ],
+            "subtypes": [
+              "Frog",
+              "Lizard"
+            ],
+            "observed_subtypes": [
+              "Frog",
+              "Lizard"
+            ],
+            "flying": false,
+            "count": 1
+          }
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "March of Souls": {
+      "csvid": 5257,
+      "source": {
+        "name": "March of Souls",
+        "oracle_id": "bca7101b-e74b-42af-ac63-1b3defb4137d",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{W}",
+        "oracle_text": "Destroy all creatures. They can't be regenerated. For each creature destroyed this way, its controller creates a 1/1 white Spirit creature token with flying.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "March of Souls",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 0,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": true,
+        "secondary": {
+          "token": {
+            "name": "Spirit",
+            "power": 1,
+            "toughness": 1,
+            "colors": [
+              "W"
+            ],
+            "subtypes": [
+              "Spirit"
+            ],
+            "flying": true,
+            "count": 1,
+            "for_each": "destroyed"
+          }
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Mogg Infestation": {
+      "csvid": 3398,
+      "source": {
+        "name": "Mogg Infestation",
+        "oracle_id": "cfd61b53-83c6-4886-8503-ddcb92dc7f85",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{3}{R}{R}",
+        "oracle_text": "Destroy all creatures target player controls. For each creature that died this way, that player creates two 1/1 red Goblin creature tokens.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Mogg Infestation",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 0,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "token": {
+            "name": "Goblin",
+            "power": 1,
+            "toughness": 1,
+            "colors": [
+              "R"
+            ],
+            "subtypes": [
+              "Goblin"
+            ],
+            "flying": false,
+            "count": 2,
+            "for_each": "died"
+          }
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "controller": "target_player"
+      }
+    },
+    "Tel-Jilad Justice": {
+      "csvid": 7138,
+      "source": {
+        "name": "Tel-Jilad Justice",
+        "oracle_id": "6c853b95-3d98-44fd-b05a-02d05d5eb0b8",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{G}",
+        "oracle_text": "Destroy target artifact. Scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "G"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Tel-Jilad Justice",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "artifact",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "scry": 2
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Skywhaler's Shot": {
+      "csvid": 16523,
+      "source": {
+        "name": "Skywhaler's Shot",
+        "oracle_id": "f3d4e48e-5f98-44a6-ad5c-a1c068aa01eb",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{W}",
+        "oracle_text": "Destroy target creature with power 3 or greater. Scry 1. (Look at the top card of your library. You may put that card on the bottom.)",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "W"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Skywhaler's Shot",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 1,
+        "variable": false,
+        "limit": {
+          "field": "power",
+          "op": "ge",
+          "value": 3
+        },
+        "no_regenerate": false,
+        "secondary": {
+          "scry": 1
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Grisly Spectacle": {
+      "csvid": 12961,
+      "source": {
+        "name": "Grisly Spectacle",
+        "oracle_id": "8c83d21a-6138-409f-8e00-75dcd14388e2",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{B}{B}",
+        "oracle_text": "Destroy target nonartifact creature. Its controller mills cards equal to that creature's power.",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Grisly Spectacle",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "nonartifact_creature",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "mill": "power"
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Pistus Strike": {
+      "csvid": 11505,
+      "source": {
+        "name": "Pistus Strike",
+        "oracle_id": "138f9daa-19d4-4290-94a7-09e00dbcebb0",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{G}",
+        "oracle_text": "Destroy target creature with flying. Its controller gets a poison counter.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Pistus Strike",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "flying_creature",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "poison": 1
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Assassin's Strike": {
+      "csvid": 12655,
+      "source": {
+        "name": "Assassin's Strike",
+        "oracle_id": "1ad6339d-6206-49bf-bf97-05e6d3bcaab7",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{B}{B}",
+        "oracle_text": "Destroy target creature. Its controller discards a card.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 6.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Assassin's Strike",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "discard": 1
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Desecrated Earth": {
+      "csvid": 10528,
+      "source": {
+        "name": "Desecrated Earth",
+        "oracle_id": "3c9242fd-915b-4f6d-b4ee-830c9d80c9e8",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{B}",
+        "oracle_text": "Destroy target land. Its controller discards a card.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Desecrated Earth",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "land",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "discard": 1
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Consume the Meek": {
+      "csvid": 10891,
+      "source": {
+        "name": "Consume the Meek",
+        "oracle_id": "c2555c38-1bfc-48c1-85aa-7e40117db78b",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{3}{B}{B}",
+        "oracle_text": "Destroy each creature with mana value 3 or less. They can't be regenerated.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Consume the Meek",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 0,
+        "variable": false,
+        "limit": {
+          "field": "mana_value",
+          "op": "le",
+          "value": 3
+        },
+        "no_regenerate": true,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Culling Sun": {
+      "csvid": 8040,
+      "source": {
+        "name": "Culling Sun",
+        "oracle_id": "e41d9b3a-0712-4174-8c5c-224065a63b16",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{W}{W}{B}",
+        "oracle_text": "Destroy each creature with mana value 3 or less.",
+        "keywords": [],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Culling Sun",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 0,
+        "variable": false,
+        "limit": {
+          "field": "mana_value",
+          "op": "le",
+          "value": 3
+        },
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Granulate": {
+      "csvid": 7064,
+      "source": {
+        "name": "Granulate",
+        "oracle_id": "fdcec649-6651-4ba0-bd3f-84f16e65397d",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{R}{R}",
+        "oracle_text": "Destroy each nonland artifact with mana value 4 or less.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Granulate",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "nonland_artifact",
+        "count": 0,
+        "variable": false,
+        "limit": {
+          "field": "mana_value",
+          "op": "le",
+          "value": 4
+        },
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Seeds of Innocence": {
+      "csvid": 2600,
+      "source": {
+        "name": "Seeds of Innocence",
+        "oracle_id": "f5ebad5c-9675-4a37-b76c-760416083939",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{G}{G}",
+        "oracle_text": "Destroy all artifacts. They can't be regenerated. The controller of each of those artifacts gains life equal to its mana value.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Seeds of Innocence",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "artifact",
+        "count": 0,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": true,
+        "secondary": {
+          "controller_life": "mana_value_all"
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Meltdown": {
+      "csvid": 3825,
+      "source": {
+        "name": "Meltdown",
+        "oracle_id": "8fd85a54-f0c7-4e9f-a4b4-b9b513b98d95",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{X}{R}",
+        "oracle_text": "Destroy each artifact with mana value X or less.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Meltdown",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "artifact",
+        "count": 0,
+        "variable": true,
+        "limit": {
+          "field": "mana_value",
+          "op": "le",
+          "value": "x"
+        },
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    },
+    "Gaze of Granite": {
+      "csvid": 13150,
+      "source": {
+        "name": "Gaze of Granite",
+        "oracle_id": "103d9ad0-d655-4bd5-a899-e9f8869e333d",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{X}{B}{B}{G}",
+        "oracle_text": "Destroy each nonland permanent with mana value X or less.",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Gaze of Granite",
+        "mode": "mass",
+        "effect": "destroy",
+        "scope": "nonland_permanent",
+        "count": 0,
+        "variable": true,
+        "limit": {
+          "field": "mana_value",
+          "op": "le",
+          "value": "x"
+        },
+        "no_regenerate": false,
+        "secondary": {},
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      }
+    }
+  }
+}

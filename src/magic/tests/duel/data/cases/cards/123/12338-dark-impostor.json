@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "card": "Dark Impostor",
+  "csvid": 12338,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "resource_growth",
+        "kind": "battlefield_exile",
+        "cost": [
+          4,
+          2,
+          0,
+          0,
+          0,
+          0
+        ],
+        "scope": "target",
+        "tap": false,
+        "random_discard": false,
+        "creature_discard": false,
+        "activation_menu": true,
+        "resolution_menu": false,
+        "unused": [
+          "inherited activated abilities of nonvanilla exiles"
+        ],
+        "conditions": [
+          "no surviving source with an activated-ability exile"
+        ]
+      },
+      "oracle_text": "{4}{B}{B}: Exile target creature and put a +1/+1 counter on this creature.\nThis creature has all activated abilities of all creature cards exiled with it.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "source_destroyed_pending_0",
+        "source_bounced_pending_0",
+        "repeat_0",
+        "cast_payment_0",
+        "tapped_source_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "own_target_0",
+        "target_bounced_pending_0",
+        "target_shroud_probe_0",
+        "target_hexproof_probe_0",
+        "target_noncreature_probe_0",
+        "self_target_0",
+        "indestructible_target_0",
+        "effect_1",
+        "payment_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "source_destroyed_pending_1",
+        "source_bounced_pending_1",
+        "repeat_1",
+        "cast_payment_1",
+        "tapped_source_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "own_target_1",
+        "target_bounced_pending_1",
+        "target_shroud_probe_1",
+        "target_hexproof_probe_1",
+        "target_noncreature_probe_1",
+        "self_target_1",
+        "indestructible_target_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle resource growth: actual source casts, printed discard or mana/tap costs, exact pending and resolved counter/zone/life receipts, typed cost and target controls, source/target loss, cleanup, repeat and replay. Elective alternate modes and dormant combat/upkeep clauses are explicit component gaps. Random discard uses uniform hands; Ooze noncreature selections use creature-free graveyards. Shauku actual cast and real untap readiness are exercised. Authoritative native/Wasm validation is recorded in the wave5 report."
+}

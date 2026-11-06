@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "card": "Lava Coil",
+  "csvid": 19417,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell_extension",
+      "version": 2,
+      "params": {
+        "kind": "targeted",
+        "effect": {
+          "amount": 4,
+          "targets": [
+            "creature"
+          ],
+          "exile_on_death": true
+        },
+        "gain_life": 0,
+        "inactive_components": [],
+        "choices_before_target": [],
+        "choices_after_target": [],
+        "skip_before_choices_on_exact_payment": false,
+        "skip_after_choices_on_exact_payment": false,
+        "omit_variants": []
+      },
+      "oracle_text": "Lava Coil deals 4 damage to target creature. If that creature would die this turn, exile it instead.",
+      "variants": [
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "survivor_0",
+        "lethal_0",
+        "lost_target_0",
+        "friendly_0",
+        "empty_0",
+        "wrong_type_0",
+        "later_death_0",
+        "expired_death_0",
+        "indestructible_0",
+        "regenerate_0",
+        "pending_snapshot_0",
+        "wrong_payment_color_0",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "survivor_1",
+        "lethal_1",
+        "lost_target_1",
+        "friendly_1",
+        "empty_1",
+        "wrong_type_1",
+        "later_death_1",
+        "expired_death_1",
+        "indestructible_1",
+        "regenerate_1",
+        "pending_snapshot_1",
+        "wrong_payment_color_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed fixed damage component through ordinary mana-paid casting; all other named clauses are explicit recipe metadata gaps."
+}

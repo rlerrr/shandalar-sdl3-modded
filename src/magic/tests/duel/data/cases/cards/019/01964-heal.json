@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Heal",
+  "csvid": 1964,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Next turn's upkeep draw trigger"
+        ]
+      },
+      "oracle_text": "Prevent the next 1 damage that would be dealt to any target this turn.\nDraw a card at the beginning of the next turn's upkeep.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "other_damage_0",
+        "repeat_damage_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "self_player_0",
+        "opponent_player_0",
+        "opponent_creature_0",
+        "effect_1",
+        "payment_1",
+        "other_damage_1",
+        "repeat_damage_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "self_player_1",
+        "opponent_player_1",
+        "opponent_creature_1"
+      ]
+    }
+  ]
+}

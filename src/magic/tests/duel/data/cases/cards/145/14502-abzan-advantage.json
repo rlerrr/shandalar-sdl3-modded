@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Abzan Advantage",
+  "csvid": 14502,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "sacrifice_bolster",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": []
+      },
+      "oracle_text": "Target player sacrifices an enchantment of their choice. Bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "preexisting_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "two_copies_0",
+        "countered_0",
+        "opposing_turn_0",
+        "self_target_0",
+        "no_enchantment_0",
+        "empty_team_0",
+        "selection_pending_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "preexisting_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "two_copies_1",
+        "countered_1",
+        "opposing_turn_1",
+        "self_target_1",
+        "no_enchantment_1",
+        "empty_team_1",
+        "selection_pending_1"
+      ]
+    }
+  ]
+}

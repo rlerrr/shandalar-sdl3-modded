@@ -1,0 +1,106 @@
+{
+  "version": 1,
+  "card": "Drogskol Cavalry",
+  "csvid": 15790,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 3,
+        "mechanism": "cost_creator",
+        "token": {
+          "name": "Spirit",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "W"
+          ],
+          "subtypes": [
+            "Spirit"
+          ],
+          "artifact": false,
+          "keywords": [
+            "Flying"
+          ]
+        },
+        "amount": {
+          "fixed": 1
+        },
+        "activation": {
+          "mana": [
+            3,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "tap": false,
+          "untap": false,
+          "sacrifice": false,
+          "additional": null,
+          "additional_count": 0,
+          "only_sorcery": false
+        },
+        "operative": [
+          {
+            "kind": "another_controlled_spirit_entry_gain2"
+          }
+        ],
+        "source_keywords": [
+          "Flying"
+        ],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Flying\nWhenever another Spirit you control enters, you gain 2 life.\n{3}{W}: Create a 1/1 white Spirit creature token with flying.",
+      "variants": [
+        "create_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "flying_evasion_0",
+        "source_flying_evasion_0",
+        "normal_spirit_entry_0",
+        "opponent_spirit_entry_0",
+        "ordinary_entry_0",
+        "source_removed_entry_0",
+        "create_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "flying_evasion_1",
+        "source_flying_evasion_1",
+        "normal_spirit_entry_1",
+        "opponent_spirit_entry_1",
+        "ordinary_entry_1",
+        "source_removed_entry_1"
+      ]
+    }
+  ]
+}

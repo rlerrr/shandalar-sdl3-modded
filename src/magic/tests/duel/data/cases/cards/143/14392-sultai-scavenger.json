@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "card": "Sultai Scavenger",
+  "csvid": 14392,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "delve",
+        "exile_scope": "own_any",
+        "additional_components": [
+          "Printed Flying combat behavior is not exercised in this initial Delve cost component."
+        ]
+      },
+      "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nFlying",
+      "variants": [
+        "effect_0",
+        "zero_cost_0",
+        "one_cost_0",
+        "max_cost_0",
+        "normal_payment_0",
+        "payment_0",
+        "no_own_graveyard_0",
+        "empty_graveyards_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "insufficient_exile_cost_0",
+        "opponent_only_cost_0",
+        "alternate_cost_0",
+        "bare_zones_0",
+        "countered_0",
+        "repeat_0",
+        "destroy_source_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "effect_1",
+        "zero_cost_1",
+        "one_cost_1",
+        "max_cost_1",
+        "normal_payment_1",
+        "payment_1",
+        "no_own_graveyard_1",
+        "empty_graveyards_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "insufficient_exile_cost_1",
+        "opponent_only_cost_1",
+        "alternate_cost_1",
+        "bare_zones_1",
+        "countered_1",
+        "repeat_1",
+        "destroy_source_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Undying Evil",
+  "csvid": 12284,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_lifecycle",
+        "mode": "undying",
+        "controller": "any",
+        "protection_color": null,
+        "inactive_components": [
+          "Sacrifice and lethal-damage death causes beyond the real Murder destruction path are not drafted."
+        ]
+      },
+      "oracle_text": "Target creature gains undying until end of turn. (When it dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "preexisting_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "countered_0",
+        "lost_target_0",
+        "selection_pending_0",
+        "opposing_turn_0",
+        "wrong_type_0",
+        "empty_0",
+        "opponent_0",
+        "bounce_instead_0",
+        "repeat_grant_0",
+        "returned_cleanup_0",
+        "foreign_owner_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "preexisting_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "countered_1",
+        "lost_target_1",
+        "selection_pending_1",
+        "opposing_turn_1",
+        "wrong_type_1",
+        "empty_1",
+        "opponent_1",
+        "bounce_instead_1",
+        "repeat_grant_1",
+        "returned_cleanup_1",
+        "foreign_owner_1"
+      ]
+    }
+  ]
+}

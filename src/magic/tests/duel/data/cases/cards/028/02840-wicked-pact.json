@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "card": "Wicked Pact",
+  "csvid": 2840,
+  "recipes": [
+    {
+      "family": "target_removal",
+      "version": 2,
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Wicked Pact",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "nonblack_creature",
+        "count": 2,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": false,
+        "secondary": {
+          "lose_life": 5
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      },
+      "oracle_text": "Destroy two target nonblack creatures. You lose 5 life.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "own_target_0",
+        "stolen_target_0",
+        "lost_all_0",
+        "bounced_target_0",
+        "wrong_type_0",
+        "indestructible_target_0",
+        "target_hexproof_0",
+        "partial_lost_0",
+        "short_targets_0",
+        "partial_hexproof_0",
+        "mixed_controller_0",
+        "regeneration_0",
+        "predicate_black_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "own_target_1",
+        "stolen_target_1",
+        "lost_all_1",
+        "bounced_target_1",
+        "wrong_type_1",
+        "indestructible_target_1",
+        "target_hexproof_1",
+        "partial_lost_1",
+        "short_targets_1",
+        "partial_hexproof_1",
+        "mixed_controller_1",
+        "regeneration_1",
+        "predicate_black_1"
+      ]
+    }
+  ]
+}

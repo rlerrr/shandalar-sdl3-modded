@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "card": "Trash for Treasure",
+  "csvid": 6819,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Trash for Treasure",
+        "kind": "cost_effect",
+        "cost_scope": "artifact",
+        "cost_count": 1,
+        "effect": "reanimate",
+        "target": "graveyard",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "cost_witnesses": [
+          "Darksteel Relic",
+          "Darksteel Relic"
+        ],
+        "target_scope": "artifact",
+        "preferred": "Sol Ring",
+        "other_target": "Phyrexian Hulk",
+        "initial_graveyard": [
+          "Phyrexian Hulk",
+          "Sol Ring",
+          "Scathe Zombies",
+          "Giant Growth",
+          "Forest"
+        ],
+        "counter_response": true
+      },
+      "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact.\nReturn target artifact card from your graveyard to the battlefield.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_cost_0",
+        "stolen_cost_0",
+        "indestructible_cost_0",
+        "empty_graveyard_0",
+        "wrong_graveyard_0",
+        "other_target_0",
+        "target_removed_0",
+        "returned_activate_0",
+        "returned_attack_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_cost_1",
+        "stolen_cost_1",
+        "indestructible_cost_1",
+        "empty_graveyard_1",
+        "wrong_graveyard_1",
+        "other_target_1",
+        "target_removed_1",
+        "returned_activate_1",
+        "returned_attack_1"
+      ]
+    }
+  ]
+}

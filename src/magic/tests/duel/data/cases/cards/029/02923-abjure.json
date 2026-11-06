@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Abjure",
+  "csvid": 2923,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": {
+            "action": "sacrifice",
+            "filter": "blue",
+            "witness": "Wind Drake"
+          },
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      },
+      "oracle_text": "As an additional cost to cast this spell, sacrifice a blue permanent.\nCounter target spell.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "no_cost_resource_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_instant_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1",
+        "no_cost_resource_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source identity and Oracle text are pinned. Actual parent and response casts use stack1/stack2 and normal legality, payment and selection for both controllers. Tests cover printed fixed or derived taxes, pay/decline/exact/unaffordable decisions, source costs and missing resources, typed targets, own/opposing spells, selected/unselected permanents, exact zone multiplicities and ordered libraries, and snapshot replay as applicable.  Countered response sources, lost targets, replacement/prevention, simultaneous responses and multiplayer remain separate gaps."
+}

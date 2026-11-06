@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Rakalite",
+  "csvid": 520,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "{2}",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Return to hand at the next end step"
+        ]
+      },
+      "oracle_text": "{2}: Prevent the next 1 damage that would be dealt to any target this turn. Return this artifact to its owner's hand at the beginning of the next end step.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "other_damage_0",
+        "repeat_damage_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "self_player_0",
+        "opponent_player_0",
+        "opponent_creature_0",
+        "source_removed_0",
+        "effect_1",
+        "payment_1",
+        "other_damage_1",
+        "repeat_damage_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "self_player_1",
+        "opponent_player_1",
+        "opponent_creature_1",
+        "source_removed_1"
+      ]
+    }
+  ]
+}

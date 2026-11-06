@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "card": "Epicenter",
+  "csvid": 5559,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Epicenter",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "any",
+        "scope": "land",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "condition": {
+          "kind": "threshold",
+          "count": 7
+        },
+        "unrelated_controls": true,
+        "recipient_checks": true
+      },
+      "oracle_text": "Target player sacrifices a land of their choice.\nThreshold \u2014 Each player sacrifices all lands they control instead if there are seven or more cards in your graveyard.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_recipients_0",
+        "own_target_0",
+        "target_shrouded_pending_0",
+        "indestructible_recipients_0",
+        "stolen_recipients_0",
+        "threshold_6_0",
+        "threshold_7_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_recipients_1",
+        "own_target_1",
+        "target_shrouded_pending_1",
+        "indestructible_recipients_1",
+        "stolen_recipients_1",
+        "threshold_6_1",
+        "threshold_7_1",
+        "alternate_choice_1"
+      ]
+    }
+  ]
+}

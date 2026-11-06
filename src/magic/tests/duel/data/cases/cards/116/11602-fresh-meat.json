@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "card": "Fresh Meat",
+  "csvid": 11602,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 1,
+        "mechanism": "death_history",
+        "token": {
+          "name": "Beast",
+          "power": 3,
+          "toughness": 3,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Beast"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "amount": {
+          "basis": "all_owned_grave_creature_deaths_current_turn"
+        },
+        "activation": null,
+        "operative": [],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Create a 3/3 green Beast creature token for each creature put into your graveyard from the battlefield this turn.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "ready_snapshot_0",
+        "effect_snapshot_0",
+        "cleanup_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "zero_0",
+        "token_deaths_0",
+        "ownership_0",
+        "opponent_deaths_0",
+        "prior_turn_expired_0",
+        "purged_history_0",
+        "pending_snapshot_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "ready_snapshot_1",
+        "effect_snapshot_1",
+        "cleanup_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "zero_1",
+        "token_deaths_1",
+        "ownership_1",
+        "opponent_deaths_1",
+        "prior_turn_expired_1",
+        "purged_history_1",
+        "pending_snapshot_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

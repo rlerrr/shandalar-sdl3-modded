@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Vigor",
+  "csvid": 9297,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "modifier",
+        "damage_rule": "own_other_growth",
+        "gaps": [
+          "Trample combat as attacker",
+          "Graveyard shuffle from battlefield, discard and mill"
+        ]
+      },
+      "oracle_text": "Trample\nIf damage would be dealt to another creature you control, prevent that damage. Put a +1/+1 counter on that creature for each 1 damage prevented this way.\nWhen Vigor is put into a graveyard from anywhere, shuffle it into its owner's library.",
+      "variants": [
+        "effect_0",
+        "small_damage_0",
+        "repeat_damage_0",
+        "source_damage_0",
+        "opponent_creature_0",
+        "self_player_0",
+        "opponent_player_0",
+        "friendly_source_0",
+        "creature_damage_0",
+        "cleanup_0",
+        "source_removed_0",
+        "payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "damaged_snapshot_0",
+        "bare_zones_0",
+        "untargeted_spell_0",
+        "creature_ability_0",
+        "large_combat_0",
+        "effect_1",
+        "small_damage_1",
+        "repeat_damage_1",
+        "source_damage_1",
+        "opponent_creature_1",
+        "self_player_1",
+        "opponent_player_1",
+        "friendly_source_1",
+        "creature_damage_1",
+        "cleanup_1",
+        "source_removed_1",
+        "payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "damaged_snapshot_1",
+        "bare_zones_1",
+        "untargeted_spell_1",
+        "creature_ability_1",
+        "large_combat_1"
+      ]
+    }
+  ]
+}

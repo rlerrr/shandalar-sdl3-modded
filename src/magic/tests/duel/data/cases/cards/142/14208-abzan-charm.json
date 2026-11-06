@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Abzan Charm",
+  "csvid": 14208,
+  "recipes": [
+    {
+      "family": "life_spell_extension",
+      "version": 2,
+      "oracle_text": "Choose one \u2014\n\u2022 Exile target creature with power 3 or greater.\n\u2022 You draw two cards and you lose 2 life.\n\u2022 Distribute two +1/+1 counters among one or two target creatures.",
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          },
+          {
+            "kind": "lose_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [
+          1
+        ],
+        "cast_after": [],
+        "gaps": [
+          "exile mode",
+          "counter distribution mode"
+        ],
+        "inactive": [],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_cast_0",
+        "opposing_turn_0",
+        "combat_0",
+        "exact_library_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_cast_1",
+        "opposing_turn_1",
+        "combat_1",
+        "exact_library_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Rust",
+  "csvid": 778,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Triggered-parent rejection remains unproven: no script fabricates a pending triggered callback.",
+          "Activated abilities from off-battlefield cards, departed sources, changed control, multiple pending activations/responses, replacements/prevention and multiplayer.",
+          "Dragon Whelp activation count remains below four, so its conditional end-step sacrifice is inactive.",
+          "Enchantment/land activated sources and planeswalker source controls remain outside this initial creature/artifact fixture."
+        ],
+        "extension": {
+          "wave": 5,
+          "ability_counter": {
+            "allowed_sources": [
+              "artifact"
+            ],
+            "draw": 0,
+            "disable_parent": false,
+            "default_parent": "icy"
+          }
+        }
+      },
+      "oracle_text": "Counter target activated ability from an artifact source. (Mana abilities can't be targeted.)",
+      "variants": [
+        "opponent_0",
+        "own_ability_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_mana_0",
+        "no_stack_0",
+        "mana_ability_0",
+        "spell_parent_0",
+        "snapshot_0",
+        "control_activation_0",
+        "wrong_source_0",
+        "opponent_1",
+        "own_ability_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_mana_1",
+        "no_stack_1",
+        "mana_ability_1",
+        "spell_parent_1",
+        "snapshot_1",
+        "control_activation_1",
+        "wrong_source_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Actual Dragon Whelp R pump or Icy Manipulator 1/tap activation creates the nonmana parent; retained parent costs, canceled/surviving effect, unrelated-source control, source usability/Interdict lock and next-turn expiry, mana/no-stack/spell-parent rejection. Triggered-parent rejection remains unproven: no script fabricates a pending triggered callback. Activated abilities from off-battlefield cards, departed sources, changed control, multiple pending activations/responses, replacements/prevention and multiplayer. Dragon Whelp activation count remains below four, so its conditional end-step sacrifice is inactive. Enchantment/land activated sources and planeswalker source controls remain outside this initial creature/artifact fixture."
+}

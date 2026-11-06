@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Molten Hydra",
+  "csvid": 4021,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "resource_growth",
+        "scope": "self",
+        "tap": false,
+        "random_discard": false,
+        "creature_discard": false,
+        "activation_menu": false,
+        "resolution_menu": false,
+        "kind": "permanent",
+        "cost": [
+          1,
+          0,
+          0,
+          0,
+          2,
+          0
+        ],
+        "activation_menu_players": [
+          1
+        ],
+        "unused": [
+          "elective counter-to-damage mode"
+        ],
+        "conditions": [
+          "counter damage mode is unselected",
+          "no combat or upkeep step"
+        ]
+      },
+      "oracle_text": "{1}{R}{R}: Put a +1/+1 counter on this creature.\n{T}, Remove all +1/+1 counters from this creature: It deals damage to any target equal to the number of +1/+1 counters removed this way.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "source_destroyed_pending_0",
+        "source_bounced_pending_0",
+        "repeat_0",
+        "cast_payment_0",
+        "tapped_source_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "effect_1",
+        "payment_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "source_destroyed_pending_1",
+        "source_bounced_pending_1",
+        "repeat_1",
+        "cast_payment_1",
+        "tapped_source_1",
+        "insufficient_mana_1",
+        "wrong_color_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle ordinary persistent growth: actual source casting, printed activation costs, source/target-independent self growth, source loss, explicit bounced-source counter clearing, repeated growth, cleanup and pending replay. Every actual activation has a fresh or already-tapped source, disabling its independent tap-to-damage mode; that elective mode remains an explicit component gap. Human single-choice auto-selection and presented AI input are pinned independently of Oracle expectations. Authoritative native/Wasm validation is recorded in the wave5 report."
+}

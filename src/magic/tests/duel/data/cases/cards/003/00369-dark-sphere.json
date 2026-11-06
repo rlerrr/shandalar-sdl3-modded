@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Dark Sphere",
+  "csvid": 369,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Repeated damage from the same chosen source",
+          "Nonplayer damage-recipient selection denial during the live window"
+        ],
+        "amount": "half_down",
+        "scope": "you",
+        "activation_cost": "",
+        "tap": true,
+        "sacrifice": true
+      },
+      "oracle_text": "{T}, Sacrifice this artifact: The next time a source of your choice would deal damage to you this turn, prevent half that damage, rounded down.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "other_damage_0",
+        "repeat_damage_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "cast_payment_0",
+        "small_damage_0",
+        "large_damage_0",
+        "effect_1",
+        "payment_1",
+        "other_damage_1",
+        "repeat_damage_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "cast_payment_1",
+        "small_damage_1",
+        "large_damage_1"
+      ]
+    }
+  ]
+}

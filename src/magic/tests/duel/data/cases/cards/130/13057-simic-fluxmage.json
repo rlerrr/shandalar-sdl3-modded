@@ -1,0 +1,86 @@
+{
+  "version": 1,
+  "card": "Simic Fluxmage",
+  "csvid": 13057,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "counter_transfer",
+        "transfer": 1,
+        "direction": "source_to_target",
+        "tap": true,
+        "entry": 0,
+        "entry_bonus": 0,
+        "graft": 0,
+        "evolve": true,
+        "relation": "any",
+        "cast_vectors": [
+          [
+            2,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "activation_vectors": [
+          [
+            1,
+            0,
+            1,
+            0,
+            0,
+            0
+          ]
+        ],
+        "unused_modes": []
+      },
+      "oracle_text": "Evolve (Whenever a creature you control enters, if that creature has greater power or toughness than this creature, put a +1/+1 counter on this creature.)\n{1}{U}, {T}: Move a +1/+1 counter from this creature onto target creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "cleanup_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "pending_snapshot_0",
+        "repeat_0",
+        "activation_pending_0",
+        "recipient_bounced_pending_0",
+        "no_counter_0",
+        "fresh_source_0",
+        "tapped_source_0",
+        "evolve_qualifying_0",
+        "wrong_color_0",
+        "cast_source_0",
+        "recipient_shroud_probe_0",
+        "recipient_hexproof_probe_0",
+        "recipient_noncreature_probe_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "cleanup_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "pending_snapshot_1",
+        "repeat_1",
+        "activation_pending_1",
+        "recipient_bounced_pending_1",
+        "no_counter_1",
+        "fresh_source_1",
+        "tapped_source_1",
+        "evolve_qualifying_1",
+        "wrong_color_1",
+        "cast_source_1",
+        "recipient_shroud_probe_1",
+        "recipient_hexproof_probe_1",
+        "recipient_noncreature_probe_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle counter transfer profile: actual casts and entry effects; printed costs, pending counters, conservation, endpoint/source loss, payment denials, cleanup, repeat and replay. Combat, replacement and control changes remain component gaps; Root-Kin graft transfers are dormant because no creature enters after it. Two-target slot-specific illegal selection probes are deferred. Authoritative native/Wasm validation is recorded in the wave5 report."
+}

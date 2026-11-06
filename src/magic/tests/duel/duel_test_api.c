@@ -75,6 +75,10 @@ static int decision_count, decision_cursor;
 static int offered_count, offered_csvids[512], offered_legal[512], offered_selection_required;
 static int forced_zone_choices;
 static int discard_policy, discard_choice_count;
+static int untap_prepared_player = -1, untap_prepared_turn = -1;
+/* Transient input binding for the one real RulesEngine casting menu. */
+static const char *flashback_menu_label;
+static int flashback_menu_player, flashback_menu_occurrence, flashback_menu_seen;
 struct DuelTestSnapshot {
   DuelHostState host;
   int decision_count, decision_cursor;
@@ -82,6 +86,7 @@ struct DuelTestSnapshot {
   int offered_count, offered_csvids[512], offered_legal[512], offered_selection_required;
   int forced_zone_choices;
   int discard_policy, discard_choice_count;
+  int untap_prepared_player, untap_prepared_turn;
   int unlocked[50];
   unsigned char data[];
 };
@@ -112,6 +117,7 @@ DuelTestSnapshot *duel_test_capture(void)
   s->offered_selection_required = offered_selection_required;
   s->forced_zone_choices = forced_zone_choices;
   s->discard_policy = discard_policy; s->discard_choice_count = discard_choice_count;
+  s->untap_prepared_player = untap_prepared_player; s->untap_prepared_turn = untap_prepared_turn;
   memcpy(s->unlocked, unlocked, sizeof(s->unlocked));
   memcpy(s->offered_csvids, offered_csvids, sizeof(offered_csvids));
   memcpy(s->offered_legal, offered_legal, sizeof(offered_legal));
@@ -134,6 +140,7 @@ void duel_test_restore(const DuelTestSnapshot *s)
   offered_selection_required = s->offered_selection_required;
   forced_zone_choices = s->forced_zone_choices;
   discard_policy = s->discard_policy; discard_choice_count = s->discard_choice_count;
+  untap_prepared_player = s->untap_prepared_player; untap_prepared_turn = s->untap_prepared_turn;
   memcpy(unlocked, s->unlocked, sizeof(s->unlocked));
   memcpy(offered_csvids, s->offered_csvids, sizeof(offered_csvids));
   memcpy(offered_legal, s->offered_legal, sizeof(offered_legal));
@@ -142,12 +149,36 @@ void duel_test_free_snapshot(DuelTestSnapshot *s) { free(s); }
 static int choice_ready(void *context, DuelChoiceKind kind, int player)
 {
   (void)context;
+  if (flashback_menu_label && kind==DUEL_CHOICE_DIALOG && player==flashback_menu_player) return 1;
   return decision_cursor<decision_count && decisions[decision_cursor].kind==kind &&
     (decisions[decision_cursor].player==-1 || decisions[decision_cursor].player==player);
 }
 static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAnswer *answer)
 {
   (void)context;
+  if (flashback_menu_label && request->kind == DUEL_CHOICE_DIALOG) {
+    if (request->player != flashback_menu_player || !request->prompt)
+      duel_host_fail("unexpected dialog before Flashback menu");
+    const char *line=request->prompt;
+    int index=0, occurrence=0, selected=-1;
+    size_t wanted=strlen(flashback_menu_label);
+    while (*line) {
+      const char *end=strchr(line,'\n');
+      if (!end) end=line+strlen(line);
+      const char *text=line;
+      while (text<end && (*text==' ' || *text=='\t')) ++text;
+      size_t length=(size_t)(end-text);
+      if (length && text[length-1]=='\r') --length;
+      if (length==wanted && !memcmp(text,flashback_menu_label,wanted) &&
+          occurrence++==flashback_menu_occurrence) selected=index;
+      ++index;
+      line=*end ? end+1 : end;
+    }
+    if (selected<0) duel_host_fail("requested Flashback source is not offered");
+    flashback_menu_label=NULL; flashback_menu_seen=1;
+    answer->value=selected; answer->card=-1;
+    return 1;
+  }
   /* Mana output and a public recovery reveal have OK-only notices. These exact
      notices carry no gameplay choice; other dialogs remain scripted. */
   if (request->kind == DUEL_CHOICE_DIALOG && request->player == 1 && request->prompt) {
@@ -184,7 +215,7 @@ static int choose(void *context, const DuelChoiceRequest *request, DuelChoiceAns
       offered_csvids[offered_count++] = global_cards_data[id].id;
     }
   }
-  if (getenv("DUEL_TEST_TRACE")) fprintf(stderr,"CHOICE kind=%d player=%d prompt=%s\n",request->kind,request->player,request->prompt?request->prompt:"");
+  if (getenv("DUEL_TEST_TRACE")) fprintf(stderr,"CHOICE kind=%d player=%d ai_mode=%d ai_depth=%d trigger=%d affected=%d/%d prompt=%s\n",request->kind,request->player,g_duel_ai_mode_state,g_ai_speculation_depth,g_trigger_condition,g_affected_card_controller,g_affected_card,request->prompt?request->prompt:"");
   if (request->kind == DUEL_CHOICE_ZONE && discard_policy && request->prompt &&
       (!strcmp(request->prompt,"Select a card to discard.") || !strcmp(request->prompt,"Select card to discard."))) {
     int chosen=-1;
@@ -469,6 +500,8 @@ void duel_test_set_mana(int p, int color, int amount) {
 }
 void duel_test_set_life(int p, int amount) { g_life[p] = amount; }
 void duel_test_set_turn(int p, int combat) {
+  /* Selecting an arbitrary fixture phase is not a new untap step. */
+  untap_prepared_player = -1;
   g_current_turn = g_current_player = p;
   g_current_phase = combat ? PHASE_DECLARE_BLOCKERS : PHASE_MAIN1;
   manalinkeh_recalculate_all_cards_in_play();
@@ -587,7 +620,139 @@ int duel_test_activate_hand(DuelTestRef s) {
   if (!duel_test_can_activate_hand(s)) return 0;
   return duel_test_activate(hand_ability_proxy(s.player));
 }
+extern int manalinkeh_call_card_function(int, int, event_t);
+extern void manalinkeh_obliterate_card_and_recycle(int, int);
+extern int manalinkeh_check_card_for_rules_engine(int);
+extern void manalinkeh_update_rules_engine(int);
+extern int grafdiggers_cages(int, type_t, tutor_from_t);
+extern player_bits_t player_bits[2];
+void duel_test_prepare_graveyard_abilities(void) {
+  if (g_stack_size) duel_host_fail("prepare_graveyard_abilities requires an empty stack");
+  /* Normal startup sees the source in a deck/hand. Direct graveyard fixtures
+     never did, and the normal rescan intentionally only visits those zones. */
+  int flags = 0;
+  for (int player = 0; player < 2; ++player)
+    for (int index = 0; index < duel_test_zone_count(player, DUEL_ZONE_GRAVEYARD); ++index)
+      flags |= manalinkeh_check_card_for_rules_engine(global_graveyard_slots[player][index]);
+  manalinkeh_update_rules_engine(flags);
+}
+static int graveyard_ability_iid(DuelTestRef source) {
+  if (source.player < 0 || source.player > 1 || source.card < 0 ||
+      source.card >= duel_test_zone_count(source.player, DUEL_ZONE_GRAVEYARD)) return -1;
+  int id = global_graveyard_slots[source.player][source.card];
+  if (id < 0 || id >= g_card_count) return -1;
+  /* These categories enter the real RulesEngine graveyard menu. */
+  int category = global_cards_data[id].cc[2];
+  if (!(category == 9 || category == 10 || category == 17 || category == 21 ||
+        category == 23 || category == 24 || category == 25 || category == 27 ||
+        global_cards_data[id].id == CARD_ID_VISCERA_DRAGGER)) return -1;
+  return id;
+}
+static int graveyard_ability_modes(DuelTestRef source) {
+  int id = graveyard_ability_iid(source);
+  if (getenv("DUEL_TEST_TRACE")) fprintf(stderr,"GY_PROBE player=%d pos=%d iid=%d flags=%x phase=%d turn=%d\n",source.player,source.card,id,source.player>=0&&source.player<2?player_bits[source.player]:0,g_current_phase,g_current_turn);
+  if (id < 0 || (player_bits[source.player] & PB_GY_ABILITIES_DISABLED)) return 0;
+  DuelTestRef proxy = hand_ability_proxy(source.player);
+  if (getenv("DUEL_TEST_TRACE")) fprintf(stderr,"GY_PROBE proxy=%d,%d info=%x\n",proxy.player,proxy.card,proxy.card>=0?global_card_instances[proxy.player][proxy.card].info_slot:0);
+  if (proxy.card < 0) return 0;
+  DuelTestSnapshot* saved = duel_test_capture();
+  int fake = manalinkeh_add_card_to_hand(source.player, id);
+  if (fake < 0) duel_host_fail("graveyard ability probe allocation failed");
+  global_card_instances[source.player][fake].state |= STATE_INVISIBLE;
+  --g_duel_summary.hand_counts[source.player];
+  g_land_can_be_played |= LCBP_ACTIVATING_FROM_HAND;
+  int available = manalinkeh_call_card_function(source.player, fake, EVENT_GRAVEYARD_ABILITY);
+  manalinkeh_obliterate_card_and_recycle(source.player, fake);
+  int proxy_available = duel_test_can_activate(proxy);
+  int modes = available & (GA_BASIC | GA_UNEARTH | GA_PLAYABLE_FROM_GRAVE);
+  /* Match the real menu's creature-return restriction, even if another card
+     makes the same shared RulesEngine proxy available. */
+  if ((modes & GA_UNEARTH) &&
+      (!(global_cards_data[id].type & TYPE_CREATURE) ||
+       grafdiggers_cages(source.player, TYPE_CREATURE, TUTOR_FROM_GRAVE)))
+    modes &= ~GA_UNEARTH;
+  if ((modes & GA_PLAYABLE_FROM_GRAVE) &&
+      grafdiggers_cages(source.player, global_cards_data[id].type, TUTOR_FROM_GRAVE))
+    modes &= ~GA_PLAYABLE_FROM_GRAVE;
+  int result = proxy_available ? modes : 0;
+  if (getenv("DUEL_TEST_TRACE")) fprintf(stderr,"GY_PROBE available=%x proxy_available=%x\n",available,proxy_available);
+  duel_test_restore(saved);
+  duel_test_free_snapshot(saved);
+  return result;
+}
+int duel_test_can_activate_graveyard(DuelTestRef source) {
+  return (graveyard_ability_modes(source) & (GA_BASIC | GA_UNEARTH)) != 0;
+}
+int duel_test_activate_graveyard(DuelTestRef source) {
+  int id = graveyard_ability_iid(source);
+  int modes = graveyard_ability_modes(source) & (GA_BASIC | GA_UNEARTH);
+  if (id < 0 || !modes) return 0;
+  DuelTestRef proxy = hand_ability_proxy(source.player);
+  int before = g_stack_size;
+  int result = duel_test_activate(proxy);
+  if (!result) return 0;
+  if (g_stack_size != before + 1) duel_host_fail("graveyard ability did not leave one pending activation");
+  DuelTestRef top = {global_stack_cards[g_stack_size - 1].player, global_stack_cards[g_stack_size - 1].card};
+  card_instance_t* activation = &global_card_instances[top.player][top.card];
+  if (activation->parent_controller != proxy.player || activation->parent_card != proxy.card ||
+      !(activation->targets[2].player & modes) || activation->targets[2].card != id)
+    duel_host_fail("graveyard ability menu selected a different source or mode");
+  return result;
+}
+int duel_test_can_cast_graveyard(DuelTestRef source) {
+  int id=graveyard_ability_iid(source);
+  if (g_stack_size || id<0 || global_cards_data[id].cc[2]!=9 ||
+      !(global_cards_data[id].type & (TYPE_SORCERY | TYPE_INSTANT | TYPE_INTERRUPT))) return 0;
+  return !!(graveyard_ability_modes(source) & GA_PLAYABLE_FROM_GRAVE);
+}
+int duel_test_cast_graveyard(DuelTestRef source) {
+  if (!duel_test_can_cast_graveyard(source)) return 0;
+  int id=graveyard_ability_iid(source), occurrence=0;
+  for (int index=0; index<source.card; ++index)
+    occurrence += global_graveyard_slots[source.player][index]==id;
+  char label[256];
+  int size=snprintf(label,sizeof(label),"Flashback %s",global_raw_cards_storage[global_cards_data[id].id].name);
+  if (size<0 || size>=(int)sizeof(label)) duel_host_fail("Flashback menu label is too long");
+  flashback_menu_label=label; flashback_menu_player=source.player;
+  flashback_menu_occurrence=occurrence; flashback_menu_seen=0;
+  int result=duel_test_activate(hand_ability_proxy(source.player));
+  flashback_menu_label=NULL;
+  if (result && !flashback_menu_seen) duel_host_fail("Flashback casting bypassed its real menu");
+  /* The engine casts and resolves inside its menu callback. Finish the real
+     RulesEngine proxy afterwards; never manufacture a pending spell. */
+  if (result) duel_test_resolve();
+  return result;
+}
 int duel_test_cast(DuelTestRef s) { if (!put_card_on_stack(s.player,s.card,0)) return 0; return put_card_on_stack(s.player,s.card,1); }
+int duel_test_cast_response(DuelTestRef source) {
+  if (g_stack_size <= 0 || g_current_spell_player >= 0)
+    duel_host_fail("cast_response requires a pending spell outside a casting callback");
+  int top = g_stack_size - 1;
+  if ((((unsigned)g_stack_data[top] >> 16) & 255) != EVENT_RESOLVE_SPELL)
+    duel_host_fail("cast_response requires a pending spell, not an activation");
+  int previous_player = g_current_spell_player, previous_card = g_current_spell_card;
+  /* The response UI normally supplies this context while casting is nested.
+     Preserve the same real stack target for an explicit scripted response.
+     The ordinary handler, targeting, legality and mana payment still run. */
+  g_current_spell_player = global_stack_cards[top].player;
+  g_current_spell_card = global_stack_cards[top].card;
+  card_instance_t* pending = &global_card_instances[g_current_spell_player][g_current_spell_card];
+  int pending_iid = pending->internal_card_id;
+  int just_cast = pending->state & STATE_JUST_CAST;
+  pending->state &= ~STATE_JUST_CAST;
+  int result = duel_test_cast(source);
+  if (pending->internal_card_id == pending_iid) pending->state |= just_cast;
+  g_current_spell_player = previous_player;
+  g_current_spell_card = previous_card;
+  return result;
+}
+extern void manalinkeh_reset_dead_count(void);
+void duel_test_reset_death_history(void) {
+  if (g_stack_size) duel_host_fail("reset_death_history requires an empty stack");
+  /* Reserved Deadbox token metadata overlaps a history slot until the normal
+     start-turn reset. Opt in before authored deaths, never during refresh. */
+  manalinkeh_reset_dead_count();
+}
 void duel_test_resolve(void) {
   int n=0;
   while(g_stack_size) {
@@ -598,6 +763,26 @@ void duel_test_resolve(void) {
       manalinkeh_put_card_on_stack3(r.player,r.card);
     else manalinkeh_finalize_activation(r.player,r.card);
   }
+}
+void duel_test_resolve_response(void) {
+  if (g_stack_size < 2 || g_current_spell_player >= 0)
+    duel_host_fail("resolve_response requires a response and its pending parent spell");
+  int parent = g_stack_size - 2;
+  if ((((unsigned)g_stack_data[parent] >> 16) & 255) != EVENT_RESOLVE_SPELL)
+    duel_host_fail("resolve_response parent must be a spell");
+  int previous_player = g_current_spell_player, previous_card = g_current_spell_card;
+  g_current_spell_player = global_stack_cards[parent].player;
+  g_current_spell_card = global_stack_cards[parent].card;
+  card_instance_t* pending = &global_card_instances[g_current_spell_player][g_current_spell_card];
+  int pending_iid = pending->internal_card_id;
+  int just_cast = pending->state & STATE_JUST_CAST;
+  pending->state &= ~STATE_JUST_CAST;
+  /* Ordinary UI responses resolve inside the parent's casting callback. Supply
+     that real target context without changing ordinary scripted resolution. */
+  duel_test_resolve();
+  if (pending->internal_card_id == pending_iid) pending->state |= just_cast;
+  g_current_spell_player = previous_player;
+  g_current_spell_card = previous_card;
 }
 void duel_test_cleanup(void) { g_current_phase=PHASE_CLEANUP; cleanup_phase(g_current_turn); end_turn_phase(g_current_turn); }
 void duel_test_remove_from_combat(DuelTestRef r) {
@@ -719,6 +904,37 @@ void duel_test_advance_turn(void) {
   if (skipped) duel_host_fail("advance_turn encountered a skipped turn");
   g_current_phase=PHASE_MAIN1;
   manalinkeh_recalculate_all_cards_in_play();
+  untap_prepared_player=g_current_turn;
+  untap_prepared_turn=turn_count;
+}
+extern int manalinkeh_untap_phase(int);
+int duel_test_untap_step(int player) {
+  if (player < 0 || player > 1 || player != g_current_turn || player != g_current_player ||
+      g_stack_size || g_current_phase != PHASE_MAIN1 ||
+      untap_prepared_player != player || untap_prepared_turn != turn_count) return 0;
+  /* The real wrapper processes mana burn. These bounded fixtures enter before
+     any mana production; do not silently erase caller pools or burn life. */
+  for (int p=0; p<2; ++p)
+    for (int color=0; color<6; ++color)
+      if (duel_test_mana(p,color)) return 0;
+  untap_prepared_player=-1;
+  char flags[2]={g_duel_phase_stop_settings[0].phase_flags[PHASE_UNTAP],
+                 g_duel_phase_stop_settings[1].phase_flags[PHASE_UNTAP]};
+  int stop=g_stop_phase, stop_player=g_stop_phase_player;
+  int previous=g_previous_stop_phase, previous_player=g_previous_stop_phase_player;
+  for (int p=0; p<2; ++p) g_duel_phase_stop_settings[p].phase_flags[PHASE_UNTAP]=0;
+  if (g_stop_phase==PHASE_UNTAP) g_stop_phase=g_stop_phase_player=-1;
+  if (g_previous_stop_phase==PHASE_UNTAP) g_previous_stop_phase=g_previous_stop_phase_player=-1;
+  /* This complete gameplay entry point queries permissions, commits untaps,
+     emits untap notifications and expires next-untap restrictions. */
+  manalinkeh_untap_phase(player);
+  for (int p=0; p<2; ++p) g_duel_phase_stop_settings[p].phase_flags[PHASE_UNTAP]=flags[p];
+  g_stop_phase=stop; g_stop_phase_player=stop_player;
+  g_previous_stop_phase=previous; g_previous_stop_phase_player=previous_player;
+  return 1;
+}
+int duel_test_shuffle_count(int player) {
+  return player >= 0 && player < 2 ? (int)duel_host_capture().shuffle_count[player] : -1;
 }
 int duel_test_token_characteristic(DuelTestRef r, const char *property)
 {
@@ -736,7 +952,17 @@ int duel_test_token_characteristic(DuelTestRef r, const char *property)
     /* The core header predates Servo; Manalink's subtypes.h assigns 0x00ee. */
     {"subtype_Servo", (subtype_t)0x00ee}, TOKEN_SUBTYPE("Sliver",SLIVER), TOKEN_SUBTYPE("Soldier",SOLDIER),
     TOKEN_SUBTYPE("Spirit",SPIRIT), TOKEN_SUBTYPE("Thopter",THOPTER), TOKEN_SUBTYPE("Warrior",WARRIOR),
-    TOKEN_SUBTYPE("Wurm",WURM)
+    TOKEN_SUBTYPE("Wurm",WURM), TOKEN_SUBTYPE("Boar",BOAR), TOKEN_SUBTYPE("Cat",CAT),
+    TOKEN_SUBTYPE("Spider",SPIDER), TOKEN_SUBTYPE("Saproling",SAPROLING), TOKEN_SUBTYPE("Phyrexian",PHYREXIAN),
+    TOKEN_SUBTYPE("Zombie",ZOMBIE), TOKEN_SUBTYPE("Construct",CONSTRUCT), TOKEN_SUBTYPE("Beast",BEAST),
+    TOKEN_SUBTYPE("Illusion",ILLUSION), TOKEN_SUBTYPE("Ooze",OOZE), TOKEN_SUBTYPE("Squirrel",SQUIRREL),
+    TOKEN_SUBTYPE("Plant",PLANT), TOKEN_SUBTYPE("Bat",BAT), TOKEN_SUBTYPE("Elemental",ELEMENTAL),
+    TOKEN_SUBTYPE("Clue",CLUE), TOKEN_SUBTYPE("Elephant",ELEPHANT), TOKEN_SUBTYPE("Kithkin",KITHKIN),
+    TOKEN_SUBTYPE("Treefolk",TREEFOLK), TOKEN_SUBTYPE("Shaman",SHAMAN), TOKEN_SUBTYPE("Snake",SNAKE),
+    TOKEN_SUBTYPE("Merfolk",MERFOLK), TOKEN_SUBTYPE("Wizard",WIZARD), TOKEN_SUBTYPE("Golem",GOLEM),
+    TOKEN_SUBTYPE("Rogue",ROGUE), TOKEN_SUBTYPE("Scion",SCION), TOKEN_SUBTYPE("Spawn",SPAWN),
+    TOKEN_SUBTYPE("Wolf",WOLF), TOKEN_SUBTYPE("Ape",APE),
+    TOKEN_SUBTYPE("Frog",FROG), TOKEN_SUBTYPE("Lizard",LIZARD)
 #undef TOKEN_SUBTYPE
   };
   for (unsigned n=0;n<sizeof(subtypes)/sizeof(subtypes[0]);++n)

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Swan Song",
+  "csvid": 13565,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "enchantment",
+            "instant",
+            "sorcery"
+          ]
+        },
+        "token": {
+          "name": "Bird",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "U"
+          ],
+          "subtypes": [
+            "Bird"
+          ],
+          "count": 1,
+          "recipient": "spell_controller",
+          "artifact": false,
+          "flying": true,
+          "from_value": false
+        },
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": []
+      },
+      "oracle_text": "Counter target enchantment, instant, or sorcery spell. Its controller creates a 2/2 blue Bird creature token with flying.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_sorcery_0",
+        "type_enchantment_0",
+        "wrong_type_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_sorcery_1",
+        "type_enchantment_1",
+        "wrong_type_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole Oracle text and source characteristics are pinned against the reviewed counter extension profile. Real casting/response windows cover both source controllers, own and opposing spells, full costs, insufficient mana, no stack, legal target relationships, exact zone receipts, populated-zone snapshots and printed immediate secondary effects.  Token creation checks exact counts, recipient, color, artifact status, printed power/toughness and exposed subtypes. Token combat and token activated abilities remain separate gaps. Countered source spells, pending-target departure, protection/prevention interactions, replacement effects, other stack objects, control changes and multiplayer remain separate gaps."
+}

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Flames of the Blood Hand",
+  "csvid": 7464,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell_extension",
+      "version": 2,
+      "params": {
+        "kind": "targeted",
+        "effect": {
+          "amount": 4,
+          "targets": [
+            "player"
+          ]
+        },
+        "gain_life": 0,
+        "inactive_components": [
+          "The damage can't be prevented; the damaged player's life-gain prohibition through end of turn."
+        ],
+        "choices_before_target": [],
+        "choices_after_target": [],
+        "skip_before_choices_on_exact_payment": false,
+        "skip_after_choices_on_exact_payment": false,
+        "omit_variants": []
+      },
+      "oracle_text": "Flames of the Blood Hand deals 4 damage to target player or planeswalker. The damage can't be prevented. If that player or that planeswalker's controller would gain life this turn, that player gains no life instead.",
+      "variants": [
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "opponent_player_0",
+        "self_player_0",
+        "pending_snapshot_0",
+        "wrong_payment_color_0",
+        "other_turn_0",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "opponent_player_1",
+        "self_player_1",
+        "pending_snapshot_1",
+        "wrong_payment_color_1",
+        "other_turn_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed fixed damage component through ordinary mana-paid casting; all other named clauses are explicit recipe metadata gaps."
+}

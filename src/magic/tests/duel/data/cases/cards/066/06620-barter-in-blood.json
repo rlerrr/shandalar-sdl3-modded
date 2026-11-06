@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Barter in Blood",
+  "csvid": 6620,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "mode": "edict",
+        "scope": "creature",
+        "recipient": "both",
+        "count": 2,
+        "receipt": "none"
+      },
+      "oracle_text": "Each player sacrifices two creatures of their choice.",
+      "variants": [
+        "mixed_0",
+        "alternate_choice_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "bare_zones_0",
+        "empty_board_0",
+        "stolen_0",
+        "tokens_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "indestructible_0",
+        "hexproof_0",
+        "wrong_color_0",
+        "short_board_0",
+        "mixed_1",
+        "alternate_choice_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "bare_zones_1",
+        "empty_board_1",
+        "stolen_1",
+        "tokens_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "indestructible_1",
+        "hexproof_1",
+        "wrong_color_1",
+        "short_board_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-text pinned ordinary sacrifice spell component: actual casting and payment, player-chosen sacrifice, exact owned zone multiplicities, mixed/ineligible witnesses, human offered selections and AI duplicate-identity receipts, indestructible/hexproof, tokens, stolen ownership, populated zones, ordered libraries, countering and caller-owned snapshots. Alternative mechanics, replacement/death triggers, control changes during resolution, multiplayer and AI choice policy remain separate gaps."
+}

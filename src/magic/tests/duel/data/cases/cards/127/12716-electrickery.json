@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "card": "Electrickery",
+  "csvid": 12716,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell_extension",
+      "version": 2,
+      "params": {
+        "kind": "targeted",
+        "effect": {
+          "amount": 1,
+          "targets": [
+            "creature"
+          ],
+          "controller": "opponent"
+        },
+        "gain_life": 0,
+        "inactive_components": [
+          "Overload {1}{R} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")"
+        ],
+        "choices_before_target": [
+          1
+        ],
+        "choices_after_target": [],
+        "skip_before_choices_on_exact_payment": true,
+        "skip_after_choices_on_exact_payment": false,
+        "omit_variants": [
+          "empty",
+          "wrong_type",
+          "wrong_controller"
+        ]
+      },
+      "oracle_text": "Electrickery deals 1 damage to target creature you don't control.\nOverload {1}{R} (You may cast this spell for its overload cost. If you do, change \"target\" in its text to \"each.\")",
+      "variants": [
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "survivor_0",
+        "lethal_0",
+        "lost_target_0",
+        "pending_snapshot_0",
+        "wrong_payment_color_0",
+        "other_turn_0",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "survivor_1",
+        "lethal_1",
+        "lost_target_1",
+        "pending_snapshot_1",
+        "wrong_payment_color_1",
+        "other_turn_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed fixed damage component through ordinary mana-paid casting; all other named clauses are explicit recipe metadata gaps."
+}

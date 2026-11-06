@@ -1,0 +1,2585 @@
+{
+  "version": 1,
+  "base_cards": [
+    "Air Elemental",
+    "Centaur Courser",
+    "Counterspell",
+    "Craw Wurm",
+    "Darksteel Citadel",
+    "Darksteel Myr",
+    "Darksteel Relic",
+    "Deadly Insect",
+    "Demon",
+    "Elemental",
+    "Elf Warrior",
+    "Exploration",
+    "Forest",
+    "Giant Growth",
+    "Gilded Light",
+    "Gilded Lotus",
+    "Gladecover Scout",
+    "Goblin",
+    "Grizzly Bears",
+    "Hill Giant",
+    "Insect",
+    "Island",
+    "Jace Beleren",
+    "Lightning Bolt",
+    "Llanowar Elves",
+    "Memnite",
+    "Mogg Raider",
+    "Mountain",
+    "Pegasus",
+    "Phyrexian Hulk",
+    "Plains",
+    "Ranger's Guile",
+    "Reclaim",
+    "Scathe Zombies",
+    "Seal of Cleansing",
+    "Shivan Dragon",
+    "Sol Ring",
+    "Suntail Hawk",
+    "Unsummon",
+    "Wall of Ice",
+    "Wall of Spears",
+    "War Mammoth",
+    "Zombie"
+  ],
+  "cards": {
+    "Air Elemental": {
+      "name": "Air Elemental",
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Elemental",
+      "mana_cost": "{3}{U}{U}",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "power": "4",
+      "toughness": "4"
+    },
+    "Autochthon Wurm": {
+      "name": "Autochthon Wurm",
+      "oracle_id": "18379907-ddba-479e-8953-3adc1ed40458",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Wurm",
+      "mana_cost": "{10}{G}{G}{G}{W}{W}",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nTrample",
+      "keywords": [
+        "Trample",
+        "Convoke"
+      ],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "cmc": 15.0,
+      "power": "9",
+      "toughness": "14"
+    },
+    "Centaur Courser": {
+      "name": "Centaur Courser",
+      "oracle_id": "2f5bf099-2e01-4e1c-9ebf-0ce0ac66939e",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Centaur Warrior",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Counterspell": {
+      "name": "Counterspell",
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "oracle_text": "Counter target spell.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 2.0
+    },
+    "Craw Wurm": {
+      "name": "Craw Wurm",
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Wurm",
+      "mana_cost": "{4}{G}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "power": "6",
+      "toughness": "4"
+    },
+    "Darksteel Citadel": {
+      "name": "Darksteel Citadel",
+      "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+      "layout": "normal",
+      "type_line": "Artifact Land",
+      "mana_cost": "",
+      "oracle_text": "Indestructible\n{T}: Add {C}.",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Darksteel Myr": {
+      "name": "Darksteel Myr",
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Myr",
+      "mana_cost": "{3}",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 3.0,
+      "power": "0",
+      "toughness": "1"
+    },
+    "Darksteel Relic": {
+      "name": "Darksteel Relic",
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Deadly Insect": {
+      "name": "Deadly Insect",
+      "oracle_id": "98273b0d-2b41-486b-9498-30a692c03982",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Insect",
+      "mana_cost": "{4}{G}",
+      "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)",
+      "keywords": [
+        "Shroud"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 5.0,
+      "power": "6",
+      "toughness": "1"
+    },
+    "Demon": {
+      "name": "Demon",
+      "oracle_id": "bf9097ec-f28c-42dc-ab92-40885ed74ac4",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Demon",
+      "mana_cost": "",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Elemental": {
+      "name": "Elemental",
+      "oracle_id": "ff9ee841-1174-4c4c-b9d3-56d79122acbb",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Elemental",
+      "mana_cost": "",
+      "oracle_text": "Whenever this creature becomes tapped, it deals 1 damage to target player.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Elf Warrior": {
+      "name": "Elf Warrior",
+      "oracle_id": "dac8a765-6845-4b57-bb79-4ec463436f92",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Elf Warrior",
+      "mana_cost": "",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Evacuation": {
+      "name": "Evacuation",
+      "oracle_id": "fdd94383-b573-439a-8e1c-925af887c5a6",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{3}{U}{U}",
+      "oracle_text": "Return all creatures to their owners' hands.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 5.0
+    },
+    "Exploration": {
+      "name": "Exploration",
+      "oracle_id": "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{G}",
+      "oracle_text": "You may play an additional land on each of your turns.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Forest": {
+      "name": "Forest",
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Forest",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Giant Growth": {
+      "name": "Giant Growth",
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Gilded Light": {
+      "name": "Gilded Light",
+      "oracle_id": "f7e7b2aa-9fd2-41dd-b11e-3a233530dc83",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "You gain shroud until end of turn. (You can't be the target of spells or abilities.)\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Gilded Lotus": {
+      "name": "Gilded Lotus",
+      "oracle_id": "9a02a9a7-39d9-4763-85d3-747a0540b60b",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{5}",
+      "oracle_text": "{T}: Add three mana of any one color.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 5.0
+    },
+    "Gladecover Scout": {
+      "name": "Gladecover Scout",
+      "oracle_id": "385c1208-bfea-44e2-b236-4f38bc90db9f",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Elf Scout",
+      "mana_cost": "{G}",
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)",
+      "keywords": [
+        "Hexproof"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Goblin": {
+      "name": "Goblin",
+      "oracle_id": "fa8ea5cd-b390-41a1-9a2a-11af1bc6bfd0",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Goblin",
+      "mana_cost": "",
+      "oracle_text": "Haste",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "power": "2",
+      "toughness": "1"
+    },
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bear",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Hill Giant": {
+      "name": "Hill Giant",
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Giant",
+      "mana_cost": "{3}{R}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Insect": {
+      "name": "Insect",
+      "oracle_id": "ff591c1f-732b-432d-b458-4f19c8f707c5",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Insect",
+      "mana_cost": "",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B",
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Island": {
+      "name": "Island",
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Island",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Jace Beleren": {
+      "name": "Jace Beleren",
+      "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "layout": "normal",
+      "type_line": "Legendary Planeswalker \u2014 Jace",
+      "mana_cost": "{1}{U}{U}",
+      "oracle_text": "+2: Each player draws a card.\n\u22121: Target player draws a card.\n\u221210: Target player mills twenty cards.",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "loyalty": "3"
+    },
+    "Krosan Cloudscraper": {
+      "name": "Krosan Cloudscraper",
+      "oracle_id": "a0ff742b-f709-43ac-84d2-dc00c723bad6",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Beast Mutant",
+      "mana_cost": "{7}{G}{G}{G}",
+      "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you pay {G}{G}.\nMorph {7}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "keywords": [
+        "Morph"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 10.0,
+      "power": "13",
+      "toughness": "13"
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0
+    },
+    "Llanowar Elves": {
+      "name": "Llanowar Elves",
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "mana_cost": "",
+      "oracle_text": "{T}: Add {G}.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Memnite": {
+      "name": "Memnite",
+      "oracle_id": "7663ac7c-1de3-4250-b96a-fae9dbd66a27",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Construct",
+      "mana_cost": "{0}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mogg Raider": {
+      "name": "Mogg Raider",
+      "oracle_id": "240746f5-caab-46b9-914f-c2c7ecce6ca9",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Goblin",
+      "mana_cost": "{R}",
+      "oracle_text": "Sacrifice a Goblin: Target creature gets +1/+1 until end of turn.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mountain": {
+      "name": "Mountain",
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Mountain",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {R}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Pegasus": {
+      "name": "Pegasus",
+      "oracle_id": "251085b8-4bca-4fcd-92a0-006541be827e",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Pegasus",
+      "mana_cost": "",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Phyrexian Hulk": {
+      "name": "Phyrexian Hulk",
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Phyrexian Golem",
+      "mana_cost": "{6}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [],
+      "cmc": 6.0,
+      "power": "5",
+      "toughness": "4"
+    },
+    "Plains": {
+      "name": "Plains",
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Plains",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Predator Ooze": {
+      "name": "Predator Ooze",
+      "oracle_id": "a51ec70d-1356-4403-a858-b99445bac54a",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Ooze",
+      "mana_cost": "{G}{G}{G}",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature.)\nWhenever this creature attacks, put a +1/+1 counter on it.\nWhenever a creature dealt damage by this creature this turn dies, put a +1/+1 counter on this creature.",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Ranger's Guile": {
+      "name": "Ranger's Guile",
+      "oracle_id": "694cb93a-bcc5-44b0-a76c-19ae4a4e5e0f",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Reclaim": {
+      "name": "Reclaim",
+      "oracle_id": "797155cd-faf4-4321-8629-c8c352392748",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Put target card from your graveyard on top of your library.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Scathe Zombies": {
+      "name": "Scathe Zombies",
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Zombie",
+      "mana_cost": "{2}{B}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Seal of Cleansing": {
+      "name": "Seal of Cleansing",
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Seal of Fire": {
+      "name": "Seal of Fire",
+      "oracle_id": "348a345e-4639-41ca-b015-a5d43459eb64",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{R}",
+      "oracle_text": "Sacrifice this enchantment: It deals 2 damage to any target.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0
+    },
+    "Shivan Dragon": {
+      "name": "Shivan Dragon",
+      "oracle_id": "711eea87-0fa3-46e0-a42b-fa5a86455f04",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Dragon",
+      "mana_cost": "{4}{R}{R}",
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "R"
+      ],
+      "cmc": 6.0,
+      "power": "5",
+      "toughness": "5"
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 1.0
+    },
+    "Suntail Hawk": {
+      "name": "Suntail Hawk",
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bird",
+      "mana_cost": "{W}",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Unsummon": {
+      "name": "Unsummon",
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 1.0
+    },
+    "Wall of Ice": {
+      "name": "Wall of Ice",
+      "oracle_id": "1945e165-7636-4727-89ba-3811251ef175",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Wall",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "Defender (This creature can't attack.)",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "power": "0",
+      "toughness": "7"
+    },
+    "Wall of Spears": {
+      "name": "Wall of Spears",
+      "oracle_id": "ed836d84-ff1e-4af8-b4b8-314569b3faec",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Wall",
+      "mana_cost": "{3}",
+      "oracle_text": "Defender (This creature can't attack.)\nFirst strike",
+      "keywords": [
+        "First strike",
+        "Defender"
+      ],
+      "colors": [],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "3"
+    },
+    "War Mammoth": {
+      "name": "War Mammoth",
+      "oracle_id": "b2a8fcf9-2ec2-40a9-9955-90f8605b11a3",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Elephant",
+      "mana_cost": "{3}{G}",
+      "oracle_text": "Trample",
+      "keywords": [
+        "Trample"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Zombie": {
+      "name": "Zombie",
+      "oracle_id": "ec6e76e8-e80e-4534-990a-03c3bbeda53a",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Zombie",
+      "mana_cost": "",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "power": "*",
+      "toughness": "*"
+    }
+  },
+  "profiles": {
+    "Living Death": {
+      "csvid": 3191,
+      "source": {
+        "name": "Living Death",
+        "oracle_id": "9e6a3df4-67a3-452e-a6ef-f04dbadb21ef",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{3}{B}{B}",
+        "oracle_text": "Each player exiles all creature cards from their graveyard, then sacrifices all creatures they control, then puts all cards they exiled this way onto the battlefield.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "profile": "Living Death",
+        "kind": "mass_exchange",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "mass_exchange",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "initial_graveyard": [
+          "Scathe Zombies",
+          "Wall of Spears",
+          "Giant Growth",
+          "Mountain",
+          "Sol Ring"
+        ],
+        "initial_battlefield": [
+          "Grizzly Bears",
+          "Hill Giant",
+          "Darksteel Myr",
+          "Sol Ring",
+          "Seal of Cleansing",
+          "Forest"
+        ],
+        "counter_response": true
+      }
+    },
+    "Trash for Treasure": {
+      "csvid": 6819,
+      "source": {
+        "name": "Trash for Treasure",
+        "oracle_id": "e69279f6-50a1-4db5-83be-30a2ea7fc6a9",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact.\nReturn target artifact card from your graveyard to the battlefield.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Trash for Treasure",
+        "kind": "cost_effect",
+        "cost_scope": "artifact",
+        "cost_count": 1,
+        "effect": "reanimate",
+        "target": "graveyard",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "cost_witnesses": [
+          "Darksteel Relic",
+          "Darksteel Relic"
+        ],
+        "target_scope": "artifact",
+        "preferred": "Sol Ring",
+        "other_target": "Phyrexian Hulk",
+        "initial_graveyard": [
+          "Phyrexian Hulk",
+          "Sol Ring",
+          "Scathe Zombies",
+          "Giant Growth",
+          "Forest"
+        ],
+        "counter_response": true
+      }
+    },
+    "Ritual of the Machine": {
+      "csvid": 2337,
+      "source": {
+        "name": "Ritual of the Machine",
+        "oracle_id": "bccd8298-e056-4b91-b090-408c75467b92",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{B}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nGain control of target nonartifact, nonblack creature.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Ritual of the Machine",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "control",
+        "target": "creature",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer",
+          "AI self-target with a mandatory sacrifice uses autonomous cost selection; human self-target is covered"
+        ],
+        "allow_own_target": true,
+        "target_controls": false,
+        "response_hexproof": true,
+        "target_predicate": {
+          "types": [
+            "Creature"
+          ],
+          "exclude_types": [
+            "Artifact"
+          ],
+          "exclude_colors": [
+            "B"
+          ]
+        },
+        "counter_response": true
+      }
+    },
+    "Dead Drop": {
+      "csvid": 14248,
+      "source": {
+        "name": "Dead Drop",
+        "oracle_id": "09f3d60c-34ee-41ec-a047-fe2140b11950",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{9}{B}",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nTarget player sacrifices two creatures of their choice.",
+        "keywords": [
+          "Delve"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 10.0
+      },
+      "params": {
+        "profile": "Dead Drop",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "any",
+        "scope": "creature",
+        "quantity": 2,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "delve": true,
+        "initial_graveyard": [
+          "Scathe Zombies",
+          "Giant Growth",
+          "Forest",
+          "Sol Ring"
+        ],
+        "counter_response": true
+      }
+    },
+    "Scrap Mastery": {
+      "csvid": 14483,
+      "source": {
+        "name": "Scrap Mastery",
+        "oracle_id": "62dac700-49f7-4745-af67-37d2a81dcebc",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{3}{R}{R}",
+        "oracle_text": "Each player exiles all artifact cards from their graveyard, then sacrifices all artifacts they control, then puts all cards they exiled this way onto the battlefield.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "profile": "Scrap Mastery",
+        "kind": "mass_exchange",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "mass_exchange",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "artifact",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "initial_graveyard": [
+          "Phyrexian Hulk",
+          "Sol Ring",
+          "Giant Growth",
+          "Mountain",
+          "Grizzly Bears"
+        ],
+        "initial_battlefield": [
+          "Wall of Spears",
+          "Darksteel Myr",
+          "Darksteel Citadel",
+          "Darksteel Relic",
+          "Grizzly Bears",
+          "Seal of Cleansing",
+          "Forest"
+        ],
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Cataclysm": {
+      "csvid": 3468,
+      "source": {
+        "name": "Cataclysm",
+        "oracle_id": "b0479ca4-e925-4aa7-a4fa-f7e01f899ac5",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{W}{W}",
+        "oracle_text": "Each player chooses from among the permanents they control an artifact, a creature, an enchantment, and a land, then sacrifices the rest.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Cataclysm",
+        "kind": "typed_keep",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "sacrifice_keep",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "keep_mode": "types",
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Tragic Arrogance": {
+      "csvid": 15240,
+      "source": {
+        "name": "Tragic Arrogance",
+        "oracle_id": "8a29bd35-33ef-4317-9fe5-8aaff5d7d64d",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{3}{W}{W}",
+        "oracle_text": "For each player, you choose from among the permanents that player controls an artifact, a creature, an enchantment, and a planeswalker. Then each player sacrifices all other nonland permanents they control.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "profile": "Tragic Arrogance",
+        "kind": "typed_keep",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "sacrifice_keep",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer",
+          "AI overlapping-type selection policy; human caster chooses overlapping artifact-creature for both players",
+          "AI artifact-land keep policy uses ordinary-land controls; human caster covers artifact-land retention for both players"
+        ],
+        "keep_mode": "nonland_types",
+        "ai_keep_inputs": "opponent_twice_when_both",
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Celestial Flare": {
+      "csvid": 13271,
+      "source": {
+        "name": "Celestial Flare",
+        "oracle_id": "efdaa3eb-e5d1-4438-b21d-2ec0fff44721",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{W}{W}",
+        "oracle_text": "Target player sacrifices an attacking or blocking creature of their choice.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Celestial Flare",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "any",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "combat": "attacking_or_blocking",
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Dispense Justice": {
+      "csvid": 11240,
+      "source": {
+        "name": "Dispense Justice",
+        "oracle_id": "a47bf064-b810-43d0-89a5-13c107a317b0",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{W}",
+        "oracle_text": "Target player sacrifices an attacking creature of their choice.\nMetalcraft \u2014 That player sacrifices two attacking creatures of their choice instead if you control three or more artifacts.",
+        "keywords": [
+          "Metalcraft"
+        ],
+        "colors": [
+          "W"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Dispense Justice",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "any",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "combat": "attacking",
+        "metalcraft": true,
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Cruel Ultimatum": {
+      "csvid": 1503,
+      "source": {
+        "name": "Cruel Ultimatum",
+        "oracle_id": "01294ac9-1a06-4ee8-b3b1-db1f07c9d94e",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{U}{U}{B}{B}{B}{R}{R}",
+        "oracle_text": "Target opponent sacrifices a creature of their choice, discards three cards, then loses 5 life. You return a creature card from your graveyard to your hand, draw three cards, then gain 5 life.",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R",
+          "U"
+        ],
+        "cmc": 7.0
+      },
+      "params": {
+        "profile": "Cruel Ultimatum",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "operations",
+        "target": "opponent",
+        "amount": 0,
+        "recipient": "opponents",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "initial_graveyard": [
+          "Scathe Zombies",
+          "Wall of Spears",
+          "Sol Ring",
+          "Giant Growth",
+          "Mountain"
+        ],
+        "preferred_return": "Scathe Zombies",
+        "other_return": "Wall of Spears",
+        "resolution_operations": [
+          {
+            "kind": "discard",
+            "player": "opponent",
+            "amount": 3
+          },
+          {
+            "kind": "lose_life",
+            "player": "opponent",
+            "amount": 5
+          },
+          {
+            "kind": "grave_to_hand",
+            "player": "self",
+            "scope": "creature"
+          },
+          {
+            "kind": "draw",
+            "player": "self",
+            "amount": 3
+          },
+          {
+            "kind": "gain_life",
+            "player": "self",
+            "amount": 5
+          }
+        ],
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Infernal Offering": {
+      "csvid": 14468,
+      "source": {
+        "name": "Infernal Offering",
+        "oracle_id": "348201c4-79de-4278-9896-d8b1567cc5cc",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{B}",
+        "oracle_text": "Choose an opponent. You and that player each sacrifice a creature. Each player who sacrificed a creature this way draws two cards.\nChoose an opponent. Return a creature card from your graveyard to the battlefield, then that player returns a creature card from their graveyard to the battlefield.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "profile": "Infernal Offering",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "operations",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "initial_graveyard": [
+          "Scathe Zombies",
+          "Wall of Spears",
+          "Sol Ring",
+          "Giant Growth",
+          "Mountain"
+        ],
+        "preferred_return": "Scathe Zombies",
+        "other_return": "Wall of Spears",
+        "resolution_operations": [
+          {
+            "kind": "draw_if_sacrificed",
+            "player": "both",
+            "amount": 2
+          },
+          {
+            "kind": "grave_to_battlefield",
+            "player": "self",
+            "scope": "creature"
+          },
+          {
+            "kind": "grave_to_battlefield",
+            "player": "opponent",
+            "scope": "creature"
+          }
+        ],
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Kaervek's Spite": {
+      "csvid": 2729,
+      "source": {
+        "name": "Kaervek's Spite",
+        "oracle_id": "7d69be1e-701a-4bcb-a83e-38b4174f7828",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{B}{B}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice all permanents you control and discard your hand.\nTarget player loses 5 life.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Kaervek's Spite",
+        "kind": "cost_effect",
+        "cost_scope": "permanent",
+        "cost_count": "all",
+        "effect": "lose_life",
+        "target": "player",
+        "amount": 5,
+        "recipient": "any",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": false,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "discard_hand_cost": true,
+        "counter_opponent": true,
+        "cost_palette": [
+          "Grizzly Bears",
+          "Darksteel Myr",
+          "Forest",
+          "Sol Ring",
+          "Seal of Cleansing",
+          "Jace Beleren"
+        ],
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Read the Runes": {
+      "csvid": 6231,
+      "source": {
+        "name": "Read the Runes",
+        "oracle_id": "74316be1-041f-4a2e-a296-0b496f90ca25",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{X}{U}",
+        "oracle_text": "Draw X cards. For each card drawn this way, discard a card unless you sacrifice a permanent.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Read the Runes",
+        "kind": "resource_choice",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "runes",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "resolution_sacrifice": true,
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Devastating Dreams": {
+      "csvid": 5801,
+      "source": {
+        "name": "Devastating Dreams",
+        "oracle_id": "18994c4c-9b5d-4b58-a5c3-646fbc92f9c7",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{R}{R}",
+        "oracle_text": "As an additional cost to cast this spell, discard X cards at random.\nEach player sacrifices X lands of their choice. Devastating Dreams deals X damage to each creature.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Devastating Dreams",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "mass_damage",
+        "target": "none",
+        "amount": "x",
+        "recipient": "both",
+        "scope": "land",
+        "quantity": "x",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "chosen_number": true,
+        "random_discard_cost": true,
+        "counter_opponent": true,
+        "creature_controls": true,
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Barrin's Spite": {
+      "csvid": 4942,
+      "source": {
+        "name": "Barrin's Spite",
+        "oracle_id": "68b038ef-71c4-4ca5-9821-57bf85831bb7",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{U}{B}",
+        "oracle_text": "Choose two target creatures controlled by the same player. Their controller chooses and sacrifices one of them. Return the other to its owner's hand.",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Barrin's Spite",
+        "kind": "cost_effect",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "choice_sac_bounce",
+        "target": "creature",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "allow_own_target": true,
+        "multi": {
+          "count": 2,
+          "scope": "creature",
+          "choice": "target",
+          "controller": "same"
+        },
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Evacuation",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Retribution": {
+      "csvid": 2231,
+      "source": {
+        "name": "Retribution",
+        "oracle_id": "2c7b0034-7eb5-4950-b6dc-8e1d07d26899",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{R}{R}",
+        "oracle_text": "Choose two target creatures controlled by the same opponent. That player chooses and sacrifices one of those creatures. Put a -1/-1 counter on the other.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Retribution",
+        "kind": "cost_effect",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "choice_sac_counter",
+        "target": "creature",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "multi": {
+          "count": 2,
+          "scope": "creature",
+          "choice": "dialog",
+          "controller": "opponent"
+        },
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Evacuation",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Rushing River": {
+      "csvid": 5292,
+      "source": {
+        "name": "Rushing River",
+        "oracle_id": "6e2a695d-305a-4bbe-b302-11fdc5c2a451",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Kicker\u2014Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell.)\nReturn target nonland permanent to its owner's hand. If this spell was kicked, return another target nonland permanent to its owner's hand.",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Rushing River",
+        "kind": "cost_effect",
+        "cost_scope": "land",
+        "cost_count": 1,
+        "effect": "multi_bounce",
+        "target": "artifact_creature_enchantment",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "allow_own_target": true,
+        "multi": {
+          "count": 2,
+          "scope": "nonland",
+          "optional_second": true
+        },
+        "optional_payment": {
+          "kind": "kicker_sacrifice",
+          "mana": 0,
+          "dialog_first": true
+        },
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Evacuation",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Mask of the Mimic": {
+      "csvid": 3391,
+      "source": {
+        "name": "Mask of the Mimic",
+        "oracle_id": "f1a16f6d-ea11-485e-8c5b-7f919a731fe0",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a card with the same name as target nontoken creature, put that card onto the battlefield, then shuffle.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Mask of the Mimic",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "none",
+        "target": "creature",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer",
+          "name-changing effects",
+          "AI own-target additional-cost selection; human own target is covered"
+        ],
+        "allow_own_target": true,
+        "same_name_search": true,
+        "own_return_index": 1,
+        "search": {
+          "scope": "same_name",
+          "quantity": 1,
+          "preferred": [
+            "War Mammoth"
+          ],
+          "destination": "battlefield"
+        },
+        "library_palette": [
+          "War Mammoth",
+          "War Mammoth",
+          "Craw Wurm",
+          "Darksteel Myr",
+          "Grizzly Bears",
+          "Memnite",
+          "Forest",
+          "Sol Ring",
+          "Lightning Bolt"
+        ],
+        "target_predicate": {
+          "types": [
+            "Creature"
+          ],
+          "exclude_token": true
+        },
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Evacuation",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Ruthless Disposal": {
+      "csvid": 16175,
+      "source": {
+        "name": "Ruthless Disposal",
+        "oracle_id": "dcd12cb6-6920-4bff-af73-104ad32f7d59",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{B}",
+        "oracle_text": "As an additional cost to cast this spell, discard a card and sacrifice a creature.\nTwo target creatures each get -13/-13 until end of turn.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "profile": "Ruthless Disposal",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "multi_reduce",
+        "target": "creature",
+        "amount": 13,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer",
+          "AI separate own targets with autonomous sacrifice choice; unique cost-as-target covered for both casters",
+          "rejected hand/type contexts use handler permission checks"
+        ],
+        "allow_own_target": true,
+        "discard_card_cost": true,
+        "counter_opponent": true,
+        "multi": {
+          "count": 2,
+          "scope": "creature"
+        },
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Autochthon Wurm",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Evacuation",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Krosan Cloudscraper",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    },
+    "Eliminate the Competition": {
+      "csvid": 16361,
+      "source": {
+        "name": "Eliminate the Competition",
+        "oracle_id": "26e549c0-a08b-475b-9138-6dde175cdf55",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice X creatures.\nDestroy X target creatures.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "profile": "Eliminate the Competition",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": "targets",
+        "effect": "multi_destroy",
+        "target": "creature",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": false,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer",
+          "X beyond three targets",
+          "AI separate own targets with autonomous sacrifice choice; unique cost-as-target covered for both casters"
+        ],
+        "allow_own_target": true,
+        "multi": {
+          "count": "chosen",
+          "scope": "creature",
+          "sacrifice_per_target": true
+        },
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Autochthon Wurm",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Evacuation",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Krosan Cloudscraper",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "card": "Living Death",
+  "csvid": 3191,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Living Death",
+        "kind": "mass_exchange",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "mass_exchange",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "initial_graveyard": [
+          "Scathe Zombies",
+          "Wall of Spears",
+          "Giant Growth",
+          "Mountain",
+          "Sol Ring"
+        ],
+        "initial_battlefield": [
+          "Grizzly Bears",
+          "Hill Giant",
+          "Darksteel Myr",
+          "Sol Ring",
+          "Seal of Cleansing",
+          "Forest"
+        ],
+        "counter_response": true
+      },
+      "oracle_text": "Each player exiles all creature cards from their graveyard, then sacrifices all creatures they control, then puts all cards they exiled this way onto the battlefield.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_battlefield_0",
+        "no_grave_creatures_0",
+        "duplicate_returns_0",
+        "stolen_creatures_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_battlefield_1",
+        "no_grave_creatures_1",
+        "duplicate_returns_1",
+        "stolen_creatures_1"
+      ]
+    }
+  ]
+}

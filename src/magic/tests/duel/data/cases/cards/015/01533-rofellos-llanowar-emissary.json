@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "card": "Rofellos, Llanowar Emissary",
+  "csvid": 1533,
+  "recipes": [
+    {
+      "family": "mana_creature",
+      "version": 2,
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "own_forests",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      },
+      "oracle_text": "{T}: Add {G} for each Forest you control.",
+      "variants": [
+        "entry_0",
+        "tapped_0",
+        "sick_0",
+        "incidental_tap_0",
+        "source_bounced_0",
+        "tax_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "fresh_cast_0",
+        "payment_0",
+        "insufficient_cast_mana_0",
+        "zero_count_0",
+        "count_removed_0",
+        "effect_m0_0",
+        "spend_generic_m0_0",
+        "repeat_denied_m0_0",
+        "untap_repeat_m0_0",
+        "entry_1",
+        "tapped_1",
+        "sick_1",
+        "incidental_tap_1",
+        "source_bounced_1",
+        "tax_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "fresh_cast_1",
+        "payment_1",
+        "insufficient_cast_mana_1",
+        "count_removed_1",
+        "effect_m0_1",
+        "spend_generic_m0_1",
+        "repeat_denied_m0_1",
+        "untap_repeat_m0_1"
+      ]
+    }
+  ]
+}

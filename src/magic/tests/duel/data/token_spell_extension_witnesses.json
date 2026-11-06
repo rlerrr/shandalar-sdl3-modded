@@ -1,0 +1,442 @@
+{
+  "version": 1,
+  "cards": {
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "colors": [
+        "G"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Giant Spider": {
+      "name": "Giant Spider",
+      "mana_cost": "{3}{G}",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "type_line": "Creature — Spider",
+      "power": "2",
+      "toughness": "4",
+      "colors": [
+        "G"
+      ],
+      "keywords": [
+        "Reach"
+      ],
+      "layout": "normal"
+    },
+    "Suntail Hawk": {
+      "name": "Suntail Hawk",
+      "mana_cost": "{W}",
+      "oracle_text": "Flying",
+      "type_line": "Creature — Bird",
+      "power": "1",
+      "toughness": "1",
+      "colors": [
+        "W"
+      ],
+      "keywords": [
+        "Flying"
+      ],
+      "layout": "normal"
+    },
+    "Unsummon": {
+      "name": "Unsummon",
+      "mana_cost": "{U}",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Cloudshift": {
+      "name": "Cloudshift",
+      "mana_cost": "{W}",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Swords to Plowshares": {
+      "name": "Swords to Plowshares",
+      "mana_cost": "{W}",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "type_line": "Instant",
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Wrath of God": {
+      "name": "Wrath of God",
+      "mana_cost": "{2}{W}{W}",
+      "oracle_text": "Destroy all creatures. They can't be regenerated.",
+      "type_line": "Sorcery",
+      "colors": [
+        "W"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Counterspell": {
+      "name": "Counterspell",
+      "mana_cost": "{U}{U}",
+      "oracle_text": "Counter target spell.",
+      "type_line": "Instant",
+      "colors": [
+        "U"
+      ],
+      "keywords": [],
+      "layout": "normal"
+    }
+  },
+  "sources": {
+    "Acorn Harvest": {
+      "name": "Acorn Harvest",
+      "oracle_id": "6aeba615-2d37-4eb8-a377-41a517e95aa3",
+      "oracle_text": "Create two 1/1 green Squirrel creature tokens.\nFlashback—{1}{G}, Pay 3 life. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Army of the Damned": {
+      "name": "Army of the Damned",
+      "oracle_id": "75d667ec-86f4-4850-a3b6-e7a9fc7053b0",
+      "oracle_text": "Create thirteen tapped 2/2 black Zombie creature tokens.\nFlashback {7}{B}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{5}{B}{B}{B}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Battle Screech": {
+      "name": "Battle Screech",
+      "oracle_id": "e73131cd-b454-405b-9539-9d777e232b9e",
+      "oracle_text": "Create two 1/1 white Bird creature tokens with flying.\nFlashback—Tap three untapped white creatures you control. (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Beast Attack": {
+      "name": "Beast Attack",
+      "oracle_id": "3f5acd90-199c-4ed3-9c8a-eeac4670d876",
+      "oracle_text": "Create a 4/4 green Beast creature token.\nFlashback {2}{G}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{G}{G}{G}",
+      "type_line": "Instant",
+      "keywords": [
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Chatter of the Squirrel": {
+      "name": "Chatter of the Squirrel",
+      "oracle_id": "b0aaa4b1-5188-43a6-997d-7a9b2ad452bc",
+      "oracle_text": "Create a 1/1 green Squirrel creature token.\nFlashback {1}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Crush of Wurms": {
+      "name": "Crush of Wurms",
+      "oracle_id": "6c12cd05-b673-453c-9f6b-f3aa022467c1",
+      "oracle_text": "Create three 6/6 green Wurm creature tokens.\nFlashback {9}{G}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{6}{G}{G}{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Empty the Warrens": {
+      "name": "Empty the Warrens",
+      "oracle_id": "3a59c882-8bb8-49ba-862f-125020dd5bec",
+      "oracle_text": "Create two 1/1 red Goblin creature tokens.\nStorm (When you cast this spell, copy it for each spell cast before it this turn.)",
+      "mana_cost": "{3}{R}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Storm"
+      ],
+      "layout": "normal"
+    },
+    "Feral Incarnation": {
+      "name": "Feral Incarnation",
+      "oracle_id": "31fefd48-6fff-41bf-a559-35a1699357ca",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nCreate three 3/3 green Beast creature tokens.",
+      "mana_cost": "{8}{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Convoke"
+      ],
+      "layout": "normal"
+    },
+    "Gather the Townsfolk": {
+      "name": "Gather the Townsfolk",
+      "oracle_id": "ff45677d-977e-4ef5-859c-52393ed71a6c",
+      "oracle_text": "Create two 1/1 white Human creature tokens.\nFateful hour — If you have 5 or less life, create five of those tokens instead.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Fateful hour"
+      ],
+      "layout": "normal"
+    },
+    "Grizzly Fate": {
+      "name": "Grizzly Fate",
+      "oracle_id": "f3073e4f-ca7e-4fde-88a4-bd7b6ebfbc8c",
+      "oracle_text": "Create two 2/2 green Bear creature tokens.\nThreshold — Create four 2/2 green Bear creature tokens instead if there are seven or more cards in your graveyard.\nFlashback {5}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Threshold",
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Hunting Pack": {
+      "name": "Hunting Pack",
+      "oracle_id": "d3e1848a-c236-4352-a7be-b0b4699af968",
+      "oracle_text": "Create a 4/4 green Beast creature token.\nStorm (When you cast this spell, copy it for each spell cast before it this turn.)",
+      "mana_cost": "{5}{G}{G}",
+      "type_line": "Instant",
+      "keywords": [
+        "Storm"
+      ],
+      "layout": "normal"
+    },
+    "Hunting Triad": {
+      "name": "Hunting Triad",
+      "oracle_id": "66bf0c4b-0c36-4d63-a929-5a7427a07279",
+      "oracle_text": "Create three 1/1 green Elf Warrior creature tokens.\nReinforce 3—{3}{G} ({3}{G}, Discard this card: Put three +1/+1 counters on target creature.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Kindred Sorcery — Elf",
+      "keywords": [
+        "Reinforce"
+      ],
+      "layout": "normal"
+    },
+    "Lingering Souls": {
+      "name": "Lingering Souls",
+      "oracle_id": "0b8c3337-04dd-4798-8203-6d8b8cfb936b",
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying.\nFlashback {1}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{W}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Moan of the Unhallowed": {
+      "name": "Moan of the Unhallowed",
+      "oracle_id": "ce87e5ed-2562-4563-9a5b-bd53c04ec4a5",
+      "oracle_text": "Create two 2/2 black Zombie creature tokens.\nFlashback {5}{B}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Reap the Seagraf": {
+      "name": "Reap the Seagraf",
+      "oracle_id": "95ff3ba5-cbd2-4723-9498-3fc6df5be973",
+      "oracle_text": "Create a 2/2 black Zombie creature token.\nFlashback {4}{U} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{B}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Savage Conception": {
+      "name": "Savage Conception",
+      "oracle_id": "494050f4-0a55-415d-9ae9-feb17e61c4e1",
+      "oracle_text": "Create a 3/3 green Beast creature token.\nRetrace (You may cast this card from your graveyard by discarding a land card in addition to paying its other costs.)",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Retrace"
+      ],
+      "layout": "normal"
+    },
+    "Scatter the Seeds": {
+      "name": "Scatter the Seeds",
+      "oracle_id": "c17d5153-cc74-4fbb-9d75-f7ee7b557b0a",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nCreate three 1/1 green Saproling creature tokens.",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Instant",
+      "keywords": [
+        "Convoke"
+      ],
+      "layout": "normal"
+    },
+    "Spiritual Visit": {
+      "name": "Spiritual Visit",
+      "oracle_id": "40759025-91e1-4755-a8cf-0b68c8e9220f",
+      "oracle_text": "Create a 1/1 colorless Spirit creature token.\nSplice onto Arcane {W} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)",
+      "mana_cost": "{W}",
+      "type_line": "Instant — Arcane",
+      "keywords": [
+        "Splice"
+      ],
+      "layout": "normal"
+    },
+    "Triplicate Spirits": {
+      "name": "Triplicate Spirits",
+      "oracle_id": "48090c64-f41a-447b-ad7a-54e3194f759b",
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nCreate three 1/1 white Spirit creature tokens with flying.",
+      "mana_cost": "{4}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Convoke"
+      ],
+      "layout": "normal"
+    },
+    "Gisa's Bidding": {
+      "name": "Gisa's Bidding",
+      "oracle_id": "0abc993b-18c7-4bb8-aa58-0d06a41cb48f",
+      "oracle_text": "Create two 2/2 black Zombie creature tokens.\nMadness {2}{B} (If you discard this card, discard it into exile. When you do, cast it for its madness cost or put it into your graveyard.)",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Madness"
+      ],
+      "layout": "normal"
+    },
+    "Spectral Reserves": {
+      "name": "Spectral Reserves",
+      "oracle_id": "628e5c1d-c7f9-4a98-98fb-13d7d5f81f64",
+      "oracle_text": "Create two 1/1 white Spirit creature tokens with flying. You gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Empyrial Storm": {
+      "name": "Empyrial Storm",
+      "oracle_id": "0af5f9f4-04d6-4701-be1f-65d4a0940737",
+      "oracle_text": "When you cast this spell, copy it for each time you've cast your commander from the command zone this game.\nCreate a 4/4 white Angel creature token with flying.",
+      "mana_cost": "{4}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Call of the Herd": {
+      "name": "Call of the Herd",
+      "oracle_id": "ee243f81-f51c-4d9a-a396-f7cef84b46c1",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Cenn's Enlistment": {
+      "name": "Cenn's Enlistment",
+      "oracle_id": "49fe9f5a-5821-4586-b913-7d8aef1f8669",
+      "oracle_text": "Create two 1/1 white Kithkin Soldier creature tokens.\nRetrace (You may cast this card from your graveyard by discarding a land card in addition to paying its other costs.)",
+      "mana_cost": "{3}{W}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Retrace"
+      ],
+      "layout": "normal"
+    },
+    "Elephant Ambush": {
+      "name": "Elephant Ambush",
+      "oracle_id": "09386931-59bd-481f-bccc-32e8a8abc0f9",
+      "oracle_text": "Create a 3/3 green Elephant creature token.\nFlashback {6}{G}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Instant",
+      "keywords": [
+        "Flashback"
+      ],
+      "layout": "normal"
+    },
+    "Reach of Branches": {
+      "name": "Reach of Branches",
+      "oracle_id": "951b59c5-6d5a-4fca-b3ae-e783814e7e7a",
+      "oracle_text": "Create a 2/5 green Treefolk Shaman creature token.\nWhenever a Forest you control enters, you may return this card from your graveyard to your hand.",
+      "mana_cost": "{4}{G}",
+      "type_line": "Kindred Instant — Treefolk",
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Sosuke's Summons": {
+      "name": "Sosuke's Summons",
+      "oracle_id": "6be663a5-70e2-435a-91ae-16168402787b",
+      "oracle_text": "Create two 1/1 green Snake creature tokens.\nWhenever a nontoken Snake you control enters, you may return this card from your graveyard to your hand.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Summon the School": {
+      "name": "Summon the School",
+      "oracle_id": "00909d51-3da8-41eb-a535-0c325fedc59f",
+      "oracle_text": "Create two 1/1 blue Merfolk Wizard creature tokens.\nTap four untapped Merfolk you control: Return this card from your graveyard to your hand.",
+      "mana_cost": "{3}{W}",
+      "type_line": "Kindred Sorcery — Merfolk",
+      "keywords": [],
+      "layout": "normal"
+    },
+    "Roar of the Wurm": {
+      "oracle_id": "b8b9e6fd-b3ed-4fbc-8753-74018fa33caa",
+      "name": "Roar of the Wurm",
+      "oracle_text": "Create a 6/6 green Wurm creature token.\nFlashback {3}{G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "mana_cost": "{6}{G}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Flashback"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 7.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dds/49/roar-of-the-wurm?utm_source=api"
+    },
+    "Stir the Sands": {
+      "oracle_id": "52fa7e9b-36d9-409c-8981-6f8dfd8bb031",
+      "name": "Stir the Sands",
+      "oracle_text": "Create three 2/2 black Zombie creature tokens.\nCycling {3}{B} ({3}{B}, Discard this card: Draw a card.)\nWhen you cycle this card, create a 2/2 black Zombie creature token.",
+      "mana_cost": "{4}{B}{B}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/akh/110/stir-the-sands?utm_source=api"
+    }
+  }
+}

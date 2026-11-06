@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Inspiring Call",
+  "csvid": 14941,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "draw_indestructible",
+        "amounts": [],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": []
+      },
+      "oracle_text": "Draw a card for each creature you control with a +1/+1 counter on it. Those creatures gain indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy them.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "two_copies_0",
+        "countered_0",
+        "opposing_turn_0",
+        "empty_counters_0",
+        "multiple_counters_0",
+        "protection_expiry_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "two_copies_1",
+        "countered_1",
+        "opposing_turn_1",
+        "empty_counters_1",
+        "multiple_counters_1",
+        "protection_expiry_1"
+      ]
+    }
+  ]
+}

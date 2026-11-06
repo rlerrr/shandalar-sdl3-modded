@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "card": "Licia, Sanguine Tribune",
+  "csvid": 17312,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "resource_growth",
+        "scope": "self",
+        "tap": false,
+        "random_discard": false,
+        "creature_discard": false,
+        "activation_menu": false,
+        "resolution_menu": false,
+        "kind": "life",
+        "cost": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "amount": 3,
+        "pay_life": 5,
+        "own_turn_only": true,
+        "once_per_turn": true,
+        "unused": [
+          "first strike and lifelink combat",
+          "cast discount after life gain",
+          "zero-life payment and game-ending state"
+        ],
+        "conditions": [
+          "no combat or upkeep step",
+          "no life gain this turn"
+        ]
+      },
+      "oracle_text": "This spell costs {1} less to cast for each 1 life you gained this turn.\nFirst strike, lifelink\nPay 5 life: Put three +1/+1 counters on Licia. Activate only during your turn and only once each turn.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cleanup_0",
+        "pending_snapshot_0",
+        "source_destroyed_pending_0",
+        "source_bounced_pending_0",
+        "cast_payment_0",
+        "tapped_source_0",
+        "once_used_0",
+        "stacked_denied_0",
+        "opposing_turn_0",
+        "insufficient_life_0",
+        "low_life_0",
+        "next_turn_0",
+        "effect_1",
+        "payment_1",
+        "cleanup_1",
+        "pending_snapshot_1",
+        "source_destroyed_pending_1",
+        "source_bounced_pending_1",
+        "cast_payment_1",
+        "tapped_source_1",
+        "once_used_1",
+        "stacked_denied_1",
+        "opposing_turn_1",
+        "insufficient_life_1",
+        "low_life_1",
+        "next_turn_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle pay-five-life growth: actual full-price source casting in a context with no life gain, life/counter/stat receipts, low-life six-to-one payment and insufficient-life four denial, own-turn and once-per-turn restrictions both pending and resolved, real next-turn untap and main-phase reactivation, source loss, cleanup and pending replay. First strike/lifelink combat, discounted casting after life gain, and game-ending zero-life payments are explicit component gaps. Authoritative native/Wasm validation is recorded in the wave5 report."
+}

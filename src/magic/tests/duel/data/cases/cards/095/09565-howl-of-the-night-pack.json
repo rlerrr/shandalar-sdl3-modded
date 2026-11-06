@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "card": "Howl of the Night Pack",
+  "csvid": 9565,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 4,
+        "mechanism": "wolf_creator",
+        "wolf_kind": "forest_wolves",
+        "token": {
+          "name": "Wolf",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Wolf"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "tokens": [
+          {
+            "token": {
+              "name": "Wolf",
+              "power": 2,
+              "toughness": 2,
+              "colors": [
+                "G"
+              ],
+              "subtypes": [
+                "Wolf"
+              ],
+              "artifact": false,
+              "keywords": []
+            },
+            "count": 1
+          }
+        ],
+        "amount": {
+          "basis": "controlled_forests"
+        },
+        "activation": null,
+        "operative": [],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Create a 2/2 green Wolf creature token for each Forest you control.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "zero_input_0",
+        "opponent_input_0",
+        "ownership_0",
+        "prior_input_removed_0",
+        "larger_amount_0",
+        "amount_locked_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "zero_input_1",
+        "opponent_input_1",
+        "ownership_1",
+        "prior_input_removed_1",
+        "larger_amount_1",
+        "amount_locked_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

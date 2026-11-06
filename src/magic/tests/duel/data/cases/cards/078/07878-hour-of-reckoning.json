@@ -1,0 +1,144 @@
+{
+  "version": 1,
+  "card": "Hour of Reckoning",
+  "csvid": 7878,
+  "recipes": [
+    {
+      "family": "tap_spell",
+      "version": 2,
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy all nontoken creatures.",
+      "params": {
+        "schema": 7,
+        "kind": "mass",
+        "effect": "preserve",
+        "scope": "creatures",
+        "controller": "any",
+        "state": "any",
+        "count": 0,
+        "optional": false,
+        "stats": [
+          0,
+          0
+        ],
+        "mana_gain": 0,
+        "controller_damage": 0,
+        "life_loss": 0,
+        "draw": 0,
+        "scry": 0,
+        "token": null,
+        "source_destination": "graveyard",
+        "return_tap": false,
+        "power_limit": null,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "after": [],
+        "menu": "",
+        "payment_mana": "",
+        "gaps": [
+          "convoke resource payment",
+          "regeneration responses"
+        ],
+        "inactive": [],
+        "sweep_destroy": true,
+        "nontoken_controls": true,
+        "convoke_normal": true
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "two_copies_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_0",
+        "empty_battlefield_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "two_copies_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_1",
+        "empty_battlefield_1"
+      ]
+    },
+    {
+      "family": "tap_spell",
+      "version": 2,
+      "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nDestroy all nontoken creatures.",
+      "params": {
+        "schema": 9,
+        "kind": "mass",
+        "effect": "preserve",
+        "scope": "creatures",
+        "controller": "any",
+        "state": "any",
+        "count": 0,
+        "optional": false,
+        "stats": [
+          0,
+          0
+        ],
+        "mana_gain": 0,
+        "controller_damage": 0,
+        "life_loss": 0,
+        "draw": 0,
+        "scry": 0,
+        "token": null,
+        "source_destination": "graveyard",
+        "return_tap": false,
+        "power_limit": null,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "after": [],
+        "menu": "",
+        "payment_mana": "",
+        "gaps": [
+          "regeneration responses",
+          "more than two convoke resources",
+          "multicolor and colorless resource choices"
+        ],
+        "inactive": [],
+        "sweep_destroy": true,
+        "nontoken_controls": true,
+        "convoke_normal": true,
+        "convoke_only": true,
+        "convoke_resources": [
+          "Savannah Lions",
+          "Suntail Hawk"
+        ],
+        "convoke_noncreature": "Ivory Mask"
+      },
+      "variants": [
+        "convoke_payment_0",
+        "convoke_countered_0",
+        "convoke_ready_snapshot_0",
+        "convoke_pending_snapshot_0",
+        "convoke_foreign_owned_0",
+        "convoke_tapped_0",
+        "convoke_wrong_controller_0",
+        "convoke_noncreature_0",
+        "convoke_payment_1",
+        "convoke_countered_1",
+        "convoke_ready_snapshot_1",
+        "convoke_pending_snapshot_1",
+        "convoke_foreign_owned_1",
+        "convoke_tapped_1",
+        "convoke_wrong_controller_1",
+        "convoke_noncreature_1"
+      ]
+    }
+  ]
+}

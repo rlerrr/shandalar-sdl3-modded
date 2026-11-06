@@ -1,0 +1,125 @@
+{
+  "version": 1,
+  "card": "Power Sink",
+  "csvid": 191,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 2
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Other mana-land abilities, animated lands, ability-granting/losing effects and uncounterable parents."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [
+            {
+              "name": "Forest",
+              "ref": "drain_own_land",
+              "player": 0,
+              "zone": "battlefield"
+            },
+            {
+              "name": "Forest",
+              "ref": "drain_other_land",
+              "player": 1,
+              "zone": "battlefield"
+            },
+            {
+              "name": "Island",
+              "ref": "drain_tapped_land",
+              "player": 1,
+              "zone": "battlefield",
+              "state": [
+                "tapped"
+              ]
+            },
+            {
+              "name": "Maze of Ith",
+              "ref": "drain_nonmana_land",
+              "player": 1,
+              "zone": "battlefield"
+            },
+            {
+              "name": "Sol Ring",
+              "ref": "drain_nonland",
+              "player": 1,
+              "zone": "battlefield",
+              "state": [
+                "tapped"
+              ]
+            }
+          ],
+          "wave": 5,
+          "drain_mana_lands": [
+            "Forest",
+            "Island"
+          ],
+          "variable_x": true
+        }
+      },
+      "oracle_text": "Counter target spell unless its controller pays {X}. If that player doesn't, they tap all lands with mana abilities they control and lose all unspent mana.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "tax_paid_0",
+        "tax_exact_0",
+        "tax_unaffordable_0",
+        "x_0_0",
+        "x_1_0",
+        "x_2_0",
+        "x_5_0",
+        "x_8_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_instant_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1",
+        "tax_paid_1",
+        "tax_exact_1",
+        "tax_unaffordable_1",
+        "x_0_1",
+        "x_1_1",
+        "x_2_1",
+        "x_5_1",
+        "x_8_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Actual variable-X paid/declined response; all six unspent mana colors drained only for unpaid target controller, Forest/Island tapped while Maze of Ith/nonland/other-player controls remain unchanged, including own parent. Other mana-land abilities, animated lands, ability-granting/losing effects and uncounterable parents."
+}

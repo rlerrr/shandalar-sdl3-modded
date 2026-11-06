@@ -1,0 +1,92 @@
+{
+  "version": 1,
+  "card": "Goblin Trenches",
+  "csvid": 5379,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 3,
+        "mechanism": "cost_creator",
+        "token": {
+          "name": "Goblin Soldier",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "R",
+            "W"
+          ],
+          "subtypes": [
+            "Goblin",
+            "Soldier"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "amount": {
+          "fixed": 2
+        },
+        "activation": {
+          "mana": [
+            2,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "tap": false,
+          "untap": false,
+          "sacrifice": false,
+          "additional": "sacrifice_land",
+          "additional_count": 1,
+          "only_sorcery": false
+        },
+        "operative": [],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "{2}, Sacrifice a land: Create two 1/1 red and white Goblin Soldier creature tokens.",
+      "variants": [
+        "create_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "missing_cost_0",
+        "opponent_cost_0",
+        "foreign_cost_0",
+        "create_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "missing_cost_1",
+        "opponent_cost_1",
+        "foreign_cost_1"
+      ]
+    }
+  ]
+}

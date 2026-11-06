@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Boar Umbra",
+  "csvid": 10881,
+  "recipes": [
+    {
+      "family": "aura_keyword_extension",
+      "version": 2,
+      "params": {
+        "power": 3,
+        "toughness": 3,
+        "keywords": [],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Umbra armor replacement"
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature gets +3/+3.\nUmbra armor (If enchanted creature would be destroyed, instead remove all damage from it and destroy this Aura.)",
+      "variants": [
+        "friendly_cleanup_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_0",
+        "wrong_type_0",
+        "lost_target_0",
+        "snapshot_0",
+        "tapped_0",
+        "large_target_0",
+        "unblocked_0",
+        "opponent_cleanup_0",
+        "opponent_unblocked_0",
+        "empty_zones_0",
+        "aura_removed_0",
+        "aura_bounced_0",
+        "host_bounced_0",
+        "friendly_cleanup_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_1",
+        "wrong_type_1",
+        "lost_target_1",
+        "snapshot_1",
+        "tapped_1",
+        "large_target_1",
+        "unblocked_1",
+        "opponent_cleanup_1",
+        "opponent_unblocked_1",
+        "empty_zones_1",
+        "aura_removed_1",
+        "aura_bounced_1",
+        "host_bounced_1"
+      ]
+    }
+  ]
+}

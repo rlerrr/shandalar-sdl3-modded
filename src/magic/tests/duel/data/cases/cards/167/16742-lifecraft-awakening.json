@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Lifecraft Awakening",
+  "csvid": 16742,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "artifact_animation",
+        "inactive_components": [
+          "Vehicle crewing and artifacts already animated before casting are not selected. Vehicle nonanimation, artifact-creature base stats, noncreature Construct conversion and permanent counters are selected."
+        ]
+      },
+      "oracle_text": "Put X +1/+1 counters on target artifact you control. If it isn't a creature or Vehicle, it becomes a 0/0 Construct artifact creature.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "countered_0",
+        "selection_pending_0",
+        "lost_target_0",
+        "two_copies_0",
+        "preexisting_0",
+        "artifact_creature_0",
+        "vehicle_0",
+        "x_zero_0",
+        "x_one_0",
+        "x_five_0",
+        "wrong_controller_0",
+        "wrong_type_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "countered_1",
+        "selection_pending_1",
+        "lost_target_1",
+        "two_copies_1",
+        "preexisting_1",
+        "artifact_creature_1",
+        "vehicle_1",
+        "x_zero_1",
+        "x_one_1",
+        "x_five_1",
+        "wrong_controller_1",
+        "wrong_type_1"
+      ]
+    }
+  ]
+}

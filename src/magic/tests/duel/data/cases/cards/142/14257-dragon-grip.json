@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Dragon Grip",
+  "csvid": 14257,
+  "recipes": [
+    {
+      "family": "aura_keyword_extension",
+      "version": 2,
+      "params": {
+        "power": 2,
+        "toughness": 0,
+        "keywords": [
+          "First strike"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Ferocious flash permission"
+        ]
+      },
+      "oracle_text": "Ferocious — If you control a creature with power 4 or greater, you may cast this spell as though it had flash. (You may cast it any time you could cast an instant.)\nEnchant creature\nEnchanted creature gets +2/+0 and has first strike.",
+      "variants": [
+        "friendly_cleanup_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_0",
+        "wrong_type_0",
+        "lost_target_0",
+        "snapshot_0",
+        "tapped_0",
+        "large_target_0",
+        "unblocked_0",
+        "opponent_cleanup_0",
+        "opponent_unblocked_0",
+        "empty_zones_0",
+        "first_strike_0",
+        "expired_first_strike_0",
+        "aura_removed_0",
+        "aura_bounced_0",
+        "host_bounced_0",
+        "host_destroyed_0",
+        "friendly_cleanup_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_1",
+        "wrong_type_1",
+        "lost_target_1",
+        "snapshot_1",
+        "tapped_1",
+        "large_target_1",
+        "unblocked_1",
+        "opponent_cleanup_1",
+        "opponent_unblocked_1",
+        "empty_zones_1",
+        "first_strike_1",
+        "expired_first_strike_1",
+        "aura_removed_1",
+        "aura_bounced_1",
+        "host_bounced_1",
+        "host_destroyed_1"
+      ]
+    }
+  ]
+}

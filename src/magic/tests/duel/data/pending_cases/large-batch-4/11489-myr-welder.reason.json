@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "card": "Myr Welder",
+  "csvid": 11489,
+  "status": "pending-runtime-instability",
+  "scope": "Whole 40-variant source declaration preserved in 11489-myr-welder.json; none enrolled in active cases.",
+  "reason": "The handler supplies 17 ordinary DIALOG options before illegal-option filtering, exceeding MAX_CHOICES=16. It also passes uninitialized labels for unavailable inherited abilities. The native batch and isolated reproductions disagree for 12 cases, so an exact stable known-failure baseline would misrepresent the evidence. Gameplay fixes are deferred.",
+  "observed": {
+    "total_variants": 40,
+    "passing_controls_each_runtime": 16,
+    "native_failed_variants": 24,
+    "native_batch_isolation_disagreements": 12,
+    "wasm_crashed_variants": 24
+  },
+  "source_anchors": [
+    "src/manalinkeh/cards/mirrodin_besieged.c:2925 card_myr_welder",
+    "src/manalinkeh/functions/dialog.c:401 choices < MAX_CHOICES"
+  ],
+  "evidence": [
+    "H:/shandalar-test-scratch/large-batch-4/graveyard_exile-pilot-fixed/validation.json",
+    "temp/parallel-large4/graveyard_exile/report.json",
+    "temp/parallel-large4/infra-evidence.json"
+  ],
+  "baseline_entries_added": 0
+}

@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Phantom Flock",
+  "csvid": 5985,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "replacement",
+        "replacement": "phantom",
+        "entry_counters": 3,
+        "casting_cost": "{3}{W}{W}",
+        "gaps": [
+          "Flying evasion and blocking"
+        ]
+      },
+      "oracle_text": "Flying\nThis creature enters with three +1/+1 counters on it.\nIf damage would be dealt to this creature, prevent that damage. Remove a +1/+1 counter from this creature.",
+      "variants": [
+        "effect_0",
+        "small_damage_0",
+        "repeat_damage_0",
+        "other_damage_0",
+        "friendly_source_0",
+        "cleanup_0",
+        "payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "damaged_snapshot_0",
+        "bare_zones_0",
+        "blocking_0",
+        "combat_snapshot_0",
+        "exhaustion_0",
+        "zero_counters_0",
+        "effect_1",
+        "small_damage_1",
+        "repeat_damage_1",
+        "other_damage_1",
+        "friendly_source_1",
+        "cleanup_1",
+        "payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "damaged_snapshot_1",
+        "bare_zones_1",
+        "blocking_1",
+        "combat_snapshot_1",
+        "exhaustion_1",
+        "zero_counters_1"
+      ]
+    }
+  ]
+}

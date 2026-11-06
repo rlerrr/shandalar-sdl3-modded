@@ -101,6 +101,7 @@ extern int g_ai_response_state;
 typedef struct
 {
   uint32_t host_random_state;
+  uint32_t host_shuffle_count[2];
   ManalinkRuntimeSnapshot manalink_runtime;
   card_instance_t card_instances[2][151];
   card_data_t extra_card_data[16];
@@ -282,6 +283,7 @@ int defending_cop_available_mana;
 // GLOBAL: SHANDALAR 0x00765e30
 static card_instance_t combat_sim_saved_card_instances[2][151];
 static ManalinkRuntimeSnapshot combat_sim_saved_manalink_runtime;
+static uint32_t combat_sim_saved_host_shuffle_count[2];
 // GLOBAL: MAGIC 0x00742ae0
 // GLOBAL: SHANDALAR 0x0077c070
 static card_data_t combat_sim_saved_dynamic_card_data[16];
@@ -1498,7 +1500,9 @@ void duel_engine_capture_ai_snapshot(void *destination)
 {
   AiSearchBackup *backup = destination;
 
-  backup->host_random_state = duel_host_capture().random_state;
+  DuelHostState host_state = duel_host_capture();
+  backup->host_random_state = host_state.random_state;
+  memcpy(backup->host_shuffle_count, host_state.shuffle_count, sizeof(backup->host_shuffle_count));
   manalinkeh_capture_runtime_snapshot(&backup->manalink_runtime);
   memcpy(backup->card_instances, global_card_instances, sizeof(backup->card_instances));
   memcpy(backup->extra_card_data, global_cards_data + g_card_count, sizeof(backup->extra_card_data));
@@ -1575,6 +1579,7 @@ void duel_engine_restore_ai_snapshot(const void *source)
    * execution budget.  Refreshing the AI random table consumes this stream. */
   DuelHostState host_state = duel_host_capture();
   host_state.random_state = backup->host_random_state;
+  memcpy(host_state.shuffle_count, backup->host_shuffle_count, sizeof(host_state.shuffle_count));
   duel_host_restore(host_state);
   manalinkeh_restore_runtime_snapshot(&backup->manalink_runtime);
   memcpy(global_card_instances, backup->card_instances, sizeof(backup->card_instances));
@@ -3015,6 +3020,8 @@ void setup_combat_damage_simulation(int player)
 // FUNCTION: SHANDALAR 0x004c3b83
 void save_combat_simulation_state(void)
 {
+  DuelHostState host_state = duel_host_capture();
+  memcpy(combat_sim_saved_host_shuffle_count, host_state.shuffle_count, sizeof(combat_sim_saved_host_shuffle_count));
   manalinkeh_capture_runtime_snapshot(&combat_sim_saved_manalink_runtime);
   memcpy(combat_sim_saved_card_instances, global_card_instances, sizeof(combat_sim_saved_card_instances));
   memcpy(combat_sim_saved_dynamic_card_data, global_cards_data + g_card_count, sizeof(combat_sim_saved_dynamic_card_data));
@@ -3061,6 +3068,9 @@ void save_combat_simulation_state(void)
 // FUNCTION: SHANDALAR 0x004c3e34
 void restore_combat_simulation_state(void)
 {
+  DuelHostState host_state = duel_host_capture();
+  memcpy(host_state.shuffle_count, combat_sim_saved_host_shuffle_count, sizeof(host_state.shuffle_count));
+  duel_host_restore(host_state);
   manalinkeh_restore_runtime_snapshot(&combat_sim_saved_manalink_runtime);
   memcpy(global_card_instances, combat_sim_saved_card_instances, sizeof(combat_sim_saved_card_instances));
   memcpy(global_cards_data + g_card_count, combat_sim_saved_dynamic_card_data, sizeof(combat_sim_saved_dynamic_card_data));

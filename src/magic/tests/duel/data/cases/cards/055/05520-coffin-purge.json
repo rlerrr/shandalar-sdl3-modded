@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Coffin Purge",
+  "csvid": 5520,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "spell",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Flashback casting from the graveyard is not exercised."
+        ]
+      },
+      "oracle_text": "Exile target card from a graveyard.\nFlashback {B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "empty_graveyards_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "alternate_0",
+        "own_target_0",
+        "sole_own_graveyard_0",
+        "sole_opponent_graveyard_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "wrong_color_0",
+        "repeat_0",
+        "lost_target_0",
+        "effect_1",
+        "payment_1",
+        "empty_graveyards_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "alternate_1",
+        "own_target_1",
+        "sole_own_graveyard_1",
+        "sole_opponent_graveyard_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "wrong_color_1",
+        "repeat_1",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

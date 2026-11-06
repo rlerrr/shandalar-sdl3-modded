@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Resistance Fighter",
+  "csvid": 2767,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "binding": "combat_source",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [],
+        "target_predicate": "creature",
+        "sacrifice": true
+      },
+      "oracle_text": "Sacrifice this creature: Prevent all combat damage target creature would deal this turn.",
+      "variants": [
+        "effect_0",
+        "blocked_0",
+        "without_effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "fresh_cast_0",
+        "effect_1",
+        "blocked_1",
+        "without_effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "fresh_cast_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "version": 1,
+  "cards": {
+    "Savannah Lions": {
+      "name": "Savannah Lions",
+      "oracle_id": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature \u2014 Cat",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "layout": "normal"
+    },
+    "Scaled Wurm": {
+      "name": "Scaled Wurm",
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "oracle_text": "",
+      "mana_cost": "{7}{G}",
+      "type_line": "Creature \u2014 Wurm",
+      "power": "7",
+      "toughness": "6",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "layout": "normal"
+    },
+    "Suntail Hawk": {
+      "name": "Suntail Hawk",
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature \u2014 Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "layout": "normal"
+    },
+    "Air Elemental": {
+      "name": "Air Elemental",
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "oracle_text": "Flying",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature \u2014 Elemental",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "layout": "normal"
+    },
+    "Darksteel Gargoyle": {
+      "name": "Darksteel Gargoyle",
+      "oracle_id": "73010421-374f-458e-aa88-248ef8ae4f8b",
+      "oracle_text": "Flying\nIndestructible (Damage and effects that say \"destroy\" don't destroy this creature.)",
+      "mana_cost": "{7}",
+      "type_line": "Artifact Creature \u2014 Gargoyle",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Flying",
+        "Indestructible"
+      ],
+      "colors": [],
+      "layout": "normal"
+    },
+    "Unsummon": {
+      "name": "Unsummon",
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "layout": "normal"
+    },
+    "Cloudshift": {
+      "name": "Cloudshift",
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "layout": "normal"
+    },
+    "Essence Scatter": {
+      "name": "Essence Scatter",
+      "oracle_id": "46665089-aa3d-44c3-964d-6638dfbb5782",
+      "oracle_text": "Counter target creature spell.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "layout": "normal"
+    },
+    "Swords to Plowshares": {
+      "name": "Swords to Plowshares",
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "layout": "normal"
+    },
+    "Darksteel Relic": {
+      "name": "Darksteel Relic",
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "layout": "normal"
+    }
+  }
+}

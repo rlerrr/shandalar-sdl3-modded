@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Steel Sabotage",
+  "csvid": 11534,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "artifact"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "The return-an-artifact mode is not selected.",
+          "Illegal counter-mode availability when another mode is legal remains untested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              0
+            ],
+            "1": []
+          },
+          "auxiliary": [
+            {
+              "name": "Ornithopter",
+              "ref": "mode_other",
+              "player": 0,
+              "zone": "battlefield"
+            }
+          ]
+        }
+      },
+      "oracle_text": "Choose one \u2014\n\u2022 Counter target artifact spell.\n\u2022 Return target artifact to its owner's hand.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source identity and Oracle text are pinned. Actual parent and response casts use stack1/stack2 and normal legality, payment and selection for both controllers. Tests cover printed fixed or derived taxes, pay/decline/exact/unaffordable decisions, source costs and missing resources, typed targets, own/opposing spells, selected/unselected permanents, exact zone multiplicities and ordered libraries, and snapshot replay as applicable. The return-an-artifact mode is not selected. Illegal counter-mode availability when another mode is legal remains untested. Countered response sources, lost targets, replacement/prevention, simultaneous responses and multiplayer remain separate gaps."
+}

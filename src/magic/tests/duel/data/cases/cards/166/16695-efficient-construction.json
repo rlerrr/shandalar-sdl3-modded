@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "card": "Efficient Construction",
+  "csvid": 16695,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 2,
+        "mechanism": "cast_predicate",
+        "token": {
+          "name": "Thopter",
+          "power": 1,
+          "toughness": 1,
+          "colors": [],
+          "subtypes": [
+            "Thopter"
+          ],
+          "artifact": true,
+          "keywords": [
+            "Flying"
+          ]
+        },
+        "amount": {
+          "fixed": 1
+        },
+        "activation": null,
+        "operative": [
+          {
+            "kind": "cast_predicate",
+            "predicate": "artifact",
+            "optional": false,
+            "payment": null
+          }
+        ],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Whenever you cast an artifact spell, create a 1/1 colorless Thopter artifact creature token with flying.",
+      "variants": [
+        "create_0",
+        "nonmatching_0",
+        "opponent_event_0",
+        "source_removed_0",
+        "repeat_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "pending_snapshot_0",
+        "predicate_second_type_0",
+        "flying_evasion_0",
+        "create_1",
+        "nonmatching_1",
+        "opponent_event_1",
+        "source_removed_1",
+        "repeat_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "pending_snapshot_1",
+        "predicate_second_type_1",
+        "flying_evasion_1"
+      ]
+    }
+  ]
+}

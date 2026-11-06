@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Hindervines",
+  "csvid": 12975,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_counter_combat",
+        "mode": "counterless_fog",
+        "inactive_components": [
+          "Creatures gaining or losing counters after resolution are not selected; mixed seeded counters exercise the printed combat-damage predicate."
+        ]
+      },
+      "oracle_text": "Prevent all combat damage that would be dealt this turn by creatures with no +1/+1 counters on them.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "countered_0",
+        "reverse_combat_0",
+        "unblocked_0",
+        "noncombat_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "countered_1",
+        "reverse_combat_1",
+        "unblocked_1",
+        "noncombat_1"
+      ]
+    }
+  ]
+}

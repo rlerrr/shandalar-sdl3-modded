@@ -1,0 +1,35 @@
+{
+  "version": 1,
+  "card": "Dazzling Reflection",
+  "csvid": 15581,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Additional damage episodes after the first prevented packet",
+          "Damage dealt outside combat by qualified creatures",
+          "Functional prevention, power-change gain, payment and replay cohorts remain pending in temp/parallel-large4/prevention/pending/15581-full-functional.json because the registry binds Deepfathom Skulker"
+        ],
+        "binding": "chosen_combat",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "",
+        "tap": false,
+        "gain_power": true,
+        "cast_permission_only": true
+      },
+      "oracle_text": "You gain life equal to target creature's power. The next time that creature would deal damage this turn, prevent that damage.",
+      "variants": [
+        "cast_permission_0",
+        "cast_permission_1"
+      ]
+    }
+  ]
+}

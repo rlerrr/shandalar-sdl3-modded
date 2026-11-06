@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Goblin Legionnaire",
+  "csvid": 5377,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "dialogs": {
+          "0": [
+            1
+          ],
+          "1": [
+            1
+          ]
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Separate deal-2-damage mode"
+        ],
+        "amount": 2,
+        "scope": "any",
+        "activation_cost": "{W}",
+        "tap": false,
+        "sacrifice": true,
+        "present_dialogs": true,
+        "normal_option_cost": "{R}"
+      },
+      "oracle_text": "{R}, Sacrifice this creature: It deals 2 damage to any target.\n{W}, Sacrifice this creature: Prevent the next 2 damage that would be dealt to any target this turn.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "other_damage_0",
+        "repeat_damage_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "self_player_0",
+        "opponent_player_0",
+        "opponent_creature_0",
+        "effect_1",
+        "payment_1",
+        "other_damage_1",
+        "repeat_damage_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "self_player_1",
+        "opponent_player_1",
+        "opponent_creature_1"
+      ]
+    }
+  ]
+}

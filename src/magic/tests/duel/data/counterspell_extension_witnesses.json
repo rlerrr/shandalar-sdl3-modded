@@ -1,0 +1,5152 @@
+{
+  "version": 1,
+  "cards": {
+    "Scaled Wurm": {
+      "name": "Scaled Wurm",
+      "type_line": "Creature \u2014 Wurm",
+      "mana_cost": "{7}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 8.0,
+      "layout": "normal",
+      "power": "7",
+      "toughness": "6"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "type_line": "Creature \u2014 Bear",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "2"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "type_line": "Basic Land \u2014 Plains",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "type_line": "Basic Land \u2014 Mountain",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {R}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Ancestral Recall": {
+      "name": "Ancestral Recall",
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "oracle_text": "Target player draws three cards.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Divination": {
+      "name": "Divination",
+      "type_line": "Sorcery",
+      "mana_cost": "{2}{U}",
+      "oracle_text": "Draw two cards.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "type_line": "Creature \u2014 Giant",
+      "mana_cost": "{3}{R}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "power": "3",
+      "toughness": "3"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "type_line": "Basic Land \u2014 Island",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Pacifism": {
+      "name": "Pacifism",
+      "type_line": "Enchantment \u2014 Aura",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Watchwolf": {
+      "name": "Watchwolf",
+      "type_line": "Creature \u2014 Wolf",
+      "mana_cost": "{G}{W}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": "3",
+      "toughness": "3"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "type_line": "Basic Land \u2014 Forest",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Glorious Anthem": {
+      "name": "Glorious Anthem",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}{W}",
+      "oracle_text": "Creatures you control get +1/+1.",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "mana_cost": "{0}",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "power": "0",
+      "toughness": "2"
+    },
+    "Wind Drake": {
+      "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+      "name": "Wind Drake",
+      "type_line": "Creature \u2014 Drake",
+      "mana_cost": "{2}{U}",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "2"
+    },
+    "Merfolk of the Pearl Trident": {
+      "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+      "name": "Merfolk of the Pearl Trident",
+      "type_line": "Creature \u2014 Merfolk",
+      "mana_cost": "{U}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": "1",
+      "toughness": "1"
+    },
+    "Rune Snag": {
+      "oracle_id": "49bf3805-cc9e-4550-8a01-171282aa49c9",
+      "name": "Rune Snag",
+      "type_line": "Instant",
+      "mana_cost": "{1}{U}",
+      "oracle_text": "Counter target spell unless its controller pays {2} plus an additional {2} for each card named Rune Snag in each graveyard.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "type_line": "Basic Land \u2014 Swamp",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {B}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Eldrazi Scion": {
+      "oracle_id": "0eb3cd4b-c34e-448c-a9ab-e7b0b4524833",
+      "name": "Eldrazi Scion",
+      "type_line": "Token Creature \u2014 Eldrazi Scion",
+      "mana_cost": "",
+      "oracle_text": "Sacrifice this creature: Add {C}.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0,
+      "layout": "token",
+      "power": "1",
+      "toughness": "1"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "type_line": "Creature \u2014 Spider",
+      "mana_cost": "{3}{G}",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "4"
+    },
+    "Shivan Dragon": {
+      "oracle_id": "711eea87-0fa3-46e0-a42b-fa5a86455f04",
+      "name": "Shivan Dragon",
+      "type_line": "Creature \u2014 Dragon",
+      "mana_cost": "{4}{R}{R}",
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "R"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "power": "5",
+      "toughness": "5"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Serum Visions": {
+      "oracle_id": "56956afd-db53-4542-816b-490c8b0bbcf7",
+      "name": "Serum Visions",
+      "oracle_text": "Draw a card. Scry 2.",
+      "mana_cost": "{U}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Scry"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/otc/112/serum-visions?utm_source=api"
+    },
+    "Disenchant": {
+      "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+      "name": "Disenchant",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fdn/572/disenchant?utm_source=api"
+    },
+    "Reach Through Mists": {
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "name": "Reach Through Mists",
+      "oracle_text": "Draw a card.",
+      "mana_cost": "{U}",
+      "type_line": "Instant \u2014 Arcane",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+    },
+    "Virulent Wound": {
+      "oracle_id": "6a555c10-4dc2-455d-87b4-c7fdbf3d29a6",
+      "name": "Virulent Wound",
+      "oracle_text": "Put a -1/-1 counter on target creature. When that creature dies this turn, its controller gets a poison counter.",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mbs/57/virulent-wound?utm_source=api"
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature \u2014 Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+    },
+    "Hunger of the Howlpack": {
+      "oracle_id": "296dee6b-6ec1-4ea4-8dc3-23080dd37646",
+      "name": "Hunger of the Howlpack",
+      "oracle_text": "Put a +1/+1 counter on target creature.\nMorbid \u2014 Put three +1/+1 counters on that creature instead if a creature died this turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [
+        "Morbid"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cns/168/hunger-of-the-howlpack?utm_source=api"
+    },
+    "Maze of Ith": {
+      "oracle_id": "38a12bd7-4394-44a8-91a0-6a4ff7fa4f71",
+      "name": "Maze of Ith",
+      "oracle_text": "{T}: Untap target attacking creature. Prevent all combat damage that would be dealt to and dealt by that creature this turn.",
+      "mana_cost": "",
+      "type_line": "Land",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/250/maze-of-ith?utm_source=api"
+    }
+  },
+  "profiles": {
+    "Assert Authority": {
+      "source": {
+        "name": "Assert Authority",
+        "type_line": "Instant",
+        "mana_cost": "{5}{U}{U}",
+        "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\nCounter target spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+        "keywords": [
+          "Affinity"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 7.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "destination": "exile"
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Affinity discount: fixtures control no artifacts."
+        ]
+      }
+    },
+    "Controvert": {
+      "source": {
+        "name": "Controvert",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Counter target spell.\nRecover {2}{U}{U} (When a creature is put into your graveyard from the battlefield, you may pay {2}{U}{U}. If you do, return this card from your graveyard to your hand. Otherwise, exile this card.)",
+        "keywords": [
+          "Recover"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Recover: no creature dies after this counterspell enters the graveyard."
+        ]
+      }
+    },
+    "Muddle the Mixture": {
+      "source": {
+        "name": "Muddle the Mixture",
+        "type_line": "Instant",
+        "mana_cost": "{U}{U}",
+        "oracle_text": "Counter target instant or sorcery spell.\nTransmute {1}{U}{U} ({1}{U}{U}, Discard this card: Search your library for a card with the same mana value as this card, reveal it, put it into your hand, then shuffle. Transmute only as a sorcery.)",
+        "keywords": [
+          "Transmute"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "instant",
+            "sorcery"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Transmute: only the printed instant spell is cast."
+        ]
+      }
+    },
+    "Last Word": {
+      "source": {
+        "name": "Last Word",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "This spell can't be countered.\nCounter target spell.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Counter immunity: source is never targeted by another counterspell."
+        ]
+      }
+    },
+    "Stoic Rebuttal": {
+      "source": {
+        "name": "Stoic Rebuttal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{U}",
+        "oracle_text": "Metalcraft \u2014 This spell costs {1} less to cast if you control three or more artifacts.\nCounter target spell.",
+        "keywords": [
+          "Metalcraft"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Metalcraft discount: fixtures control no artifacts."
+        ]
+      }
+    },
+    "Scatter to the Winds": {
+      "source": {
+        "name": "Scatter to the Winds",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{U}",
+        "oracle_text": "Counter target spell.\nAwaken 3\u2014{4}{U}{U} (If you cast this spell for {4}{U}{U}, also put three +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+        "keywords": [
+          "Awaken"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Awaken alternative cost and land animation: normal mana cost only."
+        ]
+      }
+    },
+    "Overwhelming Denial": {
+      "source": {
+        "name": "Overwhelming Denial",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Surge {U}{U} (You may cast this spell for its surge cost if you or a teammate has cast another spell this turn.)\nThis spell can't be countered.\nCounter target spell.",
+        "keywords": [
+          "Surge"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Surge alternative cost: no earlier spell has been cast by the source controller.",
+          "Counter immunity: source is never targeted by another counterspell."
+        ]
+      }
+    },
+    "Void Shatter": {
+      "source": {
+        "name": "Void Shatter",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{U}",
+        "oracle_text": "Devoid (This card has no color.)\nCounter target spell. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "destination": "exile"
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Devoid: color-based interaction is not exercised."
+        ]
+      }
+    },
+    "Horribly Awry": {
+      "source": {
+        "name": "Horribly Awry",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Devoid (This card has no color.)\nCounter target creature spell with mana value 4 or less. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature"
+          ],
+          "value_max": 4,
+          "destination": "exile"
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Devoid: color-based interaction is not exercised."
+        ]
+      }
+    },
+    "Spell Shrivel": {
+      "source": {
+        "name": "Spell Shrivel",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Devoid (This card has no color.)\nCounter target spell unless its controller pays {4}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 4,
+          "destination": "exile"
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Devoid: color-based interaction is not exercised."
+        ]
+      }
+    },
+    "Metallic Rebuke": {
+      "source": {
+        "name": "Metallic Rebuke",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Improvise (Your artifacts can help cast this spell. Each artifact you tap after you're done activating mana abilities pays for {1}.)\nCounter target spell unless its controller pays {3}.",
+        "keywords": [
+          "Improvise"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 3
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Improvise: fixtures control no artifacts to tap."
+        ]
+      }
+    },
+    "Wizard's Retort": {
+      "source": {
+        "name": "Wizard's Retort",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{U}",
+        "oracle_text": "This spell costs {1} less to cast if you control a Wizard.\nCounter target spell.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Wizard discount: fixtures control no Wizards."
+        ]
+      }
+    },
+    "Geist Snatch": {
+      "source": {
+        "name": "Geist Snatch",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Counter target creature spell. Create a 1/1 blue Spirit creature token with flying.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature"
+          ]
+        },
+        "token": {
+          "name": "Spirit",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "U"
+          ],
+          "subtypes": [
+            "Spirit"
+          ],
+          "count": 1,
+          "recipient": "self",
+          "artifact": false,
+          "flying": true,
+          "from_value": false
+        },
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": []
+      }
+    },
+    "Summoner's Bane": {
+      "source": {
+        "name": "Summoner's Bane",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Counter target creature spell. Create a 2/2 blue Illusion creature token.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature"
+          ]
+        },
+        "token": {
+          "name": "Illusion",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "U"
+          ],
+          "subtypes": [
+            "Illusion"
+          ],
+          "count": 1,
+          "recipient": "self",
+          "artifact": false,
+          "flying": false,
+          "from_value": false
+        },
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": []
+      }
+    },
+    "Swan Song": {
+      "source": {
+        "name": "Swan Song",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "Counter target enchantment, instant, or sorcery spell. Its controller creates a 2/2 blue Bird creature token with flying.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "enchantment",
+            "instant",
+            "sorcery"
+          ]
+        },
+        "token": {
+          "name": "Bird",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "U"
+          ],
+          "subtypes": [
+            "Bird"
+          ],
+          "count": 1,
+          "recipient": "spell_controller",
+          "artifact": false,
+          "flying": true,
+          "from_value": false
+        },
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": []
+      }
+    },
+    "Mystic Genesis": {
+      "source": {
+        "name": "Mystic Genesis",
+        "type_line": "Instant",
+        "mana_cost": "{2}{G}{U}{U}",
+        "oracle_text": "Counter target spell. Create an X/X green Ooze creature token, where X is that spell's mana value.",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": {
+          "name": "Ooze",
+          "power": null,
+          "toughness": null,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Ooze"
+          ],
+          "count": 1,
+          "recipient": "self",
+          "artifact": false,
+          "flying": false,
+          "from_value": true
+        },
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": []
+      }
+    },
+    "Confirm Suspicions": {
+      "source": {
+        "name": "Confirm Suspicions",
+        "type_line": "Instant",
+        "mana_cost": "{3}{U}{U}",
+        "oracle_text": "Counter target spell.\nInvestigate three times. (To investigate, create a Clue token. It's an artifact with \"{2}, Sacrifice this token: Draw a card.\")",
+        "keywords": [
+          "Investigate"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": {
+          "name": "Clue",
+          "power": null,
+          "toughness": null,
+          "colors": [],
+          "subtypes": [],
+          "count": 3,
+          "recipient": "self",
+          "artifact": true,
+          "flying": false,
+          "from_value": false
+        },
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Clue sacrifice/draw ability: creation and artifact/token identity only."
+        ]
+      }
+    },
+    "Spell Swindle": {
+      "source": {
+        "name": "Spell Swindle",
+        "type_line": "Instant",
+        "mana_cost": "{3}{U}{U}",
+        "oracle_text": "Counter target spell. Create X Treasure tokens, where X is that spell's mana value. (They're artifacts with \"{T}, Sacrifice this token: Add one mana of any color.\")",
+        "keywords": [
+          "Treasure"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": {
+          "name": "Treasure",
+          "power": null,
+          "toughness": null,
+          "colors": [],
+          "subtypes": [],
+          "count": null,
+          "recipient": "self",
+          "artifact": true,
+          "flying": false,
+          "from_value": true
+        },
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Treasure sacrifice/mana ability: creation and artifact/token identity only."
+        ]
+      }
+    },
+    "Avoid Fate": {
+      "source": {
+        "name": "Avoid Fate",
+        "type_line": "Instant",
+        "mana_cost": "{G}",
+        "oracle_text": "Counter target instant or Aura spell that targets a permanent you control.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "instant",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": "your_permanent",
+        "inactive_components": []
+      }
+    },
+    "Hindering Light": {
+      "source": {
+        "name": "Hindering Light",
+        "type_line": "Instant",
+        "mana_cost": "{W}{U}",
+        "oracle_text": "Counter target spell that targets you or a permanent you control.\nDraw a card.",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "draw": 1
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": "you_or_your_permanent",
+        "inactive_components": []
+      }
+    },
+    "Outwit": {
+      "source": {
+        "name": "Outwit",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "Counter target spell that targets a player.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": "player",
+        "inactive_components": []
+      }
+    },
+    "Rebuff the Wicked": {
+      "source": {
+        "name": "Rebuff the Wicked",
+        "type_line": "Instant",
+        "mana_cost": "{W}",
+        "oracle_text": "Counter target spell that targets a permanent you control.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": "your_permanent",
+        "inactive_components": []
+      }
+    },
+    "Turn Aside": {
+      "source": {
+        "name": "Turn Aside",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "Counter target spell that targets a permanent you control.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": "your_permanent",
+        "inactive_components": []
+      }
+    },
+    "Withering Boon": {
+      "source": {
+        "name": "Withering Boon",
+        "type_line": "Instant",
+        "mana_cost": "{1}{B}",
+        "oracle_text": "As an additional cost to cast this spell, pay 3 life.\nCounter target creature spell.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature"
+          ]
+        },
+        "token": null,
+        "life_cost": 3,
+        "relationship": null,
+        "inactive_components": []
+      }
+    },
+    "Overwhelming Intellect": {
+      "source": {
+        "name": "Overwhelming Intellect",
+        "type_line": "Instant",
+        "mana_cost": "{4}{U}{U}",
+        "oracle_text": "Counter target creature spell. Draw cards equal to that spell's mana value.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature"
+          ],
+          "draw_from_value": true
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": []
+      }
+    },
+    "Thought Collapse": {
+      "source": {
+        "name": "Thought Collapse",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{U}",
+        "oracle_text": "Counter target spell. Its controller mills three cards.",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "mill": 3
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": []
+      }
+    },
+    "Ionize": {
+      "source": {
+        "name": "Ionize",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{R}",
+        "oracle_text": "Counter target spell. Ionize deals 2 damage to that spell's controller.",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "target_damage": 2
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Damage prevention and replacement effects."
+        ]
+      }
+    },
+    "Spell Pierce": {
+      "source": {
+        "oracle_id": "d64b0848-0193-4025-ba62-63ecd8fb9f50",
+        "name": "Spell Pierce",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "Counter target noncreature spell unless its controller pays {2}.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 2
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Rethink": {
+      "source": {
+        "oracle_id": "ede61683-fa78-4103-8248-e0e64162ed49",
+        "name": "Rethink",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {X}, where X is its mana value.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": {
+            "basis": "mana_value"
+          },
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Override": {
+      "source": {
+        "oracle_id": "a2845761-7e43-4a88-8fc2-2d95d471b00c",
+        "name": "Override",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {1} for each artifact you control.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": {
+            "basis": "artifacts",
+            "count": 1
+          },
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Steel Sabotage": {
+      "source": {
+        "oracle_id": "0e71fc56-0332-4e5e-8658-9257cc0d8a1d",
+        "name": "Steel Sabotage",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "Choose one \u2014\n\u2022 Counter target artifact spell.\n\u2022 Return target artifact to its owner's hand.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "artifact"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "The return-an-artifact mode is not selected.",
+          "Illegal counter-mode availability when another mode is legal remains untested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              0
+            ],
+            "1": []
+          },
+          "auxiliary": [
+            {
+              "name": "Ornithopter",
+              "ref": "mode_other",
+              "player": 0,
+              "zone": "battlefield"
+            }
+          ]
+        }
+      }
+    },
+    "Abjure": {
+      "source": {
+        "oracle_id": "dd97e457-07eb-4918-b780-ae7ff42a37e7",
+        "name": "Abjure",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a blue permanent.\nCounter target spell.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": {
+            "action": "sacrifice",
+            "filter": "blue",
+            "witness": "Wind Drake"
+          },
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Rewind": {
+      "source": {
+        "oracle_id": "bb27bfdf-fe8d-45bd-ad62-8118dce06eda",
+        "name": "Rewind",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Counter target spell. Untap up to four lands.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 4,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Evasive Action": {
+      "source": {
+        "oracle_id": "4543a99d-eefa-470d-976d-11250524ae28",
+        "name": "Evasive Action",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Domain \u2014 Counter target spell unless its controller pays {1} for each basic land type among lands you control.",
+        "keywords": [
+          "Domain"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": {
+            "basis": "domain",
+            "count": 2
+          },
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Oppressive Will": {
+      "source": {
+        "oracle_id": "983a2a50-3634-4783-8576-30916c3d0818",
+        "name": "Oppressive Will",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {1} for each card in your hand.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": {
+            "basis": "hand",
+            "count": 2
+          },
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Rakshasa's Disdain": {
+      "source": {
+        "oracle_id": "a8fe6204-9f55-45e5-99b3-43f2761ce8a3",
+        "name": "Rakshasa's Disdain",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {1} for each card in your graveyard.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": {
+            "basis": "graveyard",
+            "count": 2
+          },
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Thassa's Rebuff": {
+      "source": {
+        "oracle_id": "bc5d9899-1a1c-4779-b9f0-b00f2c233699",
+        "name": "Thassa's Rebuff",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {X}, where X is your devotion to blue. (Each {U} in the mana costs of permanents you control counts toward your devotion to blue.)",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": {
+            "basis": "devotion_blue",
+            "count": 2
+          },
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Spell Rupture": {
+      "source": {
+        "oracle_id": "934c50aa-7d2e-4c9e-b91b-1e8c4055e1c6",
+        "name": "Spell Rupture",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {X}, where X is the greatest power among creatures you control.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": {
+            "basis": "power",
+            "count": 1
+          },
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Rune Snag": {
+      "source": {
+        "oracle_id": "49bf3805-cc9e-4550-8a01-171282aa49c9",
+        "name": "Rune Snag",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {2} plus an additional {2} for each card named Rune Snag in each graveyard.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": {
+            "basis": "rune_snag",
+            "count": 2
+          },
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Daze": {
+      "source": {
+        "oracle_id": "70486bee-6ee7-41ea-b834-8caf4699302b",
+        "name": "Daze",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "You may return an Island you control to its owner's hand rather than pay this spell's mana cost.\nCounter target spell unless its controller pays {1}.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 1
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Returning an Island instead of mana payment: these fixtures control no Islands."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Foil": {
+      "source": {
+        "oracle_id": "7dde4eb6-e9d7-4259-abc2-3af738e0f00f",
+        "name": "Foil",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "You may discard an Island card and another card rather than pay this spell's mana cost.\nCounter target spell.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Discarding an Island and another card instead of mana: no Island card is in the source hand."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Force of Will": {
+      "source": {
+        "oracle_id": "956381ba-6d37-4a8a-846c-bad79222dbee",
+        "name": "Force of Will",
+        "type_line": "Instant",
+        "mana_cost": "{3}{U}{U}",
+        "oracle_text": "You may pay 1 life and exile a blue card from your hand rather than pay this spell's mana cost.\nCounter target spell.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Pitch/life alternative cost: no other blue hand card is available; normal mana cost only."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Thwart": {
+      "source": {
+        "oracle_id": "615a149a-2869-4b18-bbbe-9ec1825049d7",
+        "name": "Thwart",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "You may return three Islands you control to their owner's hand rather than pay this spell's mana cost.\nCounter target spell.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Returning three Islands instead of mana: these fixtures control no Islands."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Forbid": {
+      "source": {
+        "oracle_id": "6e26a525-2584-490d-b106-621c1a30e1fd",
+        "name": "Forbid",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{U}",
+        "oracle_text": "Buyback\u2014Discard two cards. (You may discard two cards in addition to any other costs as you cast this spell. If you do, put this card into your hand as it resolves.)\nCounter target spell.",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Buyback discard and return: the normal mode is selected where the optional cost is offered."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "normal_buyback": true
+        }
+      }
+    },
+    "Dimir Charm": {
+      "source": {
+        "oracle_id": "4d99e786-585d-4026-9253-19741fb357de",
+        "name": "Dimir Charm",
+        "type_line": "Instant",
+        "mana_cost": "{U}{B}",
+        "oracle_text": "Choose one \u2014\n\u2022 Counter target sorcery spell.\n\u2022 Destroy target creature with power 2 or less.\n\u2022 Look at the top three cards of target player's library. Put one back and the rest into that player's graveyard.",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "sorcery"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Destroy-creature and library-selection modes are not selected.",
+          "Invalid counter-mode availability when another mode is legal remains untested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              0
+            ],
+            "1": [
+              0
+            ]
+          },
+          "auxiliary": [
+            {
+              "name": "Ornithopter",
+              "ref": "mode_other",
+              "player": 0,
+              "zone": "battlefield"
+            }
+          ],
+          "present_ai_dialogs": true
+        }
+      }
+    },
+    "Bant Charm": {
+      "source": {
+        "oracle_id": "324889d6-c857-41ed-bb60-408809fc9964",
+        "name": "Bant Charm",
+        "type_line": "Instant",
+        "mana_cost": "{G}{W}{U}",
+        "oracle_text": "Choose one \u2014\n\u2022 Destroy target artifact.\n\u2022 Put target creature on the bottom of its owner's library.\n\u2022 Counter target instant spell.",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "instant"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Artifact destruction and creature-to-library modes are not selected.",
+          "Invalid counter-mode availability when another mode is legal remains untested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              2
+            ],
+            "1": [
+              2
+            ]
+          },
+          "auxiliary": [
+            {
+              "name": "Ornithopter",
+              "ref": "mode_other",
+              "player": 0,
+              "zone": "battlefield"
+            }
+          ],
+          "present_ai_dialogs": true
+        }
+      }
+    },
+    "Insidious Will": {
+      "source": {
+        "oracle_id": "8088d110-2314-45c3-b6ee-3f55d1f388e4",
+        "name": "Insidious Will",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Choose one \u2014\n\u2022 Counter target spell.\n\u2022 You may choose new targets for target spell.\n\u2022 Copy target instant or sorcery spell. You may choose new targets for the copy.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Retarget and copy modes are not selected.",
+          "The counter component uses instant witnesses to keep every presented mode legal.",
+          "Invalid counter-mode availability when another mode is legal remains untested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              0
+            ],
+            "1": [
+              0
+            ]
+          },
+          "auxiliary": [],
+          "present_ai_dialogs": true,
+          "fixture_targets": [
+            "instant"
+          ]
+        }
+      }
+    },
+    "Supreme Will": {
+      "source": {
+        "oracle_id": "75325029-e6f1-44af-88b2-53cc2b7233c0",
+        "name": "Supreme Will",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Choose one \u2014\n\u2022 Counter target spell unless its controller pays {3}.\n\u2022 Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 3
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Top-four selection mode is not selected.",
+          "Invalid counter-mode availability when another mode is legal remains untested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              0
+            ],
+            "1": [
+              0
+            ]
+          },
+          "auxiliary": [],
+          "present_ai_dialogs": true
+        }
+      }
+    },
+    "Temur Charm": {
+      "source": {
+        "oracle_id": "418bc6c8-972b-4f07-aac0-8d003b9c1b17",
+        "name": "Temur Charm",
+        "type_line": "Instant",
+        "mana_cost": "{G}{U}{R}",
+        "oracle_text": "Choose one \u2014\n\u2022 Target creature you control gets +1/+1 until end of turn. It fights target creature you don't control.\n\u2022 Counter target spell unless its controller pays {3}.\n\u2022 Creatures with power 3 or less can't block this turn.",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G",
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 3
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Fight/stat and blocking-restriction modes are not selected.",
+          "Invalid counter-mode availability when another mode is legal remains untested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              1
+            ],
+            "1": [
+              1
+            ]
+          },
+          "auxiliary": [
+            {
+              "name": "Hill Giant",
+              "ref": "mode_other",
+              "player": 1,
+              "zone": "battlefield"
+            }
+          ],
+          "present_ai_dialogs": true
+        }
+      }
+    },
+    "Dawn Charm": {
+      "source": {
+        "oracle_id": "a8f5cfa7-4956-4182-8e44-acf3493239f0",
+        "name": "Dawn Charm",
+        "type_line": "Instant",
+        "mana_cost": "{1}{W}",
+        "oracle_text": "Choose one \u2014\n\u2022 Prevent all combat damage that would be dealt this turn.\n\u2022 Regenerate target creature.\n\u2022 Counter target spell that targets you.",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": "you",
+        "inactive_components": [
+          "Fog and regeneration modes are not selected.",
+          "Only spells targeting the source controller are used for the counter mode.",
+          "Invalid counter-mode availability when another mode is legal remains untested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              2
+            ],
+            "1": [
+              2
+            ]
+          },
+          "auxiliary": [],
+          "present_ai_dialogs": true
+        }
+      }
+    },
+    "Deprive": {
+      "source": {
+        "oracle_id": "1065eceb-9150-4ea4-bd6d-acaabda14e00",
+        "name": "Deprive",
+        "type_line": "Instant",
+        "mana_cost": "{U}{U}",
+        "oracle_text": "As an additional cost to cast this spell, return a land you control to its owner's hand.\nCounter target spell.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": {
+            "action": "bounce",
+            "filter": "land",
+            "witness": "Forest"
+          },
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Familiar's Ruse": {
+      "source": {
+        "oracle_id": "3b6d773b-e2f7-4e74-9e77-f2e0d369a31e",
+        "name": "Familiar's Ruse",
+        "type_line": "Instant",
+        "mana_cost": "{U}{U}",
+        "oracle_text": "As an additional cost to cast this spell, return a creature you control to its owner's hand.\nCounter target spell.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": {
+            "action": "bounce",
+            "filter": "creature",
+            "witness": "Wind Drake"
+          },
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Disappearing Act": {
+      "source": {
+        "oracle_id": "20393369-fdee-45ea-8584-451f38b1c002",
+        "name": "Disappearing Act",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{U}",
+        "oracle_text": "As an additional cost to cast this spell, return a permanent you control to its owner's hand.\nCounter target spell.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": {
+            "action": "bounce",
+            "filter": "permanent",
+            "witness": "Forest"
+          },
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Voidslime": {
+      "source": {
+        "oracle_id": "c4851768-e210-4aaf-935e-715942e198f9",
+        "name": "Voidslime",
+        "type_line": "Instant",
+        "mana_cost": "{G}{U}{U}",
+        "oracle_text": "Counter target spell, activated ability, or triggered ability. (Mana abilities can't be targeted.)",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Activated/triggered ability targets, including the mana-ability exception: only real spell targets are exercised."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Disallow": {
+      "source": {
+        "oracle_id": "88b51e15-6630-4e14-a6b8-db0aa12e34ef",
+        "name": "Disallow",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{U}",
+        "oracle_text": "Counter target spell, activated ability, or triggered ability. (Mana abilities can't be targeted.)",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Activated/triggered ability targets, including the mana-ability exception: only real spell targets are exercised."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Revolutionary Rebuff": {
+      "source": {
+        "oracle_id": "879c8663-5058-4998-9a59-f2e9ea8914dc",
+        "name": "Revolutionary Rebuff",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Counter target nonartifact spell unless its controller pays {2}.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 2
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Artifact-creature overlap has no separate witness yet."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Unwind": {
+      "source": {
+        "oracle_id": "e38b8ecb-e7ae-474d-b6a4-29cc1aa8ccd9",
+        "name": "Unwind",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Counter target noncreature spell. Untap up to three lands.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 3,
+          "mode_dialogs": null,
+          "auxiliary": []
+        }
+      }
+    },
+    "Vex": {
+      "source": {
+        "oracle_id": "fd6ba826-e7b1-4375-8aaf-c3cd3dc7ba07",
+        "name": "Vex",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Counter target spell. That spell's controller may draw a card.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "target_draw": 1
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "optional_target_draw": true
+        }
+      }
+    },
+    "Failed Inspection": {
+      "source": {
+        "oracle_id": "e4fbf952-de3b-4cbd-848a-37041f337e06",
+        "name": "Failed Inspection",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Counter target spell. Draw a card, then discard a card.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "loot": {
+            "player": "self",
+            "draw": 1,
+            "discard": 1
+          }
+        }
+      }
+    },
+    "Frightful Delusion": {
+      "source": {
+        "oracle_id": "13ca3ede-a4c8-463d-b160-99b4071034b0",
+        "name": "Frightful Delusion",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {1}. That player discards a card.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 1
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [
+            {
+              "name": "Forest",
+              "ref": "discard_fodder",
+              "player": 1,
+              "zone": "hand"
+            }
+          ],
+          "wave": 4,
+          "loot": {
+            "player": "target",
+            "draw": 0,
+            "discard": 1
+          }
+        }
+      }
+    },
+    "Abstruse Interference": {
+      "source": {
+        "oracle_id": "e8ebf5cb-3a26-4bbd-812b-414c129e4bb7",
+        "name": "Abstruse Interference",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Devoid (This card has no color.)\nCounter target spell unless its controller pays {1}. You create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\" ({C} represents colorless mana.)",
+        "keywords": [
+          "Devoid"
+        ],
+        "colors": [],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 1
+        },
+        "token": {
+          "name": "Eldrazi Scion",
+          "count": 1,
+          "power": 1,
+          "toughness": 1,
+          "colors": [],
+          "subtypes": [
+            "Eldrazi",
+            "Scion"
+          ],
+          "artifact": false,
+          "flying": false,
+          "from_value": false,
+          "recipient": "self"
+        },
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Devoid color interactions.",
+          "Token control/copy/doubling effects and sacrifice prevention."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4
+        }
+      }
+    },
+    "Trap Essence": {
+      "source": {
+        "oracle_id": "d64adb26-62c4-44aa-bc2e-d05bd1cf657b",
+        "name": "Trap Essence",
+        "type_line": "Instant",
+        "mana_cost": "{G}{U}{R}",
+        "oracle_text": "Counter target creature spell. Put two +1/+1 counters on up to one target creature.",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "counter_pump": {
+            "amount": 2,
+            "controller": "any"
+          }
+        }
+      }
+    },
+    "Essence Capture": {
+      "source": {
+        "oracle_id": "0f730bd9-2060-46b1-9208-0ac6562e8b2a",
+        "name": "Essence Capture",
+        "type_line": "Instant",
+        "mana_cost": "{U}{U}",
+        "oracle_text": "Counter target creature spell. Put a +1/+1 counter on up to one target creature you control.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "counter_pump": {
+            "amount": 1,
+            "controller": "self"
+          }
+        }
+      }
+    },
+    "Statute of Denial": {
+      "source": {
+        "oracle_id": "03e04cee-4727-44fe-96f3-42cbd08beb76",
+        "name": "Statute of Denial",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Counter target spell. If you control a blue creature, draw a card, then discard a card.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "loot": {
+            "player": "self",
+            "draw": 1,
+            "discard": 1
+          },
+          "condition": "blue_creature"
+        }
+      }
+    },
+    "Calculated Dismissal": {
+      "source": {
+        "oracle_id": "d8e63065-9ebc-419d-b7af-5867fd81edff",
+        "name": "Calculated Dismissal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {3}.\nSpell mastery \u2014 If there are two or more instant and/or sorcery cards in your graveyard, scry 2. (To scry 2, look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "keywords": [
+          "Spell mastery",
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 3,
+          "scry": 2
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "condition": "spell_mastery"
+        }
+      }
+    },
+    "Lost in the Mist": {
+      "source": {
+        "oracle_id": "98014ad2-7a2b-45f5-808c-edd4d0b2c597",
+        "name": "Lost in the Mist",
+        "type_line": "Instant",
+        "mana_cost": "{3}{U}{U}",
+        "oracle_text": "Counter target spell. Return target permanent to its owner's hand.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "secondary": {
+            "action": "bounce"
+          }
+        }
+      }
+    },
+    "Suffocating Blast": {
+      "source": {
+        "oracle_id": "2a9d9433-7b0f-45a3-88aa-9fd7e410c224",
+        "name": "Suffocating Blast",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{U}{R}",
+        "oracle_text": "Counter target spell and Suffocating Blast deals 3 damage to target creature.",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "secondary": {
+            "action": "damage",
+            "amount": 3
+          }
+        }
+      }
+    },
+    "Condescend": {
+      "source": {
+        "oracle_id": "96cf3c10-733d-4110-9dab-43d0cd4e6629",
+        "name": "Condescend",
+        "type_line": "Instant",
+        "mana_cost": "{X}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {X}. Scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "scry": 2
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "variable_x": true
+        }
+      }
+    },
+    "Clash of Wills": {
+      "source": {
+        "oracle_id": "56aec5bd-a8e8-403f-b339-0fc817426428",
+        "name": "Clash of Wills",
+        "type_line": "Instant",
+        "mana_cost": "{X}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {X}.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "variable_x": true
+        }
+      }
+    },
+    "Hydroblast": {
+      "source": {
+        "oracle_id": "b94c0336-2ca8-4bb1-bb1f-e9babd1826ad",
+        "name": "Hydroblast",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "Choose one \u2014\n\u2022 Counter target spell if it's red.\n\u2022 Destroy target permanent if it's red.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Permanent-destruction mode and color-changing effects."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {},
+          "auxiliary": [],
+          "wave": 4,
+          "counter_color": "R"
+        }
+      }
+    },
+    "Pyroblast": {
+      "source": {
+        "oracle_id": "ecc435e2-deb1-420a-a79f-01dd08747314",
+        "name": "Pyroblast",
+        "type_line": "Instant",
+        "mana_cost": "{R}",
+        "oracle_text": "Choose one \u2014\n\u2022 Counter target spell if it's blue.\n\u2022 Destroy target permanent if it's blue.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Permanent-destruction mode and color-changing effects."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {},
+          "auxiliary": [],
+          "wave": 4,
+          "counter_color": "U"
+        }
+      }
+    },
+    "Dispersal Shield": {
+      "source": {
+        "oracle_id": "aefb1463-76fb-419e-8cda-8c5bfb88a3d2",
+        "name": "Dispersal Shield",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Counter target spell if its mana value is less than or equal to the greatest mana value among permanents you control.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "resolution_condition": "maximum_permanent_value"
+        }
+      }
+    },
+    "Stubborn Denial": {
+      "source": {
+        "oracle_id": "3adc3af3-5086-4d61-b38c-c1dddeaeebe6",
+        "name": "Stubborn Denial",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "Counter target noncreature spell unless its controller pays {1}.\nFerocious \u2014 If you control a creature with power 4 or greater, counter that spell instead.",
+        "keywords": [
+          "Ferocious"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 1
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "hard_counter_condition": "ferocious"
+        }
+      }
+    },
+    "Silumgar's Scorn": {
+      "source": {
+        "oracle_id": "1fb3b5a3-ca4b-4cbf-ab58-71c960f3efd0",
+        "name": "Silumgar's Scorn",
+        "type_line": "Instant",
+        "mana_cost": "{U}{U}",
+        "oracle_text": "As an additional cost to cast this spell, you may reveal a Dragon card from your hand.\nCounter target spell unless its controller pays {1}. If you revealed a Dragon card or controlled a Dragon as you cast this spell, counter that spell instead.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 1
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Optional hand-Dragon reveal until its actual choice path is probed."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "hard_counter_condition": "dragon"
+        }
+      }
+    },
+    "Prohibit": {
+      "source": {
+        "oracle_id": "d95f1797-56f9-41be-a5fe-8398961f4b8b",
+        "name": "Prohibit",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Kicker {2} (You may pay an additional {2} as you cast this spell.)\nCounter target spell if its mana value is 2 or less. If this spell was kicked, counter that spell if its mana value is 4 or less instead.",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "kicker": 2,
+          "resolution_condition": "mana_value_limit"
+        }
+      }
+    },
+    "Warping Wail": {
+      "source": {
+        "oracle_id": "c8b9fa02-0a0c-4a87-9a00-3c1c7e2f4bfd",
+        "name": "Warping Wail",
+        "type_line": "Instant",
+        "mana_cost": "{1}{C}",
+        "oracle_text": "({C} represents colorless mana.)\nChoose one \u2014\n\u2022 Exile target creature with power or toughness 1 or less.\n\u2022 Counter target sorcery spell.\n\u2022 Create a 1/1 colorless Eldrazi Scion creature token. It has \"Sacrifice this token: Add {C}.\"",
+        "keywords": [],
+        "colors": [],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "sorcery"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Unselected creature-exile and Eldrazi Scion modes."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              1
+            ],
+            "1": [
+              1
+            ]
+          },
+          "auxiliary": [],
+          "wave": 4,
+          "colorless_cost": 1,
+          "present_ai_dialogs": true
+        }
+      }
+    },
+    "Syncopate": {
+      "source": {
+        "oracle_id": "318f7f70-e374-40ef-8afb-3389c10461d8",
+        "name": "Syncopate",
+        "type_line": "Instant",
+        "mana_cost": "{X}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {X}. If that spell is countered this way, exile it instead of putting it into its owner's graveyard.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "destination": "exile"
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "variable_x": true
+        }
+      }
+    },
+    "Overrule": {
+      "source": {
+        "oracle_id": "fa43d688-99de-4774-ac2d-2d01866eef58",
+        "name": "Overrule",
+        "type_line": "Instant",
+        "mana_cost": "{X}{W}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {X}. You gain X life.",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "variable_x": true,
+          "x_gain_life": true
+        }
+      }
+    },
+    "Mindswipe": {
+      "source": {
+        "oracle_id": "4682c39e-c21a-4c8b-bc63-9cbac59dc563",
+        "name": "Mindswipe",
+        "type_line": "Instant",
+        "mana_cost": "{X}{U}{R}",
+        "oracle_text": "Counter target spell unless its controller pays {X}. Mindswipe deals X damage to that spell's controller.",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "variable_x": true,
+          "x_damage": true
+        }
+      }
+    },
+    "Cryptic Command": {
+      "source": {
+        "oracle_id": "a3e51a35-09df-4189-b131-08a21e6a557d",
+        "name": "Cryptic Command",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{U}{U}",
+        "oracle_text": "Choose two \u2014\n\u2022 Counter target spell.\n\u2022 Return target permanent to its owner's hand.\n\u2022 Tap all creatures your opponents control.\n\u2022 Draw a card.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "draw": 1
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Unselected return-permanent and tap-opposing-creatures modes."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              0,
+              3
+            ],
+            "1": [
+              0,
+              3
+            ]
+          },
+          "auxiliary": [],
+          "wave": 4,
+          "present_ai_dialogs": true
+        }
+      }
+    },
+    "Ojutai's Command": {
+      "source": {
+        "oracle_id": "c1fafe93-8fd2-44c1-a4a0-5c9ecee550cc",
+        "name": "Ojutai's Command",
+        "type_line": "Instant",
+        "mana_cost": "{2}{W}{U}",
+        "oracle_text": "Choose two \u2014\n\u2022 Return target creature card with mana value 2 or less from your graveyard to the battlefield.\n\u2022 You gain 4 life.\n\u2022 Counter target creature spell.\n\u2022 Draw a card.",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature"
+          ],
+          "draw": 1
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Unselected creature reanimation and gain-four-life modes."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              2,
+              3
+            ],
+            "1": [
+              2,
+              3
+            ]
+          },
+          "auxiliary": [],
+          "wave": 4,
+          "present_ai_dialogs": true
+        }
+      }
+    },
+    "Mystic Confluence": {
+      "source": {
+        "oracle_id": "cd11c27b-9368-4622-bc5a-2e0b993cc42b",
+        "name": "Mystic Confluence",
+        "type_line": "Instant",
+        "mana_cost": "{3}{U}{U}",
+        "oracle_text": "Choose three. You may choose the same mode more than once.\n\u2022 Counter target spell unless its controller pays {3}.\n\u2022 Return target creature to its owner's hand.\n\u2022 Draw a card.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 3,
+          "draw": 2
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Other mode combinations, repeated counter mode, and creature-return mode."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              0,
+              2,
+              2
+            ],
+            "1": [
+              0,
+              2,
+              2
+            ]
+          },
+          "auxiliary": [],
+          "wave": 4,
+          "present_ai_dialogs": true
+        }
+      }
+    },
+    "Spell Blast": {
+      "source": {
+        "oracle_id": "04477339-7ed5-4770-9e5c-6e481ffcc858",
+        "name": "Spell Blast",
+        "type_line": "Instant",
+        "mana_cost": "{X}{U}",
+        "oracle_text": "Counter target spell with mana value X. (For example, if that spell's mana cost is {3}{U}{U}, X is 5.)",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Zero-mana-value and alternative/variable-mana-value parents."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "variable_x": "mana_value"
+        }
+      }
+    },
+    "Spell Burst": {
+      "source": {
+        "oracle_id": "141d9b88-5326-4e3d-8f16-5293246fab88",
+        "name": "Spell Burst",
+        "type_line": "Instant",
+        "mana_cost": "{X}{U}",
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nCounter target spell with mana value X.",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Zero-mana-value and alternative/variable-mana-value parents."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "variable_x": "mana_value",
+          "buyback": 3
+        }
+      }
+    },
+    "Hinder": {
+      "source": {
+        "oracle_id": "c9db6b94-a7b1-4b93-b454-4dead8f85e34",
+        "name": "Hinder",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}{U}",
+        "oracle_text": "Counter target spell. If that spell is countered this way, put that card on your choice of the top or bottom of its owner's library instead of into that player's graveyard.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "destination": "library_top"
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "destination_choice": true
+        }
+      }
+    },
+    "Render Silent": {
+      "source": {
+        "oracle_id": "3966bd03-a98e-43b6-a0c0-10d4d81c173c",
+        "name": "Render Silent",
+        "type_line": "Instant",
+        "mana_cost": "{W}{U}{U}",
+        "oracle_text": "Counter target spell. Its controller can't cast spells this turn.",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "followup_cast_denial": true
+        }
+      }
+    },
+    "Induce Paranoia": {
+      "source": {
+        "oracle_id": "ec9475f8-235a-4c85-9b96-9c2085a9b732",
+        "name": "Induce Paranoia",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Counter target spell. If {B} was spent to cast this spell, that spell's controller mills X cards, where X is the spell's mana value.",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "black_payment_mill": true
+        }
+      }
+    },
+    "Discombobulate": {
+      "source": {
+        "oracle_id": "b58d7a20-4bcd-4c33-8cda-955362525f48",
+        "name": "Discombobulate",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Counter target spell. Look at the top four cards of your library, then put them back in any order.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "rearrange_top": 4
+        }
+      }
+    },
+    "Molten Influence": {
+      "source": {
+        "oracle_id": "d955a26a-d474-4dff-9eba-69fcfe92d8ae",
+        "name": "Molten Influence",
+        "type_line": "Instant",
+        "mana_cost": "{1}{R}",
+        "oracle_text": "Counter target instant or sorcery spell unless its controller has Molten Influence deal 4 damage to them.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "instant",
+            "sorcery"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 4,
+          "damage_alternative": 4
+        }
+      }
+    },
+    "Bind": {
+      "source": {
+        "oracle_id": "2b9557df-7158-4ada-be77-5c346851a568",
+        "name": "Bind",
+        "type_line": "Instant",
+        "mana_cost": "{1}{G}",
+        "oracle_text": "Counter target activated ability. (Mana abilities can't be targeted.)\nDraw a card.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Triggered-parent rejection remains unproven: no script fabricates a pending triggered callback.",
+          "Activated abilities from off-battlefield cards, departed sources, changed control, multiple pending activations/responses, replacements/prevention and multiplayer.",
+          "Dragon Whelp activation count remains below four, so its conditional end-step sacrifice is inactive.",
+          "Enchantment/land activated sources and planeswalker source controls remain outside this initial creature/artifact fixture."
+        ],
+        "extension": {
+          "wave": 5,
+          "ability_counter": {
+            "allowed_sources": [
+              "any"
+            ],
+            "draw": 1,
+            "disable_parent": false,
+            "default_parent": "whelp"
+          }
+        }
+      }
+    },
+    "Squelch": {
+      "source": {
+        "oracle_id": "b8fe20ee-d52d-4494-acf4-202808a2a22d",
+        "name": "Squelch",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Counter target activated ability. (Mana abilities can't be targeted.)\nDraw a card.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Triggered-parent rejection remains unproven: no script fabricates a pending triggered callback.",
+          "Activated abilities from off-battlefield cards, departed sources, changed control, multiple pending activations/responses, replacements/prevention and multiplayer.",
+          "Dragon Whelp activation count remains below four, so its conditional end-step sacrifice is inactive.",
+          "Enchantment/land activated sources and planeswalker source controls remain outside this initial creature/artifact fixture."
+        ],
+        "extension": {
+          "wave": 5,
+          "ability_counter": {
+            "allowed_sources": [
+              "any"
+            ],
+            "draw": 1,
+            "disable_parent": false,
+            "default_parent": "whelp"
+          }
+        }
+      }
+    },
+    "Interdict": {
+      "source": {
+        "oracle_id": "93771480-2672-4bc7-81a8-011d3b8878b0",
+        "name": "Interdict",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Counter target activated ability from an artifact, creature, enchantment, or land. That permanent's activated abilities can't be activated this turn. (Mana abilities can't be targeted.)\nDraw a card.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Triggered-parent rejection remains unproven: no script fabricates a pending triggered callback.",
+          "Activated abilities from off-battlefield cards, departed sources, changed control, multiple pending activations/responses, replacements/prevention and multiplayer.",
+          "Dragon Whelp activation count remains below four, so its conditional end-step sacrifice is inactive.",
+          "Enchantment/land activated sources and planeswalker source controls remain outside this initial creature/artifact fixture."
+        ],
+        "extension": {
+          "wave": 5,
+          "ability_counter": {
+            "allowed_sources": [
+              "artifact",
+              "creature",
+              "enchantment",
+              "land"
+            ],
+            "draw": 1,
+            "disable_parent": true,
+            "default_parent": "whelp"
+          }
+        }
+      }
+    },
+    "Rust": {
+      "source": {
+        "oracle_id": "597ca66c-6bb1-4661-8ed9-8236f546e536",
+        "name": "Rust",
+        "type_line": "Instant",
+        "mana_cost": "{G}",
+        "oracle_text": "Counter target activated ability from an artifact source. (Mana abilities can't be targeted.)",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Triggered-parent rejection remains unproven: no script fabricates a pending triggered callback.",
+          "Activated abilities from off-battlefield cards, departed sources, changed control, multiple pending activations/responses, replacements/prevention and multiplayer.",
+          "Dragon Whelp activation count remains below four, so its conditional end-step sacrifice is inactive.",
+          "Enchantment/land activated sources and planeswalker source controls remain outside this initial creature/artifact fixture."
+        ],
+        "extension": {
+          "wave": 5,
+          "ability_counter": {
+            "allowed_sources": [
+              "artifact"
+            ],
+            "draw": 0,
+            "disable_parent": false,
+            "default_parent": "icy"
+          }
+        }
+      }
+    },
+    "Counterbore": {
+      "source": {
+        "oracle_id": "1198ec53-9050-417d-812f-692e1378d346",
+        "name": "Counterbore",
+        "type_line": "Instant",
+        "mana_cost": "{3}{U}{U}",
+        "oracle_text": "Counter target spell. Search its controller's graveyard, hand, and library for all cards with the same name as that spell and exile them. Then that player shuffles.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Hidden-zone fail-to-find decisions for mandatory all-match searches; source/target departure, uncounterable parents and replacement effects."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "search_same_name": {
+            "delirium": false,
+            "optional": false
+          }
+        }
+      }
+    },
+    "Quash": {
+      "source": {
+        "oracle_id": "255131a2-616c-4c8d-a36a-14e5b5ab345e",
+        "name": "Quash",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Counter target instant or sorcery spell. Search its controller's graveyard, hand, and library for all cards with the same name as that spell and exile them. Then that player shuffles.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "instant",
+            "sorcery"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Hidden-zone fail-to-find decisions for mandatory all-match searches; source/target departure, uncounterable parents and replacement effects."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "search_same_name": {
+            "delirium": false,
+            "optional": false
+          }
+        }
+      }
+    },
+    "Invasive Surgery": {
+      "source": {
+        "oracle_id": "545f56c6-b10f-4868-8aa8-ea3154980854",
+        "name": "Invasive Surgery",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "Counter target sorcery spell.\nDelirium \u2014 If there are four or more card types among cards in your graveyard, search the graveyard, hand, and library of that spell's controller for any number of cards with the same name as that spell, exile those cards, then that player shuffles.",
+        "keywords": [
+          "Delirium"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "sorcery"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Hidden-zone fail-to-find decisions for mandatory all-match searches; source/target departure, uncounterable parents and replacement effects."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "search_same_name": {
+            "delirium": true,
+            "optional": true
+          }
+        }
+      }
+    },
+    "Silumgar's Command": {
+      "source": {
+        "oracle_id": "7052fbd6-94df-41a9-a382-641701086804",
+        "name": "Silumgar's Command",
+        "type_line": "Instant",
+        "mana_cost": "{3}{U}{B}",
+        "oracle_text": "Choose two \u2014\n\u2022 Counter target noncreature spell.\n\u2022 Return target permanent to its owner's hand.\n\u2022 Target creature gets -3/-3 until end of turn.\n\u2022 Destroy target planeswalker.",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Unselected creature -3/-3 and planeswalker-destruction modes; other mode pairs, independent target invalidation, uncounterable parents and replacements."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              0,
+              1
+            ],
+            "1": [
+              0,
+              1
+            ]
+          },
+          "auxiliary": [],
+          "wave": 5,
+          "secondary": {
+            "action": "bounce"
+          },
+          "present_ai_dialogs": true
+        }
+      }
+    },
+    "Scent of Brine": {
+      "source": {
+        "oracle_id": "c22b5968-adea-4f74-877d-8ac2ee452769",
+        "name": "Scent of Brine",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Reveal any number of blue cards in your hand. Counter target spell unless its controller pays {1} for each card revealed this way.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Source/target departure, uncounterable parents, replacement effects and multiple simultaneous responses.",
+          "Manual subsets within a larger blue hand remain outside the automatic all-blue fixture; zero/one/many blue resources are independently populated."
+        ],
+        "extension": {
+          "wave": 5,
+          "resource_counter": {
+            "kind": "reveal_blue"
+          }
+        }
+      }
+    },
+    "Rites of Refusal": {
+      "source": {
+        "oracle_id": "f88e7647-49dc-4d55-99f6-2f153854e5c0",
+        "name": "Rites of Refusal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Discard any number of cards. Counter target spell unless its controller pays {3} for each card discarded this way.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Source/target departure, uncounterable parents, replacement effects and multiple simultaneous responses.",
+          "Discard identities other than the selected Forest witnesses and arbitrary mixed-name discard subsets."
+        ],
+        "extension": {
+          "wave": 5,
+          "resource_counter": {
+            "kind": "discard"
+          }
+        }
+      }
+    },
+    "Logic Knot": {
+      "source": {
+        "oracle_id": "b2da7acb-d80c-414c-9f7d-753a5d6ccad9",
+        "name": "Logic Knot",
+        "type_line": "Instant",
+        "mana_cost": "{X}{U}{U}",
+        "oracle_text": "Delve (Each card you exile from your graveyard while casting this spell pays for {1}.)\nCounter target spell unless its controller pays {X}.",
+        "keywords": [
+          "Delve"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Source/target departure, uncounterable parents, replacement effects and multiple simultaneous responses.",
+          "Alternative graveyard card types and exiling a different subset at the same intended X."
+        ],
+        "extension": {
+          "wave": 5,
+          "resource_counter": {
+            "kind": "delve"
+          }
+        }
+      }
+    },
+    "Mental Misstep": {
+      "source": {
+        "oracle_id": "1a0770e6-b093-4439-baff-6889a50ba12e",
+        "name": "Mental Misstep",
+        "type_line": "Instant",
+        "mana_cost": "{U/P}",
+        "oracle_text": "({U/P} can be paid with either {U} or 2 life.)\nCounter target spell with mana value 1.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Source/target departure, uncounterable parents, replacement effects and multiple simultaneous responses.",
+          "Lethal two-life payment and life-loss replacement/prevention."
+        ],
+        "extension": {
+          "wave": 5,
+          "resource_counter": {
+            "kind": "phyrexian_blue"
+          }
+        }
+      }
+    },
+    "Force Void": {
+      "source": {
+        "oracle_id": "469bdca3-d373-4420-9266-921b6605f327",
+        "name": "Force Void",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {1}.\nDraw a card at the beginning of the next turn's upkeep.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Other parent card types; upkeep response windows, replacement/prevention and countered delayed-effect sources.",
+          "Actual ai_turns phases explicitly run player zero; extra-turn scheduling and choosing a different next active player remain outside this fixture."
+        ],
+        "extension": {
+          "wave": 5,
+          "delayed_counter": {
+            "tax": 1,
+            "source_draw": 1,
+            "timing": "next_turn_upkeep"
+          }
+        }
+      }
+    },
+    "Desertion": {
+      "source": {
+        "oracle_id": "ee3d1f44-e0ca-4ce9-be76-4b675a115156",
+        "name": "Desertion",
+        "type_line": "Instant",
+        "mana_cost": "{3}{U}{U}",
+        "oracle_text": "Counter target spell. If an artifact or creature spell is countered this way, put that card onto the battlefield under your control instead of into its owner's graveyard.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "ETB abilities on acquired witnesses, artifact-creature intersections, changed control before resolution and replacements."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "acquire_types": [
+            "artifact",
+            "creature"
+          ]
+        }
+      }
+    },
+    "Counterlash": {
+      "source": {
+        "oracle_id": "16de96d0-a58e-42a7-9a13-45358542a246",
+        "name": "Counterlash",
+        "type_line": "Instant",
+        "mana_cost": "{4}{U}{U}",
+        "oracle_text": "Counter target spell. You may cast a spell that shares a card type with it from your hand without paying its mana cost.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Noncreature matching free spells, additional/alternative costs, targeted free spells and X choices."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [
+            {
+              "name": "Hill Giant",
+              "ref": "free_spell",
+              "player": 0,
+              "zone": "hand"
+            },
+            {
+              "name": "Forest",
+              "ref": "free_control",
+              "player": 0,
+              "zone": "hand"
+            }
+          ],
+          "wave": 5,
+          "free_matching": true
+        }
+      }
+    },
+    "Put Away": {
+      "source": {
+        "oracle_id": "1bc9a89c-7831-4c08-8934-896286d63e7c",
+        "name": "Put Away",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Counter target spell. You may shuffle up to one target card from your graveyard into your library.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Grave target loss/change in a response window and selecting newly-countered own parents are not modeled; cast-time target selection is independently tested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [
+            {
+              "name": "Forest",
+              "ref": "grave_candidate",
+              "player": 0,
+              "zone": "graveyard"
+            },
+            {
+              "name": "Mountain",
+              "ref": "grave_control",
+              "player": 0,
+              "zone": "graveyard"
+            },
+            {
+              "name": "Forest",
+              "ref": "opposing_grave",
+              "player": 1,
+              "zone": "graveyard"
+            }
+          ],
+          "wave": 5,
+          "grave_shuffle": true
+        }
+      }
+    },
+    "Teferi's Response": {
+      "source": {
+        "oracle_id": "b2faa8b6-e433-4171-9774-9170484530c4",
+        "name": "Teferi's Response",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Counter target spell or ability an opponent controls that targets a land you control. If a permanent's ability is countered this way, destroy that permanent.\nDraw two cards.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Triggered parents remain unproven; no script fabricates a pending trigger callback.",
+          "Departed permanent sources, changed controller/target in a second response window, uncounterable parents and replacement effects."
+        ],
+        "extension": {
+          "wave": 5,
+          "ability_counter": {
+            "allowed_sources": [
+              "any"
+            ],
+            "draw": 2,
+            "disable_parent": false,
+            "default_parent": "icy",
+            "land_response": true,
+            "destroy_parent": true
+          }
+        }
+      }
+    },
+    "Corrupted Resolve": {
+      "source": {
+        "oracle_id": "87837a94-05db-48fe-b810-26d8f92cfc58",
+        "name": "Corrupted Resolve",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Counter target spell if its controller is poisoned.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Poison gained/lost in a second response window; unpoisoned functional resolution remains permission-only because the implementation rejects a printed legal cast."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "poison_condition": true
+        }
+      }
+    },
+    "Fuel for the Cause": {
+      "source": {
+        "oracle_id": "667cffdd-8951-4223-8895-fa46e9f14b96",
+        "name": "Fuel for the Cause",
+        "type_line": "Instant",
+        "mana_cost": "{2}{U}{U}",
+        "oracle_text": "Counter target spell, then proliferate. (Choose any number of permanents and/or players, then give each another counter of each kind already there.)",
+        "keywords": [
+          "Proliferate"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Player counters, multiple counter kinds on one permanent, and controller-one manual subsets remain unproven.",
+          "Hunger of the Howlpack morbid is inactive after explicit death-history reset and no creature death."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "proliferate": true
+        }
+      }
+    },
+    "Psychic Rebuttal": {
+      "source": {
+        "oracle_id": "08dd393f-12d8-4801-882c-6d76009b4f12",
+        "name": "Psychic Rebuttal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{U}",
+        "oracle_text": "Counter target instant or sorcery spell that targets you.\nSpell mastery \u2014 If there are two or more instant and/or sorcery cards in your graveyard, you may copy the spell countered this way. You may choose new targets for the copy.",
+        "keywords": [
+          "Spell mastery"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "instant",
+            "sorcery"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": "you",
+        "inactive_components": [
+          "Sorcery-parent copies, copying other spell effects, target changes in a second response window and multiple simultaneous responses.",
+          "Independent exclusion of player-targeting permanent parents remains unproven by the instant fixture."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "mastery_copy": true,
+          "present_ai_dialogs": true
+        }
+      }
+    },
+    "Power Sink": {
+      "source": {
+        "oracle_id": "39412e6d-2837-4729-abf9-e64a5ba87e40",
+        "name": "Power Sink",
+        "type_line": "Instant",
+        "mana_cost": "{X}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {X}. If that player doesn't, they tap all lands with mana abilities they control and lose all unspent mana.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 2
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Other mana-land abilities, animated lands, ability-granting/losing effects and uncounterable parents."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [
+            {
+              "name": "Forest",
+              "ref": "drain_own_land",
+              "player": 0,
+              "zone": "battlefield"
+            },
+            {
+              "name": "Forest",
+              "ref": "drain_other_land",
+              "player": 1,
+              "zone": "battlefield"
+            },
+            {
+              "name": "Island",
+              "ref": "drain_tapped_land",
+              "player": 1,
+              "zone": "battlefield",
+              "state": [
+                "tapped"
+              ]
+            },
+            {
+              "name": "Maze of Ith",
+              "ref": "drain_nonmana_land",
+              "player": 1,
+              "zone": "battlefield"
+            },
+            {
+              "name": "Sol Ring",
+              "ref": "drain_nonland",
+              "player": 1,
+              "zone": "battlefield",
+              "state": [
+                "tapped"
+              ]
+            }
+          ],
+          "wave": 5,
+          "drain_mana_lands": [
+            "Forest",
+            "Island"
+          ],
+          "variable_x": true
+        }
+      }
+    },
+    "Broken Ambitions": {
+      "source": {
+        "oracle_id": "4a3fba0c-50b1-4139-834e-c8fc8e1315bb",
+        "name": "Broken Ambitions",
+        "type_line": "Instant",
+        "mana_cost": "{X}{U}",
+        "oracle_text": "Counter target spell unless its controller pays {X}. Clash with an opponent. If you win, that spell's controller mills four cards. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+        "keywords": [
+          "Clash",
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 2
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Empty clash libraries, clash-trigger permanents, multiple simultaneous responses and replacement effects."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "clash": true,
+          "variable_x": true
+        }
+      }
+    }
+  },
+  "token_aliases": {
+    "Illusion": {
+      "registry_name": "Illusion Token",
+      "csvid": 18769,
+      "reason": "Legacy registry spelling for the generic Illusion token identity; all characteristics come from Summoner's Bane printed Oracle text, not another Illusion token's Oracle record."
+    }
+  },
+  "ability_witnesses": {
+    "Dragon Whelp": {
+      "oracle_id": "705a1985-ed39-4a4b-812e-a677170b596e",
+      "name": "Dragon Whelp",
+      "type_line": "Creature \u2014 Dragon",
+      "mana_cost": "{2}{R}{R}",
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn. If this ability has been activated four or more times this turn, sacrifice this creature at the beginning of the next end step.",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "3"
+    },
+    "Icy Manipulator": {
+      "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+      "name": "Icy Manipulator",
+      "type_line": "Artifact",
+      "mana_cost": "{4}",
+      "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 4.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": null,
+      "toughness": null
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "type_line": "Creature \u2014 Bear",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "2"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Stone Rain": {
+      "oracle_id": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
+      "name": "Stone Rain",
+      "oracle_text": "Destroy target land.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/221/stone-rain?utm_source=api"
+    }
+  }
+}

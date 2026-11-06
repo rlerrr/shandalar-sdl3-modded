@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "card": "Silumgar's Command",
+  "csvid": 15032,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Unselected creature -3/-3 and planeswalker-destruction modes; other mode pairs, independent target invalidation, uncounterable parents and replacements."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              0,
+              1
+            ],
+            "1": [
+              0,
+              1
+            ]
+          },
+          "auxiliary": [],
+          "wave": 5,
+          "secondary": {
+            "action": "bounce"
+          },
+          "present_ai_dialogs": true
+        }
+      },
+      "oracle_text": "Choose two \u2014\n\u2022 Counter target noncreature spell.\n\u2022 Return target permanent to its owner's hand.\n\u2022 Target creature gets -3/-3 until end of turn.\n\u2022 Destroy target planeswalker.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "secondary_self_0",
+        "secondary_land_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1",
+        "secondary_self_1",
+        "secondary_land_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Selected counter-noncreature plus return-permanent modes, own/opposing/land bounce recipients, target and mana/zone conservation, real response drain. Unselected creature -3/-3 and planeswalker-destruction modes; other mode pairs, independent target invalidation, uncounterable parents and replacements."
+}

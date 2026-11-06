@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Barbed Lightning",
+  "csvid": 6859,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell_extension",
+      "version": 2,
+      "params": {
+        "kind": "targeted",
+        "effect": {
+          "amount": 3,
+          "targets": [
+            "creature"
+          ]
+        },
+        "gain_life": 0,
+        "inactive_components": [
+          "Other modal choices and combinations: Choose one —\n• Barbed Lightning deals 3 damage to target creature.\n• Barbed Lightning deals 3 damage to target player or planeswalker.\nEntwine {2} (Choose both if you pay the entwine cost.)"
+        ],
+        "choices_before_target": [
+          0
+        ],
+        "choices_after_target": [],
+        "skip_before_choices_on_exact_payment": false,
+        "skip_after_choices_on_exact_payment": false,
+        "omit_variants": [
+          "empty",
+          "wrong_type",
+          "wrong_flying",
+          "wrong_color",
+          "wrong_controller",
+          "noncombat"
+        ]
+      },
+      "oracle_text": "Choose one —\n• Barbed Lightning deals 3 damage to target creature.\n• Barbed Lightning deals 3 damage to target player or planeswalker.\nEntwine {2} (Choose both if you pay the entwine cost.)",
+      "variants": [
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "survivor_0",
+        "lethal_0",
+        "lost_target_0",
+        "friendly_0",
+        "regenerate_0",
+        "pending_snapshot_0",
+        "wrong_payment_color_0",
+        "other_turn_0",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "survivor_1",
+        "lethal_1",
+        "lost_target_1",
+        "friendly_1",
+        "regenerate_1",
+        "pending_snapshot_1",
+        "wrong_payment_color_1",
+        "other_turn_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed fixed damage component through ordinary mana-paid casting; all other named clauses are explicit recipe metadata gaps."
+}

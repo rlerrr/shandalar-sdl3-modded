@@ -1,0 +1,2225 @@
+{
+  "version": 1,
+  "cards": {
+    "Air Elemental": {
+      "name": "Air Elemental",
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Elemental",
+      "mana_cost": "{3}{U}{U}",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "power": "4",
+      "toughness": "4"
+    },
+    "Centaur Courser": {
+      "name": "Centaur Courser",
+      "oracle_id": "2f5bf099-2e01-4e1c-9ebf-0ce0ac66939e",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Centaur Warrior",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Counterspell": {
+      "name": "Counterspell",
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "oracle_text": "Counter target spell.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 2.0
+    },
+    "Craw Wurm": {
+      "name": "Craw Wurm",
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Wurm",
+      "mana_cost": "{4}{G}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "power": "6",
+      "toughness": "4"
+    },
+    "Darksteel Citadel": {
+      "name": "Darksteel Citadel",
+      "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+      "layout": "normal",
+      "type_line": "Artifact Land",
+      "mana_cost": "",
+      "oracle_text": "Indestructible\n{T}: Add {C}.",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Darksteel Myr": {
+      "name": "Darksteel Myr",
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Myr",
+      "mana_cost": "{3}",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 3.0,
+      "power": "0",
+      "toughness": "1"
+    },
+    "Darksteel Relic": {
+      "name": "Darksteel Relic",
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{0}",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Demon": {
+      "name": "Demon",
+      "oracle_id": "bf9097ec-f28c-42dc-ab92-40885ed74ac4",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Demon",
+      "mana_cost": "",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Elemental": {
+      "name": "Elemental",
+      "oracle_id": "ff9ee841-1174-4c4c-b9d3-56d79122acbb",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Elemental",
+      "mana_cost": "",
+      "oracle_text": "Whenever this creature becomes tapped, it deals 1 damage to target player.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Elf Warrior": {
+      "name": "Elf Warrior",
+      "oracle_id": "dac8a765-6845-4b57-bb79-4ec463436f92",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Elf Warrior",
+      "mana_cost": "",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Exploration": {
+      "name": "Exploration",
+      "oracle_id": "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{G}",
+      "oracle_text": "You may play an additional land on each of your turns.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Forest": {
+      "name": "Forest",
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Forest",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Giant Growth": {
+      "name": "Giant Growth",
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Gilded Light": {
+      "name": "Gilded Light",
+      "oracle_id": "f7e7b2aa-9fd2-41dd-b11e-3a233530dc83",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "You gain shroud until end of turn. (You can't be the target of spells or abilities.)\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Gilded Lotus": {
+      "name": "Gilded Lotus",
+      "oracle_id": "9a02a9a7-39d9-4763-85d3-747a0540b60b",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{5}",
+      "oracle_text": "{T}: Add three mana of any one color.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 5.0
+    },
+    "Gladecover Scout": {
+      "name": "Gladecover Scout",
+      "oracle_id": "385c1208-bfea-44e2-b236-4f38bc90db9f",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Elf Scout",
+      "mana_cost": "{G}",
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)",
+      "keywords": [
+        "Hexproof"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Goblin": {
+      "name": "Goblin",
+      "oracle_id": "fa8ea5cd-b390-41a1-9a2a-11af1bc6bfd0",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Goblin",
+      "mana_cost": "",
+      "oracle_text": "Haste",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "power": "2",
+      "toughness": "1"
+    },
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bear",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Hill Giant": {
+      "name": "Hill Giant",
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Giant",
+      "mana_cost": "{3}{R}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Insect": {
+      "name": "Insect",
+      "oracle_id": "ff591c1f-732b-432d-b458-4f19c8f707c5",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Insect",
+      "mana_cost": "",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B",
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Island": {
+      "name": "Island",
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Island",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Jace Beleren": {
+      "name": "Jace Beleren",
+      "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "layout": "normal",
+      "type_line": "Legendary Planeswalker \u2014 Jace",
+      "mana_cost": "{1}{U}{U}",
+      "oracle_text": "+2: Each player draws a card.\n\u22121: Target player draws a card.\n\u221210: Target player mills twenty cards.",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "loyalty": "3"
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0
+    },
+    "Llanowar Elves": {
+      "name": "Llanowar Elves",
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "mana_cost": "",
+      "oracle_text": "{T}: Add {G}.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Memnite": {
+      "name": "Memnite",
+      "oracle_id": "7663ac7c-1de3-4250-b96a-fae9dbd66a27",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Construct",
+      "mana_cost": "{0}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mogg Raider": {
+      "name": "Mogg Raider",
+      "oracle_id": "240746f5-caab-46b9-914f-c2c7ecce6ca9",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Goblin",
+      "mana_cost": "{R}",
+      "oracle_text": "Sacrifice a Goblin: Target creature gets +1/+1 until end of turn.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mountain": {
+      "name": "Mountain",
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Mountain",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {R}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Pegasus": {
+      "name": "Pegasus",
+      "oracle_id": "251085b8-4bca-4fcd-92a0-006541be827e",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Pegasus",
+      "mana_cost": "",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Phyrexian Hulk": {
+      "name": "Phyrexian Hulk",
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Phyrexian Golem",
+      "mana_cost": "{6}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [],
+      "cmc": 6.0,
+      "power": "5",
+      "toughness": "4"
+    },
+    "Plains": {
+      "name": "Plains",
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Plains",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Ranger's Guile": {
+      "name": "Ranger's Guile",
+      "oracle_id": "694cb93a-bcc5-44b0-a76c-19ae4a4e5e0f",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Target creature you control gets +1/+1 and gains hexproof until end of turn. (It can't be the target of spells or abilities your opponents control.)",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Seal of Cleansing": {
+      "name": "Seal of Cleansing",
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Shivan Dragon": {
+      "name": "Shivan Dragon",
+      "oracle_id": "711eea87-0fa3-46e0-a42b-fa5a86455f04",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Dragon",
+      "mana_cost": "{4}{R}{R}",
+      "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "R"
+      ],
+      "cmc": 6.0,
+      "power": "5",
+      "toughness": "5"
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 1.0
+    },
+    "Suntail Hawk": {
+      "name": "Suntail Hawk",
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bird",
+      "mana_cost": "{W}",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Unsummon": {
+      "name": "Unsummon",
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 1.0
+    },
+    "Wall of Ice": {
+      "name": "Wall of Ice",
+      "oracle_id": "1945e165-7636-4727-89ba-3811251ef175",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Wall",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "Defender (This creature can't attack.)",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "power": "0",
+      "toughness": "7"
+    },
+    "Wall of Spears": {
+      "name": "Wall of Spears",
+      "oracle_id": "ed836d84-ff1e-4af8-b4b8-314569b3faec",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Wall",
+      "mana_cost": "{3}",
+      "oracle_text": "Defender (This creature can't attack.)\nFirst strike",
+      "keywords": [
+        "First strike",
+        "Defender"
+      ],
+      "colors": [],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "3"
+    },
+    "War Mammoth": {
+      "name": "War Mammoth",
+      "oracle_id": "b2a8fcf9-2ec2-40a9-9955-90f8605b11a3",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Elephant",
+      "mana_cost": "{3}{G}",
+      "oracle_text": "Trample",
+      "keywords": [
+        "Trample"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Zombie": {
+      "name": "Zombie",
+      "oracle_id": "ec6e76e8-e80e-4534-990a-03c3bbeda53a",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Zombie",
+      "mana_cost": "",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "power": "*",
+      "toughness": "*"
+    }
+  },
+  "library_palette": [
+    "Grizzly Bears",
+    "Craw Wurm",
+    "Wall of Spears",
+    "War Mammoth",
+    "Sol Ring",
+    "Forest",
+    "Plains",
+    "Island",
+    "Mountain",
+    "Darksteel Citadel",
+    "Lightning Bolt",
+    "Seal of Cleansing",
+    "Memnite",
+    "Darksteel Relic",
+    "Centaur Courser",
+    "Gilded Lotus",
+    "Air Elemental",
+    "Phyrexian Hulk",
+    "Giant Growth"
+  ],
+  "profiles": {
+    "Smallpox": {
+      "csvid": 8669,
+      "source": {
+        "name": "Smallpox",
+        "oracle_id": "7bd22c98-0782-447f-a5fa-4281585a3eab",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{B}{B}",
+        "oracle_text": "Each player loses 1 life, discards a card, sacrifices a creature of their choice, then sacrifices a land of their choice.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Smallpox",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "ordered",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "creature_land",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "value_operations": [
+          {
+            "kind": "lose_life",
+            "amount": 1
+          },
+          {
+            "kind": "discard",
+            "amount": 1
+          }
+        ],
+        "life_totals": [
+          23,
+          20
+        ]
+      }
+    },
+    "Pox": {
+      "csvid": 2069,
+      "source": {
+        "name": "Pox",
+        "oracle_id": "539d7c1a-b5e9-4204-9109-ddb2e8dec168",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{B}{B}{B}",
+        "oracle_text": "Each player loses a third of their life, then discards a third of the cards in their hand, then sacrifices a third of the creatures they control of their choice, then sacrifices a third of the lands they control of their choice. Round up each time.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Pox",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "ordered",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "creature_land",
+        "quantity": "third_ceil",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "value_operations": [
+          {
+            "kind": "lose_life",
+            "amount": "third_ceil"
+          },
+          {
+            "kind": "discard",
+            "amount": "third_ceil"
+          }
+        ],
+        "life_totals": [
+          23,
+          20
+        ]
+      }
+    },
+    "Fraying Omnipotence": {
+      "csvid": 18922,
+      "source": {
+        "name": "Fraying Omnipotence",
+        "oracle_id": "3b00068d-ad07-417c-bbb3-5f980615fb06",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{3}{B}{B}",
+        "oracle_text": "Each player loses half their life, then discards half the cards in their hand, then sacrifices half the creatures they control of their choice. Round up each time.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "profile": "Fraying Omnipotence",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "ordered",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "creature",
+        "quantity": "half_ceil",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "value_operations": [
+          {
+            "kind": "lose_life",
+            "amount": "half_ceil"
+          },
+          {
+            "kind": "discard",
+            "amount": "half_ceil"
+          }
+        ],
+        "life_totals": [
+          23,
+          20
+        ],
+        "keep_land_controls": true
+      }
+    },
+    "Death Cloud": {
+      "csvid": 6876,
+      "source": {
+        "name": "Death Cloud",
+        "oracle_id": "680f5eca-b98e-4f73-a852-ab629d94297e",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{X}{B}{B}{B}",
+        "oracle_text": "Each player loses X life, discards X cards, sacrifices X creatures of their choice, then sacrifices X lands of their choice.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Death Cloud",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "ordered",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "creature_land",
+        "quantity": "x",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "value_operations": [
+          {
+            "kind": "lose_life",
+            "amount": "x"
+          },
+          {
+            "kind": "discard",
+            "amount": "x"
+          }
+        ],
+        "life_totals": [
+          23,
+          20
+        ]
+      }
+    },
+    "Diabolic Intent": {
+      "csvid": 5218,
+      "source": {
+        "name": "Diabolic Intent",
+        "oracle_id": "038519b9-bca8-4b27-b5ac-2409595469d0",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a card, put that card into your hand, then shuffle.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Diabolic Intent",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "search",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "shuffle distribution",
+          "multiplayer"
+        ],
+        "search": {
+          "scope": "card",
+          "destination": "hand",
+          "quantity": 1,
+          "preferred": [
+            "Lightning Bolt"
+          ],
+          "failure_allowed": false
+        }
+      }
+    },
+    "Crop Rotation": {
+      "csvid": 1542,
+      "source": {
+        "name": "Crop Rotation",
+        "oracle_id": "28b46183-c62f-47b1-9fee-3ba148202cab",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{G}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a land.\nSearch your library for a land card, put that card onto the battlefield, then shuffle.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Crop Rotation",
+        "kind": "cost_effect",
+        "cost_scope": "land",
+        "cost_count": 1,
+        "effect": "search",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "shuffle distribution",
+          "multiplayer"
+        ],
+        "search": {
+          "scope": "land",
+          "destination": "battlefield",
+          "quantity": 1,
+          "preferred": [
+            "Plains"
+          ],
+          "failure_allowed": true
+        }
+      }
+    },
+    "Altar of Bone": {
+      "csvid": 1850,
+      "source": {
+        "name": "Altar of Bone",
+        "oracle_id": "607a3f5f-4a36-4077-b5cf-40ffd52fa580",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{G}{W}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a creature card, reveal it, put it into your hand, then shuffle.",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Altar of Bone",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "search",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "shuffle distribution",
+          "multiplayer"
+        ],
+        "search": {
+          "scope": "creature",
+          "destination": "hand",
+          "quantity": 1,
+          "preferred": [
+            "War Mammoth"
+          ],
+          "failure_allowed": true
+        }
+      }
+    },
+    "Natural Order": {
+      "csvid": 2748,
+      "source": {
+        "name": "Natural Order",
+        "oracle_id": "8c1fe337-375a-4add-93b6-0ac39ed72b4f",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{G}{G}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a green creature.\nSearch your library for a green creature card, put it onto the battlefield, then shuffle.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Natural Order",
+        "kind": "cost_effect",
+        "cost_scope": "green_creature",
+        "cost_count": 1,
+        "effect": "search",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "shuffle distribution",
+          "multiplayer"
+        ],
+        "search": {
+          "scope": "green_creature",
+          "destination": "battlefield",
+          "quantity": 1,
+          "preferred": [
+            "Centaur Courser"
+          ],
+          "failure_allowed": true
+        }
+      }
+    },
+    "Tinker": {
+      "csvid": 1351,
+      "source": {
+        "name": "Tinker",
+        "oracle_id": "254878f0-be90-4653-a395-0c41258fceaf",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{U}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact.\nSearch your library for an artifact card, put that card onto the battlefield, then shuffle.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Tinker",
+        "kind": "cost_effect",
+        "cost_scope": "artifact",
+        "cost_count": 1,
+        "effect": "search",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "shuffle distribution",
+          "multiplayer"
+        ],
+        "search": {
+          "scope": "artifact",
+          "destination": "battlefield",
+          "quantity": 1,
+          "preferred": [
+            "Darksteel Relic"
+          ],
+          "failure_allowed": true
+        }
+      }
+    },
+    "Renewal": {
+      "csvid": 2230,
+      "source": {
+        "name": "Renewal",
+        "oracle_id": "8df46910-ee13-416e-8282-dfe85a90e6d5",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{G}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a land.\nSearch your library for a basic land card, put that card onto the battlefield, then shuffle.\nDraw a card at the beginning of the next turn's upkeep.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Renewal",
+        "kind": "cost_effect",
+        "cost_scope": "land",
+        "cost_count": 1,
+        "effect": "search",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "next-turn upkeep draw; no upkeep emitted",
+          "replacement and triggered effects",
+          "shuffle distribution",
+          "multiplayer"
+        ],
+        "search": {
+          "scope": "basic_land",
+          "destination": "battlefield",
+          "quantity": 1,
+          "preferred": [
+            "Plains"
+          ],
+          "failure_allowed": true
+        }
+      }
+    },
+    "Harrow": {
+      "csvid": 3164,
+      "source": {
+        "name": "Harrow",
+        "oracle_id": "705509e9-a034-4a5a-9c65-66f58748b8a2",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{G}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a land.\nSearch your library for up to two basic land cards, put them onto the battlefield, then shuffle.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Harrow",
+        "kind": "cost_effect",
+        "cost_scope": "land",
+        "cost_count": 1,
+        "effect": "search",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "shuffle distribution",
+          "multiplayer"
+        ],
+        "search": {
+          "scope": "basic_land",
+          "destination": "battlefield",
+          "quantity": 2,
+          "preferred": [
+            "Plains",
+            "Island"
+          ],
+          "failure_allowed": true
+        }
+      }
+    },
+    "Reshape": {
+      "csvid": 6944,
+      "source": {
+        "name": "Reshape",
+        "oracle_id": "42a3855d-25ab-45b3-9e5d-9a0f3da35a05",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{X}{U}{U}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact.\nSearch your library for an artifact card with mana value X or less, put it onto the battlefield, then shuffle.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Reshape",
+        "kind": "cost_effect",
+        "cost_scope": "artifact",
+        "cost_count": 1,
+        "effect": "search",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "shuffle distribution",
+          "multiplayer"
+        ],
+        "search": {
+          "scope": "artifact",
+          "destination": "battlefield",
+          "quantity": 1,
+          "preferred": [
+            "Gilded Lotus",
+            "Wall of Spears",
+            "Sol Ring",
+            "Memnite"
+          ],
+          "failure_allowed": true,
+          "limit": "x"
+        }
+      }
+    },
+    "Eldritch Evolution": {
+      "csvid": 16086,
+      "source": {
+        "name": "Eldritch Evolution",
+        "oracle_id": "0f77c0c9-4dc4-489a-b547-e93287c4d1a5",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{G}{G}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nSearch your library for a creature card with mana value X or less, where X is 2 plus the sacrificed creature's mana value. Put that card onto the battlefield, then shuffle. Exile Eldritch Evolution.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Eldritch Evolution",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "search",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "exile",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "shuffle distribution",
+          "multiplayer"
+        ],
+        "search": {
+          "scope": "creature",
+          "destination": "battlefield",
+          "quantity": 1,
+          "preferred": [
+            "Craw Wurm",
+            "Air Elemental",
+            "War Mammoth"
+          ],
+          "failure_allowed": true,
+          "limit": "cost_mv_plus2"
+        }
+      }
+    },
+    "Wildfire": {
+      "csvid": 1553,
+      "source": {
+        "name": "Wildfire",
+        "oracle_id": "0da68ca2-07fd-4359-95a9-fb2f815e6ed0",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{R}{R}",
+        "oracle_text": "Each player sacrifices four lands of their choice. Wildfire deals 4 damage to each creature.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 6.0
+      },
+      "params": {
+        "profile": "Wildfire",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "mass_damage",
+        "target": "none",
+        "amount": 4,
+        "recipient": "both",
+        "scope": "land",
+        "quantity": 4,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "edict_board_count": 6,
+        "creature_controls": true
+      }
+    },
+    "Destructive Force": {
+      "csvid": 11114,
+      "source": {
+        "name": "Destructive Force",
+        "oracle_id": "b0967525-554b-41eb-b639-75fe36e0fe57",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{5}{R}{R}",
+        "oracle_text": "Each player sacrifices five lands of their choice. Destructive Force deals 5 damage to each creature.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 7.0
+      },
+      "params": {
+        "profile": "Destructive Force",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "mass_damage",
+        "target": "none",
+        "amount": 5,
+        "recipient": "both",
+        "scope": "land",
+        "quantity": 5,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "edict_board_count": 6,
+        "creature_controls": true,
+        "scripted_sacrifice": {
+          "0": true,
+          "1": true
+        },
+        "scripted_order_apnap": true
+      }
+    },
+    "Balance": {
+      "csvid": 10,
+      "source": {
+        "name": "Balance",
+        "oracle_id": "17fa98cd-ed8f-483f-9525-7e989a82ebb2",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{W}",
+        "oracle_text": "Each player chooses a number of lands they control equal to the number of lands controlled by the player who controls the fewest, then sacrifices the rest. Players discard cards and sacrifice creatures the same way.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Balance",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "ordered",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "creature_land",
+        "quantity": "surplus_min",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "edict_counts": [
+          5,
+          2
+        ],
+        "hand_counts": [
+          4,
+          2
+        ],
+        "value_operations": [
+          {
+            "kind": "discard",
+            "amount": "surplus_min"
+          }
+        ],
+        "recipient_checks": true,
+        "sacrifice_order": [
+          "land",
+          "creature"
+        ]
+      }
+    },
+    "Balancing Act": {
+      "csvid": 5478,
+      "source": {
+        "name": "Balancing Act",
+        "oracle_id": "4c68282b-776f-463a-9652-f611538c53ee",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{W}{W}",
+        "oracle_text": "Each player chooses a number of permanents they control equal to the number of permanents controlled by the player who controls the fewest, then sacrifices the rest. Each player discards cards the same way.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Balancing Act",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "ordered",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "permanent",
+        "quantity": "surplus_min",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "edict_counts": [
+          5,
+          2
+        ],
+        "hand_counts": [
+          4,
+          2
+        ],
+        "value_operations": [
+          {
+            "kind": "discard",
+            "amount": "surplus_min"
+          }
+        ],
+        "recipient_checks": true
+      }
+    },
+    "Razia's Purification": {
+      "csvid": 7933,
+      "source": {
+        "name": "Razia's Purification",
+        "oracle_id": "60e95faf-1496-4298-9588-52b50b05fc6b",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{R}{W}",
+        "oracle_text": "Each player chooses three permanents they control, then sacrifices the rest.",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "cmc": 6.0
+      },
+      "params": {
+        "profile": "Razia's Purification",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "permanent",
+        "quantity": "keep3",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "edict_board_count": 5,
+        "mixed_permanents": true,
+        "scripted_sacrifice": {
+          "0": true,
+          "1": true
+        },
+        "scripted_order_apnap": true,
+        "recipient_checks": true
+      }
+    },
+    "Epicenter": {
+      "csvid": 5559,
+      "source": {
+        "name": "Epicenter",
+        "oracle_id": "264cb7f6-6d36-4e58-87f4-83ccaa998a32",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{R}",
+        "oracle_text": "Target player sacrifices a land of their choice.\nThreshold \u2014 Each player sacrifices all lands they control instead if there are seven or more cards in your graveyard.",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "R"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "profile": "Epicenter",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "any",
+        "scope": "land",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "condition": {
+          "kind": "threshold",
+          "count": 7
+        },
+        "unrelated_controls": true,
+        "recipient_checks": true
+      }
+    },
+    "Foul-Tongue Invocation": {
+      "csvid": 14918,
+      "source": {
+        "name": "Foul-Tongue Invocation",
+        "oracle_id": "fbf27d1b-2b2a-49f3-abcd-20a6c79c44ee",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{B}",
+        "oracle_text": "As an additional cost to cast this spell, you may reveal a Dragon card from your hand.\nTarget player sacrifices a creature of their choice. If you revealed a Dragon card or controlled a Dragon as you cast this spell, you gain 4 life.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Foul-Tongue Invocation",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "any",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "reveal notification visibility",
+          "Dragon response removal before resolution",
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "condition": {
+          "kind": "dragon_as_cast",
+          "gain": 4
+        },
+        "reveal_dialogs": {
+          "0": [
+            0
+          ],
+          "1": []
+        },
+        "recipient_checks": true
+      }
+    },
+    "To the Slaughter": {
+      "csvid": 15992,
+      "source": {
+        "name": "To the Slaughter",
+        "oracle_id": "518cf9ce-14aa-4f51-81bf-f8c2692a4244",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{B}",
+        "oracle_text": "Target player sacrifices a creature or planeswalker of their choice.\nDelirium \u2014 If there are four or more card types among cards in your graveyard, instead that player sacrifices a creature and a planeswalker of their choice.",
+        "keywords": [
+          "Delirium"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "To the Slaughter",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "any",
+        "scope": "creature_or_planeswalker",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "condition": {
+          "kind": "delirium",
+          "count": 4
+        },
+        "recipient_checks": true
+      }
+    },
+    "Vona's Hunger": {
+      "csvid": 18325,
+      "source": {
+        "name": "Vona's Hunger",
+        "oracle_id": "da522912-1bc2-4d70-b426-94d10edb2afe",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{B}",
+        "oracle_text": "Ascend (If you control ten or more permanents, you get the city's blessing for the rest of the game.)\nEach opponent sacrifices a creature of their choice. If you have the city's blessing, instead each opponent sacrifices half the creatures they control of their choice, rounded up.",
+        "keywords": [
+          "Ascend"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Vona's Hunger",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "none",
+        "amount": 0,
+        "recipient": "opponents",
+        "scope": "creature",
+        "quantity": "city_half",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "pre-existing city's blessing below ten permanents",
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "condition": {
+          "kind": "ascend",
+          "count": 10
+        },
+        "recipient_checks": true
+      }
+    },
+    "Skull Storm": {
+      "csvid": 19120,
+      "source": {
+        "name": "Skull Storm",
+        "oracle_id": "6f34d70e-7a3a-43f7-b2c9-f89519804d3c",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{7}{B}{B}",
+        "oracle_text": "When you cast this spell, copy it for each time you've cast your commander from the command zone this game.\nEach opponent sacrifices a creature of their choice. Each opponent who can't loses half their life, rounded up.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 9.0
+      },
+      "params": {
+        "profile": "Skull Storm",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "none",
+        "amount": 0,
+        "recipient": "opponents",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "commander cast-history copies; no commander in this fixture",
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "condition": {
+          "kind": "empty_loss",
+          "loss": "half_ceil"
+        },
+        "life_totals": [
+          23,
+          20
+        ],
+        "recipient_checks": true
+      }
+    },
+    "Syphon Flesh": {
+      "csvid": 11736,
+      "source": {
+        "name": "Syphon Flesh",
+        "oracle_id": "bc7c3151-ad07-429a-8af8-e4f24b7d9f6b",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{B}",
+        "oracle_text": "Each other player sacrifices a creature of their choice. You create a 2/2 black Zombie creature token for each creature sacrificed this way.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "profile": "Syphon Flesh",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "tokens",
+        "target": "none",
+        "amount": 0,
+        "recipient": "opponents",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": {
+          "name": "Zombie",
+          "count": "sacrificed_count",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "B"
+          ],
+          "subtypes": [
+            "Zombie"
+          ]
+        },
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "recipient_checks": true
+      }
+    },
+    "Reign of the Pit": {
+      "csvid": 14052,
+      "source": {
+        "name": "Reign of the Pit",
+        "oracle_id": "3e1a6337-bb29-450f-bf29-ff71b357a983",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{B}{B}",
+        "oracle_text": "Each player sacrifices a creature of their choice. Create an X/X black Demon creature token with flying, where X is the total power of the creatures sacrificed this way.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 6.0
+      },
+      "params": {
+        "profile": "Reign of the Pit",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "tokens",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": {
+          "name": "Demon",
+          "count": 1,
+          "power": "sacrificed_power",
+          "toughness": "sacrificed_power",
+          "colors": [
+            "B"
+          ],
+          "subtypes": [
+            "Demon"
+          ]
+        },
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "Demon subtype through exact named token identity; direct subtype observer unavailable",
+          "zero-toughness token creation event; final state-based death checked",
+          "replacement and triggered effects",
+          "multiplayer",
+          "ground-blocker evasion; real flyer-blocking action tested"
+        ],
+        "recipient_checks": true,
+        "one_sided": true,
+        "flying_proof": true
+      }
+    },
+    "Mercy Killing": {
+      "csvid": 9600,
+      "source": {
+        "name": "Mercy Killing",
+        "oracle_id": "4d80bac5-ce62-4c5c-873a-ce81d2697842",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{G/W}",
+        "oracle_text": "Target creature's controller sacrifices it, then creates X 1/1 green and white Elf Warrior creature tokens, where X is that creature's power.",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Mercy Killing",
+        "kind": "cost_effect",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "target_sac_tokens",
+        "target": "creature",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": {
+          "name": "Elf Warrior",
+          "count": "victim_power",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "G",
+            "W"
+          ],
+          "subtypes": [
+            "Elf",
+            "Warrior"
+          ]
+        },
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "allow_own_target": true,
+        "target_controls": true,
+        "response_hexproof": true,
+        "hybrid": {
+          "symbol": "G/W",
+          "default": "G",
+          "other": "W"
+        }
+      }
+    },
+    "Worthy Cause": {
+      "csvid": 3336,
+      "source": {
+        "name": "Worthy Cause",
+        "oracle_id": "b24063f7-157f-47c0-919a-33856d53b902",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{W}",
+        "oracle_text": "Buyback {2} (You may pay an additional {2} as you cast this spell. If you do, put this card into your hand as it resolves.)\nAs an additional cost to cast this spell, sacrifice a creature.\nYou gain life equal to the sacrificed creature's toughness.",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "W"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Worthy Cause",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "gain",
+        "target": "none",
+        "amount": "cost_toughness",
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "optional_payment": {
+          "kind": "buyback_mana",
+          "mana": 2,
+          "dialog_first": false
+        }
+      }
+    },
+    "Pegasus Stampede": {
+      "csvid": 3532,
+      "source": {
+        "name": "Pegasus Stampede",
+        "oracle_id": "16b4a48a-fec2-433c-948d-e0b16c961172",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{W}",
+        "oracle_text": "Buyback\u2014Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell. If you do, put this card into your hand as it resolves.)\nCreate a 1/1 white Pegasus creature token with flying.",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "W"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Pegasus Stampede",
+        "kind": "cost_effect",
+        "cost_scope": "land",
+        "cost_count": 1,
+        "effect": "tokens",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": {
+          "name": "Pegasus",
+          "count": 1,
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "W"
+          ],
+          "subtypes": [
+            "Pegasus"
+          ]
+        },
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "Pegasus subtype through exact named token identity; direct subtype observer unavailable",
+          "replacement and triggered effects",
+          "multiplayer",
+          "ground-blocker evasion; real flyer-blocking action tested"
+        ],
+        "optional_payment": {
+          "kind": "buyback_sacrifice",
+          "mana": 0,
+          "dialog_first": true
+        },
+        "flying_proof": true
+      }
+    },
+    "Bog Down": {
+      "csvid": 5204,
+      "source": {
+        "name": "Bog Down",
+        "oracle_id": "8574f57a-768d-42a0-ac8c-cc0a1de181e0",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{B}",
+        "oracle_text": "Kicker\u2014Sacrifice two lands. (You may sacrifice two lands in addition to any other costs as you cast this spell.)\nTarget player discards two cards. If this spell was kicked, that player discards three cards instead.",
+        "keywords": [
+          "Kicker"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Bog Down",
+        "kind": "cost_effect",
+        "cost_scope": "land",
+        "cost_count": 2,
+        "effect": "discard",
+        "target": "player",
+        "amount": "kicked",
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "optional_payment": {
+          "kind": "kicker_sacrifice",
+          "mana": 0,
+          "dialog_first": true
+        }
+      }
+    },
+    "Burnt Offering": {
+      "csvid": 1883,
+      "source": {
+        "name": "Burnt Offering",
+        "oracle_id": "86eb30a0-0beb-42db-9ddf-cf8be6c99dd3",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nAdd X mana in any combination of {B} and/or {R}, where X is the sacrificed creature's mana value.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Burnt Offering",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "mana",
+        "target": "none",
+        "amount": "cost_mv",
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "mana_colors": [
+          "B",
+          "R"
+        ],
+        "counter_response": true
+      }
+    },
+    "Pulverize": {
+      "csvid": 4556,
+      "source": {
+        "name": "Pulverize",
+        "oracle_id": "d403d1f3-5a92-4f4c-aff2-cff6a0b3b1ec",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{R}{R}",
+        "oracle_text": "You may sacrifice two Mountains rather than pay this spell's mana cost.\nDestroy all artifacts.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 6.0
+      },
+      "params": {
+        "profile": "Pulverize",
+        "kind": "cost_effect",
+        "cost_scope": "mountain",
+        "cost_count": 2,
+        "effect": "mass_destroy",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "optional_payment": {
+          "kind": "alternative_sacrifice",
+          "mana": 0,
+          "dialog_first": true
+        }
+      }
+    }
+  }
+}

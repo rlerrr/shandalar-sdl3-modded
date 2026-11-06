@@ -1,0 +1,91 @@
+{
+  "version": 1,
+  "card": "Pore Over the Pages",
+  "csvid": 15920,
+  "recipes": [
+    {
+      "family": "discard_spell_extension",
+      "version": 2,
+      "params": {
+        "kind": "pipeline",
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 3,
+            "scope": "recipient",
+            "random": false
+          },
+          {
+            "kind": "discard",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "context": "no_lands",
+        "resolution_inputs": {
+          "0": [
+            {
+              "kind": "cancel_target"
+            }
+          ],
+          "1": [
+            {
+              "kind": "cancel_target"
+            }
+          ]
+        },
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Untapping up to two lands between drawing and discarding; fixtures contain no battlefield lands"
+        ]
+      },
+      "oracle_text": "Draw three cards, untap up to two lands, then discard a card.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "bare_zones_0",
+        "empty_hands_0",
+        "one_card_0",
+        "large_hand_0",
+        "uneven_hands_0",
+        "own_empty_0",
+        "opponent_empty_0",
+        "duplicates_0",
+        "last_choice_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_cast_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "effect_1",
+        "payment_1",
+        "bare_zones_1",
+        "empty_hands_1",
+        "one_card_1",
+        "large_hand_1",
+        "uneven_hands_1",
+        "own_empty_1",
+        "opponent_empty_1",
+        "duplicates_1",
+        "last_choice_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_cast_1",
+        "insufficient_mana_1",
+        "wrong_color_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Pinned ordinary printed discard component through actual casting/payment, exact hand/grave/library conservation, type predicates and selected card identities, protected recipients, countering and caller snapshots. All additional clauses and deferred mechanics are enumerated by the declaration."
+}

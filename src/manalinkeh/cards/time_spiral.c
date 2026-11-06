@@ -7716,7 +7716,7 @@ All Sliver creatures have "Whenever a creature dealt damage by this creature thi
 	return slivercycling(player, card, event);
 }
 
-int card_verdant_embrace(int player, int card, event_t event, int trig_mode){
+int card_verdant_embrace(int player, int card, event_t event){
 	/* Verdant Embrace	|3|G|G
 	 * Enchantment - Aura
 	 * Enchant creature

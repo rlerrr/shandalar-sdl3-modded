@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Gossamer Chains",
+  "csvid": 2714,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "amount": "all",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Targeting creatures controlled by the ability controller"
+        ],
+        "binding": "chosen_combat",
+        "scope": "source",
+        "return_source": true,
+        "target_predicate": "unblocked"
+      },
+      "oracle_text": "Return this enchantment to its owner's hand: Prevent all combat damage that would be dealt by target unblocked creature this turn.",
+      "variants": [
+        "effect_0",
+        "without_effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "wrong_role_0",
+        "effect_1",
+        "without_effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "wrong_role_1"
+      ]
+    }
+  ]
+}

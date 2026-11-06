@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "card": "Desertion",
+  "csvid": 2688,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "ETB abilities on acquired witnesses, artifact-creature intersections, changed control before resolution and replacements."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "acquire_types": [
+            "artifact",
+            "creature"
+          ]
+        }
+      },
+      "oracle_text": "Counter target spell. If an artifact or creature spell is countered this way, put that card onto the battlefield under your control instead of into its owner's graveyard.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "acquired_mana_0",
+        "acquired_owner_grave_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_instant_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1",
+        "acquired_mana_1",
+        "acquired_owner_grave_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Artifact/creature parent acquired under source control instead of graveyard; ordinary other-type counter, functional acquired Sol Ring mana and real Disenchant proving original ownership on death. ETB abilities on acquired witnesses, artifact-creature intersections, changed control before resolution and replacements."
+}

@@ -1,0 +1,84 @@
+{
+  "version": 1,
+  "card": "Pongify",
+  "csvid": 8822,
+  "recipes": [
+    {
+      "family": "target_removal",
+      "version": 2,
+      "params": {
+        "schema": "removal_wave6",
+        "profile": "Pongify",
+        "mode": "target",
+        "effect": "destroy",
+        "scope": "creature",
+        "count": 1,
+        "variable": false,
+        "limit": null,
+        "no_regenerate": true,
+        "secondary": {
+          "token": {
+            "name": "Ape",
+            "power": 3,
+            "toughness": 3,
+            "colors": [
+              "G"
+            ],
+            "subtypes": [
+              "Ape"
+            ],
+            "observed_subtypes": [
+              "Ape"
+            ],
+            "flying": false,
+            "count": 1
+          }
+        },
+        "cost": {},
+        "gaps": [
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ]
+      },
+      "oracle_text": "Destroy target creature. It can't be regenerated. Its controller creates a 3/3 green Ape creature token.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "own_target_0",
+        "stolen_target_0",
+        "lost_all_0",
+        "bounced_target_0",
+        "wrong_type_0",
+        "indestructible_target_0",
+        "target_hexproof_0",
+        "regeneration_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "own_target_1",
+        "stolen_target_1",
+        "lost_all_1",
+        "bounced_target_1",
+        "wrong_type_1",
+        "indestructible_target_1",
+        "target_hexproof_1",
+        "regeneration_1"
+      ]
+    }
+  ]
+}

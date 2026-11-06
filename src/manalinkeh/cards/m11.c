@@ -1546,8 +1546,8 @@ int card_destructive_force(int player, int card, event_t event){
 								instance->number_of_targets = 0;
 						}
 						while( count ){
-								state_untargettable(p, sacced[count], 0);
 								count--;
+								state_untargettable(p, sacced[count], 0);
 						}
 					}
 				};
@@ -1557,7 +1557,7 @@ int card_destructive_force(int player, int card, event_t event){
 					int c;
 					for(c=150; c > -1; c--){
 						if( marked[p][c] ){
-							kill_card(p, marked[p][c], KILL_SACRIFICE);
+							kill_card(p, c, KILL_SACRIFICE);
 						}
 					}
 				};

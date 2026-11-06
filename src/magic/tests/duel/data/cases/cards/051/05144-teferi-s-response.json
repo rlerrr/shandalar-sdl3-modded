@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Teferi's Response",
+  "csvid": 5144,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": null,
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Triggered parents remain unproven; no script fabricates a pending trigger callback.",
+          "Departed permanent sources, changed controller/target in a second response window, uncounterable parents and replacement effects."
+        ],
+        "extension": {
+          "wave": 5,
+          "ability_counter": {
+            "allowed_sources": [
+              "any"
+            ],
+            "draw": 2,
+            "disable_parent": false,
+            "default_parent": "icy",
+            "land_response": true,
+            "destroy_parent": true
+          }
+        }
+      },
+      "oracle_text": "Counter target spell or ability an opponent controls that targets a land you control. If a permanent's ability is countered this way, destroy that permanent.\nDraw two cards.",
+      "variants": [
+        "opponent_0",
+        "own_ability_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_mana_0",
+        "no_stack_0",
+        "mana_ability_0",
+        "spell_parent_0",
+        "snapshot_0",
+        "control_activation_0",
+        "wrong_land_0",
+        "nonland_target_0",
+        "spell_land_0",
+        "opponent_1",
+        "own_ability_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_mana_1",
+        "no_stack_1",
+        "mana_ability_1",
+        "spell_parent_1",
+        "snapshot_1",
+        "control_activation_1",
+        "wrong_land_1",
+        "nonland_target_1",
+        "spell_land_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Actual opposing Icy activation targets an owned land; canceled ability, destroyed permanent source and two drawn cards; own-ability/wrong-land/nonland/spell-parent exclusions, Stone Rain spell-parent control and unrelated real activation. Triggered parents remain unproven; no script fabricates a pending trigger callback. Departed permanent sources, changed controller/target in a second response window, uncounterable parents and replacement effects."
+}

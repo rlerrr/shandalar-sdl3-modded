@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "card": "Phyrexian Tribute",
+  "csvid": 2560,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Phyrexian Tribute",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 2,
+        "effect": "destroy",
+        "target": "artifact",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      },
+      "oracle_text": "As an additional cost to cast this spell, sacrifice two creatures.\nDestroy target artifact.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_cost_0",
+        "stolen_cost_0",
+        "short_cost_0",
+        "indestructible_cost_0",
+        "large_target_0",
+        "indestructible_target_0",
+        "target_left_0",
+        "artifact_target_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_cost_1",
+        "stolen_cost_1",
+        "short_cost_1",
+        "indestructible_cost_1",
+        "large_target_1",
+        "indestructible_target_1",
+        "target_left_1",
+        "artifact_target_1",
+        "alternate_choice_0"
+      ]
+    }
+  ]
+}

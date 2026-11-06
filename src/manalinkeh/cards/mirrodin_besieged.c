@@ -2992,14 +2992,16 @@ int card_myr_welder(int player, int card, event_t event ){
 				CardFunction ptFunction = card_d->code_pointer;
 				int this_result = ptFunction(player, card, EVENT_CAN_ACTIVATE );
 				if( this_result ){
-					activable[ac] = instance->targets[i].player;
+					activable[ac] = instance->targets[i].card;
 					ac++;
 				}
 			}
 		}
-		char mgs[16][100];
+		/* DIALOG parses illegal entries too, and supports at most sixteen choices.
+		 * Keep every label initialized and short enough that all choices fit its prompt. */
+		char mgs[16][32] = {{0}};
 		for(i=0; i<ac; i++){
-			scnprintf(mgs[i], 100, "%s", cards_ptr[cards_data[activable[i]].id]->name);
+			scnprintf(mgs[i], sizeof(mgs[i]), "%s", cards_ptr[cards_data[activable[i]].id]->name);
 		}
 		int can_imprint = generic_activated_ability_with_target_in_grave(player, card, EVENT_CAN_ACTIVATE, GAA_UNTAPPED, MANACOST0, 0,
 																		NULL, NULL,0, &test, GS_GRAVE_RECYCLER_BOTH_GRAVES);
@@ -3019,8 +3021,15 @@ int card_myr_welder(int player, int card, event_t event ){
 							mgs[11], ac >= 12 ? 1 : 0, 1,
 							mgs[12], ac >= 13 ? 1 : 0, 1,
 							mgs[13], ac >= 14 ? 1 : 0, 1,
-							mgs[14], ac >= 15 ? 1 : 0, 1,
-							mgs[15], ac == 16 ? 1 : 0, 1);
+							ac == 16 ? "More inherited abilities" : mgs[14], ac >= 15 ? 1 : 0, 1);
+		/* Imprint plus sixteen inherited entries needs a second bounded menu.
+		 * Smaller menus keep their existing displayed choice order. */
+		if( ac == 16 && choice == 16 ){
+			int inherited_choice = DIALOG(player, card, event, DLG_RANDOM, DLG_NO_STORAGE, DLG_OMIT_ILLEGAL,
+										 mgs[14], 1, 1,
+										 mgs[15], 1, 1);
+			choice = inherited_choice ? inherited_choice + 15 : 0;
+		}
 		if( ! choice ){
 			spell_fizzled = 1;
 			return 0;

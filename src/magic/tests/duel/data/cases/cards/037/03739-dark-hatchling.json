@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "card": "Dark Hatchling",
+  "csvid": 3739,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "etb_removal_extension",
+      "version": 2,
+      "params": {
+        "effect": "destroy",
+        "targets": [
+          "creature"
+        ],
+        "optional": false,
+        "predicate": "nonblack",
+        "opponent_only": false,
+        "keywords": [
+          "Flying"
+        ],
+        "cast_dialogs": [],
+        "alternate_mana": null,
+        "resolve_dialogs": [],
+        "trigger_priority": false,
+        "positive_witnesses": {},
+        "negative_witnesses": {
+          "black": "Bog Imp"
+        },
+        "excluded_variants": [],
+        "inactive_components": [
+          "Flying combat.",
+          "Regeneration prohibition: fixtures do not offer regeneration."
+        ]
+      },
+      "oracle_text": "Flying\nWhen this creature enters, destroy target nonblack creature. It can't be regenerated.",
+      "variants": [
+        "entry_0",
+        "own_target_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_other_targets_0",
+        "wrong_type_0",
+        "countered_0",
+        "cleanup_once_0",
+        "other_creature_0",
+        "bounce_only_0",
+        "bounce_recast_0",
+        "blink_0",
+        "destroy_source_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blink_snapshot_0",
+        "bare_zones_0",
+        "wrong_color_0",
+        "target_creature_0",
+        "invalid_black_0",
+        "entry_1",
+        "own_target_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_other_targets_1",
+        "wrong_type_1",
+        "countered_1",
+        "cleanup_once_1",
+        "other_creature_1",
+        "bounce_only_1",
+        "bounce_recast_1",
+        "blink_1",
+        "destroy_source_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blink_snapshot_1",
+        "bare_zones_1",
+        "wrong_color_1",
+        "target_creature_1",
+        "invalid_black_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole Oracle identity/text, printed full casting cost and reviewed entry-removal component are pinned. Both controllers perform actual casts, target choices, payment denial, selected/unselected target zone receipts, re-entry through bounce/recast and blink, unrelated-creature controls and snapshot replay. Explicit control and predicate negatives cast the source beside an ineligible witness and assert it remains. Flying combat. Regeneration prohibition: fixtures do not offer regeneration. Pending-target departure, regeneration/replacement, protection, trigger ordering, control changes and multiplayer remain separate gaps."
+}

@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "card": "Broken Ambitions",
+  "csvid": 9088,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 2
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Empty clash libraries, clash-trigger permanents, multiple simultaneous responses and replacement effects."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "clash": true,
+          "variable_x": true
+        }
+      },
+      "oracle_text": "Counter target spell unless its controller pays {X}. Clash with an opponent. If you win, that spell's controller mills four cards. (Each clashing player reveals the top card of their library, then puts that card on their choice of the top or bottom. A player wins if their card had a greater mana value.)",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "tax_paid_0",
+        "tax_exact_0",
+        "tax_unaffordable_0",
+        "x_0_0",
+        "x_1_0",
+        "x_2_0",
+        "x_5_0",
+        "x_8_0",
+        "clash_lose_0",
+        "clash_tie_0",
+        "clash_bottom_source_0",
+        "clash_bottom_target_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_instant_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1",
+        "tax_paid_1",
+        "tax_exact_1",
+        "tax_unaffordable_1",
+        "x_0_1",
+        "x_1_1",
+        "x_2_1",
+        "x_5_1",
+        "x_8_1",
+        "clash_lose_1",
+        "clash_tie_1",
+        "clash_bottom_source_1",
+        "clash_bottom_target_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Actual X response and mandatory clash for paid/countered parents; printed top mana values distinguish win/lose/tie, both reveal notices and top/bottom choices, winner based on revealed values before reorder, four-card original-controller mill and populated replay. Empty clash libraries, clash-trigger permanents, multiple simultaneous responses and replacement effects."
+}

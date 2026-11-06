@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "card": "Pegasus Stampede",
+  "csvid": 3532,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Pegasus Stampede",
+        "kind": "cost_effect",
+        "cost_scope": "land",
+        "cost_count": 1,
+        "effect": "tokens",
+        "target": "none",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": {
+          "name": "Pegasus",
+          "count": 1,
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "W"
+          ],
+          "subtypes": [
+            "Pegasus"
+          ]
+        },
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "Pegasus subtype through exact named token identity; direct subtype observer unavailable",
+          "replacement and triggered effects",
+          "multiplayer",
+          "ground-blocker evasion; real flyer-blocking action tested"
+        ],
+        "optional_payment": {
+          "kind": "buyback_sacrifice",
+          "mana": 0,
+          "dialog_first": true
+        },
+        "flying_proof": true
+      },
+      "oracle_text": "Buyback\u2014Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell. If you do, put this card into your hand as it resolves.)\nCreate a 1/1 white Pegasus creature token with flying.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_cost_0",
+        "stolen_cost_0",
+        "indestructible_cost_0",
+        "flying_token_0",
+        "ordinary_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_cost_1",
+        "stolen_cost_1",
+        "indestructible_cost_1",
+        "flying_token_1",
+        "ordinary_1",
+        "alternate_choice_0"
+      ]
+    }
+  ]
+}

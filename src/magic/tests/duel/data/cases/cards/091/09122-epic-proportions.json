@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Epic Proportions",
+  "csvid": 9122,
+  "recipes": [
+    {
+      "family": "aura_keyword_extension",
+      "version": 2,
+      "params": {
+        "power": 5,
+        "toughness": 5,
+        "keywords": [
+          "Trample"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Flash casting timing"
+        ]
+      },
+      "oracle_text": "Flash\nEnchant creature\nEnchanted creature gets +5/+5 and has trample.",
+      "variants": [
+        "friendly_cleanup_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_0",
+        "wrong_type_0",
+        "lost_target_0",
+        "snapshot_0",
+        "tapped_0",
+        "large_target_0",
+        "unblocked_0",
+        "opponent_cleanup_0",
+        "opponent_unblocked_0",
+        "empty_zones_0",
+        "trample_0",
+        "expired_trample_0",
+        "aura_removed_0",
+        "aura_bounced_0",
+        "host_bounced_0",
+        "host_destroyed_0",
+        "friendly_cleanup_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_1",
+        "wrong_type_1",
+        "lost_target_1",
+        "snapshot_1",
+        "tapped_1",
+        "large_target_1",
+        "unblocked_1",
+        "opponent_cleanup_1",
+        "opponent_unblocked_1",
+        "empty_zones_1",
+        "trample_1",
+        "expired_trample_1",
+        "aura_removed_1",
+        "aura_bounced_1",
+        "host_bounced_1",
+        "host_destroyed_1"
+      ]
+    }
+  ]
+}

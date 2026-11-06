@@ -179,3 +179,29 @@ def expand(name,csvid,d,p,selected,registry,oracle):
   result.append(dict(name=f'ManaConsequenceRecipe_{csvid}_{variant}',card=name,fixture='empty_main' if bare else 'stocked_zones',seed=123,setup=setup,steps=steps,
    _recipe=dict(family='mana_consequence',version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],untested_components=['land play permissions','multiplayer','lethal life totals','automatic mana payment source selection','damage redirection','additional clauses or costs'])))
  return result
+
+
+# Wave-six opt-in branches keep every old declaration on its original path.
+_wave6_original_spec = spec
+_wave6_original_variants = variants
+_wave6_original_expand = expand
+_wave6_original_validate = validate_witnesses
+
+def spec(d, o):
+    from mana_spell_extension_recipes import applies, spec as extension_spec
+    return extension_spec(d, o) if applies(d) else _wave6_original_spec(d, o)
+
+def variants(p):
+    if p.get('wave') == 6:
+        from mana_spell_extension_recipes import variants as extension_variants
+        return extension_variants(p)
+    return _wave6_original_variants(p)
+
+def validate_witnesses(o, registry):
+    _wave6_original_validate(o, registry)
+
+def expand(name, csvid, d, p, selected, registry, o):
+    if p.get('wave') == 6:
+        from mana_spell_extension_recipes import expand as extension_expand
+        return extension_expand(name, csvid, d, p, selected, registry, o)
+    return _wave6_original_expand(name, csvid, d, p, selected, registry, o)

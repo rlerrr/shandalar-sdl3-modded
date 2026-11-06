@@ -1654,7 +1654,10 @@ static int select_target_maybe_force(
 #endif
     int target_card;
     int target_player = duel_host_choose(DUEL_CHOICE_TARGET, who_chooses, prompt, 0, NULL, &target_card);
-    if (target_player == -1 && (allow_cancel & 1)) return 0;
+    /* Both Cancel (1) and Done (2) end this target selection. The caller
+       decides whether an empty result cancels the action or stops an optional
+       target list, exactly as it does for the normal selector. */
+    if (target_player == -1 && (allow_cancel & 3)) return 0;
     if (target_player < 0 || target_player > 1 || target_card < -1 || target_card >= 150 ||
         !validate_target_impl(player, card, target_player, target_card, NULL,
           who_chooses, allowed_controller, allowed_controller, zone,

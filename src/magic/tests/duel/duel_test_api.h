@@ -15,6 +15,8 @@ typedef struct {
 typedef struct DuelTestSnapshot DuelTestSnapshot;
 /* Read-only token observations; ordinary card inspection stays unchanged. */
 int duel_test_token_characteristic(DuelTestRef ref, const char *property);
+/* Actual shuffle entries since reset, restored by test and AI snapshots. */
+int duel_test_shuffle_count(int player);
 int duel_test_initialize(const char *assets);
 int duel_test_handler_matches_override(int csvid);
 int duel_test_energy(int player);
@@ -62,6 +64,20 @@ int duel_test_activate(DuelTestRef source);
 /* Use the real rules-engine hand-ability menu; scripts choose its option. */
 int duel_test_can_activate_hand(DuelTestRef source);
 int duel_test_activate_hand(DuelTestRef source);
+/* GA_BASIC abilities and creature Unearth use a graveyard-index ref, not an
+   instance. Scripts select the real RulesEngine menu option; other graveyard
+   casting/return modes are unsupported. Costs/resolution stay in that engine. */
+int duel_test_can_activate_graveyard(DuelTestRef source);
+int duel_test_activate_graveyard(DuelTestRef source);
+/* Register seeded grave cards as normal deck/hand startup would have done. */
+void duel_test_prepare_graveyard_abilities(void);
+/* Bounded noncreature Flashback via the real RulesEngine menu. Source is a
+   graveyard-index ref; entry requires an empty stack. The native menu casts
+   and resolves internally, so success returns after complete resolution.
+   Only the requested outer menu entry is selected automatically; scripts
+   still supply payment/target/other decisions. Query preserves snapshots. */
+int duel_test_can_cast_graveyard(DuelTestRef source);
+int duel_test_cast_graveyard(DuelTestRef source);
 /* Query the card's EVENT_CAN_CAST handler without paying costs or choosing targets. */
 int duel_test_can_cast(DuelTestRef source);
 /* Normal unrestricted creature-spell targeting, independent of AI strategy.
@@ -71,7 +87,13 @@ int duel_test_can_target_creature(DuelTestRef source, DuelTestRef target);
  * Returns -1 if none was exposed, -2 for conflicting definitions, else 0/1. */
 int duel_test_probe_activation_target(DuelTestRef source, DuelTestRef target, int mode_choice);
 int duel_test_cast(DuelTestRef source);
+/* Cast against the actual pending spell after a scripted cast has returned. */
+int duel_test_cast_response(DuelTestRef source);
+/* Start an explicitly authored death-history fixture as normal turn setup does. */
+void duel_test_reset_death_history(void);
 void duel_test_resolve(void);
+/* Drain an explicit response while preserving the pending parent's context. */
+void duel_test_resolve_response(void);
 void duel_test_cleanup(void);
 void duel_test_remove_from_combat(DuelTestRef ref);
 void duel_test_destroy(DuelTestRef ref);
@@ -89,6 +111,10 @@ void duel_test_end_combat(void);
 /* Cleanup and the next player's real start-turn gate, then select main phase.
    Does not simulate untap, upkeep or draw; fixture zones and mana stay intact. */
 void duel_test_advance_turn(void);
+/* Run the real complete untap wrapper once after advance_turn. Requires the
+   current player, empty stack and zero floating mana; returns 0 on rejection.
+   Snapshot restore also restores the one-step preparation. No upkeep/draw. */
+int duel_test_untap_step(int player);
 DuelTestCard duel_test_inspect(DuelTestRef ref);
 int duel_test_base_power(int player, int csvid);
 int duel_test_base_toughness(int player, int csvid);

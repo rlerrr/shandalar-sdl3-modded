@@ -1,0 +1,735 @@
+{
+  "version": 1,
+  "status": "pending_components_not_enrolled",
+  "scope": "Three exact observed AI zero-output permission controls only. Both source homes and productive coverage remain active. No gameplay failure baseline is created.",
+  "promote_to": "src/magic/tests/duel/data/pending_cases/large-batch-6/mana-ai-zero-components.json",
+  "active_cohort": {
+    "homes": 57,
+    "cases": 1691
+  },
+  "components": [
+    {
+      "case": "ManaWave6Recipe_1513_zero_count_1",
+      "card": "Gaea's Cradle",
+      "csvid": 1513,
+      "oracle_id": "7c427c3d-ecd8-45ef-bebd-8f10f4a311db",
+      "metadata": [
+        "ManaWave6Recipe_1513_zero_count_1",
+        "Gaea's Cradle",
+        "7c427c3d-ecd8-45ef-bebd-8f10f4a311db",
+        "{T}: Add {G} for each creature you control.",
+        "stocked_zones",
+        123
+      ],
+      "status": "pending_exact_ai_zero_query_component",
+      "limitation": "The source AI eligibility policy rejects zero-output activation. The printed targetless mana ability remains legally activatable for zero output. No missing input, reserve, policy bypass, or changed Oracle expectation is used.",
+      "legal_expected": 1,
+      "observed_actual": false,
+      "failed_step": 23,
+      "failed_op": "require_can_activate",
+      "failed_ref": "source",
+      "exact_decoded_failed_step": [
+        "require_can_activate",
+        "source",
+        "",
+        "",
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "script_blob": "b0645cafcea6edf2cd137726334b3fc90076d7f93c8a86da9fe3fe7f7184a2da",
+      "evidence": [
+        {
+          "platform": "native",
+          "run": "original",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "072a561aff823ee74442a696a3c03a12f1d45d198a2eb13c054ce0d60e7e4d8c",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-third-tiny\\native\\Behavior.ManaWave6Recipe_1513_zero_count_1.log",
+            "sha256": "cf2ebe8341ebbb91c48d92995e25f2864d16813011b6565d513ef2d386dfb5c1"
+          }
+        },
+        {
+          "platform": "native",
+          "run": "isolated",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "072a561aff823ee74442a696a3c03a12f1d45d198a2eb13c054ce0d60e7e4d8c",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-third-tiny\\native\\isolated\\Behavior.ManaWave6Recipe_1513_zero_count_1.log",
+            "sha256": "d92b8b5399d2e0ea50f469f0134dbe43d743c8048a3d2eb0c95d8075d32ef28e"
+          }
+        },
+        {
+          "platform": "wasm",
+          "run": "original",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "9a1a4dfb71ae41b92b58d793cd859c32bcbf00754f517926841530a73075eeae",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-third-tiny\\wasm\\Behavior.ManaWave6Recipe_1513_zero_count_1.log",
+            "sha256": "6681ae98d33a3bb5e0e83faf8bdc850569638e0f73dc5cc5670cac5da4e1ca44"
+          }
+        },
+        {
+          "platform": "wasm",
+          "run": "isolated",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "9a1a4dfb71ae41b92b58d793cd859c32bcbf00754f517926841530a73075eeae",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-third-tiny\\wasm\\isolated\\Behavior.ManaWave6Recipe_1513_zero_count_1.log",
+            "sha256": "da6d3c9a27b6bb6512332f7d6a1b3597ace1af72c0192629583c13b62980b32f"
+          }
+        }
+      ],
+      "source_anchor": "src/manalinkeh/cards/urza_saga.c:43",
+      "independent_review": "temp/parallel-large6/mana-cradle-zero-independent-log-review.json",
+      "root_scope": "Exact observed component approved pending; preserve human legal-zero and productive both-controller source coverage."
+    },
+    {
+      "case": "ManaWave6Recipe_1513_opponent_controlled_1",
+      "card": "Gaea's Cradle",
+      "csvid": 1513,
+      "oracle_id": "7c427c3d-ecd8-45ef-bebd-8f10f4a311db",
+      "metadata": [
+        "ManaWave6Recipe_1513_opponent_controlled_1",
+        "Gaea's Cradle",
+        "7c427c3d-ecd8-45ef-bebd-8f10f4a311db",
+        "{T}: Add {G} for each creature you control.",
+        "stocked_zones",
+        123
+      ],
+      "status": "pending_exact_ai_zero_query_component",
+      "limitation": "The source AI eligibility policy rejects zero-output activation. The printed targetless mana ability remains legally activatable for zero output. No missing input, reserve, policy bypass, or changed Oracle expectation is used.",
+      "legal_expected": 1,
+      "observed_actual": false,
+      "failed_step": 23,
+      "failed_op": "require_can_activate",
+      "failed_ref": "source",
+      "exact_decoded_failed_step": [
+        "require_can_activate",
+        "source",
+        "",
+        "",
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "script_blob": "af35e22bc36c86c15622fe6011aa3bbcc280b099531248d9a390a84ae734c0a0",
+      "evidence": [
+        {
+          "platform": "native",
+          "run": "original",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "072a561aff823ee74442a696a3c03a12f1d45d198a2eb13c054ce0d60e7e4d8c",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-first42-full\\native\\Behavior.ManaWave6Recipe_1513_opponent_controlled_1.log",
+            "sha256": "8f39fa795e6ed582e557408126dcba26dd81b2e304f9fa7c9d30521704bdc94b"
+          }
+        },
+        {
+          "platform": "native",
+          "run": "isolated",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "072a561aff823ee74442a696a3c03a12f1d45d198a2eb13c054ce0d60e7e4d8c",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-first42-full\\native\\isolated\\Behavior.ManaWave6Recipe_1513_opponent_controlled_1.log",
+            "sha256": "82ae33d222ad7264f7dcf9a68e0dad810a33dba8f62fdac4d3167a83a0fe809e"
+          }
+        },
+        {
+          "platform": "wasm",
+          "run": "original",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "9a1a4dfb71ae41b92b58d793cd859c32bcbf00754f517926841530a73075eeae",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-first42-full\\wasm\\Behavior.ManaWave6Recipe_1513_opponent_controlled_1.log",
+            "sha256": "e5b544f72e93aa62db7d97be999af78f67897757c0304fa732b12d79a25cc2b4"
+          }
+        },
+        {
+          "platform": "wasm",
+          "run": "isolated",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "9a1a4dfb71ae41b92b58d793cd859c32bcbf00754f517926841530a73075eeae",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-first42-full\\wasm\\isolated\\Behavior.ManaWave6Recipe_1513_opponent_controlled_1.log",
+            "sha256": "c90108c98072f7831c1d5d05faeab61998eaf5103572a210ffab5f986f332768"
+          }
+        }
+      ],
+      "source_anchor": "src/manalinkeh/cards/urza_saga.c:43",
+      "independent_review": "temp/parallel-large6/mana-cradle-opponent-zero-independent-log-review.json",
+      "root_scope": "Exact observed component approved pending; preserve human legal-zero and productive both-controller source coverage."
+    },
+    {
+      "case": "ManaWave6Recipe_1533_zero_count_1",
+      "card": "Rofellos, Llanowar Emissary",
+      "csvid": 1533,
+      "oracle_id": "3015882b-4897-4d2c-8e33-6731c85a0d03",
+      "metadata": [
+        "ManaWave6Recipe_1533_zero_count_1",
+        "Rofellos, Llanowar Emissary",
+        "3015882b-4897-4d2c-8e33-6731c85a0d03",
+        "{T}: Add {G} for each Forest you control.",
+        "stocked_zones",
+        123
+      ],
+      "status": "pending_exact_ai_zero_query_component",
+      "limitation": "The source AI eligibility policy rejects zero-output activation. The printed targetless mana ability remains legally activatable for zero output. No missing input, reserve, policy bypass, or changed Oracle expectation is used.",
+      "legal_expected": 1,
+      "observed_actual": false,
+      "failed_step": 23,
+      "failed_op": "require_can_activate",
+      "failed_ref": "source",
+      "exact_decoded_failed_step": [
+        "require_can_activate",
+        "source",
+        "",
+        "",
+        0,
+        1,
+        0,
+        0,
+        0
+      ],
+      "script_blob": "b0e58f8de15f1dc6b20ed64c6fc030ea072c8b2e6a67e03caba562f4aac5df71",
+      "evidence": [
+        {
+          "platform": "native",
+          "run": "original",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "072a561aff823ee74442a696a3c03a12f1d45d198a2eb13c054ce0d60e7e4d8c",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-final\\native\\Behavior.ManaWave6Recipe_1533_zero_count_1.log",
+            "sha256": "178ce081af1c372578685132b162dcf101584a34e149f958a714b22aedf658e8"
+          }
+        },
+        {
+          "platform": "native",
+          "run": "isolated",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "072a561aff823ee74442a696a3c03a12f1d45d198a2eb13c054ce0d60e7e4d8c",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-final\\native\\isolated\\Behavior.ManaWave6Recipe_1533_zero_count_1.log",
+            "sha256": "1e7c05d9eec9aef7de16e5ef39d024b8dac612c3fc881ba813ce8d4982873c16"
+          }
+        },
+        {
+          "platform": "wasm",
+          "run": "original",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "9a1a4dfb71ae41b92b58d793cd859c32bcbf00754f517926841530a73075eeae",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-final\\wasm\\Behavior.ManaWave6Recipe_1533_zero_count_1.log",
+            "sha256": "037ac5a1d6c9a780021d34efbc6085c1c22b174a297de63286c238d32f77647a"
+          }
+        },
+        {
+          "platform": "wasm",
+          "run": "isolated",
+          "kind": "assertion",
+          "assertion_count": 1,
+          "diagnostic_blob": "9a1a4dfb71ae41b92b58d793cd859c32bcbf00754f517926841530a73075eeae",
+          "original_log": {
+            "path": "H:\\shandalar-test-scratch\\large-batch-6\\mana_effects-final\\wasm\\isolated\\Behavior.ManaWave6Recipe_1533_zero_count_1.log",
+            "sha256": "f44d30077463b303344bbc2327c9f0559ec127d00df8538397e3f44d4e1cc93b"
+          }
+        }
+      ],
+      "source_anchor": "src/manalinkeh/functions/produce_mana.c:2237",
+      "independent_review": "temp/parallel-large6/mana-rofellos-zero-independent-log-review.json",
+      "root_scope": "Exact observed component approved pending; preserve human legal-zero and productive both-controller source coverage."
+    }
+  ],
+  "source_oracles": {
+    "7c427c3d-ecd8-45ef-bebd-8f10f4a311db": {
+      "oracle_id": "7c427c3d-ecd8-45ef-bebd-8f10f4a311db",
+      "name": "Gaea's Cradle",
+      "oracle_text": "{T}: Add {G} for each creature you control.",
+      "mana_cost": "",
+      "type_line": "Legendary Land",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/usg/321/gaeas-cradle?utm_source=api"
+    },
+    "3015882b-4897-4d2c-8e33-6731c85a0d03": {
+      "oracle_id": "3015882b-4897-4d2c-8e33-6731c85a0d03",
+      "name": "Rofellos, Llanowar Emissary",
+      "oracle_text": "{T}: Add {G} for each Forest you control.",
+      "mana_cost": "{G}{G}",
+      "type_line": "Legendary Creature — Elf Druid",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/vma/229/rofellos-llanowar-emissary?utm_source=api"
+    }
+  },
+  "witness_oracles": {
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    }
+  },
+  "fixture_pins": {
+    "stocked_zones": {
+      "cards": [
+        {
+          "ref": "p0_hand_0",
+          "player": 0,
+          "zone": "hand",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_hand_1",
+          "player": 0,
+          "zone": "hand",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p0_hand_2",
+          "player": 0,
+          "zone": "hand",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p0_hand_3",
+          "player": 0,
+          "zone": "hand",
+          "name": "Plains"
+        },
+        {
+          "ref": "p0_graveyard_0",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_graveyard_1",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p0_graveyard_2",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_graveyard_3",
+          "player": 0,
+          "zone": "graveyard",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "p0_exile_0",
+          "player": 0,
+          "zone": "exile",
+          "name": "Island"
+        },
+        {
+          "ref": "p0_exile_1",
+          "player": 0,
+          "zone": "exile",
+          "name": "Llanowar Elves"
+        },
+        {
+          "ref": "p0_library_0",
+          "player": 0,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_library_1",
+          "player": 0,
+          "zone": "library",
+          "name": "Plains"
+        },
+        {
+          "ref": "p0_library_2",
+          "player": 0,
+          "zone": "library",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p0_library_3",
+          "player": 0,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p0_library_4",
+          "player": 0,
+          "zone": "library",
+          "name": "Mountain"
+        },
+        {
+          "ref": "p0_library_5",
+          "player": 0,
+          "zone": "library",
+          "name": "Island"
+        },
+        {
+          "ref": "p0_library_6",
+          "player": 0,
+          "zone": "library",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p1_hand_0",
+          "player": 1,
+          "zone": "hand",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_hand_1",
+          "player": 1,
+          "zone": "hand",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p1_hand_2",
+          "player": 1,
+          "zone": "hand",
+          "name": "Lightning Bolt"
+        },
+        {
+          "ref": "p1_hand_3",
+          "player": 1,
+          "zone": "hand",
+          "name": "Plains"
+        },
+        {
+          "ref": "p1_graveyard_0",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_graveyard_1",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Giant Growth"
+        },
+        {
+          "ref": "p1_graveyard_2",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_graveyard_3",
+          "player": 1,
+          "zone": "graveyard",
+          "name": "Sol Ring"
+        },
+        {
+          "ref": "p1_exile_0",
+          "player": 1,
+          "zone": "exile",
+          "name": "Island"
+        },
+        {
+          "ref": "p1_exile_1",
+          "player": 1,
+          "zone": "exile",
+          "name": "Llanowar Elves"
+        },
+        {
+          "ref": "p1_library_0",
+          "player": 1,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_library_1",
+          "player": 1,
+          "zone": "library",
+          "name": "Plains"
+        },
+        {
+          "ref": "p1_library_2",
+          "player": 1,
+          "zone": "library",
+          "name": "Grizzly Bears"
+        },
+        {
+          "ref": "p1_library_3",
+          "player": 1,
+          "zone": "library",
+          "name": "Forest"
+        },
+        {
+          "ref": "p1_library_4",
+          "player": 1,
+          "zone": "library",
+          "name": "Mountain"
+        },
+        {
+          "ref": "p1_library_5",
+          "player": 1,
+          "zone": "library",
+          "name": "Island"
+        },
+        {
+          "ref": "p1_library_6",
+          "player": 1,
+          "zone": "library",
+          "name": "Lightning Bolt"
+        }
+      ],
+      "life": [
+        20,
+        20
+      ],
+      "mana": [
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ],
+        [
+          10,
+          10,
+          10,
+          10,
+          10,
+          10
+        ]
+      ],
+      "turn": 0
+    }
+  },
+  "payloads": {
+    "b0645cafcea6edf2cd137726334b3fc90076d7f93c8a86da9fe3fe7f7184a2da": {
+      "kind": "exact_case_json",
+      "encoding": "gzip+base64",
+      "sha256": "b0645cafcea6edf2cd137726334b3fc90076d7f93c8a86da9fe3fe7f7184a2da",
+      "raw_bytes": 13821,
+      "data": "H4sIAAAAAAAC/+2YTW/jNhCG/4rBSy9GoZG/1r4VPaSXXrYFelgsBK5E28TSokpRTpzA/71D2fF6LVkRRbInI4ckIufhy5FmKL1vJFEs5QUjqzeypjsuDmRFCqZ2NGe5TvAXJWMiFU0FSzR70Tj89vdxNfoty0ZvT8fRWqoRo+l2lCpGdaXY6CCrUSpzraT4FWMLquiuNPyMFYJpLnOyisYE8UyViaZFwTKyWlNRsnGHhg0tkPLl65jsZMbE9RRyumaG3wgunfHTKiSXOcPBVFa5ES6f8+RdZonXM06F3JBVXgkxJjwvKpz1JRpffnCxQkpxuQjniyVNFV/zlF104zbISquKHXH4me5xZH4cE1yXlZplSSp3hTRaz3vYU8VpLeqVKZnUChNATXtMSi0+xvCUKkwNeaKM/lKOflc0E2Y/a/5itoAjpZbpd8S/ItvsKKc7c/lPTNk/KGL+ub65CcxgktwsVDKTdogn5k9dFXXyzvG3CxaCHpjC2WOi2NqsKyuVmhGzMP7/jWot2JozkZHj+ML5S4rRZ55vrhDRO4Iqzdc01cn5WfkQ9gcXYvRUZ60FJ4tTfu9gzE3TrDg9IhI3SzCD+c9b21NRYWBk1kylkCd8PRkz9P4cdgeAbUBsGzCxDZjaBsx6B9TTMP9YTlvSL22Rbdoi27RFtmmLbNMW2aYt+iBt9QValkxhOZiax1Alsb9p0wp5nhgQaRTfmQmPB3bwA3u+8G/FFcPU5wl2JL6nmnVn+3TDLKae7+1W4qFRmpZXVjuWNW5+qWn6nbRo7jneusDNo3GealWXNjHxgJjJgJjpgJiZTcz1TMHXrHVmHPVOMQxIMQxIMQxIMQxIMQxIMfROMdyk2EOP7Eac30QdCLciWl5xBsu5zxqQnauXpcGCmoweQgr5jPf2PmLSQ4asNlt82y3dMBnd0Q2z2c2j9z5676P3Pnrvo/f+/7339WTktLSAu64BzzP2QlbLmxo3s5NdJTQvBE+5PrT3oI+wxlEJAl4uwuiN5mG4EA3hwofcOJDe6SwQdxmGO5+G4X76FIQbTzw/D726wPQSvqW51/K/5bnXfUPhwi1hDYXDKr0DOKzEO3LoWtsN4LCi7tiyazU3gK5l3AAOq9/7Wx5YuC0KLSt2o+ieHcw7gnPZQjfUvXbbtS5CaHWt4naqaym3U13ruZ3qelLfoS5DUF3Lu53qeka3Up1P6J+pvap9cQkW/Jui6nAtqE3O+zdDg7SELhTYoOr03mfFVixTrvdZE39bnFrJmk+7WDMrVty5xbkVy9R2C8vyk4+9cMF8vu01gO5HRlPjwrdG10+7JtH1mGgSY8fjrEl0PR5aiEvfGl2PhSbR9UhoEJ3f+34QO6oX+n/529QwhDJsbPQuwui1qWoIZNjYcONAem3qHAIZNhDIsIFAhg0EMmz6cHt1AT+GDXg3bMCzYQO+DRvwbdiAb8MGfBs24NuwAd+GDfg2bMC3YQMDDRsIYdhAGMMGQhg2EMSwgSCGDQQxbCCIYQNBDBsIYthAEMMGghg24GLYgDfDBvwZNuDRsAGPhg34M2zAo2EDHg0bcDFswLdhA/4NG/Bt2IB3wwa8Gzbg3bAB74YNeDdswLthA94NG/Bu2HQQvx7/A8/Djgb9NQAA"
+    },
+    "072a561aff823ee74442a696a3c03a12f1d45d198a2eb13c054ce0d60e7e4d8c": {
+      "kind": "case_specific_assertion_utf8",
+      "encoding": "gzip+base64",
+      "sha256": "072a561aff823ee74442a696a3c03a12f1d45d198a2eb13c054ce0d60e7e4d8c",
+      "raw_bytes": 241,
+      "data": "H4sIAAAAAAAC/12PsW4CQQxE+/sK00EBCtBtG0X5ASSalU6Wd45bacMttu+U/H2W66BxMaOZef76rRBHIjxmLtn/aBrIRxho4TLDQke02aQZpXeY98L3nsXzwo6tYtg1n+g6ZhkpW6CBi6Fpdljzb+6x+56mWwFdWhe5siB0nyEmLNFGvicurHtL5byvmpumEn/4liU+xy0+OdbTODStRHaQWrfHj9MukDkqnc6k7ZuseIElm2YV/APEwJLj8QAAAA=="
+    },
+    "9a1a4dfb71ae41b92b58d793cd859c32bcbf00754f517926841530a73075eeae": {
+      "kind": "case_specific_assertion_utf8",
+      "encoding": "gzip+base64",
+      "sha256": "9a1a4dfb71ae41b92b58d793cd859c32bcbf00754f517926841530a73075eeae",
+      "raw_bytes": 240,
+      "data": "H4sIAAAAAAAC/12PvW7DMAyEdz8FsyVDovxsWosiLxCgo0FQ51iAEiskbbRvX8Vbu3C4w919/PyuEEcivGYu2X9oGshHGGjhMsNiR7TZpBmld5j3ws+exfPCjq1i2DWf6GvMMlK2SAMXQ9PssOb/uafuOk33Arq1LnJlQew+YkhYgo38TFxY95bKZV81N00lPPieJbzHLbw51tM4NK1EdpBa4+l4jmSOSucLaXsmK/6wkk2zCn4BtVflO/AAAAA="
+    },
+    "af35e22bc36c86c15622fe6011aa3bbcc280b099531248d9a390a84ae734c0a0": {
+      "kind": "exact_case_json",
+      "encoding": "gzip+base64",
+      "sha256": "af35e22bc36c86c15622fe6011aa3bbcc280b099531248d9a390a84ae734c0a0",
+      "raw_bytes": 13839,
+      "data": "H4sIAAAAAAAC/+2YTY/bNhCG/4rBSy9GoZG/Yt+KHjaXXtICPQSBwEi0TYQWVYryrmP4v3forziWrBVFMidjD7srch6+HGmG0rsniWIpLxhZ7MmSbrjYkQUpmNrQnOU6wV+UDIlUNBUs0exN4/D+n8Ni8EeWDfYvh8FSqgGj6XqQKkZ1pdhgJ6tBKnOtpPgdYwuq6KY0/IwVgmkuc7KIhgTxTJWJpkXBMrJYUlGyYYuGFS2Q8vnLkGxkxsTtFHK6Zob3BJfO+GkVksuc4WAqq9wIl695cpFZ4vWMUyFXZJFXQgwJz4sKZ32OhtcfXKyQUlwvwvliSVPFlzxlV924DbLQqmIHHH6lWxyZHoYE12WlZlmSyk0hjdbzHrZUcXoSVZwGknPOBM4GFLfF7Bx3ESMnpQpzRF4oo7+Vgz8VzYTZ2JK/mb3gSKll+g0jvyPLbC2nG3P5L8zdv6hm+ul4lxOYwCh5tGLJzI2AeGT+1FVxTOcZdL9yIeiOKZw9JIotjQBZqdSMGAX4/1eqtWBLzkRGDsMr528pBp94vrpBRBcEVZovaXrV9S7sIxdi8HLMYwPuss0HGHMbNStOD43EzRJMZf7z1rZUVBgYmTVTKeQJf5yMGbo8me0BYBsQ2waMbAPGtgGTzgHHaZh/LLA16Za2yDZtkW3aItu0RbZpi2zTFr2TtuMFWpZMYTmY4sdQJbHjadMceZ4YEKkV35kJzwe29wN7vvBfxRXD1OcJdiS+pZq1Z/t0wyymnu/tWuIxUpqWV1YbltVufqlp+o00aO443rjA3aNxnmpVlzYxcY+YUY+YcY+YiU3M7UzBl6xxZhx1TjH0SDH0SDH0SDH0SDH0SDF0TjHcpdhDj2xHnN9NHQj3IhpecXrLeczqkZ2bl6XeguqMDkIK+Yr39jFi1EGGrFZrfO0t3TAZ3dAVs9nNs/c+e++z9z5777P3/vre+/1k7TS0gIeuAc8z9kYW87saN7OTTSU0LwRPud4196D3sMZaCQKez8LojaZhuBD14cK73DiQ3vEkEHcehjsdh+F++BCEG488Pw+dusD4Gr6mudfyv+e5131N4cwtYTWF/Sq9BdivxFty6FrbNWC/om7Zsms114CuZVwD9qvfx1vuWbgNCi0rdqXolu3MO4Jz2UI71L12m7XOQmh1reJmqmspN1Nd67mZ6npSP6DOQ1Bdy7uZ6npGN1KdT+ifqZ2qfXYNFvyromp3K6hJzuWboUaaQxsKbFDH9D5mxVYsU66PWSN/WxxbyZqO21gTK1bcusWpFcvUdgPL8pOPvXHBfL7t1YDuR0Zd48y3RtdPuzrR9ZioE2PH46xOdD0eGohz3xpdj4U60fVIqBGd3/t+EFuqF7p/+dvUMIQybGz0zsLotalqCGTY2HDjQHpt6hwCGTYQyLCBQIYNBDJsunA7dQE/hg14N2zAs2EDvg0b8G3YgG/DBnwbNuDbsAHfhg34NmzAt2EDPQ0bCGHYQBjDBkIYNhDEsIEghg0EMWwgiGEDQQwbCGLYQBDDBoIYNuBi2IA3wwb8GTbg0bABj4YN+DNswKNhAx4NG3AxbMC3YQP+DRvwbdiAd8MGvBs24N2wAe+GDXg3bMC7YQPeDRvwbti0EL8c/gdQrsooDzYAAA=="
+    },
+    "b0e58f8de15f1dc6b20ed64c6fc030ea072c8b2e6a67e03caba562f4aac5df71": {
+      "kind": "exact_case_json",
+      "encoding": "gzip+base64",
+      "sha256": "b0e58f8de15f1dc6b20ed64c6fc030ea072c8b2e6a67e03caba562f4aac5df71",
+      "raw_bytes": 13995,
+      "data": "H4sIAAAAAAAC/+2ZTW/jNhCG/4rAs1Fo5I9sfGuBdi/tJS3QQxAIXIlyiKVFlZKcOIH/e4e2100sWRa/LoWRSyJxHg6HnBnqzTtJFct4xcjynRR0zcWWLMmaljTNFKNNqxiZEKloJljasNcG377/tVtGP+d59P51FxVSRYxmz9FvUrG6ibayjTJZNkqKn9Cyooquaw3PWSVYw2VJlvGEsLJhqk4bWlUsJ8uCippNLjuwohVCHp8mZC1zJnBExRQOQgw5PNOv3wnOnPPDJKSUpTbNZFtqr+VLmRZ7H2t8mnMq5Iosy1aICeFl1eKYx3hy+sGpKinF6SEcH9Y0U7zgGTs5jWsgy0a1bIevX+gG3yx2E4Kz4lwsTzO5rqT29LiCDVWc7l16Y0qme/9SQJ82GJG96wmaZ1RhXMiDLJgQsp5Evwtayheqol/XvK6p2qJFwV/3AVqSupHZd5zsDWfS6yvpWj/+A+P4N7q0eNhvcgrz6TQ9m7Zmegcgmepfm7baB/JoPzx9JeiWKbSdEMUK7YVsVaaDrt3Av7/RphGs4EzkZDc5Uf+UInrg5eoDIv6BoKrhBc2a9HiIrsIO564PJatK1jjNYa16pQ1t0OSRHI/d0zX2V8Xf3sQ2+oVRVfct+EXJD/w+mD4yDasOx1NicAnuWPmZtaGiRcNYz5xJIQ+L2A/GHUl1Mlw1AFODxNRgamowMzWYjzbYD8MtwK1/JuPCFpuGLTYNW2wattg0bLFp2OIrYds/oHXNFCacrjhoqiTW1kZXYV6mGkQ66X1kwu3AWh/Y44N/Wq4Yhr5Msebxja5Pg9E+bJjB0OPePktsWbUuqnW7Znln87E0Zt9Jj88j3/dOcHY0jkON8tLEJrGwmVrYzCxs5iY2H0cKXrDekUk8OsRgEWKwCDFYhBgsQgwWIYbRIYazEHuokcOI423EgVDJF/T8EiAZ4YJsV894c6xdvMjpmq4uFyWLYPZcBq3Depll4VjnamntlgPp3KnPl1Frj3oxsekh7KVYnURb0tlxHLesW5+79blbn7v1uVufu/W5/3OfezuIoz3l9qImxsucvZLl/Vk91aPTdSsaXgme8Wbbi4Wr2DsbbHwNC/EiDDcJxJ3NA3Hvw3AXszDcL1/CcOfTaRBwMo395sWobJ2dzJ9p6SFN48u8O7flnfMsE3MA6JqRHaBdKg546JqDHaBr8nWAdlk3sGTndDsnWuZZD9AwwVaKbthWd1+PzbAfehcA6pxv/VTXpOunujbBC9T7EFTXHOynura/fqpzNvZinVvfZ+qovLw7GQv+Tel/R39wqM+dH/fmDukehlBggtrv2mVWYsTS+XqZNfW3xJmRW4vZEGtuxEoGl7gwYumS0cMy/OZhr1wwn9eoLvDOM9D5C6dLTBxbRZfoWtB7iPe+fXQt5F2iaxHvEp0LeAfpfJ/6jziQaxBGX4Dx32cmeQeB9AUYL4cY5SAE0hcgkL4AgfQFCKQvQCh9weBAGOXpGIdHZasffQE86wvgW18A3/oC+NYXwLe+AL71BfCtL4B3fQF86wtgqS9ACH0BQugLEERfgCD6AgTRFyCIvgBB9AUIoi9AGH0BgugL4KIvgDd9AfzpC+BRXwCP+gL40xfAo74AHvUFcNEXwLe+AL71BfCuL4B3fQG86wvgXV8A7/oCeNcXwL++AN71hQHi0+5fSsUlVqs2AAA="
+    }
+  },
+  "source_oracle_cache_sha256": "c11dcfedde2ed4ce99ff355f5cf30c187c2b3745c87a03319e715bbfec17cf50",
+  "serialization": "Payload JSON uses UTF8, sorted keys and compact separators; SHA256 covers uncompressed exact bytes. Gzip mtime0 makes output reproducible.",
+  "no_whole_card_deferral": true,
+  "baseline_changes": false,
+  "gameplay_changes": false
+}

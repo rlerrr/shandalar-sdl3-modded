@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "card": "Blisterstick Shaman",
+  "csvid": 11421,
+  "coverage": {
+    "source": "pinned Scryfall Oracle",
+    "components": [
+      "fixed entry damage",
+      "single-target scope",
+      "collateral damage if printed",
+      "actual casting and payment",
+      "both controllers",
+      "re-entry and snapshots"
+    ],
+    "gaps": [
+      "planeswalker targets",
+      "post-targeting responses",
+      "simultaneous trigger ordering",
+      "protection and damage replacement",
+      "control changes",
+      "combat-trigger interactions",
+      "multiplayer"
+    ]
+  },
+  "recipes": [
+    {
+      "family": "etb_damage_creature",
+      "version": 2,
+      "oracle_text": "When this creature enters, it deals 1 damage to any target.",
+      "params": {
+        "amount": 1,
+        "targets": "any",
+        "damage_you": 0,
+        "keywords": [],
+        "inactive_rules": []
+      },
+      "variants": [
+        "entry_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "bare_zones_0",
+        "countered_0",
+        "cleanup_0",
+        "bounce_only_0",
+        "bounce_recast_0",
+        "blink_0",
+        "destroy_source_0",
+        "exile_source_0",
+        "other_creature_0",
+        "other_death_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "blink_snapshot_0",
+        "wrong_color_0",
+        "two_sources_0",
+        "friendly_target_0",
+        "lethal_0",
+        "indestructible_0",
+        "self_target_0",
+        "only_source_0",
+        "own_player_0",
+        "opponent_player_0",
+        "entry_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "bare_zones_1",
+        "countered_1",
+        "cleanup_1",
+        "bounce_only_1",
+        "bounce_recast_1",
+        "blink_1",
+        "destroy_source_1",
+        "exile_source_1",
+        "other_creature_1",
+        "other_death_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "blink_snapshot_1",
+        "wrong_color_1",
+        "two_sources_1",
+        "friendly_target_1",
+        "lethal_1",
+        "indestructible_1",
+        "self_target_1",
+        "only_source_1",
+        "own_player_1",
+        "opponent_player_1"
+      ]
+    }
+  ]
+}

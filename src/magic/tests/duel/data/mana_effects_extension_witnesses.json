@@ -1,0 +1,4042 @@
+{
+  "version": 1,
+  "sources": {
+    "Channel the Suns": {
+      "oracle": {
+        "oracle_id": "d1b1be96-b2aa-4386-97d2-eb0a8cc47210",
+        "name": "Channel the Suns",
+        "oracle_text": "Add {W}{U}{B}{R}{G}.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Battle Hymn": {
+      "oracle": {
+        "oracle_id": "4b977117-741c-4157-8fcf-719e475a8a4c",
+        "name": "Battle Hymn",
+        "oracle_text": "Add {R} for each creature you control.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "own_creatures",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Crystal Vein": {
+      "oracle": {
+        "oracle_id": "616d6013-24f4-4999-9bf3-5b0764e52fa6",
+        "name": "Crystal Vein",
+        "oracle_text": "{T}: Add {C}.\n{T}, Sacrifice this land: Add {C}{C}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "AI sacrifice mode has no dialog in the source policy; both-controller ordinary fallback remains exercised"
+        ]
+      }
+    },
+    "Basal Thrull": {
+      "oracle": {
+        "oracle_id": "9da50130-3f83-4968-983c-7dcba257cf1b",
+        "name": "Basal Thrull",
+        "oracle_text": "{T}, Sacrifice this creature: Add {B}{B}.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Creature — Thrull",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "2"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Tainted Field": {
+      "oracle": {
+        "oracle_id": "439de49b-1091-4688-9ffb-80a025df31c2",
+        "name": "Tainted Field",
+        "oracle_text": "{T}: Add {C}.\n{T}: Add {W} or {B}. Activate only if you control a Swamp.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_modes",
+        "modes": [
+          {
+            "pool": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "own_swamp",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "own_swamp",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Hickory Woodlot": {
+      "oracle": {
+        "oracle_id": "26259c65-8f4e-42a6-b8a7-f65c36d35c4d",
+        "name": "Hickory Woodlot",
+        "oracle_text": "This land enters tapped with two depletion counters on it.\n{T}, Remove a depletion counter from this land: Add {G}{G}. If there are no depletion counters on this land, sacrifice it.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 2,
+        "gaps": [
+          "Exact depletion count is certified by first/second removal and sacrifice receipts; no direct counter observation exists"
+        ]
+      }
+    },
+    "Pyretic Ritual": {
+      "oracle": {
+        "oracle_id": "86ef6474-613f-41fb-931c-d4279b03ed99",
+        "name": "Pyretic Ritual",
+        "oracle_text": "Add {R}{R}{R}.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              3,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Seething Song": {
+      "oracle": {
+        "oracle_id": "64bf8929-f5f2-4d50-8667-13b1d007bcfc",
+        "name": "Seething Song",
+        "oracle_text": "Add {R}{R}{R}{R}{R}.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              5,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Desperate Ritual": {
+      "oracle": {
+        "oracle_id": "3620ab8f-b693-4225-bb96-5ca3cb3fa465",
+        "name": "Desperate Ritual",
+        "oracle_text": "Add {R}{R}{R}.\nSplice onto Arcane {1}{R} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant — Arcane",
+        "keywords": [
+          "Splice"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              3,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "Normal cast only; Splice onto Arcane not selected or exercised"
+        ]
+      }
+    },
+    "Ancient Spring": {
+      "oracle": {
+        "oracle_id": "2160849a-184f-4a49-8931-fd021e16f7cb",
+        "name": "Ancient Spring",
+        "oracle_text": "This land enters tapped.\n{T}: Add {U}.\n{T}, Sacrifice this land: Add {W}{B}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              1
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 0,
+        "gaps": [
+          "AI sacrifice mode has no dialog in the source policy; both-controller ordinary fallback remains exercised"
+        ]
+      }
+    },
+    "Dwarven Ruins": {
+      "oracle": {
+        "oracle_id": "cbef6ad5-717f-4b02-9c62-e5deba407ad1",
+        "name": "Dwarven Ruins",
+        "oracle_text": "This land enters tapped.\n{T}: Add {R}.\n{T}, Sacrifice this land: Add {R}{R}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              2,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 0,
+        "gaps": [
+          "AI sacrifice mode has no dialog in the source policy; both-controller ordinary fallback remains exercised"
+        ]
+      }
+    },
+    "Ebon Stronghold": {
+      "oracle": {
+        "oracle_id": "4d4b9512-d29d-4b99-9249-d37e1199a1f5",
+        "name": "Ebon Stronghold",
+        "oracle_text": "This land enters tapped.\n{T}: Add {B}.\n{T}, Sacrifice this land: Add {B}{B}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 0,
+        "gaps": [
+          "AI sacrifice mode has no dialog in the source policy; both-controller ordinary fallback remains exercised"
+        ]
+      }
+    },
+    "Geothermal Crevice": {
+      "oracle": {
+        "oracle_id": "83f9d84a-a011-4fa9-a3a4-51eb39159c54",
+        "name": "Geothermal Crevice",
+        "oracle_text": "This land enters tapped.\n{T}: Add {R}.\n{T}, Sacrifice this land: Add {B}{G}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 0,
+        "gaps": [
+          "AI sacrifice mode has no dialog in the source policy; both-controller ordinary fallback remains exercised"
+        ]
+      }
+    },
+    "Havenwood Battleground": {
+      "oracle": {
+        "oracle_id": "18cbb47a-85b1-48f6-a024-8c3bbffa0d87",
+        "name": "Havenwood Battleground",
+        "oracle_text": "This land enters tapped.\n{T}: Add {G}.\n{T}, Sacrifice this land: Add {G}{G}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 0,
+        "gaps": [
+          "AI sacrifice mode has no dialog in the source policy; both-controller ordinary fallback remains exercised"
+        ]
+      }
+    },
+    "Irrigation Ditch": {
+      "oracle": {
+        "oracle_id": "e0c3c87b-83e3-4cff-b05f-78a192e2bba4",
+        "name": "Irrigation Ditch",
+        "oracle_text": "This land enters tapped.\n{T}: Add {W}.\n{T}, Sacrifice this land: Add {G}{U}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 0,
+        "gaps": [
+          "AI sacrifice mode has no dialog in the source policy; both-controller ordinary fallback remains exercised"
+        ]
+      }
+    },
+    "Ruins of Trokair": {
+      "oracle": {
+        "oracle_id": "ad7b610c-e276-4c71-9b53-1ccb6d2dafd2",
+        "name": "Ruins of Trokair",
+        "oracle_text": "This land enters tapped.\n{T}: Add {W}.\n{T}, Sacrifice this land: Add {W}{W}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 0,
+        "gaps": [
+          "AI sacrifice mode has no dialog in the source policy; both-controller ordinary fallback remains exercised"
+        ]
+      }
+    },
+    "Sulfur Vent": {
+      "oracle": {
+        "oracle_id": "bc2906cd-9e0c-4aa8-b656-fb1045d810ac",
+        "name": "Sulfur Vent",
+        "oracle_text": "This land enters tapped.\n{T}: Add {B}.\n{T}, Sacrifice this land: Add {U}{R}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              0,
+              1,
+              0,
+              1,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 0,
+        "gaps": [
+          "AI sacrifice mode has no dialog in the source policy; both-controller ordinary fallback remains exercised"
+        ]
+      }
+    },
+    "Svyelunite Temple": {
+      "oracle": {
+        "oracle_id": "5578cf33-62f5-456c-a58c-f744a25df79b",
+        "name": "Svyelunite Temple",
+        "oracle_text": "This land enters tapped.\n{T}: Add {U}.\n{T}, Sacrifice this land: Add {U}{U}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 0,
+        "gaps": [
+          "AI sacrifice mode has no dialog in the source policy; both-controller ordinary fallback remains exercised"
+        ]
+      }
+    },
+    "Tinder Farm": {
+      "oracle": {
+        "oracle_id": "af0ad159-8264-4526-9a95-eddd32c0a13f",
+        "name": "Tinder Farm",
+        "oracle_text": "This land enters tapped.\n{T}: Add {G}.\n{T}, Sacrifice this land: Add {R}{W}.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              1
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 0,
+        "gaps": [
+          "AI sacrifice mode has no dialog in the source policy; both-controller ordinary fallback remains exercised"
+        ]
+      }
+    },
+    "Peat Bog": {
+      "oracle": {
+        "oracle_id": "a176924c-78fc-4151-b2b5-1547b1114a40",
+        "name": "Peat Bog",
+        "oracle_text": "This land enters tapped with two depletion counters on it.\n{T}, Remove a depletion counter from this land: Add {B}{B}. If there are no depletion counters on this land, sacrifice it.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 2,
+        "gaps": [
+          "Exact depletion count is certified by first/second removal and sacrifice receipts; no direct counter observation exists"
+        ]
+      }
+    },
+    "Remote Farm": {
+      "oracle": {
+        "oracle_id": "2c38f4c7-1b3f-42b4-a175-edab7acd6cc6",
+        "name": "Remote Farm",
+        "oracle_text": "This land enters tapped with two depletion counters on it.\n{T}, Remove a depletion counter from this land: Add {W}{W}. If there are no depletion counters on this land, sacrifice it.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              2
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 2,
+        "gaps": [
+          "Exact depletion count is certified by first/second removal and sacrifice receipts; no direct counter observation exists"
+        ]
+      }
+    },
+    "Sandstone Needle": {
+      "oracle": {
+        "oracle_id": "c8e0a1a5-8188-4677-9d8a-a18eb593343a",
+        "name": "Sandstone Needle",
+        "oracle_text": "This land enters tapped with two depletion counters on it.\n{T}, Remove a depletion counter from this land: Add {R}{R}. If there are no depletion counters on this land, sacrifice it.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              2,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 2,
+        "gaps": [
+          "Exact depletion count is certified by first/second removal and sacrifice receipts; no direct counter observation exists"
+        ]
+      }
+    },
+    "Saprazzan Skerry": {
+      "oracle": {
+        "oracle_id": "e4e6e796-39ce-4a63-8c61-c7c956d75d78",
+        "name": "Saprazzan Skerry",
+        "oracle_text": "This land enters tapped with two depletion counters on it.\n{T}, Remove a depletion counter from this land: Add {U}{U}. If there are no depletion counters on this land, sacrifice it.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              2,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": true,
+        "depletion": 2,
+        "gaps": [
+          "Exact depletion count is certified by first/second removal and sacrifice receipts; no direct counter observation exists"
+        ]
+      }
+    },
+    "Tainted Isle": {
+      "oracle": {
+        "oracle_id": "0222414f-98b5-458a-a0fd-831a66cd8b07",
+        "name": "Tainted Isle",
+        "oracle_text": "{T}: Add {C}.\n{T}: Add {U} or {B}. Activate only if you control a Swamp.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_modes",
+        "modes": [
+          {
+            "pool": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "own_swamp",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "own_swamp",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Tainted Peak": {
+      "oracle": {
+        "oracle_id": "b2bae7fc-0668-4b34-9cd6-0d80aea52275",
+        "name": "Tainted Peak",
+        "oracle_text": "{T}: Add {C}.\n{T}: Add {B} or {R}. Activate only if you control a Swamp.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_modes",
+        "modes": [
+          {
+            "pool": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "own_swamp",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "own_swamp",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Tainted Wood": {
+      "oracle": {
+        "oracle_id": "fa6d05a1-3df4-4751-b1a0-8d9693faec73",
+        "name": "Tainted Wood",
+        "oracle_text": "{T}: Add {C}.\n{T}: Add {B} or {G}. Activate only if you control a Swamp.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_modes",
+        "modes": [
+          {
+            "pool": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "own_swamp",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "own_swamp",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Blood Vassal": {
+      "oracle": {
+        "oracle_id": "f792f40d-1d37-4854-98da-e4020c6a44d4",
+        "name": "Blood Vassal",
+        "oracle_text": "Sacrifice this creature: Add {B}{B}.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Thrull",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              2,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Composite Golem": {
+      "oracle": {
+        "oracle_id": "784970de-ef8c-4672-b5d0-24a4b0a978a3",
+        "name": "Composite Golem",
+        "oracle_text": "Sacrifice this creature: Add {W}{U}{B}{R}{G}.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact Creature — Golem",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "G",
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "power": "4",
+        "toughness": "4"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              1,
+              1,
+              1,
+              1,
+              1
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Gyre Engineer": {
+      "oracle": {
+        "oracle_id": "27eef5c1-259a-4d37-93af-7451f50905af",
+        "name": "Gyre Engineer",
+        "oracle_text": "{T}: Add {G}{U}.",
+        "mana_cost": "{1}{G}{U}",
+        "type_line": "Creature — Vedalken Wizard",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              1,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Coal Golem": {
+      "oracle": {
+        "oracle_id": "64b63847-27dd-469b-aad3-58e061f92817",
+        "name": "Coal Golem",
+        "oracle_text": "{3}, Sacrifice this creature: Add {R}{R}{R}.",
+        "mana_cost": "{5}",
+        "type_line": "Artifact Creature — Golem",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "power": "3",
+        "toughness": "3"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              3,
+              0
+            ],
+            "input": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Satyr Hedonist": {
+      "oracle": {
+        "oracle_id": "a75bf714-ed3e-4403-a009-3a81f430bc64",
+        "name": "Satyr Hedonist",
+        "oracle_text": "{R}, Sacrifice this creature: Add {R}{R}{R}.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Satyr",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "1"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              3,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Eye of Ramos": {
+      "oracle": {
+        "oracle_id": "a1bdea9f-56d0-411a-9da8-601dd6dc6d32",
+        "name": "Eye of Ramos",
+        "oracle_text": "{T}: Add {U}.\nSacrifice this artifact: Add {U}.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "Untapped AI sacrifice mode is absent from its menu; AI sacrifice receipts use a real tap first"
+        ]
+      }
+    },
+    "Heart of Ramos": {
+      "oracle": {
+        "oracle_id": "4c774c6e-c5a0-4018-b494-d3c521d2cac3",
+        "name": "Heart of Ramos",
+        "oracle_text": "{T}: Add {R}.\nSacrifice this artifact: Add {R}.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "Untapped AI sacrifice mode is absent from its menu; AI sacrifice receipts use a real tap first"
+        ]
+      }
+    },
+    "Horn of Ramos": {
+      "oracle": {
+        "oracle_id": "3b9bcf88-7304-48c5-bd46-3e37a93967a5",
+        "name": "Horn of Ramos",
+        "oracle_text": "{T}: Add {G}.\nSacrifice this artifact: Add {G}.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "Untapped AI sacrifice mode is absent from its menu; AI sacrifice receipts use a real tap first"
+        ]
+      }
+    },
+    "Skull of Ramos": {
+      "oracle": {
+        "oracle_id": "b5ae2532-e642-47d1-bb5f-53f408e2fdc2",
+        "name": "Skull of Ramos",
+        "oracle_text": "{T}: Add {B}.\nSacrifice this artifact: Add {B}.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "Untapped AI sacrifice mode is absent from its menu; AI sacrifice receipts use a real tap first"
+        ]
+      }
+    },
+    "Tooth of Ramos": {
+      "oracle": {
+        "oracle_id": "fa4c57b3-6eaa-4938-b41a-0dad3e774d49",
+        "name": "Tooth of Ramos",
+        "oracle_text": "{T}: Add {W}.\nSacrifice this artifact: Add {W}.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": 0
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": false,
+            "sacrifice": true,
+            "condition": "none",
+            "dialog": 1
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "Untapped AI sacrifice mode is absent from its menu; AI sacrifice receipts use a real tap first"
+        ]
+      }
+    },
+    "Blightsoil Druid": {
+      "oracle": {
+        "oracle_id": "351091cb-1263-4202-9447-021c6019cff1",
+        "name": "Blightsoil Druid",
+        "oracle_text": "{T}, Pay 1 life: Add {G}.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Elf Druid",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "2"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_consequence",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null,
+            "consequence": {
+              "kind": "life_cost",
+              "amount": 1
+            }
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Elves of Deep Shadow": {
+      "oracle": {
+        "oracle_id": "20347559-95a9-4689-bb79-c5bb3809b719",
+        "name": "Elves of Deep Shadow",
+        "oracle_text": "{T}: Add {B}. This creature deals 1 damage to you.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_consequence",
+        "modes": [
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null,
+            "consequence": {
+              "kind": "self_damage",
+              "amount": 1
+            }
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Cabal Ritual": {
+      "oracle": {
+        "oracle_id": "5b5bf1fa-6502-4790-b66b-f0f8504ebc7c",
+        "name": "Cabal Ritual",
+        "oracle_text": "Add {B}{B}{B}.\nThreshold — Add {B}{B}{B}{B}{B} instead if there are seven or more cards in your graveyard.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Instant",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "threshold7",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Brightstone Ritual": {
+      "oracle": {
+        "oracle_id": "08e90e85-4103-4acb-a8a7-e1329b460aa7",
+        "name": "Brightstone Ritual",
+        "oracle_text": "Add {R} for each Goblin on the battlefield.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "all_goblins",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Gaea's Cradle": {
+      "oracle": {
+        "oracle_id": "7c427c3d-ecd8-45ef-bebd-8f10f4a311db",
+        "name": "Gaea's Cradle",
+        "oracle_text": "{T}: Add {G} for each creature you control.",
+        "mana_cost": "",
+        "type_line": "Legendary Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "own_creatures",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Viridian Joiner": {
+      "oracle": {
+        "oracle_id": "84244aa6-11be-4940-b102-e029f955fc9a",
+        "name": "Viridian Joiner",
+        "oracle_text": "{T}: Add an amount of {G} equal to this creature's power.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Elf Druid",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "2"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "source_power",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Cabal Coffers": {
+      "oracle": {
+        "oracle_id": "7358e164-5704-4e78-9b21-6a9bf2a968ce",
+        "name": "Cabal Coffers",
+        "oracle_text": "{2}, {T}: Add {B} for each Swamp you control.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "own_swamps",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Magus of the Coffers": {
+      "oracle": {
+        "oracle_id": "23dd895c-92bd-4af0-8b1a-7d76ca49178f",
+        "name": "Magus of the Coffers",
+        "oracle_text": "{2}, {T}: Add {B} for each Swamp you control.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature — Human Wizard",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "power": "4",
+        "toughness": "4"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "own_swamps",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Tolarian Academy": {
+      "oracle": {
+        "oracle_id": "dba4fd31-8931-42dd-bd86-45479c2abf74",
+        "name": "Tolarian Academy",
+        "oracle_text": "{T}: Add {U} for each artifact you control.",
+        "mana_cost": "",
+        "type_line": "Legendary Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "own_artifacts",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "AI zero-effect activation permission controls are not selected; human zero and productive both-controller cases are exercised"
+        ]
+      }
+    },
+    "Serra's Sanctum": {
+      "oracle": {
+        "oracle_id": "34187c71-6033-4058-aadc-2bc266f762be",
+        "name": "Serra's Sanctum",
+        "oracle_text": "{T}: Add {W} for each enchantment you control.",
+        "mana_cost": "",
+        "type_line": "Legendary Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "own_enchantments",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "AI zero-effect activation permission controls are not selected; human zero and productive both-controller cases are exercised"
+        ]
+      }
+    },
+    "Rofellos, Llanowar Emissary": {
+      "oracle": {
+        "oracle_id": "3015882b-4897-4d2c-8e33-6731c85a0d03",
+        "name": "Rofellos, Llanowar Emissary",
+        "oracle_text": "{T}: Add {G} for each Forest you control.",
+        "mana_cost": "{G}{G}",
+        "type_line": "Legendary Creature — Elf Druid",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "1"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "own_forests",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Priest of Titania": {
+      "oracle": {
+        "oracle_id": "3a198a16-17b9-481e-b516-5bc945c7e247",
+        "name": "Priest of Titania",
+        "oracle_text": "{T}: Add {G} for each Elf on the battlefield.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Druid",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "all_elves",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Mana Geyser": {
+      "oracle": {
+        "oracle_id": "a8dba58b-2956-492e-ae30-49db2ae68e53",
+        "name": "Mana Geyser",
+        "oracle_text": "Add {R} for each tapped land your opponents control.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "foe_tapped_lands",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [],
+        "fixture": "empty_main"
+      }
+    },
+    "Songs of the Damned": {
+      "oracle": {
+        "oracle_id": "39419d29-47e7-4d71-953b-96a2e14ae964",
+        "name": "Songs of the Damned",
+        "oracle_text": "Add {B} for each creature card in your graveyard.",
+        "mana_cost": "{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              0,
+              1,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "own_grave_creatures",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [],
+        "fixture": "empty_main"
+      }
+    },
+    "Rite of Flame": {
+      "oracle": {
+        "oracle_id": "8a2e53f9-8100-488f-8504-b59e9bd1cc29",
+        "name": "Rite of Flame",
+        "oracle_text": "Add {R}{R}, then add {R} for each card named Rite of Flame in each graveyard.",
+        "mana_cost": "{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              1,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "rite_flame",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [],
+        "fixture": "empty_main"
+      }
+    },
+    "Spoils of Evil": {
+      "oracle": {
+        "oracle_id": "a40c52ee-4b45-4b14-8fbc-6529b42bfc9d",
+        "name": "Spoils of Evil",
+        "oracle_text": "For each artifact or creature card in target opponent's graveyard, add {C} and you gain 1 life.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "spell",
+        "family": "mana_spell_extension",
+        "modes": [
+          {
+            "pool": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "foe_grave_union",
+            "tap": false,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [],
+        "fixture": "empty_main"
+      }
+    },
+    "Nimbus Maze": {
+      "oracle": {
+        "oracle_id": "d7e1d4eb-1d4e-460e-9304-7db9ab50ccb5",
+        "name": "Nimbus Maze",
+        "oracle_text": "{T}: Add {C}.\n{T}: Add {W}. Activate only if you control an Island.\n{T}: Add {U}. Activate only if you control a Plains.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_modes",
+        "modes": [
+          {
+            "pool": [
+              1,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              1
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "own_island",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              0,
+              1,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "own_plains",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "Condition-negative cases certify fallback; separate unavailable-color mode query not available"
+        ]
+      }
+    },
+    "Temple of the False God": {
+      "oracle": {
+        "oracle_id": "cfdd5dc6-593e-495a-8cfe-3a56b3c4c7df",
+        "name": "Temple of the False God",
+        "oracle_text": "{T}: Add {C}{C}. Activate only if you control five or more lands.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "permanent_mana",
+        "modes": [
+          {
+            "pool": [
+              2,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "lands5",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": []
+      }
+    },
+    "Whisperer of the Wilds": {
+      "oracle": {
+        "oracle_id": "c1e456b6-5d2b-4c42-9464-54a8f9f8f3ba",
+        "name": "Whisperer of the Wilds",
+        "oracle_text": "{T}: Add {G}.\nFerocious — {T}: Add {G}{G}. Activate only if you control a creature with power 4 or greater.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Shaman",
+        "keywords": [
+          "Ferocious"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "0",
+        "toughness": "2"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "power4",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "Ordinary one-green mode is bound below Ferocious; selecting it while Ferocious is active is outside the source UI policy"
+        ]
+      }
+    },
+    "Circle of Elders": {
+      "oracle": {
+        "oracle_id": "f720f80a-74bc-4681-ad4f-d33152ff988b",
+        "name": "Circle of Elders",
+        "oracle_text": "Vigilance\nFormidable — {T}: Add {C}{C}{C}. Activate only if creatures you control have total power 8 or greater.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Human Shaman",
+        "keywords": [
+          "Vigilance",
+          "Formidable"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "4"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              3,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "total8",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "Vigilance combat declaration and blocking, inactive in selected mana scenarios"
+        ]
+      }
+    },
+    "Zhur-Taa Druid": {
+      "oracle": {
+        "oracle_id": "5979310e-38c8-489f-ab9e-2723af98a3a5",
+        "name": "Zhur-Taa Druid",
+        "oracle_text": "{T}: Add {G}.\nWhenever you tap this creature for mana, it deals 1 damage to each opponent.",
+        "mana_cost": "{R}{G}",
+        "type_line": "Creature — Human Druid",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null,
+            "consequence": {
+              "kind": "settled_opponent_trigger",
+              "amount": 1
+            }
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "Separate nonmana trigger response window is unobserved: real mana finalization internally dispatches tap triggers; cases assert settled results only"
+        ]
+      }
+    }
+  },
+  "witnesses": {
+    "Air Elemental": {
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "name": "Air Elemental",
+      "oracle_text": "Flying",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Elemental",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "power": "4",
+      "toughness": "4"
+    },
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Disenchant": {
+      "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+      "name": "Disenchant",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Elvish Mystic": {
+      "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+      "name": "Elvish Mystic",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Druid",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": "1",
+      "toughness": "1"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "2"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "power": "3",
+      "toughness": "3"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Ivory Mask": {
+      "oracle_id": "028bc726-0e86-4c53-9648-625153ae4b01",
+      "name": "Ivory Mask",
+      "oracle_text": "You have shroud. (You can't be the target of spells or abilities.)",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "power": "1",
+      "toughness": "1"
+    },
+    "Megrim": {
+      "oracle_id": "633ad9e2-9f55-4a1c-9248-661ad4b0e1dc",
+      "name": "Megrim",
+      "oracle_text": "Whenever an opponent discards a card, this enchantment deals 2 damage to that player.",
+      "mana_cost": "{2}{B}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Merfolk of the Pearl Trident": {
+      "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+      "name": "Merfolk of the Pearl Trident",
+      "oracle_text": "",
+      "mana_cost": "{U}",
+      "type_line": "Creature — Merfolk",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mons's Goblin Raiders": {
+      "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+      "name": "Mons's Goblin Raiders",
+      "oracle_text": "",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Muck Rats": {
+      "oracle_id": "bca13a12-6723-4a5e-8f1b-21646a8b3e7e",
+      "name": "Muck Rats",
+      "oracle_text": "",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Rat",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": "1",
+      "toughness": "1"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Negate": {
+      "oracle_id": "3407fe41-fdd3-4119-8f70-4bc4590a379f",
+      "name": "Negate",
+      "oracle_text": "Counter target noncreature spell.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Phyrexian Hulk": {
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "name": "Phyrexian Hulk",
+      "oracle_text": "",
+      "mana_cost": "{6}",
+      "type_line": "Artifact Creature — Phyrexian Golem",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 6.0,
+      "layout": "normal",
+      "power": "5",
+      "toughness": "4"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Safe Passage": {
+      "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+      "name": "Safe Passage",
+      "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Savannah Lions": {
+      "oracle_id": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+      "name": "Savannah Lions",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Cat",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "1"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Suppression Field": {
+      "oracle_id": "63439f19-01e5-4ae1-9841-90493d62d0c8",
+      "name": "Suppression Field",
+      "oracle_text": "Activated abilities cost {2} more to activate unless they're mana abilities.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "name": "Twiddle",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    }
+  }
+}

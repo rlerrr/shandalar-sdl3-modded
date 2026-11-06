@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Aggression",
+  "csvid": 1849,
+  "recipes": [
+    {
+      "family": "aura_keyword_extension",
+      "version": 2,
+      "params": {
+        "power": 0,
+        "toughness": 0,
+        "keywords": [
+          "First strike",
+          "Trample"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Non-Wall enchant restriction",
+          "End-step destruction if enchanted creature did not attack"
+        ]
+      },
+      "oracle_text": "Enchant non-Wall creature\nEnchanted creature has first strike and trample.\nAt the beginning of the end step of enchanted creature's controller, destroy that creature if it didn't attack this turn.",
+      "variants": [
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_0",
+        "wrong_type_0",
+        "lost_target_0",
+        "snapshot_0",
+        "tapped_0",
+        "large_target_0",
+        "unblocked_0",
+        "opponent_unblocked_0",
+        "empty_zones_0",
+        "trample_0",
+        "expired_trample_0",
+        "first_strike_0",
+        "expired_first_strike_0",
+        "aura_removed_0",
+        "aura_bounced_0",
+        "host_bounced_0",
+        "host_destroyed_0",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_1",
+        "wrong_type_1",
+        "lost_target_1",
+        "snapshot_1",
+        "tapped_1",
+        "large_target_1",
+        "unblocked_1",
+        "opponent_unblocked_1",
+        "empty_zones_1",
+        "trample_1",
+        "expired_trample_1",
+        "first_strike_1",
+        "expired_first_strike_1",
+        "aura_removed_1",
+        "aura_bounced_1",
+        "host_bounced_1",
+        "host_destroyed_1"
+      ]
+    }
+  ]
+}

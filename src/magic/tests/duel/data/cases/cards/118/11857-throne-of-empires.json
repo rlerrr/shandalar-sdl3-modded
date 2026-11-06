@@ -1,0 +1,123 @@
+{
+  "version": 1,
+  "card": "Throne of Empires",
+  "csvid": 11857,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "noncreature_amount",
+        "basis": "fixed",
+        "token": {
+          "name": "Soldier",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "W"
+          ],
+          "subtypes": [
+            "Soldier"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "inactive_clauses": [],
+        "entry_tapped": false,
+        "activation": {
+          "mana": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          "tap": true,
+          "sacrifice": false
+        },
+        "fixed_count": 1,
+        "empire_replacement": {
+          "required_artifacts": [
+            "Crown of Empires",
+            "Scepter of Empires"
+          ],
+          "count": 5
+        }
+      },
+      "oracle_text": "{1}, {T}: Create a 1/1 white Soldier creature token. Create five of those tokens instead if you control artifacts named Crown of Empires and Scepter of Empires.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "effect_snapshot_0",
+        "cast_only_0",
+        "activation_payment_0",
+        "activation_insufficient_0",
+        "repeat_0",
+        "source_removed_0",
+        "source_removed_pending_0",
+        "activation_snapshot_0",
+        "tapped_denied_0",
+        "untap_repeat_0",
+        "untap_snapshot_0",
+        "empire_pair_0",
+        "empire_crown_only_0",
+        "empire_scepter_only_0",
+        "empire_opponent_0",
+        "empire_foreign_controlled_0",
+        "empire_owned_opposing_0",
+        "empire_one_lost_0",
+        "empire_lost_pending_0",
+        "empire_pair_cleanup_0",
+        "empire_condition_snapshot_0",
+        "create_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "effect_snapshot_1",
+        "cast_only_1",
+        "activation_payment_1",
+        "activation_insufficient_1",
+        "repeat_1",
+        "source_removed_1",
+        "source_removed_pending_1",
+        "activation_snapshot_1",
+        "tapped_denied_1",
+        "untap_repeat_1",
+        "untap_snapshot_1",
+        "empire_pair_1",
+        "empire_crown_only_1",
+        "empire_scepter_only_1",
+        "empire_opponent_1",
+        "empire_foreign_controlled_1",
+        "empire_owned_opposing_1",
+        "empire_one_lost_1",
+        "empire_lost_pending_1",
+        "empire_pair_cleanup_1",
+        "empire_condition_snapshot_1"
+      ]
+    }
+  ]
+}

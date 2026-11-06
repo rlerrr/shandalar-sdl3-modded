@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "card": "Reins of Power",
+  "csvid": 3412,
+  "status": "superseded",
+  "pending_variant_count": 0,
+  "original_pending_variant_count": 1,
+  "superseded_by": "src/magic/tests/duel/data/pending_cases/large-batch-4/03412-reins-of-power.json",
+  "reason": "The original one scenario and all4 evidence are included in the whole-source32 archive. This marker adds no pending cases.",
+  "recipes": [],
+  "cases": []
+}

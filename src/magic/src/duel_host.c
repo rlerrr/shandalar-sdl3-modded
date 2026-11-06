@@ -1,4 +1,5 @@
 #include "duel_host.h"
+#include "duel_engine.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -16,10 +17,19 @@ void duel_host_install(const DuelHost *value, uint32_t seed, uint32_t steps)
   state.present_ai_dialogs = 0;
   state.target_probe_player = state.target_probe_card = -1;
   state.target_probe_seen = 0; state.target_probe_result = -1;
+  state.shuffle_count[0] = state.shuffle_count[1] = 0;
 }
 void duel_host_uninstall(void) { memset(&host, 0, sizeof(host)); }
 int duel_host_is_headless(void) { return host.choose != NULL; }
-int duel_host_scripted_input(void) { return duel_host_is_headless() && !state.ai_choices; }
+void duel_host_record_shuffle(int player) {
+  if (duel_host_is_headless() && player >= 0 && player < 2)
+    ++state.shuffle_count[player];
+}
+int duel_host_scripted_input(void) {
+  /* Nested damage-prevention searches replay engine snapshots. Their trial
+     choices belong to the AI, not the caller's one-shot script. */
+  return duel_host_is_headless() && !state.ai_choices && g_duel_ai_mode_state != 1;
+}
 int duel_host_choice_ready(DuelChoiceKind kind, int player) {
   return duel_host_scripted_input() && host.choice_ready && host.choice_ready(host.context,kind,player);
 }

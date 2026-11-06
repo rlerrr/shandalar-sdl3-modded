@@ -1,0 +1,116 @@
+{
+  "version": 1,
+  "card": "Whisperer of the Wilds",
+  "csvid": 14655,
+  "recipes": [
+    {
+      "family": "mana_creature",
+      "version": 2,
+      "params": {
+        "wave": 6,
+        "model": "permanent",
+        "family": "mana_creature",
+        "modes": [
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              1,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "none",
+            "dialog": null
+          },
+          {
+            "pool": [
+              0,
+              0,
+              0,
+              2,
+              0,
+              0
+            ],
+            "input": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "count": "fixed",
+            "tap": true,
+            "sacrifice": false,
+            "condition": "power4",
+            "dialog": null
+          }
+        ],
+        "enters_tapped": false,
+        "depletion": 0,
+        "gaps": [
+          "Ordinary one-green mode is bound below Ferocious; selecting it while Ferocious is active is outside the source UI policy"
+        ]
+      },
+      "oracle_text": "{T}: Add {G}.\nFerocious — {T}: Add {G}{G}. Activate only if you control a creature with power 4 or greater.",
+      "variants": [
+        "entry_0",
+        "tapped_0",
+        "sick_0",
+        "incidental_tap_0",
+        "source_bounced_0",
+        "tax_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "fresh_cast_0",
+        "payment_0",
+        "insufficient_cast_mana_0",
+        "absent_condition_0",
+        "opposing_condition_0",
+        "condition_removed_0",
+        "effect_m0_0",
+        "spend_generic_m0_0",
+        "repeat_denied_m0_0",
+        "untap_repeat_m0_0",
+        "effect_m1_0",
+        "spend_generic_m1_0",
+        "repeat_denied_m1_0",
+        "untap_repeat_m1_0",
+        "entry_1",
+        "tapped_1",
+        "sick_1",
+        "incidental_tap_1",
+        "source_bounced_1",
+        "tax_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "fresh_cast_1",
+        "payment_1",
+        "insufficient_cast_mana_1",
+        "absent_condition_1",
+        "opposing_condition_1",
+        "condition_removed_1",
+        "effect_m0_1",
+        "spend_generic_m0_1",
+        "repeat_denied_m0_1",
+        "untap_repeat_m0_1",
+        "effect_m1_1",
+        "spend_generic_m1_1",
+        "repeat_denied_m1_1",
+        "untap_repeat_m1_1"
+      ]
+    }
+  ]
+}

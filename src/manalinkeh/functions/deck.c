@@ -3337,7 +3337,9 @@ int find_in_owners_graveyard(int player, int card, int* owner, int* position)
 
   int source = ((*owner & 1) << 8) | (card & 0xFF);
   int i;
-  for (i = 499; i >= 0; --i)
+  /* Unused provenance slots can contain zero or stale source values.  Only
+   * live graveyard entries identify cards; source zero is itself valid. */
+  for (i = count_graveyard(*owner) - 1; i >= 0; --i)
 	if ((graveyard_source[*owner][i] & 0x1FF) == source)
 	  {
 		*position = i;

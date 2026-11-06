@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Bring Low",
+  "csvid": 14237,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell_extension",
+      "version": 2,
+      "params": {
+        "kind": "targeted",
+        "effect": {
+          "amount": 3,
+          "targets": [
+            "creature"
+          ]
+        },
+        "gain_life": 0,
+        "inactive_components": [
+          "Five-damage replacement when the target has a +1/+1 counter; all witnesses begin without counters."
+        ],
+        "choices_before_target": [],
+        "choices_after_target": [],
+        "skip_before_choices_on_exact_payment": false,
+        "skip_after_choices_on_exact_payment": false,
+        "omit_variants": []
+      },
+      "oracle_text": "Bring Low deals 3 damage to target creature. If that creature has a +1/+1 counter on it, Bring Low deals 5 damage to it instead.",
+      "variants": [
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "survivor_0",
+        "lethal_0",
+        "lost_target_0",
+        "friendly_0",
+        "empty_0",
+        "wrong_type_0",
+        "regenerate_0",
+        "pending_snapshot_0",
+        "wrong_payment_color_0",
+        "other_turn_0",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "survivor_1",
+        "lethal_1",
+        "lost_target_1",
+        "friendly_1",
+        "empty_1",
+        "wrong_type_1",
+        "regenerate_1",
+        "pending_snapshot_1",
+        "wrong_payment_color_1",
+        "other_turn_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed fixed damage component through ordinary mana-paid casting; all other named clauses are explicit recipe metadata gaps."
+}

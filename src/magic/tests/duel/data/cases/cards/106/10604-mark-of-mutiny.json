@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Mark of Mutiny",
+  "csvid": 10604,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "mutiny",
+        "inactive_components": [
+          "Overlapping control effects and creatures with tap abilities are not selected. Actual immediate combat proves haste, callback return proves duration, and original-owner death routing is selected."
+        ]
+      },
+      "oracle_text": "Gain control of target creature until end of turn. Put a +1/+1 counter on it and untap it. That creature gains haste until end of turn. (It can attack and {T} this turn.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "selection_pending_0",
+        "target_self_0",
+        "foreign_owner_0",
+        "death_before_return_0",
+        "countered_0",
+        "lost_target_0",
+        "preexisting_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "selection_pending_1",
+        "target_self_1",
+        "foreign_owner_1",
+        "death_before_return_1",
+        "countered_1",
+        "lost_target_1",
+        "preexisting_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "card": "Angelic Destiny",
+  "csvid": 11775,
+  "recipes": [
+    {
+      "family": "aura_keyword_extension",
+      "version": 2,
+      "params": {
+        "power": 4,
+        "toughness": 4,
+        "keywords": [
+          "Flying",
+          "First strike"
+        ],
+        "controller": "any",
+        "draw": 0,
+        "return_aura": false,
+        "gaps": [
+          "Angel subtype addition",
+          "Aura return when enchanted creature dies"
+        ]
+      },
+      "oracle_text": "Enchant creature\nEnchanted creature gets +4/+4, has flying and first strike, and is an Angel in addition to its other types.\nWhen enchanted creature dies, return this card to its owner's hand.",
+      "variants": [
+        "friendly_cleanup_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "empty_0",
+        "wrong_type_0",
+        "lost_target_0",
+        "snapshot_0",
+        "tapped_0",
+        "large_target_0",
+        "unblocked_0",
+        "opponent_cleanup_0",
+        "opponent_unblocked_0",
+        "empty_zones_0",
+        "flying_evasion_0",
+        "flying_reach_0",
+        "expired_flying_0",
+        "block_flying_0",
+        "expired_block_flying_0",
+        "first_strike_0",
+        "expired_first_strike_0",
+        "aura_removed_0",
+        "aura_bounced_0",
+        "host_bounced_0",
+        "friendly_cleanup_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "empty_1",
+        "wrong_type_1",
+        "lost_target_1",
+        "snapshot_1",
+        "tapped_1",
+        "large_target_1",
+        "unblocked_1",
+        "opponent_cleanup_1",
+        "opponent_unblocked_1",
+        "empty_zones_1",
+        "flying_evasion_1",
+        "flying_reach_1",
+        "expired_flying_1",
+        "block_flying_1",
+        "expired_block_flying_1",
+        "first_strike_1",
+        "expired_first_strike_1",
+        "aura_removed_1",
+        "aura_bounced_1",
+        "host_bounced_1"
+      ]
+    }
+  ]
+}

@@ -4193,7 +4193,7 @@ int card_nut_collector(int player, int card, event_t event){
 	return 0;
 }
 
-int card_overeager_apprentice(int player, int card, event_t event, int color){
+int card_overeager_apprentice(int player, int card, event_t event){
   /* Overeager Apprentice	|2|B
    * Creature - Human Minion 1/2
    * Discard a card, Sacrifice this creature: Add |B|B|B. */

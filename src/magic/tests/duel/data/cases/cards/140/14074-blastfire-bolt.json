@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Blastfire Bolt",
+  "csvid": 14074,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell_extension",
+      "version": 2,
+      "params": {
+        "kind": "targeted",
+        "effect": {
+          "amount": 5,
+          "targets": [
+            "creature"
+          ]
+        },
+        "gain_life": 0,
+        "inactive_components": [
+          "Destroy all Equipment attached to that creature; damage fixtures have no attached Equipment."
+        ],
+        "choices_before_target": [],
+        "choices_after_target": [],
+        "skip_before_choices_on_exact_payment": false,
+        "skip_after_choices_on_exact_payment": false,
+        "omit_variants": []
+      },
+      "oracle_text": "Blastfire Bolt deals 5 damage to target creature. Destroy all Equipment attached to that creature.",
+      "variants": [
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "survivor_0",
+        "lethal_0",
+        "lost_target_0",
+        "friendly_0",
+        "empty_0",
+        "wrong_type_0",
+        "regenerate_0",
+        "pending_snapshot_0",
+        "wrong_payment_color_0",
+        "other_turn_0",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "survivor_1",
+        "lethal_1",
+        "lost_target_1",
+        "friendly_1",
+        "empty_1",
+        "wrong_type_1",
+        "regenerate_1",
+        "pending_snapshot_1",
+        "wrong_payment_color_1",
+        "other_turn_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed fixed damage component through ordinary mana-paid casting; all other named clauses are explicit recipe metadata gaps."
+}

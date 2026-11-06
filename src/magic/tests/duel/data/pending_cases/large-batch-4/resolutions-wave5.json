@@ -1,0 +1,30 @@
+{
+  "version": 1,
+  "status": "restored_after_user_authorized_crash_fixes",
+  "audit": "docs/test-audits/unstable-card-crash-fixes-2026-11.json",
+  "audit_sha256": "2ac9cebdac1af50e48cd452983663cb4f25c8ac043ca5750227ff4efbc0b08dc",
+  "historical_pending_documents_unchanged": true,
+  "cards": [
+    {
+      "csvid": 3412,
+      "card": "Reins of Power",
+      "status": "active",
+      "historical_pending_path": "C:\\dev\\shandalar-sdl3-priv\\src\\magic\\tests\\duel\\data\\pending_cases\\large-batch-4\\03412-reins-of-power.json",
+      "historical_pending_sha256": "20bf1039d62349c3a5e840244b0b1bedef5bbe332e78460d6034be6381cf37ec"
+    },
+    {
+      "csvid": 11114,
+      "card": "Destructive Force",
+      "status": "active",
+      "historical_pending_path": "C:\\dev\\shandalar-sdl3-priv\\src\\magic\\tests\\duel\\data\\pending_cases\\large-batch-4\\11114-destructive-force.json",
+      "historical_pending_sha256": "9eb0b59d1e0080a433acf5b9cfe05a2de95f340374febfd52a503a262b82355e"
+    },
+    {
+      "csvid": 11489,
+      "card": "Myr Welder",
+      "status": "active",
+      "historical_pending_path": "C:\\dev\\shandalar-sdl3-priv\\src\\magic\\tests\\duel\\data\\pending_cases\\large-batch-4\\11489-myr-welder.json",
+      "historical_pending_sha256": "35cadc6bf3913a59f832599dec8a79ab0e3502f46b3c93a719ce4cfbbf6c6e26"
+    }
+  ]
+}

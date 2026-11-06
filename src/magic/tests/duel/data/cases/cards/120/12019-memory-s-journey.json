@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Memory's Journey",
+  "csvid": 12019,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "flashback",
+        "effect": "shuffle_grave",
+        "additional_components": []
+      },
+      "oracle_text": "Target player shuffles up to three target cards from their graveyard into their library.\nFlashback {G} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "short_library_0",
+        "opposing_turn_0",
+        "query_purity_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "repeat_0",
+        "opponent_target_0",
+        "zero_targets_0",
+        "one_target_0",
+        "max_targets_0",
+        "duplicate_targets_0",
+        "empty_graveyards_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "short_library_1",
+        "opposing_turn_1",
+        "query_purity_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "repeat_1",
+        "opponent_target_1",
+        "zero_targets_1",
+        "one_target_1",
+        "max_targets_1",
+        "duplicate_targets_1",
+        "empty_graveyards_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1759 @@
+{
+  "version": 1,
+  "cards": {
+    "Counterspell": {
+      "name": "Counterspell",
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}{U}",
+      "oracle_text": "Counter target spell.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 2.0
+    },
+    "Craw Wurm": {
+      "name": "Craw Wurm",
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Wurm",
+      "mana_cost": "{4}{G}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "power": "6",
+      "toughness": "4"
+    },
+    "Darksteel Citadel": {
+      "name": "Darksteel Citadel",
+      "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+      "layout": "normal",
+      "type_line": "Artifact Land",
+      "mana_cost": "",
+      "oracle_text": "Indestructible\n{T}: Add {C}.",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Darksteel Myr": {
+      "name": "Darksteel Myr",
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Myr",
+      "mana_cost": "{3}",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "cmc": 3.0,
+      "power": "0",
+      "toughness": "1"
+    },
+    "Demon": {
+      "name": "Demon",
+      "oracle_id": "bf9097ec-f28c-42dc-ab92-40885ed74ac4",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Demon",
+      "mana_cost": "",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Elemental": {
+      "name": "Elemental",
+      "oracle_id": "ff9ee841-1174-4c4c-b9d3-56d79122acbb",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Elemental",
+      "mana_cost": "",
+      "oracle_text": "Whenever this creature becomes tapped, it deals 1 damage to target player.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Forest": {
+      "name": "Forest",
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Forest",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {G}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Giant Growth": {
+      "name": "Giant Growth",
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{G}",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Gilded Light": {
+      "name": "Gilded Light",
+      "oracle_id": "f7e7b2aa-9fd2-41dd-b11e-3a233530dc83",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "You gain shroud until end of turn. (You can't be the target of spells or abilities.)\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Gladecover Scout": {
+      "name": "Gladecover Scout",
+      "oracle_id": "385c1208-bfea-44e2-b236-4f38bc90db9f",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Elf Scout",
+      "mana_cost": "{G}",
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)",
+      "keywords": [
+        "Hexproof"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Goblin": {
+      "name": "Goblin",
+      "oracle_id": "fa8ea5cd-b390-41a1-9a2a-11af1bc6bfd0",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Goblin",
+      "mana_cost": "",
+      "oracle_text": "Haste",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "power": "2",
+      "toughness": "1"
+    },
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Bear",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Hill Giant": {
+      "name": "Hill Giant",
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Giant",
+      "mana_cost": "{3}{R}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Insect": {
+      "name": "Insect",
+      "oracle_id": "ff591c1f-732b-432d-b458-4f19c8f707c5",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Insect",
+      "mana_cost": "",
+      "oracle_text": "Flying",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B",
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Island": {
+      "name": "Island",
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Island",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {U}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{R}",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0
+    },
+    "Llanowar Elves": {
+      "name": "Llanowar Elves",
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "mana_cost": "",
+      "oracle_text": "{T}: Add {G}.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mogg Raider": {
+      "name": "Mogg Raider",
+      "oracle_id": "240746f5-caab-46b9-914f-c2c7ecce6ca9",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Goblin",
+      "mana_cost": "{R}",
+      "oracle_text": "Sacrifice a Goblin: Target creature gets +1/+1 until end of turn.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mountain": {
+      "name": "Mountain",
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Mountain",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {R}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Phyrexian Hulk": {
+      "name": "Phyrexian Hulk",
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Phyrexian Golem",
+      "mana_cost": "{6}",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [],
+      "cmc": 6.0,
+      "power": "5",
+      "toughness": "4"
+    },
+    "Plains": {
+      "name": "Plains",
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "layout": "normal",
+      "type_line": "Basic Land \u2014 Plains",
+      "mana_cost": "",
+      "oracle_text": "({T}: Add {W}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Seal of Cleansing": {
+      "name": "Seal of Cleansing",
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "layout": "normal",
+      "type_line": "Enchantment",
+      "mana_cost": "{1}{W}",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "layout": "normal",
+      "type_line": "Artifact",
+      "mana_cost": "{1}",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 1.0
+    },
+    "Unsummon": {
+      "name": "Unsummon",
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "layout": "normal",
+      "type_line": "Instant",
+      "mana_cost": "{U}",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 1.0
+    },
+    "Wall of Ice": {
+      "name": "Wall of Ice",
+      "oracle_id": "1945e165-7636-4727-89ba-3811251ef175",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Wall",
+      "mana_cost": "{2}{G}",
+      "oracle_text": "Defender (This creature can't attack.)",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "power": "0",
+      "toughness": "7"
+    },
+    "Wall of Spears": {
+      "name": "Wall of Spears",
+      "oracle_id": "ed836d84-ff1e-4af8-b4b8-314569b3faec",
+      "layout": "normal",
+      "type_line": "Artifact Creature \u2014 Wall",
+      "mana_cost": "{3}",
+      "oracle_text": "Defender (This creature can't attack.)\nFirst strike",
+      "keywords": [
+        "First strike",
+        "Defender"
+      ],
+      "colors": [],
+      "cmc": 3.0,
+      "power": "2",
+      "toughness": "3"
+    },
+    "War Mammoth": {
+      "name": "War Mammoth",
+      "oracle_id": "b2a8fcf9-2ec2-40a9-9955-90f8605b11a3",
+      "layout": "normal",
+      "type_line": "Creature \u2014 Elephant",
+      "mana_cost": "{3}{G}",
+      "oracle_text": "Trample",
+      "keywords": [
+        "Trample"
+      ],
+      "colors": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "power": "3",
+      "toughness": "3"
+    },
+    "Zombie": {
+      "name": "Zombie",
+      "oracle_id": "ec6e76e8-e80e-4534-990a-03c3bbeda53a",
+      "layout": "token",
+      "type_line": "Token Creature \u2014 Zombie",
+      "mana_cost": "",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "power": "*",
+      "toughness": "*"
+    }
+  },
+  "profiles": {
+    "Bone Splinters": {
+      "csvid": 9926,
+      "source": {
+        "name": "Bone Splinters",
+        "oracle_id": "0c936582-d4c0-4da8-bc7e-49da5a433939",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Bone Splinters",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "destroy",
+        "target": "creature",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Shard Volley": {
+      "csvid": 1541,
+      "source": {
+        "name": "Shard Volley",
+        "oracle_id": "3d19ab38-fb32-4f2b-b68c-28db4a6864c6",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a land.\nShard Volley deals 3 damage to any target.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Shard Volley",
+        "kind": "cost_effect",
+        "cost_scope": "land",
+        "cost_count": 1,
+        "effect": "damage",
+        "target": "any",
+        "amount": 3,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Tormented Thoughts": {
+      "csvid": 13998,
+      "source": {
+        "name": "Tormented Thoughts",
+        "oracle_id": "18aee20d-ab73-4fdb-a65c-101beae5fcf5",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nTarget player discards a number of cards equal to the sacrificed creature's power.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Tormented Thoughts",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "discard",
+        "target": "player",
+        "amount": "cost_power",
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Consuming Vapors": {
+      "csvid": 10892,
+      "source": {
+        "name": "Consuming Vapors",
+        "oracle_id": "a10ce333-48d7-499b-9355-f381f2395497",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{3}{B}",
+        "oracle_text": "Target player sacrifices a creature of their choice. You gain life equal to that creature's toughness.\nRebound (If you cast this spell from your hand, exile it as it resolves. At the beginning of your next upkeep, you may cast this card from exile without paying its mana cost.)",
+        "keywords": [
+          "Rebound"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Consuming Vapors",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "sacrificed_toughness",
+        "secondary_loss": 0,
+        "source_destination": "exile",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "Rebound next-upkeep free recast",
+          "replacement and death triggers",
+          "multiplayer"
+        ]
+      }
+    },
+    "Crackling Doom": {
+      "csvid": 14244,
+      "source": {
+        "name": "Crackling Doom",
+        "oracle_id": "ee81f37b-2a81-46d7-8d2f-9091123846c4",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{R}{W}{B}",
+        "oracle_text": "Crackling Doom deals 2 damage to each opponent. Each opponent sacrifices a creature with the greatest power among creatures that player controls.",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R",
+          "W"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Crackling Doom",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "none",
+        "amount": 0,
+        "recipient": "opponents",
+        "scope": "highest_power_creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 2,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ],
+        "scripted_sacrifice": {
+          "0": true,
+          "1": true
+        }
+      }
+    },
+    "Kuldotha Rebirth": {
+      "csvid": 11293,
+      "source": {
+        "name": "Kuldotha Rebirth",
+        "oracle_id": "f3e28778-0149-4dbd-badb-ba5aeacacd76",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact.\nCreate three 1/1 red Goblin creature tokens.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Kuldotha Rebirth",
+        "kind": "cost_effect",
+        "cost_scope": "artifact",
+        "cost_count": 1,
+        "effect": "tokens",
+        "target": "none",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": {
+          "name": "Goblin",
+          "count": 3,
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "R"
+          ],
+          "subtypes": [
+            "Goblin"
+          ],
+          "keywords": []
+        },
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Artillerize": {
+      "csvid": 11562,
+      "source": {
+        "name": "Artillerize",
+        "oracle_id": "d14a8d90-13c0-4eb0-ab7b-86edb2c7fb96",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{3}{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact or creature.\nArtillerize deals 5 damage to any target.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Artillerize",
+        "kind": "cost_effect",
+        "cost_scope": "artifact_or_creature",
+        "cost_count": 1,
+        "effect": "damage",
+        "target": "any",
+        "amount": 5,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Goblin Grenade": {
+      "csvid": 1783,
+      "source": {
+        "name": "Goblin Grenade",
+        "oracle_id": "20aecb7b-7e37-4efe-ac27-f9f9042203f4",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a Goblin.\nGoblin Grenade deals 5 damage to any target.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Goblin Grenade",
+        "kind": "cost_effect",
+        "cost_scope": "goblin",
+        "cost_count": 1,
+        "effect": "damage",
+        "target": "any",
+        "amount": 5,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Magma Rift": {
+      "csvid": 10600,
+      "source": {
+        "name": "Magma Rift",
+        "oracle_id": "0996d48a-f92a-4aaf-b8a3-f7ec8ff986ca",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a land.\nMagma Rift deals 5 damage to target creature.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Magma Rift",
+        "kind": "cost_effect",
+        "cost_scope": "land",
+        "cost_count": 1,
+        "effect": "damage",
+        "target": "creature",
+        "amount": 5,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Reckless Abandon": {
+      "csvid": 4177,
+      "source": {
+        "name": "Reckless Abandon",
+        "oracle_id": "f24d5187-0f80-4528-bf44-03ae146f3551",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nReckless Abandon deals 4 damage to any target.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Reckless Abandon",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "damage",
+        "target": "any",
+        "amount": 4,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Shrapnel Blast": {
+      "csvid": 1534,
+      "source": {
+        "name": "Shrapnel Blast",
+        "oracle_id": "d3c623f3-c7c9-47c0-8096-6dee3267baff",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact.\nShrapnel Blast deals 5 damage to any target.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Shrapnel Blast",
+        "kind": "cost_effect",
+        "cost_scope": "artifact",
+        "cost_count": 1,
+        "effect": "damage",
+        "target": "any",
+        "amount": 5,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Collateral Damage": {
+      "csvid": 14530,
+      "source": {
+        "name": "Collateral Damage",
+        "oracle_id": "b89dd47e-0f65-41f0-ad23-cefc61e68978",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nCollateral Damage deals 3 damage to any target.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Collateral Damage",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "damage",
+        "target": "any",
+        "amount": 3,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Fiery Conclusion": {
+      "csvid": 7840,
+      "source": {
+        "name": "Fiery Conclusion",
+        "oracle_id": "91af3c81-615a-4b89-acf2-34c72001ebbd",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nFiery Conclusion deals 5 damage to target creature.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Fiery Conclusion",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "damage",
+        "target": "creature",
+        "amount": 5,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Final Strike": {
+      "csvid": 2823,
+      "source": {
+        "name": "Final Strike",
+        "oracle_id": "4d98aea2-b4ff-4903-ba28-a53fbfaad6b1",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{B}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nFinal Strike deals damage to target opponent or planeswalker equal to the sacrificed creature's power.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Final Strike",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "damage",
+        "target": "opponent",
+        "amount": "cost_power",
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Thud": {
+      "csvid": 19031,
+      "source": {
+        "name": "Thud",
+        "oracle_id": "5d2a9859-1353-4431-9343-f5999450acd1",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nThud deals damage equal to the sacrificed creature's power to any target.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "profile": "Thud",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "damage",
+        "target": "any",
+        "amount": "cost_power",
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Rite of Consumption": {
+      "csvid": 9651,
+      "source": {
+        "name": "Rite of Consumption",
+        "oracle_id": "327121a1-f193-44c6-a834-802095abec84",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{1}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nRite of Consumption deals damage equal to the sacrificed creature's power to target player or planeswalker. You gain life equal to the damage dealt this way.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Rite of Consumption",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "damage",
+        "target": "player",
+        "amount": "cost_power",
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "dealt",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Phyrexian Tribute": {
+      "csvid": 2560,
+      "source": {
+        "name": "Phyrexian Tribute",
+        "oracle_id": "c06b993b-a36a-412a-a732-d678a4179791",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice two creatures.\nDestroy target artifact.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Phyrexian Tribute",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 2,
+        "effect": "destroy",
+        "target": "artifact",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Launch Party": {
+      "csvid": 12765,
+      "source": {
+        "name": "Launch Party",
+        "oracle_id": "f713a6b4-bd9c-4bc3-9e00-26ecf16e4a92",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{3}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature. Its controller loses 2 life.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Launch Party",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "destroy",
+        "target": "creature",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 2,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Flesh Allergy": {
+      "csvid": 11254,
+      "source": {
+        "name": "Flesh Allergy",
+        "oracle_id": "bd3ce6a2-9efc-4dab-a357-9f2aa0a4c0c6",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{B}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nDestroy target creature. Its controller loses life equal to the number of creatures that died this turn.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Flesh Allergy",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "destroy",
+        "target": "creature",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": "deaths",
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Angelic Purge": {
+      "csvid": 15735,
+      "source": {
+        "name": "Angelic Purge",
+        "oracle_id": "b262a057-9ace-48b4-b418-1bb751ccb300",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{W}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a permanent.\nExile target artifact, creature, or enchantment.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Angelic Purge",
+        "kind": "cost_effect",
+        "cost_scope": "permanent",
+        "cost_count": 1,
+        "effect": "exile",
+        "target": "artifact_creature_enchantment",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Incendiary Sabotage": {
+      "csvid": 16413,
+      "source": {
+        "name": "Incendiary Sabotage",
+        "oracle_id": "28da6443-4acc-4f1c-a54f-9153286f18c4",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{2}{R}{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice an artifact.\nIncendiary Sabotage deals 3 damage to each creature.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Incendiary Sabotage",
+        "kind": "cost_effect",
+        "cost_scope": "artifact",
+        "cost_count": 1,
+        "effect": "mass_damage",
+        "target": "none",
+        "amount": 3,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Ichor Explosion": {
+      "csvid": 11616,
+      "source": {
+        "name": "Ichor Explosion",
+        "oracle_id": "d33aa11b-011b-4d12-85a9-4f956153fb1d",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{5}{B}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nAll creatures get -X/-X until end of turn, where X is the sacrificed creature's power.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 7.0
+      },
+      "params": {
+        "profile": "Ichor Explosion",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "mass_stats",
+        "target": "none",
+        "amount": "cost_power",
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Soulblast": {
+      "csvid": 7391,
+      "source": {
+        "name": "Soulblast",
+        "oracle_id": "18d4c57b-e2bf-47a0-8823-c4a79498a7ff",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{3}{R}{R}{R}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice all creatures you control.\nSoulblast deals damage to any target equal to the total power of the sacrificed creatures.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 6.0
+      },
+      "params": {
+        "profile": "Soulblast",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": "all",
+        "effect": "damage",
+        "target": "any",
+        "amount": "cost_power",
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": false,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Carrion": {
+      "csvid": 2424,
+      "source": {
+        "name": "Carrion",
+        "oracle_id": "84ca8d74-95ec-4a9c-8793-7a195ad28be9",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{B}{B}",
+        "oracle_text": "As an additional cost to cast this spell, sacrifice a creature.\nCreate X 0/1 black Insect creature tokens, where X is the sacrificed creature's power.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Carrion",
+        "kind": "cost_effect",
+        "cost_scope": "creature",
+        "cost_count": 1,
+        "effect": "tokens",
+        "target": "none",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": {
+          "name": "Insect",
+          "count": "cost_power",
+          "power": 0,
+          "toughness": 1,
+          "colors": [
+            "B"
+          ],
+          "subtypes": [
+            "Insect"
+          ],
+          "keywords": []
+        },
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Exile into Darkness": {
+      "csvid": 7638,
+      "source": {
+        "name": "Exile into Darkness",
+        "oracle_id": "bfa21cbc-8a04-4456-bf02-bae6b514d50a",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{4}{B}",
+        "oracle_text": "Target player sacrifices a creature of their choice with mana value 3 or less.\nAt the beginning of your upkeep, if you have more cards in hand than each opponent, you may return this card from your graveyard to your hand.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "profile": "Exile into Darkness",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature_mv3",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "Next-upkeep optional graveyard return",
+          "replacement and death triggers",
+          "multiplayer"
+        ]
+      }
+    },
+    "Structural Collapse": {
+      "csvid": 13075,
+      "source": {
+        "name": "Structural Collapse",
+        "oracle_id": "de97ec82-d09d-440e-8c7d-a3f0fb552418",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{5}{R}",
+        "oracle_text": "Target player sacrifices an artifact and a land of their choice. Structural Collapse deals 2 damage to that player.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 6.0
+      },
+      "params": {
+        "profile": "Structural Collapse",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "artifact_land",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 2,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ],
+        "sacrifice_order": [
+          "land",
+          "artifact"
+        ]
+      }
+    },
+    "Tectonic Break": {
+      "csvid": 4629,
+      "source": {
+        "name": "Tectonic Break",
+        "oracle_id": "4a3c6d0e-6d77-4434-95f4-737879de026f",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{X}{R}{R}",
+        "oracle_text": "Each player sacrifices X lands of their choice.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Tectonic Break",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "land",
+        "quantity": "x",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Thoughts of Ruin": {
+      "csvid": 7758,
+      "source": {
+        "name": "Thoughts of Ruin",
+        "oracle_id": "bb9e1d12-ebcc-4a8a-baef-9f69638a51cd",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{2}{R}{R}",
+        "oracle_text": "Each player sacrifices a land of their choice for each card in your hand.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Thoughts of Ruin",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "none",
+        "amount": 0,
+        "recipient": "both",
+        "scope": "land",
+        "quantity": "hand",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Urborg Justice": {
+      "csvid": 3061,
+      "source": {
+        "name": "Urborg Justice",
+        "oracle_id": "d8e2dea9-0e96-4ce4-a070-9893f44cf0cc",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{B}{B}",
+        "oracle_text": "Target opponent sacrifices a creature of their choice for each creature put into your graveyard from the battlefield this turn.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "profile": "Urborg Justice",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "opponent",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "creature",
+        "quantity": "deaths",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and death triggers",
+          "protection beyond reviewed controls",
+          "planeswalker targets",
+          "token combat/keyword functions",
+          "multiplayer"
+        ]
+      }
+    },
+    "Curse of the Cabal": {
+      "csvid": 8512,
+      "source": {
+        "name": "Curse of the Cabal",
+        "oracle_id": "cafede0d-aa14-4266-b619-321ac756262d",
+        "layout": "normal",
+        "type_line": "Sorcery",
+        "mana_cost": "{9}{B}",
+        "oracle_text": "Target player sacrifices half the permanents they control of their choice, rounded down.\nSuspend 2\u2014{2}{B}{B} (Rather than cast this card from your hand, you may pay {2}{B}{B} and exile it with two time counters on it. At the beginning of your upkeep, remove a time counter. When the last is removed, you may cast it without paying its mana cost.)\nAt the beginning of each player's upkeep, if this card is suspended, that player may sacrifice a permanent of their choice. If the player does, put two time counters on this card.",
+        "keywords": [
+          "Suspend"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 10.0
+      },
+      "params": {
+        "profile": "Curse of the Cabal",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "target",
+        "scope": "permanent",
+        "quantity": "half_floor",
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "Suspend alternate casting, suspended upkeep sacrifice/time counters",
+          "normal-cost fixture has only one black mana, preventing its double-black suspend payment",
+          "replacement and death triggers",
+          "multiplayer"
+        ],
+        "normal_black_cap": 1
+      }
+    }
+  }
+}

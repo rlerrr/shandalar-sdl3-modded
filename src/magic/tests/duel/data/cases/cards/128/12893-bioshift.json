@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Bioshift",
+  "csvid": 12893,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "transfer",
+        "inactive_components": [
+          "Creature controller changes while pending and counter types other than +1/+1 are not selected. Both-controller full-transfer branches select all counters; human zero/partial branches additionally select an amount. AI zero/partial inputs are not offered by the current handler."
+        ]
+      },
+      "oracle_text": "Move any number of +1/+1 counters from target creature onto another target creature with the same controller.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "countered_0",
+        "selection_pending_0",
+        "lost_target_0",
+        "two_copies_0",
+        "preexisting_0",
+        "opponent_0",
+        "blue_payment_0",
+        "empty_donor_0",
+        "wrong_controller_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "countered_1",
+        "selection_pending_1",
+        "lost_target_1",
+        "two_copies_1",
+        "preexisting_1",
+        "opponent_1",
+        "blue_payment_1",
+        "empty_donor_1",
+        "wrong_controller_1",
+        "partial_amount_0",
+        "zero_amount_0"
+      ]
+    }
+  ]
+}

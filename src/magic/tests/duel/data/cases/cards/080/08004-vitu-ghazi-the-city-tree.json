@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "card": "Vitu-Ghazi, the City-Tree",
+  "csvid": 8004,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 1,
+        "mechanism": "land_activation",
+        "token": {
+          "name": "Saproling",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Saproling"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "amount": {
+          "fixed": 1
+        },
+        "activation": {
+          "mana": [
+            2,
+            0,
+            0,
+            1,
+            0,
+            1
+          ],
+          "tap": true,
+          "sacrifice": false
+        },
+        "operative": [
+          {
+            "kind": "tap_add_colorless",
+            "amount": 1
+          }
+        ],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "{T}: Add {C}.\n{2}{G}{W}, {T}: Create a 1/1 green Saproling creature token.",
+      "variants": [
+        "create_0",
+        "payment_0",
+        "ready_snapshot_0",
+        "cleanup_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "land_entry_0",
+        "mana_ability_0",
+        "tapped_denied_0",
+        "source_removed_0",
+        "repeat_0",
+        "activation_snapshot_0",
+        "create_1",
+        "payment_1",
+        "ready_snapshot_1",
+        "cleanup_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "land_entry_1",
+        "mana_ability_1",
+        "tapped_denied_1",
+        "source_removed_1",
+        "repeat_1",
+        "activation_snapshot_1"
+      ]
+    }
+  ]
+}

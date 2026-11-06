@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Dimir Charm",
+  "csvid": 12925,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "sorcery"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Destroy-creature and library-selection modes are not selected.",
+          "Invalid counter-mode availability when another mode is legal remains untested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              0
+            ],
+            "1": [
+              0
+            ]
+          },
+          "auxiliary": [
+            {
+              "name": "Ornithopter",
+              "ref": "mode_other",
+              "player": 0,
+              "zone": "battlefield"
+            }
+          ],
+          "present_ai_dialogs": true
+        }
+      },
+      "oracle_text": "Choose one \u2014\n\u2022 Counter target sorcery spell.\n\u2022 Destroy target creature with power 2 or less.\n\u2022 Look at the top three cards of target player's library. Put one back and the rest into that player's graveyard.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source identity and Oracle text are pinned. Actual parent and response casts use stack1/stack2 and normal legality, payment and selection for both controllers. Tests cover printed fixed or derived taxes, pay/decline/exact/unaffordable decisions, source costs and missing resources, typed targets, own/opposing spells, selected/unselected permanents, exact zone multiplicities and ordered libraries, and snapshot replay as applicable. Destroy-creature and library-selection modes are not selected. Invalid counter-mode availability when another mode is legal remains untested. Countered response sources, lost targets, replacement/prevention, simultaneous responses and multiplayer remain separate gaps."
+}

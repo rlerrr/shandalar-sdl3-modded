@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Mystical Teachings",
+  "csvid": 8614,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "flashback",
+        "effect": "search_instant",
+        "additional_components": [
+          "Public reveal UI is not observed; selected identity and complete hand/library conservation are asserted."
+        ],
+        "flash_witness": "Ashcoat Bear"
+      },
+      "oracle_text": "Search your library for an instant card or a card with flash, reveal it, put it into your hand, then shuffle.\nFlashback {5}{B} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "short_library_0",
+        "opposing_turn_0",
+        "query_purity_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "repeat_0",
+        "empty_library_0",
+        "alternate_0",
+        "decline_search_0",
+        "wrong_type_library_0",
+        "predicate_library_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "short_library_1",
+        "opposing_turn_1",
+        "query_purity_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "repeat_1",
+        "empty_library_1",
+        "alternate_1",
+        "decline_search_1",
+        "wrong_type_library_1",
+        "predicate_library_1"
+      ]
+    }
+  ]
+}

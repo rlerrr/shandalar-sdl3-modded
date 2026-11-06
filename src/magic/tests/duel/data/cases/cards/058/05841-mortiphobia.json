@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "card": "Mortiphobia",
+  "csvid": 5841,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "params": {
+        "mode": "activation",
+        "quantity": "one",
+        "scope": "card",
+        "graveyard": "any",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "{1}{B}",
+          "tap": false,
+          "sacrifice": true,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [
+            1
+          ],
+          "dialogs_require_hand": true
+        },
+        "additional_components": [
+          "The discard-card alternative ability."
+        ]
+      },
+      "oracle_text": "{1}{B}, Discard a card: Exile target card from a graveyard.\n{1}{B}, Sacrifice this enchantment: Exile target card from a graveyard.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "empty_graveyards_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "alternate_0",
+        "own_target_0",
+        "sole_own_graveyard_0",
+        "sole_opponent_graveyard_0",
+        "cast_source_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "fresh_activation_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "effect_1",
+        "payment_1",
+        "empty_graveyards_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "alternate_1",
+        "own_target_1",
+        "sole_own_graveyard_1",
+        "sole_opponent_graveyard_1",
+        "cast_source_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "fresh_activation_1",
+        "insufficient_mana_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

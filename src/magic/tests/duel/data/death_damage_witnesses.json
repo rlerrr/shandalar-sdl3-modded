@@ -1,0 +1,133 @@
+{
+  "version": 1,
+  "cards": {
+    "Scaled Wurm": {
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "mana_cost": "{7}{G}",
+      "oracle_text": "",
+      "type_line": "Creature \u2014 Wurm",
+      "power": "7",
+      "toughness": "6",
+      "keywords": [],
+      "colors": [
+        "G"
+      ]
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "mana_cost": "{1}{G}",
+      "oracle_text": "",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ]
+    },
+    "Eager Cadet": {
+      "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+      "mana_cost": "{W}",
+      "oracle_text": "",
+      "type_line": "Creature \u2014 Human Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ]
+    },
+    "Darksteel Myr": {
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "mana_cost": "{3}",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "type_line": "Artifact Creature \u2014 Myr",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": []
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "mana_cost": "{1}{B}{B}",
+      "oracle_text": "Destroy target creature.",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ]
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "mana_cost": "{W}",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ]
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "mana_cost": "{U}",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ]
+    },
+    "Cloudshift": {
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "mana_cost": "{W}",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ]
+    },
+    "Essence Scatter": {
+      "oracle_id": "46665089-aa3d-44c3-964d-6638dfbb5782",
+      "mana_cost": "{1}{U}",
+      "oracle_text": "Counter target creature spell.",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ]
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "mana_cost": "{R}",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ]
+    },
+    "Grasp of Darkness": {
+      "oracle_id": "494c819d-7d73-432b-8c96-4cb9dcd31094",
+      "mana_cost": "{B}{B}",
+      "oracle_text": "Target creature gets -4/-4 until end of turn.",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ]
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "mana_cost": "{U}",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ]
+    }
+  }
+}

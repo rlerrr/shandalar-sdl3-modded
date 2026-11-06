@@ -1,0 +1,2080 @@
+{
+  "version": 1,
+  "profiles": {
+    "Reap What Is Sown": {
+      "source": {
+        "name": "Reap What Is Sown",
+        "oracle_id": "dd6cec11-5c66-4f0e-a12f-9b483a09a777",
+        "oracle_text": "Put a +1/+1 counter on each of up to three target creatures.",
+        "mana_cost": "{1}{G}{W}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "fixed",
+        "amounts": [
+          1,
+          1,
+          1
+        ],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": []
+      }
+    },
+    "Incremental Growth": {
+      "source": {
+        "name": "Incremental Growth",
+        "oracle_id": "802ff367-e52e-4f79-aa0f-96c45fe477a0",
+        "oracle_text": "Put a +1/+1 counter on target creature, two +1/+1 counters on another target creature, and three +1/+1 counters on a third target creature.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "fixed",
+        "amounts": [
+          1,
+          2,
+          3
+        ],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": []
+      }
+    },
+    "Elven Rite": {
+      "source": {
+        "name": "Elven Rite",
+        "oracle_id": "755dbf29-7484-444f-b5df-29ec4b4bbc82",
+        "oracle_text": "Distribute two +1/+1 counters among one or two target creatures.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "distribute",
+        "amounts": [
+          1,
+          1
+        ],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": []
+      }
+    },
+    "Solidarity of Heroes": {
+      "source": {
+        "name": "Solidarity of Heroes",
+        "oracle_id": "3319b2df-7354-44b5-afa1-b9bc4a577254",
+        "oracle_text": "Strive — This spell costs {1}{G} more to cast for each target beyond the first.\nChoose any number of target creatures. Double the number of +1/+1 counters on each of them.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [
+          "Double",
+          "Strive"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "double",
+        "amounts": [
+          0
+        ],
+        "strive_cost": "{1}{G}",
+        "mode_choices": [],
+        "inactive_components": [
+          "Controller1 zero-counter target control is pending because the legacy AI casting path requires a counter; human zero-counter and productive casts for both controllers are covered."
+        ],
+        "deferred_variants": [
+          "counterless_1"
+        ]
+      }
+    },
+    "Mutant's Prey": {
+      "source": {
+        "name": "Mutant's Prey",
+        "oracle_id": "3836cf33-bd1d-485d-94a2-85ea210ddf7a",
+        "oracle_text": "Target creature you control with a +1/+1 counter on it fights target creature an opponent controls. (Each deals damage equal to its power to the other.)",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "fight",
+        "amounts": [
+          0
+        ],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": []
+      }
+    },
+    "Grave Strength": {
+      "source": {
+        "name": "Grave Strength",
+        "oracle_id": "feb2f08e-79c7-4d51-bf55-e649f5ff5e07",
+        "oracle_text": "Choose target creature. Mill three cards, then put a +1/+1 counter on that creature for each creature card in your graveyard. (To mill three cards, put the top three cards of your library into your graveyard.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "mill_counters",
+        "amounts": [
+          0
+        ],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": []
+      }
+    },
+    "Inspiring Call": {
+      "source": {
+        "name": "Inspiring Call",
+        "oracle_id": "9b9a10ff-5a5d-4df8-88aa-18d84ff9117c",
+        "oracle_text": "Draw a card for each creature you control with a +1/+1 counter on it. Those creatures gain indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy them.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "draw_indestructible",
+        "amounts": [],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": []
+      }
+    },
+    "Subtle Strike": {
+      "source": {
+        "name": "Subtle Strike",
+        "oracle_id": "08122109-6287-4d78-9242-2da8a25022b0",
+        "oracle_text": "Choose one or both —\n• Target creature gets -1/-1 until end of turn.\n• Put a +1/+1 counter on target creature.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "B"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "fixed",
+        "amounts": [
+          1
+        ],
+        "strive_cost": "",
+        "mode_choices": [
+          1
+        ],
+        "inactive_components": [
+          "The -1/-1 mode and choosing both modes are not selected."
+        ]
+      }
+    },
+    "Nature's Panoply": {
+      "source": {
+        "name": "Nature's Panoply",
+        "oracle_id": "b3126751-27fe-42d3-a001-33ecee72b528",
+        "oracle_text": "Strive — This spell costs {2}{G} more to cast for each target beyond the first.\nChoose any number of target creatures. Put a +1/+1 counter on each of them.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [
+          "Strive"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "fixed",
+        "amounts": [
+          1
+        ],
+        "strive_cost": "{2}{G}",
+        "mode_choices": [],
+        "inactive_components": []
+      }
+    },
+    "Blessings of Nature": {
+      "source": {
+        "name": "Blessings of Nature",
+        "oracle_id": "1e77cf90-ac51-4ac7-b123-be04aabe1688",
+        "oracle_text": "Distribute four +1/+1 counters among any number of target creatures.\nMiracle {G} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Miracle"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "allocated",
+        "amounts": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": [
+          "Miracle alternative cost and first-draw trigger; ordinary hand casts pay {4}{G}."
+        ],
+        "target_roles": [
+          "first",
+          "first",
+          "second",
+          "third"
+        ]
+      }
+    },
+    "Verdant Confluence": {
+      "source": {
+        "name": "Verdant Confluence",
+        "oracle_id": "0f786c99-d245-4b11-bcce-6e13fb1255cc",
+        "oracle_text": "Choose three. You may choose the same mode more than once.\n• Put two +1/+1 counters on target creature.\n• Return target permanent card from your graveyard to your hand.\n• Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "allocated",
+        "amounts": [
+          2,
+          2,
+          2
+        ],
+        "strive_cost": "",
+        "mode_choices": [
+          0,
+          0,
+          0
+        ],
+        "inactive_components": [
+          "The graveyard recovery and land search modes are not selected; counter mode is selected three times."
+        ],
+        "target_roles": [
+          "first",
+          "second",
+          "third"
+        ]
+      }
+    },
+    "Collective Effort": {
+      "source": {
+        "name": "Collective Effort",
+        "oracle_id": "a97e760a-99c8-47ea-a875-451aca913ee7",
+        "oracle_text": "Escalate—Tap an untapped creature you control. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Destroy target creature with power 4 or greater.\n• Destroy target enchantment.\n• Put a +1/+1 counter on each creature target player controls.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Escalate"
+        ],
+        "colors": [
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "team",
+        "amounts": [
+          1
+        ],
+        "strive_cost": "",
+        "mode_choices": [
+          2,
+          1
+        ],
+        "inactive_components": [
+          "Other modes and Escalate are declined; only the chosen-player team counter mode is selected."
+        ]
+      }
+    },
+    "Clutch of Currents": {
+      "source": {
+        "name": "Clutch of Currents",
+        "oracle_id": "2c6658c3-8c0e-46c9-8127-bc5b77eb0dab",
+        "oracle_text": "Return target creature to its owner's hand.\nAwaken 3—{4}{U} (If you cast this spell for {4}{U}, also put three +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+        "mana_cost": "{U}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Awaken"
+        ],
+        "colors": [
+          "U"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "normal_component",
+        "amounts": [],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": [
+          "Awaken alternative cost, land animation, haste and its additional counters; all cases cast the ordinary spell without a controlled battlefield land."
+        ],
+        "component_family": "move_permanent",
+        "component_params": {
+          "targets": [
+            "creature"
+          ],
+          "destination": "hand"
+        },
+        "component_text": "Return target creature to its owner's hand."
+      }
+    },
+    "Coastal Discovery": {
+      "source": {
+        "name": "Coastal Discovery",
+        "oracle_id": "f7c84690-8c7c-41a6-b430-a9771030f903",
+        "oracle_text": "Draw two cards.\nAwaken 4—{5}{U} (If you cast this spell for {5}{U}, also put four +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Awaken"
+        ],
+        "colors": [
+          "U"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "normal_component",
+        "amounts": [],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": [
+          "Awaken alternative cost, land animation, haste and its additional counters; all cases cast the ordinary spell without a controlled battlefield land."
+        ],
+        "component_family": "draw_cards",
+        "component_params": {
+          "amount": 2
+        },
+        "component_text": "Draw two cards."
+      }
+    },
+    "Sheer Drop": {
+      "source": {
+        "name": "Sheer Drop",
+        "oracle_id": "7c42123d-c8e2-4571-b07d-f782e9ad1f8b",
+        "oracle_text": "Destroy target tapped creature.\nAwaken 3—{5}{W} (If you cast this spell for {5}{W}, also put three +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+        "mana_cost": "{2}{W}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Awaken"
+        ],
+        "colors": [
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "normal_component",
+        "amounts": [],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": [
+          "Awaken alternative cost, land animation, haste and its additional counters; all cases cast the ordinary spell without a controlled battlefield land."
+        ],
+        "component_family": "destroy_permanent",
+        "component_params": {
+          "targets": [
+            "creature"
+          ],
+          "target_tapped": true
+        },
+        "component_text": "Destroy target tapped creature."
+      }
+    },
+    "Abzan Advantage": {
+      "source": {
+        "name": "Abzan Advantage",
+        "oracle_id": "e7b2f844-2ba2-4465-bb80-358a4d915f36",
+        "oracle_text": "Target player sacrifices an enchantment of their choice. Bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [
+          "Bolster"
+        ],
+        "colors": [
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "sacrifice_bolster",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": []
+      }
+    },
+    "Map the Wastes": {
+      "source": {
+        "name": "Map the Wastes",
+        "oracle_id": "b845e69b-5d49-40ff-9cf7-d5cf2ccec7be",
+        "oracle_text": "Search your library for a basic land card, put it onto the battlefield tapped, then shuffle. Bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Bolster"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "tutor_bolster",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": []
+      }
+    },
+    "Pinion Feast": {
+      "source": {
+        "name": "Pinion Feast",
+        "oracle_id": "9812bdf9-98b6-4b4d-8381-a7bbb25069d8",
+        "oracle_text": "Destroy target creature with flying. Bolster 2. (Choose a creature with the least toughness among creatures you control and put two +1/+1 counters on it.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [
+          "Bolster"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "destroy_bolster",
+        "amount": 2,
+        "mode_choices": [],
+        "inactive_components": [],
+        "target_predicate": "flying"
+      }
+    },
+    "Enduring Victory": {
+      "source": {
+        "name": "Enduring Victory",
+        "oracle_id": "955ff3bf-4323-452e-a8b1-b7662034473d",
+        "oracle_text": "Destroy target attacking or blocking creature. Bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)",
+        "mana_cost": "{4}{W}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [
+          "Bolster"
+        ],
+        "colors": [
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "destroy_bolster",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": [],
+        "target_predicate": "combat"
+      }
+    },
+    "Dromoka's Command": {
+      "source": {
+        "name": "Dromoka's Command",
+        "oracle_id": "3bd8ea71-cbcc-4659-b9a8-88cf27ee12d8",
+        "oracle_text": "Choose two —\n• Prevent all damage target instant or sorcery spell would deal this turn.\n• Target player sacrifices an enchantment of their choice.\n• Put a +1/+1 counter on target creature.\n• Target creature you control fights target creature you don't control.",
+        "mana_cost": "{G}{W}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [
+          "Fight"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "counter_fight",
+        "amount": 1,
+        "mode_choices": [
+          2,
+          3
+        ],
+        "inactive_components": [
+          "Damage prevention and enchantment-sacrifice modes are not selected; the counter and fight modes are both fully modeled."
+        ]
+      }
+    },
+    "Misfortune": {
+      "source": {
+        "name": "Misfortune",
+        "oracle_id": "e282eb5b-f9e6-4fb3-9edf-44e23359357d",
+        "oracle_text": "An opponent chooses one —\n• You put a +1/+1 counter on each creature you control and gain 4 life.\n• You put a -1/-1 counter on each creature that player controls and Misfortune deals 4 damage to that player.",
+        "mana_cost": "{1}{B}{R}{G}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G",
+          "R"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "team_life",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": [
+          "The opponent-selected -1/-1 counters and damage mode is not selected; the opponent explicitly chooses the caster team-counter and gain4 mode."
+        ],
+        "gain_life": 4,
+        "resolution_mode": 0
+      }
+    },
+    "Tempt with Glory": {
+      "source": {
+        "name": "Tempt with Glory",
+        "oracle_id": "5a8dd1b7-b63e-4997-9fe8-5e8816bc051b",
+        "oracle_text": "Tempting offer — Put a +1/+1 counter on each creature you control. Each opponent may put a +1/+1 counter on each creature they control. For each opponent who does, put a +1/+1 counter on each creature you control.",
+        "mana_cost": "{5}{W}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Tempting offer"
+        ],
+        "colors": [
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "tempting_team",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": []
+      }
+    },
+    "Nissa's Judgment": {
+      "source": {
+        "name": "Nissa's Judgment",
+        "oracle_id": "14247820-5ecb-40bd-8dee-0625cc745ec2",
+        "oracle_text": "Support 2. (Put a +1/+1 counter on each of up to two target creatures.)\nChoose up to one target creature an opponent controls. Each creature you control with a +1/+1 counter on it deals damage equal to its power to that creature.",
+        "mana_cost": "{4}{G}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Support"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "support_damage",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": [
+          "Optional zero-Support-target and no-damage-target selections, and responses to the source, are not forced before cast-time Support target binding is verified; selection_pending independently asserts complete target-decision consumption while the spell is pending."
+        ]
+      }
+    },
+    "Bounty of the Hunt": {
+      "source": {
+        "name": "Bounty of the Hunt",
+        "oracle_id": "77a43c24-398f-42c6-a0d3-b28b33a0ce12",
+        "oracle_text": "You may exile a green card from your hand rather than pay this spell's mana cost.\nDistribute three +1/+1 counters among one, two, or three target creatures. For each +1/+1 counter you put on a creature this way, remove a +1/+1 counter from that creature at the beginning of the next cleanup step.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "temporary_allocation",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": [
+          "The exile-green-card alternative cost is not selected. Every positive cast explicitly selects and pays the printed normal mana cost; generic whole-spell denied-payment cases are omitted because the alternative remains available."
+        ],
+        "normal_cost_choice": 1
+      }
+    },
+    "Vigor Mortis": {
+      "source": {
+        "name": "Vigor Mortis",
+        "oracle_id": "6de27cba-5500-4448-abef-68e69fe519dc",
+        "oracle_text": "Return target creature card from your graveyard to the battlefield. If {G} was spent to cast this spell, that creature enters with an additional +1/+1 counter on it.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "B"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "reanimate",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": [],
+        "condition": "green_payment"
+      }
+    },
+    "Necromantic Summons": {
+      "source": {
+        "name": "Necromantic Summons",
+        "oracle_id": "2f921740-de98-4276-8196-47a38a1e4591",
+        "oracle_text": "Put target creature card from a graveyard onto the battlefield under your control.\nSpell mastery — If there are two or more instant and/or sorcery cards in your graveyard, that creature enters with two additional +1/+1 counters on it.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Spell mastery"
+        ],
+        "colors": [
+          "B"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "reanimate",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": [],
+        "condition": "spell_mastery"
+      }
+    },
+    "Cannibalize": {
+      "source": {
+        "name": "Cannibalize",
+        "oracle_id": "bf044267-92b9-4983-964f-2bc4ecf76bce",
+        "oracle_text": "Choose two target creatures controlled by the same player. Exile one of those creatures and put two +1/+1 counters on the other.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "B"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "exile_counter",
+        "amount": 2,
+        "mode_choices": [],
+        "inactive_components": []
+      }
+    },
+    "Fierce Invocation": {
+      "source": {
+        "name": "Fierce Invocation",
+        "oracle_id": "4e75fc29-68e3-41a9-9f59-adb4460663b2",
+        "oracle_text": "Manifest the top card of your library, then put two +1/+1 counters on it. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)",
+        "mana_cost": "{4}{R}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Manifest"
+        ],
+        "colors": [
+          "R"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "manifest",
+        "amount": 2,
+        "mode_choices": [],
+        "inactive_components": [
+          "Turning a manifested creature card face up for its mana cost and printed Morph costs are future optional actions outside these initial manifest casts."
+        ],
+        "variable": false,
+        "manifest_csvid": 13252
+      }
+    },
+    "Formless Nurturing": {
+      "source": {
+        "name": "Formless Nurturing",
+        "oracle_id": "ddbe6d9b-ea69-449c-a765-b3c16ff60c08",
+        "oracle_text": "Manifest the top card of your library, then put a +1/+1 counter on it. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Manifest"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "manifest",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": [
+          "Turning a manifested creature card face up for its mana cost and printed Morph costs are future optional actions outside these initial manifest casts."
+        ],
+        "variable": false,
+        "manifest_csvid": 13252
+      }
+    },
+    "Wildcall": {
+      "source": {
+        "name": "Wildcall",
+        "oracle_id": "d96ac790-428b-4a64-8dbd-6baa73eb6210",
+        "oracle_text": "Manifest the top card of your library, then put X +1/+1 counters on it. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)",
+        "mana_cost": "{X}{G}{G}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Manifest"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "manifest",
+        "amount": 0,
+        "mode_choices": [],
+        "inactive_components": [
+          "Turning a manifested creature card face up for its mana cost and printed Morph costs are future optional actions outside these initial manifest casts."
+        ],
+        "variable": true,
+        "manifest_csvid": 13252
+      }
+    }
+  },
+  "cards": {
+    "Arbor Armament": {
+      "name": "Arbor Armament",
+      "oracle_id": "504f21e8-82ac-4433-b5e9-640989480f58",
+      "oracle_text": "Put a +1/+1 counter on target creature. That creature gains reach until end of turn. (It can block creatures with flying.)",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ]
+    },
+    "Counterspell": {
+      "name": "Counterspell",
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "U"
+      ]
+    },
+    "Forest": {
+      "name": "Forest",
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "layout": "normal",
+      "keywords": [],
+      "colors": []
+    },
+    "Giant Growth": {
+      "name": "Giant Growth",
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ]
+    },
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "power": "2",
+      "toughness": "2"
+    },
+    "Hill Giant": {
+      "name": "Hill Giant",
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "power": "3",
+      "toughness": "3"
+    },
+    "Island": {
+      "name": "Island",
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "layout": "normal",
+      "keywords": [],
+      "colors": []
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "R"
+      ]
+    },
+    "Llanowar Elves": {
+      "name": "Llanowar Elves",
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "layout": "token",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mountain": {
+      "name": "Mountain",
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "layout": "normal",
+      "keywords": [],
+      "colors": []
+    },
+    "Murder": {
+      "name": "Murder",
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "B"
+      ]
+    },
+    "Plains": {
+      "name": "Plains",
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "layout": "normal",
+      "keywords": [],
+      "colors": []
+    },
+    "Savannah Lions": {
+      "name": "Savannah Lions",
+      "oracle_id": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Cat",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "power": "2",
+      "toughness": "1"
+    },
+    "Scaled Wurm": {
+      "name": "Scaled Wurm",
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "oracle_text": "",
+      "mana_cost": "{7}{G}",
+      "type_line": "Creature — Wurm",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "power": "7",
+      "toughness": "6"
+    },
+    "Shock": {
+      "name": "Shock",
+      "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+      "oracle_text": "Shock deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "R"
+      ]
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "layout": "normal",
+      "keywords": [],
+      "colors": []
+    },
+    "Unsummon": {
+      "name": "Unsummon",
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "U"
+      ]
+    },
+    "Wall of Stone": {
+      "name": "Wall of Stone",
+      "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+      "oracle_text": "Defender (This creature can't attack.)",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Wall",
+      "layout": "normal",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "R"
+      ],
+      "power": "0",
+      "toughness": "8"
+    },
+    "Blessings of Nature": {
+      "name": "Blessings of Nature",
+      "oracle_id": "1e77cf90-ac51-4ac7-b123-be04aabe1688",
+      "oracle_text": "Distribute four +1/+1 counters among any number of target creatures.\nMiracle {G} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
+      "mana_cost": "{4}{G}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Miracle"
+      ],
+      "colors": [
+        "G"
+      ]
+    },
+    "Elven Rite": {
+      "name": "Elven Rite",
+      "oracle_id": "755dbf29-7484-444f-b5df-29ec4b4bbc82",
+      "oracle_text": "Distribute two +1/+1 counters among one or two target creatures.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ]
+    },
+    "Incremental Growth": {
+      "name": "Incremental Growth",
+      "oracle_id": "802ff367-e52e-4f79-aa0f-96c45fe477a0",
+      "oracle_text": "Put a +1/+1 counter on target creature, two +1/+1 counters on another target creature, and three +1/+1 counters on a third target creature.",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ]
+    },
+    "Mutant's Prey": {
+      "name": "Mutant's Prey",
+      "oracle_id": "3836cf33-bd1d-485d-94a2-85ea210ddf7a",
+      "oracle_text": "Target creature you control with a +1/+1 counter on it fights target creature an opponent controls. (Each deals damage equal to its power to the other.)",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [
+        "Fight"
+      ],
+      "colors": [
+        "G"
+      ]
+    },
+    "Nature's Panoply": {
+      "name": "Nature's Panoply",
+      "oracle_id": "b3126751-27fe-42d3-a001-33ecee72b528",
+      "oracle_text": "Strive — This spell costs {2}{G} more to cast for each target beyond the first.\nChoose any number of target creatures. Put a +1/+1 counter on each of them.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [
+        "Strive"
+      ],
+      "colors": [
+        "G"
+      ]
+    },
+    "Reap What Is Sown": {
+      "name": "Reap What Is Sown",
+      "oracle_id": "dd6cec11-5c66-4f0e-a12f-9b483a09a777",
+      "oracle_text": "Put a +1/+1 counter on each of up to three target creatures.",
+      "mana_cost": "{1}{G}{W}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G",
+        "W"
+      ]
+    },
+    "Solidarity of Heroes": {
+      "name": "Solidarity of Heroes",
+      "oracle_id": "3319b2df-7354-44b5-afa1-b9bc4a577254",
+      "oracle_text": "Strive — This spell costs {1}{G} more to cast for each target beyond the first.\nChoose any number of target creatures. Double the number of +1/+1 counters on each of them.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [
+        "Double",
+        "Strive"
+      ],
+      "colors": [
+        "G"
+      ]
+    },
+    "Grave Strength": {
+      "name": "Grave Strength",
+      "oracle_id": "feb2f08e-79c7-4d51-bf55-e649f5ff5e07",
+      "oracle_text": "Choose target creature. Mill three cards, then put a +1/+1 counter on that creature for each creature card in your graveyard. (To mill three cards, put the top three cards of your library into your graveyard.)",
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "B"
+      ]
+    },
+    "Clutch of Currents": {
+      "name": "Clutch of Currents",
+      "oracle_id": "2c6658c3-8c0e-46c9-8127-bc5b77eb0dab",
+      "oracle_text": "Return target creature to its owner's hand.\nAwaken 3—{4}{U} (If you cast this spell for {4}{U}, also put three +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+      "mana_cost": "{U}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Awaken"
+      ],
+      "colors": [
+        "U"
+      ]
+    },
+    "Coastal Discovery": {
+      "name": "Coastal Discovery",
+      "oracle_id": "f7c84690-8c7c-41a6-b430-a9771030f903",
+      "oracle_text": "Draw two cards.\nAwaken 4—{5}{U} (If you cast this spell for {5}{U}, also put four +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+      "mana_cost": "{3}{U}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Awaken"
+      ],
+      "colors": [
+        "U"
+      ]
+    },
+    "Inspiring Call": {
+      "name": "Inspiring Call",
+      "oracle_id": "9b9a10ff-5a5d-4df8-88aa-18d84ff9117c",
+      "oracle_text": "Draw a card for each creature you control with a +1/+1 counter on it. Those creatures gain indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy them.)",
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ]
+    },
+    "Sheer Drop": {
+      "name": "Sheer Drop",
+      "oracle_id": "7c42123d-c8e2-4571-b07d-f782e9ad1f8b",
+      "oracle_text": "Destroy target tapped creature.\nAwaken 3—{5}{W} (If you cast this spell for {5}{W}, also put three +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+      "mana_cost": "{2}{W}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Awaken"
+      ],
+      "colors": [
+        "W"
+      ]
+    },
+    "Verdant Confluence": {
+      "name": "Verdant Confluence",
+      "oracle_id": "0f786c99-d245-4b11-bcce-6e13fb1255cc",
+      "oracle_text": "Choose three. You may choose the same mode more than once.\n• Put two +1/+1 counters on target creature.\n• Return target permanent card from your graveyard to your hand.\n• Search your library for a basic land card, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ]
+    },
+    "Collective Effort": {
+      "name": "Collective Effort",
+      "oracle_id": "a97e760a-99c8-47ea-a875-451aca913ee7",
+      "oracle_text": "Escalate—Tap an untapped creature you control. (Pay this cost for each mode chosen beyond the first.)\nChoose one or more —\n• Destroy target creature with power 4 or greater.\n• Destroy target enchantment.\n• Put a +1/+1 counter on each creature target player controls.",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Escalate"
+      ],
+      "colors": [
+        "W"
+      ]
+    },
+    "Subtle Strike": {
+      "name": "Subtle Strike",
+      "oracle_id": "08122109-6287-4d78-9242-2da8a25022b0",
+      "oracle_text": "Choose one or both —\n• Target creature gets -1/-1 until end of turn.\n• Put a +1/+1 counter on target creature.",
+      "mana_cost": "{1}{B}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "B"
+      ]
+    },
+    "Greed": {
+      "name": "Greed",
+      "oracle_id": "1ff62220-be95-4901-b8d8-812b9a1a1b0a",
+      "oracle_text": "{B}, Pay 2 life: Draw a card.",
+      "mana_cost": "{3}{B}",
+      "type_line": "Enchantment",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "B"
+      ]
+    },
+    "Suntail Hawk": {
+      "name": "Suntail Hawk",
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "layout": "normal",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "power": "1",
+      "toughness": "1"
+    },
+    "Wasteland": {
+      "name": "Wasteland",
+      "oracle_id": "09a70ae8-3859-4a09-901d-dce063fa3b5f",
+      "oracle_text": "{T}: Add {C}.\n{T}, Sacrifice this land: Destroy target nonbasic land.",
+      "mana_cost": "",
+      "type_line": "Land",
+      "layout": "normal",
+      "keywords": [],
+      "colors": []
+    },
+    "Misfortune": {
+      "name": "Misfortune",
+      "oracle_id": "e282eb5b-f9e6-4fb3-9edf-44e23359357d",
+      "oracle_text": "An opponent chooses one —\n• You put a +1/+1 counter on each creature you control and gain 4 life.\n• You put a -1/-1 counter on each creature that player controls and Misfortune deals 4 damage to that player.",
+      "mana_cost": "{1}{B}{R}{G}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "B",
+        "G",
+        "R"
+      ]
+    },
+    "Abzan Advantage": {
+      "name": "Abzan Advantage",
+      "oracle_id": "e7b2f844-2ba2-4465-bb80-358a4d915f36",
+      "oracle_text": "Target player sacrifices an enchantment of their choice. Bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [
+        "Bolster"
+      ],
+      "colors": [
+        "W"
+      ]
+    },
+    "Map the Wastes": {
+      "name": "Map the Wastes",
+      "oracle_id": "b845e69b-5d49-40ff-9cf7-d5cf2ccec7be",
+      "oracle_text": "Search your library for a basic land card, put it onto the battlefield tapped, then shuffle. Bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)",
+      "mana_cost": "{2}{G}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Bolster"
+      ],
+      "colors": [
+        "G"
+      ]
+    },
+    "Dromoka's Command": {
+      "name": "Dromoka's Command",
+      "oracle_id": "3bd8ea71-cbcc-4659-b9a8-88cf27ee12d8",
+      "oracle_text": "Choose two —\n• Prevent all damage target instant or sorcery spell would deal this turn.\n• Target player sacrifices an enchantment of their choice.\n• Put a +1/+1 counter on target creature.\n• Target creature you control fights target creature you don't control.",
+      "mana_cost": "{G}{W}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [
+        "Fight"
+      ],
+      "colors": [
+        "G",
+        "W"
+      ]
+    },
+    "Enduring Victory": {
+      "name": "Enduring Victory",
+      "oracle_id": "955ff3bf-4323-452e-a8b1-b7662034473d",
+      "oracle_text": "Destroy target attacking or blocking creature. Bolster 1. (Choose a creature with the least toughness among creatures you control and put a +1/+1 counter on it.)",
+      "mana_cost": "{4}{W}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [
+        "Bolster"
+      ],
+      "colors": [
+        "W"
+      ]
+    },
+    "Pinion Feast": {
+      "name": "Pinion Feast",
+      "oracle_id": "9812bdf9-98b6-4b4d-8381-a7bbb25069d8",
+      "oracle_text": "Destroy target creature with flying. Bolster 2. (Choose a creature with the least toughness among creatures you control and put two +1/+1 counters on it.)",
+      "mana_cost": "{4}{G}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [
+        "Bolster"
+      ],
+      "colors": [
+        "G"
+      ]
+    },
+    "Elvish Warrior": {
+      "name": "Elvish Warrior",
+      "oracle_id": "da587161-da7e-48ae-8af6-7f02ee71afd8",
+      "oracle_text": "",
+      "mana_cost": "{G}{G}",
+      "type_line": "Creature — Elf Warrior",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "power": "2",
+      "toughness": "3"
+    },
+    "Craw Wurm": {
+      "name": "Craw Wurm",
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "oracle_text": "",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature — Wurm",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "power": "6",
+      "toughness": "4"
+    },
+    "Reclaim": {
+      "name": "Reclaim",
+      "oracle_id": "797155cd-faf4-4321-8629-c8c352392748",
+      "oracle_text": "Put target card from your graveyard on top of your library.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ]
+    },
+    "Bounty of the Hunt": {
+      "name": "Bounty of the Hunt",
+      "oracle_id": "77a43c24-398f-42c6-a0d3-b28b33a0ce12",
+      "oracle_text": "You may exile a green card from your hand rather than pay this spell's mana cost.\nDistribute three +1/+1 counters among one, two, or three target creatures. For each +1/+1 counter you put on a creature this way, remove a +1/+1 counter from that creature at the beginning of the next cleanup step.",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "G"
+      ]
+    },
+    "Tempt with Glory": {
+      "name": "Tempt with Glory",
+      "oracle_id": "5a8dd1b7-b63e-4997-9fe8-5e8816bc051b",
+      "oracle_text": "Tempting offer — Put a +1/+1 counter on each creature you control. Each opponent may put a +1/+1 counter on each creature they control. For each opponent who does, put a +1/+1 counter on each creature you control.",
+      "mana_cost": "{5}{W}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Tempting offer"
+      ],
+      "colors": [
+        "W"
+      ]
+    },
+    "Vigor Mortis": {
+      "name": "Vigor Mortis",
+      "oracle_id": "6de27cba-5500-4448-abef-68e69fe519dc",
+      "oracle_text": "Return target creature card from your graveyard to the battlefield. If {G} was spent to cast this spell, that creature enters with an additional +1/+1 counter on it.",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "B"
+      ]
+    },
+    "Necromantic Summons": {
+      "name": "Necromantic Summons",
+      "oracle_id": "2f921740-de98-4276-8196-47a38a1e4591",
+      "oracle_text": "Put target creature card from a graveyard onto the battlefield under your control.\nSpell mastery — If there are two or more instant and/or sorcery cards in your graveyard, that creature enters with two additional +1/+1 counters on it.",
+      "mana_cost": "{4}{B}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Spell mastery"
+      ],
+      "colors": [
+        "B"
+      ]
+    },
+    "Nissa's Judgment": {
+      "name": "Nissa's Judgment",
+      "oracle_id": "14247820-5ecb-40bd-8dee-0625cc745ec2",
+      "oracle_text": "Support 2. (Put a +1/+1 counter on each of up to two target creatures.)\nChoose up to one target creature an opponent controls. Each creature you control with a +1/+1 counter on it deals damage equal to its power to that creature.",
+      "mana_cost": "{4}{G}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Support"
+      ],
+      "colors": [
+        "G"
+      ]
+    },
+    "Cannibalize": {
+      "name": "Cannibalize",
+      "oracle_id": "bf044267-92b9-4983-964f-2bc4ecf76bce",
+      "oracle_text": "Choose two target creatures controlled by the same player. Exile one of those creatures and put two +1/+1 counters on the other.",
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "B"
+      ]
+    },
+    "Fierce Invocation": {
+      "name": "Fierce Invocation",
+      "oracle_id": "4e75fc29-68e3-41a9-9f59-adb4460663b2",
+      "oracle_text": "Manifest the top card of your library, then put two +1/+1 counters on it. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)",
+      "mana_cost": "{4}{R}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Manifest"
+      ],
+      "colors": [
+        "R"
+      ]
+    },
+    "Formless Nurturing": {
+      "name": "Formless Nurturing",
+      "oracle_id": "ddbe6d9b-ea69-449c-a765-b3c16ff60c08",
+      "oracle_text": "Manifest the top card of your library, then put a +1/+1 counter on it. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Manifest"
+      ],
+      "colors": [
+        "G"
+      ]
+    },
+    "Wildcall": {
+      "name": "Wildcall",
+      "oracle_id": "d96ac790-428b-4a64-8dbd-6baa73eb6210",
+      "oracle_text": "Manifest the top card of your library, then put X +1/+1 counters on it. (To manifest a card, put it onto the battlefield face down as a 2/2 creature. Turn it face up any time for its mana cost if it's a creature card.)",
+      "mana_cost": "{X}{G}{G}",
+      "type_line": "Sorcery",
+      "layout": "normal",
+      "keywords": [
+        "Manifest"
+      ],
+      "colors": [
+        "G"
+      ]
+    },
+    "Kami of Ancient Law": {
+      "name": "Kami of Ancient Law",
+      "oracle_id": "e937e0f5-ca35-4dce-9f05-8f2075731628",
+      "oracle_text": "Sacrifice this creature: Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Spirit",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "power": "2",
+      "toughness": "2"
+    },
+    "Darksteel Relic": {
+      "name": "Darksteel Relic",
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "layout": "normal",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": []
+    },
+    "Phyrexian Hulk": {
+      "name": "Phyrexian Hulk",
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "oracle_text": "",
+      "mana_cost": "{6}",
+      "type_line": "Artifact Creature — Phyrexian Golem",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [],
+      "power": "5",
+      "toughness": "4"
+    },
+    "Sky Skiff": {
+      "name": "Sky Skiff",
+      "oracle_id": "f2c43b85-8c42-4b23-84c2-bec8d6230039",
+      "oracle_text": "Flying\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)",
+      "mana_cost": "{2}",
+      "type_line": "Artifact — Vehicle",
+      "layout": "normal",
+      "keywords": [
+        "Flying",
+        "Crew"
+      ],
+      "colors": [],
+      "power": "2",
+      "toughness": "3"
+    },
+    "Disperse": {
+      "name": "Disperse",
+      "oracle_id": "9d8fe3f8-5027-4f9e-999e-e277caa96478",
+      "oracle_text": "Return target nonland permanent to its owner's hand.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "layout": "normal",
+      "keywords": [],
+      "colors": [
+        "U"
+      ]
+    }
+  },
+  "internal_identities": [
+    {
+      "name": "Face-Down Creature",
+      "csvid": 13252,
+      "handler": "manalinkeh_card_face_down_creature"
+    }
+  ],
+  "lifecycle_profiles": {
+    "Essence Flux": {
+      "csvid": 15807,
+      "source": {
+        "name": "Essence Flux",
+        "oracle_id": "64824ae5-efab-4b55-9d3c-b9c690bad857",
+        "oracle_text": "Exile target creature you control, then return that card to the battlefield under its owner's control. If it's a Spirit, put a +1/+1 counter on it.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "U"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_lifecycle",
+        "mode": "blink",
+        "controller": "self",
+        "protection_color": null,
+        "inactive_components": [
+          "Casting a control-changing spell is outside this draft. The existing opponent_owned fixture flag explicitly separates initial owner from controller; Spirit/non-Spirit return conditions are exercised."
+        ]
+      }
+    },
+    "Undying Evil": {
+      "csvid": 12284,
+      "source": {
+        "name": "Undying Evil",
+        "oracle_id": "3ceaeb1b-8b25-453d-ac09-e466cfdd9c77",
+        "oracle_text": "Target creature gains undying until end of turn. (When it dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{B}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "B"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_lifecycle",
+        "mode": "undying",
+        "controller": "any",
+        "protection_color": null,
+        "inactive_components": [
+          "Sacrifice and lethal-damage death causes beyond the real Murder destruction path are not drafted."
+        ]
+      }
+    },
+    "Long Road Home": {
+      "csvid": 16147,
+      "source": {
+        "name": "Long Road Home",
+        "oracle_id": "a8f53018-c496-41f3-bc3f-3c4703b9e4e1",
+        "oracle_text": "Exile target creature. At the beginning of the next end step, return that card to the battlefield under its owner's control with a +1/+1 counter on it.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_lifecycle",
+        "mode": "delayed",
+        "controller": "any",
+        "protection_color": null,
+        "inactive_components": [
+          "The existing cleanup operation calls cleanup_phase then end_turn_phase. The draft asserts intermediate exile and return after the real end-turn callback, but cannot separately prove beginning-of-end-step timing. A faithful distinct end-step probe is required before claiming exact phase coverage."
+        ]
+      }
+    },
+    "Feat of Resistance": {
+      "csvid": 14268,
+      "source": {
+        "name": "Feat of Resistance",
+        "oracle_id": "2038f505-7b03-4c63-bc44-c5139729dd05",
+        "oracle_text": "Put a +1/+1 counter on target creature you control. It gains protection from the color of your choice until end of turn. (It can't be blocked, targeted, dealt damage, enchanted, or equipped by anything of that color.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_lifecycle",
+        "mode": "protection",
+        "controller": "self",
+        "protection_color": 4,
+        "inactive_components": [
+          "Colors other than red, and colored Aura/Equipment attachment, are not selected. Red targeting, blocking, damage and expiry are exercised."
+        ]
+      }
+    }
+  },
+  "combat_profiles": {
+    "Test of Faith": {
+      "csvid": 6980,
+      "source": {
+        "name": "Test of Faith",
+        "oracle_id": "3397aa3d-bf73-4ca3-a806-059361603079",
+        "oracle_text": "Prevent the next 3 damage that would be dealt to target creature this turn. For each 1 damage prevented this way, put a +1/+1 counter on that creature.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_combat",
+        "mode": "shield_counters",
+        "inactive_components": [
+          "Multiple prevention shields, damage greater than three in one event and noncreature damage sources other than red spells are not selected."
+        ]
+      }
+    },
+    "Hindervines": {
+      "csvid": 12975,
+      "source": {
+        "name": "Hindervines",
+        "oracle_id": "8d13fabc-1e0f-41f2-8873-9f44b68f7e43",
+        "oracle_text": "Prevent all combat damage that would be dealt this turn by creatures with no +1/+1 counters on them.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_combat",
+        "mode": "counterless_fog",
+        "inactive_components": [
+          "Creatures gaining or losing counters after resolution are not selected; mixed seeded counters exercise the printed combat-damage predicate."
+        ]
+      }
+    },
+    "Encircling Fissure": {
+      "csvid": 15319,
+      "source": {
+        "name": "Encircling Fissure",
+        "oracle_id": "39d7569e-62b0-4f37-813a-0985632c66c9",
+        "oracle_text": "Prevent all combat damage that would be dealt this turn by creatures target opponent controls.\nAwaken 2—{4}{W} (If you cast this spell for {4}{W}, also put two +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+        "mana_cost": "{2}{W}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [
+          "Awaken"
+        ],
+        "colors": [
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_combat",
+        "mode": "opponent_fog",
+        "inactive_components": [
+          "Only normal-cost component is selected: no controlled battlefield land makes Awaken unavailable. Awaken 2 for {4}{W} remains untested."
+        ]
+      }
+    },
+    "Infuse with the Elements": {
+      "csvid": 15352,
+      "source": {
+        "name": "Infuse with the Elements",
+        "oracle_id": "beea5db2-1771-417f-9a31-028b3d31aa66",
+        "oracle_text": "Converge — Put X +1/+1 counters on target creature, where X is the number of colors of mana spent to cast this spell. That creature gains trample until end of turn.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [
+          "Converge"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_combat",
+        "mode": "converge_trample",
+        "inactive_components": [
+          "Zero colors spent, cost modification, and all five colors spent are not selected; one through four colors and actual trample combat are exercised."
+        ]
+      }
+    },
+    "Sunbringer's Touch": {
+      "csvid": 15043,
+      "source": {
+        "name": "Sunbringer's Touch",
+        "oracle_id": "bbfced8f-0f83-4cc9-9143-aa2473828b48",
+        "oracle_text": "Bolster X, where X is the number of cards in your hand. Each creature you control with a +1/+1 counter on it gains trample until end of turn. (To bolster X, choose a creature with the least toughness among creatures you control and put X +1/+1 counters on it.)",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Bolster"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_combat",
+        "mode": "bolster_hand_trample",
+        "inactive_components": [
+          "Hand changes while pending and empty own creature battlefield are not selected. Bolster uses live minimum toughness and current hand count at resolution."
+        ]
+      }
+    },
+    "Unbreakable Formation": {
+      "csvid": 19783,
+      "source": {
+        "name": "Unbreakable Formation",
+        "oracle_id": "97435e03-2fff-4fe0-8fa9-69ab0a046a33",
+        "oracle_text": "Creatures you control gain indestructible until end of turn.\nAddendum — If you cast this spell during your main phase, put a +1/+1 counter on each of those creatures and they gain vigilance until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [
+          "Addendum"
+        ],
+        "colors": [
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_combat",
+        "mode": "addendum_team",
+        "inactive_components": [
+          "Cast-time main phase and combat/off-turn branches are selected without changing phase while pending. Non-destruction removal and deathtouch are not selected."
+        ]
+      }
+    }
+  },
+  "action_profiles": {
+    "Bioshift": {
+      "csvid": 12893,
+      "source": {
+        "name": "Bioshift",
+        "oracle_id": "3da604fc-68e9-4749-98f9-6fbcebcab9b6",
+        "oracle_text": "Move any number of +1/+1 counters from target creature onto another target creature with the same controller.",
+        "mana_cost": "{G/U}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "transfer",
+        "inactive_components": [
+          "Creature controller changes while pending and counter types other than +1/+1 are not selected. Both-controller full-transfer branches select all counters; human zero/partial branches additionally select an amount. AI zero/partial inputs are not offered by the current handler."
+        ]
+      }
+    },
+    "Thrive": {
+      "csvid": 4902,
+      "source": {
+        "name": "Thrive",
+        "oracle_id": "fe3c524e-10b7-485a-9285-973092eeb214",
+        "oracle_text": "Put a +1/+1 counter on each of X target creatures.",
+        "mana_cost": "{X}{G}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "thrive",
+        "inactive_components": [
+          "Full X=0/no-target casts, changed target selection and more than three targets are not selected; exact-G zero-target legal permission is selected. Productive printed X is determined by actual distinct cast targets, without an invented choose-X prompt."
+        ]
+      }
+    },
+    "Strength of the Tajuru": {
+      "csvid": 10842,
+      "source": {
+        "name": "Strength of the Tajuru",
+        "oracle_id": "132401fb-6754-4190-9c85-1e57e7f63ed6",
+        "oracle_text": "Multikicker {1} (You may pay an additional {1} any number of times as you cast this spell.)\nChoose target creature, then choose another target creature for each time this spell was kicked. Put X +1/+1 counters on each of them.",
+        "mana_cost": "{X}{G}{G}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [
+          "Multikicker"
+        ],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "multikicker",
+        "inactive_components": [
+          "More than one kicker payment, X=0 and changed target selection are not selected. Normal and once-kicked costs are explicit."
+        ]
+      }
+    },
+    "Lifecraft Awakening": {
+      "csvid": 16742,
+      "source": {
+        "name": "Lifecraft Awakening",
+        "oracle_id": "8919c8dd-d3b3-406f-a387-44cc1b6d92f3",
+        "oracle_text": "Put X +1/+1 counters on target artifact you control. If it isn't a creature or Vehicle, it becomes a 0/0 Construct artifact creature.",
+        "mana_cost": "{X}{G}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "artifact_animation",
+        "inactive_components": [
+          "Vehicle crewing and artifacts already animated before casting are not selected. Vehicle nonanimation, artifact-creature base stats, noncreature Construct conversion and permanent counters are selected."
+        ]
+      }
+    },
+    "Rush of Ice": {
+      "csvid": 15424,
+      "source": {
+        "name": "Rush of Ice",
+        "oracle_id": "e9d62416-c4b1-4982-9593-174d46e975c7",
+        "oracle_text": "Tap target creature. It doesn't untap during its controller's next untap step.\nAwaken 3—{4}{U} (If you cast this spell for {4}{U}, also put three +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+        "mana_cost": "{U}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Awaken"
+        ],
+        "colors": [
+          "U"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "untap_lock",
+        "inactive_components": [
+          "Only normal-cost component is selected; no controlled battlefield lands exist, so Awaken 3 for {4}{U} is unavailable. Late entrants, blink and control changes while locked are not selected. Faithful untap steps exercise one skipped step and later expiry."
+        ]
+      }
+    },
+    "Mark of Mutiny": {
+      "csvid": 10604,
+      "source": {
+        "name": "Mark of Mutiny",
+        "oracle_id": "5599ddb6-1404-4884-b6ca-c1852a521079",
+        "oracle_text": "Gain control of target creature until end of turn. Put a +1/+1 counter on it and untap it. That creature gains haste until end of turn. (It can attack and {T} this turn.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "R"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "mutiny",
+        "inactive_components": [
+          "Overlapping control effects and creatures with tap abilities are not selected. Actual immediate combat proves haste, callback return proves duration, and original-owner death routing is selected."
+        ]
+      }
+    },
+    "Press into Service": {
+      "csvid": 15657,
+      "source": {
+        "name": "Press into Service",
+        "oracle_id": "a729a684-9171-4ca9-83ad-1d199afad7bb",
+        "oracle_text": "Support 2. (Put a +1/+1 counter on each of up to two target creatures.)\nGain control of target creature until end of turn. Untap that creature. It gains haste until end of turn.",
+        "mana_cost": "{4}{R}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Support"
+        ],
+        "colors": [
+          "R"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "support_control",
+        "inactive_components": [
+          "Zero/one support recipients, support on the stolen creature, responses and overlapping control effects are not selected. Two independent support targets and the control/untap/haste/return component are active. Pending-only target binding retains all three cast targets as required by Oracle."
+        ]
+      }
+    },
+    "Spoils of War": {
+      "csvid": 2116,
+      "source": {
+        "name": "Spoils of War",
+        "oracle_id": "f3240a86-28b6-4338-9a59-1fb6f795d713",
+        "oracle_text": "X is the number of artifact and/or creature cards in an opponent's graveyard as you cast this spell.\nDistribute X +1/+1 counters among any number of target creatures.",
+        "mana_cost": "{X}{B}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "B"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "grave_single_allocation",
+        "inactive_components": [
+          "Exactly one target is selected, forcing all X counters onto that target. Arbitrary split distributions and zero-X no-target casts are deferred. Opposing artifact/creature union, exact forced cost and cast-time X through a grave-changing response are selected."
+        ]
+      }
+    },
+    "Ondu Rising": {
+      "csvid": 15393,
+      "source": {
+        "name": "Ondu Rising",
+        "oracle_id": "01081f81-f588-43ab-8d47-13593aa19ce1",
+        "oracle_text": "Whenever a creature attacks this turn, it gains lifelink until end of turn.\nAwaken 4—{4}{W} (If you cast this spell for {4}{W}, also put four +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Sorcery",
+        "layout": "normal",
+        "keywords": [
+          "Awaken"
+        ],
+        "colors": [
+          "W"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "attack_lifelink",
+        "inactive_components": [
+          "Only normal-cost component is selected: no controlled battlefield land makes Awaken 4 for {4}{W} unavailable. Opponents declaring attackers during the caster's own turn, future combat phases and late-entry attackers are not selected. Actual attack triggers, blocked/unblocked lifelink, duplicate grants, noncombat and expiry are selected."
+        ]
+      }
+    },
+    "Savage Summoning": {
+      "csvid": 13329,
+      "source": {
+        "name": "Savage Summoning",
+        "oracle_id": "30c09562-0bca-4382-ae84-aca00e0eb89b",
+        "oracle_text": "This spell can't be countered.\nThe next creature spell you cast this turn can be cast as though it had flash. That spell can't be countered. That creature enters with an additional +1/+1 counter on it.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "layout": "normal",
+        "keywords": [],
+        "colors": [
+          "G"
+        ]
+      },
+      "params": {
+        "extension": "reviewed_counter_actions",
+        "mode": "next_creature",
+        "inactive_components": [
+          "Normal-main next-creature entry, first-only consumption, intervening noncreature, expiry and source uncounterability are selected. Flash permission itself cannot be established by this wrapper, which permits direct scripted creature casts without a no-source timing denial. The creature-counter pending branch checks legal Counterspell targeting; resolution of that pending response is deferred."
+        ]
+      }
+    }
+  }
+}

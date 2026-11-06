@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "card": "Mercy Killing",
+  "csvid": 9600,
+  "recipes": [
+    {
+      "family": "edict_spell",
+      "version": 2,
+      "params": {
+        "profile": "Mercy Killing",
+        "kind": "cost_effect",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "target_sac_tokens",
+        "target": "creature",
+        "amount": 0,
+        "recipient": "self",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": {
+          "name": "Elf Warrior",
+          "count": "victim_power",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "G",
+            "W"
+          ],
+          "subtypes": [
+            "Elf",
+            "Warrior"
+          ]
+        },
+        "cost_first": true,
+        "target_choices": {
+          "0": 0,
+          "1": 0
+        },
+        "gaps": [
+          "replacement and triggered effects",
+          "multiplayer"
+        ],
+        "allow_own_target": true,
+        "target_controls": true,
+        "response_hexproof": true,
+        "hybrid": {
+          "symbol": "G/W",
+          "default": "G",
+          "other": "W"
+        }
+      },
+      "oracle_text": "Target creature's controller sacrifices it, then creates X 1/1 green and white Elf Warrior creature tokens, where X is that creature's power.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "opposing_turn_0",
+        "own_target_0",
+        "stolen_target_0",
+        "large_target_0",
+        "indestructible_target_0",
+        "target_left_0",
+        "no_creatures_0",
+        "target_hexproof_0",
+        "hybrid_other_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "opposing_turn_1",
+        "own_target_1",
+        "stolen_target_1",
+        "large_target_1",
+        "indestructible_target_1",
+        "target_left_1",
+        "no_creatures_1",
+        "target_hexproof_1",
+        "hybrid_other_1"
+      ]
+    }
+  ]
+}

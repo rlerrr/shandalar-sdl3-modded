@@ -1,0 +1,90 @@
+{
+  "version": 1,
+  "card": "Put Away",
+  "csvid": 9639,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Grave target loss/change in a response window and selecting newly-countered own parents are not modeled; cast-time target selection is independently tested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [
+            {
+              "name": "Forest",
+              "ref": "grave_candidate",
+              "player": 0,
+              "zone": "graveyard"
+            },
+            {
+              "name": "Mountain",
+              "ref": "grave_control",
+              "player": 0,
+              "zone": "graveyard"
+            },
+            {
+              "name": "Forest",
+              "ref": "opposing_grave",
+              "player": 1,
+              "zone": "graveyard"
+            }
+          ],
+          "wave": 5,
+          "grave_shuffle": true
+        }
+      },
+      "oracle_text": "Counter target spell. You may shuffle up to one target card from your graveyard into your library.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "grave_declined_0",
+        "grave_timing_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_instant_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1",
+        "grave_declined_1",
+        "grave_timing_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Selected existing own-grave Forest shuffled with exact library identity multiplicities; decline, opposing grave control, and two cast-time target-choice sentinels while a fallback permits safe completion of the late-binding defect. Grave target loss/change in a response window and selecting newly-countered own parents are not modeled; cast-time target selection is independently tested."
+}

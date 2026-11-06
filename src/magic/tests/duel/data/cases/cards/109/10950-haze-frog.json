@@ -1,0 +1,51 @@
+{
+  "version": 1,
+  "card": "Haze Frog",
+  "csvid": 10950,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "entry_shield",
+        "effect": "other_creatures_combat",
+        "gaps": [
+          "Flash UI permission outside explicit cast/response actions",
+          "Attacking Haze Frog and multiple blockers",
+          "Brass Man upkeep and untap restrictions, inactive on untapped controls"
+        ]
+      },
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, prevent all combat damage that other creatures would deal this turn.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "source_removed_0",
+        "response_cast_0",
+        "noncombat_0",
+        "source_damage_0",
+        "small_damage_0",
+        "combat_snapshot_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "source_removed_1",
+        "response_cast_1",
+        "noncombat_1",
+        "source_damage_1",
+        "small_damage_1",
+        "combat_snapshot_1"
+      ]
+    }
+  ]
+}

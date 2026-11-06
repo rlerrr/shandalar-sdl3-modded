@@ -1,0 +1,220 @@
+{
+  "version": 1,
+  "card": "Godo, Bandit Warlord",
+  "csvid": 7219,
+  "recipes": [
+    {
+      "family": "library_search",
+      "version": 2,
+      "params": {
+        "schema": 6,
+        "profile": "Godo, Bandit Warlord",
+        "mode": "entry",
+        "scope": "equipment",
+        "quantity": 1,
+        "up_to": false,
+        "destination": "battlefield",
+        "target": "self",
+        "activation_cost": "",
+        "tap": false,
+        "sacrifice": false,
+        "kicker": 0,
+        "library": [
+          "Bonesplitter",
+          "Vulshok Morningstar",
+          "Darksteel Axe",
+          "Sol Ring",
+          "Pacifism",
+          "Grizzly Bears",
+          "Forest",
+          "Giant Growth",
+          "Lightning Bolt"
+        ],
+        "preferred": [
+          "Forest",
+          "Island"
+        ],
+        "witness_universe": [
+          "Ancient Brontodon",
+          "Aurochs Herd",
+          "Avian Changeling",
+          "Azorius Guildgate",
+          "Badlands",
+          "Black Knight",
+          "Bonesplitter",
+          "Bull Aurochs",
+          "Cancel",
+          "Chandra, Pyromaster",
+          "Cloudshift",
+          "Coiling Oracle",
+          "Counterspell",
+          "Craw Wurm",
+          "Crib Swap",
+          "Dark Ritual",
+          "Darksteel Axe",
+          "Darksteel Citadel",
+          "Darksteel Relic",
+          "Divination",
+          "Elvish Mystic",
+          "Forest",
+          "Giant Growth",
+          "Giant Spider",
+          "Gilded Light",
+          "Goblin Trailblazer",
+          "Gravedigger",
+          "Grizzly Bears",
+          "Harabaz Druid",
+          "Hill Giant",
+          "Holy Strength",
+          "Isamaru, Hound of Konda",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Merfolk of the Pearl Trident",
+          "Mountain",
+          "Negate",
+          "Ondu Cleric",
+          "Ornithopter",
+          "Pacifism",
+          "Phyrexian Hulk",
+          "Plains",
+          "Primal Huntbeast",
+          "Psychogenic Probe",
+          "Ravenous Daggertooth",
+          "Rishadan Cutpurse",
+          "Savannah",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Sengir Vampire",
+          "Silvergill Adept",
+          "Slaughter Pact",
+          "Snow-Covered Forest",
+          "Snow-Covered Island",
+          "Sol Ring",
+          "Steadfast Guard",
+          "Suntail Hawk",
+          "Suppression Field",
+          "Swamp",
+          "Taiga",
+          "Tundra",
+          "Twiddle",
+          "Typhoid Rats",
+          "Underground Sea",
+          "Unsummon",
+          "Vampire Interloper",
+          "Vulshok Morningstar",
+          "War Mammoth"
+        ],
+        "gaps": [
+          "source keyword combat",
+          "other printed source clauses; fixtures do not activate those clauses",
+          "declining the entire optional search without a presented choice",
+          "shuffle random distribution",
+          "replacement and unrelated triggered effects",
+          "multiplayer"
+        ],
+        "observe_shuffle": true,
+        "entry_optional": true,
+        "entry_priority": false,
+        "entry_dialogs": {
+          "0": [
+            0
+          ],
+          "1": [
+            0
+          ]
+        },
+        "decline_entry_dialogs": {
+          "0": [
+            1
+          ],
+          "1": [
+            1
+          ]
+        },
+        "decline_skips_search": true,
+        "palette": [
+          "Bonesplitter",
+          "Vulshok Morningstar",
+          "Darksteel Axe",
+          "Sol Ring",
+          "Pacifism",
+          "Grizzly Bears",
+          "Forest"
+        ],
+        "base_zones": {
+          "hand": [
+            "Divination",
+            "Giant Growth"
+          ],
+          "graveyard": [
+            "Scathe Zombies",
+            "Mountain"
+          ],
+          "exile": [
+            "Lightning Bolt",
+            "Sol Ring"
+          ]
+        },
+        "entry_clause": "When Godo enters, you may search your library for an Equipment card, put it onto the battlefield, then shuffle.",
+        "other_rules": [
+          "Whenever Godo attacks for the first time each turn, untap it and all Samurai you control. After this phase, there is an additional combat phase."
+        ],
+        "exclude_variants": []
+      },
+      "oracle_text": "When Godo enters, you may search your library for an Equipment card, put it onto the battlefield, then shuffle.\nWhenever Godo attacks for the first time each turn, untap it and all Samurai you control. After this phase, there is an additional combat phase.",
+      "variants": [
+        "search_0",
+        "payment_0",
+        "decline_0",
+        "no_match_0",
+        "empty_library_0",
+        "single_match_0",
+        "duplicates_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "card_0_0",
+        "card_1_0",
+        "card_2_0",
+        "card_3_0",
+        "card_4_0",
+        "card_5_0",
+        "card_6_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "destroy_source_0",
+        "bounce_recast_0",
+        "blink_0",
+        "wrong_color_0",
+        "search_1",
+        "payment_1",
+        "decline_1",
+        "no_match_1",
+        "empty_library_1",
+        "single_match_1",
+        "duplicates_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "card_0_1",
+        "card_1_1",
+        "card_2_1",
+        "card_3_1",
+        "card_4_1",
+        "card_5_1",
+        "card_6_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "destroy_source_1",
+        "bounce_recast_1",
+        "blink_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

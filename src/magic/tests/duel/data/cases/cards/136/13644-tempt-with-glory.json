@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "card": "Tempt with Glory",
+  "csvid": 13644,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "linked",
+        "linked_kind": "tempting_team",
+        "amount": 1,
+        "mode_choices": [],
+        "inactive_components": []
+      },
+      "oracle_text": "Tempting offer — Put a +1/+1 counter on each creature you control. Each opponent may put a +1/+1 counter on each creature they control. For each opponent who does, put a +1/+1 counter on each creature you control.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "preexisting_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "two_copies_0",
+        "countered_0",
+        "decline_0",
+        "empty_team_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "preexisting_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "two_copies_1",
+        "countered_1",
+        "decline_1",
+        "empty_team_1"
+      ]
+    }
+  ]
+}

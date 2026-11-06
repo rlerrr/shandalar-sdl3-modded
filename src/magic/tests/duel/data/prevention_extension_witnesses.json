@@ -1,0 +1,3819 @@
+{
+  "version": 1,
+  "sources": {
+    "Samite Healer": {
+      "oracle": {
+        "oracle_id": "95a0ca48-d924-47f4-86ed-42c673ee778c",
+        "name": "Samite Healer",
+        "oracle_text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Cleric",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists"
+        ]
+      }
+    },
+    "Amulet of Kroog": {
+      "oracle": {
+        "oracle_id": "8eca999e-f7f8-4354-b419-2df4249c4361",
+        "name": "Amulet of Kroog",
+        "oracle_text": "{2}, {T}: Prevent the next 1 damage that would be dealt to any target this turn.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "{2}",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists"
+        ]
+      }
+    },
+    "Combat Medic": {
+      "oracle": {
+        "oracle_id": "541b7b2f-7bb0-4858-8dc5-6e50de443c33",
+        "name": "Combat Medic",
+        "oracle_text": "{1}{W}: Prevent the next 1 damage that would be dealt to any target this turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Cleric Soldier",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "0",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "{1}{W}",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists"
+        ]
+      }
+    },
+    "Conservator": {
+      "oracle": {
+        "oracle_id": "1940e56d-0972-4ca4-946c-bbd42dde1dcb",
+        "name": "Conservator",
+        "oracle_text": "{3}, {T}: Prevent the next 2 damage that would be dealt to you this turn.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 2,
+        "scope": "you",
+        "activation_cost": "{3}",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists"
+        ]
+      }
+    },
+    "Hold at Bay": {
+      "oracle": {
+        "oracle_id": "a57b84e4-951c-4475-bb34-b68815858f87",
+        "name": "Hold at Bay",
+        "oracle_text": "Prevent the next 7 damage that would be dealt to any target this turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "recipient",
+        "amount": 7,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": []
+      }
+    },
+    "Shielded Passage": {
+      "oracle": {
+        "oracle_id": "a6933789-bb4f-4d45-975e-402b8e0b0e68",
+        "name": "Shielded Passage",
+        "oracle_text": "Prevent all damage that would be dealt to target creature this turn.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "recipient",
+        "amount": "all",
+        "scope": "creature",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": []
+      }
+    },
+    "Horn of Deafening": {
+      "oracle": {
+        "oracle_id": "50a1c14a-003f-424b-bb8e-2e2d51465a90",
+        "name": "Horn of Deafening",
+        "oracle_text": "{2}, {T}: Prevent all combat damage that would be dealt by target creature this turn.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "combat_source",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "{2}",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [],
+        "target_predicate": "creature"
+      }
+    },
+    "Lady Evangela": {
+      "oracle": {
+        "oracle_id": "8800d672-424b-4a7b-886f-7eb9d7a56cfe",
+        "name": "Lady Evangela",
+        "oracle_text": "{W}{B}, {T}: Prevent all combat damage that would be dealt by target creature this turn.",
+        "mana_cost": "{W}{U}{B}",
+        "type_line": "Legendary Creature — Human Cleric",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "combat_source",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "{W}{B}",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [],
+        "target_predicate": "creature"
+      }
+    },
+    "Safeguard": {
+      "oracle": {
+        "oracle_id": "e310c3ab-a729-404d-944f-9b477258495c",
+        "name": "Safeguard",
+        "oracle_text": "{2}{W}: Prevent all combat damage that would be dealt by target creature this turn.",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "combat_source",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "{2}{W}",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [],
+        "target_predicate": "creature"
+      }
+    },
+    "Warning": {
+      "oracle": {
+        "oracle_id": "c5ba0f0f-65c5-4ffa-987a-f320b401ec8f",
+        "name": "Warning",
+        "oracle_text": "Prevent all combat damage that would be dealt by target attacking creature this turn.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "combat_source",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [],
+        "target_predicate": "attacking"
+      }
+    },
+    "Clergy en-Vec": {
+      "oracle": {
+        "oracle_id": "a5a1b4c9-474a-42b7-b412-c2d43a3353db",
+        "name": "Clergy en-Vec",
+        "oracle_text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Cleric",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists"
+        ]
+      }
+    },
+    "Femeref Healer": {
+      "oracle": {
+        "oracle_id": "e2117373-6f0a-41c8-ab6a-9014b9628e64",
+        "name": "Femeref Healer",
+        "oracle_text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Cleric",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists"
+        ]
+      }
+    },
+    "Kithkin Healer": {
+      "oracle": {
+        "oracle_id": "e3bd74f3-1f38-4162-a0be-c76ad63e2d9b",
+        "name": "Kithkin Healer",
+        "oracle_text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Kithkin Cleric",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists"
+        ]
+      }
+    },
+    "Orim, Samite Healer": {
+      "oracle": {
+        "oracle_id": "9d405e5b-0cee-4c8f-b3ef-65765853b8a4",
+        "name": "Orim, Samite Healer",
+        "oracle_text": "{T}: Prevent the next 3 damage that would be dealt to any target this turn.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Legendary Creature — Human Cleric",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "3"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 3,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists"
+        ]
+      }
+    },
+    "Kei Takahashi": {
+      "oracle": {
+        "oracle_id": "f3229980-994e-4492-be98-267b781614c1",
+        "name": "Kei Takahashi",
+        "oracle_text": "{T}: Prevent the next 2 damage that would be dealt to target creature this turn.",
+        "mana_cost": "{2}{G}{W}",
+        "type_line": "Legendary Creature — Human Cleric",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 2,
+        "scope": "creature",
+        "activation_cost": "",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists"
+        ]
+      }
+    },
+    "Shield of the Ages": {
+      "oracle": {
+        "oracle_id": "65164450-b477-4096-8146-ebb80a709787",
+        "name": "Shield of the Ages",
+        "oracle_text": "{2}: Prevent the next 1 damage that would be dealt to you this turn.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "you",
+        "activation_cost": "{2}",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists"
+        ]
+      }
+    },
+    "Shieldmate's Blessing": {
+      "oracle": {
+        "oracle_id": "4ed55e9c-84ea-42a3-a32f-469da56b3eb5",
+        "name": "Shieldmate's Blessing",
+        "oracle_text": "Prevent the next 3 damage that would be dealt to any target this turn.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 3,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists"
+        ]
+      }
+    },
+    "Heal": {
+      "oracle": {
+        "oracle_id": "013c42a4-d555-46c9-9d57-b50d6b59ae9e",
+        "name": "Heal",
+        "oracle_text": "Prevent the next 1 damage that would be dealt to any target this turn.\nDraw a card at the beginning of the next turn's upkeep.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Next turn's upkeep draw trigger"
+        ]
+      }
+    },
+    "Hallowed Healer": {
+      "oracle": {
+        "oracle_id": "b92f6adb-64c6-4692-af9d-af4241203722",
+        "name": "Hallowed Healer",
+        "oracle_text": "{T}: Prevent the next 2 damage that would be dealt to any target this turn.\nThreshold — {T}: Prevent the next 4 damage that would be dealt to any target this turn. Activate only if there are seven or more cards in your graveyard.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Cleric",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 2,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": [
+            0
+          ]
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Threshold mode; graveyards remain below seven cards"
+        ]
+      }
+    },
+    "Abuna Acolyte": {
+      "oracle": {
+        "oracle_id": "cf082161-47ff-46b9-926d-3fa5e5727861",
+        "name": "Abuna Acolyte",
+        "oracle_text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.\n{T}: Prevent the next 2 damage that would be dealt to target artifact creature this turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Cat Cleric",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Artifact-creature prevention mode"
+        ]
+      }
+    },
+    "Kitsune Healer": {
+      "oracle": {
+        "oracle_id": "9c6bd752-e3c8-408c-96f4-16405a653161",
+        "name": "Kitsune Healer",
+        "oracle_text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.\n{T}: Prevent all damage that would be dealt to target legendary creature this turn.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Fox Cleric",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Legendary-creature prevention mode"
+        ]
+      }
+    },
+    "Esper Battlemage": {
+      "oracle": {
+        "oracle_id": "2551f383-7308-4670-9fda-406b20e372a5",
+        "name": "Esper Battlemage",
+        "oracle_text": "{W}, {T}: Prevent the next 2 damage that would be dealt to you this turn.\n{B}, {T}: Target creature gets -1/-1 until end of turn.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Artifact Creature — Human Wizard",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 2,
+        "scope": "you",
+        "activation_cost": "{W}",
+        "tap": true,
+        "dialogs": {
+          "0": [
+            0
+          ],
+          "1": [
+            0
+          ]
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Targeted toughness-reduction mode"
+        ],
+        "present_dialogs": true,
+        "normal_option_cost": "{B}"
+      }
+    },
+    "Serra Paladin": {
+      "oracle": {
+        "oracle_id": "2fdbbca7-d1d0-4834-84df-2c2d9953f83a",
+        "name": "Serra Paladin",
+        "oracle_text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.\n{1}{W}{W}, {T}: Target creature gains vigilance until end of turn.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Human Knight",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Vigilance-granting mode"
+        ],
+        "normal_option_cost": "{1}{W}{W}"
+      }
+    },
+    "Rakalite": {
+      "oracle": {
+        "oracle_id": "193c1671-328e-4f9c-836e-055f46c3aab0",
+        "name": "Rakalite",
+        "oracle_text": "{2}: Prevent the next 1 damage that would be dealt to any target this turn. Return this artifact to its owner's hand at the beginning of the next end step.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "{2}",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Return to hand at the next end step"
+        ]
+      }
+    },
+    "Pentagram of the Ages": {
+      "oracle": {
+        "oracle_id": "265204a9-0ce2-4a0a-a9ea-8537cd94b079",
+        "name": "Pentagram of the Ages",
+        "oracle_text": "{4}, {T}: The next time a source of your choice would deal damage to you this turn, prevent that damage.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{4}",
+        "tap": true,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Multiple damage packets from the same chosen source"
+        ]
+      }
+    },
+    "Reverse Damage": {
+      "oracle": {
+        "oracle_id": "eaaf7c30-f463-4115-a40e-7dc717063413",
+        "name": "Reverse Damage",
+        "oracle_text": "The next time a source of your choice would deal damage to you this turn, prevent that damage. You gain life equal to the damage prevented this way.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Multiple damage packets from the same chosen source"
+        ],
+        "gain_prevented": true
+      }
+    },
+    "Righteous Aura": {
+      "oracle": {
+        "oracle_id": "5bf93d4f-be59-4aa7-83d5-7c35d1f07fae",
+        "name": "Righteous Aura",
+        "oracle_text": "{W}, Pay 2 life: The next time a source of your choice would deal damage to you this turn, prevent that damage.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{W}",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Multiple damage packets from the same chosen source"
+        ],
+        "pay_life": 2
+      }
+    },
+    "Haazda Shield Mate": {
+      "oracle": {
+        "oracle_id": "49b689a3-9197-4a04-a62f-218b245d6e23",
+        "name": "Haazda Shield Mate",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you pay {W}{W}.\n{W}: The next time a source of your choice would deal damage to you this turn, prevent that damage.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Soldier",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{W}",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Upkeep payment or sacrifice",
+          "Multiple damage packets from the same chosen source"
+        ]
+      }
+    },
+    "Auriok Replica": {
+      "oracle": {
+        "oracle_id": "783a62c0-3b06-4250-a1cb-5cf4042611aa",
+        "name": "Auriok Replica",
+        "oracle_text": "{W}, Sacrifice this creature: Prevent all damage a source of your choice would deal to you this turn.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature — Cleric",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{W}",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Multiple damage packets from the same chosen source"
+        ],
+        "sacrifice": true
+      }
+    },
+    "Sanctum Guardian": {
+      "oracle": {
+        "oracle_id": "eb7fe094-2237-40c8-b831-93498c93b768",
+        "name": "Sanctum Guardian",
+        "oracle_text": "Sacrifice this creature: The next time a source of your choice would deal damage to any target this turn, prevent that damage.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Human Cleric",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "4"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "amount": "all",
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Multiple damage packets from the same chosen source"
+        ],
+        "sacrifice": true
+      }
+    },
+    "Resistance Fighter": {
+      "oracle": {
+        "oracle_id": "a95a2d1c-70a9-4eb2-ae30-a07fab26a9c6",
+        "name": "Resistance Fighter",
+        "oracle_text": "Sacrifice this creature: Prevent all combat damage target creature would deal this turn.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "combat_source",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [],
+        "target_predicate": "creature",
+        "sacrifice": true
+      }
+    },
+    "Pay No Heed": {
+      "oracle": {
+        "oracle_id": "71da5acb-78bc-453a-ae28-d22faa5a4e43",
+        "name": "Pay No Heed",
+        "oracle_text": "Prevent all damage a source of your choice would deal this turn.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "combat_source",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Noncreature damage source choices"
+        ],
+        "target_predicate": "creature"
+      }
+    },
+    "Candles' Glow": {
+      "oracle": {
+        "oracle_id": "7509b934-6fbc-42fd-9040-cdf16bbfff42",
+        "name": "Candles' Glow",
+        "oracle_text": "Prevent the next 3 damage that would be dealt to any target this turn. You gain life equal to the damage prevented this way.\nSplice onto Arcane {1}{W} (As you cast an Arcane spell, you may reveal this card from your hand and pay its splice cost. If you do, add this card's effects to that spell.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant — Arcane",
+        "keywords": [
+          "Splice"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "recipient",
+        "amount": 3,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Splice onto Arcane",
+          "Expiry with unused shield capacity"
+        ],
+        "gain_prevented": true
+      }
+    },
+    "Anoint": {
+      "oracle": {
+        "oracle_id": "fcb03c54-5b9a-428d-bbf6-ef8977770c8d",
+        "name": "Anoint",
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nPrevent the next 3 damage that would be dealt to target creature this turn.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Buyback cost modification and countered buyback spells"
+        ],
+        "amount": 3,
+        "scope": "creature",
+        "activation_cost": "",
+        "tap": false,
+        "buyback_cost": "{3}",
+        "present_dialogs": true
+      }
+    },
+    "Invulnerability": {
+      "oracle": {
+        "oracle_id": "2c964157-d414-4d4e-822b-12ce61e882ff",
+        "name": "Invulnerability",
+        "oracle_text": "Buyback {3} (You may pay an additional {3} as you cast this spell. If you do, put this card into your hand as it resolves.)\nThe next time a source of your choice would deal damage to you this turn, prevent that damage.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [
+          "Buyback"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Repeated damage from the same chosen source",
+          "Buyback cost modification and countered buyback spells"
+        ],
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "",
+        "tap": false,
+        "buyback_cost": "{3}",
+        "present_dialogs": true
+      }
+    },
+    "Balm of Restoration": {
+      "oracle": {
+        "oracle_id": "45a40b4c-1d37-4d87-adf1-abf0ea4c86b4",
+        "name": "Balm of Restoration",
+        "oracle_text": "{1}, {T}, Sacrifice this artifact: Choose one —\n• You gain 2 life.\n• Prevent the next 2 damage that would be dealt to any target this turn.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "dialogs": {
+          "0": [
+            1
+          ],
+          "1": [
+            1
+          ]
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Separate gain-2-life mode"
+        ],
+        "amount": 2,
+        "scope": "any",
+        "activation_cost": "{1}",
+        "tap": true,
+        "sacrifice": true,
+        "present_dialogs": true,
+        "normal_option_cost": "{1}"
+      }
+    },
+    "Goblin Legionnaire": {
+      "oracle": {
+        "oracle_id": "582fdfbe-c5fe-45d0-b3ff-e66db5183725",
+        "name": "Goblin Legionnaire",
+        "oracle_text": "{R}, Sacrifice this creature: It deals 2 damage to any target.\n{W}, Sacrifice this creature: Prevent the next 2 damage that would be dealt to any target this turn.",
+        "mana_cost": "{R}{W}",
+        "type_line": "Creature — Goblin Soldier",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "dialogs": {
+          "0": [
+            1
+          ],
+          "1": [
+            1
+          ]
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Separate deal-2-damage mode"
+        ],
+        "amount": 2,
+        "scope": "any",
+        "activation_cost": "{W}",
+        "tap": false,
+        "sacrifice": true,
+        "present_dialogs": true,
+        "normal_option_cost": "{R}"
+      }
+    },
+    "Bone Mask": {
+      "oracle": {
+        "oracle_id": "ddfc7dac-f921-4529-935c-6c588890c522",
+        "name": "Bone Mask",
+        "oracle_text": "{2}, {T}: The next time a source of your choice would deal damage to you this turn, prevent that damage. Exile cards from the top of your library equal to the damage prevented this way.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Repeated damage from the same chosen source",
+          "Nonplayer damage-recipient selection denial during the live window"
+        ],
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{2}",
+        "tap": true,
+        "exile_prevented": true
+      }
+    },
+    "Dark Sphere": {
+      "oracle": {
+        "oracle_id": "397f53f7-f801-4442-a778-2f26ac246b62",
+        "name": "Dark Sphere",
+        "oracle_text": "{T}, Sacrifice this artifact: The next time a source of your choice would deal damage to you this turn, prevent half that damage, rounded down.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "packet",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive registration before a damage packet exists",
+          "Repeated damage from the same chosen source",
+          "Nonplayer damage-recipient selection denial during the live window"
+        ],
+        "amount": "half_down",
+        "scope": "you",
+        "activation_cost": "",
+        "tap": true,
+        "sacrifice": true
+      }
+    },
+    "Circle of Protection: Green": {
+      "oracle": {
+        "oracle_id": "41b0f347-1398-4778-bf3f-4007d8a77162",
+        "name": "Circle of Protection: Green",
+        "oracle_text": "{1}: The next time a green source of your choice would deal damage to you this turn, prevent that damage.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Card-specific illegal damage-packet selection denial",
+          "Multiple damage packets from the same source",
+          "Activation availability queries inside the live damage callback",
+          "Snapshot while the damage callback is suspended",
+          "Damage dealt outside combat by qualified creatures"
+        ],
+        "binding": "packet_combat",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{1}",
+        "tap": false,
+        "source_predicate": "green"
+      }
+    },
+    "Forcefield": {
+      "oracle": {
+        "oracle_id": "bd6823fb-a696-4e6d-9c5e-3b55dfe03730",
+        "name": "Forcefield",
+        "oracle_text": "{1}: The next time an unblocked creature of your choice would deal combat damage to you this turn, prevent all but 1 of that damage.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Card-specific illegal damage-packet selection denial",
+          "Multiple damage packets from the same source",
+          "Activation availability queries inside the live damage callback",
+          "Snapshot while the damage callback is suspended",
+          "Damage dealt outside combat by qualified creatures"
+        ],
+        "binding": "packet_combat",
+        "amount": "all_but_one",
+        "scope": "you",
+        "activation_cost": "{1}",
+        "tap": false,
+        "source_predicate": "unblocked_combat"
+      }
+    },
+    "Al-abara's Carpet": {
+      "oracle": {
+        "oracle_id": "0f5b0c77-1e3d-46a1-ae0e-03ed79196cd9",
+        "name": "Al-abara's Carpet",
+        "oracle_text": "{5}, {T}: Prevent all damage that would be dealt to you this turn by attacking creatures without flying.",
+        "mana_cost": "{5}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Damage dealt outside combat by qualified creatures"
+        ],
+        "binding": "field_combat",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{5}",
+        "tap": true,
+        "damage_rule": "you_nonflying_attacker",
+        "unselected": "Air Elemental"
+      }
+    },
+    "Scarecrow": {
+      "oracle": {
+        "oracle_id": "58616e15-531f-4680-8294-35ab7e962c96",
+        "name": "Scarecrow",
+        "oracle_text": "{6}, {T}: Prevent all damage that would be dealt to you this turn by creatures with flying.",
+        "mana_cost": "{5}",
+        "type_line": "Artifact Creature — Scarecrow",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Damage dealt outside combat by qualified creatures"
+        ],
+        "binding": "field_combat",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{6}",
+        "tap": true,
+        "damage_rule": "you_flying",
+        "attacker": "Air Elemental",
+        "unselected": "Scaled Wurm"
+      }
+    },
+    "Awe Strike": {
+      "oracle": {
+        "oracle_id": "994bcde3-4a76-403d-a6e1-88609a13a99c",
+        "name": "Awe Strike",
+        "oracle_text": "The next time target creature would deal damage this turn, prevent that damage. You gain life equal to the damage prevented this way.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Additional damage episodes after the first prevented packet",
+          "Damage dealt outside combat by qualified creatures"
+        ],
+        "binding": "chosen_combat",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "",
+        "tap": false,
+        "gain_prevented": true,
+        "target_repetitions": 2
+      }
+    },
+    "Dazzling Reflection": {
+      "oracle": {
+        "oracle_id": "44db1ff5-7082-4da4-8f4f-4a2d2e3d7666",
+        "name": "Dazzling Reflection",
+        "oracle_text": "You gain life equal to target creature's power. The next time that creature would deal damage this turn, prevent that damage.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Additional damage episodes after the first prevented packet",
+          "Damage dealt outside combat by qualified creatures",
+          "Functional prevention, power-change gain, payment and replay cohorts remain pending in temp/parallel-large4/prevention/pending/15581-full-functional.json because the registry binds Deepfathom Skulker"
+        ],
+        "binding": "chosen_combat",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "",
+        "tap": false,
+        "gain_power": true,
+        "cast_permission_only": true
+      }
+    },
+    "Azorius Ploy": {
+      "oracle": {
+        "oracle_id": "b9b58c3a-5a76-4b6a-884b-74f54f0ca53c",
+        "name": "Azorius Ploy",
+        "oracle_text": "Prevent all combat damage target creature would deal this turn.\nPrevent all combat damage that would be dealt to target creature this turn.",
+        "mana_cost": "{1}{W}{W}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Damage dealt outside combat by qualified creatures"
+        ],
+        "binding": "chosen_combat",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "",
+        "tap": false,
+        "prevent_incoming": true
+      }
+    },
+    "Songstitcher": {
+      "oracle": {
+        "oracle_id": "eec72bcf-ccbc-43fc-8bdd-7bf4faa1fad7",
+        "name": "Songstitcher",
+        "oracle_text": "{1}{W}: Prevent all combat damage that would be dealt this turn by target attacking creature with flying.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Cleric",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Targeting restrictions under control changes",
+          "Damage dealt outside combat by qualified creatures"
+        ],
+        "binding": "chosen_combat",
+        "amount": "all",
+        "scope": "source",
+        "activation_cost": "{1}{W}",
+        "tap": false,
+        "attacker": "Air Elemental",
+        "target_predicate": "attacking_flying"
+      }
+    },
+    "Sivvi's Ruse": {
+      "oracle": {
+        "oracle_id": "c5edfaae-3ecd-41ad-970f-8cecb09bf1e4",
+        "name": "Sivvi's Ruse",
+        "oracle_text": "If an opponent controls a Mountain and you control a Plains, you may cast this spell without paying its mana cost.\nPrevent all damage that would be dealt this turn to creatures you control.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "legacy_field",
+        "amount": "all",
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Alternative free casting with an opposing Mountain and controlled Plains; none are on these battlefields"
+        ],
+        "legacy_kind": "spell",
+        "legacy_scope": "own_creatures"
+      }
+    },
+    "Armament of Nyx": {
+      "oracle": {
+        "oracle_id": "1a4d16eb-343e-41ca-9363-90dc79da4769",
+        "name": "Armament of Nyx",
+        "oracle_text": "Enchant creature\nEnchanted creature has double strike as long as it's an enchantment. Otherwise, prevent all damage that would be dealt by enchanted creature. (A creature with double strike deals both first-strike and regular combat damage.)",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "legacy_field",
+        "amount": "all",
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Double strike for enchanted enchantment creatures; enchanted Wurm remains a nonenchantment creature"
+        ],
+        "legacy_kind": "aura",
+        "legacy_scope": "aura_all"
+      }
+    },
+    "Inner Sanctum": {
+      "oracle": {
+        "oracle_id": "2ae36d31-08b7-481a-bfa1-a5c65921dee0",
+        "name": "Inner Sanctum",
+        "oracle_text": "Cumulative upkeep—Pay 2 life. (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\nPrevent all damage that would be dealt to creatures you control.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Cumulative upkeep"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "legacy_field",
+        "amount": "all",
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Cumulative upkeep life payment; no upkeep step is advanced",
+          "Removal and reentry of this continuous source"
+        ],
+        "legacy_kind": "static",
+        "legacy_scope": "own_creatures"
+      }
+    },
+    "Guardian Seraph": {
+      "oracle": {
+        "oracle_id": "fe9106e3-c637-4995-9dc1-cae0be31f23b",
+        "name": "Guardian Seraph",
+        "oracle_text": "Flying\nIf a source an opponent controls would deal damage to you, prevent 1 of that damage.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Angel",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "power": "3",
+        "toughness": "4"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "legacy_field",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Damage from sources controlled by the protected player",
+          "Source flying in combat",
+          "Removal and reentry of this continuous source"
+        ],
+        "legacy_kind": "static",
+        "legacy_scope": "armor"
+      }
+    },
+    "Orbs of Warding": {
+      "oracle": {
+        "oracle_id": "c420d9c8-dc54-46b8-bd22-39c21019c3d7",
+        "name": "Orbs of Warding",
+        "oracle_text": "You have hexproof. (You can't be the target of spells or abilities your opponents control.)\nIf a creature would deal damage to you, prevent 1 of that damage.",
+        "mana_cost": "{5}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "legacy_field",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Hexproof and player-targeted spells",
+          "Noncreature sources dealing damage to the protected player",
+          "Removal and reentry of this continuous source"
+        ],
+        "legacy_kind": "static",
+        "legacy_scope": "armor",
+        "selected_components": [
+          "bare_zones",
+          "blocked",
+          "cast_payment",
+          "friendly_damage",
+          "human_source",
+          "insufficient_cast_mana",
+          "noncombat_enemy",
+          "noncombat_friendly",
+          "ready_snapshot",
+          "red_source",
+          "resolved_snapshot",
+          "reverse_blocked",
+          "reverse_combat",
+          "small_source",
+          "trample_source",
+          "unblocked"
+        ]
+      }
+    },
+    "Energy Field": {
+      "oracle": {
+        "oracle_id": "fbf7a7f4-9915-4a53-84b3-e55e9f487323",
+        "name": "Energy Field",
+        "oracle_text": "Prevent all damage that would be dealt to you by sources you don't control.\nWhen a card is put into your graveyard from anywhere, sacrifice this enchantment.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "binding": "legacy_field",
+        "amount": "all",
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Sacrifice trigger from new controlled graveyard entries; selected boards add no owned cards to graveyard",
+          "Removal and reentry of this continuous source"
+        ],
+        "legacy_kind": "static",
+        "legacy_scope": "you",
+        "selected_components": [
+          "unblocked",
+          "reverse_combat",
+          "red_source",
+          "trample_source",
+          "small_source",
+          "human_source",
+          "noncombat_player",
+          "noncombat_friendly",
+          "noncombat_enemy",
+          "opposing_turn_damage",
+          "cast_payment",
+          "insufficient_cast_mana",
+          "ready_snapshot",
+          "resolved_snapshot",
+          "bare_zones"
+        ]
+      }
+    },
+    "Circle of Protection: Black": {
+      "oracle": {
+        "oracle_id": "7a5a8414-4da4-4dd0-93ae-210d50f4d6f6",
+        "name": "Circle of Protection: Black",
+        "oracle_text": "{1}: The next time a black source of your choice would deal damage to you this turn, prevent that damage.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Additional damage episodes from the same chosen source",
+          "Illegal color/artifact/recipient selection during the live damage callback",
+          "Activation availability queries inside the live damage callback",
+          "Snapshot while the damage callback is suspended",
+          "Noncombat damage from qualified sources"
+        ],
+        "binding": "packet_combat",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{1}",
+        "tap": false,
+        "attacker": "Scathe Zombies",
+        "source_predicate": "black"
+      }
+    },
+    "Circle of Protection: Blue": {
+      "oracle": {
+        "oracle_id": "d7572f17-f85d-45c0-ac64-43aac760eafe",
+        "name": "Circle of Protection: Blue",
+        "oracle_text": "{1}: The next time a blue source of your choice would deal damage to you this turn, prevent that damage.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Additional damage episodes from the same chosen source",
+          "Illegal color/artifact/recipient selection during the live damage callback",
+          "Activation availability queries inside the live damage callback",
+          "Snapshot while the damage callback is suspended",
+          "Noncombat damage from qualified sources"
+        ],
+        "binding": "packet_combat",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{1}",
+        "tap": false,
+        "attacker": "Air Elemental",
+        "source_predicate": "blue"
+      }
+    },
+    "Circle of Protection: Red": {
+      "oracle": {
+        "oracle_id": "df2738fe-9cd1-4347-8808-105fcfde1190",
+        "name": "Circle of Protection: Red",
+        "oracle_text": "{1}: The next time a red source of your choice would deal damage to you this turn, prevent that damage.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Additional damage episodes from the same chosen source",
+          "Illegal color/artifact/recipient selection during the live damage callback",
+          "Activation availability queries inside the live damage callback",
+          "Snapshot while the damage callback is suspended",
+          "Noncombat damage from qualified sources"
+        ],
+        "binding": "packet_combat",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{1}",
+        "tap": false,
+        "attacker": "Hill Giant",
+        "source_predicate": "red"
+      }
+    },
+    "Circle of Protection: White": {
+      "oracle": {
+        "oracle_id": "5f46f86a-9779-4ed3-99cb-76a03d380598",
+        "name": "Circle of Protection: White",
+        "oracle_text": "{1}: The next time a white source of your choice would deal damage to you this turn, prevent that damage.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Additional damage episodes from the same chosen source",
+          "Illegal color/artifact/recipient selection during the live damage callback",
+          "Activation availability queries inside the live damage callback",
+          "Snapshot while the damage callback is suspended",
+          "Noncombat damage from qualified sources"
+        ],
+        "binding": "packet_combat",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{1}",
+        "tap": false,
+        "attacker": "Glory Seeker",
+        "source_predicate": "white"
+      }
+    },
+    "Circle of Protection: Artifacts": {
+      "oracle": {
+        "oracle_id": "2e61e9c0-a2b9-4a24-8cb0-5160accce183",
+        "name": "Circle of Protection: Artifacts",
+        "oracle_text": "{2}: The next time an artifact source of your choice would deal damage to you this turn, prevent that damage.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Additional damage episodes from the same chosen source",
+          "Illegal color/artifact/recipient selection during the live damage callback",
+          "Activation availability queries inside the live damage callback",
+          "Snapshot while the damage callback is suspended",
+          "Noncombat damage from qualified sources"
+        ],
+        "binding": "packet_combat",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{2}",
+        "tap": false,
+        "attacker": "Juggernaut",
+        "source_predicate": "artifact"
+      }
+    },
+    "Greater Realm of Preservation": {
+      "oracle": {
+        "oracle_id": "b03eb0c4-89a4-420d-8a23-1a868a07d9cf",
+        "name": "Greater Realm of Preservation",
+        "oracle_text": "{1}{W}: The next time a black or red source of your choice would deal damage to you this turn, prevent that damage.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Additional damage episodes from the same chosen source",
+          "Illegal color/artifact/recipient selection during the live damage callback",
+          "Activation availability queries inside the live damage callback",
+          "Snapshot while the damage callback is suspended",
+          "Noncombat damage from qualified sources"
+        ],
+        "binding": "packet_combat",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{1}{W}",
+        "tap": false,
+        "attacker": "Scathe Zombies",
+        "alternate_attacker": "Hill Giant",
+        "source_predicate": "black_or_red"
+      }
+    },
+    "Hypochondria": {
+      "oracle": {
+        "oracle_id": "74c90ddc-4c6e-479d-ad68-b444d3109258",
+        "name": "Hypochondria",
+        "oracle_text": "{W}, Discard a card: Prevent the next 3 damage that would be dealt to any target this turn.\n{W}, Sacrifice this enchantment: Prevent the next 3 damage that would be dealt to any target this turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [
+            1
+          ],
+          "1": [
+            1
+          ]
+        },
+        "gaps": [
+          "Separate discard-cost mode",
+          "Empty-hand sacrifice activation; retained Plains keeps both cost choices available"
+        ],
+        "binding": "packet",
+        "amount": 3,
+        "scope": "any",
+        "activation_cost": "{W}",
+        "tap": false,
+        "sacrifice": true,
+        "present_dialogs": true,
+        "hand_witness": "Plains"
+      }
+    },
+    "Intervention Pact": {
+      "oracle": {
+        "oracle_id": "9f9882f5-2338-4881-b418-b15348a462b4",
+        "name": "Intervention Pact",
+        "oracle_text": "The next time a source of your choice would deal damage to you this turn, prevent that damage. You gain life equal to the damage prevented this way.\nAt the beginning of your next upkeep, pay {1}{W}{W}. If you don't, you lose the game.",
+        "mana_cost": "{0}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Additional damage episodes from the same chosen source",
+          "Next-upkeep payment and lose-the-game trigger; no upkeep is advanced"
+        ],
+        "binding": "packet",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "",
+        "tap": false,
+        "gain_prevented": true
+      }
+    },
+    "Moonmist": {
+      "oracle": {
+        "oracle_id": "2c306e87-e3c8-4066-9be5-570e2f2d6bad",
+        "name": "Moonmist",
+        "oracle_text": "Transform all Humans. Prevent all combat damage that would be dealt this turn by creatures other than Werewolves and Wolves. (Only double-faced cards can be transformed.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Transform"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "amount": "all",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Transformation of Humans; no Human or double-faced card is on these battlefields",
+          "Werewolf damage sources"
+        ],
+        "binding": "field_combat",
+        "scope": "any",
+        "damage_rule": "non_wolves",
+        "unselected": "Watchwolf"
+      }
+    },
+    "Snag": {
+      "oracle": {
+        "oracle_id": "feb5e9a9-500a-4f20-881d-c97d052953ce",
+        "name": "Snag",
+        "oracle_text": "You may discard a Forest card rather than pay this spell's mana cost.\nPrevent all combat damage that would be dealt by unblocked creatures this turn.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "amount": "all",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Alternative Forest-discard cost; no Forest card is in hand"
+        ],
+        "binding": "field_combat",
+        "scope": "any",
+        "damage_rule": "unblocked"
+      }
+    },
+    "Winds of Qal Sisma": {
+      "oracle": {
+        "oracle_id": "e7871b4d-a408-4377-beee-6b1d3c7dd57d",
+        "name": "Winds of Qal Sisma",
+        "oracle_text": "Prevent all combat damage that would be dealt this turn.\nFerocious — If you control a creature with power 4 or greater, instead prevent all combat damage that would be dealt this turn by creatures your opponents control.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Ferocious"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "amount": "all",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Ferocious changes due to control changes or characteristic changes other than the tested power reduction"
+        ],
+        "binding": "field_combat",
+        "scope": "any",
+        "damage_rule": "ferocious"
+      }
+    },
+    "Terrifying Presence": {
+      "oracle": {
+        "oracle_id": "ca8f6e19-6ef3-4d77-8312-867767ffeda6",
+        "name": "Terrifying Presence",
+        "oracle_text": "Prevent all combat damage that would be dealt by creatures other than target creature this turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "amount": "all",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Noncreature and noncombat damage from the chosen exception"
+        ],
+        "binding": "field_combat",
+        "scope": "any",
+        "damage_rule": "except_chosen"
+      }
+    },
+    "Soul Parry": {
+      "oracle": {
+        "oracle_id": "8b36335b-119b-4f90-a5d7-b77d8f47f55f",
+        "name": "Soul Parry",
+        "oracle_text": "Prevent all damage one or two target creatures would deal this turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "amount": "all",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Noncombat damage from selected creatures"
+        ],
+        "binding": "chosen_combat",
+        "scope": "source",
+        "optional_second_target": true
+      }
+    },
+    "Gossamer Chains": {
+      "oracle": {
+        "oracle_id": "af3936ab-0156-438d-9fef-a924d2fcffc3",
+        "name": "Gossamer Chains",
+        "oracle_text": "Return this enchantment to its owner's hand: Prevent all combat damage that would be dealt by target unblocked creature this turn.",
+        "mana_cost": "{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "amount": "all",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Targeting creatures controlled by the ability controller"
+        ],
+        "binding": "chosen_combat",
+        "scope": "source",
+        "return_source": true,
+        "target_predicate": "unblocked"
+      }
+    },
+    "Boros Fury-Shield": {
+      "oracle": {
+        "oracle_id": "20eff2ce-f26d-48a2-8a1f-435a7e2968c8",
+        "name": "Boros Fury-Shield",
+        "oracle_text": "Prevent all combat damage that would be dealt by target attacking or blocking creature this turn. If {R} was spent to cast this spell, Boros Fury-Shield deals damage to that creature's controller equal to the creature's power.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "amount": "all",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Choosing blocking creatures instead of attacking creatures",
+          "Red paid through generic mana rather than the selected red-spent payment menu"
+        ],
+        "binding": "chosen_combat",
+        "scope": "source",
+        "red_spent_damage": true,
+        "red_spent_dialogs": {
+          "0": [
+            1
+          ],
+          "1": []
+        }
+      }
+    },
+    "Phantom Nomad": {
+      "oracle": {
+        "oracle_id": "bf65a7a7-a590-41eb-9844-184e5d63e32a",
+        "name": "Phantom Nomad",
+        "oracle_text": "This creature enters with two +1/+1 counters on it.\nIf damage would be dealt to this creature, prevent that damage. Remove a +1/+1 counter from this creature.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Spirit Nomad",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "0",
+        "toughness": "0"
+      },
+      "params": {
+        "extension": "replacement",
+        "replacement": "phantom",
+        "entry_counters": 2,
+        "casting_cost": "{1}{W}",
+        "gaps": []
+      }
+    },
+    "Phantom Tiger": {
+      "oracle": {
+        "oracle_id": "1755b3d4-0e40-40c4-b913-0960d55d411b",
+        "name": "Phantom Tiger",
+        "oracle_text": "This creature enters with two +1/+1 counters on it.\nIf damage would be dealt to this creature, prevent that damage. Remove a +1/+1 counter from this creature.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Cat Spirit",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "0"
+      },
+      "params": {
+        "extension": "replacement",
+        "replacement": "phantom",
+        "entry_counters": 2,
+        "casting_cost": "{2}{G}",
+        "gaps": []
+      }
+    },
+    "Phantom Centaur": {
+      "oracle": {
+        "oracle_id": "9bb8c54b-1228-4b7c-8651-52cb5b0f6e72",
+        "name": "Phantom Centaur",
+        "oracle_text": "Protection from black\nThis creature enters with three +1/+1 counters on it.\nIf damage would be dealt to this creature, prevent that damage. Remove a +1/+1 counter from this creature.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Centaur Spirit",
+        "keywords": [
+          "Protection"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "0"
+      },
+      "params": {
+        "extension": "replacement",
+        "replacement": "phantom",
+        "entry_counters": 3,
+        "casting_cost": "{2}{G}{G}",
+        "gaps": [
+          "Protection from black"
+        ]
+      }
+    },
+    "Phantom Flock": {
+      "oracle": {
+        "oracle_id": "bcded242-6e54-416f-bdc8-093211c50e3f",
+        "name": "Phantom Flock",
+        "oracle_text": "Flying\nThis creature enters with three +1/+1 counters on it.\nIf damage would be dealt to this creature, prevent that damage. Remove a +1/+1 counter from this creature.",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature — Bird Soldier Spirit",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "power": "0",
+        "toughness": "0"
+      },
+      "params": {
+        "extension": "replacement",
+        "replacement": "phantom",
+        "entry_counters": 3,
+        "casting_cost": "{3}{W}{W}",
+        "gaps": [
+          "Flying evasion and blocking"
+        ]
+      }
+    },
+    "Swans of Bryn Argoll": {
+      "oracle": {
+        "oracle_id": "b187aeeb-5cf5-4b73-a3ef-f39188d2ba33",
+        "name": "Swans of Bryn Argoll",
+        "oracle_text": "Flying\nIf a source would deal damage to this creature, prevent that damage. The source's controller draws cards equal to the damage prevented this way.",
+        "mana_cost": "{2}{W/U}{W/U}",
+        "type_line": "Creature — Bird Spirit",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "power": "4",
+        "toughness": "3"
+      },
+      "params": {
+        "extension": "replacement",
+        "replacement": "draw",
+        "entry_counters": 0,
+        "casting_cost": "{2}{W}{W}",
+        "gaps": [
+          "Flying evasion and blocking",
+          "Alternative blue and mixed hybrid payments"
+        ]
+      }
+    },
+    "Phyrexian Hydra": {
+      "oracle": {
+        "oracle_id": "b16085d5-6d00-4d47-ab8b-d18d55c72141",
+        "name": "Phyrexian Hydra",
+        "oracle_text": "Infect (This creature deals damage to creatures in the form of -1/-1 counters and to players in the form of poison counters.)\nIf damage would be dealt to this creature, prevent that damage. Put a -1/-1 counter on this creature for each 1 damage prevented this way.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Phyrexian Hydra",
+        "keywords": [
+          "Infect"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "power": "7",
+        "toughness": "7"
+      },
+      "params": {
+        "extension": "replacement",
+        "replacement": "minus_counters",
+        "entry_counters": 0,
+        "casting_cost": "{3}{G}{G}",
+        "gaps": [
+          "Outgoing infect damage, poison and counter cancellation"
+        ]
+      }
+    },
+    "Plated Pegasus": {
+      "oracle": {
+        "oracle_id": "30b99bee-c16e-4936-b688-1a256dd0c196",
+        "name": "Plated Pegasus",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying\nIf a spell would deal damage to a permanent or player, prevent 1 damage that spell would deal to that permanent or player.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Pegasus",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "modifier",
+        "damage_rule": "spell_one",
+        "gaps": [
+          "Flash timing",
+          "Flying evasion and blocking",
+          "Noncombat creature-ability damage"
+        ]
+      }
+    },
+    "Vigor": {
+      "oracle": {
+        "oracle_id": "70787d8b-0a40-43ea-837a-9617dc13e7e5",
+        "name": "Vigor",
+        "oracle_text": "Trample\nIf damage would be dealt to another creature you control, prevent that damage. Put a +1/+1 counter on that creature for each 1 damage prevented this way.\nWhen Vigor is put into a graveyard from anywhere, shuffle it into its owner's library.",
+        "mana_cost": "{3}{G}{G}{G}",
+        "type_line": "Creature — Elemental Incarnation",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "power": "6",
+        "toughness": "6"
+      },
+      "params": {
+        "extension": "modifier",
+        "damage_rule": "own_other_growth",
+        "gaps": [
+          "Trample combat as attacker",
+          "Graveyard shuffle from battlefield, discard and mill"
+        ]
+      }
+    },
+    "Purity": {
+      "oracle": {
+        "oracle_id": "23ef92b0-2298-4e8d-bf64-46d096c84a9d",
+        "name": "Purity",
+        "oracle_text": "Flying\nIf noncombat damage would be dealt to you, prevent that damage. You gain life equal to the damage prevented this way.\nWhen Purity is put into a graveyard from anywhere, shuffle it into its owner's library.",
+        "mana_cost": "{3}{W}{W}{W}",
+        "type_line": "Creature — Elemental Incarnation",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "power": "6",
+        "toughness": "6"
+      },
+      "params": {
+        "extension": "modifier",
+        "damage_rule": "own_noncombat_gain",
+        "gaps": [
+          "Flying evasion and blocking",
+          "Graveyard shuffle from battlefield, discard and mill",
+          "Noncombat creature-ability damage"
+        ]
+      }
+    },
+    "Gisela, Blade of Goldnight": {
+      "oracle": {
+        "oracle_id": "66f9f325-5e8e-4ebf-b5b3-c6410d80f2c5",
+        "name": "Gisela, Blade of Goldnight",
+        "oracle_text": "Flying, first strike\nIf a source would deal damage to an opponent or a permanent an opponent controls, that source deals double that damage to that player or permanent instead.\nIf a source would deal damage to you or a permanent you control, prevent half that damage, rounded up.",
+        "mana_cost": "{4}{R}{W}{W}",
+        "type_line": "Legendary Creature — Angel",
+        "keywords": [
+          "Flying",
+          "First strike",
+          "Double"
+        ],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "power": "5",
+        "toughness": "5"
+      },
+      "params": {
+        "extension": "modifier",
+        "damage_rule": "opponent_double_own_half",
+        "gaps": [
+          "Flying and first-strike combat as participant",
+          "Noncombat creature-ability damage"
+        ]
+      }
+    },
+    "Phantom Wurm": {
+      "oracle": {
+        "oracle_id": "a866fb67-6614-45e6-928e-b4b59d95335f",
+        "name": "Phantom Wurm",
+        "oracle_text": "This creature enters with four +1/+1 counters on it.\nIf damage would be dealt to this creature, prevent that damage. Remove a +1/+1 counter from this creature.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm Spirit",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "0"
+      },
+      "params": {
+        "extension": "replacement",
+        "replacement": "phantom",
+        "entry_counters": 4,
+        "casting_cost": "{4}{G}{G}",
+        "gaps": []
+      }
+    },
+    "Phantom Nishoba": {
+      "oracle": {
+        "oracle_id": "e43e06fb-52b7-4f38-8fac-f31973b043f7",
+        "name": "Phantom Nishoba",
+        "oracle_text": "Trample\nThis creature enters with seven +1/+1 counters on it.\nWhenever this creature deals damage, you gain that much life.\nIf damage would be dealt to this creature, prevent that damage. Remove a +1/+1 counter from this creature.",
+        "mana_cost": "{5}{G}{W}",
+        "type_line": "Creature — Cat Beast Spirit",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "power": "0",
+        "toughness": "0"
+      },
+      "params": {
+        "extension": "replacement",
+        "replacement": "phantom",
+        "entry_counters": 7,
+        "casting_cost": "{5}{G}{W}",
+        "gaps": [
+          "Attacking trample allocation",
+          "Noncombat damage dealt by this creature"
+        ]
+      }
+    },
+    "Field Surgeon": {
+      "oracle": {
+        "oracle_id": "730809d7-cb8c-495c-8972-7e85b967358e",
+        "name": "Field Surgeon",
+        "oracle_text": "Tap an untapped creature you control: Prevent the next 1 damage that would be dealt to target creature this turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Cleric",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "binding": "packet",
+        "amount": 1,
+        "scope": "creature",
+        "activation_cost": "",
+        "tap": true,
+        "tap_cost_source": true,
+        "repeat_untap": true,
+        "gaps": [
+          "Other creatures selected to pay the creature-tap cost",
+          "Live-window unavailable-cost queries"
+        ]
+      }
+    },
+    "Master Apothecary": {
+      "oracle": {
+        "oracle_id": "067b54e4-18f3-48e3-b824-3aba7fcf2408",
+        "name": "Master Apothecary",
+        "oracle_text": "Tap an untapped Cleric you control: Prevent the next 2 damage that would be dealt to any target this turn.",
+        "mana_cost": "{W}{W}{W}",
+        "type_line": "Creature — Human Cleric",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "binding": "packet",
+        "amount": 2,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": true,
+        "tap_cost_source": true,
+        "repeat_untap": true,
+        "gaps": [
+          "Other Clerics selected to pay the creature-tap cost",
+          "Live-window unavailable-cost queries"
+        ]
+      }
+    },
+    "Pearl Shard": {
+      "oracle": {
+        "oracle_id": "d08cb402-2138-4e8e-99f4-4a62855dc285",
+        "name": "Pearl Shard",
+        "oracle_text": "{3}, {T} or {W}, {T}: Prevent the next 2 damage that would be dealt to any target this turn.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [
+            0
+          ],
+          "1": [
+            0
+          ]
+        },
+        "binding": "packet",
+        "amount": 2,
+        "scope": "any",
+        "activation_cost": "{W}",
+        "tap": true,
+        "alternative_cost": "{3}",
+        "repeat_untap": true,
+        "present_dialogs": true,
+        "gaps": [
+          "Both payment modes affordable but choosing generic instead of white"
+        ]
+      }
+    },
+    "Oriss, Samite Guardian": {
+      "oracle": {
+        "oracle_id": "8d6e0dab-400a-4761-8343-92c7eb7e8735",
+        "name": "Oriss, Samite Guardian",
+        "oracle_text": "{T}: Prevent all damage that would be dealt to target creature this turn.\nGrandeur — Discard another card named Oriss, Samite Guardian: Target player can't cast spells this turn, and creatures that player controls can't attack this turn.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Legendary Creature — Human Cleric",
+        "keywords": [
+          "Grandeur"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "3"
+      },
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [
+            0
+          ],
+          "1": [
+            0
+          ]
+        },
+        "binding": "recipient_activation",
+        "amount": "all",
+        "scope": "creature",
+        "activation_cost": "",
+        "tap": true,
+        "present_dialogs": true,
+        "gaps": [
+          "Grandeur discard mode",
+          "Countering the activation or losing its recipient while pending"
+        ]
+      }
+    },
+    "Lymph Sliver": {
+      "oracle": {
+        "oracle_id": "c3469de8-4bdb-42d4-9fc0-75fe31c3f6e5",
+        "name": "Lymph Sliver",
+        "oracle_text": "All Sliver creatures have absorb 1. (If a source would deal damage to a Sliver, prevent 1 of that damage.)",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Sliver",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "power": "3",
+        "toughness": "3"
+      },
+      "params": {
+        "extension": "modifier",
+        "damage_rule": "sliver_one",
+        "gaps": [
+          "Sliver sources other than Lymph itself granting additional absorb instances",
+          "Brood Sliver player-damage token trigger, inactive because it only blocks"
+        ]
+      }
+    },
+    "Temple Altisaur": {
+      "oracle": {
+        "oracle_id": "1f499d39-b963-45c0-9604-d3cab98c9e05",
+        "name": "Temple Altisaur",
+        "oracle_text": "If a source would deal damage to another Dinosaur you control, prevent all but 1 of that damage.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Dinosaur",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "power": "3",
+        "toughness": "4"
+      },
+      "params": {
+        "extension": "modifier",
+        "damage_rule": "other_dinosaur_one",
+        "gaps": [
+          "More than two controlled Temple copies",
+          "Other Dinosaur identities beyond independent Temple copies"
+        ]
+      }
+    },
+    "Spirit of Resistance": {
+      "oracle": {
+        "oracle_id": "b075b645-2e5a-4d91-9440-02db4e6f5d08",
+        "name": "Spirit of Resistance",
+        "oracle_text": "As long as you control a permanent of each color, prevent all damage that would be dealt to you.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal"
+      },
+      "params": {
+        "extension": "modifier",
+        "damage_rule": "five_colors",
+        "gaps": [
+          "Color-changing continuous effects",
+          "Hybrid/multicolor single permanent satisfying several colors",
+          "Air Elemental flying is inactive on the idle color witness"
+        ]
+      }
+    },
+    "Bronze Horse": {
+      "oracle": {
+        "oracle_id": "a7887b24-977d-4a40-bb30-4bf467e5dba6",
+        "name": "Bronze Horse",
+        "oracle_text": "Trample\nAs long as you control another creature, prevent all damage that would be dealt to this creature by spells that target it.",
+        "mana_cost": "{7}",
+        "type_line": "Artifact Creature — Horse",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 7.0,
+        "layout": "normal",
+        "power": "4",
+        "toughness": "4"
+      },
+      "params": {
+        "extension": "modifier",
+        "damage_rule": "targeted_self_with_ally",
+        "gaps": [
+          "Attacking trample allocation",
+          "Mixed-source single damage events"
+        ]
+      }
+    },
+    "Unbreathing Horde": {
+      "oracle": {
+        "oracle_id": "e6cd9203-e4d3-4d9f-b59f-4e454fc5a477",
+        "name": "Unbreathing Horde",
+        "oracle_text": "This creature enters with a +1/+1 counter on it for each other Zombie you control and each Zombie card in your graveyard.\nIf this creature would be dealt damage, prevent that damage and remove a +1/+1 counter from it.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "0",
+        "toughness": "0"
+      },
+      "params": {
+        "extension": "replacement",
+        "replacement": "zombie_phantom",
+        "entry_counters": 3,
+        "casting_cost": "{2}{B}",
+        "gaps": [
+          "Blink, reanimation and simultaneous Zombie entries",
+          "Entry counts outside one, two and three"
+        ]
+      }
+    },
+    "Undergrowth Champion": {
+      "oracle": {
+        "oracle_id": "cb0eb84d-b41b-4147-aa7c-089b7fabd835",
+        "name": "Undergrowth Champion",
+        "oracle_text": "If damage would be dealt to this creature while it has a +1/+1 counter on it, prevent that damage and remove a +1/+1 counter from this creature.\nLandfall — Whenever a land you control enters, put a +1/+1 counter on this creature.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "keywords": [
+          "Landfall"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "replacement",
+        "replacement": "conditional_phantom",
+        "entry_counters": 0,
+        "casting_cost": "{1}{G}{G}",
+        "gaps": [
+          "Multiple lands entering simultaneously",
+          "Other counter sources and counter cancellation",
+          "Post-search shuffle order unconstrained; exact library multiplicities retained"
+        ]
+      }
+    },
+    "Gloom Surgeon": {
+      "oracle": {
+        "oracle_id": "48b8ab2d-9f3f-42b2-9c5d-7497bceae43e",
+        "name": "Gloom Surgeon",
+        "oracle_text": "If combat damage would be dealt to this creature, prevent that damage and exile that many cards from the top of your library.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Spirit",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "replacement",
+        "replacement": "exile_combat",
+        "entry_counters": 0,
+        "casting_cost": "{1}{B}",
+        "gaps": [
+          "Attacking combat roles",
+          "Multiple attackers and blockers",
+          "Exile replacement effects and later reuse of exiled cards"
+        ]
+      }
+    },
+    "Ethersworn Shieldmage": {
+      "oracle": {
+        "oracle_id": "ee988017-fc7e-4d8a-8f5c-0a7e57a8d050",
+        "name": "Ethersworn Shieldmage",
+        "oracle_text": "Flash\nWhen this creature enters, prevent all damage that would be dealt to artifact creatures this turn.",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Artifact Creature — Vedalken Wizard",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "extension": "entry_shield",
+        "effect": "artifact_creatures",
+        "gaps": [
+          "Flash UI permission outside explicit cast/response actions",
+          "Artifact creatures losing artifact status after the shield resolves",
+          "Brass Man upkeep and untap restrictions, inactive on untapped blockers"
+        ]
+      }
+    },
+    "Selfless Squire": {
+      "oracle": {
+        "oracle_id": "7d079c78-b2a9-444f-ab54-c61c041baa6d",
+        "name": "Selfless Squire",
+        "oracle_text": "Flash\nWhen this creature enters, prevent all damage that would be dealt to you this turn.\nWhenever damage that would be dealt to you is prevented, put that many +1/+1 counters on this creature.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Soldier",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "entry_shield",
+        "effect": "own_player_counters",
+        "gaps": [
+          "Flash UI permission outside explicit cast/response actions",
+          "Several simultaneous independent prevention replacements",
+          "Brass Man upkeep and untap restrictions, inactive on untapped controls"
+        ]
+      }
+    },
+    "Haze Frog": {
+      "oracle": {
+        "oracle_id": "d4cbf16d-6da8-4018-8398-8e263ef6c69e",
+        "name": "Haze Frog",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, prevent all combat damage that other creatures would deal this turn.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Frog",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "1"
+      },
+      "params": {
+        "extension": "entry_shield",
+        "effect": "other_creatures_combat",
+        "gaps": [
+          "Flash UI permission outside explicit cast/response actions",
+          "Attacking Haze Frog and multiple blockers",
+          "Brass Man upkeep and untap restrictions, inactive on untapped controls"
+        ]
+      }
+    }
+  },
+  "witnesses": {
+    "Scaled Wurm": {
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "name": "Scaled Wurm",
+      "oracle_text": "",
+      "mana_cost": "{7}{G}",
+      "type_line": "Creature — Wurm",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 8.0,
+      "layout": "normal",
+      "power": "7",
+      "toughness": "6"
+    },
+    "Craw Wurm": {
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "name": "Craw Wurm",
+      "oracle_text": "",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature — Wurm",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "power": "6",
+      "toughness": "4"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "power": "3",
+      "toughness": "3"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Shock": {
+      "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+      "name": "Shock",
+      "oracle_text": "Shock deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Disenchant": {
+      "oracle_id": "a7e97fa9-4b72-4548-b854-5be5f18a6f1a",
+      "name": "Disenchant",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Vitalize": {
+      "oracle_id": "cd3226c6-bd47-4246-8ab3-01316c5d1809",
+      "name": "Vitalize",
+      "oracle_text": "Untap all creatures you control.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Lava Axe": {
+      "oracle_id": "387b6b07-a283-412d-94c3-f7f1dc76e858",
+      "name": "Lava Axe",
+      "oracle_text": "Lava Axe deals 5 damage to target player or planeswalker.",
+      "mana_cost": "{4}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "2"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Air Elemental": {
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "name": "Air Elemental",
+      "oracle_text": "Flying",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Elemental",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "power": "4",
+      "toughness": "4"
+    },
+    "Squire": {
+      "oracle_id": "aa6cdcc7-f5ea-47bf-9448-1c63e36b18d1",
+      "name": "Squire",
+      "oracle_text": "",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Soldier",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": "1",
+      "toughness": "2"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "2"
+    },
+    "Juggernaut": {
+      "oracle_id": "4ac9116f-36bc-4d71-b696-d6ee064e1d58",
+      "name": "Juggernaut",
+      "oracle_text": "This creature attacks each combat if able.\nThis creature can't be blocked by Walls.",
+      "mana_cost": "{4}",
+      "type_line": "Artifact Creature — Juggernaut",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4.0,
+      "layout": "normal",
+      "power": "5",
+      "toughness": "3"
+    },
+    "Glory Seeker": {
+      "oracle_id": "55c60b29-52c5-428c-9229-11ed0e26bd71",
+      "name": "Glory Seeker",
+      "oracle_text": "",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Soldier",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "2"
+    },
+    "Watchwolf": {
+      "oracle_id": "a35c2e20-eb90-4132-b65f-be1fcb569819",
+      "name": "Watchwolf",
+      "oracle_text": "",
+      "mana_cost": "{G}{W}",
+      "type_line": "Creature — Wolf",
+      "keywords": [],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": "3",
+      "toughness": "3"
+    },
+    "Shrink": {
+      "oracle_id": "252330b1-67cf-4d9e-a413-917ba61e731f",
+      "name": "Shrink",
+      "oracle_text": "Target creature gets -5/-0 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Krosan Colossus": {
+      "oracle_id": "703ab192-7e0a-4f02-8381-568ad2d999ca",
+      "name": "Krosan Colossus",
+      "oracle_text": "Morph {6}{G}{G} (You may cast this card face down as a 2/2 creature for {3}. Turn it face up any time for its morph cost.)",
+      "mana_cost": "{6}{G}{G}{G}",
+      "type_line": "Creature — Beast",
+      "keywords": [
+        "Morph"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 9.0,
+      "layout": "normal",
+      "power": "9",
+      "toughness": "9"
+    },
+    "Brood Sliver": {
+      "oracle_id": "6b1d178f-9713-4dcf-920b-ddf2c94cc427",
+      "name": "Brood Sliver",
+      "oracle_text": "Whenever a Sliver deals combat damage to a player, its controller may create a 1/1 colorless Sliver creature token.",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Sliver",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "power": "3",
+      "toughness": "3"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Prodigal Sorcerer": {
+      "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+      "name": "Prodigal Sorcerer",
+      "oracle_text": "{T}: This creature deals 1 damage to any target.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Human Wizard Sorcerer",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "power": "1",
+      "toughness": "1"
+    },
+    "Pyroclasm": {
+      "oracle_id": "e4bcd4ea-e7cd-4471-8f3b-18bb51d3d70c",
+      "name": "Pyroclasm",
+      "oracle_text": "Pyroclasm deals 2 damage to each creature.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Rampant Growth": {
+      "oracle_id": "8539f295-5d58-4436-a73a-b9277c4c7795",
+      "name": "Rampant Growth",
+      "oracle_text": "Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Brass Man": {
+      "oracle_id": "64f56228-7874-4465-ba58-1049083ea02f",
+      "name": "Brass Man",
+      "oracle_text": "This creature doesn't untap during your untap step.\nAt the beginning of your upkeep, you may pay {1}. If you do, untap this creature.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact Creature — Construct",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "power": "1",
+      "toughness": "3"
+    },
+    "Liquimetal Coating": {
+      "oracle_id": "f4bdc551-c2eb-4a34-a3e3-b4a017c925af",
+      "name": "Liquimetal Coating",
+      "oracle_text": "{T}: Target permanent becomes an artifact in addition to its other types until end of turn.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Relentless Assault": {
+      "oracle_id": "dc1c0e8c-d0c1-445c-968f-7dec91e5d5fc",
+      "name": "Relentless Assault",
+      "oracle_text": "Untap all creatures that attacked this turn. After this main phase, there is an additional combat phase followed by an additional main phase.",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Fog": {
+      "oracle_id": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+      "name": "Fog",
+      "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    }
+  }
+}

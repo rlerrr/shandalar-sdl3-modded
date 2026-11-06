@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Corrupted Resolve",
+  "csvid": 11585,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ]
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Poison gained/lost in a second response window; unpoisoned functional resolution remains permission-only because the implementation rejects a printed legal cast."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": null,
+          "auxiliary": [],
+          "wave": 5,
+          "poison_condition": true
+        }
+      },
+      "oracle_text": "Counter target spell if its controller is poisoned.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "condition_none_0",
+        "condition_opponent_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "type_instant_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1",
+        "condition_none_1",
+        "condition_opponent_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source and witness Oracle pins. Both controllers, own/opposing parent, printed payment/denial, populated replay. Actual Virulent Wound killing Suntail Hawk establishes parent-controller poison or other-player poison, with real payment/death/zone receipts; unpoisoned legal casting permission is isolated with ordinary drain and explicit functional limitation. Poison gained/lost in a second response window; unpoisoned functional resolution remains permission-only because the implementation rejects a printed legal cast."
+}

@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Circle of Protection: Green",
+  "csvid": 35,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Proactive source choice before a damage packet exists",
+          "Card-specific illegal damage-packet selection denial",
+          "Multiple damage packets from the same source",
+          "Activation availability queries inside the live damage callback",
+          "Snapshot while the damage callback is suspended",
+          "Damage dealt outside combat by qualified creatures"
+        ],
+        "binding": "packet_combat",
+        "amount": "all",
+        "scope": "you",
+        "activation_cost": "{1}",
+        "tap": false,
+        "source_predicate": "green"
+      },
+      "oracle_text": "{1}: The next time a green source of your choice would deal damage to you this turn, prevent that damage.",
+      "variants": [
+        "effect_0",
+        "without_effect_0",
+        "payment_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "cleanup_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "effect_1",
+        "without_effect_1",
+        "payment_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "cleanup_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1"
+      ]
+    }
+  ]
+}

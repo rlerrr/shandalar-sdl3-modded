@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "card": "Forlorn Pseudamma",
+  "csvid": 13718,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "inspired_payment",
+        "token": {
+          "name": "Zombie",
+          "power": 2,
+          "toughness": 2,
+          "colors": [
+            "B"
+          ],
+          "subtypes": [
+            "Zombie"
+          ],
+          "artifact": false,
+          "keywords": [],
+          "enchantment": true
+        },
+        "count": 1,
+        "payment": [
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "source_keywords": [
+          "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)"
+        ]
+      },
+      "oracle_text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nInspired \u2014 Whenever this creature becomes untapped, you may pay {2}{B}. If you do, create a 2/2 black Zombie enchantment creature token.",
+      "variants": [
+        "create_0",
+        "cast_only_0",
+        "source_payment_0",
+        "source_insufficient_0",
+        "source_wrong_color_0",
+        "countered_0",
+        "payment_0",
+        "payment_insufficient_0",
+        "payment_wrong_color_0",
+        "already_untapped_0",
+        "other_untaps_0",
+        "opponent_untap_0",
+        "untap_timing_0",
+        "repeat_0",
+        "source_destroyed_0",
+        "source_bounced_0",
+        "source_exiled_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "enchantment_type_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "effect_snapshot_0",
+        "repeat_snapshot_0",
+        "source_intimidate_ground_0",
+        "source_intimidate_artifact_0",
+        "source_intimidate_black_0",
+        "create_1",
+        "cast_only_1",
+        "source_payment_1",
+        "source_insufficient_1",
+        "source_wrong_color_1",
+        "countered_1",
+        "payment_1",
+        "payment_insufficient_1",
+        "payment_wrong_color_1",
+        "already_untapped_1",
+        "other_untaps_1",
+        "opponent_untap_1",
+        "untap_timing_1",
+        "repeat_1",
+        "source_destroyed_1",
+        "source_bounced_1",
+        "source_exiled_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "enchantment_type_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "effect_snapshot_1",
+        "repeat_snapshot_1",
+        "source_intimidate_ground_1",
+        "source_intimidate_artifact_1",
+        "source_intimidate_black_1",
+        "decline_0",
+        "decline_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Reaping the Rewards",
+  "csvid": 3542,
+  "recipes": [
+    {
+      "family": "life_spell_extension",
+      "version": 2,
+      "oracle_text": "Buyback\u2014Sacrifice a land. (You may sacrifice a land in addition to any other costs as you cast this spell. If you do, put this card into your hand as it resolves.)\nYou gain 2 life.",
+      "params": {
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "gain_life",
+            "amount": 2,
+            "scope": "recipient",
+            "quantity": "fixed"
+          }
+        ],
+        "cast_before": [],
+        "cast_after": [],
+        "gaps": [
+          "buyback sacrifice"
+        ],
+        "inactive": [
+          "no lands controlled"
+        ],
+        "energy": 0,
+        "poison": 0,
+        "lands": [],
+        "target_choices": 1
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_cast_0",
+        "opposing_turn_0",
+        "combat_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_cast_1",
+        "opposing_turn_1",
+        "combat_1"
+      ]
+    }
+  ]
+}

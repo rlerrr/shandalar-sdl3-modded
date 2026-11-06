@@ -2218,9 +2218,13 @@ int card_reins_of_power(int player, int card, event_t event){
 			default_test_definition(&this_test, TYPE_CREATURE);
 			new_manipulate_all(player, card, ANYBODY, &this_test, ACT_UNTAP);
 
-			int c, marked[2][151];
+			/* Snapshot both cohorts before either transfer.  Taking the opponent's
+			 * creatures can grow our active range or reuse an empty slot; those new
+			 * arrivals must not be given straight back by the second loop. */
+			int c, marked[2][151] = {{0}};
+			int original_count[2] = {active_cards_count[0], active_cards_count[1]};
 			APNAP(p,{
-						for (c = 0; c < active_cards_count[p]; ++c){
+						for (c = 0; c < original_count[p]; ++c){
 							if (in_play(p, c) && is_what(p, c, TYPE_CREATURE)){
 								marked[p][c] = 1;
 							}
@@ -2231,14 +2235,14 @@ int card_reins_of_power(int player, int card, event_t event){
 					};
 			);
 
-			for (c = active_cards_count[1-player]-1; c >-1 ; c--){
+			for (c = original_count[1-player]-1; c >-1 ; c--){
 				if (marked[1-player][c]){
 					effect_act_of_treason(player, card, 1-player, c);
 				}
 			}
 
 			int fake = add_card_to_hand(1-player, instance->internal_card_id);
-			for (c = active_cards_count[player]-1; c >-1 ; c--){
+			for (c = original_count[player]-1; c >-1 ; c--){
 				if (marked[player][c]){
 					effect_act_of_treason(1-player, fake, player, c);
 				}

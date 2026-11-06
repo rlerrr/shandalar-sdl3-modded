@@ -1,0 +1,4053 @@
+{
+  "version": 1,
+  "sources": {
+    "Goblin Chieftain": {
+      "oracle": {
+        "oracle_id": "368b4052-174e-4458-a6e6-eaf8093aa0fe",
+        "name": "Goblin Chieftain",
+        "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nOther Goblin creatures you control get +1/+1 and have haste.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature \u2014 Goblin",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/324/goblin-chieftain?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "own",
+        "other": true,
+        "predicate": "subtype",
+        "value": "Goblin",
+        "power": 1,
+        "toughness": 1,
+        "granted_keywords": [
+          "Haste"
+        ],
+        "source_keywords": [
+          "Haste"
+        ],
+        "primary_keyword": "Haste",
+        "matching": "Mons's Goblin Raiders",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Fury Sliver": {
+      "oracle": {
+        "oracle_id": "44623693-51d6-49ad-8cd7-140505caf02f",
+        "name": "Fury Sliver",
+        "oracle_text": "All Sliver creatures have double strike.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/164/fury-sliver?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Sliver",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Double strike"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Double strike",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Levitation": {
+      "oracle": {
+        "oracle_id": "94b703c4-5584-4913-8365-7e9f2f535c2d",
+        "name": "Levitation",
+        "oracle_text": "Creatures you control have flying.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m12/61/levitation?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Flying"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Flying",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Fervor": {
+      "oracle": {
+        "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+        "name": "Fervor",
+        "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Haste"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Haste",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Illness in the Ranks": {
+      "oracle": {
+        "oracle_id": "51abc95c-bd92-46f7-a0a1-6e9f8e0dda87",
+        "name": "Illness in the Ranks",
+        "oracle_text": "Creature tokens get -1/-1.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/69/illness-in-the-ranks?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "stats",
+        "scope": "both",
+        "other": false,
+        "predicate": "token",
+        "value": "",
+        "power": -1,
+        "toughness": -1,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "actual late token creation; supplied tokens are legal copy-token fixture states"
+        ]
+      }
+    },
+    "Glory of Warfare": {
+      "oracle": {
+        "oracle_id": "a73757e5-3430-42ed-8d1a-922c414c7f21",
+        "name": "Glory of Warfare",
+        "oracle_text": "During your turn, creatures you control get +2/+0.\nDuring turns other than yours, creatures you control get +0/+2.",
+        "mana_cost": "{2}{R}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hop/88/glory-of-warfare?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "turn_stats",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          2,
+          0
+        ],
+        "other_turn": [
+          0,
+          2
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Bedlam": {
+      "oracle": {
+        "oracle_id": "c28d4caf-9b7c-40b1-9cbe-275ca9dae06a",
+        "name": "Bedlam",
+        "oracle_text": "Creatures can't block.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/7ed/174/bedlam?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "block_permission",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Kismet": {
+      "oracle": {
+        "oracle_id": "81fdd1c4-d43b-4f8b-8712-7c2bf45a3e0b",
+        "name": "Kismet",
+        "oracle_text": "Artifacts, creatures, and lands your opponents control enter tapped.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/17/kismet?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "entry_tapped",
+        "scope": "opponents",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [
+          "Artifact",
+          "Creature",
+          "Land"
+        ],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Akroma's Devoted": {
+      "oracle": {
+        "oracle_id": "d264903b-d23e-48c8-95f1-cb1606a705a2",
+        "name": "Akroma's Devoted",
+        "oracle_text": "Cleric creatures have vigilance.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature \u2014 Human Cleric",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lgn/2/akromas-devoted?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Cleric",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Vigilance"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Vigilance",
+        "matching": "Samite Healer",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "late_attack": true
+      }
+    },
+    "Battering Sliver": {
+      "oracle": {
+        "oracle_id": "4adf959b-2e09-47ff-a1b1-b889348735b8",
+        "name": "Battering Sliver",
+        "oracle_text": "All Sliver creatures have trample.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/154/battering-sliver?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Sliver",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Trample"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Trample",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "late_attack": true
+      }
+    },
+    "Horned Sliver": {
+      "oracle": {
+        "oracle_id": "64553181-9852-459f-a6e0-54ce188dd937",
+        "name": "Horned Sliver",
+        "oracle_text": "All Sliver creatures have trample.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/176/horned-sliver?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Sliver",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Trample"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Trample",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "late_attack": true
+      }
+    },
+    "Heart Sliver": {
+      "oracle": {
+        "oracle_id": "6dd1f375-e8f2-4725-8fbd-9750c4860820",
+        "name": "Heart Sliver",
+        "oracle_text": "All Sliver creatures have haste.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/182/heart-sliver?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Sliver",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Haste"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Haste",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Reflex Sliver": {
+      "oracle": {
+        "oracle_id": "80e4e857-3f7e-4344-bf41-64d3b32f328f",
+        "name": "Reflex Sliver",
+        "oracle_text": "All Sliver creatures have haste.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/226/reflex-sliver?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Sliver",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Haste"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Haste",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Synchronous Sliver": {
+      "oracle": {
+        "oracle_id": "b90e2fb8-9b09-4d95-a8a2-5287b5f18132",
+        "name": "Synchronous Sliver",
+        "oracle_text": "All Sliver creatures have vigilance.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/48/synchronous-sliver?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Sliver",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Vigilance"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Vigilance",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "late_attack": true
+      }
+    },
+    "Spitting Sliver": {
+      "oracle": {
+        "oracle_id": "8415a482-3957-4c00-9015-99defc049877",
+        "name": "Spitting Sliver",
+        "oracle_text": "All Sliver creatures have first strike.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/80/spitting-sliver?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Sliver",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "First strike"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "First strike",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Talon Sliver": {
+      "oracle": {
+        "oracle_id": "74910702-e385-48f7-a6b3-064ebed08be7",
+        "name": "Talon Sliver",
+        "oracle_text": "All Sliver creatures have first strike.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/50/talon-sliver?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Sliver",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "First strike"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "First strike",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Winged Sliver": {
+      "oracle": {
+        "oracle_id": "24e96682-14ca-4a62-a920-2d686c8a5dbf",
+        "name": "Winged Sliver",
+        "oracle_text": "All Sliver creatures have flying.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/860/winged-sliver?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Sliver",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Flying"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Flying",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Concordant Crossroads": {
+      "oracle": {
+        "oracle_id": "ff01b408-6d17-40a3-9efd-a1b341ec1307",
+        "name": "Concordant Crossroads",
+        "oracle_text": "All creatures have haste.",
+        "mana_cost": "{G}",
+        "type_line": "World Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/141/concordant-crossroads?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Haste"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Haste",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "World replacement sequence; only one World permanent exists"
+        ]
+      }
+    },
+    "Mass Hysteria": {
+      "oracle": {
+        "oracle_id": "4500131b-7417-4f30-a1b0-97d51b2e6458",
+        "name": "Mass Hysteria",
+        "oracle_text": "All creatures have haste.",
+        "mana_cost": "{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/164/mass-hysteria?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Haste"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Haste",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Fires of Yavimaya": {
+      "oracle": {
+        "oracle_id": "e23d6f3b-0e18-423b-943b-15db7837255b",
+        "name": "Fires of Yavimaya",
+        "oracle_text": "Creatures you control have haste.\nSacrifice this enchantment: Target creature gets +2/+2 until end of turn.",
+        "mana_cost": "{1}{R}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pca/92/fires-of-yavimaya?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Haste"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Haste",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "activated sacrifice/pump ability: no activation is dispatched"
+        ]
+      }
+    },
+    "Rage Reflection": {
+      "oracle": {
+        "oracle_id": "03fb26b1-6d9c-455b-9b2f-a052a9222db7",
+        "name": "Rage Reflection",
+        "oracle_text": "Creatures you control have double strike.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/139/rage-reflection?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Double strike"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Double strike",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "True Conviction": {
+      "oracle": {
+        "oracle_id": "fc299c1c-50f3-492a-b6b8-a3664bb72ab7",
+        "name": "True Conviction",
+        "oracle_text": "Creatures you control have double strike and lifelink.",
+        "mana_cost": "{3}{W}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/93/true-conviction?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Double strike",
+          "Lifelink"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Double strike",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Serra's Blessing": {
+      "oracle": {
+        "oracle_id": "49cdd05c-feeb-4c24-9d88-069f5d2e08c3",
+        "name": "Serra's Blessing",
+        "oracle_text": "Creatures you control have vigilance. (Attacking doesn't cause them to tap.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/44/serras-blessing?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Vigilance"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Vigilance",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "late_attack": true
+      }
+    },
+    "Intangible Virtue": {
+      "oracle": {
+        "oracle_id": "d21c3c8f-d105-4ba9-bf69-e5f26f0f8ec5",
+        "name": "Intangible Virtue",
+        "oracle_text": "Creature tokens you control get +1/+1 and have vigilance.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/29/intangible-virtue?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "own",
+        "other": false,
+        "predicate": "token",
+        "value": "",
+        "power": 1,
+        "toughness": 1,
+        "granted_keywords": [
+          "Vigilance"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Vigilance",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "actual late token creation; legal copy-token fixture states used"
+        ]
+      }
+    },
+    "Always Watching": {
+      "oracle": {
+        "oracle_id": "c2153115-bc12-458d-baeb-538ec61e1242",
+        "name": "Always Watching",
+        "oracle_text": "Nontoken creatures you control get +1/+1 and have vigilance.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gnt/7/always-watching?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "own",
+        "other": false,
+        "predicate": "nontoken",
+        "value": "",
+        "power": 1,
+        "toughness": 1,
+        "granted_keywords": [
+          "Vigilance"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Vigilance",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "nonmatching_token": true,
+        "late_attack": true
+      }
+    },
+    "Phantom General": {
+      "oracle": {
+        "oracle_id": "b800c3e5-4ed9-4603-a987-d830e90cf25e",
+        "name": "Phantom General",
+        "oracle_text": "Creature tokens you control get +1/+1.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature \u2014 Spirit Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddk/14/phantom-general?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "stats",
+        "scope": "own",
+        "other": false,
+        "predicate": "token",
+        "value": "",
+        "power": 1,
+        "toughness": 1,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "actual late token creation; legal copy-token fixture states used"
+        ]
+      }
+    },
+    "Virulent Plague": {
+      "oracle": {
+        "oracle_id": "adfba95e-c73c-415d-adea-edcd04372ba4",
+        "name": "Virulent Plague",
+        "oracle_text": "Creature tokens get -2/-2.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/125/virulent-plague?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "stats",
+        "scope": "both",
+        "other": false,
+        "predicate": "token",
+        "value": "",
+        "power": -2,
+        "toughness": -2,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Hill Giant",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "actual late token creation; legal copy-token fixture states used"
+        ]
+      }
+    },
+    "Uphill Battle": {
+      "oracle": {
+        "oracle_id": "349a18bf-5c61-4fe6-a5e5-5e7cad6b4ba6",
+        "name": "Uphill Battle",
+        "oracle_text": "Creatures played by your opponents enter tapped.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/222/uphill-battle?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "entry_tapped",
+        "scope": "opponents",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [
+          "Creature"
+        ],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Frozen Aether": {
+      "oracle": {
+        "oracle_id": "32452ccf-88c7-41d6-93e5-15d31f29726d",
+        "name": "Frozen Aether",
+        "oracle_text": "Artifacts, creatures, and lands your opponents control enter tapped.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/54/frozen-aether?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "entry_tapped",
+        "scope": "opponents",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [
+          "Artifact",
+          "Creature",
+          "Land"
+        ],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Loxodon Gatekeeper": {
+      "oracle": {
+        "oracle_id": "861f0b1c-3b37-4d38-9232-e42565247076",
+        "name": "Loxodon Gatekeeper",
+        "oracle_text": "Artifacts, creatures, and lands your opponents control enter tapped.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature \u2014 Elephant Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rav/25/loxodon-gatekeeper?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "entry_tapped",
+        "scope": "opponents",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [
+          "Artifact",
+          "Creature",
+          "Land"
+        ],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Imposing Sovereign": {
+      "oracle": {
+        "oracle_id": "4bba3663-7f3c-4589-88aa-cf0bfe36b171",
+        "name": "Imposing Sovereign",
+        "oracle_text": "Creatures your opponents control enter tapped.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature \u2014 Human Noble",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/22/imposing-sovereign?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "entry_tapped",
+        "scope": "opponents",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [
+          "Creature"
+        ],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Kinjalli's Sunwing": {
+      "oracle": {
+        "oracle_id": "b9243163-b726-432e-830f-86132aa7f34a",
+        "name": "Kinjalli's Sunwing",
+        "oracle_text": "Flying\nCreatures your opponents control enter tapped.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature \u2014 Dinosaur",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lcc/130/kinjallis-sunwing?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "entry_tapped",
+        "scope": "opponents",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [
+          "Flying"
+        ],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [
+          "Creature"
+        ],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "source flying combat"
+        ]
+      }
+    },
+    "Moat": {
+      "oracle": {
+        "oracle_id": "42208fea-8c24-451f-861d-6d70c0a7a502",
+        "name": "Moat",
+        "oracle_text": "Creatures without flying can't attack.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/21/moat?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "attack_permission",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Air Elemental",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "rule": "nonflying",
+        "late_attack": true
+      }
+    },
+    "Magus of the Moat": {
+      "oracle": {
+        "oracle_id": "a035f865-b4db-4b9f-bccc-8572acd2033c",
+        "name": "Magus of the Moat",
+        "oracle_text": "Creatures without flying can't attack.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "0",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fut/12/magus-of-the-moat?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "attack_permission",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Air Elemental",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "rule": "nonflying",
+        "late_attack": true
+      }
+    },
+    "Blazing Archon": {
+      "oracle": {
+        "oracle_id": "82a70e4c-01ed-4280-80e4-86cb2bf6e63d",
+        "name": "Blazing Archon",
+        "oracle_text": "Flying\nCreatures can't attack you.",
+        "mana_cost": "{6}{W}{W}{W}",
+        "type_line": "Creature \u2014 Archon",
+        "power": "5",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/8/blazing-archon?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "attack_permission",
+        "scope": "opponents",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [
+          "Flying"
+        ],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "rule": "you",
+        "late_attack": true
+      }
+    },
+    "Peacekeeper": {
+      "oracle": {
+        "oracle_id": "e82ce5c6-1e42-4e87-b696-67aa3822ec9c",
+        "name": "Peacekeeper",
+        "oracle_text": "At the beginning of your upkeep, sacrifice this creature unless you pay {1}{W}.\nCreatures can't attack.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature \u2014 Human",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/22/peacekeeper?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "attack_permission",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "upkeep payment/sacrifice not dispatched; no upkeep helper invoked"
+        ],
+        "rule": "all",
+        "late_attack": true
+      }
+    },
+    "Reverence": {
+      "oracle": {
+        "oracle_id": "60963292-2dee-4b1c-9c1c-c35cf8ea3496",
+        "name": "Reverence",
+        "oracle_text": "Creatures with power 2 or less can't attack you.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/26/reverence?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "attack_permission",
+        "scope": "opponents",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Air Elemental",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "rule": "power_le2",
+        "late_attack": true
+      }
+    },
+    "Razorjaw Oni": {
+      "oracle": {
+        "oracle_id": "ed8bc0f2-5a65-4eb4-bf88-3642a55b6889",
+        "name": "Razorjaw Oni",
+        "oracle_text": "Black creatures can't block.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature \u2014 Demon Spirit",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/63/razorjaw-oni?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "block_permission",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "rule": "black",
+        "blocker": "Scathe Zombies",
+        "alternate_blocker": true,
+        "self_blocker": true
+      }
+    },
+    "Rolling Stones": {
+      "oracle": {
+        "oracle_id": "7ce533d0-8b6e-46d8-b21e-a2932bdffb67",
+        "name": "Rolling Stones",
+        "oracle_text": "Wall creatures can attack as though they didn't have defender.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/38/rolling-stones?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "defender_permission",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Wall of Stone",
+        "nonmatching": "Guard Gomazoa",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "Guard Gomazoa never enters combat; its damage prevention is inactive"
+        ],
+        "rule": "wall",
+        "late_attack": true
+      }
+    },
+    "Bower Passage": {
+      "oracle": {
+        "oracle_id": "f91ef713-5289-4901-9291-0a5afe6f997b",
+        "name": "Bower Passage",
+        "oracle_text": "Creatures with flying can't block creatures you control.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/170/bower-passage?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "block_permission",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "rule": "flying_vs_own",
+        "blocker": "Air Elemental",
+        "alternate_blocker": true
+      }
+    },
+    "Darkest Hour": {
+      "oracle": {
+        "oracle_id": "5667376e-e59c-4b17-b096-5d92cdfe3db1",
+        "name": "Darkest Hour",
+        "oracle_text": "All creatures are black.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/7ed/128/darkest-hour?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "color",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "B",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Savannah Lions",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Gravity Sphere": {
+      "oracle": {
+        "oracle_id": "8ddf93fe-980b-4dc4-b56f-6a2ee50100a6",
+        "name": "Gravity Sphere",
+        "oracle_text": "All creatures lose flying.",
+        "mana_cost": "{2}{R}",
+        "type_line": "World Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/leg/151/gravity-sphere?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "flying_loss",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Air Elemental",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "later flying grants/timestamp interactions",
+          "World replacement sequence: exactly one World source"
+        ],
+        "removed_keywords": [
+          "Flying"
+        ]
+      }
+    },
+    "Mystic Decree": {
+      "oracle": {
+        "oracle_id": "06eb8b90-aad8-41c1-bbc5-85ded2fe76bc",
+        "name": "Mystic Decree",
+        "oracle_text": "All creatures lose flying and islandwalk.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "World Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/53/mystic-decree?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "flying_loss",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Air Elemental",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "later ability grants/timestamps",
+          "World replacement sequence: exactly one World source",
+          "islandwalk probe stops before damage; optional River Boa regeneration is not invoked"
+        ],
+        "removed_keywords": [
+          "Flying",
+          "Islandwalk"
+        ]
+      }
+    },
+    "Paper Tiger": {
+      "oracle": {
+        "oracle_id": "8e409d83-b63d-48e8-b55a-2a2d364a7a0f",
+        "name": "Paper Tiger",
+        "oracle_text": "Creatures named Rock Lobster can't attack or block.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature \u2014 Cat",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/und/80/paper-tiger?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "named_restriction",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "Rock Lobster",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Rock Lobster",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "independent named witness restrictions remain inactive: their named subjects are absent"
+        ],
+        "witness_forbids": "Scissors Lizard",
+        "late_attack": true
+      }
+    },
+    "Rock Lobster": {
+      "oracle": {
+        "oracle_id": "ebed673b-c332-4afa-b9ad-31ff9da5839b",
+        "name": "Rock Lobster",
+        "oracle_text": "Creatures named Scissors Lizard can't attack or block.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature \u2014 Lobster",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/und/82/rock-lobster?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "named_restriction",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "Scissors Lizard",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Scissors Lizard",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "independent named witness restrictions remain inactive: their named subjects are absent"
+        ],
+        "witness_forbids": "Paper Tiger",
+        "late_attack": true
+      }
+    },
+    "Scissors Lizard": {
+      "oracle": {
+        "oracle_id": "c0bb1f84-41b6-4465-93aa-089fc1645527",
+        "name": "Scissors Lizard",
+        "oracle_text": "Creatures named Paper Tiger can't attack or block.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature \u2014 Lizard",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/und/83/scissors-lizard?utm_source=api"
+      },
+      "params": {
+        "schema": 2,
+        "kind": "named_restriction",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "Paper Tiger",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Paper Tiger",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "independent named witness restrictions remain inactive: their named subjects are absent"
+        ],
+        "witness_forbids": "Rock Lobster",
+        "late_attack": true
+      }
+    },
+    "Angelic Voices": {
+      "oracle": {
+        "oracle_id": "3485109b-251f-4bef-a069-308031f47912",
+        "name": "Angelic Voices",
+        "oracle_text": "Creatures you control get +1/+1 as long as you control no nonartifact, nonwhite creatures.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/3/angelic-voices?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "conditional_stats",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 1,
+        "toughness": 1,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Savannah Lions",
+        "nonmatching": "Samite Healer",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses"
+        ],
+        "condition": "no_own_nonartifact_nonwhite"
+      }
+    },
+    "Common Cause": {
+      "oracle": {
+        "oracle_id": "d1dac139-de12-46ba-94b1-42e107c2c95f",
+        "name": "Common Cause",
+        "oracle_text": "Nonartifact creatures get +2/+2 as long as they all share a color.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/13/common-cause?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "conditional_stats",
+        "scope": "both",
+        "other": false,
+        "predicate": "nonartifact",
+        "value": "",
+        "power": 2,
+        "toughness": 2,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Savannah Lions",
+        "nonmatching": "Sliver Construct",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses",
+          "multicolor witnesses have dormant activated abilities; Scab-Clan Mauler is seeded with no bloodthirst counters and never attacks/blocks"
+        ],
+        "condition": "all_nonartifact_creatures_share_color"
+      }
+    },
+    "Divine Sacrament": {
+      "oracle": {
+        "oracle_id": "92bd7fe2-bb70-40fb-984b-26e461347c56",
+        "name": "Divine Sacrament",
+        "oracle_text": "White creatures get +1/+1.\nThreshold \u2014 White creatures get an additional +1/+1 as long as there are seven or more cards in your graveyard.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [
+          "Threshold"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/5/divine-sacrament?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "conditional_stats",
+        "scope": "both",
+        "other": false,
+        "predicate": "color",
+        "value": "W",
+        "power": 1,
+        "toughness": 1,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Savannah Lions",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses"
+        ],
+        "condition": "own_grave_threshold_extra",
+        "threshold_power": 1,
+        "threshold_toughness": 1
+      }
+    },
+    "Silver Seraph": {
+      "oracle": {
+        "oracle_id": "bcc7e32a-9cf9-4fdf-a0a4-e90ae42f1353",
+        "name": "Silver Seraph",
+        "oracle_text": "Flying\nThreshold \u2014 Other creatures you control get +2/+2 as long as there are seven or more cards in your graveyard.",
+        "mana_cost": "{5}{W}{W}{W}",
+        "type_line": "Creature \u2014 Angel",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying",
+          "Threshold"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jud/23/silver-seraph?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "conditional_stats",
+        "scope": "own",
+        "other": true,
+        "predicate": "all",
+        "value": "",
+        "power": 2,
+        "toughness": 2,
+        "granted_keywords": [],
+        "source_keywords": [
+          "Flying"
+        ],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Savannah Lions",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses"
+        ],
+        "condition": "own_grave_threshold"
+      }
+    },
+    "Weapons Trainer": {
+      "oracle": {
+        "oracle_id": "d193f3b7-d205-4c49-ae52-6a095282e0b3",
+        "name": "Weapons Trainer",
+        "oracle_text": "Other creatures you control get +1/+0 as long as you control an Equipment.",
+        "mana_cost": "{R}{W}",
+        "type_line": "Creature \u2014 Human Soldier Ally",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/228/weapons-trainer?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "conditional_stats",
+        "scope": "own",
+        "other": true,
+        "predicate": "all",
+        "value": "",
+        "power": 1,
+        "toughness": 0,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Savannah Lions",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses",
+          "Equipment remains unattached; equip activation and attached Equipment effects are inactive"
+        ],
+        "condition": "own_equipment_exists"
+      }
+    },
+    "Hold the Gates": {
+      "oracle": {
+        "oracle_id": "7e6fcbc0-691a-4bd7-b063-debc86f4506a",
+        "name": "Hold the Gates",
+        "oracle_text": "Creatures you control get +0/+1 for each Gate you control and have vigilance.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/16/hold-the-gates?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "conditional_stats",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Vigilance"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Vigilance",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Savannah Lions",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses",
+          "Gate mana activations are inactive; all seeded Gates tapped; actual new Gate enters via Walking Atlas"
+        ],
+        "condition": "own_gate_count"
+      }
+    },
+    "Master of Etherium": {
+      "oracle": {
+        "oracle_id": "181e6b3e-c33e-49e7-acb8-67473289a856",
+        "name": "Master of Etherium",
+        "oracle_text": "Master of Etherium's power and toughness are each equal to the number of artifacts you control.\nOther artifact creatures you control get +1/+1.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Artifact Creature \u2014 Vedalken Wizard",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/226/master-of-etherium?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "conditional_stats",
+        "scope": "own",
+        "other": true,
+        "predicate": "artifact_creature",
+        "value": "",
+        "power": 1,
+        "toughness": 1,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses"
+        ],
+        "condition": "own_artifact_count_cda_plus_other_anthem",
+        "base_formula": "own_artifact_count_including_source"
+      }
+    },
+    "Obelisk of Urd": {
+      "oracle": {
+        "oracle_id": "e2ef3a24-9e78-47fc-9192-049aa0ddb7a0",
+        "name": "Obelisk of Urd",
+        "oracle_text": "Convoke (Your creatures can help cast this spell. Each creature you tap while casting this spell pays for {1} or one mana of that creature's color.)\nAs this artifact enters, choose a creature type.\nCreatures you control of the chosen type get +2/+2.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Convoke"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/znc/115/obelisk-of-urd?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "conditional_stats",
+        "scope": "own",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Bear",
+        "power": 2,
+        "toughness": 2,
+        "granted_keywords": [],
+        "source_keywords": [],
+        "primary_keyword": "",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Savannah Lions",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses",
+          "Convoke discounted-payment branch: all owned creatures are tapped before normal printed6 payment",
+          "unrepresented creature-type choices; Bear and Cat are explicitly selected by a normal single-subtype physical witness"
+        ],
+        "condition": "chosen_creature_type"
+      }
+    },
+    "Spinneret Sliver": {
+      "oracle": {
+        "oracle_id": "fbdec63e-0679-47e9-b82a-daa56df50481",
+        "name": "Spinneret Sliver",
+        "oracle_text": "All Sliver creatures have reach.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/230/spinneret-sliver?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "subtype",
+        "value": "Sliver",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Reach"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Reach",
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses"
+        ]
+      }
+    },
+    "Spidersilk Armor": {
+      "oracle": {
+        "oracle_id": "ad73e5eb-197c-45a3-9d20-a406ba126c79",
+        "name": "Spidersilk Armor",
+        "oracle_text": "Creatures you control get +0/+1 and have reach. (They can block creatures with flying.)",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddg/32/spidersilk-armor?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "grant",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 1,
+        "granted_keywords": [
+          "Reach"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Reach",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Savannah Lions",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses"
+        ]
+      }
+    },
+    "Elvish Champion": {
+      "oracle": {
+        "oracle_id": "7e40f37c-9a0c-40e0-b195-7ea94b12f798",
+        "name": "Elvish Champion",
+        "oracle_text": "Other Elf creatures get +1/+1 and have forestwalk. (They can't be blocked as long as defending player controls a Forest.)",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature \u2014 Elf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/261/elvish-champion?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "grant",
+        "scope": "both",
+        "other": true,
+        "predicate": "subtype",
+        "value": "Elf",
+        "power": 1,
+        "toughness": 1,
+        "granted_keywords": [
+          "Forestwalk"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Forestwalk",
+        "matching": "Elvish Warrior",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses"
+        ]
+      }
+    },
+    "Master of the Pearl Trident": {
+      "oracle": {
+        "oracle_id": "9f6ea9fe-eee5-4dca-a34e-c66d3e218716",
+        "name": "Master of the Pearl Trident",
+        "oracle_text": "Other Merfolk creatures you control get +1/+1 and have islandwalk. (They can't be blocked as long as defending player controls an Island.)",
+        "mana_cost": "{U}{U}",
+        "type_line": "Creature \u2014 Merfolk",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lcc/162/master-of-the-pearl-trident?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "grant",
+        "scope": "own",
+        "other": true,
+        "predicate": "subtype",
+        "value": "Merfolk",
+        "power": 1,
+        "toughness": 1,
+        "granted_keywords": [
+          "Islandwalk"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Islandwalk",
+        "matching": "Merfolk of the Pearl Trident",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses"
+        ]
+      }
+    },
+    "Eladamri, Lord of Leaves": {
+      "oracle": {
+        "oracle_id": "dcbb6b0e-2219-4ba4-9720-3e58b59b4328",
+        "name": "Eladamri, Lord of Leaves",
+        "oracle_text": "Other Elf creatures have forestwalk. (They can't be blocked as long as defending player controls a Forest.)\nOther Elves have shroud. (They can't be the targets of spells or abilities.)",
+        "mana_cost": "{G}{G}",
+        "type_line": "Legendary Creature \u2014 Elf Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/224/eladamri-lord-of-leaves?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "grant",
+        "scope": "both",
+        "other": true,
+        "predicate": "subtype",
+        "value": "Elf",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Forestwalk",
+          "Shroud"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Forestwalk",
+        "matching": "Elvish Warrior",
+        "nonmatching": "Grizzly Bears",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses",
+          "noncreature Kindred Elf permanents are not represented"
+        ]
+      }
+    },
+    "Knighthood": {
+      "oracle": {
+        "oracle_id": "22f008b3-c263-4dcc-855f-403da9ca4cd9",
+        "name": "Knighthood",
+        "oracle_text": "Creatures you control have first strike.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/7ed/25/knighthood?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "First strike"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "First strike",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Savannah Lions",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ]
+      }
+    },
+    "Primal Rage": {
+      "oracle": {
+        "oracle_id": "d6464ee4-23fc-4d68-bbda-3b53772015d1",
+        "name": "Primal Rage",
+        "oracle_text": "Creatures you control have trample. (A creature with trample can deal excess combat damage to the player or planeswalker it's attacking.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/286/primal-rage?utm_source=api"
+      },
+      "params": {
+        "schema": 1,
+        "kind": "grant",
+        "scope": "own",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Trample"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Trample",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Savannah Lions",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression"
+        ],
+        "late_attack": true
+      }
+    },
+    "Lumbering Satyr": {
+      "oracle": {
+        "oracle_id": "fba1329d-d8bf-4c5e-9cf1-5410a42f732e",
+        "name": "Lumbering Satyr",
+        "oracle_text": "All creatures have forestwalk. (They can't be blocked as long as defending player controls a Forest.)",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature \u2014 Satyr Beast",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/257/lumbering-satyr?utm_source=api"
+      },
+      "params": {
+        "schema": 3,
+        "kind": "grant",
+        "scope": "both",
+        "other": false,
+        "predicate": "all",
+        "value": "",
+        "power": 0,
+        "toughness": 0,
+        "granted_keywords": [
+          "Forestwalk"
+        ],
+        "source_keywords": [],
+        "primary_keyword": "Forestwalk",
+        "matching": "Grizzly Bears",
+        "nonmatching": "Savannah Lions",
+        "entry_types": [],
+        "own_turn": [
+          0,
+          0
+        ],
+        "other_turn": [
+          0,
+          0
+        ],
+        "gaps": [
+          "multiplayer",
+          "live type/color/control changes",
+          "additional keyword interactions",
+          "upkeep, untap and draw progression",
+          "live control/color/type changes beyond explicit entry/departure witnesses"
+        ]
+      }
+    }
+  },
+  "witnesses": {
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature \u2014 Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Mothdust Changeling": {
+      "oracle_id": "52237e6b-19f6-405c-a668-545c4ccb1b6d",
+      "name": "Mothdust Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\nTap an untapped creature you control: This creature gains flying until end of turn.",
+      "mana_cost": "{U}",
+      "type_line": "Creature \u2014 Shapeshifter",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Changeling"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mma/53/mothdust-changeling?utm_source=api"
+    },
+    "Air Elemental": {
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "name": "Air Elemental",
+      "oracle_text": "Flying",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature \u2014 Elemental",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+    },
+    "Mons's Goblin Raiders": {
+      "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+      "name": "Mons's Goblin Raiders",
+      "oracle_text": "",
+      "mana_cost": "{R}",
+      "type_line": "Creature \u2014 Goblin",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+    },
+    "Elvish Mystic": {
+      "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+      "name": "Elvish Mystic",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "{G}",
+      "type_line": "Creature \u2014 Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature \u2014 Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Seal of Fire": {
+      "oracle_id": "348a345e-4639-41ca-b015-a5d43459eb64",
+      "name": "Seal of Fire",
+      "oracle_text": "Sacrifice this enchantment: It deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/jvc/50/seal-of-fire?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Raging Goblin": {
+      "oracle_id": "30997b43-fc13-41d3-8064-1ccc2cb6fd2b",
+      "name": "Raging Goblin",
+      "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)",
+      "mana_cost": "{R}",
+      "type_line": "Creature \u2014 Goblin Berserker",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/oana/43/raging-goblin?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    },
+    "Walking Atlas": {
+      "oracle_id": "855a4837-7fc8-4b97-afbd-daa88e322c89",
+      "name": "Walking Atlas",
+      "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact Creature \u2014 Construct",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/wwk/131/walking-atlas?utm_source=api"
+    },
+    "Sliver Construct": {
+      "oracle_id": "7d592d5b-95cf-4416-9ade-1c23a8ba01d1",
+      "name": "Sliver Construct",
+      "oracle_text": "",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature \u2014 Sliver Construct",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m14/218/sliver-construct?utm_source=api"
+    },
+    "Samite Healer": {
+      "oracle_id": "95a0ca48-d924-47f4-86ed-42c673ee778c",
+      "name": "Samite Healer",
+      "oracle_text": "{T}: Prevent the next 1 damage that would be dealt to any target this turn.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature \u2014 Human Cleric",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/38/samite-healer?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Burst of Speed": {
+      "oracle_id": "91e33674-b13a-41de-8998-4b57016ae42f",
+      "name": "Burst of Speed",
+      "oracle_text": "Creatures you control gain haste until end of turn. (They can attack and {T} even if they just came under your control.)",
+      "mana_cost": "{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m10/129/burst-of-speed?utm_source=api"
+    },
+    "Savannah Lions": {
+      "oracle_id": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+      "name": "Savannah Lions",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature \u2014 Cat",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fdn/146/savannah-lions?utm_source=api"
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature \u2014 Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+    },
+    "Wall of Stone": {
+      "oracle_id": "cd4cadb4-3156-49bd-b36e-12ba5c85938b",
+      "name": "Wall of Stone",
+      "oracle_text": "Defender (This creature can't attack.)",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature \u2014 Wall",
+      "power": "0",
+      "toughness": "8",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/8ed/232/wall-of-stone?utm_source=api"
+    },
+    "Guard Gomazoa": {
+      "oracle_id": "7c565975-aebc-4599-ac32-5594c718e2cb",
+      "name": "Guard Gomazoa",
+      "oracle_text": "Defender, flying\nPrevent all combat damage that would be dealt to this creature.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature \u2014 Jellyfish",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [
+        "Flying",
+        "Defender"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/pca/17/guard-gomazoa?utm_source=api"
+    },
+    "Doom Blade": {
+      "oracle_id": "59e7f2ae-4535-4191-98be-3e65b6b2befa",
+      "name": "Doom Blade",
+      "oracle_text": "Destroy target nonblack creature.",
+      "mana_cost": "{1}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/576/doom-blade?utm_source=api"
+    },
+    "River Boa": {
+      "oracle_id": "86187aed-77ce-4b2d-aab0-0a8f807a9451",
+      "name": "River Boa",
+      "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\n{G}: Regenerate this creature.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Snake",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [
+        "Landwalk",
+        "Regenerate",
+        "Islandwalk"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ddm/49/river-boa?utm_source=api"
+    },
+    "Paper Tiger": {
+      "oracle_id": "8e409d83-b63d-48e8-b55a-2a2d364a7a0f",
+      "name": "Paper Tiger",
+      "oracle_text": "Creatures named Rock Lobster can't attack or block.",
+      "mana_cost": "{4}",
+      "type_line": "Artifact Creature \u2014 Cat",
+      "power": "4",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/und/80/paper-tiger?utm_source=api"
+    },
+    "Rock Lobster": {
+      "oracle_id": "ebed673b-c332-4afa-b9ad-31ff9da5839b",
+      "name": "Rock Lobster",
+      "oracle_text": "Creatures named Scissors Lizard can't attack or block.",
+      "mana_cost": "{4}",
+      "type_line": "Artifact Creature \u2014 Lobster",
+      "power": "4",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/und/82/rock-lobster?utm_source=api"
+    },
+    "Scissors Lizard": {
+      "oracle_id": "c0bb1f84-41b6-4465-93aa-089fc1645527",
+      "name": "Scissors Lizard",
+      "oracle_text": "Creatures named Paper Tiger can't attack or block.",
+      "mana_cost": "{4}",
+      "type_line": "Artifact Creature \u2014 Lizard",
+      "power": "4",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/und/83/scissors-lizard?utm_source=api"
+    },
+    "Watchwolf": {
+      "oracle_id": "a35c2e20-eb90-4132-b65f-be1fcb569819",
+      "name": "Watchwolf",
+      "oracle_text": "",
+      "mana_cost": "{G}{W}",
+      "type_line": "Creature \u2014 Wolf",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/a25/220/watchwolf?utm_source=api"
+    },
+    "Goblin Legionnaire": {
+      "oracle_id": "582fdfbe-c5fe-45d0-b3ff-e66db5183725",
+      "name": "Goblin Legionnaire",
+      "oracle_text": "{R}, Sacrifice this creature: It deals 2 damage to any target.\n{W}, Sacrifice this creature: Prevent the next 2 damage that would be dealt to any target this turn.",
+      "mana_cost": "{R}{W}",
+      "type_line": "Creature \u2014 Goblin Soldier",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/apc/103/goblin-legionnaire?utm_source=api"
+    },
+    "Scab-Clan Mauler": {
+      "oracle_id": "db0b6e35-d7f2-435a-87d7-9e8c36426f4d",
+      "name": "Scab-Clan Mauler",
+      "oracle_text": "Bloodthirst 2 (If an opponent was dealt damage this turn, this creature enters with two +1/+1 counters on it.)\nTrample",
+      "mana_cost": "{R}{G}",
+      "type_line": "Creature \u2014 Human Berserker",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Bloodthirst",
+        "Trample"
+      ],
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/rvr/219/scab-clan-mauler?utm_source=api"
+    },
+    "Scion of Ugin": {
+      "oracle_id": "7422f43d-0c1e-42cb-864d-1c63f2ec533a",
+      "name": "Scion of Ugin",
+      "oracle_text": "Flying",
+      "mana_cost": "{6}",
+      "type_line": "Creature \u2014 Dragon Spirit",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ima/1/scion-of-ugin?utm_source=api"
+    },
+    "Bone Saw": {
+      "oracle_id": "16e555f2-5aa8-4100-a036-eed48db0e84a",
+      "name": "Bone Saw",
+      "oracle_text": "Equipped creature gets +1/+0.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact \u2014 Equipment",
+      "keywords": [
+        "Equip"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ogw/161/bone-saw?utm_source=api"
+    },
+    "Selesnya Guildgate": {
+      "oracle_id": "75b235d3-595a-4859-be45-9559d8445db5",
+      "name": "Selesnya Guildgate",
+      "oracle_text": "This land enters tapped.\n{T}: Add {G} or {W}.",
+      "mana_cost": "",
+      "type_line": "Land \u2014 Gate",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fdn/694/selesnya-guildgate?utm_source=api"
+    },
+    "Golgari Guildgate": {
+      "oracle_id": "fa2da325-6859-45bb-b185-35526b01bcc1",
+      "name": "Golgari Guildgate",
+      "oracle_text": "This land enters tapped.\n{T}: Add {B} or {G}.",
+      "mana_cost": "",
+      "type_line": "Land \u2014 Gate",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fdn/689/golgari-guildgate?utm_source=api"
+    },
+    "Elvish Warrior": {
+      "oracle_id": "da587161-da7e-48ae-8af6-7f02ee71afd8",
+      "name": "Elvish Warrior",
+      "oracle_text": "",
+      "mana_cost": "{G}{G}",
+      "type_line": "Creature \u2014 Elf Warrior",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/evg/5/elvish-warrior?utm_source=api"
+    },
+    "Merfolk of the Pearl Trident": {
+      "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+      "name": "Merfolk of the Pearl Trident",
+      "oracle_text": "",
+      "mana_cost": "{U}",
+      "type_line": "Creature \u2014 Merfolk",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m13/60/merfolk-of-the-pearl-trident?utm_source=api"
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "name": "Twiddle",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+    },
+    "Morningtide": {
+      "oracle_id": "a8432372-672b-4bf7-9000-17e43356f149",
+      "name": "Morningtide",
+      "oracle_text": "Exile all graveyards.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tor/10/morningtide?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Resourceful Return",
+  "csvid": 16782,
+  "recipes": [
+    {
+      "family": "graveyard_recovery_extension",
+      "version": 2,
+      "params": {
+        "mode": "spell",
+        "scope": "creature",
+        "value_max": null,
+        "self_destination": "graveyard",
+        "conditional_draw": true,
+        "optional_mode": false,
+        "selection": {
+          "before_zone": [],
+          "after_zone": [],
+          "after_zone_min_mana": null
+        },
+        "additional_components": []
+      },
+      "oracle_text": "Return target creature card from your graveyard to your hand. If you control an artifact, draw a card.",
+      "variants": [
+        "effect_0",
+        "alternate_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "cleanup_0",
+        "repeat_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "empty_graveyard_0",
+        "other_graveyard_0",
+        "wrong_type_0",
+        "own_artifact_0",
+        "opponent_artifact_0",
+        "effect_1",
+        "alternate_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "cleanup_1",
+        "repeat_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "empty_graveyard_1",
+        "other_graveyard_1",
+        "wrong_type_1",
+        "own_artifact_1",
+        "opponent_artifact_1"
+      ]
+    }
+  ]
+}

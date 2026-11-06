@@ -1,0 +1,1168 @@
+{
+  "version": 1,
+  "cards": {
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "layout": "normal",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "layout": "normal",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "layout": "normal",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "keywords": [],
+      "colors": [],
+      "cmc": 1.0
+    },
+    "Divination": {
+      "name": "Divination",
+      "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+      "layout": "normal",
+      "mana_cost": "{2}{U}",
+      "type_line": "Sorcery",
+      "oracle_text": "Draw two cards.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0
+    },
+    "Plains": {
+      "name": "Plains",
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "layout": "normal",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Craw Wurm": {
+      "name": "Craw Wurm",
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "layout": "normal",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature \u2014 Wurm",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "power": "6",
+      "toughness": "4"
+    },
+    "Isamaru, Hound of Konda": {
+      "name": "Isamaru, Hound of Konda",
+      "oracle_id": "cfb756dd-6fe1-430a-8f04-8b10cac62a86",
+      "layout": "normal",
+      "mana_cost": "{W}",
+      "type_line": "Legendary Creature \u2014 Dog",
+      "oracle_text": "",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "power": "2",
+      "toughness": "2"
+    },
+    "Forest": {
+      "name": "Forest",
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "layout": "normal",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Island": {
+      "name": "Island",
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "layout": "normal",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Giant Growth": {
+      "name": "Giant Growth",
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "layout": "normal",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 1.0
+    },
+    "Mountain": {
+      "name": "Mountain",
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "layout": "normal",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0
+    },
+    "Llanowar Elves": {
+      "name": "Llanowar Elves",
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "layout": "token",
+      "mana_cost": "",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "oracle_text": "{T}: Add {G}.",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "power": "1",
+      "toughness": "1"
+    },
+    "Counterspell": {
+      "name": "Counterspell",
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "layout": "normal",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "oracle_text": "Counter target spell.",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 2.0
+    },
+    "Gilded Light": {
+      "name": "Gilded Light",
+      "oracle_id": "f7e7b2aa-9fd2-41dd-b11e-3a233530dc83",
+      "layout": "normal",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "oracle_text": "You gain shroud until end of turn. (You can't be the target of spells or abilities.)\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "cmc": 2.0
+    },
+    "Jace Beleren": {
+      "name": "Jace Beleren",
+      "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "layout": "normal",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Legendary Planeswalker \u2014 Jace",
+      "oracle_text": "+2: Each player draws a card.\n\u22121: Target player draws a card.\n\u221210: Target player mills twenty cards.",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "cmc": 3.0
+    }
+  },
+  "profiles": {
+    "Horrifying Revelation": {
+      "csvid": 11461,
+      "source": {
+        "name": "Horrifying Revelation",
+        "oracle_id": "36ee4179-83a1-472a-a48c-394c4c0457bc",
+        "layout": "normal",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player discards a card, then mills a card.",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "discard",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          },
+          {
+            "kind": "mill",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      }
+    },
+    "Rakshasa's Secret": {
+      "csvid": 14347,
+      "source": {
+        "name": "Rakshasa's Secret",
+        "oracle_id": "e753f50d-64ed-4822-a301-57659ee378b6",
+        "layout": "normal",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target opponent discards two cards. You mill two cards.",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "opponent",
+        "operations": [
+          {
+            "kind": "discard",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          },
+          {
+            "kind": "mill",
+            "amount": 2,
+            "scope": "self",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      }
+    },
+    "Raven's Crime": {
+      "csvid": 9851,
+      "source": {
+        "name": "Raven's Crime",
+        "oracle_id": "a21c85f3-482b-47e5-9321-0ca21e110bd8",
+        "layout": "normal",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player discards a card.\nRetrace (You may cast this card from your graveyard by discarding a land card in addition to paying its other costs.)",
+        "keywords": [
+          "Retrace"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "discard",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Retrace casting from the graveyard with a discarded land"
+        ]
+      }
+    },
+    "Ostracize": {
+      "csvid": 4029,
+      "source": {
+        "name": "Ostracize",
+        "oracle_id": "43975c07-103c-4664-b7e6-55bb29d85183",
+        "layout": "normal",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target opponent reveals their hand. You choose a creature card from it. That player discards that card.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "kind": "chosen",
+        "recipient": "opponent",
+        "operations": [],
+        "scope": "creature",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      }
+    },
+    "Distress": {
+      "csvid": 7197,
+      "source": {
+        "name": "Distress",
+        "oracle_id": "7bb1b48b-aa6b-4064-9355-c43b0f509388",
+        "layout": "normal",
+        "mana_cost": "{B}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player reveals their hand. You choose a nonland card from it. That player discards that card.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "kind": "chosen",
+        "recipient": "any",
+        "operations": [],
+        "scope": "nonland",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      }
+    },
+    "Thoughtseize": {
+      "csvid": 9286,
+      "source": {
+        "name": "Thoughtseize",
+        "oracle_id": "edd8d1e8-be43-4c38-bb3a-83081fbaf0b5",
+        "layout": "normal",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player reveals their hand. You choose a nonland card from it. That player discards that card. You lose 2 life.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "kind": "chosen",
+        "recipient": "any",
+        "operations": [],
+        "scope": "nonland",
+        "life_loss": 2,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      }
+    },
+    "Despise": {
+      "csvid": 11591,
+      "source": {
+        "name": "Despise",
+        "oracle_id": "b13b40f1-1b1f-40e8-989b-ef24dc05007a",
+        "layout": "normal",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target opponent reveals their hand. You choose a creature or planeswalker card from it. That player discards that card.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "kind": "chosen",
+        "recipient": "opponent",
+        "operations": [],
+        "scope": "creature_or_planeswalker",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      }
+    },
+    "Inquisition of Kozilek": {
+      "csvid": 10958,
+      "source": {
+        "name": "Inquisition of Kozilek",
+        "oracle_id": "395611fa-aec2-4c9e-92c3-70cf95cc00f4",
+        "layout": "normal",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player reveals their hand. You choose a nonland card from it with mana value 3 or less. That player discards that card.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "kind": "chosen",
+        "recipient": "any",
+        "operations": [],
+        "scope": "nonland_mv3",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      }
+    },
+    "Nightmare Void": {
+      "csvid": 7913,
+      "source": {
+        "name": "Nightmare Void",
+        "oracle_id": "9a53ef0d-8e29-4128-9cc4-fbdd3e4fdb84",
+        "layout": "normal",
+        "mana_cost": "{3}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player reveals their hand. You choose a card from it. That player discards that card.\nDredge 2 (If you would draw a card, you may mill two cards instead. If you do, return this card from your graveyard to your hand.)",
+        "keywords": [
+          "Dredge",
+          "Mill"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "kind": "chosen",
+        "recipient": "any",
+        "operations": [],
+        "scope": "any",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Dredge 2 replacement of future draws"
+        ]
+      }
+    },
+    "Diplomacy of the Wastes": {
+      "csvid": 14538,
+      "source": {
+        "name": "Diplomacy of the Wastes",
+        "oracle_id": "8b4670b9-6701-4ca6-afd7-256742267e86",
+        "layout": "normal",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target opponent reveals their hand. You choose a nonland card from it. That player discards that card. If you control a Warrior, that player loses 2 life.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "kind": "chosen",
+        "recipient": "opponent",
+        "operations": [],
+        "scope": "nonland",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Warrior-controlled additional life loss; fixtures contain no battlefield permanents"
+        ]
+      }
+    },
+    "Lay Bare the Heart": {
+      "csvid": 16957,
+      "source": {
+        "name": "Lay Bare the Heart",
+        "oracle_id": "910f4339-9125-45b7-929f-57e1adb6ac3c",
+        "layout": "normal",
+        "mana_cost": "{1}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target opponent reveals their hand. You choose a nonlegendary, nonland card from it. That player discards that card.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "kind": "chosen",
+        "recipient": "opponent",
+        "operations": [],
+        "scope": "nonlegendary_nonland",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      }
+    },
+    "Divest": {
+      "csvid": 18390,
+      "source": {
+        "name": "Divest",
+        "oracle_id": "9e0d7408-3827-4a65-9905-9fef3ae23c7e",
+        "layout": "normal",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player reveals their hand. You choose an artifact or creature card from it. That player discards that card.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 1.0
+      },
+      "params": {
+        "kind": "chosen",
+        "recipient": "any",
+        "operations": [],
+        "scope": "artifact_or_creature",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      }
+    },
+    "Drill Bit": {
+      "csvid": 19610,
+      "source": {
+        "name": "Drill Bit",
+        "oracle_id": "0dbd6e47-a8b4-4268-ba44-8924cd4963a6",
+        "layout": "normal",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Spectacle {B} (You may cast this spell for its spectacle cost rather than its mana cost if an opponent lost life this turn.)\nTarget player reveals their hand. You choose a nonland card from it. That player discards that card.",
+        "keywords": [
+          "Spectacle"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "kind": "chosen",
+        "recipient": "any",
+        "operations": [],
+        "scope": "nonland",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Spectacle alternative cost; fixtures have no earlier life loss"
+        ]
+      }
+    },
+    "Resounding Scream": {
+      "csvid": 10043,
+      "source": {
+        "name": "Resounding Scream",
+        "oracle_id": "287d5a5d-e477-4d5b-815a-d83c73f4792d",
+        "layout": "normal",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player discards a card at random.\nCycling {5}{U}{B}{R} ({5}{U}{B}{R}, Discard this card: Draw a card.)\nWhen you cycle this card, target player discards two cards at random.",
+        "keywords": [
+          "Cycling"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "discard",
+            "amount": 1,
+            "scope": "recipient",
+            "random": true
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Cycling and its two-card random-discard trigger"
+        ]
+      }
+    },
+    "Mind Ravel": {
+      "csvid": 2033,
+      "source": {
+        "name": "Mind Ravel",
+        "oracle_id": "8cd0fcac-800a-431c-aca9-804998704606",
+        "layout": "normal",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player discards a card.\nDraw a card at the beginning of the next turn's upkeep.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "discard",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Delayed draw at the beginning of the next turn's upkeep"
+        ]
+      }
+    },
+    "Mind Burst": {
+      "csvid": 5612,
+      "source": {
+        "name": "Mind Burst",
+        "oracle_id": "efc32c4a-ad84-400d-b79f-5861a3e4fa2f",
+        "layout": "normal",
+        "mana_cost": "{1}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player discards X cards, where X is one plus the number of cards named Mind Burst in all graveyards.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "discard",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "context": "no_other_copies",
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Scaling from earlier copies named Mind Burst in either graveyard; none are present"
+        ]
+      }
+    },
+    "Ghastly Discovery": {
+      "csvid": 9542,
+      "source": {
+        "name": "Ghastly Discovery",
+        "oracle_id": "1ca875f0-50a7-4332-8643-c2b4bbda18b1",
+        "layout": "normal",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "oracle_text": "Draw two cards, then discard a card.\nConspire (As you cast this spell, you may tap two untapped creatures you control that share a color with it. When you do, copy it.)",
+        "keywords": [
+          "Conspire"
+        ],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          },
+          {
+            "kind": "discard",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "context": "no_conspire",
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Conspire copy/payment; no two eligible same-color creatures are controlled"
+        ]
+      }
+    },
+    "Gruesome Discovery": {
+      "csvid": 12197,
+      "source": {
+        "name": "Gruesome Discovery",
+        "oracle_id": "ecdae60b-c594-4e70-909b-83483104a42c",
+        "layout": "normal",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target player discards two cards.\nMorbid \u2014 If a creature died this turn, instead that player reveals their hand, you choose two cards from it, then that player discards those cards.",
+        "keywords": [
+          "Morbid"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "discard",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "context": "no_deaths",
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Morbid caster-chosen discard; death history is reset and no creatures die"
+        ]
+      }
+    },
+    "Frantic Search": {
+      "csvid": 1395,
+      "source": {
+        "name": "Frantic Search",
+        "oracle_id": "16e015b2-f8a3-4b1a-80be-58a8f5fb5e8c",
+        "layout": "normal",
+        "mana_cost": "{2}{U}",
+        "type_line": "Instant",
+        "oracle_text": "Draw two cards, then discard two cards. Untap up to three lands.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          },
+          {
+            "kind": "discard",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "context": "no_lands",
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Untapping up to three lands; fixtures contain no battlefield lands"
+        ]
+      }
+    },
+    "Pore Over the Pages": {
+      "csvid": 15920,
+      "source": {
+        "name": "Pore Over the Pages",
+        "oracle_id": "55fe5ec3-1c81-4e9d-9e4c-f68ce6d7c2de",
+        "layout": "normal",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Sorcery",
+        "oracle_text": "Draw three cards, untap up to two lands, then discard a card.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 5.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 3,
+            "scope": "recipient",
+            "random": false
+          },
+          {
+            "kind": "discard",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "context": "no_lands",
+        "resolution_inputs": {
+          "0": [
+            {
+              "kind": "cancel_target"
+            }
+          ],
+          "1": [
+            {
+              "kind": "cancel_target"
+            }
+          ]
+        },
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Untapping up to two lands between drawing and discarding; fixtures contain no battlefield lands"
+        ]
+      }
+    },
+    "Chart a Course": {
+      "csvid": 17369,
+      "source": {
+        "name": "Chart a Course",
+        "oracle_id": "05878e49-93ad-4144-9c50-a0bb86126c2e",
+        "layout": "normal",
+        "mana_cost": "{1}{U}",
+        "type_line": "Sorcery",
+        "oracle_text": "Draw two cards. Then discard a card unless you attacked this turn.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          },
+          {
+            "kind": "discard",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "context": "no_attacks",
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Skipping discard after an attack; fixtures never attack"
+        ]
+      }
+    },
+    "Tragic Lesson": {
+      "csvid": 17244,
+      "source": {
+        "name": "Tragic Lesson",
+        "oracle_id": "516d1ac4-e831-44b6-8266-131dde7fe802",
+        "layout": "normal",
+        "mana_cost": "{2}{U}",
+        "type_line": "Instant",
+        "oracle_text": "Draw two cards. Then discard a card unless you return a land you control to its owner's hand.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "self",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          },
+          {
+            "kind": "discard",
+            "amount": 1,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "context": "no_lands",
+        "resolution_inputs": {
+          "0": [],
+          "1": [
+            {
+              "kind": "dialog",
+              "value": 0
+            }
+          ]
+        },
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Returning a controlled land instead of discarding; fixtures contain no battlefield lands"
+        ]
+      }
+    },
+    "Haunting Hymn": {
+      "csvid": 8574,
+      "source": {
+        "name": "Haunting Hymn",
+        "oracle_id": "b9a0977a-6364-4358-bab1-112898a1b942",
+        "layout": "normal",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Instant",
+        "oracle_text": "Target player discards two cards. If you cast this spell during your main phase, that player discards four cards instead.",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "cmc": 6.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "discard",
+            "amount": 4,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "outside_main_operations": [
+          {
+            "kind": "discard",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "context": "main_phase",
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      }
+    },
+    "Careful Consideration": {
+      "csvid": 8495,
+      "source": {
+        "name": "Careful Consideration",
+        "oracle_id": "2b34b361-7b0e-4464-874c-ceb501bc5ecc",
+        "layout": "normal",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Instant",
+        "oracle_text": "Target player draws four cards, then discards three cards. If you cast this spell during your main phase, instead that player draws four cards, then discards two cards.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "any",
+        "operations": [
+          {
+            "kind": "draw",
+            "amount": 4,
+            "scope": "recipient",
+            "random": false
+          },
+          {
+            "kind": "discard",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "outside_main_operations": [
+          {
+            "kind": "draw",
+            "amount": 4,
+            "scope": "recipient",
+            "random": false
+          },
+          {
+            "kind": "discard",
+            "amount": 3,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "context": "main_phase",
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer"
+        ]
+      }
+    },
+    "Mire's Malice": {
+      "csvid": 15375,
+      "source": {
+        "name": "Mire's Malice",
+        "oracle_id": "1e7b18a3-43eb-4491-bb19-99f261a94719",
+        "layout": "normal",
+        "mana_cost": "{3}{B}",
+        "type_line": "Sorcery",
+        "oracle_text": "Target opponent discards two cards.\nAwaken 3\u2014{5}{B} (If you cast this spell for {5}{B}, also put three +1/+1 counters on target land you control and it becomes a 0/0 Elemental creature with haste. It's still a land.)",
+        "keywords": [
+          "Awaken"
+        ],
+        "colors": [
+          "B"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "kind": "pipeline",
+        "recipient": "opponent",
+        "operations": [
+          {
+            "kind": "discard",
+            "amount": 2,
+            "scope": "recipient",
+            "random": false
+          }
+        ],
+        "scope": "none",
+        "life_loss": 0,
+        "context": "no_lands",
+        "gaps": [
+          "alternative casting costs and keyword mechanics",
+          "discard/draw replacement and triggered effects",
+          "control changes",
+          "multiplayer",
+          "Awaken alternative cost, counters and land animation; fixtures contain no controlled lands"
+        ]
+      }
+    }
+  }
+}

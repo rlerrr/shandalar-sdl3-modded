@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "card": "Patrol Signaler",
+  "csvid": 9846,
+  "recipes": [
+    {
+      "family": "token_trigger_creation",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 3,
+        "mechanism": "cost_creator",
+        "token": {
+          "name": "Kithkin Soldier",
+          "power": 1,
+          "toughness": 1,
+          "colors": [
+            "W"
+          ],
+          "subtypes": [
+            "Kithkin",
+            "Soldier"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "amount": {
+          "fixed": 1
+        },
+        "activation": {
+          "mana": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "tap": false,
+          "untap": true,
+          "sacrifice": false,
+          "additional": null,
+          "additional_count": 0,
+          "only_sorcery": false
+        },
+        "operative": [],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "{1}{W}, {Q}: Create a 1/1 white Kithkin Soldier creature token. ({Q} is the untap symbol.)",
+      "variants": [
+        "create_0",
+        "ready_snapshot_0",
+        "event_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "payment_0",
+        "activation_snapshot_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "tapped_or_untapped_denied_0",
+        "fresh_denied_0",
+        "create_1",
+        "ready_snapshot_1",
+        "event_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "payment_1",
+        "activation_snapshot_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "tapped_or_untapped_denied_1",
+        "fresh_denied_1"
+      ]
+    }
+  ]
+}

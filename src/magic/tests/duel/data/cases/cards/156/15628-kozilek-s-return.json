@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Kozilek's Return",
+  "csvid": 15628,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "damage_spell_extension",
+      "version": 2,
+      "params": {
+        "kind": "sweep",
+        "effect": {
+          "effect": "damage",
+          "amount": 2,
+          "targets": [
+            "creature"
+          ],
+          "scope": "all",
+          "players": "none"
+        },
+        "gain_life": 0,
+        "inactive_components": [
+          "Devoid color interactions and graveyard Eldrazi-cast trigger: Whenever you cast an Eldrazi creature spell with mana value 7 or greater, you may exile this card from your graveyard. If you do, this card deals 5 damage to each creature."
+        ],
+        "choices_before_target": [],
+        "choices_after_target": [],
+        "skip_before_choices_on_exact_payment": false,
+        "skip_after_choices_on_exact_payment": false,
+        "omit_variants": []
+      },
+      "oracle_text": "Devoid (This card has no color.)\nKozilek's Return deals 2 damage to each creature.\nWhenever you cast an Eldrazi creature spell with mana value 7 or greater, you may exile this card from your graveyard. If you do, this card deals 5 damage to each creature.",
+      "variants": [
+        "mixed_0",
+        "friendly_only_0",
+        "opponent_only_0",
+        "empty_board_0",
+        "empty_zones_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "cleanup_0",
+        "tapped_all_0",
+        "untapped_all_0",
+        "injured_0",
+        "pending_snapshot_0",
+        "wrong_payment_color_0",
+        "other_turn_0",
+        "mixed_1",
+        "friendly_only_1",
+        "opponent_only_1",
+        "empty_board_1",
+        "empty_zones_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "cleanup_1",
+        "tapped_all_1",
+        "untapped_all_1",
+        "injured_1",
+        "pending_snapshot_1",
+        "wrong_payment_color_1",
+        "other_turn_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Printed fixed damage component through ordinary mana-paid casting; all other named clauses are explicit recipe metadata gaps."
+}

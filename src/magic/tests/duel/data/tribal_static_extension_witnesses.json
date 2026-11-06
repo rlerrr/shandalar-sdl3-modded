@@ -1,0 +1,1808 @@
+{
+  "version": 1,
+  "sources": {
+    "Blur Sliver": {
+      "oracle": {
+        "name": "Blur Sliver",
+        "oracle_id": "e0f05979-daba-43eb-b356-24284e7ca99c",
+        "oracle_text": "Sliver creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Sliver",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "R"
+        ],
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Sliver"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Haste"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Bonescythe Sliver": {
+      "oracle": {
+        "name": "Bonescythe Sliver",
+        "oracle_id": "1d95ad32-768f-40a1-a461-e0562326b2b7",
+        "oracle_text": "Sliver creatures you control have double strike. (They deal both first-strike and regular combat damage.)",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Sliver",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "W"
+        ],
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Sliver"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Double strike"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Galerider Sliver": {
+      "oracle": {
+        "name": "Galerider Sliver",
+        "oracle_id": "1ad78038-44f9-4599-84db-fc1a87d9ed45",
+        "oracle_text": "Sliver creatures you control have flying.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Sliver",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "U"
+        ],
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Sliver"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Flying"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Groundshaker Sliver": {
+      "oracle": {
+        "name": "Groundshaker Sliver",
+        "oracle_id": "106e343f-c6f4-4155-ad01-63e482d4d38e",
+        "oracle_text": "Sliver creatures you control have trample. (A creature with trample can deal excess combat damage to the player or planeswalker it's attacking.)",
+        "mana_cost": "{6}{G}",
+        "type_line": "Creature — Sliver",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "G"
+        ],
+        "power": "5",
+        "toughness": "5"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Sliver"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Trample"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Sentinel Sliver": {
+      "oracle": {
+        "name": "Sentinel Sliver",
+        "oracle_id": "1d0f1186-be6c-45c3-9703-f0c1e13892fb",
+        "oracle_text": "Sliver creatures you control have vigilance. (Attacking doesn't cause them to tap.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Sliver",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "W"
+        ],
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Sliver"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Vigilance"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Striking Sliver": {
+      "oracle": {
+        "name": "Striking Sliver",
+        "oracle_id": "6a15599d-8b00-4e0f-ac0c-d05f07c1e50d",
+        "oracle_text": "Sliver creatures you control have first strike. (They deal combat damage before creatures without first strike.)",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Sliver",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "R"
+        ],
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Sliver"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "First strike"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Syphon Sliver": {
+      "oracle": {
+        "name": "Syphon Sliver",
+        "oracle_id": "61f18560-8f26-4d7b-a6f8-ec388766123b",
+        "oracle_text": "Sliver creatures you control have lifelink. (Damage dealt by a Sliver creature you control also causes you to gain that much life.)",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Sliver",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "B"
+        ],
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Sliver"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Lifelink"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Venom Sliver": {
+      "oracle": {
+        "name": "Venom Sliver",
+        "oracle_id": "ffe05d4b-0ec9-4319-bb11-1366dc091224",
+        "oracle_text": "Sliver creatures you control have deathtouch. (Any amount of damage a creature with deathtouch deals to a creature is enough to destroy it.)",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Sliver",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "G"
+        ],
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Sliver"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Deathtouch"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Maze Abomination": {
+      "oracle": {
+        "name": "Maze Abomination",
+        "oracle_id": "eaa72823-413e-474e-a926-aebb0a78ff31",
+        "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nMulticolored creatures you control have deathtouch.",
+        "mana_cost": "{5}{B}",
+        "type_line": "Creature — Elemental",
+        "keywords": [
+          "Deathtouch"
+        ],
+        "layout": "normal",
+        "colors": [
+          "B"
+        ],
+        "power": "4",
+        "toughness": "5"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "multicolored",
+            "value": "",
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Deathtouch"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Deathtouch"
+        ],
+        "inactive": [],
+        "matching": "Watchwolf",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Maze Behemoth": {
+      "oracle": {
+        "name": "Maze Behemoth",
+        "oracle_id": "d54c258f-1914-449a-857d-11f9478bff63",
+        "oracle_text": "Trample\nMulticolored creatures you control have trample.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Elemental",
+        "keywords": [
+          "Trample"
+        ],
+        "layout": "normal",
+        "colors": [
+          "G"
+        ],
+        "power": "5",
+        "toughness": "4"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "multicolored",
+            "value": "",
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Trample"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Trample"
+        ],
+        "inactive": [],
+        "matching": "Watchwolf",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Maze Glider": {
+      "oracle": {
+        "name": "Maze Glider",
+        "oracle_id": "2388a064-ae84-4eac-b1d9-819a40052d12",
+        "oracle_text": "Flying\nMulticolored creatures you control have flying.",
+        "mana_cost": "{5}{U}",
+        "type_line": "Creature — Elemental",
+        "keywords": [
+          "Flying"
+        ],
+        "layout": "normal",
+        "colors": [
+          "U"
+        ],
+        "power": "3",
+        "toughness": "5"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "multicolored",
+            "value": "",
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Flying"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Flying"
+        ],
+        "inactive": [],
+        "matching": "Watchwolf",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Maze Rusher": {
+      "oracle": {
+        "name": "Maze Rusher",
+        "oracle_id": "f6ef6ac6-bf1f-41ed-bd3f-a3806a76a336",
+        "oracle_text": "Haste\nMulticolored creatures you control have haste.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature — Elemental",
+        "keywords": [
+          "Haste"
+        ],
+        "layout": "normal",
+        "colors": [
+          "R"
+        ],
+        "power": "6",
+        "toughness": "3"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "multicolored",
+            "value": "",
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Haste"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Haste"
+        ],
+        "inactive": [],
+        "matching": "Watchwolf",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Maze Sentinel": {
+      "oracle": {
+        "name": "Maze Sentinel",
+        "oracle_id": "635360cd-0114-47d1-8a98-e6a3678652a8",
+        "oracle_text": "Vigilance\nMulticolored creatures you control have vigilance.",
+        "mana_cost": "{5}{W}",
+        "type_line": "Creature — Elemental",
+        "keywords": [
+          "Vigilance"
+        ],
+        "layout": "normal",
+        "colors": [
+          "W"
+        ],
+        "power": "3",
+        "toughness": "6"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "multicolored",
+            "value": "",
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Vigilance"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Vigilance"
+        ],
+        "inactive": [],
+        "matching": "Watchwolf",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Roughshod Mentor": {
+      "oracle": {
+        "name": "Roughshod Mentor",
+        "oracle_id": "ec43fb64-122d-4fc5-9fe0-b7913373f7a4",
+        "oracle_text": "Green creatures you control have trample.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Giant Warrior",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "G"
+        ],
+        "power": "5",
+        "toughness": "4"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "color",
+            "value": "green",
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Trample"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant"
+      }
+    },
+    "Khenra Charioteer": {
+      "oracle": {
+        "name": "Khenra Charioteer",
+        "oracle_id": "e75bc5df-f4a4-45af-a6fd-2711b98dd521",
+        "oracle_text": "Trample\nOther creatures you control have trample.",
+        "mana_cost": "{1}{R}{G}",
+        "type_line": "Creature — Jackal Warrior",
+        "keywords": [
+          "Trample"
+        ],
+        "layout": "normal",
+        "colors": [
+          "G",
+          "R"
+        ],
+        "power": "3",
+        "toughness": "3"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "all",
+            "value": "",
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Trample"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Trample"
+        ],
+        "inactive": [],
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant"
+      }
+    },
+    "Aggressive Mammoth": {
+      "oracle": {
+        "name": "Aggressive Mammoth",
+        "oracle_id": "032b5fc4-5aca-41b6-9bf6-2c1ed0018968",
+        "oracle_text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nOther creatures you control have trample.",
+        "mana_cost": "{3}{G}{G}{G}",
+        "type_line": "Creature — Elephant",
+        "keywords": [
+          "Trample"
+        ],
+        "layout": "normal",
+        "colors": [
+          "G"
+        ],
+        "power": "8",
+        "toughness": "8"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "all",
+            "value": "",
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Trample"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Trample"
+        ],
+        "inactive": [],
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant"
+      }
+    },
+    "Bloodmark Mentor": {
+      "oracle": {
+        "name": "Bloodmark Mentor",
+        "oracle_id": "8c22b218-cf40-47af-8c11-73c581a43390",
+        "oracle_text": "Red creatures you control have first strike.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "R"
+        ],
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "color",
+            "value": "red",
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "First strike"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Hill Giant",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Rhox Pikemaster": {
+      "oracle": {
+        "name": "Rhox Pikemaster",
+        "oracle_id": "8866d33e-8159-4e10-8b11-914c12a0918f",
+        "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nOther Soldier creatures you control have first strike.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Rhino Soldier",
+        "keywords": [
+          "First strike"
+        ],
+        "layout": "normal",
+        "colors": [
+          "W"
+        ],
+        "power": "3",
+        "toughness": "3"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Soldier"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "First strike"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "First strike"
+        ],
+        "inactive": [],
+        "matching": "Glory Seeker",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Kobold Overlord": {
+      "oracle": {
+        "name": "Kobold Overlord",
+        "oracle_id": "5839bc83-868e-402a-9233-ad3d2871ac6d",
+        "oracle_text": "First strike\nOther Kobold creatures you control have first strike.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Kobold",
+        "keywords": [
+          "First strike"
+        ],
+        "layout": "normal",
+        "colors": [
+          "R"
+        ],
+        "power": "1",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Kobold"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "First strike"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "First strike"
+        ],
+        "inactive": [],
+        "matching": "Crimson Kobolds",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Madrush Cyclops": {
+      "oracle": {
+        "name": "Madrush Cyclops",
+        "oracle_id": "f45a2a66-04cc-4622-9c70-f2dfc1391bb1",
+        "oracle_text": "Creatures you control have haste.",
+        "mana_cost": "{1}{B}{R}{G}",
+        "type_line": "Creature — Cyclops Warrior",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "B",
+          "G",
+          "R"
+        ],
+        "power": "3",
+        "toughness": "4"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "all",
+            "value": "",
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Haste"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant"
+      }
+    },
+    "Cyclops of Eternal Fury": {
+      "oracle": {
+        "name": "Cyclops of Eternal Fury",
+        "oracle_id": "f7875f87-d774-4811-a4a7-349ec01bf95b",
+        "oracle_text": "Creatures you control have haste.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Enchantment Creature — Cyclops",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "R"
+        ],
+        "power": "5",
+        "toughness": "3"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "all",
+            "value": "",
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Haste"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant"
+      }
+    },
+    "Herald of Dromoka": {
+      "oracle": {
+        "name": "Herald of Dromoka",
+        "oracle_id": "dae8dc90-8047-434c-9e3a-a2eaa6aba575",
+        "oracle_text": "Vigilance\nOther Warrior creatures you control have vigilance.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Warrior",
+        "keywords": [
+          "Vigilance"
+        ],
+        "layout": "normal",
+        "colors": [
+          "W"
+        ],
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Warrior"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Vigilance"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Vigilance"
+        ],
+        "inactive": [],
+        "matching": "Elvish Warrior",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Kinsbaile Cavalier": {
+      "oracle": {
+        "name": "Kinsbaile Cavalier",
+        "oracle_id": "e21ed0d0-26b1-4ffe-971a-babf37f4492c",
+        "oracle_text": "Knight creatures you control have double strike.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Kithkin Knight",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "W"
+        ],
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Knight"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Double strike"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Knight Errant",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Felhide Petrifier": {
+      "oracle": {
+        "name": "Felhide Petrifier",
+        "oracle_id": "1ad604ed-c645-4f94-8c5f-8e0ce66a85ff",
+        "oracle_text": "Deathtouch\nOther Minotaur creatures you control have deathtouch.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Minotaur Warrior",
+        "keywords": [
+          "Deathtouch"
+        ],
+        "layout": "normal",
+        "colors": [
+          "B"
+        ],
+        "power": "2",
+        "toughness": "3"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Minotaur"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Deathtouch"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Deathtouch"
+        ],
+        "inactive": [],
+        "matching": "Hurloon Minotaur",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Field Marshal": {
+      "oracle": {
+        "name": "Field Marshal",
+        "oracle_id": "1c0a53fc-8037-46e3-90ea-cb8b73631a83",
+        "oracle_text": "Other Soldier creatures get +1/+1 and have first strike. (They deal combat damage before creatures without first strike.)",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Human Soldier",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "W"
+        ],
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "both",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Soldier"
+            ],
+            "power": 1,
+            "toughness": 1,
+            "keywords": [
+              "First strike"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Glory Seeker",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Stromkirk Captain": {
+      "oracle": {
+        "name": "Stromkirk Captain",
+        "oracle_id": "599c3fd6-3309-4b5d-adec-9c4062848ad5",
+        "oracle_text": "First strike\nOther Vampire creatures you control get +1/+1 and have first strike.",
+        "mana_cost": "{1}{B}{R}",
+        "type_line": "Creature — Vampire Soldier",
+        "keywords": [
+          "First strike"
+        ],
+        "layout": "normal",
+        "colors": [
+          "B",
+          "R"
+        ],
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Vampire"
+            ],
+            "power": 1,
+            "toughness": 1,
+            "keywords": [
+              "First strike"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "First strike"
+        ],
+        "inactive": [],
+        "matching": "Barony Vampire",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Kobold Drill Sergeant": {
+      "oracle": {
+        "name": "Kobold Drill Sergeant",
+        "oracle_id": "a6409aa6-035c-4859-8135-90d34d67f72c",
+        "oracle_text": "Other Kobold creatures you control get +0/+1 and have trample.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Kobold Soldier",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "R"
+        ],
+        "power": "1",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Kobold"
+            ],
+            "power": 0,
+            "toughness": 1,
+            "keywords": [
+              "Trample"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Crimson Kobolds",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Pheres-Band Warchief": {
+      "oracle": {
+        "name": "Pheres-Band Warchief",
+        "oracle_id": "79bc9b71-5b04-46b8-a9de-9e9f17936f29",
+        "oracle_text": "Vigilance, trample\nOther Centaur creatures you control get +1/+1 and have vigilance and trample.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Centaur Warrior",
+        "keywords": [
+          "Vigilance",
+          "Trample"
+        ],
+        "layout": "normal",
+        "colors": [
+          "G"
+        ],
+        "power": "3",
+        "toughness": "3"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Centaur"
+            ],
+            "power": 1,
+            "toughness": 1,
+            "keywords": [
+              "Trample",
+              "Vigilance"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Trample",
+          "Vigilance"
+        ],
+        "inactive": [],
+        "matching": "Centaur Courser",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Rageblood Shaman": {
+      "oracle": {
+        "name": "Rageblood Shaman",
+        "oracle_id": "2608f905-a678-4e40-9e73-cf1c42ec880d",
+        "oracle_text": "Trample\nOther Minotaur creatures you control get +1/+1 and have trample.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Minotaur Shaman",
+        "keywords": [
+          "Trample"
+        ],
+        "layout": "normal",
+        "colors": [
+          "R"
+        ],
+        "power": "2",
+        "toughness": "3"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Minotaur"
+            ],
+            "power": 1,
+            "toughness": 1,
+            "keywords": [
+              "Trample"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Trample"
+        ],
+        "inactive": [],
+        "matching": "Hurloon Minotaur",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Sunrise Sovereign": {
+      "oracle": {
+        "name": "Sunrise Sovereign",
+        "oracle_id": "c9abbb90-e3ae-4e7c-87ca-06ebebf65edb",
+        "oracle_text": "Other Giant creatures you control get +2/+2 and have trample.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature — Giant Warrior",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "R"
+        ],
+        "power": "5",
+        "toughness": "5"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Giant"
+            ],
+            "power": 2,
+            "toughness": 2,
+            "keywords": [
+              "Trample"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Hill Giant",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Oathsworn Giant": {
+      "oracle": {
+        "name": "Oathsworn Giant",
+        "oracle_id": "d3828907-1321-40ca-9531-30401e82a6b8",
+        "oracle_text": "Vigilance\nOther creatures you control get +0/+2 and have vigilance.",
+        "mana_cost": "{4}{W}{W}",
+        "type_line": "Creature — Giant Soldier",
+        "keywords": [
+          "Vigilance"
+        ],
+        "layout": "normal",
+        "colors": [
+          "W"
+        ],
+        "power": "3",
+        "toughness": "4"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "all",
+            "value": "",
+            "power": 0,
+            "toughness": 2,
+            "keywords": [
+              "Vigilance"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Vigilance"
+        ],
+        "inactive": [],
+        "matching": "Grizzly Bears",
+        "nonmatching": "Hill Giant"
+      }
+    },
+    "Drogskol Captain": {
+      "oracle": {
+        "name": "Drogskol Captain",
+        "oracle_id": "c33604ac-636a-43ad-9efe-8d7b3a28bf81",
+        "oracle_text": "Flying\nOther Spirit creatures you control get +1/+1 and have hexproof. (They can't be the targets of spells or abilities your opponents control.)",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Creature — Spirit Soldier",
+        "keywords": [
+          "Flying"
+        ],
+        "layout": "normal",
+        "colors": [
+          "U",
+          "W"
+        ],
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Spirit"
+            ],
+            "power": 1,
+            "toughness": 1,
+            "keywords": [
+              "Hexproof"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Flying"
+        ],
+        "inactive": [],
+        "matching": "Tormented Soul",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Lord of the Unreal": {
+      "oracle": {
+        "name": "Lord of the Unreal",
+        "oracle_id": "cc60181a-5eeb-4d66-9876-3194bac1e7a7",
+        "oracle_text": "Illusion creatures you control get +1/+1 and have hexproof. (They can't be the targets of spells or abilities your opponents control.)",
+        "mana_cost": "{U}{U}",
+        "type_line": "Creature — Human Wizard",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "U"
+        ],
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Illusion"
+            ],
+            "power": 1,
+            "toughness": 1,
+            "keywords": [
+              "Hexproof"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Phantom Warrior",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Scion of Oona": {
+      "oracle": {
+        "name": "Scion of Oona",
+        "oracle_id": "b34601d2-2aeb-4649-9d73-d0895611bd69",
+        "oracle_text": "Flash\nFlying\nOther Faerie creatures you control get +1/+1.\nOther Faeries you control have shroud. (They can't be the targets of spells or abilities.)",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Faerie Soldier",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "layout": "normal",
+        "colors": [
+          "U"
+        ],
+        "power": "1",
+        "toughness": "1"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Faerie"
+            ],
+            "power": 1,
+            "toughness": 1,
+            "keywords": [
+              "Shroud"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "Flash",
+          "Flying"
+        ],
+        "inactive": [],
+        "matching": "Wasp Lancer",
+        "nonmatching": "Grizzly Bears",
+        "gaps": [
+          "noncreature Faerie permanents"
+        ]
+      }
+    },
+    "Knight Exemplar": {
+      "oracle": {
+        "name": "Knight Exemplar",
+        "oracle_id": "ecb198fc-5663-4380-b2da-ad54421e966d",
+        "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nOther Knight creatures you control get +1/+1 and have indestructible. (Damage and effects that say \"destroy\" don't destroy them.)",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Human Knight",
+        "keywords": [
+          "First strike"
+        ],
+        "layout": "normal",
+        "colors": [
+          "W"
+        ],
+        "power": "2",
+        "toughness": "2"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": true,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Knight"
+            ],
+            "power": 1,
+            "toughness": 1,
+            "keywords": [
+              "Indestructible"
+            ]
+          }
+        ],
+        "source_keywords": [
+          "First strike"
+        ],
+        "inactive": [],
+        "matching": "Knight Errant",
+        "nonmatching": "Grizzly Bears"
+      }
+    },
+    "Sliver Hivelord": {
+      "oracle": {
+        "name": "Sliver Hivelord",
+        "oracle_id": "e4fe33e7-b952-4152-8c83-81d948756d2f",
+        "oracle_text": "Sliver creatures you control have indestructible. (Damage and effects that say \"destroy\" don't destroy them.)",
+        "mana_cost": "{W}{U}{B}{R}{G}",
+        "type_line": "Legendary Creature — Sliver",
+        "keywords": [],
+        "layout": "normal",
+        "colors": [
+          "B",
+          "G",
+          "R",
+          "U",
+          "W"
+        ],
+        "power": "5",
+        "toughness": "5"
+      },
+      "params": {
+        "clauses": [
+          {
+            "scope": "own",
+            "other": false,
+            "state": "all",
+            "predicate": "subtypes",
+            "value": [
+              "Sliver"
+            ],
+            "power": 0,
+            "toughness": 0,
+            "keywords": [
+              "Indestructible"
+            ]
+          }
+        ],
+        "source_keywords": [],
+        "inactive": [],
+        "matching": "Sliver Construct",
+        "nonmatching": "Grizzly Bears"
+      }
+    }
+  },
+  "witnesses": {
+    "Barony Vampire": {
+      "name": "Barony Vampire",
+      "oracle_id": "e886756a-298d-4f79-8699-8bfc9345352e",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Vampire",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "B"
+      ],
+      "power": "3",
+      "toughness": "2"
+    },
+    "Centaur Courser": {
+      "name": "Centaur Courser",
+      "oracle_id": "2f5bf099-2e01-4e1c-9ebf-0ce0ac66939e",
+      "oracle_text": "",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Centaur Warrior",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "G"
+      ],
+      "power": "3",
+      "toughness": "3"
+    },
+    "Crimson Kobolds": {
+      "name": "Crimson Kobolds",
+      "oracle_id": "93fdcc49-e3c8-4f8c-a3bc-064c6392b4ca",
+      "oracle_text": "",
+      "mana_cost": "{0}",
+      "type_line": "Creature — Kobold",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "R"
+      ],
+      "power": "0",
+      "toughness": "1"
+    },
+    "Elvish Warrior": {
+      "name": "Elvish Warrior",
+      "oracle_id": "da587161-da7e-48ae-8af6-7f02ee71afd8",
+      "oracle_text": "",
+      "mana_cost": "{G}{G}",
+      "type_line": "Creature — Elf Warrior",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "G"
+      ],
+      "power": "2",
+      "toughness": "3"
+    },
+    "Forest": {
+      "name": "Forest",
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "layout": "normal",
+      "colors": []
+    },
+    "Giant Growth": {
+      "name": "Giant Growth",
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "G"
+      ]
+    },
+    "Glory Seeker": {
+      "name": "Glory Seeker",
+      "oracle_id": "55c60b29-52c5-428c-9229-11ed0e26bd71",
+      "oracle_text": "",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Soldier",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "W"
+      ],
+      "power": "2",
+      "toughness": "2"
+    },
+    "Grizzly Bears": {
+      "name": "Grizzly Bears",
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "G"
+      ],
+      "power": "2",
+      "toughness": "2"
+    },
+    "Hill Giant": {
+      "name": "Hill Giant",
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "R"
+      ],
+      "power": "3",
+      "toughness": "3"
+    },
+    "Hurloon Minotaur": {
+      "name": "Hurloon Minotaur",
+      "oracle_id": "8f1dae40-b307-446e-bbd2-86aa35813871",
+      "oracle_text": "",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Minotaur",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "R"
+      ],
+      "power": "2",
+      "toughness": "3"
+    },
+    "Island": {
+      "name": "Island",
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "layout": "normal",
+      "colors": []
+    },
+    "Knight Errant": {
+      "name": "Knight Errant",
+      "oracle_id": "920cc1a7-ac6b-44c0-ade7-347f05bba0f2",
+      "oracle_text": "",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Knight",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "W"
+      ],
+      "power": "2",
+      "toughness": "2"
+    },
+    "Lightning Bolt": {
+      "name": "Lightning Bolt",
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "R"
+      ]
+    },
+    "Llanowar Elves": {
+      "name": "Llanowar Elves",
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "keywords": [],
+      "layout": "token",
+      "colors": [
+        "G"
+      ],
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mothdust Changeling": {
+      "name": "Mothdust Changeling",
+      "oracle_id": "52237e6b-19f6-405c-a668-545c4ccb1b6d",
+      "oracle_text": "Changeling (This card is every creature type.)\nTap an untapped creature you control: This creature gains flying until end of turn.",
+      "mana_cost": "{U}",
+      "type_line": "Creature — Shapeshifter",
+      "keywords": [
+        "Changeling"
+      ],
+      "layout": "normal",
+      "colors": [
+        "U"
+      ],
+      "power": "1",
+      "toughness": "1"
+    },
+    "Mountain": {
+      "name": "Mountain",
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "layout": "normal",
+      "colors": []
+    },
+    "Murder": {
+      "name": "Murder",
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "B"
+      ]
+    },
+    "Ornithopter": {
+      "name": "Ornithopter",
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "keywords": [
+        "Flying"
+      ],
+      "layout": "normal",
+      "colors": [],
+      "power": "0",
+      "toughness": "2"
+    },
+    "Phantom Warrior": {
+      "name": "Phantom Warrior",
+      "oracle_id": "23745133-e5e2-4ce3-b94a-73d0d3d8a013",
+      "oracle_text": "This creature can't be blocked.",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Creature — Illusion Warrior",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "U"
+      ],
+      "power": "2",
+      "toughness": "2"
+    },
+    "Plains": {
+      "name": "Plains",
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "layout": "normal",
+      "colors": []
+    },
+    "Savannah Lions": {
+      "name": "Savannah Lions",
+      "oracle_id": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Cat",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "W"
+      ],
+      "power": "2",
+      "toughness": "1"
+    },
+    "Scaled Wurm": {
+      "name": "Scaled Wurm",
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "oracle_text": "",
+      "mana_cost": "{7}{G}",
+      "type_line": "Creature — Wurm",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "G"
+      ],
+      "power": "7",
+      "toughness": "6"
+    },
+    "Sliver Construct": {
+      "name": "Sliver Construct",
+      "oracle_id": "7d592d5b-95cf-4416-9ade-1c23a8ba01d1",
+      "oracle_text": "",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Sliver Construct",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [],
+      "power": "2",
+      "toughness": "2"
+    },
+    "Sol Ring": {
+      "name": "Sol Ring",
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "layout": "normal",
+      "colors": []
+    },
+    "Tormented Soul": {
+      "name": "Tormented Soul",
+      "oracle_id": "ee334bd7-d344-4684-85c8-d0464bbaf2b4",
+      "oracle_text": "This creature can't block and can't be blocked.",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Spirit",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "B"
+      ],
+      "power": "1",
+      "toughness": "1"
+    },
+    "Unsummon": {
+      "name": "Unsummon",
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "U"
+      ]
+    },
+    "Wasp Lancer": {
+      "name": "Wasp Lancer",
+      "oracle_id": "12a9a9a4-6b8c-48a1-833f-457a7ece8e7e",
+      "oracle_text": "Flying",
+      "mana_cost": "{U/B}{U/B}{U/B}",
+      "type_line": "Creature — Faerie Soldier",
+      "keywords": [
+        "Flying"
+      ],
+      "layout": "normal",
+      "colors": [
+        "B",
+        "U"
+      ],
+      "power": "3",
+      "toughness": "2"
+    },
+    "Watchwolf": {
+      "name": "Watchwolf",
+      "oracle_id": "a35c2e20-eb90-4132-b65f-be1fcb569819",
+      "oracle_text": "",
+      "mana_cost": "{G}{W}",
+      "type_line": "Creature — Wolf",
+      "keywords": [],
+      "layout": "normal",
+      "colors": [
+        "G",
+        "W"
+      ],
+      "power": "3",
+      "toughness": "3"
+    }
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "card": "Gelatinous Genesis",
+  "csvid": 10932,
+  "recipes": [
+    {
+      "family": "token_spell_extension",
+      "version": 2,
+      "params": {
+        "profile": "creator_wave6",
+        "schema": 2,
+        "mechanism": "spell_x",
+        "token": {
+          "name": "Ooze",
+          "power": 0,
+          "toughness": 0,
+          "colors": [
+            "G"
+          ],
+          "subtypes": [
+            "Ooze"
+          ],
+          "artifact": false,
+          "keywords": []
+        },
+        "amount": {
+          "basis": "chosen_x",
+          "body_x": true,
+          "fixed_count": null
+        },
+        "activation": null,
+        "operative": [],
+        "source_keywords": [],
+        "inactive_clauses": []
+      },
+      "oracle_text": "Create X X/X green Ooze creature tokens.",
+      "variants": [
+        "create_0",
+        "zero_0",
+        "larger_amount_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "cleanup_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "create_1",
+        "zero_1",
+        "larger_amount_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "cleanup_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "countered_0",
+        "countered_1"
+      ]
+    }
+  ]
+}

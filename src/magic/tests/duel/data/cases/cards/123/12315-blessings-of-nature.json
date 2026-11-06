@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Blessings of Nature",
+  "csvid": 12315,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_spell",
+      "version": 2,
+      "params": {
+        "extension": "reviewed_growth",
+        "mechanic": "allocated",
+        "amounts": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "strive_cost": "",
+        "mode_choices": [],
+        "inactive_components": [
+          "Miracle alternative cost and first-draw trigger; ordinary hand casts pay {4}{G}."
+        ],
+        "target_roles": [
+          "first",
+          "first",
+          "second",
+          "third"
+        ]
+      },
+      "oracle_text": "Distribute four +1/+1 counters among any number of target creatures.\nMiracle {G} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "two_copies_0",
+        "countered_0",
+        "one_target_0",
+        "opponent_0",
+        "preexisting_0",
+        "lost_target_0",
+        "partial_target_0",
+        "selection_pending_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "two_copies_1",
+        "countered_1",
+        "one_target_1",
+        "opponent_1",
+        "preexisting_1",
+        "lost_target_1",
+        "partial_target_1",
+        "selection_pending_1"
+      ]
+    }
+  ]
+}

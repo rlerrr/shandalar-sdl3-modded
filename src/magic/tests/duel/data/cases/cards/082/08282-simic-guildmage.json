@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "card": "Simic Guildmage",
+  "csvid": 8282,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "growth_counter_activation",
+      "version": 2,
+      "params": {
+        "profile": "counter_transfer",
+        "transfer": 1,
+        "direction": "two_targets",
+        "tap": false,
+        "entry": 0,
+        "entry_bonus": 0,
+        "graft": 0,
+        "evolve": false,
+        "relation": "same_controller",
+        "cast_vectors": [
+          [
+            0,
+            0,
+            0,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            2,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1,
+            1,
+            0,
+            0
+          ]
+        ],
+        "activation_vectors": [
+          [
+            1,
+            0,
+            0,
+            1,
+            0,
+            0
+          ]
+        ],
+        "unused_modes": [
+          "{1}{U}: Attach target Aura attached to a permanent to another permanent with the same controller."
+        ]
+      },
+      "oracle_text": "({G/U} can be paid with either {G} or {U}.)\n{1}{G}: Move a +1/+1 counter from target creature onto another target creature with the same controller.\n{1}{U}: Attach target Aura attached to a permanent to another permanent with the same controller.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "cleanup_0",
+        "source_bounced_pending_0",
+        "source_destroyed_pending_0",
+        "pending_snapshot_0",
+        "repeat_0",
+        "origin_bounced_pending_0",
+        "recipient_bounced_pending_0",
+        "cast_blue_0",
+        "cast_mixed_0",
+        "zero_counter_0",
+        "one_creature_0",
+        "wrong_color_0",
+        "opponent_pair_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "cleanup_1",
+        "source_bounced_pending_1",
+        "source_destroyed_pending_1",
+        "pending_snapshot_1",
+        "repeat_1",
+        "origin_bounced_pending_1",
+        "recipient_bounced_pending_1",
+        "cast_blue_1",
+        "cast_mixed_1",
+        "zero_counter_1",
+        "one_creature_1",
+        "wrong_color_1",
+        "opponent_pair_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle counter transfer profile: actual casts and entry effects; printed costs, pending counters, conservation, endpoint/source loss, payment denials, cleanup, repeat and replay. Combat, replacement and control changes remain component gaps; Root-Kin graft transfers are dormant because no creature enters after it. Two-target slot-specific illegal selection probes are deferred. Authoritative native/Wasm validation is recorded in the wave5 report."
+}

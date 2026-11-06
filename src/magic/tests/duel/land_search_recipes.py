@@ -116,16 +116,17 @@ def validate_witnesses(o,rows):
     if tuple(o['Grizzly Bears'].get(k) for k in ('mana_cost','oracle_text','power','toughness'))!=('{1}{G}','','2','2'):raise ValueError('unaffected witness changed')
 
 
-def expand(name,csvid,d,p,selected,rows,o,palette=None,base_deck=None,match=None,observed_match=None):
+def expand(name,csvid,d,p,selected,rows,o,palette=None,base_deck=None,match=None,observed_match=None,base_zones=None,attempt_rejected=False):
     from recipes import card,step,observe,cost_from_oracle
     palette=LANDS if palette is None else palette
     base_deck=DECK if base_deck is None else base_deck
     match=eligible if match is None else match
     observed_match=(lambda r,p,target:match(r,p)) if observed_match is None else observed_match
+    initial_zones=dict(hand=HAND,graveyard=GRAVE,exile=EXILE) if base_zones is None else base_zones
     result=[]
     for variant in selected:
         v,owner=variant.rsplit('_',1);owner=int(owner);bare=v=='bare_zones';spell_mode=p['mode']=='spell';entry_mode=p['mode']=='entry';hand_mode=p['mode']=='landcycling';casting=spell_mode or entry_mode;hand_source=casting or hand_mode
-        decks=[list(base_deck),list(base_deck)];valid=[n for n in palette if match(o[n],p)];target=valid[0] if valid else None
+        decks=[list(base_deck),list(base_deck)];valid=[n for n in palette if match(o[n],p)];target=valid[0] if valid else None;candidate=None
         if v.startswith(('land_','card_')):
             candidate=palette[int(v[5:])];target=candidate if match(o[candidate],p) else None
             decks[owner]=['Giant Growth',candidate,'Lightning Bolt']
@@ -137,7 +138,7 @@ def expand(name,csvid,d,p,selected,rows,o,palette=None,base_deck=None,match=None
         if p['family']=='library_search' and v=='no_match':decks[owner]=[n for n in base_deck if not match(o[n],p)];target=None
         if v in ('two_sources','repeat'):decks[owner].append(target)
         if v in ('bounce_recast','blink') and p['destination']!='top':decks[owner].append(target)
-        zones={z:[[] if bare else list(ns),[] if bare else list(ns)] for z,ns in (('hand',HAND),('graveyard',GRAVE),('exile',EXILE))}
+        zones={z:[[] if bare else list(ns),[] if bare else list(ns)] for z,ns in initial_zones.items()}
         zones['library']=decks;setup=[];entities={};actions=[];mana=[[20]*6,[20]*6];life=[20,20]
         pre=[step('turn',player=1-owner if v=='opposing_turn' else owner,value=0),step('observe_search_filters',value=1)]
 
@@ -162,7 +163,7 @@ def expand(name,csvid,d,p,selected,rows,o,palette=None,base_deck=None,match=None
             if v=='reclaim_pending':add('Reclaim','reclaim',owner,'hand')
         for pl in (0,1):
             for z,ns in zones.items():
-                if z!='library':initial=[] if bare else {'hand':HAND,'graveyard':GRAVE,'exile':EXILE}[z]
+                if z!='library':initial=[] if bare else initial_zones[z]
                 else:initial=list(ns[pl])
                 setup[:0]=[card(nm,f'p{pl}_{z}_{i}',pl,z) for i,nm in enumerate(initial)]
         cost=list(p['spell_mana'] if casting else p['cost'])
@@ -239,7 +240,7 @@ def expand(name,csvid,d,p,selected,rows,o,palette=None,base_deck=None,match=None
                 elif p['destination']=='top':decks[owner].insert(0,target);top_target[0]=target
                 else:fetched.append(target)
             else:
-                seq.append(step('choose_optional_zone',player=owner,value=rows[valid[0]]['csvid']))
+                seq.append(step('choose_zone_card' if attempt_rejected and candidate is not None else 'choose_optional_zone',player=owner,value=rows[candidate if attempt_rejected and candidate is not None else valid[0]]['csvid']))
             seq += [step('resolve'),step('assert_choices_consumed'),step('assert_forced_zone_choices',value=0),step('refresh')]
             if p['family']=='library_search':life[owner]-=p['lose_life']
             if target:
@@ -312,7 +313,7 @@ def expand(name,csvid,d,p,selected,rows,o,palette=None,base_deck=None,match=None
                 checks.append(observe(ref,'tapped',int(e['tapped'])))
                 r=o[e['name']]
                 if 'Creature' in r['type_line']:checks += [observe(ref,'power',int(r['power'])),observe(ref,'toughness',int(r['toughness'])),observe(ref,'damage',0)]
-        universe=set(HAND+GRAVE+EXILE)|set(base_deck+palette+[name]+[e['name'] for e in entities.values()])
+        universe=set(initial_zones['hand'])|set(initial_zones['graveyard'])|set(initial_zones['exile'])|set(base_deck+palette+[name]+[e['name'] for e in entities.values()])
         if top_target[0]:checks.append(step('assert_zone_card',player=owner,zone='library',index=0,value=rows[top_target[0]]['csvid']))
         for pl in (0,1):
             checks += [step('assert_life',player=pl,value=life[pl]),step('assert_zone',player=pl,zone='battlefield',value=sum(e['alive'] and e['player']==pl for e in entities.values())+(len(fetched) if pl==owner else 0))]

@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Oriss, Samite Guardian",
+  "csvid": 8987,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "dialogs": {
+          "0": [
+            0
+          ],
+          "1": [
+            0
+          ]
+        },
+        "binding": "recipient_activation",
+        "amount": "all",
+        "scope": "creature",
+        "activation_cost": "",
+        "tap": true,
+        "present_dialogs": true,
+        "gaps": [
+          "Grandeur discard mode",
+          "Countering the activation or losing its recipient while pending"
+        ]
+      },
+      "oracle_text": "{T}: Prevent all damage that would be dealt to target creature this turn.\nGrandeur — Discard another card named Oriss, Samite Guardian: Target player can't cast spells this turn, and creatures that player controls can't attack this turn.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "other_damage_0",
+        "repeat_damage_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "opponent_creature_0",
+        "cleanup_0",
+        "overflow_damage_0",
+        "tapped_0",
+        "sick_0",
+        "fresh_cast_0",
+        "without_effect_0",
+        "source_removed_0",
+        "effect_1",
+        "payment_1",
+        "other_damage_1",
+        "repeat_damage_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "opponent_creature_1",
+        "cleanup_1",
+        "overflow_damage_1",
+        "tapped_1",
+        "sick_1",
+        "fresh_cast_1",
+        "without_effect_1",
+        "source_removed_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "card": "Supreme Will",
+  "csvid": 17233,
+  "cases": [],
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "params": {
+        "counter": {
+          "targets": [
+            "creature",
+            "instant",
+            "sorcery",
+            "artifact",
+            "enchantment",
+            "aura"
+          ],
+          "tax": 3
+        },
+        "token": null,
+        "life_cost": 0,
+        "relationship": null,
+        "inactive_components": [
+          "Top-four selection mode is not selected.",
+          "Invalid counter-mode availability when another mode is legal remains untested."
+        ],
+        "extension": {
+          "tax": null,
+          "additional_cost": null,
+          "untap": 0,
+          "mode_dialogs": {
+            "0": [
+              0
+            ],
+            "1": [
+              0
+            ]
+          },
+          "auxiliary": [],
+          "present_ai_dialogs": true
+        }
+      },
+      "oracle_text": "Choose one \u2014\n\u2022 Counter target spell unless its controller pays {3}.\n\u2022 Look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "snapshot_0",
+        "type_instant_0",
+        "type_sorcery_0",
+        "type_artifact_0",
+        "type_enchantment_0",
+        "type_aura_0",
+        "tax_paid_0",
+        "tax_exact_0",
+        "tax_unaffordable_0",
+        "wrong_mana_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "snapshot_1",
+        "type_instant_1",
+        "type_sorcery_1",
+        "type_artifact_1",
+        "type_enchantment_1",
+        "type_aura_1",
+        "tax_paid_1",
+        "tax_exact_1",
+        "tax_unaffordable_1",
+        "wrong_mana_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Complete source identity and Oracle text are pinned. Actual parent and response casts use stack1/stack2 and normal legality, payment and selection for both controllers. Tests cover printed fixed or derived taxes, pay/decline/exact/unaffordable decisions, source costs and missing resources, typed targets, own/opposing spells, selected/unselected permanents, exact zone multiplicities and ordered libraries, and snapshot replay as applicable. Top-four selection mode is not selected. Invalid counter-mode availability when another mode is legal remains untested. Countered response sources, lost targets, replacement/prevention, simultaneous responses and multiplayer remain separate gaps."
+}

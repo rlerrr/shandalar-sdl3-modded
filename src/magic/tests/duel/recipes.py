@@ -10,7 +10,39 @@ from collections import Counter
 VERSION = 1
 COLORS = {"B": 1, "U": 2, "G": 3, "R": 4, "W": 5}
 WORDS = {"a": 1, "two": 2, "three": 3, "four": 4}
+# Independently authored extensions share one narrow dispatcher contract.
+# Imports stay lazy so an unrelated worker never loads unfinished modules.
+EXTENSION_MODULES = {
+    'growth_counter_spell': 'growth_counter_spell_recipes',
+    'counterspell_extension': 'counterspell_extension_recipes',
+    'edict_spell': 'edict_recipes',
+    'growth_counter_activation': 'growth_counter_activation_recipes',
+    'reanimation': 'reanimation_recipes',
+    'token_trigger_creation': 'token_trigger_creation_recipes',
+    'prevention': 'prevention_recipes',
+    'tap_spell': 'tap_spell_recipes',
+    'token_spell_extension': 'token_spell_extension_recipes',
+    'etb_removal_extension': 'etb_removal_extension_recipes',
+    'graveyard_recovery_extension': 'graveyard_recovery_extension_recipes',
+    'damage_spell_extension': 'damage_spell_extension_recipes',
+    'discard_spell_extension': 'discard_spell_extension_recipes',
+    'life_spell_extension': 'life_spell_extension_recipes',
+    'aura_keyword_extension': 'aura_keyword_extension_recipes',
+    'tribal_static_extension': 'tribal_static_extension_recipes',
+    'graveyard_exile': 'graveyard_exile_recipes',
+    'mana_spell_extension': 'mana_spell_extension_recipes',
+    'entry_value_extension': 'entry_value_extension_recipes',
+    'static_effect_extension': 'static_effect_extension_recipes',
+}
+
+def extension_module(family):
+    from importlib import import_module
+    return import_module(EXTENSION_MODULES[family])
+
 VARIANTS = {
+    "variable_sweep": ("mixed_x0_0", "payment_x3_0", "pending_snapshot_x5_0"),
+    "etb_damage_creature": ("entry_0", "payment_0", "pending_snapshot_0", "blink_0"),
+    "death_damage_creature": ("destroy_0", "payment_0", "death_snapshot_0", "combat_death_0"),
     "variable_damage": ("survivor_x0_0", "payment_x3_0", "snapshot_x5_0"),
     "variable_value": ("effect_x0_0", "payment_x3_0", "pending_snapshot_x5_0"),
     "static_stats": ("static_0", "payment_0", "pending_snapshot_0"),
@@ -77,6 +109,7 @@ VARIANTS = {
     "pump_creature": ("friendly_cleanup", "opponent", "no_creature", "payment", "insufficient_mana", "snapshot"),
     "damage_any_target": ("survivor", "lethal", "opponent", "self", "lost_target", "payment", "insufficient_mana", "snapshot"),
 }
+VARIANTS.update({family: () for family in EXTENSION_MODULES})
 
 
 def validate_context(oracle, registry, fixtures):
@@ -204,6 +237,17 @@ def explicit_spec(declaration, oracle):
     """
     from hybrid_creature_recipes import applies, specification
     if applies(declaration):return specification(declaration,oracle)
+    if declaration.get('family') in EXTENSION_MODULES:
+        return extension_module(declaration['family']).spec(declaration,oracle)
+    if declaration.get('family')=='variable_sweep':
+        from variable_sweep_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='etb_damage_creature':
+        from etb_damage_creature_recipes import spec
+        return spec(declaration,oracle)
+    if declaration.get('family')=='death_damage_creature':
+        from death_damage_recipes import spec
+        return spec(declaration,oracle)
     if declaration.get('family')=='variable_damage':
         from variable_damage_recipes import spec
         return spec(declaration,oracle)
@@ -455,7 +499,7 @@ def _expand_plain(card_name, csvid, declaration, oracle, registry, oracle_contex
     if version == 2 and declaration.get('family') == 'self_pump_creature':allowed |= {'activation_dialog','activation_dialogs','activation_cancel_mana'}
     if version == 2 and declaration.get('family') in ('value_activation','hand_exchange','value_flow'):allowed |= {'activation_dialogs'}
     if version == 2 and declaration.get('family') in ('hand_exchange','value_flow'):allowed |= {'target_choices'}
-    if version == 2 and declaration.get('family') == 'mass_removal':allowed |= {'target_choices'}
+    if version == 2 and declaration.get('family') in ('mass_removal','edict_spell','discard_spell_extension'):allowed |= {'target_choices'}
     if version == 2 and declaration.get('family') == 'removal_activation':allowed |= {'activation_dialogs'}
     if version == 2 and declaration.get('family') == 'land_search':allowed |= {'activation_dialogs'}
     if version == 2 and declaration.get('family') == 'library_search':allowed |= {'activation_dialogs','entry_dialogs','decline_entry_dialogs','trigger_players','gate_menu'}
@@ -481,6 +525,25 @@ def _expand_plain(card_name, csvid, declaration, oracle, registry, oracle_contex
     family = spec["family"]
     variants = declaration.get("variants", list(VARIANTS[family]))
     supported_variants = set(VARIANTS[family]) | ({"lost_target"} if version == 2 and family == "pump_creature" else set())
+    if family in EXTENSION_MODULES:
+        module = extension_module(family)
+        if family == 'token_trigger_creation':
+            module.validate_witnesses(oracle_context,registry,spec)
+        else:
+            module.validate_witnesses(oracle_context,registry)
+        supported_variants = set(module.variants(spec))
+    if family == 'variable_sweep':
+        from variable_sweep_recipes import variants as sweep_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(sweep_variants(spec))
+    if family == 'etb_damage_creature':
+        from etb_damage_creature_recipes import variants as entry_damage_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(entry_damage_variants(spec))
+    if family == 'death_damage_creature':
+        from death_damage_recipes import variants as death_damage_variants, validate_witnesses
+        validate_witnesses(oracle_context,registry)
+        supported_variants=set(death_damage_variants(spec))
     if family == 'variable_damage':
         from variable_damage_recipes import variants as damage_variants,validate_witnesses
         validate_witnesses(oracle_context,registry)
@@ -773,6 +836,22 @@ def _expand_plain(card_name, csvid, declaration, oracle, registry, oracle_contex
             raise ValueError(f"recipe witness missing from registry: {name}")
         return registry[name]["csvid"]
 
+    if family in EXTENSION_MODULES:
+        if dialogs or support or resolve_zones or cast_dialogs:
+            raise ValueError('extension recipes require dedicated cases for custom setup/decisions')
+        return extension_module(family).expand(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'variable_sweep':
+        if dialogs or support or resolve_zones or cast_dialogs:raise ValueError('variable sweeps need dedicated cases for custom setup/decisions')
+        from variable_sweep_recipes import expand as variable_sweep
+        return variable_sweep(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'etb_damage_creature':
+        if dialogs or support or resolve_zones or cast_dialogs:raise ValueError('entry damage needs dedicated cases for custom setup/decisions')
+        from etb_damage_creature_recipes import expand as entry_damage
+        return entry_damage(card_name,csvid,declaration,spec,variants,registry,oracle_context)
+    if family == 'death_damage_creature':
+        if dialogs or support or resolve_zones or cast_dialogs:raise ValueError('death damage needs dedicated cases for custom setup/decisions')
+        from death_damage_recipes import expand as death_damage
+        return death_damage(card_name,csvid,declaration,spec,variants,registry,oracle_context)
     if family == 'variable_damage':
         if dialogs or support or resolve_zones or cast_dialogs:raise ValueError('variable damage needs dedicated cases for custom setup/decisions')
         from variable_damage_recipes import expand as variable_damage

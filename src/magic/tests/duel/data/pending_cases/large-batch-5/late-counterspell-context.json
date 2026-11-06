@@ -1,0 +1,247 @@
+{
+  "version": 1,
+  "status": "deferred_harness_boundary_not_enrolled",
+  "reason": "Direct cast_response supplies parent globals before the pending parent has dispatched its natural spell-cast history. Resolving the real parent dispatches history, but native late response legality/selection still fails. Root tested and withdrew an opt-in whole-parent context helper rather than treating these observations as card bugs.",
+  "pending_scope": "Three implemented cards require a faithful native late-response/history boundary. No card bug baseline or unimplemented classification is inferred.",
+  "sources": [
+    {
+      "csvid": 12461,
+      "name": "Second Guess",
+      "oracle_pin": {
+        "oracle_id": "b036eac6-60db-48ca-b6e1-b42afac959bd",
+        "name": "Second Guess",
+        "oracle_text": "Counter target spell that's the second spell cast this turn.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/74/second-guess?utm_source=api"
+      }
+    },
+    {
+      "csvid": 11727,
+      "name": "Flusterstorm",
+      "oracle_pin": {
+        "oracle_id": "86bf58f2-7f25-4e10-b797-25e0e8e67769",
+        "name": "Flusterstorm",
+        "oracle_text": "Counter target instant or sorcery spell unless its controller pays {1}.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Storm"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/55/flusterstorm?utm_source=api"
+      }
+    },
+    {
+      "csvid": 6540,
+      "name": "Hindering Touch",
+      "oracle_pin": {
+        "oracle_id": "90c6f338-fc41-4499-8f39-1cd202a2cd31",
+        "name": "Hindering Touch",
+        "oracle_text": "Counter target spell unless its controller pays {2}.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Instant",
+        "keywords": [
+          "Storm"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/scg/37/hindering-touch?utm_source=api"
+      }
+    }
+  ],
+  "root_decision": "resolve_spell_context; source/API/DSL/tests removed by root and engine rebuilt",
+  "source_note_sha256": "91750d700971efbbe1d64ebad34a512ac5b5ef620a147d7b55ac85f47434a50b",
+  "recorded_attempts": [
+    {
+      "report": "H:/shandalar-test-scratch/large-batch-5/counterspells-history-proliferate-raw/validation.json",
+      "result": "Early Second Guess response rejected before pending parent history; response drain then harnesses."
+    },
+    {
+      "report": "H:/shandalar-test-scratch/large-batch-5/counterspells-corrected-raw15/validation.json",
+      "result": "Late ordinary parent drain: controller zero leaves planned response unused; controller one reports illegal opponent response."
+    },
+    {
+      "report": "H:\\shandalar-test-scratch\\large-batch-5\\late-context-api-controls2\\validation.json",
+      "result": "Natural history reaches storm2, but ordinary counter legality is still0 for responder1; ordinary Counterspell controls fail response selection for both controllers. Entry/restore guard control passes."
+    }
+  ],
+  "executed_archive_inputs": [
+    {
+      "report": "H:\\shandalar-test-scratch\\large-batch-5\\counterspells-history-proliferate-raw\\validation.json",
+      "report_sha256": "f3aa6b6b9625d460f4a0efca0090358569f9ab99207a21a29003cf45b8a3dd38",
+      "archive_sha256": "9d3095b583755f9d07b075d51f67b9edfb5d63a940fb6fe48119e27eace977bc",
+      "cases": 4,
+      "encoding": "CaseArchiveReader decoded header/setup/step tuples",
+      "payload": "6c33fffdd05d91b2f5b7ba6d13df1286d3d05a4c8ee8031fe4fad791c709a44b"
+    },
+    {
+      "report": "H:\\shandalar-test-scratch\\large-batch-5\\counterspells-corrected-raw15\\validation.json",
+      "report_sha256": "048a2b949ce740d0b9bf783aab049d1c7a7662b903704ff11e51f154e36c500f",
+      "archive_sha256": "4108bf3ded6a91fe2e3ecb6e420487e150c3d13914f337dd8eca8fedb123fceb",
+      "cases": 4,
+      "encoding": "CaseArchiveReader decoded header/setup/step tuples",
+      "payload": "cd918e496412623ebd616ba135870eb98e739f0f9ced66fb96961e9afa455a2c"
+    }
+  ],
+  "latest_candidate_prototypes": [
+    {
+      "path": "temp/parallel-large5/counterspells/raw-probes/history_poison.json",
+      "sha256": "ecaadeeed2ddd69cb6001ef1ebd7875dbe1f5d89fcad60464c70db6d238f1638",
+      "cases": 4,
+      "payload": "1a318185a7a90d3655c823ec1bb9966155866da836c067e9dd12cec66c3541b3",
+      "status": "Most recent candidate input; may contain the explicitly withdrawn opcode. Not enrolled or asserted runnable."
+    },
+    {
+      "path": "temp/parallel-large5/counterspells/raw-probes/storm_context.json",
+      "sha256": "0968b389c87320ff3a4240b172bae928767e3bca8137f03abc37f72352128a9e",
+      "cases": 8,
+      "payload": "0d1cc390de0f5b848a4eba49828c385f83e80564acecff041004daeb003c8d70",
+      "status": "Most recent candidate input; may contain the explicitly withdrawn opcode. Not enrolled or asserted runnable."
+    }
+  ],
+  "explicitly_unexecuted": [
+    "raw-probes/history_poison.json second_context_0/_1",
+    "raw-probes/storm_context.json all8"
+  ],
+  "static_control_results": [
+    {
+      "platform": "native",
+      "filter": "LateSpellContext.NativePriorityCanCounterTheRealParentForEitherController",
+      "kind": "assertion",
+      "assertion_count": 6,
+      "log": "H:\\shandalar-test-scratch\\large-batch-5\\late-context-api-controls2\\native\\LateSpellContext.NativePriorityCanCounterTheRealParentForEitherController.log",
+      "sha256": "7f75360364bdd3d56f382d0623c5bd337e6db90ff321dba5682110422bf312ff",
+      "diagnostic_payload": "978d7c8047bc27dd8ebfc443f086f5f2549971f193da14f63b8256775ad829db"
+    },
+    {
+      "platform": "native",
+      "filter": "LateSpellContext.ActualCastHistoryControlsSecondGuessWithoutManualCounters",
+      "kind": "assertion",
+      "assertion_count": 1,
+      "log": "H:\\shandalar-test-scratch\\large-batch-5\\late-context-api-controls2\\native\\LateSpellContext.ActualCastHistoryControlsSecondGuessWithoutManualCounters.log",
+      "sha256": "8f28b611e337665fa24d133e9b6a15504cfe039beca28f31c93efc5dda2b6588",
+      "diagnostic_payload": "bc6e7a4549684f9771f7b40ecc09dc70248d1e1bf3b2fcf6a46028f0b570dde8"
+    },
+    {
+      "platform": "native",
+      "filter": "LateSpellContext.EntryGuardsAndAResolvingCreaturePreserveCallerContext",
+      "kind": "passed",
+      "assertion_count": 0,
+      "log": "H:\\shandalar-test-scratch\\large-batch-5\\late-context-api-controls2\\native\\LateSpellContext.EntryGuardsAndAResolvingCreaturePreserveCallerContext.log",
+      "sha256": "2de7d4ea6cbd3d0472905d3f93ebfd2e9abe7ba32491baa275b1bb86be24895b",
+      "diagnostic_payload": "b92b35614c4865d52ce316eef5c8ad0a4cb166fffc2b9a5530bf58144d0401a7"
+    },
+    {
+      "platform": "wasm",
+      "filter": "LateSpellContext.NativePriorityCanCounterTheRealParentForEitherController",
+      "kind": "assertion",
+      "assertion_count": 6,
+      "log": "H:\\shandalar-test-scratch\\large-batch-5\\late-context-api-controls2\\wasm\\LateSpellContext.NativePriorityCanCounterTheRealParentForEitherController.log",
+      "sha256": "d5a2ba183e537c80589ca67cec0ef630c8418b430ea9785a5c0e8807115326ff",
+      "diagnostic_payload": "2930fd1863162c412b36b68913a7b46a02e233698af53f856a9e09ec13b4eaf2"
+    },
+    {
+      "platform": "wasm",
+      "filter": "LateSpellContext.ActualCastHistoryControlsSecondGuessWithoutManualCounters",
+      "kind": "assertion",
+      "assertion_count": 1,
+      "log": "H:\\shandalar-test-scratch\\large-batch-5\\late-context-api-controls2\\wasm\\LateSpellContext.ActualCastHistoryControlsSecondGuessWithoutManualCounters.log",
+      "sha256": "6eed804ded3eb4686ed7a63bd7a82062881bd535e107b9fe3f72e4542df70c7d",
+      "diagnostic_payload": "90c80f8d7e07023c9156c835aacb2cee4446e83f296648df4f77bd5df36d74df"
+    },
+    {
+      "platform": "wasm",
+      "filter": "LateSpellContext.EntryGuardsAndAResolvingCreaturePreserveCallerContext",
+      "kind": "passed",
+      "assertion_count": 0,
+      "log": "H:\\shandalar-test-scratch\\large-batch-5\\late-context-api-controls2\\wasm\\LateSpellContext.EntryGuardsAndAResolvingCreaturePreserveCallerContext.log",
+      "sha256": "8a5b8b353f1333a6e24978c875c2e5490e4a1618190c1b602076281947e386ab",
+      "diagnostic_payload": "fa246ea5a96ad790a3439ed6fdd81acca64ad4da840b6506828ca163e969cf69"
+    }
+  ],
+  "withdrawn_source_payload": "0a59c20929e72dda258c84a28e50eff141cd443ca9d6db5c3371b68f9fd1bb3a",
+  "blobs": {
+    "1a318185a7a90d3655c823ec1bb9966155866da836c067e9dd12cec66c3541b3": {
+      "encoding": "gzip+base64; UTF-8 JSON",
+      "uncompressed_bytes": 9521,
+      "data": "H4sIAAAAAAAC/+2YXU/bMBSG/wrKdS/sQBnhcpPGdjWkXSJkmfS0sebalu0AAe2/z0m/0jaUxEmgjNwgGvt9z4mP7Tw6N89BTPUkuAx+QyzF5OQqBWOCUTBljzbV4AZgrmxG5pQJ91jQef7sm0yFBf2DGSt1di2ZkeJayzsgODw7x8QUZsT9sfBoCXJKA+DC4PA0/9emKri8eV7Z7cRWnGagg0s0CjRM3biRqY7BjTxJkc9PqJgEf0dr/RWjwp5caflgk5Ier/SKahD2gF6zpyeenXwFqk2VgYaYKbblcUet5TBlwLesfhqem1e8BGd3aCN3vzTVWVn6XWowtiq8m4wPSn9pwWwilatJlX7KtNl7/VtXCAvKFIWQqnhLVxkyAWoTkixKWwQpBt1uENve95Snzg6tp8S0iLIdczkLr2dRY0BbYiyN/1SNuywkv4fgFQHaHS/2sUtQS+V+Zm6ACZKnWzulfQclH4oVrdTXyMDKdJaIxa6u9Ag3i5dIaYBYqmdgD+/B6gVfb/LGK74MrTSTmtnNei2P3W5liFHA+epwN69TIlkMJtebdA6ToHkhy8fRt5gVHqFPQV/yYWICj/mF5+7D0ZZrfgrJPOWWKc7ixYKXbovVC62P60zTe8jyVLrwRfu34NIy+lLfD7+aZ9mJsylUJhPu7Y7C6/B6lO+/snROBSVWWsorDcYXuSCWXC4e70orRVFJg2tqMCqJQo9Apz6BznxE40aiAyXF9UuK25Z0YzCOapcUVy8A9hGFPqLTmqKodk2xT023RLeFrH/+w378h1vyH2rLf6gD/sP+/Ida8h/qkf/QwH9vw39o4L9PxH+4J/7DHfMfasN/7wQLFx6wEL0VK0QeqNCA/9qzwlEifeSB9A34ryXTN+A/5MF/7Zm+N/4rvnJD26+ftl8Pjbt37D05G+LyV44GINir/EsQ0T09Hi2VjDuiknG33aNuu1L4s3alztH/9wkb+lJDX+o4+1ILLhnaUb20o3poKL1jT2TgkuPnEtwTl+COueQDdksacMmH+YQN/ZKhX9KyX3L7D5smzboxJQAA"
+    },
+    "0d1cc390de0f5b848a4eba49828c385f83e80564acecff041004daeb003c8d70": {
+      "encoding": "gzip+base64; UTF-8 JSON",
+      "uncompressed_bytes": 27085,
+      "data": "H4sIAAAAAAAC/+2cX2/aMBTFv0qVZx58A6xaHzep3d4mbW9VFbnBBWsmjmynhVb77nPCulJIQ2L+FNHzBsTnOnG4zj3+Ya6fopSbUXQRXarCOmGs02Ya9aI7OXOFEf6AmOZunky5zPzHGZ+Wn33VReYb/ywbf9X+5cz9MPpWJETn8XmS83nClUqYV1ghfHiK++VLV+TRxfXTc5iVPnPF58JEF6wXGXHnj1tdmFT4I486K9tPeDaK/vT+668kz9zZldEPbrKkp2d9zo3IXIPeyMdHNT/7IrixdQGMSGUuX8W45c4pcSeFehXqu1Vl8JqLUPKWvcj9O8PNfFl6qY2wrq5735hqpDd+KJ3IbTWU2o9o5G9V9jrAPVeFF7Gyn1QrvTijqrG/Df52Zvz1ydYIqKsgbiOgJUG/aw+DroJhV0HDKL0Ma9xulKjrKNUL+m0E1G6UqOsorQiqZulEaysSx81YuOa8edHw6ju+kpjLJ18149YK4xLrePq77vi/rnMjtZFuHq1MFavtRpIrPW53Oa3a+lTV6l4kNhd+gksXc1+04fTZ6nHfo0yFLfW2mIrRWoBqUvZnYnTu3879AZkl5XlFdVPTW6O4HiXXD/7KGmIMN8dwuhhPMmHtlnFyP/uTH4LqUdIYjG0ONpVZcDQl70TtvBCvNS2TI3HacdV6IllStp5xu2jiAE0/QDMI0Ay7aJZbVo+82pbrD/NWOqp9AnfscvXZ31EuZlItpiiZjcTMn1RZLfXWwiTTQjmZK5kuZrimqxkbfi/mZTosxf0cFJS9EbQhVahrqlBAqlBAqlBAqlBAqlBAqlBAqlDrVKHAVKHwVKmTdkgV2kOq0MZvdUCqUHP+3VR3c39uisLcFG3ppti2bortwE1RuJti27qpLXwC27tPoK4+gR3GJ3TxnPHePSfr6jnpMJ6z0U2x43dTrIObYnBTH9FNoUREiVjf5dGUiLSPEjHATWHhAQsP9dKjWXhg+1h4OLibKs8KbAps6iTZFIFNnRCbOnWHFO/IIcXgTSj7wJvAm7CYAN4E3rQLhwTeBN50kryJwJtOiDfBIZ28Q0LZh7IPDAkMCYsJYEihDOlbGd7IbHz2SxfpJNwkfRoOWOsdTuu9AiS9P0jqAyS18FUDgCRscsLP8rDJCXUioFN4nVjWS2BOWHwAc9ptprw3ctqPoaJgQwXu9H7cqQ/u1MKBDcCdsM8Jhgr7nFAmglEdvkwEosLSw8dCVKFLD6dCqNrscwKhAqHC3/CBUGGrE37IB+qE0g/UCdQJywmgTh+GOrXZ6gTqBOqEf9cDdcJuJ5gkkCSUfiBJIElYTgBJOiqSdPMXA7r3Yc1pAAA="
+    },
+    "6c33fffdd05d91b2f5b7ba6d13df1286d3d05a4c8ee8031fe4fad791c709a44b": {
+      "encoding": "gzip+base64; UTF-8 JSON",
+      "uncompressed_bytes": 7135,
+      "data": "H4sIAAAAAAAC/+2XTY+bMBCG/0rEpRdSeZxAl3MP7XGlHqOVZcDZWCUY2aZV+us7hHxAwgqHom2SjYgUZXhnmLxY82gWi4X3VZW5Ffq7NFbpzbOSRuXPWsWCAZ2HwJZSG8uI53s/RKLydPKtFMbgz5jMQsGTcBqSNJ7OnxI+jUMB03hO+ZInURDFKcp29SeW61dhJ6YQWTaxK24/GfwSE1NXreMJNxajEm+VOv+M6WJd2A1bc5l7PtDZi48tG1XqRHg+wWvbpE8w7hVci9yiDMPRlzqmRSILuQvjRcI6nsmYVAUoFjiGoFJRP6oKbp+khRGWpYLbFVvVDmFP+w/ZX1V61XDjHjTvJSuljGC1BXi70VWXGk3A6P7v7J8FRwU3RmjLjOXJz1Y/0K7CsP9C5Qa9OpjW0bpLOayksl/irX//ZolzDZohE2EYvnZTrkXaJ+c6PbdM5qzI+Kbbl+6UQv0WukoIHBOsKl9X+fawdyX9Ublg6zKzsshkIu3pyZg1z6ZTDrTPs0NOdaZnh8O+S8jksv2eKOls/uTZ9ESy5jlnVlmetYThebFK2S7mrgEHDXXQzBw0cwdN8LaR4GAkuBoJfhD1mQQORoKDkeBgJPhRn4/g4CMcfawnqBte4BrxAt14Id14Ied4gXO8kJHwQi7CC3ng5a7wAgPwAgPwQhzwMvJUDMl1TcV+vFw4Ft+L0/14eV9ORyNj2g0v9fj/gOsLRrZoresFMB97pakpsnvGQIiMOPXrEdtox2WEN+SH8e1SuzW66XXveS7l6NkraVa8eSLTIUSmFy58MGDhI7ew8AVP/ZCIxuFI9Fj37nzd2/H44+17Rx6TsXhMHjz+Vx6TB4/vk8cwgMcwgMf/YUPu5zH40TgciR778Q3vxy9/ASNB1YXfGwAA"
+    },
+    "cd918e496412623ebd616ba135870eb98e739f0f9ced66fb96961e9afa455a2c": {
+      "encoding": "gzip+base64; UTF-8 JSON",
+      "uncompressed_bytes": 7077,
+      "data": "H4sIAAAAAAAC/+2XTY+bMBCG/0rEpRdSeUigy7mH9rhSj9HKMjDZWCUY2aZV+utr4nxAwhaHot1NNiJSlPHMeHgzmkezWCy8r6IqNMrvXGkhN4+CK1E8SpEghWAeAV1yqTQlnu/9wFQU2eRbhUqZnwmZRcjSaBqRLJnOH1I2TSKEaTIP2JKlcRgnmXHb5Z9oJp9RT1SJeT7RK6Y/KfOFE2WzWnvKlDZWbo4qWXw24bgu9YauGS88H4LZk29KVqKSKXo+Mc+2SJ8Yu1cyiYU2bsYcf7E2iSkv+c5sHhJZe84TUicITIKjCWqvwI/rhNubJCrUNEOmV3RlFTI17T9k/9ThdcGNM2iepSshFFIrgTluVNXlbUQw1v3r7O+CowdTCqWmSrP0Z6seaGehpv5SFMpodRCto3SXdCaTyH/hS2//YopzHyMGT1FR87erao1ZnzuT2blkvKBlzjbdunSHlOI3yjogdAzQonpeFdtm7wr6Iwqk6yrXvMx5yvVpZ8yavekUA+1+doipe3p2aPZdQM6X7f8pIJ3Fn9wdnLisWcGoFprlLcfoPFnt2U7m7gMOPoGDz8zBZ+7gE74sJDgICa5Cgh/GfSKBg5DgICQ4CAl+3KcjOOgIRx3tBHXDC7xHvEA3Xkg3Xsg5XuAcL2QkvJCL8ELueLkpvMAAvMAAvBAHvIw8FSPyvqZiP14uHIuvxel+vLwup+ORMe2GFzv+ac400lJyIU2Df8Blxli2oLX5QpiPveBYpuzuGIiUERlgB26jHJeB3nA/DHOX3K1BHrzx1mfv3Lf6v8F8Q9ANhkA3uHCngwE7HbmGnS586OdAPA4q4vtGd+MbXSdyP96Cd0QuGQu55I7c/0UuuSP3ipALA5ALA5D7BntuP3LBj8dBRXzfcq94y336Cxy7G1KlGwAA"
+    },
+    "978d7c8047bc27dd8ebfc443f086f5f2549971f193da14f63b8256775ad829db": {
+      "encoding": "gzip+base64; UTF-8 JSON",
+      "uncompressed_bytes": 2516,
+      "data": "H4sIAAAAAAAC/+2WW2vbMBSA/8qhTzHEJkm7Sw15CIkbBiELSdqxVcEo9kkiUCTvSE67/fpJ9pIVw2AbGWPd9ODL0bl+R0K6mGqLMYy13kqEJRoLGyEtEvRhwi0uCpRyqJXFRxtNuRUHnJHQJOynIVdDXboZWu5wjlzOOKGyN5oSYXdI3oq0lEhM3fdPYwXzUimhttAFW8UjvT9+m1JYjJx+eBorGEu95rJWQHUQpNXeBQKDNiyLpvZTr80KnCrMb6dQjdU5CxzGjOV4YMzsuMq55BSaXF6GBQkvpIyxPd8K9/LZGadcoqyfacYpTytxlBVF66rzMogBiTTFcMdliaA3MRCaQiuDkUGJmcWcKYBBZksuY9hwaZCp5LGopmKwVLr/p221xDOMz5rp5XUvOCaWI/U7TJ2ZxKtvJI61AX50Jbv2OCrg2mAQDh6SiT2Qyo33kAplvEFrjZyCqNAPvk2+7+92ItuBMDG88ILeM8B0/euYPmuFaWYOIm+dMmyPbpNJ+uHtNEnH88Fd8n4wH7U7QRNf2PWSq9fPAODfuuO6/3fcn8H0j+24CuA9wM3gzSQZnfXshFYP9ib4iVO8tgCrLZdBldiP3BasW5Vhrh9U4zbyvVsIEFdRI5QjMBssFjWBDtS8GmBqH22QwvhFsUapH+LfBc9X7yJ+9bxMFkumLr4Aw0yAW9QJAAA="
+    },
+    "bc6e7a4549684f9771f7b40ecc09dc70248d1e1bf3b2fcf6a46028f0b570dde8": {
+      "encoding": "gzip+base64; UTF-8 JSON",
+      "uncompressed_bytes": 1101,
+      "data": "H4sIAAAAAAAC/7VTUWvbMBD+K0efGmhM03UPM/ghpGlW6MqoU/owhaLYl1gg67zTKW3+/aS4K8UwWCE9sGxJn+6+79P55I4Ec1gQbS3CEr3AxlhBhgJutWDZobUzcoIvkk0rCdrOtJfvxgvxPm0wWV9iRa5eBPT+0UhDQX5ol6AU4kn2yv0q3mIF98E547YwATkUZGr/fvtgBLOIH7/FChaW1tr2AHQ7w+RadBGMMg7dEP0+61BChML9wx0cYnVUhbNcqRp3SvlGu1pbzWNf2y/jjk1a5EqpVm9NfCV6PoID2n58qjTXT4flrOq608vLr6MckJk4h/lLh5VgDfg71jOyB9qANOgRdtpGQrlyAB3TGjOLW23TFOCxMVUDxuew0dZjjzHERTEZAoRD3E9y2+ICiGvjNO8jKRcfL8W5cu/7Q1hXmB9X8EUSzOi7aDJyMXnlGqmmG4Pr6c3t/Oq4Nwan36D1ow80T38ChETb0YHZ/zSpYDSmpmc3+An+1fzA2mWDUtGCn9Oy7C04h964gTN9jjOw0YbYLWu09Jx/mntJfiz5mno5L5fKnfwBP+uQJk0EAAA="
+    },
+    "b92b35614c4865d52ce316eef5c8ad0a4cb166fffc2b9a5530bf58144d0401a7": {
+      "encoding": "gzip+base64; UTF-8 JSON",
+      "uncompressed_bytes": 600,
+      "data": "H4sIAAAAAAAC/62RQUvDQBCF/8rQkx4S6FXoIcSSg1JLoifNYSXPEtjMlNnZtP5710aLBASFvtMevvdmZ95iI4YbqkR2HvSIYPTWe4PSiu6dodnD+1LYcLR8zabvVXTahYK7okYQP/a8KxXOomKrCNARpfMe+uV64efVWS3VkTlZaEl2GqYyfL9D7A154rOzWqq8vDo/AeCxV+EBnGBYFvdz+mfq/PsJpfppQye1l9tuCqSHu4uF0tWShnD9j90mB5mY88n3xxsanGadHHjW0W/dkDrOZ6PS+tuiada3nzed4FTK4gO7+HcTWAIAAA=="
+    },
+    "2930fd1863162c412b36b68913a7b46a02e233698af53f856a9e09ec13b4eaf2": {
+      "encoding": "gzip+base64; UTF-8 JSON",
+      "uncompressed_bytes": 2725,
+      "data": "H4sIAAAAAAAC/+2WS4/aMBCA/8poTyCRBNjtbonEAUFAlRBFwG4fC4pMPIBVY7u2A7S/vnYoCKFWalX2QFsfomQ8z2/ix81AWoyhJ+WSI0zQWFgwblFDE/rE4lgh520pLO5sOCCWbXComdTMfmkT0Za5m9GTFY6Q8CHRKGxX6oTZFWpvpSXnqKfiuXkcMxjlQjCxhBrYIp6W68O7yZnF0OkHxzGDHpdzwvcKKDZMS7F2gcCgDXJ1rn3q9bwCpwqjxwEUY3bJAttxRHETmRURlHCiA0P5baA0czKdRWuyZFnkEzMRzZEXjzQjmqaFMMyUiu+q9zF0CeO5xql4IjxHkIsYNBolhcHQIMfMIp0KgFZmc8JjWBBunHayU8VUDFbn7vu0oVaTDOPL5HjbqB8Soqib1am4VO0PJ7UfqgH87Ip0rXAcwCE3CBuPxcQeQeHHu0iZMN6gNEeiy6GSW98S3+N3K5atgJkYXnlB/RrBNP4AzFcpMM3MhtHSMbdK5zHppx/fDpK0N2o9JR9ao06lWj4HFtS85O71NSK7unVU+7+OXhzMv7KOCmTPAN3Wm37Sueg5B6V7WJvyb5y4UHpwFmClJbxcJPYrJ7t1/19A5Vac3Rx+dmMATUQIpcZpKEdg2BqP9wSqsMd1BmbvowKcGf8zzJHLbfxS8Hz1LuJ3z5NkPJm6fmWf3N4jFQq3AzHukmi75pqQEgt6/kOFiBh38zHpWlKKNFIOhrLmfS20u7/Jpn60ufkG1oGOEaUKAAA="
+    },
+    "90c80f8d7e07023c9156c835aacb2cee4446e83f296648df4f77bd5df36d74df": {
+      "encoding": "gzip+base64; UTF-8 JSON",
+      "uncompressed_bytes": 1383,
+      "data": "H4sIAAAAAAAC/91TUYvaQBD+K8M99aAmxru+BPIg1rOF61FOjytUkTU76tLNbjoz8fTfd6JXEWmhBfvShYRk95uZb7759uohCuYwinHlESbIAkvnBQkKuDeC4xq9H8QguJWkX0pj/MCwfHAskXbtAUXPYyxjsKMGmZ+drGMjn0xoobHRSOJp+Foc1wwemxBcWEEGsi9Isfr5zY0TTBTfOa4ZjHxcGH8AYNg4iqHCoGCUTlOfo0+znregUHh8eoD9ml20w0GeWtykvDbBGm+ow9bfdGpyukdlWpmVK9OWGae2Qb9/zUtDdr7fTMq6zm9v3+VwZ5xvCKdhuK2xFLSA37WSkx3EJcgaGWFjvFLJpwGgprjAxOPK+PYX4HntyjU4zmFpPOMB4yIVRXYOEGr0vG20KnoQybpgaKesgj4sRXcaTp0hZErML9RqT1sl5FplRSqyV45KsZ0R3PU/3g/fX3ZG8CbrQsXXf+EXDck0BCSK8dd7bn9iTEEVxcaXcGb83xkeyIREa92c1lIVPvfH44MKXThIdybOIclb8KqEGmWBPr7k/0zAtn8t+Zp6MhxPpjq88ps6LdYY1G/OK4uBTpoTawRo8UtAalivLs+raC3aVB1c1cJfskS2/1NM7xhz9QObOxVNZwUAAA=="
+    },
+    "fa246ea5a96ad790a3439ed6fdd81acca64ad4da840b6506828ca163e969cf69": {
+      "encoding": "gzip+base64; UTF-8 JSON",
+      "uncompressed_bytes": 893,
+      "data": "H4sIAAAAAAAC/92RQUvDQBCF/8rQUz0kpR5ECj2EWHJQakkVBC2ydScluJkJs5Na/73bRkMJCgo9Oac9fG/evnmDOStOIGPeOIQ79ApF6RQFpnBjFJc1OpcyKe40npHKe9YYsT4hm+To2W1L2qSCRhvBhaBH2WJqnEP5VD3R47SbFeQNUZDAGPRgJlx9vX1TKsaBj7pZQeZ4bVwLIG1LYaqQAowaNXWfPt7a/35AIb+fw2FWp0vXLoTb65MtheEFVP7sD9laBSircUH3yxsqGoksv1Gvo5+6ATEUw/Dy2CrEXyTL5exqf9MWDqVYfHmdQME1EhSmdGgh3d8gtkZB1t8CI+NDqf65YmvRjurgXqt/GMe6+0+a804z+AC5ulzrfQMAAA=="
+    },
+    "0a59c20929e72dda258c84a28e50eff141cd443ca9d6db5c3371b68f9fd1bb3a": {
+      "encoding": "gzip+base64; UTF-8 JSON",
+      "uncompressed_bytes": 8382,
+      "data": "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"
+    }
+  },
+  "integrity": "Blob keys are SHA256 of decoded UTF-8 JSON; gzip mtime is zero. Only selected cases and single-control diagnostics are retained.",
+  "tests_enrolled": 0,
+  "known_failures_added": 0,
+  "runnable_with_current_engine": false
+}

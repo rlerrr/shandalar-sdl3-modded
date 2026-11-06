@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "card": "Orbs of Warding",
+  "csvid": 15191,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "params": {
+        "extension": "shield",
+        "binding": "legacy_field",
+        "amount": 1,
+        "scope": "any",
+        "activation_cost": "",
+        "tap": false,
+        "dialogs": {
+          "0": [],
+          "1": []
+        },
+        "gaps": [
+          "Hexproof and player-targeted spells",
+          "Noncreature sources dealing damage to the protected player",
+          "Removal and reentry of this continuous source"
+        ],
+        "legacy_kind": "static",
+        "legacy_scope": "armor",
+        "selected_components": [
+          "bare_zones",
+          "blocked",
+          "cast_payment",
+          "friendly_damage",
+          "human_source",
+          "insufficient_cast_mana",
+          "noncombat_enemy",
+          "noncombat_friendly",
+          "ready_snapshot",
+          "red_source",
+          "resolved_snapshot",
+          "reverse_blocked",
+          "reverse_combat",
+          "small_source",
+          "trample_source",
+          "unblocked"
+        ]
+      },
+      "oracle_text": "You have hexproof. (You can't be the target of spells or abilities your opponents control.)\nIf a creature would deal damage to you, prevent 1 of that damage.",
+      "variants": [
+        "unblocked_0",
+        "blocked_0",
+        "reverse_combat_0",
+        "reverse_blocked_0",
+        "red_source_0",
+        "trample_source_0",
+        "small_source_0",
+        "human_source_0",
+        "noncombat_friendly_0",
+        "noncombat_enemy_0",
+        "friendly_damage_0",
+        "cast_payment_0",
+        "insufficient_cast_mana_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "unblocked_1",
+        "blocked_1",
+        "reverse_combat_1",
+        "reverse_blocked_1",
+        "red_source_1",
+        "trample_source_1",
+        "small_source_1",
+        "human_source_1",
+        "noncombat_friendly_1",
+        "noncombat_enemy_1",
+        "friendly_damage_1",
+        "cast_payment_1",
+        "insufficient_cast_mana_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1"
+      ]
+    }
+  ]
+}
