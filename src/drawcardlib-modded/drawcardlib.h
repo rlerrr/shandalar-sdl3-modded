@@ -468,7 +468,7 @@ DLLIMPORT int ReloadSmallArtIfWrongSize(int id, int version, int width, int heig
 BOOL WINAPI DllMain(HINSTANCE dll, DWORD reason, LPVOID reserved);
 int CalcDrawManaText(HDC hdc, const RECT* rect, const char* str);
 int DestroyAllCardBackgrounds(void);
-int DrawCardBack(HDC hdc, const RECT* dest_rect, /* An appalling hack to use this as an interface for other functions, but still safer than adding new imports. */ unsigned int mode, int arg1, int arg2, int arg3, int arg4);
+int DrawCardBack(HDC hdc, const RECT* dest_rect, /* An appalling hack to use this as an interface for other functions, but still safer than adding new imports. */ unsigned int mode, intptr_t arg1, intptr_t arg2, int arg3, int arg4);
 int DrawFullCardEx(HDC, const RECT*, const card_ptr_t*, int, int, int, const char*, int);
 int DrawSmallCardEx(HDC, const RECT*, const card_ptr_t*, int, int, int, int, int);
 void get_config_data(int config, int item, int *result);

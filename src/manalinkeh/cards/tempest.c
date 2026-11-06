@@ -9,7 +9,7 @@ int card_magus_of_the_scroll(int player, int card, event_t event);
 char *with_shadow(int who_chooses, int player, int card);
 static int effect_maddening_imp(int player, int card, event_t event);
 
-void bellowing_fiend_effect(int player, int card, int t_player, int t_card);
+void bellowing_fiend_effect(intptr_t player, intptr_t card, int t_player, int t_card);
 int damage_controller_and_you(int player, int card, event_t event);
 
 #ifndef SHANDALAR
@@ -6242,7 +6242,7 @@ int damage_controller_and_you(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x2147be0; original cards/tempest.c:5878. */
-void bellowing_fiend_effect(int player, int card, int t_player, int t_card)
+void bellowing_fiend_effect(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   create_targetted_legacy_effect(player, card, damage_controller_and_you, t_player, t_card);
   return;
@@ -6811,7 +6811,7 @@ int card_endless_scream(int player, int card, event_t event)
 #endif
 
 /* ManalinkEh 2022: 0x2147610; original cards/tempest.c:6300. */
-static void blocked_by_me_or_my_blocker_gets_1_1(int player, int card, int t_player, int t_card)
+static void blocked_by_me_or_my_blocker_gets_1_1(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   pump_ability_until_eot(player, card, t_player, t_card, 1, 1, 0, 0);
   return;

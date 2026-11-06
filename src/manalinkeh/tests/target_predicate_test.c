@@ -41,7 +41,7 @@ int main(void)
 {
   card_instance_t* damage = get_card_instance(1, 1);
   /* Keep a real indirect call even in optimized WASM builds. */
-  volatile int extra = target_predicate_extra(colored_damage_source);
+  volatile intptr_t extra = target_predicate_extra(colored_damage_source);
   memset(instances, 0, sizeof(instances));
   damage->internal_card_id = damage_card;
   damage->damage_target_player = 0;

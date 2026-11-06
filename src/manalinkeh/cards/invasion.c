@@ -7016,7 +7016,7 @@ int card_pain_suffering(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x2486940; original cards/invasion.c:6139. */
-static void destroy_green_creature_when_blocked(int player, int card, int t_player, int t_card)
+static void destroy_green_creature_when_blocked(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   unsigned int creature_color;
   unsigned int destroyed_color;
@@ -7066,7 +7066,7 @@ int card_phyrexian_reaper(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x24869b0; original cards/invasion.c:6165. */
-static void destroy_white_creature_when_blocked(int player, int card, int t_player, int t_card)
+static void destroy_white_creature_when_blocked(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   unsigned int creature_color;
   unsigned int destroyed_color;

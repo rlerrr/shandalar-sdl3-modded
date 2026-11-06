@@ -1,6 +1,6 @@
 #include "manalink.h"
 
-static int is_not_commander(int iid, int val, int player, int card);
+static int is_not_commander(int iid, intptr_t val, int player, int card);
 int count_creatures_with_p1_p1_counter(int player);
 
 static void slurrk_trigger(int player, int card);
@@ -16,7 +16,7 @@ static int count_how_many_times_a_commander_was_played(int player);
 
 static int colfenor_effect(int player, int card, event_t event);
 
-static int is_aura_or_equipment_by_iid(int iid, int unused, int player, int card);
+static int is_aura_or_equipment_by_iid(int iid, intptr_t unused, int player, int card);
 
 #ifndef SHANDALAR
 
@@ -1197,7 +1197,7 @@ int card_armix_filigree_thrasher(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x25a0670; original cards/commander_legends.c:787. */
-static int is_aura_or_equipment_by_iid(int iid, int unused, int player, int card)
+static int is_aura_or_equipment_by_iid(int iid, intptr_t unused, int player, int card)
 {
   int result;
 
@@ -5270,7 +5270,7 @@ int card_keeper_of_the_accord(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x25a0390; original cards/commander_legends.c:3447. */
-static int commander_test(int iid, int unused, int player, int card)
+static int commander_test(int iid, intptr_t unused, int player, int card)
 {
   int result;
 
@@ -7595,7 +7595,7 @@ int card_sakashimas_protege(int player, int card, event_t event)
 
 #ifndef SHANDALAR
 /* ManalinkEh 2022: 0x259ff10; original cards/commander_legends.c:5067. */
-static int test_exclude_this_creature(int iid, int val, int player, int card)
+static int test_exclude_this_creature(int iid, intptr_t val, int player, int card)
 {
   if (card != (val & 0xffffU))
   {
@@ -7844,7 +7844,7 @@ int card_siani_eye_of_the_storm(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x25a03c0; original cards/commander_legends.c:5222. */
-static int is_not_commander(int iid, int val, int player, int card)
+static int is_not_commander(int iid, intptr_t val, int player, int card)
 {
   int result;
 

@@ -9,7 +9,7 @@ int phase_out_target_until_source_leaves_play(int s_player, int s_card, int t_pl
 
 #endif
 
-static void mark_creatures(int itgt, int iinfo_slot, int t_player, int t_card)
+static void mark_creatures(intptr_t itgt, intptr_t iinfo_slot, int t_player, int t_card)
 {
   int16_t** tgt = (int16_t**)itgt;
   **tgt = t_card;
@@ -44,10 +44,10 @@ When ~ dies, destroy all creatures blocking or blocked by it. They can't be rege
 		  int16_t* tgt = (int16_t*)(&instance->targets[0].player);
 
 		  if (player == current_turn)
-			for_each_creature_blocking_me(player, card, mark_creatures, (uint32_t)(&tgt), 0);
+			for_each_creature_blocking_me(player, card, mark_creatures, (intptr_t)(&tgt), 0);
 
 		  if (player == 1-current_turn)
-			for_each_creature_blocked_by_me(player, card, mark_creatures, (uint32_t)(&tgt), 0);
+			for_each_creature_blocked_by_me(player, card, mark_creatures, (intptr_t)(&tgt), 0);
 		}
 
 	  if (this_dies_trigger(player, card, event, RESOLVE_TRIGGER_MANDATORY))

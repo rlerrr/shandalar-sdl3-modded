@@ -306,7 +306,7 @@ static void rally(int player, int card, event_t event, resolve_trigger_t mode)
 	etb_ability(player, card, event, mode);
 }
 
-static int test_isnt_land(int iid, int unused, int player, int card)
+static int test_isnt_land(int iid, intptr_t unused, int player, int card)
 {
   return card >= 0 ? !is_what(player, card, TYPE_LAND) : !is_what(-1, iid, TYPE_LAND);
 }
@@ -1938,7 +1938,7 @@ int card_guardian_of_tazeem(int player, int card, event_t event)
   return 0;
 }
 
-static int test_has_awaken(int iid, int unused, int player, int card)
+static int test_has_awaken(int iid, intptr_t unused, int player, int card)
 {
   return call_card_fn(cards_data[iid].code_pointer,
 					  get_card_instance(0, 0),	// Since broken asm cards look at it, and they haven't necessarily all been removed
@@ -5199,7 +5199,7 @@ int card_hedron_archive(int player, int card, event_t event)
 
   return card_sol_ring(player, card, event);
 }
-static void mark_if_blocked_by_colorless(int any_ptr, int unused, int blocking_controller, int blocking_card)
+static void mark_if_blocked_by_colorless(intptr_t any_ptr, intptr_t unused, int blocking_controller, int blocking_card)
 {
   int* any = (int*)any_ptr;
   if (!*any && !(get_color(blocking_controller, blocking_card) & COLOR_TEST_ANY_COLORED))
@@ -5222,7 +5222,7 @@ int card_hedron_blade(int player, int card, event_t event)
 		{
 		  int any = 0;
 		  for_each_creature_blocking_me(inst->damage_target_player, inst->damage_target_card,
-										mark_if_blocked_by_colorless, (int)(&any), 0);
+										mark_if_blocked_by_colorless, (intptr_t)(&any), 0);
 		  if (any)
 			pump_ability_until_eot(player, card, inst->damage_target_player, inst->damage_target_card, 0,0, 0,SP_KEYWORD_DEATHTOUCH);
 		}

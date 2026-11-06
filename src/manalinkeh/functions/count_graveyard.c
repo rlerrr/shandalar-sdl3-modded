@@ -213,12 +213,11 @@ int any_in_graveyard_by_subtype(int player, subtype_t subtype)
       grave_byte_offset = 0;
       do
       {
-        if (*(int *)((int)graveyard_ptr_mutable[grave_owner] + grave_byte_offset) == -1)
+        if (graveyard_ptr_mutable[grave_owner][grave_byte_offset / sizeof(int)] == -1)
           break;
         if (has_subtype_by_id(
                 player,
-                (unsigned int)cards_data[*(int *)((int)graveyard_ptr_mutable[grave_owner] +
-                                                  grave_byte_offset)]
+                (unsigned int)cards_data[graveyard_ptr_mutable[grave_owner][grave_byte_offset / sizeof(int)]]
                     .id,
                 subtype) != 0)
         {

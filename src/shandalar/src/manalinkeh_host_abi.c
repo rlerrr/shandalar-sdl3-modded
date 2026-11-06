@@ -2,7 +2,7 @@
 #include "magic/src/global_state.h"
 #include "drawcardlib/src/autoproto.h"
 
-int DrawCardModdedBack(HDC, const RECT*, unsigned int, int, int, int, int);
+int DrawCardModdedBack(HDC, const RECT*, unsigned int, intptr_t, intptr_t, int, int);
 int DrawCardModdedSmallCard(HDC, const RECT*, const card_ptr_t*, int, int, int, int);
 int DrawCardModdedSmallCardTitle(HDC, const RECT*, const char*, int, int,
                                 const card_ptr_t*, int, int);

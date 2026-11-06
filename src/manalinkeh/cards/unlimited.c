@@ -6631,7 +6631,7 @@ int card_the_hive(int player, int card, event_t event){
 	return generic_activated_ability(player, card, event, GAA_UNTAPPED, MANACOST_X(5), 0, NULL, NULL);
 }
 
-static void destroy_nonwall_at_end_of_combat(int player, int card, int t_player, int t_card)
+static void destroy_nonwall_at_end_of_combat(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   if (!has_subtype(t_player, t_card, SUBTYPE_WALL))
 	create_legacy_effect_exe(player, card, LEGACY_EFFECT_STONING, t_player, t_card);

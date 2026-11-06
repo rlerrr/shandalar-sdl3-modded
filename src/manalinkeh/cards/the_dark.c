@@ -3454,7 +3454,7 @@ If each of those creatures could block all creatures that the other is blocking,
 Each one then blocks all creatures the other was blocking.
 Whenever Sorrow's Path becomes tapped, it deals 2 damage to you and each creature you control.
 */
-static void give_first_strike(int player, int card, int t_player, int t_card)
+static void give_first_strike(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	pump_ability_until_eot(player, card, t_player, t_card, 0, 0, KEYWORD_FIRST_STRIKE, 0);
 }
@@ -3870,7 +3870,7 @@ int card_uncle_istvan(int player, int card, event_t event)
   return 0;
 }
 
-static void destroy_nonwall_at_end_of_combat(int player, int card, int t_player, int t_card)
+static void destroy_nonwall_at_end_of_combat(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   if (!has_subtype(t_player, t_card, SUBTYPE_WALL))
 	create_legacy_effect_exe(player, card, LEGACY_EFFECT_STONING, t_player, t_card);

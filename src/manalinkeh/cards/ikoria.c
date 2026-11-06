@@ -1,6 +1,6 @@
 #include "manalink.h"
 
-static int iid_has_cycling(int iid, int me, int player, int card);
+static int iid_has_cycling(int iid, intptr_t me, int player, int card);
 
 static int luminous_broodmoth_effect(int player, int card, event_t event);
 
@@ -182,7 +182,7 @@ int card_eerie_ultimatum(int player, int card, event_t event)
     /* Native selection storage is not initialized before the predicate reads it. */
     int chosen[2][151];
     new_default_test_definition(&test, 0x47, "Select a permanent card.");
-    test.value_for_special_selection_function = (int)chosen[1];
+    test.value_for_special_selection_function = (intptr_t)chosen[1];
     test.no_shuffle = 1;
     test.special_selection_function = test_not_in_array;
     test.id = 0x388;
@@ -269,7 +269,7 @@ int card_emergent_ultimatum(int player, int card, event_t event)
         iid_t searched[3] = {-1, -1, -1};
         test_definition_t test;
         new_default_test_definition(&test, TYPE_ANY, "Select a monocolored card.");
-        test.value_for_special_selection_function = (int)searched;
+        test.value_for_special_selection_function = (intptr_t)searched;
         test.color_flag = 3;
         test.special_selection_function = test_not_in_array;
         int num_chosen = 0;
@@ -1414,7 +1414,7 @@ int card_lurrus_of_the_dream_den(int player, int card, event_t event)
       }
     }
     test_definition_t test;
-    _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Lurrus filter");
+    _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 232 : 216), "native Lurrus filter");
     new_default_test_definition(&test, 0xff, "Select a permanent card to play.");
     int selected = select_card_from_zone(player, player, playable[0], count, 0, 1, -1, &test);
     if (selected != -1 && charge_mana_from_id(player, -1, EVENT_ACTIVATE,
@@ -1604,7 +1604,7 @@ int card_obosh_the_preypiercer(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x2288060; original cards/ikoria.c:1927. */
-static int iid_has_cycling(int iid, int me, int player, int card)
+static int iid_has_cycling(int iid, intptr_t me, int player, int card)
 {
   return (unsigned int)(cards_data[iid].cc[2] == '\x04');
 }
@@ -1765,7 +1765,7 @@ int card_sprite_dragon(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x22884c0; original cards/ikoria.c:2222. */
-static int has_counter(int unused1, int unused2, int player, int card)
+static int has_counter(int unused1, intptr_t unused2, int player, int card)
 {
   return count_counters(player, card, -1);
 }

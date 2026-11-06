@@ -2365,7 +2365,7 @@ int card_dack_fayden(int player, int card, event_t event)
   return planeswalker(player, card, event, 3);
 }
 
-static int test_targets_opponents_permanent(int iid, int me, int player, int card)
+static int test_targets_opponents_permanent(int iid, intptr_t me, int player, int card)
 {
   card_instance_t* instance = get_card_instance(player, card);
   int i;

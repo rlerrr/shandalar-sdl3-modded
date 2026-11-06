@@ -102,8 +102,8 @@ void choose_who_attack(int player, int card)
   int this_pow = get_attack_power(player, card);
 
   // Must-attack-a-specific-planeswalker effects.
-  int gideon_all = (int)(&gideon_jura_force_attack);
-  int gideon_single = (int)(&fx_attack_gideon_battle_forged);
+  intptr_t gideon_all = (intptr_t)(&gideon_jura_force_attack);
+  intptr_t gideon_single = (intptr_t)(&fx_attack_gideon_battle_forged);
   for (count = 0; count < active_cards_count[1 - player]; ++count)
   {
     card_instance_t *inst = in_play(1 - player, count);

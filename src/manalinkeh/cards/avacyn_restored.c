@@ -4524,7 +4524,7 @@ int card_scalding_devil(int player, int card, event_t event){
 	return generic_activated_ability(player, card, event, GAA_CAN_TARGET, MANACOST_XR(2, 1), 0, &td1, "TARGET_PLAYER_OR_PLANESWALKER");
 }
 
-static void block_deal1dam(int player, int card, int blocking_player, int blocking_card)
+static void block_deal1dam(intptr_t player, intptr_t card, int blocking_player, int blocking_card)
 {
   damage_creature(blocking_player, blocking_card, 1, player, card);
 }

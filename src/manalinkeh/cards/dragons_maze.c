@@ -1048,7 +1048,7 @@ int card_phytoburst(int player, int card, event_t event){
 	return vanilla_pump(player, card, event, &td, 5, 5, 0, 0);
 }
 
-static int has_1_1_counter(int unused1, int unused2, int player, int card){
+static int has_1_1_counter(int unused1, intptr_t unused2, int player, int card){
 	return count_1_1_counters(player, card) ? 1 : 0;
 }
 

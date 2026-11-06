@@ -77,6 +77,15 @@ add_library(shandalar_duel_engine STATIC
 add_executable(shandalar src/sdl_main.c)
 target_link_libraries(shandalar PRIVATE shandalar_duel_engine)
 if(WIN32 AND NOT EMSCRIPTEN)
+  set_target_properties(shandalar PROPERTIES
+    WIN32_EXECUTABLE "$<NOT:$<CONFIG:Debug>>"
+  )
+  # Enter the SDL host's main(), not the embedded legacy WinMain().
+  if(MSVC)
+    target_link_options(shandalar PRIVATE /ENTRY:mainCRTStartup)
+  else()
+    target_link_options(shandalar PRIVATE "-Wl,--entry,mainCRTStartup")
+  endif()
   set(shandalar_icon_resource "${CMAKE_CURRENT_BINARY_DIR}/shandalar_icon.rc")
   file(GENERATE OUTPUT "${shandalar_icon_resource}"
     CONTENT "1 ICON \"${CMAKE_CURRENT_SOURCE_DIR}/shandalar.ico\"\n"
@@ -376,11 +385,28 @@ if(SHANDALAR_BUILD_TESTS AND WIN32)
     "/FI${SHANDALAR_SRC_ROOT}/manalinkeh/mok_manalink_redirects.h")
   add_test(NAME mok_engine_test COMMAND mok_engine_test)
 
+  set(mok_mana_payment_source "${CMAKE_CURRENT_BINARY_DIR}/generated/mok_mana_payment.c")
+  add_custom_command(OUTPUT "${mok_mana_payment_source}"
+    COMMAND "${Python3_EXECUTABLE}" "${SHANDALAR_SRC_ROOT}/manalinkeh/tests/select_mana_payment_functions.py"
+            "${SHANDALAR_SRC_ROOT}" "${mok_mana_payment_source}"
+    DEPENDS ../manalinkeh/tests/select_mana_payment_functions.py
+            ../manalinkeh/functions/engine.c ../manalinkeh/functions/ai.c ../magic/src/duel_mana.c
+    VERBATIM
+  )
+  add_executable(mok_mana_payment_test ../manalinkeh/tests/mok_mana_payment_test.c "${mok_mana_payment_source}")
+  target_include_directories(mok_mana_payment_test PRIVATE "${SHANDALAR_SRC_ROOT}/manalinkeh" "${SHANDALAR_SRC_ROOT}")
+  target_include_directories(mok_mana_payment_test BEFORE PRIVATE "${SHANDALAR_SRC_ROOT}/magic/compat")
+  target_compile_definitions(mok_mana_payment_test PRIVATE MANALINKEH_STATIC)
+  target_link_libraries(mok_mana_payment_test PRIVATE shandalar_platform)
+  add_test(NAME mok_mana_payment_test COMMAND mok_mana_payment_test)
+
   set(mok_legacy_text_source "${CMAKE_CURRENT_BINARY_DIR}/generated/mok_legacy_text.c")
   add_custom_command(OUTPUT "${mok_legacy_text_source}"
     COMMAND "${Python3_EXECUTABLE}" "${SHANDALAR_SRC_ROOT}/manalinkeh/tests/select_legacy_text_functions.py"
-            "${SHANDALAR_SRC_ROOT}/manalinkeh/functions/windows.c" "${mok_legacy_text_source}"
+            "${SHANDALAR_SRC_ROOT}/manalinkeh/functions/windows.c"
+            "${SHANDALAR_SRC_ROOT}/manalinkeh/functions/functions.c" "${mok_legacy_text_source}"
     DEPENDS ../manalinkeh/tests/select_legacy_text_functions.py ../manalinkeh/functions/windows.c
+            ../manalinkeh/functions/functions.c ../manalinkeh/functions/global_checking.c
     VERBATIM
   )
   add_executable(mok_legacy_text_test ../manalinkeh/tests/mok_legacy_text_test.c "${mok_legacy_text_source}")

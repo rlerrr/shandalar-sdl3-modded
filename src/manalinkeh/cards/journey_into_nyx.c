@@ -1965,7 +1965,7 @@ int card_dreadbringer_lampads(int player, int card, event_t event)
   return 0;
 }
 
-static int test_is_not_enchantment(int iid, int unused, int player, int card)
+static int test_is_not_enchantment(int iid, intptr_t unused, int player, int card)
 {
   return !is_what(player, card, TYPE_ENCHANTMENT);
 }
@@ -3711,7 +3711,7 @@ int card_swarmborn_giant(int player, int card, event_t event)
 * Multicolor *
 *************/
 
-static int is_creature_planeswalker_aura(int iid, int unused, int player, int card)
+static int is_creature_planeswalker_aura(int iid, intptr_t unused, int player, int card)
 {
   if (is_what(-1, iid, TYPE_CREATURE | TARGET_TYPE_PLANESWALKER))
     return 1;

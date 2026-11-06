@@ -1277,7 +1277,7 @@ int card_lab_rats(int player, int card, event_t event){
 
 // lancer en-kor --> nomads en-kor
 
-void lowland_basilisk_effect(int player, int card, int t_player, int t_card){
+void lowland_basilisk_effect(intptr_t player, intptr_t card, int t_player, int t_card){
 	create_targetted_legacy_effect(player, card, &die_at_end_of_combat, t_player, t_card);
 }
 
@@ -3510,7 +3510,7 @@ static int wot_effect(int player, int card, event_t event)
   return 0;
 }
 
-static void create_stronghold_end_combat_bounce(int player, int card, int t_player, int t_card)
+static void create_stronghold_end_combat_bounce(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   create_targetted_legacy_effect(player, card, wot_effect, t_player, t_card);
   return;

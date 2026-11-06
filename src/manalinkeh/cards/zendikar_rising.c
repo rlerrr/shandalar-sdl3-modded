@@ -346,7 +346,7 @@ int mdfc_front(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x2307880; original cards/zendikar_rising.c:291. */
-int cmc_not_in_array(int iid, int arrptr, int player, int card)
+int cmc_not_in_array(int iid, intptr_t arrptr, int player, int card)
 {
   int candidate_cmc;
   int existing_cmc;
@@ -790,7 +790,7 @@ int card_cleansing_wildfire(int player, int card, event_t event)
 }
 
 /* Recovered October 2022 implementations; see docs/recovery-progress.md. */
-static int is_instant_sorcery_or_wizard(int iid, int unused, int player, int card);
+static int is_instant_sorcery_or_wizard(int iid, intptr_t unused, int player, int card);
 int mdfc_front(int player, int card, event_t event);
 static int malakir_rebirth_effect(int player, int card, event_t event);
 static int mdfc_front_impl(int player, int card, event_t event, int can_play_front,
@@ -2956,7 +2956,7 @@ static int three_counters_for_mv_less_than_three(int player, int card)
 /* Recovered October 2022 implementations; see docs/recovery-progress.md. */
 
 /* ManalinkEh 2022: 0x23066a0; original cards/zendikar_rising.c:3646. */
-static int is_instant_sorcery_or_wizard(int iid, int unused, int player, int card)
+static int is_instant_sorcery_or_wizard(int iid, intptr_t unused, int player, int card)
 {
   int result;
   unsigned int matches;
@@ -3264,7 +3264,7 @@ int card_agadeems_awakening(int player, int card, event_t event)
       test.cmc_flag = 3;
       test.cmc = maximum_targets + 1;
       test.no_shuffle = 1;
-      test.value_for_special_selection_function = (int)(chosen + 1);
+      test.value_for_special_selection_function = (intptr_t)(chosen + 1);
       test.special_selection_function = test_not_in_array;
 
       if (graveyard_has_shroud(player) == 0)

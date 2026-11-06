@@ -2,7 +2,7 @@
 
 // Functions
 
-static int is_basic_land_by_internal_id(int iid, int unused, int unused1, int unused2){
+static int is_basic_land_by_internal_id(int iid, intptr_t unused, int unused1, int unused2){
 	return is_basic_land_by_id(cards_data[iid].id);
 }
 
@@ -960,7 +960,7 @@ Cavern Thoctar	|5|G
 Creature - Beast 5/5
 |1|R: ~ gets +1/+0 until end of turn. */
 
-static int check_clarion_ultimatum_targets(int iid, int card, int player, int unused){
+static int check_clarion_ultimatum_targets(int iid, intptr_t card, int player, int unused){
 	card_instance_t* instance = get_card_instance(player, card);
 	int i;
 	for(i=0; i<5; i++){
@@ -5009,11 +5009,11 @@ int card_tezzeret_the_seeker(int player, int card, event_t event)
           choice_or_artifact_value = is_what(-1, choice_or_artifact_value, 0x40);
           if ((choice_or_artifact_value != 0) &&
               (choice_or_artifact_value =
-                   get_cmc_by_internal_id(*(int *)((int)deck_ptr[player] + library_byte_offset)),
+                   get_cmc_by_internal_id(deck_ptr[player][library_byte_offset / sizeof(int)]),
                choice_or_artifact_value < loyalty_or_artifact_count))
           {
             choice_or_artifact_value =
-                get_cmc_by_internal_id(*(int *)((int)deck_ptr[player] + library_byte_offset));
+                get_cmc_by_internal_id(deck_ptr[player][library_byte_offset / sizeof(int)]);
             choice_or_artifact_value = choice_or_artifact_value * 4 + 4;
             if (tutor_priority < choice_or_artifact_value)
             {
@@ -5023,7 +5023,7 @@ int card_tezzeret_the_seeker(int player, int card, event_t event)
               break;
           }
           library_byte_offset = library_byte_offset + 4;
-          choice_or_artifact_value = *(int *)((int)deck_ptr[player] + library_byte_offset);
+          choice_or_artifact_value = deck_ptr[player][library_byte_offset / sizeof(int)];
         } while (choice_or_artifact_value != -1);
       }
       default_test_definition(&this_test, 0x40);

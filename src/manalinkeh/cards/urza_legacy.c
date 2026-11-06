@@ -6,7 +6,7 @@ const char *target_is_attached_to_creature(int who_chooses, int player, int card
 
 // ---- CARDS ----
 
-static void destroy_auras_attached(int player, int card, int t_player, int t_card);
+static void destroy_auras_attached(intptr_t player, intptr_t card, int t_player, int t_card);
 
 int card_angels_trumpet(int player, int card, event_t event){
 /* CARD_ID_ANGELS_TRUMPET	3967
@@ -3161,7 +3161,7 @@ int card_treacherous_link(int player, int card, event_t event)
 #endif
 
 /* ManalinkEh 2022: 0x25b22e0; original cards/urza_legacy.c:2968. */
-static void destroy_auras_attached(int player, int card, int t_player, int t_card)
+static void destroy_auras_attached(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   int p;
   card_instance_t *instance;

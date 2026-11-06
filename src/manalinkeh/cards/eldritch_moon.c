@@ -3709,7 +3709,7 @@ int card_alchemists_greeting(int player, int card, event_t event)
   return madness(player, card, event, MANACOST_XR(1,1));
 }
 
-static void damage_blocked_blocking_creature_and_controller(int player, int card, int t_player, int t_card)
+static void damage_blocked_blocking_creature_and_controller(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	damage_creature(t_player, t_card, 3, player, card);
 	damage_player(t_player, 3, player, card);

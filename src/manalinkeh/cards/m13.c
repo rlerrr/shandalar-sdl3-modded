@@ -2,7 +2,7 @@
 
 static int xathrid_ability_legacy(int player, int card, event_t event);
 
-static int has_mbt_by_iid(int iid, int unused1, int unused2, int unused3);
+static int has_mbt_by_iid(int iid, intptr_t unused1, int unused2, int unused3);
 
 // ------------ General functions
 
@@ -1381,7 +1381,7 @@ Destroy target creature. */
 }
 
 /* ManalinkEh 2022: 0x22b4140; original cards/m13.c:1313. */
-static int has_mbt_by_iid(int iid, int unused1, int unused2, int unused3)
+static int has_mbt_by_iid(int iid, intptr_t unused1, int unused2, int unused3)
 {
   int result;
   result = check_for_special_ability(-1, iid, (SP_KEYWORD_DEATHTOUCH | SP_KEYWORD_HEXPROOF));

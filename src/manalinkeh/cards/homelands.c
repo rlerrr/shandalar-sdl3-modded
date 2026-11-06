@@ -1918,7 +1918,7 @@ int card_funeral_march(int player, int card, event_t event)
 	return vanilla_aura(player, card, event, 1-player);
 }
 
-static void first_strike_if_white(int player, int card, int t_player, int t_card)
+static void first_strike_if_white(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   if (get_color(t_player, t_card) & get_sleighted_color_test(player, card, COLOR_TEST_WHITE))
 	pump_ability_until_eot(player, card, player, card, 0,0, KEYWORD_FIRST_STRIKE,0);
@@ -2168,7 +2168,7 @@ static int greater_werewolf_legacy(int player, int card, event_t event){
 	return 0;
 }
 
-static void attach_greater_werewolf_legacy(int player, int card, int t_player, int t_card)
+static void attach_greater_werewolf_legacy(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	create_targetted_legacy_effect(player, card, &greater_werewolf_legacy, t_player, t_card);
 }
@@ -2693,7 +2693,7 @@ int card_leeches(int player, int card, event_t event){
 	return generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_PLAYER", 1, NULL);
 }
 
-static void give_first_strike(int player, int card, int t_player, int t_card)
+static void give_first_strike(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   pump_ability_until_eot(player, card, t_player, t_card, 0,0, KEYWORD_FIRST_STRIKE,0);
 }
@@ -2998,7 +2998,7 @@ int card_prophecy(int player, int card, event_t event)
   return generic_spell(player, card, event, GS_CAN_ONLY_TARGET_OPPONENT, &td, "TARGET_OPPONENT", 1, NULL);
 }
 
-static void set_val_if_color(int color_test, int val, int t_player, int t_card)
+static void set_val_if_color(intptr_t color_test, intptr_t val, int t_player, int t_card)
 {
   if (get_color(t_player, t_card) & color_test)
 	*((int*)val) = 1;
@@ -3019,7 +3019,7 @@ int card_rashka_the_slayer(int player, int card, event_t event)
 	  int color_test_black = 1<<get_sleighted_color(player, card, COLOR_BLACK);
 	  int blocking_black = 0;
 	  if (inst->state & STATE_BLOCKING)
-		for_each_creature_blocked_by_me(player, card, set_val_if_color, color_test_black, (int)(&blocking_black));
+		for_each_creature_blocked_by_me(player, card, set_val_if_color, color_test_black, (intptr_t)(&blocking_black));
 	  if (blocking_black)
 		pump_until_eot(player, card, player, card, 1,2);
 	}
@@ -3371,9 +3371,9 @@ int card_sea_troll(int player, int card, event_t event)
 	  int color_test_blue = 1<<get_sleighted_color(player, card, COLOR_BLUE);
 	  int blocking_blue = 0;
 	  if (inst->state & STATE_ATTACKING)
-		for_each_creature_blocking_me(player, card, set_val_if_color, color_test_blue, (int)(&blocking_blue));
+		for_each_creature_blocking_me(player, card, set_val_if_color, color_test_blue, (intptr_t)(&blocking_blue));
 	  if (inst->state & STATE_BLOCKING)
-		for_each_creature_blocked_by_me(player, card, set_val_if_color, color_test_blue, (int)(&blocking_blue));
+		for_each_creature_blocked_by_me(player, card, set_val_if_color, color_test_blue, (intptr_t)(&blocking_blue));
 	  if (blocking_blue)
 		inst->info_slot = CARD_ID_SEA_TROLL;
 	}
@@ -3498,9 +3498,9 @@ int card_serra_inquisitors(int player, int card, event_t event)
 	  int color_test_black = 1<<get_sleighted_color(player, card, COLOR_BLACK);
 	  int blocking_black = 0;
 	  if (inst->state & STATE_ATTACKING)
-		for_each_creature_blocking_me(player, card, set_val_if_color, color_test_black, (int)(&blocking_black));
+		for_each_creature_blocking_me(player, card, set_val_if_color, color_test_black, (intptr_t)(&blocking_black));
 	  if (inst->state & STATE_BLOCKING)
-		for_each_creature_blocked_by_me(player, card, set_val_if_color, color_test_black, (int)(&blocking_black));
+		for_each_creature_blocked_by_me(player, card, set_val_if_color, color_test_black, (intptr_t)(&blocking_black));
 	  if (blocking_black)
 		pump_until_eot(player, card, player, card, 2,0);
 	}

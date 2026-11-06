@@ -74,7 +74,7 @@ int explore(int player, int card, event_t event);
 
 int card_deeproot_champion(int player, int card, event_t event);
 
-static int test_dinosaur_or_land(int iid, int value, int player, int card);
+static int test_dinosaur_or_land(int iid, intptr_t value, int player, int card);
 
 #ifndef SHANDALAR
 
@@ -2241,7 +2241,7 @@ int card_carnage_tyrant(int player, int card, event_t event)
  * Trample */
 
 /* ManalinkEh 2022: 0x2212840; original cards/ixalan.c:1737. */
-static int test_dinosaur_or_land(int iid, int value, int player, int card)
+static int test_dinosaur_or_land(int iid, intptr_t value, int player, int card)
 {
   int result;
 

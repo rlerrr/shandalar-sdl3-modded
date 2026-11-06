@@ -11,7 +11,7 @@ static char *target_must_be_damage_targeting_this_revered_elder(int who_chooses,
                                                                 int targeting_card);
 static int creatures_target_player_controls_attack_this_turn_if_able(int player, int card,
                                                                      event_t event);
-static int are_blocked_creatures(int unused, int unused2, int player, int card);
+static int are_blocked_creatures(int unused, intptr_t unused2, int player, int card);
 static int target_lands_become_forests(int player, int card, event_t event);
 int destroy_target_blocking_creature_at_end_of_combat(int player, int card, event_t event);
 
@@ -20,7 +20,7 @@ static int scandalmonger_effect(int player, int card, event_t event);
 int effect_squallmonger(int player, int card, event_t event);
 int effect_warmonger(int player, int card, event_t event);
 
-static void whenever_a_creature_blocks_black_red(int color_test, int val, int t_player, int t_card);
+static void whenever_a_creature_blocks_black_red(intptr_t color_test, intptr_t val, int t_player, int t_card);
 
 static int cast_creature_and_enchantment_spells_as_they_had_flash(int player, int card,
                                                                   event_t event);
@@ -1333,7 +1333,7 @@ Creature - Dryad Spellshaper 1/1
 	return generic_activated_ability(player, card, event, GAA_UNTAPPED|GAA_DISCARD, MANACOST_G(1), 0, NULL, NULL);
 }
 
-static void destroy_nonblack_at_end_of_combat(int player, int card, int t_player, int t_card)
+static void destroy_nonblack_at_end_of_combat(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   if (!(get_color(t_player, t_card) & get_sleighted_color_test(player, card, COLOR_TEST_BLACK)))
 	create_legacy_effect_exe(player, card, LEGACY_EFFECT_STONING, t_player, t_card);
@@ -8702,7 +8702,7 @@ int card_revered_elder(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x216bac0; original cards/mercadian_masques.c:7207. */
-static void whenever_a_creature_blocks_black_red(int color_test, int val, int t_player, int t_card)
+static void whenever_a_creature_blocks_black_red(intptr_t color_test, intptr_t val, int t_player, int t_card)
 {
   unsigned int attacker_color;
 
@@ -8749,7 +8749,7 @@ int card_righteous_indignation(int player, int card, event_t event)
         if (((instance->state & 8) != 0) &&
             (for_each_creature_blocked_by_me(1 - current_turn, blocker_index_or_humiliated,
                                              whenever_a_creature_blocks_black_red,
-                                             eligible_or_color, (int)&blocking_black),
+                                             eligible_or_color, (intptr_t)&blocking_black),
              blocking_black != 0))
         {
           pump_until_eot(player, card, 1 - current_turn, blocker_index_or_humiliated, 1, 1);
@@ -10450,7 +10450,7 @@ int card_unnatural_hunger(int player, int card, event_t event)
 #endif
 
 /* ManalinkEh 2022: 0x216bd00; original cards/mercadian_masques.c:8344. */
-static void destroy_creature_when_blocks_or_blocked(int player, int card, int t_player, int t_card)
+static void destroy_creature_when_blocks_or_blocked(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   create_targetted_legacy_effect(player, card, die_at_end_of_combat, t_player, t_card);
   return;
@@ -10884,7 +10884,7 @@ int card_warmonger(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x216eb80; original cards/mercadian_masques.c:8619. */
-static int are_blocked_creatures(int unused, int unused2, int player, int card)
+static int are_blocked_creatures(int unused, intptr_t unused2, int player, int card)
 {
   int result;
   result = is_what(player, card, 2);

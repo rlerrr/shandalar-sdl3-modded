@@ -1028,7 +1028,7 @@ int card_odric_lunarch_marshal(int player, int card, event_t event){
 	return 0;
 }
 
-static int is_aura_or_equipment(int iid, int unused, int player, int card)
+static int is_aura_or_equipment(int iid, intptr_t unused, int player, int card)
 {
   if (has_subtype_by_id(player, (unsigned int)cards_data[iid].id, SUBTYPE_EQUIPMENT))
     return 1;

@@ -3841,7 +3841,7 @@ static int can_cast_creature_in_grave(int player, int card, int t_player){
 	return 0;
 }
 
-static int can_cast_this(int iid, int unused, int player, int card)
+static int can_cast_this(int iid, intptr_t unused, int player, int card)
 {
 	card_instance_t *instance = get_card_instance(player, card);
 	return has_mana_to_cast_iid(instance->targets[0].player, EVENT_CAN_CAST, iid);
@@ -4936,7 +4936,7 @@ static int can_use_stolen_ability_with_havengul_lich(int player, int card)
 
 #ifndef SHANDALAR
 /* ManalinkEh 2022: 0x210a700; original cards/dark_ascension.c:3873. */
-static int can_cast_this_havengul(int iid, int unused, int player, int card)
+static int can_cast_this_havengul(int iid, intptr_t unused, int player, int card)
 {
   return has_mana_to_cast_iid(player, EVENT_CAN_CAST, iid);
 }

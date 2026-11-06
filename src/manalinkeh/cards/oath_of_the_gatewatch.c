@@ -2456,7 +2456,7 @@ int card_sweep_away(int player, int card, event_t event){
  * Creature - Merfolk Rogue Ally 2/1
  * Prowess */
 
-static int has_1_1_counter(int unused, int unused2, int player, int card){
+static int has_1_1_counter(int unused, intptr_t unused2, int player, int card){
 	return count_1_1_counters(player, card) ? 1 : 0;
 }
 
@@ -3420,7 +3420,7 @@ int card_null_caller(int player, int card, event_t event){
 	return 0;
 }
 
-static int is_creature_or_pwalker(int unused, int unused2, int player, int card){
+static int is_creature_or_pwalker(int unused, intptr_t unused2, int player, int card){
 	if( is_what(player, card, TYPE_CREATURE) || is_planeswalker(player, card) ){
 		return 1;
 	}

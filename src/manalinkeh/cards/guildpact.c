@@ -1875,7 +1875,7 @@ int card_mizzium_transreliquat(int player, int card, event_t event)
 				  {
 					set_legacy_image(p, CARD_ID_MIZZIUM_TRANSRELIQUAT, leg);
 					card_instance_t* legacy = get_card_instance(p, leg);
-					legacy->targets[2].player = (intptr_t)effect_mizzium_transreliquat;
+					target_store_pointer(&legacy->targets[2], (intptr_t)effect_mizzium_transreliquat);
 				  }
 				break;
 

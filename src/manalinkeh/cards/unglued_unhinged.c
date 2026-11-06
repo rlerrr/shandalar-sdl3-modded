@@ -536,7 +536,7 @@ static int roll_d6_shim(int player, int card)
  * |1|B, Growl: Regenerate ~. */
 
 /* ManalinkEh 2022: 0x2302910; original cards/unglued_unhinged.c:199. */
-int test_has_border_val(int iid, int val, int player, int card)
+int test_has_border_val(int iid, intptr_t val, int player, int card)
 {
   border_t border;
 
@@ -1702,7 +1702,7 @@ int card_awol(int player, int card, event_t event)
 }
 
 /* Recovered October 2022 implementations; see docs/recovery-progress.md. */
-int test_has_border_val(int iid, int val, int player, int card);
+int test_has_border_val(int iid, intptr_t val, int player, int card);
 char *target_has_silver_border(int who_chooses, int player, int card, int targeting_player,
                                int targeting_card);
 
@@ -2085,7 +2085,7 @@ int card_ass_whuppin(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x2302ba0; original cards/unglued_unhinged.c:2316. */
-static int test_rare_or_mythic(int iid, int val, int player, int card)
+static int test_rare_or_mythic(int iid, intptr_t val, int player, int card)
 {
   const Rarities *rarity;
 
@@ -2694,7 +2694,7 @@ int card_booster_tutor(int player, int card, event_t event)
       if (ai_is_speculating != 1 && player == 1)
         show_deck(0, iids, num_csvids, "Booster contents", 0, gs_done_008b40e0);
       test_definition_t test;
-      _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Booster Tutor filter");
+      _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 232 : 216), "native Booster Tutor filter");
       default_test_definition(&test, 0xff);
       int selected;
       do

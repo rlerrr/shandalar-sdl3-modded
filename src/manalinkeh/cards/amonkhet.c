@@ -10,7 +10,7 @@ static int effect_insult(int player, int card, event_t event);
 int aftermath(int player, int card, event_t event, int colorless, int black, int blue, int green,
               int red, int white, int interrupt);
 
-static int iid_has_cycling(int iid, int me, int player, int card);
+static int iid_has_cycling(int iid, intptr_t me, int player, int card);
 
 static int gate_to_the_afterlife_effect(int player, int card, event_t event);
 
@@ -1172,7 +1172,7 @@ int card_as_foretold(int player, int card, event_t event)
       }
     }
     test_definition_t test;
-    _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native As Foretold filter");
+    _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 232 : 216), "native As Foretold filter");
     new_default_test_definition(&test, 1, "Select a spell to cast.");
     test.type_flag = 1;
     int selected = select_card_from_zone(player, player, playable[0], count, 0, 2, -1, &test);
@@ -1763,7 +1763,7 @@ int card_river_serpent(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x22d6b60; original cards/amonkhet.c:1386. */
-static int iid_has_cycling(int iid, int me, int player, int card)
+static int iid_has_cycling(int iid, intptr_t me, int player, int card)
 {
   return (unsigned int)(cards_data[iid].cc[2] == '\x04');
 }

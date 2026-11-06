@@ -10,13 +10,13 @@ static int slimefoot_effect(int player, int card, event_t event);
 
 int the_mirari_conjecture_legacy(int player, int card, event_t event);
 
-static int is_historic_by_internal_id(int iid, int unused, int player, int card);
+static int is_historic_by_internal_id(int iid, intptr_t unused, int player, int card);
 
 static char *can_cast_historic_spell(int who_chooses, int player, int card, int targeting_player,
                                      int targeting_card);
 
 /* ManalinkEh 2022: 0x22ca500; original cards/dominaria.c:3. */
-static int is_historic_by_internal_id(int iid, int unused, int player, int card)
+static int is_historic_by_internal_id(int iid, intptr_t unused, int player, int card)
 {
   if (cards_data[iid].type & TYPE_ARTIFACT)
     return 1;
@@ -26,7 +26,7 @@ static int is_historic_by_internal_id(int iid, int unused, int player, int card)
 }
 
 /* ManalinkEh 2022: 0x22ca380; original cards/dominaria.c:7. */
-static int is_historic(int iid, int unused, int player, int card)
+static int is_historic(int iid, intptr_t unused, int player, int card)
 {
   int result;
 
@@ -2121,7 +2121,7 @@ int card_jodah_archmage_eternal(int player, int card, event_t event)
         }
       }
       test_definition_t test;
-      _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Jodah filter");
+      _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 232 : 216), "native Jodah filter");
       new_default_test_definition(&test, 0xff, "Select a card to play.");
       test.zone = 0x100;
       int selected =
@@ -2179,7 +2179,7 @@ int card_josu_vess_lich_knight(int player, int card, event_t event)
  * Equip |3 */
 
 /* ManalinkEh 2022: 0x22ca320; original cards/dominaria.c:1594. */
-static int is_land_or_legendary_by_internal_id(int iid, int unused, int unused1, int unused2)
+static int is_land_or_legendary_by_internal_id(int iid, intptr_t unused, int unused1, int unused2)
 {
   int matches;
   int legendary;
@@ -3284,7 +3284,7 @@ int card_muldrotha_the_gravetide(int player, int card, event_t event)
       }
     }
     test_definition_t test;
-    _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Muldrotha filter");
+    _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 232 : 216), "native Muldrotha filter");
     new_default_test_definition(&test, 0xff, "Select a permanent card to play.");
     int selected = select_card_from_zone(player, player, playable[0], count, 0, 1, -1, &test);
     if (selected != -1 && charge_mana_from_id(player, -1, EVENT_ACTIVATE,
@@ -5954,7 +5954,7 @@ int card_urgoros_the_empty_one(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x22c94c0; original cards/dominaria.c:4212. */
-static int is_not_legendary_test(int unused1, int unused2, int player, int card)
+static int is_not_legendary_test(int unused1, intptr_t unused2, int player, int card)
 {
   int result;
   result = is_legendary(player, card);

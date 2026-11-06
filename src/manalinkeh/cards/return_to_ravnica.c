@@ -4226,7 +4226,7 @@ int card_detention_sphere(int player, int card, event_t event)
          candidate_owner_or_result = candidate_owner_or_result + -1)
     {
       (*marked_cursor)[0] = 0;
-      marked_cursor = (int (*)[151])((int)marked_cursor + 4u);
+      marked_cursor = (int (*)[151])((char *)marked_cursor + sizeof(int));
     }
     if (chosen_name_or_returned_card == -1)
     {

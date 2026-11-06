@@ -112,7 +112,6 @@ player_bits_t player_bits[2];
 int lands_played;
 int unknown62BCEC;
 int unknown_charge_mana_004d7cb0;
-int ldoubleclicked;
 int tapped_for_mana_color = -1;
 int cant_be_responded_to;
 int stack_phase[32];

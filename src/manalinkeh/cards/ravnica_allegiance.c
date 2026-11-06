@@ -1,6 +1,6 @@
 #include "manalink.h"
 
-static int unique_name(int unused1, int unused2, int player, int card);
+static int unique_name(int unused1, intptr_t unused2, int player, int card);
 
 static void afterlife(int player, int card, event_t event, int qty);
 
@@ -1791,7 +1791,7 @@ int card_gruul_spellbreaker(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x25bb4e0; original cards/ravnica_allegiance.c:1815. */
-static int unique_name(int unused1, int unused2, int player, int card)
+static int unique_name(int unused1, intptr_t unused2, int player, int card)
 {
   int result;
   result = get_card_name(player, card);

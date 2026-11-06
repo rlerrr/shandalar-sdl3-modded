@@ -2,12 +2,12 @@
 
 // Functions
 
-static int was_dealt_damage_this_turn(int unused, int unused2, int player, int card);
+static int was_dealt_damage_this_turn(int unused, intptr_t unused2, int player, int card);
 static int mirror_strike_effect(int player, int card, event_t event);
 
-void death_charmer_effect(int player, int card, int t_player, int t_card);
-void plague_fiend_effect(int player, int card, int t_player, int t_card);
-void soul_charmer_effect(int player, int card, int t_player, int t_card);
+void death_charmer_effect(intptr_t player, intptr_t card, int t_player, int t_card);
+void plague_fiend_effect(intptr_t player, intptr_t card, int t_player, int t_card);
+void soul_charmer_effect(intptr_t player, intptr_t card, int t_player, int t_card);
 int destroy_unless_pay_2(int player, int card, event_t event);
 int gain_2_life_unless_they_pay_2(int player, int card, event_t event);
 int lose_2_life_unless_pay_2(int player, int card, event_t event);
@@ -2123,7 +2123,7 @@ int lose_2_life_unless_pay_2(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x25f8da0; original cards/prophecy.c:2017. */
-void death_charmer_effect(int player, int card, int t_player, int t_card)
+void death_charmer_effect(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   create_targetted_legacy_effect(player, card, lose_2_life_unless_pay_2, t_player, t_card);
   return;
@@ -3557,7 +3557,7 @@ int card_hollow_warrior(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x25fb150; original cards/prophecy.c:2975. */
-static int was_dealt_damage_this_turn(int unused, int unused2, int player, int card)
+static int was_dealt_damage_this_turn(int unused, intptr_t unused2, int player, int card)
 {
   int result;
   card_instance_t *instance;
@@ -4416,7 +4416,7 @@ int destroy_unless_pay_2(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x25f8dd0; original cards/prophecy.c:3535. */
-void plague_fiend_effect(int player, int card, int t_player, int t_card)
+void plague_fiend_effect(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   create_targetted_legacy_effect(player, card, destroy_unless_pay_2, t_player, t_card);
   return;
@@ -5519,7 +5519,7 @@ int gain_2_life_unless_they_pay_2(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x25f8e00; original cards/prophecy.c:4209. */
-void soul_charmer_effect(int player, int card, int t_player, int t_card)
+void soul_charmer_effect(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   create_targetted_legacy_effect(player, card, gain_2_life_unless_they_pay_2, t_player, t_card);
   return;

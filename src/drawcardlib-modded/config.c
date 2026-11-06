@@ -1493,6 +1493,26 @@ read_watermarks_csv(void)
 				  r->dfc_symbol = DFC_SYMBOL_LAND;
 				  continue;
 				}
+			  if (!strcmp(wmark, "xmodalfront"))
+				{
+				  r->dfc_symbol = DFC_SYMBOL_MODAL_FRONT;
+				  continue;
+				}
+			  if (!strcmp(wmark, "xmodalback"))
+				{
+				  r->dfc_symbol = DFC_SYMBOL_MODAL_BACK;
+				  continue;
+				}
+			  if (!strcmp(wmark, "xfanclose"))
+				{
+				  r->dfc_symbol = DFC_SYMBOL_FAN_CLOSE;
+				  continue;
+				}
+			  if (!strcmp(wmark, "xfanopen"))
+				{
+				  r->dfc_symbol = DFC_SYMBOL_FAN_OPEN;
+				  continue;
+				}
 			}
 
 		  radix -= 'a';

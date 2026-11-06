@@ -1237,7 +1237,7 @@ int card_clockspinning(int player, int card, event_t event)
   instance = get_card_instance(player, card);
   default_target_definition(player, card, &td, 199);
   bool ai = ai_is_speculating == 1 || (player == 1 && (((unsigned char)trace_mode & 2) == 0));
-  td.extra = (int32_t)(ai && event != EVENT_RESOLVE_SPELL
+  td.extra = (intptr_t)(ai && event != EVENT_RESOLVE_SPELL
                            ? target_must_be_permanent_or_suspend_and_have_counters
                            : target_must_be_permanent_or_suspend);
   if (event == EVENT_CAN_CAST)
@@ -3202,7 +3202,7 @@ void damage_all_my_blockers(int player, int card, int dmg){
 	}
 }
 
-static void sac_and_damage_blockers(int player, int card, int t_player, int t_card)
+static void sac_and_damage_blockers(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   if (in_play(player, card))
   {
@@ -3602,7 +3602,7 @@ int card_jhoiras_timebug(int player, int card, event_t event)
   {
     target_requirement = target_must_be_permanent_or_suspend;
   }
-  td.extra = (int32_t)target_requirement;
+  td.extra = (intptr_t)target_requirement;
   instance = get_card_instance(player, card);
   if (event == EVENT_RESOLVE_ACTIVATION)
   {
@@ -4503,7 +4503,7 @@ Destroy target land. Search your library for |Ha Forest card and put that card o
 
 }
 
-static int is_instant_or_has_flash(int iid, int has_teferi, int unused1, int unused2){
+static int is_instant_or_has_flash(int iid, intptr_t has_teferi, int unused1, int unused2){
 	/* Approximation, but it works as the current implementation of "flash" requires that the card has TYPE_INSTANT or TYPE_INTERRUPT plus its other types.
 	 * Deliberately don't use is_what(), which ignores the TYPE_INSTANT bit for cards with any permanent types. */
 	return cards_data[iid].type & (TYPE_INSTANT | TYPE_INTERRUPT | (has_teferi ? TYPE_CREATURE : 0));

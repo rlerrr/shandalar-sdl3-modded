@@ -1858,7 +1858,7 @@ int card_jesters_scepter(int player, int card, event_t event){
 			if( charge_mana_for_activated_ability(player, card, MANACOST_X(2)) ){
 				int iid = -1;
 				if( player == HUMAN ){
-					int rval = exiledby_choose(player, card, CARD_ID_JESTERS_SCEPTER, EXBY_CHOOSE, 0, "", 1);
+					intptr_t rval = exiledby_choose(player, card, CARD_ID_JESTERS_SCEPTER, EXBY_CHOOSE, 0, "", 1);
 					int* loc = (int*)rval;
 					if( loc ){
 						int *loc2 = exiledby_find(player, card, *loc, NULL, NULL);
@@ -3991,13 +3991,13 @@ int card_void_maw(int player, int card, event_t event){
 
 	if( event == EVENT_CAN_ACTIVATE ){
 		if( generic_activated_ability(player, card, event, 0, MANACOST0, 0, NULL, NULL) ){
-			return exiledby_choose(player, card, CARD_ID_VOID_MAW, EXBY_FIRST_FOUND, 0, "Creature", 1);
+			return exiledby_choose(player, card, CARD_ID_VOID_MAW, EXBY_FIRST_FOUND, 0, "Creature", 1) != 0;
 		}
 	}
 
 	if(event == EVENT_ACTIVATE ){
 		if( charge_mana_for_activated_ability(player, card, 0, 0, 0, 0, 0, 0) ){
-			int rval = exiledby_choose(player, card, CARD_ID_VOID_MAW, EXBY_CHOOSE, 0, "Creature", 1);
+			intptr_t rval = exiledby_choose(player, card, CARD_ID_VOID_MAW, EXBY_CHOOSE, 0, "Creature", 1);
 			int* loc = (int*)rval;
 			if( loc ){
 				int *loc2 = exiledby_find(player, card, *loc, NULL, NULL);

@@ -177,7 +177,7 @@ int card_cartographer(int player, int card, event_t event)
   return generic_type_recycler_creature(player, card, event, &this_test);
 }
 
-int not_marked(int iid, int markedptr, int player, int card)
+int not_marked(int iid, intptr_t markedptr, int player, int card)
 {
   char (*marked)[2][151] = (char(*)[2][151])markedptr;
   return !(*marked)[player][card];
@@ -232,7 +232,7 @@ int card_cataclysm(int player, int card, event_t event){
 					test_definition_t this_test;
 					default_test_definition(&this_test, TYPE_PERMANENT);
 					this_test.special_selection_function = &not_marked;
-					this_test.value_for_special_selection_function = (int)(marked);
+					this_test.value_for_special_selection_function = (intptr_t)(marked);
 					new_manipulate_all(player, card, p, &this_test, KILL_SACRIFICE);
 				}
 			});

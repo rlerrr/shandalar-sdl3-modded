@@ -2667,7 +2667,7 @@ int card_venerated_teacher(int player, int card, event_t event)
 /********
 * Black *
 ********/
-static void destroy_self_at_end_of_combat_if_vs_le_1_power(int player, int card, int t_player, int t_card)
+static void destroy_self_at_end_of_combat_if_vs_le_1_power(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   if (get_power(t_player, t_card) <= 1)
 	create_legacy_effect_exe(player, card, LEGACY_EFFECT_STONING, player, card);

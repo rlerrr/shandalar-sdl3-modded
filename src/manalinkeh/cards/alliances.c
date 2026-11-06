@@ -1384,7 +1384,7 @@ int card_gusthas_scepter(int player, int card, event_t event)
   if (event == EVENT_CAN_ACTIVATE)
   {
     if ((player == 0) &&
-        (count_or_selected = exiledby_choose(0, card, 0x8f6, EXBY_FIRST_FOUND, 0, "Card", 0),
+        (count_or_selected = exiledby_choose(0, card, 0x8f6, EXBY_FIRST_FOUND, 0, "Card", 0) != 0,
          count_or_selected != 0))
     {
       return 1;
@@ -4486,7 +4486,7 @@ int card_fyndhorn_druid(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x209cc10; original cards/alliances.c:4274. */
-static void boost_tough_gain_1_life(int player, int card, int t_player, int t_card)
+static void boost_tough_gain_1_life(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   card_instance_t *instance;
 
@@ -4975,7 +4975,7 @@ int card_natures_wrath(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x209d490; original cards/alliances.c:4630. */
-static int is_land_or_white_permanent(int unused, int unused2, int player, int card)
+static int is_land_or_white_permanent(int unused, intptr_t unused2, int player, int card)
 {
   int result;
   subtype_t subtype;
@@ -5386,7 +5386,7 @@ int card_seasoned_tactician(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x209cb70; original cards/alliances.c:4905. */
-static int is_black_or_artifact_creature(int unused, int unused2, int player, int card)
+static int is_black_or_artifact_creature(int unused, intptr_t unused2, int player, int card)
 {
   int result;
   result = is_what(player, card, 2);

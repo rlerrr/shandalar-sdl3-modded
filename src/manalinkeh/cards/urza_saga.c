@@ -7134,7 +7134,7 @@ int card_reclusive_wight(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x20429c0; original cards/urza_saga.c:6687. */
-static void retaliation_legacy(int player, int card, int t_player, int t_card)
+static void retaliation_legacy(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   pump_until_eot(player, card, player, card, 1, 1);
   return;

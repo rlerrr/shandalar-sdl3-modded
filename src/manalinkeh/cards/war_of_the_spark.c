@@ -3683,7 +3683,7 @@ int card_liliana_dreadhorde_general(int player, int card, event_t event)
       if (can_sacrifice(player, p, 1, TYPE_PERMANENT, SUBTYPE_INVALID) != 0)
       {
         default_test_definition(&this_test, 0x47);
-        this_test.value_for_special_selection_function = (int)marked;
+        this_test.value_for_special_selection_function = (intptr_t)marked;
         this_test.special_selection_function = not_marked;
         new_manipulate_all(player, card, p, &this_test, ACT_KILL_SACRIFICE);
       }
@@ -4461,7 +4461,7 @@ static int colors_to_guilds(int iid)
 }
 
 /* ManalinkEh 2022: 0x21c7f20; original cards/war_of_the_spark.c:4706. */
-static int not_selected(int iid, int chosen, int unused1, int unused2)
+static int not_selected(int iid, intptr_t chosen, int unused1, int unused2)
 {
   int result;
   unsigned int guilds;
@@ -6489,7 +6489,7 @@ static int look_at_card(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x21c7a90; original cards/war_of_the_spark.c:7035. */
-static int has_deathtouch(int unused, int unused2, int player, int card)
+static int has_deathtouch(int unused, intptr_t unused2, int player, int card)
 {
   int result;
   result = check_for_special_ability(player, card, 0x200);
@@ -7209,7 +7209,7 @@ static int vivien_enable_flash_land(int player, int card, event_t event)
   td.allowed_controller = player;
   td.zone = TARGET_ZONE_HAND;
   result = can_play_cards_as_though_they_had_flash(
-      player, card, event, &td, (char *)instance->targets[3].player, instance->targets[3].card);
+      player, card, event, &td, (const char *)target_load_pointer(&instance->targets[3]), instance->targets[4].player);
   return result;
 }
 
@@ -7284,8 +7284,8 @@ int card_emergence_zone(int player, int card, event_t event)
       }
       instance = get_card_instance(player, mode_or_result);
       instance->targets[2].card = 1;
-      instance->targets[3].player = (int32_t)"SELECT_CARD";
-      instance->targets[3].card = 0;
+      target_store_pointer(&instance->targets[3], (intptr_t)"SELECT_CARD");
+      instance->targets[4].player = 0;
       if (stack_size < 1)
       {
         return 0;

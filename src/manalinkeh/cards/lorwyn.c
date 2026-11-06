@@ -418,7 +418,7 @@ static int hideaway(int player, int card, event_t event, int mana_color)
     if (instance->info_slot == CHOICE_PLAY_EXILED_CARD)
     {
       int csvid = get_id(instance->parent_controller, instance->parent_card);
-      int rval = exiledby_choose(instance->parent_controller, instance->parent_card, csvid,
+      intptr_t rval = exiledby_choose(instance->parent_controller, instance->parent_card, csvid,
                                  EXBY_CHOOSE | EXBY_TEST_CAN_CAST, 0, "Card", 1);
       int *loc = (int *)rval;
       if (loc)
@@ -1644,7 +1644,7 @@ int card_cairn_wanderer(int player, int card, event_t event)
       grave_keywords = 0;
       do
       {
-        card_00 = *(int *)((int)graveyard_ptr_mutable[player] + result);
+        card_00 = graveyard_ptr_mutable[player][result / sizeof(int)];
         if (card_00 == -1)
           break;
         if ((cards_data[card_00].type & 2) != 0)

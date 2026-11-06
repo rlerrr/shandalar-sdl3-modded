@@ -1459,7 +1459,7 @@ int card_generals_kabuto(int player, int card, event_t event){
 
 // Ghostly Prison --> Propaganda
 
-static int test_not_in_array4(int iid, int arrptr, int player, int card)
+static int test_not_in_array4(int iid, intptr_t arrptr, int player, int card)
 {
   int* arr = (int*)arrptr;
   return iid != arr[0] && iid != arr[1] && iid != arr[2] && iid != arr[3];
@@ -1477,7 +1477,7 @@ int gift_ungiven_impl(int player, int card, event_t event, test_definition_t *te
 			int chosen[4] = {-1, -1, -1, -1};
 
 			test->no_shuffle = 1;
-			test->value_for_special_selection_function = (int)chosen;
+			test->value_for_special_selection_function = (intptr_t)chosen;
 			test->special_selection_function = test_not_in_array4;
 
 			int num_chosen;

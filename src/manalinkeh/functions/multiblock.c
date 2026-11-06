@@ -396,7 +396,7 @@ int is_blocking_or_blocked_by(int player1, int card1, int player2, int card2)
 
 /* Preconditions: (player,card) is blocking; fn is a function with signature void fn(int arg1, int arg2, int blocked_controller, int blocked_card)
  * fn() will be called with arguments arg1, arg2, blocked_controller, blocked_card for each (blocked_controller,blocked_card) blocked by (player,card). */
-void for_each_creature_blocked_by_me(int player, int card, void (*fn)(int, int, int, int), int arg1, int arg2)
+void for_each_creature_blocked_by_me(int player, int card, void (*fn)(intptr_t, intptr_t, int, int), intptr_t arg1, intptr_t arg2)
 {
   int c, d;
   for (c = 0; c < active_cards_count[player]; ++c)
@@ -460,7 +460,7 @@ void mark_each_creature_blocked_by_me(int player, int card, char (*marked)[151])
 
 /* Preconditions: (player,card) is attacking; fn is a function with signature void fn(int arg1, int arg2, int blocking_controller, int blocking_card)
  * fn() will be called with arguments arg1, arg2, blocking_controller, blocking_card for each (blocking_controller,blocking_card) blocking (player,card). */
-void for_each_creature_blocking_me(int player, int card, void (*fn)(int, int, int, int), int arg1, int arg2)
+void for_each_creature_blocking_me(int player, int card, void (*fn)(intptr_t, intptr_t, int, int), intptr_t arg1, intptr_t arg2)
 {
   int c, band = get_card_instance(player, card)->blocking;
   if (band == 255)

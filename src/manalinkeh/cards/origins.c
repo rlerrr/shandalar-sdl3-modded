@@ -3225,7 +3225,7 @@ int card_abbot_of_keral_keep(int player, int card, event_t event)
 	return 0;
 }
 
-static void block_deal2dam(int player, int card, int blocking_player, int blocking_card)
+static void block_deal2dam(intptr_t player, intptr_t card, int blocking_player, int blocking_card)
 {
   damage_creature(blocking_player, blocking_card, 2, player, card);
 }

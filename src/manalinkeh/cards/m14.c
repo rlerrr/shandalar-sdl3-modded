@@ -591,7 +591,7 @@ int card_elite_arcanist(int player, int card, event_t event){
 
 	if( event == EVENT_CAN_ACTIVATE ){
 		if( generic_activated_ability(player, card, event, GAA_UNTAPPED, MANACOST0, 0, NULL, NULL) ){
-			int result = exiledby_choose(player, card, CARD_ID_ELITE_ARCANIST, EXBY_TEST_HAS_GENERIC_MANA_TO_PAY_CMC | EXBY_TEST_CAN_CAST | EXBY_CAN_CAST, 0, "", 1);
+			int result = (int)exiledby_choose(player, card, CARD_ID_ELITE_ARCANIST, EXBY_TEST_HAS_GENERIC_MANA_TO_PAY_CMC | EXBY_TEST_CAN_CAST | EXBY_CAN_CAST, 0, "", 1);
 			return result;
 		}
 		if( ! IS_AI(player) ){
@@ -624,7 +624,7 @@ int card_elite_arcanist(int player, int card, event_t event){
 			return 0;
 		}
 		if( choice == CHOICE_PLAY_EXILED_CARD ){
-			int rval = exiledby_choose(player, card, CARD_ID_ELITE_ARCANIST, EXBY_TEST_HAS_GENERIC_MANA_TO_PAY_CMC, event,
+			intptr_t rval = exiledby_choose(player, card, CARD_ID_ELITE_ARCANIST, EXBY_TEST_HAS_GENERIC_MANA_TO_PAY_CMC, event,
 										"", 1);
 			if( rval ){
 				int* loc = (int*)rval;

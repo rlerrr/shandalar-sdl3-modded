@@ -1508,7 +1508,7 @@ int card_break_ties(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x222b8f0; original cards/modern_horizons_2.c:1077. */
-static int is_snow_or_can_produce_colorless(int iid, int val, int player, int card)
+static int is_snow_or_can_produce_colorless(int iid, intptr_t val, int player, int card)
 {
   int result;
   unsigned int eligible;
@@ -4144,8 +4144,8 @@ int card_galvanic_relay(int player, int card, event_t event)
 }
 
 /* Recovered October 2022 implementations; see docs/recovery-progress.md. */
-static int is_artifact_land(int iid, int unused, int unused2, int unused3);
-static int is_snow_or_can_produce_colorless(int iid, int val, int player, int card);
+static int is_artifact_land(int iid, intptr_t unused, int unused2, int unused3);
+static int is_snow_or_can_produce_colorless(int iid, intptr_t val, int player, int card);
 static int count_lands_in_play_and_in_hand(int player);
 static int carth_effect(int player, int card, event_t event);
 static int tide_shaper_effect(int player, int card, event_t event);
@@ -7576,7 +7576,7 @@ int card_so_shiny(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x222b890; original cards/modern_horizons_2.c:6060. */
-static int is_artifact_land(int iid, int unused, int unused2, int unused3)
+static int is_artifact_land(int iid, intptr_t unused, int unused2, int unused3)
 {
   int result;
 
@@ -9844,7 +9844,7 @@ int card_timeless_witness(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x222b7b0; original cards/modern_horizons_2.c:7203. */
-static int has_mana_cost_0_or_1(int iid, int val, int player, int card)
+static int has_mana_cost_0_or_1(int iid, intptr_t val, int player, int card)
 {
   int id = cards_data[iid].id;
   if (has_no_mana_cost(-1, iid) || is_what(-1, iid, TYPE_LAND))

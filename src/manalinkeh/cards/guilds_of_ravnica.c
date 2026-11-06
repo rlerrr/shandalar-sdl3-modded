@@ -1520,7 +1520,7 @@ int card_fireminds_research(int player, int card, event_t event)
 
 #ifndef SHANDALAR
 /* ManalinkEh 2022: 0x2619160; original cards/guilds_of_ravnica.c:1502. */
-static int is_basic_land_by_internal_id(int iid, int unused, int unused1, int unused2)
+static int is_basic_land_by_internal_id(int iid, intptr_t unused, int unused1, int unused2)
 {
   int result;
 

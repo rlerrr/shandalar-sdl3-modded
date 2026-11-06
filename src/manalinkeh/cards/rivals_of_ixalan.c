@@ -3367,7 +3367,7 @@ int card_merfolk_mistbinder(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x218f2c0; original cards/rivals_of_ixalan.c:2411. */
-static int not_fs_ds_v_or_h(int unused, int unused2, int player, int card)
+static int not_fs_ds_v_or_h(int unused, intptr_t unused2, int player, int card)
 {
   int result;
   result = check_for_ability(player, card, 0x100);
@@ -3388,7 +3388,7 @@ static int not_fs_ds_v_or_h(int unused, int unused2, int player, int card)
 }
 
 /* ManalinkEh 2022: 0x218f230; original cards/rivals_of_ixalan.c:2423. */
-static int has_fs_ds_v_or_h(int unused, int unused2, int player, int card)
+static int has_fs_ds_v_or_h(int unused, intptr_t unused2, int player, int card)
 {
   int result;
   result = check_for_ability(player, card, 0x100);

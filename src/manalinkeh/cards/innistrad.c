@@ -6056,7 +6056,7 @@ Equip |2 */
 	return basic_equipment(player, card, event, 2);
 }
 
-static int iid_has_flashback(int iid, int me, int player, int card){
+static int iid_has_flashback(int iid, intptr_t me, int player, int card){
 	if( is_what(-1, iid, TYPE_SPELL) && cards_data[iid].cc[2] == 9 ){
 		return 1;
 	}
@@ -7186,7 +7186,7 @@ int card_witchbane_orb(int player, int card, event_t event ){
 	return 0;
 }
 
-static void bury_vampire(int player, int card, int t_player, int t_card)
+static void bury_vampire(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   kill_card(t_player, t_card, KILL_BURY);
 }

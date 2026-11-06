@@ -1405,14 +1405,14 @@ int card_nissa_revane(int player, int card, event_t event)
         if ((choice_or_result != 0) &&
             (choice_or_result = has_subtype_by_id(
                  player,
-                 (unsigned int)cards_data[*(int *)((int)deck_ptr[player] + library_byte_offset)].id,
+                 (unsigned int)cards_data[deck_ptr[player][library_byte_offset / sizeof(int)]].id,
                  SUBTYPE_ELF),
              choice_or_result != 0))
         {
           elf_tutor_priority = elf_tutor_priority + 3;
         }
         library_byte_offset = library_byte_offset + 4;
-        choice_or_result = *(int *)((int)deck_ptr[player] + library_byte_offset);
+        choice_or_result = deck_ptr[player][library_byte_offset / sizeof(int)];
       } while (choice_or_result != -1);
     }
     if (player != 1)
@@ -4919,7 +4919,7 @@ Whenever an opponent shuffles his or her library, you may put a +1/+1 counter on
 	return 0;
 }
 
-static void put_on_top_of_owners_deck(int player, int card, int t_player, int t_card)
+static void put_on_top_of_owners_deck(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	if( in_play(t_player, t_card) )
 		put_on_top_of_deck(t_player, t_card);

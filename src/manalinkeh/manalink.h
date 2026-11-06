@@ -1168,10 +1168,10 @@ int count_creatures_this_is_blocking(int player, int card);	// Returns count of 
 int count_my_blockers(int player, int card);	// Returns number of creatures {player,card} is blocked by, dealing properly with banding.
 int is_blocking(int blocking_card, int attack_card);	// Preconditions: attack_card is controlled by current_turn; blocking_card is controlled by 1-current_turn; in_play(current_turn, attack_card)
 int is_blocking_or_blocked_by(int player1, int card1, int player2, int card2);	// player1/card1 and player2/card2 are interchangeable.
-void for_each_creature_blocked_by_me(int player, int card, void (*fn)(int, int, int, int), int arg1, int arg2);	// Preconditions: (player,card) is blocking; fn is a function with signature void fn(int arg1, int arg2, int blocked_controller, int blocked_card).  fn() will be called with arguments arg1, arg2, blocked_controller, blocked_card for each (blocked_controller,blocked_card) blocked by (player,card). */
+void for_each_creature_blocked_by_me(int player, int card, void (*fn)(intptr_t, intptr_t, int, int), intptr_t arg1, intptr_t arg2);	// Preconditions: (player,card) is blocking; fn is a function with signature void fn(int arg1, int arg2, int blocked_controller, int blocked_card).  fn() will be called with arguments arg1, arg2, blocked_controller, blocked_card for each (blocked_controller,blocked_card) blocked by (player,card). */
 void mark_each_creature_blocked_by_me(int player, int card, char (*marked)[151]);	// A simple interface to for_each_creature_blocked_by_me() handling a common case.  marked should be a char array[2][151] initialized to 0; each element of marked[blocked_controller][blocked_card] will be set to 1.
 int is_multiblocker_card_copying(int player, int card, int orig_player, int orig_card);
-void for_each_creature_blocking_me(int player, int card, void (*fn)(int, int, int, int), int arg1, int arg2);	// Preconditions: (player,card) is attacking; fn is a function with signature void fn(int arg1, int arg2, int blocking_controller, int blocking_card).  fn() will be called with arguments arg1, arg2, blocking_controller, blocking_card for each (blocking_controller,blocking_card) blocking (player,card). */
+void for_each_creature_blocking_me(int player, int card, void (*fn)(intptr_t, intptr_t, int, int), intptr_t arg1, intptr_t arg2);	// Preconditions: (player,card) is attacking; fn is a function with signature void fn(int arg1, int arg2, int blocking_controller, int blocking_card).  fn() will be called with arguments arg1, arg2, blocking_controller, blocking_card for each (blocking_controller,blocking_card) blocking (player,card). */
 void mark_each_creature_blocking_me(int player, int card, char (*marked)[151]);	// A simple interface to for_each_creature_blocking_me() handling a common case.  marked should be a char array[2][151] initialized to 0; each element of marked[blocking_controller][blocking_card] will be set to 1.
 int generic_licid(int player, int card, event_t event, int, int, int, int, int, int, int, int, int, int, int);
 void aura_ability_for_color(int player, int card, event_t event, int, int, int, int, int);
@@ -1184,7 +1184,7 @@ int raw_put_iid_on_top_of_graveyard(int player, int iid);	// Put a newly-created
 void from_exile_to_graveyard(int player, int position_in_exile);	// Moves a card from a player's exile zone to his graveyard.
 int turn_card_in_grave_face_down(int player, int position);	// Replaces the card in player's graveyard at position position to the card back image, and returns the internal_card_id that was there.  It's the caller's responsibility to turn it back with turn_card_in_grave_face_up(), using the same iid that was returned.
 void turn_card_in_grave_face_up(int player, int position, int iid);	// Changes the card in player's graveyard at position position to the internal_card_id that was there.  Aborts if the current card there isn't face-down.  Please don't abuse this function to assign arbitrary values within a player's graveyard.
-int exiledby_choose(int player, int card, int csvid, exiledby_choose_mode_t mode, int testarg, const char* cardtype_txt, int faceup);	// player/card: The card that exiled the cards to search for. * csvid: Csvid to display in the dialog.  Typically the same as player/card's; but must be provided since player/card may have been obliterated. * mode, testarg: Action and constraints per exiledby_choose_mode_t, documented in manalink.h. * cardtype_txt: Descriptor of cards exiled (e.g. "creature"), or NULL if arbitrary cards. * faceup: Whether the cards are exiled face-up (and thus should exist in rfg_ptr[][]) or face-down (and thus should not yet).
+intptr_t exiledby_choose(int player, int card, int csvid, exiledby_choose_mode_t mode, int testarg, const char* cardtype_txt, int faceup);	// player/card: The card that exiled the cards to search for. * csvid: Csvid to display in the dialog.  Typically the same as player/card's; but must be provided since player/card may have been obliterated. * mode, testarg: Action and constraints per exiledby_choose_mode_t, documented in manalink.h. * cardtype_txt: Descriptor of cards exiled (e.g. "creature"), or NULL if arbitrary cards. * faceup: Whether the cards are exiled face-up (and thus should exist in rfg_ptr[][]) or face-down (and thus should not yet).
 int* exiledby_find_any(int player, int card, int* ret_leg, int* ret_idx);	// Find the first card exiled by player/card starting at ret_leg/ret_idx.
 int* exiledby_find(int player, int card, int needle, int* ret_leg, int* ret_idx);	// Find the first card exiled by player/card starting at ret_leg/ret_idx with stored value needle.
 int exiledby_count(int player, int card, int owned_by);	// Returns total number of cards exiled by player/card owned by owned_by.
@@ -1344,8 +1344,8 @@ void whenever_a_card_is_put_into_a_graveyard_from_anywhere_exile_that_card(int p
 const char* target_is_monocolored(int who_chooses, int player, int card, int unused_source_player, int unused_source_card);
 int is_plane_card(int id);
 void immortal_enchantment(int player, int card, event_t event);
-void for_each_creature_damaged_by_me(int player, int card, event_t event, int flags, void (*fn)(int, int, int, int), int arg1, int arg2);
-void lowland_basilisk_effect(int player, int card, int t_player, int t_card);
+void for_each_creature_damaged_by_me(int player, int card, event_t event, int flags, void (*fn)(intptr_t, intptr_t, int, int), intptr_t arg1, intptr_t arg2);
+void lowland_basilisk_effect(intptr_t player, intptr_t card, int t_player, int t_card);
 int real_set_pt(int player, int card, int t_player, int t_card, int pow, int tou, int mode);
 int set_pt_legacy(int player, int card, event_t event);
 int humility_legacy(int player, int card, event_t event);
@@ -2104,7 +2104,7 @@ int card_outland_boar(int player, int card, event_t event);
 int card_return_to_nature(int player, int card, event_t event);
 int card_steppe_lynx(int player, int card, event_t event);
 int check_for_death_trigger_removal(int player, int card);
-int cmc_not_in_array(int iid, int arrptr, int player, int card);
+int cmc_not_in_array(int iid, intptr_t arrptr, int player, int card);
 int count_basic_lands(int player, int subtype);
 int count_creatures_with_p1_p1_counter(int player);
 int count_iid_in_rfg(int player, int iid);
@@ -2152,7 +2152,7 @@ inline int is_split_card(int csvid)
 }
 #endif
 
-int test_not_in_array(int iid, int arrptr, int player, int card);
+int test_not_in_array(int iid, intptr_t arrptr, int player, int card);
 int thriving_land(int player, int card, event_t event);
 int time_of_ice_effect(int player, int card, event_t event);
 int triome(int player, int card, event_t event);
@@ -2183,7 +2183,7 @@ void ward_mana(int player, int card, event_t event, int cless, int black, int bl
 void ward_multidiscard(int player, int card, event_t event, int number_to_discard);
 
 /* Interfaces recovered from October 2022 DWARF. */
-int not_marked(int iid, int markedptr, int player, int card);
+int not_marked(int iid, intptr_t markedptr, int player, int card);
 int pump_until_eot_merge_previous_alt(int player, int card, int t_player, int t_card, int power,
                                       int toughness, int alternate_txt);
 int tiana_effect(int player, int card, event_t event);
@@ -2220,12 +2220,12 @@ int get_power_sum_of_untapped_creatures(int player);
 int glass_asp_legacy(int player, int card, event_t event);
 int lose_2_life_unless_pay_2(int player, int card, event_t event);
 int sabertooth_cobra_legacy(int player, int card, event_t event);
-void bellowing_fiend_effect(int player, int card, int t_player, int t_card);
-void death_charmer_effect(int player, int card, int t_player, int t_card);
+void bellowing_fiend_effect(intptr_t player, intptr_t card, int t_player, int t_card);
+void death_charmer_effect(intptr_t player, intptr_t card, int t_player, int t_card);
 void do_multicascade(int player, int card, int override, int amount);
 void multicascade(int player, int card, event_t event, int amount);
-void plague_fiend_effect(int player, int card, int t_player, int t_card);
-void soul_charmer_effect(int player, int card, int t_player, int t_card);
+void plague_fiend_effect(intptr_t player, intptr_t card, int t_player, int t_card);
+void soul_charmer_effect(intptr_t player, intptr_t card, int t_player, int t_card);
 void warp_world_effect(int player, int card, int t_player, int tutor_rest);
 
 
@@ -2318,7 +2318,7 @@ char *target_has_black_border(int who_chooses, int player, int card, int targeti
                               int targeting_card);
 char *target_has_silver_border(int who_chooses, int player, int card, int targeting_player,
                                int targeting_card);
-int test_has_border_val(int iid, int val, int player, int card);
+int test_has_border_val(int iid, intptr_t val, int player, int card);
 
 /* Recovered October 2022 Surveil helper. */
 void surveil(int player, int number);
@@ -3948,7 +3948,7 @@ void remove_from_combat(int player, int card);
 #ifndef SHANDALAR
 void type_uncounterable(int player, int card, event_t event, int t_player, int type,
                              test_definition_t *this_test);
-int is_artifact_creature_by_internal_id(int iid, int unused1, int unused2, int unused3);
+int is_artifact_creature_by_internal_id(int iid, intptr_t unused1, int unused2, int unused3);
 void global_type_change(int player, int card, event_t event, int t_player, int added_type,
                              test_definition_t *this_test, int pow, int tou, int key,
                              int subtype, int clr);

@@ -1135,7 +1135,7 @@ Creature - Merfolk Cleric 1/1
 	return generic_activated_ability(player, card, event, GAA_UNTAPPED | GAA_CAN_TARGET | GAA_ONLY_ON_UPKEEP, MANACOST_U(2), 0, &td, "TARGET_CREATURE");
 }
 
-static void gains_first_strike(int player, int card, int t_player, int t_card)
+static void gains_first_strike(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	pump_ability_until_eot(player, card, t_player, t_card, 0, 0, KEYWORD_FIRST_STRIKE, 0);
 }

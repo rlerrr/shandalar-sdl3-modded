@@ -2229,7 +2229,7 @@ int card_knight_of_the_mists(int player, int card, event_t event){
 	return 0;
 }
 
-static void creatures_without_flanking_get_minus1minus1(int player, int card, int blocking_player, int blocking_card)
+static void creatures_without_flanking_get_minus1minus1(intptr_t player, intptr_t card, int blocking_player, int blocking_card)
 {
   if (is_what(blocking_player, blocking_card, TYPE_CREATURE)
 	  && !check_for_special_ability(blocking_player, blocking_card, SP_KEYWORD_FLANKING))
@@ -6161,7 +6161,7 @@ int card_sun_clasp(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x2013ff0; original cards/visions.c:5216. */
-static void negate_first_strike(int player, int card, int t_player, int t_card)
+static void negate_first_strike(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   negate_ability_until_eot(player, card, t_player, t_card, KEYWORD_FIRST_STRIKE);
   return;

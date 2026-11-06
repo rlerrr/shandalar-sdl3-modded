@@ -391,8 +391,8 @@ int card_inniaz_the_gale_force(int player, int card, event_t event)
         result = validate_target(player, card, &td, target_number);
         if (result != 0)
         {
-          give_control(player, card, *(int *)((int)instance + target_number * 8 + 0x74),
-                       *(int *)((int)instance + target_number * 8 + 0x78));
+          give_control(player, card, instance->targets[target_number].player,
+                       instance->targets[target_number].card);
         }
         turn_offset = turn_offset + 1;
       } while (turn_offset != 2);

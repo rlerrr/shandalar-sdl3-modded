@@ -1110,7 +1110,7 @@ read_db_guts(void)
 
 	static char nul = 0;
 
-	unsigned int offset = (unsigned int)global_base_txt;
+	uintptr_t offset = (uintptr_t)global_base_txt;
 
 	card_ptr_t* cp = global_raw_cards_ptr;
 	for (int i = 0; i < global_available_slots; ++i, ++cp)

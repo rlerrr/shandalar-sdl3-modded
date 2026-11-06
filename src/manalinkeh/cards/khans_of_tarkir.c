@@ -4698,7 +4698,7 @@ int card_icefeather_aven(int player, int card, event_t event){
 	return morph(player, card, event, MANACOST_XUG(1, 1, 1));
 }
 
-static int has_1_1_counter(int unused, int unused2, int player, int card){
+static int has_1_1_counter(int unused, intptr_t unused2, int player, int card){
 	return count_1_1_counters(player, card) ? 1 : 0;
 }
 
@@ -5195,7 +5195,7 @@ Creature - Cat Demon
 Whenever one or more cards are put into exile from your graveyard, put that many +1/+1 counters on Rakshasa Vizier.
 4/4
 */
-static void give_trample(int player, int card, int t_player, int t_card)
+static void give_trample(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	pump_ability_until_eot(player, card, t_player, t_card, 0, 0, KEYWORD_TRAMPLE, 0);
 }

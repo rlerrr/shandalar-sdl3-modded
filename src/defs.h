@@ -36,6 +36,7 @@ static inline int adventure_deck_set_available(int entry, int available, int dec
 
 #include "inttypes.h"
 #include <stdbool.h>
+#include <string.h>
 
 /* Creature types are in their own header because there are so many of them. */
 #include "subtypes.h"
@@ -743,6 +744,20 @@ typedef struct target_struct
 	int32_t card;
 } target_t;
 
+/* A metadata pointer uses the whole target pair on x64. Neither word may
+ * simultaneously hold another value. Keep ordinary player/card targets 32-bit. */
+static inline void target_store_pointer(target_t *target, intptr_t pointer)
+{
+  memcpy(target, &pointer, sizeof(pointer));
+}
+
+static inline intptr_t target_load_pointer(const target_t *target)
+{
+  intptr_t pointer;
+  memcpy(&pointer, target, sizeof(pointer));
+  return pointer;
+}
+
 #define SET_TARGET(destination_, source_)         \
 	do                                            \
 	{                                             \
@@ -1442,8 +1457,8 @@ typedef struct
 	unsigned int sub5;
 	unsigned short int no_shuffle;
 	unsigned short int create_minideck;
-	int (*special_selection_function)(int, int, int, int); // Internal id to parse, value to check contained in "value_for_special_selection_function", player, card (-1 if not a card in play/in hand/on the stack).  Return nonzero to pass, zero to fail.
-	int value_for_special_selection_function;
+	int (*special_selection_function)(int, intptr_t, int, int); // Internal id to parse, value to check contained in "value_for_special_selection_function", player, card (-1 if not a card in play/in hand/on the stack).  Return nonzero to pass, zero to fail.
+	intptr_t value_for_special_selection_function;
 	int16_t painters_servant_hack[2];
 	unsigned char has_mana_to_pay_cmc;
 	unsigned char can_legally_play;

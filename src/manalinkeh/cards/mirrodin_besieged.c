@@ -3790,7 +3790,7 @@ int card_virulent_wound(int player, int card, event_t event){
 	return generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_CREATURE", 1, NULL);
 }
 
-static int is_nonland_permanent_by_iid(int iid, int unused1, int unused2, int unused3){
+static int is_nonland_permanent_by_iid(int iid, intptr_t unused1, int unused2, int unused3){
 	if( is_what(-1, iid, TYPE_PERMANENT) && ! is_what(-1, iid, TYPE_LAND) ){
 		return 1;
 	}

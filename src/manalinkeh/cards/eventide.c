@@ -1515,7 +1515,7 @@ int card_endless_horizons(int player, int card, event_t event){
 	}
 
 	if( event == EVENT_UPKEEP_TRIGGER_ABILITY ){
-		int rval = exiledby_choose(player, card, CARD_ID_ENDLESS_HORIZONS, EXBY_CHOOSE, 0, "Plains", 1);
+		intptr_t rval = exiledby_choose(player, card, CARD_ID_ENDLESS_HORIZONS, EXBY_CHOOSE, 0, "Plains", 1);
 		int* loc = (int*)rval;
 		if( loc ){
 			int *loc2 = exiledby_find(player, card, *loc, NULL, NULL);
@@ -1526,7 +1526,7 @@ int card_endless_horizons(int player, int card, event_t event){
 	}
 
 	if( event == EVENT_CAN_ACTIVATE && player == HUMAN ){
-		return exiledby_choose(player, card, CARD_ID_ENDLESS_HORIZONS, EXBY_FIRST_FOUND, 0, "Plains", 1);
+		return exiledby_choose(player, card, CARD_ID_ENDLESS_HORIZONS, EXBY_FIRST_FOUND, 0, "Plains", 1) != 0;
 	}
 
 	if( event == EVENT_ACTIVATE ){

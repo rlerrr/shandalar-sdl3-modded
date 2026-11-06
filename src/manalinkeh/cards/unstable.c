@@ -1059,7 +1059,7 @@
 static int fx_0(int player, int card, event_t event) { return 0; }
 
 /* ManalinkEh 2022: 0x25c4b50; original cards/unstable.c:155. */
-static int test_words_in_name_val(int iid, int val, int player, int card)
+static int test_words_in_name_val(int iid, intptr_t val, int player, int card)
 {
   int result;
 
@@ -1068,11 +1068,11 @@ static int test_words_in_name_val(int iid, int val, int player, int card)
 }
 
 /* Recovered October 2022 implementations; see docs/recovery-progress.md. */
-static int test_ineffable_blessing_a(int iid, int val, int player, int card);
-static int test_words_in_name_mod_val(int iid, int val, int player, int card);
+static int test_ineffable_blessing_a(int iid, intptr_t val, int player, int card);
+static int test_words_in_name_mod_val(int iid, intptr_t val, int player, int card);
 
 /* ManalinkEh 2022: 0x25c4b10; original cards/unstable.c:305. */
-static int test_words_in_name_mod_val(int iid, int val, int player, int card)
+static int test_words_in_name_mod_val(int iid, intptr_t val, int player, int card)
 {
   int result;
 
@@ -1120,7 +1120,7 @@ int card_oddly_uneven(int player, int card, event_t event)
         if (event == EVENT_RESOLVE_SPELL)
         {
           default_test_definition(&test, 0x47);
-          test.value_for_special_selection_function = (int)(result == CHOICE_ODD);
+          test.value_for_special_selection_function = (intptr_t)(result == CHOICE_ODD);
           test.special_selection_function = test_words_in_name_mod_val;
           new_manipulate_all(player, card, 2, &test, ACT_KILL_DESTROY);
           kill_card(player, card, KILL_DESTROY);
@@ -1229,7 +1229,7 @@ static char *target_hasnt_reminder_text(int who_chooses, int player, int card, i
                                         int targeting_card);
 
 /* ManalinkEh 2022: 0x25c4970; original cards/unstable.c:1661. */
-static int test_ineffable_blessing_a(int iid, int val, int player, int card)
+static int test_ineffable_blessing_a(int iid, intptr_t val, int player, int card)
 {
   unsigned int matches;
 
@@ -1446,7 +1446,7 @@ static watermark_t choose_a_watermark(int player, int src_player, int src_card)
 /* Recovered October 2022 implementations; see docs/recovery-progress.md. */
 static char *target_has_league_watermark(int who_chooses, int player, int card,
                                          int targeting_player, int targeting_card);
-static int test_has_watermark_val(int iid, int val, int player, int card);
+static int test_has_watermark_val(int iid, intptr_t val, int player, int card);
 
 /* ManalinkEh 2022: 0x25c49f0; original cards/unstable.c:113. */
 static watermark_t get_watermark_by_iid(int iid)
@@ -1471,7 +1471,7 @@ static watermark_t get_watermark_by_iid(int iid)
 }
 
 /* ManalinkEh 2022: 0x25c4af0; original cards/unstable.c:150. */
-static int test_has_watermark_val(int iid, int val, int player, int card)
+static int test_has_watermark_val(int iid, intptr_t val, int player, int card)
 {
   watermark_t watermark;
 
@@ -1608,7 +1608,7 @@ char *target_has_black_border(int who_chooses, int player, int card, int targeti
 }
 
 /* ManalinkEh 2022: 0x25c4a60; original cards/unstable.c:756. */
-static int test_has_any_watermark(int iid, int val, int player, int card)
+static int test_has_any_watermark(int iid, intptr_t val, int player, int card)
 {
   card_instance_t *instance = get_card_instance(player, card);
   int current_iid = instance->internal_card_id;
@@ -1788,7 +1788,7 @@ int card_sly_spy_f(int player, int card, event_t event)
 static int fx_ineffable_blessing_f(int player, int card, event_t event);
 
 /* ManalinkEh 2022: 0x25c4940; original cards/unstable.c:1229. */
-static int test_has_been_banned_or_restricted(int iid, int val, int player, int card)
+static int test_has_been_banned_or_restricted(int iid, intptr_t val, int player, int card)
 {
   enum
   {
@@ -2135,7 +2135,7 @@ int card_ineffable_blessing_c(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x25c49b0; original cards/unstable.c:1761. */
-static int test_has_rarity_val(int iid, int val, int player, int card)
+static int test_has_rarity_val(int iid, intptr_t val, int player, int card)
 {
   const Rarities *rarity;
 

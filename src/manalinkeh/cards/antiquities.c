@@ -658,7 +658,7 @@ Sacrifice an artifact: ~ gets +2/+2 until end of turn. */
 	return 0;
 }
 
-static void destroy_wall_at_end_of_combat(int player, int card, int t_player, int t_card)
+static void destroy_wall_at_end_of_combat(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   if (has_subtype(t_player, t_card, SUBTYPE_WALL))
 	create_legacy_effect_exe(player, card, LEGACY_EFFECT_STONING, t_player, t_card);

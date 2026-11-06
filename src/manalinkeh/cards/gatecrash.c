@@ -3734,7 +3734,7 @@ int card_bane_alley_broker(int player, int card, event_t event){
 	}
 
 	if(event == EVENT_ACTIVATE ){
-		int check_exile = exiledby_choose(player, card, CARD_ID_BANE_ALLEY_BROKER, EXBY_FIRST_FOUND, 0, "Card", 1) ;
+		intptr_t check_exile = exiledby_choose(player, card, CARD_ID_BANE_ALLEY_BROKER, EXBY_FIRST_FOUND, 0, "Card", 1) ;
 		int abilities[4] = {
 							0,
 							generic_activated_ability(player, card, EVENT_CAN_ACTIVATE, GAA_UNTAPPED, MANACOST0, 0, NULL, NULL),
@@ -3780,7 +3780,7 @@ int card_bane_alley_broker(int player, int card, event_t event){
 			}
 		}
 		if( instance->info_slot == CHOICE_RETURN_EXILED ){
-			int rval = exiledby_choose(player, instance->parent_card, CARD_ID_BANE_ALLEY_BROKER, EXBY_CHOOSE, 0,
+			intptr_t rval = exiledby_choose(player, instance->parent_card, CARD_ID_BANE_ALLEY_BROKER, EXBY_CHOOSE, 0,
 										"Card", 1);
 			int* loc = (int*)rval;
 			if( loc ){
@@ -4719,7 +4719,7 @@ int card_ground_assault(int player, int card, event_t event){
 	return generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_CREATURE", 1, NULL);
 }
 
-static int has_flying_but_not_prot_red_prot_green(int iid, int me, int player, int card){
+static int has_flying_but_not_prot_red_prot_green(int iid, intptr_t me, int player, int card){
 	if( check_for_ability(player, card, KEYWORD_FLYING) && ! check_for_ability(player, card, KEYWORD_PROT_RED | KEYWORD_PROT_GREEN) ){
 		return 1;
 	}

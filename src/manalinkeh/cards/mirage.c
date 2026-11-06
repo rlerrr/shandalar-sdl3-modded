@@ -972,7 +972,7 @@ static int basalt_golem_legacy(int player, int card, event_t event){
 	return 0;
 }
 
-static void stoning_at_end_of_combat(int player, int card, int t_player, int t_card)
+static void stoning_at_end_of_combat(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	create_targetted_legacy_effect(player, card, &basalt_golem_legacy, t_player, t_card);
 }
@@ -1462,7 +1462,7 @@ int card_carrion(int player, int card, event_t event)
   return 0;
 }
 
-static void weaken_nondragon_nonartifact(int player, int card, int t_player, int t_card)
+static void weaken_nondragon_nonartifact(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	if( ! has_subtype(t_player, t_card, SUBTYPE_DRAGON) && ! is_what(t_player, t_card, TYPE_ARTIFACT) ){
 		int minus = round_down_value(get_power(t_player, t_card));
@@ -2001,7 +2001,7 @@ Draw three cards, then put two cards from your hand both on top of your library 
 	return basic_spell(player, card, event);
 }
 
-static void phase_out_me_and_blocker(int player, int card, int t_player, int t_card)
+static void phase_out_me_and_blocker(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	if( ! check_state(player, card, STATE_OUBLIETTED) ){
 		phase_out(player, card);
@@ -3066,7 +3066,7 @@ int card_hakim_loreweaver(int player, int card, event_t event)
             reanimate_priority = value * 8;
             highest_cmc = value;
           }
-          value = *(int *)((int)graveyard_ptr_mutable[player] + offset_or_result);
+          value = graveyard_ptr_mutable[player][offset_or_result / sizeof(int)];
           offset_or_result = offset_or_result + 4;
         } while (-1 < value);
       }
@@ -3703,7 +3703,7 @@ int card_mind_bend(int player, int card, event_t event){
 	return 0;
 }
 
-static void add_fungus_counters(int player, int card, int blocked_controller, int blocked_card)
+static void add_fungus_counters(intptr_t player, intptr_t card, int blocked_controller, int blocked_card)
 {
   add_counters(player, card, blocked_controller, blocked_card, COUNTER_FUNGUS, 4);
   gains_doesnt_untap_while_has_a_counter_and_remove_a_counter_at_upkeep(
@@ -4420,7 +4420,7 @@ At the beginning of your upkeep, you may pay |4 and 2 life. If you do, return a 
 		if( has_mana(player, COLOR_COLORLESS, 4) && can_pay_life(player, 2) &&
 			exiledby_choose(player, card, CARD_ID_PURGATORY, EXBY_FIRST_FOUND, 0, "creature", 1) )
 		{
-			int rval = exiledby_choose(player, card, CARD_ID_PURGATORY, EXBY_CHOOSE, 0, "Creature", 1);
+			intptr_t rval = exiledby_choose(player, card, CARD_ID_PURGATORY, EXBY_CHOOSE, 0, "Creature", 1);
 			charge_mana(player, COLOR_COLORLESS, 4);
 			if( spell_fizzled != -1 ){
 				int* loc = (int*)rval;

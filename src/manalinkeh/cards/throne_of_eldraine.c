@@ -13,13 +13,13 @@ static int resolve_an_adventure(int player, int card, int csvid_creature);
 
 static int trail_of_crumbs_effect(int player, int card, event_t event);
 
-static int acclaimed_contender_fn(int iid, int unused, int player, int unused3);
+static int acclaimed_contender_fn(int iid, intptr_t unused, int player, int unused3);
 
-static int has_adventure(int iid, int unused, int player, int card);
+static int has_adventure(int iid, intptr_t unused, int player, int card);
 
 #ifndef SHANDALAR
 
-static int nonland_nontoken_permanent(int iid, int value, int player, int card);
+static int nonland_nontoken_permanent(int iid, intptr_t value, int player, int card);
 
 #endif
 
@@ -450,7 +450,7 @@ int generic_adventurer(int player, int card, event_t event, int priority_creatur
 }
 
 /* ManalinkEh 2022: 0x25c8fd0; original cards/throne_of_eldraine.c:284. */
-static int acclaimed_contender_fn(int iid, int unused, int player, int unused3)
+static int acclaimed_contender_fn(int iid, intptr_t unused, int player, int unused3)
 {
   int result;
 
@@ -1413,7 +1413,7 @@ int card_curious_pair(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x25c8f40; original cards/throne_of_eldraine.c:1253. */
-static int dotm_selection(int iid, int value, int player, int card)
+static int dotm_selection(int iid, intptr_t value, int player, int card)
 {
   if (is_what(-1, iid, TYPE_ARTIFACT))
     return 1;
@@ -1585,7 +1585,7 @@ int card_didnt_say_please(int player, int card, event_t event)
 
 #ifndef SHANDALAR
 /* ManalinkEh 2022: 0x25c9800; original cards/throne_of_eldraine.c:1402. */
-static int nonland_nontoken_permanent(int iid, int value, int player, int card)
+static int nonland_nontoken_permanent(int iid, intptr_t value, int player, int card)
 {
   return !is_what(player, card, TYPE_LAND) && !is_token(player, card);
 }
@@ -1711,7 +1711,7 @@ int card_drown_in_the_loch(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x25c90e0; original cards/throne_of_eldraine.c:1518. */
-static int has_adventure(int iid, int unused, int player, int card)
+static int has_adventure(int iid, intptr_t unused, int player, int card)
 {
   enum
   {
@@ -2270,7 +2270,7 @@ int card_fires_of_invention(int player, int card, event_t event)
       scnprintf(buffer, 100,
                 "Select a non-land card with mana value less than or equal to %d to play.", lands);
       test_definition_t test;
-      _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Fires of Invention filter");
+      _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 232 : 216), "native Fires of Invention filter");
       new_default_test_definition(&test, 1, buffer);
       test.cmc = lands + 1;
       test.cmc_flag = 3;

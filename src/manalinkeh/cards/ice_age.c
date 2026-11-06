@@ -6211,7 +6211,7 @@ static int kjeldoran_frostbeast_legacy(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x23eb8a0; original cards/ice_age.c:5587. */
-static void attach_kjeldoran_frostbeast_legacy(int player, int card, int t_player, int t_card)
+static void attach_kjeldoran_frostbeast_legacy(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   create_targetted_legacy_effect(player, card, kjeldoran_frostbeast_legacy, t_player, t_card);
   return;
@@ -8994,7 +8994,7 @@ int card_ray_of_erasure(int player, int card, event_t event)
 }
 
 /* Recovered October 2022 implementations; see docs/recovery-progress.md. */
-static void add_venomous_breath_effect(int player, int card, int t_player, int t_card);
+static void add_venomous_breath_effect(intptr_t player, intptr_t card, int t_player, int t_card);
 static int kjeldoran_frostbeast_legacy(int player, int card, event_t event);
 static int venomous_breath_effect(int player, int card, event_t event);
 static int orcish_farmer_effect(int player, int card, event_t event);
@@ -10804,7 +10804,7 @@ static int venomous_breath_effect(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x23eb8d0; original cards/ice_age.c:9650. */
-static void add_venomous_breath_effect(int player, int card, int t_player, int t_card)
+static void add_venomous_breath_effect(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   create_targetted_legacy_effect(player, card, venomous_breath_effect, t_player, t_card);
   return;

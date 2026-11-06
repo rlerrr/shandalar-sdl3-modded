@@ -45,6 +45,7 @@ extern int g_event_player;
 extern int g_activation_event_flags;
 extern int g_ai_modifier;
 extern int g_land_can_be_played;
+extern int g_recorded_action_player;
 extern int g_life[2];
 extern int g_mana_charge[8];
 extern int g_special_mana_pool[2][8];
@@ -263,6 +264,7 @@ extern int shandalar_check_mana_multi(int player);
 #define cancel g_spell_fizzled
 #define spell_fizzled g_spell_fizzled
 #define land_can_be_played g_land_can_be_played
+#define ldoubleclicked g_recorded_action_player
 #define life g_life
 #define max_x_value g_max_x_value
 #define PAY_MANA_COLORLESS g_mana_charge[0]

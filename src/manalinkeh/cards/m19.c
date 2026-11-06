@@ -16,7 +16,7 @@ int palladia_mors_legacy(int player, int card, event_t event);
 
 #ifndef SHANDALAR
 
-static int test_not_in_array4(int iid, int arrptr, int player, int card);
+static int test_not_in_array4(int iid, intptr_t arrptr, int player, int card);
 
 #endif
 
@@ -1750,7 +1750,7 @@ int card_lightning_mare(int player, int card, event_t event)
 
 #ifndef SHANDALAR
 /* ManalinkEh 2022: 0x2205870; original cards/m19.c:1238. */
-static int test_not_in_array4(int iid, int arrptr, int player, int card)
+static int test_not_in_array4(int iid, intptr_t arrptr, int player, int card)
 {
   const int *arr = (const int *)arrptr;
   return arr[0] != iid && arr[1] != iid && arr[2] != iid && arr[3] != iid;
@@ -1779,7 +1779,7 @@ int card_lilianas_contract(int player, int card, event_t event)
     test_definition_t test;
     default_test_definition(&test, 2);
     int first_player = current_turn;
-    test.value_for_special_selection_function = (int)hell;
+    test.value_for_special_selection_function = (intptr_t)hell;
     test.subtype = 0x2c;
     test.special_selection_function = test_not_in_array4;
     int demon_count = 0;

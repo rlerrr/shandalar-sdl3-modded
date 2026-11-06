@@ -18,7 +18,7 @@
 
 /* A second click on a pending spell/activation requests automatic payment;
  * it must not cast that spell or activate that ability again. */
-static int mana_source_is_on_stack(int player, int card)
+int mana_source_is_on_stack(int player, int card)
 {
   int index;
   int stack_card;

@@ -727,7 +727,7 @@ int card_dragonscale_general(int player, int card, event_t event){
 	return 0;
 }
 
-static int has_1_1_counter(int iid, int unused, int player, int card)
+static int has_1_1_counter(int iid, intptr_t unused, int player, int card)
 {
 	return count_counters(player, card, COUNTER_P1_P1) > 0;
 }
@@ -1575,7 +1575,7 @@ int card_refocus(int player, int card, event_t event){
 	return generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_CREATURE", 1, NULL);
 }
 
-static int renowned_weaponsmith_tutor(int iid, int unused, int unused2, int unused3){
+static int renowned_weaponsmith_tutor(int iid, intptr_t unused, int unused2, int unused3){
 	return (cards_data[iid].id == CARD_ID_HEART_PIERCER_BOW || cards_data[iid].id == CARD_ID_VIAL_OF_DRAGONFIRE);
 }
 

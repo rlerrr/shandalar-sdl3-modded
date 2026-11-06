@@ -1,6 +1,6 @@
 #include "manalink.h"
 
-typedef int (*test_selection_predicate_t)(int, int, int, int);
+typedef int (*test_selection_predicate_t)(int, intptr_t, int, int);
 
 /* Canonical recovered helper declarations. */
 int new_get_test_score(test_definition_t *this_test);
@@ -781,10 +781,9 @@ int new_make_test_in_play(int player, int to_examine, int test_type, test_defini
   special_selection = this_test->special_selection_function;
   if (special_selection != (test_selection_predicate_t)0x0)
   {
-    id_stat_or_predicate_result = this_test->value_for_special_selection_function;
     instance = get_card_instance(player, to_examine);
     id_stat_or_predicate_result = (*special_selection)(
-        instance->internal_card_id, id_stat_or_predicate_result, player, to_examine);
+        instance->internal_card_id, this_test->value_for_special_selection_function, player, to_examine);
     if (id_stat_or_predicate_result == 0)
     {
       return 0;
@@ -1716,7 +1715,7 @@ int check_battlefield_for_name(int player, int type, int name){
 /* Recovered October 2022 implementations; see docs/recovery-progress.md. */
 
 /* ManalinkEh 2022: 0x26c1000; original functions/global_checking.c:1212. */
-int test_not_in_array(int iid, int arrptr, int player, int card)
+int test_not_in_array(int iid, intptr_t arrptr, int player, int card)
 {
   int result;
 

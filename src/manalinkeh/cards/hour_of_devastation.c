@@ -2607,7 +2607,7 @@ int card_rhonass_last_stand(int player, int card, event_t event)
  * As long as a creature has a -1/-1 counter on it, ~ has vigilance and deathtouch. */
 
 /* ManalinkEh 2022: 0x20ccf70; original cards/hour_of_devastation.c:1776. */
-static int test_not_in_array20(int iid, int arrptr, int player, int card)
+static int test_not_in_array20(int iid, intptr_t arrptr, int player, int card)
 {
 
   if (((((((*(int *)arrptr != iid) && (*(int *)(arrptr + 4) != iid)) &&
@@ -2684,7 +2684,7 @@ int card_uncage_the_menagerie(int player, int card, event_t event)
                     limit_or_selected, next_index, limit_or_selected);
           new_default_test_definition(&test, 2, buffer);
           test.cmc = instance->info_slot;
-          test.value_for_special_selection_function = (int)chosen;
+          test.value_for_special_selection_function = (intptr_t)chosen;
           test.storage = card;
           test.special_selection_function = test_not_in_array20;
           test.no_shuffle = 1;
@@ -4199,7 +4199,7 @@ int card_driven_despair(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x20ccff0; original cards/hour_of_devastation.c:2849. */
-static int has_cycling(int iid, int me, int player, int card)
+static int has_cycling(int iid, intptr_t me, int player, int card)
 {
   return (unsigned int)(cards_data[iid].cc[2] == '\x04');
 }
@@ -4278,7 +4278,7 @@ int card_abandoned_sarcophagus(int player, int card, event_t event)
     }
   }
   test_definition_t test;
-  _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 224 : 216), "native Sarcophagus filter");
+  _Static_assert(sizeof(test) == (sizeof(void *) == 8 ? 232 : 216), "native Sarcophagus filter");
   new_default_test_definition(&test, 0xff, "Select a card to play.");
   int selected = select_card_from_zone(player, player, playable[0], count, 0, 1, -1, &test);
   if (selected != -1 && charge_mana_from_id(player, -1, EVENT_ACTIVATE,

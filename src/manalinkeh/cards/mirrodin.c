@@ -2690,7 +2690,7 @@ Artifact
 	return 0;
 }
 
-static int is_not_x_spell(int iid, int unused1, int unused2, int unused3)
+static int is_not_x_spell(int iid, intptr_t unused1, int unused2, int unused3)
 {
   return cards_data[iid].cc[1] != 255;
 }
@@ -5229,7 +5229,7 @@ int soul_foundry_impl(int player, int card, event_t event)
   {
     if (generic_activated_ability(player, card, event, GAA_UNTAPPED, MANACOST0, 0, NULL, NULL))
     {
-      int result = exiledby_choose(
+      int result = (int)exiledby_choose(
           player, card, CARD_ID_SOUL_FOUNDRY,
           EXBY_CAN_CAST | EXBY_TEST_CAN_CAST | EXBY_TEST_HAS_GENERIC_MANA_TO_PAY_CMC, 0, "", 1);
       return result;
@@ -5273,7 +5273,7 @@ int soul_foundry_impl(int player, int card, event_t event)
     }
     if (choice == CHOICE_CREATE_TOKEN)
     {
-      int rval = exiledby_choose(player, card, CARD_ID_SOUL_FOUNDRY,
+      intptr_t rval = exiledby_choose(player, card, CARD_ID_SOUL_FOUNDRY,
                                  EXBY_CHOOSE | EXBY_TEST_HAS_GENERIC_MANA_TO_PAY_CMC, event, "", 1);
       if (rval)
       {
@@ -5405,7 +5405,7 @@ int card_spellweaver_helix(int player, int card, event_t event){
             if (instance->targets[9].player == iid){ iid = instance->targets[9].card; }
             else if (instance->targets[9].card == iid){ iid = instance->targets[9].player; }
             else{ return 0; }
-			int rval = exiledby_choose(player, card, CARD_ID_SPELLWEAVER_HELIX, EXBY_FIRST_FOUND | EXBY_TEST_IID, iid, "", 1);
+			intptr_t rval = exiledby_choose(player, card, CARD_ID_SPELLWEAVER_HELIX, EXBY_FIRST_FOUND | EXBY_TEST_IID, iid, "", 1);
 			if( rval ){
 				int* loc = (int*)rval;
 				if( loc ){

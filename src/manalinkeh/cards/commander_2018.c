@@ -10,7 +10,7 @@ static int vedalken_humiliation(int player, int card, event_t event);
 
 #ifndef SHANDALAR
 
-static int is_enchanted_or_enchantment_creature(int unused1, int unused2, int player, int card);
+static int is_enchanted_or_enchantment_creature(int unused1, intptr_t unused2, int player, int card);
 static char *is_aura_or_equipment(int who_chooses, int player, int card);
 
 #endif
@@ -563,7 +563,7 @@ static char *is_token_targ(int who_chooses, int player, int card)
 }
 
 /* ManalinkEh 2022: 0x255f730; original cards/commander_2018.c:380. */
-static int is_token_test(int unused1, int unused2, int player, int card)
+static int is_token_test(int unused1, intptr_t unused2, int player, int card)
 {
   int result;
   result = is_token(player, card);
@@ -1225,7 +1225,7 @@ int card_mask(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x255f790; original cards/commander_2018.c:732. */
-static int is_enchanted_test(int unused1, int unused2, int player, int card)
+static int is_enchanted_test(int unused1, intptr_t unused2, int player, int card)
 {
   int result;
   result = is_enchanted(player, card);
@@ -1691,7 +1691,7 @@ int card_heavenly_blademaster(int player, int card, event_t event)
 
 #ifndef SHANDALAR
 /* ManalinkEh 2022: 0x255f7c0; original cards/commander_2018.c:1033. */
-static int is_enchanted_or_enchantment_creature(int unused1, int unused2, int player, int card)
+static int is_enchanted_or_enchantment_creature(int unused1, intptr_t unused2, int player, int card)
 {
   return is_enchanted(player, card) || is_what(player, card, TYPE_ENCHANTMENT);
 }

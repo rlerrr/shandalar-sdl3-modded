@@ -204,6 +204,12 @@ else()
   add_compile_options(-Wall -Wextra -Wno-unused-parameter -Wno-unused-function)
 endif()
 
+if(CMAKE_C_COMPILER_ID MATCHES "Clang")
+  add_compile_options(-Werror=pointer-to-int-cast -Werror=int-to-pointer-cast)
+elseif(MSVC)
+  add_compile_options(/we4302 /we4311 /we4312)
+endif()
+
 include(cmake/DownloadAssets.cmake)
 
 if(SHANDALAR_BUILD_FACEMAKER OR SHANDALAR_BUILD_SHANDALAR OR SHANDALAR_BUILD_DECK)

@@ -1120,7 +1120,7 @@ int card_rainbow_knights(int player, int card, event_t event){
 	return 0;
 }
 
-static void sewers_of_estark_prevent_damage_effect(int player, int card, int t_player, int t_card){
+static void sewers_of_estark_prevent_damage_effect(intptr_t player, intptr_t card, int t_player, int t_card){
 	prevent_all_damage_dealt_by_target(player, card, t_player, t_card, DDBM_MUST_BE_COMBAT_DAMAGE);
 }
 
@@ -1440,7 +1440,7 @@ int card_seasons_beatings(int player, int card, event_t event)
  ****************************/
 
 /* ManalinkEh 2022: 0x240d300; original cards/promo.c:1398. */
-static int has_globe_counter(int unused, int unused2, int player, int card)
+static int has_globe_counter(int unused, intptr_t unused2, int player, int card)
 {
   int result;
   result = count_counters(player, card, COUNTER_GLOBE);

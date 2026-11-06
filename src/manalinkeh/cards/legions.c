@@ -55,7 +55,7 @@ static int provoke(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x24a5c50; original cards/legions.c:55. */
-static int test_shares_creature_subtype(int iid, int value, int player, int card)
+static int test_shares_creature_subtype(int iid, intptr_t value, int player, int card)
 {
   int result;
 

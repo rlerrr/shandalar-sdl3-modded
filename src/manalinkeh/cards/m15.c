@@ -3739,7 +3739,7 @@ int card_feral_incarnation(int player, int card, event_t event){
 	return generic_spell_with_convoke(player, card, event);
 }
 
-static int test_is_nonland(int iid, int unused1, int unused2, int unused3)
+static int test_is_nonland(int iid, intptr_t unused1, int unused2, int unused3)
 {
   return !is_what(-1, iid, TYPE_LAND);
 }

@@ -5246,8 +5246,8 @@ int card_verdurous_gearhulk(int player, int card, event_t event)
           target_card = instance->targets[0].card;
           *(unsigned char *)selection_cursor =
               (unsigned char)*selection_cursor | (unsigned char)result;
-          *(unsigned char *)((int)selection_cursor + 1) =
-              *(unsigned char *)((int)selection_cursor + 1) | (unsigned char)target_card;
+          *((unsigned char *)selection_cursor + 1) =
+              *((unsigned char *)selection_cursor + 1) | (unsigned char)target_card;
           add_state(result, target_card, 0x200000);
         }
         selection_cursor = selection_cursor + 1;
@@ -5639,7 +5639,7 @@ Choose one -
 	return 0;
 }
 
-static int have_no_counter(int unused1, int unused2, int player, int card){
+static int have_no_counter(int unused1, intptr_t unused2, int player, int card){
 	return count_counters(player, card, COUNTER_invalid)== 0 ? 1 : 0;
 }
 
@@ -5739,7 +5739,7 @@ When Restoration Gearsmith enters the battlefield, return target artifact or cre
 	return 0;
 }
 
-static int test_not_in_array3(int iid, int arrptr, int player, int card)
+static int test_not_in_array3(int iid, intptr_t arrptr, int player, int card)
 {
   int* arr = (int*)arrptr;
   return iid != arr[0] && iid != arr[1] && iid != arr[2];
@@ -5821,7 +5821,7 @@ Planeswalker - Saheeli
 			test_definition_t test;
 			default_test_definition(&test, TYPE_ARTIFACT);
 			test.storage = card;
-			test.value_for_special_selection_function = (int)chosen;
+			test.value_for_special_selection_function = (intptr_t)chosen;
 			test.special_selection_function = test_not_in_array3;
 			test.qty = 1;
 			test.no_shuffle = 1;

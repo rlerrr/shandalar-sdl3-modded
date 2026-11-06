@@ -4602,7 +4602,7 @@ int card_renewing_touch(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x21b8aa0; original cards/portal_1_2_3k.c:4204. */
-static void destroy_creature_when_blocked(int player, int card, int t_player, int t_card)
+static void destroy_creature_when_blocked(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   kill_card(t_player, t_card, KILL_DESTROY);
   return;

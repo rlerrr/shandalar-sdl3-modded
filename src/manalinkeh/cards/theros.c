@@ -4745,7 +4745,7 @@ int card_ashiok_nightmare_weaver(int player, int card, event_t event)
 
 				case CHOICE_NIGHTMARE:
 				  {
-					int rval = exiledby_choose(player, card, CARD_ID_ASHIOK_NIGHTMARE_WEAVER, EXBY_CHOOSE|EXBY_TEST_CMC_LE, loyalty, "creature", 1);
+					intptr_t rval = exiledby_choose(player, card, CARD_ID_ASHIOK_NIGHTMARE_WEAVER, EXBY_CHOOSE|EXBY_TEST_CMC_LE, loyalty, "creature", 1);
 					int* loc = (int*)rval;
 					if (!loc)
 					  spell_fizzled = 1;

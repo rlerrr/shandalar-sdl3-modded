@@ -266,7 +266,7 @@ static int leg_color_hoser(int player, int card, event_t event, int permanent_co
 }
 
 // Cards
-static void destroy_green_or_white_at_end_of_combat(int player, int card, int t_player, int t_card)
+static void destroy_green_or_white_at_end_of_combat(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   if (get_color(t_player, t_card) & (get_sleighted_color_test(player, card, COLOR_TEST_GREEN)
 									 | get_sleighted_color_test(player, card, COLOR_TEST_WHITE)))
@@ -378,7 +378,7 @@ int card_aerathi_berserker(int player, int card, event_t event)
   return 0;
 }
 
-static void becomes_green(int player, int card, int t_player, int t_card)
+static void becomes_green(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	change_color(player, card, t_player, t_card, get_sleighted_color_test(player, card, COLOR_TEST_GREEN), CHANGE_COLOR_SET);
 }
@@ -2349,7 +2349,7 @@ Tap all creatures dealt damage by ~. If ~ doesn't turn completely over at least 
 	return generic_spell(player, card, event, 0, NULL, NULL, 0, NULL);
 }
 
-static void tap_and_maze_of_ith(int player, int card, int t_player, int t_card){
+static void tap_and_maze_of_ith(intptr_t player, intptr_t card, int t_player, int t_card){
 	tap_card(t_player, t_card);
 	maze_of_ith_effect(player, card, t_player, t_card);
 }
@@ -3041,7 +3041,7 @@ static int glyph_of_doom_legacy(int player, int card, event_t event){
 	return 0;
 }
 
-static void add_glyph_of_doom_legacy(int player, int card, int t_player, int t_card){
+static void add_glyph_of_doom_legacy(intptr_t player, intptr_t card, int t_player, int t_card){
 	create_targetted_legacy_effect(player, card, &glyph_of_doom_legacy, t_player, t_card);
 }
 
@@ -3972,13 +3972,13 @@ Prevent all damage that would be dealt to target creature this turn. */
 	return generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_CREATURE", 1, NULL);
 }
 
-static void destroy_nonwall_at_end_of_combat(int player, int card, int t_player, int t_card)
+static void destroy_nonwall_at_end_of_combat(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   if (!has_subtype(t_player, t_card, SUBTYPE_WALL))
 	create_legacy_effect_exe(player, card, LEGACY_EFFECT_STONING, t_player, t_card);
 }
 
-static void destroy_creature_at_end_of_combat(int player, int card, int t_player, int t_card)
+static void destroy_creature_at_end_of_combat(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   create_legacy_effect_exe(player, card, LEGACY_EFFECT_STONING, t_player, t_card);
 }
@@ -4029,7 +4029,7 @@ static int infinite_autority_legacy(int player, int card, event_t event){
 	return 0;
 }
 
-static void create_infinite_autority_legacy(int player, int card, int t_player, int t_card)
+static void create_infinite_autority_legacy(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	if( get_toughness(t_player, t_card) < 4 ){
 		int legacy = create_targetted_legacy_effect(player, card, &infinite_autority_legacy, t_player, t_card);
@@ -9106,7 +9106,7 @@ static int effect_cant_attack_during_controllers_next_turn(int player, int card,
   return 0;
 }
 
-static void add_effect_cant_attack_during_controllers_next_turn(int player, int card, int t_player, int t_card)
+static void add_effect_cant_attack_during_controllers_next_turn(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   int leg = create_targetted_legacy_effect(player, card, effect_cant_attack_during_controllers_next_turn, t_player, t_card);
   if (leg != -1)

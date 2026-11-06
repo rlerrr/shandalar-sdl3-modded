@@ -1,6 +1,6 @@
 #include "manalink.h"
 
-static void cathedral_membrane_legacy(int player, int card, int t_player, int t_card);
+static void cathedral_membrane_legacy(intptr_t player, intptr_t card, int t_player, int t_card);
 
 /* Canonical recovered helper declarations. */
 int has_phyrexian_mana(int player, int cless, int black, int blue, int green, int red,
@@ -403,7 +403,7 @@ static int deal_6_damage_legacy(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x226d140; original cards/new_phyrexia.c:519. */
-static void cathedral_membrane_legacy(int player, int card, int t_player, int t_card)
+static void cathedral_membrane_legacy(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   int leg;
   card_instance_t *instance;

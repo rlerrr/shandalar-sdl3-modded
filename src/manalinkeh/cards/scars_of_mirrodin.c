@@ -3212,7 +3212,7 @@ int card_embersmith(int player, int card, event_t event)
   return 0;
 }
 
-static void destroy_creature_and_gain_life(int player, int card, int t_player, int t_card)
+static void destroy_creature_and_gain_life(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   int tgh = get_toughness(t_player, t_card);
   kill_card(t_player, t_card, KILL_DESTROY);
@@ -3267,7 +3267,7 @@ int card_exsanguinate(int player, int card, event_t event){
 	return generic_spell(player, card, event, GS_X_SPELL, NULL, NULL, 0, NULL);
 }
 
-static void pump_ezuri_archer(int player, int card, int t_player, int t_card)
+static void pump_ezuri_archer(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   if (check_for_ability(t_player, t_card, KEYWORD_FLYING))
     pump_until_eot_merge_previous(player, card, player, card, 3, 0);
@@ -6831,7 +6831,7 @@ static int prototype_portal_impl(int player, int card, event_t event)
   {
     if (generic_activated_ability(player, card, event, GAA_UNTAPPED, MANACOST0, 0, NULL, NULL))
     {
-      int result = exiledby_choose(
+      int result = (int)exiledby_choose(
           player, card, CARD_ID_PROTOTYPE_PORTAL,
           EXBY_CAN_CAST | EXBY_TEST_CAN_CAST | EXBY_TEST_HAS_GENERIC_MANA_TO_PAY_CMC, 0, "", 1);
       return result;
@@ -6875,7 +6875,7 @@ static int prototype_portal_impl(int player, int card, event_t event)
     }
     if (choice == CHOICE_CREATE_TOKEN)
     {
-      int rval = exiledby_choose(player, card, CARD_ID_PROTOTYPE_PORTAL,
+      intptr_t rval = exiledby_choose(player, card, CARD_ID_PROTOTYPE_PORTAL,
                                  EXBY_CHOOSE | EXBY_TEST_HAS_GENERIC_MANA_TO_PAY_CMC, event, "", 1);
       if (rval)
       {

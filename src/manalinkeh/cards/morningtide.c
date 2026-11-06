@@ -2870,7 +2870,7 @@ static void scapeshift_resolution_for_ai(int player, int amount){
 	}
 }
 
-static int forbidden_land_sacrifices_for_ai(int unused1, int unused2, int player, int card){
+static int forbidden_land_sacrifices_for_ai(int unused1, intptr_t unused2, int player, int card){
 	int csvid = get_card_name(player, card);
 	switch( csvid ){
 			case CARD_ID_CLOUDPOST:

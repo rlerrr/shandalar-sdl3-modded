@@ -114,6 +114,7 @@ int hack_xx = 1;
 
 void event_activate_then_duplicate_into_stack(int player, int card, int event, int new_attacking_card_controller, int new_attacking_card);
 void human_autotap_for_mana(int player, int* amt, int* unknown_v46, int unknown_v47);
+int mana_source_is_on_stack(int player, int card);
 int pay_mana_maximally_satisfied(int* pay_mana_array, int x_val, int max_x_val);
 int try_to_pay_for_mana_by_autotapping(int player, int* amt, int* unknown_v46, int autotap_flags, int unknown_v47);
 extern int pay_mana_xbugrwaU[8];
@@ -2309,7 +2310,8 @@ int charge_mana(int player, color_t color, int amount)
           {
             card_instance_t *inst = get_card_instance(player, card);
             int iid = inst->internal_card_id;
-            if (iid >= 0 && (cards_data[iid].extra_ability & EA_MANA_SOURCE) &&
+            if (!mana_source_is_on_stack(player, card) &&
+                iid >= 0 && (cards_data[iid].extra_ability & EA_MANA_SOURCE) &&
                 ((cards_data[iid].type & TYPE_INTERRUPT) ||
                  (inst->state & (STATE_IN_PLAY | STATE_OUBLIETTED)) == STATE_IN_PLAY))
             {
@@ -2493,6 +2495,22 @@ int charge_mana(int player, color_t color, int amount)
               }
             }
           }
+        }
+        /* A fast first click has already entered manual payment. The second
+         * click must still be able to request automatic payment after mouse-up. */
+        if (ldoubleclicked &&
+            !pay_mana_maximally_satisfied(pay_mana_xbugrwaU, x_value, max_x_value))
+        {
+          amt_of_nonartifact_mana =
+              has_mana(player, COLOR_ARTIFACT, 1) - has_mana(player, COLOR_ANY, 1);
+          payment_apply_mana_in_pool_to_cost(player, amtspaid, &total_paid,
+                                             amt_of_nonartifact_mana);
+          payment_apply_mana_in_pool_to_colorless_cost(
+              player, amtspaid, &total_paid, amt_of_nonartifact_mana, &x_value, max_x_value);
+          payment_apply_mana_in_pool_to_x_cost(
+              player, amtspaid, &total_paid, amt_of_nonartifact_mana, &x_value, max_x_value);
+          human_autotap_for_mana(player, amtspaid, &total_paid, 1);
+          payment_copy_mana_pool_to_display();
         }
       }
 

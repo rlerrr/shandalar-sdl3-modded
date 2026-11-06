@@ -307,13 +307,13 @@ static int chainers_legacy(int player, int card, event_t event)
         {
 
           iid_or_playability =
-              can_legally_play_iid(player, *(int *)((int)current_graveyard + grave_byte_offset));
+              can_legally_play_iid(player, current_graveyard[grave_byte_offset / sizeof(int)]);
           current_graveyard = graveyard_ptr_mutable[player];
           if (iid_or_playability != 0)
           {
 
             if (has_mana_to_cast_iid(player, EVENT_CAN_ACTIVATE,
-                                     *(int *)((int)current_graveyard + grave_byte_offset)) == 0)
+                                     current_graveyard[grave_byte_offset / sizeof(int)]) == 0)
             {
               current_graveyard = graveyard_ptr_mutable[player];
             }
@@ -327,7 +327,7 @@ static int chainers_legacy(int player, int card, event_t event)
               iid_or_playability = can_sorcery_be_played(player, EVENT_CAN_ACTIVATE);
               if ((iid_or_playability != 0) ||
                   (current_graveyard = graveyard_ptr_mutable[player],
-                   (cards_data[*(int *)((int)current_graveyard + grave_byte_offset)].type & 0x30) !=
+                   (cards_data[current_graveyard[grave_byte_offset / sizeof(int)]].type & 0x30) !=
                        0))
               {
                 return 1;
@@ -336,7 +336,7 @@ static int chainers_legacy(int player, int card, event_t event)
           }
         }
         grave_byte_offset = grave_byte_offset + 4;
-        iid_or_playability = *(int *)((int)current_graveyard + grave_byte_offset);
+        iid_or_playability = current_graveyard[grave_byte_offset / sizeof(int)];
       } while (iid_or_playability != -1);
     }
   }

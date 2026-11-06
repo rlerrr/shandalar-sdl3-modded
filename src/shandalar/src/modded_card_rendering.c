@@ -1,7 +1,7 @@
 #include "drawcardlib/Drawcardlib.h"
 
 int DrawCardModdedBack(HDC dc, const RECT *rect, unsigned int mode,
-                       int arg1, int arg2, int arg3, int arg4);
+                       intptr_t arg1, intptr_t arg2, int arg3, int arg4);
 int DrawCardModdedDestroyAllCardBackgrounds(void);
 int DrawCardModdedSmallCardTitle(HDC dc, const RECT *rect, const char *title,
                                 int color, int controlled_by_owner,

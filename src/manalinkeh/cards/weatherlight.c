@@ -2662,7 +2662,7 @@ int card_lotus_vale(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x22eabc0; original cards/weatherlight.c:2436. */
-static int has_same_mana_type(int unused, int color, int player, int card)
+static int has_same_mana_type(int unused, intptr_t color, int player, int card)
 {
   unsigned int available_colors;
   available_colors = get_colors_of_mana_land_could_produce_ignoring_costs(player, card);
@@ -3854,7 +3854,7 @@ static int entrancer_effect(int player, int card, event_t event){
 	return 0;
 }
 
-static void tolarian_entrancer_ability(int player, int card, int t_player, int t_card)
+static void tolarian_entrancer_ability(intptr_t player, intptr_t card, int t_player, int t_card)
 {
 	create_targetted_legacy_effect(player, card, &entrancer_effect, t_player, t_card);
 }
@@ -4123,8 +4123,8 @@ static int effect_enable_flash_land(int player, int card, event_t event)
   /* Local data:
    * targets[2].player: allowable types
    * targets[2].card: illegal types
-   * targets[3].player: prompt, a const char* cast to an int.
-   * targets[3].card: whether prompt it literal. */
+   * targets[3]: native prompt pointer.
+   * targets[4].player: whether prompt is literal. */
 
   if (event == EVENT_CLEANUP)
 	kill_card(player, card, KILL_EXILE);
@@ -4140,7 +4140,7 @@ static int effect_enable_flash_land(int player, int card, event_t event)
   td.allowed_controller = td.preferred_controller = player;
   td.zone = TARGET_ZONE_HAND;
 
-  return can_play_cards_as_though_they_had_flash(player, card, event, &td, (const char*)(instance->targets[3].player), instance->targets[3].card);
+  return can_play_cards_as_though_they_had_flash(player, card, event, &td, (const char*)target_load_pointer(&instance->targets[3]), instance->targets[4].player);
 }
 
 int enable_flash_land(int player, int card, event_t event, int x, int b, int u, int g, int r, int w, int required_type, int illegal_type, const char* prompt, int literal)
@@ -4194,8 +4194,8 @@ int enable_flash_land(int player, int card, event_t event, int x, int b, int u, 
 			card_instance_t* legacy = get_card_instance(player, leg);
 			legacy->targets[2].player = required_type;
 			legacy->targets[2].card = illegal_type;
-			legacy->targets[3].player = (int)prompt;
-			legacy->targets[3].card = literal;
+			target_store_pointer(&legacy->targets[3], (intptr_t)prompt);
+			legacy->targets[4].player = literal;
 
 			// If there's cards on the stack below this, allow a response before further unwinding the stack.
 			if (stack_size > 0)
@@ -4551,7 +4551,7 @@ int card_cinder_giant(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x22eabf0; original cards/weatherlight.c:4171. */
-static void blocking_enchanted(int player, int card, int t_player, int t_card)
+static void blocking_enchanted(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   int result;
 
@@ -5548,7 +5548,7 @@ static int sawtooth_ogre_legacy(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x22e9d10; original cards/weatherlight.c:4825. */
-static void damage_blocked_blocking_creature(int player, int card, int t_player, int t_card)
+static void damage_blocked_blocking_creature(intptr_t player, intptr_t card, int t_player, int t_card)
 {
   create_targetted_legacy_effect(player, card, sawtooth_ogre_legacy, t_player, t_card);
   return;

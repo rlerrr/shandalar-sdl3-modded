@@ -9,6 +9,7 @@
 #endif
 #include <string.h>
 #include <ctype.h>
+#include <errno.h>
 #include "cardartlib/src/assert.h"
 #include "drawcardlib/src/pic.h"
 #include "defs.h"
@@ -264,6 +265,9 @@ static void SetInitialFaceOutputPath(void)
   if (strcmp(shandalar_user_data_root(), ".") != 0)
     snprintf(g_face_output_path, sizeof(g_face_output_path), "%s/face.pic",
              shandalar_user_data_root());
+  else if (!g_use_desktop_palette)
+    snprintf(g_face_output_path, sizeof(g_face_output_path), "%s/face.pic",
+             global_base_directory);
   else
     snprintf(g_face_output_path, sizeof(g_face_output_path), "%s\\PlayFace\\*.pic",
              global_base_directory);
@@ -827,7 +831,15 @@ int AcceptFaceSelection(FaceControl *control)
   }
   if (g_use_desktop_palette == 0)
   {
-    ExportEncodedImage(2, 0, 0, 0x114, 0xaa, 0, g_face_output_path);
+    if (ExportEncodedImage(2, 0, 0, 0x114, 0xaa, 0, g_face_output_path) < 0)
+    {
+      char message[512];
+      snprintf(message, sizeof(message), "Could not save portrait to %s: %s",
+               g_face_output_path, strerror(errno));
+      SDL_Log("facemaker: %s", message);
+      MessageBoxA(g_main_hwnd, message, "Could not save portrait", MB_OK | MB_ICONERROR);
+      return 0;
+    }
   }
 
   recent_face_file = shandalar_open_file_io(FacemakerRecentFacePath(), "wt");

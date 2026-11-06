@@ -144,7 +144,7 @@ void ai_modifier_twiddle(int player, int card, int tgtnum);
 int choosing_to_untap(int player, int card, event_t event);
 void remove_from_combat(int player, int card);
 static int remove_untargettable_legacy(int player, int card, event_t event);
-int is_artifact_creature_by_internal_id(int iid, int unused1, int unused2, int unused3);
+int is_artifact_creature_by_internal_id(int iid, intptr_t unused1, int unused2, int unused3);
 void land_animation(int player, int card);
 void true_transform(int player, int card);
 int create_legacy_name_with_rfg_check(int player, int card, int owner, int iid);
@@ -10530,7 +10530,7 @@ int nightveil_specter_like_ability(int player, int card, event_t event, unsigned
 
   if (event == EVENT_CAN_ACTIVATE)
 	{
-	  int can_cast = exiledby_choose(player, card, csvid_to_display, EXBY_CAN_CAST|EXBY_TEST_CAN_CAST|exby_flags, event, NULL, 1);
+	  int can_cast = (int)exiledby_choose(player, card, csvid_to_display, EXBY_CAN_CAST|EXBY_TEST_CAN_CAST|exby_flags, event, NULL, 1);
 	  if (IS_AI(player) || can_cast)
 		return can_cast;
 	  else
@@ -10541,7 +10541,7 @@ int nightveil_specter_like_ability(int player, int card, event_t event, unsigned
 	{
 	  if (!IS_AI(player))
 		{
-		  int can_cast = exiledby_choose(player, card, csvid_to_display, EXBY_CAN_CAST|EXBY_TEST_CAN_CAST|exby_flags, event, NULL, 1);
+		  int can_cast = (int)exiledby_choose(player, card, csvid_to_display, EXBY_CAN_CAST|EXBY_TEST_CAN_CAST|exby_flags, event, NULL, 1);
 		  if (DIALOG(player, card, event, DLG_NO_STORAGE, DLG_NO_CANCEL,
 					 "Show exiled cards", 1, 1,
 					 "Play an exiled card", can_cast, 1) == 1)
@@ -10552,7 +10552,7 @@ int nightveil_specter_like_ability(int player, int card, event_t event, unsigned
 			}
 		}
 
-	  int rval = exiledby_choose(player, card, csvid_to_display, EXBY_CHOOSE|EXBY_TEST_CAN_CAST|exby_flags, event, NULL, 1);
+	  intptr_t rval = exiledby_choose(player, card, csvid_to_display, EXBY_CHOOSE|EXBY_TEST_CAN_CAST|exby_flags, event, NULL, 1);
 	  int* loc = (int*)rval;
 	  if (!loc)
 		spell_fizzled = 1;
@@ -10981,7 +10981,7 @@ void play_land_sound_effect_force_color(int player, int card, int colors){
 /* Recovered October 2022 implementations; see docs/recovery-progress.md. */
 
 void for_each_creature_damaged_by_me(int player, int card, event_t event, int flags,
-                                     void (*fn)(int, int, int, int), int arg1, int arg2)
+                                     void (*fn)(intptr_t, intptr_t, int, int), intptr_t arg1, intptr_t arg2)
 {
   card_instance_t *instance = get_card_instance(player, card);
   if (event == EVENT_DEAL_DAMAGE)
@@ -18500,16 +18500,16 @@ static int new_reanimate_all_impl(int player, int card, int targ_player,
     value = trc[player];
     if (0 < value)
     {
-      index = player * 2000;
+      index = 0;
       do
       {
-        instance = get_card_instance(player, *(int *)((int)auras[0] + index));
+        instance = get_card_instance(player, auras[player][index]);
         instance->state = instance->state & 0xffffffdf;
-        entry = (int *)((int)to_reanimate[0] + index);
-        index = index + 4;
+        entry = &to_reanimate[player][index];
+        ++index;
         reanimate_permanent_impl(player, card, player, *entry, action | REANIMATE_SPECIAL_R_ALL,
                                  COUNTER_invalid, (CardFunction)0x0, (ReanimationBeforeEtb)0x0);
-      } while ((value + player * 500) * 4 != index);
+      } while (index != value);
     }
   }
   if (-1 < titan_player)
@@ -18579,7 +18579,7 @@ static int shapeshift_target_effect(int player, int card, event_t event)
   mode = instance->targets[1].player;
   card_00 = instance->damage_target_card;
   target_player = (int)instance->damage_target_player;
-  func_ptr = (CardFunction)instance->targets[2].player;
+  func_ptr = (CardFunction)target_load_pointer(&instance->targets[2]);
   copies_token_characteristics = mode & 0x400000;
   if (event == EVENT_CHANGE_TYPE && card_00 == affected_card &&
       (result = instance->targets[1].card, affected_card_controller == target_player) && result != -1 &&
@@ -18600,7 +18600,7 @@ static int shapeshift_target_effect(int player, int card, event_t event)
         count_counters(target_player, card_00, mode >> 0x18))
       return 0;
   }
-  if (((mode & 2) != 0) && (func_ptr != (CardFunction)0xffffffff))
+  if (((mode & 2) != 0) && (func_ptr != (CardFunction)(intptr_t)-1))
   {
     create_targetted_legacy_activate((int)instance->damage_source_player,
                                      instance->damage_source_card, func_ptr, target_player, card_00);
@@ -23201,9 +23201,10 @@ int card_generic_animated_land(int player, int card, event_t event)
     special_abilities(player, card, event, instance->targets[8].card, player, card);
   }
   int result = 0;
-  if (instance->targets[6].card > -1)
+  /* Keep the native callback separate from the color in targets[6].player. */
+  CardFunction ptFunction = (CardFunction)target_load_pointer(&instance->targets[9]);
+  if (ptFunction && ptFunction != (CardFunction)(intptr_t)-1)
   {
-    int (*ptFunction)(int, int, event_t) = (void *)instance->targets[6].card;
     result = ptFunction(player, card, event);
   }
   return result;
@@ -23935,7 +23936,7 @@ int damage_cannot_be_prevented_until_eot(int player, int card)
 
 #ifndef SHANDALAR
 /* ManalinkEh 2022: 0x2696130; original functions/functions.c:16465. */
-int is_artifact_creature_by_internal_id(int iid, int unused1, int unused2, int unused3)
+int is_artifact_creature_by_internal_id(int iid, intptr_t unused1, int unused2, int unused3)
 {
   return is_what(-1, iid, TYPE_CREATURE) && is_what(-1, iid, TYPE_ARTIFACT) ? 1 : 0;
 }
@@ -25470,7 +25471,7 @@ static void disable_legend_rule_impl(int t_player)
 /* SDL host helper retained during the 2022 migration. */
 int legacy_effect_custom(int player, int card, event_t event){
 	card_instance_t* instance = get_card_instance(player, card);
-	CardFunction handler = (CardFunction)(uintptr_t)(uint32_t)instance->info_slot;
+	CardFunction handler = instance->info_slot_fn;
 	return handler ? call_card_fn(handler, instance, player, card, event) : 0;
 }
 

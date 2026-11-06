@@ -18,7 +18,7 @@ static int anax_effect(int player, int card, event_t event);
 
 static int athreos_effect(int player, int card, event_t event);
 
-static int is_basic_land_by_internal_id(int iid, int unused, int unused1, int unused2);
+static int is_basic_land_by_internal_id(int iid, intptr_t unused, int unused1, int unused2);
 
 #ifndef SHANDALAR
 
@@ -3319,7 +3319,7 @@ static int sac_at_beginning_of_next_end_step(int player, int card, int t_player,
 #endif
 
 /* ManalinkEh 2022: 0x23596d0; original cards/theros_beyond_death.c:3154. */
-static int purphoros_test(int iid, int color, int player, int card)
+static int purphoros_test(int iid, intptr_t color, int player, int card)
 {
   unsigned int creature_color;
   unsigned int matches;
@@ -4014,7 +4014,7 @@ int card_the_binding_of_the_titans(int player, int card, event_t event)
 #endif
 
 /* ManalinkEh 2022: 0x2359730; original cards/theros_beyond_death.c:3921. */
-static int is_basic_land_by_internal_id(int iid, int unused, int unused1, int unused2)
+static int is_basic_land_by_internal_id(int iid, intptr_t unused, int unused1, int unused2)
 {
   int result;
 

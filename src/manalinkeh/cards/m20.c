@@ -478,7 +478,7 @@ static int can_cast_caf(int player, int card)
 
 #ifndef SHANDALAR
 /* ManalinkEh 2022: 0x2394370; original cards/m20.c:591. */
-static int can_cast_this(int iid, int unused, int player, int card)
+static int can_cast_this(int iid, intptr_t unused, int player, int card)
 {
   int result;
 
@@ -1239,7 +1239,7 @@ int card_kaalia_zenith_seeker(int player, int card, event_t event)
         if (has_subtype_by_id(
                 player,
                 (unsigned int)
-                    cards_data[*(int *)((int)deck_ptr[player] + deck_byte_offset_or_selected)]
+                    cards_data[deck_ptr[player][deck_byte_offset_or_selected / sizeof(int)]]
                         .id,
                 SUBTYPE_ANGEL) != 0)
         {
@@ -1248,7 +1248,7 @@ int card_kaalia_zenith_seeker(int player, int card, event_t event)
         if (has_subtype_by_id(
                 player,
                 (unsigned int)
-                    cards_data[*(int *)((int)deck_ptr[player] + deck_byte_offset_or_selected)]
+                    cards_data[deck_ptr[player][deck_byte_offset_or_selected / sizeof(int)]]
                         .id,
                 SUBTYPE_DEMON) != 0)
         {
@@ -1257,7 +1257,7 @@ int card_kaalia_zenith_seeker(int player, int card, event_t event)
         if (has_subtype_by_id(
                 player,
                 (unsigned int)
-                    cards_data[*(int *)((int)deck_ptr[player] + deck_byte_offset_or_selected)]
+                    cards_data[deck_ptr[player][deck_byte_offset_or_selected / sizeof(int)]]
                         .id,
                 SUBTYPE_DRAGON) != 0)
         {

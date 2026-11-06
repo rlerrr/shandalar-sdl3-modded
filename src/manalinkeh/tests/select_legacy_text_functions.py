@@ -3,7 +3,7 @@ import re
 import sys
 from pathlib import Path
 
-source, output = map(Path, sys.argv[1:])
+source, functions_source, output = map(Path, sys.argv[1:])
 text = source.read_text(encoding="utf-8")
 definitions = []
 for name in ("legacy_name_or_text", "legacy_name", "effect_card_text_replace_pipe_n"):
@@ -17,5 +17,16 @@ for name in ("legacy_name_or_text", "legacy_name", "effect_card_text_replace_pip
     if end is None:
         raise ValueError(f"Missing closing brace of {name}")
     definitions.append(text[start:starts[0].end() + end.end()])
+# Include the actual dispatcher so native x64 exercises the stored callback.
+for path, name in ((functions_source, "legacy_effect_custom"),
+                   (functions_source.with_name("global_checking.c"), "test_not_in_array")):
+    functions_text = path.read_text(encoding="utf-8")
+    start = re.search(rf"(?m)^int {name}\([^;]*?\)\s*\{{", functions_text)
+    if start is None:
+        raise ValueError(f"Missing {name}")
+    end = re.search(r"(?m)^}", functions_text[start.end():])
+    if end is None:
+        raise ValueError(f"Missing end of {name}")
+    definitions.append(functions_text[start.start():start.end() + end.end()])
 output.parent.mkdir(parents=True, exist_ok=True)
 output.write_text('#include "manalink.h"\n' + "\n".join(definitions), encoding="utf-8")

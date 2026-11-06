@@ -1854,7 +1854,7 @@ int card_pulsemage_advocate(int player, int card, event_t event){
 	return 0;
 }
 
-static int has_flashback_by_internal_id(int iid, int unused1, int unused2, int unsed3){
+static int has_flashback_by_internal_id(int iid, intptr_t unused1, int unused2, int unsed3){
 	// Approximation, until we find a better method
 	return is_what(-1, iid, TYPE_SPELL) && !is_what(-1, iid, TYPE_PERMANENT) && cards_data[iid].cc[2] == 9 ? 1 : 0;
 }

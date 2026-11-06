@@ -37,7 +37,7 @@ static int exiledby_legacymatches(card_instance_t* instance, int player, int car
  * mode, testarg: Action and constraints per exiledby_choose_mode_t, documented in manalink.h.
  * cardtype_txt: Descriptor of cards exiled (e.g. "creature"), or NULL if arbitrary cards.
  * faceup: Whether the cards are exiled face-up (and thus should exist in rfg_ptr[][]) or face-down (and thus should not yet). */
-int exiledby_choose(int player, int card, int csvid, exiledby_choose_mode_t mode, int testarg,
+intptr_t exiledby_choose(int player, int card, int csvid, exiledby_choose_mode_t mode, int testarg,
                     const char *cardtype_txt, int faceup)
 {
   int iids[1000];
@@ -125,7 +125,7 @@ int exiledby_choose(int player, int card, int csvid, exiledby_choose_mode_t mode
                 continue;
 
               if (mode == EXBY_FIRST_FOUND)
-                return (int)loc;
+                return (intptr_t)loc;
 
               if (mode == EXBY_CAN_CAST)
               {
@@ -171,7 +171,7 @@ int exiledby_choose(int player, int card, int csvid, exiledby_choose_mode_t mode
     if (ai_choice == -1)
       return 0;
     else
-      return (int)(locs[ai_choice]);
+      return (intptr_t)(locs[ai_choice]);
   }
 
   char buf[200];
@@ -194,7 +194,7 @@ int exiledby_choose(int player, int card, int csvid, exiledby_choose_mode_t mode
   }
   else
   {
-    return (int)(locs[selected]);
+    return (intptr_t)(locs[selected]);
   }
 }
 

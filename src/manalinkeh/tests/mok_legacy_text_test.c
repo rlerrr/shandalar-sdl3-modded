@@ -43,6 +43,27 @@ static int callback(int player, int card, event_t event)
   return 0;
 }
 
+static int dispatch_callback(int player, int card, event_t event)
+{
+  check(player == 1 && card == 4, "Legacy dispatch must preserve player and card");
+  last_event = event;
+  return 23;
+}
+
+card_instance_t *get_card_instance(int player, int card)
+{
+  check(player == 1 && card == 4, "Legacy dispatch must use the requested instance");
+  return &instance;
+}
+
+int call_card_fn(CardFunction handler, card_instance_t *actual_instance,
+                 int player, int card, event_t event)
+{
+  check(actual_instance == &instance, "Legacy dispatch must preserve its instance");
+  check(handler == dispatch_callback, "Legacy dispatch truncated the callback address");
+  return handler == dispatch_callback ? handler(player, card, event) : -1;
+}
+
 int main(void)
 {
   char title[52];
@@ -80,5 +101,33 @@ int main(void)
   effect_card_text_replace_pipe_n(modifiers, 0, -3);
   check(strcmp(modifiers, "Modifier -0/-3") == 0,
         "Negative modifiers must preserve the signed zero for power");
+  instance.info_slot = (intptr_t)dispatch_callback;
+  if (sizeof(void *) > 4)
+    check((uintptr_t)dispatch_callback > UINT32_MAX,
+          "The x64 regression must exercise a callback above the 32-bit address range");
+  last_event = 0;
+  check(legacy_effect_custom(1, 4, EVENT_STATIC_EFFECTS) == 23 &&
+        last_event == EVENT_STATIC_EFFECTS,
+        "Custom legacy effects must call the complete stored address and return its result");
+  instance.targets[1].player = 91;
+  instance.targets[3].card = 73;
+  target_store_pointer(&instance.targets[2], (intptr_t)dispatch_callback);
+  check(target_load_pointer(&instance.targets[2]) == (intptr_t)dispatch_callback &&
+        instance.targets[1].player == 91 && instance.targets[3].card == 73,
+        "Native metadata pointers must preserve every address bit and neighboring targets");
+  target_store_pointer(&instance.targets[2], -1);
+  check(target_load_pointer(&instance.targets[2]) == -1,
+        "Native metadata pointers must retain the empty sentinel");
+  instance.info_slot = 0;
+  last_event = 0;
+  check(legacy_effect_custom(1, 4, EVENT_STATIC_EFFECTS) == 0 && last_event == 0,
+        "An empty legacy effect callback must remain a no-op");
+  int excluded[] = {11, 22, 33, 44};
+  test_definition_t test = {0};
+  test.special_selection_function = test_not_in_array;
+  test.value_for_special_selection_function = (intptr_t)excluded;
+  check(!test.special_selection_function(33, test.value_for_special_selection_function, 0, -1) &&
+        test.special_selection_function(55, test.value_for_special_selection_function, 0, -1),
+        "Search predicates must preserve a native stack pointer through their context field");
   return failures ? 1 : 0;
 }

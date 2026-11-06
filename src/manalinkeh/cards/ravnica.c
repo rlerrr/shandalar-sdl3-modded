@@ -6312,7 +6312,7 @@ Legendary Creature - Gorgon 7/5
 					}
 					case CHOICE_RETURN_C:
 					{
-						int rval = exiledby_choose(player, card, CARD_ID_SISTERS_OF_STONE_DEATH, EXBY_CHOOSE, 0, "creature", 1);
+						intptr_t rval = exiledby_choose(player, card, CARD_ID_SISTERS_OF_STONE_DEATH, EXBY_CHOOSE, 0, "creature", 1);
 						int* loc = (int*)rval;
 						if (!loc)
 						  spell_fizzled = 1;
@@ -7023,7 +7023,7 @@ int card_thoughtpicker_witch(int player, int card, event_t event){
 	return generic_activated_ability(player, card, event, GAA_SACRIFICE_CREATURE | GAA_CAN_TARGET, MANACOST_X(1), 0, &td, "TARGET_PLAYER");
 }
 
-static int test_not_in_array3(int iid, int arrptr, int player, int card)
+static int test_not_in_array3(int iid, intptr_t arrptr, int player, int card)
 {
   int* arr = (int*)arrptr;
   return iid != arr[0] && iid != arr[1] && iid != arr[2];
@@ -7042,7 +7042,7 @@ int card_three_dreams(int player, int card, event_t event){
 		default_test_definition(&test, TYPE_ENCHANTMENT);
 		test.subtype = SUBTYPE_AURA;
 		test.no_shuffle = 1;
-		test.value_for_special_selection_function = (int)chosen;
+		test.value_for_special_selection_function = (intptr_t)chosen;
 		test.special_selection_function = test_not_in_array3;
 		test.storage = card;
 		for (int i = 0; i < 3; ++i){

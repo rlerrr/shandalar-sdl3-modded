@@ -4186,7 +4186,7 @@ int card_whitemane_lion(int player, int card, event_t event){
 	return flash(player, card, event);
 }
 
-static int has_the_same_pt_sum(int iid, int loword_sum_hiword_player, int unused1, int unused2){
+static int has_the_same_pt_sum(int iid, intptr_t loword_sum_hiword_player, int unused1, int unused2){
 	int player = SHIWORD(loword_sum_hiword_player);
 	return get_base_power_iid(player, iid) + get_base_toughness_iid(player, iid) == SLOWORD(loword_sum_hiword_player);
 }

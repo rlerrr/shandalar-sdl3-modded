@@ -21,7 +21,7 @@ static void add_hofry_legacy(token_generation_t *token, int card_added, int numb
 int rushed_rebirth_legacy(int player, int card, event_t event);
 static int hofri_legacy(int player, int card, event_t event);
 
-static int is_basic_forest_or_island(int iid, int unused2, int player, int card);
+static int is_basic_forest_or_island(int iid, intptr_t unused2, int player, int card);
 
 #ifndef SHANDALAR
 
@@ -1346,7 +1346,7 @@ int card_confront_the_past(int player, int card, event_t event)
             return 1;
           }
         }
-        value = *(int *)((int)graveyard_ptr_mutable[player] + offset_or_shroud);
+        value = graveyard_ptr_mutable[player][offset_or_shroud / sizeof(int)];
         offset_or_shroud = offset_or_shroud + 4;
       } while (value != -1);
     }
@@ -2636,7 +2636,7 @@ int card_ecological_appreciation(int player, int card, event_t event)
       default_test_definition(&this_test, 2);
       this_test.cmc = i + 1;
       this_test.no_shuffle = 1;
-      this_test.value_for_special_selection_function = (int)chosen;
+      this_test.value_for_special_selection_function = (intptr_t)chosen;
       this_test.cmc_flag = 3;
       this_test.special_selection_function = test_not_in_array;
       chosen[0] = -1;
@@ -7429,7 +7429,7 @@ int card_quandrix_command(int player, int card, event_t event)
 #endif
 
 /* ManalinkEh 2022: 0x23c7c00; original cards/strixhaven.c:5659. */
-static int is_basic_forest_or_island(int iid, int unused2, int player, int card)
+static int is_basic_forest_or_island(int iid, intptr_t unused2, int player, int card)
 {
   subtype_t subtype;
   subtype_t subtype_00;

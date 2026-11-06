@@ -3829,7 +3829,7 @@ When you do, copy it and you may choose a new target for the copy.) */
 	return generic_spell(player, card, event, GS_GRAVE_RECYCLER_BOTH_GRAVES, NULL, NULL, 1, &this_test);
 }
 
-static int test_exclude_this_creature(int iid, int val, int player, int card)
+static int test_exclude_this_creature(int iid, intptr_t val, int player, int card)
 {
   return !(card == LOWORD(val) && player == HIWORD(val));
 }

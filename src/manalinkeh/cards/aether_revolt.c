@@ -6546,7 +6546,7 @@ int card_srams_expertise(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x20ba870; original cards/aether_revolt.c:5114. */
-static int is_aura_equipment_or_vehicle(int iid, int unused, int player, int card)
+static int is_aura_equipment_or_vehicle(int iid, intptr_t unused, int player, int card)
 {
   int result;
 

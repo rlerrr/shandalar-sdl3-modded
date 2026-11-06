@@ -11,7 +11,7 @@ Watermark watermarks[256];	// Up to 255 may be defined, plus one as a sentinel
 void
 blt_expansion_symbol(HDC hdc, const RECT* dest_rect, EXPANSION_t expansion, rarity_t rarity, int smallcard)
 {
-#define EXPANSIONS_WIDE	7	// Number of expansions wide (times four rarities)
+#define EXPANSIONS_WIDE	8	// Number of expansions wide (times four rarities)
 #define EXPANSIONS_TALL	25	// Number of expansions tall
 
   if (!hdc || !dest_rect || !pics[EXPANSION_SYMBOLS])
@@ -1748,7 +1748,7 @@ draw_card_back_no_crit(HDC hdc, const RECT* dest_rect)
 int
 DrawCardBack(HDC hdc, const RECT* dest_rect,
 			 // An appalling hack to use this as an interface for other functions, but still safer than adding new imports.
-			 unsigned int mode, int arg1, int arg2, int arg3, int arg4)
+			 unsigned int mode, intptr_t arg1, intptr_t arg2, int arg3, int arg4)
 {
   int rval;
 
@@ -1757,7 +1757,7 @@ DrawCardBack(HDC hdc, const RECT* dest_rect,
 
   EnterCriticalSection(critical_section_for_drawing);
 
-  if ((int)hdc == -1 && (int)dest_rect == -1 && (mode & 0xFFFFFF00) == 0x7D260A00)
+  if ((intptr_t)hdc == -1 && (intptr_t)dest_rect == -1 && (mode & 0xFFFFFF00) == 0x7D260A00)
 	{
 	  switch (mode & 0xFF)
 		{
