@@ -596,7 +596,7 @@ opening_menu:
     if (deck[loop_index] != -1)
     {
       g_deck_total_card_count = g_deck_total_card_count + 1;
-      if ((deck[loop_index] & 0x4000) == 0)
+      if ((deck[loop_index] & ADVENTURE_DECK_AVAILABLE) == 0)
       {
         g_deck_active_card_count = g_deck_active_card_count + 1;
       }

@@ -304,6 +304,12 @@ if(SHANDALAR_BUILD_TESTS)
   set_property(TARGET mok_legacy_effect_test PROPERTY EXCLUDE_FROM_ALL FALSE)
 endif()
 
+add_executable(adventure_deck_test EXCLUDE_FROM_ALL tests/adventure_deck_test.c)
+target_include_directories(adventure_deck_test PRIVATE "${SHANDALAR_SRC_ROOT}")
+if(SHANDALAR_BUILD_TESTS AND NOT EMSCRIPTEN)
+  add_test(NAME adventure_deck_test COMMAND adventure_deck_test)
+endif()
+
 if(SHANDALAR_BUILD_TESTS AND WIN32)
   add_executable(card_pool_test tests/card_pool_test.c src/card_pool.c)
   target_include_directories(card_pool_test PRIVATE "${SHANDALAR_SRC_ROOT}")

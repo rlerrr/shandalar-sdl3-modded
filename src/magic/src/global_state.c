@@ -46,14 +46,7 @@ char *s_duel_options_registry_path_00588100 = "Software\\MicroProse\\Magic: The 
 // FUNCTION: SHANDALAR 0x00557b9b
 void SetCardInDeck(int deck_index, int enabled)
 {
-  if (enabled == 1)
-  {
-    deck[deck_index] = deck[deck_index] | 0x4000;
-  }
-  else
-  {
-    deck[deck_index] = deck[deck_index] & 0x8fff;
-  }
+  deck[deck_index] = adventure_deck_set_available(deck[deck_index], enabled, _currentDeck);
 }
 
 // FUNCTION: MAGIC 0x004ed13a
@@ -521,7 +514,7 @@ unsigned int save_or_load_ver1(void)
   result &= save_or_load_data(&g_hand_count_adjustment, 4);
   result &= save_or_load_data(&g_encounter_opening_hand_size_modifier, 4);
   result &= save_or_load_data(&g_duel_state_00742fc0, 4);
-  result &= save_or_load_data(&deck, 2000);
+  result &= save_or_load_data(deck, sizeof(deck));
   result &= save_or_load_data(global_card_instances, 0x161e8);
   result &= save_or_load_data(g_damage_accumulators, 0x25c0);
   result &= save_or_load_data(global_graveyard_slots, 4000);
@@ -725,7 +718,7 @@ unsigned int save_or_load_ver2(void)
   result &= save_or_load_data(&g_hand_count_adjustment, 4);
   result &= save_or_load_data(&g_encounter_opening_hand_size_modifier, 4);
   result &= save_or_load_data(&g_duel_state_00742fc0, 4);
-  result &= save_or_load_data(&deck, 2000);
+  result &= save_or_load_data(deck, sizeof(deck));
   result &= save_or_load_data(global_card_instances, 0x161e8);
   result &= save_or_load_data(g_damage_accumulators, 0x25c0);
   result &= save_or_load_data(global_graveyard_slots, 4000);

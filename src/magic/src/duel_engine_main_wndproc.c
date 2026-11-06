@@ -2541,9 +2541,9 @@ int get_primary_color_from_duel_deck(int player)
   {
     for (card_index = 0; card_index < 500; card_index++)
     {
-      if ((deck[card_index] != -1) && ((deck[card_index] & 0xc000) == 0))
+      if ((deck[card_index] != -1) && ((deck[card_index] & (ADVENTURE_DECK_AVAILABLE | ADVENTURE_DECK_SELECTED)) == 0))
       {
-        internal_card_id = deck[card_index] & ADVENTURE_DECK_CARD_ID_MASK;
+        internal_card_id = adventure_deck_card_id(deck[card_index]);
         color = global_cards_data[internal_card_id].color;
         card_count = 1;
         if ((color & COLOR_TEST_BLACK) != 0)

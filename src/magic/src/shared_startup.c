@@ -176,7 +176,7 @@ int CardIDFromInternalIndex(unsigned int type)
   return global_cards_data[type].id;
 }
 
-/* Adventure deck words pack flags into bits 14 and 15. Duel indices are
+/* Adventure deck words encode card IDs separately from their flags. Duel indices are
  * unencoded and must use CardIDFromInternalIndex, including activation effects. */
 int CardIDFromType(unsigned int type)
 {
@@ -184,7 +184,7 @@ int CardIDFromType(unsigned int type)
   {
     return -1;
   }
-  return CardIDFromInternalIndex(type & ADVENTURE_DECK_CARD_ID_MASK);
+  return CardIDFromInternalIndex(adventure_deck_card_id((int)type));
 }
 
 // FUNCTION: MAGIC 0x004a5929
@@ -201,7 +201,7 @@ int CardInDeck(int deck_entry)
   }
   else
   {
-    return deck_entry & 0x4000;
+    return deck_entry & ADVENTURE_DECK_AVAILABLE;
   }
 }
 

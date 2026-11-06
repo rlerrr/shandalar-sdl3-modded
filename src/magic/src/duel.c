@@ -1701,7 +1701,7 @@ int AddCardToDeckSorted(int card_id)
   int entry_index;
   int candidate_sort_key;
 
-  if (card_id < 0 || card_id > ADVENTURE_DECK_CARD_ID_MASK || card_id >= g_card_count)
+  if (card_id < 0 || card_id > ADVENTURE_DECK_MAX_CARD_ID || card_id >= g_card_count)
     return -1;
 
   if (GetCardRarity(card_id) >= 3)
@@ -1729,18 +1729,18 @@ int AddCardToDeckSorted(int card_id)
       continue;
     }
 
-    inner_index = (unsigned int)deck[location_block_start_index] & ADVENTURE_DECK_CARD_ID_MASK;
+    inner_index = adventure_deck_card_id(deck[location_block_start_index]);
     candidate_sort_key = single_color_test_bit_to_color_t(global_cards_data[inner_index].color) * 0x20 + (int)global_cards_data[inner_index].name[0] +
                          (unsigned int)global_cards_data[inner_index].type * 0x100;
     if (candidate_sort_key >= entry_index)
     {
-      deck[location_block_start_index + 1] = card_id;
+      deck[location_block_start_index + 1] = adventure_deck_set_available(adventure_deck_entry(card_id), 0, _currentDeck);
       card_id = (unsigned int)-1;
       return location_block_start_index + 1;
     }
     deck[location_block_start_index + 1] = (unsigned int)deck[location_block_start_index];
   }
-  deck[0] = card_id;
+  deck[0] = adventure_deck_set_available(adventure_deck_entry(card_id), 0, _currentDeck);
   return 0;
 }
 
@@ -1801,7 +1801,7 @@ int draw_random_unmarked_deck_card(void)
   candidate_count = 0;
   for (deck_index = 0; deck_index < 500; deck_index++)
   {
-    if ((deck[deck_index] != -1) && ((deck[deck_index] & 0xc000) == 0))
+    if ((deck[deck_index] != -1) && ((deck[deck_index] & (ADVENTURE_DECK_AVAILABLE | ADVENTURE_DECK_SELECTED)) == 0))
     {
       candidate_indexes[candidate_count] = deck_index;
       candidate_count++;
@@ -1813,7 +1813,7 @@ int draw_random_unmarked_deck_card(void)
   }
   random_index = internal_rand(candidate_count);
   deck[candidate_indexes[random_index]] |= 0x8000;
-  return deck[candidate_indexes[random_index]] & ADVENTURE_DECK_CARD_ID_MASK;
+  return adventure_deck_card_id(deck[candidate_indexes[random_index]]);
 }
 
 // FUNCTION: MAGIC 0x00464700
@@ -2182,7 +2182,7 @@ int play_duel(int player, int creature_type)
     g_restore_deck_after_duel = 0;
     for (card_index = 0; card_index < 500; card_index = card_index + 1)
     {
-      if (deck[card_index] != -1 && (deck[card_index] & 0x4000) == 0)
+      if (deck[card_index] != -1 && (deck[card_index] & ADVENTURE_DECK_AVAILABLE) == 0)
       {
         shandalar_deck_minimums[4]++;
       }
@@ -2213,8 +2213,8 @@ int play_duel(int player, int creature_type)
     {
       for (card_index = 0; card_index < 500; card_index = card_index + 1)
       {
-        if ((deck[card_index] & 0x4000) == 0 &&
-            (deck[card_index] & ADVENTURE_DECK_CARD_ID_MASK) == global_ante_cards[0][town_index])
+        if ((deck[card_index] & ADVENTURE_DECK_AVAILABLE) == 0 &&
+            (adventure_deck_card_id(deck[card_index])) == global_ante_cards[0][town_index])
         {
           deck[card_index] |= 0x8000;
           break;
@@ -2274,7 +2274,7 @@ int play_duel(int player, int creature_type)
       }
       for (card_index = 0; card_index < 500; card_index = card_index + 1)
       {
-        if ((deck[card_index] & ADVENTURE_DECK_CARD_ID_MASK) == global_ante_cards[0][0])
+        if ((adventure_deck_card_id(deck[card_index])) == global_ante_cards[0][0])
         {
           deck[card_index] |= 0x8000;
           break;

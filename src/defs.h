@@ -4,9 +4,33 @@
 /* CSV IDs in the modded card database are signed 16-bit values. */
 #define SHANDALAR_CARD_DATABASE_CAPACITY 32768
 
-/* Adventure deck flags start at bit 14 (market) and bit 15 (selection).
- * Original campaign cards can have Manalink internal IDs above 4095. */
-#define ADVENTURE_DECK_CARD_ID_MASK 0x3fff
+/* Manalink/Shandalar.dll collection layout: IID bits 0..14, temporary
+ * selection bit 15, three deck membership bits 16..18, available bit 19.
+ * Available means in the collection but outside the currently selected deck. */
+#define ADVENTURE_DECK_MAX_CARD_ID 0x7fff
+#define ADVENTURE_DECK_CARD_BITS 0x7fff
+#define ADVENTURE_DECK_FLAG_BITS 0xf8000
+#define ADVENTURE_DECK_AVAILABLE 0x80000
+#define ADVENTURE_DECK_SELECTED 0x8000
+#define ADVENTURE_DECK_MEMBERSHIP 0x70000
+
+static inline int adventure_deck_card_id(int entry)
+{
+  return entry == -1 ? -1 : entry & ADVENTURE_DECK_CARD_BITS;
+}
+
+static inline int adventure_deck_entry(int iid)
+{
+  return iid < 0 || iid > ADVENTURE_DECK_MAX_CARD_ID ? -1 : iid;
+}
+
+static inline int adventure_deck_set_available(int entry, int available, int deck_index)
+{
+  int member = 1 << (16 + (deck_index >= 0 && deck_index < 3 ? deck_index : 0));
+  if (entry == -1) return -1;
+  return available ? (entry | ADVENTURE_DECK_AVAILABLE) & ~member :
+                     (entry & ~ADVENTURE_DECK_AVAILABLE) | member;
+}
 
 // Shared engine types, constants, and header-only compatibility helpers.
 

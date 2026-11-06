@@ -1,10 +1,12 @@
 #include "card_pool.h"
 #include "defs.h"
+#include "deckdll/src/card_db.h"
 #include "magic/src/carddata_generated.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 extern card_data_t global_cards_data[];
+int card_dummy(int, int, event_t);
 extern card_ptr_t global_raw_cards_storage[];
 extern int global_available_slots;
 
@@ -35,14 +37,16 @@ void shandalar_card_pool_initialize(const char *directory)
     if (csvid >= 0 && csvid < global_available_slots) {
       card_ptr_t *raw = &global_raw_cards_storage[csvid];
       cards[iid].name = raw->full_name;
-      /* Savegame card words reserve the upper bits for ownership/UI flags.
-       * Never truncate a large internal ID into a different card. */
-      cards[iid].eligible = iid <= ADVENTURE_DECK_CARD_ID_MASK &&
-          /* card_dummy is also the legitimate handler for vanilla creatures;
-           * type metadata distinguishes those from nonplayable placeholder rows. */
+      /* Bindings identify implementations; Cards.dat's coded bitmap also
+       * distinguishes legitimate vanilla cards from unimplemented dummy rows. */
+      cards[iid].eligible = iid <= ADVENTURE_DECK_MAX_CARD_ID &&
           global_cards_data[iid].code_pointer && (global_cards_data[iid].type & 0x7f) &&
+          (global_cards_data[iid].code_pointer != card_dummy || CardDatabaseCardWasCoded(csvid)) &&
           raw->card_type > CP_TYPE_NONE && raw->card_type != CP_TYPE_TOKEN &&
-          raw->card_type <= CP_TYPE_PLANESWALKER && !(raw->flags & CPF_IS_TRANSFORMED_DFC);
+          raw->card_type <= CP_TYPE_PLANESWALKER &&
+          /* Modern Cards.dat marks back faces with expansion 0x1000. Its flags
+           * field contains format legality, including banned-in-Vintage bit 2. */
+          raw->expansion != 0x1000 && global_cards_data[iid].cc[2] != 3;
       cards[iid].basic_land = iid < 5;
     }
   }

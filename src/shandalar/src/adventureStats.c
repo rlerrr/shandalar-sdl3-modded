@@ -1686,10 +1686,10 @@ void AnalyzeDeckAndMaybeShowReport(int show_ui)
   }
   for (deck_index = 0; deck_index < 500; deck_index = deck_index + 1)
   {
-    if ((deck[deck_index] & 0x4000) == 0)
+    if ((deck[deck_index] & ADVENTURE_DECK_AVAILABLE) == 0)
     {
       g_deck_analysis_card_count = g_deck_analysis_card_count + 1;
-      card_id_masked = deck[deck_index] & ADVENTURE_DECK_CARD_ID_MASK;
+      card_id_masked = adventure_deck_card_id(deck[deck_index]);
       color_index = (int)global_cards_data[card_id_masked].color;
       if (global_cards_data[card_id_masked].rarity == '\x03')
       {

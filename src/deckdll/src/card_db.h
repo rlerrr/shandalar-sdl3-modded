@@ -38,5 +38,6 @@ extern card_ptr_t global_raw_cards_storage[];
 
 void FreeRaritiesCsvRaw(void);
 int read_db_guts(char *cards_dat_filename);
+int CardDatabaseCardWasCoded(int csvid);
 int ReadLegacyCsv(const char *filename);
 int ReadDeckbuilderCsv(const char *filename, OrigRarities *orig_rarities);

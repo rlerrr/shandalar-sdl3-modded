@@ -433,7 +433,7 @@ int FindDeckSlotForQuestColorAndType(unsigned char quest_color, int quest_bitmap
   {
     if (deck[deck_slot_index] != -1)
     {
-      card_id = deck[deck_slot_index] & ADVENTURE_DECK_CARD_ID_MASK;
+      card_id = adventure_deck_card_id(deck[deck_slot_index]);
       if (((1 << quest_color) & (int)(char)global_cards_data[card_id].color) != 0)
       {
         if ((quest_bitmap_mask & (unsigned char)global_cards_data[card_id].type) != 0)

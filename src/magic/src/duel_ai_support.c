@@ -108,7 +108,7 @@ int DrawRandomCardFromInitialLibrary(int library_index)
 
   for (i = 0; i < g_card_count; ++i)
   {
-    if ((int)global_cards_data[i].id == chosen_csvid)
+    if ((int)global_cards_data[i].id == chosen_csvid && global_cards_data[i].code_pointer)
     {
       return i;
     }

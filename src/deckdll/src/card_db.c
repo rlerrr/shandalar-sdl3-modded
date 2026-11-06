@@ -194,6 +194,15 @@ static int convert_card_disk_record(card_ptr_t *dst, const card_disk_record_t *s
 // GLOBAL: SHANDALAR 0x008c8250
 int global_available_slots;
 
+static unsigned char database_coded_cards[SHANDALAR_CARD_DATABASE_CAPACITY / 8];
+
+int CardDatabaseCardWasCoded(int csvid)
+{
+  return csvid >= 0 && csvid < global_available_slots &&
+      (database_coded_cards[csvid / 8] & (1u << (csvid % 8))) != 0;
+}
+
+
 // GLOBAL: DECKDLL 0x10147220
 // GLOBAL: MAGIC 0x008d0350
 // GLOBAL: SHANDALAR 0x008e44a0
@@ -235,6 +244,8 @@ int read_db_guts(char *cards_dat_filename)
   int card_idx; /* ebp - 0x10 */
   SDL_IOStream *cards_dat;
 
+  uint32_t coded_size = 0;
+  memset(database_coded_cards, 0, sizeof(database_coded_cards));
   cards_dat = shandalar_open_file_io(cards_dat_filename, "rb");
   if (cards_dat == NULL)
     return 0;
@@ -260,7 +271,11 @@ int read_db_guts(char *cards_dat_filename)
 
   if (shandalar_io_read(disk_records, sizeof(*disk_records), (size_t)global_available_slots, cards_dat) !=
           (size_t)global_available_slots ||
-      shandalar_io_read(global_base_txt, 1, text_size, cards_dat) != text_size)
+      shandalar_io_read(global_base_txt, 1, text_size, cards_dat) != text_size ||
+      shandalar_io_read(&coded_size, sizeof(coded_size), 1, cards_dat) != 1 ||
+      coded_size > sizeof(database_coded_cards) ||
+      coded_size > ((unsigned int)global_available_slots + 7) / 8 ||
+      shandalar_io_read(database_coded_cards, 1, coded_size, cards_dat) != coded_size)
   {
     free(disk_records);
     free(global_base_txt);

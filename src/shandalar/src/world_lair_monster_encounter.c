@@ -599,7 +599,7 @@ void RunRandomCreatureAnteDuel(int creature_tier, int ante_card_count)
         creature_type = AddCardToDeckSorted(ante_card_ids[loop_index]);
         if (creature_type != -1)
         {
-          deck[creature_type] = deck[creature_type] | 0x4000;
+          deck[creature_type] = adventure_deck_set_available(deck[creature_type], 1, _currentDeck);
         }
       }
       g_page0_window_bounds->font_slot = 4;
@@ -1018,8 +1018,8 @@ void RunLairExplorationEvent(int color)
     {
       card_or_deck_index = internal_rand(500);
     } while (deck[card_or_deck_index] == -1);
-  } while ((GetCardRarity(deck[card_or_deck_index] & ADVENTURE_DECK_CARD_ID_MASK) <= 1) ||
-           (GetCardAvailabilityMask(deck[card_or_deck_index] & ADVENTURE_DECK_CARD_ID_MASK) == 0));
+  } while ((GetCardRarity(adventure_deck_card_id(deck[card_or_deck_index])) <= 1) ||
+           (GetCardAvailabilityMask(adventure_deck_card_id(deck[card_or_deck_index])) == 0));
 
   reward_card = reward_cards[3];
   EnsureAdvfac64Loaded(1);
@@ -1229,7 +1229,7 @@ retry:
       break;
     case 0x11:
       sprintf(g_ui_message_buffer, gs_lair_0077e180[0xf],
-              global_cards_data[deck[card_or_deck_index] & ADVENTURE_DECK_CARD_ID_MASK].name);
+              global_cards_data[adventure_deck_card_id(deck[card_or_deck_index])].name);
       strcat(g_ui_message_buffer, gs_lair_0077e180[0x10]);
       if (RunTextMenuAt(g_ui_message_buffer, 100, 100) == 1)
       {
@@ -1308,7 +1308,7 @@ end:
     card_or_deck_index = AddCardToDeckSorted(reward_card);
     if (card_or_deck_index != -1)
     {
-      deck[card_or_deck_index] = deck[card_or_deck_index] | 0x4000;
+      deck[card_or_deck_index] = adventure_deck_set_available(deck[card_or_deck_index], 1, _currentDeck);
     }
     WaitForInputEventUnlessBlocked();
   }
@@ -1595,9 +1595,9 @@ int RunWorldLairMonsterEncounter(int slot_index, int monster_color)
       {
         deck_or_card_index = internal_rand(500);
       } while (deck[deck_or_card_index] == -1);
-    } while (((deck[deck_or_card_index] & 0x4000) != 0) ||
-             (((int)deck[deck_or_card_index] & ADVENTURE_DECK_CARD_ID_MASK) <= 4));
-    global_ante_cards[0][loop_index] = deck[deck_or_card_index] & ADVENTURE_DECK_CARD_ID_MASK;
+    } while (((deck[deck_or_card_index] & ADVENTURE_DECK_AVAILABLE) != 0) ||
+             ((adventure_deck_card_id(deck[deck_or_card_index])) <= 4));
+    global_ante_cards[0][loop_index] = adventure_deck_card_id(deck[deck_or_card_index]);
   }
   font_slot = 2;
   preduel_background_paths[0] = "prdblk.pic";
@@ -1930,7 +1930,7 @@ int RunWorldLairMonsterEncounter(int slot_index, int monster_color)
           deck_or_card_index = AddCardToDeckSorted(global_library[1][selected_card_id]);
           if (deck_or_card_index != 0xffffffff)
           {
-            deck[deck_or_card_index] = deck[deck_or_card_index] | 0x4000;
+            deck[deck_or_card_index] = adventure_deck_set_available(deck[deck_or_card_index], 1, _currentDeck);
           }
         }
       }
@@ -2028,9 +2028,9 @@ int RunWorldLairMonsterEncounter(int slot_index, int monster_color)
         {
           deck_or_card_index = internal_rand(500);
         } while (deck[deck_or_card_index] == -1);
-      } while (((deck[deck_or_card_index] & 0x4000) != 0) ||
-               (((int)deck[deck_or_card_index] & ADVENTURE_DECK_CARD_ID_MASK) <= 4));
-      global_ante_cards[0][0] = deck[deck_or_card_index] & ADVENTURE_DECK_CARD_ID_MASK;
+      } while (((deck[deck_or_card_index] & ADVENTURE_DECK_AVAILABLE) != 0) ||
+               ((adventure_deck_card_id(deck[deck_or_card_index])) <= 4));
+      global_ante_cards[0][0] = adventure_deck_card_id(deck[deck_or_card_index]);
       world_magic_ante_used = 1;
       victory_count = 0;
       goto LAB_004f3a77;
@@ -2377,7 +2377,7 @@ LAB_4F4BB2:
             deck_or_card_index = AddCardToDeckSorted(reward_card_ids[slot_index]);
             if (deck_or_card_index != 0xffffffff)
             {
-              deck[deck_or_card_index] = deck[deck_or_card_index] | 0x4000;
+              deck[deck_or_card_index] = adventure_deck_set_available(deck[deck_or_card_index], 1, _currentDeck);
             }
           }
         }
@@ -2392,7 +2392,7 @@ LAB_4F4BB2:
           deck_or_card_index = AddCardToDeckSorted(reward_card_ids[slot_index]);
           if (deck_or_card_index != 0xffffffff)
           {
-            deck[deck_or_card_index] = deck[deck_or_card_index] | 0x4000;
+            deck[deck_or_card_index] = adventure_deck_set_available(deck[deck_or_card_index], 1, _currentDeck);
           }
         }
       }
@@ -2536,7 +2536,7 @@ LAB_4F4BB2:
         deck_or_card_index = AddCardToDeckSorted(g_next_duel_card_id);
         if (deck_or_card_index != 0xffffffff)
         {
-          deck[deck_or_card_index] = deck[deck_or_card_index] | 0x4000;
+          deck[deck_or_card_index] = adventure_deck_set_available(deck[deck_or_card_index], 1, _currentDeck);
         }
         sprintf(g_ui_message_buffer, gs_encounter_postduel_0077f050[0x13],
                 global_cards_data[g_next_duel_card_id].name);
@@ -2590,7 +2590,7 @@ LAB_4F4BB2:
         if (selected_card_id != 0xffffffff)
         {
           iVar8 = AddCardToDeckSorted(selected_card_id);
-          deck[iVar8] = deck[iVar8] | 0x4000;
+          deck[iVar8] = adventure_deck_set_available(deck[iVar8], 1, _currentDeck);
         }
         reward_flags = 0;
       }
@@ -2605,7 +2605,7 @@ LAB_4F4BB2:
           temp_deck[slot_index] = deck[slot_index];
           if (temp_deck[slot_index] != 0xffffffff)
           {
-            temp_deck[slot_index] = temp_deck[slot_index] & ADVENTURE_DECK_CARD_ID_MASK;
+            temp_deck[slot_index] = adventure_deck_card_id(temp_deck[slot_index]);
           }
         }
         selected_card_id = show_deck(g_active_player, (int *)temp_deck, 500,
@@ -2613,7 +2613,7 @@ LAB_4F4BB2:
         if (selected_card_id != 0xffffffff)
         {
           iVar7 = AddCardToDeckSorted(temp_deck[selected_card_id]);
-          deck[iVar7] = deck[iVar7] | 0x4000;
+          deck[iVar7] = adventure_deck_set_available(deck[iVar7], 1, _currentDeck);
         }
         reward_flags = 0;
       }

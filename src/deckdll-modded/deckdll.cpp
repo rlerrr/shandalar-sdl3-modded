@@ -5952,7 +5952,7 @@ copy_deck_to_edit(void)
 	}
 
       global_deck[i].GDE_csvid = csvid;
-      global_deck[i].GDE_iid = iid_t(global_external_deck[global_deck_num_entries] & 0x7FFF);
+      global_deck[i].GDE_iid = iid_t(adventure_deck_card_id(global_external_deck[global_deck_num_entries]));
       global_deck[i].GDE_Available = 1;
       global_deck[i].GDE_DecksBits = (global_external_deck[global_deck_num_entries] & 0x70000) >> 16;
       ++global_deck_num_entries;

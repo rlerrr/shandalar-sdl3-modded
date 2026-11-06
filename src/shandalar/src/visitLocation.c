@@ -1289,7 +1289,7 @@ redraw_buy_cards_screen:
       {
         Gold = Gold - g_town_shop_card_prices[idx];
         deck_slot = AddCardToDeckSorted((unsigned int)g_town_shop_card_ids[idx]);
-        deck[deck_slot] = deck[deck_slot] | 0x4000;
+        deck[deck_slot] = adventure_deck_set_available(deck[deck_slot], 1, _currentDeck);
         g_town_shop_card_ids[idx] = -1;
         g_town_shop_card_prices[idx] = 0;
 
@@ -1482,7 +1482,7 @@ int DeckContainsCsvid(int csvid)
 
   for (i = 0; i < 500; i++)
   {
-    if (global_cards_data[deck[i] & ADVENTURE_DECK_CARD_ID_MASK].id == csvid)
+    if (global_cards_data[adventure_deck_card_id(deck[i])].id == csvid)
     {
       return 1;
     }
@@ -1540,7 +1540,7 @@ int FindHintPairIndexForOfferCard(int card_internal_id)
         {
           for (deck_scan_index = 0; deck_scan_index < 500; deck_scan_index = deck_scan_index + 1)
           {
-            deck_card_internal_id = deck[deck_scan_index] & ADVENTURE_DECK_CARD_ID_MASK;
+            deck_card_internal_id = adventure_deck_card_id(deck[deck_scan_index]);
 
             if (((unsigned char)global_cards_data[deck_card_internal_id].type & 1) != 0)
             {
@@ -2357,7 +2357,7 @@ int ExitIfNoUsableDeckCards(void)
   usable_card_count = 0;
   for (deck_slot = 0; deck_slot < 500; deck_slot = deck_slot + 1)
   {
-    if ((deck[deck_slot] != -1) && ((deck[deck_slot] & 0x4000) == 0) && (4 < (deck[deck_slot] & ADVENTURE_DECK_CARD_ID_MASK)))
+    if ((deck[deck_slot] != -1) && ((deck[deck_slot] & ADVENTURE_DECK_AVAILABLE) == 0) && (4 < (adventure_deck_card_id(deck[deck_slot]))))
     {
       usable_card_count = usable_card_count + 1;
     }
@@ -2537,7 +2537,7 @@ int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library
             numcards = g_shandalar_difficulty;
           }
 
-          if (card_index != -1)
+          if (card_index != -1 && global_cards_data[card_index].code_pointer)
           {
             if (((unsigned char)global_cards_data[card_index].type & 1) != 0)
             {
@@ -2546,7 +2546,7 @@ int ParseDeckFileIntoInitialLibrary(char *deck_path, csvid_and_numcards *library
           }
           else
           {
-            /* Unimplemented CSV records are excluded from the engine table.
+            /* Unimplemented CSV records may be absent or retain a null binding.
              * Keep them out of the draw pool rather than producing an effect
              * card (or a gap that terminates the library prematurely). */
             library_entries[entry_index].numcards = 0;
@@ -2754,7 +2754,7 @@ void RemoveCardFromDeckById(unsigned int card_id)
 
   for (deck_slot = 0; deck_slot < 0x1f4; deck_slot = deck_slot + 1)
   {
-    if (((unsigned int)deck[deck_slot] & ADVENTURE_DECK_CARD_ID_MASK) == card_id)
+    if ((adventure_deck_card_id(deck[deck_slot])) == card_id)
     {
       RemoveDeckSlot(deck_slot);
       break;
@@ -3471,7 +3471,7 @@ LAB_00531ee7:
       deck_card_ids[deck_scan_index] = deck[deck_scan_index];
       if (deck_card_ids[deck_scan_index] != 0xffffffff)
       {
-        deck_card_ids[deck_scan_index] = deck_card_ids[deck_scan_index] & ADVENTURE_DECK_CARD_ID_MASK;
+        deck_card_ids[deck_scan_index] = adventure_deck_card_id(deck_card_ids[deck_scan_index]);
       }
     }
 
@@ -3479,7 +3479,7 @@ LAB_00531ee7:
     if ((selected_deck_index != -1) &&
         ((selected_deck_slot = AddCardToDeckSorted(deck_card_ids[selected_deck_index])) != -1))
     {
-      deck[selected_deck_slot] = deck[selected_deck_slot] | 0x4000;
+      deck[selected_deck_slot] = adventure_deck_set_available(deck[selected_deck_slot], 1, _currentDeck);
     }
     RefreshAdventureInterfaceLayout();
     return 0;
@@ -3880,7 +3880,7 @@ loop:
     owned_copies = 0;
     for (deck_slot = 0; deck_slot < 500; deck_slot = deck_slot + 1)
     {
-      if (((unsigned int)deck[deck_slot] & ADVENTURE_DECK_CARD_ID_MASK) == (unsigned int)card_index)
+      if ((adventure_deck_card_id(deck[deck_slot])) == (unsigned int)card_index)
       {
         owned_copies = owned_copies + 1;
       }
@@ -4268,7 +4268,7 @@ int BuyAnyCardFromTown(int payment_color, int town_index)
       random_color = AddCardToDeckSorted(card_id);
       if (random_color != -1)
       {
-        deck[random_color] = deck[random_color] | 0x4000;
+        deck[random_color] = adventure_deck_set_available(deck[random_color], 1, _currentDeck);
       }
     }
 
@@ -4344,10 +4344,10 @@ int VisitTownSlot(int town_index)
           found_deck_slot = duel_deck_seed % 500;
           duel_deck_seed = duel_deck_seed + 7;
         } while (deck[found_deck_slot] == -1);
-      } while ((deck[found_deck_slot] & 0x4000) != 0 || ((deck[found_deck_slot] & ADVENTURE_DECK_CARD_ID_MASK) <= 4));
+      } while ((deck[found_deck_slot] & ADVENTURE_DECK_AVAILABLE) != 0 || ((adventure_deck_card_id(deck[found_deck_slot])) <= 4));
 
-      global_ante_cards[0][duel_ante_slot] = deck[found_deck_slot] & ADVENTURE_DECK_CARD_ID_MASK;
-      DrawAdventureCard(deck[found_deck_slot] & ADVENTURE_DECK_CARD_ID_MASK, duel_ante_slot * 0x28 + 0x60, duel_ante_slot * 3 + 0x80, 1,
+      global_ante_cards[0][duel_ante_slot] = adventure_deck_card_id(deck[found_deck_slot]);
+      DrawAdventureCard(adventure_deck_card_id(deck[found_deck_slot]), duel_ante_slot * 0x28 + 0x60, duel_ante_slot * 3 + 0x80, 1,
                         gs_visit_0077c4f0[0]);
     }
 
@@ -4578,7 +4578,7 @@ int VisitTownSlot(int town_index)
                                                          (1 << (g_current_quest_destination & 3)));
       g_amulet_inventory[g_current_quest_color - 1] += 1;
 
-      sprintf(g_ui_message_buffer, gs_visit_0077c4f0[0x13], global_cards_data[deck[found_deck_slot - 1] & ADVENTURE_DECK_CARD_ID_MASK].name);
+      sprintf(g_ui_message_buffer, gs_visit_0077c4f0[0x13], global_cards_data[adventure_deck_card_id(deck[found_deck_slot - 1])].name);
 
       sprintf(g_ui_message_buffer + strlen(g_ui_message_buffer), gs_visit_0077c4f0[0x14], gs_amuletnames_0077d090[g_current_quest_color]);
 
@@ -4638,7 +4638,7 @@ int VisitTownSlot(int town_index)
               found_deck_slot = AddCardToDeckSorted(selected_card_id);
               if (found_deck_slot != -1)
               {
-                deck[found_deck_slot] |= 0x4000;
+                deck[found_deck_slot] = adventure_deck_set_available(deck[found_deck_slot], 1, _currentDeck);
               }
             }
             else

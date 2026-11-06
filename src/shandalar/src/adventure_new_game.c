@@ -501,14 +501,14 @@ int GetRemainingAllowedCardCopies(unsigned int card_id)
 
   for (i = 0; i < 500; i = i + 1)
   {
-    if ((deck[i] != -1) && ((deck[i] & 0x4000) == 0))
+    if ((deck[i] != -1) && ((deck[i] & ADVENTURE_DECK_AVAILABLE) == 0))
     {
       total_non_market_cards = total_non_market_cards + 1;
-      color_index = single_color_test_bit_to_color_t(global_cards_data[deck[i] & ADVENTURE_DECK_CARD_ID_MASK].color);
+      color_index = single_color_test_bit_to_color_t(global_cards_data[adventure_deck_card_id(deck[i])].color);
       color_counts[color_index] = color_counts[color_index] + 1;
     }
 
-    if (((unsigned int)deck[i] & (ADVENTURE_DECK_CARD_ID_MASK | 0x4000U)) == card_id)
+    if (((deck[i] & ADVENTURE_DECK_AVAILABLE) == 0 && adventure_deck_card_id(deck[i]) == (int)card_id))
     {
       copies_in_deck = copies_in_deck + 1;
       g_last_matching_deck_card_index = i;
@@ -642,8 +642,10 @@ void RebuildDeckEntriesByCardGroup(void)
   {
     if (saved_deck_entries[card_index] != 0xffffffff)
     {
-      deck_slot_index = AddCardToDeckSorted(saved_deck_entries[card_index] & ADVENTURE_DECK_CARD_ID_MASK);
-      deck[deck_slot_index] |= ((int)saved_deck_entries[card_index] & ~ADVENTURE_DECK_CARD_ID_MASK);
+      deck_slot_index = AddCardToDeckSorted(adventure_deck_card_id(saved_deck_entries[card_index]));
+      if (deck_slot_index >= 0)
+        deck[deck_slot_index] = (deck[deck_slot_index] & ADVENTURE_DECK_CARD_BITS) |
+            ((int)saved_deck_entries[card_index] & ADVENTURE_DECK_FLAG_BITS);
     }
   }
   g_journal_entry_count = saved_journal_entry_count;
@@ -660,7 +662,7 @@ int RecountDeckCardTotals(void)
     if (deck[deck_index] != -1)
     {
       g_deck_total_card_count = g_deck_total_card_count + 1;
-      if ((deck[deck_index] & 0x4000) == 0)
+      if ((deck[deck_index] & ADVENTURE_DECK_AVAILABLE) == 0)
       {
         g_deck_active_card_count++;
       }

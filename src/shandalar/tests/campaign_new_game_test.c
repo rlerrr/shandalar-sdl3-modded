@@ -138,6 +138,67 @@ static void check_card_prices(void)
   }
 }
 
+static int test_iid(const char *name)
+{
+  for (int csvid = 0; csvid < global_available_slots; ++csvid)
+    if (strcmp(global_raw_cards_storage[csvid].full_name, name) == 0)
+      return FindCardIndexByCsvid(csvid);
+  check(0, name);
+  return -1;
+}
+
+static void check_full_campaign_availability(const char *fixture_directory, const char *fixture_ini)
+{
+  FILE *fixture = fopen(fixture_ini, "w");
+  if (!fixture) { check(0, "Create empty campaign config"); return; }
+  fclose(fixture);
+  shandalar_card_pool_initialize(fixture_directory);
+  check(shandalar_card_pool_ready(), "Load default campaign pool");
+  const char *enabled[] = {"Bastion Mastodon", "Blooming Marsh", "Aegis Automaton",
+                          "Battlefield Scavenger", "Cowl Prowler", "Grizzly Bears"};
+  for (unsigned int i = 0; i < sizeof(enabled) / sizeof(enabled[0]); ++i)
+    check(shandalar_card_pool_sale(test_iid(enabled[i])), enabled[i]);
+  const char *disabled[] = {"Besmirch", "Pointed Discussion", "Quick Sliver",
+                           "Insectile Aberration", "Bala Ged Sanctuary"};
+  for (unsigned int i = 0; i < sizeof(disabled) / sizeof(disabled[0]); ++i)
+    check(!shandalar_card_pool_random(test_iid(disabled[i])), disabled[i]);
+  check(CampaignCardIsTreasure(test_iid("Contract from Below")),
+        "Format-ban flags must not exclude dungeon treasures");
+  int total = 0, newer = 0, treasures = 0;
+  for (int iid = 0; iid < g_card_count; ++iid) {
+    total += shandalar_card_pool_random(iid);
+    newer += iid > 0x3fff && shandalar_card_pool_random(iid);
+    treasures += CampaignCardIsTreasure(iid);
+  }
+  fprintf(stderr, "Default campaign: %d random rewards, %d above IID 16383, %d treasures\n",
+          total, newer, treasures);
+  check(newer > 2500 && treasures == 30, "Full implemented pool exceeds the old ID limit");
+
+  int iid = test_iid("Bastion Mastodon");
+  for (int i = 0; i < 500; ++i) deck[i] = -1;
+  _currentDeck = 1;
+  int slot = AddCardToDeckSorted(iid);
+  check(iid == 16384 && slot >= 0 && adventure_deck_card_id(deck[slot]) == iid,
+        "First formerly excluded IID survives collection insertion");
+  check(CardIDFromType(deck[slot]) == global_cards_data[iid].id &&
+        !(deck[slot] & ADVENTURE_DECK_AVAILABLE) && (deck[slot] & 0x20000),
+        "IID bit 14 must not become a sideboard flag");
+  deck[slot] = adventure_deck_set_available(deck[slot], 1, _currentDeck) | ADVENTURE_DECK_SELECTED;
+  RebuildDeckEntriesByCardGroup();
+  check(adventure_deck_card_id(deck[0]) == iid && (deck[0] & ADVENTURE_DECK_AVAILABLE) &&
+        (deck[0] & ADVENTURE_DECK_SELECTED) && !(deck[0] & 0x20000),
+        "Collection regrouping preserves high IDs and sideboard/selection state");
+  _currentDeck = 0;
+
+  fixture = fopen(fixture_ini, "w");
+  if (!fixture) { check(0, "Create explicit card policy"); return; }
+  fputs("[Sets]\n--=disable\n[Enable]\nBastion Mastodon=\n", fixture);
+  fclose(fixture);
+  shandalar_card_pool_initialize(fixture_directory);
+  check(shandalar_card_pool_sale(iid) && !shandalar_card_pool_sale(test_iid("Blooming Marsh")),
+        "Explicit Shandalar.ini policy still controls the expanded pool");
+}
+
 int main(int argc, char **argv)
 {
   const int expected_counts[4] = {36, 40, 46, 46};
@@ -161,12 +222,22 @@ int main(int argc, char **argv)
           "Availability must respect the loaded database boundary on reload");
     return failures ? 1 : 0;
   }
+  int availability_only = argc == 3 && strcmp(argv[1], "--availability-only") == 0;
+  if (availability_only) { argv[1] = argv[2]; argc = 2; }
   if (!_getcwd(fixture_directory, sizeof(fixture_directory) - 64)) return 2;
   strcat(fixture_directory, "/campaign_card_pool_test_assets");
   _mkdir(fixture_directory);
   snprintf(fixture_ini, sizeof(fixture_ini), "%s/Shandalar.ini", fixture_directory);
   if (argc != 2 || campaign_chdir(argv[1]) != 0) return 2;
   g_card_count = SHANDALAR_CARD_DATA_ACTIVE_COUNT;
+  if (availability_only) {
+    if (!read_db_guts("Cards.dat")) return 2;
+    CopyRawCardNamesAndRarities();
+    check_full_campaign_availability(fixture_directory, fixture_ini);
+    free(global_base_txt);
+    return failures ? 1 : 0;
+  }
+
   for (iid = 0; iid < g_card_count; ++iid)
     check(CardIDFromInternalIndex(iid) == global_cards_data[iid].id,
           "Raw duel indices must preserve every card index bit");
@@ -175,13 +246,13 @@ int main(int argc, char **argv)
   check(CardIDFromInternalIndex(SHANDALAR_CARD_DATA_COUNT) == -1,
         "Out-of-range duel index must not read beyond the card table");
   memset(g_initial_library, 0, sizeof(g_initial_library));
-  g_initial_library[1][0].csvid = 4664; /* Animate Land: absent from imported engine table. */
+  g_initial_library[1][0].csvid = 6426; /* Quick Sliver: null registry binding. */
   g_initial_library[1][0].numcards = 1;
   iid = DrawRandomCardFromInitialLibrary(1);
   check(iid == -1, "An unsupported deck card must never become an arbitrary internal card");
   fixture = fopen(fixture_ini, "w");
   if (!fixture) return 2;
-  fputs("Druid regression\n\n.4664 1 Animate Land\n.91 5 Forest\n"
+  fputs("Druid regression\n\n.6426 1 Quick Sliver\n.91 5 Forest\n"
         ".4431 1 Clear the Land\n.4766 2 Skyshroud Claim\n"
         ".4100 1 Braidwood Sextant\n.3723 1 Citanul Centaurs\n"
         ".1909 1 Elder Druid\n", fixture);
@@ -195,13 +266,16 @@ int main(int argc, char **argv)
       check(FindCardIndexByCsvid(g_initial_library[1][slot].csvid) >= 0,
             "Unsupported Druid entries must be excluded from the draw pool");
   }
-  check(count == 8 && g_initial_library[1][1].numcards == 5,
+  check(count == 11 && g_initial_library[1][1].numcards == 5,
         "Skipping unsupported entries must preserve every supported card and basic land");
-  for (slot = 0; slot < 8; ++slot) {
+  for (slot = 0; slot < 11; ++slot) {
     iid = DrawRandomCardFromInitialLibrary(1);
     check(iid >= 0 && (global_cards_data[iid].id == CARD_ID_FOREST ||
                       global_cards_data[iid].id == CARD_ID_SKYSHROUD_CLAIM ||
-                      global_cards_data[iid].id == CARD_ID_ELDER_DRUID),
+                      global_cards_data[iid].id == CARD_ID_ELDER_DRUID ||
+                      global_cards_data[iid].id == CARD_ID_CLEAR_THE_LAND ||
+                      global_cards_data[iid].id == CARD_ID_BRAIDWOOD_SEXTANT ||
+                      global_cards_data[iid].id == CARD_ID_CITANUL_CENTAURS),
           "Every initialized library card must belong to the supported deck definition");
   }
   check(DrawRandomCardFromInitialLibrary(1) == -1, "The initialized library ends after its last real card");
@@ -252,7 +326,7 @@ int main(int argc, char **argv)
       {
         if (deck[slot] == -1) continue;
         ++count;
-        iid = deck[slot] & ADVENTURE_DECK_CARD_ID_MASK;
+        iid = adventure_deck_card_id(deck[slot]);
         ++original_counts[iid];
         if (iid < 5) ++basic_lands;
         if (iid > 4095) ++high_ids;
@@ -269,7 +343,7 @@ int main(int argc, char **argv)
       {
         check(deck[slot] != -1 && (deck[slot] & 0x10000) != 0,
               "Deck rebuild must retain new-card flags");
-        iid = deck[slot] & ADVENTURE_DECK_CARD_ID_MASK;
+        iid = adventure_deck_card_id(deck[slot]);
         check(original_counts[iid]-- > 0, "Deck rebuild must preserve every card's identity");
       }
     }
@@ -279,15 +353,15 @@ int main(int argc, char **argv)
   /* Mesa Pegasus has an imported ID above 4095. Its highlight/selection flags
      must not change copy limits, and market copies must remain excluded. */
   iid = FindCardIndexByCsvid(CARD_ID_MESA_PEGASUS);
-  check(iid > 4095 && iid <= ADVENTURE_DECK_CARD_ID_MASK, "Expected a large Mesa Pegasus ID");
+  check(iid > 4095 && iid <= ADVENTURE_DECK_MAX_CARD_ID, "Expected a large Mesa Pegasus ID");
   for (slot = 0; slot < 500; ++slot) deck[slot] = -1;
-  deck[0] = iid | 0x10000 | 0x8000;
-  deck[1] = iid | 0x4000;
+  deck[0] = iid | 0x10000 | ADVENTURE_DECK_SELECTED;
+  deck[1] = iid | ADVENTURE_DECK_AVAILABLE;
   g_world_magic_bitmap = 0;
   check(GetRemainingAllowedCardCopies(iid) == 0,
         "A flagged active copy must count; a market copy must not count");
-  check(AddCardToDeckSorted(ADVENTURE_DECK_CARD_ID_MASK + 1) == -1,
-        "IDs overlapping market flags must be rejected");
+  check(AddCardToDeckSorted(ADVENTURE_DECK_MAX_CARD_ID + 1) == -1,
+        "IDs outside the signed engine range must be rejected");
 
   check(read_db_guts("cards.dat"), "Load real card names, types, flags, and rarity");
   CopyRawCardNamesAndRarities();
@@ -340,7 +414,7 @@ int main(int argc, char **argv)
         for (slot = 0; slot < 500; ++slot) {
           if (deck[slot] == -1) continue;
           ++count;
-          iid = deck[slot] & ADVENTURE_DECK_CARD_ID_MASK;
+          iid = adventure_deck_card_id(deck[slot]);
           check(CampaignCardForSale(iid), "Configured starters must respect sale eligibility");
         }
         check(count == expected_counts[difficulty], "Configured starters must keep the original deck size even with only basic lands");

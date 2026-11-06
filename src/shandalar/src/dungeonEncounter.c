@@ -517,10 +517,10 @@ int RunCastleDungeonBoard(int dungeon_index)
                 do
                 {
                   event_code = deck[internal_rand(500)];
-                  candidate_card_id = event_code & ADVENTURE_DECK_CARD_ID_MASK;
+                  candidate_card_id = adventure_deck_card_id(event_code);
                 } while (candidate_card_id < 6);
-              } while ((event_code & 0x4000) != 0);
-              event_code &= ADVENTURE_DECK_CARD_ID_MASK;
+              } while ((event_code & ADVENTURE_DECK_AVAILABLE) != 0);
+              event_code = adventure_deck_card_id(event_code);
               if ((global_cards_data[event_code].type & 0x42) == 0)
                 goto LAB_00444355;
               g_next_duel_card_id = event_code;
@@ -596,7 +596,7 @@ int RunCastleDungeonBoard(int dungeon_index)
                 WaitForInputEventUnlessBlocked();
                 DrawCastleDungeonBoard(0, 0, dungeon_index);
                 result = AddCardToDeckSorted((&g_castle_dungeon_slots[dungeon_index].card_slot_1)[event_code]);
-                deck[result] = deck[result] | 0x4000;
+                deck[result] = adventure_deck_set_available(deck[result], 1, _currentDeck);
                 (&g_castle_dungeon_slots[dungeon_index].card_slot_1)[event_code] = -1;
               }
               else
@@ -752,7 +752,7 @@ int RunDungeonMonsterDuel(int dungeon_index, int monster_slot, int final_battle)
 
   for (deck_index = 0; deck_index < 500; deck_index = deck_index + 1)
   {
-    card_id = deck[deck_index] & ADVENTURE_DECK_CARD_ID_MASK;
+    card_id = adventure_deck_card_id(deck[deck_index]);
     if ((g_castle_dungeon_slots[dungeon_index].rules_bitmap & 0x80) != 0)
     {
       g_duel_state_00742fc0 = 0;
@@ -844,8 +844,8 @@ int RunDungeonMonsterDuel(int dungeon_index, int monster_slot, int final_battle)
     {
       work_index = internal_rand(500);
     } while (deck[work_index] == -1);
-  } while (((deck[work_index] & 0x4000) != 0) || ((deck[work_index] & ADVENTURE_DECK_CARD_ID_MASK) <= 4));
-  global_ante_cards[0][0] = deck[work_index] & ADVENTURE_DECK_CARD_ID_MASK;
+  } while (((deck[work_index] & ADVENTURE_DECK_AVAILABLE) != 0) || ((adventure_deck_card_id(deck[work_index])) <= 4));
+  global_ante_cards[0][0] = adventure_deck_card_id(deck[work_index]);
   if ((0 < g_next_duel_card_id) && (g_next_duel_card_id <= 5))
   {
     g_next_duel_card_id = -1;
@@ -1005,7 +1005,7 @@ undefined4 HandleDefeatedWizardCastle(int castle_index)
         town_index = AddCardToDeckSorted(chosen_card);
         if (town_index != -1)
         {
-          deck[town_index] = deck[town_index] | 0x4000;
+          deck[town_index] = adventure_deck_set_available(deck[town_index], 1, _currentDeck);
         }
         selected_cards[loop_index] = chosen_card;
         global_cards_data[chosen_card].extra_ability |= 0x100;
