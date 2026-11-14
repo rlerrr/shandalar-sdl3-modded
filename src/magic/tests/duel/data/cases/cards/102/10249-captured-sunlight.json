@@ -1,0 +1,63 @@
+{
+  "version": 1,
+  "card": "Captured Sunlight",
+  "csvid": 10249,
+  "recipes": [
+    {
+      "family": "cascade_spell_effect",
+      "version": 2,
+      "oracle_text": "Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)\nYou gain 4 life.",
+      "params": {
+        "effect": "life",
+        "amount": 4,
+        "target": null,
+        "mana": [
+          2,
+          0,
+          0,
+          1,
+          0,
+          1
+        ],
+        "mv": 4,
+        "creature": false,
+        "power": 0,
+        "toughness": 0
+      },
+      "variants": [
+        "accept_0",
+        "decline_0",
+        "scan_land_0",
+        "scan_equal_0",
+        "scan_higher_0",
+        "scan_mixed_0",
+        "decline_mixed_0",
+        "lower_boundary_0",
+        "zero_cost_0",
+        "no_eligible_0",
+        "empty_library_0",
+        "one_card_0",
+        "last_eligible_0",
+        "countered_parent_0",
+        "source_insufficient_mana_0",
+        "source_wrong_color_0",
+        "accept_1",
+        "decline_1",
+        "scan_land_1",
+        "scan_equal_1",
+        "scan_higher_1",
+        "scan_mixed_1",
+        "decline_mixed_1",
+        "lower_boundary_1",
+        "zero_cost_1",
+        "no_eligible_1",
+        "empty_library_1",
+        "one_card_1",
+        "last_eligible_1",
+        "countered_parent_1",
+        "source_insufficient_mana_1",
+        "source_wrong_color_1"
+      ]
+    }
+  ]
+}

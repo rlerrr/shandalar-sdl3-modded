@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Huatli, Warrior Poet",
+  "csvid": 17437,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "+2: You gain life equal to the greatest power among creatures you control.\n0: Create a 3/3 green Dinosaur creature token with trample.\n\u2212X: Huatli deals X damage divided as you choose among any number of target creatures. Creatures dealt damage this way can't block this turn.",
+      "params": {
+        "ability": 0,
+        "present_ai_dialogs": true,
+        "activation_dialogs": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_destroyed_pending_0",
+        "offturn_0",
+        "repeat_denied_0",
+        "metric_many_0",
+        "no_other_members_0",
+        "metric_removed_0",
+        "zero_after_source_removal_0",
+        "stat_pumped_0",
+        "stat_pumped_cleanup_0",
+        "value_1",
+        "payment_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_destroyed_pending_1",
+        "offturn_1",
+        "repeat_denied_1",
+        "metric_many_1",
+        "no_other_members_1",
+        "metric_removed_1",
+        "zero_after_source_removal_1",
+        "stat_pumped_1",
+        "stat_pumped_cleanup_1"
+      ]
+    }
+  ]
+}

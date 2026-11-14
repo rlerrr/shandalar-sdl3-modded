@@ -3119,15 +3119,15 @@ static void deathtouch_part(int player, int card, event_t event)
 }
 
 /* ManalinkEh 2022: 0x26de480; original functions/abilities.c:651. */
-void deathtouch(int player, int card, event_t event)
+int deathtouch(int player, int card, event_t event)
 {
   if (((event == EVENT_ABILITIES) && (card == affected_card)) &&
       (player == affected_card_controller))
   {
     deathtouch_part(player, card, EVENT_ABILITIES);
-    return;
+    return 0;
   }
-  return;
+  return 0;
 }
 
 /* ManalinkEh 2022: 0x26dd0c0; original functions/abilities.c:653. */

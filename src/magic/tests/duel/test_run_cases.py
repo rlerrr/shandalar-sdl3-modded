@@ -10,6 +10,33 @@ import re
 
 
 class RunnerExpectationsTest(unittest.TestCase):
+    def test_platform_signatures_preserve_exact_counts_patterns_and_original(self):
+        record = dict(kind='assertion', assertion_count=2, reason='Native untap defect',
+                      patterns=['native untap'], pattern_counts=[1],
+                      platform_signatures={'wasm': dict(kind='assertion', assertion_count=3,
+                          reason='Wasm no-target payment defect', patterns=['wasm payment'])})
+        original = json.dumps(record, sort_keys=True)
+        for platform, count, text, other in (('native', 2, 'native untap', 'wasm payment'),
+                                             ('wasm', 3, 'wasm payment', 'native untap')):
+            baseline = expectations_for_platform({'case': record}, platform)
+            self.assertEqual(classify_outcome('case', 'assertion', count, text, baseline), 'known_failure')
+            for kind, actual_count, actual_text in (('assertion', count+1, text),
+                    ('assertion', count, other), ('harness', count, text)):
+                self.assertEqual(classify_outcome('case', kind, actual_count, actual_text, baseline), 'failed')
+            self.assertEqual(classify_outcome('case', 'passed', 0, '', baseline), 'unexpected_pass')
+        self.assertNotIn('pattern_counts', expectations_for_platform({'case':record}, 'wasm')['case'])
+        self.assertEqual(json.dumps(record, sort_keys=True), original)
+
+    def test_platform_signatures_reject_ambiguous_or_incomplete_overrides(self):
+        leaf = dict(kind='assertion', assertion_count=1, reason='Reviewed defect', patterns=['exact'])
+        for overrides in ({}, {'linux':leaf}, {'wasm':dict(leaf, assertion_count=True)},
+                          {'wasm':dict(leaf, kind='harness')}, {'wasm':dict(leaf, card='replacement')},
+                          {'wasm':dict(leaf, patterns=[])}, {'wasm':dict(leaf, pattern_counts=[2, 1])}):
+            with self.subTest(overrides=overrides), self.assertRaises(ValueError):
+                expectations_for_platform({'case':dict(leaf, platform_signatures=overrides)}, 'wasm')
+        with self.assertRaises(ValueError):
+            validate_expectation_signature('case', dict(leaf, platform='native', platform_signatures={'wasm':leaf}))
+
     def test_fatal_engine_error_without_xml_cannot_hide_earlier_assertions(self):
         error = 'DUEL_ENGINE_ERROR: bad parameters: get_card_instance(-1, -1)'
         record = dict(kind='crash', reason='Reviewed zero-target engine error', patterns=[re.escape(error)], pattern_counts=[1])

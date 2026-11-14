@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Denizen of the Deep",
+  "csvid": 3612,
+  "recipes": [
+    {
+      "family": "entry_own_return",
+      "version": 2,
+      "oracle_text": "When this creature enters, return each other creature you control to its owner's hand.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "foreign_owned_0",
+        "empty_others_0",
+        "opponent_only_0",
+        "artifact_creature_0",
+        "land_creature_0",
+        "protected_others_0",
+        "bounce_recast_0",
+        "nonmatching_entry_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "foreign_owned_1",
+        "empty_others_1",
+        "opponent_only_1",
+        "artifact_creature_1",
+        "land_creature_1",
+        "protected_others_1",
+        "bounce_recast_1",
+        "nonmatching_entry_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1"
+      ],
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "creature",
+          "colors": [],
+          "count": null,
+          "another": true,
+          "optional": false,
+          "creature": true,
+          "flash": false,
+          "flying": false,
+          "secondary": null,
+          "entry_clause": "When this creature enters, return each other creature you control to its owner's hand.",
+          "other_clauses": [],
+          "mass": true
+        },
+        "presentation": {
+          "human_optional_trigger": false
+        }
+      }
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle adjacent own-return calibration with actual Creature type, printed costs/stats/passives, entry return controlled-vs-owned destinations, source-self or source-excluded semantics, real reentry/costs/counter/replay. Specter real combat hand coercion covers source-controller selection of damaged-player card, land/creature/artifact choices, mandatory refusal policy, empty/one-card hand, blocked and real Aura-granted noncombat negatives. Denizen mass-other return covers all controlled creatures including artifact/land/protected witnesses, original-owner hands, empty/opponent-only and retained noncreature permanents; no target-selector input. Alternative ETB priority/order, token replacements, multiplayer and unavailable planeswalker attack declaration remain explicit boundaries."
+}

@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Rix Maadi, Dungeon Palace",
+  "csvid": 8277,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}.\n{1}{B}{R}, {T}: Each player discards a card. Activate only as a sorcery.",
+      "params": {
+        "ability": 1,
+        "present_ai_dialogs": true,
+        "mode_intent": {
+          "mode_label": "Both playes discard",
+          "fallback_color": 0,
+          "allow_auto_nonmana": true
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_destroyed_pending_0",
+        "value_1",
+        "payment_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_destroyed_pending_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,648 @@
+{
+  "version": 1,
+  "witnesses": {
+    "Urza's Armor": {
+      "oracle": {
+        "oracle_id": "e5fa232a-c8f2-4532-88bf-60d1223181b0",
+        "name": "Urza's Armor",
+        "oracle_text": "If a source would deal damage to you, prevent 1 of that damage.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/318/urzas-armor?utm_source=api"
+      },
+      "handler": "manalinkeh_card_urzas_armor",
+      "reviewed_native_witness": false
+    },
+    "Ivory Mask": {
+      "oracle": {
+        "oracle_id": "028bc726-0e86-4c53-9648-625153ae4b01",
+        "name": "Ivory Mask",
+        "oracle_text": "You have shroud. (You can't be the target of spells or abilities.)",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/23/ivory-mask?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ivory_mask",
+      "reviewed_native_witness": false
+    },
+    "Tibalt, the Fiend-Blooded": {
+      "oracle": {
+        "oracle_id": "ee9c57c6-41ef-4328-8417-e5a433eadf17",
+        "name": "Tibalt, the Fiend-Blooded",
+        "oracle_text": "+1: Draw a card, then discard a card at random.\n−4: Tibalt deals damage equal to the number of cards in target player's hand to that player.\n−6: Gain control of all creatures until end of turn. Untap them. They gain haste until end of turn.",
+        "mana_cost": "{R}{R}",
+        "type_line": "Legendary Planeswalker — Tibalt",
+        "loyalty": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddk/41/tibalt-the-fiend-blooded?utm_source=api"
+      },
+      "handler": "manalinkeh_card_tibalt_the_fiend_blooded",
+      "reviewed_native_witness": false
+    },
+    "Ancestral Recall": {
+      "oracle": {
+        "oracle_id": "550c74d4-1fcb-406a-b02a-639a760a4380",
+        "name": "Ancestral Recall",
+        "oracle_text": "Target player draws three cards.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/1/ancestral-recall?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ancestral_recall",
+      "reviewed_native_witness": false
+    },
+    "Mind Rot": {
+      "oracle": {
+        "oracle_id": "ad44cf74-b717-48fb-9fa2-77512024d76a",
+        "name": "Mind Rot",
+        "oracle_text": "Target player discards two cards.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m21/115/mind-rot?utm_source=api"
+      },
+      "handler": "manalinkeh_card_mind_rot",
+      "reviewed_native_witness": false
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    }
+  },
+  "sources": {
+    "Ivory Tower": {
+      "oracle": {
+        "oracle_id": "d416a4ed-9f16-4a8b-8aee-03c630e1eb6c",
+        "name": "Ivory Tower",
+        "oracle_text": "At the beginning of your upkeep, you gain X life, where X is the number of cards in your hand minus 4.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/269/ivory-tower?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ivory_tower",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Bulwark": {
+      "oracle": {
+        "oracle_id": "259da825-02f7-4e72-8f44-01683330f457",
+        "name": "Bulwark",
+        "oracle_text": "At the beginning of your upkeep, this enchantment deals X damage to target opponent, where X is the number of cards in your hand minus the number of cards in that player's hand.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/usg/178/bulwark?utm_source=api"
+      },
+      "handler": "manalinkeh_card_bulwark",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Dark Suspicions": {
+      "oracle": {
+        "oracle_id": "cf5cf174-d976-4cd8-9721-c30fe784fb70",
+        "name": "Dark Suspicions",
+        "oracle_text": "At the beginning of each opponent's upkeep, that player loses X life, where X is the number of cards in that player's hand minus the number of cards in your hand.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pls/40/dark-suspicions?utm_source=api"
+      },
+      "handler": "manalinkeh_card_dark_suspicions",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Dreamborn Muse": {
+      "oracle": {
+        "oracle_id": "68d7f338-c6e7-4372-b41c-901e39e08bde",
+        "name": "Dreamborn Muse",
+        "oracle_text": "At the beginning of each player's upkeep, that player mills X cards, where X is the number of cards in their hand.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/41/dreamborn-muse?utm_source=api"
+      },
+      "handler": "manalinkeh_card_dreamborn_muse",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Storm World": {
+      "oracle": {
+        "oracle_id": "868f4ab2-a846-4ad0-8720-95fd234dd36b",
+        "name": "Storm World",
+        "oracle_text": "At the beginning of each player's upkeep, this enchantment deals X damage to that player, where X is 4 minus the number of cards in their hand.",
+        "mana_cost": "{R}",
+        "type_line": "World Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/111/storm-world?utm_source=api"
+      },
+      "handler": "manalinkeh_card_storm_world",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Scalding Tongs": {
+      "oracle": {
+        "oracle_id": "939a0cdf-b5e8-4d7d-adb3-f7b2fd7aab8f",
+        "name": "Scalding Tongs",
+        "oracle_text": "At the beginning of your upkeep, if you have three or fewer cards in hand, this artifact deals 1 damage to target opponent or planeswalker.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/307/scalding-tongs?utm_source=api"
+      },
+      "handler": "manalinkeh_card_scalding_tongs",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": true
+      }
+    },
+    "Ivory Crane Netsuke": {
+      "oracle": {
+        "oracle_id": "ab151429-0890-4231-a3a7-34e8455dac70",
+        "name": "Ivory Crane Netsuke",
+        "oracle_text": "At the beginning of your upkeep, if you have seven or more cards in hand, you gain 4 life.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/155/ivory-crane-netsuke?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ivory_crane_netsuke",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Skullcage": {
+      "oracle": {
+        "oracle_id": "a96387fb-ff10-4299-8f42-aa61da693d07",
+        "name": "Skullcage",
+        "oracle_text": "At the beginning of each opponent's upkeep, this artifact deals 2 damage to that player unless they have exactly three or exactly four cards in hand.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/arc/115/skullcage?utm_source=api"
+      },
+      "handler": "manalinkeh_card_skullcage",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Iron Maiden": {
+      "oracle": {
+        "oracle_id": "e0351638-9224-4779-8f7c-f2b11d134a5f",
+        "name": "Iron Maiden",
+        "oracle_text": "At the beginning of each opponent's upkeep, this artifact deals X damage to that player, where X is the number of cards in their hand minus 4.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/127/iron-maiden?utm_source=api"
+      },
+      "handler": "manalinkeh_card_iron_maiden",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Rackling": {
+      "oracle": {
+        "oracle_id": "41d116d7-3b1e-4777-b3c0-54f8ca6b2785",
+        "name": "Rackling",
+        "oracle_text": "At the beginning of each opponent's upkeep, this creature deals X damage to that player, where X is 3 minus the number of cards in their hand.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Phyrexian Construct",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nem/136/rackling?utm_source=api"
+      },
+      "handler": "manalinkeh_card_wheel_of_torture",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Viseling": {
+      "oracle": {
+        "oracle_id": "05b9dccb-2364-4bca-a12e-8cb54a3f3a0b",
+        "name": "Viseling",
+        "oracle_text": "At the beginning of each opponent's upkeep, this creature deals X damage to that player, where X is the number of cards in their hand minus 4.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Phyrexian Construct",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/269/viseling?utm_source=api"
+      },
+      "handler": "manalinkeh_card_iron_maiden",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Wheel of Torture": {
+      "oracle": {
+        "oracle_id": "7a3e6e84-a8c2-472d-99fb-7cd14850b5ce",
+        "name": "Wheel of Torture",
+        "oracle_text": "At the beginning of each opponent's upkeep, this artifact deals X damage to that player, where X is 3 minus the number of cards in their hand.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/138/wheel-of-torture?utm_source=api"
+      },
+      "handler": "manalinkeh_card_wheel_of_torture",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Ebony Owl Netsuke": {
+      "oracle": {
+        "oracle_id": "dcacb717-4ca4-47c0-9b23-26e4eb4ffdc8",
+        "name": "Ebony Owl Netsuke",
+        "oracle_text": "At the beginning of each opponent's upkeep, if that player has seven or more cards in hand, this artifact deals 4 damage to that player.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/154/ebony-owl-netsuke?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ebony_owl_netsuke",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Hellfire Mongrel": {
+      "oracle": {
+        "oracle_id": "633a0919-9ac3-4645-8f0b-3f00c198db79",
+        "name": "Hellfire Mongrel",
+        "oracle_text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, this creature deals 2 damage to that player.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Elemental Dog",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddh/48/hellfire-mongrel?utm_source=api"
+      },
+      "handler": "manalinkeh_card_hellfire_mongrel",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Lavaborn Muse": {
+      "oracle": {
+        "oracle_id": "2825ff5a-5340-4494-bfde-80f6f5bce5a2",
+        "name": "Lavaborn Muse",
+        "oracle_text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, this creature deals 3 damage to that player.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Spirit",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddk/50/lavaborn-muse?utm_source=api"
+      },
+      "handler": "manalinkeh_card_lavaborn_muse",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Misers' Cage": {
+      "oracle": {
+        "oracle_id": "72a1e724-eb32-4781-b44d-3b1ed02a5a8b",
+        "name": "Misers' Cage",
+        "oracle_text": "At the beginning of each opponent's upkeep, if that player has five or more cards in hand, this artifact deals 2 damage to that player.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/311/misers-cage?utm_source=api"
+      },
+      "handler": "manalinkeh_card_misers_cage",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Paupers' Cage": {
+      "oracle": {
+        "oracle_id": "38ec5b13-b143-4818-9243-b1715dab3bef",
+        "name": "Paupers' Cage",
+        "oracle_text": "At the beginning of each opponent's upkeep, if that player has two or fewer cards in hand, this artifact deals 2 damage to that player.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/314/paupers-cage?utm_source=api"
+      },
+      "handler": "manalinkeh_card_paupers_cage",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Shrieking Affliction": {
+      "oracle": {
+        "oracle_id": "9e3f5d0b-103f-40e2-beb5-26b1fcb136f3",
+        "name": "Shrieking Affliction",
+        "oracle_text": "At the beginning of each opponent's upkeep, if that player has one or fewer cards in hand, they lose 3 life.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/76/shrieking-affliction?utm_source=api"
+      },
+      "handler": "manalinkeh_card_shrieking_affliction",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": false
+      }
+    },
+    "Thumbscrews": {
+      "oracle": {
+        "oracle_id": "a8f1f55a-7a85-4338-b4d1-3d28f10f69a7",
+        "name": "Thumbscrews",
+        "oracle_text": "At the beginning of your upkeep, if you have five or more cards in hand, this artifact deals 1 damage to target opponent or planeswalker.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tmp/312/thumbscrews?utm_source=api"
+      },
+      "handler": "manalinkeh_card_thumbscrew",
+      "ui": {
+        "status": "provisional_until_capture",
+        "target_choices": true
+      }
+    }
+  },
+  "witness_side_effect_audit": "Grizzly Bears native2/2 no callbacks. Basic lands in hands/libraries count as actual cards. Armor/Mask/planeswalkers actuallypaid on legal controller turns before source entry; hand removals and loyalty tracked. Ancestral Recall actuallycast as legal instant including off-turn8-card own upkeep; Mind Rot actuallycast in own main against homogeneous Forest hand. No ordinary draw step or fake hand/life/counter state. World replacement follows real second paid World entry, never duplicate seeded Worlds."
+}

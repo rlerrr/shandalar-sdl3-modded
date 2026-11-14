@@ -1,0 +1,188 @@
+{
+  "version": 1,
+  "card": "Walking Ballista",
+  "csvid": 16822,
+  "recipes": [
+    {
+      "family": "permanent_plus1_activation",
+      "version": 2,
+      "oracle_text": "This creature enters with X +1/+1 counters on it.\n{4}: Put a +1/+1 counter on this creature.\nRemove a +1/+1 counter from this creature: It deals 1 damage to any target.",
+      "params": {
+        "ability": 1,
+        "interface": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {
+            "0": "query_only",
+            "1": "disabled_dialog"
+          }
+        },
+        "other_clauses": [
+          "This creature enters with X +1/+1 counters on it.",
+          "Remove a +1/+1 counter from this creature: It deals 1 damage to any target."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "source_removed_pending_0",
+        "cleanup_0",
+        "fresh_0",
+        "tapped_0",
+        "repeat_0",
+        "insufficient_mana_0",
+        "entry_x0_0",
+        "entry_x1_0",
+        "entry_x3_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "source_removed_pending_1",
+        "cleanup_1",
+        "fresh_1",
+        "tapped_1",
+        "repeat_1",
+        "insufficient_mana_1",
+        "entry_x0_1",
+        "entry_x1_1",
+        "entry_x3_1"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "PermanentPlus1Activation_BallistaDoubleXCostProbe_0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Walking Ballista",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 6
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "choose_x",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "choose_x",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "require_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_counter",
+          "ref": "source",
+          "counter_kind": "plus1",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ]
+    }
+  ]
+}

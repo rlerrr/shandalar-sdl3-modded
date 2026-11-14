@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Liliana of the Veil",
+  "csvid": 12004,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "+1: Each player discards a card.\n\u22122: Target player sacrifices a creature.\n\u22126: Separate all permanents target player controls into two piles. That player sacrifices all permanents in the pile of their choice.",
+      "params": {
+        "ability": 0,
+        "present_ai_dialogs": true,
+        "activation_dialogs": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "repeat_denied_0",
+        "source_destroyed_pending_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "repeat_denied_1",
+        "source_destroyed_pending_1"
+      ]
+    }
+  ]
+}

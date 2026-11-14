@@ -16346,7 +16346,8 @@ int generic_spell(int player, int card, event_t event, int flags, target_definit
       if ((result == 0) || (target_limit <= selected_targets))
         break;
       prompt_00 = prompt;
-      if (targeting_flags == 0)
+      /* A missing resource key uses select_target's existing default prompt. */
+      if (targeting_flags == 0 && prompt != NULL)
       {
         prompt_lines = load_text_nocopy(prompt, NULL);
         prompt_00 = *prompt_lines;
@@ -19076,8 +19077,13 @@ int reveal_card_until_you_reveal_test(int player, int t_player, test_definition_
       if (found == wanted || scanned == limit)
         break;
     }
-    show_deck(current_turn, deck_copy, scanned, "Cards revealed.", 0, gs_done_008b40e0);
-    show_deck(current_turn ^ 1, deck_copy, scanned, "Cards revealed.", 0, gs_done_008b40e0);
+    /* These ignored-return displays are informational. AI trial runs must
+       leave the real action's one-shot acknowledgements untouched. */
+    if (!duel_host_is_headless() || duel_host_scripted_input())
+    {
+      show_deck(current_turn, deck_copy, scanned, "Cards revealed.", 0, gs_done_008b40e0);
+      show_deck(current_turn ^ 1, deck_copy, scanned, "Cards revealed.", 0, gs_done_008b40e0);
+    }
     remaining = scanned - removed;
     if (remaining > 0)
     {

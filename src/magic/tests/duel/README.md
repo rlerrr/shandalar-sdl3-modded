@@ -224,6 +224,9 @@ For Node/Wasm, replace `--binary` with the shared `.js` and add `--node` with th
 Node executable. The runner mounts the selected archive's host directory through
 NodeFS and keeps the binary directory as the asset working directory. Batches,
 restarts and isolated failure checks all use the same archive.
+Node's user-data directory uses process-local memory rather than IndexedDB.
+The headless target includes Asyncify and IDBFS support required by the shared
+file-I/O layer; browser persistence is outside these duel tests.
 
 Subset manifests explicitly identify their selected sources. The runner checks
 expectation signatures and selected identities while allowing unrelated baseline
@@ -241,8 +244,25 @@ one object. It is currently validated only for one response above its parent
 spell; do not use it for deeper response chains. Keep ordinary `cast`/`resolve`
 for scenarios that do not need this context. Check stack size, queued choices
 and printed costs on either side of
-the response. While a spell is pending, the engine still physically counts its
-source card in hand; move it in the expected zone model only after resolution.
+the response. While a spell is pending, the legacy hand-count receipt still
+includes its physical slot, although the source's `in_hand` property is false.
+Retain that slot in count receipts until resolution; do not assert that a spell
+on the stack is in hand.
+
+Cast-history-sensitive explicit responses use `cast`, then `announce_spell`
+on the pending parent, then `cast_response` and `resolve_response`.
+`announce_spell` runs the engine's actual storm/replicate and cast-trigger stage,
+without paying costs again or resolving the spell. Its driver marker is restored
+by test snapshots; later resolution executes the remaining engine phase without
+announcing the parent twice. Ordinary casts retain their existing path.
+The operation requires the top pending spell outside a casting callback and
+rejects duplicate announcements. Current response recipes cover a single parent
+without prior storm copies. An explicit response before this boundary sees an
+unfinished cast history and can misorder a later storm check.
+
+Same-turn histories spanning both players keep the turn unchanged. Use an
+instant or a legally cast flash spell for the nonactive player's precursor;
+changing the fixture's turn field is not a substitute for legal timing.
 
 History-sensitive cases use `reset_death_history` as their first step, before
 any authored destruction or other death. This explicit, empty-stack operation
@@ -310,6 +330,15 @@ when a reviewed failure occurs on only that runtime. Unscoped records apply to
 both. The other runtime must pass normally; an unexpected pass on the affected
 runtime still fails the gate. Invalid platform labels are rejected.
 
+When the same case exposes different reviewed assertion failures on the two
+runtimes, `platform_signatures` can contain an exact `native` or `wasm`
+signature. Each override supplies its own assertion count, reason, and patterns
+(plus optional pattern occurrence counts); the top-level signature is the
+default. Overrides cannot change card identities, introduce harness failures,
+or combine with a single-runtime `platform` restriction. Unexpected passes and
+unreviewed diagnostic changes still fail. Passing observations must agree;
+reviewed differences in known assertions are reported separately.
+
 Oracle supplies the rules expectations. These details describe how scripts drive
 the harness, so test authors can express those expectations correctly:
 
@@ -373,7 +402,10 @@ the harness, so test authors can express those expectations correctly:
   through the engine and leave vigilant creatures untapped. A sick creature
   fails the scripted `attack` guard exactly as the main-phase UI guard fails
   it, so granted haste is observable through `attack`: Instill Energy keeps a
-  failing case proving the hasted creature still cannot attack. The combat fixture
+  failing case proving the hasted creature still cannot attack. The `sick`
+  observation reports raw engine state bits; the engine clears those bits for
+  haste. Keep real fresh attack or activation checks as the rules expectation.
+  The combat fixture
   preloads an attacking flag; an explicit `attack` step completes its declaration
   and tap obligation. This helper does not
   yet run the complete attack-cost or timing sequence. Mana activations finish
@@ -432,8 +464,15 @@ the harness, so test authors can express those expectations correctly:
 - `destroy` completes the engine's pending regeneration and graveyard processing
   before returning. Queue any required choices before it, and verify a setup
   death before testing mechanics such as morbid.
-- Informational library reveal windows currently request `choose_zone` too;
-  use `-1` to acknowledge them. When ordering rejected cards on the bottom,
+- Raw `show_deck` lists request `choose_zone`; use `-1` to acknowledge a
+  display-only list. The informational GUI block in
+  `reveal_top_cards_of_library` is suppressed in headless mode; it preserves
+  the revealed count and library, and consumes no selection input. Later card
+  selectors and human `reveal_card_iid` dialog acknowledgments still run.
+  `select_one_and_put_the_rest_on_bottom` bounds its initial window to the
+  target library's size and returns `-1` without input when that window is
+  empty. Nonempty selection and bottom ordering still use the normal helpers.
+  When ordering rejected cards on the bottom,
   script the requested indices and assert the resulting order, including a card
   below the looked-at window to prove the remainder moved to the bottom.
 - Player targets use `choose_player`; a missing timing or presentation hook
@@ -842,11 +881,74 @@ unexercised abilities are covered, and Flash timing still needs dedicated tests.
 include `minus1_counters` as well as `plus1_counters`; both counters and player
 poison appear in observable snapshots used for deterministic replay comparisons.
 
+`assert_counter` reads a named battlefield permanent's actual counters, for
+example `{"op":"assert_counter","ref":"source","counter_kind":"charge","value":3}`.
+Reviewed kinds are `plus1`, `minus1`, `charge`, `loyalty`, `knowledge`, `elixir`,
+`divinity`, `quest`, `blood`, `gold`, and `study`. The action only observes;
+fixtures must obtain and spend counters through the card's real entry, trigger,
+or activation. Explicit receipts must be repeated after snapshot replay for
+counter kinds outside the ordinary plus/minus-one board summary.
+
+`blocking_count` exposes the engine's stored blocker assignment. It is useful
+during live combat; surviving pairs can retain that historical assignment after
+`end_combat`. Use combat, damage, and zone receipts after that boundary instead
+of interpreting this field as a current rules-level blocking status.
+
+`untap_step` leaves the real wrapper's phase value. For a later main-phase
+action, select first main with `turn` for the already-current player after the
+actual `advance_turn` and `untap_step` operations. This phase handoff must retain
+the turn processing, untaps, and history rather than replace them.
+
+Battlefield setup does not establish a previously completed entry trigger. For
+an entry-source negative control, cast and resolve that source and its initial
+effect before casting an unrelated entrant. Then assert that the later entrant
+causes no additional effect. Seeded graveyard, exile, and library references are
+zone indices; observe their exact zones rather than using instance properties.
+
+For counted graveyard triggers from an enchantment's destruction, use a real
+destruction spell and normal resolution. The standalone `destroy` helper can
+move an enchantment to its graveyard and count its death without draining the
+counted trigger at a normal action boundary. Femeref Enchantress's Naturalize
+controls verify the actual payment, target, graveyard movement, and draw. Raw
+helper diagnostics remain testing references rather than card-failure baselines.
+
 `choose_trigger` selects an offered trigger effect by the referenced card's
 CSVID. Earlier response windows pass without consuming the planned selection;
 an unavailable trigger leaves an unconsumed choice and fails the case. Snapshot
 capture/restore also saves the script's named-instance bindings so replay can
 rebind cards that moved between the battlefield and hand.
+
+`choose_trigger_source` instead selects the named live instance, with an
+explicit `player`. It waits until that instance is a legal offered trigger
+response, so a same-display invisible legacy cannot make the choice ambiguous.
+Use the original CSVID-based `choose_trigger` for a dying source's legacy
+handoff. Exact-source intent and instance timestamps are part of test snapshots.
+
+`choose_optional_target` records cancellation intent with a named legal fallback
+and explicit chooser. It cancels only when the actual selector allows it;
+otherwise the engine validates the fallback normally and increments
+`assert_forced_target_choices`. That receipt and ordinary zone/effect assertions
+can expose an incorrectly forced action without bypassing targeting rules.
+Counts reset with the fixture and are restored by test snapshots.
+
+`choose_activation_mode` records intent for one real activation of a named live
+source. Supply an explicit `player`, exact one-line `mode_label`, legal
+`fallback_color`, and boolean `allow_auto_nonmana`. Queue conditional cost
+choices after that action, then `activate` the same source and immediately
+`require_activation_mode` with `value: 1` before checking effects. Registration
+requires an empty ordinary choice queue. The receipt is 1 for the requested
+offered mode, 0 for an unselected no-menu path, or a negative fingerprint of an
+offered menu missing that label. A different legal mana action cannot satisfy
+the receipt. A failed receipt clears only its conditional cost choices;
+successful selection retains strict consumption checks.
+
+Enable `allow_auto_nonmana` only after Oracle review establishes exactly one
+nonmana activated ability: it can recognize a newly pending activation from that
+source when the engine legitimately omits a one-option menu. Multiple value abilities
+still require their actual menu protocol. Mode intent, source timestamps,
+conditional choice boundaries, and receipts are restored by snapshots; an
+unfinished intent is a harness error. Printed costs and resulting effects need
+their own independent assertions.
 
 Scripted targeting for either controller uses the rules' allowed controller,
 instead of the AI's preferred controller. The actual chooser and all other

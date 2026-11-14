@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Second Guess",
+  "csvid": 12461,
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "oracle_text": "Counter target spell that's the second spell cast this turn.",
+      "params": {
+        "schema": 7,
+        "extension": {
+          "wave": 7
+        },
+        "kind": "second_spell",
+        "token": null,
+        "inactive_components": []
+      },
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "instant_parent_0",
+        "sorcery_parent_0",
+        "artifact_parent_0",
+        "enchantment_parent_0",
+        "aura_parent_0",
+        "first_spell_0",
+        "third_spell_0",
+        "split_history_0",
+        "announced_snapshot_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "instant_parent_1",
+        "sorcery_parent_1",
+        "artifact_parent_1",
+        "enchantment_parent_1",
+        "aura_parent_1",
+        "first_spell_1",
+        "third_spell_1",
+        "split_history_1",
+        "announced_snapshot_1"
+      ]
+    }
+  ],
+  "coverage_notes": [
+    "Both controllers create all prior history through real precursor casts, then cast the pending parent and call announce_spell to execute its actual engine cast announcement exactly once.",
+    "Actual cast_response queries/casts occur after announcement; first/third parents are rejected without spending source mana and then resolve normally.",
+    "Snapshot cases cover replay from before casting and from an already announced pending parent, including restoration of the harness announcement marker."
+  ]
+}

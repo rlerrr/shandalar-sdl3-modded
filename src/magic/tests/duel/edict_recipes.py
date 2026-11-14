@@ -59,12 +59,16 @@ def spec(d,r):
     if not r or r.get('layout')!='normal' or r.get('card_faces') or r.get('selected_face') or d.get('oracle_text')!=r.get('oracle_text') or 'variants' not in d:
         raise ValueError('edict requires pinned complete normal Oracle text and explicit variants')
     p=d.get('params')
-    if not isinstance(p,dict) or set(p)!={'mode','scope','recipient','count','receipt'}:raise ValueError('explicit sacrifice mode, predicate, recipient, quantity and receipt required')
+    ordinary_keys={'mode','scope','recipient','count','receipt'}
+    if not isinstance(p,dict) or set(p) not in (ordinary_keys,ordinary_keys|{'schema','extra_cost_choices'}):raise ValueError('explicit sacrifice mode, predicate, recipient, quantity and receipt required')
     if 'target_choices' in d:
         choices=d['target_choices']
         ordinary=type(choices) is int and choices in (0,1)
         mapped=isinstance(choices,dict) and set(choices)=={'0','1'} and all(type(n) is int and n in (0,1) for n in choices.values())
         if not (ordinary or mapped) or p['recipient'] not in ('any','opponent'):raise ValueError('reviewed per-controller automatic or explicit target-player presentation required')
+    if 'extra_cost_choices' in p:
+        choices=p['extra_cost_choices']
+        if type(p['schema']) is not int or p['schema']!=7 or not isinstance(choices,dict) or set(choices)!={'0','1'} or any(type(n) is not int or n not in (0,1) for n in choices.values()) or p['mode']!='cost' or p['count']!=1:raise ValueError('reviewed extra cost-choice presentation requires one ordinary sacrifice cost')
     if p['mode'] not in ('edict','cost','after_draw') or p['scope'] not in NOUNS or p['recipient'] not in ('self','any','opponent','both','opponents') or type(p['count']) is not int or p['count'] not in (1,2):raise ValueError('unreviewed sacrifice shape')
     if p['mode']=='edict':
         if p['recipient']=='self' or p['count']==2 and p['scope']!='creature' or p['receipt'] not in ('none','lose1','lose2_if','recipient_gain_toughness','gain_toughness','draw_power'):raise ValueError('unreviewed edict quantity or receipt')
@@ -104,6 +108,8 @@ def validate_witnesses(o,rows):
         if name not in rows or any(o.get(name,{}).get(k)!=v for k,v in pin.items()):raise ValueError('edict wave 4 witness changed: '+name)
     for name,pin in WAVE5_PINS['cards'].items():
         if name not in rows or any(o.get(name,{}).get(k)!=v for k,v in pin.items()):raise ValueError('edict wave 5 witness changed: '+name)
+    for name,pin in WAVE7_PINS['cards'].items():
+        if name not in rows or any(o.get(name,{}).get(k)!=v for k,v in pin.items()):raise ValueError('edict wave 7 witness changed: '+name)
 
 
 def expand(name,csvid,d,p,selected,rows,o):
@@ -137,7 +143,7 @@ def expand(name,csvid,d,p,selected,rows,o):
             # The fixture's token flag does not construct a copy effect or copy
             # mana-cost data. Use a printed zero-cost body for MV receipts so
             # both an ordinary token and a copied token have the same value.
-            if v=='tokens' and p['receipt']=='draw_mv':pair=('Memnite','Memnite')
+            if v=='tokens' and (p['receipt']=='draw_mv' or p.get('schema')==7 and p['receipt']=='black_mv'):pair=('Memnite','Memnite')
             if v=='other_type':pair={'artifact_or_enchantment':('Seal of Cleansing','Seal of Fire'),'artifact_or_creature':('Sol Ring','Fountain of Youth'),'creature_or_land':('Forest','Mountain')}[p['scope']]
             if v=='indestructible':
                 candidate='Darksteel Citadel' if p['scope']=='land' else 'Darksteel Gargoyle' if p['scope']=='flying_creature' else 'Darksteel Myr'
@@ -208,8 +214,17 @@ def expand(name,csvid,d,p,selected,rows,o):
             choices=d.get('target_choices',1);choices=choices[str(owner)] if isinstance(choices,dict) else choices
             if p['recipient'] in ('any','opponent') and choices:actions.append(step('choose_player',player=owner,value=target))
             picked=choose_sacrifices() if p['mode']=='cost' else []
-            if v=='countered':actions.append(step('choose_priority',ref='counter'))
-            actions.append(step('cast',ref='source',value=0 if v=='countered' else 1));pay(cost,owner);consume_spell('source')
+            # Some broken handlers ask for an additional sacrifice after paying
+            # the printed cost. Supply their real input while keeping the
+            # Oracle model below at exactly one sacrificed creature.
+            extra=p.get('extra_cost_choices',{}).get(str(owner),0)
+            if extra:
+                remaining=[ref for ref,e in entities.items() if e['alive'] and e['player']==owner and ref not in picked and eligible(o[e['name']],p['scope'])]
+                if len(remaining)<extra:raise ValueError('extra cost presentation needs another real eligible permanent')
+                actions.extend(step('choose_target',player=owner,ref=ref) for ref in remaining[:extra])
+            explicit_counter=v=='countered' and p.get('schema')==7 and p['receipt']=='black_mv'
+            if v=='countered' and not explicit_counter:actions.append(step('choose_priority',ref='counter'))
+            actions.append(step('cast',ref='source',value=0 if v=='countered' and not explicit_counter else 1));pay(cost,owner);consume_spell('source')
             if p['mode']=='cost':sacrifice(picked)
             if v=='countered':pay(cost_from_oracle(o['Counterspell']),0);consume_spell('counter')
             else:
@@ -222,10 +237,13 @@ def expand(name,csvid,d,p,selected,rows,o):
                     actions.extend([step('assert_zone',player=pl,zone='hand',value=len(zones['hand'][pl])+pending),step('assert_zone',player=pl,zone='graveyard',value=len(zones['graveyard'][pl])-pending)])
                 actions.extend(step('assert_mana',player=owner,color=i,value=n) for i,n in enumerate(mana[owner]))
             cut=len(actions)
-            if v=='target_shrouded_pending':
+            if explicit_counter:
+                actions.extend([step('assert_stack',value=1),step('announce_spell',ref='source'),step('cast_response',ref='counter',value=1),step('assert_stack',value=2),step('resolve_response')])
+            elif v=='target_shrouded_pending':
                 actions.extend([step('cast',ref='shield',value=1),step('assert_stack',value=2)]);pay(cost_from_oracle(o['Gilded Light']),target);consume_spell('shield')
             if v!='countered' and v!='target_shrouded_pending' and p['mode']!='cost':picked=choose_sacrifices()
-            actions.extend([step('resolve'),step('assert_choices_consumed')])
+            if not explicit_counter:actions.append(step('resolve'))
+            actions.append(step('assert_choices_consumed'))
             if v!='countered' and v!='target_shrouded_pending':
                 if p['mode']!='cost':sacrifice(picked)
                 receipts(picked)
@@ -258,6 +276,7 @@ def expand(name,csvid,d,p,selected,rows,o):
 EXTENSION_PINS=json.loads((Path(__file__).parent/'data/edict_extension_profiles.json').read_text(encoding='utf8'))
 WAVE4_PINS=json.loads((Path(__file__).parent/'data/edict_wave4_profiles.json').read_text(encoding='utf8'))
 WAVE5_PINS=json.loads((Path(__file__).parent/'data/edict_wave5_profiles.json').read_text(encoding='utf8'))
+WAVE7_PINS=json.loads((Path(__file__).parent/'data/edict_wave7_profiles.json').read_text(encoding='utf8'))
 
 
 def _same(a,b):
@@ -272,13 +291,15 @@ def extension_spec(d,r):
     import copy
     wave4=d['params']['profile'] in WAVE4_PINS['profiles']
     wave5=d['params']['profile'] in WAVE5_PINS['profiles']
-    pin=(WAVE5_PINS if wave5 else WAVE4_PINS if wave4 else EXTENSION_PINS)['profiles'].get(d['params']['profile'])
+    wave7=d['params']['profile'] in WAVE7_PINS['profiles']
+    pin=(WAVE7_PINS if wave7 else WAVE5_PINS if wave5 else WAVE4_PINS if wave4 else EXTENSION_PINS)['profiles'].get(d['params']['profile'])
     if not pin or d.get('family')!='edict_spell' or type(d.get('version')) is not int or d['version']!=2 or not r or r.get('layout')!='normal' or r.get('card_faces') or r.get('selected_face') or any(r.get(k)!=v for k,v in pin['source'].items()) or d.get('oracle_text')!=r['oracle_text'] or not _same(d['params'],pin['params']):raise ValueError('edict extension requires explicit reviewed parameters and complete source pins')
     p=copy.deepcopy(pin['params']);variable='{X}' in r['mana_cost'];mana_text=r['mana_cost'].replace('{X}','')
     if p.get('hybrid'):mana_text=mana_text.replace('{'+p['hybrid']['symbol']+'}','{'+p['hybrid']['default']+'}')
     p.update(family='edict_spell',mana=cost_from_oracle(dict(mana_cost=mana_text)),instant='Instant' in r['type_line'],csvid=pin['csvid'],variable=variable)
     if wave4:p['_wave4']=True
     if wave5:p['_wave5']=True
+    if wave7:p.update(_wave5=True,_wave7=True)
     vs=d.get('variants')
     if not isinstance(vs,list) or not vs or any(not isinstance(v,str) for v in vs) or len(vs)!=len(set(vs)) or set(vs)-set(extension_variants(p)):raise ValueError('explicit distinct reviewed edict extension variants required')
     return p
@@ -397,7 +418,11 @@ def wave5_variants(p):
 
 
 def extension_variants(p):
-    if p.get('_wave5'):return wave5_variants(p)
+    if p.get('_wave5'):
+        result=wave5_variants(p)
+        if p.get('_wave7'):
+            result += [f'{v}_{pl}' for pl in (0,1) for v in ('large_toughness','stolen_recipients')]
+        return result
     common=['effect','payment','insufficient_mana','wrong_color','bare_zones','cleanup','countered','ready_snapshot','pending_snapshot','resolved_snapshot']
     if p['cost_scope']!='none':common+=['empty_cost','stolen_cost']
     elif p['kind']=='edict':common+=['empty_recipients']
@@ -523,7 +548,8 @@ def extension_expand(name,csvid,d,p,selected,rows,o):
             count=0 if v=='empty_recipients' else 1 if v=='one_recipient' else 3
             for i in range(count):
                 n='Darksteel Myr' if v=='indestructible_recipients' else 'Gladecover Scout' if v=='hexproof_recipients' else 'Grizzly Bears' if target==1 else ('Grizzly Bears','Hill Giant','Grizzly Bears')[i]
-                ref=f'participant{i}';add(n,ref,target);entities[ref]['tapped']=False;setup[-1]['state']=['untapped'];entities[ref]['combat']='blocking' if blocking else 'attacking';combat_refs.append(ref)
+                if p.get('_wave7') and v=='large_toughness':n='Phyrexian Hulk'
+                ref=f'participant{i}';add(n,ref,target,stolen=p.get('_wave7') and v=='stolen_recipients');entities[ref]['tapped']=False;setup[-1]['state']=[s for s in setup[-1]['state'] if s!='tapped']+['untapped'];entities[ref]['combat']='blocking' if blocking else 'attacking';combat_refs.append(ref)
             for ref,pl in (('ready_nonparticipant',target),('opposing_nonparticipant',1-target)):
                 add('Grizzly Bears',ref,pl);entities[ref]['tapped']=False;setup[-1]['state']=['untapped']
             if blocking:add('Grizzly Bears','combat_attacker',1-target);entities['combat_attacker']['tapped']=False;setup[-1]['state']=['untapped']
@@ -787,7 +813,8 @@ def extension_expand(name,csvid,d,p,selected,rows,o):
                 for ref,e in entities.items():
                     if e['alive'] and 'Creature' in o[e['name']]['type_line']:leave(ref,'hand')
             elif v=='target_shrouded_pending':
-                actions.extend([step('cast',ref='response',value=1),step('assert_stack',value=2),step('resolve')]);pay(cost_from_oracle(o['Gilded Light']),target);spell_done('Gilded Light',target)
+                if p.get('parent_response_context'):actions.append(step('announce_spell',ref='source'))
+                actions.extend([step('cast_response' if p.get('parent_response_context') else 'cast',ref='response',value=1),step('assert_stack',value=2),step('resolve_response' if p.get('parent_response_context') else 'resolve')]);pay(cost_from_oracle(o['Gilded Light']),target);spell_done('Gilded Light',target)
             elif v in ('target_hexproof','second_target_hexproof'):
                 pl=entities[response_victim]['player'];actions.extend([step('choose_target',player=pl,ref=response_victim),step('cast_response',ref='response',value=1),step('assert_stack',value=2),step('resolve_response')]);pay(cost_from_oracle(o["Ranger's Guile"]),pl);spell_done("Ranger's Guile",pl);entities[response_victim]['power']+=1;entities[response_victim]['toughness']+=1
             elif v=='target_removed':
@@ -924,6 +951,8 @@ def extension_expand(name,csvid,d,p,selected,rows,o):
                     elif p['effect']=='edict':
                         for pl in recipients:life[pl]-=p['secondary_loss']
                         if p['gain']=='sacrificed_toughness':life[owner]+=sum(entities[ref]['toughness'] for ref in sacrificed)
+                        if p.get('_wave7') and p.get('sacrifice_token'):
+                            t=dict(p['sacrifice_token']);t['count']=max(0,sum(entities[ref]['toughness'] for ref in sacrificed));tokens[owner].append(t)
                         if p.get('condition',{}).get('kind')=='dragon_as_cast' and dragon_as_cast:life[owner]+=p['condition']['gain']
                         if p.get('condition',{}).get('kind')=='empty_loss':
                             for pl in recipients:
@@ -1011,6 +1040,7 @@ def extension_expand(name,csvid,d,p,selected,rows,o):
                 if not t['count']:continue
                 properties=dict(token=1,artifact=0,color=sum(1<<{'B':1,'U':2,'G':3,'R':4,'W':5}[c] for c in t['colors']),power=t['power'],toughness=t['toughness'])
                 properties.update({'subtype_'+sub:1 for sub in t['subtypes'] if sub in {'Goblin','Insect','Zombie','Elf','Warrior','Elemental'}})
+                if p.get('_wave7') and 'Soldier' in t['subtypes']:properties['subtype_Soldier']=1
                 checks.extend(step('assert_matching_permanents',player=pl,index=rows[t['name']]['csvid'],property=k,value=n) for k,n in properties.items())
                 for i in range(t['count']):checks.extend([step('bind_permanent_copy',ref=f'token{pl}_{i}',player=pl,index=i,value=rows[t['name']]['csvid']),observe(f'token{pl}_{i}','sick',t.get('sick',1))])
             for zone,players in zones.items():

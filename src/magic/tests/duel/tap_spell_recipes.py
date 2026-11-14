@@ -8,6 +8,7 @@ import json
 from pathlib import Path
 
 REVIEW=json.loads((Path(__file__).parent/'data/tap_spell_reviews.json').read_text(encoding='utf8'))
+WAVE7=json.loads((Path(__file__).parent/'data/tap_spell_wave7_reviews.json').read_text(encoding='utf8'))
 SINGLE={'creature','land','permanent','artifact_creature_land'}
 HAND=('Grizzly Bears','Plains')
 GRAVE=('Grizzly Bears','Forest')
@@ -17,6 +18,7 @@ ARMY=('Grizzly Bears','Hill Giant','Merfolk of the Pearl Trident','Savannah Lion
 
 def spec(d,o):
  from recipes import cost_from_oracle
+ if isinstance(d.get('params'),dict) and d['params'].get('schema')==10:return _spec7(d,o)
  entry=(REVIEW['cards'].get(o.get('name')) or REVIEW.get('advanced_cards',{}).get(o.get('name')) or REVIEW.get('extension_cards',{}).get(o.get('name')) or REVIEW.get('next_untap_cards',{}).get(o.get('name')) or REVIEW.get('mechanic_cards',{}).get(o.get('name')) or REVIEW.get('quantity_cards',{}).get(o.get('name'))) if o else None
  if o and isinstance(d.get('params'),dict) and d['params'].get('schema')==9:entry=REVIEW.get('cost_followups',{}).get(o.get('name'))
  if not entry or o.get('layout')!='normal' or o.get('card_faces') or o.get('selected_face') or o.get('type_line','').partition(' — ')[0] not in ('Instant','Sorcery'):
@@ -36,6 +38,7 @@ def spec(d,o):
  return dict(p,family='tap_spell',mana=cost_from_oracle(o),instant=o['type_line'].startswith('Instant'),single=p['scope'] in SINGLE)
 
 def variants(p):
+ if p.get('wave7'):return _variants7(p)
  if p.get('quantity8'):return _variants8(p)
  if p.get('next_untap5'):return _variants5(p)
  if p.get('advanced3'):return _variants3(p)
@@ -56,6 +59,7 @@ def variants(p):
  if 'no spell previously cast for surge' in p['inactive']:names.remove('two_copies')
  if p['scope'] in ('land','lands'):names.remove('combat_attack')
  if p['scope'] in ('lands','white_creatures'):names.remove('late_entry')
+ if p.get('wave7_component') and p['controller']=='opponent':names+=['wrong_controller']
  return [v+'_'+str(owner) for owner in (0,1) for v in names]
 
 def validate_witnesses(o,rows):
@@ -76,6 +80,7 @@ def matches(record,p,owner,controller):
  return scope=='permanent'
 
 def expand(name,csvid,d,p,selected,rows,o):
+ if p.get('wave7'):return _expand7(name,csvid,d,p,selected,rows,o)
  if p.get('quantity8'):return _expand8(name,csvid,d,p,selected,rows,o)
  if p.get('next_untap5'):return _expand5(name,csvid,d,p,selected,rows,o)
  if p.get('advanced3'):return _expand3(name,csvid,d,p,selected,rows,o)
@@ -1202,3 +1207,81 @@ def _quantity_case8(name,csvid,d,p,variant,rows,o):
  if v in ('ready_snapshot','pending_snapshot','resolved_snapshot'):
   cut=0 if v=='ready_snapshot' else pending_cut if v=='pending_snapshot' else len(actions);assert cut is not None;tail=actions[cut:]+checks;seq=pre+actions[:cut]+[step('capture')]+copy.deepcopy(tail)+[step('record_state'),step('ai_roundtrip'),step('restore')]+copy.deepcopy(tail)+[step('assert_recorded_state')]
  return dict(name=f'TapSpell8Recipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=setup,steps=seq,_recipe=dict(family='tap_spell',version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],untested_components=p['gaps']))
+
+
+# Wave7 reuses the unchanged basic model for explicitly pinned components.
+# The action prefix keeps two-mode declarations distinct without changing any
+# existing case identity or legacy recipe body.
+def _spec7(d,o):
+ entry=WAVE7['cards'].get(o.get('name')) if o else None
+ if (not entry or o!=entry['oracle'] or o.get('layout')!='normal'
+     or o.get('card_faces') or o.get('selected_face')
+     or o.get('type_line','').partition(' — ')[0] not in ('Instant','Sorcery')):
+  raise ValueError('wave7 tap spell requires the complete pinned ordinary Oracle record')
+ if (type(d.get('version')) is not int or d['version']!=2 or 'variants' not in d
+     or d.get('oracle_text')!=o['oracle_text']
+     or json.dumps(d.get('params'),sort_keys=True)!=json.dumps(entry['params'],sort_keys=True)):
+  raise ValueError('wave7 tap spell requires exact reviewed parameters and variants')
+ return dict(family='tap_spell',wave7=True,source_name=o['name'],params=copy.deepcopy(entry['params']),oracle=copy.deepcopy(o))
+
+def _profile7(p,effect):
+ from recipes import cost_from_oracle
+ profile=copy.deepcopy(p['params']['base'])
+ profile.update(effect=effect,mana=cost_from_oracle(p['oracle']),instant=p['oracle']['type_line'].startswith('Instant'),single=profile['scope'] in SINGLE,wave7_component=True)
+ if p['params']['resolve_twiddle']:
+  profile['resolve_dialogs']=[0 if effect=='tap' else 1]*profile['count']
+ return profile
+
+def _variants7(p):
+ result=[]
+ for effect in p['params']['effects']:
+  profile=_profile7(p,effect)
+  choices=variants(profile)
+  omitted=set(p['params']['omit_variants'])
+  result += [effect+'_'+choice for choice in choices if choice.rsplit('_',1)[0] not in omitted]
+ return result
+
+def _expand7(name,csvid,d,p,selected,rows,o):
+ if (not isinstance(selected,list) or not selected or len(selected)!=len(set(selected))
+     or set(selected)-set(_variants7(p))):
+  raise ValueError('wave7 tap spell requires distinct reviewed action variants')
+ result=[]
+ for variant in selected:
+  effect,legacy=variant.split('_',1)
+  profile=_profile7(p,effect)
+  if p['params']['resolve_twiddle'] and legacy.rsplit('_',1)[0] in ('lost_target','bounced_target','target_shrouded_pending'):
+   profile['resolve_dialogs']=profile['resolve_dialogs'][1:]
+  case=expand(name,csvid,d,profile,[legacy],rows,o)[0]
+  if name=='Hidden Strings' and legacy.rsplit('_',1)[0]=='bounced_target':
+   # Multi-target parent spells need the real response context while the
+   # response and parent drain, rather than an unrelated top-level cast.
+   # The one surviving twiddle belongs after response target selection: all
+   # scripted decisions share one ordered queue, even across different kinds.
+   initial_cast=next(i for i,s in enumerate(case['steps']) if s['op']=='cast' and s.get('ref')=='source')
+   delayed=[s for s in case['steps'][:initial_cast] if s['op']=='choose_dialog']
+   seq=[];response=False
+   for index,operation in enumerate(case['steps']):
+    if index<initial_cast and operation['op']=='choose_dialog':continue
+    if operation['op']=='cast' and operation.get('ref')=='response':
+     seq += [dict(operation,op='cast_response'),dict(op='assert_stack',value=2)]+delayed;response=True
+    elif response and operation['op']=='resolve':
+     seq += [dict(op='resolve_response'),dict(op='assert_stack',value=0)];response=False
+    else:seq.append(operation)
+   case['steps']=seq
+  if name=='Psychic Puppetry' and legacy=='two_copies_0':
+   # The second Arcane copy in hand makes splice available to the human.
+   # Decline its real casting-time menu before the resolution twiddle menu.
+   seq=case['steps'];at=next(i for i,s in enumerate(seq) if s['op']=='choose_target')
+   seq.insert(at,dict(op='choose_dialog',player=0,value=0))
+  # Hidden Strings is deliberately exercised without a creature to encode.
+  # A new variant must not silently turn the cipher component on.
+  if 'no controlled creature on successful casts to encode' in profile['inactive']:
+   owner=int(legacy[-1])
+   if any(c['player']==owner and c['zone']=='battlefield' and 'Creature' in o[c['name']]['type_line'] for c in case['setup']):
+    raise ValueError('wave7 cipher-inactive board contains a controlled creature')
+  case['name']=f'TapSpellWave7Recipe_{csvid}_{variant}'
+  case['_recipe']['variant']=variant
+  case['_recipe']['untested_components']=profile['gaps']+['control changes','multiplayer']
+  if name=='Permafrost Trap':case['_recipe']['untested_components']+=['next untap steps']
+  result.append(case)
+ return result

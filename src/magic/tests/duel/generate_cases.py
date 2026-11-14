@@ -33,10 +33,23 @@ OPS |= {"record_library", "assert_scry_result"}
 OPS |= {"observe_search_filters", "assert_offered_legal_card"}
 OPS.add("assert_offered_selection_required")
 OPS |= {"cast_response", "resolve_response", "reset_death_history"}
+OPS.add("announce_spell")
 OPS |= {"can_activate_graveyard", "require_can_activate_graveyard", "activate_graveyard", "prepare_graveyard_abilities"}
 OPS.add("untap_step")
+OPS.add("upkeep_step")
 OPS |= {"can_cast_graveyard", "require_can_cast_graveyard", "cast_graveyard"}
 OPS.add("assert_shuffle_count")
+OPS.add("assert_counter")
+COUNTER_KINDS = {"plus1", "minus1", "charge", "loyalty", "knowledge", "elixir",
+                 "divinity", "quest", "blood", "gold", "study", "growth", "ki", "lore", "age", "fade", "time"}
+
+def validate_counter_observation(step):
+    if (set(step) != {'op', 'ref', 'counter_kind', 'value'}
+            or not isinstance(step.get('ref'), str) or not step['ref']
+            or not isinstance(step.get('counter_kind'), str) or step['counter_kind'] not in COUNTER_KINDS
+            or type(step.get('value')) is not int or not 0 <= step['value'] <= 2147483647):
+        raise ValueError('counter observations require a named permanent, reviewed counter kind and nonnegative count')
+
 TOKEN_PROPERTIES = {"token", "color", "artifact"} | {"subtype_"+n for n in (
     "Angel","Bear","Bird","Centaur","Citizen","Dragon","Drake","Eldrazi","Elf","Goblin",
     "Horror","Human","Insect","Knight","Ally","Minotaur","Myr","Satyr","Servo","Sliver",
@@ -47,6 +60,53 @@ REF_OPS = {"choose_regeneration", "choose_target", "choose_damage_target", "choo
 REF_OPS |= {"can_activate_hand", "require_can_activate_hand", "activate_hand", "require_can_activate", "can_target_creature"}
 REF_OPS.add("probe_activation_target")
 REF_OPS.add("cast_response")
+REF_OPS.add("announce_spell")
+REF_OPS.add("assert_counter")
+OPS |= {"choose_trigger_source", "choose_optional_target", "assert_forced_target_choices"}
+REF_OPS |= {"choose_trigger_source", "choose_optional_target"}
+OPS |= {"choose_activation_mode", "require_activation_mode"}
+REF_OPS.add("choose_activation_mode")
+OPS |= {"choose_mana_source", "can_activate_granted_mana", "activate_granted_mana"}
+REF_OPS |= {"choose_mana_source", "can_activate_granted_mana", "activate_granted_mana"}
+
+def validate_mana_source_choice(step):
+    if (set(step) != {'op','ref'} or step.get('op') != 'choose_mana_source'
+            or not isinstance(step.get('ref'),str) or not step['ref']):
+        raise ValueError('mana-source choices require only a named live source; chooser comes from its reference')
+
+def validate_granted_mana_action(step):
+    if (set(step) != {'op','ref','other','value'}
+            or step.get('op') not in ('can_activate_granted_mana','activate_granted_mana')
+            or not isinstance(step.get('ref'),str) or not step['ref']
+            or not isinstance(step.get('other'),str) or not step['other']
+            or type(step.get('value')) is not int or step['value'] not in (0,1)):
+        raise ValueError('granted mana actions require actual host/provider references and a boolean integer receipt')
+
+def validate_activation_mode_choice(step):
+    label = step.get('mode_label')
+    if (set(step) != {'op','ref','player','mode_label','fallback_color','allow_auto_nonmana'}
+            or not isinstance(step.get('ref'),str) or not step['ref']
+            or type(step.get('player')) is not int or step['player'] not in (0,1)
+            or not isinstance(label,str) or not label or len(label.encode('utf8'))>127
+            or '\n' in label or '\r' in label
+            or type(step.get('fallback_color')) is not int or not 0<=step['fallback_color']<=6
+            or type(step.get('allow_auto_nonmana')) is not bool):
+        raise ValueError('activation mode intent requires an explicit source, chooser, one-line label and reviewed fallback/auto policy')
+
+def validate_activation_mode_observation(step):
+    if set(step) != {'op','value'} or type(step.get('value')) is not int or step['value'] not in (0,1):
+        raise ValueError('activation mode observation requires only an explicit zero/one receipt')
+
+def validate_named_choice(step):
+    if (set(step) != {'op', 'ref', 'player'}
+            or not isinstance(step.get('ref'), str) or not step['ref']
+            or type(step.get('player')) is not int or step['player'] not in (0, 1)):
+        raise ValueError('named trigger/optional target choices require an explicit chooser and reference')
+
+def validate_forced_target_observation(step):
+    if (set(step) != {'op', 'value'} or type(step.get('value')) is not int
+            or not 0 <= step['value'] <= 2147483647):
+        raise ValueError('forced target observations require only an explicit nonnegative count')
 REF_OPS |= {"can_activate_graveyard", "require_can_activate_graveyard", "activate_graveyard"}
 REF_OPS |= {"can_cast_graveyard", "require_can_cast_graveyard", "cast_graveyard"}
 
@@ -67,6 +127,10 @@ def validate_library_observation(step, recorded):
 def validate_untap_step(step):
     if type(step.get('player')) is not int or step['player'] not in (0,1) or set(step) != {'op','player'}:
         raise ValueError('untap_step requires only an explicit player zero or one')
+
+def validate_upkeep_step(step):
+    if type(step.get('player')) is not int or step['player'] not in (0,1) or set(step) != {'op','player'}:
+        raise ValueError('upkeep_step requires only an explicit player zero or one')
 
 def read(path):
     value = json.loads(path.read_text(encoding="utf-8"))
@@ -161,10 +225,26 @@ def build(data, output, legacy_fingerprints=False, *, case_files=None, csvids=No
         recorded_libraries = set()
         for step in case["steps"]:
             op = step["op"]
+            if op == 'choose_mana_source':
+                validate_mana_source_choice(step)
+            if op in ('can_activate_granted_mana','activate_granted_mana'):
+                validate_granted_mana_action(step)
+            if op == 'assert_counter':
+                validate_counter_observation(step)
+            if op in ('choose_trigger_source', 'choose_optional_target'):
+                validate_named_choice(step)
+            if op == 'assert_forced_target_choices':
+                validate_forced_target_observation(step)
+            if op == 'choose_activation_mode':
+                validate_activation_mode_choice(step)
+            if op == 'require_activation_mode':
+                validate_activation_mode_observation(step)
             if op == 'assert_shuffle_count':
                 validate_shuffle_observation(step)
             if op == 'untap_step':
                 validate_untap_step(step)
+            if op == 'upkeep_step':
+                validate_upkeep_step(step)
             if op == 'present_ai_dialogs' and (type(step.get('value')) is not int or step['value'] not in (0,1)):
                 raise ValueError(f'Invalid AI dialog input policy in {name}: {step}')
             if op == 'discard_policy' and (type(step.get('value')) is not int or step['value'] not in (0,1,2)):
@@ -260,9 +340,10 @@ def build(data, output, legacy_fingerprints=False, *, case_files=None, csvids=No
                 recorded_state = True
             elif op == "assert_recorded_state" and not recorded_state:
                 raise ValueError(f"Record a result before comparing it in {name}")
-            step_rows.append((op,step.get("ref", ""),step.get("other", ""),step.get("property", ""),
-                step.get("player",0),step.get("value",0),ZONES.get(step.get("zone","hand"),0),
-                step.get("index",-1 if op in {"bind_permanent","bind_hand"} else 0),step.get("color",0)))
+            step_rows.append((op,step.get("ref", ""),step.get("other", ""),
+                step['mode_label'] if op=='choose_activation_mode' else step.get("counter_kind", "") if op == 'assert_counter' else step.get("property", ""),
+                step.get("player",0),int(step['allow_auto_nonmana']) if op=='choose_activation_mode' else step.get("value",0),ZONES.get(step.get("zone","hand"),0),
+                step.get("index",-1 if op in {"bind_permanent","bind_hand"} else 0),step['fallback_color'] if op=='choose_activation_mode' else step.get("color",0)))
         metadata=(name,case["card"],o["oracle_id"],text,case["fixture"],case.get("seed",123))
         card_rows=[(c["ref"],c["player"],ZONES[c["zone"]],by_name[c["name"]]["csvid"],sum(STATES[x] for x in c.get("state",[]))) for c in case.get("setup",[])]
         archive.add(metadata,card_rows,step_rows)

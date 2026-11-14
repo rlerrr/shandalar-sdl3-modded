@@ -1,0 +1,1184 @@
+{
+  "version": 1,
+  "sources": {
+    "Fellwar Stone": {
+      "csvid": 318,
+      "oracle": {
+        "oracle_id": "95560508-7ac9-4be9-8a3f-3c7d5b52807b",
+        "name": "Fellwar Stone",
+        "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbc/74/fellwar-stone?utm_source=api"
+      },
+      "handler": "manalinkeh_card_fellwar_stone",
+      "input_source": "src/manalinkeh/cards/the_dark.c",
+      "input_source_line": 1173,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": true,
+          "filter_menu": false
+        }
+      },
+      "raw_ai_query_policy": {
+        "empty_query_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        },
+        "wrong_owner_query_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        },
+        "zero_output_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        }
+      },
+      "generic_payment_inputs": {
+        "0": {
+          "cleanup_0": {
+            "spender": 2
+          },
+          "spend_0": {
+            "spender": 2
+          },
+          "untap_step_0": {
+            "spender": 2
+          }
+        }
+      }
+    },
+    "Star Compass": {
+      "csvid": 1160,
+      "oracle": {
+        "oracle_id": "b5e9599f-9561-4e3f-9904-9a4dab98cabb",
+        "name": "Star Compass",
+        "oracle_text": "This artifact enters tapped.\n{T}: Add one mana of any color that a basic land you control could produce.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/229/star-compass?utm_source=api"
+      },
+      "handler": "manalinkeh_card_star_compass",
+      "input_source": "src/manalinkeh/cards/planeshift.c",
+      "input_source_line": 2007,
+      "abilities": {
+        "1": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": true,
+          "filter_menu": false
+        }
+      },
+      "raw_ai_query_policy": {
+        "empty_query_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        },
+        "nonbasic_query_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        },
+        "wrong_owner_query_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        },
+        "zero_output_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        }
+      },
+      "generic_payment_inputs": {
+        "1": {
+          "cleanup_0": {
+            "spender": 3
+          },
+          "spend_0": {
+            "spender": 3
+          },
+          "untap_step_0": {
+            "spender": 3
+          }
+        }
+      }
+    },
+    "Silhana Starfletcher": {
+      "csvid": 8128,
+      "oracle": {
+        "oracle_id": "3b4b6af2-f929-4082-a5ae-61a4e074bf14",
+        "name": "Silhana Starfletcher",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nAs this creature enters, choose a color.\n{T}: Add one mana of the chosen color.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Elf Druid Archer",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gpt/95/silhana-starfletcher?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sol_grail",
+      "input_source": "src/manalinkeh/cards/alliances.c",
+      "input_source_line": 3290,
+      "abilities": {
+        "2": {
+          "entry_choice": true,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      },
+      "generic_payment_inputs": {
+        "2": {
+          "cleanup_0": {
+            "spender": 4
+          },
+          "reach_0": {
+            "spender": 4
+          },
+          "spend_0": {
+            "spender": 4
+          },
+          "untap_step_0": {
+            "spender": 4
+          }
+        }
+      }
+    },
+    "Vesper Ghoul": {
+      "csvid": 8314,
+      "oracle": {
+        "oracle_id": "c45562ce-5d1a-4ad4-82f8-92199520ae87",
+        "name": "Vesper Ghoul",
+        "oracle_text": "{T}, Pay 1 life: Add one mana of any color.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dis/57/vesper-ghoul?utm_source=api"
+      },
+      "handler": "manalinkeh_card_mana_confluence",
+      "input_source": "src/manalinkeh/cards/journey_into_nyx.c",
+      "input_source_line": 4355,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      },
+      "generic_payment_inputs": {
+        "0": {
+          "cleanup_0": {
+            "spender": 3
+          },
+          "spend_0": {
+            "spender": 3
+          },
+          "untap_step_0": {
+            "spender": 3
+          }
+        }
+      }
+    },
+    "Springleaf Drum": {
+      "csvid": 9270,
+      "oracle": {
+        "oracle_id": "bdeb440d-a714-40e8-9038-f651e6ae45fb",
+        "name": "Springleaf Drum",
+        "oracle_text": "{T}, Tap an untapped creature you control: Add one mana of any color.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ecl/260/springleaf-drum?utm_source=api"
+      },
+      "handler": "manalinkeh_card_springleaf_drum",
+      "input_source": "src/manalinkeh/cards/lorwyn.c",
+      "input_source_line": 6270,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": true,
+            "1": true
+          },
+          "cost_before_color": true,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      },
+      "generic_payment_inputs": {
+        "0": {
+          "cleanup_0": {
+            "spender": 3
+          },
+          "spend_0": {
+            "spender": 3
+          },
+          "untap_step_0": {
+            "spender": 3
+          }
+        }
+      }
+    },
+    "Pristine Talisman": {
+      "csvid": 11664,
+      "oracle": {
+        "oracle_id": "1b3d7fce-e9fe-4176-9d9a-472415826cdd",
+        "name": "Pristine Talisman",
+        "oracle_text": "{T}: Add {C}. You gain 1 life.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/258/pristine-talisman?utm_source=api"
+      },
+      "handler": "manalinkeh_card_pristine_talisman",
+      "input_source": "src/manalinkeh/cards/new_phyrexia.c",
+      "input_source_line": 4706,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      }
+    },
+    "Naga Vitalist": {
+      "csvid": 16973,
+      "oracle": {
+        "oracle_id": "9cea8783-c7d7-49f9-b23d-324309efc140",
+        "name": "Naga Vitalist",
+        "oracle_text": "{T}: Add one mana of any type that a land you control could produce.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Snake Druid",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/176/naga-vitalist?utm_source=api"
+      },
+      "handler": "manalinkeh_card_naga_vitalist",
+      "input_source": "src/manalinkeh/cards/amonkhet.c",
+      "input_source_line": 4876,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      }
+    },
+    "Painted Bluffs": {
+      "csvid": 16990,
+      "oracle": {
+        "oracle_id": "b66deeb5-7371-4f06-b10e-d65165bc07b2",
+        "name": "Painted Bluffs",
+        "oracle_text": "{T}: Add {C}.\n{1}, {T}: Add one mana of any color.",
+        "mana_cost": "",
+        "type_line": "Land — Desert",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/otc/309/painted-bluffs?utm_source=api"
+      },
+      "handler": "manalinkeh_card_prismatic_lens",
+      "input_source": "src/manalinkeh/cards/time_spiral.c",
+      "input_source_line": 4990,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": true
+        },
+        "1": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": true
+        }
+      },
+      "generic_payment_inputs": {
+        "1": {
+          "cleanup_0": {
+            "spender": 3
+          },
+          "repeat_untap_0": {
+            "source_activation_2": 3
+          },
+          "spend_0": {
+            "spender": 3
+          }
+        }
+      }
+    },
+    "Exotic Orchard": {
+      "csvid": 1614,
+      "oracle": {
+        "oracle_id": "27b047e3-0d41-45e2-98e9-9391d7923a1e",
+        "name": "Exotic Orchard",
+        "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbc/79/exotic-orchard?utm_source=api"
+      },
+      "handler": "manalinkeh_card_fellwar_stone",
+      "input_source": "src/manalinkeh/cards/the_dark.c",
+      "input_source_line": 1173,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": true,
+          "filter_menu": false
+        }
+      },
+      "generic_payment_inputs": {
+        "0": {
+          "spend_0": {
+            "spender": 2
+          },
+          "cleanup_0": {
+            "spender": 2
+          },
+          "untap_step_0": {
+            "spender": 2
+          }
+        }
+      },
+      "raw_ai_query_policy": {
+        "empty_query_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        },
+        "wrong_owner_query_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        },
+        "zero_output_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        }
+      }
+    },
+    "Sol Grail": {
+      "csvid": 2347,
+      "oracle": {
+        "oracle_id": "0396ef40-3774-4684-9971-160aaccf6ac6",
+        "name": "Sol Grail",
+        "oracle_text": "As this artifact enters, choose a color.\n{T}: Add one mana of the chosen color.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/201/sol-grail?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sol_grail",
+      "input_source": "src/manalinkeh/cards/alliances.c",
+      "input_source_line": 3290,
+      "abilities": {
+        "1": {
+          "entry_choice": true,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      },
+      "generic_payment_inputs": {
+        "1": {
+          "spend_0": {
+            "spender": 4
+          },
+          "cleanup_0": {
+            "spender": 4
+          },
+          "untap_step_0": {
+            "spender": 4
+          }
+        }
+      }
+    },
+    "Quirion Elves": {
+      "csvid": 2572,
+      "oracle": {
+        "oracle_id": "e2975a88-5a5a-462a-90b9-d8c00150b6d3",
+        "name": "Quirion Elves",
+        "oracle_text": "As this creature enters, choose a color.\n{T}: Add {G}.\n{T}: Add one mana of the chosen color.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dde/39/quirion-elves?utm_source=api"
+      },
+      "handler": "manalinkeh_card_quirion_elves",
+      "input_source": "src/manalinkeh/cards/mirage.c",
+      "input_source_line": 4489,
+      "abilities": {
+        "1": {
+          "entry_choice": true,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        },
+        "2": {
+          "entry_choice": true,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      },
+      "append_presentation": {
+        "combined_entry_palette": true
+      },
+      "generic_payment_inputs": {
+        "1": {
+          "spend_0": {
+            "spender": 3
+          },
+          "cleanup_0": {
+            "spender": 3
+          },
+          "untap_step_0": {
+            "spender": 3
+          }
+        },
+        "2": {
+          "spend_0": {
+            "spender": 4
+          },
+          "cleanup_0": {
+            "spender": 4
+          },
+          "untap_step_0": {
+            "spender": 4
+          }
+        }
+      }
+    },
+    "Reflecting Pool": {
+      "csvid": 3244,
+      "oracle": {
+        "oracle_id": "67f43ac6-2a58-4b53-b5d7-0330e2a252e2",
+        "name": "Reflecting Pool",
+        "oracle_text": "{T}: Add one mana of any type that a land you control could produce.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/23/reflecting-pool?utm_source=api"
+      },
+      "handler": "manalinkeh_card_reflecting_pool",
+      "input_source": "src/manalinkeh/cards/tempest.c",
+      "input_source_line": 4318,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      }
+    },
+    "Sylvok Explorer": {
+      "csvid": 7135,
+      "oracle": {
+        "oracle_id": "cf7371c8-2fd8-4e70-abde-27495af85011",
+        "name": "Sylvok Explorer",
+        "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c16/169/sylvok-explorer?utm_source=api"
+      },
+      "handler": "manalinkeh_card_fellwar_stone",
+      "input_source": "src/manalinkeh/cards/the_dark.c",
+      "input_source_line": 1173,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": true,
+          "filter_menu": false
+        }
+      },
+      "generic_payment_inputs": {
+        "0": {
+          "spend_0": {
+            "spender": 2
+          },
+          "cleanup_0": {
+            "spender": 2
+          },
+          "untap_step_0": {
+            "spender": 2
+          }
+        }
+      },
+      "raw_ai_query_policy": {
+        "empty_query_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        },
+        "wrong_owner_query_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        },
+        "zero_output_1": {
+          "raw_value": 0,
+          "oracle_legal_activation": true,
+          "zero_output": true,
+          "action": "query_only",
+          "policy": "AI_nonproductive_availability"
+        }
+      }
+    },
+    "Coldsteel Heart": {
+      "csvid": 8349,
+      "oracle": {
+        "oracle_id": "21d700e8-0255-418e-96a0-6fe05b3f836d",
+        "name": "Coldsteel Heart",
+        "oracle_text": "This artifact enters tapped.\nAs this artifact enters, choose a color.\n{T}: Add one mana of the chosen color.",
+        "mana_cost": "{2}",
+        "type_line": "Snow Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/301/coldsteel-heart?utm_source=api"
+      },
+      "handler": "manalinkeh_card_coldsteel_heart",
+      "input_source": "src/manalinkeh/cards/coldsnap.c",
+      "input_source_line": 603,
+      "abilities": {
+        "2": {
+          "entry_choice": true,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      },
+      "generic_payment_inputs": {
+        "2": {
+          "spend_0": {
+            "spender": 4
+          },
+          "cleanup_0": {
+            "spender": 4
+          },
+          "untap_step_0": {
+            "spender": 4
+          }
+        }
+      }
+    },
+    "Holdout Settlement": {
+      "csvid": 15614,
+      "oracle": {
+        "oracle_id": "e6b77545-de5c-4f4a-b7ea-83498fb33ba8",
+        "name": "Holdout Settlement",
+        "oracle_text": "{T}: Add {C}. ({C} represents colorless mana.)\n{T}, Tap an untapped creature you control: Add one mana of any color.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ogw/172/holdout-settlement?utm_source=api"
+      },
+      "handler": "manalinkeh_card_holdout_settlement",
+      "input_source": "src/manalinkeh/cards/oath_of_the_gatewatch.c",
+      "input_source_line": 5994,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        },
+        "1": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": true,
+            "1": true
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      },
+      "append_presentation": {
+        "creature_color_menu": true,
+        "shrouded_helper_query_only": true
+      },
+      "generic_payment_inputs": {
+        "1": {
+          "spend_0": {
+            "spender": 3
+          },
+          "cleanup_0": {
+            "spender": 3
+          },
+          "untap_step_0": {
+            "spender": 3
+          }
+        }
+      }
+    },
+    "Loam Dryad": {
+      "csvid": 15883,
+      "oracle": {
+        "oracle_id": "1420b7db-859b-4ad5-9844-10413cc70478",
+        "name": "Loam Dryad",
+        "oracle_text": "{T}, Tap an untapped creature you control: Add one mana of any color.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Dryad Horror",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/216/loam-dryad?utm_source=api"
+      },
+      "handler": "manalinkeh_card_springleaf_drum",
+      "input_source": "src/manalinkeh/cards/lorwyn.c",
+      "input_source_line": 6270,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": true,
+            "1": true
+          },
+          "cost_before_color": true,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      },
+      "generic_payment_inputs": {
+        "0": {
+          "spend_0": {
+            "spender": 3
+          },
+          "cleanup_0": {
+            "spender": 3
+          },
+          "untap_step_0": {
+            "spender": 3
+          }
+        }
+      }
+    },
+    "Survivors' Encampment": {
+      "csvid": 17234,
+      "oracle": {
+        "oracle_id": "152e7e91-4eda-4e72-a9fb-bd5cb2e68239",
+        "name": "Survivors' Encampment",
+        "oracle_text": "{T}: Add {C}.\n{T}, Tap an untapped creature you control: Add one mana of any color.",
+        "mana_cost": "",
+        "type_line": "Land — Desert",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hou/184/survivors-encampment?utm_source=api"
+      },
+      "handler": "manalinkeh_card_holdout_settlement",
+      "input_source": "src/manalinkeh/cards/oath_of_the_gatewatch.c",
+      "input_source_line": 5994,
+      "abilities": {
+        "0": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        },
+        "1": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": true,
+            "1": true
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        }
+      },
+      "append_presentation": {
+        "creature_color_menu": true,
+        "shrouded_helper_query_only": true
+      },
+      "generic_payment_inputs": {
+        "1": {
+          "spend_0": {
+            "spender": 3
+          },
+          "cleanup_0": {
+            "spender": 3
+          },
+          "untap_step_0": {
+            "spender": 3
+          }
+        }
+      },
+      "observed_ai_sacrifices": {
+        "1": {
+          "helper_shroud_1": "source"
+        }
+      }
+    }
+  },
+  "witnesses": {
+    "Plains": {
+      "csvid": 188,
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Island": {
+      "csvid": 126,
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Swamp": {
+      "csvid": 239,
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Mountain": {
+      "csvid": 164,
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Forest": {
+      "csvid": 91,
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Wastes": {
+      "csvid": 15719,
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Mana Confluence": {
+      "csvid": 13929,
+      "oracle": {
+        "oracle_id": "d0ee5bdc-2b69-4b73-9a20-ffcc18783b29",
+        "name": "Mana Confluence",
+        "oracle_text": "{T}, Pay 1 life: Add one mana of any color.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/163/mana-confluence?utm_source=api"
+      },
+      "handler": "manalinkeh_card_mana_confluence"
+    },
+    "Scion of Glaciers": {
+      "csvid": 14370,
+      "oracle": {
+        "oracle_id": "9d49cef5-8f9c-46cd-aa5e-7861fc1dcaa4",
+        "name": "Scion of Glaciers",
+        "oracle_text": "{U}: This creature gets +1/-1 until end of turn.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "2",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/53/scion-of-glaciers?utm_source=api"
+      },
+      "handler": "manalinkeh_card_metropolis_sprite"
+    },
+    "Judge's Familiar": {
+      "csvid": 12760,
+      "oracle": {
+        "oracle_id": "22b7975c-37a5-4895-b209-bdeeec0c6aea",
+        "name": "Judge's Familiar",
+        "oracle_text": "Flying\nSacrifice this creature: Counter target instant or sorcery spell unless its controller pays {1}.",
+        "mana_cost": "{W/U}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/192/judges-familiar?utm_source=api"
+      },
+      "handler": "manalinkeh_card_judges_familiar"
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "handler": "manalinkeh_card_twiddle"
+    },
+    "Icy Manipulator": {
+      "csvid": 119,
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "handler": "manalinkeh_card_icy_manipulator"
+    },
+    "Sylvan Safekeeper": {
+      "csvid": 6016,
+      "oracle": {
+        "oracle_id": "bddf8f4a-3149-4dd6-a9e5-7747e7e45a1c",
+        "name": "Sylvan Safekeeper",
+        "oracle_text": "Sacrifice a land: Target creature you control gains shroud until end of turn. (It can't be the target of spells or abilities.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh3/287/sylvan-safekeeper?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sylvan_safekeeper"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Demonfire",
+  "csvid": 8197,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "oracle_text": "Demonfire deals X damage to any target. If a creature dealt damage this way would die this turn, exile it instead.\nHellbent — If you have no cards in hand, this spell can't be countered and the damage can't be prevented.",
+      "params": {
+        "schema": 7,
+        "extension": "unpreventable",
+        "profile": "Demonfire",
+        "mode": "hellbent",
+        "gaps": [
+          "uncounterability",
+          "exile replacement on later lethal damage"
+        ],
+        "target_repetitions": 1
+      },
+      "variants": [
+        "creature_0",
+        "player_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "without_shield_0",
+        "friendly_creature_0",
+        "x_zero_0",
+        "lost_target_0",
+        "with_hand_card_0",
+        "lethal_exile_0",
+        "creature_1",
+        "player_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "without_shield_1",
+        "friendly_creature_1",
+        "x_zero_1",
+        "lost_target_1",
+        "with_hand_card_1",
+        "lethal_exile_1"
+      ]
+    }
+  ]
+}

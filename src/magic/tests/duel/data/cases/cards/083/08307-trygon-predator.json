@@ -1,0 +1,4489 @@
+{
+  "version": 1,
+  "card": "Trygon Predator",
+  "csvid": 8307,
+  "recipes": [
+    {
+      "family": "combat_targeted_removal",
+      "version": 2,
+      "params": {
+        "effect": "destroy",
+        "selector": "artifact_or_enchantment",
+        "optional": true,
+        "scope": "combat",
+        "payment": null,
+        "ninjutsu": null,
+        "maxblockers": null,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, you may destroy target artifact or enchantment that player controls.",
+      "variants": [
+        "unblocked_0",
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "fresh_attack_0",
+        "blocked_0",
+        "pump_0",
+        "cleanup_0",
+        "no_target_0",
+        "wrong_type_0",
+        "ready_snapshot_0",
+        "combat_snapshot_0",
+        "noncombat_player_0",
+        "noncombat_self_0",
+        "noncombat_snapshot_0",
+        "noncombat_sick_0",
+        "two_hits_0",
+        "source_bounce_0",
+        "other_controller_0",
+        "indestructible_0",
+        "enchantment_target_0",
+        "keyword_block_0",
+        "contrary_block_0",
+        "unblocked_1",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "fresh_attack_1",
+        "blocked_1",
+        "pump_1",
+        "cleanup_1",
+        "no_target_1",
+        "wrong_type_1",
+        "ready_snapshot_1",
+        "combat_snapshot_1",
+        "noncombat_player_1",
+        "noncombat_self_1",
+        "noncombat_snapshot_1",
+        "noncombat_sick_1",
+        "two_hits_1",
+        "source_bounce_1",
+        "other_controller_1",
+        "indestructible_1",
+        "enchantment_target_1",
+        "keyword_block_1",
+        "contrary_block_1",
+        "declined_0"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "CombatTargetedRemovalRecipe_8307_mixed_artifact_first_0",
+      "card": "Trygon Predator",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Forest",
+          "ref": "stock_hand_0_0",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_hand_0_1",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_graveyard_0_0",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_exile_0_0",
+          "player": 0,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_0_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_library_0_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "stock_library_0_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_0_3",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_library_0_4",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_library_0_5",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "stock_library_0_6",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_hand_1_0",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_hand_1_1",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_graveyard_1_0",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_exile_1_0",
+          "player": 1,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_1_0",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_library_1_1",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "stock_library_1_2",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_1_3",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_library_1_4",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_library_1_5",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "stock_library_1_6",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Trygon Predator",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "idle",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Denial",
+          "ref": "wall",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "victim",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Fervor",
+          "ref": "later_victim",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "present_ai_dialogs",
+          "value": 1
+        },
+        {
+          "op": "discard_policy",
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "victim"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "assert_unused_choices",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "toughness",
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "victim",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "later_victim",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "later_victim",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 164,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 60
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 230,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 164,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "assert_forced_zone_choices",
+          "value": 0
+        },
+        {
+          "op": "assert_forced_target_choices",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "CombatTargetedRemovalRecipe_8307_mixed_enchantment_first_0",
+      "card": "Trygon Predator",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Forest",
+          "ref": "stock_hand_0_0",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_hand_0_1",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_graveyard_0_0",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_exile_0_0",
+          "player": 0,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_0_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_library_0_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "stock_library_0_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_0_3",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_library_0_4",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_library_0_5",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "stock_library_0_6",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_hand_1_0",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_hand_1_1",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_graveyard_1_0",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_exile_1_0",
+          "player": 1,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_1_0",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_library_1_1",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "stock_library_1_2",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_1_3",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_library_1_4",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_library_1_5",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "stock_library_1_6",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Trygon Predator",
+          "ref": "source",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "idle",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Denial",
+          "ref": "wall",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Fervor",
+          "ref": "victim",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "later_victim",
+          "player": 1,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "present_ai_dialogs",
+          "value": 1
+        },
+        {
+          "op": "discard_policy",
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "choose_target",
+          "player": 0,
+          "ref": "victim"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "assert_unused_choices",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "toughness",
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "victim",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "later_victim",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "later_victim",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 164,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 18
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 60
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 1604,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 164,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "assert_forced_zone_choices",
+          "value": 0
+        },
+        {
+          "op": "assert_forced_target_choices",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "CombatTargetedRemovalRecipe_8307_mixed_artifact_first_1",
+      "card": "Trygon Predator",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Forest",
+          "ref": "stock_hand_0_0",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_hand_0_1",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_graveyard_0_0",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_exile_0_0",
+          "player": 1,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_0_0",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_library_0_1",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "stock_library_0_2",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_0_3",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_library_0_4",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_library_0_5",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "stock_library_0_6",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_hand_1_0",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_hand_1_1",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_graveyard_1_0",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_exile_1_0",
+          "player": 0,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_1_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_library_1_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "stock_library_1_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_1_3",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_library_1_4",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_library_1_5",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "stock_library_1_6",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Trygon Predator",
+          "ref": "source",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "idle",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Denial",
+          "ref": "wall",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "victim",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Fervor",
+          "ref": "later_victim",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "present_ai_dialogs",
+          "value": 1
+        },
+        {
+          "op": "discard_policy",
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "choose_target",
+          "player": 1,
+          "ref": "victim"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "assert_unused_choices",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "toughness",
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "victim",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "later_victim",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "later_victim",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 60
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 164,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 230,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 164,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "assert_forced_zone_choices",
+          "value": 0
+        },
+        {
+          "op": "assert_forced_target_choices",
+          "value": 0
+        }
+      ]
+    },
+    {
+      "name": "CombatTargetedRemovalRecipe_8307_mixed_enchantment_first_1",
+      "card": "Trygon Predator",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Forest",
+          "ref": "stock_hand_0_0",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_hand_0_1",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_graveyard_0_0",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_exile_0_0",
+          "player": 1,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_0_0",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_library_0_1",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "stock_library_0_2",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_0_3",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_library_0_4",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_library_0_5",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "stock_library_0_6",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_hand_1_0",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_hand_1_1",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_graveyard_1_0",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_exile_1_0",
+          "player": 0,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_1_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "stock_library_1_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "stock_library_1_2",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Forest",
+          "ref": "stock_library_1_3",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Mountain",
+          "ref": "stock_library_1_4",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Island",
+          "ref": "stock_library_1_5",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Lightning Bolt",
+          "ref": "stock_library_1_6",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Trygon Predator",
+          "ref": "source",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "idle",
+          "player": 1,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Wall of Denial",
+          "ref": "wall",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Fervor",
+          "ref": "victim",
+          "player": 0,
+          "zone": "battlefield"
+        },
+        {
+          "name": "Sol Ring",
+          "ref": "later_victim",
+          "player": 0,
+          "zone": "battlefield"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "present_ai_dialogs",
+          "value": 1
+        },
+        {
+          "op": "discard_policy",
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "begin_attackers"
+        },
+        {
+          "op": "attack",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "finish_attackers"
+        },
+        {
+          "op": "begin_blockers"
+        },
+        {
+          "op": "advance_combat"
+        },
+        {
+          "op": "choose_target",
+          "player": 1,
+          "ref": "victim"
+        },
+        {
+          "op": "combat_damage"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "end_combat"
+        },
+        {
+          "op": "assert_unused_choices",
+          "value": 0
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "tapped",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 3
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "idle",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "power",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "toughness",
+          "value": 8
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "plus1_counters",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "wall",
+          "property": "damage",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "victim",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "later_victim",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "later_victim",
+          "property": "tapped",
+          "value": 0
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 60
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "hand",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 164,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "exile",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 1,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 18
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 60
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 91,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 188,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 1604,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 126,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 164,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 1604,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 91,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 106,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 126,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 145,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 164,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 188,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 230,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 8307,
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "exile",
+          "index": 10374,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 7
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 0,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 1,
+          "value": 188
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 2,
+          "value": 106
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 3,
+          "value": 91
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 4,
+          "value": 164
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 5,
+          "value": 126
+        },
+        {
+          "op": "assert_zone_card",
+          "player": 0,
+          "zone": "library",
+          "index": 6,
+          "value": 145
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 1,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 10
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 10
+        },
+        {
+          "op": "assert_forced_zone_choices",
+          "value": 0
+        },
+        {
+          "op": "assert_forced_target_choices",
+          "value": 0
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,343 @@
+{
+  "version": 1,
+  "sources": {
+    "Civic Saber": {
+      "csvid": 12683,
+      "profile": "colors",
+      "oracle": {
+        "name": "Civic Saber",
+        "oracle_id": "79441673-6e43-41bc-936c-958dbb9d92da",
+        "oracle_text": "Equipped creature gets +1/+0 for each of its colors.\nEquip {1}",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "color_identity": []
+      }
+    },
+    "Empyrial Plate": {
+      "csvid": 6659,
+      "profile": "hand",
+      "oracle": {
+        "name": "Empyrial Plate",
+        "oracle_id": "e95e100e-4886-4bde-825c-017e878ac825",
+        "oracle_text": "Equipped creature gets +1/+1 for each card in your hand.\nEquip {2}",
+        "mana_cost": "{2}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "color_identity": []
+      }
+    },
+    "Golem-Skin Gauntlets": {
+      "csvid": 6678,
+      "profile": "attachments",
+      "oracle": {
+        "name": "Golem-Skin Gauntlets",
+        "oracle_id": "2a956224-8bdb-40d8-8405-2aa29eb228e0",
+        "oracle_text": "Equipped creature gets +1/+0 for each Equipment attached to it.\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "color_identity": []
+      }
+    },
+    "Hedron Matrix": {
+      "csvid": 10951,
+      "profile": "mana_value",
+      "oracle": {
+        "name": "Hedron Matrix",
+        "oracle_id": "dc748941-fd91-4a0e-b0c4-04c9092ff158",
+        "oracle_text": "Equipped creature gets +X/+X, where X is its mana value.\nEquip {4}",
+        "mana_cost": "{4}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "color_identity": []
+      }
+    },
+    "Pennon Blade": {
+      "csvid": 11016,
+      "profile": "creatures",
+      "oracle": {
+        "name": "Pennon Blade",
+        "oracle_id": "b97e6acd-a676-429e-b875-b734759ebea7",
+        "oracle_text": "Equipped creature gets +1/+1 for each creature you control.\nEquip {4} ({4}: Attach to target creature you control. Equip only as a sorcery.)",
+        "mana_cost": "{3}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "color_identity": []
+      }
+    },
+    "Helm of the Gods": {
+      "csvid": 15148,
+      "profile": "enchantments",
+      "oracle": {
+        "name": "Helm of the Gods",
+        "oracle_id": "52804094-47b9-40b9-999d-7c050d220e63",
+        "oracle_text": "Equipped creature gets +1/+1 for each enchantment you control.\nEquip {1} ({1}: Attach to target creature you control. Equip only as a sorcery.)",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "color_identity": []
+      }
+    }
+  },
+  "witnesses": {
+    "Grizzly Bears": {
+      "csvid": 106,
+      "oracle": {
+        "name": "Grizzly Bears",
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "2",
+        "toughness": "2",
+        "color_identity": [
+          "G"
+        ]
+      }
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "oracle": {
+        "name": "Hill Giant",
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "power": "3",
+        "toughness": "3",
+        "color_identity": [
+          "R"
+        ]
+      }
+    },
+    "Ornithopter": {
+      "csvid": 514,
+      "oracle": {
+        "name": "Ornithopter",
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "power": "0",
+        "toughness": "2",
+        "color_identity": []
+      }
+    },
+    "Watchwolf": {
+      "csvid": 1297,
+      "oracle": {
+        "name": "Watchwolf",
+        "oracle_id": "a35c2e20-eb90-4132-b65f-be1fcb569819",
+        "oracle_text": "",
+        "mana_cost": "{G}{W}",
+        "type_line": "Creature — Wolf",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "power": "3",
+        "toughness": "3",
+        "color_identity": [
+          "G",
+          "W"
+        ]
+      }
+    },
+    "Scaled Wurm": {
+      "csvid": 2085,
+      "oracle": {
+        "name": "Scaled Wurm",
+        "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+        "oracle_text": "",
+        "mana_cost": "{7}{G}",
+        "type_line": "Creature — Wurm",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "power": "7",
+        "toughness": "6",
+        "color_identity": [
+          "G"
+        ]
+      }
+    },
+    "Seal of Cleansing": {
+      "csvid": 4755,
+      "oracle": {
+        "name": "Seal of Cleansing",
+        "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+        "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "color_identity": [
+          "W"
+        ]
+      }
+    },
+    "Howling Mine": {
+      "csvid": 114,
+      "oracle": {
+        "name": "Howling Mine",
+        "oracle_id": "d26b27db-a567-4631-b4b6-7294222fbdd1",
+        "oracle_text": "At the beginning of each player's draw step, if this artifact is untapped, that player draws an additional card.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "color_identity": []
+      }
+    },
+    "Bonesplitter": {
+      "csvid": 6627,
+      "oracle": {
+        "name": "Bonesplitter",
+        "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+        "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+        "mana_cost": "{1}",
+        "type_line": "Artifact — Equipment",
+        "keywords": [
+          "Equip"
+        ],
+        "colors": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "color_identity": []
+      }
+    },
+    "Divination": {
+      "csvid": 10405,
+      "oracle": {
+        "name": "Divination",
+        "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+        "oracle_text": "Draw two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "color_identity": [
+          "U"
+        ]
+      }
+    },
+    "Sol Ring": {
+      "csvid": 230,
+      "oracle": {
+        "name": "Sol Ring",
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "color_identity": []
+      }
+    },
+    "Boomerang": {
+      "csvid": 585,
+      "oracle": {
+        "name": "Boomerang",
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "color_identity": [
+          "U"
+        ]
+      }
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "oracle": {
+        "name": "Unsummon",
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "color_identity": [
+          "U"
+        ]
+      }
+    }
+  }
+}

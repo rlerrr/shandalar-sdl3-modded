@@ -12,12 +12,14 @@ import counter_recipes as ordinary
 PINS = json.loads((Path(__file__).parent/'data/counterspell_extension_witnesses.json').read_text(encoding='utf8'))
 PROFILES = PINS['profiles']
 TOKEN_ALIASES = PINS.get('token_aliases', {})
+WAVE7_PINS = json.loads((Path(__file__).parent/'data/counterspell_wave7_witnesses.json').read_text(encoding='utf8'))
+WAVE7_PROFILES = WAVE7_PINS['profiles']
 
 
 def spec(d, oracle):
     from recipes import cost_from_oracle
     name = oracle.get('name') if isinstance(oracle, dict) else None
-    profile = PROFILES.get(name)
+    profile = PROFILES.get(name) or WAVE7_PROFILES.get(name)
     if (not profile or oracle.get('card_faces') or oracle.get('selected_face')
             or d.get('family') != 'counterspell_extension' or d.get('version') != 2
             or d.get('params') != profile['params'] or d.get('oracle_text') != profile['source']['oracle_text']
@@ -25,6 +27,7 @@ def spec(d, oracle):
             or not isinstance(d.get('variants'), list) or not d['variants']):
         raise ValueError('counter extension requires explicit reviewed parameters, full source pin and variants')
     result = copy.deepcopy(profile['params'])
+    if result.get('schema') == 7:return _spec_wave7(d,result,oracle)
     if result.get('extension',{}).get('wave')==5 and json.dumps(d['params'],sort_keys=True)!=json.dumps(result,sort_keys=True):
         raise ValueError('reviewed wave-five parameter types required')
     if result.get('extension',{}).get('resource_counter'):return _spec_resource_counter(d,result,oracle)
@@ -71,6 +74,7 @@ def _ordinary_params(p, branch=None):
 
 
 def variants(p):
+    if p.get('schema') == 7:return _variants_wave7(p)
     if p.get('extension',{}).get('delayed_counter'):return _variants_delayed_counter(p)
     if p.get('extension',{}).get('resource_counter'):return _variants_resource_counter(p)
     if p.get('extension',{}).get('ability_counter'):return _variants_activated_counter(p)
@@ -93,6 +97,9 @@ def variants(p):
 
 
 def validate_witnesses(oracle_context, registry):
+    for name,pin in WAVE7_PINS['cards'].items():
+        if name not in registry or any(oracle_context.get(name,{}).get(k)!=v for k,v in pin.items()):
+            raise ValueError('wave-seven counter witness changed: '+name)
     if not isinstance(oracle_context,dict):raise ValueError('pinned witness Oracle context required')
     ordinary.validate_witnesses(oracle_context,registry)
     if PINS.get('ability_witnesses'):_validate_activated_counter_witnesses(oracle_context,registry)
@@ -123,6 +130,7 @@ def _swap_players(case):
 
 
 def expand(name, csvid, d, p, selected, registry, oracle_context):
+    if p.get('schema') == 7:return _expand_wave7(name,csvid,d,p,selected,registry,oracle_context)
     if p.get('extension',{}).get('delayed_counter'):return _expand_delayed_counter(name,csvid,d,p,selected,registry,oracle_context)
     if p.get('extension',{}).get('resource_counter'):return _expand_resource_counter(name,csvid,d,p,selected,registry,oracle_context)
     if p.get('extension',{}).get('ability_counter'):return _expand_activated_counter(name,csvid,d,p,selected,registry,oracle_context)
@@ -1067,6 +1075,170 @@ def _delayed_counter_config(p):
             or p['counter'] is not None or p['token'] is not None or p['relationship'] is not None or p['life_cost']):
         raise ValueError('reviewed delayed counter component required')
     return q
+
+
+# Wave seven keeps source-dependent permissions separate from the ordinary
+# type/color grammar. All stack objects and turn history come from real casts.
+def _spec_wave7(d,p,o):
+    from recipes import cost_from_oracle
+    if (set(p)!={'schema','kind','token','inactive_components','extension'}
+            or type(p['schema']) is not int or p['schema']!=7
+            or p['extension']!={'wave':7}
+            or p['kind'] not in ('non_faerie_exile','second_spell','wizard_draw','hand_inspection')
+            or p['token'] is not None
+            or json.dumps(d['params'],sort_keys=True)!=json.dumps(p,sort_keys=True)):
+        raise ValueError('reviewed wave-seven counter parameters required')
+    p.update(family='counterspell_extension',mana=cost_from_oracle(o))
+    selected=d['variants'];available=_variants_wave7(p)
+    if len(set(selected))!=len(selected) or any(v not in available for v in selected):
+        raise ValueError('unique reviewed wave-seven counter variants required')
+    return p
+
+
+def _variants_wave7(p):
+    base=['opponent','own_spell','payment','insufficient_mana','wrong_mana','no_stack','snapshot',
+          'instant_parent','sorcery_parent','artifact_parent','enchantment_parent','aura_parent']
+    if p['kind']=='non_faerie_exile':base.append('forbidden_faerie')
+    if p['kind']=='second_spell':base += ['first_spell','third_spell','split_history','announced_snapshot']
+    if p['kind']=='wizard_draw':base += ['no_wizard','opposing_wizard','two_wizards','departed_wizard','tax_paid','tax_exact','tax_unaffordable','tax_paid_no_wizard']
+    return [v+'_'+str(owner) for owner in (0,1) for v in base]
+
+
+def _expand_wave7(name,csvid,d,p,selected,rows,o):
+    from collections import Counter
+    from recipes import card,step,observe,cost_from_oracle
+    if (not isinstance(selected,list) or not selected or len(set(selected))!=len(selected)
+            or any(v not in _variants_wave7(p) for v in selected)):
+        raise ValueError('unique reviewed wave-seven counter expansion required')
+    validate_witnesses(o,rows)
+    output=[]
+    parents={'instant_parent':'Giant Growth','sorcery_parent':'Divination','artifact_parent':'Sol Ring',
+             'enchantment_parent':'Glorious Anthem','aura_parent':'Pacifism','forbidden_faerie':'Faerie Miscreant'}
+    for requested in selected:
+        branch,owner=requested.rsplit('_',1);owner=int(owner)
+        target_owner=0 if branch=='own_spell' else 1
+        kind=p['kind'];no_stack=branch=='no_stack'
+        allowed=branch not in ('insufficient_mana','wrong_mana','no_stack','forbidden_faerie','first_spell','third_spell')
+        paid=branch in ('tax_paid','tax_exact','tax_paid_no_wizard')
+        countered=allowed and not paid
+        parent=parents.get(branch,'Grizzly Bears')
+        setup=[card(name,'source',0,'hand'),card(parent,'spell',target_owner,'hand'),
+               card('Scaled Wurm','recipient',target_owner)]
+        for player in (0,1):
+            setup += [card('Forest',f'hand_control_{player}',player,'hand'),
+                      card('Island',f'grave_control_{player}',player,'graveyard'),
+                      card('Mountain',f'exile_control_{player}',player,'exile'),
+                      card('Hill Giant',f'board_control_{player}',player)]
+            setup += [card(n,f'library_{player}_{i}',player,'library') for i,n in enumerate(ordinary.LIBRARY)]
+        wizard_refs=[]
+        if kind=='wizard_draw' and branch not in ('no_wizard','tax_paid_no_wizard'):
+            wizard_owner=1 if branch=='opposing_wizard' else 0
+            for i in range(2 if branch=='two_wizards' else 1):
+                ref=f'wizard_{i}';wizard_refs.append(ref);setup.append(card('Fugitive Wizard',ref,wizard_owner))
+        # The complete history is generated in the fixture, never seeded into
+        # a storm counter. Both players can contribute to the second-spell test.
+        preceding=(0 if branch=='first_spell' else 2 if branch=='third_spell' else 1) if kind=='second_spell' else 0
+        precursor='Reach Through Mists' if branch=='split_history' else 'Ornithopter'
+        for i in range(preceding):setup.append(card(precursor,f'precursor_{i}',0 if branch=='split_history' else target_owner,'hand'))
+        zones=[{z:[] for z in ('hand','battlefield','graveyard','exile','library')} for _ in (0,1)]
+        states={c['ref']:dict(zone=c['zone'],player=c['player'],name=c['name']) for c in setup}
+        for c in setup:zones[c['player']][c['zone']].append(c['name'])
+        def move(ref,destination):
+            state=states[ref];who=state['player'];nm=state['name']
+            zones[who][state['zone']].remove(nm);zones[who][destination].append(nm);state['zone']=destination
+        pools=[[10]*6,[10]*6]
+        parent_cost=cost_from_oracle(o[parent]);source_cost=list(p['mana'])
+        if branch=='payment':
+            pools[0]=list(source_cost)
+            if target_owner==0:pools[0]=[a+b for a,b in zip(pools[0],parent_cost)]
+        if branch=='insufficient_mana':pools[0]=[0]*6
+        if branch=='wrong_mana':pools[0]=[60,0,0,0,0,0]
+        if branch in ('tax_exact','tax_unaffordable'):
+            pools[target_owner]=list(parent_cost);pools[target_owner][0]+=3 if paid else 0
+        pre=[step('turn',player=target_owner,value=0)]
+        pre += [step('set_mana',player=player,color=color,value=value) for player in (0,1) for color,value in enumerate(pools[player])]
+        actions=[];announced_split=None
+        def pay(player,amount):
+            # Generic payments can choose any legal pool. Assert their total;
+            # printed-color exact pools are checked in the payment scenario.
+            pools[player][0]-=sum(amount)
+        for i in range(preceding):
+            ref=f'precursor_{i}'
+            if branch=='split_history':
+                # An instant can be cast by the other player during the same
+                # unchanged active player's turn. Its real draw and printed
+                # blue payment are independent of the later counterspell.
+                player=states[ref]['player']
+                actions += [step('cast',ref=ref,value=1),step('assert_stack',value=1),step('resolve'),step('assert_stack',value=0),step('assert_choices_consumed')]
+                pay(player,cost_from_oracle(o[precursor]));move(ref,'graveyard')
+                drawn=zones[player]['library'].pop(0);zones[player]['hand'].append(drawn)
+                actions += [step('assert_mana',player=player,color=2,value=9),step('assert_mana_total',player=player,value=59),
+                            step('assert_zone',player=player,zone='hand',value=3),step('assert_zone',player=player,zone='graveyard',value=2),step('assert_zone',player=player,zone='library',value=6),
+                            step('assert_zone_multiplicity',player=player,zone='hand',index=rows['Forest']['csvid'],value=2),
+                            step('assert_zone_multiplicity',player=player,zone='hand',index=rows[precursor]['csvid'],value=0),
+                            step('assert_zone_multiplicity',player=player,zone='graveyard',index=rows[precursor]['csvid'],value=1)]
+                actions += [step('assert_zone_card',player=player,zone='library',index=j,value=rows[n]['csvid']) for j,n in enumerate(zones[player]['library'])]
+            else:
+                actions += [step('turn',player=states[ref]['player'],value=0),step('cast',ref=ref,value=1),step('assert_stack',value=1),step('resolve'),step('assert_stack',value=0),step('assert_choices_consumed')]
+                move(ref,'battlefield')
+        if preceding and branch!='split_history':actions.append(step('turn',player=target_owner,value=0))
+        if no_stack:actions += [step('can_cast',ref='source',value=0),step('assert_stack',value=0)]
+        else:
+            if parent in ('Giant Growth','Pacifism'):actions.append(step('choose_target',player=target_owner,ref='recipient'))
+            actions += [step('cast',ref='spell',value=1),step('assert_stack',value=1)];pay(target_owner,parent_cost)
+            actions += [step('assert_mana_total',player=player,value=sum(pools[player])) for player in (0,1)]
+            if kind=='second_spell':
+                # Execute the engine's real cast announcement once while
+                # keeping this exact parent pending. No history is seeded.
+                actions += [step('announce_spell',ref='spell'),step('assert_stack',value=1),observe('spell','in_hand',0),step('assert_choices_consumed')]
+                announced_split=len(actions)
+            actions += [step('cast_response',ref='source',value=int(allowed)),step('assert_stack',value=2 if allowed else 1)]
+            if allowed:
+                pay(0,source_cost)
+                actions += [observe('source','in_hand',0)]+[step('assert_mana_total',player=player,value=sum(pools[player])) for player in (0,1)]
+                if branch=='departed_wizard':
+                    actions += [step('destroy',ref='wizard_0'),observe('wizard_0','in_play',0)];move('wizard_0','graveyard')
+                if kind=='wizard_draw' and branch!='tax_unaffordable':actions.append(step('choose_dialog',player=target_owner,value=0 if paid else 1))
+                actions.append(step('resolve_response'))
+                move('source','graveyard')
+                if paid:pay(target_owner,[3,0,0,0,0,0])
+                if countered:move('spell','exile' if kind=='non_faerie_exile' else 'graveyard')
+                else:move('spell','battlefield')
+                # The draw is a separate Oracle sentence and remains required
+                # even when the parent controller pays the counter tax.
+                if kind=='wizard_draw' and any(states[r]['player']==0 and states[r]['zone']=='battlefield' for r in wizard_refs):
+                    drawn=zones[0]['library'].pop(0);zones[0]['hand'].append(drawn)
+            else:
+                actions.append(step('resolve'));move('spell','battlefield')
+            actions.append(step('assert_choices_consumed'))
+        checks=[step('assert_stack',value=0),observe('source','in_hand',int(not allowed)),
+                observe('spell','in_play',int(states['spell']['zone']=='battlefield'))]
+        for c in setup:
+            if states[c['ref']]['zone']=='battlefield':
+                checks.append(observe(c['ref'],'in_play',1))
+                if 'Creature' in o[c['name']]['type_line']:
+                    checks += [observe(c['ref'],'power',int(o[c['name']]['power'])),observe(c['ref'],'toughness',int(o[c['name']]['toughness'])),observe(c['ref'],'damage',0)]
+        universe=sorted({c['name'] for c in setup}|set(ordinary.LIBRARY))
+        for player in (0,1):
+            checks += [step('assert_life',player=player,value=20),step('assert_mana_total',player=player,value=sum(pools[player]))]
+            if branch=='payment' and player==0:checks += [step('assert_mana',player=0,color=color,value=0) for color in range(6)]
+            for zone,names in zones[player].items():
+                checks.append(step('assert_zone',player=player,zone=zone,value=len(names)))
+                if zone=='library':checks += [step('assert_zone_card',player=player,zone=zone,index=i,value=rows[n]['csvid']) for i,n in enumerate(names)]
+                else:
+                    counts=Counter(names)
+                    checks += [step('assert_zone_multiplicity',player=player,zone=zone,index=rows[n]['csvid'],value=counts[n]) for n in universe]
+        steps=pre+actions+checks
+        if branch=='snapshot':steps=pre+[step('capture')]+copy.deepcopy(actions+checks)+[step('record_state'),step('ai_roundtrip'),step('restore')]+copy.deepcopy(actions+checks)+[step('assert_recorded_state')]
+        if branch=='announced_snapshot':
+            response=actions[announced_split:]+checks
+            steps=pre+copy.deepcopy(actions[:announced_split])+[step('capture')]+copy.deepcopy(response)+[step('record_state'),step('ai_roundtrip'),step('restore')]+copy.deepcopy(response)+[step('assert_recorded_state')]
+        case=dict(name=f'CounterWave7Recipe_{csvid}_{requested}',card=name,fixture='empty_main',seed=123,setup=setup,steps=steps,
+                  _recipe=dict(family='counterspell_extension',version=2,variant=requested,params=copy.deepcopy(d['params']),oracle_text=d['oracle_text'],
+                               untested_components=list(p['inactive_components'])+['Countered response source, uncounterable spells, target departure or changed identity, live control changes, replacement/prevention and multiplayer.']))
+        if owner:_swap_players(case)
+        output.append(case)
+    return output
 
 
 def _variants_delayed_counter(p):

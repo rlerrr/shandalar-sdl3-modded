@@ -1,0 +1,892 @@
+{
+  "version": 1,
+  "sources": {
+    "Cloudpost": {
+      "csvid": 6637,
+      "oracle": {
+        "oracle_id": "f705c0eb-9c6c-4315-a860-208ed0c5d93e",
+        "name": "Cloudpost",
+        "oracle_text": "This land enters tapped.\n{T}: Add {C} for each Locus on the battlefield.",
+        "mana_cost": "",
+        "type_line": "Land — Locus",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/280/cloudpost?utm_source=api"
+      },
+      "handler": "manalinkeh_card_cloudpost",
+      "input_source": "src/manalinkeh/cards/mirrodin.c",
+      "input_source_line": 973,
+      "abilities": {
+        "1": {
+          "mode_dialog": null,
+          "color_choice": "none"
+        }
+      }
+    },
+    "Urza's Tower": {
+      "csvid": 544,
+      "oracle": {
+        "oracle_id": "32fbb638-ab14-4e8b-a07a-d4c44e3496f2",
+        "name": "Urza's Tower",
+        "oracle_text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
+        "mana_cost": "",
+        "type_line": "Land — Urza's Tower",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/1053/urzas-tower?utm_source=api"
+      },
+      "handler": "manalinkeh_card_urzas_tower",
+      "input_source": "src/manalinkeh/cards/antiquities.c",
+      "input_source_line": 3218,
+      "abilities": {
+        "0": {
+          "mode_dialog": null,
+          "color_choice": "none"
+        }
+      }
+    },
+    "Cabal Stronghold": {
+      "csvid": 18365,
+      "oracle": {
+        "oracle_id": "066cd584-773c-4623-be53-8f6feda5a26a",
+        "name": "Cabal Stronghold",
+        "oracle_text": "{T}: Add {C}.\n{3}, {T}: Add {B} for each basic Swamp you control.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/238/cabal-stronghold?utm_source=api"
+      },
+      "handler": "manalinkeh_card_cabal_stronghold",
+      "input_source": "src/manalinkeh/cards/dominaria.c",
+      "input_source_line": 838,
+      "abilities": {
+        "0": {
+          "mode_dialog": 0,
+          "color_choice": "none"
+        },
+        "1": {
+          "mode_dialog": 1,
+          "color_choice": "none"
+        }
+      },
+      "fixed_sibling_wallet": 3,
+      "fixed_zero_dialog": true,
+      "ai_mode_dialog": false,
+      "ai_free_fixture": {
+        "variants": [
+          "fixed_zero_budget_1",
+          "opponent_turn_1",
+          "payment_1",
+          "ready_snapshot_1",
+          "repeat_denied_1",
+          "repeat_untap_1",
+          "resolved_snapshot_1",
+          "spend_1",
+          "value_1"
+        ],
+        "floating_colorless": 0,
+        "other_own_lands_tapped": true
+      }
+    },
+    "Crypt of Agadeem": {
+      "csvid": 10526,
+      "oracle": {
+        "oracle_id": "4fe8af73-c84a-44bd-9739-ee5c8b027874",
+        "name": "Crypt of Agadeem",
+        "oracle_text": "This land enters tapped.\n{T}: Add {B}.\n{2}, {T}: Add {B} for each black creature card in your graveyard.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/354/crypt-of-agadeem?utm_source=api"
+      },
+      "handler": "manalinkeh_card_crypt_of_agadeem",
+      "input_source": "src/manalinkeh/cards/zendikar.c",
+      "input_source_line": 642,
+      "abilities": {
+        "1": {
+          "mode_dialog": 0,
+          "color_choice": "none"
+        },
+        "2": {
+          "mode_dialog": 1,
+          "color_choice": "none"
+        }
+      },
+      "fixed_sibling_wallet": 2,
+      "fixed_zero_dialog": false
+    },
+    "Wirewood Channeler": {
+      "csvid": 6468,
+      "oracle": {
+        "oracle_id": "8badfd34-9b63-4ada-8012-b8cddaf5b492",
+        "name": "Wirewood Channeler",
+        "oracle_text": "{T}: Add X mana of any one color, where X is the number of Elves on the battlefield.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/khc/79/wirewood-channeler?utm_source=api"
+      },
+      "handler": "manalinkeh_card_wirewood_channeler",
+      "input_source": "src/manalinkeh/cards/legions.c",
+      "input_source_line": 2245,
+      "abilities": {
+        "0": {
+          "mode_dialog": null,
+          "color_choice": "output"
+        }
+      }
+    },
+    "Nykthos, Shrine to Nyx": {
+      "csvid": 13494,
+      "oracle": {
+        "oracle_id": "84dc18f0-8225-4b40-a165-b10321e41769",
+        "name": "Nykthos, Shrine to Nyx",
+        "oracle_text": "{T}: Add {C}.\n{2}, {T}: Choose a color. Add an amount of mana of that color equal to your devotion to that color. (Your devotion to a color is the number of mana symbols of that color in the mana costs of permanents you control.)",
+        "mana_cost": "",
+        "type_line": "Legendary Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/223/nykthos-shrine-to-nyx?utm_source=api"
+      },
+      "handler": "manalinkeh_card_nykthos_shrine_to_nix",
+      "input_source": "src/manalinkeh/cards/theros.c",
+      "input_source_line": 6033,
+      "abilities": {
+        "0": {
+          "mode_dialog": 0,
+          "color_choice": "none"
+        },
+        "1": {
+          "mode_dialog": 1,
+          "color_choice": "after_payment"
+        }
+      },
+      "fixed_sibling_wallet": 2,
+      "fixed_zero_dialog": false,
+      "fixed_output_choices": {
+        "0": {
+          "opponent_legend_0": 0,
+          "opponent_legend_1": 0,
+          "opponent_turn_0": 0,
+          "opponent_turn_1": 0,
+          "payment_0": 0,
+          "payment_1": 0,
+          "ready_snapshot_0": 0,
+          "ready_snapshot_1": 0,
+          "repeat_denied_0": 0,
+          "repeat_denied_1": 0,
+          "repeat_untap_0": 0,
+          "repeat_untap_1": 0,
+          "resolved_snapshot_0": 0,
+          "resolved_snapshot_1": 0,
+          "spend_0": 0,
+          "spend_1": 0,
+          "value_0": 0,
+          "value_1": 0
+        }
+      }
+    },
+    "Astral Cornucopia": {
+      "csvid": 13670,
+      "oracle": {
+        "oracle_id": "1bc42024-52da-4d93-8b47-544f0a4a72a1",
+        "name": "Astral Cornucopia",
+        "oracle_text": "This artifact enters with X charge counters on it.\n{T}: Choose a color. Add one mana of that color for each charge counter on this artifact.",
+        "mana_cost": "{X}{X}{X}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/342/astral-cornucopia?utm_source=api"
+      },
+      "handler": "manalinkeh_card_astral_cornucopia",
+      "input_source": "src/manalinkeh/cards/born_of_the_gods.c",
+      "input_source_line": 4404,
+      "abilities": {
+        "1": {
+          "mode_dialog": null,
+          "color_choice": "output"
+        }
+      },
+      "casting_x_inputs": {
+        "0": [
+          "declared",
+          "declared"
+        ],
+        "1": [
+          "declared"
+        ]
+      },
+      "input_status": "Actual controls004: human generic+helper each consumes declaredX, AI consumes only helper declaredX. Human positive cost is4X vs correct3X; AI fee observations match3X. Zero-output mana selection is automatic for both actors, so no color intent is queued. Funding4X, Oracle fee3X and leftoverX remain independent.",
+      "casting_x_probe_inputs": {
+        "1": {
+          "xxx_cost_probe_0": [
+            "declared",
+            "declared"
+          ]
+        }
+      },
+      "casting_budget_x": 4,
+      "zero_output_color_choice": false
+    },
+    "Everflowing Chalice": {
+      "csvid": 10759,
+      "oracle": {
+        "oracle_id": "0a79237e-0811-4a8a-bd4d-db3ca91bff22",
+        "name": "Everflowing Chalice",
+        "oracle_text": "Multikicker {2} (You may pay an additional {2} any number of times as you cast this spell.)\nThis artifact enters with a charge counter on it for each time it was kicked.\n{T}: Add {C} for each charge counter on this artifact.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Multikicker"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/137/everflowing-chalice?utm_source=api"
+      },
+      "handler": "manalinkeh_card_everflowing_chalice",
+      "input_source": "src/manalinkeh/cards/worldwake.c",
+      "input_source_line": 1071,
+      "abilities": {
+        "2": {
+          "mode_dialog": null,
+          "color_choice": "none"
+        }
+      },
+      "multikicker_inputs": {
+        "pay": 0,
+        "pass": 1
+      },
+      "raw_ai_zero_query": {
+        "raw_value": 0,
+        "oracle_legal_activation": true,
+        "action": "query_only",
+        "policy": "AI_nonproductive_availability"
+      }
+    },
+    "Urza's Mine": {
+      "csvid": 541,
+      "oracle": {
+        "oracle_id": "33e85a8a-86df-4cdc-a9cc-8cbabe92c3c0",
+        "name": "Urza's Mine",
+        "oracle_text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
+        "mana_cost": "",
+        "type_line": "Land — Urza's Mine",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/1051/urzas-mine?utm_source=api"
+      },
+      "handler": "manalinkeh_card_urzas_mine_card_urzas_power_plant",
+      "input_source": "src/manalinkeh/cards/antiquities.c",
+      "input_source_line": 3229,
+      "abilities": {
+        "0": {
+          "mode_dialog": null,
+          "color_choice": "none"
+        }
+      }
+    },
+    "Urza's Power Plant": {
+      "csvid": 543,
+      "oracle": {
+        "oracle_id": "e11966cd-2ee3-4df4-b099-abf42dcdf0db",
+        "name": "Urza's Power Plant",
+        "oracle_text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
+        "mana_cost": "",
+        "type_line": "Land — Urza's Power-Plant",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/1052/urzas-power-plant?utm_source=api"
+      },
+      "handler": "manalinkeh_card_urzas_mine_card_urzas_power_plant",
+      "input_source": "src/manalinkeh/cards/antiquities.c",
+      "input_source_line": 3229,
+      "abilities": {
+        "0": {
+          "mode_dialog": null,
+          "color_choice": "none"
+        }
+      }
+    },
+    "Karametra's Acolyte": {
+      "csvid": 13468,
+      "oracle": {
+        "oracle_id": "e8cf80a1-6908-4adb-88e7-2015672d4905",
+        "name": "Karametra's Acolyte",
+        "oracle_text": "{T}: Add an amount of {G} equal to your devotion to green. (Each {G} in the mana costs of permanents you control counts toward your devotion to green.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/160/karametras-acolyte?utm_source=api"
+      },
+      "handler": "manalinkeh_card_karametras_acolyte",
+      "input_source": "src/manalinkeh/cards/theros.c",
+      "input_source_line": 4071,
+      "abilities": {
+        "0": {
+          "mode_dialog": null,
+          "color_choice": "none"
+        }
+      }
+    },
+    "Harabaz Druid": {
+      "csvid": 10776,
+      "oracle": {
+        "oracle_id": "ead985ec-f29f-4a3b-b8b1-061142cc5bd1",
+        "name": "Harabaz Druid",
+        "oracle_text": "{T}: Add X mana of any one color, where X is the number of Allies you control.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Druid Ally",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/105/harabaz-druid?utm_source=api"
+      },
+      "handler": "manalinkeh_card_harabaz_druid",
+      "input_source": "src/manalinkeh/cards/worldwake.c",
+      "input_source_line": 1301,
+      "abilities": {
+        "0": {
+          "mode_dialog": null,
+          "color_choice": "output"
+        }
+      }
+    }
+  },
+  "witnesses": {
+    "Plains": {
+      "csvid": 188,
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Island": {
+      "csvid": 126,
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Swamp": {
+      "csvid": 239,
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Mountain": {
+      "csvid": 164,
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Forest": {
+      "csvid": 91,
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Wastes": {
+      "csvid": 15719,
+      "oracle": {
+        "oracle_id": "05d24b0c-904a-46b6-b42a-96a4d91a0dd4",
+        "name": "Wastes",
+        "oracle_text": "{T}: Add {C}.",
+        "mana_cost": "",
+        "type_line": "Basic Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/191/wastes?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Elvish Mystic": {
+      "csvid": 13284,
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "handler": "manalinkeh_card_elvish_mystic",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Judge's Familiar": {
+      "csvid": 12760,
+      "oracle": {
+        "oracle_id": "22b7975c-37a5-4895-b209-bdeeec0c6aea",
+        "name": "Judge's Familiar",
+        "oracle_text": "Flying\nSacrifice this creature: Counter target instant or sorcery spell unless its controller pays {1}.",
+        "mana_cost": "{W/U}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/192/judges-familiar?utm_source=api"
+      },
+      "handler": "manalinkeh_card_judges_familiar",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Vesper Ghoul": {
+      "csvid": 8314,
+      "oracle": {
+        "oracle_id": "c45562ce-5d1a-4ad4-82f8-92199520ae87",
+        "name": "Vesper Ghoul",
+        "oracle_text": "{T}, Pay 1 life: Add one mana of any color.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dis/57/vesper-ghoul?utm_source=api"
+      },
+      "handler": "manalinkeh_card_mana_confluence",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Sylvan Safekeeper": {
+      "csvid": 6016,
+      "oracle": {
+        "oracle_id": "bddf8f4a-3149-4dd6-a9e5-7747e7e45a1c",
+        "name": "Sylvan Safekeeper",
+        "oracle_text": "Sacrifice a land: Target creature you control gains shroud until end of turn. (It can't be the target of spells or abilities.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh3/287/sylvan-safekeeper?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sylvan_safekeeper",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Scion of Glaciers": {
+      "csvid": 14370,
+      "oracle": {
+        "oracle_id": "9d49cef5-8f9c-46cd-aa5e-7861fc1dcaa4",
+        "name": "Scion of Glaciers",
+        "oracle_text": "{U}: This creature gets +1/-1 until end of turn.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "2",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/53/scion-of-glaciers?utm_source=api"
+      },
+      "handler": "manalinkeh_card_metropolis_sprite",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "handler": "manalinkeh_card_twiddle",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Icy Manipulator": {
+      "csvid": 119,
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "handler": "manalinkeh_card_icy_manipulator",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Terror": {
+      "csvid": 242,
+      "oracle": {
+        "oracle_id": "b81f041d-98db-4408-9472-c483e4a502bc",
+        "name": "Terror",
+        "oracle_text": "Destroy target nonartifact, nonblack creature. It can't be regenerated.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/103/terror?utm_source=api"
+      },
+      "handler": "manalinkeh_card_terror",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Urza's Mine": {
+      "csvid": 541,
+      "oracle": {
+        "oracle_id": "33e85a8a-86df-4cdc-a9cc-8cbabe92c3c0",
+        "name": "Urza's Mine",
+        "oracle_text": "{T}: Add {C}. If you control an Urza's Power-Plant and an Urza's Tower, add {C}{C} instead.",
+        "mana_cost": "",
+        "type_line": "Land — Urza's Mine",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/1051/urzas-mine?utm_source=api"
+      },
+      "handler": "manalinkeh_card_urzas_mine_card_urzas_power_plant",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Urza's Power Plant": {
+      "csvid": 543,
+      "oracle": {
+        "oracle_id": "e11966cd-2ee3-4df4-b099-abf42dcdf0db",
+        "name": "Urza's Power Plant",
+        "oracle_text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Tower, add {C}{C} instead.",
+        "mana_cost": "",
+        "type_line": "Land — Urza's Power-Plant",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/1052/urzas-power-plant?utm_source=api"
+      },
+      "handler": "manalinkeh_card_urzas_mine_card_urzas_power_plant",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Cloudpost": {
+      "csvid": 6637,
+      "oracle": {
+        "oracle_id": "f705c0eb-9c6c-4315-a860-208ed0c5d93e",
+        "name": "Cloudpost",
+        "oracle_text": "This land enters tapped.\n{T}: Add {C} for each Locus on the battlefield.",
+        "mana_cost": "",
+        "type_line": "Land — Locus",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/280/cloudpost?utm_source=api"
+      },
+      "handler": "manalinkeh_card_cloudpost",
+      "use": "independently printed normal implemented fixture; other activated clauses dormant unless explicitly exercised"
+    },
+    "Vorel of the Hull Clade": {
+      "csvid": 13244,
+      "oracle": {
+        "oracle_id": "3001f971-c4db-4176-89b5-e7f4a8890c0f",
+        "name": "Vorel of the Hull Clade",
+        "oracle_text": "{G}{U}, {T}: Double the number of each kind of counter on target artifact, creature, or land.",
+        "mana_cost": "{1}{G}{U}",
+        "type_line": "Legendary Creature — Human Merfolk",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Double"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lcc/294/vorel-of-the-hull-clade?utm_source=api"
+      },
+      "handler": "manalinkeh_card_vorel_of_the_hull_clade",
+      "use": "Real GU+T counter doubling of artifact source; power/toughness independently pinned, no setters."
+    },
+    "Badlands": {
+      "csvid": 9,
+      "oracle": {
+        "oracle_id": "13ff3222-91cb-4796-a34e-899ed817694c",
+        "name": "Badlands",
+        "oracle_text": "({T}: Add {B} or {R}.)",
+        "mana_cost": "",
+        "type_line": "Land — Swamp Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/291/badlands?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "use": "Real nonbasic Swamp contrary to Cabal basic-Swamp count; no shock entry choice."
+    },
+    "Urza's Tower": {
+      "csvid": 544,
+      "oracle": {
+        "oracle_id": "32fbb638-ab14-4e8b-a07a-d4c44e3496f2",
+        "name": "Urza's Tower",
+        "oracle_text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
+        "mana_cost": "",
+        "type_line": "Land — Urza's Tower",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/1053/urzas-tower?utm_source=api"
+      },
+      "handler": "manalinkeh_card_urzas_tower",
+      "use": "Normal printed Tower type witness for Mine/Power-Plant conditions; fixed mana activation dormant."
+    },
+    "Elvish Hexhunter": {
+      "csvid": 9524,
+      "oracle": {
+        "oracle_id": "f8f450c1-f405-4ccc-aef3-f0186d1f5056",
+        "name": "Elvish Hexhunter",
+        "oracle_text": "{G/W}, {T}, Sacrifice this creature: Destroy target enchantment.",
+        "mana_cost": "{G/W}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/226/elvish-hexhunter?utm_source=api"
+      },
+      "handler": "manalinkeh_card_elvish_hexhunter",
+      "use": "Static normal1/1 printed{G/W} devotion witness; no Enchantment exists, so destroy-enchantment activation is unavailable. No triggered clauses."
+    },
+    "Harabaz Druid": {
+      "csvid": 10776,
+      "oracle": {
+        "oracle_id": "ead985ec-f29f-4a3b-b8b1-061142cc5bd1",
+        "name": "Harabaz Druid",
+        "oracle_text": "{T}: Add X mana of any one color, where X is the number of Allies you control.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Human Druid Ally",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wwk/105/harabaz-druid?utm_source=api"
+      },
+      "handler": "manalinkeh_card_harabaz_druid",
+      "use": "Normal0/1 Ally own/foreign witness with no triggered clauses. Mana activation remains dormant; never substitute an Ally with entry triggers."
+    }
+  }
+}

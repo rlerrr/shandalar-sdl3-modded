@@ -1,0 +1,71 @@
+{
+  "version": 1,
+  "card": "Master of the Feast",
+  "csvid": 13931,
+  "recipes": [
+    {
+      "family": "upkeep_value_trigger",
+      "version": 2,
+      "oracle_text": "Flying\nAt the beginning of your upkeep, each opponent draws a card.",
+      "params": {
+        "gate": "own",
+        "optional": false,
+        "actions": [
+          {
+            "kind": "draw",
+            "recipient": "opponent",
+            "amount": 1
+          }
+        ],
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "variants": [
+        "cast_0",
+        "insufficient_mana_0",
+        "effect_0",
+        "opponent_upkeep_0",
+        "source_absent_0",
+        "source_enters_after_0",
+        "source_destroyed_after_0",
+        "repeat_0",
+        "armor_0",
+        "ready_snapshot_0",
+        "untap_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "wrong_color_0",
+        "two_sources_0",
+        "short_library_0",
+        "unblocked_0",
+        "flying_ground_0",
+        "flying_reach_0",
+        "flying_blocker_0",
+        "defend_flying_0",
+        "cast_1",
+        "insufficient_mana_1",
+        "effect_1",
+        "opponent_upkeep_1",
+        "source_absent_1",
+        "source_enters_after_1",
+        "source_destroyed_after_1",
+        "repeat_1",
+        "armor_1",
+        "ready_snapshot_1",
+        "untap_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "wrong_color_1",
+        "two_sources_1",
+        "short_library_1",
+        "unblocked_1",
+        "flying_ground_1",
+        "flying_reach_1",
+        "flying_blocker_1",
+        "defend_flying_1",
+        "cast_cancel_0"
+      ]
+    }
+  ]
+}

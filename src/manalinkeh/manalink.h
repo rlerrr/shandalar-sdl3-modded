@@ -2955,7 +2955,7 @@ int enchant_player(int player, int card, event_t event, target_definition_t *td)
 #ifndef SHANDALAR
 void default_pump_ability_definition(int player, int card, pump_ability_t *pump, int pow,
                                           int tou, int key, int skey);
-void deathtouch(int player, int card, event_t event);
+int deathtouch(int player, int card, event_t event);
 void hexproof(int player, int card, event_t event);
 void indestructible(int player, int card, event_t event);
 int attack_if_able(int player, int card, event_t event);

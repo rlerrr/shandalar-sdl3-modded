@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "card": "Runaway Steam-Kin",
+  "csvid": 19479,
+  "recipes": [
+    {
+      "family": "cast_counter_engine",
+      "version": 2,
+      "oracle_text": "Whenever you cast a red spell, if this creature has fewer than three +1/+1 counters on it, put a +1/+1 counter on this creature.\nRemove three +1/+1 counters from this creature: Add {R}{R}{R}.",
+      "params": {
+        "predicate": "red",
+        "counter": "plus1",
+        "optional": false,
+        "cap": 3,
+        "abilities": [
+          {
+            "mana": [
+              0,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "tap": false,
+            "remove": 3,
+            "counter": "plus1",
+            "effect": "red_mana",
+            "target": "none",
+            "amount": 3,
+            "token": null
+          }
+        ]
+      },
+      "variants": [
+        "source_cast_0",
+        "source_payment_0",
+        "source_insufficient_mana_0",
+        "gain_0",
+        "alternate_spell_0",
+        "nonmatching_spell_0",
+        "opponent_cast_0",
+        "two_casts_0",
+        "three_casts_0",
+        "countered_witness_0",
+        "source_arrives_late_0",
+        "source_removed_before_0",
+        "two_sources_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "value_0",
+        "payment_0",
+        "tapped_0",
+        "sick_0",
+        "source_wrong_color_0",
+        "counter_short_0",
+        "cap_fourth_0",
+        "spend_regrow_0",
+        "permanent_cleanup_0",
+        "source_cast_1",
+        "source_payment_1",
+        "source_insufficient_mana_1",
+        "gain_1",
+        "alternate_spell_1",
+        "nonmatching_spell_1",
+        "opponent_cast_1",
+        "two_casts_1",
+        "three_casts_1",
+        "countered_witness_1",
+        "source_arrives_late_1",
+        "source_removed_before_1",
+        "two_sources_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "value_1",
+        "payment_1",
+        "tapped_1",
+        "sick_1",
+        "source_wrong_color_1",
+        "counter_short_1",
+        "cap_fourth_1",
+        "spend_regrow_1",
+        "permanent_cleanup_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "card": "Crow Storm",
+  "csvid": 17937,
+  "recipes": [
+    {
+      "family": "storm_effect",
+      "version": 2,
+      "oracle_text": "Create a 1/2 blue Bird creature token with flying named Storm Crow.\nStorm (When you cast this spell, copy it for each spell cast before it this turn.)",
+      "params": {
+        "kind": "token",
+        "amount": 1,
+        "scope": "controller",
+        "destination": "battlefield",
+        "token": {
+          "name": "Storm Crow",
+          "power": 1,
+          "toughness": 2,
+          "colors": [
+            "blue"
+          ],
+          "subtypes": [
+            "Bird"
+          ],
+          "keywords": [
+            "Flying"
+          ],
+          "artifact": false
+        }
+      },
+      "variants": [
+        "effect_0",
+        "prefix_two_0",
+        "prefix_three_0",
+        "opponent_history_0",
+        "split_history_0",
+        "instant_history_0",
+        "countered_predecessor_0",
+        "previous_turn_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "no_prior_0",
+        "activation_not_cast_0",
+        "countered_original_0",
+        "token_flying_block_0",
+        "token_fresh_attack_0",
+        "token_mana_value_zero_0",
+        "effect_1",
+        "prefix_two_1",
+        "prefix_three_1",
+        "opponent_history_1",
+        "split_history_1",
+        "instant_history_1",
+        "countered_predecessor_1",
+        "previous_turn_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "no_prior_1",
+        "activation_not_cast_1",
+        "countered_original_1",
+        "token_flying_block_1",
+        "token_fresh_attack_1",
+        "token_mana_value_zero_1"
+      ]
+    }
+  ]
+}

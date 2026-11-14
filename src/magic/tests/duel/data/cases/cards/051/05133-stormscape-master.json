@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Stormscape Master",
+  "csvid": 5133,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "{W}{W}, {T}: Target creature gains protection from the color of your choice until end of turn.\n{B}{B}, {T}: Target player loses 2 life and you gain 2 life.",
+      "params": {
+        "ability": 1,
+        "present_ai_dialogs": true,
+        "activation_dialogs": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "target_self_0",
+        "source_destroyed_pending_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "target_self_1",
+        "source_destroyed_pending_1"
+      ]
+    }
+  ]
+}

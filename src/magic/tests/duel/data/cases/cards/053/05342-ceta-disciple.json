@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "card": "Ceta Disciple",
+  "csvid": 5342,
+  "recipes": [
+    {
+      "family": "activated_temporary_pt",
+      "version": 2,
+      "oracle_text": "{R}, {T}: Target creature gets +2/+0 until end of turn.\n{G}, {T}: Add one mana of any color.",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "mode_label": "Give +2/+0",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 3,
+          "fallback_color": 3
+        },
+        "other_clauses": [
+          "{G}, {T}: Add one mana of any color."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "counter_cleanup_0",
+        "source_removed_pending_0",
+        "fresh_0",
+        "tapped_0",
+        "target_enemy_0",
+        "target_removed_pending_0",
+        "probe_noncreature_0",
+        "target_self_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "repeat_0",
+        "repeat_untap_0",
+        "other_mode_only_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "counter_cleanup_1",
+        "source_removed_pending_1",
+        "fresh_1",
+        "tapped_1",
+        "target_enemy_1",
+        "target_removed_pending_1",
+        "probe_noncreature_1",
+        "target_self_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "repeat_1",
+        "repeat_untap_1",
+        "other_mode_only_1"
+      ]
+    }
+  ]
+}

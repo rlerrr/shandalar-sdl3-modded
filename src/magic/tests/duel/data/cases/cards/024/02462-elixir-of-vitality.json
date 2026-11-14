@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "card": "Elixir of Vitality",
+  "csvid": 2462,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "This artifact enters tapped.\n{T}, Sacrifice this artifact: You gain 4 life.\n{8}, {T}, Sacrifice this artifact: You gain 8 life.",
+      "params": {
+        "ability": 1,
+        "present_ai_dialogs": true,
+        "mode_dialog_minimum": 8,
+        "activation_dialogs": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1"
+      ]
+    },
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "This artifact enters tapped.\n{T}, Sacrifice this artifact: You gain 4 life.\n{8}, {T}, Sacrifice this artifact: You gain 8 life.",
+      "params": {
+        "ability": 2,
+        "present_ai_dialogs": true,
+        "mode_dialog_minimum": 8,
+        "activation_dialogs": {
+          "0": 1,
+          "1": 1
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1"
+      ]
+    }
+  ]
+}

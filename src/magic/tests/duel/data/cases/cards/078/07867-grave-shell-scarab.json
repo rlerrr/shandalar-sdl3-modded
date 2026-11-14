@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Grave-Shell Scarab",
+  "csvid": 7867,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "{1}, Sacrifice this creature: Draw a card.\nDredge 1 (If you would draw a card, you may mill a card instead. If you do, return this card from your graveyard to your hand.)",
+      "params": {
+        "ability": 0,
+        "sacrifice_choices": {
+          "0": true
+        },
+        "resolution_dialogs": {
+          "0": [
+            0
+          ],
+          "1": [
+            0
+          ]
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "tapped_0",
+        "sick_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "cast_0",
+        "fresh_0",
+        "insufficient_mana_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "tapped_1",
+        "sick_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "cast_1",
+        "fresh_1",
+        "insufficient_mana_1"
+      ]
+    }
+  ]
+}

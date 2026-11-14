@@ -1,0 +1,910 @@
+{
+  "version": 1,
+  "oracle_sha256": "c11dcfedde2ed4ce99ff355f5cf30c187c2b3745c87a03319e715bbfec17cf50",
+  "sources": {
+    "Arcbound Crusher": {
+      "csvid": 6845,
+      "handler": "manalinkeh_card_arcbound_crusher",
+      "oracle": {
+        "oracle_id": "ee496b34-d8e0-482a-a2c2-3122ea376da0",
+        "name": "Arcbound Crusher",
+        "oracle_text": "Trample\nWhenever another artifact enters, put a +1/+1 counter on this creature.\nModular 1 (This creature enters with a +1/+1 counter on it. When it dies, you may put its +1/+1 counters on target artifact creature.)",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Juggernaut",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Modular",
+          "Trample"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hop/105/arcbound-crusher?utm_source=api"
+      }
+    },
+    "Arcbound Overseer": {
+      "csvid": 6849,
+      "handler": "manalinkeh_card_arcbound_overseer",
+      "oracle": {
+        "oracle_id": "d57eb294-9707-4f93-82ad-b22d5f68c6c9",
+        "name": "Arcbound Overseer",
+        "oracle_text": "At the beginning of your upkeep, put a +1/+1 counter on each creature you control with modular.\nModular 6 (This creature enters with six +1/+1 counters on it. When it dies, you may put its +1/+1 counters on target artifact creature.)",
+        "mana_cost": "{8}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Modular"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/99/arcbound-overseer?utm_source=api"
+      }
+    },
+    "Arcbound Reclaimer": {
+      "csvid": 6851,
+      "handler": "manalinkeh_card_arcbound_reclaimer",
+      "oracle": {
+        "oracle_id": "c6424a3e-dbc7-403f-867f-a81cccd17ab8",
+        "name": "Arcbound Reclaimer",
+        "oracle_text": "Remove a +1/+1 counter from this creature: Put target artifact card from your graveyard on top of your library.\nModular 2 (This creature enters with two +1/+1 counters on it. When it dies, you may put its +1/+1 counters on target artifact creature.)",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Modular"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/101/arcbound-reclaimer?utm_source=api"
+      }
+    },
+    "Arcbound Slith": {
+      "csvid": 6852,
+      "handler": "manalinkeh_card_arcbound_slith",
+      "oracle": {
+        "oracle_id": "4fa113da-44aa-4c84-8f63-b1cad63da926",
+        "name": "Arcbound Slith",
+        "oracle_text": "Whenever this creature deals combat damage to a player, put a +1/+1 counter on it.\nModular 1 (This creature enters with a +1/+1 counter on it. When it dies, you may put its +1/+1 counters on target artifact creature.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Slith",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Modular"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hop/106/arcbound-slith?utm_source=api"
+      }
+    }
+  },
+  "cards": {
+    "Arcbound Worker": {
+      "oracle_id": "6d9af084-cd5d-4242-b0f0-24a36d0a75d4",
+      "name": "Arcbound Worker",
+      "oracle_text": "Modular 1 (This creature enters with a +1/+1 counter on it. When it dies, you may put its +1/+1 counters on target artifact creature.)",
+      "mana_cost": "{1}",
+      "type_line": "Artifact Creature — Construct",
+      "power": "0",
+      "toughness": "0",
+      "keywords": [
+        "Modular"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mma/201/arcbound-worker?utm_source=api"
+    },
+    "Ashnod's Altar": {
+      "oracle_id": "4d18bcba-a346-445e-a182-6cc30b7e066d",
+      "name": "Ashnod's Altar",
+      "oracle_text": "Sacrifice a creature: Add {C}{C}.",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/368/ashnods-altar?utm_source=api"
+    },
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    },
+    "Burst of Strength": {
+      "oracle_id": "1ab592fa-adfb-4879-af6c-0204eab323fb",
+      "name": "Burst of Strength",
+      "oracle_text": "Put a +1/+1 counter on target creature and untap it.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/gtc/115/burst-of-strength?utm_source=api"
+    },
+    "Control Magic": {
+      "oracle_id": "cd0d7141-46d2-4aa3-bc77-6b3b4513803e",
+      "name": "Control Magic",
+      "oracle_text": "Enchant creature\nYou control enchanted creature.",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Enchantment — Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cma/34/control-magic?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Craw Wurm": {
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "name": "Craw Wurm",
+      "oracle_text": "",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature — Wurm",
+      "power": "6",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+    },
+    "Death Wind": {
+      "oracle_id": "a636b62a-340b-444d-9161-f6d3367b745c",
+      "name": "Death Wind",
+      "oracle_text": "Target creature gets -X/-X until end of turn.",
+      "mana_cost": "{X}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cn2/131/death-wind?utm_source=api"
+    },
+    "Disfigure": {
+      "oracle_id": "77eafe49-b9c5-461d-89c5-cec217dd2974",
+      "name": "Disfigure",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bro/91/disfigure?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Fume Spitter": {
+      "oracle_id": "6556a15b-be4b-45ea-867d-3a8e26202b42",
+      "name": "Fume Spitter",
+      "oracle_text": "Sacrifice this creature: Put a -1/-1 counter on target creature.",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Phyrexian Horror",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/uma/95/fume-spitter?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Heat Ray": {
+      "oracle_id": "76ec76b9-da0f-4b9d-ad0a-d734052a5f2b",
+      "name": "Heat Ray",
+      "oracle_text": "Heat Ray deals X damage to target creature.",
+      "mana_cost": "{X}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ima/133/heat-ray?utm_source=api"
+    },
+    "Indestructibility": {
+      "oracle_id": "9aaa0a28-e342-48bd-8f59-0cd289491f98",
+      "name": "Indestructibility",
+      "oracle_text": "Enchant permanent\nEnchanted permanent has indestructible. (Effects that say \"destroy\" don't destroy that permanent. A creature with indestructible can't be destroyed by damage.)",
+      "mana_cost": "{3}{W}",
+      "type_line": "Enchantment — Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m14/23/indestructibility?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Memnite": {
+      "oracle_id": "7663ac7c-1de3-4250-b96a-fae9dbd66a27",
+      "name": "Memnite",
+      "oracle_text": "",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Construct",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/td2/2/memnite?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Naturalize": {
+      "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+      "name": "Naturalize",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Raise the Alarm": {
+      "oracle_id": "5b2364d7-a811-4595-a1b4-224c70555ffa",
+      "name": "Raise the Alarm",
+      "oracle_text": "Create two 1/1 white Soldier creature tokens.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmr/41/raise-the-alarm?utm_source=api"
+    },
+    "Reach Through Mists": {
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "name": "Reach Through Mists",
+      "oracle_text": "Draw a card.",
+      "mana_cost": "{U}",
+      "type_line": "Instant — Arcane",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+    },
+    "Robe of Mirrors": {
+      "oracle_id": "093a20e5-ff14-41c7-b16c-1f745ddf6942",
+      "name": "Robe of Mirrors",
+      "oracle_text": "Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nEnchanted creature has shroud. (It can't be the target of spells or abilities.)",
+      "mana_cost": "{U}",
+      "type_line": "Enchantment — Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/101/robe-of-mirrors?utm_source=api"
+    },
+    "Safe Passage": {
+      "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+      "name": "Safe Passage",
+      "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m13/30/safe-passage?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Soul's Fire": {
+      "oracle_id": "62d7ed6e-c386-477e-b155-982c3790f842",
+      "name": "Soul's Fire",
+      "oracle_text": "Target creature you control deals damage equal to its power to any target.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmr/200/souls-fire?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Fusion Elemental": {
+      "oracle_id": "a152674f-be29-40ab-8dd9-376fd4eb3bb8",
+      "name": "Fusion Elemental",
+      "oracle_text": "",
+      "mana_cost": "{W}{U}{B}{R}{G}",
+      "type_line": "Creature — Elemental",
+      "power": "8",
+      "toughness": "8",
+      "keywords": [],
+      "colors": [
+        "B",
+        "G",
+        "R",
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "B",
+        "G",
+        "R",
+        "U",
+        "W"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmc/150/fusion-elemental?utm_source=api"
+    }
+  },
+  "registry": {
+    "Arcbound Worker": {
+      "csvid": 6854,
+      "iid": 546,
+      "name": "Arcbound Worker",
+      "handler": "manalinkeh_card_arcbound_worker",
+      "kind": "card"
+    },
+    "Ashnod's Altar": {
+      "csvid": 474,
+      "iid": 662,
+      "name": "Ashnod's Altar",
+      "handler": "manalinkeh_card_ashnods_altar",
+      "kind": "card"
+    },
+    "Boomerang": {
+      "csvid": 585,
+      "iid": 1233,
+      "name": "Boomerang",
+      "handler": "manalinkeh_card_boomerang",
+      "kind": "card"
+    },
+    "Burst of Strength": {
+      "csvid": 12904,
+      "iid": 1417,
+      "name": "Burst of Strength",
+      "handler": "manalinkeh_card_burst_of_strength",
+      "kind": "card"
+    },
+    "Control Magic": {
+      "csvid": 44,
+      "iid": 1938,
+      "name": "Control Magic",
+      "handler": "manalinkeh_card_control_magic",
+      "kind": "card"
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "iid": 1996,
+      "name": "Counterspell",
+      "handler": "manalinkeh_card_counterspell",
+      "kind": "card"
+    },
+    "Craw Wurm": {
+      "csvid": 49,
+      "iid": 2032,
+      "name": "Craw Wurm",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Death Wind": {
+      "csvid": 12340,
+      "iid": 2332,
+      "name": "Death Wind",
+      "handler": "manalinkeh_card_death_wind",
+      "kind": "card"
+    },
+    "Disfigure": {
+      "csvid": 10530,
+      "iid": 2576,
+      "name": "Disfigure",
+      "handler": "manalinkeh_card_disfigure",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "name": "Forest",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Fume Spitter": {
+      "csvid": 11257,
+      "iid": 3674,
+      "name": "Fume Spitter",
+      "handler": "manalinkeh_card_fume_spitter",
+      "kind": "card"
+    },
+    "Giant Growth": {
+      "csvid": 97,
+      "iid": 3862,
+      "name": "Giant Growth",
+      "handler": "manalinkeh_card_giant_growth",
+      "kind": "card"
+    },
+    "Giant Spider": {
+      "csvid": 98,
+      "iid": 3868,
+      "name": "Giant Spider",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "name": "Grizzly Bears",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Heat Ray": {
+      "csvid": 3791,
+      "iid": 4454,
+      "name": "Heat Ray",
+      "handler": "manalinkeh_card_heat_ray",
+      "kind": "card"
+    },
+    "Indestructibility": {
+      "csvid": 10434,
+      "iid": 4842,
+      "name": "Indestructibility",
+      "handler": "manalinkeh_card_indestructibility",
+      "kind": "card"
+    },
+    "Island": {
+      "csvid": 126,
+      "iid": 1,
+      "name": "Island",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Lightning Bolt": {
+      "csvid": 145,
+      "iid": 5596,
+      "name": "Lightning Bolt",
+      "handler": "manalinkeh_card_lightning_bolt",
+      "kind": "card"
+    },
+    "Llanowar Elves": {
+      "csvid": 149,
+      "iid": 5655,
+      "name": "Llanowar Elves",
+      "handler": "manalinkeh_card_elvish_mystic",
+      "kind": "card"
+    },
+    "Memnite": {
+      "csvid": 11303,
+      "iid": 6020,
+      "name": "Memnite",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Mountain": {
+      "csvid": 164,
+      "iid": 3,
+      "name": "Mountain",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Murder": {
+      "csvid": 12594,
+      "iid": 6382,
+      "name": "Murder",
+      "handler": "manalinkeh_card_murder2",
+      "kind": "card"
+    },
+    "Naturalize": {
+      "csvid": 1096,
+      "iid": 6485,
+      "name": "Naturalize",
+      "handler": "manalinkeh_card_disenchant",
+      "kind": "card"
+    },
+    "Ornithopter": {
+      "csvid": 514,
+      "iid": 6907,
+      "name": "Ornithopter",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Plains": {
+      "csvid": 188,
+      "iid": 4,
+      "name": "Plains",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Raise the Alarm": {
+      "csvid": 1450,
+      "iid": 7615,
+      "name": "Raise the Alarm",
+      "handler": "manalinkeh_card_raise_the_alarm",
+      "kind": "card"
+    },
+    "Reach Through Mists": {
+      "csvid": 7353,
+      "iid": 7720,
+      "name": "Reach Through Mists",
+      "handler": "manalinkeh_card_reach_through_mists",
+      "kind": "card"
+    },
+    "Robe of Mirrors": {
+      "csvid": 3548,
+      "iid": 14283,
+      "name": "Robe of Mirrors",
+      "handler": "manalinkeh_card_diplomatic_immunity",
+      "kind": "card"
+    },
+    "Safe Passage": {
+      "csvid": 10462,
+      "iid": 8169,
+      "name": "Safe Passage",
+      "handler": "manalinkeh_card_safe_passage",
+      "kind": "card"
+    },
+    "Sol Ring": {
+      "csvid": 230,
+      "iid": 8968,
+      "name": "Sol Ring",
+      "handler": "manalinkeh_card_sol_ring",
+      "kind": "card"
+    },
+    "Soul's Fire": {
+      "csvid": 10071,
+      "iid": 9051,
+      "name": "Soul's Fire",
+      "handler": "manalinkeh_card_souls_fire",
+      "kind": "card"
+    },
+    "Swords to Plowshares": {
+      "csvid": 240,
+      "iid": 9616,
+      "name": "Swords to Plowshares",
+      "handler": "manalinkeh_card_swords_to_plowshares",
+      "kind": "card"
+    },
+    "Fusion Elemental": {
+      "csvid": 1370,
+      "iid": 3694,
+      "name": "Fusion Elemental",
+      "handler": "card_dummy",
+      "kind": "card"
+    }
+  },
+  "static_base_engine_witnesses": {
+    "Craw Wurm": "Printed static characteristics/base engine behavior only",
+    "Giant Spider": "Printed static characteristics/base engine behavior only",
+    "Grizzly Bears": "Printed static characteristics/base engine behavior only",
+    "Memnite": "Printed static characteristics/base engine behavior only",
+    "Ornithopter": "Printed static characteristics/base engine behavior only",
+    "Fusion Elemental": "Printed8/8 static characteristics/base engine behavior only"
+  },
+  "rules": [
+    "Complete Oracle including another/each-creature-you-control/combat/target-artifact-your-graveyard distinctions",
+    "Reclaimer pinned payment is no mana and one counter; printed casting cost4, initial Modular2",
+    "No source counter or Modular flag seeding; actual paid source/auxiliary entry, damage, upkeep and counter costs"
+  ]
+}

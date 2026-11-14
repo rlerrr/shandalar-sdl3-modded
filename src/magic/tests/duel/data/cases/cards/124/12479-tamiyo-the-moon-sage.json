@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "card": "Tamiyo, the Moon Sage",
+  "csvid": 12479,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "+1: Tap target permanent. It doesn't untap during its controller's next untap step.\n\u22122: Draw a card for each tapped creature target player controls.\n\u22128: You get an emblem with \"You have no maximum hand size\" and \"Whenever a card is put into your graveyard from anywhere, you may return it to your hand.\"",
+      "params": {
+        "ability": 1,
+        "present_ai_dialogs": true,
+        "activation_dialogs": {
+          "0": 1,
+          "1": 1
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_destroyed_pending_0",
+        "offturn_0",
+        "repeat_denied_0",
+        "target_self_0",
+        "metric_many_0",
+        "no_other_members_0",
+        "metric_removed_0",
+        "zero_after_source_removal_0",
+        "real_tap_before_0",
+        "value_1",
+        "payment_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_destroyed_pending_1",
+        "offturn_1",
+        "repeat_denied_1",
+        "target_self_1",
+        "metric_many_1",
+        "no_other_members_1",
+        "metric_removed_1",
+        "zero_after_source_removal_1",
+        "real_tap_before_1"
+      ]
+    }
+  ]
+}

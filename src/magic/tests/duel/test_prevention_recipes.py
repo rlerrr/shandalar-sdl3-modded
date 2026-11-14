@@ -1213,4 +1213,105 @@ class PreventionRecipesTest(unittest.TestCase):
      if x['op']=='untap_step':validate_untap_step(x)
 
 
+class UnpreventablePreventionRecipesTest(unittest.TestCase):
+ @classmethod
+ def setUpClass(cls):
+  cls.oracle=json.loads((Path(__file__).parent/'data/oracle.json').read_text(encoding='utf8'))['cards']
+  cls.rows={r['name']:r for r in registry()}
+  cls.pins=json.loads((Path(__file__).parent/'data/prevention_wave7_witnesses.json').read_text(encoding='utf8'))
+
+ def declaration(self,name,selected):
+  return dict(family='prevention',version=2,oracle_text=self.oracle[name]['oracle_text'],params=copy.deepcopy(self.pins['sources'][name]['params']),variants=selected)
+
+ def cases(self,name,selected,oracle=None,declaration=None):
+  o=self.oracle if oracle is None else oracle;d=declaration or self.declaration(name,selected)
+  return expand(name,self.rows[name]['csvid'],d,spec(d,o[name]),d['variants'],self.rows,o)
+
+ def test_whole_source_cost_and_effect_pin_and_mode_fail_closed(self):
+  name='Banefire';d=self.declaration(name,['creature_0'])
+  for key,value in (('mana_cost','{X}{R}{R}'),('oracle_text',self.oracle[name]['oracle_text']+' Draw a card.'),('layout','transform'),('keywords',['Flying'])):
+   with self.subTest(key=key),self.assertRaises(ValueError):
+    self.cases(name,d['variants'],oracle=dict(self.oracle,**{name:dict(self.oracle[name],**{key:value})}))
+  for key,value in (('mode','global'),('schema',8),('target_repetitions',1),('gaps',[])):
+   bad=copy.deepcopy(d);bad['params'][key]=value
+   with self.subTest(key=key),self.assertRaises(ValueError):self.cases(name,bad['variants'],declaration=bad)
+
+ def test_shield_source_damage_and_creature_witness_pins_fail_closed(self):
+  for nm,key,value in (('Safe Passage','oracle_text','Prevent all damage.'),('Lightning Bolt','mana_cost','{R}{R}'),('Scaled Wurm','toughness','8')):
+   with self.subTest(name=nm),self.assertRaises(ValueError):
+    self.cases('Flaring Pain',['creature_0'],oracle=dict(self.oracle,**{nm:dict(self.oracle[nm],**{key:value})}))
+
+ def test_schema7_identity_and_numeric_json_types_fail_closed(self):
+  for name in ('Banefire','Lava Burst'):
+   original=self.declaration(name,['creature_0'])
+   for field,value in (('family','damage_spell'),('family',None),('version',2.0),('version',True)):
+    bad=copy.deepcopy(original);bad[field]=value
+    with self.subTest(name=name,field=field,value=value),self.assertRaises(ValueError):
+     spec(bad,self.oracle[name])
+   for field,value in (('schema',7.0),('schema',True),('target_repetitions',float(original['params']['target_repetitions'])),('target_repetitions',True),('gaps',tuple(original['params']['gaps']))):
+    bad=copy.deepcopy(original);bad['params'][field]=value
+    with self.subTest(name=name,field=field,value=value),self.assertRaises(ValueError):
+     spec(bad,self.oracle[name])
+
+ def test_every_profile_uses_actual_casting_and_shield_control_for_both_players(self):
+  for name in self.pins['sources']:
+   for owner in (0,1):
+    c=self.cases(name,[f'creature_{owner}'])[0];s=c['steps']
+    source=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='source')
+    shield=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='shield')
+    control=next(i for i,x in enumerate(s) if x['op']=='cast' and x['ref']=='control_bolt')
+    self.assertLess(shield,control);self.assertLess(control,source)
+    self.assertIn(dict(op='assert_card',ref='recipient',property='damage',value=0),s[control:source])
+    self.assertIn(dict(op='assert_card',ref='recipient',property='damage',value=5 if name=='Banefire' else 3),s[source:])
+    self.assertEqual(next(x['player'] for x in c['setup'] if x['ref']=='source'),owner)
+    self.assertEqual(next(x['player'] for x in c['setup'] if x['ref']=='shield'),1-owner)
+    self.assertIn('source', [x['ref'] for x in s if x['op']=='cast'])
+
+ def test_banefire_threshold_and_lava_burst_recipient_type_are_separate_rules(self):
+  below,at=self.cases('Banefire',['threshold_below_0','threshold_at_0'])
+  self.assertIn(dict(op='choose_x',player=0,value=4),below['steps'])
+  self.assertNotIn(dict(op='assert_card',ref='recipient',property='damage',value=4),below['steps'])
+  self.assertIn(dict(op='assert_card',ref='recipient',property='damage',value=5),at['steps'])
+  creature,player=self.cases('Lava Burst',['creature_0','player_0'])
+  self.assertIn(dict(op='assert_card',ref='recipient',property='damage',value=3),creature['steps'])
+  self.assertIn(dict(op='assert_life',player=1,value=20),player['steps'])
+  self.assertNotIn(dict(op='assert_life',player=1,value=17),player['steps'])
+
+ def test_hellbent_hand_control_and_lethal_exile_keep_correct_oracle_expectations(self):
+  empty,occupied,lethal=self.cases('Demonfire',['creature_0','with_hand_card_0','lethal_exile_0'])
+  self.assertNotIn('hand_control',[x['ref'] for x in empty['setup']])
+  self.assertEqual(next(x['name'] for x in occupied['setup'] if x['ref']=='hand_control'),'Forest')
+  self.assertIn(dict(op='assert_card',ref='recipient',property='damage',value=3),empty['steps'])
+  self.assertNotIn(dict(op='assert_card',ref='recipient',property='damage',value=3),occupied['steps'])
+  self.assertIn(dict(op='assert_zone_multiplicity',player=1,zone='exile',index=self.rows['Grizzly Bears']['csvid'],value=1),lethal['steps'])
+
+ def test_global_effect_has_real_no_effect_and_expiration_controls(self):
+  no_effect,cleanup=self.cases('Flaring Pain',['without_effect_0','cleanup_0'])
+  self.assertNotIn('source',[x['ref'] for x in no_effect['steps'] if x['op']=='cast'])
+  self.assertNotIn(dict(op='assert_card',ref='recipient',property='damage',value=3),no_effect['steps'])
+  at=next(i for i,x in enumerate(cleanup['steps']) if x['op']=='cleanup')
+  self.assertIn(dict(op='assert_card',ref='recipient',property='damage',value=3),cleanup['steps'][:at])
+  self.assertIn(dict(op='assert_card',ref='recipient',property='damage',value=0),cleanup['steps'][at:])
+  self.assertIn('next_shield',[x['ref'] for x in cleanup['steps'][at:] if x['op']=='cast'])
+
+ def test_pending_snapshots_and_lost_targets_keep_real_response_context(self):
+  for name in self.pins['sources']:
+   c=self.cases(name,['pending_snapshot_1'])[0];s=c['steps'];at=next(i for i,x in enumerate(s) if x['op']=='capture')
+   self.assertTrue(any(x['op']=='cast' and x['ref']=='source' for x in s[:at]))
+   self.assertEqual(s[at-1],dict(op='assert_stack',value=1))
+   self.assertIn('restore',[x['op'] for x in s]);self.assertIn('assert_recorded_state',[x['op'] for x in s])
+  c=self.cases('Lava Burst',['lost_target_0'])[0]
+  self.assertIn(dict(op='cast_response',ref='bounce',value=1),c['steps'])
+  self.assertIn(dict(op='resolve_response'),c['steps'])
+  self.assertIn(dict(op='assert_zone_multiplicity',player=1,zone='hand',index=self.rows['Scaled Wurm']['csvid'],value=1),c['steps'])
+
+ def test_invalid_variants_and_zero_mana_casts_fail_closed(self):
+  for name in self.pins['sources']:
+   for vs in ([],['bad_0'],['creature_0','creature_0']):
+    with self.subTest(name=name,vs=vs),self.assertRaises(ValueError):self.cases(name,vs)
+   c=self.cases(name,['insufficient_mana_0'])[0]
+   self.assertIn(dict(op='cast',ref='source',value=0),c['steps'])
+   self.assertNotIn(dict(op='choose_x',player=0,value=3),c['steps'])
+
+
 if __name__=='__main__':unittest.main()

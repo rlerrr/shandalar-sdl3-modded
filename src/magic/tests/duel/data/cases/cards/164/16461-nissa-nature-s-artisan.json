@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Nissa, Nature's Artisan",
+  "csvid": 16461,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "+3: You gain 3 life.\n\u22124: Reveal the top two cards of your library. Put all land cards from among them onto the battlefield and the rest into your hand.\n\u221212: Creatures you control get +5/+5 and gain trample until end of turn.",
+      "params": {
+        "ability": 0,
+        "present_ai_dialogs": true,
+        "activation_dialogs": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "repeat_denied_0",
+        "source_destroyed_pending_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "repeat_denied_1",
+        "source_destroyed_pending_1"
+      ]
+    }
+  ]
+}

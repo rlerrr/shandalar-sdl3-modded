@@ -20,8 +20,20 @@ def expectations_for_platform(records, platform):
     for name, record in records.items():
         if record.get("platform", platform) not in ("native", "wasm"):
             raise ValueError(f"Expectation {name} has an invalid platform")
-    selected = {name: record for name, record in records.items()
-                if record.get("platform", platform) == platform}
+    selected = {}
+    for name, record in records.items():
+        if record.get("platform", platform) != platform:
+            continue
+        if "platform_signatures" in record:
+            validate_expectation_signature(name, record)
+            resolved = {k: v for k, v in record.items() if k != "platform_signatures"}
+            override = record["platform_signatures"].get(platform)
+            if override:
+                resolved.pop("pattern_counts", None)
+                resolved.update(override)
+            selected[name] = resolved
+        else:
+            selected[name] = record
     # Older native-only baselines serialized caught hardware exceptions as one
     # assertion. Adapt only explicitly pinned SEH signatures, preserving their
     # on-disk identity, exact patterns and unexpected-pass checks.
@@ -102,6 +114,18 @@ def validate_expectation_signature(name, record):
                                                     or record["assertion_count"] < 1))):
         raise ValueError(f"Expectation {name} needs a reason, matching patterns, and a positive count for assertion failures")
     expectation_pattern_counts(name, record)
+    if "platform_signatures" in record:
+        signatures = record["platform_signatures"]
+        allowed = {"kind", "assertion_count", "reason", "patterns", "pattern_counts"}
+        if (record["kind"] != "assertion" or "platform" in record
+                or not isinstance(signatures, dict) or not signatures
+                or not set(signatures) <= {"native", "wasm"}):
+            raise ValueError(f"Expectation {name} has invalid platform signatures")
+        for platform, signature in signatures.items():
+            if (not isinstance(signature, dict) or not set(signature) <= allowed
+                    or signature.get("kind") != "assertion"):
+                raise ValueError(f"Expectation {name} has an invalid {platform} signature")
+            validate_expectation_signature(name + "[" + platform + "]", signature)
     try:
         for pattern in record["patterns"]:
             re.compile(pattern)

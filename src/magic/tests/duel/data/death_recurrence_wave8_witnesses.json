@@ -1,0 +1,634 @@
+{
+  "version": 1,
+  "sources": {
+    "Safehold Elite": {
+      "csvid": 9661,
+      "handler": "manalinkeh_card_scuzzback_marauders",
+      "oracle": {
+        "oracle_id": "68ca91ba-31fb-47e0-9b32-e4f3504cbbca",
+        "name": "Safehold Elite",
+        "oracle_text": "Persist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+        "mana_cost": "{1}{G/W}",
+        "type_line": "Creature \u2014 Elf Scout",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Persist"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/220/safehold-elite?utm_source=api"
+      }
+    },
+    "Gravelgill Axeshark": {
+      "csvid": 9553,
+      "handler": "manalinkeh_card_scuzzback_marauders",
+      "oracle": {
+        "oracle_id": "2141b48d-5a04-40dd-a76b-457ac06b56c2",
+        "name": "Gravelgill Axeshark",
+        "oracle_text": "Persist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+        "mana_cost": "{4}{U/B}",
+        "type_line": "Creature \u2014 Merfolk Soldier",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Persist"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/shm/164/gravelgill-axeshark?utm_source=api"
+      }
+    },
+    "Butcher Ghoul": {
+      "csvid": 12323,
+      "handler": "manalinkeh_card_nearheath_stalker",
+      "oracle": {
+        "oracle_id": "28caeed4-c175-469f-8d8e-f45bc0a51a1c",
+        "name": "Butcher Ghoul",
+        "oracle_text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature \u2014 Zombie",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Undying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/99/butcher-ghoul?utm_source=api"
+      }
+    },
+    "Young Wolf": {
+      "csvid": 12296,
+      "handler": "manalinkeh_card_nearheath_stalker",
+      "oracle": {
+        "oracle_id": "8b492764-10b6-4506-be11-22daa9220a91",
+        "name": "Young Wolf",
+        "oracle_text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature \u2014 Wolf",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Undying"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/227/young-wolf?utm_source=api"
+      }
+    },
+    "Nearheath Stalker": {
+      "csvid": 12237,
+      "handler": "manalinkeh_card_nearheath_stalker",
+      "oracle": {
+        "oracle_id": "c804157e-2911-4973-83bf-f5befc09065d",
+        "name": "Nearheath Stalker",
+        "oracle_text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature \u2014 Vampire Rogue",
+        "power": "4",
+        "toughness": "1",
+        "keywords": [
+          "Undying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/100/nearheath-stalker?utm_source=api"
+      }
+    },
+    "Kitchen Finks": {
+      "csvid": 9579,
+      "handler": "manalinkeh_card_kitchen_finks",
+      "oracle": {
+        "oracle_id": "5470dcfa-4eff-43da-abf7-19922841f719",
+        "name": "Kitchen Finks",
+        "oracle_text": "When this creature enters, you gain 2 life.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+        "mana_cost": "{1}{G/W}{G/W}",
+        "type_line": "Creature \u2014 Ouphe",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Persist"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/216/kitchen-finks?utm_source=api"
+      }
+    },
+    "Scuzzback Marauders": {
+      "csvid": 9670,
+      "handler": "manalinkeh_card_scuzzback_marauders",
+      "oracle": {
+        "oracle_id": "423a1fc2-f623-4b5f-9a3e-7f63b2f3cf5d",
+        "name": "Scuzzback Marauders",
+        "oracle_text": "Trample\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+        "mana_cost": "{4}{R/G}",
+        "type_line": "Creature \u2014 Goblin Warrior",
+        "power": "5",
+        "toughness": "2",
+        "keywords": [
+          "Persist",
+          "Trample"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/221/scuzzback-marauders?utm_source=api"
+      }
+    },
+    "Strangleroot Geist": {
+      "csvid": 12271,
+      "handler": "manalinkeh_card_strangleroor_geist",
+      "oracle": {
+        "oracle_id": "af12758f-4a7b-4156-8942-de4716aa0623",
+        "name": "Strangleroot Geist",
+        "oracle_text": "Haste\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{G}{G}",
+        "type_line": "Creature \u2014 Spirit",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Undying",
+          "Haste"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/127/strangleroot-geist?utm_source=api"
+      }
+    },
+    "Vengeful Vampire": {
+      "csvid": 12286,
+      "handler": "manalinkeh_card_nearheath_stalker",
+      "oracle": {
+        "oracle_id": "1fcf95d7-fd70-474b-be0a-e43502633556",
+        "name": "Vengeful Vampire",
+        "oracle_text": "Flying\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Creature \u2014 Vampire",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Undying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/78/vengeful-vampire?utm_source=api"
+      }
+    },
+    "Vorapede": {
+      "csvid": 12288,
+      "handler": "manalinkeh_card_vorapede",
+      "oracle": {
+        "oracle_id": "fd44986c-cf37-4f6e-b8d6-1795ec794b5f",
+        "name": "Vorapede",
+        "oracle_text": "Vigilance, trample\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{2}{G}{G}{G}",
+        "type_line": "Creature \u2014 Insect",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Undying",
+          "Vigilance",
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c20/195/vorapede?utm_source=api"
+      }
+    },
+    "Hound of Griselbrand": {
+      "csvid": 12399,
+      "handler": "manalinkeh_card_nearheath_stalker",
+      "oracle": {
+        "oracle_id": "17425a60-7554-4740-9455-976edd63c106",
+        "name": "Hound of Griselbrand",
+        "oracle_text": "Double strike\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature \u2014 Elemental Dog",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Undying",
+          "Double strike"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/141/hound-of-griselbrand?utm_source=api"
+      }
+    }
+  },
+  "cards": {
+    "Burst of Strength": {
+      "oracle_id": "1ab592fa-adfb-4879-af6c-0204eab323fb",
+      "name": "Burst of Strength",
+      "oracle_text": "Put a +1/+1 counter on target creature and untap it.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/gtc/115/burst-of-strength?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Fume Spitter": {
+      "oracle_id": "6556a15b-be4b-45ea-867d-3a8e26202b42",
+      "name": "Fume Spitter",
+      "oracle_text": "Sacrifice this creature: Put a -1/-1 counter on target creature.",
+      "mana_cost": "{B}",
+      "type_line": "Creature \u2014 Phyrexian Horror",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/uma/95/fume-spitter?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Shock": {
+      "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+      "name": "Shock",
+      "oracle_text": "Shock deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "name": "Twiddle",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature \u2014 Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+    },
+    "Lightning Blast": {
+      "oracle_id": "91fd731c-e076-4f2d-9f22-872880c3cc3d",
+      "name": "Lightning Blast",
+      "oracle_text": "Lightning Blast deals 4 damage to any target.",
+      "mana_cost": "{3}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tpr/138/lightning-blast?utm_source=api"
+    }
+  }
+}

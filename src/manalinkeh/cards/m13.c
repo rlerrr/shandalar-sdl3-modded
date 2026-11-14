@@ -2153,12 +2153,20 @@ int card_trading_post(int player, int card, event_t event){
 							&& ! graveyard_has_shroud(player),
 							can_sacrifice_as_cost(player, 1, TYPE_ARTIFACT, 0, 0, 0, 0, 0, 0, 0, -1, 0)
 						};
+		/* An unavailable mode has no candidate to score.  In particular, an
+		   empty graveyard makes new_select_a_card() return -1; indexing that
+		   result also prompted for an irrelevant card before the mode dialog. */
+		int return_priority = 0;
+		if( player == AI && abils[2] ){
+			int selected = new_select_a_card(player, player, TUTOR_FROM_GRAVE, 0, AI_MAX_VALUE, -1, &test);
+			if( selected >= 0 && selected < count_graveyard(player) ){
+				return_priority = count_subtype(player, TYPE_CREATURE, -1)*2 + get_base_value(-1, grave[selected]);
+			}
+		}
 		int priorities[4] = { 	player == AI ? 40-(life[player]*2) : 0,
 								player == AI ? ((count_subtype(1-player, TYPE_CREATURE, -1)-count_subtype(player, TYPE_CREATURE, -1))*3) +
 												(10 * (current_phase < PHASE_DECLARE_BLOCKERS)) + (5*(life[player] > 7)) : 0,
-								player == AI ? count_subtype(player, TYPE_CREATURE, -1)*2 +
-												get_base_value(-1, grave[new_select_a_card(player, player, TUTOR_FROM_GRAVE, 0, AI_MAX_VALUE, -1, &test)])
-												: 0,
+									return_priority,
 								player == AI ? count_subtype(player, TYPE_ARTIFACT, -1)*2 + (14-(hand_count[player]*2)) : 0
 							};
 

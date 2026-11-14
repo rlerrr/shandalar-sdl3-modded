@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Pristine Talisman",
+  "csvid": 11664,
+  "recipes": [
+    {
+      "family": "printed_tap_mana_activation",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}. You gain 1 life.",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": false,
+          "filter_menu": false
+        },
+        "other_clauses": []
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "inactive_0",
+        "tapped_0",
+        "repeat_denied_0",
+        "repeat_untap_0",
+        "spend_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "opponent_turn_0",
+        "untap_step_0",
+        "value_1",
+        "payment_1",
+        "inactive_1",
+        "tapped_1",
+        "repeat_denied_1",
+        "repeat_untap_1",
+        "spend_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "opponent_turn_1",
+        "untap_step_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "version": 1,
+  "card": "Ghost-Lit Redeemer",
+  "csvid": 7646,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "{W}, {T}: You gain 2 life.\nChannel — {1}{W}, Discard this card: You gain 4 life.",
+      "params": {
+        "ability": 0
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_destroyed_pending_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_destroyed_pending_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,803 @@
+{
+  "version": 1,
+  "oracle_sha256": "c11dcfedde2ed4ce99ff355f5cf30c187c2b3745c87a03319e715bbfec17cf50",
+  "sources": {
+    "Endless Cockroaches": {
+      "csvid": 2822,
+      "handler": "manalinkeh_card_endless_cockroaches",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "9f31dbb1-c350-46f8-bd1d-9f23a073d2f1",
+        "name": "Endless Cockroaches",
+        "oracle_text": "When this creature dies, return it to its owner's hand.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature \u2014 Insect",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/75/endless-cockroaches?utm_source=api"
+      }
+    },
+    "Shivan Phoenix": {
+      "csvid": 4055,
+      "handler": "manalinkeh_card_endless_cockroaches",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "49ca8516-624b-4aa8-8e13-d145590cdfda",
+        "name": "Shivan Phoenix",
+        "oracle_text": "Flying\nWhen this creature dies, return it to its owner's hand.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature \u2014 Phoenix",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/91/shivan-phoenix?utm_source=api"
+      }
+    },
+    "Weatherseed Treefolk": {
+      "csvid": 4086,
+      "handler": "manalinkeh_card_endless_cockroaches",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "4e9b878b-80a2-433b-941b-92d854e83d58",
+        "name": "Weatherseed Treefolk",
+        "oracle_text": "Trample\nWhen this creature dies, return it to its owner's hand.",
+        "mana_cost": "{2}{G}{G}{G}",
+        "type_line": "Creature \u2014 Treefolk",
+        "power": "5",
+        "toughness": "3",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/116/weatherseed-treefolk?utm_source=api"
+      }
+    },
+    "Undying Beast": {
+      "csvid": 2836,
+      "handler": "manalinkeh_card_dark_revenant",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "5ae03181-a436-4bad-be3a-6c9f6c0ed4d6",
+        "name": "Undying Beast",
+        "oracle_text": "When this creature dies, put it on top of its owner's library.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature \u2014 Beast",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/por/113/undying-beast?utm_source=api"
+      }
+    },
+    "Alabaster Dragon": {
+      "csvid": 2927,
+      "handler": "manalinkeh_card_alabaster_dragon",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "2392a41a-59d3-4749-be94-4d9df0af9c4c",
+        "name": "Alabaster Dragon",
+        "oracle_text": "Flying\nWhen this creature dies, shuffle it into its owner's library.",
+        "mana_cost": "{4}{W}{W}",
+        "type_line": "Creature \u2014 Dragon",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/2/alabaster-dragon?utm_source=api"
+      }
+    },
+    "Cyclopean Mummy": {
+      "csvid": 606,
+      "handler": "manalinkeh_card_cyclopean_mummy",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "f5f2c98c-dd89-4b60-83e5-07f5fdc699ef",
+        "name": "Cyclopean Mummy",
+        "oracle_text": "When this creature dies, exile it.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature \u2014 Zombie",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/72/cyclopean-mummy?utm_source=api"
+      }
+    },
+    "Mortus Strider": {
+      "csvid": 13012,
+      "handler": "manalinkeh_card_endless_cockroaches",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "15af3bd0-022b-472e-b21e-29b925b7692b",
+        "name": "Mortus Strider",
+        "oracle_text": "When this creature dies, return it to its owner's hand.",
+        "mana_cost": "{1}{U}{B}",
+        "type_line": "Creature \u2014 Skeleton",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/203/mortus-strider?utm_source=api"
+      }
+    },
+    "Dark Revenant": {
+      "csvid": 12697,
+      "handler": "manalinkeh_card_dark_revenant",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "7191f765-6e66-4bc4-8aa8-85280ac61d1e",
+        "name": "Dark Revenant",
+        "oracle_text": "Flying\nWhen this creature dies, put it on top of its owner's library.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature \u2014 Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/61/dark-revenant?utm_source=api"
+      }
+    },
+    "Immortal Phoenix": {
+      "csvid": 19139,
+      "handler": "manalinkeh_card_endless_cockroaches",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "1d8bd391-b133-4c8b-95ad-7f7ab99137c7",
+        "name": "Immortal Phoenix",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhen this creature dies, return it to its owner's hand.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature \u2014 Phoenix",
+        "power": "5",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/332/immortal-phoenix?utm_source=api"
+      }
+    }
+  },
+  "cards": {
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Dragonscale Boon": {
+      "oracle_id": "629b3aee-b8fd-495a-a988-815a0aaf3e82",
+      "name": "Dragonscale Boon",
+      "oracle_text": "Put two +1/+1 counters on target creature and untap it.",
+      "mana_cost": "{3}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ktk/131/dragonscale-boon?utm_source=api"
+    },
+    "Eager Cadet": {
+      "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+      "name": "Eager Cadet",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature \u2014 Human Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature \u2014 Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+    },
+    "Grasp of Darkness": {
+      "oracle_id": "494c819d-7d73-432b-8c96-4cb9dcd31094",
+      "name": "Grasp of Darkness",
+      "oracle_text": "Target creature gets -4/-4 until end of turn.",
+      "mana_cost": "{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m21/102/grasp-of-darkness?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Lightning Blast": {
+      "oracle_id": "91fd731c-e076-4f2d-9f22-872880c3cc3d",
+      "name": "Lightning Blast",
+      "oracle_text": "Lightning Blast deals 4 damage to any target.",
+      "mana_cost": "{3}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tpr/138/lightning-blast?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Reach Through Mists": {
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "name": "Reach Through Mists",
+      "oracle_text": "Draw a card.",
+      "mana_cost": "{U}",
+      "type_line": "Instant \u2014 Arcane",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+    },
+    "Shock": {
+      "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+      "name": "Shock",
+      "oracle_text": "Shock deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Unruly Mob": {
+      "oracle_id": "05d0b904-a680-4f2f-aaa1-e227a7fe7e79",
+      "name": "Unruly Mob",
+      "oracle_text": "Whenever another creature you control dies, put a +1/+1 counter on this creature.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature \u2014 Human",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mid/40/unruly-mob?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Withstand Death": {
+      "oracle_id": "c462adf3-4ade-4b90-bdec-7247b080471f",
+      "name": "Withstand Death",
+      "oracle_text": "Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/134/withstand-death?utm_source=api"
+    },
+    "Wrath of God": {
+      "oracle_id": "34515b16-c9a4-4f98-8c77-416a7a523407",
+      "name": "Wrath of God",
+      "oracle_text": "Destroy all creatures. They can't be regenerated.",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/70/wrath-of-god?utm_source=api"
+    }
+  },
+  "registry": {
+    "Counterspell": {
+      "csvid": 48,
+      "iid": 1996,
+      "name": "Counterspell",
+      "handler": "manalinkeh_card_counterspell",
+      "kind": "card"
+    },
+    "Dragonscale Boon": {
+      "csvid": 14260,
+      "iid": 2696,
+      "name": "Dragonscale Boon",
+      "handler": "manalinkeh_card_dragonscale_boon",
+      "kind": "card"
+    },
+    "Eager Cadet": {
+      "csvid": 4363,
+      "iid": 12406,
+      "name": "Eager Cadet",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "name": "Forest",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Giant Growth": {
+      "csvid": 97,
+      "iid": 3862,
+      "name": "Giant Growth",
+      "handler": "manalinkeh_card_giant_growth",
+      "kind": "card"
+    },
+    "Giant Spider": {
+      "csvid": 98,
+      "iid": 3868,
+      "name": "Giant Spider",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Grasp of Darkness": {
+      "csvid": 11274,
+      "iid": 4149,
+      "name": "Grasp of Darkness",
+      "handler": "manalinkeh_card_grasp_of_darkness",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "name": "Grizzly Bears",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Island": {
+      "csvid": 126,
+      "iid": 1,
+      "name": "Island",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Lightning Blast": {
+      "csvid": 1070,
+      "iid": 5595,
+      "name": "Lightning Blast",
+      "handler": "manalinkeh_card_lightning_blast",
+      "kind": "card"
+    },
+    "Lightning Bolt": {
+      "csvid": 145,
+      "iid": 5596,
+      "name": "Lightning Bolt",
+      "handler": "manalinkeh_card_lightning_bolt",
+      "kind": "card"
+    },
+    "Llanowar Elves": {
+      "csvid": 149,
+      "iid": 5655,
+      "name": "Llanowar Elves",
+      "handler": "manalinkeh_card_elvish_mystic",
+      "kind": "card"
+    },
+    "Mountain": {
+      "csvid": 164,
+      "iid": 3,
+      "name": "Mountain",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Murder": {
+      "csvid": 12594,
+      "iid": 6382,
+      "name": "Murder",
+      "handler": "manalinkeh_card_murder2",
+      "kind": "card"
+    },
+    "Plains": {
+      "csvid": 188,
+      "iid": 4,
+      "name": "Plains",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Reach Through Mists": {
+      "csvid": 7353,
+      "iid": 7720,
+      "name": "Reach Through Mists",
+      "handler": "manalinkeh_card_reach_through_mists",
+      "kind": "card"
+    },
+    "Shock": {
+      "csvid": 1147,
+      "iid": 8661,
+      "name": "Shock",
+      "handler": "manalinkeh_card_shock2",
+      "kind": "card"
+    },
+    "Sol Ring": {
+      "csvid": 230,
+      "iid": 8968,
+      "name": "Sol Ring",
+      "handler": "manalinkeh_card_sol_ring",
+      "kind": "card"
+    },
+    "Swords to Plowshares": {
+      "csvid": 240,
+      "iid": 9616,
+      "name": "Swords to Plowshares",
+      "handler": "manalinkeh_card_swords_to_plowshares",
+      "kind": "card"
+    },
+    "Unruly Mob": {
+      "csvid": 12112,
+      "iid": 10380,
+      "name": "Unruly Mob",
+      "handler": "manalinkeh_card_unruly_mob",
+      "kind": "card"
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "iid": 10388,
+      "name": "Unsummon",
+      "handler": "manalinkeh_card_unsummon",
+      "kind": "card"
+    },
+    "Withstand Death": {
+      "csvid": 11412,
+      "iid": 11048,
+      "name": "Withstand Death",
+      "handler": "manalinkeh_card_withstand_death",
+      "kind": "card"
+    },
+    "Wrath of God": {
+      "csvid": 290,
+      "iid": 11121,
+      "name": "Wrath of God",
+      "handler": "manalinkeh_card_wrath_of_god",
+      "kind": "card"
+    }
+  },
+  "rules": {
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020261106.txt",
+    "sections": [
+      "111.7",
+      "111.8",
+      "701.24c"
+    ],
+    "token_shuffle": "Token ceases and cannot return; specific-object shuffle still shuffles without it."
+  },
+  "presentation": {
+    "self_trigger": "mandatory normal engine death resolution; no fabricated independent response window",
+    "observer": "surviving mandatory Unruly Mob counter per controlled creature death"
+  }
+}

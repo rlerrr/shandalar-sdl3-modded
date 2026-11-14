@@ -1,0 +1,657 @@
+{
+  "version": 1,
+  "sources": {
+    "Restless Apparition": {
+      "csvid": 9857,
+      "handler": "manalinkeh_card_restless_apparition",
+      "oracle": {
+        "oracle_id": "fbd6dda7-ccee-4640-805d-78a9d60f45ef",
+        "name": "Restless Apparition",
+        "oracle_text": "{W/B}{W/B}{W/B}: This creature gets +3/+3 until end of turn.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+        "mana_cost": "{W/B}{W/B}{W/B}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Persist"
+        ],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/196/restless-apparition?utm_source=api"
+      }
+    },
+    "Thunderblust": {
+      "csvid": 9891,
+      "handler": "manalinkeh_card_thunderblust",
+      "oracle": {
+        "oracle_id": "30d961f7-aae2-4e5a-8f83-9dc17c7dee47",
+        "name": "Thunderblust",
+        "oracle_text": "Haste\nThis creature has trample as long as it has a -1/-1 counter on it.\nPersist (When this creature dies, if it had no -1/-1 counters on it, return it to the battlefield under its owner's control with a -1/-1 counter on it.)",
+        "mana_cost": "{2}{R}{R}{R}",
+        "type_line": "Creature — Elemental",
+        "power": "7",
+        "toughness": "2",
+        "keywords": [
+          "Persist",
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/131/thunderblust?utm_source=api"
+      }
+    },
+    "Sightless Ghoul": {
+      "csvid": 12260,
+      "handler": "manalinkeh_card_sightless_ghoul",
+      "oracle": {
+        "oracle_id": "8791adf7-16b5-4692-9eaa-0d0c58867d9d",
+        "name": "Sightless Ghoul",
+        "oracle_text": "This creature can't block.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Zombie Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Undying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/73/sightless-ghoul?utm_source=api"
+      }
+    },
+    "Stormbound Geist": {
+      "csvid": 12270,
+      "handler": "manalinkeh_card_stormbound_geist",
+      "oracle": {
+        "oracle_id": "b5027d79-83e9-437a-baae-03cc3a13a608",
+        "name": "Stormbound Geist",
+        "oracle_text": "Flying\nThis creature can block only creatures with flying.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Undying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dka/51/stormbound-geist?utm_source=api"
+      }
+    },
+    "Evernight Shade": {
+      "csvid": 12364,
+      "handler": "manalinkeh_card_evernight_shade",
+      "oracle": {
+        "oracle_id": "9af1b6c4-295f-41d2-b3a0-0863798330d4",
+        "name": "Evernight Shade",
+        "oracle_text": "{B}: This creature gets +1/+1 until end of turn.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Shade",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Undying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/144/evernight-shade?utm_source=api"
+      }
+    },
+    "Howlgeist": {
+      "csvid": 12400,
+      "handler": "manalinkeh_card_howlgeist",
+      "oracle": {
+        "oracle_id": "5a00eb94-6c0f-4f41-8c16-fc4e2f7cb9aa",
+        "name": "Howlgeist",
+        "oracle_text": "Creatures with power less than this creature's power can't block it.\nUndying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Spirit Wolf",
+        "power": "4",
+        "toughness": "2",
+        "keywords": [
+          "Undying"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/182/howlgeist?utm_source=api"
+      }
+    }
+  },
+  "cards": {
+    "Burst of Strength": {
+      "oracle_id": "1ab592fa-adfb-4879-af6c-0204eab323fb",
+      "name": "Burst of Strength",
+      "oracle_text": "Put a +1/+1 counter on target creature and untap it.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/gtc/115/burst-of-strength?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Darksteel Myr": {
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "name": "Darksteel Myr",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Myr",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+    },
+    "Elvish Mystic": {
+      "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+      "name": "Elvish Mystic",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Fume Spitter": {
+      "oracle_id": "6556a15b-be4b-45ea-867d-3a8e26202b42",
+      "name": "Fume Spitter",
+      "oracle_text": "Sacrifice this creature: Put a -1/-1 counter on target creature.",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Phyrexian Horror",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/uma/95/fume-spitter?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Lightning Blast": {
+      "oracle_id": "91fd731c-e076-4f2d-9f22-872880c3cc3d",
+      "name": "Lightning Blast",
+      "oracle_text": "Lightning Blast deals 4 damage to any target.",
+      "mana_cost": "{3}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tpr/138/lightning-blast?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Serra Angel": {
+      "oracle_id": "4b7ac066-e5c7-43e6-9e7e-2739b24a905d",
+      "name": "Serra Angel",
+      "oracle_text": "Flying\nVigilance (Attacking doesn't cause this creature to tap.)",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Creature — Angel",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying",
+        "Vigilance"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fdn/740/serra-angel?utm_source=api"
+    },
+    "Shock": {
+      "oracle_id": "a9d288b8-cdc1-4e55-a0c9-d6edfc95e65d",
+      "name": "Shock",
+      "oracle_text": "Shock deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/809/shock?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "name": "Twiddle",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Act of Treason": {
+      "oracle_id": "9d08af23-9f4a-4097-9abc-3b17475ab744",
+      "name": "Act of Treason",
+      "oracle_text": "Gain control of target creature until end of turn. Untap that creature. It gains haste until end of turn. (It can attack and {T} this turn.)",
+      "mana_cost": "{2}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/rvr/99/act-of-treason?utm_source=api"
+    },
+    "Fog": {
+      "oracle_id": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+      "name": "Fog",
+      "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ema/167/fog?utm_source=api"
+    }
+  },
+  "implemented_witnesses": {
+    "Burst of Strength": {
+      "csvid": 12904,
+      "iid": 1417,
+      "name": "Burst of Strength",
+      "handler": "manalinkeh_card_burst_of_strength",
+      "kind": "card"
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "iid": 1996,
+      "name": "Counterspell",
+      "handler": "manalinkeh_card_counterspell",
+      "kind": "card"
+    },
+    "Darksteel Myr": {
+      "csvid": 11238,
+      "iid": 2255,
+      "name": "Darksteel Myr",
+      "handler": "manalinkeh_card_darksteel_myr",
+      "kind": "card"
+    },
+    "Elvish Mystic": {
+      "csvid": 13284,
+      "iid": 2982,
+      "name": "Elvish Mystic",
+      "handler": "manalinkeh_card_elvish_mystic",
+      "kind": "card"
+    },
+    "Fume Spitter": {
+      "csvid": 11257,
+      "iid": 3674,
+      "name": "Fume Spitter",
+      "handler": "manalinkeh_card_fume_spitter",
+      "kind": "card"
+    },
+    "Lightning Blast": {
+      "csvid": 1070,
+      "iid": 5595,
+      "name": "Lightning Blast",
+      "handler": "manalinkeh_card_lightning_blast",
+      "kind": "card"
+    },
+    "Murder": {
+      "csvid": 12594,
+      "iid": 6382,
+      "name": "Murder",
+      "handler": "manalinkeh_card_murder2",
+      "kind": "card"
+    },
+    "Serra Angel": {
+      "csvid": 221,
+      "iid": 8519,
+      "name": "Serra Angel",
+      "handler": "manalinkeh_card_serra_angel",
+      "kind": "card"
+    },
+    "Shock": {
+      "csvid": 1147,
+      "iid": 8661,
+      "name": "Shock",
+      "handler": "manalinkeh_card_shock2",
+      "kind": "card"
+    },
+    "Swords to Plowshares": {
+      "csvid": 240,
+      "iid": 9616,
+      "name": "Swords to Plowshares",
+      "handler": "manalinkeh_card_swords_to_plowshares",
+      "kind": "card"
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "iid": 10281,
+      "name": "Twiddle",
+      "handler": "manalinkeh_card_twiddle",
+      "kind": "card"
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "iid": 10388,
+      "name": "Unsummon",
+      "handler": "manalinkeh_card_unsummon",
+      "kind": "card"
+    },
+    "Act of Treason": {
+      "csvid": 10381,
+      "iid": 224,
+      "name": "Act of Treason",
+      "handler": "manalinkeh_card_act_of_treason",
+      "kind": "card"
+    },
+    "Fog": {
+      "csvid": 88,
+      "iid": 3563,
+      "name": "Fog",
+      "handler": "manalinkeh_card_fog",
+      "kind": "card"
+    }
+  },
+  "notes": [
+    "All recurrence counters arise through real printed recurrence or real spells/abilities; no counter seed.",
+    "Stocked-zone names retained as dormant zone controls, never unimplemented combat bodies."
+  ]
+}

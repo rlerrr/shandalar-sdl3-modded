@@ -1,0 +1,646 @@
+{
+  "version": 1,
+  "witnesses": {
+    "Urza's Armor": {
+      "oracle": {
+        "oracle_id": "e5fa232a-c8f2-4532-88bf-60d1223181b0",
+        "name": "Urza's Armor",
+        "oracle_text": "If a source would deal damage to you, prevent 1 of that damage.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/318/urzas-armor?utm_source=api"
+      },
+      "handler": "manalinkeh_card_urzas_armor",
+      "reviewed_native_witness": false
+    },
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "handler": "manalinkeh_card_lightning_bolt",
+      "reviewed_native_witness": false
+    }
+  },
+  "sources": {
+    "Phyrexian Arena": {
+      "oracle": {
+        "oracle_id": "ee579a32-a048-4335-b966-231ba731cdea",
+        "name": "Phyrexian Arena",
+        "oracle_text": "At the beginning of your upkeep, you draw a card and lose 1 life.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/180/phyrexian-arena?utm_source=api"
+      },
+      "handler": "manalinkeh_card_phyrexian_arena",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Baleful Force": {
+      "oracle": {
+        "oracle_id": "f26fa9e4-f528-4e22-8f7c-329fc3b633e4",
+        "name": "Baleful Force",
+        "oracle_text": "At the beginning of each upkeep, you draw a card and you lose 1 life.",
+        "mana_cost": "{5}{B}{B}{B}",
+        "type_line": "Creature — Elemental",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/105/baleful-force?utm_source=api"
+      },
+      "handler": "manalinkeh_card_baleful_force",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Seizan, Perverter of Truth": {
+      "oracle": {
+        "oracle_id": "04d0d20f-720e-4cb6-a3ad-ea2b57bb7efa",
+        "name": "Seizan, Perverter of Truth",
+        "oracle_text": "At the beginning of each player's upkeep, that player loses 2 life and draws two cards.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Legendary Creature — Demon Spirit",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/143/seizan-perverter-of-truth?utm_source=api"
+      },
+      "handler": "manalinkeh_card_seizan_perverter_of_truth",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Bloodgift Demon": {
+      "oracle": {
+        "oracle_id": "e64b184d-9746-4723-a928-d459b5c3ee6c",
+        "name": "Bloodgift Demon",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, target player draws a card and loses 1 life.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Demon",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c14/137/bloodgift-demon?utm_source=api"
+      },
+      "handler": "manalinkeh_card_bloodgift_demon",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [
+          0
+        ],
+        "ai_target_policy": "own_unless_opponent_library_short"
+      }
+    },
+    "Drana's Emissary": {
+      "oracle": {
+        "oracle_id": "ef49b53d-e5b6-423a-88f0-51a7b2021c46",
+        "name": "Drana's Emissary",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, each opponent loses 1 life and you gain 1 life.",
+        "mana_cost": "{1}{W}{B}",
+        "type_line": "Creature — Vampire Cleric Ally",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/210/dranas-emissary?utm_source=api"
+      },
+      "handler": "manalinkeh_card_dranas_emissary",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Ajani's Mantra": {
+      "oracle": {
+        "oracle_id": "2f47661e-a107-4d98-8773-0a068a63df49",
+        "name": "Ajani's Mantra",
+        "oracle_text": "At the beginning of your upkeep, you may gain 1 life.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddh/22/ajanis-mantra?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ajanis_mantra",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [
+          0
+        ],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Copper Tablet": {
+      "oracle": {
+        "oracle_id": "16d1023b-2162-4010-8bf4-218dbe7c99a0",
+        "name": "Copper Tablet",
+        "oracle_text": "At the beginning of each player's upkeep, this artifact deals 1 damage to that player.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/154/copper-tablet?utm_source=api"
+      },
+      "handler": "manalinkeh_card_copper_tablet",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Moroii": {
+      "oracle": {
+        "oracle_id": "418be12f-b40a-4018-86c1-98c9000a999a",
+        "name": "Moroii",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, you lose 1 life.",
+        "mana_cost": "{2}{U}{B}",
+        "type_line": "Creature — Vampire",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/202/moroii?utm_source=api"
+      },
+      "handler": "manalinkeh_card_juzam_djinn",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Serendib Efreet": {
+      "oracle": {
+        "oracle_id": "dd520d83-297a-487f-b8f3-4997bbc056e0",
+        "name": "Serendib Efreet",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, this creature deals 1 damage to you.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Efreet",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/175/serendib-efreet?utm_source=api"
+      },
+      "handler": "manalinkeh_card_juzam_djinn",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Fledgling Djinn": {
+      "oracle": {
+        "oracle_id": "2c73ef77-ae58-401f-8747-538c4cd075d0",
+        "name": "Fledgling Djinn",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, this creature deals 1 damage to you.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Djinn",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/121/fledgling-djinn?utm_source=api"
+      },
+      "handler": "manalinkeh_card_juzam_djinn",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Nettletooth Djinn": {
+      "oracle": {
+        "oracle_id": "f1d300b6-f9cf-40a9-8520-d78cd7d813cf",
+        "name": "Nettletooth Djinn",
+        "oracle_text": "At the beginning of your upkeep, this creature deals 1 damage to you.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Djinn",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/232/nettletooth-djinn?utm_source=api"
+      },
+      "handler": "manalinkeh_card_juzam_djinn",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Rumbling Slum": {
+      "oracle": {
+        "oracle_id": "77275fc5-5f70-4d7f-938e-f32b5c19c532",
+        "name": "Rumbling Slum",
+        "oracle_text": "At the beginning of your upkeep, this creature deals 1 damage to each player.",
+        "mana_cost": "{1}{R}{G}{G}",
+        "type_line": "Creature — Elemental",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hop/93/rumbling-slum?utm_source=api"
+      },
+      "handler": "manalinkeh_card_rumbling_slum",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Celestial Force": {
+      "oracle": {
+        "oracle_id": "8add6996-6c5c-4aa2-93d4-a39efcfd22b2",
+        "name": "Celestial Force",
+        "oracle_text": "At the beginning of each upkeep, you gain 3 life.",
+        "mana_cost": "{5}{W}{W}{W}",
+        "type_line": "Creature — Elemental",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmd/10/celestial-force?utm_source=api"
+      },
+      "handler": "manalinkeh_card_celestial_force",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Master of the Feast": {
+      "oracle": {
+        "oracle_id": "01dc86f3-5ebb-4b10-bf68-8fc9f232c724",
+        "name": "Master of the Feast",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, each opponent draws a card.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Enchantment Creature — Demon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/75/master-of-the-feast?utm_source=api"
+      },
+      "handler": "manalinkeh_card_master_of_the_feast",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    },
+    "Nyx-Fleece Ram": {
+      "oracle": {
+        "oracle_id": "5a20113c-7ea8-4edf-af9f-148ccd326a88",
+        "name": "Nyx-Fleece Ram",
+        "oracle_text": "At the beginning of your upkeep, you gain 1 life.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Enchantment Creature — Sheep",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/126/nyx-fleece-ram?utm_source=api"
+      },
+      "handler": "manalinkeh_card_nyx_fleece_ram",
+      "ui": {
+        "status": "provisional_until_capture",
+        "trigger_accept_players": [],
+        "target_choice_players": [],
+        "ai_target_policy": ""
+      }
+    }
+  },
+  "witness_side_effect_audit": "No unmodeled ETB/death/upkeep triggers in controls. Armor is actuallypaid6 before realturns; permanent prevention distinguishes damage from lifeloss. Libraries are exact bounded prefixes, no ordinarydrawstep is run. Creature controls are reviewed vanilla/nativeFlying/Reach; no fakecast/aging/counter state."
+}

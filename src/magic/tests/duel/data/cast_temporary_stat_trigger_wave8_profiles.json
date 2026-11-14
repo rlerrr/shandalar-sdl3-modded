@@ -1,0 +1,500 @@
+{
+  "sources": {
+    "Dragon-Style Twins": {
+      "oracle_id": "d150f456-c33a-4b19-ac73-b1d818d5db8f",
+      "name": "Dragon-Style Twins",
+      "oracle_text": "Double strike\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+      "mana_cost": "{3}{R}{R}",
+      "type_line": "Creature — Human Monk",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Prowess",
+        "Double strike"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Whirlwind Adept": {
+      "oracle_id": "0c7e261f-45d5-4c86-8cba-9b6edce8ef49",
+      "name": "Whirlwind Adept",
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)\nProwess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)",
+      "mana_cost": "{4}{U}",
+      "type_line": "Creature — Djinn Monk",
+      "power": "4",
+      "toughness": "2",
+      "keywords": [
+        "Prowess",
+        "Hexproof"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Seeker of the Way": {
+      "oracle_id": "e206842f-139b-490d-bc10-d365705ac720",
+      "name": "Seeker of the Way",
+      "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhenever you cast a noncreature spell, this creature gains lifelink until end of turn.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Warrior",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Prowess"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Strongarm Monk": {
+      "oracle_id": "8711b732-8dab-41d4-a85b-b10edcd25e97",
+      "name": "Strongarm Monk",
+      "oracle_text": "Whenever you cast a noncreature spell, creatures you control get +1/+1 until end of turn.",
+      "mana_cost": "{4}{W}",
+      "type_line": "Creature — Human Monk",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Jeskai Sage": {
+      "oracle_id": "b79d4b17-482e-415b-a63b-1f97a55e7583",
+      "name": "Jeskai Sage",
+      "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\nWhen this creature dies, draw a card.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Human Monk",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Prowess"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Ingenious Skaab": {
+      "oracle_id": "9107ece7-a263-4203-ab09-069193cc4902",
+      "name": "Ingenious Skaab",
+      "oracle_text": "Prowess (Whenever you cast a noncreature spell, this creature gets +1/+1 until end of turn.)\n{U}: This creature gets +1/-1 until end of turn.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Zombie Horror",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "Prowess"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Soulblade Djinn": {
+      "oracle_id": "a598e6ce-21ee-49c1-989e-ee864208262f",
+      "name": "Soulblade Djinn",
+      "oracle_text": "Flying\nWhenever you cast a noncreature spell, creatures you control get +1/+1 until end of turn.",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Djinn",
+      "power": "4",
+      "toughness": "3",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    }
+  },
+  "witnesses": {
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Divination": {
+      "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+      "name": "Divination",
+      "oracle_text": "Draw two cards.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Jace Beleren": {
+      "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "name": "Jace Beleren",
+      "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Legendary Planeswalker — Jace",
+      "loyalty": "3",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Reach Through Mists": {
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "name": "Reach Through Mists",
+      "oracle_text": "Draw a card.",
+      "mana_cost": "{U}",
+      "type_line": "Instant — Arcane",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Seal of Cleansing": {
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "name": "Seal of Cleansing",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Visara the Dreadful": {
+      "oracle_id": "79b999bc-2d4b-41e1-b64e-f0c080a9a2c5",
+      "name": "Visara the Dreadful",
+      "oracle_text": "Flying\n{T}: Destroy target creature. It can't be regenerated.",
+      "mana_cost": "{3}{B}{B}{B}",
+      "type_line": "Legendary Creature — Gorgon",
+      "power": "5",
+      "toughness": "5",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 6.0,
+      "layout": "normal"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    }
+  },
+  "handlers": {
+    "Counterspell": "manalinkeh_card_counterspell",
+    "Darksteel Relic": "manalinkeh_card_darksteel_myr",
+    "Divination": "manalinkeh_card_divination",
+    "Dragon-Style Twins": "manalinkeh_card_jeskai_windscout",
+    "Forest": "manalinkeh_plain_mana_producer",
+    "Giant Growth": "manalinkeh_card_giant_growth",
+    "Grizzly Bears": "card_dummy",
+    "Ingenious Skaab": "manalinkeh_card_ingenious_skaab",
+    "Island": "manalinkeh_plain_mana_producer",
+    "Jace Beleren": "manalinkeh_card_jace_beleren",
+    "Jeskai Sage": "manalinkeh_card_jeskai_sage",
+    "Lightning Bolt": "manalinkeh_card_lightning_bolt",
+    "Llanowar Elves": "manalinkeh_card_elvish_mystic",
+    "Mountain": "manalinkeh_plain_mana_producer",
+    "Ornithopter": "card_dummy",
+    "Plains": "manalinkeh_plain_mana_producer",
+    "Reach Through Mists": "manalinkeh_card_reach_through_mists",
+    "Seal of Cleansing": "manalinkeh_card_seal_of_primordium",
+    "Seeker of the Way": "manalinkeh_card_seeker_of_the_way",
+    "Sol Ring": "manalinkeh_card_sol_ring",
+    "Strongarm Monk": "manalinkeh_card_strongarm_monk",
+    "Suntail Hawk": "card_dummy",
+    "Unsummon": "manalinkeh_card_unsummon",
+    "Visara the Dreadful": "manalinkeh_card_visara_the_dreadful",
+    "Whirlwind Adept": "manalinkeh_card_whirlwind_adept",
+    "Soulblade Djinn": "manalinkeh_card_strongarm_monk",
+    "Giant Spider": "card_dummy"
+  }
+}

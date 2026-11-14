@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "card": "Chromescale Drake",
+  "csvid": 6866,
+  "recipes": [
+    {
+      "family": "entry_trigger_value",
+      "version": 2,
+      "oracle_text": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)\nFlying\nWhen this creature enters, reveal the top three cards of your library. Put all artifact cards revealed this way into your hand and the rest into your graveyard.",
+      "variants": [
+        "count0_0",
+        "count1_0",
+        "count2_0",
+        "count6_0",
+        "count7_0",
+        "opponent_artifacts_0",
+        "artifact_in_hand_0",
+        "artifact_in_grave_0",
+        "artifact_creature_0",
+        "nonartifact_0",
+        "insufficient_0",
+        "missing_blue_0",
+        "empty_library_0",
+        "one_card_library_0",
+        "short_library_0",
+        "no_match_0",
+        "duplicates_0",
+        "all_match_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bounce_recast_0",
+        "removed_before_0",
+        "removed_after_0",
+        "count0_1",
+        "count1_1",
+        "count2_1",
+        "count6_1",
+        "count7_1",
+        "opponent_artifacts_1",
+        "artifact_in_hand_1",
+        "artifact_in_grave_1",
+        "artifact_creature_1",
+        "nonartifact_1",
+        "insufficient_1",
+        "missing_blue_1",
+        "empty_library_1",
+        "one_card_library_1",
+        "short_library_1",
+        "no_match_1",
+        "duplicates_1",
+        "all_match_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bounce_recast_1",
+        "removed_before_1",
+        "removed_after_1"
+      ],
+      "params": {
+        "schema": 4,
+        "mechanism": {
+          "gate": "affinity_artifacts",
+          "kind": "all",
+          "window": 3,
+          "scope": "artifact",
+          "optional": false,
+          "remainder": "graveyard",
+          "target_player": false,
+          "selection_clause": "When this creature enters, reveal the top three cards of your library. Put all artifact cards revealed this way into your hand and the rest into your graveyard.",
+          "condition_clause": "Affinity for artifacts (This spell costs {1} less to cast for each artifact you control.)",
+          "gaps": [
+            "Flying"
+          ]
+        },
+        "presentation": {
+          "selector": "automatic",
+          "public_reveal_ack_player": 0
+        }
+      }
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle typed entry gate: actual cast-time colored payment or live-battlefield affinity reduction, complete mandatory library selection and source survival/sacrifice, both controllers, bounded/empty windows, ordinary costs and denials, real artifact casts and ownership/zone controls, actual bounce/blink/counter responses and native snapshot replay. Independent ETB-order alternatives/intermediate priority, passive keyword combat and external replacement/control changes are explicit gaps; no synthetic mana-paid or battlefield-readiness flags."
+}

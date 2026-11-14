@@ -1652,8 +1652,18 @@ static int select_target_maybe_force(
       return 0;
     }
 #endif
+    /* A mandatory in-play chooser with no legal candidates has no input to
+     * request. Mirror the ordinary selector's empty result before consulting
+     * the scripted host; preserve probes and every nonempty/cancellable path. */
+    if (!(allow_cancel & 3) && zone == TARGET_ZONE_IN_PLAY &&
+        !target_available_impl(player, card, NULL, 0, who_chooses,
+          allowed_controller, allowed_controller, zone, required_type, illegal_type,
+          required_abilities, illegal_abilities, required_color, illegal_color, extra,
+          required_subtype, power_requirement, toughness_requirement, special,
+          required_state, illegal_state, flags))
+      return 0;
     int target_card;
-    int target_player = duel_host_choose(DUEL_CHOICE_TARGET, who_chooses, prompt, 0, NULL, &target_card);
+    int target_player = duel_host_choose_target(who_chooses, prompt, allow_cancel, &target_card);
     /* Both Cancel (1) and Done (2) end this target selection. The caller
        decides whether an empty result cancels the action or stops an optional
        target list, exactly as it does for the normal selector. */

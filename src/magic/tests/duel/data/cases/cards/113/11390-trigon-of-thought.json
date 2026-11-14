@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Trigon of Thought",
+  "csvid": 11390,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "This artifact enters with three charge counters on it.\n{U}{U}, {T}: Put a charge counter on this artifact.\n{2}, {T}, Remove a charge counter from this artifact: Draw a card.",
+      "params": {
+        "ability": 2,
+        "present_ai_dialogs": true,
+        "activation_dialogs": {
+          "0": 0,
+          "1": 0
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "repeat_denied_0",
+        "source_destroyed_pending_0",
+        "tapped_0",
+        "insufficient_mana_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "repeat_denied_1",
+        "source_destroyed_pending_1",
+        "tapped_1",
+        "insufficient_mana_1"
+      ]
+    }
+  ]
+}

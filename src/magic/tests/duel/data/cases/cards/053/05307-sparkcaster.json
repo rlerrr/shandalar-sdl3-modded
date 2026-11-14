@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "card": "Sparkcaster",
+  "csvid": 5307,
+  "recipes": [
+    {
+      "family": "entry_own_return",
+      "version": 2,
+      "oracle_text": "When this creature enters, return a red or green creature you control to its owner's hand.\nWhen this creature enters, it deals 1 damage to target player or planeswalker.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "foreign_owned_0",
+        "alternate_choice_0",
+        "bounce_recast_0",
+        "cleanup_0",
+        "nonmatching_entry_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "wrong_color_0",
+        "mandatory_cancel_0",
+        "source_choice_0",
+        "shroud_choice_0",
+        "protection_choice_0",
+        "other_color_0",
+        "wrong_color_only_0",
+        "self_damage_0",
+        "planeswalker_damage_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "foreign_owned_1",
+        "alternate_choice_1",
+        "bounce_recast_1",
+        "cleanup_1",
+        "nonmatching_entry_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "wrong_color_1",
+        "mandatory_cancel_1",
+        "source_choice_1",
+        "shroud_choice_1",
+        "protection_choice_1",
+        "other_color_1",
+        "wrong_color_only_1",
+        "self_damage_1",
+        "planeswalker_damage_1"
+      ],
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "creature",
+          "colors": [
+            "R",
+            "G"
+          ],
+          "count": 1,
+          "another": false,
+          "optional": false,
+          "creature": true,
+          "flash": false,
+          "flying": false,
+          "secondary": "damage",
+          "entry_clause": "When this creature enters, return a red or green creature you control to its owner's hand.",
+          "other_clauses": [
+            "When this creature enters, it deals 1 damage to target player or planeswalker."
+          ]
+        },
+        "presentation": {
+          "human_optional_trigger": false
+        }
+      }
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle real ETB return of own controlled permanents to original owner hands; nontargeted selection, own source return, mandatory/optional policy, color/type/quantity, true printed source costs/types/Flash/Flying, all printed secondary discard/draw-bottom/damage/graveyard exile/mana callbacks, real Temporal Adept bounce/recast and snapshots. Fixed handler-composed trigger order and unavailable independent priority, generic became-target observer and AI direct-discard exact identity are explicit gaps; counts and per-card hand+grave conservation remain asserted."
+}

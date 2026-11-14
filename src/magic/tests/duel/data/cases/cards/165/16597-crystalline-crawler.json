@@ -1,0 +1,311 @@
+{
+  "version": 1,
+  "card": "Crystalline Crawler",
+  "csvid": 16597,
+  "recipes": [
+    {
+      "family": "permanent_plus1_activation",
+      "version": 2,
+      "oracle_text": "Converge — This creature enters with a +1/+1 counter on it for each color of mana spent to cast it.\nRemove a +1/+1 counter from this creature: Add one mana of any color.\n{T}: Put a +1/+1 counter on this creature.",
+      "params": {
+        "ability": 2,
+        "interface": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [
+            "B",
+            "U",
+            "G",
+            "R"
+          ],
+          "intent": {
+            "mode_label": "Add +1/+1 counter",
+            "fallback_color": 3,
+            "allow_auto_nonmana": true
+          },
+          "unavailable": {
+            "0": "query_only",
+            "1": "disabled_dialog"
+          }
+        },
+        "other_clauses": [
+          "Converge — This creature enters with a +1/+1 counter on it for each color of mana spent to cast it.",
+          "Remove a +1/+1 counter from this creature: Add one mana of any color."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "fresh_0",
+        "tapped_0",
+        "repeat_0",
+        "repeat_untap_0",
+        "converge_zero_0",
+        "converge_one_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "fresh_1",
+        "tapped_1",
+        "repeat_1",
+        "repeat_untap_1",
+        "converge_zero_1",
+        "converge_one_1"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "PermanentPlus1Activation_CrawlerConvergeCostProbe_0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Crystalline Crawler",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 2
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 2
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 2
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 2
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "choose_mana",
+          "player": 0,
+          "color": 1
+        },
+        {
+          "op": "choose_mana",
+          "player": 0,
+          "color": 2
+        },
+        {
+          "op": "choose_mana",
+          "player": 0,
+          "color": 3
+        },
+        {
+          "op": "choose_mana",
+          "player": 0,
+          "color": 4
+        },
+        {
+          "op": "choose_mana",
+          "player": 0,
+          "color": 1
+        },
+        {
+          "op": "choose_mana",
+          "player": 0,
+          "color": 2
+        },
+        {
+          "op": "choose_mana",
+          "player": 0,
+          "color": 3
+        },
+        {
+          "op": "choose_mana",
+          "player": 0,
+          "color": 4
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 4
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "require_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_counter",
+          "ref": "source",
+          "counter_kind": "plus1",
+          "value": 4
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 5
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 5
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 1,
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 2,
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 3,
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 4,
+          "value": 1
+        },
+        {
+          "op": "assert_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 4
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 16597,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 16597,
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ]
+    }
+  ]
+}

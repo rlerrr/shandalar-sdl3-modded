@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Sage Aven",
+  "csvid": 6246,
+  "recipes": [
+    {
+      "family": "entry_trigger_value",
+      "version": 2,
+      "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhen this creature enters, look at the top four cards of your library, then put them back in any order.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cleanup_0",
+        "empty_library_0",
+        "short_library_0",
+        "one_card_library_0",
+        "duplicates_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bounce_recast_0",
+        "source_destroyed_0",
+        "nonmatching_entry_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_cast_0",
+        "blink_source_0",
+        "reorder_0",
+        "effect_1",
+        "payment_1",
+        "cleanup_1",
+        "empty_library_1",
+        "short_library_1",
+        "one_card_library_1",
+        "duplicates_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bounce_recast_1",
+        "source_destroyed_1",
+        "nonmatching_entry_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_cast_1",
+        "blink_source_1",
+        "reorder_1"
+      ],
+      "params": {
+        "schema": 3,
+        "mechanism": {
+          "kind": "reorder",
+          "window": 4,
+          "scope": "any",
+          "optional": false,
+          "remainder": "top",
+          "target_player": false,
+          "clause": "When this creature enters, look at the top four cards of your library, then put them back in any order.",
+          "gaps": [
+            "Flying (This creature can't be blocked except by creatures with flying or reach.)"
+          ]
+        },
+        "presentation": {
+          "selector": "reorder"
+        }
+      }
+    }
+  ],
+  "recipe_coverage": "Actual typed creature entry using calibrated fixed-window selection/reorder model; exact ordinary casting costs, both controllers, optional/mandatory selection, normal legal type predicates and explicit cancellation receipts, short/empty/duplicate/outside-window controls, unchanged library suffix and complete zone/card conservation, real cast/reentry and snapshot replay. Artifact-predicate positives use existing all_match/duplicates variants; full extra clauses (including Echo or emerge-specific sacrifice where present) remain explicit gaps."
+}

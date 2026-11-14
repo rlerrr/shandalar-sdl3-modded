@@ -1,0 +1,1477 @@
+{
+  "version": 1,
+  "witnesses": {
+    "Forest": {
+      "csvid": 91,
+      "oracle": {
+        "name": "Forest",
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "layout": "normal",
+        "type_line": "Basic Land \u2014 Forest",
+        "mana_cost": "",
+        "oracle_text": "({T}: Add {G}.)",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0
+      }
+    },
+    "Plains": {
+      "csvid": 188,
+      "oracle": {
+        "name": "Plains",
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "layout": "normal",
+        "type_line": "Basic Land \u2014 Plains",
+        "mana_cost": "",
+        "oracle_text": "({T}: Add {W}.)",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0
+      }
+    },
+    "Mountain": {
+      "csvid": 164,
+      "oracle": {
+        "name": "Mountain",
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "layout": "normal",
+        "type_line": "Basic Land \u2014 Mountain",
+        "mana_cost": "",
+        "oracle_text": "({T}: Add {R}.)",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "oracle": {
+        "name": "Island",
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "layout": "normal",
+        "type_line": "Basic Land \u2014 Island",
+        "mana_cost": "",
+        "oracle_text": "({T}: Add {U}.)",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0
+      }
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "oracle": {
+        "name": "Grizzly Bears",
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Bear",
+        "mana_cost": "{1}{G}",
+        "oracle_text": "",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "power": "2",
+        "toughness": "2"
+      }
+    },
+    "Suntail Hawk": {
+      "csvid": 1195,
+      "oracle": {
+        "name": "Suntail Hawk",
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Bird",
+        "mana_cost": "{W}",
+        "oracle_text": "Flying",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "power": "1",
+        "toughness": "1"
+      }
+    },
+    "Howling Mine": {
+      "csvid": 114,
+      "oracle": {
+        "name": "Howling Mine",
+        "oracle_id": "d26b27db-a567-4631-b4b6-7294222fbdd1",
+        "layout": "normal",
+        "type_line": "Artifact",
+        "mana_cost": "{2}",
+        "oracle_text": "At the beginning of each player's draw step, if this artifact is untapped, that player draws an additional card.",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0
+      }
+    },
+    "Lightning Bolt": {
+      "csvid": 145,
+      "oracle": {
+        "name": "Lightning Bolt",
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{R}",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0
+      }
+    },
+    "Ornithopter": {
+      "csvid": 514,
+      "oracle": {
+        "name": "Ornithopter",
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "layout": "normal",
+        "type_line": "Artifact Creature \u2014 Thopter",
+        "mana_cost": "{0}",
+        "oracle_text": "Flying",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "power": "0",
+        "toughness": "2"
+      }
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "oracle": {
+        "name": "Hill Giant",
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Giant",
+        "mana_cost": "{3}{R}",
+        "oracle_text": "",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "power": "3",
+        "toughness": "3"
+      }
+    },
+    "Rumbling Baloth": {
+      "csvid": 13328,
+      "oracle": {
+        "name": "Rumbling Baloth",
+        "oracle_id": "3191c6ca-4d25-4ba3-bfe1-4aeab1295573",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Beast",
+        "mana_cost": "{2}{G}{G}",
+        "oracle_text": "",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "power": "4",
+        "toughness": "4"
+      }
+    },
+    "Devoted Caretaker": {
+      "csvid": 5540,
+      "oracle": {
+        "name": "Devoted Caretaker",
+        "oracle_id": "654bcf7f-9325-4a4b-8a50-41fdd2b7e514",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Human Cleric",
+        "mana_cost": "{W}",
+        "oracle_text": "{W}, {T}: Target permanent you control gains protection from instant spells and from sorcery spells until end of turn.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "power": "1",
+        "toughness": "2"
+      }
+    },
+    "Icy Manipulator": {
+      "csvid": 119,
+      "oracle": {
+        "name": "Icy Manipulator",
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "layout": "normal",
+        "type_line": "Artifact",
+        "mana_cost": "{4}",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0
+      }
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "oracle": {
+        "name": "Twiddle",
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{U}",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0
+      }
+    },
+    "Saproling": {
+      "csvid": 18813,
+      "oracle": {
+        "name": "Saproling",
+        "oracle_id": "2b7dba01-b08c-4218-9fc1-da55559d9155",
+        "layout": "token",
+        "type_line": "Token Creature \u2014 Saproling",
+        "mana_cost": "",
+        "oracle_text": "",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "power": "1",
+        "toughness": "1"
+      }
+    },
+    "Giant Growth": {
+      "csvid": 97,
+      "oracle": {
+        "name": "Giant Growth",
+        "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{G}",
+        "oracle_text": "Target creature gets +3/+3 until end of turn.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0
+      }
+    },
+    "Wellwisher": {
+      "csvid": 6318,
+      "oracle": {
+        "name": "Wellwisher",
+        "oracle_id": "c3b1b7bd-cff8-4275-b6d3-868f4e4b2cc0",
+        "layout": "normal",
+        "type_line": "Creature \u2014 Elf",
+        "mana_cost": "{1}{G}",
+        "oracle_text": "{T}: You gain 1 life for each Elf on the battlefield.",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "power": "1",
+        "toughness": "1"
+      }
+    },
+    "Wall of Tanglecord": {
+      "csvid": 11409,
+      "oracle": {
+        "name": "Wall of Tanglecord",
+        "oracle_id": "423bebcc-8fa0-49c4-aa22-728bf51a535b",
+        "layout": "normal",
+        "type_line": "Artifact Creature \u2014 Wall",
+        "mana_cost": "{2}",
+        "oracle_text": "Defender\n{G}: This creature gains reach until end of turn. (It can block creatures with flying.)",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "power": "0",
+        "toughness": "6"
+      }
+    }
+  },
+  "source_interfaces": {
+    "Overgrown Estate": {
+      "csvid": 5412,
+      "handler": "manalinkeh_card_overgrown_estate",
+      "source_path": "src/manalinkeh/cards/apocalypse.c",
+      "source_function": "card_overgrown_estate",
+      "source_function_sha256": "d75ab4e16263b9475774521c18eb02cf89f5ccb62175a397988c013aec287eb3",
+      "abilities": {
+        "0": {
+          "params": {
+            "sacrifice_choices": {
+              "1": true
+            }
+          }
+        }
+      }
+    },
+    "Dark Heart of the Wood": {
+      "csvid": 298,
+      "handler": "manalinkeh_card_dark_heart_of_the_woods",
+      "source_path": "src/manalinkeh/cards/recoded_cards.c",
+      "source_function": "card_dark_heart_of_the_woods",
+      "source_function_sha256": "4a90d866fb5cc5325406819b76cf4db9a562b582c98b1c57c0eda4ff6cf38f5f",
+      "abilities": {
+        "0": {}
+      }
+    },
+    "Obelisk of Alara": {
+      "csvid": 1696,
+      "handler": "manalinkeh_card_obelisk_of_alara2",
+      "source_path": "src/manalinkeh/cards/conflux.c",
+      "source_function": "card_obelisk_of_alara2",
+      "source_function_sha256": "5c296bc516fbf5b0a73d34dcc0f6dd0a5cf556fbef1c6cb21d5239dfe2893f0e",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Elvish Farmer": {
+      "csvid": 1773,
+      "handler": "manalinkeh_card_elvish_farmer",
+      "source_path": "src/manalinkeh/cards/fallen_empires.c",
+      "source_function": "card_elvish_farmer",
+      "source_function_sha256": "3b7cca535a8a424835e173965fc1e0b3680695503ff744bcaadfd6ff69ddae0b",
+      "abilities": {
+        "2": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Elixir of Vitality": {
+      "csvid": 2462,
+      "handler": "manalinkeh_card_elixir_of_vitality",
+      "source_path": "src/manalinkeh/cards/mirage.c",
+      "source_function": "card_elixir_of_vitality",
+      "source_function_sha256": "e5bb1c04b22b48af60a29433d048db3532f8e3d78c823964e164fb556e5ad901",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "mode_dialog_minimum": 8,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        },
+        "2": {
+          "params": {
+            "present_ai_dialogs": true,
+            "mode_dialog_minimum": 8,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Heart Warden": {
+      "csvid": 4138,
+      "handler": "manalinkeh_card_heart_warden",
+      "source_path": "src/manalinkeh/cards/urza_destiny.c",
+      "source_function": "card_heart_warden",
+      "source_function_sha256": "38e71241019b79d1f1de936506440d34600dc7baac1e5d8b680ddc79220bfc62",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "mode_intent": {
+              "mode_label": "Sac & draw a card",
+              "fallback_color": 3,
+              "allow_auto_nonmana": true
+            }
+          }
+        }
+      }
+    },
+    "High Market": {
+      "csvid": 4489,
+      "handler": "manalinkeh_card_high_market",
+      "source_path": "src/manalinkeh/cards/mercadian_masques.c",
+      "source_function": "card_high_market",
+      "source_function_sha256": "1684d32ea51c1588b931636015d7b629ccea5e3f7480070886c825d5f8b9deae",
+      "abilities": {
+        "1": {
+          "params": {
+            "activation_dialogs": {
+              "0": 1
+            }
+          }
+        }
+      }
+    },
+    "Compulsion": {
+      "csvid": 5794,
+      "handler": "manalinkeh_card_compulsion",
+      "source_path": "src/manalinkeh/cards/torment.c",
+      "source_function": "card_compulsion",
+      "source_function_sha256": "29048c9c458aa2c4e7d8810acae7698275efee72062e669842bfa1205323bf0c",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        },
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Arcanis the Omnipotent": {
+      "csvid": 6050,
+      "handler": "manalinkeh_card_arcanis_the_omnipotent",
+      "source_path": "src/manalinkeh/cards/onslaught.c",
+      "source_function": "card_arcanis_the_omnipotent",
+      "source_function_sha256": "e7df03ef1be71810f354d206c0ee37d060f1780eaf1551d61223dfd66e5aefc8",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            },
+            "silent_variants": [
+              "payment_0"
+            ]
+          }
+        }
+      }
+    },
+    "Seaside Haven": {
+      "csvid": 6252,
+      "handler": "manalinkeh_card_seaside_haven",
+      "source_path": "src/manalinkeh/cards/onslaught.c",
+      "source_function": "card_seaside_haven",
+      "source_function_sha256": "4096fb37c2aaf88b7533a862c9af5636d7eb1531f55b11eb44b5c7e37cb431a9",
+      "abilities": {
+        "1": {
+          "params": {
+            "activation_dialogs": {
+              "0": 1
+            }
+          }
+        }
+      }
+    },
+    "Aether Spellbomb": {
+      "csvid": 6614,
+      "handler": "manalinkeh_card_aether_spellbomb",
+      "source_path": "src/manalinkeh/cards/mirrodin.c",
+      "source_function": "card_aether_spellbomb",
+      "source_function_sha256": "f1403772fb0e08b269838b48a3fd113a812701c9b1ca61014ecc5a14f0ec1855",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Necrogen Spellbomb": {
+      "csvid": 6738,
+      "handler": "manalinkeh_card_necrogen_spellbomb",
+      "source_path": "src/manalinkeh/cards/mirrodin.c",
+      "source_function": "card_necrogen_spellbomb",
+      "source_function_sha256": "9e41c8451f35ab9e864db1f964285eab090207c1e4272b8d0a0fae2ee1c7343b",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        },
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Pyrite Spellbomb": {
+      "csvid": 6764,
+      "handler": "manalinkeh_card_pyrite_spellbomb",
+      "source_path": "src/manalinkeh/cards/mirrodin.c",
+      "source_function": "card_pyrite_spellbomb",
+      "source_function_sha256": "bfb5cc33f3e03d15b389a06830ee0ddb0ea752c26a9127badc863cdf51bcc6e6",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Sunbeam Spellbomb": {
+      "csvid": 6795,
+      "handler": "manalinkeh_card_sunbeam_spellbomb",
+      "source_path": "src/manalinkeh/cards/mirrodin.c",
+      "source_function": "card_sunbeam_spellbomb",
+      "source_function_sha256": "71de660652bb91508e7efb6a255c1f3fd91a0392b5de2b956e5b9b60518cb0d4",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        },
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Staff of Domination": {
+      "csvid": 7127,
+      "handler": "manalinkeh_card_staff_of_domination",
+      "source_path": "src/manalinkeh/cards/fifth_dawn.c",
+      "source_function": "card_staff_of_domination",
+      "source_function_sha256": "dbf504f3b748c342915609c0090e7bf0e3f85c9ba55df0c5c92d69a624ad470f",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        },
+        "4": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 4,
+              "1": 4
+            }
+          }
+        }
+      }
+    },
+    "Grave-Shell Scarab": {
+      "csvid": 7867,
+      "handler": "manalinkeh_card_graveshell_scarab",
+      "source_path": "src/manalinkeh/cards/ravnica.c",
+      "source_function": "card_graveshell_scarab",
+      "source_function_sha256": "d9a05917deb1521a45d66054ca88e697e75dc39eb23308599a0cad10cf7e1512",
+      "abilities": {
+        "0": {
+          "params": {
+            "sacrifice_choices": {
+              "0": true
+            },
+            "resolution_dialogs": {
+              "0": [
+                0
+              ],
+              "1": [
+                0
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Rix Maadi, Dungeon Palace": {
+      "csvid": 8277,
+      "handler": "manalinkeh_card_rix_maadi_dungeon_palace",
+      "source_path": "src/manalinkeh/cards/dissension.c",
+      "source_function": "card_rix_maadi_dungeon_palace",
+      "source_function_sha256": "1a0821731c394743556faa98e4978bacef9444249ef63e81a4e6a4362e1286cd",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "mode_intent": {
+              "mode_label": "Both playes discard",
+              "fallback_color": 0,
+              "allow_auto_nonmana": true
+            }
+          }
+        }
+      }
+    },
+    "Mycologist": {
+      "csvid": 8812,
+      "handler": "manalinkeh_card_elvish_farmer",
+      "source_path": "src/manalinkeh/cards/fallen_empires.c",
+      "source_function": "card_elvish_farmer",
+      "source_function_sha256": "3b7cca535a8a424835e173965fc1e0b3680695503ff744bcaadfd6ff69ddae0b",
+      "abilities": {
+        "2": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Psychotrope Thallid": {
+      "csvid": 8826,
+      "handler": "manalinkeh_card_psychotrope_thallid",
+      "source_path": "src/manalinkeh/cards/planar_chaos.c",
+      "source_function": "card_psychotrope_thallid",
+      "source_function_sha256": "f26274125bbc5c413d50da17546264107e5dcde01d01f4237cbd2af73d6f6c85",
+      "abilities": {
+        "2": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Horizon Canopy": {
+      "csvid": 8945,
+      "handler": "manalinkeh_card_horizon_canopy",
+      "source_path": "src/manalinkeh/cards/future_sight.c",
+      "source_function": "card_horizon_canopy",
+      "source_function_sha256": "b06ed735f3336186feb373c42edfb6e2b6ef9a00f604e565a70c91704f4123e1",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "mode_intent": {
+              "mode_label": "Sac and draw a card",
+              "fallback_color": 3,
+              "allow_auto_nonmana": true
+            }
+          }
+        }
+      }
+    },
+    "Cinderhaze Wretch": {
+      "csvid": 9497,
+      "handler": "manalinkeh_card_cinderhaze_wretch",
+      "source_path": "src/manalinkeh/cards/shadowmoor.c",
+      "source_function": "card_cinderhaze_wretch",
+      "source_function_sha256": "647bd6d313012000fa052a073cff80aca123cb9c1163918f2f26da510b615024",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Phyrexia's Core": {
+      "csvid": 11653,
+      "handler": "manalinkeh_card_phyrexias_core",
+      "source_path": "src/manalinkeh/cards/new_phyrexia.c",
+      "source_function": "card_phyrexias_core",
+      "source_function_sha256": "f6c6280d9782e60b7492854ea0e7fd6c64068c7efec28db3ad8436a9af0eb7a8",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "mode_intent": {
+              "mode_label": "Sac artifact & gain life",
+              "fallback_color": 0,
+              "allow_auto_nonmana": true
+            }
+          }
+        }
+      }
+    },
+    "Grim Backwoods": {
+      "csvid": 12194,
+      "handler": "manalinkeh_card_grim_backwoods",
+      "source_path": "src/manalinkeh/cards/dark_ascension.c",
+      "source_function": "card_grim_backwoods",
+      "source_function_sha256": "df65ac83d32ed9234bf65aac35219bd2c90b8cecac4cc867a8a6ffab3ae330be",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "mode_intent": {
+              "mode_label": "Sac crit & draw",
+              "fallback_color": 0,
+              "allow_auto_nonmana": true
+            }
+          }
+        }
+      }
+    },
+    "Trading Post": {
+      "csvid": 12632,
+      "handler": "manalinkeh_card_trading_post",
+      "source_path": "src/manalinkeh/cards/m13.c",
+      "source_function": "card_trading_post",
+      "source_function_sha256": "8141f488c6dd94025c7c7c13106c323d63f40bcaba85d00a57eabf3678190f09",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        },
+        "3": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 3,
+              "1": 3
+            }
+          }
+        }
+      }
+    },
+    "Mercurial Chemister": {
+      "csvid": 12772,
+      "handler": "manalinkeh_card_mercurial_chemister",
+      "source_path": "src/manalinkeh/cards/return_to_ravnica.c",
+      "source_function": "card_mercurial_chemister",
+      "source_function_sha256": "a58b258e09f08b847f869c3910a09903c10bc7d8de29a213c7dd4144dc50bfa7",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Duskmantle Guildmage": {
+      "csvid": 12933,
+      "handler": "manalinkeh_card_duskmantle_guildmage",
+      "source_path": "src/manalinkeh/cards/gatecrash.c",
+      "source_function": "card_duskmantle_guildmage",
+      "source_function_sha256": "1b8133741ec2f1810f70fe506c9d24adf295ccbcc333d69c6ca2388166343cb9",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Bubbling Cauldron": {
+      "csvid": 13269,
+      "handler": "manalinkeh_card_bubbling_cauldron",
+      "source_path": "src/manalinkeh/cards/m14.c",
+      "source_function": "card_bubbling_cauldron",
+      "source_function_sha256": "8955e32bc056579e1689472eae71954135bea1bf44a31911226e58c46965426c",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Stormscape Master": {
+      "csvid": 5133,
+      "handler": "manalinkeh_card_stormscape_master",
+      "source_path": "src/manalinkeh/cards/invasion.c",
+      "source_function": "card_stormscape_master",
+      "source_function_sha256": "c00ddd1d0605b7f385dc95a3d41983a5c3a458dcd5fc6a8c8a6ab7e9b7913176",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Thunderscape Master": {
+      "csvid": 5149,
+      "handler": "manalinkeh_card_thunderscape_master",
+      "source_path": "src/manalinkeh/cards/invasion.c",
+      "source_function": "card_thunderscape_master",
+      "source_function_sha256": "1687767e6e85f1937fe1583718c84ee7f397762abe09a9ba602dc517653178b9",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Zacama, Primal Calamity": {
+      "csvid": 18334,
+      "handler": "manalinkeh_card_zacama_primal_calamity",
+      "source_path": "src/manalinkeh/cards/rivals_of_ixalan.c",
+      "source_function": "card_zacama_primal_calamity",
+      "source_function_sha256": "a3f06c44dc7f46b52e6932642de244632bc8186edff9773cd4579ab80217aa0a",
+      "abilities": {
+        "4": {
+          "params": {
+            "present_ai_dialogs": true,
+            "silent_variants": [
+              "payment_0"
+            ],
+            "activation_dialogs": {
+              "0": 2,
+              "1": 2
+            }
+          }
+        }
+      }
+    },
+    "Memorial to Genius": {
+      "csvid": 18460,
+      "handler": "manalinkeh_card_memorial_to_genius",
+      "source_path": "src/manalinkeh/cards/dominaria.c",
+      "source_function": "card_memorial_to_genius",
+      "source_function_sha256": "0a5c29efb29c66fff58eb004b198ae882c7231e2dc4ce8bc51fe29b486be98b7",
+      "abilities": {
+        "2": {
+          "params": {
+            "present_ai_dialogs": true,
+            "mode_intent": {
+              "mode_label": "Draw",
+              "fallback_color": 2,
+              "allow_auto_nonmana": true
+            }
+          }
+        }
+      }
+    },
+    "Dismissive Pyromancer": {
+      "csvid": 18907,
+      "handler": "manalinkeh_card_dismissive_pyromancer",
+      "source_path": "src/manalinkeh/cards/m19.c",
+      "source_function": "card_dismissive_pyromancer",
+      "source_function_sha256": "6588f6145333c92a2ad283b119d017ab34a21fbb533112e5f43dab7c1840ca4c",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Ajani Goldmane": {
+      "csvid": 9058,
+      "handler": "manalinkeh_card_ajani_goldmane",
+      "source_path": "src/manalinkeh/cards/lorwyn.c",
+      "source_function": "card_ajani_goldmane",
+      "source_function_sha256": "d0bdd86dcf930b5058c026a98ea49f32840f6af1c0efc96069b41665c8e1d151",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Jace Beleren": {
+      "csvid": 9185,
+      "handler": "manalinkeh_card_jace_beleren",
+      "source_path": "src/manalinkeh/cards/lorwyn.c",
+      "source_function": "card_jace_beleren",
+      "source_function_sha256": "7d77246b565c8922e367ba95d11e8471b75d138b661e046b7a886b310b9a0ef1",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        },
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Teferi, Timebender": {
+      "csvid": 18524,
+      "handler": "manalinkeh_card_teferi_timebender",
+      "source_path": "src/manalinkeh/cards/dominaria.c",
+      "source_function": "card_teferi_timebender",
+      "source_function_sha256": "acb49adc42cdb534f82c5e1fe2eaebfedc7bcb090bbef688cefe1c5d9fa8a3fb",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Gnawing Zombie": {
+      "csvid": 13294,
+      "source_path": "src/manalinkeh/cards/m14.c",
+      "source_function": "card_gnawing_zombie",
+      "source_function_sha256": "c410d56af9408927fb7608b8efececb9add2198d4edc552d9c01d46b00b7a44a",
+      "abilities": {
+        "0": {
+          "params": {
+            "sacrifice_first": true
+          }
+        }
+      }
+    },
+    "Nezumi Bone-Reader": {
+      "csvid": 7317,
+      "source_path": "src/manalinkeh/cards/champions_of_kamigawa.c",
+      "source_function": "card_nezumi_bone_reader",
+      "source_function_sha256": "9ceacf3168c570bb81cc0bac380b74bb0f3e6e6195745f772d0cdb2cfcf37610",
+      "abilities": {
+        "0": {
+          "params": {
+            "sacrifice_first": true
+          }
+        }
+      }
+    },
+    "Sadistic Hypnotist": {
+      "csvid": 5681,
+      "source_path": "src/manalinkeh/cards/odissey.c",
+      "source_function": "card_sadistic_hypnotist",
+      "source_function_sha256": "444334c1558268b0094d618ccba9eed7adb7ebd03eb81c2c6ad8ad5e734073b2",
+      "abilities": {
+        "0": {
+          "params": {
+            "sacrifice_first": true
+          }
+        }
+      }
+    },
+    "Jace, Memory Adept": {
+      "csvid": 11821,
+      "handler": "manalinkeh_card_jace_memory_adept",
+      "source_path": "src/manalinkeh/cards/m12.c",
+      "source_function": "card_jace_memory_adept",
+      "source_function_sha256": "ac629accbcfa474e6753fd55d6fe17f40f9ccfa20da2bae5595a6411e39f0317",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Liliana of the Veil": {
+      "csvid": 12004,
+      "handler": "manalinkeh_card_liliana_of_the_veil",
+      "source_path": "src/manalinkeh/cards/innistrad.c",
+      "source_function": "card_liliana_of_the_veil",
+      "source_function_sha256": "0ccf1d7b5c425f01c3a74e062d59bb65eca900afac56af3a741f7c7712d5d4c2",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Liliana Vess": {
+      "csvid": 9201,
+      "handler": "manalinkeh_card_liliana_vess",
+      "source_path": "src/manalinkeh/cards/lorwyn.c",
+      "source_function": "card_liliana_vess",
+      "source_function_sha256": "e1ed530d330a251ad120182fd96514a9535a6b9598cb00846b6d69c811286414",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Trigon of Mending": {
+      "csvid": 11388,
+      "handler": "manalinkeh_card_trigon_of_mending",
+      "source_path": "src/manalinkeh/cards/scars_of_mirrodin.c",
+      "source_function": "card_trigon_of_mending",
+      "source_function_sha256": "2688579a33dd5d7a803661a6fd7e78f8c82168773740a9f437e54638d00595dc",
+      "abilities": {
+        "2": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Trigon of Thought": {
+      "csvid": 11390,
+      "handler": "manalinkeh_card_trigon_of_thought",
+      "source_path": "src/manalinkeh/cards/scars_of_mirrodin.c",
+      "source_function": "card_trigon_of_thought",
+      "source_function_sha256": "c42e1ff968bba8e6d9eb82d64e61c205db252e05ecefe4e31cb2753bfaa3b698",
+      "abilities": {
+        "2": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Dovin Baan": {
+      "csvid": 16349,
+      "handler": "manalinkeh_card_dovin_baan",
+      "source_path": "src/manalinkeh/cards/kaladesh.c",
+      "source_function": "card_dovin_baan",
+      "source_function_sha256": "70cd4278a14ba349e206993c694bad02d9a75558fd3e1e3ac440031456fd0efe",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Nissa, Nature's Artisan": {
+      "csvid": 16461,
+      "handler": "manalinkeh_card_nissa_natures_artisan",
+      "source_path": "src/manalinkeh/cards/kaladesh.c",
+      "source_function": "card_nissa_natures_artisan",
+      "source_function_sha256": "33152bc108a2bea13169a99659f8f1650a92c482d7cf0847acfeb403f8d3e1ca",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Diamond Valley": {
+      "csvid": 410,
+      "handler": "manalinkeh_card_diamond_valley",
+      "source_path": "src/manalinkeh/cards/arabian_nights.c",
+      "source_function": "card_diamond_valley",
+      "source_function_sha256": "b8e35a7f5811a828e8b8b7280f43e1d5b01330a3b9b021d286b0a666855e2cd2",
+      "abilities": {
+        "0": {
+          "params": {
+            "sacrifice_choices": {
+              "0": true,
+              "1": true
+            }
+          }
+        }
+      }
+    },
+    "Altar of Dementia": {
+      "csvid": 3075,
+      "handler": "manalinkeh_card_altar_of_dementia",
+      "source_path": "src/manalinkeh/cards/tempest.c",
+      "source_function": "card_altar_of_dementia",
+      "source_function_sha256": "0fdf2e31f5d4f2ebfa6f0aaa4dd380a08ae20f75afdb6bcd305a622613539419",
+      "abilities": {
+        "0": {
+          "params": {
+            "sacrifice_first": true
+          }
+        }
+      }
+    },
+    "Elspeth Tirel": {
+      "csvid": 11244,
+      "handler": "manalinkeh_card_elspeth_tirel",
+      "source_path": "src/manalinkeh/cards/scars_of_mirrodin.c",
+      "source_function": "card_elspeth_tirel",
+      "source_function_sha256": "c95fc6973cab5c8253ab0ab86366199db969a774b9c10132caa6d8acd2e96fff",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Wellwisher": {
+      "csvid": 6318,
+      "handler": "manalinkeh_card_wellwisher",
+      "source_path": "src/manalinkeh/cards/onslaught.c",
+      "source_function": "card_wellwisher",
+      "source_function_sha256": "a2749f249234d2832c9319d3fc38d55a83a1849faaea974c990546662d316c83",
+      "abilities": {
+        "0": {
+          "params": {}
+        }
+      }
+    },
+    "Keening Stone": {
+      "csvid": 10967,
+      "handler": "manalinkeh_card_keening_stone",
+      "source_path": "src/manalinkeh/cards/rise_of_the_eldrazi.c",
+      "source_function": "card_keening_stone",
+      "source_function_sha256": "9836a2cca3134a6dfcd14c0b4a531e32a83b279373b30fa1cac880cff5a1d5e4",
+      "abilities": {
+        "0": {
+          "params": {}
+        }
+      }
+    },
+    "Bargaining Table": {
+      "csvid": 4391,
+      "handler": "manalinkeh_card_bargaining_table",
+      "source_path": "src/manalinkeh/cards/mercadian_masques.c",
+      "source_function": "card_bargaining_table",
+      "source_function_sha256": "965c988d8a5dac01d366a66764b498ba0bd340236860d66202345b65dea4b83d",
+      "abilities": {
+        "0": {
+          "params": {}
+        }
+      }
+    },
+    "Tomb of the Spirit Dragon": {
+      "csvid": 14410,
+      "handler": "manalinkeh_card_tomb_of_the_spirit_dragon",
+      "source_path": "src/manalinkeh/cards/khans_of_tarkir.c",
+      "source_function": "card_tomb_of_the_spirit_dragon",
+      "source_function_sha256": "4acc3fed87a517a8b5a5ce15519ff6b43b9853911bf5931536c6323bf5c72174",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "mode_intent": {
+              "mode_label": "Gain life",
+              "fallback_color": 0,
+              "allow_auto_nonmana": true
+            }
+          }
+        }
+      }
+    },
+    "Huatli, Warrior Poet": {
+      "csvid": 17437,
+      "handler": "manalinkeh_card_huatli_warrior_poet",
+      "source_path": "src/manalinkeh/cards/ixalan.c",
+      "source_function": "card_huatli_warrior_poet",
+      "source_function_sha256": "52da4ee95055f066d17fa9b956ff1dacaff1ae33601d8eb6c58c5a01320de023",
+      "abilities": {
+        "0": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 0,
+              "1": 0
+            }
+          }
+        }
+      }
+    },
+    "Disciple of Griselbrand": {
+      "csvid": 11932,
+      "handler": "manalinkeh_card_disciple_of_griselbrand",
+      "source_path": "src/manalinkeh/cards/innistrad.c",
+      "source_function": "card_disciple_of_griselbrand",
+      "source_function_sha256": "d4799d5f4b3e0455e2ee75ea5312948ccc5c45c1cc6b8575fe2bd4ec693a4163",
+      "abilities": {
+        "0": {
+          "params": {}
+        }
+      }
+    },
+    "Miren, the Moaning Well": {
+      "csvid": 7696,
+      "handler": "manalinkeh_card_miren_the_moaning_well",
+      "source_path": "src/manalinkeh/cards/saviors_of_kamigawa.c",
+      "source_function": "card_miren_the_moaning_well",
+      "source_function_sha256": "c7e160ef9565541b4c9cb1ec18737a9467b02cb26db2556e755e066ca12faca3",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "mode_intent": {
+              "mode_label": "Sac and gain life",
+              "fallback_color": 0,
+              "allow_auto_nonmana": true
+            }
+          }
+        }
+      }
+    },
+    "Nissa Revane": {
+      "csvid": 10620,
+      "handler": "manalinkeh_card_nissa_revane",
+      "source_path": "src/manalinkeh/cards/zendikar.c",
+      "source_function": "card_nissa_revane",
+      "source_function_sha256": "a1e6202d1ad6a0294b2d32c25b12c34e89f4966fe356d09b927bd19856b3df32",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Riptide Director": {
+      "csvid": 6428,
+      "handler": "manalinkeh_card_riptide_director",
+      "source_path": "src/manalinkeh/cards/legions.c",
+      "source_function": "card_riptide_director",
+      "source_function_sha256": "a860f288be4ed28f10c6877d59038083021f080d051f3ea4bc950575ca22238d",
+      "abilities": {
+        "0": {
+          "params": {}
+        }
+      }
+    },
+    "Sea Gate Loremaster": {
+      "csvid": 10657,
+      "handler": "manalinkeh_card_sea_gate_loremaster",
+      "source_path": "src/manalinkeh/cards/zendikar.c",
+      "source_function": "card_sea_gate_loremaster",
+      "source_function_sha256": "3f60395d35a0d15665d2ad85632a8e0c6060bd7955f76c8d3a0ffbdeb586066b",
+      "abilities": {
+        "0": {
+          "params": {}
+        }
+      }
+    },
+    "Blighted Steppe": {
+      "csvid": 15276,
+      "handler": "manalinkeh_card_blighted_steppe",
+      "source_path": "src/manalinkeh/cards/battle_for_zendikar.c",
+      "source_function": "card_blighted_steppe",
+      "source_function_sha256": "6290f73513c64e9138e8c7b1e335c2e727263b33baf8ed78ebe76b8ec0ca4fb3",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "mode_intent": {
+              "mode_label": "Gain life",
+              "fallback_color": 0,
+              "allow_auto_nonmana": true
+            }
+          }
+        }
+      }
+    },
+    "Doorkeeper": {
+      "csvid": 12706,
+      "handler": "manalinkeh_card_doorkeeper",
+      "source_path": "src/manalinkeh/cards/return_to_ravnica.c",
+      "source_function": "card_doorkeeper",
+      "source_function_sha256": "4b3a621bd9f917f9eae6a7b12c1ce063aa51e4757435c030911214e1c86d7aa6",
+      "abilities": {
+        "1": {
+          "params": {}
+        }
+      }
+    },
+    "Tamiyo, the Moon Sage": {
+      "csvid": 12479,
+      "handler": "manalinkeh_card_tamiyo_the_moon_sage",
+      "source_path": "src/manalinkeh/cards/avacyn_restored.c",
+      "source_function": "card_tamiyo_the_moon_sage",
+      "source_function_sha256": "130732a8ea70963c52631c3a60ef770169b9d562b9e3bdcab7314694d92853bf",
+      "abilities": {
+        "1": {
+          "params": {
+            "present_ai_dialogs": true,
+            "activation_dialogs": {
+              "0": 1,
+              "1": 1
+            }
+          }
+        }
+      }
+    },
+    "Loreseeker's Stone": {
+      "csvid": 14472,
+      "handler": "manalinkeh_card_loreseekers_stone",
+      "source_path": "src/manalinkeh/cards/commander_2014.c",
+      "source_function": "card_loreseekers_stone",
+      "source_function_sha256": "e6b3e19a841f600fae2b0f2e439edbecca327512725a6d04a74eb6d16811f1f5",
+      "abilities": {
+        "0": {
+          "params": {}
+        }
+      }
+    }
+  },
+  "derived_subtype_witnesses": {
+    "Elf": "Wellwisher"
+  },
+  "derived_keyword_witnesses": {
+    "Defender": "Wall of Tanglecord"
+  }
+}

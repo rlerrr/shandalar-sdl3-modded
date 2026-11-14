@@ -1,0 +1,2155 @@
+{
+  "version": 1,
+  "sources": {
+    "Contemplation": {
+      "oracle_id": "fa7efcef-a688-4e25-a823-4d53b2e96508",
+      "name": "Contemplation",
+      "oracle_text": "Whenever you cast a spell, you gain 1 life.",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Dragon's Claw": {
+      "oracle_id": "bd8d707d-1201-42c6-bce6-fbda12ce5ea8",
+      "name": "Dragon's Claw",
+      "oracle_text": "Whenever a player casts a red spell, you may gain 1 life.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Ebon Drake": {
+      "oracle_id": "db4242ab-fdf3-487a-bc77-42bd2ef973c3",
+      "name": "Ebon Drake",
+      "oracle_text": "Flying\nWhenever a player casts a spell, you lose 1 life.",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Drake",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Enchantress's Presence": {
+      "oracle_id": "795b096a-2bce-4588-a2c9-abc5ea40dc0c",
+      "name": "Enchantress's Presence",
+      "oracle_text": "Whenever you cast an enchantment spell, draw a card.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Memory Erosion": {
+      "oracle_id": "f4a96881-586d-44ad-b427-5cdf8988f9a1",
+      "name": "Memory Erosion",
+      "oracle_text": "Whenever an opponent casts a spell, that player mills two cards.",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Enchantment",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Primordial Sage": {
+      "oracle_id": "499f1e1e-d96e-481f-a5d9-eb38da927cd7",
+      "name": "Primordial Sage",
+      "oracle_text": "Whenever you cast a creature spell, you may draw a card.",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature — Spirit",
+      "power": "4",
+      "toughness": "5",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "layout": "normal"
+    },
+    "Vedalken Archmage": {
+      "oracle_id": "568cf486-0261-4634-ac36-a6507101b2d0",
+      "name": "Vedalken Archmage",
+      "oracle_text": "Whenever you cast an artifact spell, draw a card.",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Creature — Vedalken Wizard",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Beast Whisperer": {
+      "oracle_id": "5da7eea8-bb9e-47ce-a554-8a1ee058bd7a",
+      "name": "Beast Whisperer",
+      "oracle_text": "Whenever you cast a creature spell, draw a card.",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Creature — Elf Druid",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Angel's Feather": {
+      "oracle_id": "3d0d4ba4-d5aa-4d9f-89ab-46687637fecf",
+      "name": "Angel's Feather",
+      "oracle_text": "Whenever a player casts a white spell, you may gain 1 life.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Demon's Horn": {
+      "oracle_id": "ee38377f-8d3a-402e-a5d7-a01cfe3a5322",
+      "name": "Demon's Horn",
+      "oracle_text": "Whenever a player casts a black spell, you may gain 1 life.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Forced Fruition": {
+      "oracle_id": "448b27a5-7c0c-4ab6-bddf-bd62b920aacc",
+      "name": "Forced Fruition",
+      "oracle_text": "Whenever an opponent casts a spell, that player draws seven cards.",
+      "mana_cost": "{4}{U}{U}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 6.0,
+      "layout": "normal"
+    },
+    "Golem's Heart": {
+      "oracle_id": "650890bc-aba6-45fb-8096-3a36b0a015b3",
+      "name": "Golem's Heart",
+      "oracle_text": "Whenever a player casts an artifact spell, you may gain 1 life.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Kraken's Eye": {
+      "oracle_id": "14a21d8a-2097-4150-8af5-8c155049477a",
+      "name": "Kraken's Eye",
+      "oracle_text": "Whenever a player casts a blue spell, you may gain 1 life.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Mesa Enchantress": {
+      "oracle_id": "8f4b8a19-72f4-48ed-ac05-62a7c7525797",
+      "name": "Mesa Enchantress",
+      "oracle_text": "Whenever you cast an enchantment spell, you may draw a card.",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Human Druid",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Soot Imp": {
+      "oracle_id": "c867e31a-90ea-4d20-80db-3977ec68b16b",
+      "name": "Soot Imp",
+      "oracle_text": "Flying\nWhenever a player casts a nonblack spell, that player loses 1 life.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Imp",
+      "power": "1",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Verduran Enchantress": {
+      "oracle_id": "cd98a31b-cc7e-43f9-982e-109ad9850908",
+      "name": "Verduran Enchantress",
+      "oracle_text": "Whenever you cast an enchantment spell, you may draw a card.",
+      "mana_cost": "{1}{G}{G}",
+      "type_line": "Creature — Human Druid",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Wurm's Tooth": {
+      "oracle_id": "69476326-fda5-48c8-a506-e71eb7c81c2f",
+      "name": "Wurm's Tooth",
+      "oracle_text": "Whenever a player casts a green spell, you may gain 1 life.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Student of Ojutai": {
+      "oracle_id": "0adcf8d2-6eb9-4679-8ad5-f28e2f4aba39",
+      "name": "Student of Ojutai",
+      "oracle_text": "Whenever you cast a noncreature spell, you gain 2 life.",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Human Monk",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Satyr Enchanter": {
+      "oracle_id": "aa321138-b1a7-4b8e-a2ca-b9ce65704e92",
+      "name": "Satyr Enchanter",
+      "oracle_text": "Whenever you cast an enchantment spell, draw a card.",
+      "mana_cost": "{1}{G}{W}",
+      "type_line": "Creature — Satyr Druid",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Blind Creeper": {
+      "oracle_id": "02d4c3a8-c733-45c1-bca5-51eed47c9230",
+      "name": "Blind Creeper",
+      "oracle_text": "Whenever a player casts a spell, this creature gets -1/-1 until end of turn.",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Zombie Beast",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Crystal Rod": {
+      "oracle_id": "e68bc048-1009-46a5-97d6-ec77a18067da",
+      "name": "Crystal Rod",
+      "oracle_text": "Whenever a player casts a blue spell, you may pay {1}. If you do, you gain 1 life.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Lifesmith": {
+      "oracle_id": "95f5c0ac-8835-4b31-863b-84f5273aac50",
+      "name": "Lifesmith",
+      "oracle_text": "Whenever you cast an artifact spell, you may pay {1}. If you do, you gain 3 life.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Human Artificer",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Lunar Mystic": {
+      "oracle_id": "9652f79c-3060-4e9c-9623-0ebe4ab4094c",
+      "name": "Lunar Mystic",
+      "oracle_text": "Whenever you cast an instant spell, you may pay {1}. If you do, draw a card.",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Creature — Human Wizard",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Satyr Hoplite": {
+      "oracle_id": "ee7dc820-10ee-429a-a1ef-ecd6a11f5608",
+      "name": "Satyr Hoplite",
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature.",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Satyr Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Heroic"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Triton Fortune Hunter": {
+      "oracle_id": "f84637f0-1a04-4fd1-85d9-8e8f5d444800",
+      "name": "Triton Fortune Hunter",
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, draw a card.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Merfolk Soldier",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Heroic"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Cunning Breezedancer": {
+      "oracle_id": "ba997e44-fc80-4463-ad3f-6497be26df0f",
+      "name": "Cunning Breezedancer",
+      "oracle_text": "Flying\nWhenever you cast a noncreature spell, this creature gets +2/+2 until end of turn.",
+      "mana_cost": "{4}{W}{U}",
+      "type_line": "Creature — Dragon",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 6.0,
+      "layout": "normal"
+    },
+    "Deeproot Champion": {
+      "oracle_id": "507c2921-7070-482d-8754-dc667e3315bd",
+      "name": "Deeproot Champion",
+      "oracle_text": "Whenever you cast a noncreature spell, put a +1/+1 counter on this creature.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Merfolk Shaman",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Apothecary Initiate": {
+      "oracle_id": "a74d80ec-9f42-418d-ab98-897acc23c319",
+      "name": "Apothecary Initiate",
+      "oracle_text": "Whenever a player casts a white spell, you may pay {1}. If you do, you gain 1 life.",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Kithkin Cleric",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Setessan Battle Priest": {
+      "oracle_id": "e2886098-0309-4da5-b2e5-a06af5cfe5b8",
+      "name": "Setessan Battle Priest",
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, you gain 2 life.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Cleric",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [
+        "Heroic"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Urza's Chalice": {
+      "oracle_id": "fde25440-1810-46ba-a112-b54091593b66",
+      "name": "Urza's Chalice",
+      "oracle_text": "Whenever a player casts an artifact spell, you may pay {1}. If you do, you gain 1 life.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Managorger Hydra": {
+      "oracle_id": "b3f2265b-dd65-4b74-8b74-35ee0b147617",
+      "name": "Managorger Hydra",
+      "oracle_text": "Trample\nWhenever a player casts a spell, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Hydra",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Trample"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Akroan Skyguard": {
+      "oracle_id": "f4e8be6f-2a1f-47b2-a4d8-7e576e25ab60",
+      "name": "Akroan Skyguard",
+      "oracle_text": "Flying\nHeroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying",
+        "Heroic"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Centaur Battlemaster": {
+      "oracle_id": "4b854749-f3a5-4199-bbfa-83090b8ccc25",
+      "name": "Centaur Battlemaster",
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put three +1/+1 counters on this creature.",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Creature — Centaur Warrior",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Heroic"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Dawnbringer Charioteers": {
+      "oracle_id": "29263d48-cb28-478b-a99e-5a18dbc924f0",
+      "name": "Dawnbringer Charioteers",
+      "oracle_text": "Flying, lifelink\nHeroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Creature — Human Soldier",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Flying",
+        "Lifelink",
+        "Heroic"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Fabled Hero": {
+      "oracle_id": "f9fd9b1c-4c00-4db7-bbfe-7fd5d8bb9258",
+      "name": "Fabled Hero",
+      "oracle_text": "Double strike\nHeroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on it.",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Human Soldier",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Heroic",
+        "Double strike"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Iron Star": {
+      "oracle_id": "e9ec67e1-7064-44d4-a1ed-04b7893ffb15",
+      "name": "Iron Star",
+      "oracle_text": "Whenever a player casts a red spell, you may pay {1}. If you do, you gain 1 life.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Ivory Cup": {
+      "oracle_id": "8e2017c3-057d-4e30-bd60-f486fddbc6ca",
+      "name": "Ivory Cup",
+      "oracle_text": "Whenever a player casts a white spell, you may pay {1}. If you do, you gain 1 life.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Kiln Fiend": {
+      "oracle_id": "eac8c196-8477-4b79-9875-21afa1e61708",
+      "name": "Kiln Fiend",
+      "oracle_text": "Whenever you cast an instant or sorcery spell, this creature gets +3/+0 until end of turn.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Elemental Beast",
+      "power": "1",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Lagonna-Band Trailblazer": {
+      "oracle_id": "09cc0faa-71d7-428b-9fc4-5ba09e244e89",
+      "name": "Lagonna-Band Trailblazer",
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on it.",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Centaur Scout",
+      "power": "0",
+      "toughness": "4",
+      "keywords": [
+        "Heroic"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Mogg Sentry": {
+      "oracle_id": "ac6f490b-6cf7-4afc-910e-4c8b51fcb2de",
+      "name": "Mogg Sentry",
+      "oracle_text": "Whenever an opponent casts a spell, this creature gets +2/+2 until end of turn.",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Pheres-Band Thunderhoof": {
+      "oracle_id": "651a1f3d-d6f0-4a38-a776-bceba698127b",
+      "name": "Pheres-Band Thunderhoof",
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put two +1/+1 counters on this creature.",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Centaur Warrior",
+      "power": "3",
+      "toughness": "4",
+      "keywords": [
+        "Heroic"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Setessan Oathsworn": {
+      "oracle_id": "78d5f882-5d17-4228-b9b5-d460ab2bef08",
+      "name": "Setessan Oathsworn",
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put two +1/+1 counters on this creature.",
+      "mana_cost": "{1}{G}{G}",
+      "type_line": "Creature — Satyr Warrior",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Heroic"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Staunch-Hearted Warrior": {
+      "oracle_id": "aa6244fb-e1f1-4b53-b530-a8c9d0712a5b",
+      "name": "Staunch-Hearted Warrior",
+      "oracle_text": "Heroic — Whenever you cast a spell that targets this creature, put two +1/+1 counters on this creature.",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Human Warrior",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Heroic"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Throne of Bone": {
+      "oracle_id": "f73c7edf-ed2c-41e8-ac83-c83ddd543f14",
+      "name": "Throne of Bone",
+      "oracle_text": "Whenever a player casts a black spell, you may pay {1}. If you do, you gain 1 life.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Titania's Chosen": {
+      "oracle_id": "a9e72fe7-c4b3-421a-8b2f-bb9448b04a44",
+      "name": "Titania's Chosen",
+      "oracle_text": "Whenever a player casts a green spell, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Archer",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "War-Wing Siren": {
+      "oracle_id": "0e49ec18-f979-4168-b7df-7728f3fe442e",
+      "name": "War-Wing Siren",
+      "oracle_text": "Flying\nHeroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Siren Soldier",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [
+        "Flying",
+        "Heroic"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Wee Dragonauts": {
+      "oracle_id": "e9e56b1d-5ad2-4807-8c4c-1a1a6a25ecbf",
+      "name": "Wee Dragonauts",
+      "oracle_text": "Flying\nWhenever you cast an instant or sorcery spell, this creature gets +2/+0 until end of turn.",
+      "mana_cost": "{1}{U}{R}",
+      "type_line": "Creature — Faerie Wizard",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Wingsteed Rider": {
+      "oracle_id": "9c46adaa-ab39-4c0a-99bd-935b6c4f732f",
+      "name": "Wingsteed Rider",
+      "oracle_text": "Flying\nHeroic — Whenever you cast a spell that targets this creature, put a +1/+1 counter on this creature.",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Human Knight",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flying",
+        "Heroic"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Wooden Sphere": {
+      "oracle_id": "0bd8917c-bec4-4603-bc3f-8e0c2afae56a",
+      "name": "Wooden Sphere",
+      "oracle_text": "Whenever a player casts a green spell, you may pay {1}. If you do, you gain 1 life.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Blessed Spirits": {
+      "oracle_id": "5fb899c1-3a2f-4b5e-a82d-fece51bdf786",
+      "name": "Blessed Spirits",
+      "oracle_text": "Flying\nWhenever you cast an enchantment spell, put a +1/+1 counter on this creature.",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Spirit",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Pyre Hound": {
+      "oracle_id": "0a6f45e9-5c7a-4e2c-bf8a-fc5fe0ae0793",
+      "name": "Pyre Hound",
+      "oracle_text": "Trample\nWhenever you cast an instant or sorcery spell, put a +1/+1 counter on this creature.",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Elemental Dog",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "Trample"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Mercurial Geists": {
+      "oracle_id": "1f6bff6c-a2f0-4ed7-8169-acb4d31a7187",
+      "name": "Mercurial Geists",
+      "oracle_text": "Flying\nWhenever you cast an instant or sorcery spell, this creature gets +3/+0 until end of turn.",
+      "mana_cost": "{2}{U}{R}",
+      "type_line": "Creature — Spirit",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Bounteous Kirin": {
+      "oracle_id": "31d572b8-2c5e-4819-b2a6-e7ef90872d9e",
+      "name": "Bounteous Kirin",
+      "oracle_text": "Flying\nWhenever you cast a Spirit or Arcane spell, you may gain life equal to that spell's mana value.",
+      "mana_cost": "{5}{G}{G}",
+      "type_line": "Legendary Creature — Kirin Spirit",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 7.0,
+      "layout": "normal"
+    },
+    "Kami of the Hunt": {
+      "oracle_id": "96e68c7a-f187-4aa6-998c-238e7c833809",
+      "name": "Kami of the Hunt",
+      "oracle_text": "Whenever you cast a Spirit or Arcane spell, this creature gets +1/+1 until end of turn.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Spirit",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Manaplasm": {
+      "oracle_id": "9061e2ae-7385-494a-a511-0b6531d1fe0e",
+      "name": "Manaplasm",
+      "oracle_text": "Whenever you cast a spell, this creature gets +X/+X until end of turn, where X is that spell's mana value.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Ooze",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Reki, the History of Kamigawa": {
+      "oracle_id": "8a7d68ae-ac43-46a6-9dc8-d6b07cc0333c",
+      "name": "Reki, the History of Kamigawa",
+      "oracle_text": "Whenever you cast a legendary spell, draw a card.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Legendary Creature — Human Shaman",
+      "power": "1",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Jori En, Ruin Diver": {
+      "oracle_id": "4cd9b48e-5774-4a1c-857f-9f4a92db9b41",
+      "name": "Jori En, Ruin Diver",
+      "oracle_text": "Whenever you cast your second spell each turn, draw a card.",
+      "mana_cost": "{1}{U}{R}",
+      "type_line": "Legendary Creature — Merfolk Wizard",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Emrakul's Influence": {
+      "oracle_id": "92eb07ca-ec57-48c3-98ce-9e878bd968c1",
+      "name": "Emrakul's Influence",
+      "oracle_text": "Whenever you cast an Eldrazi creature spell with mana value 7 or greater, draw two cards.",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Sram, Senior Edificer": {
+      "oracle_id": "7e00b0cd-d212-4604-ba07-da21f4fe00b0",
+      "name": "Sram, Senior Edificer",
+      "oracle_text": "Whenever you cast an Aura, Equipment, or Vehicle spell, draw a card.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Legendary Creature — Dwarf Advisor",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Jhoira, Weatherlight Captain": {
+      "oracle_id": "c803b788-4213-4fab-b841-7e5bbf66088e",
+      "name": "Jhoira, Weatherlight Captain",
+      "oracle_text": "Whenever you cast a historic spell, draw a card. (Artifacts, legendaries, and Sagas are historic.)",
+      "mana_cost": "{2}{U}{R}",
+      "type_line": "Legendary Creature — Human Artificer",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Pyrostatic Pillar": {
+      "oracle_id": "3b5b87da-5a00-449a-97ef-fa1e2c1c4b4b",
+      "name": "Pyrostatic Pillar",
+      "oracle_text": "Whenever a player casts a spell with mana value 3 or less, this enchantment deals 2 damage to that player.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Pyromancer's Assault": {
+      "oracle_id": "87038d1b-0fa9-4604-b119-1de56db30144",
+      "name": "Pyromancer's Assault",
+      "oracle_text": "Whenever you cast your second spell each turn, this enchantment deals 2 damage to any target.",
+      "mana_cost": "{3}{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Kaervek the Merciless": {
+      "oracle_id": "c7b72d38-0aa0-4e17-9dd5-9276d7cb21ec",
+      "name": "Kaervek the Merciless",
+      "oracle_text": "Whenever an opponent casts a spell, Kaervek deals damage equal to that spell's mana value to any target.",
+      "mana_cost": "{5}{B}{R}",
+      "type_line": "Legendary Creature — Human Shaman",
+      "power": "5",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 7.0,
+      "layout": "normal"
+    },
+    "Lys Alana Bowmaster": {
+      "oracle_id": "135e6545-4ec5-4136-9019-3fda92052b7a",
+      "name": "Lys Alana Bowmaster",
+      "oracle_text": "Reach\nWhenever you cast an Elf spell, you may have this creature deal 2 damage to target creature with flying.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Archer",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Guttersnipe": {
+      "oracle_id": "c6bdaf76-6a03-4695-9c4b-f040e73435af",
+      "name": "Guttersnipe",
+      "oracle_text": "Whenever you cast an instant or sorcery spell, this creature deals 2 damage to each opponent.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Goblin Shaman",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Mindsparker": {
+      "oracle_id": "54866c25-b332-46c8-a2c5-1a71b702ddc0",
+      "name": "Mindsparker",
+      "oracle_text": "First strike (This creature deals combat damage before creatures without first strike.)\nWhenever an opponent casts a white or blue instant or sorcery spell, this creature deals 2 damage to that player.",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Elemental",
+      "power": "3",
+      "toughness": "2",
+      "keywords": [
+        "First strike"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Pyroconvergence": {
+      "oracle_id": "8da5c156-3688-4d6e-b5c4-95c082d1b426",
+      "name": "Pyroconvergence",
+      "oracle_text": "Whenever you cast a multicolored spell, this enchantment deals 2 damage to any target.",
+      "mana_cost": "{4}{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Weaver of Lightning": {
+      "oracle_id": "28274c39-19e2-4b4c-bd53-d31d6063c2ba",
+      "name": "Weaver of Lightning",
+      "oracle_text": "Reach (This creature can block creatures with flying.)\nWhenever you cast an instant or sorcery spell, this creature deals 1 damage to target creature an opponent controls.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Human Shaman",
+      "power": "1",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Eidolon of the Great Revel": {
+      "oracle_id": "2fd7018e-1c36-4d7f-8f72-22f2f7f60c60",
+      "name": "Eidolon of the Great Revel",
+      "oracle_text": "Whenever a player casts a spell with mana value 3 or less, this creature deals 2 damage to that player.",
+      "mana_cost": "{R}{R}",
+      "type_line": "Enchantment Creature — Spirit",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Aether Sting": {
+      "oracle_id": "61105cb5-d7a1-4021-a006-dd1b947dfa68",
+      "name": "Aether Sting",
+      "oracle_text": "Whenever an opponent casts a creature spell, this enchantment deals 1 damage to that player.",
+      "mana_cost": "{3}{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Spellshock": {
+      "oracle_id": "6579bb00-3886-447b-a265-3e72e98bbe2c",
+      "name": "Spellshock",
+      "oracle_text": "Whenever a player casts a spell, this enchantment deals 2 damage to that player.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Electrostatic Field": {
+      "oracle_id": "2fa94a07-c932-4f85-b6e0-a97d2b29eb52",
+      "name": "Electrostatic Field",
+      "oracle_text": "Defender\nWhenever you cast an instant or sorcery spell, this creature deals 1 damage to each opponent.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Wall",
+      "power": "0",
+      "toughness": "4",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    }
+  },
+  "witnesses": {
+    "Coral Merfolk": {
+      "oracle_id": "4ed27607-21a8-4bc3-997e-6d2242313f6d",
+      "name": "Coral Merfolk",
+      "oracle_text": "",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Merfolk",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Divination": {
+      "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+      "name": "Divination",
+      "oracle_text": "Draw two cards.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Drudge Skeletons": {
+      "oracle_id": "c180ed02-07f4-4538-9bea-8c249234a8e2",
+      "name": "Drudge Skeletons",
+      "oracle_text": "{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Skeleton",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Heal",
+        "Regenerate"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Elvish Warrior": {
+      "oracle_id": "da587161-da7e-48ae-8af6-7f02ee71afd8",
+      "name": "Elvish Warrior",
+      "oracle_text": "",
+      "mana_cost": "{G}{G}",
+      "type_line": "Creature — Elf Warrior",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Goblin Legionnaire": {
+      "oracle_id": "582fdfbe-c5fe-45d0-b3ff-e66db5183725",
+      "name": "Goblin Legionnaire",
+      "oracle_text": "{R}, Sacrifice this creature: It deals 2 damage to any target.\n{W}, Sacrifice this creature: Prevent the next 2 damage that would be dealt to any target this turn.",
+      "mana_cost": "{R}{W}",
+      "type_line": "Creature — Goblin Soldier",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "R",
+        "W"
+      ],
+      "color_identity": [
+        "R",
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Goblin Piker": {
+      "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+      "name": "Goblin Piker",
+      "oracle_text": "",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Seal of Cleansing": {
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "name": "Seal of Cleansing",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Seal of Fire": {
+      "oracle_id": "348a345e-4639-41ca-b015-a5d43459eb64",
+      "name": "Seal of Fire",
+      "oracle_text": "Sacrifice this enchantment: It deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Silvercoat Lion": {
+      "oracle_id": "e3c0b11e-7340-4e0a-98b7-91b38439d4f9",
+      "name": "Silvercoat Lion",
+      "oracle_text": "",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Cat",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Watchwolf": {
+      "oracle_id": "a35c2e20-eb90-4132-b65f-be1fcb569819",
+      "name": "Watchwolf",
+      "oracle_text": "",
+      "mana_cost": "{G}{W}",
+      "type_line": "Creature — Wolf",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Wind Drake": {
+      "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+      "name": "Wind Drake",
+      "oracle_text": "Flying",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Drake",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Brute Force": {
+      "oracle_id": "9880ba09-d5b8-4675-bfb4-2161d86d2d41",
+      "name": "Brute Force",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Wandering Ones": {
+      "oracle_id": "1bbddbd2-9c85-4a1d-87aa-0c2eb2e0fb73",
+      "name": "Wandering Ones",
+      "oracle_text": "",
+      "mana_cost": "{U}",
+      "type_line": "Creature — Spirit",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Lantern Kami": {
+      "oracle_id": "bddb6b9b-5120-48d2-a57f-eb5d46d38cec",
+      "name": "Lantern Kami",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Spirit",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Reach Through Mists": {
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "name": "Reach Through Mists",
+      "oracle_text": "Draw a card.",
+      "mana_cost": "{U}",
+      "type_line": "Instant — Arcane",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Deathless Behemoth": {
+      "oracle_id": "78ee8cd8-de12-440f-8890-a78ab40b6be4",
+      "name": "Deathless Behemoth",
+      "oracle_text": "Vigilance\nSacrifice two Eldrazi Scions: Return this card from your graveyard to your hand. Activate only as a sorcery.",
+      "mana_cost": "{6}",
+      "type_line": "Creature — Eldrazi",
+      "power": "6",
+      "toughness": "6",
+      "keywords": [
+        "Vigilance"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 6.0,
+      "layout": "normal"
+    },
+    "Bane of Bala Ged": {
+      "oracle_id": "38839894-1706-4e11-8310-5ea8dd8866d9",
+      "name": "Bane of Bala Ged",
+      "oracle_text": "Whenever this creature attacks, defending player exiles two permanents they control.",
+      "mana_cost": "{7}",
+      "type_line": "Creature — Eldrazi",
+      "power": "7",
+      "toughness": "5",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 7.0,
+      "layout": "normal"
+    },
+    "Eldrazi Devastator": {
+      "oracle_id": "bc08ac66-969c-4905-a2d6-16ff565be475",
+      "name": "Eldrazi Devastator",
+      "oracle_text": "Trample",
+      "mana_cost": "{8}",
+      "type_line": "Creature — Eldrazi",
+      "power": "8",
+      "toughness": "9",
+      "keywords": [
+        "Trample"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 8.0,
+      "layout": "normal"
+    },
+    "Eldrazi Conscription": {
+      "oracle_id": "3635e4e5-e655-45f4-a444-39756f55129a",
+      "name": "Eldrazi Conscription",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +10/+10 and has trample and annihilator 2. (Whenever it attacks, defending player sacrifices two permanents of their choice.)",
+      "mana_cost": "{8}",
+      "type_line": "Kindred Enchantment — Eldrazi Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 8.0,
+      "layout": "normal"
+    },
+    "Bonesplitter": {
+      "oracle_id": "452e3f5f-ce17-4682-966b-5cc100210aee",
+      "name": "Bonesplitter",
+      "oracle_text": "Equipped creature gets +2/+0.\nEquip {1}",
+      "mana_cost": "{1}",
+      "type_line": "Artifact — Equipment",
+      "keywords": [
+        "Equip"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Smuggler's Copter": {
+      "oracle_id": "49136bdc-bc50-49a2-999a-1ef9c16ea130",
+      "name": "Smuggler's Copter",
+      "oracle_text": "Flying\nWhenever this Vehicle attacks or blocks, you may draw a card. If you do, discard a card.\nCrew 1 (Tap any number of creatures you control with total power 1 or more: This Vehicle becomes an artifact creature until end of turn.)",
+      "mana_cost": "{2}",
+      "type_line": "Artifact — Vehicle",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Flying",
+        "Crew"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Pacifism": {
+      "oracle_id": "5f5e0b10-c8cf-450c-bfd3-bcb0528ec330",
+      "name": "Pacifism",
+      "oracle_text": "Enchant creature\nEnchanted creature can't attack or block.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment — Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Song of Freyalise": {
+      "oracle_id": "9fe1f3ef-2c30-4ccc-9a67-5349e98e2502",
+      "name": "Song of Freyalise",
+      "oracle_text": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI, II — Until your next turn, creatures you control gain \"{T}: Add one mana of any color.\"\nIII — Put a +1/+1 counter on each creature you control. Those creatures gain vigilance, trample, and indestructible until end of turn.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Enchantment — Saga",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "saga"
+    },
+    "Isamaru, Hound of Konda": {
+      "oracle_id": "cfb756dd-6fe1-430a-8f04-8b10cac62a86",
+      "name": "Isamaru, Hound of Konda",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Legendary Creature — Dog",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Jasmine Boreal": {
+      "oracle_id": "942407bf-862a-4a0b-b19d-b9f8ee833026",
+      "name": "Jasmine Boreal",
+      "oracle_text": "",
+      "mana_cost": "{3}{G}{W}",
+      "type_line": "Legendary Creature — Human",
+      "power": "4",
+      "toughness": "5",
+      "keywords": [],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Tobias Andrion": {
+      "oracle_id": "55dfe722-7487-4d25-b90c-e6ad2c82a671",
+      "name": "Tobias Andrion",
+      "oracle_text": "",
+      "mana_cost": "{3}{W}{U}",
+      "type_line": "Legendary Creature — Human Advisor",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Hope of Ghirapur": {
+      "oracle_id": "1a20e805-c80b-4710-917b-706d29ec395e",
+      "name": "Hope of Ghirapur",
+      "oracle_text": "Flying\nSacrifice Hope of Ghirapur: Until your next turn, target player who was dealt combat damage by Hope of Ghirapur this turn can't cast noncreature spells.",
+      "mana_cost": "{1}",
+      "type_line": "Legendary Artifact Creature — Thopter",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Dark Ritual": {
+      "oracle_id": "53f7c868-b03e-4fc2-8dcf-a75bbfa3272b",
+      "name": "Dark Ritual",
+      "oracle_text": "Add {B}{B}{B}.",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Mirari": {
+      "oracle_id": "8f6a2fce-719e-4745-80d3-aabce5c9bafa",
+      "name": "Mirari",
+      "oracle_text": "Whenever you cast an instant or sorcery spell, you may pay {3}. If you do, copy that spell. You may choose new targets for the copy.",
+      "mana_cost": "{5}",
+      "type_line": "Legendary Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Kami of Ancient Law": {
+      "oracle_id": "e937e0f5-ca35-4dce-9f05-8f2075731628",
+      "name": "Kami of Ancient Law",
+      "oracle_text": "Sacrifice this creature: Destroy target enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Spirit",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Holy Day": {
+      "oracle_id": "98423a34-f044-4811-b288-56981d604b6e",
+      "name": "Holy Day",
+      "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Air Elemental": {
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "name": "Air Elemental",
+      "oracle_text": "Flying",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Elemental",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Eager Cadet": {
+      "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+      "name": "Eager Cadet",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Azorius Charm": {
+      "oracle_id": "e7592863-4aee-47b3-9abf-4b863ab0b6ec",
+      "name": "Azorius Charm",
+      "oracle_text": "Choose one —\n• Creatures you control gain lifelink until end of turn.\n• Draw a card.\n• Put target attacking or blocking creature on top of its owner's library.",
+      "mana_cost": "{W}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Chandra, Pyrogenius": {
+      "oracle_id": "ae2c89c2-66d6-484a-a176-9ea19e00f445",
+      "name": "Chandra, Pyrogenius",
+      "oracle_text": "+2: Chandra deals 2 damage to each opponent.\n−3: Chandra deals 4 damage to target creature.\n−10: Chandra deals 6 damage to target player or planeswalker and each creature that player or that planeswalker's controller controls.",
+      "mana_cost": "{4}{R}{R}",
+      "type_line": "Legendary Planeswalker — Chandra",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "loyalty": "5"
+    },
+    "Elvish Mystic": {
+      "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+      "name": "Elvish Mystic",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    }
+  },
+  "presentation": {
+    "Urza's Chalice": {
+      "handler": "manalinkeh_card_urzas_chalice",
+      "acceptance": "payment",
+      "decline": "cancel_mana_with_land",
+      "decline_witness": "Ornithopter",
+      "payment_land": "Forest"
+    }
+  },
+  "witness_modes": {
+    "Azorius Charm": {
+      "handler": "manalinkeh_card_azorius_charm",
+      "label": "Draw a card.",
+      "index": 1
+    }
+  },
+  "damage_presentations": {
+    "Lys Alana Bowmaster": {
+      "handler": "manalinkeh_card_lys_alana_bowmaster",
+      "acceptance": "target",
+      "decline": "cancel_target"
+    }
+  }
+}

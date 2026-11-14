@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Mirrodin's Core",
+  "csvid": 6918,
+  "recipes": [
+    {
+      "family": "charge_counter_activation",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}.\n{T}: Put a charge counter on this land.\n{T}, Remove a charge counter from this land: Add one mana of any color.",
+      "params": {
+        "ability": 1,
+        "interface": {
+          "dialogs": {},
+          "intent": {
+            "mode_label": "Add charge counter",
+            "fallback_color": 0,
+            "allow_auto_nonmana": true
+          },
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        },
+        "inactive_clauses": [
+          "{T}: Add {C}.",
+          "{T}, Remove a charge counter from this land: Add one mana of any color."
+        ]
+      },
+      "variants": [
+        "charge_0",
+        "payment_0",
+        "offturn_0",
+        "tapped_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "repeat_untap_0",
+        "charge_1",
+        "payment_1",
+        "offturn_1",
+        "tapped_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "repeat_untap_1"
+      ]
+    }
+  ]
+}

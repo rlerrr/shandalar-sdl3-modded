@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Ajani Steadfast",
+  "csvid": 14067,
+  "recipes": [
+    {
+      "family": "permanent_plus1_activation",
+      "version": 2,
+      "oracle_text": "+1: Until end of turn, up to one target creature gets +1/+1 and gains first strike, vigilance, and lifelink.\n−2: Put a +1/+1 counter on each creature you control and a loyalty counter on each other planeswalker you control.\n−7: You get an emblem with \"If a source would deal damage to you or a planeswalker you control, prevent all but 1 of that damage.\"",
+      "params": {
+        "ability": 1,
+        "interface": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        },
+        "other_clauses": [
+          "+1: Until end of turn, up to one target creature gets +1/+1 and gains first strike, vigilance, and lifelink.",
+          "−7: You get an emblem with \"If a source would deal damage to you or a planeswalker you control, prevent all but 1 of that damage.\""
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

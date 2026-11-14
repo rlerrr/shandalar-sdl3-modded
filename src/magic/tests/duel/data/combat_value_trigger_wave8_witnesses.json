@@ -1,0 +1,570 @@
+{
+  "version": 1,
+  "cards": {
+    "Wall of Denial": {
+      "oracle_id": "9cc092f9-e8f0-40ea-847d-813b70f889db",
+      "name": "Wall of Denial",
+      "oracle_text": "Defender, flying\nShroud (This creature can't be the target of spells or abilities.)",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Creature \u2014 Wall",
+      "power": "0",
+      "toughness": "8",
+      "keywords": [
+        "Flying",
+        "Shroud",
+        "Defender"
+      ],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/939/wall-of-denial?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature \u2014 Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Hydrosurge": {
+      "oracle_id": "4c2059d5-9a2e-4b89-a617-9125eb0cd570",
+      "name": "Hydrosurge",
+      "oracle_text": "Target creature gets -5/-0 until end of turn.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m15/58/hydrosurge?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Hermetic Study": {
+      "oracle_id": "792d7818-ee5c-4254-b969-7b50f475c629",
+      "name": "Hermetic Study",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+      "mana_cost": "{1}{U}",
+      "type_line": "Enchantment \u2014 Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/53/hermetic-study?utm_source=api"
+    },
+    "Darksteel Gargoyle": {
+      "oracle_id": "73010421-374f-458e-aa88-248ef8ae4f8b",
+      "name": "Darksteel Gargoyle",
+      "oracle_text": "Flying\nIndestructible (Damage and effects that say \"destroy\" don't destroy this creature.)",
+      "mana_cost": "{7}",
+      "type_line": "Artifact Creature \u2014 Gargoyle",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Flying",
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 7.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/td2/19/darksteel-gargoyle?utm_source=api"
+    },
+    "Zombie": {
+      "oracle_id": "ec6e76e8-e80e-4534-990a-03c3bbeda53a",
+      "name": "Zombie",
+      "oracle_text": "",
+      "mana_cost": "",
+      "type_line": "Token Creature \u2014 Zombie",
+      "power": "*",
+      "toughness": "*",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/tinr/12/zombie?utm_source=api"
+    },
+    "Barony Vampire": {
+      "oracle_id": "e886756a-298d-4f79-8699-8bfc9345352e",
+      "name": "Barony Vampire",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature \u2014 Vampire",
+      "power": "3",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m20/85/barony-vampire?utm_source=api"
+    },
+    "Spinneret Sliver": {
+      "oracle_id": "fbdec63e-0679-47e9-b82a-daa56df50481",
+      "name": "Spinneret Sliver",
+      "oracle_text": "All Sliver creatures have reach.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Sliver",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tsr/230/spinneret-sliver?utm_source=api"
+    },
+    "Sakura-Tribe Scout": {
+      "oracle_id": "0c319f45-cb0f-4641-acd8-145768acb3fc",
+      "name": "Sakura-Tribe Scout",
+      "oracle_text": "{T}: You may put a land card from your hand onto the battlefield.",
+      "mana_cost": "{G}",
+      "type_line": "Creature \u2014 Snake Shaman Scout",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/sok/144/sakura-tribe-scout?utm_source=api"
+    },
+    "Shaman of the Great Hunt": {
+      "oracle_id": "4f87eb3c-c261-4d92-a260-4b20daddb601",
+      "name": "Shaman of the Great Hunt",
+      "oracle_text": "Haste\nWhenever a creature you control deals combat damage to a player, put a +1/+1 counter on it.\nFerocious \u2014 {2}{G/U}{G/U}: Draw a card for each creature you control with power 4 or greater.",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature \u2014 Orc Shaman",
+      "power": "4",
+      "toughness": "2",
+      "keywords": [
+        "Ferocious",
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R",
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frf/113/shaman-of-the-great-hunt?utm_source=api"
+    },
+    "Deepfathom Skulker": {
+      "oracle_id": "a09a4556-8913-495c-8768-e05413c48f0b",
+      "name": "Deepfathom Skulker",
+      "oracle_text": "Devoid (This card has no color.)\nWhenever a creature you control deals combat damage to a player, you may draw a card.\n{3}{C}: Target creature can't be blocked this turn. ({C} represents colorless mana.)",
+      "mana_cost": "{5}{U}",
+      "type_line": "Creature \u2014 Eldrazi",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Devoid"
+      ],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ogw/43/deepfathom-skulker?utm_source=api"
+    },
+    "Vampire Hexmage": {
+      "oracle_id": "fcb2a95b-cef0-4b29-8b2b-538f380aff2b",
+      "name": "Vampire Hexmage",
+      "oracle_text": "First strike\nSacrifice this creature: Remove all counters from target permanent.",
+      "mana_cost": "{B}{B}",
+      "type_line": "Creature \u2014 Vampire Shaman",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [
+        "First strike"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/2xm/112/vampire-hexmage?utm_source=api"
+    },
+    "Hunger of the Howlpack": {
+      "oracle_id": "296dee6b-6ec1-4ea4-8dc3-23080dd37646",
+      "name": "Hunger of the Howlpack",
+      "oracle_text": "Put a +1/+1 counter on target creature.\nMorbid \u2014 Put three +1/+1 counters on that creature instead if a creature died this turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [
+        "Morbid"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cns/168/hunger-of-the-howlpack?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Wei Scout": {
+      "oracle_id": "f7fa054f-39cb-47d3-a55d-3f70ae164063",
+      "name": "Wei Scout",
+      "oracle_text": "Horsemanship (This creature can't be blocked except by creatures with horsemanship.)",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature \u2014 Human Soldier Scout",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Horsemanship"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ptk/90/wei-scout?utm_source=api"
+    },
+    "Dauthi Horror": {
+      "oracle_id": "07c20708-c305-46e7-a98e-c99f54aeafec",
+      "name": "Dauthi Horror",
+      "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nThis creature can't be blocked by white creatures.",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature \u2014 Dauthi Horror",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [
+        "Shadow"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/clb/748/dauthi-horror?utm_source=api"
+    },
+    "Fugitive Wizard": {
+      "oracle_id": "381fa2a9-69fc-4558-a0ac-fb99c6f8d77f",
+      "name": "Fugitive Wizard",
+      "oracle_text": "",
+      "mana_cost": "{U}",
+      "type_line": "Creature \u2014 Human Wizard",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m15/56/fugitive-wizard?utm_source=api"
+    },
+    "Vision Skeins": {
+      "oracle_id": "6d42dff5-97ec-4768-b112-84a3584d0b87",
+      "name": "Vision Skeins",
+      "oracle_text": "Each player draws two cards.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/e01/29/vision-skeins?utm_source=api"
+    },
+    "Propaganda": {
+      "oracle_id": "ea9709b6-4c37-4d5a-b04d-cd4c42e4f9dd",
+      "name": "Propaganda",
+      "oracle_text": "Creatures can't attack you unless their controller pays {2} for each creature they control that's attacking you.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/151/propaganda?utm_source=api"
+    },
+    "Abyssal Specter": {
+      "oracle_id": "51833cff-6519-4806-8d91-0040e9a02189",
+      "name": "Abyssal Specter",
+      "oracle_text": "Flying\nWhenever this creature deals damage to a player, that player discards a card.",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature \u2014 Specter",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mm3/59/abyssal-specter?utm_source=api"
+    },
+    "Slith Firewalker": {
+      "oracle_id": "ea1af948-686d-4b40-ad4e-cb48a0258269",
+      "name": "Slith Firewalker",
+      "oracle_text": "Haste\nWhenever this creature deals combat damage to a player, put a +1/+1 counter on it.",
+      "mana_cost": "{R}{R}",
+      "type_line": "Creature \u2014 Slith",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/jvc/39/slith-firewalker?utm_source=api"
+    }
+  },
+  "token_registry": {
+    "Zombie": 18860
+  },
+  "token_characteristics_note": "The Zombie identity pin has printed */* in this Oracle record; created2/2black characteristics come independently from the creator clause.",
+  "input_profiles": {
+    "Deepfathom Skulker": "optional_trigger"
+  },
+  "implemented_color_witnesses": {
+    "Abyssal Specter": 971,
+    "Slith Firewalker": 1476
+  }
+}

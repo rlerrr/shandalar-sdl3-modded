@@ -1,0 +1,834 @@
+{
+  "version": 1,
+  "sources": {
+    "Black Mana Battery": {
+      "csvid": 580,
+      "oracle": {
+        "oracle_id": "dc3b2bab-755d-4b2f-97c0-70a74d721a79",
+        "name": "Black Mana Battery",
+        "oracle_text": "{2}, {T}: Put a charge counter on this artifact.\n{T}, Remove any number of charge counters from this artifact: Add {B}, then add an additional {B} for each charge counter removed this way.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/298/black-mana-battery?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": true,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/legends.c"
+    },
+    "Coretapper": {
+      "csvid": 6867,
+      "oracle": {
+        "oracle_id": "66e37011-f3d2-41ed-8e09-7bba9464e8c3",
+        "name": "Coretapper",
+        "oracle_text": "{T}: Put a charge counter on target artifact.\nSacrifice this creature: Put two charge counters on target artifact.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/132/coretapper?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": true,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        },
+        "1": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/darksteel.c"
+    },
+    "Culling Dais": {
+      "csvid": 11232,
+      "oracle": {
+        "oracle_id": "42b03dd7-e796-47c3-b596-87960d72818b",
+        "name": "Culling Dais",
+        "oracle_text": "{T}, Sacrifice a creature: Put a charge counter on this artifact.\n{1}, Sacrifice this artifact: Draw a card for each charge counter on this artifact.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/246/culling-dais?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "intent": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": true
+        }
+      },
+      "input_source": "src/manalinkeh/cards/scars_of_mirrodin.c"
+    },
+    "Gemstone Array": {
+      "csvid": 7060,
+      "oracle": {
+        "oracle_id": "91303465-4b98-4ecc-82f4-cfd2f9a0f8a7",
+        "name": "Gemstone Array",
+        "oracle_text": "{2}: Put a charge counter on this artifact.\nRemove a charge counter from this artifact: Add one mana of any color.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/124/gemstone-array?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {},
+          "intent": {
+            "mode_label": "Add charge counter",
+            "fallback_color": 1,
+            "allow_auto_nonmana": true
+          },
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/fifth_dawn.c"
+    },
+    "Mirrodin's Core": {
+      "csvid": 6918,
+      "oracle": {
+        "oracle_id": "ea53adbe-3f9a-4847-87c7-723ac2789918",
+        "name": "Mirrodin's Core",
+        "oracle_text": "{T}: Add {C}.\n{T}: Put a charge counter on this land.\n{T}, Remove a charge counter from this land: Add one mana of any color.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/492/mirrodins-core?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "dialogs": {},
+          "intent": {
+            "mode_label": "Add charge counter",
+            "fallback_color": 0,
+            "allow_auto_nonmana": true
+          },
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/darksteel.c"
+    },
+    "Surge Node": {
+      "csvid": 11692,
+      "oracle": {
+        "oracle_id": "3b30f043-aa79-4262-b13f-6cd794b1920b",
+        "name": "Surge Node",
+        "oracle_text": "This artifact enters with six charge counters on it.\n{1}, {T}, Remove a charge counter from this artifact: Put a charge counter on target artifact.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/294/surge-node?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "dialogs": {},
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/new_phyrexia.c"
+    },
+    "Trigon of Corruption": {
+      "csvid": 11386,
+      "oracle": {
+        "oracle_id": "0da19cd4-7b3f-47bb-bb35-cbcc88ab53cd",
+        "name": "Trigon of Corruption",
+        "oracle_text": "This artifact enters with three charge counters on it.\n{B}{B}, {T}: Put a charge counter on this artifact.\n{2}, {T}, Remove a charge counter from this artifact: Put a -1/-1 counter on target creature.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/213/trigon-of-corruption?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/scars_of_mirrodin.c"
+    },
+    "Ventifact Bottle": {
+      "csvid": 2649,
+      "oracle": {
+        "oracle_id": "8f167e2f-7b89-4ae2-8332-7c978f71522e",
+        "name": "Ventifact Bottle",
+        "oracle_text": "{X}{1}, {T}: Put X charge counters on this artifact. Activate only as a sorcery.\nAt the beginning of your first main phase, if this artifact has a charge counter on it, tap it and remove all charge counters from it. Add {C} for each charge counter removed this way.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/323/ventifact-bottle?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {},
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mirage.c"
+    },
+    "Blue Mana Battery": {
+      "csvid": 584,
+      "oracle": {
+        "oracle_id": "79e91e8a-cee7-411b-b0a3-d3383c0d4a43",
+        "name": "Blue Mana Battery",
+        "oracle_text": "{2}, {T}: Put a charge counter on this artifact.\n{T}, Remove any number of charge counters from this artifact: Add {U}, then add an additional {U} for each charge counter removed this way.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/300/blue-mana-battery?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": true,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/legends.c"
+    },
+    "Coalition Relic": {
+      "csvid": 8906,
+      "oracle": {
+        "oracle_id": "008cb342-79f5-4df6-a6b7-0e9e22ed693f",
+        "name": "Coalition Relic",
+        "oracle_text": "{T}: Add one mana of any color.\n{T}: Put a charge counter on this artifact.\nAt the beginning of your first main phase, remove all charge counters from this artifact. Add one mana of any color for each charge counter removed this way.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmc/180/coalition-relic?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/future_sight.c"
+    },
+    "Green Mana Battery": {
+      "csvid": 662,
+      "oracle": {
+        "oracle_id": "b953d19f-6ba7-4aee-b353-c60dc9572610",
+        "name": "Green Mana Battery",
+        "oracle_text": "{2}, {T}: Put a charge counter on this artifact.\n{T}, Remove any number of charge counters from this artifact: Add {G}, then add an additional {G} for each charge counter removed this way.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/323/green-mana-battery?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": true,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/legends.c"
+    },
+    "Grindclock": {
+      "csvid": 11275,
+      "oracle": {
+        "oracle_id": "6b7de1c0-4b97-47e1-8ea7-ba55a8d16a9b",
+        "name": "Grindclock",
+        "oracle_text": "{T}: Put a charge counter on this artifact.\n{T}: Target player mills X cards, where X is the number of charge counters on this artifact.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/217/grindclock?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/scars_of_mirrodin.c"
+    },
+    "Lux Cannon": {
+      "csvid": 11301,
+      "oracle": {
+        "oracle_id": "ebdf26a4-77ee-4635-8d52-926bdca623f7",
+        "name": "Lux Cannon",
+        "oracle_text": "{T}: Put a charge counter on this artifact.\n{T}, Remove three charge counters from this artifact: Destroy target permanent.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/141/lux-cannon?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/scars_of_mirrodin.c"
+    },
+    "Magistrate's Scepter": {
+      "csvid": 4527,
+      "oracle": {
+        "oracle_id": "487485a6-cf79-48c0-bea9-0ec6b3ee253c",
+        "name": "Magistrate's Scepter",
+        "oracle_text": "{4}, {T}: Put a charge counter on this artifact.\n{T}, Remove three charge counters from this artifact: Take an extra turn after this one.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/238/magistrates-scepter?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mercadian_masques.c"
+    },
+    "Otherworld Atlas": {
+      "csvid": 12437,
+      "oracle": {
+        "oracle_id": "8d907a1b-f301-46a3-aa1c-25fb7f29c949",
+        "name": "Otherworld Atlas",
+        "oracle_text": "{T}: Put a charge counter on this artifact.\n{T}: Each player draws a card for each charge counter on this artifact.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact — Book",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/219/otherworld-atlas?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/avacyn_restored.c"
+    },
+    "Ratchet Bomb": {
+      "csvid": 11342,
+      "oracle": {
+        "oracle_id": "255d752a-8251-4e4c-99d6-4a1648de1474",
+        "name": "Ratchet Bomb",
+        "oracle_text": "{T}: Put a charge counter on this artifact.\n{T}, Sacrifice this artifact: Destroy each nonland permanent with mana value equal to the number of charge counters on this artifact.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/284/ratchet-bomb?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/scars_of_mirrodin.c"
+    },
+    "Red Mana Battery": {
+      "csvid": 765,
+      "oracle": {
+        "oracle_id": "8ceb295c-a611-4ac7-940b-557bf60f8a8b",
+        "name": "Red Mana Battery",
+        "oracle_text": "{2}, {T}: Put a charge counter on this artifact.\n{T}, Remove any number of charge counters from this artifact: Add {R}, then add an additional {R} for each charge counter removed this way.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/343/red-mana-battery?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": true,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/legends.c"
+    },
+    "Titan Forge": {
+      "csvid": 11543,
+      "oracle": {
+        "oracle_id": "3b02dfca-bcaa-4e22-b143-401ed250d016",
+        "name": "Titan Forge",
+        "oracle_text": "{3}, {T}: Put a charge counter on this artifact.\n{T}, Remove three charge counters from this artifact: Create a 9/9 colorless Golem artifact creature token.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/146/titan-forge?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mirrodin_besieged.c"
+    },
+    "Trigon of Rage": {
+      "csvid": 11389,
+      "oracle": {
+        "oracle_id": "3b172be8-1bac-441e-98cc-f5af8da6005b",
+        "name": "Trigon of Rage",
+        "oracle_text": "This artifact enters with three charge counters on it.\n{R}{R}, {T}: Put a charge counter on this artifact.\n{2}, {T}, Remove a charge counter from this artifact: Target creature gets +3/+0 until end of turn.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/216/trigon-of-rage?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/scars_of_mirrodin.c"
+    },
+    "White Mana Battery": {
+      "csvid": 852,
+      "oracle": {
+        "oracle_id": "cf58682f-c305-4803-b54b-37f0841788e9",
+        "name": "White Mana Battery",
+        "oracle_text": "{2}, {T}: Put a charge counter on this artifact.\n{T}, Remove any number of charge counters from this artifact: Add {W}, then add an additional {W} for each charge counter removed this way.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/357/white-mana-battery?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": true,
+          "exact_cost_negatives": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/legends.c"
+    },
+    "Kyren Toy": {
+      "csvid": 4516,
+      "oracle": {
+        "oracle_id": "f1a0d112-9e1b-4354-bd7f-0051bff8f904",
+        "name": "Kyren Toy",
+        "oracle_text": "{1}, {T}: Put a charge counter on this artifact.\n{T}, Remove X charge counters from this artifact: Add an amount of {C} equal to X plus one.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/303/kyren-toy?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": true,
+          "exact_cost_negatives": false,
+          "mana_sibling_x_domain": {
+            "minimum": 0,
+            "maximum": "available_charge_counters",
+            "zero_charge_cost": 0,
+            "zero_mana_result": 1
+          }
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mercadian_masques.c"
+    },
+    "Trigon of Infestation": {
+      "csvid": 11387,
+      "oracle": {
+        "oracle_id": "6af2b898-7ba0-4641-8234-5171397cf602",
+        "name": "Trigon of Infestation",
+        "oracle_text": "This artifact enters with three charge counters on it.\n{G}{G}, {T}: Put a charge counter on this artifact.\n{2}, {T}, Remove a charge counter from this artifact: Create a 1/1 green Phyrexian Insect creature token with infect.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/214/trigon-of-infestation?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false,
+          "disabled_cost_modes": [
+            "wrong_color"
+          ]
+        }
+      },
+      "input_source": "src/manalinkeh/cards/scars_of_mirrodin.c"
+    }
+  },
+  "witnesses": {
+    "Lux Cannon": {
+      "csvid": 11301,
+      "oracle": {
+        "oracle_id": "ebdf26a4-77ee-4635-8d52-926bdca623f7",
+        "name": "Lux Cannon",
+        "oracle_text": "{T}: Put a charge counter on this artifact.\n{T}, Remove three charge counters from this artifact: Destroy target permanent.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/141/lux-cannon?utm_source=api"
+      }
+    },
+    "Icy Manipulator": {
+      "csvid": 119,
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      }
+    },
+    "Sage of Lat-Nam": {
+      "csvid": 524,
+      "oracle": {
+        "oracle_id": "f34be3cc-ff47-4415-a6a8-ed142891dc0c",
+        "name": "Sage of Lat-Nam",
+        "oracle_text": "{T}, Sacrifice an artifact: Draw a card.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Human Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/64/sage-of-lat-nam?utm_source=api"
+      }
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      }
+    },
+    "Plains": {
+      "csvid": 188,
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    }
+  }
+}

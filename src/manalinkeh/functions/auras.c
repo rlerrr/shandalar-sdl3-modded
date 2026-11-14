@@ -582,6 +582,11 @@ void pump_attached(int player, int card, event_t event, pump_ability_t *ability_
   pump_ability_t default_ability_mod;
 
   aura_instance = in_play(player, card);
+  /* Direct entry resolves the Aura while it is still invisible to in_play(). */
+  if (aura_instance == NULL)
+  {
+    return;
+  }
   if ((((event == EVENT_RESOLVE_SPELL) &&
         (result = has_subtype(player, card, SUBTYPE_AURA), player == 1)) &&
        (result != 0)) &&
@@ -597,10 +602,6 @@ void pump_attached(int player, int card, event_t event, pump_ability_t *ability_
     {
       ai_modifier = ai_modifier + -0x18;
     }
-  }
-  else if (aura_instance == NULL)
-  {
-    return;
   }
   if (((-1 < aura_instance->damage_target_card) &&
        (result = is_humiliated(player, card, AL_STATIC), result == 0)) &&

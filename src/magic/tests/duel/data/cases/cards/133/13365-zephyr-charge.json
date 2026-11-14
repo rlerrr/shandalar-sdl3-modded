@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Zephyr Charge",
+  "csvid": 13365,
+  "recipes": [
+    {
+      "family": "activated_temporary_modifier",
+      "version": 2,
+      "oracle_text": "{1}{U}: Target creature gains flying until end of turn.",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        },
+        "other_clauses": []
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "inactive_0",
+        "cleanup_0",
+        "counter_cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "target_enemy_0",
+        "target_removed_pending_0",
+        "probe_noncreature_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "ground_block_0",
+        "effect_1",
+        "payment_1",
+        "inactive_1",
+        "cleanup_1",
+        "counter_cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "target_enemy_1",
+        "target_removed_pending_1",
+        "probe_noncreature_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "ground_block_1"
+      ]
+    }
+  ]
+}

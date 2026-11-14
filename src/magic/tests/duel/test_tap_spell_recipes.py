@@ -691,4 +691,123 @@ class QuantitySearchRecoveryTest(unittest.TestCase):
      if 'property' in step:self.assertIn(step['property'],PROPERTIES)
    suffix='_x2_1' if entry['params']['variable'] else '_1';s=self.cases(name,['pending_snapshot'+suffix])[0]['steps'];ops=[x['op'] for x in s];a=ops.index('capture');b=ops.index('record_state');r=ops.index('restore');self.assertEqual(s[a+1:b],s[r+1:-1]);self.assertIsNot(s[a+1],s[r+1])
 
+class Wave7TapSpellTest(unittest.TestCase):
+ @classmethod
+ def setUpClass(cls):
+  from tap_spell_recipes import WAVE7
+  cls.reviews=WAVE7['cards']
+  cls.oracle=json.loads((Path(__file__).parent/'data/oracle.json').read_text(encoding='utf8'))['cards']
+  cls.rows={r['name']:r for r in registry()}
+ def declaration(self,name):
+  return dict(family='tap_spell',version=2,oracle_text=self.oracle[name]['oracle_text'],params=copy.deepcopy(self.reviews[name]['params']),variants=[])
+ def cases(self,name,selected):
+  d=self.declaration(name);d['variants']=selected
+  return expand(name,self.rows[name]['csvid'],d,spec(d,self.oracle[name]),selected,self.rows,self.oracle)
+ def test_complete_source_and_component_contract_fail_closed(self):
+  for name in self.reviews:
+   d=self.declaration(name)
+   for key,value in [('oracle_text',self.oracle[name]['oracle_text']+' Draw a card.'),('mana_cost','{99}'),('colors',[]),('type_line','Enchantment')]:
+    changed=dict(self.oracle[name],**{key:value});changed_d=dict(d,oracle_text=changed['oracle_text'])
+    with self.assertRaises(ValueError):spec(changed_d,changed)
+   changed=copy.deepcopy(d);changed['params']['base']['draw']+=1
+   with self.assertRaises(ValueError):spec(changed,self.oracle[name])
+ def test_all_actions_and_controllers_have_noop_sensitive_receipts(self):
+  for name,entry in self.reviews.items():
+   for effect in entry['params']['effects']:
+    for owner in (0,1):
+     c=self.cases(name,[f'{effect}_effect_{owner}'])[0];steps=c['steps'];cut=next(i for i,s in enumerate(steps) if s['op']=='resolve')
+     before=[s['value'] for s in steps[:cut] if s.get('ref')=='recipient' and s.get('property')=='tapped']
+     after=[s['value'] for s in steps[cut:] if s.get('ref')=='recipient' and s.get('property')=='tapped']
+     self.assertEqual(before[-1],int(effect=='untap'),name)
+     self.assertEqual(after[-1],int(effect=='tap'),name)
+     self.assertTrue(any(s.get('ref')=='unselected' and s.get('property')=='tapped' and s['value']==before[-1] for s in steps[cut:]),name)
+ def test_cipher_inactive_profiles_keep_controlled_creatures_out_of_play(self):
+  d=self.declaration('Hidden Strings');p=spec(d,self.oracle['Hidden Strings'])
+  self.assertFalse(any('_own_target_' in v for v in variants(p)))
+  for c in self.cases('Hidden Strings',variants(p)):
+   owner=int(c['_recipe']['variant'][-1])
+   self.assertFalse(any(item['player']==owner and item['zone']=='battlefield' and 'Creature' in self.oracle[item['name']]['type_line'] for item in c['setup']))
+ def test_partial_target_loss_queues_only_valid_twiddle_actions(self):
+  for name in ('Psychic Puppetry','Hidden Strings'):
+   count=self.reviews[name]['params']['base']['count']
+   for effect in ('tap','untap'):
+    for owner in (0,1):
+     steps=self.cases(name,[f'{effect}_lost_target_{owner}'])[0]['steps']
+     self.assertEqual(sum(s['op']=='choose_dialog' for s in steps),count-1)
+     self.assertIn(dict(op='assert_choices_consumed'),steps)
+ def test_provoke_rejects_own_creature_and_draws_only_after_valid_resolution(self):
+  for owner in (0,1):
+   c=self.cases('Provoke',[f'untap_wrong_controller_{owner}'])[0]
+   target=next(x for x in c['setup'] if x['ref']=='recipient')
+   self.assertEqual(target['player'],owner)
+   self.assertIn(dict(op='can_cast',ref='source',value=0),c['steps'])
+   self.assertFalse(any(x['op']=='choose_target' for x in c['steps']))
+   lost=self.cases('Provoke',[f'untap_lost_target_{owner}'])[0]['steps']
+   self.assertIn(dict(op='assert_zone',player=owner,zone='library',value=6),lost)
+   effect=self.cases('Provoke',[f'untap_effect_{owner}'])[0]['steps']
+   self.assertIn(dict(op='assert_zone',player=owner,zone='library',value=5),effect)
+ def test_action_variants_and_snapshot_replay_are_strict(self):
+  for name,entry in self.reviews.items():
+   d=self.declaration(name);p=spec(d,self.oracle[name]);supported=variants(p)
+   self.assertEqual(len(supported),len(set(supported)))
+   for effect in entry['params']['effects']:
+    s=self.cases(name,[f'{effect}_pending_snapshot_1'])[0]['steps'];ops=[x['op'] for x in s];a=ops.index('capture');b=ops.index('record_state');r=ops.index('restore')
+    self.assertEqual(s[a+1:b],s[r+1:-1]);self.assertIsNot(s[a+1],s[r+1])
+   for bad in ([],[supported[0],supported[0]],['invented_effect_0']):
+    with self.assertRaises(ValueError):self.cases(name,bad)
+ def test_hidden_strings_response_retains_the_pending_multitarget_parent(self):
+  for effect in ('tap','untap'):
+   for owner in (0,1):
+    s=self.cases('Hidden Strings',[f'{effect}_bounced_target_{owner}'])[0]['steps']
+    response=next(i for i,x in enumerate(s) if x['op']=='cast_response')
+    self.assertEqual(s[response]['ref'],'response')
+    self.assertEqual(s[response+1],dict(op='assert_stack',value=2))
+    drain=next(i for i,x in enumerate(s) if x['op']=='resolve_response')
+    self.assertEqual(s[drain+1],dict(op='assert_stack',value=0))
+    dialogs=[i for i,x in enumerate(s) if x['op']=='choose_dialog']
+    self.assertEqual(len(dialogs),1)
+    self.assertLess(response,dialogs[0]);self.assertLess(dialogs[0],drain)
+    response_target=max(i for i,x in enumerate(s[:response]) if x['op']=='choose_target')
+    self.assertLess(response_target,response)
+    self.assertTrue(any(x.get('ref')=='recipient_1' and x.get('property')=='tapped' and x['value']==int(effect=='tap') for x in s[drain:]))
+ def test_two_arcane_copies_explicitly_decline_human_splice_menu(self):
+  for effect in ('tap','untap'):
+   for owner in (0,1):
+    s=self.cases('Psychic Puppetry',[f'{effect}_two_copies_{owner}'])[0]['steps']
+    cast=next(i for i,x in enumerate(s) if x['op']=='cast')
+    dialogs=[x['value'] for x in s[:cast] if x['op']=='choose_dialog']
+    self.assertEqual(dialogs,([0] if owner==0 else [])+[int(effect=='untap')])
+    queued=[x for x in s[:cast] if x['op'] in ('choose_target','choose_dialog')]
+    if owner==0:
+     self.assertEqual(queued[0],dict(op='choose_dialog',player=0,value=0))
+     self.assertEqual(queued[1]['op'],'choose_target')
+     self.assertEqual(queued[2],dict(op='choose_dialog',player=0,value=int(effect=='untap')))
+    else:self.assertEqual(queued[0]['op'],'choose_target')
+ def test_ruthless_nonattacking_only_fixtures_choose_the_first_mode_implicitly(self):
+  name='Ruthless Instincts'
+  home=Path(__file__).parent/'data/cases/cards/146/14614-ruthless-instincts.json'
+  selected=json.loads(home.read_text(encoding='utf8'))['recipes'][0]['variants']
+  for c in self.cases(name,selected):
+   owner=int(c['_recipe']['variant'][-1]);s=c['steps']
+   # The actual handler offers a modal menu only if both attacking and
+   # nonattacking targets exist. These boards have no attacking creature.
+   self.assertFalse(any(x['zone']=='battlefield' and 'attacking' in x.get('state',[]) for x in c['setup']))
+   casts=[i for i,x in enumerate(s) if x['op']=='cast' and x.get('ref') in ('source','second')]
+   for cast in casts:
+    self.assertFalse(any(x['op']=='attack' for x in s[:cast]))
+    previous=max((i for i,x in enumerate(s[:cast]) if x['op']=='assert_choices_consumed'),default=-1)
+    queued=[x for x in s[previous+1:cast] if x['op'] in ('choose_dialog','choose_target')]
+    self.assertFalse(any(x['op']=='choose_dialog' for x in queued))
+    if queued:self.assertEqual(queued[0],dict(op='choose_target',player=owner,ref='recipient'))
+ def test_mark_for_death_untaps_opposing_target_without_a_draw(self):
+  for owner in (0,1):
+   c=self.cases('Mark for Death',[f'untap_effect_{owner}'])[0]
+   target=next(x for x in c['setup'] if x['ref']=='recipient')
+   self.assertEqual(target['player'],1-owner)
+   cut=next(i for i,x in enumerate(c['steps']) if x['op']=='resolve')
+   after=c['steps'][cut:]
+   self.assertIn(dict(op='assert_card',ref='recipient',property='tapped',value=0),after)
+   self.assertIn(dict(op='assert_card',ref='unselected',property='tapped',value=1),after)
+   self.assertIn(dict(op='assert_zone',player=owner,zone='library',value=6),after)
+
 if __name__=='__main__':unittest.main()

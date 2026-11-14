@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Dovin Baan",
+  "csvid": 16349,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "+1: Until your next turn, up to one target creature gets -3/-0 and its activated abilities can't be activated.\n\u22121: You gain 2 life and draw a card.\n\u22127: You get an emblem with \"Your opponents can't untap more than two permanents during their untap steps.\"",
+      "params": {
+        "ability": 1,
+        "present_ai_dialogs": true,
+        "activation_dialogs": {
+          "0": 1,
+          "1": 1
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "repeat_denied_0",
+        "source_destroyed_pending_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "repeat_denied_1",
+        "source_destroyed_pending_1"
+      ]
+    }
+  ]
+}

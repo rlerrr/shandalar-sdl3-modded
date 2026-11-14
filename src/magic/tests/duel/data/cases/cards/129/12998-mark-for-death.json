@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "card": "Mark for Death",
+  "csvid": 12998,
+  "recipes": [
+    {
+      "family": "tap_spell",
+      "version": 2,
+      "oracle_text": "Target creature an opponent controls blocks this turn if able. Untap that creature. Other creatures that player controls can't block this turn.",
+      "params": {
+        "schema": 10,
+        "effects": [
+          "untap"
+        ],
+        "base": {
+          "scope": "creature",
+          "controller": "opponent",
+          "count": 1,
+          "optional": false,
+          "draw": 0,
+          "cast_before": [],
+          "cast_after": [],
+          "resolve_dialogs": [],
+          "gaps": [
+            "must-block obligation",
+            "other creatures controlled by that player cannot block"
+          ],
+          "inactive": []
+        },
+        "omit_variants": [],
+        "resolve_twiddle": false
+      },
+      "variants": [
+        "untap_effect_0",
+        "untap_payment_0",
+        "untap_insufficient_mana_0",
+        "untap_wrong_color_0",
+        "untap_bare_zones_0",
+        "untap_already_in_state_0",
+        "untap_cleanup_0",
+        "untap_two_copies_0",
+        "untap_ready_snapshot_0",
+        "untap_pending_snapshot_0",
+        "untap_resolved_snapshot_0",
+        "untap_countered_0",
+        "untap_combat_attack_0",
+        "untap_lost_target_0",
+        "untap_bounced_target_0",
+        "untap_wrong_type_0",
+        "untap_no_targets_0",
+        "untap_target_shrouded_pending_0",
+        "untap_wrong_controller_0",
+        "untap_effect_1",
+        "untap_payment_1",
+        "untap_insufficient_mana_1",
+        "untap_wrong_color_1",
+        "untap_bare_zones_1",
+        "untap_already_in_state_1",
+        "untap_cleanup_1",
+        "untap_two_copies_1",
+        "untap_ready_snapshot_1",
+        "untap_pending_snapshot_1",
+        "untap_resolved_snapshot_1",
+        "untap_countered_1",
+        "untap_combat_attack_1",
+        "untap_lost_target_1",
+        "untap_bounced_target_1",
+        "untap_wrong_type_1",
+        "untap_no_targets_1",
+        "untap_target_shrouded_pending_1",
+        "untap_wrong_controller_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Wave7 tap/untap component: real casts, unchanged controls, costs, eligibility, responses, exact populated-zone receipts and snapshots for both controllers. Additional printed components remain explicit recipe gaps."
+}

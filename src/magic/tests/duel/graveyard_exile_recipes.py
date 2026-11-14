@@ -8,6 +8,7 @@ from grant_recipes import HAND,GRAVE,LIBRARY,EXILE
 PINS=json.loads((Path(__file__).parent/'data/graveyard_exile_witnesses.json').read_text(encoding='utf8'))
 PROFILES=PINS['profiles']
 WITNESSES=tuple(PINS['palette'])
+WAVE7_PROFILES=json.loads((Path(__file__).parent/'data/graveyard_exile_wave7_profiles.json').read_text(encoding='utf8'))['profiles']
 
 
 def mana_cost(text):
@@ -23,13 +24,15 @@ def eligible(record,p):
 
 def spec(d,r):
  capacity=isinstance(d.get('params'),dict) and d['params'].get('mode')=='myr_capacity'
- profile=PINS.get('components',{}).get('myr_capacity') if capacity else PROFILES.get(r.get('name')) if isinstance(r,dict) else None
+ wave7=isinstance(d.get('params'),dict) and type(d['params'].get('schema')) is int and d['params']['schema']==7
+ profile=WAVE7_PROFILES.get(r.get('name')) if wave7 and isinstance(r,dict) else PINS.get('components',{}).get('myr_capacity') if capacity else PROFILES.get(r.get('name')) if isinstance(r,dict) else None
  if (not profile or type(d.get('version')) is not int or d['version']!=2 or d.get('family')!='graveyard_exile'
   or r.get('layout')!='normal' or r.get('card_faces') or r.get('selected_face')
   or any(r.get(k)!=v for k,v in profile['source'].items()) or d.get('oracle_text')!=r.get('oracle_text')
   or not isinstance(d.get('params'),dict) or json.dumps(d['params'],sort_keys=True)!=json.dumps(profile['params'],sort_keys=True)):
   raise ValueError('graveyard exile requires complete source pins and explicit reviewed components')
  p=copy.deepcopy(profile['params'])
+ if wave7:_validate_wave7_profile(r,p)
  if p['mode']=='flashback':
   import re
   grammar={'draw_player': ('Target player draws two cards.', 2), 'mill_player': ('Target player mills three cards.', 3), 'mill_all': ('Each player mills five cards.', 5), 'bounce_owned': ('Return target creature you own to your hand.', 0), 'select_four': ('Look at the top four cards of your library. Put one of them into your hand and the rest into your graveyard.', 0), 'search_instant': ('Search your library for an instant card or a card with flash, reveal it, put it into your hand, then shuffle.', 1), 'search_ambition': ('Search your library for a card and put that card into your hand. If this spell was cast from a graveyard, instead search your library for two cards and put those cards into your hand. Then shuffle.', 2), 'recover_type': ('Choose a permanent type. Return all cards of the chosen type from your graveyard to your hand.', 0), 'blink_controlled': ("Exile target creature you control, then return it to the battlefield under its owner's control.", 0), 'unblockable': ("Target creature can't be blocked this turn.", 0), 'cannot_block': ("Up to two target creatures can't block this turn.", 0), 'sever_names': ('Exile target creature and all other creatures with the same name as that creature.', 0)}
@@ -73,6 +76,31 @@ def spec(d,r):
  return p
 
 
+def _validate_wave7_profile(r,p):
+ """Pin the selected Oracle component separately from its menu annotation."""
+ text=r['oracle_text'];name=r['name']
+ common=dict(schema=7,quantity='all',scope='card',graveyard='target_player',draw=0,life_per=0,
+  life_characteristic=None,setup_tapped=False,battlefield_controls=True)
+ if any(p.get(k)!=v or type(p.get(k)) is not type(v) for k,v in common.items()):raise ValueError('reviewed whole-graveyard exile component required')
+ if name=="Tormod's Crypt":
+  expected="{T}, Sacrifice this artifact: Exile target player's graveyard."
+  valid=p['mode']=='activation' and p['activation']==dict(mana='',tap=True,sacrifice=True,exile=False,pay_life=0)
+ elif name=='Angel of Finality':
+  expected="Flying\nWhen this creature enters, exile target player's graveyard."
+  valid=p['mode']=='entry' and p['activation'] is None
+ elif name=='Agent of Erebos':
+  expected="Constellation — Whenever this creature or another enchantment you control enters, exile target player's graveyard."
+  valid=p['mode']=='entry' and p['activation'] is None and p['disable_repeat'] is True
+ elif name=='Rakdos Charm':
+  expected="Choose one —\n• Exile target player's graveyard.\n• Destroy target artifact.\n• Each creature deals 1 damage to its controller."
+  valid=p['mode']=='spell' and p['activation'] is None and p['inputs']==dict(dialogs=[0],present_ai_dialogs=True)
+ elif name=='Ravenous Trap':
+  expected="If an opponent had three or more cards put into their graveyard from anywhere this turn, you may pay {0} rather than pay this spell's mana cost.\nExile target player's graveyard."
+  valid=p['mode']=='spell' and p['activation'] is None and p['inputs']==dict(dialogs=[]) and r['mana_cost']=='{2}{B}{B}'
+ else:raise ValueError('unreviewed wave7 graveyard exile source')
+ if text!=expected or not valid:raise ValueError('complete reviewed wave7 Oracle grammar required')
+
+
 def variants(p):
  if p['mode']=='flashback':return _flashback_variants(p)
  if p['mode']=='myr_capacity':return [f'slot{slot}_{owner}' for owner in (0,1) for slot in p['slots']]
@@ -106,6 +134,7 @@ def variants(p):
  if p.get('variable_exile_count'):modes += ['exile_one','exile_two']
  if p.get('cast_exile_count'):modes += ['exact_creature_cost','short_creature_cost','opponent_only_cost']
  if p.get('graveyard_replacement'):modes += ['replacement_own_death','replacement_opponent_death','replacement_removed','replacement_spell']
+ if p.get('schema')==7 and not sum(p['mana']) and 'insufficient_cast_mana' in modes:modes.remove('insufficient_cast_mana')
  return [f'{v}_{owner}' for owner in (0,1) for v in modes]
 
 
@@ -115,6 +144,8 @@ def validate_witnesses(o,rows):
   if n not in rows or any(o.get(n,{}).get(k)!=v for k,v in pin.items()) or o[n].get('card_faces') or o[n].get('selected_face'):raise ValueError('graveyard exile witness changed: '+n)
  for n,p in PROFILES.items():
   if n not in rows or any(o.get(n,{}).get(k)!=v for k,v in p['source'].items()):raise ValueError('graveyard exile source changed: '+n)
+ for n,p in WAVE7_PROFILES.items():
+  if n not in rows or rows[n]['csvid']!=p['csvid'] or rows[n]['handler'] in ('card_dummy','NULL','0') or any(o.get(n,{}).get(k)!=v for k,v in p['source'].items()):raise ValueError('wave7 graveyard exile source changed: '+n)
  for component in PINS.get('components',{}).values():
   for pin in [component['source']]+list(component['witnesses'].values()):
    n=pin['name']
@@ -177,6 +208,7 @@ def expand(name,csvid,d,p,selected,rows,o):
    setup.append(card('Grizzly Bears','replacement_control',pl));entities['replacement_control']=dict(name='Grizzly Bears',player=pl,alive=True,hand=False,tapped=False)
   token_instances=[];last_cost_cards=[];chosen_targets=[]
   life=[20,20];mana=[[10]*6,[10]*6];pre=[step('turn',player=owner,value=0)];actions=[]
+  if p['inputs'].get('present_ai_dialogs'):pre.append(step('present_ai_dialogs',value=1))
   current_cost=p['activation_mana'] if activation and not casting else p['mana']
   if v=='repeat':mana[owner]=[30]*6
   if v in ('payment','cast_payment'):mana[owner]=list(p['activation_mana'] if activation and v=='payment' else p['mana'])

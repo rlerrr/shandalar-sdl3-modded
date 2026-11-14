@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "card": "Frost Lynx",
+  "csvid": 14102,
+  "recipes": [
+    {
+      "family": "entry_tap_trigger",
+      "version": 2,
+      "oracle_text": "When this creature enters, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.",
+      "variants": [
+        "tap_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "already_tapped_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bounce_recast_0",
+        "blink_source_0",
+        "nonmatching_entry_0",
+        "source_bounced_0",
+        "source_destroyed_0",
+        "no_targets_0",
+        "next_untap_0",
+        "source_departure_lock_0",
+        "freeze_cleanup_0",
+        "frozen_attack_0",
+        "tap_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "already_tapped_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bounce_recast_1",
+        "blink_source_1",
+        "nonmatching_entry_1",
+        "source_bounced_1",
+        "source_destroyed_1",
+        "no_targets_1",
+        "next_untap_1",
+        "source_departure_lock_1",
+        "freeze_cleanup_1",
+        "frozen_attack_1"
+      ],
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "creature",
+          "controller": "opponent",
+          "optional": false,
+          "effect": "tap",
+          "next_untap": true,
+          "flash": false,
+          "flying": false,
+          "enters_tapped": false,
+          "entry_clause": "When this creature enters, tap target creature an opponent controls. That creature doesn't untap during its controller's next untap step.",
+          "other_clauses": []
+        },
+        "presentation": {
+          "human_optional_trigger": false,
+          "present_ai_twiddle": false
+        }
+      }
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle actual Creature entry tap/untap with real costs and counter responses; independent target type/controller, real optional target refusal and mandatory no-legal-target receipts; actual first/second controller untap and source-departure duration, Flash off-turn casts, Flying block/evasion/reach controls, functional untapped Artifact activation and casting, reentry and snapshot replay. Explicit gaps retain separate ETB priority, full turn upkeep/draw, replacement/control changes and combat damage beyond block legality."
+}

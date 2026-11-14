@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Mistblade Shinobi",
+  "csvid": 7520,
+  "recipes": [
+    {
+      "family": "return_saboteur_trigger",
+      "version": 2,
+      "params": {
+        "effect": "bounce_one",
+        "selector": "creature",
+        "scope": "combat",
+        "recipient": "player",
+        "optional": true,
+        "trigger_cost": null,
+        "cycling": null,
+        "ninjutsu": "{U}",
+        "regeneration": null,
+        "keywords": [
+          "Ninjutsu"
+        ]
+      },
+      "oracle_text": "Ninjutsu {U} ({U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)\nWhenever this creature deals combat damage to a player, you may return target creature that player controls to its owner's hand.",
+      "variants": [
+        "unblocked_0",
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "fresh_attack_0",
+        "blocked_0",
+        "pump_0",
+        "cleanup_0",
+        "two_hits_0",
+        "ready_snapshot_0",
+        "combat_snapshot_0",
+        "noncombat_player_0",
+        "noncombat_self_0",
+        "source_bounce_0",
+        "ninjutsu_0",
+        "ninjutsu_payment_0",
+        "ninjutsu_insufficient_0",
+        "ninjutsu_before_blocks_0",
+        "ninjutsu_blocked_0",
+        "ninjutsu_pending_snapshot_0",
+        "unblocked_1",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "fresh_attack_1",
+        "blocked_1",
+        "pump_1",
+        "cleanup_1",
+        "two_hits_1",
+        "ready_snapshot_1",
+        "combat_snapshot_1",
+        "noncombat_player_1",
+        "noncombat_self_1",
+        "source_bounce_1",
+        "ninjutsu_1",
+        "ninjutsu_payment_1",
+        "ninjutsu_insufficient_1",
+        "ninjutsu_before_blocks_1",
+        "ninjutsu_blocked_1",
+        "ninjutsu_pending_snapshot_1"
+      ]
+    }
+  ]
+}

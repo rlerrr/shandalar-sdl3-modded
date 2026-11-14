@@ -1,0 +1,81 @@
+{
+  "version": 1,
+  "card": "Bounding Krasis",
+  "csvid": 15091,
+  "recipes": [
+    {
+      "family": "entry_tap_trigger",
+      "version": 2,
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nWhen this creature enters, you may tap or untap target creature.",
+      "variants": [
+        "tap_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "already_tapped_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bounce_recast_0",
+        "blink_source_0",
+        "nonmatching_entry_0",
+        "source_bounced_0",
+        "source_destroyed_0",
+        "decline_0",
+        "own_target_0",
+        "self_target_0",
+        "untap_0",
+        "already_untapped_0",
+        "own_untap_0",
+        "offturn_0",
+        "tap_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "already_tapped_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bounce_recast_1",
+        "blink_source_1",
+        "nonmatching_entry_1",
+        "source_bounced_1",
+        "source_destroyed_1",
+        "decline_1",
+        "own_target_1",
+        "self_target_1",
+        "untap_1",
+        "already_untapped_1",
+        "own_untap_1",
+        "offturn_1",
+        "whole_decline_0"
+      ],
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "creature",
+          "controller": "any",
+          "optional": true,
+          "effect": "twiddle",
+          "next_untap": false,
+          "flash": true,
+          "flying": false,
+          "enters_tapped": false,
+          "entry_clause": "When this creature enters, you may tap or untap target creature.",
+          "other_clauses": [
+            "Flash (You may cast this spell any time you could cast an instant.)"
+          ]
+        },
+        "presentation": {
+          "human_optional_trigger": true,
+          "present_ai_twiddle": true
+        }
+      }
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle actual Creature entry tap/untap with real costs and counter responses; independent target type/controller, real optional target refusal and mandatory no-legal-target receipts; actual first/second controller untap and source-departure duration, Flash off-turn casts, Flying block/evasion/reach controls, functional untapped Artifact activation and casting, reentry and snapshot replay. Explicit gaps retain separate ETB priority, full turn upkeep/draw, replacement/control changes and combat damage beyond block legality."
+}

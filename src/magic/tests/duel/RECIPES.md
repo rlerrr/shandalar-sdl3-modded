@@ -3224,3 +3224,113 @@ performing those actions; no policy override is used and these controls are not
 gameplay-failure baselines. Both card homes remain active, including human zero
 controls and productive AI actions. The pending package retains the complete
 scripts, full source Oracle records, and all four original/isolated diagnostics.
+
+## Wave7 component adapters
+
+The Wave7 adapters retain the old declarations and generated bodies. Sources,
+witnesses, and selected components are pinned in six private `*wave7*.json`
+files. They reject changed source text and unreviewed parameters. Additional
+printed clauses remain explicit coverage gaps rather than implied coverage.
+
+- `counterspell_extension` schema 7 covers non-Faerie exile, the second spell
+  cast this turn, Wizard-dependent draw, and Lay Bare's counter component.
+  Cast ordinals come from real preceding casts and `announce_spell`; snapshots
+  replay responses from both sides of the announcement boundary. Hand disclosure
+  remains unobserved.
+- `prevention` schema 7 covers global, X-threshold, creature-only, and hellbent
+  inability to prevent damage. A real Safe Passage and an earlier Lightning Bolt
+  establish prevention before testing the exception. Conditional controls,
+  cleanup, lethal exile, exact payment, and snapshots retain Oracle expectations.
+  The engine's prevention and Demonfire packet-owner defects remain failures.
+- `edict_spell` adds attacking-creature sacrifice and toughness-derived Soldier
+  receipts. Sacrifice's additional cost remains exactly one creature even though
+  its handler asks for another. Plain token mana-value fixtures use Memnite:
+  setting a token flag does not construct a copy with a printed mana cost.
+  Storm copies remain separate from Wing Shards' original-spell component.
+- `graveyard_exile` schema 7 covers a target player's whole graveyard through
+  activation, entry, and an explicitly chosen spell mode. Empty graveyards remain
+  legal targets. Constellation from other enchantments, other Rakdos Charm modes,
+  and Ravenous Trap's alternative cost remain separate components.
+- `tap_spell` schema 10 reuses the basic tap/untap model with complete source pins.
+  Printed untap, draw, controller restrictions, and both tap-or-untap actions are
+  checked where selected. Splice, cipher, blocking obligations, and the declared
+  keyword/alternative-mode clauses remain explicit gaps. Scripted splice menus
+  precede target choices; resolution choices follow a pending response's targets.
+- `equipment` schema 7 covers bonuses derived from hand size, controlled
+  creatures or enchantments, the host's colors or mana value, and attached
+  Equipment. Real equip/cast costs, count changes, moving/detaching, removal,
+  combat, both controllers, and snapshots exercise those components. Live color
+  and mana-value changes remain separate from the fixed witness comparisons.
+
+## Wave8 trigger and activation models
+
+Version-two families derive typed mechanisms from complete pinned Oracle
+clauses. New card enrollment uses those mechanisms and independently pinned
+witnesses; handler reads only annotate the actual input menus. Additional
+printed clauses remain explicit gaps.
+
+- `combat_value_trigger` uses real combat damage for fixed draw/discard,
+  damage-derived milling, and source counters. Blocking, zero damage, repeated
+  real turns, costs, both controllers, and snapshot replay distinguish receipts.
+  Team/type models distinguish the printed source, actual damaging creature,
+  and controller receiving a draw or counter. Printed allied bonuses and actual
+  resolution dialogs remain separate from the damage receipt.
+- `attack_value_trigger` uses actual grouped declarations for self, controlled,
+  and defending-player attack predicates. Life loss, damage, milling, attacking
+  team bonuses, and targeted tapping retain their separate rules expectations.
+- `death_value_trigger` follows actual destruction, combat and sacrifice through
+  the graveyard pipeline, with source/other, controller, owner, and nontoken
+  predicates. Death receipts and last-known information keep Oracle expectations.
+- `death_recurrence` checks persist and undying through real deaths, including
+  counter eligibility, original ownership, return counters, and printed passives.
+- `death_counter_trigger` observes source counters from qualifying deaths.
+  Creature, artifact, Goblin, controller and ownership predicates stay distinct;
+  separate optional triggers permit accepting only one of simultaneous deaths.
+- `cast_value_trigger` observes real spell announcements, with caster, type and
+  color predicates and mandatory/optional draw, life and mill receipts. Countered
+  spells still trigger casts; removing a source after the event does not undo it.
+  Paid triggers use actual mana payments or payment cancellation; a mandatory
+  outer trigger is compatible with an optional payment at resolution. Heroic,
+  temporary pumps, and creature counters use their own event predicates.
+- `entry_trigger_value` tests real entry sacrifices, filtered discard gates,
+  and controlled-permanent returns. Unrelated-entry controls first resolve the
+  source's own entry. Faerie refusal controls use the explicit optional-target
+  intent and forced-action receipt, preserving the printed no-return and
+  self-sacrifice expectations. The original raw-cancellation scripts under
+  `data/pending_cases/wave8/entry-target-refusal.json` remain unexecuted historical
+  evidence; those raw scripts do not count as coverage or known failures.
+  Schema-two hand flows validate complete entry clauses and actual permanent
+  types, then reuse the immutable hand-exchange receipt ledger for ordered
+  draws/discards, optional decisions, ownership, and replay. Enchantments retain
+  their actual type throughout casting and entry.
+- `permanent_value_activation` checks real mana, tapping, sacrifice, life and
+  discard transactions, then their draw/life/mill/discard effects. Printed
+  restrictions and newly cast creature sickness apply to activation queries too.
+  Global activation permission and permission for one selected mode are distinct.
+  Mature battlefield fixtures explicitly initialize ready permanents that enter
+  tapped, including duplicate witnesses; real casts and tapped controls retain
+  their printed entry behavior.
+- `activated_token_creation` derives token characteristics from the creator's
+  Oracle clause, then checks real mana, tap, discard, sacrifice and loyalty costs.
+  Native token identities do not supply default colors, stats or abilities.
+  Mode menus are input annotations; printed sibling effects remain explicit gaps.
+- `draw_value_trigger` follows actual draws, including each draw in a multi-card
+  instruction, optional payments, nested rewards and interleaved self-milling.
+  A card returned to hand is a separate negative control. Failed-draw game
+  outcomes and an unavailable post-draw response window remain explicit gaps.
+- `entry_tutor_trigger` checks real multi-card entry searches, exact name/type/
+  mana-value filters, hand destinations, multiplicities and one shuffle per
+  search. Whole-action decline and accepted fail-to-find are distinct; controls
+  requiring an unavailable separate UI decision remain pending, outside coverage.
+- `return_saboteur_trigger` follows real combat and printed noncombat damage
+  through battlefield and graveyard returns. Ownership, entry effects, payments,
+  cycling, Ninjutsu and regeneration use actual actions. Reanimation expectations
+  put entry abilities under the receiving controller immediately.
+- `battalion_trigger` requires the source among at least three declared attackers.
+  Threshold, source participation, temporary rewards, targets and expiry use
+  completed declarations; the inline trigger boundary offers no response window.
+
+Ordinary rules defects retain their expected values and require exact reviewed
+assertion signatures. Input errors, seeded-entry artifacts, historical blocker
+assignments outside combat, and helper-only phase boundaries are diagnosed as
+testing issues rather than rules-failure baselines.

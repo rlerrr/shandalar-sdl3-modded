@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Everflowing Chalice",
+  "csvid": 10759,
+  "recipes": [
+    {
+      "family": "counted_tap_mana_activation",
+      "version": 2,
+      "oracle_text": "Multikicker {2} (You may pay an additional {2} any number of times as you cast this spell.)\nThis artifact enters with a charge counter on it for each time it was kicked.\n{T}: Add {C} for each charge counter on this artifact.",
+      "params": {
+        "ability": 2,
+        "interface": {
+          "mode_dialog": null,
+          "color_choice": "none"
+        },
+        "other_clauses": [
+          "Multikicker {2} (You may pay an additional {2} any number of times as you cast this spell.)",
+          "This artifact enters with a charge counter on it for each time it was kicked."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "inactive_0",
+        "tapped_0",
+        "repeat_denied_0",
+        "repeat_untap_0",
+        "spend_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "opponent_turn_0",
+        "dynamic_count_0",
+        "entry_zero_0",
+        "entry_one_0",
+        "entry_three_0",
+        "entry_decline_0",
+        "value_1",
+        "payment_1",
+        "inactive_1",
+        "tapped_1",
+        "repeat_denied_1",
+        "repeat_untap_1",
+        "spend_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "opponent_turn_1",
+        "dynamic_count_1",
+        "entry_zero_1",
+        "entry_one_1",
+        "entry_three_1",
+        "entry_decline_1"
+      ]
+    }
+  ]
+}

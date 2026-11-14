@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Duskmantle Guildmage",
+  "csvid": 12933,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "{1}{U}{B}: Whenever a card is put into an opponent's graveyard from anywhere this turn, that player loses 1 life.\n{2}{U}{B}: Target player mills two cards.",
+      "params": {
+        "ability": 1,
+        "present_ai_dialogs": true,
+        "activation_dialogs": {
+          "0": 1,
+          "1": 1
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "tapped_0",
+        "sick_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "cast_0",
+        "fresh_0",
+        "target_self_0",
+        "short_library_0",
+        "empty_library_0",
+        "source_destroyed_pending_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "tapped_1",
+        "sick_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "cast_1",
+        "fresh_1",
+        "target_self_1",
+        "short_library_1",
+        "empty_library_1",
+        "source_destroyed_pending_1"
+      ]
+    }
+  ]
+}

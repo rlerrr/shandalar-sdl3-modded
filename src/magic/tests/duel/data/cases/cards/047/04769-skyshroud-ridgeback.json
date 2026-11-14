@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "card": "Skyshroud Ridgeback",
+  "csvid": 4769,
+  "recipes": [
+    {
+      "family": "countdown_counter_lifecycle",
+      "version": 2,
+      "oracle_text": "Fading 2 (This creature enters with two fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "keywords": [],
+          "entry_tapped": false,
+          "edge": "none",
+          "edge_amount": 0,
+          "activation": "none",
+          "generic": 0,
+          "activation_amount": 0,
+          "kind": "fading",
+          "counter": "fade",
+          "initial": 2,
+          "power": 2,
+          "toughness": 3,
+          "clauses": [
+            "Fading 2 (This creature enters with two fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)"
+          ]
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "lifecycle_0",
+        "opponent_upkeep_0",
+        "first_upkeep_0",
+        "zero_boundary_0",
+        "snap_zero_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "source_destroyed_0",
+        "nonmatching_entry_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "partial_snapshot_0",
+        "resolved_snapshot_0",
+        "expiry_snapshot_0",
+        "two_sources_0",
+        "attack_0",
+        "block_0",
+        "source_bounced_0",
+        "bounce_recast_0",
+        "control_transfer_0",
+        "value_1",
+        "payment_1",
+        "lifecycle_1",
+        "opponent_upkeep_1",
+        "first_upkeep_1",
+        "zero_boundary_1",
+        "snap_zero_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "source_destroyed_1",
+        "nonmatching_entry_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "partial_snapshot_1",
+        "resolved_snapshot_1",
+        "expiry_snapshot_1",
+        "two_sources_1",
+        "attack_1",
+        "block_1",
+        "source_bounced_1",
+        "bounce_recast_1",
+        "control_transfer_1"
+      ]
+    }
+  ]
+}

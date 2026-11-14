@@ -1,0 +1,38 @@
+{
+  "version": 1,
+  "card": "Seaside Haven",
+  "csvid": 6252,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}.\n{W}{U}, {T}, Sacrifice a Bird: Draw a card.",
+      "params": {
+        "ability": 1,
+        "activation_dialogs": {
+          "0": 1
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "card": "Shalai, Voice of Plenty",
+  "csvid": 18502,
+  "recipes": [
+    {
+      "family": "permanent_plus1_activation",
+      "version": 2,
+      "oracle_text": "Flying\nYou, planeswalkers you control, and other creatures you control have hexproof.\n{4}{G}{G}: Put a +1/+1 counter on each creature you control.",
+      "params": {
+        "ability": 2,
+        "interface": {
+          "dialogs": {},
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        },
+        "other_clauses": [
+          "Flying",
+          "You, planeswalkers you control, and other creatures you control have hexproof."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "source_removed_pending_0",
+        "cleanup_0",
+        "fresh_0",
+        "tapped_0",
+        "repeat_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "no_other_creatures_0",
+        "hexproof_0",
+        "flying_attack_0",
+        "flying_block_0",
+        "hexproof_flying_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "source_removed_pending_1",
+        "cleanup_1",
+        "fresh_1",
+        "tapped_1",
+        "repeat_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "no_other_creatures_1",
+        "hexproof_1",
+        "flying_attack_1",
+        "flying_block_1",
+        "hexproof_flying_1"
+      ]
+    }
+  ]
+}

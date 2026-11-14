@@ -33,6 +33,87 @@ set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
   data/removal_wave6_profiles.json data/library_search_wave6_profiles.json
   data/library_search_wave6_witnesses.json data/graveyard_recovery_wave6_witnesses.json
   data/token_creator_wave6_witnesses.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  data/counterspell_wave7_witnesses.json data/prevention_wave7_witnesses.json
+  data/edict_wave7_profiles.json data/graveyard_exile_wave7_profiles.json
+  data/tap_spell_wave7_reviews.json data/equipment_wave7_witnesses.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  combat_value_trigger_recipes.py data/combat_value_trigger_wave8_witnesses.json
+  attack_value_trigger_recipes.py data/attack_value_trigger_wave8_witnesses.json
+  death_value_trigger_recipes.py data/death_value_trigger_wave8_witnesses.json
+  death_recurrence_recipes.py data/death_recurrence_wave8_witnesses.json
+  cast_value_trigger_recipes.py data/cast_value_trigger_wave8_profiles.json
+  entry_trigger_value_recipes.py data/entry_trigger_value_wave8_profiles.json
+  data/entry_trigger_value_wave8_witnesses.json
+  entry_trigger_value_handflow_recipes.py data/entry_trigger_value_wave8_handflow_profiles.json
+  entry_trigger_value_selection_recipes.py data/entry_trigger_value_wave8_selection_profiles.json
+  entry_trigger_value_gate_recipes.py data/entry_trigger_value_wave8_gate_profiles.json
+  permanent_value_activation_recipes.py data/permanent_value_activation_wave8_witnesses.json
+  activated_token_creation_recipes.py data/activated_token_creation_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  draw_value_trigger_recipes.py data/draw_value_trigger_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  death_counter_trigger_recipes.py data/death_counter_trigger_wave8_profiles.json
+  battalion_trigger_recipes.py data/battalion_trigger_wave8_profiles.json
+  entry_tutor_trigger_recipes.py data/entry_tutor_trigger_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  return_saboteur_trigger_recipes.py data/return_saboteur_trigger_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  charge_counter_activation_recipes.py data/charge_counter_activation_wave8_profiles.json
+  death_counter_extended_recipes.py data/death_counter_extended_wave8_profiles.json
+  entry_land_tutor_recipes.py data/entry_land_tutor_wave8_profiles.json
+  cast_untap_trigger_recipes.py data/cast_untap_trigger_wave8_profiles.json
+  mentor_attack_counter_recipes.py data/mentor_attack_counter_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  combat_library_prefix_recipes.py data/combat_library_prefix_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  attack_team_reward_recipes.py data/attack_team_reward_wave8_profiles.json
+  combat_targeted_removal_recipes.py data/combat_targeted_removal_wave8_profiles.json
+  cast_extort_trigger_recipes.py data/cast_extort_trigger_wave8_profiles.json
+  permanent_plus1_activation_recipes.py data/permanent_plus1_activation_wave8_profiles.json
+  entry_tap_trigger_recipes.py data/entry_tap_trigger_wave8_profiles.json
+  death_self_destination_recipes.py data/death_self_destination_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  upkeep_value_trigger_recipes.py data/upkeep_value_trigger_wave8_profiles.json
+  storm_effect_recipes.py data/storm_effect_wave8_profiles.json
+  death_target_effect_recipes.py data/death_target_effect_wave8_profiles.json
+  entry_linked_exile_recipes.py data/entry_linked_exile_wave8_profiles.json
+  block_damage_destruction_recipes.py data/block_damage_destruction_wave8_profiles.json
+  activated_temporary_pt_recipes.py data/activated_temporary_pt_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  upkeep_permanent_count_recipes.py data/upkeep_permanent_count_wave8_profiles.json
+  death_player_value_recipes.py data/death_player_value_wave8_profiles.json
+  entry_own_return_recipes.py data/entry_own_return_wave8_profiles.json
+  cast_temporary_stat_trigger_recipes.py data/cast_temporary_stat_trigger_wave8_profiles.json
+  activated_temporary_modifier_recipes.py data/activated_temporary_modifier_wave8_profiles.json
+  block_stat_trigger_recipes.py data/block_stat_trigger_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  upkeep_hand_value_recipes.py data/upkeep_hand_value_wave8_profiles.json
+  entry_aura_freeze_recipes.py data/entry_aura_freeze_wave8_profiles.json
+  cast_counter_engine_recipes.py data/cast_counter_engine_wave8_profiles.json
+  death_library_tutor_recipes.py data/death_library_tutor_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  cast_reload_tap_activation_recipes.py data/cast_reload_tap_activation_wave8_profiles.json
+  upkeep_controlled_return_recipes.py data/upkeep_controlled_return_wave8_profiles.json
+  aura_restriction_recipes.py data/aura_restriction_wave8_profiles.json
+  death_paid_value_recipes.py data/death_paid_value_wave8_profiles.json
+  conditional_blocking_legality_recipes.py data/conditional_blocking_legality_wave8_profiles.json
+  printed_tap_mana_activation_recipes.py data/printed_tap_mana_activation_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  upkeep_echo_payment_recipes.py data/upkeep_echo_payment_wave8_profiles.json
+  cast_conjunctive_base_stat_recipes.py data/cast_conjunctive_base_stat_wave8_profiles.json
+  paid_unblockability_activation_recipes.py data/paid_unblockability_activation_wave8_profiles.json
+  aura_mana_enhancement_recipes.py data/aura_mana_enhancement_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  counted_tap_mana_activation_recipes.py data/counted_tap_mana_activation_wave8_profiles.json
+  death_modular_transfer_recipes.py data/death_modular_transfer_wave8_profiles.json)
+set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS
+  cascade_spell_effect_recipes.py data/cascade_spell_effect_wave8_profiles.json
+  death_modular_composition_recipes.py data/death_modular_composition_wave8_profiles.json
+  unblockability_composition_recipes.py data/unblockability_composition_wave8_profiles.json
+  countdown_counter_lifecycle_recipes.py data/countdown_counter_lifecycle_wave8_profiles.json
+  counter_condition_recurrence_recipes.py data/counter_condition_recurrence_wave8_profiles.json
+  cumulative_upkeep_payment_recipes.py data/cumulative_upkeep_payment_wave8_profiles.json)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS hand_exchange_recipes.py data/hand_exchange_witnesses.json)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS value_flow_recipes.py variable_value_recipes.py variable_damage_recipes.py case_archive.py)
 set_property(DIRECTORY APPEND PROPERTY CMAKE_CONFIGURE_DEPENDS mass_removal_recipes.py data/mass_removal_witnesses.json)
@@ -117,7 +198,7 @@ if(EMSCRIPTEN)
   # Case bodies are loaded on demand; grow the engine arena when needed.
   target_link_options(duel_card_tests PRIVATE -O0 -sENVIRONMENT=node -sFETCH=1 -sEXIT_RUNTIME=1 -sALLOW_MEMORY_GROWTH=1
     -sINITIAL_MEMORY=256MB -sSTACK_SIZE=4MB -sASSERTIONS=1 -sFORCE_FILESYSTEM=1
-    -lnodefs.js "--pre-js=${CMAKE_CURRENT_SOURCE_DIR}/node_results.js"
+    -sASYNCIFY=1 -lidbfs.js -lnodefs.js "--pre-js=${CMAKE_CURRENT_SOURCE_DIR}/node_results.js"
     "--pre-js=${duel_generated}/node_case_data.js")
   foreach(asset cards.dat Text.res uistrings.txt MP_UIStrings.txt prompts.txt)
     target_link_options(duel_card_tests PRIVATE "--preload-file=${SHANDALAR_MODDED_ASSET_DIR}/${asset}@/assets_modded/${asset}")
@@ -167,6 +248,12 @@ set_tests_properties(duel.case_files PROPERTIES LABELS "duel;harness" TIMEOUT 15
 add_test(NAME duel.case_archive COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/test_case_archive.py")
 set_tests_properties(duel.case_archive PROPERTIES LABELS "duel;harness" TIMEOUT 15)
+add_test(NAME duel.counter_observation COMMAND "${Python3_EXECUTABLE}"
+  "${CMAKE_CURRENT_SOURCE_DIR}/test_counter_observation.py")
+set_tests_properties(duel.counter_observation PROPERTIES LABELS "duel;harness" TIMEOUT 15)
+add_test(NAME duel.input_observations COMMAND "${Python3_EXECUTABLE}"
+  "${CMAKE_CURRENT_SOURCE_DIR}/test_input_observations.py")
+set_tests_properties(duel.input_observations PROPERTIES LABELS "duel;harness" TIMEOUT 15)
 add_test(NAME duel.recipes COMMAND "${Python3_EXECUTABLE}"
   -m unittest discover -s "${CMAKE_CURRENT_SOURCE_DIR}" -p "test_*recipes.py")
 set_tests_properties(duel.recipes PROPERTIES LABELS "duel;harness" TIMEOUT 180)
@@ -191,6 +278,35 @@ set_tests_properties(duel.runner_batches PROPERTIES LABELS "duel;harness" TIMEOU
 add_test(NAME duel.template_oracle COMMAND "${Python3_EXECUTABLE}"
   "${CMAKE_CURRENT_SOURCE_DIR}/test_template_oracle.py")
 set_tests_properties(duel.template_oracle PROPERTIES LABELS "duel;harness" TIMEOUT 15)
+
+foreach(counter_case IN ITEMS
+    RealChargeCostsAndSnapshotsPreserveCountsWithoutChangingQueryState
+    RealLoyaltyEntryAndActivationCostsReplayForBothControllers)
+  if(EMSCRIPTEN)
+    add_test(NAME "duel.counter.${counter_case}" COMMAND "${duel_node}" "$<TARGET_FILE:duel_card_tests>"
+      "--gtest_filter=CounterObservation.${counter_case}")
+  else()
+    add_test(NAME "duel.counter.${counter_case}" COMMAND duel_card_tests
+      "--gtest_filter=CounterObservation.${counter_case}")
+  endif()
+  set_tests_properties("duel.counter.${counter_case}" PROPERTIES LABELS "duel;engine" TIMEOUT 30
+    WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>")
+endforeach()
+
+foreach(input_case IN ITEMS
+    TriggerSourceSelection.LiveSourceDefersAcrossEarlierWindowsAndReplaysWithoutLegacyAmbiguity
+    OptionalTargetReceipt.RealCancellationAndMandatoryFallbackRetainPolicyAndSnapshotCounts
+    ActivationModeIntent.MenusAutomaticValuesAndManaFallbacksStayDistinctAcrossSnapshots
+    ActivationHeuristics.DisabledGraveyardModeDoesNotPromptBeforeTradingPostChoice)
+  if(EMSCRIPTEN)
+    add_test(NAME "duel.input.${input_case}" COMMAND "${duel_node}" "$<TARGET_FILE:duel_card_tests>"
+      "--gtest_filter=${input_case}")
+  else()
+    add_test(NAME "duel.input.${input_case}" COMMAND duel_card_tests "--gtest_filter=${input_case}")
+  endif()
+  set_tests_properties("duel.input.${input_case}" PROPERTIES LABELS "duel;engine" TIMEOUT 30
+    WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>")
+endforeach()
 
 if(NOT SHANDALAR_DUEL_AUTHORING_BUILD)
 if(EMSCRIPTEN)
@@ -236,6 +352,7 @@ foreach(flashback_case IN ITEMS
     WORKING_DIRECTORY "$<TARGET_FILE_DIR:duel_card_tests>")
 endforeach()
 foreach(observation_case IN ITEMS
+    CastAnnouncement.RealHistoryAndCounterResolutionSurviveBothSnapshotBoundaries
     CardCallbackAbi.RegisteredHandlersUseThreeArgumentsForBothControllers
     FiresOfYavimaya.ExileNotificationUsesIidWhileSurvivorStillGrantsHaste
     FiresOfYavimaya.SacrificePumpKeepsCostsAndTemporaryEffect

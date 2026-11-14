@@ -84,8 +84,9 @@ int mana_battery_generic(int player, int card, event_t event, color_t color, int
       if (is_animated_and_sick(player, card) != 0)
         return 0;
     }
-    else if (event == EVENT_ACTIVATE)
-      load_text(NULL, "MANABATTERY");
+    /* dialog_impl parses option strings even for availability queries and
+       resolution.  Use loaded host strings, never the original exe address. */
+    load_text(NULL, "MANABATTERY");
 
     num_counters = count_counters(player, card, COUNTER_CHARGE);
     charge_priority = 1;
@@ -100,7 +101,7 @@ int mana_battery_generic(int player, int card, event_t event, color_t color, int
     }
     int mana_available = can_produce_mana(player, card);
     int choice = dialog_impl(
-        player, card, event, DLG_AUTOCHOOSE_IF_1, text_lines, mana_available, 2, 0x715dd8,
+        player, card, event, DLG_AUTOCHOOSE_IF_1, text_lines[0], mana_available, 2, text_lines[1],
         charge_available, charge_priority, 0, 0, 0, 0);
     if (event == EVENT_CAN_ACTIVATE)
       return choice;

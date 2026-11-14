@@ -1,0 +1,792 @@
+{
+  "version": 1,
+  "sources": {
+    "Agent of Horizons": {
+      "csvid": 13367,
+      "handler": "manalinkeh_card_agent_of_horizons",
+      "oracle": {
+        "oracle_id": "668a6a9d-80fc-437b-99b8-6807e92eabca",
+        "name": "Agent of Horizons",
+        "oracle_text": "{2}{U}: This creature can't be blocked this turn.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Human Rogue",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ths/148/agent-of-horizons?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "{2}{U}",
+        "tap": false,
+        "scope": "self",
+        "timing": "any",
+        "target_power_max": null,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/theros.c",
+        "line": 3728,
+        "symbol": "card_agent_of_horizons",
+        "sha256": "f5465152c19f8162b38e332d548fca9981da11c7085cfb9c247cd3d3ba1c0924"
+      }
+    },
+    "Amphin Pathmage": {
+      "csvid": 14070,
+      "handler": "manalinkeh_card_amphin_pathmage",
+      "oracle": {
+        "oracle_id": "53e4273c-3292-47a0-90d1-8a0eb0eaf381",
+        "name": "Amphin Pathmage",
+        "oracle_text": "{2}{U}: Target creature can't be blocked this turn.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Salamander Wizard",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/45/amphin-pathmage?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "{2}{U}",
+        "tap": false,
+        "scope": "any",
+        "timing": "any",
+        "target_power_max": null,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/m15.c",
+        "line": 1052,
+        "symbol": "card_amphin_pathmage",
+        "sha256": "fd80394f9a136e6d5db4610715e46fe20761cbe9986e6db967ffdcd078d48d52"
+      }
+    },
+    "Zhuge Jin, Wu Strategist": {
+      "csvid": 4268,
+      "handler": "manalinkeh_card_zhuge_jin_wu_strategist",
+      "oracle": {
+        "oracle_id": "ce995d3f-be7c-4d2a-8ec4-c7f7f831f0bf",
+        "name": "Zhuge Jin, Wu Strategist",
+        "oracle_text": "{T}: Target creature can't be blocked this turn. Activate only during your turn, before attackers are declared.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Creature — Human Advisor",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ptk/66/zhuge-jin-wu-strategist?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "",
+        "tap": true,
+        "scope": "any",
+        "timing": "own_before_attackers",
+        "target_power_max": null,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/portal_1_2_3k.c",
+        "line": 2613,
+        "symbol": "card_zhuge_jin_wu_strategist",
+        "sha256": "9ebb12c4108ac5848332addac2199b3e7416492fe5ce24e38e49aaa7e3d38f33"
+      }
+    },
+    "Goblin Tunneler": {
+      "csvid": 10938,
+      "handler": "manalinkeh_card_dwarven_warriors",
+      "oracle": {
+        "oracle_id": "1005bc16-8a6a-476a-a647-4ed40d2e96de",
+        "name": "Goblin Tunneler",
+        "oracle_text": "{T}: Target creature with power 2 or less can't be blocked this turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Goblin Rogue",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddt/49/goblin-tunneler?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "",
+        "tap": true,
+        "scope": "any",
+        "timing": "any",
+        "target_power_max": 2,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/unlimited.c",
+        "line": 2096,
+        "symbol": "card_dwarven_warriors",
+        "sha256": "b34b0614a1cdd978fbcf606165da0fe163743cd884d34d3c4659bc58b29e1f7a"
+      }
+    },
+    "Kaseto, Orochi Archmage": {
+      "csvid": 15524,
+      "handler": "manalinkeh_card_kaseto_orochi_archmage",
+      "oracle": {
+        "oracle_id": "198b6c6f-a480-4672-9d87-b0cb5d8ed1c0",
+        "name": "Kaseto, Orochi Archmage",
+        "oracle_text": "{G}{U}: Target creature can't be blocked this turn. If that creature is a Snake, it gets +2/+2 until end of turn.",
+        "mana_cost": "{1}{G}{U}",
+        "type_line": "Legendary Creature — Snake Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/221/kaseto-orochi-archmage?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "{G}{U}",
+        "tap": false,
+        "scope": "any",
+        "timing": "any",
+        "target_power_max": null,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          2,
+          2
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/commander_2015.c",
+        "line": 1939,
+        "symbol": "card_kaseto_orochi_archmage",
+        "sha256": "52769bf1ea15d408a0373f367a3138f79403993e967ec9783dc0a4f4c0a7278b"
+      }
+    },
+    "Ghirapur Guide": {
+      "csvid": 16391,
+      "handler": "manalinkeh_card_ghirapur_guide",
+      "oracle": {
+        "oracle_id": "92d5bb7e-08ba-448e-8763-f47c89505e80",
+        "name": "Ghirapur Guide",
+        "oracle_text": "{2}{G}: Target creature you control can't be blocked by creatures with power 2 or less this turn.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Elf Scout",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/400/ghirapur-guide?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "{2}{G}",
+        "tap": false,
+        "scope": "own",
+        "timing": "any",
+        "target_power_max": null,
+        "blocker_power_max": 2,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/kaladesh.c",
+        "line": 4677,
+        "symbol": "card_ghirapur_guide",
+        "sha256": "4caca6b75b1631533b587bf2bdf76b1c13669c9b4bc4ba6d222b70932dff87e5"
+      }
+    },
+    "Coralhelm Guide": {
+      "csvid": 15300,
+      "handler": "manalinkeh_card_coralhelm_guide",
+      "oracle": {
+        "oracle_id": "979e670e-bbd8-4595-8d9d-ad1c0bc422e3",
+        "name": "Coralhelm Guide",
+        "oracle_text": "{4}{U}: Target creature can't be blocked this turn.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Merfolk Scout Ally",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/116/coralhelm-guide?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "{4}{U}",
+        "tap": false,
+        "scope": "any",
+        "timing": "any",
+        "target_power_max": null,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/battle_for_zendikar.c",
+        "line": 1868,
+        "symbol": "card_coralhelm_guide",
+        "sha256": "aff5dde7eebeb6b76c017e7dcaaf8f46e60466487eaffa20d3a383776cf832e6"
+      }
+    },
+    "Passwall Adept": {
+      "csvid": 19452,
+      "handler": "manalinkeh_card_amphin_pathmage",
+      "oracle": {
+        "oracle_id": "9a2bc266-4076-4923-b201-5898b18cbad9",
+        "name": "Passwall Adept",
+        "oracle_text": "{2}{U}: Target creature can't be blocked this turn.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/91/passwall-adept?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "{2}{U}",
+        "tap": false,
+        "scope": "any",
+        "timing": "any",
+        "target_power_max": null,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/m15.c",
+        "line": 1052,
+        "symbol": "card_amphin_pathmage",
+        "sha256": "fd80394f9a136e6d5db4610715e46fe20761cbe9986e6db967ffdcd078d48d52"
+      }
+    },
+    "Crafty Pathmage": {
+      "csvid": 6095,
+      "handler": "manalinkeh_card_dwarven_warriors",
+      "oracle": {
+        "oracle_id": "c4020178-71d9-4363-a0bd-b9a7eecd5d02",
+        "name": "Crafty Pathmage",
+        "oracle_text": "{T}: Target creature with power 2 or less can't be blocked this turn.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/77/crafty-pathmage?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "",
+        "tap": true,
+        "scope": "any",
+        "timing": "any",
+        "target_power_max": 2,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/unlimited.c",
+        "line": 2096,
+        "symbol": "card_dwarven_warriors",
+        "sha256": "b34b0614a1cdd978fbcf606165da0fe163743cd884d34d3c4659bc58b29e1f7a"
+      }
+    },
+    "Dwarven Nomad": {
+      "csvid": 2458,
+      "handler": "manalinkeh_card_dwarven_warriors",
+      "oracle": {
+        "oracle_id": "db130ff4-7525-421f-b7e7-200921ecbdec",
+        "name": "Dwarven Nomad",
+        "oracle_text": "{T}: Target creature with power 2 or less can't be blocked this turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Dwarf Nomad",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/170/dwarven-nomad?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "",
+        "tap": true,
+        "scope": "any",
+        "timing": "any",
+        "target_power_max": 2,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/unlimited.c",
+        "line": 2096,
+        "symbol": "card_dwarven_warriors",
+        "sha256": "b34b0614a1cdd978fbcf606165da0fe163743cd884d34d3c4659bc58b29e1f7a"
+      }
+    },
+    "Pathmaker Initiate": {
+      "csvid": 16991,
+      "handler": "manalinkeh_card_dwarven_warriors",
+      "oracle": {
+        "oracle_id": "c0247a19-9c8f-422c-88cf-9f298c3a8c96",
+        "name": "Pathmaker Initiate",
+        "oracle_text": "{T}: Target creature with power 2 or less can't be blocked this turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Human Wizard",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/182/pathmaker-initiate?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "",
+        "tap": true,
+        "scope": "any",
+        "timing": "any",
+        "target_power_max": 2,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/unlimited.c",
+        "line": 2096,
+        "symbol": "card_dwarven_warriors",
+        "sha256": "b34b0614a1cdd978fbcf606165da0fe163743cd884d34d3c4659bc58b29e1f7a"
+      }
+    },
+    "Frilled Sea Serpent": {
+      "csvid": 18923,
+      "handler": "manalinkeh_card_frilled_sea_serpent",
+      "oracle": {
+        "oracle_id": "6dc534e8-e22b-4e3c-aa30-c6e4c84f698c",
+        "name": "Frilled Sea Serpent",
+        "oracle_text": "{5}{U}{U}: This creature can't be blocked this turn.",
+        "mana_cost": "{4}{U}{U}",
+        "type_line": "Creature — Serpent",
+        "power": "4",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/61/frilled-sea-serpent?utm_source=api"
+      },
+      "params": {
+        "activation_cost": "{5}{U}{U}",
+        "tap": false,
+        "scope": "self",
+        "timing": "any",
+        "target_power_max": null,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/m19.c",
+        "line": 1174,
+        "symbol": "card_frilled_sea_serpent",
+        "sha256": "5009796aca8ddc00d1bb674a0bdc6cbc100564565f679eb55aa7cad2c503febf"
+      }
+    }
+  },
+  "witnesses": {
+    "Centaur Courser": {
+      "oracle_id": "2f5bf099-2e01-4e1c-9ebf-0ce0ac66939e",
+      "name": "Centaur Courser",
+      "oracle_text": "",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Centaur Warrior",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m20/168/centaur-courser?utm_source=api"
+    },
+    "Diplomatic Immunity": {
+      "oracle_id": "f1a3153c-0200-4ff2-b7d5-48d23920bb3c",
+      "name": "Diplomatic Immunity",
+      "oracle_text": "Enchant creature\nShroud (A permanent with shroud can't be the target of spells or abilities.)\nEnchanted creature has shroud.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Enchantment — Aura",
+      "keywords": [
+        "Shroud",
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mmq/75/diplomatic-immunity?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Orcish Artillery": {
+      "oracle_id": "c000811e-bde7-4840-a3bb-9714d5c977eb",
+      "name": "Orcish Artillery",
+      "oracle_text": "{T}: This creature deals 2 damage to any target and 3 damage to you.",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Orc Warrior",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/220/orcish-artillery?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Sakura-Tribe Elder": {
+      "oracle_id": "e3afc704-220f-498f-9eaa-0821b17dc24c",
+      "name": "Sakura-Tribe Elder",
+      "oracle_text": "Sacrifice this creature: Search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Snake Shaman",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/soc/285/sakura-tribe-elder?utm_source=api"
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "name": "Twiddle",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Wall of Denial": {
+      "oracle_id": "9cc092f9-e8f0-40ea-847d-813b70f889db",
+      "name": "Wall of Denial",
+      "oracle_text": "Defender, flying\nShroud (This creature can't be the target of spells or abilities.)",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Creature — Wall",
+      "power": "0",
+      "toughness": "8",
+      "keywords": [
+        "Flying",
+        "Shroud",
+        "Defender"
+      ],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/939/wall-of-denial?utm_source=api"
+    }
+  },
+  "witness_handlers": {
+    "Centaur Courser": "card_dummy",
+    "Diplomatic Immunity": "manalinkeh_card_diplomatic_immunity",
+    "Forest": "manalinkeh_plain_mana_producer",
+    "Giant Growth": "manalinkeh_card_giant_growth",
+    "Grizzly Bears": "card_dummy",
+    "Island": "manalinkeh_plain_mana_producer",
+    "Lightning Bolt": "manalinkeh_card_lightning_bolt",
+    "Mountain": "manalinkeh_plain_mana_producer",
+    "Orcish Artillery": "manalinkeh_card_orcish_artillery",
+    "Ornithopter": "card_dummy",
+    "Plains": "manalinkeh_plain_mana_producer",
+    "Sakura-Tribe Elder": "manalinkeh_card_sakura_tribe_elder",
+    "Twiddle": "manalinkeh_card_twiddle",
+    "Unsummon": "manalinkeh_card_unsummon",
+    "Wall of Denial": "card_dummy"
+  },
+  "native_characteristics_only_witnesses": [
+    "Centaur Courser",
+    "Grizzly Bears",
+    "Ornithopter",
+    "Wall of Denial"
+  ],
+  "native_witness_scope": "Setup characteristics and real combat only; no dummy callback is used for a cast, activation or cost witness."
+}

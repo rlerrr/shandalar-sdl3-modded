@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Halimar Depths",
+  "csvid": 10773,
+  "recipes": [
+    {
+      "family": "entry_trigger_value",
+      "version": 2,
+      "oracle_text": "This land enters tapped.\nWhen this land enters, look at the top three cards of your library, then put them back in any order.\n{T}: Add {U}.",
+      "params": {
+        "schema": 3,
+        "mechanism": {
+          "kind": "reorder",
+          "window": 3,
+          "scope": "any",
+          "optional": false,
+          "remainder": "top",
+          "target_player": false,
+          "clause": "When this land enters, look at the top three cards of your library, then put them back in any order.",
+          "gaps": [
+            "This land enters tapped.",
+            "{T}: Add {U}."
+          ]
+        },
+        "presentation": {
+          "selector": "reorder"
+        }
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "cleanup_0",
+        "empty_library_0",
+        "short_library_0",
+        "one_card_library_0",
+        "duplicates_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bounce_recast_0",
+        "source_destroyed_0",
+        "nonmatching_entry_0",
+        "reorder_0",
+        "effect_1",
+        "payment_1",
+        "cleanup_1",
+        "empty_library_1",
+        "short_library_1",
+        "one_card_library_1",
+        "duplicates_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bounce_recast_1",
+        "source_destroyed_1",
+        "nonmatching_entry_1",
+        "reorder_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Actual typed permanent entry; Oracle-bounded fixed window, filters and selected quantity, optional decline/mandatory choice, legal remainder ordering and zone conservation, both source controllers and targeted library ownership, exact ordinary costs, denied/countered casts where legal, actual bounce/reentry, creature-only blink and snapshots. Real Land entries use native land branch; repeated land entry occurs on a later own turn. Complete additional printed clauses are explicit gaps."
+}

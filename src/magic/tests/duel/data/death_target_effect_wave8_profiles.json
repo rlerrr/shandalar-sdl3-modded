@@ -1,0 +1,1260 @@
+{
+  "version": 1,
+  "oracle_sha256": "c11dcfedde2ed4ce99ff355f5cf30c187c2b3745c87a03319e715bbfec17cf50",
+  "sources": {
+    "Archon of Justice": {
+      "csvid": 9734,
+      "handler": "manalinkeh_card_archon_of_justice",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "d551931d-4ebe-4acc-9e87-6c628897071a",
+        "name": "Archon of Justice",
+        "oracle_text": "Flying\nWhen this creature dies, exile target permanent.",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Creature \u2014 Archon",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/89/archon-of-justice?utm_source=api"
+      }
+    },
+    "Elder Cathar": {
+      "csvid": 11936,
+      "handler": "manalinkeh_card_elder_cathar",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "ba9ac0a9-735d-4bca-9d24-586aca963872",
+        "name": "Elder Cathar",
+        "oracle_text": "When this creature dies, put a +1/+1 counter on target creature you control. If that creature is a Human, put two +1/+1 counters on it instead.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature \u2014 Human Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddq/9/elder-cathar?utm_source=api"
+      }
+    },
+    "Festering Goblin": {
+      "csvid": 6142,
+      "handler": "manalinkeh_card_festering_goblin",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "66fb4764-d309-4c30-a2a4-474f9030dc87",
+        "name": "Festering Goblin",
+        "oracle_text": "When this creature dies, target creature gets -1/-1 until end of turn.",
+        "mana_cost": "{B}",
+        "type_line": "Creature \u2014 Zombie Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/85/festering-goblin?utm_source=api"
+      }
+    },
+    "Festering Newt": {
+      "csvid": 13287,
+      "handler": "manalinkeh_card_festering_newt",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "5887922e-d1fb-44e2-9498-2065ce8ac870",
+        "name": "Festering Newt",
+        "oracle_text": "When this creature dies, target creature an opponent controls gets -1/-1 until end of turn. That creature gets -4/-4 instead if you control a creature named Bogbrew Witch.",
+        "mana_cost": "{B}",
+        "type_line": "Creature \u2014 Salamander",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/234/festering-newt?utm_source=api"
+      }
+    },
+    "Reliquary Monk": {
+      "csvid": 4178,
+      "handler": "manalinkeh_card_reliquary_monk",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "a149ac31-b792-4fbe-903a-788bbdfd5e97",
+        "name": "Reliquary Monk",
+        "oracle_text": "When this creature dies, destroy target artifact or enchantment.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature \u2014 Human Monk Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uds/14/reliquary-monk?utm_source=api"
+      }
+    },
+    "Noxious Dragon": {
+      "csvid": 14597,
+      "handler": "manalinkeh_card_noxious_dragon",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "fe75b364-9e65-499d-9763-76844cf88cf7",
+        "name": "Noxious Dragon",
+        "oracle_text": "Flying\nWhen this creature dies, you may destroy target creature with mana value 3 or less.",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Creature \u2014 Dragon",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/139/noxious-dragon?utm_source=api"
+      }
+    },
+    "Festering Mummy": {
+      "csvid": 16907,
+      "handler": "manalinkeh_card_necropede",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "bdf78365-5887-497e-af25-ca0cb731f35a",
+        "name": "Festering Mummy",
+        "oracle_text": "When this creature dies, you may put a -1/-1 counter on target creature.",
+        "mana_cost": "{B}",
+        "type_line": "Creature \u2014 Zombie",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/91/festering-mummy?utm_source=api"
+      }
+    },
+    "Sparring Construct": {
+      "csvid": 18513,
+      "handler": "manalinkeh_card_lawless_broker",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "bc948e19-816b-4c13-a36b-73b3e0472dca",
+        "name": "Sparring Construct",
+        "oracle_text": "When this creature dies, put a +1/+1 counter on target creature you control.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact Creature \u2014 Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/232/sparring-construct?utm_source=api"
+      }
+    },
+    "Polluted Dead": {
+      "csvid": 12441,
+      "handler": "manalinkeh_card_polluted_dead",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "5ffca600-5286-4086-9efe-c398babeb6ae",
+        "name": "Polluted Dead",
+        "oracle_text": "When this creature dies, destroy target land.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature \u2014 Zombie",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/116/polluted-dead?utm_source=api"
+      }
+    },
+    "Undead Executioner": {
+      "csvid": 12498,
+      "handler": "manalinkeh_card_undead_executioner",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "e2bfac84-0e2f-4f3e-8d87-a555c26093a6",
+        "name": "Undead Executioner",
+        "oracle_text": "When this creature dies, you may have target creature get -2/-2 until end of turn.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature \u2014 Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/avr/123/undead-executioner?utm_source=api"
+      }
+    },
+    "Destructor Dragon": {
+      "csvid": 14537,
+      "handler": "manalinkeh_card_destructor_dragon",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "b0104d66-5c28-482f-838a-416aabaeaf43",
+        "name": "Destructor Dragon",
+        "oracle_text": "Flying\nWhen this creature dies, destroy target noncreature permanent.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature \u2014 Dragon",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/127/destructor-dragon?utm_source=api"
+      }
+    },
+    "Fire Snake": {
+      "csvid": 2882,
+      "handler": "manalinkeh_card_polluted_dead",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "e96542ed-1931-4da1-9d9e-d10878c4ae6b",
+        "name": "Fire Snake",
+        "oracle_text": "When this creature dies, destroy target land.",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature \u2014 Snake",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/por/127/fire-snake?utm_source=api"
+      }
+    },
+    "Goblin Gardener": {
+      "csvid": 4134,
+      "handler": "manalinkeh_card_polluted_dead",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "29781b19-0917-4d8f-abe3-df0b7e96d8a6",
+        "name": "Goblin Gardener",
+        "oracle_text": "When this creature dies, destroy target land.",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature \u2014 Goblin",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/7ed/188/goblin-gardener?utm_source=api"
+      }
+    },
+    "Shambling Goblin": {
+      "csvid": 15016,
+      "handler": "manalinkeh_card_shambling_goblin",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "9d8c39f2-ddb5-4b79-861a-e1e25f447c29",
+        "name": "Shambling Goblin",
+        "oracle_text": "When this creature dies, target creature an opponent controls gets -1/-1 until end of turn.",
+        "mana_cost": "{B}",
+        "type_line": "Creature \u2014 Zombie Goblin",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/277/shambling-goblin?utm_source=api"
+      }
+    },
+    "Lawless Broker": {
+      "csvid": 16430,
+      "handler": "manalinkeh_card_lawless_broker",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "d17d085f-aeda-4b23-ab80-729d070ae813",
+        "name": "Lawless Broker",
+        "oracle_text": "When this creature dies, put a +1/+1 counter on target creature you control.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature \u2014 Aetherborn Rogue",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/249/lawless-broker?utm_source=api"
+      }
+    },
+    "Spinal Centipede": {
+      "csvid": 19488,
+      "handler": "manalinkeh_card_lawless_broker",
+      "kind": "card",
+      "oracle": {
+        "oracle_id": "43d44a7f-829a-4f4d-9f71-2f4384ddd803",
+        "name": "Spinal Centipede",
+        "oracle_text": "When this creature dies, put a +1/+1 counter on target creature you control.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature \u2014 Insect",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/grn/86/spinal-centipede?utm_source=api"
+      }
+    }
+  },
+  "cards": {
+    "Bogbrew Witch": {
+      "oracle_id": "ad138184-ab2d-407a-9f9c-94b0675be19d",
+      "name": "Bogbrew Witch",
+      "oracle_text": "{2}, {T}: Search your library for a card named Festering Newt or Bubbling Cauldron, put it onto the battlefield tapped, then shuffle.",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature \u2014 Human Wizard",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/jmp/211/bogbrew-witch?utm_source=api"
+    },
+    "Centaur Courser": {
+      "oracle_id": "2f5bf099-2e01-4e1c-9ebf-0ce0ac66939e",
+      "name": "Centaur Courser",
+      "oracle_text": "",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature \u2014 Centaur Warrior",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m20/168/centaur-courser?utm_source=api"
+    },
+    "Cloudshift": {
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "name": "Cloudshift",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Darksteel Myr": {
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "name": "Darksteel Myr",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature \u2014 Myr",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+    },
+    "Dragonscale Boon": {
+      "oracle_id": "629b3aee-b8fd-495a-a988-815a0aaf3e82",
+      "name": "Dragonscale Boon",
+      "oracle_text": "Put two +1/+1 counters on target creature and untap it.",
+      "mana_cost": "{3}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ktk/131/dragonscale-boon?utm_source=api"
+    },
+    "Eager Cadet": {
+      "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+      "name": "Eager Cadet",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature \u2014 Human Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+    },
+    "Exploration": {
+      "oracle_id": "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
+      "name": "Exploration",
+      "oracle_text": "You may play an additional land on each of your turns.",
+      "mana_cost": "{G}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/159/exploration?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature \u2014 Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+    },
+    "Grasp of Darkness": {
+      "oracle_id": "494c819d-7d73-432b-8c96-4cb9dcd31094",
+      "name": "Grasp of Darkness",
+      "oracle_text": "Target creature gets -4/-4 until end of turn.",
+      "mana_cost": "{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m21/102/grasp-of-darkness?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature \u2014 Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Lightning Blast": {
+      "oracle_id": "91fd731c-e076-4f2d-9f22-872880c3cc3d",
+      "name": "Lightning Blast",
+      "oracle_text": "Lightning Blast deals 4 damage to any target.",
+      "mana_cost": "{3}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tpr/138/lightning-blast?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Memnite": {
+      "oracle_id": "7663ac7c-1de3-4250-b96a-fae9dbd66a27",
+      "name": "Memnite",
+      "oracle_text": "",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Construct",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/td2/2/memnite?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Scaled Wurm": {
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "name": "Scaled Wurm",
+      "oracle_text": "",
+      "mana_cost": "{7}{G}",
+      "type_line": "Creature \u2014 Wurm",
+      "power": "7",
+      "toughness": "6",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 8.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cns/178/scaled-wurm?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Sphinx of Jwar Isle": {
+      "oracle_id": "3951f13e-f6dd-4d67-a088-23925baaf99b",
+      "name": "Sphinx of Jwar Isle",
+      "oracle_text": "Flying\nShroud (This creature can't be the target of spells or abilities.)\nYou may look at the top card of your library any time.",
+      "mana_cost": "{4}{U}{U}",
+      "type_line": "Creature \u2014 Sphinx",
+      "power": "5",
+      "toughness": "5",
+      "keywords": [
+        "Flying",
+        "Shroud"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/c18/103/sphinx-of-jwar-isle?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Task Force": {
+      "oracle_id": "b80415cd-5887-4146-852e-73119fcd3ec6",
+      "name": "Task Force",
+      "oracle_text": "Whenever this creature becomes the target of a spell or ability, it gets +0/+3 until end of turn.",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature \u2014 Human Rebel",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mmq/52/task-force?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Virulent Wound": {
+      "oracle_id": "6a555c10-4dc2-455d-87b4-c7fdbf3d29a6",
+      "name": "Virulent Wound",
+      "oracle_text": "Put a -1/-1 counter on target creature. When that creature dies this turn, its controller gets a poison counter.",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mbs/57/virulent-wound?utm_source=api"
+    },
+    "Woodland Changeling": {
+      "oracle_id": "338f0ab6-f744-4e5a-a358-05e71b93758d",
+      "name": "Woodland Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Shapeshifter",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Changeling"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/lrw/242/woodland-changeling?utm_source=api"
+    },
+    "Wrath of God": {
+      "oracle_id": "34515b16-c9a4-4f98-8c77-416a7a523407",
+      "name": "Wrath of God",
+      "oracle_text": "Destroy all creatures. They can't be regenerated.",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/70/wrath-of-god?utm_source=api"
+    }
+  },
+  "registry": {
+    "Bogbrew Witch": {
+      "csvid": 13267,
+      "iid": 1192,
+      "name": "Bogbrew Witch",
+      "handler": "manalinkeh_card_bogbrew_witch",
+      "kind": "card"
+    },
+    "Centaur Courser": {
+      "csvid": 10397,
+      "iid": 1596,
+      "name": "Centaur Courser",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Cloudshift": {
+      "csvid": 12330,
+      "iid": 1828,
+      "name": "Cloudshift",
+      "handler": "manalinkeh_card_cloudshift",
+      "kind": "card"
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "iid": 1996,
+      "name": "Counterspell",
+      "handler": "manalinkeh_card_counterspell",
+      "kind": "card"
+    },
+    "Darksteel Myr": {
+      "csvid": 11238,
+      "iid": 2255,
+      "name": "Darksteel Myr",
+      "handler": "manalinkeh_card_darksteel_myr",
+      "kind": "card"
+    },
+    "Dragonscale Boon": {
+      "csvid": 14260,
+      "iid": 2696,
+      "name": "Dragonscale Boon",
+      "handler": "manalinkeh_card_dragonscale_boon",
+      "kind": "card"
+    },
+    "Eager Cadet": {
+      "csvid": 4363,
+      "iid": 12406,
+      "name": "Eager Cadet",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Exploration": {
+      "csvid": 3763,
+      "iid": 3196,
+      "name": "Exploration",
+      "handler": "manalinkeh_card_exploration",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "name": "Forest",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Giant Growth": {
+      "csvid": 97,
+      "iid": 3862,
+      "name": "Giant Growth",
+      "handler": "manalinkeh_card_giant_growth",
+      "kind": "card"
+    },
+    "Giant Spider": {
+      "csvid": 98,
+      "iid": 3868,
+      "name": "Giant Spider",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Grasp of Darkness": {
+      "csvid": 11274,
+      "iid": 4149,
+      "name": "Grasp of Darkness",
+      "handler": "manalinkeh_card_grasp_of_darkness",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "name": "Grizzly Bears",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "iid": 4570,
+      "name": "Hill Giant",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Island": {
+      "csvid": 126,
+      "iid": 1,
+      "name": "Island",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Lightning Blast": {
+      "csvid": 1070,
+      "iid": 5595,
+      "name": "Lightning Blast",
+      "handler": "manalinkeh_card_lightning_blast",
+      "kind": "card"
+    },
+    "Lightning Bolt": {
+      "csvid": 145,
+      "iid": 5596,
+      "name": "Lightning Bolt",
+      "handler": "manalinkeh_card_lightning_bolt",
+      "kind": "card"
+    },
+    "Llanowar Elves": {
+      "csvid": 149,
+      "iid": 5655,
+      "name": "Llanowar Elves",
+      "handler": "manalinkeh_card_elvish_mystic",
+      "kind": "card"
+    },
+    "Memnite": {
+      "csvid": 11303,
+      "iid": 6020,
+      "name": "Memnite",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Mountain": {
+      "csvid": 164,
+      "iid": 3,
+      "name": "Mountain",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Murder": {
+      "csvid": 12594,
+      "iid": 6382,
+      "name": "Murder",
+      "handler": "manalinkeh_card_murder2",
+      "kind": "card"
+    },
+    "Plains": {
+      "csvid": 188,
+      "iid": 4,
+      "name": "Plains",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Scaled Wurm": {
+      "csvid": 2085,
+      "iid": 8287,
+      "name": "Scaled Wurm",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Sol Ring": {
+      "csvid": 230,
+      "iid": 8968,
+      "name": "Sol Ring",
+      "handler": "manalinkeh_card_sol_ring",
+      "kind": "card"
+    },
+    "Sphinx of Jwar Isle": {
+      "csvid": 10671,
+      "iid": 9136,
+      "name": "Sphinx of Jwar Isle",
+      "handler": "manalinkeh_card_sphinx_of_jwar_isle",
+      "kind": "card"
+    },
+    "Swords to Plowshares": {
+      "csvid": 240,
+      "iid": 9616,
+      "name": "Swords to Plowshares",
+      "handler": "manalinkeh_card_swords_to_plowshares",
+      "kind": "card"
+    },
+    "Task Force": {
+      "csvid": 4628,
+      "iid": 9714,
+      "name": "Task Force",
+      "handler": "manalinkeh_card_task_force",
+      "kind": "card"
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "iid": 10388,
+      "name": "Unsummon",
+      "handler": "manalinkeh_card_unsummon",
+      "kind": "card"
+    },
+    "Virulent Wound": {
+      "csvid": 11554,
+      "iid": 10626,
+      "name": "Virulent Wound",
+      "handler": "manalinkeh_card_virulent_wound",
+      "kind": "card"
+    },
+    "Woodland Changeling": {
+      "csvid": 9315,
+      "iid": 11079,
+      "name": "Woodland Changeling",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Wrath of God": {
+      "csvid": 290,
+      "iid": 11121,
+      "name": "Wrath of God",
+      "handler": "manalinkeh_card_wrath_of_god",
+      "kind": "card"
+    }
+  },
+  "presentation": {
+    "Archon of Justice": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Elder Cathar": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Festering Goblin": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Festering Newt": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Reliquary Monk": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Noxious Dragon": {
+      "outer_priority_human": true,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Festering Mummy": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Sparring Construct": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Polluted Dead": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Undead Executioner": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Destructor Dragon": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Fire Snake": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Goblin Gardener": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Shambling Goblin": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Lawless Broker": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    },
+    "Spinal Centipede": {
+      "outer_priority_human": false,
+      "source": "this_dies_trigger legacy callback",
+      "ordinary_target": "legal target choice; Oracle target mandatory even when effect optional"
+    }
+  },
+  "rules": {
+    "url": "https://media.wizards.com/2026/downloads/MagicCompRules%2020260619.pdf",
+    "sections": [
+      "603.3d",
+      "603.5"
+    ],
+    "expectation": "Every selected clause has a required target; optional effect does not remove targeting. Task Force observes actual targeting, not a fabricated event."
+  },
+  "token_copy_fixtures": {
+    "land": {
+      "source": "Forest",
+      "copied_type_line": "Basic Land \u2014 Forest",
+      "copied_mana_value": 0.0,
+      "description": "Seeded TOKEN COPY of Forest; ordinary copied Land types and MV0; token creation is outside this control."
+    },
+    "noncreature_permanent": {
+      "source": "Sol Ring",
+      "copied_type_line": "Artifact",
+      "copied_mana_cost": "{1}",
+      "copied_mana_value": 1.0,
+      "description": "Seeded TOKEN COPY of Sol Ring; copied Artifact and MV1, not generic MV0. Token creation is outside this control."
+    }
+  }
+}

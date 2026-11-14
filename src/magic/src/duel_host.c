@@ -73,9 +73,9 @@ void duel_host_checkpoint(const char *operation)
     duel_host_fail(operation);
 }
 static int choose_with_policy(DuelChoiceKind kind, int player, const char *prompt,
-                     int count, const int *cards, int *card, int must_select, const int *legal)
+                     int count, const int *cards, int *card, int must_select, const int *legal, int allow_cancel)
 {
-  DuelChoiceRequest request = {kind, player, prompt, count, cards, must_select, legal};
+  DuelChoiceRequest request = {kind, player, prompt, count, cards, must_select, legal, allow_cancel};
   DuelChoiceAnswer answer = {-1, -1};
   duel_host_checkpoint("execution budget exhausted during input");
   if (!host.choose || !host.choose(host.context, &request, &answer))
@@ -91,12 +91,16 @@ static int choose_with_policy(DuelChoiceKind kind, int player, const char *promp
 int duel_host_choose(DuelChoiceKind kind, int player, const char *prompt,
                      int count, const int *cards, int *card)
 {
-  return choose_with_policy(kind,player,prompt,count,cards,card,-1,NULL);
+  return choose_with_policy(kind,player,prompt,count,cards,card,-1,NULL,-1);
 }
 int duel_host_choose_zone(int player, const char *prompt, int count,
                           const int *cards, int must_select, const int *legal)
 {
-  return choose_with_policy(DUEL_CHOICE_ZONE,player,prompt,count,cards,NULL,!!must_select,legal);
+  return choose_with_policy(DUEL_CHOICE_ZONE,player,prompt,count,cards,NULL,!!must_select,legal,-1);
+}
+int duel_host_choose_target(int player, const char *prompt, int allow_cancel, int *card)
+{
+  return choose_with_policy(DUEL_CHOICE_TARGET,player,prompt,0,NULL,card,-1,NULL,allow_cancel & 3);
 }
 int duel_host_random(void)
 {

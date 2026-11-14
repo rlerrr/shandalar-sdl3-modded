@@ -1,0 +1,622 @@
+{
+  "version": 1,
+  "witnesses": {
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Craw Wurm": {
+      "oracle": {
+        "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+        "name": "Craw Wurm",
+        "oracle_text": "",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sol_ring",
+      "reviewed_native_witness": false
+    },
+    "Twiddle": {
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "handler": "manalinkeh_card_twiddle",
+      "reviewed_native_witness": false
+    },
+    "Safe Passage": {
+      "oracle": {
+        "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+        "name": "Safe Passage",
+        "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/30/safe-passage?utm_source=api"
+      },
+      "handler": "manalinkeh_card_safe_passage",
+      "reviewed_native_witness": false
+    },
+    "Lightning Bolt": {
+      "oracle": {
+        "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+        "name": "Lightning Bolt",
+        "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+        "mana_cost": "{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+      },
+      "handler": "manalinkeh_card_lightning_bolt",
+      "reviewed_native_witness": false
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Servo Exhibition": {
+      "oracle": {
+        "oracle_id": "76a6ddc2-f894-4331-89a9-87ca16efd0c0",
+        "name": "Servo Exhibition",
+        "oracle_text": "Create two 1/1 colorless Servo artifact creature tokens.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/27/servo-exhibition?utm_source=api"
+      },
+      "handler": "manalinkeh_card_servo_exhibition",
+      "reviewed_native_witness": false
+    },
+    "Servo": {
+      "oracle": {
+        "oracle_id": "b6ca7bd1-d72e-4260-8b52-997ee1377279",
+        "name": "Servo",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Servo",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmh3/33/servo?utm_source=api"
+      },
+      "handler": "manalinkeh_card_rhino_token",
+      "reviewed_native_witness": false
+    },
+    "Tibalt, the Fiend-Blooded": {
+      "oracle": {
+        "oracle_id": "ee9c57c6-41ef-4328-8417-e5a433eadf17",
+        "name": "Tibalt, the Fiend-Blooded",
+        "oracle_text": "+1: Draw a card, then discard a card at random.\n−4: Tibalt deals damage equal to the number of cards in target player's hand to that player.\n−6: Gain control of all creatures until end of turn. Untap them. They gain haste until end of turn.",
+        "mana_cost": "{R}{R}",
+        "type_line": "Legendary Planeswalker — Tibalt",
+        "loyalty": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddk/41/tibalt-the-fiend-blooded?utm_source=api"
+      },
+      "handler": "manalinkeh_card_tibalt_the_fiend_blooded",
+      "reviewed_native_witness": false
+    }
+  },
+  "native_witness_review": "Printed vanilla/native-keyword card_dummy witnesses are explicitly supported by README and root review; not unimplemented primaries. Full Oracle and binding remain pinned.",
+  "witness_side_effect_audit": "No unmodeled ETB/death triggers. Servo Exhibition and Tibalt are paid casts before source declarations; no loyalty abilities are activated. Basic mana sources serve genuine human source-cast cancellation. Kavu Climber, Raging Bull and Scathe Zombies excluded.",
+  "sources": {
+    "12899": {
+      "card": "Boros Elite",
+      "oracle": {
+        "oracle_id": "7c83fb45-03af-4f1a-b7e3-2c4f47511658",
+        "name": "Boros Elite",
+        "oracle_text": "Battalion — Whenever this creature and at least two other creatures attack, this creature gets +2/+2 until end of turn.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Battalion"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/10/boros-elite?utm_source=api"
+      },
+      "handler": "manalinkeh_card_boros_elite"
+    },
+    "13129": {
+      "card": "Boros Mastiff",
+      "oracle": {
+        "oracle_id": "bcbaef07-1d5b-457b-b373-77d3a2884b39",
+        "name": "Boros Mastiff",
+        "oracle_text": "Battalion — Whenever this creature and at least two other creatures attack, this creature gains lifelink until end of turn. (Damage dealt by a creature with lifelink also causes its controller to gain that much life.)",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Dog",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Battalion"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/1/boros-mastiff?utm_source=api"
+      },
+      "handler": "manalinkeh_card_boros_mastiff"
+    },
+    "12918": {
+      "card": "Daring Skyjek",
+      "oracle": {
+        "oracle_id": "f15a202d-c1c4-49bd-924a-7a0a5667ff70",
+        "name": "Daring Skyjek",
+        "oracle_text": "Battalion — Whenever this creature and at least two other creatures attack, this creature gains flying until end of turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Human Knight",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Battalion"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/9/daring-skyjek?utm_source=api"
+      },
+      "handler": "manalinkeh_card_daring_skyjak"
+    },
+    "12942": {
+      "card": "Firefist Striker",
+      "oracle": {
+        "oracle_id": "a017ab43-7d73-441a-8931-2a038306083f",
+        "name": "Firefist Striker",
+        "oracle_text": "Battalion — Whenever this creature and at least two other creatures attack, target creature can't block this turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Battalion"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/134/firefist-striker?utm_source=api"
+      },
+      "handler": "manalinkeh_card_firefist_striker"
+    },
+    "12943": {
+      "card": "Firemane Avenger",
+      "oracle": {
+        "oracle_id": "7ea71a36-8fa8-4ba3-9cb1-7fc6917c3ddd",
+        "name": "Firemane Avenger",
+        "oracle_text": "Flying\nBattalion — Whenever this creature and at least two other creatures attack, this creature deals 3 damage to any target and you gain 3 life.",
+        "mana_cost": "{2}{R}{W}",
+        "type_line": "Creature — Angel",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Battalion"
+        ],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/189/firemane-avenger?utm_source=api"
+      },
+      "handler": "manalinkeh_card_firemane_avenger"
+    },
+    "13016": {
+      "card": "Nav Squad Commandos",
+      "oracle": {
+        "oracle_id": "affdf41e-c851-4f5d-bd3a-7ca7ada4416a",
+        "name": "Nav Squad Commandos",
+        "oracle_text": "Battalion — Whenever this creature and at least two other creatures attack, this creature gets +1/+1 until end of turn. Untap it.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "3",
+        "toughness": "5",
+        "keywords": [
+          "Battalion"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/22/nav-squad-commandos?utm_source=api"
+      },
+      "handler": "manalinkeh_card_nav_squad_commandos"
+    },
+    "13023": {
+      "card": "Ordruun Veteran",
+      "oracle": {
+        "oracle_id": "119af12a-b767-4408-9bb5-72a6d0ec63d1",
+        "name": "Ordruun Veteran",
+        "oracle_text": "Battalion — Whenever this creature and at least two other creatures attack, this creature gains double strike until end of turn. (It deals both first-strike and regular combat damage.)",
+        "mana_cost": "{2}{R}{W}",
+        "type_line": "Creature — Minotaur Soldier",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Battalion"
+        ],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/184/ordruun-veteran?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ordruun_veteran"
+    },
+    "13104": {
+      "card": "Wojek Halberdiers",
+      "oracle": {
+        "oracle_id": "96d6a400-f1bc-40f8-91ef-1d3cb96926f1",
+        "name": "Wojek Halberdiers",
+        "oracle_text": "Battalion — Whenever this creature and at least two other creatures attack, this creature gains first strike until end of turn.",
+        "mana_cost": "{R}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Battalion"
+        ],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/208/wojek-halberdiers?utm_source=api"
+      },
+      "handler": "manalinkeh_card_wojek_halberdier"
+    },
+    "12896": {
+      "card": "Bomber Corps",
+      "oracle": {
+        "oracle_id": "a429c351-d281-4e49-8564-bd96bdf5c41b",
+        "name": "Bomber Corps",
+        "oracle_text": "Battalion — Whenever this creature and at least two other creatures attack, this creature deals 1 damage to any target.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Battalion"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/102/bomber-corps?utm_source=api"
+      },
+      "handler": "manalinkeh_card_bomber_corps"
+    },
+    "13098": {
+      "card": "Warmind Infantry",
+      "oracle": {
+        "oracle_id": "9e32750a-8e5f-4d81-92a8-c3d4ea1477fd",
+        "name": "Warmind Infantry",
+        "oracle_text": "Battalion — Whenever this creature and at least two other creatures attack, this creature gets +2/+0 until end of turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Elemental Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Battalion"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/111/warmind-infantry?utm_source=api"
+      },
+      "handler": "manalinkeh_card_warmind_infantry"
+    }
+  }
+}

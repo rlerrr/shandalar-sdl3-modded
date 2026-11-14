@@ -1,0 +1,414 @@
+{
+  "version": 1,
+  "witnesses": {
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "layout": "normal",
+      "cmc": 2.0
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "layout": "normal",
+      "cmc": 4.0
+    },
+    "Craw Wurm": {
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "name": "Craw Wurm",
+      "oracle_text": "",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature — Wurm",
+      "power": "6",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "layout": "normal",
+      "cmc": 6.0
+    },
+    "Air Elemental": {
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "name": "Air Elemental",
+      "oracle_text": "Flying",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Elemental",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "layout": "normal",
+      "cmc": 5.0
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "layout": "normal",
+      "cmc": 1.0
+    },
+    "Safe Passage": {
+      "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+      "name": "Safe Passage",
+      "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "layout": "normal",
+      "cmc": 3.0
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "layout": "normal",
+      "cmc": 0.0
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "layout": "normal",
+      "cmc": 0.0
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "layout": "normal",
+      "cmc": 0.0
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "keywords": [],
+      "colors": [],
+      "layout": "normal",
+      "cmc": 0.0
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "layout": "normal",
+      "cmc": 0.0
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "layout": "normal",
+      "cmc": 1.0
+    },
+    "Goblin Piker": {
+      "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+      "name": "Goblin Piker",
+      "oracle_text": "",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "layout": "normal",
+      "cmc": 2.0
+    },
+    "Amrou Scout": {
+      "oracle_id": "4c80112a-8ff5-4ca4-8737-b8d499d78982",
+      "name": "Amrou Scout",
+      "oracle_text": "{4}, {T}: Search your library for a Rebel permanent card with mana value 3 or less, put it onto the battlefield, then shuffle.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Kithkin Rebel Scout",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "layout": "normal",
+      "cmc": 2.0
+    },
+    "Woodland Changeling": {
+      "oracle_id": "338f0ab6-f744-4e5a-a358-05e71b93758d",
+      "name": "Woodland Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Shapeshifter",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Changeling"
+      ],
+      "colors": [
+        "G"
+      ],
+      "layout": "normal",
+      "cmc": 2.0
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "layout": "normal",
+      "cmc": 4.0
+    },
+    "Venser's Sliver": {
+      "oracle_id": "54d65915-3833-4e4d-a066-37ae9507846f",
+      "name": "Venser's Sliver",
+      "oracle_text": "",
+      "mana_cost": "{5}",
+      "type_line": "Artifact Creature — Sliver",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [],
+      "layout": "normal",
+      "cmc": 5.0
+    },
+    "Kavu Chameleon": {
+      "oracle_id": "82c583ab-8158-4074-a3ff-b7a05ecc8ab1",
+      "name": "Kavu Chameleon",
+      "oracle_text": "This spell can't be countered.\n{G}: This creature becomes the color of your choice until end of turn.",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Creature — Kavu",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "layout": "normal",
+      "cmc": 5.0
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "name": "Twiddle",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "layout": "normal",
+      "cmc": 1.0
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "layout": "normal",
+      "cmc": 1.0
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "layout": "normal",
+      "cmc": 1.0
+    }
+  },
+  "source_ui": {
+    "Riddlekeeper": {
+      "oracle": {
+        "oracle_id": "df23a4a5-eddd-4b0e-9f7e-a3733ce49c0d",
+        "name": "Riddlekeeper",
+        "oracle_text": "Whenever a creature attacks you or a planeswalker you control, that creature's controller mills two cards.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Homunculus",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "layout": "normal",
+        "cmc": 3.0
+      },
+      "trigger_priority_players": [
+        0
+      ],
+      "trigger_priority_aggregation": "per_source"
+    },
+    "Frenzied Goblin": {
+      "oracle": {
+        "oracle_id": "6ac470a1-c2be-4971-a5ca-10bb189ebe4d",
+        "name": "Frenzied Goblin",
+        "oracle_text": "Whenever this creature attacks, you may pay {R}. If you do, target creature can't block this turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Goblin Berserker",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "layout": "normal",
+        "cmc": 1.0
+      },
+      "trigger_priority_players": [
+        0
+      ],
+      "trigger_priority_aggregation": "per_source",
+      "payment_gate": "affordability_checked",
+      "cancellation_players": [
+        0
+      ]
+    },
+    "Haazda Snare Squad": {
+      "oracle": {
+        "oracle_id": "2a174adc-0536-4e12-a6fe-c44305822714",
+        "name": "Haazda Snare Squad",
+        "oracle_text": "Whenever this creature attacks, you may pay {W}. If you do, tap target creature an opponent controls.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "layout": "normal",
+        "cmc": 3.0
+      },
+      "trigger_priority_players": [
+        0
+      ],
+      "trigger_priority_aggregation": "per_source",
+      "payment_gate": "unconditional",
+      "cancellation_players": [
+        0
+      ]
+    },
+    "Gravity Negator": {
+      "oracle": {
+        "oracle_id": "18dcf3db-d6c6-4780-a931-546e71a3ae3f",
+        "name": "Gravity Negator",
+        "oracle_text": "Devoid (This card has no color.)\nFlying\nWhenever this creature attacks, you may pay {C}. If you do, another target creature gains flying until end of turn. ({C} represents colorless mana.)",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Eldrazi Drone",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Devoid"
+        ],
+        "colors": [],
+        "layout": "normal",
+        "cmc": 4.0
+      },
+      "trigger_priority_players": [
+        0
+      ],
+      "trigger_priority_aggregation": "per_source",
+      "payment_gate": "unconditional",
+      "cancellation_players": [
+        0
+      ]
+    }
+  },
+  "subtype_witnesses": {
+    "Goblin": "Goblin Piker",
+    "Kithkin": "Amrou Scout",
+    "Aurochs": "Woodland Changeling",
+    "Kavu": "Kavu Chameleon",
+    "Sliver": "Venser's Sliver",
+    "Ally": "Woodland Changeling"
+  },
+  "tokens": {
+    "Servo": {
+      "oracle_id": "b6ca7bd1-d72e-4260-8b52-997ee1377279",
+      "name": "Servo",
+      "oracle_text": "",
+      "mana_cost": "",
+      "type_line": "Token Artifact Creature — Servo",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [],
+      "layout": "token",
+      "cmc": 0.0
+    }
+  }
+}

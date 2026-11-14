@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Gideon, Ally of Zendikar",
+  "csvid": 15334,
+  "recipes": [
+    {
+      "family": "activated_token_creation",
+      "version": 2,
+      "oracle_text": "+1: Until end of turn, Gideon becomes a 5/5 Human Soldier Ally creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n0: Create a 2/2 white Knight Ally creature token.\n−4: You get an emblem with \"Creatures you control get +1/+1.\"",
+      "params": {
+        "ability": 1,
+        "interface": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "present_ai_dialogs": true,
+          "sacrifice_choices": {},
+          "casting_colors": []
+        },
+        "inactive_clauses": [
+          "+1: Until end of turn, Gideon becomes a 5/5 Human Soldier Ally creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.",
+          "−4: You get an emblem with \"Creatures you control get +1/+1.\""
+        ]
+      },
+      "variants": [
+        "create_0",
+        "payment_0",
+        "bare_zones_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "source_destroyed_pending_0",
+        "cleanup_0",
+        "repeat_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "create_1",
+        "payment_1",
+        "bare_zones_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "source_destroyed_pending_1",
+        "cleanup_1",
+        "repeat_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1"
+      ]
+    }
+  ]
+}

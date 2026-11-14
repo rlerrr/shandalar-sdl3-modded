@@ -1,0 +1,1511 @@
+{
+  "version": 2,
+  "sources": {
+    "Balduvian War-Makers": {
+      "csvid": 1685,
+      "oracle": {
+        "oracle_id": "1bda7f60-f986-455b-9d56-bbd494e27c17",
+        "name": "Balduvian War-Makers",
+        "oracle_text": "Haste\nRampage 1 (Whenever this creature becomes blocked, it gets +1/+1 until end of turn for each creature blocking it beyond the first.)",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature \u2014 Human Barbarian",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Haste",
+          "Rampage"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/all/66a/balduvian-war-makers?utm_source=api"
+      },
+      "handler": "manalinkeh_card_balduvian_war_makers",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/alliances.c",
+        "line": 426,
+        "symbol": "card_balduvian_war_makers",
+        "sha256": "4d2791f016e09bfaea017421bbc397ec702ccac538500ea1311f62a1edb35d47"
+      },
+      "params": {
+        "basis": "beyond_first",
+        "power": 1,
+        "toughness": 1,
+        "scope": "self",
+        "keywords": [
+          "Haste",
+          "Rampage"
+        ]
+      }
+    },
+    "Craw Giant": {
+      "csvid": 601,
+      "oracle": {
+        "oracle_id": "152b621e-4c18-438c-9999-77e2685fda79",
+        "name": "Craw Giant",
+        "oracle_text": "Trample\nRampage 2 (Whenever this creature becomes blocked, it gets +2/+2 until end of turn for each creature blocking it beyond the first.)",
+        "mana_cost": "{3}{G}{G}{G}{G}",
+        "type_line": "Creature \u2014 Giant",
+        "power": "6",
+        "toughness": "4",
+        "keywords": [
+          "Trample",
+          "Rampage"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsb/76/craw-giant?utm_source=api"
+      },
+      "handler": "manalinkeh_card_craw_giant",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/legends.c",
+        "line": 1655,
+        "symbol": "card_craw_giant",
+        "sha256": "d7e3d27299b5be320f972f7c3629b9fb6cabaecae969484dff8f0dd41810117a"
+      },
+      "params": {
+        "basis": "beyond_first",
+        "power": 2,
+        "toughness": 2,
+        "scope": "self",
+        "keywords": [
+          "Rampage",
+          "Trample"
+        ]
+      }
+    },
+    "Teeka's Dragon": {
+      "csvid": 2627,
+      "oracle": {
+        "oracle_id": "6fb6e37e-d774-4a50-8ea3-b955535c2065",
+        "name": "Teeka's Dragon",
+        "oracle_text": "Flying; trample; rampage 4 (Whenever this creature becomes blocked, it gets +4/+4 until end of turn for each creature blocking it beyond the first.)",
+        "mana_cost": "{9}",
+        "type_line": "Artifact Creature \u2014 Dragon",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Flying",
+          "Trample",
+          "Rampage"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/320/teekas-dragon?utm_source=api"
+      },
+      "handler": "manalinkeh_card_teekas_dragon",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/mirage.c",
+        "line": 5393,
+        "symbol": "card_teekas_dragon",
+        "sha256": "15f69bb5fb7dcd3cd3bbee2524763d661130f8389df4c125a6195066f368a023"
+      },
+      "params": {
+        "basis": "beyond_first",
+        "power": 4,
+        "toughness": 4,
+        "scope": "self",
+        "keywords": [
+          "Flying",
+          "Rampage",
+          "Trample"
+        ]
+      }
+    },
+    "Elvish Berserker": {
+      "csvid": 3484,
+      "oracle": {
+        "oracle_id": "c9046281-dedb-4246-8e5d-7786fe0c41c7",
+        "name": "Elvish Berserker",
+        "oracle_text": "Whenever this creature becomes blocked, it gets +1/+1 until end of turn for each creature blocking it.",
+        "mana_cost": "{G}",
+        "type_line": "Creature \u2014 Elf Berserker",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/260/elvish-berserker?utm_source=api"
+      },
+      "handler": "manalinkeh_card_elvish_berserker",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/exodus.c",
+        "line": 511,
+        "symbol": "card_elvish_berserker",
+        "sha256": "665aed18fbbf2ac5663eaa599626c0f0bb1c8f2ee90d4a97a295dbbe0f6ed527"
+      },
+      "params": {
+        "basis": "per_blocker",
+        "power": 1,
+        "toughness": 1,
+        "scope": "self",
+        "keywords": []
+      }
+    },
+    "Jungle Wurm": {
+      "csvid": 2519,
+      "oracle": {
+        "oracle_id": "457705c9-5b0c-4c3a-89dd-80286fac6a6c",
+        "name": "Jungle Wurm",
+        "oracle_text": "Whenever this creature becomes blocked, it gets -1/-1 until end of turn for each creature blocking it beyond the first.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature \u2014 Wurm",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/217/jungle-wurm?utm_source=api"
+      },
+      "handler": "manalinkeh_card_jungle_wurm",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/mirage.c",
+        "line": 3458,
+        "symbol": "card_jungle_wurm",
+        "sha256": "15f69bb5fb7dcd3cd3bbee2524763d661130f8389df4c125a6195066f368a023"
+      },
+      "params": {
+        "basis": "beyond_first",
+        "power": -1,
+        "toughness": -1,
+        "scope": "self",
+        "keywords": []
+      }
+    },
+    "Johtull Wurm": {
+      "csvid": 1991,
+      "oracle": {
+        "oracle_id": "ab5a8242-4e42-43e6-a6ee-eeb0a8db3d11",
+        "name": "Johtull Wurm",
+        "oracle_text": "Whenever this creature becomes blocked, it gets -2/-1 until end of turn for each creature blocking it beyond the first.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature \u2014 Wurm",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/168/johtull-wurm?utm_source=api"
+      },
+      "handler": "manalinkeh_card_johtull_wurm",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/ice_age.c",
+        "line": 5939,
+        "symbol": "card_johtull_wurm",
+        "sha256": "91423745e010334b252c03fe07f2ed144040400dac9fb38417f766ce7c1b4c7c"
+      },
+      "params": {
+        "basis": "beyond_first",
+        "power": -2,
+        "toughness": -1,
+        "scope": "self",
+        "keywords": []
+      }
+    },
+    "Spined Sliver": {
+      "csvid": 3434,
+      "oracle": {
+        "oracle_id": "eed9c168-1c78-43c6-a814-9b80054d1373",
+        "name": "Spined Sliver",
+        "oracle_text": "Whenever a Sliver becomes blocked, that Sliver gets +1/+1 until end of turn for each creature blocking it.",
+        "mana_cost": "{R}{G}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/213/spined-sliver?utm_source=api"
+      },
+      "handler": "manalinkeh_card_spined_sliver",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/stronghold.c",
+        "line": 2949,
+        "symbol": "card_spined_sliver",
+        "sha256": "ec3fcf5f1a83350c765081584ac8423400d623ca3f5cd3340317f3abd0e94101"
+      },
+      "params": {
+        "basis": "per_blocker",
+        "power": 1,
+        "toughness": 1,
+        "scope": "all_slivers",
+        "keywords": []
+      }
+    },
+    "Sparring Golem": {
+      "csvid": 5123,
+      "oracle": {
+        "oracle_id": "c54879da-0f1d-4ad0-b082-95f0e4d35685",
+        "name": "Sparring Golem",
+        "oracle_text": "Whenever this creature becomes blocked, it gets +1/+1 until end of turn for each creature blocking it.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature \u2014 Golem",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/312/sparring-golem?utm_source=api"
+      },
+      "handler": "manalinkeh_card_elvish_berserker",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/exodus.c",
+        "line": 511,
+        "symbol": "card_elvish_berserker",
+        "sha256": "665aed18fbbf2ac5663eaa599626c0f0bb1c8f2ee90d4a97a295dbbe0f6ed527"
+      },
+      "params": {
+        "basis": "per_blocker",
+        "power": 1,
+        "toughness": 1,
+        "scope": "self",
+        "keywords": []
+      }
+    },
+    "Frost Giant": {
+      "csvid": 643,
+      "oracle": {
+        "oracle_id": "56ed6af3-8f85-4907-9364-eca71f21bb11",
+        "name": "Frost Giant",
+        "oracle_text": "Rampage 2 (Whenever this creature becomes blocked, it gets +2/+2 until end of turn for each creature blocking it beyond the first.)",
+        "mana_cost": "{3}{R}{R}{R}",
+        "type_line": "Creature \u2014 Giant",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Rampage"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/101/frost-giant?utm_source=api"
+      },
+      "handler": "manalinkeh_card_craw_giant",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/legends.c",
+        "line": 1655,
+        "symbol": "card_craw_giant",
+        "sha256": "d7e3d27299b5be320f972f7c3629b9fb6cabaecae969484dff8f0dd41810117a"
+      },
+      "params": {
+        "basis": "beyond_first",
+        "power": 2,
+        "toughness": 2,
+        "scope": "self",
+        "keywords": [
+          "Rampage"
+        ]
+      }
+    },
+    "Hunding Gjornersen": {
+      "csvid": 676,
+      "oracle": {
+        "oracle_id": "dd4f3a78-3167-42d0-8334-5ac36750a253",
+        "name": "Hunding Gjornersen",
+        "oracle_text": "Rampage 1 (Whenever this creature becomes blocked, it gets +1/+1 until end of turn for each creature blocking it beyond the first.)",
+        "mana_cost": "{3}{W}{U}{U}",
+        "type_line": "Legendary Creature \u2014 Human Warrior",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Rampage"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/152/hunding-gjornersen?utm_source=api"
+      },
+      "handler": "manalinkeh_card_hunding_gjornersen",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/legends.c",
+        "line": 3750,
+        "symbol": "card_hunding_gjornersen",
+        "sha256": "d7e3d27299b5be320f972f7c3629b9fb6cabaecae969484dff8f0dd41810117a"
+      },
+      "params": {
+        "basis": "beyond_first",
+        "power": 1,
+        "toughness": 1,
+        "scope": "self",
+        "keywords": [
+          "Rampage"
+        ]
+      }
+    },
+    "Marhault Elsdragon": {
+      "csvid": 723,
+      "oracle": {
+        "oracle_id": "c202f124-4283-48f6-aef1-470ad9ded22b",
+        "name": "Marhault Elsdragon",
+        "oracle_text": "Rampage 1 (Whenever this creature becomes blocked, it gets +1/+1 until end of turn for each creature blocking it beyond the first.)",
+        "mana_cost": "{3}{R}{R}{G}",
+        "type_line": "Legendary Creature \u2014 Elf Warrior",
+        "power": "4",
+        "toughness": "6",
+        "keywords": [
+          "Rampage"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/161/marhault-elsdragon?utm_source=api"
+      },
+      "handler": "manalinkeh_card_hunding_gjornersen",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/legends.c",
+        "line": 3750,
+        "symbol": "card_hunding_gjornersen",
+        "sha256": "d7e3d27299b5be320f972f7c3629b9fb6cabaecae969484dff8f0dd41810117a"
+      },
+      "params": {
+        "basis": "beyond_first",
+        "power": 1,
+        "toughness": 1,
+        "scope": "self",
+        "keywords": [
+          "Rampage"
+        ]
+      }
+    },
+    "Wolverine Pack": {
+      "csvid": 856,
+      "oracle": {
+        "oracle_id": "d67d9d82-2786-48fc-8107-11d12c5813d0",
+        "name": "Wolverine Pack",
+        "oracle_text": "Rampage 2 (Whenever this creature becomes blocked, it gets +2/+2 until end of turn for each creature blocking it beyond the first.)",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature \u2014 Wolverine",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Rampage"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5ed/344/wolverine-pack?utm_source=api"
+      },
+      "handler": "manalinkeh_card_craw_giant",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/legends.c",
+        "line": 1655,
+        "symbol": "card_craw_giant",
+        "sha256": "d7e3d27299b5be320f972f7c3629b9fb6cabaecae969484dff8f0dd41810117a"
+      },
+      "params": {
+        "basis": "beyond_first",
+        "power": 2,
+        "toughness": 2,
+        "scope": "self",
+        "keywords": [
+          "Rampage"
+        ]
+      }
+    },
+    "Chub Toad": {
+      "csvid": 1890,
+      "oracle": {
+        "oracle_id": "a0daace2-92fc-4c7d-b497-94b4ba775559",
+        "name": "Chub Toad",
+        "oracle_text": "Whenever this creature blocks or becomes blocked, it gets +2/+2 until end of turn.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature \u2014 Frog",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/116/chub-toad?utm_source=api"
+      },
+      "handler": "manalinkeh_card_chub_toad",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/ice_age.c",
+        "line": 2263,
+        "symbol": "card_chub_toad",
+        "sha256": "91423745e010334b252c03fe07f2ed144040400dac9fb38417f766ce7c1b4c7c"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "both",
+        "multiplicity": "once",
+        "predicate": "any",
+        "power": 2,
+        "toughness": 2,
+        "keywords": [],
+        "granted_keywords": []
+      }
+    },
+    "Goblin Elite Infantry": {
+      "csvid": 2490,
+      "oracle": {
+        "oracle_id": "a6a8861c-b6fe-45a6-86e4-9160c36362ff",
+        "name": "Goblin Elite Infantry",
+        "oracle_text": "Whenever this creature blocks or becomes blocked, it gets -1/-1 until end of turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature \u2014 Goblin Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/206/goblin-elite-infantry?utm_source=api"
+      },
+      "handler": "manalinkeh_card_goblin_elite_infantry",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/mirage.c",
+        "line": 2670,
+        "symbol": "card_goblin_elite_infantry",
+        "sha256": "15f69bb5fb7dcd3cd3bbee2524763d661130f8389df4c125a6195066f368a023"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "both",
+        "multiplicity": "once",
+        "predicate": "any",
+        "power": -1,
+        "toughness": -1,
+        "keywords": [],
+        "granted_keywords": []
+      }
+    },
+    "Dwarven Berserker": {
+      "csvid": 2965,
+      "oracle": {
+        "oracle_id": "cc43507a-ca61-45ae-ac0a-4ddb851c27ef",
+        "name": "Dwarven Berserker",
+        "oracle_text": "Whenever this creature becomes blocked, it gets +3/+0 and gains trample until end of turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature \u2014 Dwarf Berserker",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/97/dwarven-berserker?utm_source=api"
+      },
+      "handler": "manalinkeh_card_dwarven_berserker",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/weatherlight.c",
+        "line": 1654,
+        "symbol": "card_dwarven_berserker",
+        "sha256": "7002a4fbb7fccd4891416d593caa50bcf3bf225a36c4d4ef90930f27eb0b0937"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "attacking",
+        "multiplicity": "once",
+        "predicate": "any",
+        "power": 3,
+        "toughness": 0,
+        "keywords": [],
+        "granted_keywords": [
+          "Trample"
+        ]
+      }
+    },
+    "Root Spider": {
+      "csvid": 2233,
+      "oracle": {
+        "oracle_id": "d8fe0115-5d98-4251-a48c-5e849430a445",
+        "name": "Root Spider",
+        "oracle_text": "Whenever this creature blocks, it gets +1/+0 and gains first strike until end of turn.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature \u2014 Spider",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hml/94/root-spider?utm_source=api"
+      },
+      "handler": "manalinkeh_card_root_spider",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/homelands.c",
+        "line": 3173,
+        "symbol": "card_root_spider",
+        "sha256": "c871ee10198ca612944b15cc0a9d04177636918efa2f679a148ca386f975474b"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "defending",
+        "multiplicity": "once",
+        "predicate": "any",
+        "power": 1,
+        "toughness": 0,
+        "keywords": [],
+        "granted_keywords": [
+          "First strike"
+        ]
+      }
+    },
+    "Giant Badger": {
+      "csvid": 898,
+      "oracle": {
+        "oracle_id": "a4109138-5d69-4510-a228-7c1f88c0c8c0",
+        "name": "Giant Badger",
+        "oracle_text": "Whenever this creature blocks, it gets +2/+2 until end of turn.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature \u2014 Badger",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/253/giant-badger?utm_source=api"
+      },
+      "handler": "manalinkeh_card_giant_badger",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/promo.c",
+        "line": 605,
+        "symbol": "card_giant_badger",
+        "sha256": "95999259dac0848eb867e2893a5881a90793ecd339dadde0670de819d7c943c6"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "defending",
+        "multiplicity": "once",
+        "predicate": "any",
+        "power": 2,
+        "toughness": 2,
+        "keywords": [],
+        "granted_keywords": []
+      }
+    },
+    "Ezuri's Archers": {
+      "csvid": 11249,
+      "oracle": {
+        "oracle_id": "bcaf3f32-c4e5-4d39-be98-bfc00327021b",
+        "name": "Ezuri's Archers",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nWhenever this creature blocks a creature with flying, this creature gets +3/+0 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Creature \u2014 Elf Archer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddu/9/ezuris-archers?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ezuris_archers",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/scars_of_mirrodin.c",
+        "line": 3276,
+        "symbol": "card_ezuris_archers",
+        "sha256": "f0212bb7c1e51d46d378c7ef5b9d9b41a45d553199397c1a455bf49f155d4c75"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "defending",
+        "multiplicity": "per_opponent",
+        "predicate": "flying",
+        "power": 3,
+        "toughness": 0,
+        "keywords": [
+          "Reach"
+        ],
+        "granted_keywords": []
+      }
+    },
+    "Dwarven Soldier": {
+      "csvid": 1768,
+      "oracle": {
+        "oracle_id": "88f9075c-ea96-4f8d-b0d1-e5e244e824c1",
+        "name": "Dwarven Soldier",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by one or more Orcs, this creature gets +0/+2 until end of turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature \u2014 Dwarf Soldier",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/92/dwarven-soldier?utm_source=api"
+      },
+      "handler": "manalinkeh_card_dwarven_soldier",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/fallen_empires.c",
+        "line": 2174,
+        "symbol": "card_dwarven_soldier",
+        "sha256": "b403432aa2cf2a755d4546f6b21f923798d44d02fb9c89dfdb008173b22fd9e3"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "both",
+        "multiplicity": "once",
+        "predicate": "orc",
+        "power": 0,
+        "toughness": 2,
+        "keywords": [],
+        "granted_keywords": []
+      }
+    },
+    "Serra Inquisitors": {
+      "csvid": 2243,
+      "oracle": {
+        "oracle_id": "3c6a32e8-0c2a-45cb-8b79-c7f022fe5129",
+        "name": "Serra Inquisitors",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by one or more black creatures, this creature gets +2/+0 until end of turn.",
+        "mana_cost": "{4}{W}",
+        "type_line": "Creature \u2014 Human Cleric",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hml/16/serra-inquisitors?utm_source=api"
+      },
+      "handler": "manalinkeh_card_serra_inquisitors",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/homelands.c",
+        "line": 3489,
+        "symbol": "card_serra_inquisitors",
+        "sha256": "c871ee10198ca612944b15cc0a9d04177636918efa2f679a148ca386f975474b"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "both",
+        "multiplicity": "once",
+        "predicate": "black",
+        "power": 2,
+        "toughness": 0,
+        "keywords": [],
+        "granted_keywords": []
+      }
+    },
+    "Razorclaw Bear": {
+      "csvid": 3642,
+      "oracle": {
+        "oracle_id": "3ee07899-e6d6-4dcf-8596-4d2420690d7c",
+        "name": "Razorclaw Bear",
+        "oracle_text": "Whenever this creature becomes blocked, it gets +2/+2 until end of turn.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature \u2014 Bear",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/p02/142/razorclaw-bear?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ichorclaw_myr",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/scars_of_mirrodin.c",
+        "line": 1749,
+        "symbol": "card_ichorclaw_myr",
+        "sha256": "f0212bb7c1e51d46d378c7ef5b9d9b41a45d553199397c1a455bf49f155d4c75"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "attacking",
+        "multiplicity": "once",
+        "predicate": "any",
+        "power": 2,
+        "toughness": 2,
+        "keywords": [],
+        "granted_keywords": []
+      }
+    },
+    "Slashing Tiger": {
+      "csvid": 4340,
+      "oracle": {
+        "oracle_id": "c07a86de-ec29-478c-b6cb-057eb9d3e126",
+        "name": "Slashing Tiger",
+        "oracle_text": "Whenever this creature becomes blocked, it gets +2/+2 until end of turn.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature \u2014 Cat",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/133/slashing-tiger?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ichorclaw_myr",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/scars_of_mirrodin.c",
+        "line": 1749,
+        "symbol": "card_ichorclaw_myr",
+        "sha256": "f0212bb7c1e51d46d378c7ef5b9d9b41a45d553199397c1a455bf49f155d4c75"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "attacking",
+        "multiplicity": "once",
+        "predicate": "any",
+        "power": 2,
+        "toughness": 2,
+        "keywords": [],
+        "granted_keywords": []
+      }
+    },
+    "Snorting Gahr": {
+      "csvid": 4609,
+      "oracle": {
+        "oracle_id": "3e7f67d6-db12-4034-b8e3-9c9d401c8f57",
+        "name": "Snorting Gahr",
+        "oracle_text": "Whenever this creature becomes blocked, it gets +2/+2 until end of turn.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature \u2014 Rhino Beast",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/272/snorting-gahr?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ichorclaw_myr",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/scars_of_mirrodin.c",
+        "line": 1749,
+        "symbol": "card_ichorclaw_myr",
+        "sha256": "f0212bb7c1e51d46d378c7ef5b9d9b41a45d553199397c1a455bf49f155d4c75"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "attacking",
+        "multiplicity": "once",
+        "predicate": "any",
+        "power": 2,
+        "toughness": 2,
+        "keywords": [],
+        "granted_keywords": []
+      }
+    },
+    "Deeproot Warrior": {
+      "csvid": 17387,
+      "oracle": {
+        "oracle_id": "2af1930c-a5f2-4e7e-910f-e84458b051ac",
+        "name": "Deeproot Warrior",
+        "oracle_text": "Whenever this creature becomes blocked, it gets +1/+1 until end of turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature \u2014 Merfolk Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/xln/186/deeproot-warrior?utm_source=api"
+      },
+      "handler": "manalinkeh_card_norwood_warrior",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/portal_1_2_3k.c",
+        "line": 4485,
+        "symbol": "card_norwood_warrior",
+        "sha256": "9ebb12c4108ac5848332addac2199b3e7416492fe5ce24e38e49aaa7e3d38f33"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "attacking",
+        "multiplicity": "once",
+        "predicate": "any",
+        "power": 1,
+        "toughness": 1,
+        "keywords": [],
+        "granted_keywords": []
+      }
+    },
+    "Royal Trooper": {
+      "csvid": 4366,
+      "oracle": {
+        "oracle_id": "e31510d5-b74e-4a8d-94e8-8bd098cac3c7",
+        "name": "Royal Trooper",
+        "oracle_text": "Whenever this creature blocks, it gets +2/+2 until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature \u2014 Human Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/104/royal-trooper?utm_source=api"
+      },
+      "handler": "manalinkeh_card_giant_badger",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/promo.c",
+        "line": 605,
+        "symbol": "card_giant_badger",
+        "sha256": "95999259dac0848eb867e2893a5881a90793ecd339dadde0670de819d7c943c6"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "defending",
+        "multiplicity": "once",
+        "predicate": "any",
+        "power": 2,
+        "toughness": 2,
+        "keywords": [],
+        "granted_keywords": []
+      }
+    },
+    "Folk of An-Havva": {
+      "csvid": 2204,
+      "oracle": {
+        "oracle_id": "86002526-ed3d-47e5-9f2a-55c4fa220ce8",
+        "name": "Folk of An-Havva",
+        "oracle_text": "Whenever this creature blocks, it gets +2/+0 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Creature \u2014 Human",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hml/87a/folk-of-an-havva?utm_source=api"
+      },
+      "handler": "manalinkeh_card_folk_of_an_havva",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/homelands.c",
+        "line": 1853,
+        "symbol": "card_folk_of_an_havva",
+        "sha256": "c871ee10198ca612944b15cc0a9d04177636918efa2f679a148ca386f975474b"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "defending",
+        "multiplicity": "once",
+        "predicate": "any",
+        "power": 2,
+        "toughness": 0,
+        "keywords": [],
+        "granted_keywords": []
+      }
+    },
+    "Netcaster Spider": {
+      "csvid": 14140,
+      "oracle": {
+        "oracle_id": "0ddb3fa0-447c-40c5-928a-541f3d543014",
+        "name": "Netcaster Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nWhenever this creature blocks a creature with flying, this creature gets +2/+0 until end of turn.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature \u2014 Spider",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/184/netcaster-spider?utm_source=api"
+      },
+      "handler": "manalinkeh_card_netcaster_spider",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/m15.c",
+        "line": 3973,
+        "symbol": "card_netcaster_spider",
+        "sha256": "fd80394f9a136e6d5db4610715e46fe20761cbe9986e6db967ffdcd078d48d52"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "defending",
+        "multiplicity": "per_opponent",
+        "predicate": "flying",
+        "power": 2,
+        "toughness": 0,
+        "keywords": [
+          "Reach"
+        ],
+        "granted_keywords": []
+      }
+    },
+    "Woolly Spider": {
+      "csvid": 2162,
+      "oracle": {
+        "oracle_id": "811c6f52-03cb-49a9-a3c7-7f4ae40e7155",
+        "name": "Woolly Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nWhenever this creature blocks a creature with flying, this creature gets +0/+2 until end of turn.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature \u2014 Spider",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/189/woolly-spider?utm_source=api"
+      },
+      "handler": "manalinkeh_card_woolly_spider",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/ice_age.c",
+        "line": 11201,
+        "symbol": "card_woolly_spider",
+        "sha256": "91423745e010334b252c03fe07f2ed144040400dac9fb38417f766ce7c1b4c7c"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "defending",
+        "multiplicity": "per_opponent",
+        "predicate": "flying",
+        "power": 0,
+        "toughness": 2,
+        "keywords": [
+          "Reach"
+        ],
+        "granted_keywords": []
+      }
+    },
+    "Rashka the Slayer": {
+      "csvid": 2229,
+      "oracle": {
+        "oracle_id": "8e1e477a-192a-4e5c-a18b-7e25d9bd47f3",
+        "name": "Rashka the Slayer",
+        "oracle_text": "Reach (This creature can block creatures with flying.)\nWhenever Rashka blocks one or more black creatures, Rashka gets +1/+2 until end of turn.",
+        "mana_cost": "{3}{W}{W}",
+        "type_line": "Legendary Creature \u2014 Human Archer",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hml/12/rashka-the-slayer?utm_source=api"
+      },
+      "handler": "manalinkeh_card_rashka_the_slayer",
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/homelands.c",
+        "line": 3007,
+        "symbol": "card_rashka_the_slayer",
+        "sha256": "c871ee10198ca612944b15cc0a9d04177636918efa2f679a148ca386f975474b"
+      },
+      "params": {
+        "mechanism": "fixed_predicate",
+        "role": "defending",
+        "multiplicity": "once",
+        "predicate": "black",
+        "power": 1,
+        "toughness": 2,
+        "keywords": [
+          "Reach"
+        ],
+        "granted_keywords": []
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Gaseous Form": {
+      "oracle_id": "896af9a9-12a2-4dd6-957c-e52150b5f3a2",
+      "name": "Gaseous Form",
+      "oracle_text": "Enchant creature\nPrevent all combat damage that would be dealt to and dealt by enchanted creature.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Enchantment \u2014 Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ema/51/gaseous-form?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Homing Sliver": {
+      "oracle_id": "34b4d137-780b-446c-8cdd-fd1673180971",
+      "name": "Homing Sliver",
+      "oracle_text": "Each Sliver card in each player's hand has slivercycling {3}.\nSlivercycling {3} ({3}, Discard this card: Search your library for a Sliver card, reveal it, put it into your hand, then shuffle.)",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature \u2014 Sliver",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Typecycling",
+        "Cycling",
+        "Slivercycling"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tsr/171/homing-sliver?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Changeling Sentinel": {
+      "oracle_id": "2977aae2-225d-4f3f-8bf7-535f542a7391",
+      "name": "Changeling Sentinel",
+      "oracle_text": "Changeling (This card is every creature type.)\nVigilance",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature \u2014 Shapeshifter",
+      "power": "3",
+      "toughness": "2",
+      "keywords": [
+        "Vigilance",
+        "Changeling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mor/6/changeling-sentinel?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Hermetic Study": {
+      "oracle_id": "792d7818-ee5c-4254-b969-7b50f475c629",
+      "name": "Hermetic Study",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+      "mana_cost": "{1}{U}",
+      "type_line": "Enchantment \u2014 Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/53/hermetic-study?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Valor Made Real": {
+      "oracle_id": "5bd1348c-51cc-4426-b995-8bb6d4a5bd2e",
+      "name": "Valor Made Real",
+      "oracle_text": "Target creature can block any number of creatures this turn.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cns/86/valor-made-real?utm_source=api"
+    },
+    "Orcish Artillery": {
+      "oracle_id": "c000811e-bde7-4840-a3bb-9714d5c977eb",
+      "name": "Orcish Artillery",
+      "oracle_text": "{T}: This creature deals 2 damage to any target and 3 damage to you.",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature \u2014 Orc Warrior",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/220/orcish-artillery?utm_source=api"
+    },
+    "Orcish Lumberjack": {
+      "oracle_id": "383e3fe4-8558-4561-8632-6eadb5d5963c",
+      "name": "Orcish Lumberjack",
+      "oracle_text": "{T}, Sacrifice a Forest: Add three mana in any combination of {R} and/or {G}.",
+      "mana_cost": "{R}",
+      "type_line": "Creature \u2014 Orc",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/vma/179/orcish-lumberjack?utm_source=api"
+    },
+    "Giant Scorpion": {
+      "oracle_id": "557485d9-7537-4297-a589-c29d0f1ecd98",
+      "name": "Giant Scorpion",
+      "oracle_text": "Deathtouch (Any amount of damage this deals to a creature is enough to destroy it.)",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature \u2014 Scorpion",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [
+        "Deathtouch"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ddr/50/giant-scorpion?utm_source=api"
+    },
+    "Dreg Mangler": {
+      "oracle_id": "71358110-4e28-4794-befa-ea6e27e720ef",
+      "name": "Dreg Mangler",
+      "oracle_text": "Haste\nScavenge {3}{B}{G} ({3}{B}{G}, Exile this card from your graveyard: Put a number of +1/+1 counters equal to this card's power on target creature. Scavenge only as a sorcery.)",
+      "mana_cost": "{1}{B}{G}",
+      "type_line": "Creature \u2014 Plant Zombie",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Scavenge",
+        "Haste"
+      ],
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/2x2/204/dreg-mangler?utm_source=api"
+    },
+    "Darksteel Myr": {
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "name": "Darksteel Myr",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature \u2014 Myr",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+    }
+  },
+  "native_characteristics_only_witnesses": [
+    "Grizzly Bears",
+    "Ornithopter"
+  ],
+  "witness_handlers": {
+    "Changeling Sentinel": "manalinkeh_card_serra_angel",
+    "Forest": "manalinkeh_plain_mana_producer",
+    "Gaseous Form": "manalinkeh_card_gaseous_form",
+    "Giant Growth": "manalinkeh_card_giant_growth",
+    "Grizzly Bears": "card_dummy",
+    "Hermetic Study": "manalinkeh_card_hermetic_study",
+    "Homing Sliver": "manalinkeh_card_homing_sliver",
+    "Island": "manalinkeh_plain_mana_producer",
+    "Lightning Bolt": "manalinkeh_card_lightning_bolt",
+    "Mountain": "manalinkeh_plain_mana_producer",
+    "Ornithopter": "card_dummy",
+    "Plains": "manalinkeh_plain_mana_producer",
+    "Valor Made Real": "manalinkeh_card_valor_made_real",
+    "Orcish Artillery": "manalinkeh_card_orcish_artillery",
+    "Orcish Lumberjack": "manalinkeh_card_orcish_lumberjack",
+    "Giant Scorpion": "manalinkeh_card_deadly_recluse",
+    "Dreg Mangler": "manalinkeh_card_dreg_mangler",
+    "Darksteel Myr": "manalinkeh_card_darksteel_myr"
+  }
+}

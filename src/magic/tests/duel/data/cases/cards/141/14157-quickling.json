@@ -1,0 +1,723 @@
+{
+  "version": 1,
+  "card": "Quickling",
+  "csvid": 14157,
+  "recipes": [
+    {
+      "family": "entry_trigger_value",
+      "version": 2,
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying\nWhen this creature enters, sacrifice it unless you return another creature you control to its owner's hand.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "count": 1,
+          "scope": "creature",
+          "colors": [],
+          "another": true,
+          "recipient": "self",
+          "targeted": false,
+          "kind": "bounce_gate",
+          "clause": "When this creature enters, sacrifice it unless you return another creature you control to its owner's hand.",
+          "gaps": [
+            "Flash (You may cast this spell any time you could cast an instant.)",
+            "Flying"
+          ]
+        }
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "nonmatching_entry_0",
+        "wrong_color_0",
+        "no_match_0",
+        "opponent_only_0",
+        "alternate_choice_0",
+        "foreign_owned_0",
+        "blink_0",
+        "bounce_recast_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "nonmatching_entry_1",
+        "wrong_color_1",
+        "no_match_1",
+        "opponent_only_1",
+        "alternate_choice_1",
+        "foreign_owned_1",
+        "blink_1",
+        "bounce_recast_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Real casting and ordinary payment, pending and resolved entry state, whole modeled entry exchange, exact card ownership/destinations and populated-zone conservation, contrary/empty controls, both controllers and snapshot replay. Other printed components remain explicit recipe gaps.",
+  "cases": [
+    {
+      "name": "EntryTriggerValueRefusal_14157_0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Quickling",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "return_candidate",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Darksteel Relic",
+          "ref": "own_control",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "opponent_control",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Plains",
+          "ref": "hand_0_0",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "graveyard_0_0",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Island",
+          "ref": "exile_0_0",
+          "player": 0,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "library_0_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "hand_1_0",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "graveyard_1_0",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Island",
+          "ref": "exile_1_0",
+          "player": 1,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_1_0",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "library_1_1",
+          "player": 1,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 0
+        },
+        {
+          "op": "choose_optional_target",
+          "player": 0,
+          "ref": "return_candidate"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_forced_target_choices",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "return_candidate",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "return_candidate",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "return_candidate",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "graveyard",
+          "index": 14157,
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 2
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 1
+        }
+      ]
+    },
+    {
+      "name": "EntryTriggerValueRefusal_14157_1",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Quickling",
+          "ref": "source",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "return_candidate",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Darksteel Relic",
+          "ref": "own_control",
+          "player": 1,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Grizzly Bears",
+          "ref": "opponent_control",
+          "player": 0,
+          "zone": "battlefield",
+          "state": [
+            "untapped"
+          ]
+        },
+        {
+          "name": "Plains",
+          "ref": "hand_0_0",
+          "player": 0,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "graveyard_0_0",
+          "player": 0,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Island",
+          "ref": "exile_0_0",
+          "player": 0,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_0_0",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "library_0_1",
+          "player": 0,
+          "zone": "library"
+        },
+        {
+          "name": "Plains",
+          "ref": "hand_1_0",
+          "player": 1,
+          "zone": "hand"
+        },
+        {
+          "name": "Mountain",
+          "ref": "graveyard_1_0",
+          "player": 1,
+          "zone": "graveyard"
+        },
+        {
+          "name": "Island",
+          "ref": "exile_1_0",
+          "player": 1,
+          "zone": "exile"
+        },
+        {
+          "name": "Forest",
+          "ref": "library_1_0",
+          "player": 1,
+          "zone": "library"
+        },
+        {
+          "name": "Giant Growth",
+          "ref": "library_1_1",
+          "player": 1,
+          "zone": "library"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 0,
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 2,
+          "value": 1
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 1,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_hand",
+          "value": 0
+        },
+        {
+          "op": "choose_optional_target",
+          "player": 1,
+          "ref": "return_candidate"
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "assert_forced_target_choices",
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_stack",
+          "value": 0
+        },
+        {
+          "op": "assert_card",
+          "ref": "return_candidate",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_card",
+          "ref": "return_candidate",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "return_candidate",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 0
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 1,
+          "zone": "graveyard",
+          "index": 14157,
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 0,
+          "value": 20
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "graveyard",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "library",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 0,
+          "zone": "battlefield",
+          "value": 1
+        },
+        {
+          "op": "assert_life",
+          "player": 1,
+          "value": 20
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 1,
+          "value": 0
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "hand",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "graveyard",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "exile",
+          "value": 1
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "library",
+          "value": 2
+        },
+        {
+          "op": "assert_zone",
+          "player": 1,
+          "zone": "battlefield",
+          "value": 2
+        }
+      ]
+    }
+  ],
+  "refusal_coverage": "Explicit optional-target decline intent: if no creature is returned, Faerie Impostor must sacrifice itself; eligible creature remains. Actual cancellation policy is observed without overriding it; forced target count must be zero."
+}

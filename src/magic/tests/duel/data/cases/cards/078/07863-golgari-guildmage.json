@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "card": "Golgari Guildmage",
+  "csvid": 7863,
+  "recipes": [
+    {
+      "family": "permanent_plus1_activation",
+      "version": 2,
+      "oracle_text": "{4}{B}, Sacrifice a creature: Return target creature card from your graveyard to your hand.\n{4}{G}: Put a +1/+1 counter on target creature.",
+      "params": {
+        "ability": 1,
+        "interface": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [
+            "G",
+            "G"
+          ],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        },
+        "other_clauses": [
+          "{4}{B}, Sacrifice a creature: Return target creature card from your graveyard to your hand."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "fresh_0",
+        "tapped_0",
+        "repeat_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "target_enemy_0",
+        "target_removed_pending_0",
+        "probe_noncreature_0",
+        "target_self_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "fresh_1",
+        "tapped_1",
+        "repeat_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "target_enemy_1",
+        "target_removed_pending_1",
+        "probe_noncreature_1",
+        "target_self_1"
+      ]
+    }
+  ]
+}

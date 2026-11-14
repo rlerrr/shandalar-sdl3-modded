@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Flaring Pain",
+  "csvid": 5942,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "oracle_text": "Damage can't be prevented this turn.\nFlashback {R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+      "params": {
+        "schema": 7,
+        "extension": "unpreventable",
+        "profile": "Flaring Pain",
+        "mode": "global",
+        "gaps": [
+          "Flashback"
+        ],
+        "target_repetitions": 1
+      },
+      "variants": [
+        "creature_0",
+        "player_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "without_shield_0",
+        "friendly_creature_0",
+        "without_effect_0",
+        "cleanup_0",
+        "creature_1",
+        "player_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "without_shield_1",
+        "friendly_creature_1",
+        "without_effect_1",
+        "cleanup_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,525 @@
+{
+  "version": 1,
+  "sources": {
+    "Unruly Mob": {
+      "csvid": 12112,
+      "handler": "manalinkeh_card_unruly_mob",
+      "oracle": {
+        "oracle_id": "05d0b904-a680-4f2f-aaa1-e227a7fe7e79",
+        "name": "Unruly Mob",
+        "oracle_text": "Whenever another creature you control dies, put a +1/+1 counter on this creature.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature \u2014 Human",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mid/40/unruly-mob?utm_source=api"
+      }
+    },
+    "Rot Shambler": {
+      "csvid": 15420,
+      "handler": "manalinkeh_card_unruly_mob",
+      "oracle": {
+        "oracle_id": "88c187fd-b3d3-4218-8e63-380a9ca9f1b4",
+        "name": "Rot Shambler",
+        "oracle_text": "Whenever another creature you control dies, put a +1/+1 counter on this creature.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature \u2014 Fungus",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/318/rot-shambler?utm_source=api"
+      }
+    },
+    "Gavony Unhallowed": {
+      "csvid": 16105,
+      "handler": "manalinkeh_card_unruly_mob",
+      "oracle": {
+        "oracle_id": "95ccb4a6-6e45-4c00-b7c6-25384022c02f",
+        "name": "Gavony Unhallowed",
+        "oracle_text": "Whenever another creature you control dies, put a +1/+1 counter on this creature.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature \u2014 Zombie",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gn2/29/gavony-unhallowed?utm_source=api"
+      }
+    },
+    "Malakir Cullblade": {
+      "csvid": 15179,
+      "handler": "manalinkeh_card_malakir_cullblade",
+      "oracle": {
+        "oracle_id": "4fbaf052-a8c3-4395-8f40-0cb3a10d5ccd",
+        "name": "Malakir Cullblade",
+        "oracle_text": "Whenever a creature an opponent controls dies, put a +1/+1 counter on this creature.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature \u2014 Vampire Warrior",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/108/malakir-cullblade?utm_source=api"
+      }
+    },
+    "Knucklebone Witch": {
+      "csvid": 9195,
+      "handler": "manalinkeh_card_knucklebone_witch",
+      "oracle": {
+        "oracle_id": "4d165c0f-3e40-45ad-92a1-53b13c07b34d",
+        "name": "Knucklebone Witch",
+        "oracle_text": "Whenever a Goblin you control is put into a graveyard from the battlefield, you may put a +1/+1 counter on this creature.",
+        "mana_cost": "{B}",
+        "type_line": "Creature \u2014 Goblin Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lrw/120/knucklebone-witch?utm_source=api"
+      }
+    },
+    "Moriok Rigger": {
+      "csvid": 7090,
+      "handler": "manalinkeh_card_moriok_rigger",
+      "oracle": {
+        "oracle_id": "9364b5bc-3e78-4b9d-9993-0081bbe2eef6",
+        "name": "Moriok Rigger",
+        "oracle_text": "Whenever an artifact is put into a graveyard from the battlefield, you may put a +1/+1 counter on this creature.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature \u2014 Human Rogue Rigger",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/5dn/54/moriok-rigger?utm_source=api"
+      }
+    }
+  },
+  "cards": {
+    "Boggart Shenanigans": {
+      "oracle_id": "997d2f38-5a50-451e-bd48-e36dcb24d967",
+      "name": "Boggart Shenanigans",
+      "oracle_text": "Whenever another Goblin you control is put into a graveyard from the battlefield, you may have this enchantment deal 1 damage to target player or planeswalker.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Kindred Enchantment \u2014 Goblin",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/evg/54/boggart-shenanigans?utm_source=api"
+    },
+    "Cloudshift": {
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "name": "Cloudshift",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Exploration": {
+      "oracle_id": "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
+      "name": "Exploration",
+      "oracle_text": "You may play an additional land on each of your turns.",
+      "mana_cost": "{G}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/159/exploration?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Naturalize": {
+      "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+      "name": "Naturalize",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Pyroclasm": {
+      "oracle_id": "e4bcd4ea-e7cd-4471-8f3b-18bb51d3d70c",
+      "name": "Pyroclasm",
+      "oracle_text": "Pyroclasm deals 2 damage to each creature.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/149/pyroclasm?utm_source=api"
+    },
+    "Raging Goblin": {
+      "oracle_id": "30997b43-fc13-41d3-8064-1ccc2cb6fd2b",
+      "name": "Raging Goblin",
+      "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)",
+      "mana_cost": "{R}",
+      "type_line": "Creature \u2014 Goblin Berserker",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/oana/43/raging-goblin?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Virulent Wound": {
+      "oracle_id": "6a555c10-4dc2-455d-87b4-c7fdbf3d29a6",
+      "name": "Virulent Wound",
+      "oracle_text": "Put a -1/-1 counter on target creature. When that creature dies this turn, its controller gets a poison counter.",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mbs/57/virulent-wound?utm_source=api"
+    },
+    "Wrath of God": {
+      "oracle_id": "34515b16-c9a4-4f98-8c77-416a7a523407",
+      "name": "Wrath of God",
+      "oracle_text": "Destroy all creatures. They can't be regenerated.",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/70/wrath-of-god?utm_source=api"
+    }
+  },
+  "presentation": {
+    "Knucklebone Witch": {
+      "optional": "live_source_priority",
+      "inner_dialog": null
+    },
+    "Moriok Rigger": {
+      "optional": "live_source_priority",
+      "inner_dialog": null
+    }
+  }
+}

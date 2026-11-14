@@ -1,0 +1,863 @@
+{
+  "version": 1,
+  "sources": {
+    "Ajani Steadfast": {
+      "csvid": 14067,
+      "oracle": {
+        "oracle_id": "90249526-1875-450a-882d-bf6f6bfd37a6",
+        "name": "Ajani Steadfast",
+        "oracle_text": "+1: Until end of turn, up to one target creature gets +1/+1 and gains first strike, vigilance, and lifelink.\n−2: Put a +1/+1 counter on each creature you control and a loyalty counter on each other planeswalker you control.\n−7: You get an emblem with \"If a source would deal damage to you or a planeswalker you control, prevent all but 1 of that damage.\"",
+        "mana_cost": "{3}{W}",
+        "type_line": "Legendary Planeswalker — Ajani",
+        "loyalty": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/813/ajani-steadfast?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        }
+      },
+      "input_source": "src/manalinkeh/cards/m15.c"
+    },
+    "Arcbound Ravager": {
+      "csvid": 6850,
+      "oracle": {
+        "oracle_id": "62e7e7b1-9887-4d15-b0e5-a8ddc711bd88",
+        "name": "Arcbound Ravager",
+        "oracle_text": "Sacrifice an artifact: Put a +1/+1 counter on this creature.\nModular 1 (This creature enters with a +1/+1 counter on it. When it dies, you may put its +1/+1 counters on target artifact creature.)",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Beast",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [
+          "Modular"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/198/arcbound-ravager?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {},
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        }
+      },
+      "input_source": "src/manalinkeh/cards/darksteel.c"
+    },
+    "Golgari Guildmage": {
+      "csvid": 7863,
+      "oracle": {
+        "oracle_id": "46dad873-11f5-4269-8ec2-f126419fbd7d",
+        "name": "Golgari Guildmage",
+        "oracle_text": "{4}{B}, Sacrifice a creature: Return target creature card from your graveyard to your hand.\n{4}{G}: Put a +1/+1 counter on target creature.",
+        "mana_cost": "{B/G}{B/G}",
+        "type_line": "Creature — Elf Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/194/golgari-guildmage?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [
+            "G",
+            "G"
+          ],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        }
+      },
+      "input_source": "src/manalinkeh/cards/ravnica.c"
+    },
+    "Mikaeus, the Lunarch": {
+      "csvid": 12022,
+      "oracle": {
+        "oracle_id": "82f3faa8-39fa-450b-843f-d60a4c36d8f7",
+        "name": "Mikaeus, the Lunarch",
+        "oracle_text": "Mikaeus enters with X +1/+1 counters on it.\n{T}: Put a +1/+1 counter on Mikaeus.\n{T}, Remove a +1/+1 counter from Mikaeus: Put a +1/+1 counter on each other creature you control.",
+        "mana_cost": "{X}{W}",
+        "type_line": "Legendary Creature — Human Cleric",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/197/mikaeus-the-lunarch?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        },
+        "2": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        }
+      },
+      "input_source": "src/manalinkeh/cards/innistrad.c"
+    },
+    "Hangarback Walker": {
+      "csvid": 15144,
+      "oracle": {
+        "oracle_id": "dde55256-5259-44e7-a267-fca45a7f0d04",
+        "name": "Hangarback Walker",
+        "oracle_text": "This creature enters with X +1/+1 counters on it.\nWhen this creature dies, create a 1/1 colorless Thopter artifact creature token with flying for each +1/+1 counter on this creature.\n{1}, {T}: Put a +1/+1 counter on this creature.",
+        "mana_cost": "{X}{X}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soc/348/hangarback-walker?utm_source=api"
+      },
+      "abilities": {
+        "2": {
+          "dialogs": {},
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        }
+      },
+      "input_source": "src/manalinkeh/cards/origins.c",
+      "casting_protocols": {
+        "value_0": "generic_placeholder_then_handler",
+        "payment_0": "generic_placeholder_then_handler",
+        "offturn_0": "generic_placeholder_then_handler",
+        "ready_snapshot_0": "generic_placeholder_then_handler",
+        "pending_snapshot_0": "generic_placeholder_then_handler",
+        "resolved_snapshot_0": "generic_placeholder_then_handler",
+        "cleanup_0": "generic_placeholder_then_handler",
+        "source_removed_pending_0": "generic_placeholder_then_handler",
+        "fresh_0": "generic_placeholder_then_handler",
+        "tapped_0": "generic_placeholder_then_handler",
+        "repeat_0": "generic_placeholder_then_handler",
+        "repeat_untap_0": "generic_placeholder_then_handler",
+        "insufficient_mana_0": "generic_placeholder_then_handler",
+        "entry_x0_0": "generic_placeholder_then_handler",
+        "entry_x1_0": "generic_placeholder_then_handler",
+        "entry_x3_0": "generic_placeholder_then_handler",
+        "source_dies_after_0": "generic_placeholder_then_handler",
+        "death_snapshot_0": "generic_placeholder_then_handler",
+        "token_block_flying_0": "generic_placeholder_then_handler"
+      }
+    },
+    "Crystalline Crawler": {
+      "csvid": 16597,
+      "oracle": {
+        "oracle_id": "5ea3e672-ae14-49a4-badb-f713497dd126",
+        "name": "Crystalline Crawler",
+        "oracle_text": "Converge — This creature enters with a +1/+1 counter on it for each color of mana spent to cast it.\nRemove a +1/+1 counter from this creature: Add one mana of any color.\n{T}: Put a +1/+1 counter on this creature.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Converge"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/133/crystalline-crawler?utm_source=api"
+      },
+      "abilities": {
+        "2": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [
+            "B",
+            "U",
+            "G",
+            "R"
+          ],
+          "intent": {
+            "mode_label": "Add +1/+1 counter",
+            "fallback_color": 3,
+            "allow_auto_nonmana": true
+          },
+          "unavailable": {
+            "0": "query_only",
+            "1": "disabled_dialog"
+          }
+        }
+      },
+      "input_source": "src/manalinkeh/cards/commander_2016.c",
+      "casting_payment_repetitions": {
+        "value_0": 2,
+        "payment_0": 2,
+        "offturn_0": 2,
+        "ready_snapshot_0": 2,
+        "pending_snapshot_0": 2,
+        "resolved_snapshot_0": 2,
+        "cleanup_0": 2,
+        "source_removed_pending_0": 2,
+        "fresh_0": 2,
+        "tapped_0": 2,
+        "repeat_0": 2,
+        "repeat_untap_0": 2,
+        "converge_zero_0": 2,
+        "converge_one_0": 2,
+        "value_1": 2,
+        "payment_1": 2,
+        "offturn_1": 2,
+        "ready_snapshot_1": 2,
+        "pending_snapshot_1": 2,
+        "resolved_snapshot_1": 2,
+        "cleanup_1": 2,
+        "source_removed_pending_1": 2,
+        "fresh_1": 2,
+        "tapped_1": 2,
+        "repeat_1": 2,
+        "repeat_untap_1": 2,
+        "converge_zero_1": 2,
+        "converge_one_1": 2
+      }
+    },
+    "Ajani, Adversary of Tyrants": {
+      "csvid": 18874,
+      "oracle": {
+        "oracle_id": "b25bea73-7444-4ee2-8022-611461506117",
+        "name": "Ajani, Adversary of Tyrants",
+        "oracle_text": "+1: Put a +1/+1 counter on each of up to two target creatures.\n−2: Return target creature card with mana value 2 or less from your graveyard to the battlefield.\n−7: You get an emblem with \"At the beginning of your end step, create three 1/1 white Cat creature tokens with lifelink.\"",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Legendary Planeswalker — Ajani",
+        "loyalty": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/3/ajani-adversary-of-tyrants?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        }
+      },
+      "input_source": "src/manalinkeh/cards/m19.c"
+    },
+    "Simic Ascendancy": {
+      "csvid": 19739,
+      "oracle": {
+        "oracle_id": "57c1a98e-c4fb-4144-9e3e-d0fe6789ba26",
+        "name": "Simic Ascendancy",
+        "oracle_text": "{1}{G}{U}: Put a +1/+1 counter on target creature you control.\nWhenever one or more +1/+1 counters are put on a creature you control, put that many growth counters on this enchantment.\nAt the beginning of your upkeep, if this enchantment has twenty or more growth counters on it, you win the game.",
+        "mana_cost": "{G}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lcc/288/simic-ascendancy?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {},
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        }
+      },
+      "input_source": "src/manalinkeh/cards/ravnica_allegiance.c"
+    },
+    "Ajani, Caller of the Pride": {
+      "csvid": 12537,
+      "oracle": {
+        "oracle_id": "1d5ff280-7f4d-4801-aefd-9b6e6b1f2818",
+        "name": "Ajani, Caller of the Pride",
+        "oracle_text": "+1: Put a +1/+1 counter on up to one target creature.\n−3: Target creature gains flying and double strike until end of turn.\n−8: Create X 2/2 white Cat creature tokens, where X is your life total.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Legendary Planeswalker — Ajani",
+        "loyalty": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/134/ajani-caller-of-the-pride?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        }
+      },
+      "input_source": "src/manalinkeh/cards/m13.c"
+    },
+    "Gavony Township": {
+      "csvid": 11960,
+      "oracle": {
+        "oracle_id": "8a44e4e7-dfa2-427b-bbff-11c398fa60bb",
+        "name": "Gavony Township",
+        "oracle_text": "{T}: Add {C}.\n{2}{G}{W}, {T}: Put a +1/+1 counter on each creature you control.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/406/gavony-township?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": {
+            "mode_label": "Add +1/+1 counters",
+            "fallback_color": 0,
+            "allow_auto_nonmana": true
+          },
+          "unavailable": {
+            "0": "query_only",
+            "1": "query_only"
+          }
+        }
+      },
+      "input_source": "src/manalinkeh/cards/innistrad.c"
+    },
+    "Goblin Razerunners": {
+      "csvid": 10151,
+      "oracle": {
+        "oracle_id": "7b3e05e1-31b4-46af-b3d0-f2467f8551e9",
+        "name": "Goblin Razerunners",
+        "oracle_text": "{1}{R}, Sacrifice a land: Put a +1/+1 counter on this creature.\nAt the beginning of your end step, you may have this creature deal damage equal to the number of +1/+1 counters on it to target player or planeswalker.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Goblin Warrior",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nec/106/goblin-razerunners?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "dialogs": {},
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        }
+      },
+      "input_source": "src/manalinkeh/cards/conflux.c"
+    },
+    "Walking Ballista": {
+      "csvid": 16822,
+      "oracle": {
+        "oracle_id": "4b515bb0-f275-4400-8032-3173b799ab40",
+        "name": "Walking Ballista",
+        "oracle_text": "This creature enters with X +1/+1 counters on it.\n{4}: Put a +1/+1 counter on this creature.\nRemove a +1/+1 counter from this creature: It deals 1 damage to any target.",
+        "mana_cost": "{X}{X}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "0",
+        "toughness": "0",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/306/walking-ballista?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {
+            "0": "query_only",
+            "1": "disabled_dialog"
+          }
+        }
+      },
+      "input_source": "src/manalinkeh/cards/aether_revolt.c",
+      "casting_protocols": {
+        "value_0": "generic_placeholder_then_handler",
+        "payment_0": "generic_placeholder_then_handler",
+        "offturn_0": "generic_placeholder_then_handler",
+        "ready_snapshot_0": "generic_placeholder_then_handler",
+        "pending_snapshot_0": "generic_placeholder_then_handler",
+        "resolved_snapshot_0": "generic_placeholder_then_handler",
+        "source_removed_pending_0": "generic_placeholder_then_handler",
+        "cleanup_0": "generic_placeholder_then_handler",
+        "fresh_0": "generic_placeholder_then_handler",
+        "tapped_0": "generic_placeholder_then_handler",
+        "repeat_0": "generic_placeholder_then_handler",
+        "insufficient_mana_0": "generic_placeholder_then_handler",
+        "entry_x0_0": "generic_placeholder_then_handler",
+        "entry_x1_0": "generic_placeholder_then_handler",
+        "entry_x3_0": "generic_placeholder_then_handler"
+      },
+      "casting_protocol_status": "Independent exact source/metadata review; actor policy unmeasured pending new runtime controls. Dedicated2,2 overcharge probe retained."
+    },
+    "Shalai, Voice of Plenty": {
+      "csvid": 18502,
+      "oracle": {
+        "oracle_id": "a0c47ab6-dfb4-46ee-a3f7-9e1521b4bb4b",
+        "name": "Shalai, Voice of Plenty",
+        "oracle_text": "Flying\nYou, planeswalkers you control, and other creatures you control have hexproof.\n{4}{G}{G}: Put a +1/+1 counter on each creature you control.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Legendary Creature — Angel",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tdc/130/shalai-voice-of-plenty?utm_source=api"
+      },
+      "abilities": {
+        "2": {
+          "dialogs": {},
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        }
+      },
+      "input_source": "src/manalinkeh/cards/dominaria.c"
+    }
+  },
+  "witnesses": {
+    "Ornithopter": {
+      "csvid": 514,
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      }
+    },
+    "Coretapper": {
+      "csvid": 6867,
+      "oracle": {
+        "oracle_id": "66e37011-f3d2-41ed-8e09-7bba9464e8c3",
+        "name": "Coretapper",
+        "oracle_text": "{T}: Put a charge counter on target artifact.\nSacrifice this creature: Put two charge counters on target artifact.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact Creature — Myr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eoc/132/coretapper?utm_source=api"
+      }
+    },
+    "Sage of Lat-Nam": {
+      "csvid": 524,
+      "oracle": {
+        "oracle_id": "f34be3cc-ff47-4415-a6a8-ed142891dc0c",
+        "name": "Sage of Lat-Nam",
+        "oracle_text": "{T}, Sacrifice an artifact: Draw a card.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Human Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/64/sage-of-lat-nam?utm_source=api"
+      }
+    },
+    "Icy Manipulator": {
+      "csvid": 119,
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      }
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      }
+    },
+    "Nissa, Voice of Zendikar": {
+      "csvid": 15648,
+      "oracle": {
+        "oracle_id": "b0f36bf7-bdde-4576-9eca-ec02d41326ab",
+        "name": "Nissa, Voice of Zendikar",
+        "oracle_text": "+1: Create a 0/1 green Plant creature token.\n−2: Put a +1/+1 counter on each creature you control.\n−7: You gain X life and draw X cards, where X is the number of lands you control.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Legendary Planeswalker — Nissa",
+        "loyalty": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddr/1/nissa-voice-of-zendikar?utm_source=api"
+      }
+    },
+    "Suntail Hawk": {
+      "csvid": 1195,
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      }
+    },
+    "Plains": {
+      "csvid": 188,
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Thopter": {
+      "csvid": 18837,
+      "oracle": {
+        "oracle_id": "e3c8482e-ce21-43f8-ac07-c26c01941a4d",
+        "name": "Thopter",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Thopter",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmh3/13/thopter?utm_source=api"
+      }
+    },
+    "Dovin, Grand Arbiter": {
+      "csvid": 19609,
+      "oracle": {
+        "oracle_id": "596237da-3d51-4052-a8ca-2218efc1afb3",
+        "name": "Dovin, Grand Arbiter",
+        "oracle_text": "+1: Until end of turn, whenever a creature you control deals combat damage to a player, put a loyalty counter on Dovin.\n−1: Create a 1/1 colorless Thopter artifact creature token with flying. You gain 1 life.\n−7: Look at the top ten cards of your library. Put three of them into your hand and the rest on the bottom of your library in a random order.",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Legendary Planeswalker — Dovin",
+        "loyalty": "3",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/voc/153/dovin-grand-arbiter?utm_source=api"
+      }
+    },
+    "Rod of Ruin": {
+      "csvid": 208,
+      "oracle": {
+        "oracle_id": "c29a04ab-4e14-45d8-a993-3fffd0e2f6eb",
+        "name": "Rod of Ruin",
+        "oracle_text": "{3}, {T}: This artifact deals 1 damage to any target.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/217/rod-of-ruin?utm_source=api"
+      }
+    },
+    "Duress": {
+      "csvid": 3755,
+      "oracle": {
+        "oracle_id": "33d405ea-7a9a-4970-b70f-9c05d90dd6f0",
+        "name": "Duress",
+        "oracle_text": "Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.",
+        "mana_cost": "{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/606/duress?utm_source=api"
+      }
+    },
+    "Tome Scour": {
+      "csvid": 10477,
+      "oracle": {
+        "oracle_id": "446a9d7e-9c1a-4e83-8342-2ed5acae2eed",
+        "name": "Tome Scour",
+        "oracle_text": "Target player mills five cards.",
+        "mana_cost": "{U}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/75/tome-scour?utm_source=api"
+      }
+    }
+  },
+  "witness_notes": {
+    "Ornithopter": "Native printed 0/2 artifact/Flying control, first disposable own artifact; no token flag or fabricated type.",
+    "Thopter": "Identity witness only; Hangarback creator defines colorless1/1 artifact/Flying.",
+    "Suntail Hawk": "Native printed1/1Flying control."
+  }
+}

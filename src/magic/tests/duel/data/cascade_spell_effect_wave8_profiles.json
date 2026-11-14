@@ -1,0 +1,510 @@
+{
+  "sources": {
+    "Ardent Plea": {
+      "oracle_id": "49a8ca54-30d3-42d3-b122-334d24805e1b",
+      "name": "Ardent Plea",
+      "oracle_text": "Exalted (Whenever a creature you control attacks alone, that creature gets +1/+1 until end of turn.)\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Enchantment",
+      "keywords": [
+        "Exalted",
+        "Cascade"
+      ],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Bituminous Blast": {
+      "oracle_id": "d291d8f7-bb67-470c-8794-cd553c91e5cc",
+      "name": "Bituminous Blast",
+      "oracle_text": "Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)\nBituminous Blast deals 4 damage to target creature.",
+      "mana_cost": "{3}{B}{R}",
+      "type_line": "Instant",
+      "keywords": [
+        "Cascade"
+      ],
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Bloodbraid Elf": {
+      "oracle_id": "3f0c9466-5ab9-4205-a84f-b4b27b5a678e",
+      "name": "Bloodbraid Elf",
+      "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
+      "mana_cost": "{2}{R}{G}",
+      "type_line": "Creature — Elf Berserker",
+      "power": "3",
+      "toughness": "2",
+      "keywords": [
+        "Haste",
+        "Cascade"
+      ],
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Captured Sunlight": {
+      "oracle_id": "937cb494-7dcb-4a40-b1e0-6e6b31f5c8a6",
+      "name": "Captured Sunlight",
+      "oracle_text": "Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)\nYou gain 4 life.",
+      "mana_cost": "{2}{G}{W}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Cascade"
+      ],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Demonic Dread": {
+      "oracle_id": "b090f1e5-1f7e-4492-9928-c5911a8ef95b",
+      "name": "Demonic Dread",
+      "oracle_text": "Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)\nTarget creature can't block this turn.",
+      "mana_cost": "{1}{B}{R}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Cascade"
+      ],
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Deny Reality": {
+      "oracle_id": "f9e31993-bfe1-46fb-8a32-418e97f9cfe1",
+      "name": "Deny Reality",
+      "oracle_text": "Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)\nReturn target permanent to its owner's hand.",
+      "mana_cost": "{3}{U}{B}",
+      "type_line": "Sorcery",
+      "keywords": [
+        "Cascade"
+      ],
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Enlisted Wurm": {
+      "oracle_id": "69191459-36ca-4e71-b4bb-0270c4cdaee9",
+      "name": "Enlisted Wurm",
+      "oracle_text": "Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
+      "mana_cost": "{4}{G}{W}",
+      "type_line": "Creature — Wurm",
+      "power": "5",
+      "toughness": "5",
+      "keywords": [
+        "Cascade"
+      ],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 6.0,
+      "layout": "normal"
+    },
+    "Violent Outburst": {
+      "oracle_id": "c0f69063-9079-4e7a-98dc-c29da8171d33",
+      "name": "Violent Outburst",
+      "oracle_text": "Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)\nCreatures you control get +1/+0 until end of turn.",
+      "mana_cost": "{1}{R}{G}",
+      "type_line": "Instant",
+      "keywords": [
+        "Cascade"
+      ],
+      "colors": [
+        "G",
+        "R"
+      ],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Shardless Agent": {
+      "oracle_id": "2afbaa9a-c171-4a8b-90f3-5250d8498356",
+      "name": "Shardless Agent",
+      "oracle_text": "Cascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
+      "mana_cost": "{1}{G}{U}",
+      "type_line": "Artifact Creature — Human Rogue",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Cascade"
+      ],
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    }
+  },
+  "witnesses": {
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Spined Wurm": {
+      "oracle_id": "05425f2f-7228-4bf5-8fe1-6fe99107e8e0",
+      "name": "Spined Wurm",
+      "oracle_text": "",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Wurm",
+      "power": "5",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Memnite": {
+      "oracle_id": "7663ac7c-1de3-4250-b96a-fae9dbd66a27",
+      "name": "Memnite",
+      "oracle_text": "",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Construct",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Enormous Baloth": {
+      "oracle_id": "6189cd17-61aa-420a-ba53-5ddaf2bbc2ba",
+      "name": "Enormous Baloth",
+      "oracle_text": "",
+      "mana_cost": "{6}{G}",
+      "type_line": "Creature — Beast",
+      "power": "7",
+      "toughness": "7",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 7.0,
+      "layout": "normal"
+    },
+    "Fervor": {
+      "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+      "name": "Fervor",
+      "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+      "mana_cost": "{2}{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Jace Beleren": {
+      "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "name": "Jace Beleren",
+      "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Legendary Planeswalker — Jace",
+      "loyalty": "3",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    }
+  },
+  "handlers": {
+    "Ardent Plea": "manalinkeh_card_ardent_plea",
+    "Bituminous Blast": "manalinkeh_card_bituminous_blast",
+    "Bloodbraid Elf": "manalinkeh_card_bloodbraid_elf",
+    "Captured Sunlight": "manalinkeh_card_captured_sunlight",
+    "Demonic Dread": "manalinkeh_card_demonic_dread",
+    "Deny Reality": "manalinkeh_card_deny_reality",
+    "Enlisted Wurm": "manalinkeh_card_enlisted_wurm",
+    "Violent Outburst": "manalinkeh_card_violent_outburst",
+    "Darksteel Relic": "manalinkeh_card_darksteel_myr",
+    "Forest": "manalinkeh_plain_mana_producer",
+    "Giant Growth": "manalinkeh_card_giant_growth",
+    "Grizzly Bears": "card_dummy",
+    "Island": "manalinkeh_plain_mana_producer",
+    "Lightning Bolt": "manalinkeh_card_lightning_bolt",
+    "Llanowar Elves": "manalinkeh_card_elvish_mystic",
+    "Mountain": "manalinkeh_plain_mana_producer",
+    "Plains": "manalinkeh_plain_mana_producer",
+    "Sol Ring": "manalinkeh_card_sol_ring",
+    "Scathe Zombies": "card_scathe_zombies",
+    "Hill Giant": "card_dummy",
+    "Spined Wurm": "card_dummy",
+    "Memnite": "card_dummy",
+    "Enormous Baloth": "card_dummy",
+    "Fervor": "manalinkeh_card_fervor",
+    "Jace Beleren": "manalinkeh_card_jace_beleren",
+    "Counterspell": "manalinkeh_card_counterspell",
+    "Shardless Agent": "manalinkeh_card_enlisted_wurm"
+  }
+}

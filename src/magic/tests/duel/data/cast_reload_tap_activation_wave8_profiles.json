@@ -1,0 +1,671 @@
+{
+  "sources": {
+    "Gelectrode": {
+      "oracle_id": "8039df5c-b26b-4277-8226-4c08a5a69fbb",
+      "name": "Gelectrode",
+      "oracle_text": "{T}: This creature deals 1 damage to any target.\nWhenever you cast an instant or sorcery spell, you may untap this creature.",
+      "mana_cost": "{1}{U}{R}",
+      "type_line": "Creature — Weird",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Leonin Battlemage": {
+      "oracle_id": "7c0e4731-d384-4f63-a36c-b571d8f79922",
+      "name": "Leonin Battlemage",
+      "oracle_text": "{T}: Target creature gets +1/+1 until end of turn.\nWhenever you cast a spell, you may untap this creature.",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Cat Wizard",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Merrow Bonegnawer": {
+      "oracle_id": "dad36dc0-39aa-46f9-819b-cad7a578c037",
+      "name": "Merrow Bonegnawer",
+      "oracle_text": "{T}: Target player exiles a card from their graveyard.\nWhenever you cast a black spell, you may untap this creature.",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Merfolk Rogue",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Merrow Levitator": {
+      "oracle_id": "a4154dac-3f6d-4f8f-a769-9f5b8acecda7",
+      "name": "Merrow Levitator",
+      "oracle_text": "{T}: Target creature gains flying until end of turn.\nWhenever you cast a blue spell, you may untap this creature.",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Merfolk Wizard",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Lobber Crew": {
+      "oracle_id": "84dffb4b-02d7-48e4-9a95-43f88cd52bf3",
+      "name": "Lobber Crew",
+      "oracle_text": "Defender\n{T}: This creature deals 1 damage to each opponent.\nWhenever you cast a multicolored spell, untap this creature.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "power": "0",
+      "toughness": "4",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Nettle Drone": {
+      "oracle_id": "cc4e8b8e-f615-4842-84c5-d6154986b666",
+      "name": "Nettle Drone",
+      "oracle_text": "Devoid (This card has no color.)\n{T}: This creature deals 1 damage to each opponent.\nWhenever you cast a colorless spell, untap this creature.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Eldrazi Drone",
+      "power": "3",
+      "toughness": "1",
+      "keywords": [
+        "Devoid"
+      ],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Zephyr Scribe": {
+      "oracle_id": "a1841bcc-738e-4f4b-a88f-571a93c59ad7",
+      "name": "Zephyr Scribe",
+      "oracle_text": "{U}, {T}: Draw a card, then discard a card.\nWhenever you cast a noncreature spell, untap this creature.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Human Monk",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Inspired Sprite": {
+      "oracle_id": "c3700173-d23a-4b73-b710-72aae82f0dfd",
+      "name": "Inspired Sprite",
+      "oracle_text": "Flash\nFlying\nWhenever you cast a Wizard spell, you may untap this creature.\n{T}: Draw a card, then discard a card.",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Faerie Wizard",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flying",
+        "Flash"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Thermo-Alchemist": {
+      "oracle_id": "228fbae1-423e-461d-b8c3-55786938a3cb",
+      "name": "Thermo-Alchemist",
+      "oracle_text": "Defender\n{T}: This creature deals 1 damage to each opponent.\nWhenever you cast an instant or sorcery spell, untap this creature.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Human Shaman",
+      "power": "0",
+      "toughness": "3",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    }
+  },
+  "witnesses": {
+    "Archivist": {
+      "oracle_id": "d137586f-83b0-40af-8100-443460b07ac0",
+      "name": "Archivist",
+      "oracle_text": "{T}: Draw a card.",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Creature — Human Wizard",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Centaur Healer": {
+      "oracle_id": "ff435f84-73ab-4a16-8af6-6576af4e4edb",
+      "name": "Centaur Healer",
+      "oracle_text": "When this creature enters, you gain 3 life.",
+      "mana_cost": "{1}{G}{W}",
+      "type_line": "Creature — Centaur Cleric",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Coral Merfolk": {
+      "oracle_id": "4ed27607-21a8-4bc3-997e-6d2242313f6d",
+      "name": "Coral Merfolk",
+      "oracle_text": "",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Merfolk",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Divination": {
+      "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+      "name": "Divination",
+      "oracle_text": "Draw two cards.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Drudge Skeletons": {
+      "oracle_id": "c180ed02-07f4-4538-9bea-8c249234a8e2",
+      "name": "Drudge Skeletons",
+      "oracle_text": "{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Skeleton",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Heal",
+        "Regenerate"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Jace Beleren": {
+      "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "name": "Jace Beleren",
+      "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Legendary Planeswalker — Jace",
+      "loyalty": "3",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Prodigal Sorcerer": {
+      "oracle_id": "5e961d15-5972-4e4b-9385-1cd7cd7c6bbe",
+      "name": "Prodigal Sorcerer",
+      "oracle_text": "{T}: This creature deals 1 damage to any target.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Human Wizard Sorcerer",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Raging Goblin": {
+      "oracle_id": "30997b43-fc13-41d3-8064-1ccc2cb6fd2b",
+      "name": "Raging Goblin",
+      "oracle_text": "Haste (This creature can attack and {T} as soon as it comes under your control.)",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin Berserker",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Haste"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Reach Through Mists": {
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "name": "Reach Through Mists",
+      "oracle_text": "Draw a card.",
+      "mana_cost": "{U}",
+      "type_line": "Instant — Arcane",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Suntail Hawk": {
+      "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+      "name": "Suntail Hawk",
+      "oracle_text": "Flying",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Watchwolf": {
+      "oracle_id": "a35c2e20-eb90-4132-b65f-be1fcb569819",
+      "name": "Watchwolf",
+      "oracle_text": "",
+      "mana_cost": "{G}{W}",
+      "type_line": "Creature — Wolf",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G",
+        "W"
+      ],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Wind Drake": {
+      "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+      "name": "Wind Drake",
+      "oracle_text": "Flying",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Drake",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    }
+  },
+  "handlers": {
+    "Archivist": "manalinkeh_card_archivist",
+    "Centaur Healer": "manalinkeh_card_centaur_healer",
+    "Coral Merfolk": "card_dummy",
+    "Counterspell": "manalinkeh_card_counterspell",
+    "Darksteel Relic": "manalinkeh_card_darksteel_myr",
+    "Divination": "manalinkeh_card_divination",
+    "Drudge Skeletons": "manalinkeh_card_drudge_skeletons",
+    "Forest": "manalinkeh_plain_mana_producer",
+    "Gelectrode": "manalinkeh_card_gelectrode",
+    "Giant Growth": "manalinkeh_card_giant_growth",
+    "Giant Spider": "card_dummy",
+    "Grizzly Bears": "card_dummy",
+    "Inspired Sprite": "manalinkeh_card_inspired_sprite",
+    "Island": "manalinkeh_plain_mana_producer",
+    "Jace Beleren": "manalinkeh_card_jace_beleren",
+    "Leonin Battlemage": "manalinkeh_card_leonin_battlemage",
+    "Lightning Bolt": "manalinkeh_card_lightning_bolt",
+    "Llanowar Elves": "manalinkeh_card_elvish_mystic",
+    "Lobber Crew": "manalinkeh_card_lobber_crew",
+    "Merrow Bonegnawer": "manalinkeh_card_merrow_bonegnawer",
+    "Merrow Levitator": "manalinkeh_card_merrow_levitator",
+    "Mountain": "manalinkeh_plain_mana_producer",
+    "Nettle Drone": "manalinkeh_card_nettle_drone",
+    "Ornithopter": "card_dummy",
+    "Plains": "manalinkeh_plain_mana_producer",
+    "Prodigal Sorcerer": "manalinkeh_card_prodigal_sorcerer",
+    "Raging Goblin": "manalinkeh_card_ambush_party",
+    "Reach Through Mists": "manalinkeh_card_reach_through_mists",
+    "Scathe Zombies": "card_scathe_zombies",
+    "Sol Ring": "manalinkeh_card_sol_ring",
+    "Suntail Hawk": "card_dummy",
+    "Watchwolf": "card_dummy",
+    "Wind Drake": "card_dummy",
+    "Zephyr Scribe": "manalinkeh_card_zephyr_scribe",
+    "Thermo-Alchemist": "manalinkeh_card_thermo_alchemist"
+  },
+  "mandatory_multi_source_choice": {
+    "Gelectrode": false,
+    "Leonin Battlemage": false,
+    "Merrow Bonegnawer": false,
+    "Merrow Levitator": false,
+    "Lobber Crew": true,
+    "Nettle Drone": true,
+    "Zephyr Scribe": false,
+    "Inspired Sprite": false,
+    "Thermo-Alchemist": true
+  }
+}

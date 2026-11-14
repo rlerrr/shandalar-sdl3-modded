@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Ravenous Trap",
+  "csvid": 10645,
+  "recipes": [
+    {
+      "family": "graveyard_exile",
+      "version": 2,
+      "oracle_text": "If an opponent had three or more cards put into their graveyard from anywhere this turn, you may pay {0} rather than pay this spell's mana cost.\nExile target player's graveyard.",
+      "params": {
+        "schema": 7,
+        "mode": "spell",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "target_player",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "The conditional {0} alternative cost after three or more cards entered an opponent graveyard this turn. These cases cast at the printed {2}{B}{B} cost without authored graveyard additions."
+        ],
+        "battlefield_controls": true
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "empty_graveyards_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "own_target_0",
+        "sole_own_graveyard_0",
+        "sole_opponent_graveyard_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "wrong_color_0",
+        "repeat_0",
+        "effect_1",
+        "payment_1",
+        "empty_graveyards_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "own_target_1",
+        "sole_own_graveyard_1",
+        "sole_opponent_graveyard_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "wrong_color_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

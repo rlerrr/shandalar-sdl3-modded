@@ -1,0 +1,660 @@
+{
+  "version": 1,
+  "oracle_sha256": "c11dcfedde2ed4ce99ff355f5cf30c187c2b3745c87a03319e715bbfec17cf50",
+  "sources": {
+    "Sleep Paralysis": {
+      "csvid": 15960,
+      "oracle": {
+        "oracle_id": "5a8bd4a4-8b10-4eef-8341-28be2afa2c00",
+        "name": "Sleep Paralysis",
+        "oracle_text": "Enchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Enchantment \u2014 Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/75/sleep-paralysis?utm_source=api"
+      }
+    },
+    "Mystic Restraints": {
+      "csvid": 7314,
+      "oracle": {
+        "oracle_id": "efb91243-2617-495f-adb0-1c26a669fb80",
+        "name": "Mystic Restraints",
+        "oracle_text": "Flash\nEnchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Enchantment \u2014 Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/76/mystic-restraints?utm_source=api"
+      }
+    },
+    "Runner's Bane": {
+      "csvid": 13212,
+      "oracle": {
+        "oracle_id": "31c30c4f-12f4-4cbc-b7c1-123f36b8df75",
+        "name": "Runner's Bane",
+        "oracle_text": "Enchant creature with power 3 or less\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment \u2014 Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/17/runners-bane?utm_source=api"
+      }
+    },
+    "Encase in Ice": {
+      "csvid": 14910,
+      "oracle": {
+        "oracle_id": "a61277d6-a27d-45d1-ba2a-7afe1b8f5ce1",
+        "name": "Encase in Ice",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant red or green creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment \u2014 Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/54/encase-in-ice?utm_source=api"
+      }
+    },
+    "Roots": {
+      "csvid": 2234,
+      "oracle": {
+        "oracle_id": "0dcee3a3-6cb1-45ce-958c-1f57ced80be4",
+        "name": "Roots",
+        "oracle_text": "Enchant creature without flying\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Enchantment \u2014 Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/183/roots?utm_source=api"
+      }
+    },
+    "Malfunction": {
+      "csvid": 16441,
+      "oracle": {
+        "oracle_id": "d2f98983-f395-4166-aa5a-309b4769baab",
+        "name": "Malfunction",
+        "oracle_text": "Enchant artifact or creature\nWhen this Aura enters, tap enchanted permanent.\nEnchanted permanent doesn't untap during its controller's untap step.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Enchantment \u2014 Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/55/malfunction?utm_source=api"
+      }
+    },
+    "Castaway's Despair": {
+      "csvid": 17367,
+      "oracle": {
+        "oracle_id": "9dc4b172-da33-40c0-ab29-d68807dbe93f",
+        "name": "Castaway's Despair",
+        "oracle_text": "Enchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Enchantment \u2014 Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/xln/281/castaways-despair?utm_source=api"
+      }
+    },
+    "Waterknot": {
+      "csvid": 18331,
+      "oracle": {
+        "oracle_id": "002100cd-1ab1-44da-93a0-1269d47a712a",
+        "name": "Waterknot",
+        "oracle_text": "Enchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Enchantment \u2014 Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/192/waterknot?utm_source=api"
+      }
+    },
+    "Capture Sphere": {
+      "csvid": 19305,
+      "oracle": {
+        "oracle_id": "2dc59566-10cb-468a-b6a2-17d6c0186e6d",
+        "name": "Capture Sphere",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nEnchant creature\nWhen this Aura enters, tap enchanted creature.\nEnchanted creature doesn't untap during its controller's untap step.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Enchantment \u2014 Aura",
+        "keywords": [
+          "Enchant",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/42/capture-sphere?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    },
+    "Calcite Snapper": {
+      "oracle_id": "36593200-e53c-46e4-a04e-8deec8273c65",
+      "name": "Calcite Snapper",
+      "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)\nLandfall \u2014 Whenever a land you control enters, you may switch this creature's power and toughness until end of turn.",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Creature \u2014 Turtle",
+      "power": "1",
+      "toughness": "4",
+      "keywords": [
+        "Shroud",
+        "Landfall"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/wwk/25/calcite-snapper?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Craw Wurm": {
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "name": "Craw Wurm",
+      "oracle_text": "",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature \u2014 Wurm",
+      "power": "6",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+    },
+    "Darksteel Citadel": {
+      "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+      "name": "Darksteel Citadel",
+      "oracle_text": "Indestructible\n{T}: Add {C}.",
+      "mana_cost": "",
+      "type_line": "Artifact Land",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/c21/285/darksteel-citadel?utm_source=api"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+    },
+    "Dryad Arbor": {
+      "oracle_id": "e996cd67-739c-40f4-b276-0042acf26c71",
+      "name": "Dryad Arbor",
+      "oracle_text": "(This land isn't a spell, it's affected by summoning sickness, and it has \"{T}: Add {G}.\")",
+      "mana_cost": "",
+      "type_line": "Land Creature \u2014 Forest Dryad",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/273/dryad-arbor?utm_source=api"
+    },
+    "Elvish Mystic": {
+      "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+      "name": "Elvish Mystic",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "{G}",
+      "type_line": "Creature \u2014 Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature \u2014 Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+    },
+    "Goblin Piker": {
+      "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+      "name": "Goblin Piker",
+      "oracle_text": "",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature \u2014 Goblin Warrior",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m12/141/goblin-piker?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature \u2014 Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Jump": {
+      "oracle_id": "f7518456-45ed-41d4-bd3c-5aacea28eb35",
+      "name": "Jump",
+      "oracle_text": "Target creature gains flying until end of turn.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m10/59/jump?utm_source=api"
+    },
+    "Merfolk of the Pearl Trident": {
+      "oracle_id": "218d9277-c179-4de3-9c7f-79b5a6d4fa38",
+      "name": "Merfolk of the Pearl Trident",
+      "oracle_text": "",
+      "mana_cost": "{U}",
+      "type_line": "Creature \u2014 Merfolk",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m13/60/merfolk-of-the-pearl-trident?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Purelace": {
+      "oracle_id": "3773001a-8868-49ec-a406-298cf72359c2",
+      "name": "Purelace",
+      "oracle_text": "Target spell or permanent becomes white. (Mana symbols on that permanent remain unchanged.)",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/4ed/43/purelace?utm_source=api"
+    },
+    "Seal of Cleansing": {
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "name": "Seal of Cleansing",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mkc/80/seal-of-cleansing?utm_source=api"
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "name": "Twiddle",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Fog": {
+      "oracle_id": "27e9db49-7af7-4bef-ad4c-bf5dfb92030d",
+      "name": "Fog",
+      "oracle_text": "Prevent all combat damage that would be dealt this turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ema/167/fog?utm_source=api"
+    },
+    "Turn to Frog": {
+      "oracle_id": "74c4c1e2-c50d-4c8f-889a-0d5674dc6d67",
+      "name": "Turn to Frog",
+      "oracle_text": "Until end of turn, target creature loses all abilities and becomes a blue Frog with base power and toughness 1/1.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/clu/103/turn-to-frog?utm_source=api"
+    }
+  }
+}

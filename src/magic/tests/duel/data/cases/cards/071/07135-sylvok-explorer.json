@@ -1,0 +1,73 @@
+{
+  "version": 1,
+  "card": "Sylvok Explorer",
+  "csvid": 7135,
+  "recipes": [
+    {
+      "family": "printed_tap_mana_activation",
+      "version": 2,
+      "oracle_text": "{T}: Add one mana of any color that a land an opponent controls could produce.",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "entry_choice": false,
+          "output_choice": "when_multiple",
+          "cost_creature_choices": {
+            "0": false,
+            "1": false
+          },
+          "cost_before_color": false,
+          "zero_output_no_color": true,
+          "filter_menu": false
+        },
+        "other_clauses": []
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "inactive_0",
+        "tapped_0",
+        "repeat_denied_0",
+        "repeat_untap_0",
+        "spend_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "opponent_turn_0",
+        "untap_step_0",
+        "fresh_0",
+        "color_b_0",
+        "color_u_0",
+        "color_g_0",
+        "color_r_0",
+        "color_w_0",
+        "palette_choice_0",
+        "empty_query_0",
+        "wrong_owner_query_0",
+        "zero_output_0",
+        "value_1",
+        "payment_1",
+        "inactive_1",
+        "tapped_1",
+        "repeat_denied_1",
+        "repeat_untap_1",
+        "spend_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "opponent_turn_1",
+        "untap_step_1",
+        "fresh_1",
+        "color_b_1",
+        "color_u_1",
+        "color_g_1",
+        "color_r_1",
+        "color_w_1",
+        "palette_choice_1",
+        "empty_query_1",
+        "wrong_owner_query_1",
+        "zero_output_1"
+      ]
+    }
+  ]
+}

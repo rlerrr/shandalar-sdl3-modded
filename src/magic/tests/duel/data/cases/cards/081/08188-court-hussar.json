@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "card": "Court Hussar",
+  "csvid": 8188,
+  "recipes": [
+    {
+      "family": "entry_trigger_value",
+      "version": 2,
+      "oracle_text": "Vigilance\nWhen this creature enters, look at the top three cards of your library, then put one of them into your hand and the rest on the bottom of your library in any order.\nWhen this creature enters, sacrifice it unless {W} was spent to cast it.",
+      "variants": [
+        "white_0",
+        "no_white_0",
+        "insufficient_0",
+        "wrong_blue_0",
+        "alternate_choice_0",
+        "duplicates_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bounce_recast_0",
+        "blink_uncast_0",
+        "source_destroyed_0",
+        "empty_library_0",
+        "one_card_library_0",
+        "short_library_0",
+        "no_white_empty_0",
+        "no_white_short_0",
+        "white_1",
+        "no_white_1",
+        "insufficient_1",
+        "wrong_blue_1",
+        "alternate_choice_1",
+        "duplicates_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bounce_recast_1",
+        "blink_uncast_1",
+        "source_destroyed_1",
+        "empty_library_1",
+        "one_card_library_1",
+        "short_library_1",
+        "no_white_empty_1",
+        "no_white_short_1",
+        "generic_white_0",
+        "white_unspent_0"
+      ],
+      "params": {
+        "schema": 4,
+        "mechanism": {
+          "gate": "white_spent",
+          "kind": "one",
+          "window": 3,
+          "scope": "any",
+          "optional": false,
+          "remainder": "bottom",
+          "target_player": false,
+          "selection_clause": "When this creature enters, look at the top three cards of your library, then put one of them into your hand and the rest on the bottom of your library in any order.",
+          "condition_clause": "When this creature enters, sacrifice it unless {W} was spent to cast it.",
+          "gaps": [
+            "Vigilance"
+          ]
+        },
+        "presentation": {
+          "selector": "display",
+          "human_payment_dialog": true
+        }
+      }
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle typed entry gate: actual cast-time colored payment or live-battlefield affinity reduction, complete mandatory library selection and source survival/sacrifice, both controllers, bounded/empty windows, ordinary costs and denials, real artifact casts and ownership/zone controls, actual bounce/blink/counter responses and native snapshot replay. Independent ETB-order alternatives/intermediate priority, passive keyword combat and external replacement/control changes are explicit gaps; no synthetic mana-paid or battlefield-readiness flags."
+}

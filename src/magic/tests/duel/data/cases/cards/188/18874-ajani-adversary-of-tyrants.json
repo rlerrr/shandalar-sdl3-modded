@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Ajani, Adversary of Tyrants",
+  "csvid": 18874,
+  "recipes": [
+    {
+      "family": "permanent_plus1_activation",
+      "version": 2,
+      "oracle_text": "+1: Put a +1/+1 counter on each of up to two target creatures.\n−2: Return target creature card with mana value 2 or less from your graveyard to the battlefield.\n−7: You get an emblem with \"At the beginning of your end step, create three 1/1 white Cat creature tokens with lifelink.\"",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        },
+        "other_clauses": [
+          "−2: Return target creature card with mana value 2 or less from your graveyard to the battlefield.",
+          "−7: You get an emblem with \"At the beginning of your end step, create three 1/1 white Cat creature tokens with lifelink.\""
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "target_enemy_0",
+        "target_removed_pending_0",
+        "probe_noncreature_0",
+        "targets0_0",
+        "targets1_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "target_enemy_1",
+        "target_removed_pending_1",
+        "probe_noncreature_1",
+        "targets0_1",
+        "targets1_1"
+      ]
+    }
+  ]
+}

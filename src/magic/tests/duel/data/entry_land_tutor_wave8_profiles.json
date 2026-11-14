@@ -1,0 +1,641 @@
+{
+  "version": 1,
+  "sources": {
+    "Liliana's Shade": {
+      "csvid": 12588,
+      "oracle": {
+        "oracle_id": "44f87b6e-0cc8-4088-8a94-8272b6b26869",
+        "name": "Liliana's Shade",
+        "oracle_text": "When this creature enters, you may search your library for a Swamp card, reveal it, put it into your hand, then shuffle.\n{B}: This creature gets +1/+1 until end of turn.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature \u2014 Shade",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m13/98/lilianas-shade?utm_source=api"
+      },
+      "presentation": {
+        "human_entry_trigger": true,
+        "human_death_trigger": false
+      }
+    },
+    "Mycosynth Wellspring": {
+      "csvid": 11643,
+      "oracle": {
+        "oracle_id": "9ec43ec6-b625-4be8-8f79-3679e6657dbc",
+        "name": "Mycosynth Wellspring",
+        "oracle_text": "When this artifact enters or is put into a graveyard from the battlefield, you may search your library for a basic land card, reveal it, put it into your hand, then shuffle.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/252/mycosynth-wellspring?utm_source=api"
+      },
+      "presentation": {
+        "human_entry_trigger": true,
+        "human_death_trigger": true
+      }
+    },
+    "Solemn Simulacrum": {
+      "csvid": 1207,
+      "oracle": {
+        "oracle_id": "00c0543c-2a1f-4425-8283-4062d74a1637",
+        "name": "Solemn Simulacrum",
+        "oracle_text": "When this creature enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.\nWhen this creature dies, you may draw a card.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature \u2014 Golem",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/msc/215/solemn-simulacrum?utm_source=api"
+      },
+      "presentation": {
+        "human_entry_trigger": true,
+        "human_death_trigger": true
+      }
+    },
+    "Yavimaya Granger": {
+      "csvid": 4088,
+      "oracle": {
+        "oracle_id": "fac9ff8d-8342-4099-b224-d48a044bcc9a",
+        "name": "Yavimaya Granger",
+        "oracle_text": "Echo {2}{G} (At the beginning of your upkeep, if this came under your control since the beginning of your last upkeep, sacrifice it unless you pay its echo cost.)\nWhen this creature enters, you may search your library for a basic land card, put that card onto the battlefield tapped, then shuffle.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature \u2014 Elf",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Echo"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/118/yavimaya-granger?utm_source=api"
+      },
+      "presentation": {
+        "human_entry_trigger": true,
+        "human_death_trigger": false
+      }
+    },
+    "Yavimaya Dryad": {
+      "csvid": 8735,
+      "oracle": {
+        "oracle_id": "6d1a1ea3-6d83-4bee-a7fe-0ddd0f3019cf",
+        "name": "Yavimaya Dryad",
+        "oracle_text": "Forestwalk (This creature can't be blocked as long as defending player controls a Forest.)\nWhen this creature enters, you may search your library for a Forest card, put it onto the battlefield tapped under target player's control, then shuffle.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature \u2014 Dryad",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Landwalk",
+          "Forestwalk"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/247/yavimaya-dryad?utm_source=api"
+      },
+      "presentation": {
+        "human_entry_trigger": true,
+        "human_death_trigger": false
+      }
+    },
+    "Knight of the White Orchid": {
+      "csvid": 10001,
+      "oracle": {
+        "oracle_id": "7d0efc64-151f-45b4-8c0b-c32609f9d862",
+        "name": "Knight of the White Orchid",
+        "oracle_text": "First strike\nWhen this creature enters, if an opponent controls more lands than you, you may search your library for a Plains card, put it onto the battlefield, then shuffle.",
+        "mana_cost": "{W}{W}",
+        "type_line": "Creature \u2014 Human Knight",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/193/knight-of-the-white-orchid?utm_source=api"
+      },
+      "presentation": {
+        "human_entry_trigger": true,
+        "human_death_trigger": false
+      }
+    },
+    "Oreskos Explorer": {
+      "csvid": 15533,
+      "oracle": {
+        "oracle_id": "a3055ae8-990d-495a-9cb5-971407990cfa",
+        "name": "Oreskos Explorer",
+        "oracle_text": "When this creature enters, search your library for up to X Plains cards, where X is the number of players who control more lands than you. Reveal those cards, put them into your hand, then shuffle.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature \u2014 Cat Scout",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/832/oreskos-explorer?utm_source=api"
+      },
+      "presentation": {
+        "human_entry_trigger": true,
+        "human_death_trigger": false
+      }
+    },
+    "Ulvenwald Hydra": {
+      "csvid": 16003,
+      "oracle": {
+        "oracle_id": "40b85f70-78b6-427a-9fb9-c3a72b8528ed",
+        "name": "Ulvenwald Hydra",
+        "oracle_text": "Reach\nUlvenwald Hydra's power and toughness are each equal to the number of lands you control.\nWhen this creature enters, you may search your library for a land card, put it onto the battlefield tapped, then shuffle.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature \u2014 Hydra",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/439/ulvenwald-hydra?utm_source=api"
+      },
+      "presentation": {
+        "human_entry_trigger": false,
+        "human_death_trigger": false
+      }
+    }
+  },
+  "witnesses": {
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    },
+    "Cloudshift": {
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "name": "Cloudshift",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Darksteel Citadel": {
+      "oracle_id": "8dc067bf-f78f-4ac4-b6e7-b305c42cf0bc",
+      "name": "Darksteel Citadel",
+      "oracle_text": "Indestructible\n{T}: Add {C}.",
+      "mana_cost": "",
+      "type_line": "Artifact Land",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/c21/285/darksteel-citadel?utm_source=api"
+    },
+    "Darksteel Relic": {
+      "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+      "name": "Darksteel Relic",
+      "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+    },
+    "Divination": {
+      "oracle_id": "273b339c-964b-4a18-8eb5-ceb8abcdfd9e",
+      "name": "Divination",
+      "oracle_text": "Draw two cards.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/51/divination?utm_source=api"
+    },
+    "Dryad Arbor": {
+      "oracle_id": "e996cd67-739c-40f4-b276-0042acf26c71",
+      "name": "Dryad Arbor",
+      "oracle_text": "(This land isn't a spell, it's affected by summoning sickness, and it has \"{T}: Add {G}.\")",
+      "mana_cost": "",
+      "type_line": "Land Creature \u2014 Forest Dryad",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/273/dryad-arbor?utm_source=api"
+    },
+    "Elvish Mystic": {
+      "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+      "name": "Elvish Mystic",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "{G}",
+      "type_line": "Creature \u2014 Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Jace Beleren": {
+      "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+      "name": "Jace Beleren",
+      "oracle_text": "+2: Each player draws a card.\n\u22121: Target player draws a card.\n\u221210: Target player mills twenty cards.",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Legendary Planeswalker \u2014 Jace",
+      "loyalty": "3",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Mons's Goblin Raiders": {
+      "oracle_id": "a37159df-f6d7-4db6-85de-0ea77f425993",
+      "name": "Mons's Goblin Raiders",
+      "oracle_text": "",
+      "mana_cost": "{R}",
+      "type_line": "Creature \u2014 Goblin",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/s00/32/monss-goblin-raiders?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Savannah": {
+      "oracle_id": "703243f0-8cb3-420f-958f-5fd4bde30293",
+      "name": "Savannah",
+      "oracle_text": "({T}: Add {G} or {W}.)",
+      "mana_cost": "",
+      "type_line": "Land \u2014 Forest Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G",
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/vma/311/savannah?utm_source=api"
+    },
+    "Scrying Sheets": {
+      "oracle_id": "0f98e055-ab61-4314-aae8-9d3c19f66acf",
+      "name": "Scrying Sheets",
+      "oracle_text": "{T}: Add {C}.\n{1}{S}, {T}: Look at the top card of your library. If that card is snow, you may reveal it and put it into your hand. ({S} can be paid with one mana from a snow source.)",
+      "mana_cost": "",
+      "type_line": "Snow Land",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/csp/149/scrying-sheets?utm_source=api"
+    },
+    "Signal Pest": {
+      "oracle_id": "724f3d2f-0513-4efd-961f-56a7ea7b5731",
+      "name": "Signal Pest",
+      "oracle_text": "Battle cry (Whenever this creature attacks, each other attacking creature gets +1/+0 until end of turn.)\nThis creature can't be blocked except by creatures with flying or reach.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact Creature \u2014 Pest",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Battle Cry"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mbs/131/signal-pest?utm_source=api"
+    },
+    "Snow-Covered Forest": {
+      "oracle_id": "5f0d3be8-e63e-4ade-ae58-6b0c14f2ce6d",
+      "name": "Snow-Covered Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Snow Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/khm/284/snow-covered-forest?utm_source=api"
+    },
+    "Snow-Covered Plains": {
+      "oracle_id": "ac8cc74d-e43b-4118-bba0-dfa8b9c04d45",
+      "name": "Snow-Covered Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Snow Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/khm/276/snow-covered-plains?utm_source=api"
+    },
+    "Snow-Covered Swamp": {
+      "oracle_id": "d8239a86-7184-4005-ba1e-2dddcd756c47",
+      "name": "Snow-Covered Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Snow Land \u2014 Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/khm/280/snow-covered-swamp?utm_source=api"
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+    },
+    "Taiga": {
+      "oracle_id": "22e3cf1d-3559-4ce1-954c-8dc815342979",
+      "name": "Taiga",
+      "oracle_text": "({T}: Add {R} or {G}.)",
+      "mana_cost": "",
+      "type_line": "Land \u2014 Mountain Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G",
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/vma/317/taiga?utm_source=api"
+    },
+    "Tarfire": {
+      "oracle_id": "f07b821c-bbc1-4def-b009-6c03689478d0",
+      "name": "Tarfire",
+      "oracle_text": "Tarfire deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Kindred Instant \u2014 Goblin",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ddt/55/tarfire?utm_source=api"
+    },
+    "Tundra": {
+      "oracle_id": "02418479-9455-417f-a6a1-004356faff37",
+      "name": "Tundra",
+      "oracle_text": "({T}: Add {W} or {U}.)",
+      "mana_cost": "",
+      "type_line": "Land \u2014 Plains Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/vma/322/tundra?utm_source=api"
+    },
+    "Underground Sea": {
+      "oracle_id": "4b22be3a-8ce1-47d1-b82e-6c3ccfb0548b",
+      "name": "Underground Sea",
+      "oracle_text": "({T}: Add {U} or {B}.)",
+      "mana_cost": "",
+      "type_line": "Land \u2014 Island Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/vma/323/underground-sea?utm_source=api"
+    }
+  }
+}

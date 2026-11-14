@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Simic Ascendancy",
+  "csvid": 19739,
+  "recipes": [
+    {
+      "family": "permanent_plus1_activation",
+      "version": 2,
+      "oracle_text": "{1}{G}{U}: Put a +1/+1 counter on target creature you control.\nWhenever one or more +1/+1 counters are put on a creature you control, put that many growth counters on this enchantment.\nAt the beginning of your upkeep, if this enchantment has twenty or more growth counters on it, you win the game.",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "dialogs": {},
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        },
+        "other_clauses": [
+          "Whenever one or more +1/+1 counters are put on a creature you control, put that many growth counters on this enchantment.",
+          "At the beginning of your upkeep, if this enchantment has twenty or more growth counters on it, you win the game."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "target_enemy_0",
+        "target_removed_pending_0",
+        "probe_noncreature_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "target_enemy_1",
+        "target_removed_pending_1",
+        "probe_noncreature_1"
+      ]
+    }
+  ]
+}

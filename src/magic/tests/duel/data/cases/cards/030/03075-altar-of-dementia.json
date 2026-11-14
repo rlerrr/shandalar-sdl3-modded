@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Altar of Dementia",
+  "csvid": 3075,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "Sacrifice a creature: Target player mills cards equal to the sacrificed creature's power.",
+      "params": {
+        "ability": 0,
+        "sacrifice_first": true
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_destroyed_pending_0",
+        "offturn_0",
+        "target_self_0",
+        "short_library_0",
+        "empty_library_0",
+        "stat_pumped_0",
+        "no_victim_0",
+        "zero_stat_0",
+        "value_1",
+        "payment_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_destroyed_pending_1",
+        "offturn_1",
+        "target_self_1",
+        "short_library_1",
+        "empty_library_1",
+        "stat_pumped_1",
+        "no_victim_1",
+        "zero_stat_1"
+      ]
+    }
+  ]
+}

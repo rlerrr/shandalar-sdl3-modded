@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Jace, Memory Adept",
+  "csvid": 11821,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "+1: Draw a card. Target player mills a card.\n0: Target player mills ten cards.\n\u22127: Any number of target players each draw twenty cards.",
+      "params": {
+        "ability": 1,
+        "present_ai_dialogs": true,
+        "activation_dialogs": {
+          "0": 1,
+          "1": 1
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "repeat_denied_0",
+        "source_destroyed_pending_0",
+        "target_self_0",
+        "short_library_0",
+        "empty_library_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "repeat_denied_1",
+        "source_destroyed_pending_1",
+        "target_self_1",
+        "short_library_1",
+        "empty_library_1"
+      ]
+    }
+  ]
+}

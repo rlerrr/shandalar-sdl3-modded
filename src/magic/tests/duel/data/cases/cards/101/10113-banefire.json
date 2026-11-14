@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Banefire",
+  "csvid": 10113,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "oracle_text": "Banefire deals X damage to any target.\nIf X is 5 or more, this spell can't be countered and the damage can't be prevented.",
+      "params": {
+        "schema": 7,
+        "extension": "unpreventable",
+        "profile": "Banefire",
+        "mode": "threshold",
+        "gaps": [
+          "uncounterability"
+        ],
+        "target_repetitions": 2
+      },
+      "variants": [
+        "creature_0",
+        "player_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "without_shield_0",
+        "friendly_creature_0",
+        "x_zero_0",
+        "lost_target_0",
+        "threshold_below_0",
+        "threshold_at_0",
+        "threshold_above_0",
+        "creature_1",
+        "player_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "without_shield_1",
+        "friendly_creature_1",
+        "x_zero_1",
+        "lost_target_1",
+        "threshold_below_1",
+        "threshold_at_1",
+        "threshold_above_1"
+      ]
+    }
+  ]
+}

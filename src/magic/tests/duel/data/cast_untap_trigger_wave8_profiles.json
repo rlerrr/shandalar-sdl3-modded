@@ -1,0 +1,592 @@
+{
+  "sources": {
+    "Hematite Talisman": {
+      "oracle_id": "586601dd-ac73-4451-848d-f21e64feb6a9",
+      "name": "Hematite Talisman",
+      "oracle_text": "Whenever a player casts a red spell, you may pay {3}. If you do, untap target permanent.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Mirran Spy": {
+      "oracle_id": "8e5d72a1-6ae0-445d-bac7-62da3bd3a8d6",
+      "name": "Mirran Spy",
+      "oracle_text": "Flying\nWhenever you cast an artifact spell, you may untap target creature.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Drone",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Nettle Sentinel": {
+      "oracle_id": "5c367b7d-3cb4-45db-b836-dad953efce15",
+      "name": "Nettle Sentinel",
+      "oracle_text": "This creature doesn't untap during your untap step.\nWhenever you cast a green spell, you may untap this creature.",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Warrior",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Paradox Engine": {
+      "oracle_id": "d38937a6-ab1c-4de8-a278-d81a6ce0d921",
+      "name": "Paradox Engine",
+      "oracle_text": "Whenever you cast a spell, untap all nonland permanents you control.",
+      "mana_cost": "{5}",
+      "type_line": "Legendary Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 5.0,
+      "layout": "normal"
+    },
+    "Traxos, Scourge of Kroog": {
+      "oracle_id": "c1c78144-b335-4d22-a668-9173ab6a0d04",
+      "name": "Traxos, Scourge of Kroog",
+      "oracle_text": "Trample\nTraxos enters tapped and doesn't untap during your untap step.\nWhenever you cast a historic spell, untap Traxos. (Artifacts, legendaries, and Sagas are historic.)",
+      "mana_cost": "{4}",
+      "type_line": "Legendary Artifact Creature — Dragon Construct",
+      "power": "7",
+      "toughness": "7",
+      "keywords": [
+        "Trample"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 4.0,
+      "layout": "normal"
+    },
+    "Lapis Lazuli Talisman": {
+      "oracle_id": "83447e57-06f7-4e7b-91d4-7b8f71ea0676",
+      "name": "Lapis Lazuli Talisman",
+      "oracle_text": "Whenever a player casts a blue spell, you may pay {3}. If you do, untap target permanent.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Malachite Talisman": {
+      "oracle_id": "0be4877d-72ff-4951-aa52-f4f816abc844",
+      "name": "Malachite Talisman",
+      "oracle_text": "Whenever a player casts a green spell, you may pay {3}. If you do, untap target permanent.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Nacre Talisman": {
+      "oracle_id": "f87aaed9-7f78-4f8b-8af5-44d4be1d6f30",
+      "name": "Nacre Talisman",
+      "oracle_text": "Whenever a player casts a white spell, you may pay {3}. If you do, untap target permanent.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Onyx Talisman": {
+      "oracle_id": "d19a19ed-33f9-400d-9669-c393d7127652",
+      "name": "Onyx Talisman",
+      "oracle_text": "Whenever a player casts a black spell, you may pay {3}. If you do, untap target permanent.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 2.0,
+      "layout": "normal"
+    }
+  },
+  "witnesses": {
+    "Chandra, Pyrogenius": {
+      "oracle_id": "ae2c89c2-66d6-484a-a176-9ea19e00f445",
+      "name": "Chandra, Pyrogenius",
+      "oracle_text": "+2: Chandra deals 2 damage to each opponent.\n−3: Chandra deals 4 damage to target creature.\n−10: Chandra deals 6 damage to target player or planeswalker and each creature that player or that planeswalker's controller controls.",
+      "mana_cost": "{4}{R}{R}",
+      "type_line": "Legendary Planeswalker — Chandra",
+      "loyalty": "5",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 6.0,
+      "layout": "normal"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Dryad Arbor": {
+      "oracle_id": "e996cd67-739c-40f4-b276-0042acf26c71",
+      "name": "Dryad Arbor",
+      "oracle_text": "(This land isn't a spell, it's affected by summoning sickness, and it has \"{T}: Add {G}.\")",
+      "mana_cost": "",
+      "type_line": "Land Creature — Forest Dryad",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Elvish Warrior": {
+      "oracle_id": "da587161-da7e-48ae-8af6-7f02ee71afd8",
+      "name": "Elvish Warrior",
+      "oracle_text": "",
+      "mana_cost": "{G}{G}",
+      "type_line": "Creature — Elf Warrior",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Goblin Piker": {
+      "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+      "name": "Goblin Piker",
+      "oracle_text": "",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Hope of Ghirapur": {
+      "oracle_id": "1a20e805-c80b-4710-917b-706d29ec395e",
+      "name": "Hope of Ghirapur",
+      "oracle_text": "Flying\nSacrifice Hope of Ghirapur: Until your next turn, target player who was dealt combat damage by Hope of Ghirapur this turn can't cast noncreature spells.",
+      "mana_cost": "{1}",
+      "type_line": "Legendary Artifact Creature — Thopter",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Isamaru, Hound of Konda": {
+      "oracle_id": "cfb756dd-6fe1-430a-8f04-8b10cac62a86",
+      "name": "Isamaru, Hound of Konda",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Legendary Creature — Dog",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token"
+    },
+    "Marble Diamond": {
+      "oracle_id": "910488bf-66ab-415e-973b-1262b2ab7454",
+      "name": "Marble Diamond",
+      "oracle_text": "This artifact enters tapped.\n{T}: Add {W}.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Seal of Cleansing": {
+      "oracle_id": "a75dbe70-7e3e-446f-9a76-9fbb414f2e7c",
+      "name": "Seal of Cleansing",
+      "oracle_text": "Sacrifice this enchantment: Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Seal of Fire": {
+      "oracle_id": "348a345e-4639-41ca-b015-a5d43459eb64",
+      "name": "Seal of Fire",
+      "oracle_text": "Sacrifice this enchantment: It deals 2 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Song of Freyalise": {
+      "oracle_id": "9fe1f3ef-2c30-4ccc-9a67-5349e98e2502",
+      "name": "Song of Freyalise",
+      "oracle_text": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)\nI, II — Until your next turn, creatures you control gain \"{T}: Add one mana of any color.\"\nIII — Put a +1/+1 counter on each creature you control. Those creatures gain vigilance, trample, and indestructible until end of turn.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Enchantment — Saga",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "saga"
+    },
+    "Coral Merfolk": {
+      "oracle_id": "4ed27607-21a8-4bc3-997e-6d2242313f6d",
+      "name": "Coral Merfolk",
+      "oracle_text": "",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Merfolk",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Wind Drake": {
+      "oracle_id": "d6ffdaf0-ac08-4de9-bbce-2eab2f86bcca",
+      "name": "Wind Drake",
+      "oracle_text": "Flying",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Drake",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Silvercoat Lion": {
+      "oracle_id": "e3c0b11e-7340-4e0a-98b7-91b38439d4f9",
+      "name": "Silvercoat Lion",
+      "oracle_text": "",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Cat",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    },
+    "Drudge Skeletons": {
+      "oracle_id": "c180ed02-07f4-4538-9bea-8c249234a8e2",
+      "name": "Drudge Skeletons",
+      "oracle_text": "{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Skeleton",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Heal",
+        "Regenerate"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal"
+    }
+  },
+  "presentations": {
+    "Hematite Talisman": {
+      "handler": "manalinkeh_card_hematite_talisman",
+      "acceptance": "payment_then_target"
+    },
+    "Mirran Spy": {
+      "handler": "manalinkeh_card_mirran_spy",
+      "acceptance": "optional_trigger_then_target"
+    },
+    "Nettle Sentinel": {
+      "handler": "manalinkeh_card_nettle_sentinel",
+      "acceptance": "optional_trigger"
+    },
+    "Lapis Lazuli Talisman": {
+      "handler": "manalinkeh_card_lapis_lazuli_talisman",
+      "acceptance": "payment_then_target"
+    },
+    "Malachite Talisman": {
+      "handler": "manalinkeh_card_malachite_talisman",
+      "acceptance": "payment_then_target"
+    },
+    "Nacre Talisman": {
+      "handler": "manalinkeh_card_nacre_talisman",
+      "acceptance": "payment_then_target"
+    },
+    "Onyx Talisman": {
+      "handler": "manalinkeh_card_onyx_talisman",
+      "acceptance": "payment_then_target"
+    }
+  }
+}

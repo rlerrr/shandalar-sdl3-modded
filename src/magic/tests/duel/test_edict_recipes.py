@@ -695,4 +695,120 @@ class EdictRecipesTest(unittest.TestCase):
                 self.assertTrue(self.copies(s,'Hill Giant',1-owner,'graveyard',1) if n=='Ruthless Disposal' else self.copies(s,'Hill Giant',1-owner,'battlefield',1))
 
 
+class Wave7CombatEdictTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        EdictRecipesTest.setUpClass.__func__(cls)
+
+    has=EdictRecipesTest.has
+    copies=EdictRecipesTest.copies
+
+    def wave7(self,name,variant):
+        pin=family.WAVE7_PINS['profiles'][name]
+        d=dict(family='edict_spell',version=2,params=copy.deepcopy(pin['params']),oracle_text=self.oracle[name]['oracle_text'],variants=[variant])
+        p=family.spec(d,self.oracle[name])
+        return family.expand(name,self.rows[name]['csvid'],d,p,d['variants'],self.rows,self.oracle)[0]
+
+    def test_wave7_source_parameters_and_token_witness_fail_closed(self):
+        for name,pin in family.WAVE7_PINS['profiles'].items():
+            d=dict(family='edict_spell',version=2,params=copy.deepcopy(pin['params']),oracle_text=self.oracle[name]['oracle_text'],variants=['effect_0'])
+            r=copy.deepcopy(self.oracle[name]);r['oracle_text']+=' Draw a card.'
+            with self.assertRaises(ValueError):family.spec(dict(d,oracle_text=r['oracle_text']),r)
+            d['params']['combat']='attacking_or_blocking'
+            with self.assertRaises(ValueError):family.spec(d,self.oracle[name])
+        oracle=copy.deepcopy(self.oracle);oracle['Soldier']['toughness']='2'
+        with self.assertRaisesRegex(ValueError,'wave 7 witness'):family.validate_witnesses(oracle,self.rows)
+
+    def test_entrapment_uses_sacrificed_toughness_and_casters_token_ownership(self):
+        for owner in (0,1):
+            case=self.wave7('Entrapment Maneuver',f'large_toughness_{owner}');steps=case['steps']
+            self.assertTrue(any(x['name']=='Phyrexian Hulk' and x['zone']=='battlefield' for x in case['setup']))
+            self.assertTrue(self.copies(steps,'Soldier',owner,'battlefield',4))
+            self.assertTrue(self.copies(steps,'Soldier',1-owner,'battlefield',0))
+            for prop,value in [('token',1),('power',1),('toughness',1),('color',32),('subtype_Soldier',1)]:
+                self.assertTrue(self.has(steps,op='assert_matching_permanents',player=owner,index=self.rows['Soldier']['csvid'],property=prop,value=value))
+            self.assertTrue(self.has(steps,op='assert_card',ref='token'+str(owner)+'_3',property='sick',value=1))
+
+    def test_combat_predicate_and_empty_recipients_have_real_controls(self):
+        for name in family.WAVE7_PINS['profiles']:
+            for owner in (0,1):
+                normal=self.wave7(name,f'effect_{owner}')['steps']
+                self.assertTrue(self.has(normal,op='begin_attackers'))
+                self.assertTrue(self.has(normal,op='attack',ref='participant0',value=1))
+                self.assertTrue(self.has(normal,op='assert_card',ref='ready_nonparticipant',property='in_play',value=1))
+                blocked=self.wave7(name,f'blocking_negative_{owner}')['steps']
+                self.assertTrue(self.has(blocked,op='block',ref='participant0',value=1))
+                self.assertTrue(self.has(blocked,op='assert_card',ref='participant0',property='in_play',value=1))
+                if name=='Entrapment Maneuver':
+                    for variant in ('blocking_negative','empty_recipients','countered','target_shrouded_pending'):
+                        self.assertTrue(self.copies(self.wave7(name,f'{variant}_{owner}')['steps'],'Soldier',owner,'battlefield',0))
+
+    def test_stolen_recipients_return_to_owner_and_replay_keeps_token_receipts(self):
+        for owner in (0,1):
+            case=self.wave7('Entrapment Maneuver',f'stolen_recipients_{owner}')
+            self.assertTrue(all('opponent_owned' in x['state'] for x in case['setup'] if x['ref'].startswith('participant')))
+            self.assertTrue(self.copies(case['steps'],'Soldier',owner,'battlefield',2))
+            self.assertTrue(self.copies(case['steps'],'Grizzly Bears',owner,'graveyard',2))
+            for variant in ('ready_snapshot','pending_snapshot','resolved_snapshot'):
+                steps=self.wave7('Entrapment Maneuver',f'{variant}_{owner}')['steps']
+                self.assertTrue(self.has(steps,op='capture'));self.assertTrue(self.has(steps,op='restore'))
+                self.assertTrue(self.has(steps,op='assert_recorded_state'))
+                self.assertEqual(sum(x.get('op')=='assert_zone_multiplicity' and x.get('zone')=='battlefield' and x.get('player')==owner and x.get('index')==self.rows['Soldier']['csvid'] and x.get('value')==2 for x in steps),2)
+        gaps=self.wave7('Wing Shards','effect_0')['_recipe']['untested_components']
+        self.assertTrue(any('Storm copies' in gap for gap in gaps))
+
+    def test_handler_extra_choice_does_not_change_printed_one_sacrifice_cost(self):
+        d=dict(family='edict_spell',version=2,params=dict(mode='cost',scope='creature',recipient='self',count=1,receipt='black_mv',schema=7,extra_cost_choices={'0':1,'1':0}),oracle_text=self.oracle['Sacrifice']['oracle_text'],variants=['mixed_0'])
+        p=family.spec(d,self.oracle['Sacrifice']);steps=family.expand('Sacrifice',210,d,p,d['variants'],self.rows,self.oracle)[0]['steps']
+        cast=next(i for i,s in enumerate(steps) if s['op']=='cast')
+        self.assertEqual([s['ref'] for s in steps[:cast] if s['op']=='choose_target'],['b0_0','b0_1'])
+        self.assertTrue(self.copies(steps,'Hill Giant',0,'battlefield',1))
+        self.assertTrue(self.copies(steps,'Grizzly Bears',0,'battlefield',1))
+        self.assertTrue(self.copies(steps,'Grizzly Bears',0,'graveyard',2))
+        for malformed in ({'0':True,'1':0},{'0':2,'1':0},{'0':1}):
+            altered=copy.deepcopy(d);altered['params']['extra_cost_choices']=malformed
+            with self.assertRaises(ValueError):family.spec(altered,self.oracle['Sacrifice'])
+
+    def test_storm_parent_response_uses_real_pending_spell_context(self):
+        for owner in (0,1):
+            steps=self.wave7('Wing Shards',f'target_shrouded_pending_{owner}')['steps']
+            self.assertTrue(self.has(steps,op='cast_response',ref='response',value=1))
+            self.assertTrue(self.has(steps,op='resolve_response'))
+            cast=next(i for i,s in enumerate(steps) if s['op']=='cast' and s.get('ref')=='source')
+            announced=[i for i,s in enumerate(steps) if s['op']=='announce_spell']
+            response=next(i for i,s in enumerate(steps) if s['op']=='cast_response')
+            self.assertEqual(len(announced),1);self.assertTrue(cast<announced[0]<response)
+            self.assertEqual(steps[announced[0]],{'op':'announce_spell','ref':'source'})
+        for name,variant in [('Wing Shards','effect_0'),('Entrapment Maneuver','target_shrouded_pending_0')]:
+            self.assertFalse(any(s['op']=='announce_spell' for s in self.wave7(name,variant)['steps']))
+
+    def test_sacrifice_token_mana_value_receipt_uses_real_zero_cost_witness(self):
+        for owner in (0,1):
+            d=dict(family='edict_spell',version=2,params=dict(mode='cost',scope='creature',recipient='self',count=1,receipt='black_mv',schema=7,extra_cost_choices={'0':1,'1':0}),oracle_text=self.oracle['Sacrifice']['oracle_text'],variants=[f'tokens_{owner}'])
+            p=family.spec(d,self.oracle['Sacrifice']);case=family.expand('Sacrifice',210,d,p,d['variants'],self.rows,self.oracle)[0]
+            cost=[c for c in case['setup'] if c['zone']=='battlefield' and c['ref'].startswith('b'+str(owner)+'_')]
+            self.assertEqual(len(cost),3)
+            self.assertTrue(all(c['name']=='Memnite' and 'token' in c['state'] for c in cost))
+            self.assertEqual(self.oracle['Memnite']['cmc'],0)
+            self.assertTrue(self.has(case['steps'],op='assert_mana',player=owner,color=1,value=19))
+            self.assertFalse(self.has(case['steps'],op='assert_mana',player=owner,color=1,value=21))
+
+    def test_sacrifice_counter_response_waits_for_real_announcement(self):
+        for owner in (0,1):
+            d=dict(family='edict_spell',version=2,params=dict(mode='cost',scope='creature',recipient='self',count=1,receipt='black_mv',schema=7,extra_cost_choices={'0':1,'1':0}),oracle_text=self.oracle['Sacrifice']['oracle_text'],variants=[f'countered_{owner}'])
+            p=family.spec(d,self.oracle['Sacrifice']);steps=family.expand('Sacrifice',210,d,p,d['variants'],self.rows,self.oracle)[0]['steps']
+            self.assertFalse(any(s['op']=='choose_priority' for s in steps))
+            cast=next(i for i,s in enumerate(steps) if s['op']=='cast' and s.get('ref')=='source')
+            announce=next(i for i,s in enumerate(steps) if s['op']=='announce_spell')
+            counter=next(i for i,s in enumerate(steps) if s['op']=='cast_response')
+            resolve=next(i for i,s in enumerate(steps) if s['op']=='resolve_response')
+            self.assertTrue(cast<announce<counter<resolve)
+            self.assertEqual(steps[cast]['value'],1)
+            self.assertEqual(steps[counter],{'op':'cast_response','ref':'counter','value':1})
+            self.assertTrue(self.has(steps,op='assert_stack',value=2))
+            self.assertTrue(self.has(steps,op='assert_mana',player=owner,color=1,value=19))
+            self.assertTrue(self.has(steps,op='assert_mana',player=0,color=2,value=18))
+            self.assertTrue(self.copies(steps,'Counterspell',0,'graveyard',1))
+
+
 if __name__=='__main__':unittest.main()

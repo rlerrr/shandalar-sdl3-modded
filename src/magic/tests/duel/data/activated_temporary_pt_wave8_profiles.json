@@ -1,0 +1,2274 @@
+{
+  "version": 1,
+  "sources": {
+    "Watercourser": {
+      "csvid": 12639,
+      "oracle": {
+        "oracle_id": "65dd4ae3-432c-4d57-ac14-4d827262ea0b",
+        "name": "Watercourser",
+        "oracle_text": "{U}: This creature gets +1/-1 until end of turn.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature \u2014 Elemental",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/137/watercourser?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/m13.c"
+    },
+    "Armorer Guildmage": {
+      "csvid": 2397,
+      "oracle": {
+        "oracle_id": "7b75b74c-6003-4b34-bae3-2c9e2f880042",
+        "name": "Armorer Guildmage",
+        "oracle_text": "{B}, {T}: Target creature gets +1/+0 until end of turn.\n{G}, {T}: Target creature gets +0/+1 until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/156/armorer-guildmage?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Pump power",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 3
+        },
+        "1": {
+          "mode_label": "Pump toughness",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mirage.c"
+    },
+    "Bloodthrone Vampire": {
+      "csvid": 10880,
+      "oracle": {
+        "oracle_id": "aa76cc50-5be0-4844-b3a4-fb33fca3cdd3",
+        "name": "Bloodthrone Vampire",
+        "oracle_text": "Sacrifice a creature: This creature gets +2/+2 until end of turn.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature \u2014 Vampire",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddp/46/bloodthrone-vampire?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/onslaught.c"
+    },
+    "Deepwood Drummer": {
+      "csvid": 4448,
+      "oracle": {
+        "oracle_id": "b2bbb4e5-05b1-49e5-ad02-7384e115e06b",
+        "name": "Deepwood Drummer",
+        "oracle_text": "{G}, {T}, Discard a card: Target creature gets +2/+2 until end of turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature \u2014 Human Spellshaper",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/239/deepwood-drummer?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mercadian_masques.c"
+    },
+    "Char-Rumbler": {
+      "csvid": 8902,
+      "oracle": {
+        "oracle_id": "758aeca5-6ef3-4463-a65a-66b39289cc86",
+        "name": "Char-Rumbler",
+        "oracle_text": "Double strike\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature \u2014 Elemental",
+        "power": "-1",
+        "toughness": "3",
+        "keywords": [
+          "Double strike"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/158/char-rumbler?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/fifth_dawn.c"
+    },
+    "Sacred Armory": {
+      "csvid": 14165,
+      "oracle": {
+        "oracle_id": "37d74df9-cf87-4b82-842a-3941064078fb",
+        "name": "Sacred Armory",
+        "oracle_text": "{2}: Target creature gets +1/+0 until end of turn.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/228/sacred-armory?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/m15.c"
+    },
+    "Seal of Strength": {
+      "csvid": 4759,
+      "oracle": {
+        "oracle_id": "e41a68b3-e1cb-4f51-bd54-68882d2cc015",
+        "name": "Seal of Strength",
+        "oracle_text": "Sacrifice this enchantment: Target creature gets +3/+3 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/184/seal-of-strength?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/nemesis.c"
+    },
+    "Cabal Patriarch": {
+      "csvid": 5498,
+      "oracle": {
+        "oracle_id": "70d1caee-1c35-4fa3-bbc3-a7dcc226be90",
+        "name": "Cabal Patriarch",
+        "oracle_text": "{2}{B}, Sacrifice a creature: Target creature gets -2/-2 until end of turn.\n{2}{B}, Exile a creature card from your graveyard: Target creature gets -2/-2 until end of turn.",
+        "mana_cost": "{3}{B}{B}{B}",
+        "type_line": "Legendary Creature \u2014 Human Wizard",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/140/cabal-patriarch?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Sac a creature",
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": true,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/odissey.c"
+    },
+    "Staff of Zegon": {
+      "csvid": 527,
+      "oracle": {
+        "oracle_id": "52c53132-146a-4912-8e0f-1d4d9937fff3",
+        "name": "Staff of Zegon",
+        "oracle_text": "{3}, {T}: Target creature gets -2/-0 until end of turn.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/229/staff-of-zegon?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/antiquities.c"
+    },
+    "Sunscape Apprentice": {
+      "csvid": 1346,
+      "oracle": {
+        "oracle_id": "4ab1411e-b255-4a6e-b81a-5de7b2d4ea12",
+        "name": "Sunscape Apprentice",
+        "oracle_text": "{G}, {T}: Target creature gets +1/+1 until end of turn.\n{U}, {T}: Put target creature you control on top of its owner's library.",
+        "mana_cost": "{W}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "U",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/41/sunscape-apprentice?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Pump a creature",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 2
+        }
+      },
+      "input_source": "src/manalinkeh/cards/invasion.c"
+    },
+    "Thunderscape Apprentice": {
+      "csvid": 1348,
+      "oracle": {
+        "oracle_id": "34e325f0-b66f-44b9-a25c-da88357dbac4",
+        "name": "Thunderscape Apprentice",
+        "oracle_text": "{B}, {T}: Target player loses 1 life.\n{G}, {T}: Target creature gets +1/+1 until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/174/thunderscape-apprentice?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "mode_label": "Pump a creature",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/invasion.c"
+    },
+    "Morphling": {
+      "csvid": 1355,
+      "oracle": {
+        "oracle_id": "19f233b2-8be6-4172-abf9-b132fc3393d9",
+        "name": "Morphling",
+        "oracle_text": "{U}: Untap this creature.\n{U}: This creature gains flying until end of turn.\n{U}: This creature gains shroud until end of turn. (It can't be the target of spells or abilities.)\n{1}: This creature gets +1/-1 until end of turn.\n{1}: This creature gets -1/+1 until end of turn.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature \u2014 Shapeshifter",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/81/morphling?utm_source=api"
+      },
+      "abilities": {
+        "3": {
+          "mode_label": "+1/-1 until end of turn",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "4": {
+          "mode_label": "-1/+1 until end of turn",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/urza_saga.c"
+    },
+    "Elven Lyre": {
+      "csvid": 1772,
+      "oracle": {
+        "oracle_id": "7601378d-42cb-4351-8316-8f78a3b49a85",
+        "name": "Elven Lyre",
+        "oracle_text": "{1}, {T}, Sacrifice this artifact: Target creature gets +2/+2 until end of turn.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/208/elven-lyre?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/fallen_empires.c"
+    },
+    "Brine Shaman": {
+      "csvid": 1880,
+      "oracle": {
+        "oracle_id": "3e3e2f71-2159-4f83-a9c1-a67ecac8a711",
+        "name": "Brine Shaman",
+        "oracle_text": "{T}, Sacrifice a creature: Target creature gets +2/+2 until end of turn.\n{1}{U}{U}, Sacrifice a creature: Counter target creature spell.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature \u2014 Human Cleric Shaman",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/80/brine-shaman?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": true,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/ice_age.c"
+    },
+    "Krovikan Elementalist": {
+      "csvid": 2008,
+      "oracle": {
+        "oracle_id": "43e6fc44-8b23-4bff-91da-936019efe84b",
+        "name": "Krovikan Elementalist",
+        "oracle_text": "{2}{R}: Target creature gets +1/+0 until end of turn.\n{U}{U}: Target creature you control gains flying until end of turn. Sacrifice it at the beginning of the next end step.",
+        "mana_cost": "{B}{B}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "R",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/139/krovikan-elementalist?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "+1/+0",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/ice_age.c"
+    },
+    "Shambling Strider": {
+      "csvid": 2089,
+      "oracle": {
+        "oracle_id": "fd65468c-d75a-4be2-8a0c-9c4e808e3dd0",
+        "name": "Shambling Strider",
+        "oracle_text": "{R}{G}: This creature gets +1/-1 until end of turn.",
+        "mana_cost": "{4}{G}{G}",
+        "type_line": "Creature \u2014 Yeti",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/129/shambling-strider?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/ice_age.c"
+    },
+    "Abbey Matron": {
+      "csvid": 2168,
+      "oracle": {
+        "oracle_id": "62e3f285-886c-414e-b4ff-403a7c01c23a",
+        "name": "Abbey Matron",
+        "oracle_text": "{W}, {T}: This creature gets +0/+3 until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature \u2014 Human Cleric",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hml/2a/abbey-matron?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/homelands.c"
+    },
+    "Phantasmal Fiend": {
+      "csvid": 2326,
+      "oracle": {
+        "oracle_id": "821ce349-5379-4415-89e2-224e21dda24b",
+        "name": "Phantasmal Fiend",
+        "oracle_text": "{B}: This creature gets +1/-1 until end of turn.\n{1}{U}: Switch this creature's power and toughness until end of turn.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature \u2014 Illusion",
+        "power": "1",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/108/phantasmal-fiend?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "+1/-1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/alliances.c"
+    },
+    "Civic Guildmage": {
+      "csvid": 2434,
+      "oracle": {
+        "oracle_id": "6e93cb9a-44c8-49fb-b6a7-bfdf7bd725fe",
+        "name": "Civic Guildmage",
+        "oracle_text": "{G}, {T}: Target creature gets +0/+1 until end of turn.\n{U}, {T}: Put target creature you control on top of its owner's library.",
+        "mana_cost": "{W}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "U",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/7/civic-guildmage?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Pump toughness",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 2
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mirage.c"
+    },
+    "Shaper Guildmage": {
+      "csvid": 2606,
+      "oracle": {
+        "oracle_id": "dfbce321-d3c1-4b76-a3fa-27f875015085",
+        "name": "Shaper Guildmage",
+        "oracle_text": "{W}, {T}: Target creature gains first strike until end of turn.\n{B}, {T}: Target creature gets +1/+0 until end of turn.",
+        "mana_cost": "{U}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/91/shaper-guildmage?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "mode_label": "Pump power",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 5
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mirage.c"
+    },
+    "Flowstone Shambler": {
+      "csvid": 3372,
+      "oracle": {
+        "oracle_id": "e72ae9ab-7405-4ea7-b075-42d0ddc352db",
+        "name": "Flowstone Shambler",
+        "oracle_text": "{R}: This creature gets +1/-1 until end of turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature \u2014 Beast",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/185/flowstone-shambler?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/stronghold.c"
+    },
+    "Phyrexian Ghoul": {
+      "csvid": 3852,
+      "oracle": {
+        "oracle_id": "748c2723-dc59-4aa7-9667-d4679448c8b6",
+        "name": "Phyrexian Ghoul",
+        "oracle_text": "Sacrifice a creature: This creature gets +2/+2 until end of turn.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature \u2014 Phyrexian Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/moc/264/phyrexian-ghoul?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/onslaught.c"
+    },
+    "Ghitu War Cry": {
+      "csvid": 4001,
+      "oracle": {
+        "oracle_id": "0439df39-0324-4110-b3f4-4a32393021de",
+        "name": "Ghitu War Cry",
+        "oracle_text": "{R}: Target creature gets +1/+0 until end of turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/78/ghitu-war-cry?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/urza_legacy.c"
+    },
+    "Flowstone Crusher": {
+      "csvid": 4692,
+      "oracle": {
+        "oracle_id": "cc18fcfc-bfe8-41d8-9037-5ff05b2a9c44",
+        "name": "Flowstone Crusher",
+        "oracle_text": "{R}: This creature gets +1/-1 until end of turn.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Creature \u2014 Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/184/flowstone-crusher?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/stronghold.c"
+    },
+    "Plague Witch": {
+      "csvid": 4737,
+      "oracle": {
+        "oracle_id": "532ab335-4873-405b-84b3-c447207172b5",
+        "name": "Plague Witch",
+        "oracle_text": "{B}, {T}, Discard a card: Target creature gets -1/-1 until end of turn.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature \u2014 Elf Spellshaper",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/103/plague-witch?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/nemesis.c"
+    },
+    "Ana Disciple": {
+      "csvid": 5329,
+      "oracle": {
+        "oracle_id": "f543dfcd-015e-48bc-851d-08002d0241fa",
+        "name": "Ana Disciple",
+        "oracle_text": "{U}, {T}: Target creature gains flying until end of turn.\n{B}, {T}: Target creature gets -2/-0 until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/73/ana-disciple?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "mode_label": "Give -2/-0",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 2
+        }
+      },
+      "input_source": "src/manalinkeh/cards/apocalypse.c"
+    },
+    "Ceta Disciple": {
+      "csvid": 5342,
+      "oracle": {
+        "oracle_id": "1f085c2d-bd1b-4889-882f-367e0e970f44",
+        "name": "Ceta Disciple",
+        "oracle_text": "{R}, {T}: Target creature gets +2/+0 until end of turn.\n{G}, {T}: Add one mana of any color.",
+        "mana_cost": "{U}",
+        "type_line": "Creature \u2014 Merfolk Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "R",
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/19/ceta-disciple?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Give +2/+0",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 3,
+          "fallback_color": 3
+        }
+      },
+      "input_source": "src/manalinkeh/cards/apocalypse.c"
+    },
+    "Dega Disciple": {
+      "csvid": 5352,
+      "oracle": {
+        "oracle_id": "c6c53277-daad-4aa3-b29a-11378d550651",
+        "name": "Dega Disciple",
+        "oracle_text": "{B}, {T}: Target creature gets -2/-0 until end of turn.\n{R}, {T}: Target creature gets +2/+0 until end of turn.",
+        "mana_cost": "{W}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "R",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/4/dega-disciple?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Give -2/-0",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 4
+        },
+        "1": {
+          "mode_label": "Give +2/+0",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/apocalypse.c"
+    },
+    "Lithatog": {
+      "csvid": 5603,
+      "oracle": {
+        "oracle_id": "4c08b7e3-ebac-485d-9e79-fcc2599e219b",
+        "name": "Lithatog",
+        "oracle_text": "Sacrifice an artifact: This creature gets +1/+1 until end of turn.\nSacrifice a land: This creature gets +1/+1 until end of turn.",
+        "mana_cost": "{1}{R}{G}",
+        "type_line": "Creature \u2014 Atog",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/289/lithatog?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "1": {
+          "mode_label": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/odissey.c"
+    },
+    "Phantatog": {
+      "csvid": 5655,
+      "oracle": {
+        "oracle_id": "edaff13c-1a07-4fcf-8b31-ed5acba207c5",
+        "name": "Phantatog",
+        "oracle_text": "Sacrifice an enchantment: This creature gets +1/+1 until end of turn.\nDiscard a card: This creature gets +1/+1 until end of turn.",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Creature \u2014 Atog",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/291/phantatog?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/odissey.c"
+    },
+    "Psychatog": {
+      "csvid": 5664,
+      "oracle": {
+        "oracle_id": "d7c4da85-d1a5-4a27-812d-65d8ee1494dd",
+        "name": "Psychatog",
+        "oracle_text": "Discard a card: This creature gets +1/+1 until end of turn.\nExile two cards from your graveyard: This creature gets +1/+1 until end of turn.",
+        "mana_cost": "{1}{U}{B}",
+        "type_line": "Creature \u2014 Atog",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/258/psychatog?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Discard",
+          "sacrifice_choices": {},
+          "discard_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false,
+          "other_color": -1,
+          "menu_rule": "grave_two_or_ai"
+        }
+      },
+      "input_source": "src/manalinkeh/cards/odissey.c",
+      "controller_interfaces": {
+        "0": {
+          "1": {
+            "mode_label": "Discard",
+            "sacrifice_choices": {},
+            "discard_choices": {
+              "0": true,
+              "1": true
+            },
+            "sacrifice_before_target": false,
+            "other_color": -1,
+            "menu_rule": "grave_two_or_ai"
+          }
+        }
+      },
+      "controller_input_evidence": "out/wave8/activated_temporary_pt/runs/temporary-pt-follow47-native-controls-001/native-failures.json: actual kind1 player1 Select a card to discard."
+    },
+    "Sarcatog": {
+      "csvid": 5683,
+      "oracle": {
+        "oracle_id": "e5afc145-1fc3-4d87-b175-0dcd9a81ae7c",
+        "name": "Sarcatog",
+        "oracle_text": "Exile two cards from your graveyard: This creature gets +1/+1 until end of turn.\nSacrifice an artifact: This creature gets +1/+1 until end of turn.",
+        "mana_cost": "{1}{B}{R}",
+        "type_line": "Creature \u2014 Atog",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/293/sarcatog?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "mode_label": "Sac an artifact",
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/odissey.c"
+    },
+    "Thaumatog": {
+      "csvid": 5730,
+      "oracle": {
+        "oracle_id": "9845fb27-3a1e-4cad-b30b-2c7a9dbb6209",
+        "name": "Thaumatog",
+        "oracle_text": "Sacrifice a land: This creature gets +1/+1 until end of turn.\nSacrifice an enchantment: This creature gets +1/+1 until end of turn.",
+        "mana_cost": "{1}{G}{W}",
+        "type_line": "Creature \u2014 Atog",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/295/thaumatog?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/odissey.c"
+    },
+    "Tireless Tribe": {
+      "csvid": 5737,
+      "oracle": {
+        "oracle_id": "5dfbcdb4-d2ad-477d-b37d-db4725410b27",
+        "name": "Tireless Tribe",
+        "oracle_text": "Discard a card: This creature gets +0/+4 until end of turn.",
+        "mana_cost": "{W}",
+        "type_line": "Creature \u2014 Human Nomad",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/56/tireless-tribe?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/odissey.c"
+    },
+    "Narcissism": {
+      "csvid": 5847,
+      "oracle": {
+        "oracle_id": "59cd56d2-42f3-44de-b1b8-a5f9105dcaa8",
+        "name": "Narcissism",
+        "oracle_text": "{G}, Discard a card: Target creature gets +2/+2 until end of turn.\n{G}, Sacrifice this enchantment: Target creature gets +2/+2 until end of turn.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tor/134/narcissism?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Discard to boost.",
+          "sacrifice_choices": {},
+          "discard_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "1": {
+          "mode_label": "Sac Hypochondria to boost.",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/torment.c"
+    },
+    "Tower of Champions": {
+      "csvid": 6815,
+      "oracle": {
+        "oracle_id": "f7880784-e1dc-4250-812e-eda41fe91e36",
+        "name": "Tower of Champions",
+        "oracle_text": "{8}, {T}: Target creature gets +6/+6 until end of turn.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/265/tower-of-champions?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mirrodin.c"
+    },
+    "Captive Flame": {
+      "csvid": 7611,
+      "oracle": {
+        "oracle_id": "fada1102-bbb7-4c90-a72e-6c595c08a55d",
+        "name": "Captive Flame",
+        "oracle_text": "{R}: Target creature gets +1/+0 until end of turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddg/68/captive-flame?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/urza_legacy.c"
+    },
+    "Ghost-Lit Nourisher": {
+      "csvid": 7644,
+      "oracle": {
+        "oracle_id": "acaed013-2e74-47e3-a687-084388b37a7b",
+        "name": "Ghost-Lit Nourisher",
+        "oracle_text": "{2}{G}, {T}: Target creature gets +2/+2 until end of turn.\nChannel \u2014 {3}{G}, Discard this card: Target creature gets +4/+4 until end of turn.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature \u2014 Spirit",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Channel"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/131/ghost-lit-nourisher?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/saviors_of_kamigawa.c"
+    },
+    "Viashino Slasher": {
+      "csvid": 8000,
+      "oracle": {
+        "oracle_id": "63908256-a8a4-494f-b5b1-4b92c064af1d",
+        "name": "Viashino Slasher",
+        "oracle_text": "{R}: This creature gets +1/-1 until end of turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature \u2014 Lizard Warrior",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rav/149/viashino-slasher?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/stronghold.c"
+    },
+    "Gruul Guildmage": {
+      "csvid": 8065,
+      "oracle": {
+        "oracle_id": "75645b1f-0e12-4a05-b47f-0d2e2616c3ca",
+        "name": "Gruul Guildmage",
+        "oracle_text": "({R/G} can be paid with either {R} or {G}.)\n{3}{R}, Sacrifice a land: This creature deals 2 damage to target player or planeswalker.\n{3}{G}: Target creature gets +2/+2 until end of turn.",
+        "mana_cost": "{R/G}{R/G}",
+        "type_line": "Creature \u2014 Human Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/189/gruul-guildmage?utm_source=api"
+      },
+      "abilities": {
+        "2": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/guildpact.c",
+      "casting_colors": [
+        "G",
+        "G"
+      ]
+    },
+    "Plagued Rusalka": {
+      "csvid": 8107,
+      "oracle": {
+        "oracle_id": "d6912f52-e478-4cc6-a34c-67e372abc4fa",
+        "name": "Plagued Rusalka",
+        "oracle_text": "{B}, Sacrifice a creature: Target creature gets -1/-1 until end of turn.",
+        "mana_cost": "{B}",
+        "type_line": "Creature \u2014 Spirit",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/268/plagued-rusalka?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/guildpact.c",
+      "variant_interfaces": {
+        "0": {
+          "cleanup_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "counter_cleanup_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "fresh_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "offturn_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "payment_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "pending_snapshot_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "ready_snapshot_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "repeat_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "resolved_snapshot_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "sacrifice_source_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "source_removed_pending_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "tapped_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "target_enemy_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "target_removed_pending_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "target_self_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          },
+          "value_0": {
+            "mode_label": null,
+            "sacrifice_choices": {
+              "0": true,
+              "1": false
+            },
+            "discard_choices": {},
+            "sacrifice_before_target": true,
+            "other_color": -1
+          }
+        }
+      },
+      "input_order_evidence": "functions.c:15488-15522 marks GAA_SACRIFICE_CREATURE before select_target. native audit005:13human pending failures consumed intended ally/source as sacrifice;3enemy-target cells rejected enemy sacrifice. AI has no queued sacrifice and all passed."
+    },
+    "Rakdos Guildmage": {
+      "csvid": 8268,
+      "oracle": {
+        "oracle_id": "650949ca-609b-46c5-bc6b-6f782cdcb6d2",
+        "name": "Rakdos Guildmage",
+        "oracle_text": "({B/R} can be paid with either {B} or {R}.)\n{3}{B}, Discard a card: Target creature gets -2/-2 until end of turn.\n{3}{R}: Create a 2/1 red Goblin creature token with haste. Exile it at the beginning of the next end step.",
+        "mana_cost": "{B/R}{B/R}",
+        "type_line": "Creature \u2014 Zombie Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/214/rakdos-guildmage?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "mode_label": "Weaken a creature",
+          "sacrifice_choices": {},
+          "discard_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/dissension.c",
+      "casting_colors": [
+        "B",
+        "B"
+      ]
+    },
+    "Unliving Psychopath": {
+      "csvid": 8309,
+      "oracle": {
+        "oracle_id": "038463c8-d2e1-4e7b-829d-67a744ae2660",
+        "name": "Unliving Psychopath",
+        "oracle_text": "{B}: This creature gets +1/-1 until end of turn.\n{B}, {T}: Destroy target creature with power less than this creature's power.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature \u2014 Zombie Assassin",
+        "power": "0",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dis/56/unliving-psychopath?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Pump Unliving Psychopath",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1,
+          "menu_rule": "power_less",
+          "zero_power_menu": true
+        }
+      },
+      "input_source": "src/manalinkeh/cards/dissension.c",
+      "presentation_evidence": "temporary-pt-follow47-ai-native-controls-002: actual power0 offered pump menu; targets.c both-comparison bits omit power rejection. Input annotation only, not Oracle destroy-target legality."
+    },
+    "Disciple of Tevesh Szat": {
+      "csvid": 8360,
+      "oracle": {
+        "oracle_id": "3a09c951-9861-4e95-acf1-5ce1a3778493",
+        "name": "Disciple of Tevesh Szat",
+        "oracle_text": "{T}: Target creature gets -1/-1 until end of turn.\n{4}{B}{B}, {T}, Sacrifice this creature: Target creature gets -6/-6 until end of turn.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Creature \u2014 Human Cleric",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/csp/55/disciple-of-tevesh-szat?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Give -1/-1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "1": {
+          "mode_label": "Sac and give -6/-6",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/coldsnap.c"
+    },
+    "Torchling": {
+      "csvid": 8867,
+      "oracle": {
+        "oracle_id": "769748a8-d861-46f9-8fcd-18c3f0585bd6",
+        "name": "Torchling",
+        "oracle_text": "{R}: Untap this creature.\n{R}: Target creature blocks this creature this turn if able.\n{R}: Change the target of target spell that targets only this creature.\n{1}: This creature gets +1/-1 until end of turn.\n{1}: This creature gets -1/+1 until end of turn.",
+        "mana_cost": "{3}{R}{R}",
+        "type_line": "Creature \u2014 Shapeshifter",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/e01/60/torchling?utm_source=api"
+      },
+      "abilities": {
+        "3": {
+          "mode_label": "+1/-1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "4": {
+          "mode_label": "-1/+1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/planar_chaos.c"
+    },
+    "Naya Battlemage": {
+      "csvid": 10019,
+      "oracle": {
+        "oracle_id": "db4d2580-50f4-4986-8091-769b4d2f6d72",
+        "name": "Naya Battlemage",
+        "oracle_text": "{R}, {T}: Target creature gets +2/+0 until end of turn.\n{W}, {T}: Tap target creature.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature \u2014 Human Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G",
+          "R",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ala/142/naya-battlemage?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Give +2/+0",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 5
+        }
+      },
+      "input_source": "src/manalinkeh/cards/shards_of_alara.c"
+    },
+    "Thornling": {
+      "csvid": 10215,
+      "oracle": {
+        "oracle_id": "55a59d01-b2cf-4c17-89c5-ce8312a85740",
+        "name": "Thornling",
+        "oracle_text": "{G}: This creature gains haste until end of turn.\n{G}: This creature gains trample until end of turn.\n{G}: This creature gains indestructible until end of turn.\n{1}: This creature gets +1/-1 until end of turn.\n{1}: This creature gets -1/+1 until end of turn.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature \u2014 Elemental Shapeshifter",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/con/95/thornling?utm_source=api"
+      },
+      "abilities": {
+        "3": {
+          "mode_label": "+1/-1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "4": {
+          "mode_label": "-1/+1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/conflux.c"
+    },
+    "Vampire Aristocrat": {
+      "csvid": 10479,
+      "oracle": {
+        "oracle_id": "c14739b0-5c19-4873-b027-314225a10f7b",
+        "name": "Vampire Aristocrat",
+        "oracle_text": "Sacrifice a creature: This creature gets +2/+2 until end of turn.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature \u2014 Vampire Rogue Noble",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm3/86/vampire-aristocrat?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/onslaught.c"
+    },
+    "Water Servant": {
+      "csvid": 11192,
+      "oracle": {
+        "oracle_id": "f8c32c80-9693-4ae4-a387-21ec8a3cdd40",
+        "name": "Water Servant",
+        "oracle_text": "{U}: This creature gets +1/-1 until end of turn.\n{U}: This creature gets -1/+1 until end of turn.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature \u2014 Elemental",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm2/69/water-servant?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "+1/-1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "1": {
+          "mode_label": "-1/+1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/m11.c"
+    },
+    "Ferrovore": {
+      "csvid": 11252,
+      "oracle": {
+        "oracle_id": "1f0f068a-fd4e-4a6f-9439-0e694e34a945",
+        "name": "Ferrovore",
+        "oracle_text": "{R}, Sacrifice an artifact: This creature gets +3/+0 until end of turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature \u2014 Beast",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/88/ferrovore?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/scars_of_mirrodin.c"
+    },
+    "Aetherling": {
+      "csvid": 13110,
+      "oracle": {
+        "oracle_id": "b980bf11-9e12-4ee9-83c1-45706d9ae344",
+        "name": "Aetherling",
+        "oracle_text": "{U}: Exile this creature. Return it to the battlefield under its owner's control at the beginning of the next end step.\n{U}: This creature can't be blocked this turn.\n{1}: This creature gets +1/-1 until end of turn.\n{1}: This creature gets -1/+1 until end of turn.",
+        "mana_cost": "{4}{U}{U}",
+        "type_line": "Creature \u2014 Shapeshifter",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/11/aetherling?utm_source=api"
+      },
+      "abilities": {
+        "2": {
+          "mode_label": "+1/-1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "3": {
+          "mode_label": "-1/+1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/dragons_maze.c"
+    },
+    "Scion of Glaciers": {
+      "csvid": 14370,
+      "oracle": {
+        "oracle_id": "9d49cef5-8f9c-46cd-aa5e-7861fc1dcaa4",
+        "name": "Scion of Glaciers",
+        "oracle_text": "{U}: This creature gets +1/-1 until end of turn.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature \u2014 Elemental",
+        "power": "2",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/53/scion-of-glaciers?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/gatecrash.c"
+    },
+    "Dragon Whisperer": {
+      "csvid": 14890,
+      "oracle": {
+        "oracle_id": "54884040-b426-43da-9bb1-016621e1446d",
+        "name": "Dragon Whisperer",
+        "oracle_text": "{R}: This creature gains flying until end of turn.\n{1}{R}: This creature gets +1/+0 until end of turn.\nFormidable \u2014 {4}{R}{R}: Create a 4/4 red Dragon creature token with flying. Activate only if creatures you control have total power 8 or greater.",
+        "mana_cost": "{R}{R}",
+        "type_line": "Creature \u2014 Human Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Formidable"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/137/dragon-whisperer?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "mode_label": "+1/+0",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": 4
+        }
+      },
+      "input_source": "src/manalinkeh/cards/dragons_of_tarkir.c"
+    },
+    "Ravenous Bloodseeker": {
+      "csvid": 15929,
+      "oracle": {
+        "oracle_id": "bc548ecb-57c4-49ef-a7aa-312bf3665fab",
+        "name": "Ravenous Bloodseeker",
+        "oracle_text": "Discard a card: This creature gets +2/-2 until end of turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature \u2014 Vampire Berserker",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/175/ravenous-bloodseeker?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {},
+          "discard_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/shadows_over_innistrad.c"
+    },
+    "Ravenous Intruder": {
+      "csvid": 16774,
+      "oracle": {
+        "oracle_id": "06a94ea3-6cda-42fe-ba3b-40a0e9044f8e",
+        "name": "Ravenous Intruder",
+        "oracle_text": "Sacrifice an artifact: This creature gets +2/+2 until end of turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature \u2014 Gremlin",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/141/ravenous-intruder?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/antiquities.c"
+    }
+  },
+  "witnesses": {
+    "Ornithopter": {
+      "csvid": 514,
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature \u2014 Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      }
+    },
+    "Bottle Gnomes": {
+      "csvid": 1705,
+      "oracle": {
+        "oracle_id": "54b5e429-7a44-480d-bea4-4f8eeb7449b5",
+        "name": "Bottle Gnomes",
+        "oracle_text": "Sacrifice this creature: You gain 3 life.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature \u2014 Gnome",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/177/bottle-gnomes?utm_source=api"
+      }
+    },
+    "Sage of Lat-Nam": {
+      "csvid": 524,
+      "oracle": {
+        "oracle_id": "f34be3cc-ff47-4415-a6a8-ed142891dc0c",
+        "name": "Sage of Lat-Nam",
+        "oracle_text": "{T}, Sacrifice an artifact: Draw a card.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature \u2014 Human Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/64/sage-of-lat-nam?utm_source=api"
+      }
+    },
+    "Icy Manipulator": {
+      "csvid": 119,
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      }
+    },
+    "Plains": {
+      "csvid": 188,
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land \u2014 Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land \u2014 Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land \u2014 Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      }
+    },
+    "Hunger of the Howlpack": {
+      "csvid": 12212,
+      "oracle": {
+        "oracle_id": "296dee6b-6ec1-4ea4-8dc3-23080dd37646",
+        "name": "Hunger of the Howlpack",
+        "oracle_text": "Put a +1/+1 counter on target creature.\nMorbid \u2014 Put three +1/+1 counters on that creature instead if a creature died this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Morbid"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/168/hunger-of-the-howlpack?utm_source=api"
+      }
+    }
+  }
+}

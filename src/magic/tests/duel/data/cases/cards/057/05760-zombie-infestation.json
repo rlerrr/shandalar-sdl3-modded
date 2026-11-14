@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Zombie Infestation",
+  "csvid": 5760,
+  "recipes": [
+    {
+      "family": "activated_token_creation",
+      "version": 2,
+      "oracle_text": "Discard two cards: Create a 2/2 black Zombie creature token.",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "dialogs": {},
+          "present_ai_dialogs": false,
+          "sacrifice_choices": {},
+          "casting_colors": []
+        },
+        "inactive_clauses": []
+      },
+      "variants": [
+        "create_0",
+        "payment_0",
+        "bare_zones_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "source_destroyed_pending_0",
+        "cleanup_0",
+        "repeat_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "tapped_0",
+        "cast_0",
+        "empty_hand_0",
+        "short_hand_0",
+        "create_1",
+        "payment_1",
+        "bare_zones_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "source_destroyed_pending_1",
+        "cleanup_1",
+        "repeat_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1",
+        "tapped_1",
+        "cast_1",
+        "empty_hand_1",
+        "short_hand_1"
+      ]
+    }
+  ]
+}

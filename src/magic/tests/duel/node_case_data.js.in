@@ -2,6 +2,10 @@
 // complete archive into WebAssembly memory. Case records are read on demand.
 Module.preRun = Module.preRun || [];
 Module.preRun.push(function () {
+  // Node has no IndexedDB. Keep user data local to this test process, as in
+  // the platform namespace tests, while retaining real file-I/O routing.
+  FS.mkdirTree('/userdata');
+  Module.__shandalarUserDataReady = 1;
   FS.mkdir('/test-cases');
   FS.mount(NODEFS, {root: process.env.DUEL_TEST_CASE_DIR || '@duel_generated@'}, '/test-cases');
 });

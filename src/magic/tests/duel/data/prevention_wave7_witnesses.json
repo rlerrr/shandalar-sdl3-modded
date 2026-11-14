@@ -1,0 +1,218 @@
+{
+  "version": 1,
+  "sources": {
+    "Flaring Pain": {
+      "oracle": {
+        "oracle_id": "cad19ad2-3ea9-43f5-bb5a-b0793402fab0",
+        "name": "Flaring Pain",
+        "oracle_text": "Damage can't be prevented this turn.\nFlashback {R} (You may cast this card from your graveyard for its flashback cost. Then exile it.)",
+        "mana_cost": "{1}{R}",
+        "type_line": "Instant",
+        "keywords": [
+          "Flashback"
+        ],
+        "colors": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal"
+      },
+      "params": {
+        "schema": 7,
+        "extension": "unpreventable",
+        "profile": "Flaring Pain",
+        "mode": "global",
+        "gaps": [
+          "Flashback"
+        ],
+        "target_repetitions": 1
+      }
+    },
+    "Banefire": {
+      "oracle": {
+        "oracle_id": "5eff8a06-e0d6-435a-a7c0-db9f9d98636a",
+        "name": "Banefire",
+        "oracle_text": "Banefire deals X damage to any target.\nIf X is 5 or more, this spell can't be countered and the damage can't be prevented.",
+        "mana_cost": "{X}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "schema": 7,
+        "extension": "unpreventable",
+        "profile": "Banefire",
+        "mode": "threshold",
+        "gaps": [
+          "uncounterability"
+        ],
+        "target_repetitions": 2
+      }
+    },
+    "Lava Burst": {
+      "oracle": {
+        "oracle_id": "f7be3da5-55b2-46f2-a5aa-277dee242b94",
+        "name": "Lava Burst",
+        "oracle_text": "Lava Burst deals X damage to any target. If Lava Burst would deal damage to a creature, that damage can't be prevented or dealt instead to another permanent or player.",
+        "mana_cost": "{X}{R}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "schema": 7,
+        "extension": "unpreventable",
+        "profile": "Lava Burst",
+        "mode": "creature",
+        "gaps": [
+          "damage redirection"
+        ],
+        "target_repetitions": 1
+      }
+    },
+    "Demonfire": {
+      "oracle": {
+        "oracle_id": "314a5c76-1a68-433b-a383-1834400254a8",
+        "name": "Demonfire",
+        "oracle_text": "Demonfire deals X damage to any target. If a creature dealt damage this way would die this turn, exile it instead.\nHellbent — If you have no cards in hand, this spell can't be countered and the damage can't be prevented.",
+        "mana_cost": "{X}{R}",
+        "type_line": "Sorcery",
+        "keywords": [
+          "Hellbent"
+        ],
+        "colors": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal"
+      },
+      "params": {
+        "schema": 7,
+        "extension": "unpreventable",
+        "profile": "Demonfire",
+        "mode": "hellbent",
+        "gaps": [
+          "uncounterability",
+          "exile replacement on later lethal damage"
+        ],
+        "target_repetitions": 1
+      }
+    }
+  },
+  "witnesses": {
+    "Safe Passage": {
+      "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+      "name": "Safe Passage",
+      "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Scaled Wurm": {
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "name": "Scaled Wurm",
+      "oracle_text": "",
+      "mana_cost": "{7}{G}",
+      "type_line": "Creature — Wurm",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 8.0,
+      "layout": "normal",
+      "power": "7",
+      "toughness": "6"
+    },
+    "Craw Wurm": {
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "name": "Craw Wurm",
+      "oracle_text": "",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature — Wurm",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "power": "6",
+      "toughness": "4"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "power": "2",
+      "toughness": "2"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "cmc": 0.0,
+      "layout": "normal"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "cmc": 1.0,
+      "layout": "normal"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal"
+    }
+  }
+}

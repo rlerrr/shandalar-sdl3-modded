@@ -29,6 +29,8 @@ WITNESSES={'Grizzly Bears':('2','2',''), 'Hill Giant':('3','3',''), 'Scaled Wurm
            'Llanowar Elves':('1','1','{T}: Add {G}.')}
 
 def spec(declaration,record):
+    if isinstance(declaration.get('params'),dict) and declaration['params'].get('schema')==7:
+        return wave7_spec(declaration,record)
     from recipes import cost_from_oracle
     if (not record or record.get('layout')!='normal' or record.get('card_faces') or record.get('selected_face')
             or 'Artifact' not in record.get('type_line','') or 'Equipment' not in record.get('type_line','')
@@ -79,6 +81,7 @@ def spec(declaration,record):
     return dict(p,family='equipment',mana=mana,equip_mana=[int(cost[1]),0,0,0,0,0])
 
 def variants(p):
+    if p.get('schema')==7:return wave7_variants(p)
     modes=['attach','cast','cast_payment','equip_payment','red_payment','move','tapped_source','tapped_host','sick_host',
            'empty','wrong_controller','wrong_type','cleanup','equipment_bounce','equipment_destroy','host_destroy',
            'lost_target','move_lost_target','source_bounced_pending','ready_snapshot','pending_snapshot','resolved_snapshot',
@@ -108,6 +111,7 @@ def validate_witnesses(oracle,registry):
             raise ValueError('equipment creature witness changed: '+name)
 
 def expand(name,csvid,declaration,p,selected,registry,oracle):
+    if p.get('schema')==7:return wave7_expand(name,csvid,declaration,p,selected,registry,oracle)
     from recipes import card,step,observe
     result=[]
     for variant in selected:
@@ -267,4 +271,221 @@ def expand(name,csvid,declaration,p,selected,registry,oracle):
         if v=='resolved_snapshot':steps += [step('capture'),step('record_state'),step('destroy',ref='other'),step('ai_roundtrip'),step('restore'),step('assert_recorded_state')]
         result.append(dict(name=f'EquipmentRecipe_{csvid}_{variant}',card=name,fixture=fixture,seed=123,setup=setup,steps=steps,
                            _recipe=dict(family='equipment',version=2,variant=variant,params=declaration['params'],oracle_text=declaration['oracle_text'],untested_components=['equip priority permissions','multiplayer','damage ordering for multiple blockers'])))
+    return result
+
+
+# Count-derived bonuses use an isolated grammar and model. Legacy fixed bonuses
+# retain their original scenarios and parameters above.
+WAVE7_PROFILES={
+    'Empyrial Plate':('hand','Equipped creature gets +1/+1 for each card in your hand.','{2}'),
+    'Pennon Blade':('creatures','Equipped creature gets +1/+1 for each creature you control.','{4}'),
+    'Helm of the Gods':('enchantments','Equipped creature gets +1/+1 for each enchantment you control.','{1}'),
+    'Civic Saber':('colors','Equipped creature gets +1/+0 for each of its colors.','{1}'),
+    'Hedron Matrix':('mana_value','Equipped creature gets +X/+X, where X is its mana value.','{4}'),
+    'Golem-Skin Gauntlets':('attachments','Equipped creature gets +1/+0 for each Equipment attached to it.','{2}'),
+}
+
+def wave7_data():
+    import json
+    from pathlib import Path
+    return json.loads((Path(__file__).parent/'data/equipment_wave7_witnesses.json').read_text(encoding='utf8'))
+
+def wave7_spec(declaration,record):
+    from recipes import cost_from_oracle
+    if declaration.get('family')!='equipment' or type(declaration.get('version')) is not int or declaration['version']!=2:
+        raise ValueError('count-derived Equipment requires family equipment and integer version 2')
+    p=declaration['params']
+    if set(p)!={'schema','profile'} or type(p['schema']) is not int or p['schema']!=7:
+        raise ValueError('equipment schema 7 requires only its reviewed count profile')
+    name=(record or {}).get('name')
+    if name not in WAVE7_PROFILES:raise ValueError('unreviewed count-derived Equipment')
+    profile,clause,cost=WAVE7_PROFILES[name]
+    pinned=wave7_data()['sources'][name]
+    if (p['profile']!=profile or declaration.get('oracle_text')!=record.get('oracle_text')
+            or 'variants' not in declaration or any(record.get(k)!=v for k,v in pinned['oracle'].items())
+            or record.get('card_faces') or record.get('selected_face') or record.get('layout')!='normal'
+            or 'Artifact' not in record.get('type_line','') or 'Equipment' not in record.get('type_line','')
+            or 'Creature' in record.get('type_line','') or set(record.get('keywords',[]))!={'Equip'}):
+        raise ValueError('count-derived Equipment identity, complete Oracle record or profile changed')
+    lines=[]
+    for raw in record['oracle_text'].splitlines():
+        text=raw
+        for reminder in re.findall(r'\([^\n]*?\)',raw):
+            if reminder!=EQUIP_REMINDER.format(cost=cost):raise ValueError('unreviewed count Equipment reminder')
+            text=text.replace(reminder,'')
+        lines.append(text.strip())
+    if lines!=[clause,'Equip '+cost]:raise ValueError('count-derived Equipment must match its whole rules text')
+    result=dict(schema=7,family='equipment',profile=profile,mana=cost_from_oracle(record),equip_mana=int(cost[1]),
+                power_scale=1,toughness_scale=int(profile not in ('colors','attachments')))
+    selected=declaration['variants']
+    if (not isinstance(selected,list) or not selected or any(not isinstance(v,str) for v in selected)
+            or len(set(selected))!=len(selected) or not set(selected)<=set(wave7_variants(result))):
+        raise ValueError('count-derived Equipment requires explicit distinct supported string variants')
+    return result
+
+def wave7_variants(p):
+    modes=['cast_attach','exact_payment','generic_red','move','cleanup','source_bounce','host_bounce',
+           'source_destroy','host_destroy','ready_snapshot','pending_snapshot','resolved_snapshot',
+           'empty','wrong_controller','wrong_type','no_equip_mana','opponent_turn','tapped_source',
+           'tapped_host','sick_host','unblocked','bare_zones','lost_target','source_bounced_pending']
+    if p['profile'] in ('hand','creatures','enchantments','attachments'):modes+=['increase','decrease']
+    if p['profile'] in ('colors','mana_value'):modes+=['zero_host','many_host']
+    if p['profile']=='enchantments':modes+=['zero_count']
+    return [v+'_'+str(owner) for owner in (0,1) for v in modes]
+
+def wave7_validate(oracle,registry):
+    for name,pinned in wave7_data()['witnesses'].items():
+        if registry.get(name,{}).get('csvid')!=pinned['csvid'] or any(oracle.get(name,{}).get(k)!=v for k,v in pinned['oracle'].items()):
+            raise ValueError('count-derived Equipment witness changed: '+name)
+
+def wave7_expand(name,csvid,declaration,p,selected,registry,oracle):
+    import copy
+    from recipes import card,step,cost_from_oracle
+    wave7_validate(oracle,registry)
+    if registry[name]['csvid']!=wave7_data()['sources'][name]['csvid'] or csvid!=registry[name]['csvid']:
+        raise ValueError('count-derived Equipment registry identity changed')
+    result=[]
+    for variant in selected:
+        mode,owner=variant.rsplit('_',1);owner=int(owner);profile=p['profile']
+        bare=mode=='bare_zones'
+        zones=[dict(hand=list(() if bare else HAND),graveyard=list(() if bare else GRAVE),
+                    library=list(() if bare else LIBRARY),exile=list(() if bare else EXILE)) for _ in (0,1)]
+        setup=[];entities={};attached={};steps=[]
+        negative=mode in ('empty','wrong_controller','wrong_type','no_equip_mana','opponent_turn')
+        seeded=negative or mode in ('generic_red','tapped_source')
+        pools=[[40,10,10,10,10,10] for _ in (0,1)]
+        if mode=='exact_payment':pools=[[0]*6 for _ in (0,1)];pools[owner][0]=sum(p['mana'])+p['equip_mana']+int(profile=='attachments')
+        if mode=='no_equip_mana':pools[owner]=[0]*6
+        if mode=='generic_red':pools[owner]=[0,0,0,0,p['equip_mana']+int(profile=='attachments'),0]
+        totals=[sum(pool) for pool in pools]
+        def add(nm,ref,who,zone='battlefield',state=None):
+            c=card(nm,ref,who,zone)
+            if state:c['state']=state
+            setup.append(c);entities[ref]=dict(name=nm,player=who,alive=zone=='battlefield')
+            if zone!='battlefield':zones[who][zone].append(nm)
+        def creature(ref):return 'Creature' in oracle[entities[ref]['name']].get('type_line','')
+        source_state=['tapped'] if mode=='tapped_source' else None
+        add(name,'source',owner,'battlefield' if seeded else 'hand',source_state)
+        host_name='Ornithopter' if mode=='zero_host' else ('Scaled Wurm' if profile=='mana_value' else 'Watchwolf') if mode=='many_host' else 'Grizzly Bears'
+        if mode!='empty':add('Sol Ring' if mode=='wrong_type' else host_name,'host',1-owner if mode=='wrong_controller' else owner,
+                             state=['tapped'] if mode=='tapped_host' else ['sick'] if mode=='sick_host' else None)
+        if not negative:
+            add('Hill Giant','other',owner);add('Grizzly Bears','enemy',1-owner)
+            # Populated opposing boards and irrelevant types expose count scope.
+            if profile=='creatures':add('Sol Ring','noncreature',owner);add('Hill Giant','enemy_extra',1-owner)
+            if profile=='enchantments':
+                if mode!='zero_count':add('Seal of Cleansing','counted',owner)
+                add('Seal of Cleansing','enemy_enchantment',1-owner);add('Howling Mine','nonenchantment',owner)
+            if profile=='attachments':add('Bonesplitter','other_blade',owner)
+            if mode in ('source_bounce','host_bounce','lost_target','source_bounced_pending'):
+                add('Boomerang' if mode in ('source_bounce','source_bounced_pending') else 'Unsummon','removal',0,'hand')
+            if mode=='increase':
+                addition={'hand':'Divination','creatures':'Ornithopter','enchantments':'Seal of Cleansing','attachments':'Bonesplitter'}[profile]
+                add(addition,'addition',owner,'hand')
+            if mode=='decrease' and profile=='hand':add('Sol Ring','addition',owner,'hand')
+            if mode=='decrease' and profile=='attachments':add('Bonesplitter','counted',owner)
+        steps += [step('turn',player=1-owner if mode=='opponent_turn' else owner,value=0)]
+        steps += [step('set_mana',player=who,color=color,value=amount) for who in (0,1) for color,amount in enumerate(pools[who])]
+        steps.append(step('refresh'))
+        def amount(ref):
+            if profile=='hand':return len(zones[owner]['hand'])
+            if profile in ('creatures','enchantments'):
+                kind='Creature' if profile=='creatures' else 'Enchantment'
+                return sum(e['alive'] and e['player']==owner and kind in oracle[e['name']].get('type_line','') for e in entities.values())
+            if profile=='colors':return len(oracle[entities[ref]['name']]['colors'])
+            if profile=='mana_value':return int(oracle[entities[ref]['name']]['cmc'])
+            return sum(e['alive'] and attached.get(r)==ref and 'Equipment' in oracle[e['name']].get('type_line','') for r,e in entities.items())
+        def stats():
+            seq=[]
+            for ref,e in entities.items():
+                if not e['alive'] or not creature(ref):continue
+                base=oracle[e['name']];power=int(base['power']);toughness=int(base['toughness'])
+                for equipment,target in attached.items():
+                    if target!=ref or not entities[equipment]['alive']:continue
+                    if equipment=='source':power+=amount(ref)*p['power_scale'];toughness+=amount(ref)*p['toughness_scale']
+                    elif entities[equipment]['name']=='Bonesplitter':power+=2
+                seq += [step('require_card',ref=ref,property='power',value=power),step('require_card',ref=ref,property='toughness',value=toughness)]
+            return seq
+        def cast(ref,target=None):
+            e=entities[ref];nm=e['name'];who=e['player'];cost=[0]*6 if oracle[nm].get('mana_cost')=='{0}' else cost_from_oracle(oracle[nm])
+            if target:steps.append(step('choose_target',player=who,ref=target))
+            steps.extend([step('cast',ref=ref,value=1),step('assert_stack',value=1),step('assert_choices_consumed'),step('resolve'),step('refresh'),step('assert_stack',value=0),step('assert_choices_consumed')])
+            totals[who]-=sum(cost);zones[who]['hand'].remove(nm)
+            if 'Instant' in oracle[nm]['type_line'] or 'Sorcery' in oracle[nm]['type_line']:zones[who]['graveyard'].append(nm)
+            else:e['alive']=True
+        def activate(ref,target):
+            who=entities[ref]['player'];cost=p['equip_mana'] if ref=='source' else 1
+            steps.append(step('require_can_activate',ref=ref,value=1))
+            if mode=='generic_red' and who==0:steps.extend(step('choose_mana',player=who,color=4) for _ in range(cost))
+            steps.extend([step('choose_target',player=who,ref=target),step('activate',ref=ref,value=1),step('assert_stack',value=1),step('assert_choices_consumed')])
+            totals[who]-=cost
+        def resolve_equipment(ref,target):
+            steps.extend([step('resolve'),step('refresh'),step('assert_stack',value=0),step('assert_choices_consumed')]);attached[ref]=target
+        def destroy(ref):
+            e=entities[ref];steps.extend([step('destroy',ref=ref),step('refresh')]);e['alive']=False;zones[e['player']]['graveyard'].append(e['name']);attached.pop(ref,None)
+            for equipment,target in list(attached.items()):
+                if target==ref:attached.pop(equipment)
+        def checks():
+            seq=[step('assert_stack',value=0),step('assert_choices_consumed')]+stats()
+            seq += [step('require_card',ref=ref,property='in_play',value=int(e['alive'])) for ref,e in entities.items()]
+            for who in (0,1):
+                seq.extend([step('assert_life',player=who,value=20),step('assert_mana_total',player=who,value=totals[who]),step('assert_zone',player=who,zone='battlefield',value=sum(e['alive'] and e['player']==who for e in entities.values()))])
+                for zone,names in zones[who].items():
+                    seq.append(step('assert_zone',player=who,zone=zone,value=len(names)))
+                    if zone=='library':seq.extend(step('assert_zone_card',player=who,zone=zone,index=i,value=registry[nm]['csvid']) for i,nm in enumerate(names))
+                    else:
+                        for nm,count in Counter(names).items():seq.append(step('assert_zone_multiplicity',player=who,zone=zone,index=registry[nm]['csvid'],value=count))
+            return seq
+        if negative:
+            steps.extend([step('require_can_activate',ref='source',value=0),step('activate',ref='source',value=0),step('assert_choices_consumed')])
+        else:
+            if not seeded:cast('source')
+            if profile=='attachments':activate('other_blade','other');resolve_equipment('other_blade','other')
+            if mode=='decrease' and profile=='attachments':activate('counted','host');resolve_equipment('counted','host')
+            ready=len(steps)
+            steps.extend(stats());activate('source','host');pending=len(steps)
+            # Costs and targeting are paid before attachment changes stats.
+            steps.extend(stats())
+            if mode in ('lost_target','source_bounced_pending'):
+                target='host' if mode=='lost_target' else 'source';removal=entities['removal']['name']
+                steps.extend([step('choose_target',player=0,ref=target),step('cast',ref='removal',value=1),step('assert_stack',value=2),
+                              step('assert_choices_consumed'),step('resolve'),step('refresh'),step('assert_stack',value=0),step('assert_choices_consumed')])
+                zones[0]['hand'].remove(removal);zones[0]['graveyard'].append(removal);totals[0]-=sum(cost_from_oracle(oracle[removal]))
+                e=entities[target];e['alive']=False;zones[e['player']]['hand'].append(e['name'])
+            else:resolve_equipment('source','host')
+            steps.extend(stats())
+            if mode=='move':activate('source','other');resolve_equipment('source','other')
+            if mode=='cleanup':steps.extend([step('cleanup'),step('refresh')])
+            if mode in ('source_bounce','host_bounce'):
+                target='source' if mode=='source_bounce' else 'host';cast('removal',target)
+                e=entities[target];e['alive']=False;zones[e['player']]['hand'].append(e['name']);attached.pop(target,None)
+                for equipment,host in list(attached.items()):
+                    if host==target:attached.pop(equipment)
+            if mode in ('source_destroy','host_destroy'):destroy('source' if mode=='source_destroy' else 'host')
+            if mode=='increase':
+                cast('addition')
+                if profile=='hand':zones[owner]['hand'].extend(zones[owner]['library'][:2]);del zones[owner]['library'][:2]
+                if profile=='attachments':activate('addition','host');resolve_equipment('addition','host')
+            if mode=='decrease':
+                if profile=='hand':cast('addition')
+                else:destroy('other' if profile=='creatures' else 'counted')
+            if mode=='unblocked':
+                steps.extend([step('begin_attackers'),step('attack',ref='host',value=1),step('finish_attackers'),step('begin_blockers'),step('advance_combat'),step('combat_damage')])
+                # Keep combat life receipts separate from the common empty-combat checks.
+                host=oracle[host_name];damage=int(host['power'])+amount('host')*p['power_scale']
+                steps.extend([step('assert_life',player=1-owner,value=20-damage),step('assert_life',player=owner,value=20),step('end_combat')])
+            if mode in ('tapped_source','tapped_host'):
+                steps.append(step('require_card',ref='source' if mode=='tapped_source' else 'host',property='tapped',value=1))
+        tail=checks()
+        if mode=='unblocked':tail=[s for s in tail if s['op']!='assert_life']
+        if mode=='exact_payment':tail += [step('assert_mana',player=owner,color=c,value=0) for c in range(6)]
+        steps+=tail
+        if mode in ('ready_snapshot','pending_snapshot'):
+            cut=ready if mode=='ready_snapshot' else pending
+            prefix=steps[:cut];replay=steps[cut:]
+            steps=prefix+[step('capture')]+copy.deepcopy(replay)+[step('record_state'),step('ai_roundtrip'),step('restore')]+copy.deepcopy(replay)+[step('assert_recorded_state')]
+        if mode=='resolved_snapshot':steps += [step('capture'),step('record_state'),step('destroy',ref='other'),step('refresh'),step('ai_roundtrip'),step('restore'),step('assert_recorded_state')]
+        result.append(dict(name=f'EquipmentWave7Recipe_{csvid}_{variant}',card=name,fixture='empty_main' if bare else 'stocked_zones',seed=123,setup=setup,steps=steps,
+                           _recipe=dict(family='equipment',version=2,variant=variant,params=declaration['params'],oracle_text=declaration['oracle_text'],
+                                        untested_components=['live color and mana-value changes','copy/control changes','attachment replacement effects','multiplayer'])))
     return result

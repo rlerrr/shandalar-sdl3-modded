@@ -1,0 +1,1423 @@
+{
+  "version": 1,
+  "sources": {
+    "Amrou Seekers": {
+      "csvid": 8476,
+      "handler": "manalinkeh_card_amrou_seekers",
+      "oracle": {
+        "oracle_id": "396efb56-7a54-4d91-b2ce-7f3c62c3238b",
+        "name": "Amrou Seekers",
+        "oracle_text": "This creature can't be blocked except by artifact creatures and/or white creatures.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Kithkin Rebel",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/2/amrou-seekers?utm_source=api"
+      },
+      "params": {
+        "rule": "allow",
+        "predicates": [
+          "artifact",
+          "color:W"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/time_spiral.c",
+        "line": 528,
+        "sha256": "cfddc9c8fe99f0dff533eb3715441c173b9ab7887b933c819e019439ed2bcbae",
+        "symbol": "card_amrou_seekers"
+      }
+    },
+    "Elven Riders": {
+      "csvid": 622,
+      "handler": "manalinkeh_card_elven_riders",
+      "oracle": {
+        "oracle_id": "9a6ff511-3c8f-446e-8cad-b8997a753958",
+        "name": "Elven Riders",
+        "oracle_text": "This creature can't be blocked except by Walls and/or creatures with flying.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Elf",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/259/elven-riders?utm_source=api"
+      },
+      "params": {
+        "rule": "allow",
+        "predicates": [
+          "subtype:Wall",
+          "keyword:Flying"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/legends.c",
+        "line": 2040,
+        "sha256": "d7e3d27299b5be320f972f7c3629b9fb6cabaecae969484dff8f0dd41810117a",
+        "symbol": "card_elven_riders"
+      }
+    },
+    "Rampart Crawler": {
+      "csvid": 4566,
+      "handler": "manalinkeh_card_bog_rats",
+      "oracle": {
+        "oracle_id": "302c0400-043d-42fa-abbb-488e520116ba",
+        "name": "Rampart Crawler",
+        "oracle_text": "This creature can't be blocked by Walls.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Lizard Mercenary",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/156/rampart-crawler?utm_source=api"
+      },
+      "params": {
+        "rule": "deny",
+        "predicates": [
+          "subtype:Wall"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/the_dark.c",
+        "line": 418,
+        "sha256": "ae6ab4577044567c895fe73ecc6ac44f4cc671b73bd09aa75f83f2864c265e6b",
+        "symbol": "card_bog_rats"
+      }
+    },
+    "Outland Boar": {
+      "csvid": 16761,
+      "handler": "manalinkeh_card_outland_boar",
+      "oracle": {
+        "oracle_id": "fdb109f6-d185-4d1e-92b9-768e77562f55",
+        "name": "Outland Boar",
+        "oracle_text": "This creature can't be blocked by creatures with power 2 or less.",
+        "mana_cost": "{2}{R}{G}",
+        "type_line": "Creature — Boar",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/132/outland-boar?utm_source=api"
+      },
+      "params": {
+        "rule": "power_fixed",
+        "limit": 2
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/aether_revolt.c",
+        "line": 4362,
+        "sha256": "98cdcc0c8f3aff4b5c3ce9d7e4a14f3aa075ff6da63ff3b13d09a44d76c476b7",
+        "symbol": "card_outland_boar"
+      }
+    },
+    "Wandering Wolf": {
+      "csvid": 12507,
+      "handler": "manalinkeh_card_wandering_wolf",
+      "oracle": {
+        "oracle_id": "1750cf0a-0709-4f02-90ea-572ff88a37a5",
+        "name": "Wandering Wolf",
+        "oracle_text": "Creatures with power less than this creature's power can't block it.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Wolf",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/216/wandering-wolf?utm_source=api"
+      },
+      "params": {
+        "rule": "power_source"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/avacyn_restored.c",
+        "line": 5803,
+        "sha256": "fcc36418a2f02d6ebf5e4f80a58dc4f071586b4749fda830d4e9a1456dc8afac",
+        "symbol": "card_wandering_wolf"
+      }
+    },
+    "Neurok Spy": {
+      "csvid": 6742,
+      "handler": "manalinkeh_card_scrapdiver_serpent",
+      "oracle": {
+        "oracle_id": "d78cb7d8-9cfc-4d16-86ea-d49fc5d65db0",
+        "name": "Neurok Spy",
+        "oracle_text": "This creature can't be blocked as long as defending player controls an artifact.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Human Rogue",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/44/neurok-spy?utm_source=api"
+      },
+      "params": {
+        "rule": "defender_artifact"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/scars_of_mirrodin.c",
+        "line": 5481,
+        "sha256": "f0212bb7c1e51d46d378c7ef5b9d9b41a45d553199397c1a455bf49f155d4c75",
+        "symbol": "card_scrapdiver_serpent"
+      }
+    },
+    "Felhide Brawler": {
+      "csvid": 13711,
+      "handler": "manalinkeh_card_felhide_brawler",
+      "oracle": {
+        "oracle_id": "2ddd33e1-b48e-42e2-a60a-f09f151d3c1d",
+        "name": "Felhide Brawler",
+        "oracle_text": "This creature can't block unless you control another Minotaur.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Minotaur",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bng/70/felhide-brawler?utm_source=api"
+      },
+      "params": {
+        "rule": "support",
+        "subtype": "Minotaur",
+        "another": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/born_of_the_gods.c",
+        "line": 1942,
+        "sha256": "7b81b4f22e1d402dfc648a104eb55ca094761feddcae0860f64b88647062cc55",
+        "symbol": "card_felhide_brawler"
+      }
+    },
+    "Branded Brawlers": {
+      "csvid": 4804,
+      "handler": "manalinkeh_card_branded_brawlers",
+      "oracle": {
+        "oracle_id": "e975a8b3-f817-42f3-84da-b03ebf95cf25",
+        "name": "Branded Brawlers",
+        "oracle_text": "This creature can't attack if defending player controls an untapped land.\nThis creature can't block if you control an untapped land.",
+        "mana_cost": "{R}",
+        "type_line": "Creature — Human Soldier",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pcy/84/branded-brawlers?utm_source=api"
+      },
+      "params": {
+        "rule": "untapped_land"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/prophecy.c",
+        "line": 343,
+        "sha256": "e47e6aa67b4c2d7b8ab3c8f017fde322a499bc2a29d3c64d305e6cf0a9a66f9e",
+        "symbol": "card_branded_brawlers"
+      }
+    },
+    "Skirk Shaman": {
+      "csvid": 8852,
+      "handler": "manalinkeh_card_skirk_shaman",
+      "oracle": {
+        "oracle_id": "78d5ce34-f160-4925-a4ce-25a3546d97c7",
+        "name": "Skirk Shaman",
+        "oracle_text": "This creature can't be blocked except by artifact creatures and/or red creatures.",
+        "mana_cost": "{1}{R}{R}",
+        "type_line": "Creature — Goblin Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/191/skirk-shaman?utm_source=api"
+      },
+      "params": {
+        "rule": "allow",
+        "predicates": [
+          "artifact",
+          "color:R"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/planar_chaos.c",
+        "line": 3346,
+        "sha256": "b46148715eccb4425c09bdadf91c71dcb1569910d21fa6758f4988c72778c62c",
+        "symbol": "card_skirk_shaman"
+      }
+    },
+    "Dread Warlock": {
+      "csvid": 10410,
+      "handler": "manalinkeh_card_prowling_nightstalker",
+      "oracle": {
+        "oracle_id": "5791710d-c718-4f64-9c14-3668154716f1",
+        "name": "Dread Warlock",
+        "oracle_text": "This creature can't be blocked except by black creatures.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Human Wizard Warlock",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m10/94/dread-warlock?utm_source=api"
+      },
+      "params": {
+        "rule": "allow",
+        "predicates": [
+          "color:B"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/portal_1_2_3k.c",
+        "line": 1422,
+        "sha256": "9ebb12c4108ac5848332addac2199b3e7416492fe5ce24e38e49aaa7e3d38f33",
+        "symbol": "card_prowling_nightstalker"
+      }
+    },
+    "Prowling Nightstalker": {
+      "csvid": 3605,
+      "handler": "manalinkeh_card_prowling_nightstalker",
+      "oracle": {
+        "oracle_id": "6279078a-5c77-4a9e-8e9b-e99310363b6f",
+        "name": "Prowling Nightstalker",
+        "oracle_text": "This creature can't be blocked except by black creatures.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Nightstalker",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/93/prowling-nightstalker?utm_source=api"
+      },
+      "params": {
+        "rule": "allow",
+        "predicates": [
+          "color:B"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/portal_1_2_3k.c",
+        "line": 1422,
+        "sha256": "9ebb12c4108ac5848332addac2199b3e7416492fe5ce24e38e49aaa7e3d38f33",
+        "symbol": "card_prowling_nightstalker"
+      }
+    },
+    "Deathcult Rogue": {
+      "csvid": 12919,
+      "handler": "manalinkeh_card_deathcult_rogue",
+      "oracle": {
+        "oracle_id": "fa8ae8ac-4ad2-4cda-9f6b-4ec634526658",
+        "name": "Deathcult Rogue",
+        "oracle_text": "This creature can't be blocked except by Rogues.",
+        "mana_cost": "{1}{U/B}{U/B}",
+        "type_line": "Creature — Human Rogue",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/218/deathcult-rogue?utm_source=api"
+      },
+      "params": {
+        "rule": "allow",
+        "predicates": [
+          "subtype:Rogue"
+        ],
+        "hybrid_pairs": [
+          [
+            "U",
+            "B"
+          ],
+          [
+            "U",
+            "B"
+          ]
+        ],
+        "payment_colors": [
+          "U",
+          "U"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/gatecrash.c",
+        "line": 6733,
+        "sha256": "5be363bd38955a7a2cac85f8ab209c4748d2ba0285c70adcc0da68ed36d94d4a",
+        "symbol": "card_deathcult_rogue"
+      }
+    },
+    "Orchard Spirit": {
+      "csvid": 12040,
+      "handler": "manalinkeh_card_orchard_spirit",
+      "oracle": {
+        "oracle_id": "b6eb56a7-4dfe-4d51-a1df-55f892c1b014",
+        "name": "Orchard Spirit",
+        "oracle_text": "This creature can't be blocked except by creatures with flying or reach.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Spirit",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ori/192/orchard-spirit?utm_source=api"
+      },
+      "params": {
+        "rule": "allow",
+        "predicates": [
+          "keyword:Flying",
+          "keyword:Reach"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/innistrad.c",
+        "line": 5664,
+        "sha256": "c47d29f9fac5619d74df08a83e2f323f9e1b5adde5a4a1f45663f29d8d548087",
+        "symbol": "card_orchard_spirit"
+      }
+    },
+    "Spire Tracer": {
+      "csvid": 13073,
+      "handler": "manalinkeh_card_orchard_spirit",
+      "oracle": {
+        "oracle_id": "9b38ab81-7ee7-4d89-878b-3507e44836ca",
+        "name": "Spire Tracer",
+        "oracle_text": "This creature can't be blocked except by creatures with flying or reach.",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Elf Scout",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gtc/135/spire-tracer?utm_source=api"
+      },
+      "params": {
+        "rule": "allow",
+        "predicates": [
+          "keyword:Flying",
+          "keyword:Reach"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/innistrad.c",
+        "line": 5664,
+        "sha256": "c47d29f9fac5619d74df08a83e2f323f9e1b5adde5a4a1f45663f29d8d548087",
+        "symbol": "card_orchard_spirit"
+      }
+    },
+    "Gnat Alley Creeper": {
+      "csvid": 8213,
+      "handler": "manalinkeh_card_stone_spirit",
+      "oracle": {
+        "oracle_id": "17f930a9-64ee-46f9-8a7c-8877e532c94f",
+        "name": "Gnat Alley Creeper",
+        "oracle_text": "This creature can't be blocked by creatures with flying.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Human Rogue",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dis/63/gnat-alley-creeper?utm_source=api"
+      },
+      "params": {
+        "rule": "deny",
+        "predicates": [
+          "keyword:Flying"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/ice_age.c",
+        "line": 10155,
+        "sha256": "91423745e010334b252c03fe07f2ed144040400dac9fb38417f766ce7c1b4c7c",
+        "symbol": "card_stone_spirit"
+      }
+    },
+    "Stone Spirit": {
+      "csvid": 2120,
+      "handler": "manalinkeh_card_stone_spirit",
+      "oracle": {
+        "oracle_id": "63bc0a02-0d6c-4a00-8b17-1b024f830219",
+        "name": "Stone Spirit",
+        "oracle_text": "This creature can't be blocked by creatures with flying.",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature — Elemental Spirit",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/150/stone-spirit?utm_source=api"
+      },
+      "params": {
+        "rule": "deny",
+        "predicates": [
+          "keyword:Flying"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/ice_age.c",
+        "line": 10155,
+        "sha256": "91423745e010334b252c03fe07f2ed144040400dac9fb38417f766ce7c1b4c7c",
+        "symbol": "card_stone_spirit"
+      }
+    },
+    "Audacious Infiltrator": {
+      "csvid": 16665,
+      "handler": "manalinkeh_card_argothian_pixies",
+      "oracle": {
+        "oracle_id": "e01b3d52-297d-42e3-9de9-4f45c2359bcc",
+        "name": "Audacious Infiltrator",
+        "oracle_text": "This creature can't be blocked by artifact creatures.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Dwarf Rogue",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/aer/7/audacious-infiltrator?utm_source=api"
+      },
+      "params": {
+        "rule": "deny",
+        "predicates": [
+          "artifact"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/antiquities.c",
+        "line": 172,
+        "sha256": "d7b240e7cd6c7c9e48f8404044ff48acbcb34832b2695b5b0562ec4212e6b1d0",
+        "symbol": "card_argothian_pixies"
+      }
+    },
+    "Giltgrove Stalker": {
+      "csvid": 18211,
+      "handler": "manalinkeh_card_outland_boar",
+      "oracle": {
+        "oracle_id": "2be3969b-a427-47be-a49c-47b98e3d6b5f",
+        "name": "Giltgrove Stalker",
+        "oracle_text": "This creature can't be blocked by creatures with power 2 or less.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Merfolk Warrior",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rix/131/giltgrove-stalker?utm_source=api"
+      },
+      "params": {
+        "rule": "power_fixed",
+        "limit": 2
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/aether_revolt.c",
+        "line": 4362,
+        "sha256": "98cdcc0c8f3aff4b5c3ce9d7e4a14f3aa075ff6da63ff3b13d09a44d76c476b7",
+        "symbol": "card_outland_boar"
+      }
+    },
+    "Steel Leaf Champion": {
+      "csvid": 18517,
+      "handler": "manalinkeh_card_outland_boar",
+      "oracle": {
+        "oracle_id": "666af637-9282-4121-962a-048e528f9221",
+        "name": "Steel Leaf Champion",
+        "oracle_text": "This creature can't be blocked by creatures with power 2 or less.",
+        "mana_cost": "{G}{G}{G}",
+        "type_line": "Creature — Elf Knight",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/182/steel-leaf-champion?utm_source=api"
+      },
+      "params": {
+        "rule": "power_fixed",
+        "limit": 2
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/aether_revolt.c",
+        "line": 4362,
+        "sha256": "98cdcc0c8f3aff4b5c3ce9d7e4a14f3aa075ff6da63ff3b13d09a44d76c476b7",
+        "symbol": "card_outland_boar"
+      }
+    },
+    "Enraged Ceratok": {
+      "csvid": 19615,
+      "handler": "manalinkeh_card_outland_boar",
+      "oracle": {
+        "oracle_id": "e1f3f377-c7b1-474c-aed6-78b061d138c1",
+        "name": "Enraged Ceratok",
+        "oracle_text": "This creature can't be blocked by creatures with power 2 or less.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Rhino",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/162/enraged-ceratok?utm_source=api"
+      },
+      "params": {
+        "rule": "power_fixed",
+        "limit": 2
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/aether_revolt.c",
+        "line": 4362,
+        "sha256": "98cdcc0c8f3aff4b5c3ce9d7e4a14f3aa075ff6da63ff3b13d09a44d76c476b7",
+        "symbol": "card_outland_boar"
+      }
+    },
+    "Bouncing Beebles": {
+      "csvid": 3973,
+      "handler": "manalinkeh_card_scrapdiver_serpent",
+      "oracle": {
+        "oracle_id": "4fa46972-d953-4328-9c31-96e134234133",
+        "name": "Bouncing Beebles",
+        "oracle_text": "This creature can't be blocked as long as defending player controls an artifact.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Beeble",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/28/bouncing-beebles?utm_source=api"
+      },
+      "params": {
+        "rule": "defender_artifact"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/scars_of_mirrodin.c",
+        "line": 5481,
+        "sha256": "f0212bb7c1e51d46d378c7ef5b9d9b41a45d553199397c1a455bf49f155d4c75",
+        "symbol": "card_scrapdiver_serpent"
+      }
+    },
+    "Scrapdiver Serpent": {
+      "csvid": 11354,
+      "handler": "manalinkeh_card_scrapdiver_serpent",
+      "oracle": {
+        "oracle_id": "6f45ac24-e153-4ec1-a41f-989f9547d409",
+        "name": "Scrapdiver Serpent",
+        "oracle_text": "This creature can't be blocked as long as defending player controls an artifact.",
+        "mana_cost": "{5}{U}{U}",
+        "type_line": "Creature — Serpent",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmr/94/scrapdiver-serpent?utm_source=api"
+      },
+      "params": {
+        "rule": "defender_artifact"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/scars_of_mirrodin.c",
+        "line": 5481,
+        "sha256": "f0212bb7c1e51d46d378c7ef5b9d9b41a45d553199397c1a455bf49f155d4c75",
+        "symbol": "card_scrapdiver_serpent"
+      }
+    },
+    "Mindless Null": {
+      "csvid": 10610,
+      "handler": "manalinkeh_card_mindless_null",
+      "oracle": {
+        "oracle_id": "22ff4e16-5c66-4076-94cc-32c281d42f03",
+        "name": "Mindless Null",
+        "oracle_text": "This creature can't block unless you control a Vampire.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/zen/103/mindless-null?utm_source=api"
+      },
+      "params": {
+        "rule": "support",
+        "subtype": "Vampire",
+        "another": false
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/zendikar.c",
+        "line": 2539,
+        "sha256": "e97877480b7610ffc703f29d79dfc73c0be1d7e130b680627147b6da0c1932f1",
+        "symbol": "card_mindless_null"
+      }
+    },
+    "Howlpack Wolf": {
+      "csvid": 15857,
+      "handler": "manalinkeh_card_howlpack_wolf",
+      "oracle": {
+        "oracle_id": "a2fb7d03-d6bf-4716-9ca4-bd7dbcf9ae66",
+        "name": "Howlpack Wolf",
+        "oracle_text": "This creature can't block unless you control another Wolf or Werewolf.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Wolf",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/164/howlpack-wolf?utm_source=api"
+      },
+      "params": {
+        "rule": "support",
+        "subtypes": [
+          "Wolf",
+          "Werewolf"
+        ],
+        "another": true
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/shadows_over_innistrad.c",
+        "line": 4678,
+        "sha256": "82e12d667575627cc3694110c1f2c98243d1d1ee7b9eeeed7e0925c01e2e8427",
+        "symbol": "card_howlpack_wolf"
+      }
+    },
+    "Veteran Brawlers": {
+      "csvid": 4907,
+      "handler": "manalinkeh_card_branded_brawlers",
+      "oracle": {
+        "oracle_id": "77a963a3-473a-4c34-bc46-8ef016a92c0c",
+        "name": "Veteran Brawlers",
+        "oracle_text": "This creature can't attack if defending player controls an untapped land.\nThis creature can't block if you control an untapped land.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Human Soldier",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pcy/106/veteran-brawlers?utm_source=api"
+      },
+      "params": {
+        "rule": "untapped_land"
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/prophecy.c",
+        "line": 343,
+        "sha256": "e47e6aa67b4c2d7b8ab3c8f017fde322a499bc2a29d3c64d305e6cf0a9a66f9e",
+        "symbol": "card_branded_brawlers"
+      }
+    }
+  },
+  "witnesses": {
+    "Centaur Courser": {
+      "oracle_id": "2f5bf099-2e01-4e1c-9ebf-0ce0ac66939e",
+      "name": "Centaur Courser",
+      "oracle_text": "",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Centaur Warrior",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m20/168/centaur-courser?utm_source=api"
+    },
+    "Court Homunculus": {
+      "oracle_id": "b597e801-2648-48b9-8a21-02baa13e37af",
+      "name": "Court Homunculus",
+      "oracle_text": "This creature gets +1/+1 as long as you control another artifact.",
+      "mana_cost": "{W}",
+      "type_line": "Artifact Creature — Homunculus",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mm2/13/court-homunculus?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Giant Spider": {
+      "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+      "name": "Giant Spider",
+      "oracle_text": "Reach (This creature can block creatures with flying.)",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Spider",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [
+        "Reach"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+    },
+    "Glasses of Urza": {
+      "oracle_id": "af7fabf4-8d55-4b06-9c21-472f4a5775b4",
+      "name": "Glasses of Urza",
+      "oracle_text": "{T}: Look at target player's hand.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me4/203/glasses-of-urza?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Kragma Butcher": {
+      "oracle_id": "3e6dad31-6192-4675-81df-09689906c12b",
+      "name": "Kragma Butcher",
+      "oracle_text": "Inspired — Whenever this creature becomes untapped, it gets +2/+0 until end of turn.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Minotaur Warrior",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "Inspired"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bng/100/kragma-butcher?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Orcish Artillery": {
+      "oracle_id": "c000811e-bde7-4840-a3bb-9714d5c977eb",
+      "name": "Orcish Artillery",
+      "oracle_text": "{T}: This creature deals 2 damage to any target and 3 damage to you.",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Orc Warrior",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/220/orcish-artillery?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Savannah Lions": {
+      "oracle_id": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+      "name": "Savannah Lions",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Cat",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fdn/146/savannah-lions?utm_source=api"
+    },
+    "Shatter": {
+      "oracle_id": "84d32e68-72b9-432d-a023-7bc6a26b8ad0",
+      "name": "Shatter",
+      "oracle_text": "Destroy target artifact.",
+      "mana_cost": "{1}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/rix/114/shatter?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Wall of Denial": {
+      "oracle_id": "9cc092f9-e8f0-40ea-847d-813b70f889db",
+      "name": "Wall of Denial",
+      "oracle_text": "Defender, flying\nShroud (This creature can't be the target of spells or abilities.)",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Creature — Wall",
+      "power": "0",
+      "toughness": "8",
+      "keywords": [
+        "Flying",
+        "Shroud",
+        "Defender"
+      ],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/939/wall-of-denial?utm_source=api"
+    },
+    "Wall of Roots": {
+      "oracle_id": "3a21a6ae-b2f2-4f0c-acfd-5f3e8d63fd2f",
+      "name": "Wall of Roots",
+      "oracle_text": "Defender\nPut a -0/-1 counter on this creature: Add {G}. Activate only once each turn.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Plant Wall",
+      "power": "0",
+      "toughness": "5",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tdc/278/wall-of-roots?utm_source=api"
+    },
+    "Dreg Mangler": {
+      "oracle_id": "71358110-4e28-4794-befa-ea6e27e720ef",
+      "name": "Dreg Mangler",
+      "oracle_text": "Haste\nScavenge {3}{B}{G} ({3}{B}{G}, Exile this card from your graveyard: Put a number of +1/+1 counters equal to this card's power on target creature. Scavenge only as a sorcery.)",
+      "mana_cost": "{1}{B}{G}",
+      "type_line": "Creature — Plant Zombie",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Scavenge",
+        "Haste"
+      ],
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/2x2/204/dreg-mangler?utm_source=api"
+    },
+    "Invisible Stalker": {
+      "oracle_id": "1a137a67-4156-45c8-aae9-838f688e12bd",
+      "name": "Invisible Stalker",
+      "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)\nThis creature can't be blocked.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Human Rogue",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Hexproof"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/znc/27/invisible-stalker?utm_source=api"
+    },
+    "Vampire Nighthawk": {
+      "oracle_id": "feb244f8-bcb1-44cf-9940-2719221a7309",
+      "name": "Vampire Nighthawk",
+      "oracle_text": "Flying\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\nLifelink (Damage dealt by this creature also causes you to gain that much life.)",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Vampire Shaman",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "Deathtouch",
+        "Flying",
+        "Lifelink"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fdn/757/vampire-nighthawk?utm_source=api"
+    },
+    "Young Wolf": {
+      "oracle_id": "8b492764-10b6-4506-be11-22daa9220a91",
+      "name": "Young Wolf",
+      "oracle_text": "Undying (When this creature dies, if it had no +1/+1 counters on it, return it to the battlefield under its owner's control with a +1/+1 counter on it.)",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Wolf",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [
+        "Undying"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/inr/227/young-wolf?utm_source=api"
+    },
+    "Greater Werewolf": {
+      "oracle_id": "02847b0d-03a1-4e30-902e-60bdf6952c58",
+      "name": "Greater Werewolf",
+      "oracle_text": "At end of combat, put a -0/-2 counter on each creature blocking or blocked by this creature.",
+      "mana_cost": "{4}{B}",
+      "type_line": "Creature — Werewolf",
+      "power": "2",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/5ed/166/greater-werewolf?utm_source=api"
+    },
+    "Etherium-Horn Sorcerer": {
+      "oracle_id": "01afb7a1-6427-4bb6-935a-613e9bda9de3",
+      "name": "Etherium-Horn Sorcerer",
+      "oracle_text": "{1}{U}{R}: Return this creature to its owner's hand.\nCascade (When you cast this spell, exile cards from the top of your library until you exile a nonland card that costs less. You may cast it without paying its mana cost. Put the exiled cards on the bottom in a random order.)",
+      "mana_cost": "{4}{U}{R}",
+      "type_line": "Artifact Creature — Minotaur Wizard Sorcerer",
+      "power": "3",
+      "toughness": "6",
+      "keywords": [
+        "Cascade"
+      ],
+      "colors": [
+        "R",
+        "U"
+      ],
+      "color_identity": [
+        "R",
+        "U"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/c17/171/etherium-horn-sorcerer?utm_source=api"
+    },
+    "Spidery Grasp": {
+      "oracle_id": "021ce403-cbfa-4d69-a6e9-473d58bd477a",
+      "name": "Spidery Grasp",
+      "oracle_text": "Untap target creature. It gets +2/+4 and gains reach until end of turn. (It can block creatures with flying.)",
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/gn2/51/spidery-grasp?utm_source=api"
+    },
+    "Iron Myr": {
+      "oracle_id": "6c5cbab6-ee27-46f5-97a7-df85698d1e9f",
+      "name": "Iron Myr",
+      "oracle_text": "{T}: Add {R}.",
+      "mana_cost": "{2}",
+      "type_line": "Artifact Creature — Myr",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/168/iron-myr?utm_source=api"
+    }
+  },
+  "witness_handlers": {
+    "Centaur Courser": "card_dummy",
+    "Court Homunculus": "manalinkeh_card_court_homunculus",
+    "Forest": "manalinkeh_plain_mana_producer",
+    "Giant Growth": "manalinkeh_card_giant_growth",
+    "Giant Spider": "card_dummy",
+    "Glasses of Urza": "manalinkeh_card_glasses_of_urza",
+    "Grizzly Bears": "card_dummy",
+    "Island": "manalinkeh_plain_mana_producer",
+    "Kragma Butcher": "manalinkeh_card_kragma_butcher",
+    "Lightning Bolt": "manalinkeh_card_lightning_bolt",
+    "Mountain": "manalinkeh_plain_mana_producer",
+    "Orcish Artillery": "manalinkeh_card_orcish_artillery",
+    "Ornithopter": "card_dummy",
+    "Plains": "manalinkeh_plain_mana_producer",
+    "Savannah Lions": "card_dummy",
+    "Shatter": "manalinkeh_card_shatter",
+    "Unsummon": "manalinkeh_card_unsummon",
+    "Wall of Denial": "card_dummy",
+    "Wall of Roots": "manalinkeh_card_wall_of_roots",
+    "Dreg Mangler": "manalinkeh_card_dreg_mangler",
+    "Invisible Stalker": "manalinkeh_card_invisible_stalker",
+    "Vampire Nighthawk": "manalinkeh_card_vampire_nighthawk",
+    "Young Wolf": "manalinkeh_card_nearheath_stalker",
+    "Greater Werewolf": "manalinkeh_card_greater_werewolf",
+    "Etherium-Horn Sorcerer": "manalinkeh_card_etherium_horn_sorcerer",
+    "Spidery Grasp": "manalinkeh_card_spidery_grasp",
+    "Iron Myr": "manalinkeh_card_generic_noncombat_1_mana_producing_creature"
+  },
+  "native_characteristics_only_witnesses": [
+    "Centaur Courser",
+    "Giant Spider",
+    "Grizzly Bears",
+    "Ornithopter",
+    "Savannah Lions",
+    "Wall of Denial"
+  ],
+  "native_witness_scope": "Only setup characteristics and real combat; never claim dummy callbacks implement casts/activations."
+}

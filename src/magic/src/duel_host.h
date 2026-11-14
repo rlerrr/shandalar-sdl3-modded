@@ -19,6 +19,7 @@ typedef struct {
   const int *cards;
   int zone_must_select; /* -1 when unspecified; input policy, not a rules override. */
   const int *zone_legal; /* Read-only engine predicate results; NULL if unavailable. */
+  int target_allow_cancel; /* Actual Cancel/Done bits, or -1 when unavailable. */
 } DuelChoiceRequest;
 typedef struct { int value, card; } DuelChoiceAnswer;
 typedef struct {
@@ -58,6 +59,8 @@ int duel_host_choose(DuelChoiceKind kind, int player, const char *prompt,
                      int count, const int *cards, int *card);
 int duel_host_choose_zone(int player, const char *prompt, int count,
                           const int *cards, int must_select, const int *legal);
+/* Preserve the selector's policy for input receipts, without changing it. */
+int duel_host_choose_target(int player, const char *prompt, int allow_cancel, int *card);
 int duel_host_random(void);
 uint32_t duel_host_clock(void);
 void duel_host_checkpoint(const char *operation);

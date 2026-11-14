@@ -48,6 +48,18 @@ int duel_test_offered_count(void);
 int duel_test_offered_selection_required(void);
 int duel_test_offered_legal(int index);
 int duel_test_forced_zone_choices(void);
+/* Deferred, legal live-instance selection; the old CSVID selector also handles dead-source legacies. */
+void duel_test_source_trigger_decision(int player, DuelTestRef source);
+/* Decline when permitted; otherwise record the forced action and validate the fallback normally. */
+void duel_test_optional_target_decision(int player, DuelTestRef fallback);
+int duel_test_forced_target_choices(void);
+/* Source-bound value-mode intent. Followup cost choices are conditional on
+   selecting this mode; finish immediately after the actual activation. */
+void duel_test_activation_mode_decision(int player, DuelTestRef source, const char *label,
+                                       int fallback_color, int allow_auto_nonmana);
+/* 1 selected, 0 unavailable/no mode menu, negative fingerprint of an offered
+   menu lacking the requested label. Distinct menus retain distinct signatures. */
+int duel_test_finish_activation_mode(void);
 /* 0 disables; 1/2 choose the lowest/highest CSVID actually offered for discard.
    Starts a fresh counted policy; both fields are caller-snapshot state. */
 void duel_test_set_discard_policy(int policy);
@@ -61,6 +73,10 @@ DuelTestRef duel_test_permanent_at(int player, int index);
 DuelTestRef duel_test_hand_at(int player, int index);
 int duel_test_can_activate(DuelTestRef source);
 int duel_test_activate(DuelTestRef source);
+/* Native {T}-only mana grants: ref is the host, provider is its attached Aura.
+   The host controller acts; arbitrary fee-paying grants are unsupported. */
+int duel_test_can_activate_granted_mana(DuelTestRef host, DuelTestRef provider);
+int duel_test_activate_granted_mana(DuelTestRef host, DuelTestRef provider);
 /* Use the real rules-engine hand-ability menu; scripts choose its option. */
 int duel_test_can_activate_hand(DuelTestRef source);
 int duel_test_activate_hand(DuelTestRef source);
@@ -87,6 +103,9 @@ int duel_test_can_target_creature(DuelTestRef source, DuelTestRef target);
  * Returns -1 if none was exposed, -2 for conflicting definitions, else 0/1. */
 int duel_test_probe_activation_target(DuelTestRef source, DuelTestRef target, int mode_choice);
 int duel_test_cast(DuelTestRef source);
+/* Run the real cast announcement once, retaining a pending spell for explicit
+   responses. Test snapshots restore this opt-in phase marker. */
+int duel_test_announce_spell(DuelTestRef source);
 /* Cast against the actual pending spell after a scripted cast has returned. */
 int duel_test_cast_response(DuelTestRef source);
 /* Start an explicitly authored death-history fixture as normal turn setup does. */
@@ -115,13 +134,21 @@ void duel_test_advance_turn(void);
    current player, empty stack and zero floating mana; returns 0 on rejection.
    Snapshot restore also restores the one-step preparation. No upkeep/draw. */
 int duel_test_untap_step(int player);
+/* Run the complete production upkeep once after a real untap wrapper for the
+   current turn (including a real skipped untap). Empty stack and zero pools
+   required. Phase shortcuts/actions invalidate readiness; snapshot restores it.
+   Returns 0 without mutation on rejection. Leaves real upkeep; no draw step. */
+int duel_test_upkeep_step(int player);
 DuelTestCard duel_test_inspect(DuelTestRef ref);
+/* Read real permanent counters; invalid refs/kinds return -1. No mutation. */
+int duel_test_counter(DuelTestRef ref, const char *kind);
 int duel_test_base_power(int player, int csvid);
 int duel_test_base_toughness(int player, int csvid);
 int duel_test_zone_count(int player, int zone);
 int duel_test_zone_csvid(int player, int zone, int index);
 int duel_test_life(int player);
 int duel_test_mana(int player, int color);
+/* Live objects, excluding retired spell slots awaiting the ordinary drain. */
 int duel_test_stack_size(void);
 void duel_test_check_invariants(void);
 void duel_test_dump(void);

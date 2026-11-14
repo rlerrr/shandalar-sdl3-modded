@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Surge Node",
+  "csvid": 11692,
+  "recipes": [
+    {
+      "family": "charge_counter_activation",
+      "version": 2,
+      "oracle_text": "This artifact enters with six charge counters on it.\n{1}, {T}, Remove a charge counter from this artifact: Put a charge counter on target artifact.",
+      "params": {
+        "ability": 1,
+        "interface": {
+          "dialogs": {},
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        },
+        "inactive_clauses": [
+          "This artifact enters with six charge counters on it."
+        ]
+      },
+      "variants": [
+        "charge_0",
+        "payment_0",
+        "offturn_0",
+        "tapped_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "repeat_untap_0",
+        "insufficient_mana_0",
+        "target_enemy_0",
+        "target_self_0",
+        "target_nonnative_0",
+        "target_removed_pending_0",
+        "probe_nonartifact_0",
+        "spend_all_0",
+        "charge_1",
+        "payment_1",
+        "offturn_1",
+        "tapped_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "repeat_untap_1",
+        "insufficient_mana_1",
+        "target_enemy_1",
+        "target_self_1",
+        "target_nonnative_1",
+        "target_removed_pending_1",
+        "probe_nonartifact_1",
+        "spend_all_1"
+      ]
+    }
+  ]
+}

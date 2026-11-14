@@ -1,6 +1,6 @@
 #include "manalink.h"
 
-static char *not_already_dying(int who_chooses, int player, int card);
+static const char *not_already_dying(int who_chooses, int player, int card, int source_player, int source_card);
 
 // Global functions
 
@@ -3320,10 +3320,13 @@ int card_thunderstaff(int player, int card, event_t event)
 
 extern int dont_account_for_trinisphere;
 /* ManalinkEh 2022: 0x224d6b0; original cards/darksteel.c:5. */
-static char *not_already_dying(int who_chooses, int player, int card)
+static const char *not_already_dying(int who_chooses, int player, int card, int source_player, int source_card)
 {
+  /* Target predicates use five arguments on every platform, including Wasm. */
+  (void)source_player;
+  (void)source_card;
   card_instance_t *instance;
-  char *rejection;
+  const char *rejection;
 
   instance = get_card_instance(player, card);
   rejection = NULL;

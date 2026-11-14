@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Horizon Canopy",
+  "csvid": 8945,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "{T}, Pay 1 life: Add {G} or {W}.\n{1}, {T}, Sacrifice this land: Draw a card.",
+      "params": {
+        "ability": 1,
+        "present_ai_dialogs": true,
+        "mode_intent": {
+          "mode_label": "Sac and draw a card",
+          "fallback_color": 3,
+          "allow_auto_nonmana": true
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1"
+      ]
+    }
+  ]
+}

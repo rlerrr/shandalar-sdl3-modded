@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Gavony Township",
+  "csvid": 11960,
+  "recipes": [
+    {
+      "family": "permanent_plus1_activation",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}.\n{2}{G}{W}, {T}: Put a +1/+1 counter on each creature you control.",
+      "params": {
+        "ability": 1,
+        "interface": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": {
+            "mode_label": "Add +1/+1 counters",
+            "fallback_color": 0,
+            "allow_auto_nonmana": true
+          },
+          "unavailable": {
+            "0": "query_only",
+            "1": "query_only"
+          }
+        },
+        "other_clauses": [
+          "{T}: Add {C}."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "source_removed_pending_0",
+        "cleanup_0",
+        "tapped_0",
+        "repeat_0",
+        "repeat_untap_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "no_other_creatures_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "source_removed_pending_1",
+        "cleanup_1",
+        "tapped_1",
+        "repeat_1",
+        "repeat_untap_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "no_other_creatures_1"
+      ]
+    }
+  ]
+}

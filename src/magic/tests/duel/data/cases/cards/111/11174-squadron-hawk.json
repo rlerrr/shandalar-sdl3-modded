@@ -1,0 +1,85 @@
+{
+  "version": 1,
+  "card": "Squadron Hawk",
+  "csvid": 11174,
+  "recipes": [
+    {
+      "family": "entry_tutor_trigger",
+      "version": 2,
+      "oracle_text": "Flying\nWhen this creature enters, you may search your library for up to three cards named Squadron Hawk, reveal them, put them into your hand, then shuffle.",
+      "variants": [
+        "search_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "accepted_zero_0",
+        "one_selected_0",
+        "two_selected_0",
+        "match1_0",
+        "match2_0",
+        "match3_0",
+        "match4_0",
+        "none_match_0",
+        "duplicates_0",
+        "last_choice_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bounce_recast_0",
+        "blink_source_0",
+        "nonmatching_entry_0",
+        "source_destroyed_0",
+        "empty_library_0",
+        "search_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "accepted_zero_1",
+        "one_selected_1",
+        "two_selected_1",
+        "match1_1",
+        "match2_1",
+        "match3_1",
+        "match4_1",
+        "none_match_1",
+        "duplicates_1",
+        "last_choice_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bounce_recast_1",
+        "blink_source_1",
+        "nonmatching_entry_1",
+        "source_destroyed_1",
+        "empty_library_1",
+        "whole_decline_0"
+      ],
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "quantity": 3,
+          "predicate": {
+            "scope": "named",
+            "names": [
+              "Squadron Hawk"
+            ],
+            "limit": null
+          },
+          "entry_clause": "When this creature enters, you may search your library for up to three cards named Squadron Hawk, reveal them, put them into your hand, then shuffle.",
+          "gaps": [
+            "Flying"
+          ]
+        },
+        "presentation": {
+          "human_optional_trigger": true,
+          "sequential_single_search": false
+        }
+      }
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle actual Creature entry multi-tutor; exact name/type/mana-value predicate, up-to/any-number quantity and hidden-zone fail-to-find, owned hand destination, complete card/zone conservation and one shuffle per accepted search. Real optional-trigger whole decline where offered, actual costs/countering/reentry and snapshots, both controllers. Extra full printed clauses and unoffered Grozoth whole-action/empty-library intent are explicit gaps; pending controls are unexecuted/noncoverage."
+}

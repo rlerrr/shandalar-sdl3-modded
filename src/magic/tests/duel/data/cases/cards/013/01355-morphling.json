@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "card": "Morphling",
+  "csvid": 1355,
+  "recipes": [
+    {
+      "family": "activated_temporary_pt",
+      "version": 2,
+      "oracle_text": "{U}: Untap this creature.\n{U}: This creature gains flying until end of turn.\n{U}: This creature gains shroud until end of turn. (It can't be the target of spells or abilities.)\n{1}: This creature gets +1/-1 until end of turn.\n{1}: This creature gets -1/+1 until end of turn.",
+      "params": {
+        "ability": 3,
+        "interface": {
+          "mode_label": "+1/-1 until end of turn",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "other_clauses": [
+          "{U}: Untap this creature.",
+          "{U}: This creature gains flying until end of turn.",
+          "{U}: This creature gains shroud until end of turn. (It can't be the target of spells or abilities.)",
+          "{1}: This creature gets -1/+1 until end of turn."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "counter_cleanup_0",
+        "source_removed_pending_0",
+        "fresh_0",
+        "tapped_0",
+        "insufficient_mana_0",
+        "repeat_0",
+        "lethal_repeat_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "counter_cleanup_1",
+        "source_removed_pending_1",
+        "fresh_1",
+        "tapped_1",
+        "insufficient_mana_1",
+        "repeat_1",
+        "lethal_repeat_1"
+      ]
+    },
+    {
+      "family": "activated_temporary_pt",
+      "version": 2,
+      "oracle_text": "{U}: Untap this creature.\n{U}: This creature gains flying until end of turn.\n{U}: This creature gains shroud until end of turn. (It can't be the target of spells or abilities.)\n{1}: This creature gets +1/-1 until end of turn.\n{1}: This creature gets -1/+1 until end of turn.",
+      "params": {
+        "ability": 4,
+        "interface": {
+          "mode_label": "-1/+1 until end of turn",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "other_clauses": [
+          "{U}: Untap this creature.",
+          "{U}: This creature gains flying until end of turn.",
+          "{U}: This creature gains shroud until end of turn. (It can't be the target of spells or abilities.)",
+          "{1}: This creature gets +1/-1 until end of turn."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "counter_cleanup_0",
+        "source_removed_pending_0",
+        "fresh_0",
+        "tapped_0",
+        "insufficient_mana_0",
+        "repeat_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "counter_cleanup_1",
+        "source_removed_pending_1",
+        "fresh_1",
+        "tapped_1",
+        "insufficient_mana_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

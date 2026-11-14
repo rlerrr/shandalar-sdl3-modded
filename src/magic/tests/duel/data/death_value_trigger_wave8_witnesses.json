@@ -1,0 +1,793 @@
+{
+  "version": 1,
+  "cards": {
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Disfigure": {
+      "oracle_id": "77eafe49-b9c5-461d-89c5-cec217dd2974",
+      "name": "Disfigure",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bro/91/disfigure?utm_source=api"
+    },
+    "Disperse": {
+      "oracle_id": "9d8fe3f8-5027-4f9e-999e-e277caa96478",
+      "name": "Disperse",
+      "oracle_text": "Return target nonland permanent to its owner's hand.",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/50/disperse?utm_source=api"
+    },
+    "Eager Cadet": {
+      "oracle_id": "39780477-01ba-40c6-8fe6-2178efb10b92",
+      "name": "Eager Cadet",
+      "oracle_text": "",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/S1/eager-cadet?utm_source=api"
+    },
+    "Exploration": {
+      "oracle_id": "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
+      "name": "Exploration",
+      "oracle_text": "You may play an additional land on each of your turns.",
+      "mana_cost": "{G}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/159/exploration?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Gilded Light": {
+      "oracle_id": "f7e7b2aa-9fd2-41dd-b11e-3a233530dc83",
+      "name": "Gilded Light",
+      "oracle_text": "You gain shroud until end of turn. (You can't be the target of spells or abilities.)\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mh1/12/gilded-light?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Scaled Wurm": {
+      "oracle_id": "009a8e38-74d0-4b4a-b8ca-62c9f3183531",
+      "name": "Scaled Wurm",
+      "oracle_text": "",
+      "mana_cost": "{7}{G}",
+      "type_line": "Creature — Wurm",
+      "power": "7",
+      "toughness": "6",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 8.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cns/178/scaled-wurm?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Spore Frog": {
+      "oracle_id": "97db6c39-e690-49b6-93a6-e51b8dfad10b",
+      "name": "Spore Frog",
+      "oracle_text": "Sacrifice this creature: Prevent all combat damage that would be dealt this turn.",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Frog",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mh1/180/spore-frog?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Wrath of God": {
+      "oracle_id": "34515b16-c9a4-4f98-8c77-416a7a523407",
+      "name": "Wrath of God",
+      "oracle_text": "Destroy all creatures. They can't be regenerated.",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/70/wrath-of-god?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature — Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Scathe Zombies": {
+      "oracle_id": "e0fefaf0-da20-4d58-8db7-019dba16c780",
+      "name": "Scathe Zombies",
+      "oracle_text": "",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/175/scathe-zombies?utm_source=api"
+    },
+    "Woodland Changeling": {
+      "oracle_id": "338f0ab6-f744-4e5a-a358-05e71b93758d",
+      "name": "Woodland Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Shapeshifter",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Changeling"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/lrw/242/woodland-changeling?utm_source=api"
+    },
+    "Phyrexian Hulk": {
+      "oracle_id": "a16509da-ad46-4ee3-86f3-06c521c23481",
+      "name": "Phyrexian Hulk",
+      "oracle_text": "",
+      "mana_cost": "{6}",
+      "type_line": "Artifact Creature — Phyrexian Golem",
+      "power": "5",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tpr/230/phyrexian-hulk?utm_source=api"
+    },
+    "Air Elemental": {
+      "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+      "name": "Air Elemental",
+      "oracle_text": "Flying",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Elemental",
+      "power": "4",
+      "toughness": "4",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+    },
+    "Centaur Courser": {
+      "oracle_id": "2f5bf099-2e01-4e1c-9ebf-0ce0ac66939e",
+      "name": "Centaur Courser",
+      "oracle_text": "",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Centaur Warrior",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m20/168/centaur-courser?utm_source=api"
+    },
+    "Craw Wurm": {
+      "oracle_id": "6a462a69-3e42-41de-a3aa-a488d9f38d69",
+      "name": "Craw Wurm",
+      "oracle_text": "",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature — Wurm",
+      "power": "6",
+      "toughness": "4",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m10/173/craw-wurm?utm_source=api"
+    },
+    "Lightning Blast": {
+      "oracle_id": "91fd731c-e076-4f2d-9f22-872880c3cc3d",
+      "name": "Lightning Blast",
+      "oracle_text": "Lightning Blast deals 4 damage to any target.",
+      "mana_cost": "{3}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tpr/138/lightning-blast?utm_source=api"
+    },
+    "Grasp of Darkness": {
+      "oracle_id": "494c819d-7d73-432b-8c96-4cb9dcd31094",
+      "name": "Grasp of Darkness",
+      "oracle_text": "Target creature gets -4/-4 until end of turn.",
+      "mana_cost": "{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m21/102/grasp-of-darkness?utm_source=api"
+    },
+    "Diminish": {
+      "oracle_id": "3e554ab4-8179-4d3e-84ba-9a67b51cff7f",
+      "name": "Diminish",
+      "oracle_text": "Target creature has base power and toughness 1/1 until end of turn.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ima/50/diminish?utm_source=api"
+    },
+    "Naturalize": {
+      "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+      "name": "Naturalize",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+    },
+    "Return to Dust": {
+      "oracle_id": "3029df1d-d02a-4fed-8ab4-000a2096f823",
+      "name": "Return to Dust",
+      "oracle_text": "Exile target artifact or enchantment. If you cast this spell during your main phase, you may exile up to one other target artifact or enchantment.",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/102/return-to-dust?utm_source=api"
+    },
+    "Planar Cleansing": {
+      "oracle_id": "a98c2d81-4add-4292-bbdd-e1b69ff936d4",
+      "name": "Planar Cleansing",
+      "oracle_text": "Destroy all nonland permanents.",
+      "mana_cost": "{3}{W}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m20/33/planar-cleansing?utm_source=api"
+    },
+    "Bottle Gnomes": {
+      "oracle_id": "54b5e429-7a44-480d-bea4-4f8eeb7449b5",
+      "name": "Bottle Gnomes",
+      "oracle_text": "Sacrifice this creature: You gain 3 life.",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Gnome",
+      "power": "1",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cm2/177/bottle-gnomes?utm_source=api"
+    }
+  },
+  "presentations": {
+    "Blood Artist": {
+      "oracle_id": "310f141c-7f37-4729-aed6-dd9c09db448d",
+      "handler": "manalinkeh_card_blood_artist",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory trigger; targeted Blood Artist implementation selects a legal player implicitly."
+    },
+    "Zulaport Cutthroat": {
+      "oracle_id": "76b003e0-15af-4f22-bdf2-1ade5430964a",
+      "handler": "manalinkeh_card_zulaport_cutthroat",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory trigger; targeted Blood Artist implementation selects a legal player implicitly."
+    },
+    "Dark Prophecy": {
+      "oracle_id": "f47659b5-d834-4153-b9fc-6a0702c503d9",
+      "handler": "manalinkeh_card_dark_prophecy",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory trigger; targeted Blood Artist implementation selects a legal player implicitly."
+    },
+    "Moonlit Wake": {
+      "oracle_id": "c93965a8-c527-4b1f-8322-b043f910ffb7",
+      "handler": "manalinkeh_card_monlit_wake",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory trigger; targeted Blood Artist implementation selects a legal player implicitly."
+    },
+    "Deathgreeter": {
+      "oracle_id": "b7ad11dc-c962-4034-b15a-a080c6fff75f",
+      "handler": "manalinkeh_card_deathgreeter",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Actual fixed implicit-player presentation; Deathgreeter incorrectly offers no optional decline."
+    },
+    "Harvester of Souls": {
+      "oracle_id": "5987ce77-10ad-4871-900a-5a005fcf4955",
+      "handler": "manalinkeh_card_harvester_of_souls",
+      "presentation": {
+        "optional": "trigger_draw",
+        "target": "implicit"
+      },
+      "notes": "Actual draw menu plus human optional-trigger priority."
+    },
+    "Disciple of the Vault": {
+      "oracle_id": "c8625113-0ce4-4454-83a1-25c31b8bfb9a",
+      "handler": "manalinkeh_card_disciple_of_the_vault",
+      "presentation": {
+        "optional": "trigger",
+        "target": "implicit"
+      },
+      "notes": "Actual optional-AI outer trigger, accepted via surviving exact source or dying-source legacy. Decline uses actual priority pass with no invented inner menu; validate this source separately from the retained Harvester mandatory-legacy impediment."
+    },
+    "Falkenrath Noble": {
+      "oracle_id": "3739b179-bc81-4737-8376-66a57e16b942",
+      "handler": "manalinkeh_card_falkenrath_noble",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory death receipt, no synthetic menu; player targets follow actual implicit handler presentation."
+    },
+    "Fangren Marauder": {
+      "oracle_id": "e154e612-4041-4fb7-903f-917588dbe58e",
+      "handler": "manalinkeh_card_fangren_marauder",
+      "presentation": {
+        "optional": "trigger",
+        "target": "implicit"
+      },
+      "notes": "Actual optional-AI outer trigger, accepted via surviving exact source or dying-source legacy. Decline uses actual priority pass with no invented inner menu; validate this source separately from the retained Harvester mandatory-legacy impediment."
+    },
+    "Fecundity": {
+      "oracle_id": "ffa64ac6-fe55-48b8-b015-849982cd7ad8",
+      "handler": "manalinkeh_card_fecundity",
+      "presentation": {
+        "optional": "controller_number",
+        "target": "implicit"
+      },
+      "notes": "Mandatory source event, actual human draw-number menu for the dying creature controller; AI uses its real draw-up-to policy."
+    },
+    "Femeref Enchantress": {
+      "oracle_id": "8b983a46-580f-4a94-8ef3-5253e503148e",
+      "handler": "manalinkeh_card_femeref_enchantress",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory death receipt, no synthetic menu; player targets follow actual implicit handler presentation."
+    },
+    "Hatching Plans": {
+      "oracle_id": "cebc9fcc-25ec-4366-a914-b95afbd134b0",
+      "handler": "manalinkeh_card_hatching_plans",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory death receipt, no synthetic menu; player targets follow actual implicit handler presentation."
+    },
+    "Mycoid Shepherd": {
+      "oracle_id": "c4a4e607-7f37-4dc6-8fc0-f77bdafeb919",
+      "handler": "manalinkeh_card_mycoid_shepherd",
+      "presentation": {
+        "optional": "trigger",
+        "target": "implicit"
+      },
+      "notes": "Actual optional-AI outer trigger, accepted via surviving exact source or dying-source legacy. Decline uses actual priority pass with no invented inner menu; validate this source separately from the retained Harvester mandatory-legacy impediment."
+    },
+    "Sultai Flayer": {
+      "oracle_id": "df621822-c811-40fa-99c1-ea9920bcd2e2",
+      "handler": "manalinkeh_card_sultai_flayer",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory death receipt, no synthetic menu; player targets follow actual implicit handler presentation."
+    },
+    "Vengeful Dead": {
+      "oracle_id": "277c8ee9-0157-4e45-96ad-1b67716955ee",
+      "handler": "manalinkeh_card_vengeful_dead",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory death receipt, no synthetic menu; player targets follow actual implicit handler presentation."
+    },
+    "Kothophed, Soul Hoarder": {
+      "oracle_id": "85e1791f-f9a0-4e82-baf6-33cff2dcf60b",
+      "handler": "manalinkeh_card_kothophed_soul_hoarder",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory death receipt, no synthetic menu; player targets follow actual implicit handler presentation."
+    },
+    "Ulvenwald Observer": {
+      "oracle_id": "dff3cfff-69f9-4afd-af28-b75504d30ffa",
+      "handler": "manalinkeh_card_ulvenwald_observer",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory death receipt, no synthetic menu; player targets follow actual implicit handler presentation."
+    },
+    "Poison-Tip Archer": {
+      "oracle_id": "d0e810bb-5f38-4045-a718-30d423c05659",
+      "handler": "manalinkeh_card_poison_tip_archer",
+      "presentation": {
+        "optional": "none",
+        "target": "implicit"
+      },
+      "notes": "Mandatory death receipt, no synthetic menu; player targets follow actual implicit handler presentation."
+    }
+  }
+}

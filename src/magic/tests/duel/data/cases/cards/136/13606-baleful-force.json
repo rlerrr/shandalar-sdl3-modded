@@ -1,0 +1,66 @@
+{
+  "version": 1,
+  "card": "Baleful Force",
+  "csvid": 13606,
+  "recipes": [
+    {
+      "family": "upkeep_value_trigger",
+      "version": 2,
+      "oracle_text": "At the beginning of each upkeep, you draw a card and you lose 1 life.",
+      "params": {
+        "gate": "each",
+        "optional": false,
+        "actions": [
+          {
+            "kind": "draw",
+            "recipient": "controller",
+            "amount": 1
+          },
+          {
+            "kind": "loss",
+            "recipient": "controller",
+            "amount": 1
+          }
+        ],
+        "keywords": []
+      },
+      "variants": [
+        "cast_0",
+        "insufficient_mana_0",
+        "effect_0",
+        "opponent_upkeep_0",
+        "source_absent_0",
+        "source_enters_after_0",
+        "source_destroyed_after_0",
+        "repeat_0",
+        "armor_0",
+        "ready_snapshot_0",
+        "untap_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "wrong_color_0",
+        "two_sources_0",
+        "short_library_0",
+        "unblocked_0",
+        "cast_1",
+        "insufficient_mana_1",
+        "effect_1",
+        "opponent_upkeep_1",
+        "source_absent_1",
+        "source_enters_after_1",
+        "source_destroyed_after_1",
+        "repeat_1",
+        "armor_1",
+        "ready_snapshot_1",
+        "untap_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "wrong_color_1",
+        "two_sources_1",
+        "short_library_1",
+        "unblocked_1",
+        "cast_cancel_0"
+      ]
+    }
+  ]
+}

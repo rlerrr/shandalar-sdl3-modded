@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Doorkeeper",
+  "csvid": 12706,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "Defender\n{2}{U}, {T}: Target player mills X cards, where X is the number of creatures you control with defender.",
+      "params": {
+        "ability": 1
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_destroyed_pending_0",
+        "offturn_0",
+        "tapped_0",
+        "repeat_denied_0",
+        "sick_0",
+        "fresh_0",
+        "target_self_0",
+        "short_library_0",
+        "empty_library_0",
+        "metric_many_0",
+        "no_other_members_0",
+        "metric_removed_0",
+        "zero_after_source_removal_0",
+        "one_short_payment_0",
+        "wrong_color_0",
+        "value_1",
+        "payment_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_destroyed_pending_1",
+        "offturn_1",
+        "tapped_1",
+        "repeat_denied_1",
+        "sick_1",
+        "fresh_1",
+        "target_self_1",
+        "short_library_1",
+        "empty_library_1",
+        "metric_many_1",
+        "no_other_members_1",
+        "metric_removed_1",
+        "zero_after_source_removal_1",
+        "one_short_payment_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

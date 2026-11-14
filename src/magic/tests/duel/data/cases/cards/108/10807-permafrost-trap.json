@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "card": "Permafrost Trap",
+  "csvid": 10807,
+  "recipes": [
+    {
+      "family": "tap_spell",
+      "version": 2,
+      "oracle_text": "If an opponent had a green creature enter the battlefield under their control this turn, you may pay {U} rather than pay this spell's mana cost.\nTap up to two target creatures. Those creatures don't untap during their controller's next untap step.",
+      "params": {
+        "schema": 10,
+        "effects": [
+          "tap"
+        ],
+        "base": {
+          "scope": "creature",
+          "controller": "any",
+          "count": 2,
+          "optional": true,
+          "draw": 0,
+          "cast_before": [],
+          "cast_after": [],
+          "resolve_dialogs": [],
+          "gaps": [
+            "next untap restriction",
+            "alternate Trap cost"
+          ],
+          "inactive": [
+            "no creature has entered under either controller this turn"
+          ]
+        },
+        "omit_variants": [],
+        "resolve_twiddle": false
+      },
+      "variants": [
+        "tap_effect_0",
+        "tap_payment_0",
+        "tap_insufficient_mana_0",
+        "tap_wrong_color_0",
+        "tap_bare_zones_0",
+        "tap_already_in_state_0",
+        "tap_cleanup_0",
+        "tap_two_copies_0",
+        "tap_ready_snapshot_0",
+        "tap_pending_snapshot_0",
+        "tap_resolved_snapshot_0",
+        "tap_countered_0",
+        "tap_combat_attack_0",
+        "tap_opposing_turn_0",
+        "tap_lost_target_0",
+        "tap_bounced_target_0",
+        "tap_own_target_0",
+        "tap_wrong_type_0",
+        "tap_one_target_0",
+        "tap_zero_targets_0",
+        "tap_effect_1",
+        "tap_payment_1",
+        "tap_insufficient_mana_1",
+        "tap_wrong_color_1",
+        "tap_bare_zones_1",
+        "tap_already_in_state_1",
+        "tap_cleanup_1",
+        "tap_two_copies_1",
+        "tap_ready_snapshot_1",
+        "tap_pending_snapshot_1",
+        "tap_resolved_snapshot_1",
+        "tap_countered_1",
+        "tap_combat_attack_1",
+        "tap_opposing_turn_1",
+        "tap_lost_target_1",
+        "tap_bounced_target_1",
+        "tap_own_target_1",
+        "tap_wrong_type_1",
+        "tap_one_target_1",
+        "tap_zero_targets_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Wave7 tap/untap component: real casts, unchanged controls, costs, eligibility, responses, exact populated-zone receipts and snapshots for both controllers. Additional printed components remain explicit recipe gaps."
+}

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "card": "Gnathosaur",
+  "csvid": 11450,
+  "recipes": [
+    {
+      "family": "activated_temporary_modifier",
+      "version": 2,
+      "oracle_text": "Sacrifice an artifact: This creature gains trample until end of turn.",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        },
+        "other_clauses": []
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "inactive_0",
+        "cleanup_0",
+        "counter_cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "fresh_0",
+        "tapped_0",
+        "no_resource_0",
+        "effect_1",
+        "payment_1",
+        "inactive_1",
+        "cleanup_1",
+        "counter_cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "fresh_1",
+        "tapped_1",
+        "no_resource_1"
+      ]
+    }
+  ]
+}

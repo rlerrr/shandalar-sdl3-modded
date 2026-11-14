@@ -1,0 +1,88 @@
+{
+  "version": 1,
+  "card": "Femeref Enchantress",
+  "csvid": 2703,
+  "recipes": [
+    {
+      "family": "death_value_trigger",
+      "version": 2,
+      "params": {
+        "schema": 8,
+        "predicate": {
+          "kind": "Enchantment",
+          "self_only": false,
+          "exclude_source": false,
+          "controller": "any",
+          "owner": "any",
+          "nontoken": false,
+          "subtype": null,
+          "threshold": null,
+          "self_included": false
+        },
+        "receipt": {
+          "draw": 1,
+          "gain": 0,
+          "loss": 0,
+          "recipient": "you",
+          "optional": false
+        },
+        "keywords": [],
+        "presentation": {
+          "optional": "none",
+          "target": "implicit"
+        }
+      },
+      "oracle_text": "Whenever an enchantment is put into a graveyard from the battlefield, draw a card.",
+      "variants": [
+        "cast_only_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "own_death_0",
+        "opponent_death_0",
+        "self_death_0",
+        "token_death_0",
+        "artifact_death_0",
+        "enchantment_death_0",
+        "stolen_death_0",
+        "bounce_victim_0",
+        "exile_victim_0",
+        "source_bounced_0",
+        "two_deaths_0",
+        "simultaneous_0",
+        "cleanup_once_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "death_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "wrong_color_0",
+        "two_sources_0",
+        "cast_only_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "own_death_1",
+        "opponent_death_1",
+        "self_death_1",
+        "token_death_1",
+        "artifact_death_1",
+        "enchantment_death_1",
+        "stolen_death_1",
+        "bounce_victim_1",
+        "exile_victim_1",
+        "source_bounced_1",
+        "two_deaths_1",
+        "simultaneous_1",
+        "cleanup_once_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "death_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "wrong_color_1",
+        "two_sources_1"
+      ]
+    }
+  ]
+}

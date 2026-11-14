@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Trigon of Corruption",
+  "csvid": 11386,
+  "recipes": [
+    {
+      "family": "charge_counter_activation",
+      "version": 2,
+      "oracle_text": "This artifact enters with three charge counters on it.\n{B}{B}, {T}: Put a charge counter on this artifact.\n{2}, {T}, Remove a charge counter from this artifact: Put a -1/-1 counter on target creature.",
+      "params": {
+        "ability": 1,
+        "interface": {
+          "dialogs": {
+            "0": 1,
+            "1": 1
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        },
+        "inactive_clauses": [
+          "This artifact enters with three charge counters on it.",
+          "{2}, {T}, Remove a charge counter from this artifact: Put a -1/-1 counter on target creature."
+        ]
+      },
+      "variants": [
+        "charge_0",
+        "payment_0",
+        "offturn_0",
+        "tapped_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "repeat_untap_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "charge_1",
+        "payment_1",
+        "offturn_1",
+        "tapped_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "repeat_untap_1",
+        "insufficient_mana_1",
+        "wrong_color_1"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "card": "Hellrider",
+  "csvid": 12205,
+  "recipes": [
+    {
+      "family": "attack_value_trigger",
+      "version": 2,
+      "oracle_text": "Haste\nWhenever a creature you control attacks, this creature deals 1 damage to the player or planeswalker it's attacking.",
+      "params": {
+        "trigger": "own",
+        "effect": "damage",
+        "amount": 1,
+        "power": 0,
+        "toughness": 0,
+        "other": false,
+        "keywords": [
+          "Haste"
+        ]
+      },
+      "variants": [
+        "effect_0",
+        "attack_pair_0",
+        "other_attack_0",
+        "opponent_attack_0",
+        "no_attack_0",
+        "tapped_0",
+        "sick_0",
+        "source_absent_0",
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "fresh_attack_0",
+        "unblocked_0",
+        "cleanup_0",
+        "source_destroyed_after_0",
+        "ready_snapshot_0",
+        "declaration_snapshot_0",
+        "resolved_snapshot_0",
+        "bare_zones_0",
+        "blocked_0",
+        "two_sources_0",
+        "prevention_control_0",
+        "effect_1",
+        "attack_pair_1",
+        "other_attack_1",
+        "opponent_attack_1",
+        "no_attack_1",
+        "tapped_1",
+        "sick_1",
+        "source_absent_1",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "fresh_attack_1",
+        "unblocked_1",
+        "cleanup_1",
+        "source_destroyed_after_1",
+        "ready_snapshot_1",
+        "declaration_snapshot_1",
+        "resolved_snapshot_1",
+        "bare_zones_1",
+        "blocked_1",
+        "two_sources_1",
+        "prevention_control_1"
+      ]
+    }
+  ]
+}

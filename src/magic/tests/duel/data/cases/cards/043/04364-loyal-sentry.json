@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "card": "Loyal Sentry",
+  "csvid": 4364,
+  "recipes": [
+    {
+      "family": "block_damage_destruction",
+      "version": 2,
+      "params": {
+        "trigger": "block",
+        "role": "defending",
+        "scope": null,
+        "victims": "both",
+        "timing": "immediate",
+        "predicate": "any",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "oracle_text": "When this creature blocks a creature, destroy that creature and this creature.",
+      "variants": [
+        "attack_blocked_0",
+        "defend_0",
+        "unblocked_0",
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "fresh_attack_0",
+        "pump_0",
+        "indestructible_victim_0",
+        "source_indestructible_0",
+        "ready_snapshot_0",
+        "declared_snapshot_0",
+        "damage_snapshot_0",
+        "noncombat_creature_0",
+        "noncombat_player_0",
+        "regenerate_victim_0",
+        "attack_blocked_1",
+        "defend_1",
+        "unblocked_1",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "fresh_attack_1",
+        "pump_1",
+        "indestructible_victim_1",
+        "source_indestructible_1",
+        "ready_snapshot_1",
+        "declared_snapshot_1",
+        "damage_snapshot_1",
+        "noncombat_creature_1",
+        "noncombat_player_1",
+        "regenerate_victim_1"
+      ]
+    }
+  ]
+}

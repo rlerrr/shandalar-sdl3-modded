@@ -1,4 +1,5 @@
 #include "manalink.h"
+#include "magic/src/duel_host.h"
 
 /* Canonical recovered helper declarations. */
 void cascade(int player, int card, event_t event);
@@ -1923,7 +1924,8 @@ int mind_funeral_effect(int player, int card, int t_player ){
 	card_ptr_t* c = cards_ptr[ get_id(player, card)  ];
 	char buffer[100];
 	scnprintf(buffer, 100, " Cards revealed by %s.", c->name);
-	show_deck( HUMAN, deck, x, buffer, 0, gs_done_008b40e0 );
+	if (!duel_host_is_headless() || duel_host_scripted_input())
+		show_deck( HUMAN, deck, x, buffer, 0, gs_done_008b40e0 );
 	mill(t_player, cards_to_mill);
 	return cards_to_mill;
 }

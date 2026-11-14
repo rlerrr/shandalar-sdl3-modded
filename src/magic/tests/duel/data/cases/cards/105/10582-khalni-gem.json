@@ -1,0 +1,78 @@
+{
+  "version": 1,
+  "card": "Khalni Gem",
+  "csvid": 10582,
+  "recipes": [
+    {
+      "family": "entry_own_return",
+      "version": 2,
+      "oracle_text": "When this artifact enters, return two lands you control to their owner's hand.\n{T}: Add two mana of any one color.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "foreign_owned_0",
+        "alternate_choice_0",
+        "bounce_recast_0",
+        "cleanup_0",
+        "nonmatching_entry_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "mandatory_cancel_0",
+        "zero_lands_0",
+        "one_land_0",
+        "three_lands_0",
+        "mana_B_0",
+        "mana_U_0",
+        "mana_G_0",
+        "mana_R_0",
+        "mana_W_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "foreign_owned_1",
+        "alternate_choice_1",
+        "bounce_recast_1",
+        "cleanup_1",
+        "nonmatching_entry_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "mandatory_cancel_1",
+        "zero_lands_1",
+        "one_land_1",
+        "three_lands_1",
+        "mana_B_1",
+        "mana_U_1",
+        "mana_G_1",
+        "mana_R_1",
+        "mana_W_1"
+      ],
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "land",
+          "colors": [],
+          "count": 2,
+          "another": false,
+          "optional": false,
+          "creature": false,
+          "flash": false,
+          "flying": false,
+          "secondary": "mana",
+          "entry_clause": "When this artifact enters, return two lands you control to their owner's hand.",
+          "other_clauses": [
+            "{T}: Add two mana of any one color."
+          ]
+        },
+        "presentation": {
+          "human_optional_trigger": false
+        }
+      }
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle real ETB return of own controlled permanents to original owner hands; nontargeted selection, own source return, mandatory/optional policy, color/type/quantity, true printed source costs/types/Flash/Flying, all printed secondary discard/draw-bottom/damage/graveyard exile/mana callbacks, real Temporal Adept bounce/recast and snapshots. Fixed handler-composed trigger order and unavailable independent priority, generic became-target observer and AI direct-discard exact identity are explicit gaps; counts and per-card hand+grave conservation remain asserted."
+}

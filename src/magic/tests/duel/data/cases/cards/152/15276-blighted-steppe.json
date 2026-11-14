@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Blighted Steppe",
+  "csvid": 15276,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}.\n{3}{W}, {T}, Sacrifice this land: You gain 2 life for each creature you control.",
+      "params": {
+        "ability": 1,
+        "present_ai_dialogs": true,
+        "mode_intent": {
+          "mode_label": "Gain life",
+          "fallback_color": 0,
+          "allow_auto_nonmana": true
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "offturn_0",
+        "tapped_0",
+        "repeat_denied_0",
+        "metric_many_0",
+        "no_other_members_0",
+        "metric_removed_0",
+        "value_1",
+        "payment_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "offturn_1",
+        "tapped_1",
+        "repeat_denied_1",
+        "metric_many_1",
+        "no_other_members_1",
+        "metric_removed_1"
+      ]
+    }
+  ]
+}

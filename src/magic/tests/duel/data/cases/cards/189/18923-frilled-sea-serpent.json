@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "card": "Frilled Sea Serpent",
+  "csvid": 18923,
+  "recipes": [
+    {
+      "family": "paid_unblockability_activation",
+      "version": 2,
+      "params": {
+        "activation_cost": "{5}{U}{U}",
+        "tap": false,
+        "scope": "self",
+        "timing": "any",
+        "target_power_max": null,
+        "blocker_power_max": null,
+        "snake_bonus": [
+          0,
+          0
+        ]
+      },
+      "oracle_text": "{5}{U}{U}: This creature can't be blocked this turn.",
+      "variants": [
+        "activated_0",
+        "unactivated_0",
+        "cast_0",
+        "cast_payment_0",
+        "cast_insufficient_0",
+        "cast_wrong_color_0",
+        "fresh_attack_0",
+        "fresh_source_0",
+        "activation_payment_0",
+        "tapped_source_0",
+        "repeat_activation_0",
+        "after_attackers_0",
+        "other_attacker_0",
+        "empty_combat_0",
+        "expiry_combat_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "declared_snapshot_0",
+        "shrouded_source_0",
+        "activation_insufficient_0",
+        "activation_wrong_color_0",
+        "activated_1",
+        "unactivated_1",
+        "cast_1",
+        "cast_payment_1",
+        "cast_insufficient_1",
+        "cast_wrong_color_1",
+        "fresh_attack_1",
+        "fresh_source_1",
+        "activation_payment_1",
+        "tapped_source_1",
+        "repeat_activation_1",
+        "after_attackers_1",
+        "other_attacker_1",
+        "empty_combat_1",
+        "expiry_combat_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "declared_snapshot_1",
+        "shrouded_source_1",
+        "activation_insufficient_1",
+        "activation_wrong_color_1"
+      ]
+    }
+  ]
+}

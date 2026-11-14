@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "card": "Keldon Raider",
+  "csvid": 18445,
+  "recipes": [
+    {
+      "family": "entry_trigger_value",
+      "version": 2,
+      "oracle_text": "When this creature enters, you may discard a card. If you do, draw a card.",
+      "params": {
+        "schema": 2,
+        "mechanism": {
+          "kind": "loot",
+          "recipient": "self",
+          "discard": 1,
+          "draw": "discarded",
+          "optional": "discard",
+          "clause": "When this creature enters, you may discard a card. If you do, draw a card.",
+          "gaps": []
+        },
+        "presentation": {
+          "human_optional_trigger": true,
+          "target_player_choices": 0
+        }
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "bare_zones_0",
+        "empty_hands_0",
+        "one_card_0",
+        "large_hand_0",
+        "uneven_hands_0",
+        "own_empty_0",
+        "opponent_empty_0",
+        "duplicates_0",
+        "last_choice_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "countered_cast_0",
+        "insufficient_mana_0",
+        "source_destroyed_0",
+        "bounce_recast_0",
+        "blink_source_0",
+        "wrong_color_0",
+        "effect_1",
+        "payment_1",
+        "bare_zones_1",
+        "empty_hands_1",
+        "one_card_1",
+        "large_hand_1",
+        "uneven_hands_1",
+        "own_empty_1",
+        "opponent_empty_1",
+        "duplicates_1",
+        "last_choice_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "countered_cast_1",
+        "insufficient_mana_1",
+        "source_destroyed_1",
+        "bounce_recast_1",
+        "blink_source_1",
+        "wrong_color_1",
+        "decline_0",
+        "decline_1",
+        "decline_trigger_0"
+      ]
+    }
+  ],
+  "recipe_coverage": "Actual entry draw/discard or optional-loot clause, both controllers, exact ordinary costs and owned zone/card conservation, ordered library receipts and legal AI discard subsets, empty/uneven hands, normal countering/source removal/re-entry and snapshot replay. Other complete printed clauses remain explicit gaps; enchantments retain their actual noncreature type."
+}

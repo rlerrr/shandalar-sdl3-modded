@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "card": "Voracious Cobra",
+  "csvid": 1602,
+  "recipes": [
+    {
+      "family": "block_damage_destruction",
+      "version": 2,
+      "params": {
+        "trigger": "damage",
+        "role": "source",
+        "scope": "combat",
+        "victims": "other",
+        "timing": "immediate",
+        "predicate": "any",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": [
+          "First strike"
+        ]
+      },
+      "oracle_text": "First strike\nWhenever this creature deals combat damage to a creature, destroy that creature.",
+      "variants": [
+        "attack_blocked_0",
+        "defend_0",
+        "unblocked_0",
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "fresh_attack_0",
+        "pump_0",
+        "indestructible_victim_0",
+        "source_indestructible_0",
+        "ready_snapshot_0",
+        "declared_snapshot_0",
+        "damage_snapshot_0",
+        "noncombat_creature_0",
+        "noncombat_player_0",
+        "regenerate_victim_0",
+        "first_strike_0",
+        "intrinsic_first_strike_0",
+        "attack_blocked_1",
+        "defend_1",
+        "unblocked_1",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "fresh_attack_1",
+        "pump_1",
+        "indestructible_victim_1",
+        "source_indestructible_1",
+        "ready_snapshot_1",
+        "declared_snapshot_1",
+        "damage_snapshot_1",
+        "noncombat_creature_1",
+        "noncombat_player_1",
+        "regenerate_victim_1",
+        "first_strike_1",
+        "intrinsic_first_strike_1"
+      ]
+    }
+  ]
+}

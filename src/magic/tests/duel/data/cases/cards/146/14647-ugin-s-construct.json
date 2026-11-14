@@ -1,0 +1,61 @@
+{
+  "version": 1,
+  "card": "Ugin's Construct",
+  "csvid": 14647,
+  "recipes": [
+    {
+      "family": "entry_trigger_value",
+      "version": 2,
+      "oracle_text": "When this creature enters, sacrifice a permanent that's one or more colors.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "count": 1,
+          "scope": "colored_permanent",
+          "colors": [],
+          "another": false,
+          "recipient": "self",
+          "targeted": false,
+          "kind": "sacrifice",
+          "clause": "When this creature enters, sacrifice a permanent that's one or more colors.",
+          "gaps": []
+        },
+        "presentation": {
+          "scripted_sacrifice": {
+            "0": true,
+            "1": true
+          }
+        }
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "nonmatching_entry_0",
+        "empty_eligible_0",
+        "opponent_only_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "nonmatching_entry_1",
+        "empty_eligible_1",
+        "opponent_only_1",
+        "alternate_choice_0",
+        "foreign_owned_0"
+      ]
+    }
+  ],
+  "recipe_coverage": "Real casting and ordinary payment, pending and resolved entry state, whole modeled entry exchange, exact card ownership/destinations and populated-zone conservation, contrary/empty controls, both controllers and snapshot replay. Other printed components remain explicit recipe gaps."
+}

@@ -1,4 +1,5 @@
 #include "manalink.h"
+#include "magic/src/duel_host.h"
 static int soulcatchers_aerie_effect(int,int,event_t);
 
 /* Canonical recovered helper declarations. */
@@ -1967,8 +1968,10 @@ static void scalpelexis_effect(int player, int t_player){
 				stop = 1;
 			}
 	}
-	show_deck(player, deck_ptr[t_player], pos, "Scalpelexis will exile these cards.", 0, gs_done_008b40e0 );
-	show_deck(1-player, deck_ptr[t_player], pos, "Scalpelexis will exile these cards.", 0, gs_done_008b40e0 );
+	if (!duel_host_is_headless() || duel_host_scripted_input()) {
+		show_deck(player, deck_ptr[t_player], pos, "Scalpelexis will exile these cards.", 0, gs_done_008b40e0 );
+		show_deck(1-player, deck_ptr[t_player], pos, "Scalpelexis will exile these cards.", 0, gs_done_008b40e0 );
+	}
 	int i;
 	for(i=0; i<pos; i++){
 		rfg_top_card_of_deck(t_player);

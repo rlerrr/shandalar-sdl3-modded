@@ -1,0 +1,60 @@
+{
+  "version": 1,
+  "card": "Ventifact Bottle",
+  "csvid": 2649,
+  "recipes": [
+    {
+      "family": "charge_counter_activation",
+      "version": 2,
+      "oracle_text": "{X}{1}, {T}: Put X charge counters on this artifact. Activate only as a sorcery.\nAt the beginning of your first main phase, if this artifact has a charge counter on it, tap it and remove all charge counters from it. Add {C} for each charge counter removed this way.",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "dialogs": {},
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        },
+        "inactive_clauses": [
+          "At the beginning of your first main phase, if this artifact has a charge counter on it, tap it and remove all charge counters from it. Add {C} for each charge counter removed this way."
+        ]
+      },
+      "variants": [
+        "charge_0",
+        "payment_0",
+        "offturn_0",
+        "tapped_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "repeat_untap_0",
+        "insufficient_mana_0",
+        "x0_0",
+        "x1_0",
+        "x5_0",
+        "charge_1",
+        "payment_1",
+        "offturn_1",
+        "tapped_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "repeat_untap_1",
+        "insufficient_mana_1",
+        "x0_1",
+        "x1_1",
+        "x5_1"
+      ]
+    }
+  ]
+}

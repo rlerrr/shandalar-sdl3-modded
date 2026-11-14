@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "card": "Mycologist",
+  "csvid": 8812,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "At the beginning of your upkeep, put a spore counter on this creature.\nRemove three spore counters from this creature: Create a 1/1 green Saproling creature token.\nSacrifice a Saproling: You gain 2 life.",
+      "params": {
+        "ability": 2,
+        "present_ai_dialogs": true,
+        "activation_dialogs": {
+          "0": 1,
+          "1": 1
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "tapped_0",
+        "sick_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "cast_0",
+        "fresh_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "tapped_1",
+        "sick_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "cast_1",
+        "fresh_1"
+      ]
+    }
+  ]
+}

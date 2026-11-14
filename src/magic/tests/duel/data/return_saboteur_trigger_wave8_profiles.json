@@ -1,0 +1,697 @@
+{
+  "version": 1,
+  "sources": {
+    "Blizzard Specter": {
+      "oracle": {
+        "oracle_id": "b6f4148d-8511-46b3-93ec-2f5eb1e4ffad",
+        "name": "Blizzard Specter",
+        "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, choose one \u2014\n\u2022 That player returns a permanent they control to its owner's hand.\n\u2022 That player discards a card.",
+        "mana_cost": "{2}{U}{B}",
+        "type_line": "Snow Creature \u2014 Specter",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/194/blizzard-specter?utm_source=api"
+      },
+      "handler": "manalinkeh_card_blizzard_specter",
+      "params": {
+        "effect": "modal_bounce_discard",
+        "selector": "permanent",
+        "scope": "combat",
+        "recipient": "player",
+        "optional": false,
+        "trigger_cost": null,
+        "cycling": null,
+        "ninjutsu": null,
+        "regeneration": null,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    },
+    "Cephalid Constable": {
+      "oracle": {
+        "oracle_id": "a5236bf7-c84f-4c64-bf6b-3a89c05e161a",
+        "name": "Cephalid Constable",
+        "oracle_text": "Whenever this creature deals combat damage to a player, return up to that many target permanents that player controls to their owner's hand.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Creature \u2014 Octopus Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/72/cephalid-constable?utm_source=api"
+      },
+      "handler": "manalinkeh_card_cephalid_constable",
+      "params": {
+        "effect": "bounce_damage",
+        "selector": "permanent",
+        "scope": "combat",
+        "recipient": "player",
+        "optional": true,
+        "trigger_cost": null,
+        "cycling": null,
+        "ninjutsu": null,
+        "regeneration": null,
+        "keywords": []
+      },
+      "input_profile": {
+        "outer_optional": false,
+        "up_to_stop_policy": "each_remaining_damage_slot"
+      }
+    },
+    "Charnelhoard Wurm": {
+      "oracle": {
+        "oracle_id": "4a430fa3-e693-424b-9981-d7d8193445e3",
+        "name": "Charnelhoard Wurm",
+        "oracle_text": "Trample\nWhenever this creature deals damage to an opponent, you may return target card from your graveyard to your hand.",
+        "mana_cost": "{4}{B}{R}{G}",
+        "type_line": "Creature \u2014 Wurm",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "B",
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "R"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c18/171/charnelhoard-wurm?utm_source=api"
+      },
+      "handler": "manalinkeh_card_charnelhoard_wurm",
+      "params": {
+        "effect": "grave_hand",
+        "selector": "card",
+        "scope": "any",
+        "recipient": "opponent",
+        "optional": true,
+        "trigger_cost": null,
+        "cycling": null,
+        "ninjutsu": null,
+        "regeneration": null,
+        "keywords": [
+          "Trample"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": true
+      }
+    },
+    "Dromar, the Banisher": {
+      "oracle": {
+        "oracle_id": "35ad7f82-a1b1-4aa7-a8b0-3f99ca2cff52",
+        "name": "Dromar, the Banisher",
+        "oracle_text": "Flying\nWhenever Dromar deals combat damage to a player, you may pay {2}{U}. If you do, choose a color, then return all creatures of that color to their owners' hands.",
+        "mana_cost": "{3}{W}{U}{B}",
+        "type_line": "Legendary Creature \u2014 Dragon",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "U",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/244/dromar-the-banisher?utm_source=api"
+      },
+      "handler": "manalinkeh_card_dromar_the_banisher",
+      "params": {
+        "effect": "color_bounce",
+        "selector": "creature",
+        "scope": "combat",
+        "recipient": "player",
+        "optional": true,
+        "trigger_cost": "{2}{U}",
+        "cycling": null,
+        "ninjutsu": null,
+        "regeneration": null,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    },
+    "Ink-Eyes, Servant of Oni": {
+      "oracle": {
+        "oracle_id": "5d520476-740a-4005-801e-472b24fa6497",
+        "name": "Ink-Eyes, Servant of Oni",
+        "oracle_text": "Ninjutsu {3}{B}{B} ({3}{B}{B}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)\nWhenever Ink-Eyes deals combat damage to a player, you may put target creature card from that player's graveyard onto the battlefield under your control.\n{1}{B}: Regenerate Ink-Eyes.",
+        "mana_cost": "{4}{B}{B}",
+        "type_line": "Legendary Creature \u2014 Rat Ninja",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Regenerate",
+          "Ninjutsu"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pca/33/ink-eyes-servant-of-oni?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ink_eyes_servant_of_oni",
+      "params": {
+        "effect": "grave_play",
+        "selector": "damaged_grave",
+        "scope": "combat",
+        "recipient": "player",
+        "optional": true,
+        "trigger_cost": null,
+        "cycling": null,
+        "ninjutsu": "{3}{B}{B}",
+        "regeneration": "{1}{B}",
+        "keywords": [
+          "Ninjutsu",
+          "Regenerate"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    },
+    "Scion of Darkness": {
+      "oracle": {
+        "oracle_id": "bd940cab-d23a-44bf-ab96-8aa1dcd3f0ff",
+        "name": "Scion of Darkness",
+        "oracle_text": "Trample\nWhenever this creature deals combat damage to a player, you may put target creature card from that player's graveyard onto the battlefield under your control.\nCycling {3} ({3}, Discard this card: Draw a card.)",
+        "mana_cost": "{5}{B}{B}{B}",
+        "type_line": "Creature \u2014 Avatar",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Trample",
+          "Cycling"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/86/scion-of-darkness?utm_source=api"
+      },
+      "handler": "manalinkeh_card_scion_of_darkness",
+      "params": {
+        "effect": "grave_play",
+        "selector": "damaged_grave",
+        "scope": "combat",
+        "recipient": "player",
+        "optional": true,
+        "trigger_cost": null,
+        "cycling": "{3}",
+        "ninjutsu": null,
+        "regeneration": null,
+        "keywords": [
+          "Cycling",
+          "Trample"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    },
+    "Teneb, the Harvester": {
+      "oracle": {
+        "oracle_id": "d41f0357-f1d6-45cc-b8ea-4efa41da1448",
+        "name": "Teneb, the Harvester",
+        "oracle_text": "Flying\nWhenever Teneb deals combat damage to a player, you may pay {2}{B}. If you do, put target creature card from a graveyard onto the battlefield under your control.",
+        "mana_cost": "{3}{W}{B}{G}",
+        "type_line": "Legendary Creature \u2014 Dragon",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/282/teneb-the-harvester?utm_source=api"
+      },
+      "handler": "manalinkeh_card_teneb_the_harvester",
+      "params": {
+        "effect": "grave_play",
+        "selector": "any_grave",
+        "scope": "combat",
+        "recipient": "player",
+        "optional": true,
+        "trigger_cost": "{2}{B}",
+        "cycling": null,
+        "ninjutsu": null,
+        "regeneration": null,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    },
+    "The Unspeakable": {
+      "oracle": {
+        "oracle_id": "64e413c9-96e5-43c3-a182-84d53fef4327",
+        "name": "The Unspeakable",
+        "oracle_text": "Flying, trample\nWhenever The Unspeakable deals combat damage to a player, you may return target Arcane card from your graveyard to your hand.",
+        "mana_cost": "{6}{U}{U}{U}",
+        "type_line": "Legendary Creature \u2014 Spirit",
+        "power": "6",
+        "toughness": "7",
+        "keywords": [
+          "Flying",
+          "Trample"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 9.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dds/13/the-unspeakable?utm_source=api"
+      },
+      "handler": "manalinkeh_card_the_unspeakable",
+      "params": {
+        "effect": "grave_hand",
+        "selector": "arcane",
+        "scope": "combat",
+        "recipient": "player",
+        "optional": true,
+        "trigger_cost": null,
+        "cycling": null,
+        "ninjutsu": null,
+        "regeneration": null,
+        "keywords": [
+          "Flying",
+          "Trample"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    },
+    "Mistblade Shinobi": {
+      "oracle": {
+        "oracle_id": "16856e22-6f9e-4f8e-b4ee-622a7c2ee453",
+        "name": "Mistblade Shinobi",
+        "oracle_text": "Ninjutsu {U} ({U}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)\nWhenever this creature deals combat damage to a player, you may return target creature that player controls to its owner's hand.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature \u2014 Human Ninja",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Ninjutsu"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pca/20/mistblade-shinobi?utm_source=api"
+      },
+      "handler": "manalinkeh_card_mistblade_shinobi",
+      "params": {
+        "effect": "bounce_one",
+        "selector": "creature",
+        "scope": "combat",
+        "recipient": "player",
+        "optional": true,
+        "trigger_cost": null,
+        "cycling": null,
+        "ninjutsu": "{U}",
+        "regeneration": null,
+        "keywords": [
+          "Ninjutsu"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Wall of Denial": {
+      "oracle_id": "9cc092f9-e8f0-40ea-847d-813b70f889db",
+      "name": "Wall of Denial",
+      "oracle_text": "Defender, flying\nShroud (This creature can't be the target of spells or abilities.)",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Creature \u2014 Wall",
+      "power": "0",
+      "toughness": "8",
+      "keywords": [
+        "Flying",
+        "Shroud",
+        "Defender"
+      ],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/939/wall-of-denial?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Abyssal Specter": {
+      "oracle_id": "51833cff-6519-4806-8d91-0040e9a02189",
+      "name": "Abyssal Specter",
+      "oracle_text": "Flying\nWhenever this creature deals damage to a player, that player discards a card.",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature \u2014 Specter",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mm3/59/abyssal-specter?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Hermetic Study": {
+      "oracle_id": "792d7818-ee5c-4254-b969-7b50f475c629",
+      "name": "Hermetic Study",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+      "mana_cost": "{1}{U}",
+      "type_line": "Enchantment \u2014 Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/53/hermetic-study?utm_source=api"
+    },
+    "Elvish Visionary": {
+      "oracle_id": "c6a3a882-a127-4590-93d7-679ef4313efe",
+      "name": "Elvish Visionary",
+      "oracle_text": "When this creature enters, draw a card.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Elf Shaman",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/hoc/206/elvish-visionary?utm_source=api"
+    },
+    "Reach Through Mists": {
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "name": "Reach Through Mists",
+      "oracle_text": "Draw a card.",
+      "mana_cost": "{U}",
+      "type_line": "Instant \u2014 Arcane",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Terminate": {
+      "oracle_id": "6257c2fd-005f-41e3-8a72-af76df1eb134",
+      "name": "Terminate",
+      "oracle_text": "Destroy target creature. It can't be regenerated.",
+      "mana_cost": "{B}{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B",
+        "R"
+      ],
+      "color_identity": [
+        "B",
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/189/terminate?utm_source=api"
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+    }
+  },
+  "native_characteristics_only_witnesses": [
+    "Grizzly Bears",
+    "Wall of Denial",
+    "Ornithopter"
+  ]
+}

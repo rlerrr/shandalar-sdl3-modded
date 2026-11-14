@@ -1,0 +1,57 @@
+{
+  "version": 1,
+  "card": "Arcbound Ravager",
+  "csvid": 6850,
+  "recipes": [
+    {
+      "family": "permanent_plus1_activation",
+      "version": 2,
+      "oracle_text": "Sacrifice an artifact: Put a +1/+1 counter on this creature.\nModular 1 (This creature enters with a +1/+1 counter on it. When it dies, you may put its +1/+1 counters on target artifact creature.)",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "dialogs": {},
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        },
+        "other_clauses": [
+          "Modular 1 (This creature enters with a +1/+1 counter on it. When it dies, you may put its +1/+1 counters on target artifact creature.)"
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "fresh_0",
+        "tapped_0",
+        "source_dies_after_0",
+        "death_snapshot_0",
+        "death_decline_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "fresh_1",
+        "tapped_1",
+        "source_dies_after_1",
+        "death_snapshot_1",
+        "death_decline_1"
+      ]
+    }
+  ]
+}

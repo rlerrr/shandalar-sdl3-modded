@@ -13,7 +13,8 @@ class CounterExtensionTests(unittest.TestCase):
   cls.oracle=json.loads((Path(__file__).parent/'data/oracle.json').read_text(encoding='utf8'))['cards']
   cls.rows={r['name']:r for r in registry()}
  def declaration(self,name):
-  return dict(family='counterspell_extension',version=2,params=copy.deepcopy(extension.PROFILES[name]['params']),oracle_text=self.oracle[name]['oracle_text'],variants=[])
+  profile=extension.PROFILES.get(name) or extension.WAVE7_PROFILES[name]
+  return dict(family='counterspell_extension',version=2,params=copy.deepcopy(profile['params']),oracle_text=self.oracle[name]['oracle_text'],variants=[])
  def cases(self,name,variants):
   d=self.declaration(name);d['variants']=variants;p=extension.spec(d,self.oracle[name]);return extension.expand(name,self.rows[name]['csvid'],d,p,variants,self.rows,self.oracle)
  def test_every_profile_whole_source_and_explicit_params(self):
@@ -587,5 +588,106 @@ class CounterExtensionTests(unittest.TestCase):
    self.assertIn(dict(op='assert_zone_multiplicity',player=owner,zone='graveyard',index=self.rows['Forest']['csvid'],value=chosen),c['steps'])
   self.assertIn(dict(op='choose_zone',player=0,value=-1),human['steps'])
   self.assertFalse(any(x['op']=='choose_zone' and x['player']==1 and x['value']==-1 for x in ai['steps']))
+
+ def test_wave7_wizard_draw_is_independent_of_counter_tax_payment(self):
+  for variant in ('tax_paid_0','tax_exact_1','two_wizards_0'):
+   c=self.cases("Sage's Dousing",[variant])[0];owner=int(variant[-1])
+   self.assertIn(dict(op='assert_zone',player=owner,zone='library',value=6),c['steps'])
+   self.assertIn(dict(op='assert_zone_multiplicity',player=owner,zone='hand',index=self.rows['Forest']['csvid'],value=2),c['steps'])
+  for variant in ('tax_paid_no_wizard_0','no_wizard_1','opposing_wizard_0','departed_wizard_1'):
+   c=self.cases("Sage's Dousing",[variant])[0]
+   self.assertIn(dict(op='assert_zone',player=int(variant[-1]),zone='library',value=7),c['steps'])
+  c=self.cases("Sage's Dousing",['departed_wizard_0'])[0]
+  self.assertLess(c['steps'].index(dict(op='destroy',ref='wizard_0')),c['steps'].index(dict(op='resolve_response')))
+ def test_wave7_non_faerie_exiles_only_the_countered_spell(self):
+  positive,negative=self.cases('Faerie Trickery',['opponent_1','forbidden_faerie_1'])
+  self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='exile',index=self.rows['Grizzly Bears']['csvid'],value=1),positive['steps'])
+  self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='graveyard',index=self.rows['Grizzly Bears']['csvid'],value=0),positive['steps'])
+  self.assertIn(dict(op='cast_response',ref='source',value=0),negative['steps'])
+  self.assertIn(dict(op='assert_card',ref='spell',property='in_play',value=1),negative['steps'])
+  self.assertIn(dict(op='assert_zone_multiplicity',player=0,zone='exile',index=self.rows['Faerie Miscreant']['csvid'],value=0),negative['steps'])
+ def test_wave7_second_spell_uses_cast_history_and_isolates_illegal_casts(self):
+  for variant,count in (('opponent_0',1),('opponent_1',1),('first_spell_0',0),('first_spell_1',0),('third_spell_0',2),('third_spell_1',2),('split_history_0',1)):
+   c=self.cases('Second Guess',[variant])[0]
+   self.assertEqual(sum(s['op']=='cast' and s.get('ref','').startswith('precursor_') for s in c['steps']),count)
+   denied=variant.startswith(('first_spell','third_spell'))
+   parent=c['steps'].index(dict(op='cast',ref='spell',value=1));announce=c['steps'].index(dict(op='announce_spell',ref='spell'))
+   response=c['steps'].index(dict(op='cast_response',ref='source',value=int(not denied)))
+   self.assertLess(parent,announce);self.assertLess(announce,response)
+   self.assertFalse(any(s['op']=='choose_priority' for s in c['steps']))
+   if variant.startswith(('first_spell','third_spell')):
+    self.assertIn(dict(op='assert_card',ref='source',property='in_hand',value=1),c['steps'])
+    self.assertIn(dict(op='assert_card',ref='spell',property='in_play',value=1),c['steps'])
+    self.assertIn(dict(op='assert_mana_total',player=int(variant[-1]),value=60),c['steps'])
+    self.assertIn(dict(op='resolve'),c['steps'])
+  c=self.cases('Second Guess',['snapshot_0'])[0]
+  self.assertEqual(sum(s['op']=='cast' and s.get('ref')=='precursor_0' for s in c['steps']),2)
+  self.assertEqual(sum(s['op']=='cast_response' and s.get('ref')=='source' for s in c['steps']),2)
+  self.assertEqual(sum(s['op']=='announce_spell' for s in c['steps']),2)
+  self.assertIn(dict(op='assert_recorded_state'),c['steps'])
+  self.assertFalse(any('deferred' in gap for gap in c['_recipe']['untested_components']))
+  d=self.declaration('Second Guess');d['variants']=['first_spell_1'];p=extension.spec(d,self.oracle['Second Guess'])
+  self.assertEqual(len(extension.variants(p)),32)
+ def test_wave7_snapshot_restores_an_already_announced_parent(self):
+  for owner in (0,1):
+   c=self.cases('Second Guess',[f'announced_snapshot_{owner}'])[0]
+   self.assertEqual(sum(s['op']=='cast' and s.get('ref')=='spell' for s in c['steps']),1)
+   self.assertEqual(sum(s['op']=='announce_spell' for s in c['steps']),1)
+   self.assertEqual(sum(s['op']=='cast_response' for s in c['steps']),2)
+   self.assertLess(c['steps'].index(dict(op='announce_spell',ref='spell')),c['steps'].index(dict(op='capture')))
+   self.assertLess(c['steps'].index(dict(op='capture')),c['steps'].index(dict(op='cast_response',ref='source',value=1)))
+   self.assertIn(dict(op='assert_recorded_state'),c['steps'])
+ def test_wave7_split_history_uses_a_legal_off_turn_instant_without_turn_flip(self):
+  for owner in (0,1):
+   c=self.cases('Second Guess',[f'split_history_{owner}'])[0]
+   turns=[s for s in c['steps'] if s['op']=='turn']
+   self.assertEqual(turns,[dict(op='turn',player=1-owner,value=0)])
+   self.assertFalse(any(s['op']=='advance_turn' for s in c['steps']))
+   precursor=next(x for x in c['setup'] if x['ref']=='precursor_0')
+   self.assertEqual((precursor['name'],precursor['player']),('Reach Through Mists',owner))
+   self.assertIn('Instant',self.oracle[precursor['name']]['type_line'])
+   self.assertEqual(self.oracle[precursor['name']]['mana_cost'],'{U}')
+   self.assertEqual(self.oracle[precursor['name']]['oracle_text'],'Draw a card.')
+   before_parent=c['steps'][:c['steps'].index(dict(op='cast',ref='spell',value=1))]
+   self.assertIn(dict(op='assert_mana',player=owner,color=2,value=9),before_parent)
+   self.assertIn(dict(op='assert_mana_total',player=owner,value=59),before_parent)
+   self.assertIn(dict(op='assert_zone',player=owner,zone='library',value=6),before_parent)
+   self.assertIn(dict(op='assert_zone_multiplicity',player=owner,zone='hand',index=self.rows['Forest']['csvid'],value=2),before_parent)
+   self.assertIn(dict(op='assert_zone_multiplicity',player=owner,zone='graveyard',index=self.rows['Reach Through Mists']['csvid'],value=1),before_parent)
+   for i,name in enumerate(extension.ordinary.LIBRARY[1:]):
+    self.assertIn(dict(op='assert_zone_card',player=owner,zone='library',index=i,value=self.rows[name]['csvid']),before_parent)
+   self.assertIn(dict(op='assert_mana_total',player=owner,value=57),c['steps'])
+   ordinary=self.cases('Second Guess',[f'opponent_{owner}'])[0]
+   self.assertEqual(next(x['name'] for x in ordinary['setup'] if x['ref']=='precursor_0'),'Ornithopter')
+   self.assertTrue(all(s['player']==1-owner for s in ordinary['steps'] if s['op']=='turn'))
+ def test_wave7_split_history_draw_witness_is_fully_pinned(self):
+  for field,value in (('mana_cost','{1}'),('oracle_text','Draw two cards.'),('type_line','Sorcery — Arcane')):
+   changed=copy.deepcopy(self.oracle);changed['Reach Through Mists'][field]=value
+   with self.assertRaisesRegex(ValueError,'wave-seven counter witness'):extension.validate_witnesses(changed,self.rows)
+ def test_wave7_source_and_target_subtype_pins_fail_closed(self):
+  d=self.declaration('Faerie Trickery');d['variants']=['opponent_0']
+  for key,value in (('schema',True),('extension',dict(wave=True)),('kind','any_spell')):
+   changed=copy.deepcopy(d);changed['params'][key]=value
+   with self.assertRaises(ValueError):extension.spec(changed,self.oracle['Faerie Trickery'])
+  oracle=copy.deepcopy(self.oracle);oracle['Faerie Miscreant']['type_line']='Creature — Human Rogue'
+  with self.assertRaisesRegex(ValueError,'wave-seven counter witness'):extension.validate_witnesses(oracle,self.rows)
+  c=self.cases('Lay Bare',['snapshot_0'])[0]
+  self.assertTrue(any('hand-inspection' in s for s in c['_recipe']['untested_components']))
+ def test_wave7_full_sources_selected_variants_and_inputs_are_preserved(self):
+  for name in extension.WAVE7_PROFILES:
+   d=self.declaration(name);d['variants']=['opponent_0'];p=extension.spec(d,self.oracle[name]);d['variants']=extension.variants(p)
+   before=copy.deepcopy((d,p,self.oracle));cases=extension.expand(name,self.rows[name]['csvid'],d,p,d['variants'],self.rows,self.oracle)
+   self.assertEqual(before,(d,p,self.oracle));self.assertEqual(len(cases),len(d['variants']))
+   changed=copy.deepcopy(self.oracle[name]);changed['oracle_text']+=' '
+   with self.assertRaises(ValueError):extension.spec(d,changed)
+   for variants in ([],['opponent_0','opponent_0'],['unknown_0']):
+    with self.assertRaises(ValueError):extension.spec(dict(d,variants=variants),self.oracle[name])
+ def test_wave7_payment_receipt_precedes_resolution_for_both_controllers(self):
+  for owner in (0,1):
+   c=self.cases('Faerie Trickery',[f'payment_{owner}'])[0];resolved=c['steps'].index(dict(op='resolve_response'))
+   cast=c['steps'].index(dict(op='cast_response',ref='source',value=1))
+   self.assertIn(dict(op='assert_mana_total',player=owner,value=0),c['steps'][cast:resolved])
+   self.assertIn(dict(op='assert_card',ref='source',property='in_hand',value=0),c['steps'][cast:resolved])
+   self.assertIn(dict(op='assert_card',ref='source',property='in_hand',value=0),c['steps'][resolved:])
 
 if __name__=='__main__':unittest.main()

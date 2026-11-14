@@ -137,4 +137,85 @@ class EquipmentRecipesTest(unittest.TestCase):
     def test_unknown_variant_rejected(self):
         with self.assertRaises(ValueError):self.cases(selected=['made_up'])
 
+class CountEquipmentRecipesTest(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.oracle=json.loads((Path(__file__).parent/'data/oracle.json').read_text(encoding='utf8'))['cards']
+        cls.rows={r['name']:r for r in registry()}
+    def cases(self,name,variant='cast_attach_0',oracle=None):
+        from equipment_recipes import WAVE7_PROFILES
+        d=dict(family='equipment',version=2,oracle_text=self.oracle[name]['oracle_text'],
+               params=dict(schema=7,profile=WAVE7_PROFILES[name][0]),variants=[variant])
+        context=oracle or self.oracle
+        return expand(name,self.rows[name]['csvid'],d,context[name],self.rows,oracle_context=context)
+    def last_stat(self,case,ref,prop):
+        return [s['value'] for s in case['steps'] if s['op']=='require_card' and s.get('ref')==ref and s.get('property')==prop][-1]
+    def test_six_independent_printed_bonus_receipts(self):
+        # Four cards in hand; two own creatures; one own enchantment; one
+        # host color; mana value two; one Equipment attached to this host.
+        expected={'Empyrial Plate':(6,6),'Pennon Blade':(4,4),'Helm of the Gods':(3,3),
+                  'Civic Saber':(3,2),'Hedron Matrix':(4,4),'Golem-Skin Gauntlets':(3,2)}
+        for name,(power,toughness) in expected.items():
+            with self.subTest(name=name):
+                case=self.cases(name)[0]
+                self.assertEqual((self.last_stat(case,'host','power'),self.last_stat(case,'host','toughness')),(power,toughness))
+                self.assertEqual(self.last_stat(case,'enemy','power'),2)
+    def test_dynamic_counts_have_distinct_increase_and_decrease_expectations(self):
+        for name,increase,decrease in [('Empyrial Plate',8,6),('Pennon Blade',5,3),('Helm of the Gods',4,2),('Golem-Skin Gauntlets',6,3)]:
+            with self.subTest(name=name):
+                self.assertEqual(self.last_stat(self.cases(name,'increase_1')[0],'host','power'),increase)
+                self.assertEqual(self.last_stat(self.cases(name,'decrease_1')[0],'host','power'),decrease)
+    def test_zero_and_larger_host_colors_and_mana_values(self):
+        for name,power,toughness in [('Civic Saber',5,3),('Hedron Matrix',15,14)]:
+            zero=self.cases(name,'zero_host_0')[0];many=self.cases(name,'many_host_0')[0]
+            self.assertEqual((self.last_stat(zero,'host','power'),self.last_stat(zero,'host','toughness')),(0,2))
+            self.assertEqual((self.last_stat(many,'host','power'),self.last_stat(many,'host','toughness')),(power,toughness))
+    def test_counted_attachments_follow_the_creature_after_move(self):
+        case=self.cases('Golem-Skin Gauntlets','move_0')[0]
+        self.assertEqual(self.last_stat(case,'host','power'),2)
+        self.assertEqual(self.last_stat(case,'other','power'),7)
+    def test_owner_hand_count_includes_planned_spell_then_real_draw_receipts(self):
+        c=self.cases('Empyrial Plate','increase_1')[0]
+        self.assertIn(dict(op='require_card',ref='host',property='power',value=7),c['steps'])
+        self.assertEqual(self.last_stat(c,'host','power'),8)
+        self.assertIn(dict(op='assert_zone',player=1,zone='hand',value=6),c['steps'])
+        self.assertIn(dict(op='assert_zone',player=1,zone='library',value=5),c['steps'])
+    def test_exact_cost_includes_other_equipment_activation(self):
+        c=self.cases('Golem-Skin Gauntlets','exact_payment_0')[0]
+        self.assertIn(dict(op='set_mana',player=0,color=0,value=4),c['steps'])
+        self.assertIn(dict(op='assert_mana_total',player=0,value=0),c['steps'])
+    def test_pending_response_preserves_real_two_object_stack_and_cost(self):
+        c=self.cases('Hedron Matrix','lost_target_1')[0];s=c['steps']
+        self.assertIn(dict(op='assert_stack',value=2),s)
+        self.assertIn(dict(op='require_card',ref='host',property='in_play',value=0),s)
+        self.assertEqual(self.last_stat(c,'other','power'),3)
+    def test_pending_snapshot_keeps_cost_paid_and_attachment_unresolved(self):
+        c=self.cases('Pennon Blade','pending_snapshot_1')[0];s=c['steps'];capture=next(i for i,a in enumerate(s) if a['op']=='capture')
+        self.assertEqual(s[capture-3]['op'],'activate')
+        self.assertIn(dict(op='require_card',ref='host',property='power',value=2),s[capture:])
+        self.assertIn(dict(op='require_card',ref='host',property='power',value=4),s[capture:])
+        self.assertEqual(len({id(a) for a in s}),len(s))
+    def test_source_and_witness_pins_reject_wrong_rules_and_identity(self):
+        for name,field,value in [('Empyrial Plate','oracle_text','changed'),('Hedron Matrix','cmc',3),('Grizzly Bears','colors',[]),('Watchwolf','power','2')]:
+            context=copy.deepcopy(self.oracle);context[name][field]=value
+            with self.subTest(name=name,field=field),self.assertRaises(ValueError):self.cases('Empyrial Plate',oracle=context) if name not in ('Empyrial Plate','Hedron Matrix') else self.cases(name,oracle=context)
+    def test_schema_cannot_silently_accept_additional_clauses_or_parameters(self):
+        d=dict(family='equipment',version=2,oracle_text=self.oracle['Empyrial Plate']['oracle_text'],params=dict(schema=7,profile='hand'),variants=['cast_attach_0'])
+        for p in (dict(schema=7,profile='creatures'),dict(schema=7,profile='hand',extra=True),dict(schema=True,profile='hand')):
+            with self.subTest(params=p),self.assertRaises(ValueError):explicit_spec(dict(d,params=p),self.oracle['Empyrial Plate'])
+        with self.assertRaises(ValueError):explicit_spec(d,self.oracle['Bonesplitter'])
+    def test_count_schema_preserves_equipment_family_and_exact_integer_version(self):
+        from equipment_recipes import wave7_spec
+        d=dict(family='equipment',version=2,oracle_text=self.oracle['Empyrial Plate']['oracle_text'],params=dict(schema=7,profile='hand'),variants=['cast_attach_0'])
+        for change in (dict(family=None),dict(family='other'),dict(version=None),dict(version=True),dict(version=1),dict(version=2.0),dict(version='2')):
+            with self.subTest(change=change),self.assertRaises(ValueError):wave7_spec(dict(d,**change),self.oracle['Empyrial Plate'])
+    def test_count_schema_rejects_empty_duplicate_nonstrings_and_unknown_variants(self):
+        from equipment_recipes import wave7_spec
+        d=dict(family='equipment',version=2,oracle_text=self.oracle['Civic Saber']['oracle_text'],params=dict(schema=7,profile='colors'),variants=['cast_attach_0'])
+        for selected in (None,[],(),['cast_attach_0','cast_attach_0'],[1],[''],['made_up_0'],['cast_attach_2'],['increase_0'],['cast_attach_0','made_up_0']):
+            with self.subTest(selected=selected),self.assertRaises(ValueError):wave7_spec(dict(d,variants=selected),self.oracle['Civic Saber'])
+        missing=dict(d);missing.pop('variants')
+        with self.assertRaises(ValueError):wave7_spec(missing,self.oracle['Civic Saber'])
+        self.assertEqual(wave7_spec(dict(d,variants=['many_host_1','zero_host_0']),self.oracle['Civic Saber'])['profile'],'colors')
+
 if __name__=='__main__':unittest.main()

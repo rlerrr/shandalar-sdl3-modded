@@ -1,0 +1,68 @@
+{
+  "version": 1,
+  "card": "Dust Elemental",
+  "csvid": 8773,
+  "recipes": [
+    {
+      "family": "entry_trigger_value",
+      "version": 2,
+      "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying; fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nWhen this creature enters, return three creatures you control to their owner's hand.",
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "count": 3,
+          "scope": "creature",
+          "colors": [],
+          "another": false,
+          "recipient": "self",
+          "targeted": false,
+          "kind": "bounce",
+          "clause": "When this creature enters, return three creatures you control to their owner's hand.",
+          "gaps": [
+            "Flash (You may cast this spell any time you could cast an instant.)",
+            "Flying; fear (This creature can't be blocked except by artifact creatures and/or black creatures.)"
+          ]
+        }
+      },
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "bare_zones_0",
+        "cleanup_0",
+        "countered_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "nonmatching_entry_0",
+        "wrong_color_0",
+        "alternate_choice_0",
+        "foreign_owned_0",
+        "blink_0",
+        "bounce_recast_0",
+        "source_choice_0",
+        "one_match_0",
+        "source_only_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "bare_zones_1",
+        "cleanup_1",
+        "countered_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "nonmatching_entry_1",
+        "wrong_color_1",
+        "alternate_choice_1",
+        "foreign_owned_1",
+        "blink_1",
+        "bounce_recast_1",
+        "source_choice_1",
+        "one_match_1",
+        "source_only_1"
+      ]
+    }
+  ],
+  "recipe_coverage": "Real casting and ordinary payment, pending and resolved entry state, whole modeled entry exchange, exact card ownership/destinations and populated-zone conservation, contrary/empty controls, both controllers and snapshot replay. Other printed components remain explicit recipe gaps."
+}

@@ -128,6 +128,15 @@ int select_one_and_mill_the_rest(int player, int t_player, int number, int type)
 
 int select_one_and_put_the_rest_on_bottom(int player, int t_player, int number){
 
+	/* A mandatory selector needs an actual card, and its display window must
+	 * stay inside this player's library just like select_one_and_mill_the_rest. */
+	int available = count_deck(t_player);
+	if( number > available ){
+		number = available;
+	}
+	if( number <= 0 ){
+		return -1;
+	}
 	int selected = -1;
 	int *deck = deck_ptr[t_player];
 	while( selected == -1 ){
@@ -1704,7 +1713,9 @@ int reveal_top_cards_of_library(int player, int num_cards)
     count = num_cards;
   if (count <= 0)
     return 0;
-  if (ai_is_speculating != 1)
+  /* This window only displays the revealed cards; selection happens later.
+   * Keep the library/count semantics in headless runs without opening a GUI. */
+  if (ai_is_speculating != 1 && !duel_host_is_headless())
   {
     char buffer[50];
     if (player == 0)

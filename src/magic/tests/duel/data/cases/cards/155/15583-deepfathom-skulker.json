@@ -1,0 +1,83 @@
+{
+  "version": 1,
+  "card": "Deepfathom Skulker",
+  "csvid": 15583,
+  "recipes": [
+    {
+      "family": "combat_value_trigger",
+      "version": 2,
+      "params": {
+        "schema": 10,
+        "scope": "combat",
+        "recipient": "player",
+        "keywords": [
+          "Devoid"
+        ],
+        "team": {
+          "tribe": null,
+          "controller": "own"
+        },
+        "allied_bonus": null,
+        "attacker_counters": 0,
+        "beneficiary": "source_controller",
+        "inactive_abilities": [
+          "{3}{C}: Target creature can't be blocked this turn. ({C} represents colorless mana.)"
+        ],
+        "effects": {
+          "draw": 1,
+          "discard": 0,
+          "mill": false,
+          "self_counters": 0,
+          "target_draw": 0,
+          "optional": true,
+          "exchange": null,
+          "token": null
+        }
+      },
+      "oracle_text": "Devoid (This card has no color.)\nWhenever a creature you control deals combat damage to a player, you may draw a card.\n{3}{C}: Target creature can't be blocked this turn. ({C} represents colorless mana.)",
+      "variants": [
+        "unblocked_0",
+        "source_hit_0",
+        "enemy_hit_0",
+        "two_attackers_0",
+        "source_pair_0",
+        "blocked_0",
+        "zero_power_0",
+        "pump_0",
+        "cleanup_0",
+        "two_hits_0",
+        "source_bounce_0",
+        "ready_snapshot_0",
+        "combat_snapshot_0",
+        "noncombat_ally_0",
+        "noncombat_source_0",
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "fresh_attack_0",
+        "declined_0",
+        "unblocked_1",
+        "source_hit_1",
+        "enemy_hit_1",
+        "two_attackers_1",
+        "source_pair_1",
+        "blocked_1",
+        "zero_power_1",
+        "pump_1",
+        "cleanup_1",
+        "two_hits_1",
+        "source_bounce_1",
+        "ready_snapshot_1",
+        "combat_snapshot_1",
+        "noncombat_ally_1",
+        "noncombat_source_1",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "fresh_attack_1"
+      ]
+    }
+  ]
+}

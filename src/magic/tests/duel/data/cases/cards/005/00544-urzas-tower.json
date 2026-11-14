@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "card": "Urza's Tower",
+  "csvid": 544,
+  "recipes": [
+    {
+      "family": "counted_tap_mana_activation",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}. If you control an Urza's Mine and an Urza's Power-Plant, add {C}{C}{C} instead.",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "mode_dialog": null,
+          "color_choice": "none"
+        },
+        "other_clauses": []
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "inactive_0",
+        "tapped_0",
+        "repeat_denied_0",
+        "repeat_untap_0",
+        "spend_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "opponent_turn_0",
+        "minimal_count_0",
+        "partial_count_0",
+        "wrong_owner_0",
+        "contrary_kind_0",
+        "dynamic_count_0",
+        "value_1",
+        "payment_1",
+        "inactive_1",
+        "tapped_1",
+        "repeat_denied_1",
+        "repeat_untap_1",
+        "spend_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "opponent_turn_1",
+        "minimal_count_1",
+        "partial_count_1",
+        "wrong_owner_1",
+        "contrary_kind_1",
+        "dynamic_count_1"
+      ]
+    }
+  ]
+}

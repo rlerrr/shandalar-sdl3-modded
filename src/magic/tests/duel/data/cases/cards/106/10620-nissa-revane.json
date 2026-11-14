@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "card": "Nissa Revane",
+  "csvid": 10620,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "+1: Search your library for a card named Nissa's Chosen, put it onto the battlefield, then shuffle.\n+1: You gain 2 life for each Elf you control.\n\u22127: Search your library for any number of Elf creature cards, put them onto the battlefield, then shuffle.",
+      "params": {
+        "ability": 1,
+        "present_ai_dialogs": true,
+        "activation_dialogs": {
+          "0": 1,
+          "1": 1
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_destroyed_pending_0",
+        "offturn_0",
+        "repeat_denied_0",
+        "metric_many_0",
+        "no_other_members_0",
+        "metric_removed_0",
+        "zero_after_source_removal_0",
+        "value_1",
+        "payment_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_destroyed_pending_1",
+        "offturn_1",
+        "repeat_denied_1",
+        "metric_many_1",
+        "no_other_members_1",
+        "metric_removed_1",
+        "zero_after_source_removal_1"
+      ]
+    }
+  ]
+}

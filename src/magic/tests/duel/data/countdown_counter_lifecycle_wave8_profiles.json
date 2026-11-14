@@ -1,0 +1,621 @@
+{
+  "version": 1,
+  "sources": {
+    "Blastoderm": {
+      "csvid": 4673,
+      "handler": "manalinkeh_card_blastoderm",
+      "oracle": {
+        "oracle_id": "d6ee8bd6-0207-46ee-9892-c1d1b23b934e",
+        "name": "Blastoderm",
+        "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)\nFading 3 (This creature enters with three fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Shroud",
+          "Fading"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gvl/7/blastoderm?utm_source=api"
+      }
+    },
+    "Skyshroud Behemoth": {
+      "csvid": 4765,
+      "handler": "manalinkeh_card_skyshroud_behemoth",
+      "oracle": {
+        "oracle_id": "77bee041-6f96-44e3-a18c-b52e508b9bdf",
+        "name": "Skyshroud Behemoth",
+        "oracle_text": "Fading 2 (This creature enters with two fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\nThis creature enters tapped.",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "10",
+        "toughness": "10",
+        "keywords": [
+          "Fading"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nem/116/skyshroud-behemoth?utm_source=api"
+      }
+    },
+    "Calciderm": {
+      "csvid": 8753,
+      "handler": "manalinkeh_card_calciderm",
+      "oracle": {
+        "oracle_id": "329d53eb-d443-4376-ae5a-4be7dfb1fc91",
+        "name": "Calciderm",
+        "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)\nVanishing 4 (This creature enters with four time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Beast",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Shroud",
+          "Vanishing"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/11/calciderm?utm_source=api"
+      }
+    },
+    "Aven Riftwatcher": {
+      "csvid": 8743,
+      "handler": "manalinkeh_card_aven_riftwatcher",
+      "oracle": {
+        "oracle_id": "a4d22abe-87c5-4f6b-ad14-4a7935883169",
+        "name": "Aven Riftwatcher",
+        "oracle_text": "Flying\nVanishing 3 (This creature enters with three time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen this creature enters or leaves the battlefield, you gain 2 life.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Bird Rebel Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying",
+          "Vanishing"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/6/aven-riftwatcher?utm_source=api"
+      }
+    },
+    "Keldon Marauders": {
+      "csvid": 8798,
+      "handler": "manalinkeh_card_keldon_marauders",
+      "oracle": {
+        "oracle_id": "e05b850f-24cd-42b9-bc4f-0f05f9aea679",
+        "name": "Keldon Marauders",
+        "oracle_text": "Vanishing 2 (This creature enters with two time counters on it. At the beginning of your upkeep, remove a time counter from it. When the last is removed, sacrifice it.)\nWhen this creature enters or leaves the battlefield, it deals 1 damage to target player or planeswalker.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature — Human Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Vanishing"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ema/136/keldon-marauders?utm_source=api"
+      }
+    },
+    "Ancient Hydra": {
+      "csvid": 4662,
+      "handler": "manalinkeh_card_ancient_hydra",
+      "oracle": {
+        "oracle_id": "8e1d3722-9bd1-4ab7-b4a5-9265fca3aba9",
+        "name": "Ancient Hydra",
+        "oracle_text": "Fading 5 (This creature enters with five fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\n{1}, Remove a fade counter from this creature: It deals 1 damage to any target.",
+        "mana_cost": "{4}{R}",
+        "type_line": "Creature — Hydra",
+        "power": "5",
+        "toughness": "1",
+        "keywords": [
+          "Fading"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nem/76/ancient-hydra?utm_source=api"
+      }
+    },
+    "Jolting Merfolk": {
+      "csvid": 4702,
+      "handler": "manalinkeh_card_jolting_merfolk",
+      "oracle": {
+        "oracle_id": "3b71aeee-a4a8-46d3-9973-06db14d8bf6c",
+        "name": "Jolting Merfolk",
+        "oracle_text": "Fading 4 (This creature enters with four fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\nRemove a fade counter from this creature: Tap target creature.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature — Merfolk",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Fading"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nem/34/jolting-merfolk?utm_source=api"
+      }
+    },
+    "Woodripper": {
+      "csvid": 4790,
+      "handler": "manalinkeh_card_woodripper",
+      "oracle": {
+        "oracle_id": "d0653734-9eb7-48c6-9042-65ffdd50fd2a",
+        "name": "Woodripper",
+        "oracle_text": "Fading 3 (This creature enters with three fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)\n{1}, Remove a fade counter from this creature: Destroy target artifact.",
+        "mana_cost": "{3}{G}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "6",
+        "keywords": [
+          "Fading"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nem/125/woodripper?utm_source=api"
+      }
+    },
+    "Cloudskate": {
+      "csvid": 4676,
+      "handler": "manalinkeh_card_blastoderm",
+      "oracle": {
+        "oracle_id": "648e4072-b991-46fd-b057-1e807091dcdf",
+        "name": "Cloudskate",
+        "oracle_text": "Flying\nFading 3 (This creature enters with three fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Illusion",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Fading"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nem/29/cloudskate?utm_source=api"
+      }
+    },
+    "Skyshroud Ridgeback": {
+      "csvid": 4769,
+      "handler": "manalinkeh_card_skyshroud_ridgeback",
+      "oracle": {
+        "oracle_id": "34a160bc-5d7e-483c-b24c-ab30b7d313b0",
+        "name": "Skyshroud Ridgeback",
+        "oracle_text": "Fading 2 (This creature enters with two fade counters on it. At the beginning of your upkeep, remove a fade counter from it. If you can't, sacrifice it.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature — Beast",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Fading"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nem/120/skyshroud-ridgeback?utm_source=api"
+      }
+    }
+  },
+  "witnesses": {
+    "Plains": {
+      "csvid": 188,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      }
+    },
+    "Swamp": {
+      "csvid": 239,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Mountain": {
+      "csvid": 164,
+      "handler": "manalinkeh_plain_mana_producer",
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      }
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "handler": "manalinkeh_card_counterspell",
+      "oracle": {
+        "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+        "name": "Counterspell",
+        "oracle_text": "Counter target spell.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+      }
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "handler": "manalinkeh_card_unsummon",
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      }
+    },
+    "Control Magic": {
+      "csvid": 44,
+      "handler": "manalinkeh_card_control_magic",
+      "oracle": {
+        "oracle_id": "cd0d7141-46d2-4aa3-bc77-6b3b4513803e",
+        "name": "Control Magic",
+        "oracle_text": "Enchant creature\nYou control enchanted creature.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/34/control-magic?utm_source=api"
+      }
+    },
+    "Aether Snap": {
+      "csvid": 6855,
+      "handler": "manalinkeh_card_aether_snap",
+      "oracle": {
+        "oracle_id": "1a1a16e5-ce4f-42b8-a1c6-05dd635d83cc",
+        "name": "Aether Snap",
+        "oracle_text": "Remove all counters from all permanents and exile all tokens.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ncc/241/aether-snap?utm_source=api"
+      }
+    },
+    "Darksteel Relic": {
+      "csvid": 11586,
+      "handler": "manalinkeh_card_darksteel_myr",
+      "oracle": {
+        "oracle_id": "2bda1fb1-528c-4e66-89f1-bb1a85e9181e",
+        "name": "Darksteel Relic",
+        "oracle_text": "Indestructible (Effects that say \"destroy\" don't destroy this artifact.)",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [
+          "Indestructible"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/134/darksteel-relic?utm_source=api"
+      }
+    },
+    "Boomerang": {
+      "csvid": 585,
+      "handler": "manalinkeh_card_boomerang",
+      "oracle": {
+        "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+        "name": "Boomerang",
+        "oracle_text": "Return target permanent to its owner's hand.",
+        "mana_cost": "{U}{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+      }
+    },
+    "Jace Beleren": {
+      "csvid": 9185,
+      "handler": "manalinkeh_card_jace_beleren",
+      "oracle": {
+        "oracle_id": "cc2b6e58-2d6f-495e-95f3-9496105c4cba",
+        "name": "Jace Beleren",
+        "oracle_text": "+2: Each player draws a card.\n−1: Target player draws a card.\n−10: Target player mills twenty cards.",
+        "mana_cost": "{1}{U}{U}",
+        "type_line": "Legendary Planeswalker — Jace",
+        "loyalty": "3",
+        "keywords": [
+          "Mill"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/850/jace-beleren?utm_source=api"
+      }
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      }
+    },
+    "Horned Turtle": {
+      "csvid": 1057,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "7a4ae76b-6241-4fa8-b239-5ec941a0e7df",
+        "name": "Horned Turtle",
+        "oracle_text": "",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Turtle",
+        "power": "1",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/53/horned-turtle?utm_source=api"
+      }
+    },
+    "Giant Spider": {
+      "csvid": 98,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      }
+    },
+    "Ornithopter": {
+      "csvid": 514,
+      "handler": "card_dummy",
+      "oracle": {
+        "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+        "name": "Ornithopter",
+        "oracle_text": "Flying",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Thopter",
+        "power": "0",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+      }
+    },
+    "Sol Ring": {
+      "csvid": 230,
+      "handler": "manalinkeh_card_sol_ring",
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      }
+    }
+  },
+  "honest_static_only_dummy_witnesses": [
+    "Hill Giant",
+    "Horned Turtle",
+    "Giant Spider",
+    "Ornithopter"
+  ]
+}

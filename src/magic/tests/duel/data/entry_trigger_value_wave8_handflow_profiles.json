@@ -1,0 +1,642 @@
+{
+  "version": 1,
+  "sources": {
+    "Viashino Racketeer": {
+      "csvid": 12866,
+      "oracle": {
+        "oracle_id": "18b09c2d-20cb-40e9-8209-8a1ec2edde97",
+        "name": "Viashino Racketeer",
+        "oracle_text": "When this creature enters, you may discard a card. If you do, draw a card.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature — Lizard Rogue",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/112/viashino-racketeer?utm_source=api"
+      },
+      "mechanism": {
+        "kind": "loot",
+        "recipient": "self",
+        "discard": 1,
+        "draw": "discarded",
+        "optional": "discard",
+        "clause": "When this creature enters, you may discard a card. If you do, draw a card.",
+        "gaps": []
+      },
+      "presentation": {
+        "human_optional_trigger": true,
+        "target_player_choices": 0
+      }
+    },
+    "Pale Rider of Trostad": {
+      "csvid": 15914,
+      "oracle": {
+        "oracle_id": "6cc47c8e-9154-4517-940d-d1a7f35e5677",
+        "name": "Pale Rider of Trostad",
+        "oracle_text": "Skulk (This creature can't be blocked by creatures with greater power.)\nWhen this creature enters, discard a card.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Spirit",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Skulk"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/soi/128/pale-rider-of-trostad?utm_source=api"
+      },
+      "mechanism": {
+        "kind": "discard",
+        "recipient": "self",
+        "discard": 1,
+        "draw": 0,
+        "optional": "none",
+        "clause": "When this creature enters, discard a card.",
+        "gaps": [
+          "Skulk (This creature can't be blocked by creatures with greater power.)"
+        ]
+      },
+      "presentation": {
+        "human_optional_trigger": false,
+        "target_player_choices": 0
+      }
+    },
+    "Oath of Jace": {
+      "csvid": 15652,
+      "oracle": {
+        "oracle_id": "dc92b420-8ac7-4478-a287-3d897357be08",
+        "name": "Oath of Jace",
+        "oracle_text": "When Oath of Jace enters, draw three cards, then discard two cards.\nAt the beginning of your upkeep, scry X, where X is the number of planeswalkers you control.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Legendary Enchantment",
+        "keywords": [
+          "Scry"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmm/854/oath-of-jace?utm_source=api"
+      },
+      "mechanism": {
+        "kind": "draw_discard",
+        "recipient": "self",
+        "draw": 3,
+        "discard": 2,
+        "optional": "none",
+        "clause": "When Oath of Jace enters, draw three cards, then discard two cards.",
+        "gaps": [
+          "At the beginning of your upkeep, scry X, where X is the number of planeswalkers you control."
+        ]
+      },
+      "presentation": {
+        "human_optional_trigger": false,
+        "target_player_choices": 0
+      }
+    },
+    "Brutal Nightstalker": {
+      "csvid": 3591,
+      "oracle": {
+        "oracle_id": "a4003cd1-e98c-4346-b685-89c7891f9920",
+        "name": "Brutal Nightstalker",
+        "oracle_text": "When this creature enters, you may have target opponent discard a card.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature — Nightstalker",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/p02/64/brutal-nightstalker?utm_source=api"
+      },
+      "mechanism": {
+        "kind": "discard",
+        "recipient": "opponent",
+        "discard": 1,
+        "draw": 0,
+        "optional": "trigger",
+        "clause": "When this creature enters, you may have target opponent discard a card.",
+        "gaps": []
+      },
+      "presentation": {
+        "human_optional_trigger": true,
+        "target_player_choices": 0
+      }
+    },
+    "Ebon Dragon": {
+      "csvid": 2821,
+      "oracle": {
+        "oracle_id": "12e4d2bd-83e9-4120-a2e8-0645c0ed2387",
+        "name": "Ebon Dragon",
+        "oracle_text": "Flying\nWhen this creature enters, you may have target opponent discard a card.",
+        "mana_cost": "{5}{B}{B}",
+        "type_line": "Creature — Dragon",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/80/ebon-dragon?utm_source=api"
+      },
+      "mechanism": {
+        "kind": "discard",
+        "recipient": "opponent",
+        "discard": 1,
+        "draw": 0,
+        "optional": "trigger",
+        "clause": "When this creature enters, you may have target opponent discard a card.",
+        "gaps": [
+          "Flying"
+        ]
+      },
+      "presentation": {
+        "human_optional_trigger": true,
+        "target_player_choices": 0
+      }
+    },
+    "Keldon Raider": {
+      "csvid": 18445,
+      "oracle": {
+        "oracle_id": "004f82f0-74cc-4bc7-ab22-ab1a5247bc29",
+        "name": "Keldon Raider",
+        "oracle_text": "When this creature enters, you may discard a card. If you do, draw a card.",
+        "mana_cost": "{2}{R}{R}",
+        "type_line": "Creature — Human Warrior",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/146/keldon-raider?utm_source=api"
+      },
+      "mechanism": {
+        "kind": "loot",
+        "recipient": "self",
+        "discard": 1,
+        "draw": "discarded",
+        "optional": "discard",
+        "clause": "When this creature enters, you may discard a card. If you do, draw a card.",
+        "gaps": []
+      },
+      "presentation": {
+        "human_optional_trigger": true,
+        "target_player_choices": 0
+      }
+    },
+    "Trial of Knowledge": {
+      "csvid": 17051,
+      "oracle": {
+        "oracle_id": "6155908a-0079-42c7-ae81-326a6faccb89",
+        "name": "Trial of Knowledge",
+        "oracle_text": "When this enchantment enters, draw three cards, then discard a card.\nWhen a Cartouche you control enters, return this enchantment to its owner's hand.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/akh/73/trial-of-knowledge?utm_source=api"
+      },
+      "mechanism": {
+        "kind": "draw_discard",
+        "recipient": "self",
+        "draw": 3,
+        "discard": 1,
+        "optional": "none",
+        "clause": "When this enchantment enters, draw three cards, then discard a card.",
+        "gaps": [
+          "When a Cartouche you control enters, return this enchantment to its owner's hand."
+        ]
+      },
+      "presentation": {
+        "human_optional_trigger": false,
+        "target_player_choices": 0
+      }
+    }
+  },
+  "witnesses": {
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    },
+    "Cloudshift": {
+      "oracle_id": "6879f5ce-7a1b-4606-bad1-885779b0d456",
+      "name": "Cloudshift",
+      "oracle_text": "Exile target creature you control, then return that card to the battlefield under your control.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tle/152/cloudshift?utm_source=api"
+    },
+    "Eldrazi Displacer": {
+      "oracle_id": "9b1f552a-bddc-4fcb-ac67-b4a65b2f48ba",
+      "name": "Eldrazi Displacer",
+      "oracle_text": "Devoid (This card has no color.)\n{2}{C}: Exile another target creature, then return it to the battlefield tapped under its owner's control. ({C} represents colorless mana.)",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Eldrazi",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Devoid"
+      ],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ogw/13/eldrazi-displacer?utm_source=api"
+    },
+    "Ertai, Wizard Adept": {
+      "oracle_id": "f2902dfd-888f-4b02-b8ad-1056f0059fc3",
+      "name": "Ertai, Wizard Adept",
+      "oracle_text": "{2}{U}{U}, {T}: Counter target spell.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Legendary Creature — Human Wizard",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/exo/33/ertai-wizard-adept?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Gilded Light": {
+      "oracle_id": "f7e7b2aa-9fd2-41dd-b11e-3a233530dc83",
+      "name": "Gilded Light",
+      "oracle_text": "You gain shroud until end of turn. (You can't be the target of spells or abilities.)\nCycling {2} ({2}, Discard this card: Draw a card.)",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "keywords": [
+        "Cycling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mh1/12/gilded-light?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Kiora's Follower": {
+      "oracle_id": "22c044ad-77d7-4c93-953d-e2daa9686ff7",
+      "name": "Kiora's Follower",
+      "oracle_text": "{T}: Untap another target permanent.",
+      "mana_cost": "{G}{U}",
+      "type_line": "Creature — Merfolk",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G",
+        "U"
+      ],
+      "color_identity": [
+        "G",
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/lcc/273/kioras-follower?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature — Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Suppression Field": {
+      "oracle_id": "63439f19-01e5-4ae1-9841-90493d62d0c8",
+      "name": "Suppression Field",
+      "oracle_text": "Activated abilities cost {2} more to activate unless they're mana abilities.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/rav/31/suppression-field?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Temporal Adept": {
+      "oracle_id": "fd9b5462-6578-4bf6-8026-23eaf5af3eee",
+      "name": "Temporal Adept",
+      "oracle_text": "{U}{U}{U}, {T}: Return target permanent to its owner's hand.",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Creature — Human Wizard",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/102/temporal-adept?utm_source=api"
+    },
+    "Twiddle": {
+      "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+      "name": "Twiddle",
+      "oracle_text": "You may tap or untap target artifact, creature, or land.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    }
+  }
+}

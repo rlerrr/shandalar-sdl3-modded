@@ -1,0 +1,691 @@
+{
+  "version": 1,
+  "sources": {
+    "Caustic Wasps": {
+      "oracle": {
+        "oracle_id": "fea997a4-3ed1-4f83-b16a-56939f4b2211",
+        "name": "Caustic Wasps",
+        "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, you may destroy target artifact that player controls.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature \u2014 Insect",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/234/caustic-wasps?utm_source=api"
+      },
+      "handler": "manalinkeh_card_rustmouth_ogre",
+      "params": {
+        "effect": "destroy",
+        "selector": "artifact",
+        "optional": true,
+        "scope": "combat",
+        "payment": null,
+        "ninjutsu": null,
+        "maxblockers": null,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": true
+      }
+    },
+    "Soltari Visionary": {
+      "oracle": {
+        "oracle_id": "7971f5c2-97b7-441f-ad77-954f43ede0a1",
+        "name": "Soltari Visionary",
+        "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nWhenever this creature deals damage to a player, destroy target enchantment that player controls.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature \u2014 Soltari Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Shadow"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/exo/20/soltari-visionary?utm_source=api"
+      },
+      "handler": "manalinkeh_card_soltari_visionary",
+      "params": {
+        "effect": "destroy",
+        "selector": "enchantment",
+        "optional": false,
+        "scope": "any",
+        "payment": null,
+        "ninjutsu": null,
+        "maxblockers": null,
+        "keywords": [
+          "Shadow"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    },
+    "Throat Slitter": {
+      "oracle": {
+        "oracle_id": "56f782b7-d46c-4aa1-ae16-66d6401c72ae",
+        "name": "Throat Slitter",
+        "oracle_text": "Ninjutsu {2}{B} ({2}{B}, Return an unblocked attacker you control to hand: Put this card onto the battlefield from your hand tapped and attacking.)\nWhenever this creature deals combat damage to a player, destroy target nonblack creature that player controls.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature \u2014 Rat Ninja",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Ninjutsu"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pca/37/throat-slitter?utm_source=api"
+      },
+      "handler": "manalinkeh_card_throat_slitter",
+      "params": {
+        "effect": "destroy",
+        "selector": "nonblack_creature",
+        "optional": false,
+        "scope": "combat",
+        "payment": null,
+        "ninjutsu": "{2}{B}",
+        "maxblockers": null,
+        "keywords": [
+          "Ninjutsu"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    },
+    "Ashling, the Extinguisher": {
+      "oracle": {
+        "oracle_id": "e89e102f-e3bc-4c16-bb27-09db83cec5ec",
+        "name": "Ashling, the Extinguisher",
+        "oracle_text": "Whenever Ashling deals combat damage to a player, choose target creature that player controls. The player sacrifices that creature.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Legendary Creature \u2014 Elemental Shaman",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/eve/33/ashling-the-extinguisher?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ashling_the_extinguisher",
+      "params": {
+        "effect": "targeted_sacrifice",
+        "selector": "creature",
+        "optional": false,
+        "scope": "combat",
+        "payment": null,
+        "ninjutsu": null,
+        "maxblockers": null,
+        "keywords": []
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    },
+    "Blind Zealot": {
+      "oracle": {
+        "oracle_id": "30c7e304-ecfe-44c1-88d1-f507df63c080",
+        "name": "Blind Zealot",
+        "oracle_text": "Intimidate (This creature can't be blocked except by artifact creatures and/or creatures that share a color with it.)\nWhenever this creature deals combat damage to a player, you may sacrifice it. If you do, destroy target creature that player controls.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature \u2014 Phyrexian Human Cleric",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Intimidate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/nph/52/blind-zealot?utm_source=api"
+      },
+      "handler": "manalinkeh_card_blind_zealot",
+      "params": {
+        "effect": "sacrifice_source_then_destroy",
+        "selector": "creature",
+        "optional": true,
+        "scope": "combat",
+        "payment": null,
+        "ninjutsu": null,
+        "maxblockers": null,
+        "keywords": [
+          "Intimidate"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": true
+      }
+    },
+    "Numot, the Devastator": {
+      "oracle": {
+        "oracle_id": "1c6d4322-1588-4fc2-a60a-5b5e724638c5",
+        "name": "Numot, the Devastator",
+        "oracle_text": "Flying\nWhenever Numot deals combat damage to a player, you may pay {2}{R}. If you do, destroy up to two target lands.",
+        "mana_cost": "{3}{U}{R}{W}",
+        "type_line": "Legendary Creature \u2014 Dragon",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmd/215/numot-the-devastator?utm_source=api"
+      },
+      "handler": "manalinkeh_card_numot_the_devastator",
+      "params": {
+        "effect": "pay_then_destroy_up_to_two",
+        "selector": "land",
+        "optional": true,
+        "scope": "combat",
+        "payment": "{2}{R}",
+        "ninjutsu": null,
+        "maxblockers": null,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    },
+    "Sunder Shaman": {
+      "oracle": {
+        "oracle_id": "38b23fe1-0e76-494a-ad9b-bc22c7d21a5e",
+        "name": "Sunder Shaman",
+        "oracle_text": "This creature can't be blocked by more than one creature.\nWhenever this creature deals combat damage to a player, destroy target artifact or enchantment that player controls.",
+        "mana_cost": "{R}{R}{G}{G}",
+        "type_line": "Creature \u2014 Giant Shaman",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/230/sunder-shaman?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sunder_shaman",
+      "params": {
+        "effect": "destroy",
+        "selector": "artifact_or_enchantment",
+        "optional": false,
+        "scope": "combat",
+        "payment": null,
+        "ninjutsu": null,
+        "maxblockers": 1,
+        "keywords": []
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    },
+    "Rustmouth Ogre": {
+      "oracle": {
+        "oracle_id": "0a64b683-7017-44cb-923f-b512fe3886f6",
+        "name": "Rustmouth Ogre",
+        "oracle_text": "Whenever this creature deals combat damage to a player, you may destroy target artifact that player controls.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature \u2014 Ogre",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/103/rustmouth-ogre?utm_source=api"
+      },
+      "handler": "manalinkeh_card_rustmouth_ogre",
+      "params": {
+        "effect": "destroy",
+        "selector": "artifact",
+        "optional": true,
+        "scope": "combat",
+        "payment": null,
+        "ninjutsu": null,
+        "maxblockers": null,
+        "keywords": []
+      },
+      "input_profile": {
+        "outer_optional": true
+      }
+    },
+    "Trygon Predator": {
+      "oracle": {
+        "oracle_id": "c744b5f4-fbcf-48b8-9d60-5e9c6ac297e0",
+        "name": "Trygon Predator",
+        "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, you may destroy target artifact or enchantment that player controls.",
+        "mana_cost": "{1}{G}{U}",
+        "type_line": "Creature \u2014 Beast",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/667/trygon-predator?utm_source=api"
+      },
+      "handler": "manalinkeh_card_trygon_predator",
+      "params": {
+        "effect": "destroy",
+        "selector": "artifact_or_enchantment",
+        "optional": true,
+        "scope": "combat",
+        "payment": null,
+        "ninjutsu": null,
+        "maxblockers": null,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "input_profile": {
+        "outer_optional": false
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Wall of Denial": {
+      "oracle_id": "9cc092f9-e8f0-40ea-847d-813b70f889db",
+      "name": "Wall of Denial",
+      "oracle_text": "Defender, flying\nShroud (This creature can't be the target of spells or abilities.)",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Creature \u2014 Wall",
+      "power": "0",
+      "toughness": "8",
+      "keywords": [
+        "Flying",
+        "Shroud",
+        "Defender"
+      ],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/939/wall-of-denial?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Hermetic Study": {
+      "oracle_id": "792d7818-ee5c-4254-b969-7b50f475c629",
+      "name": "Hermetic Study",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+      "mana_cost": "{1}{U}",
+      "type_line": "Enchantment \u2014 Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/53/hermetic-study?utm_source=api"
+    },
+    "Fervor": {
+      "oracle_id": "8e0cea9c-3110-4728-9378-76849e33bb90",
+      "name": "Fervor",
+      "oracle_text": "Creatures you control have haste. (They can attack and {T} as soon as they come under your control.)",
+      "mana_cost": "{2}{R}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m13/129/fervor?utm_source=api"
+    },
+    "Darksteel Myr": {
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "name": "Darksteel Myr",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature \u2014 Myr",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+    },
+    "Darksteel Gargoyle": {
+      "oracle_id": "73010421-374f-458e-aa88-248ef8ae4f8b",
+      "name": "Darksteel Gargoyle",
+      "oracle_text": "Flying\nIndestructible (Damage and effects that say \"destroy\" don't destroy this creature.)",
+      "mana_cost": "{7}",
+      "type_line": "Artifact Creature \u2014 Gargoyle",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Flying",
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 7.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/td2/19/darksteel-gargoyle?utm_source=api"
+    },
+    "Dauthi Slayer": {
+      "oracle_id": "c1d0537b-954f-4d3b-b9fe-1dd7ffaa1197",
+      "name": "Dauthi Slayer",
+      "oracle_text": "Shadow (This creature can block or be blocked by only creatures with shadow.)\nThis creature attacks each combat if able.",
+      "mana_cost": "{B}{B}",
+      "type_line": "Creature \u2014 Dauthi Soldier",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Shadow"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tpr/97/dauthi-slayer?utm_source=api"
+    },
+    "Abyssal Specter": {
+      "oracle_id": "51833cff-6519-4806-8d91-0040e9a02189",
+      "name": "Abyssal Specter",
+      "oracle_text": "Flying\nWhenever this creature deals damage to a player, that player discards a card.",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature \u2014 Specter",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mm3/59/abyssal-specter?utm_source=api"
+    },
+    "Control Magic": {
+      "oracle_id": "cd0d7141-46d2-4aa3-bc77-6b3b4513803e",
+      "name": "Control Magic",
+      "oracle_text": "Enchant creature\nYou control enchanted creature.",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Enchantment \u2014 Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cma/34/control-magic?utm_source=api"
+    }
+  },
+  "native_characteristics_only_witnesses": [
+    "Grizzly Bears",
+    "Wall of Denial",
+    "Ornithopter"
+  ]
+}

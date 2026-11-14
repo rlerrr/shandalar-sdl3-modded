@@ -1,0 +1,204 @@
+{
+  "version": 1,
+  "card": "Hangarback Walker",
+  "csvid": 15144,
+  "recipes": [
+    {
+      "family": "permanent_plus1_activation",
+      "version": 2,
+      "oracle_text": "This creature enters with X +1/+1 counters on it.\nWhen this creature dies, create a 1/1 colorless Thopter artifact creature token with flying for each +1/+1 counter on this creature.\n{1}, {T}: Put a +1/+1 counter on this creature.",
+      "params": {
+        "ability": 2,
+        "interface": {
+          "dialogs": {},
+          "sacrifice_choices": {},
+          "casting_colors": [],
+          "converge_colors": [],
+          "intent": null,
+          "unavailable": {}
+        },
+        "other_clauses": [
+          "This creature enters with X +1/+1 counters on it.",
+          "When this creature dies, create a 1/1 colorless Thopter artifact creature token with flying for each +1/+1 counter on this creature."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "fresh_0",
+        "tapped_0",
+        "repeat_0",
+        "repeat_untap_0",
+        "insufficient_mana_0",
+        "entry_x0_0",
+        "entry_x1_0",
+        "entry_x3_0",
+        "source_dies_after_0",
+        "death_snapshot_0",
+        "token_block_flying_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "fresh_1",
+        "tapped_1",
+        "repeat_1",
+        "repeat_untap_1",
+        "insufficient_mana_1",
+        "entry_x0_1",
+        "entry_x1_1",
+        "entry_x3_1",
+        "source_dies_after_1",
+        "death_snapshot_1",
+        "token_block_flying_1"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "name": "PermanentPlus1Activation_HangarbackDoubleXCostProbe_0",
+      "fixture": "empty_main",
+      "seed": 123,
+      "setup": [
+        {
+          "name": "Hangarback Walker",
+          "ref": "source",
+          "player": 0,
+          "zone": "hand"
+        }
+      ],
+      "steps": [
+        {
+          "op": "turn",
+          "player": 0,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 0,
+          "value": 6
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 1,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 2,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 3,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 4,
+          "value": 0
+        },
+        {
+          "op": "set_mana",
+          "player": 0,
+          "color": 5,
+          "value": 0
+        },
+        {
+          "op": "choose_x",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "choose_x",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "cast",
+          "ref": "source",
+          "value": 1
+        },
+        {
+          "op": "assert_stack",
+          "value": 1
+        },
+        {
+          "op": "assert_choices_consumed"
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "resolve"
+        },
+        {
+          "op": "refresh"
+        },
+        {
+          "op": "require_card",
+          "ref": "source",
+          "property": "in_play",
+          "value": 1
+        },
+        {
+          "op": "assert_counter",
+          "ref": "source",
+          "counter_kind": "plus1",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "power",
+          "value": 2
+        },
+        {
+          "op": "assert_card",
+          "ref": "source",
+          "property": "toughness",
+          "value": 2
+        },
+        {
+          "op": "assert_mana_total",
+          "player": 0,
+          "value": 2
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "battlefield",
+          "index": 15144,
+          "value": 1
+        },
+        {
+          "op": "assert_zone_multiplicity",
+          "player": 0,
+          "zone": "hand",
+          "index": 15144,
+          "value": 0
+        },
+        {
+          "op": "assert_choices_consumed"
+        }
+      ]
+    }
+  ]
+}

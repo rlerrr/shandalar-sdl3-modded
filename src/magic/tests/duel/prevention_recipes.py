@@ -53,6 +53,7 @@ BASE_GAPS = ['multiple blockers', 'damage redirection', 'damage that cannot be p
 
 def spec(d, r):
  from recipes import cost_from_oracle
+ if isinstance(d.get('params'),dict) and d['params'].get('schema')==7:return _unpreventable_spec(d,r)
  if isinstance(d.get('params'),dict) and d['params'].get('extension')=='replacement':return _replacement_spec(d,r)
  if isinstance(d.get('params'),dict) and d['params'].get('extension')=='modifier':return _modifier_spec(d,r)
  if isinstance(d.get('params'),dict) and d['params'].get('extension')=='entry_shield':return _entry_shield_spec(d,r)
@@ -118,6 +119,7 @@ def spec(d, r):
 
 
 def variants(p):
+ if p.get('schema')==7:return _unpreventable_variants(p)
  if p.get('extension')=='replacement':return _replacement_variants(p)
  if p.get('extension')=='modifier':return _modifier_variants(p)
  if p.get('extension')=='entry_shield':return _entry_shield_variants(p)
@@ -167,6 +169,7 @@ def validate_witnesses(o, rows):
 
 
 def expand(name, csvid, d, p, selected, rows, oracle):
+ if p.get('schema')==7:return _unpreventable_expand(name,csvid,d,p,selected,rows,oracle)
  if p.get('extension')=='replacement':return _replacement_expand(name,csvid,d,p,selected,rows,oracle)
  if p.get('extension')=='modifier':return _modifier_expand(name,csvid,d,p,selected,rows,oracle)
  if p.get('extension')=='entry_shield':return _entry_shield_expand(name,csvid,d,p,selected,rows,oracle)
@@ -1457,4 +1460,158 @@ def _entry_shield_expand(name,csvid,d,p,selected,rows,o):
   if v=='resolved_snapshot':steps += [step('capture'),step('record_state'),step('ai_roundtrip'),step('restore')]+copy.deepcopy(checks)+[step('assert_recorded_state')]
   result.append(dict(name=f'PreventionEntryShieldRecipe_{csvid}_{variant}',card=name,fixture='empty_main' if bare else 'stocked_zones',seed=123,setup=setup,steps=steps,
    _recipe=dict(family='prevention',version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],untested_components=p['gaps']+['unpreventable damage','redirection and prevention ordering','control changes','multiplayer'])))
+ return result
+
+
+def _unpreventable_pins():
+ return json.loads((Path(__file__).parent/'data/prevention_wave7_witnesses.json').read_text(encoding='utf8'))
+
+
+def _unpreventable_spec(d,r):
+ from recipes import cost_from_oracle
+ pins=_unpreventable_pins();p=d.get('params');profile=pins['sources'].get((r or {}).get('name'))
+ if (not profile or type(p) is not dict or p!=profile['params']
+     or d.get('family')!='prevention' or type(d.get('version')) is not int or d['version']!=2
+     or d.get('oracle_text')!=r.get('oracle_text') or 'variants' not in d
+     or r.get('layout')!='normal' or r.get('card_faces') or r.get('selected_face')
+     or any(r.get(k)!=value for k,value in profile['oracle'].items())):
+  raise ValueError('whole pinned schema7 unpreventable source and explicit variants required')
+ modes={'Flaring Pain':'global','Banefire':'threshold','Lava Burst':'creature','Demonfire':'hellbent'}
+ if (set(p)!={'schema','extension','profile','mode','gaps','target_repetitions'}
+     or type(p['schema']) is not int or p['schema']!=7
+     or type(p['target_repetitions']) is not int
+     or any(type(p[k]) is not str for k in ('extension','profile','mode'))
+     or type(p['gaps']) is not list or any(type(gap) is not str for gap in p['gaps'])
+     or p['extension']!='unpreventable' or p['profile']!=r['name'] or p['mode']!=modes.get(r['name'])
+     or p['target_repetitions']!=(2 if r['name']=='Banefire' else 1)
+     or r['type_line']!=('Instant' if p['mode']=='global' else 'Sorcery')):
+  raise ValueError('reviewed complete unpreventable source mode required')
+ return dict(copy.deepcopy(p),family='prevention',mana=cost_from_oracle(dict(mana_cost=r['mana_cost'].replace('{X}',''))))
+
+
+def _unpreventable_variants(p):
+ vs=['creature','player','payment','insufficient_mana','pending_snapshot','resolved_snapshot','without_shield','friendly_creature']
+ if p['mode']=='global':vs+=['without_effect','cleanup']
+ else:vs+=['x_zero','lost_target']
+ if p['mode']=='threshold':vs+=['threshold_below','threshold_at','threshold_above']
+ if p['mode']=='hellbent':vs+=['with_hand_card','lethal_exile']
+ return [v+'_'+str(owner) for owner in (0,1) for v in vs]
+
+
+def _unpreventable_expand(name,csvid,d,p,selected,rows,o):
+ from recipes import card,step,observe,cost_from_oracle
+ allowed=_unpreventable_variants(p)
+ if not selected or len(set(selected))!=len(selected) or any(v not in allowed for v in selected):
+  raise ValueError('explicit unique reviewed unpreventable variants required')
+ for nm,pin in _unpreventable_pins()['witnesses'].items():
+  if nm not in rows or o.get(nm,{}).get('card_faces') or o.get(nm,{}).get('selected_face') or any(o.get(nm,{}).get(k)!=value for k,value in pin.items()):
+   raise ValueError('whole unpreventable witness changed: '+nm)
+ result=[]
+ for variant in selected:
+  v,owner=variant.rsplit('_',1);owner=int(owner);enemy=1-owner;mode=p['mode'];global_effect=mode=='global'
+  recipient_owner=owner if v=='friendly_creature' else enemy
+  target_player=v=='player';x={'x_zero':0,'threshold_below':4,'threshold_at':5,'threshold_above':8}.get(v,5 if mode=='threshold' else 3)
+  shield=v not in ('without_shield','lethal_exile');hellbent=v!='with_hand_card'
+  setup=[];hands=[[],[]];graves=[[],[]];exiles=[[],[]];mana=[[20]*6,[20]*6];life=[20,20]
+  creatures={};actions=[];pending_cut=None
+  def add(nm,ref,pl,zone='battlefield'):
+   setup.append(card(nm,ref,pl,zone))
+   if zone=='hand':hands[pl].append(nm)
+   elif 'Creature' in o[nm]['type_line']:creatures[ref]=dict(name=nm,player=pl,zone=zone,damage=0)
+  def receipt():
+   return [step('assert_mana',player=pl,color=c,value=n) for pl in (0,1) for c,n in enumerate(mana[pl])]
+  def pool(pl,amount):
+   mana[pl]=list(amount)
+   return [step('set_mana',player=pl,color=c,value=n) for c,n in enumerate(amount)]
+  def cast(ref,nm,pl,target=None,player_target=None,amount=None):
+   cost=cost_from_oracle(dict(mana_cost=o[nm]['mana_cost'].replace('{X}','')))
+   if amount is not None:cost[0]+=amount
+   seq=pool(pl,cost)
+   if amount is not None:seq.append(step('choose_x',player=pl,value=amount))
+   if target:
+    seq += [step('choose_target',player=pl,ref=target) for _ in range(p['target_repetitions'] if ref=='source' else 1)]
+   if player_target is not None:
+    seq += [step('choose_player',player=pl,value=player_target) for _ in range(p['target_repetitions'] if ref=='source' else 1)]
+   seq += [step('cast',ref=ref,value=1),step('assert_stack',value=1)]
+   return seq
+  def finish(nm,pl,amount=None):
+   cost=cost_from_oracle(dict(mana_cost=o[nm]['mana_cost'].replace('{X}','')))
+   if amount is not None:cost[0]+=amount
+   mana[pl]=[a-b for a,b in zip(mana[pl],cost)];hands[pl].remove(nm);graves[pl].append(nm)
+   return [step('resolve'),step('assert_stack',value=0),step('assert_choices_consumed')]
+  def damage(ref,amount,exile=False):
+   if ref is None:
+    life[recipient_owner]-=amount
+    return [step('assert_life',player=recipient_owner,value=life[recipient_owner])]
+   entity=creatures[ref];entity['damage']+=amount
+   if entity['damage']>=int(o[entity['name']]['toughness']):
+    entity['zone']='exile' if exile else 'graveyard';(exiles if exile else graves)[entity['player']].append(entity['name'])
+    return [observe(ref,'in_play',0)]
+   return [observe(ref,'in_play',1),observe(ref,'damage',entity['damage'])]
+  add(name,'source',owner,'hand')
+  add('Grizzly Bears' if v=='lethal_exile' else 'Scaled Wurm','recipient',recipient_owner)
+  add('Craw Wurm','control',1-recipient_owner)
+  add('Sol Ring','noncreature',recipient_owner)
+  if mode=='hellbent' and not hellbent:add('Forest','hand_control',owner,'hand')
+  if shield:add('Safe Passage','shield',recipient_owner,'hand')
+  # The unrelated Bolt proves that the cast shield really prevents damage
+  # before any asserted inability to prevent damage is exercised.
+  if shield:add('Lightning Bolt','control_bolt',owner,'hand')
+  if global_effect:add('Lightning Bolt','effect_bolt',owner,'hand')
+  if v=='cleanup':
+   add('Safe Passage','next_shield',recipient_owner,'hand');add('Lightning Bolt','next_bolt',owner,'hand')
+  if v=='lost_target':add('Unsummon','bounce',recipient_owner,'hand')
+  pre=[step('turn',player=owner,value=0)]+pool(0,mana[0])+pool(1,mana[1])
+  if shield:
+   actions += cast('shield','Safe Passage',recipient_owner)+finish('Safe Passage',recipient_owner)
+   actions += cast('control_bolt','Lightning Bolt',owner,target='recipient')+finish('Lightning Bolt',owner)+damage('recipient',0)
+  source_cost=list(p['mana'])
+  if not global_effect:source_cost[0]+=x
+  if v in ('payment','insufficient_mana'):actions += pool(owner,source_cost if v=='payment' else [0]*6)
+  if v=='insufficient_mana':
+   actions += [step('cast',ref='source',value=0),step('assert_stack',value=0),step('assert_choices_consumed')]
+  elif v!='without_effect':
+   actions += cast('source',name,owner,target=None if global_effect or target_player else 'recipient',player_target=recipient_owner if target_player and not global_effect else None,amount=None if global_effect else x)
+   pending_cut=len(actions)
+   actions += [observe('recipient','damage',0),step('assert_life',player=recipient_owner,value=20)]
+   if v=='lost_target':
+    cost=cost_from_oracle(o['Unsummon']);actions += pool(recipient_owner,cost)
+    actions += [step('choose_target',player=recipient_owner,ref='recipient'),step('cast_response',ref='bounce',value=1),step('assert_stack',value=2),step('resolve_response'),step('assert_choices_consumed')]
+    mana[recipient_owner]=[a-b for a,b in zip(mana[recipient_owner],cost)];hands[recipient_owner].remove('Unsummon');graves[recipient_owner].append('Unsummon')
+    hands[recipient_owner].append(creatures['recipient']['name']);creatures['recipient']['zone']='hand'
+    mana[owner]=[a-b for a,b in zip(mana[owner],source_cost)];hands[owner].remove(name);graves[owner].append(name)
+   else:actions += finish(name,owner,None if global_effect else x)
+   if v=='payment':actions += receipt()
+   if not global_effect and v!='lost_target':
+    bypass=(mode=='threshold' and x>=5) or (mode=='creature' and not target_player) or (mode=='hellbent' and hellbent)
+    actions += damage(None if target_player else 'recipient',x if bypass or not shield else 0,exile=mode=='hellbent')
+  if global_effect and v!='insufficient_mana':
+   if v=='payment':actions += pool(owner,[20]*6)
+   actions += cast('effect_bolt','Lightning Bolt',owner,target=None if target_player else 'recipient',player_target=recipient_owner if target_player else None)+finish('Lightning Bolt',owner)
+   actions += damage(None if target_player else 'recipient',0 if v=='without_effect' else 3)
+   if v=='cleanup':
+    actions += [step('cleanup'),step('refresh')]
+    for entity in creatures.values():entity['damage']=0
+    actions += cast('next_shield','Safe Passage',recipient_owner)+finish('Safe Passage',recipient_owner)
+    actions += cast('next_bolt','Lightning Bolt',owner,target='recipient')+finish('Lightning Bolt',owner)+damage('recipient',0)
+  checks=[step('assert_stack',value=0),step('assert_choices_consumed')]+receipt()
+  for ref,entity in creatures.items():
+   checks += [observe(ref,'in_play',int(entity['zone']=='battlefield'))]
+   if entity['zone']=='battlefield':checks += [observe(ref,'power',int(o[entity['name']]['power'])),observe(ref,'toughness',int(o[entity['name']]['toughness'])),observe(ref,'damage',entity['damage'])]
+  checks += [observe('noncreature','in_play',1)]
+  universe={item['name'] for item in setup}
+  for pl in (0,1):
+   battlefield=[entity['name'] for entity in creatures.values() if entity['player']==pl and entity['zone']=='battlefield']+(['Sol Ring'] if pl==recipient_owner else [])
+   checks += [step('assert_life',player=pl,value=life[pl])]
+   for zone,names in (('battlefield',battlefield),('hand',hands[pl]),('graveyard',graves[pl]),('exile',exiles[pl]),('library',[])):
+    checks += [step('assert_zone',player=pl,zone=zone,value=len(names))]
+    if zone!='library':
+     counts=Counter(names);checks += [step('assert_zone_multiplicity',player=pl,zone=zone,index=rows[nm]['csvid'],value=counts[nm]) for nm in sorted(universe)]
+  steps=pre+actions+checks
+  if v=='pending_snapshot':
+   tail=actions[pending_cut:]+checks
+   steps=pre+actions[:pending_cut]+[step('capture')]+copy.deepcopy(tail)+[step('record_state'),step('ai_roundtrip'),step('restore')]+copy.deepcopy(tail)+[step('assert_recorded_state')]
+  if v=='resolved_snapshot':steps += [step('capture'),step('record_state'),step('ai_roundtrip'),step('restore')]+copy.deepcopy(checks)+[step('assert_recorded_state')]
+  result.append(dict(name=f'PreventionUnpreventableRecipe_{csvid}_{variant}',card=name,fixture='empty_main',seed=123,setup=setup,steps=steps,
+   _recipe=dict(family='prevention',version=2,variant=variant,params=d['params'],oracle_text=d['oracle_text'],untested_components=p['gaps']+['planeswalker targets','damage replacement ordering','multiplayer'])))
  return result

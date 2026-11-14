@@ -1,0 +1,107 @@
+{
+  "version": 1,
+  "card": "Torchling",
+  "csvid": 8867,
+  "recipes": [
+    {
+      "family": "activated_temporary_pt",
+      "version": 2,
+      "oracle_text": "{R}: Untap this creature.\n{R}: Target creature blocks this creature this turn if able.\n{R}: Change the target of target spell that targets only this creature.\n{1}: This creature gets +1/-1 until end of turn.\n{1}: This creature gets -1/+1 until end of turn.",
+      "params": {
+        "ability": 3,
+        "interface": {
+          "mode_label": "+1/-1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "other_clauses": [
+          "{R}: Untap this creature.",
+          "{R}: Target creature blocks this creature this turn if able.",
+          "{R}: Change the target of target spell that targets only this creature.",
+          "{1}: This creature gets -1/+1 until end of turn."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "counter_cleanup_0",
+        "source_removed_pending_0",
+        "fresh_0",
+        "tapped_0",
+        "insufficient_mana_0",
+        "repeat_0",
+        "lethal_repeat_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "counter_cleanup_1",
+        "source_removed_pending_1",
+        "fresh_1",
+        "tapped_1",
+        "insufficient_mana_1",
+        "repeat_1",
+        "lethal_repeat_1"
+      ]
+    },
+    {
+      "family": "activated_temporary_pt",
+      "version": 2,
+      "oracle_text": "{R}: Untap this creature.\n{R}: Target creature blocks this creature this turn if able.\n{R}: Change the target of target spell that targets only this creature.\n{1}: This creature gets +1/-1 until end of turn.\n{1}: This creature gets -1/+1 until end of turn.",
+      "params": {
+        "ability": 4,
+        "interface": {
+          "mode_label": "-1/+1",
+          "sacrifice_choices": {},
+          "discard_choices": {},
+          "sacrifice_before_target": false,
+          "other_color": -1
+        },
+        "other_clauses": [
+          "{R}: Untap this creature.",
+          "{R}: Target creature blocks this creature this turn if able.",
+          "{R}: Change the target of target spell that targets only this creature.",
+          "{1}: This creature gets +1/-1 until end of turn."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "counter_cleanup_0",
+        "source_removed_pending_0",
+        "fresh_0",
+        "tapped_0",
+        "insufficient_mana_0",
+        "repeat_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "counter_cleanup_1",
+        "source_removed_pending_1",
+        "fresh_1",
+        "tapped_1",
+        "insufficient_mana_1",
+        "repeat_1"
+      ]
+    }
+  ]
+}

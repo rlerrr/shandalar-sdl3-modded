@@ -645,4 +645,72 @@ class GraveyardExileTest(unittest.TestCase):
      receipts=[x for x in steps[start:end] if x['op']=='assert_zone_multiplicity' and x.get('zone')=='exile' and x.get('index')==self.rows[name]['csvid']]
      self.assertTrue(receipts);self.assertTrue(all(x['value']==number for x in receipts))
 
+class GraveyardExileWave7Test(unittest.TestCase):
+ @classmethod
+ def setUpClass(cls):
+  cls.o=json.loads((Path(__file__).parent/'data/oracle.json').read_text(encoding='utf8'))['cards'];cls.rows={r['name']:r for r in registry()}
+ def d(self,name,variant='effect_0'):
+  return dict(family='graveyard_exile',version=2,params=copy.deepcopy(f.WAVE7_PROFILES[name]['params']),oracle_text=self.o[name]['oracle_text'],variants=[variant])
+ def cases(self,name,variant='effect_0',d=None):
+  d=d or self.d(name,variant);p=f.spec(d,self.o[name]);return f.expand(name,self.rows[name]['csvid'],d,p,d['variants'],self.rows,self.o)
+ def test_wave7_requires_complete_identity_and_exact_component_params(self):
+  for name in f.WAVE7_PROFILES:
+   for key,value in [('oracle_text','Exile each graveyard.'),('mana_cost','{7}'),('oracle_id','other'),('layout','transform')]:
+    r=copy.deepcopy(self.o[name]);r[key]=value
+    with self.assertRaises(ValueError):f.spec(self.d(name),r)
+   for key,value in [('schema',7.0),('draw',1),('quantity','one'),('graveyard','all'),('battlefield_controls',1)]:
+    d=self.d(name);d['params'][key]=value
+    with self.assertRaises(ValueError):f.spec(d,self.o[name])
+ def test_wave7_grammar_rejects_mutually_consistent_bad_source_pins(self):
+  for name in f.WAVE7_PROFILES:
+   source=copy.deepcopy(self.o[name]);source['oracle_text']+=' Draw a card.'
+   with self.assertRaises(ValueError):f._validate_wave7_profile(source,copy.deepcopy(f.WAVE7_PROFILES[name]['params']))
+ def test_free_crypt_cast_is_not_denied_for_zero_mana(self):
+  d=self.d("Tormod's Crypt");p=f.spec(d,self.o["Tormod's Crypt"])
+  self.assertNotIn('insufficient_cast_mana_0',f.variants(p))
+  for owner in (0,1):
+   steps=self.cases("Tormod's Crypt",f'cast_payment_{owner}')[0]['steps']
+   self.assertIn(dict(op='cast',ref='source',value=1),steps)
+   self.assertIn(dict(op='assert_mana_total',player=owner,value=0),steps)
+ def test_crypt_sacrifice_cost_precedes_own_graveyard_exile(self):
+  csvid=self.rows["Tormod's Crypt"]['csvid']
+  for owner in (0,1):
+   steps=self.cases("Tormod's Crypt",f'own_target_{owner}')[0]['steps'];resolve=next(i for i,s in enumerate(steps) if s['op']=='resolve')
+   self.assertIn(dict(op='assert_zone_multiplicity',player=owner,zone='graveyard',index=csvid,value=1),steps[:resolve])
+   self.assertIn(dict(op='assert_zone_multiplicity',player=owner,zone='graveyard',index=csvid,value=0),steps[resolve:])
+   self.assertIn(dict(op='assert_zone_multiplicity',player=owner,zone='exile',index=csvid,value=1),steps[resolve:])
+ def test_modal_selection_is_explicit_for_both_controllers(self):
+  for owner in (0,1):
+   steps=self.cases('Rakdos Charm',f'effect_{owner}')[0]['steps']
+   self.assertIn(dict(op='present_ai_dialogs',value=1),steps)
+   self.assertIn(dict(op='choose_dialog',player=owner,value=0),steps)
+   self.assertIn(dict(op='choose_player',player=owner,value=1-owner),steps)
+   self.assertIn(dict(op='assert_choices_consumed'),steps)
+ def test_entry_and_modal_effects_keep_battlefield_controls(self):
+  for name in f.WAVE7_PROFILES:
+   steps=self.cases(name)[0]['steps']
+   for who in (0,1):
+    for index in range(4):self.assertIn(dict(op='assert_card',ref=f'zone_control_{who}_{index}',property='in_play',value=1),steps)
+ def test_empty_player_graveyard_remains_a_legal_target(self):
+  for name in f.WAVE7_PROFILES:
+   for owner in (0,1):
+    steps=self.cases(name,f'empty_graveyards_{owner}')[0]['steps']
+    self.assertIn(dict(op='choose_player',player=owner,value=1-owner),steps)
+    self.assertIn(dict(op='activate' if name=="Tormod's Crypt" else 'cast',ref='source',value=1),steps)
+ def test_constellation_scope_avoids_unmodeled_second_source_triggers(self):
+  d=self.d('Agent of Erebos');p=f.spec(d,self.o['Agent of Erebos'])
+  self.assertNotIn('repeat_0',f.variants(p))
+  self.assertTrue(any('other enchantments' in gap for gap in p['additional_components']))
+ def test_trap_component_checks_printed_cost_without_claiming_alternative_cost(self):
+  for owner in (0,1):
+   steps=self.cases('Ravenous Trap',f'payment_{owner}')[0]['steps']
+   self.assertIn(dict(op='set_mana',player=owner,color=0,value=2),steps)
+   self.assertIn(dict(op='set_mana',player=owner,color=1,value=2),steps)
+   self.assertIn(dict(op='assert_mana_total',player=owner,value=0),steps)
+   self.assertFalse(any(s['op'] in ('destroy','advance_turn') for s in steps))
+  self.assertTrue(any('alternative cost' in gap for gap in f.WAVE7_PROFILES['Ravenous Trap']['params']['additional_components']))
+ def test_trap_printed_cost_is_an_independent_grammar_requirement(self):
+  source=copy.deepcopy(self.o['Ravenous Trap']);source['mana_cost']='{0}'
+  with self.assertRaises(ValueError):f._validate_wave7_profile(source,copy.deepcopy(f.WAVE7_PROFILES['Ravenous Trap']['params']))
+
 if __name__=='__main__':unittest.main()

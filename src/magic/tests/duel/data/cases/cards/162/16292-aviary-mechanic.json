@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "card": "Aviary Mechanic",
+  "csvid": 16292,
+  "recipes": [
+    {
+      "family": "entry_own_return",
+      "version": 2,
+      "oracle_text": "When this creature enters, you may return another permanent you control to its owner's hand.",
+      "variants": [
+        "effect_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "countered_0",
+        "foreign_owned_0",
+        "alternate_choice_0",
+        "bounce_recast_0",
+        "cleanup_0",
+        "nonmatching_entry_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "wrong_color_0",
+        "decline_0",
+        "no_other_0",
+        "artifact_choice_0",
+        "land_choice_0",
+        "enchantment_choice_0",
+        "shroud_choice_0",
+        "protection_choice_0",
+        "effect_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "countered_1",
+        "foreign_owned_1",
+        "alternate_choice_1",
+        "bounce_recast_1",
+        "cleanup_1",
+        "nonmatching_entry_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "wrong_color_1",
+        "decline_1",
+        "no_other_1",
+        "artifact_choice_1",
+        "land_choice_1",
+        "enchantment_choice_1",
+        "shroud_choice_1",
+        "protection_choice_1",
+        "whole_decline_0"
+      ],
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "permanent",
+          "colors": [],
+          "count": 1,
+          "another": true,
+          "optional": true,
+          "creature": true,
+          "flash": false,
+          "flying": false,
+          "secondary": null,
+          "entry_clause": "When this creature enters, you may return another permanent you control to its owner's hand.",
+          "other_clauses": []
+        },
+        "presentation": {
+          "human_optional_trigger": true
+        }
+      }
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle real ETB return of own controlled permanents to original owner hands; nontargeted selection, own source return, mandatory/optional policy, color/type/quantity, true printed source costs/types/Flash/Flying, all printed secondary discard/draw-bottom/damage/graveyard exile/mana callbacks, real Temporal Adept bounce/recast and snapshots. Fixed handler-composed trigger order and unavailable independent priority, generic became-target observer and AI direct-discard exact identity are explicit gaps; counts and per-card hand+grave conservation remain asserted."
+}

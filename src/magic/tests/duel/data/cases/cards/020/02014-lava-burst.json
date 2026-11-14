@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "card": "Lava Burst",
+  "csvid": 2014,
+  "recipes": [
+    {
+      "family": "prevention",
+      "version": 2,
+      "oracle_text": "Lava Burst deals X damage to any target. If Lava Burst would deal damage to a creature, that damage can't be prevented or dealt instead to another permanent or player.",
+      "params": {
+        "schema": 7,
+        "extension": "unpreventable",
+        "profile": "Lava Burst",
+        "mode": "creature",
+        "gaps": [
+          "damage redirection"
+        ],
+        "target_repetitions": 1
+      },
+      "variants": [
+        "creature_0",
+        "player_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "without_shield_0",
+        "friendly_creature_0",
+        "x_zero_0",
+        "lost_target_0",
+        "creature_1",
+        "player_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "without_shield_1",
+        "friendly_creature_1",
+        "x_zero_1",
+        "lost_target_1"
+      ]
+    }
+  ]
+}

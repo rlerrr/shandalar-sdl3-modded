@@ -2739,7 +2739,7 @@ void recopy_card_onto_stack(int a1)
 
 #ifndef SHANDALAR
 /* ManalinkEh 2022: 0x26adfa0; original functions/engine.c:3761. */
-int put_card_on_stack3(int player, int card)
+static int announce_put_card_on_stack3(int player, int card)
 {
   enum
   {
@@ -2776,6 +2776,15 @@ int put_card_on_stack3(int player, int card)
   dispatch_event_to_single_card(player, card, EVENT_THIS_SPELL_CAST, -1, -1);
 
   dispatch_trigger2(current_turn, TRIGGER_SPELL_CAST, gs_prompt_specialfephase_6, 0, player, card);
+
+  return 1;
+}
+
+static int finish_put_card_on_stack3(int player, int card)
+{
+  enum { STATE_BEING_CAST = 0x80000000u };
+  card_instance_t *instance = get_card_instance(player, card);
+  int iid;
 
   land_can_be_played &= ~LCBP_SPELL_BEING_PLAYED;
   iid = instance->internal_card_id;
@@ -2873,6 +2882,27 @@ int put_card_on_stack3(int player, int card)
     return 1;
   }
 }
+
+int put_card_on_stack3(int player, int card)
+{
+  if (!announce_put_card_on_stack3(player, card))
+    return 0;
+  return finish_put_card_on_stack3(player, card);
+}
+
+#ifdef MANALINKEH_STATIC
+/* Headless tests may stop at the real cast-announcement boundary. Normal game
+   callers still execute both phases above in their original order. */
+int manalinkeh_announce_pending_spell(int player, int card)
+{
+  return announce_put_card_on_stack3(player, card);
+}
+
+int manalinkeh_finish_announced_spell(int player, int card)
+{
+  return finish_put_card_on_stack3(player, card);
+}
+#endif
 
 #endif
 

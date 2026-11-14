@@ -1,0 +1,226 @@
+{
+  "version": 1,
+  "cards": {
+    "Soldier": {
+      "oracle_id": "eac25f12-6459-438c-a09e-93e23d2cf80d",
+      "name": "Soldier",
+      "oracle_text": "",
+      "mana_cost": "",
+      "type_line": "Token Creature — Soldier",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/tfrc/3/soldier?utm_source=api"
+    }
+  },
+  "profiles": {
+    "Wing Shards": {
+      "csvid": 6602,
+      "source": {
+        "name": "Wing Shards",
+        "oracle_id": "b302bce5-d7ad-46d8-9dbf-8159e8709b4f",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{1}{W}{W}",
+        "oracle_text": "Target player sacrifices an attacking creature of their choice.\nStorm (When you cast this spell, copy it for each spell cast before it this turn. You may choose new targets for the copies.)",
+        "keywords": [
+          "Storm"
+        ],
+        "colors": [
+          "W"
+        ],
+        "cmc": 3.0
+      },
+      "params": {
+        "profile": "Wing Shards",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "any",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "multiplayer",
+          "replacement and unrelated triggered effects",
+          "Storm copies, previous-spell counts and retargeting; these cases exercise the original spell with no earlier cast this turn"
+        ],
+        "combat": "attacking",
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Soldier",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ],
+        "schema": 7,
+        "parent_response_context": true
+      }
+    },
+    "Entrapment Maneuver": {
+      "csvid": 16603,
+      "source": {
+        "name": "Entrapment Maneuver",
+        "oracle_id": "2244bef9-1e4e-44ed-9b27-810f04f9e611",
+        "layout": "normal",
+        "type_line": "Instant",
+        "mana_cost": "{3}{W}",
+        "oracle_text": "Target player sacrifices an attacking creature of their choice. You create X 1/1 white Soldier creature tokens, where X is that creature's toughness.",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "cmc": 4.0
+      },
+      "params": {
+        "profile": "Entrapment Maneuver",
+        "kind": "edict",
+        "cost_scope": "none",
+        "cost_count": 1,
+        "effect": "edict",
+        "target": "player",
+        "amount": 0,
+        "recipient": "any",
+        "scope": "creature",
+        "quantity": 1,
+        "gain": "none",
+        "secondary_loss": 0,
+        "source_destination": "graveyard",
+        "token": null,
+        "cost_first": true,
+        "target_choices": {
+          "0": 1,
+          "1": 1
+        },
+        "gaps": [
+          "multiplayer",
+          "replacement and unrelated triggered effects"
+        ],
+        "combat": "attacking",
+        "counter_response": true,
+        "witness_universe": [
+          "Air Elemental",
+          "Centaur Courser",
+          "Counterspell",
+          "Craw Wurm",
+          "Darksteel Citadel",
+          "Darksteel Myr",
+          "Darksteel Relic",
+          "Deadly Insect",
+          "Demon",
+          "Elemental",
+          "Elf Warrior",
+          "Exploration",
+          "Forest",
+          "Giant Growth",
+          "Gilded Light",
+          "Gilded Lotus",
+          "Gladecover Scout",
+          "Goblin",
+          "Grizzly Bears",
+          "Hill Giant",
+          "Insect",
+          "Island",
+          "Jace Beleren",
+          "Lightning Bolt",
+          "Llanowar Elves",
+          "Memnite",
+          "Mogg Raider",
+          "Mountain",
+          "Pegasus",
+          "Phyrexian Hulk",
+          "Plains",
+          "Predator Ooze",
+          "Ranger's Guile",
+          "Reclaim",
+          "Scathe Zombies",
+          "Seal of Cleansing",
+          "Seal of Fire",
+          "Shivan Dragon",
+          "Sol Ring",
+          "Soldier",
+          "Suntail Hawk",
+          "Unsummon",
+          "Wall of Ice",
+          "Wall of Spears",
+          "War Mammoth",
+          "Zombie"
+        ],
+        "schema": 7,
+        "sacrifice_token": {
+          "name": "Soldier",
+          "colors": [
+            "W"
+          ],
+          "power": 1,
+          "toughness": 1,
+          "subtypes": [
+            "Soldier"
+          ],
+          "count": "sacrificed_toughness"
+        }
+      }
+    }
+  }
+}

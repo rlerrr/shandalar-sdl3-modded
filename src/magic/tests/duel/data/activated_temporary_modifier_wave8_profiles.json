@@ -1,0 +1,1779 @@
+{
+  "version": 1,
+  "sources": {
+    "Death-Hood Cobra": {
+      "csvid": 11587,
+      "oracle": {
+        "oracle_id": "747dfffd-880c-48fe-9380-eb56071f5910",
+        "name": "Death-Hood Cobra",
+        "oracle_text": "{1}{G}: This creature gains reach until end of turn.\n{1}{G}: This creature gains deathtouch until end of turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature \u2014 Phyrexian Snake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/163/death-hood-cobra?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Gains Reach",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        },
+        "1": {
+          "mode_label": "Gains Deathtouch",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/new_phyrexia.c",
+      "input_source_line": 3182,
+      "handler": "manalinkeh_card_death_hood_cobra"
+    },
+    "Patrol Hound": {
+      "csvid": 5649,
+      "oracle": {
+        "oracle_id": "115dabbd-1a09-4641-a428-92fcbfd82ae9",
+        "name": "Patrol Hound",
+        "oracle_text": "Discard a card: This creature gains first strike until end of turn.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature \u2014 Dog",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/38/patrol-hound?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {
+            "0": true,
+            "1": false
+          },
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/odissey.c",
+      "input_source_line": 4231,
+      "handler": "manalinkeh_card_patrol_hound"
+    },
+    "Boros Guildmage": {
+      "csvid": 7779,
+      "oracle": {
+        "oracle_id": "266c2f49-82eb-48e9-a7ea-e0da787fa40e",
+        "name": "Boros Guildmage",
+        "oracle_text": "{1}{R}: Target creature gains haste until end of turn.\n{1}{W}: Target creature gains first strike until end of turn.",
+        "mana_cost": "{R/W}{R/W}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R",
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/168/boros-guildmage?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": "Give Haste",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        },
+        "1": {
+          "mode_label": "Give First Strike",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/ravnica.c",
+      "input_source_line": 1014,
+      "casting_colors": [
+        "R",
+        "R"
+      ],
+      "handler": "manalinkeh_card_boros_guildmage"
+    },
+    "Flowstone Channeler": {
+      "csvid": 8549,
+      "oracle": {
+        "oracle_id": "91818ad0-b22a-423c-bed6-a285f2f8c9d4",
+        "name": "Flowstone Channeler",
+        "oracle_text": "{1}{R}, {T}, Discard a card: Target creature gets +1/-1 and gains haste until end of turn.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature \u2014 Human Spellshaper",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsp/155/flowstone-channeler?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {
+            "0": true,
+            "1": false
+          },
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/time_spiral.c",
+      "input_source_line": 2395,
+      "handler": "manalinkeh_card_flowstone_channeler"
+    },
+    "Power Matrix": {
+      "csvid": 4553,
+      "oracle": {
+        "oracle_id": "4355507e-e3a4-4c49-a1f7-344150213a2f",
+        "name": "Power Matrix",
+        "oracle_text": "{T}: Target creature gets +1/+1 and gains flying, first strike, and trample until end of turn.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/309/power-matrix?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mercadian_masques.c",
+      "input_source_line": 3650,
+      "handler": "manalinkeh_card_power_matrix"
+    },
+    "Skarrg, the Rage Pits": {
+      "csvid": 8130,
+      "oracle": {
+        "oracle_id": "92bac34e-2045-4331-842f-185711c1ac56",
+        "name": "Skarrg, the Rage Pits",
+        "oracle_text": "{T}: Add {C}.\n{R}{G}, {T}: Target creature gets +1/+1 and gains trample until end of turn.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pca/127/skarrg-the-rage-pits?utm_source=api"
+      },
+      "abilities": {
+        "1": {
+          "mode_label": "Pump a creature",
+          "fallback_color": 0,
+          "allow_auto_nonmana": true,
+          "discard_choices": {},
+          "probe_dialog": 1
+        }
+      },
+      "input_source": "src/manalinkeh/cards/guildpact.c",
+      "input_source_line": 3071,
+      "handler": "manalinkeh_card_skarrg_the_rage_pit"
+    },
+    "Shadowcloak Vampire": {
+      "csvid": 14170,
+      "oracle": {
+        "oracle_id": "00fc773a-72aa-4b58-a17c-8ac0f17c4c85",
+        "name": "Shadowcloak Vampire",
+        "oracle_text": "Pay 2 life: This creature gains flying until end of turn. (It can't be blocked except by creatures with flying or reach.)",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature \u2014 Vampire",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/113/shadowcloak-vampire?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/m15.c",
+      "input_source_line": 2543,
+      "source_review": "AI-only GAA_ONCE_PER_TURN call exists but is an unmeasured prospective AI action restriction; Oracle has no once limit and correct repeat remains expected.",
+      "handler": "manalinkeh_card_shadowcloak_vampire"
+    },
+    "Beetleform Mage": {
+      "csvid": 13121,
+      "oracle": {
+        "oracle_id": "227cbba1-700b-4255-b730-b324ab3dec34",
+        "name": "Beetleform Mage",
+        "oracle_text": "{G}{U}: This creature gets +2/+2 and gains flying until end of turn. Activate only once each turn.",
+        "mana_cost": "{1}{G}{U}",
+        "type_line": "Creature \u2014 Human Insect Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/54/beetleform-mage?utm_source=api"
+      },
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/dragons_maze.c",
+      "input_source_line": 1163,
+      "handler": "manalinkeh_card_beetleform_mage"
+    },
+    "Thornscape Apprentice": {
+      "csvid": 1347,
+      "oracle": {
+        "oracle_id": "ebb68e03-b2a5-4c5c-8e3b-968cd241d1f0",
+        "name": "Thornscape Apprentice",
+        "oracle_text": "{R}, {T}: Target creature gains first strike until end of turn.\n{W}, {T}: Tap target creature.",
+        "mana_cost": "{G}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G",
+          "R",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dde/37/thornscape-apprentice?utm_source=api"
+      },
+      "handler": "manalinkeh_card_thornscape_apprentice",
+      "abilities": {
+        "0": {
+          "mode_label": "Give first strike",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/invasion.c",
+      "input_source_line": 4103
+    },
+    "Nightscape Apprentice": {
+      "csvid": 1349,
+      "oracle": {
+        "oracle_id": "429de3c3-3f2e-4d55-a04a-f414912aff3a",
+        "name": "Nightscape Apprentice",
+        "oracle_text": "{U}, {T}: Put target creature you control on top of its owner's library.\n{R}, {T}: Target creature gains first strike until end of turn.",
+        "mana_cost": "{B}",
+        "type_line": "Creature \u2014 Zombie Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "R",
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/112/nightscape-apprentice?utm_source=api"
+      },
+      "handler": "manalinkeh_card_nightscape_apprentice",
+      "abilities": {
+        "1": {
+          "mode_label": "Give first strike",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/invasion.c",
+      "input_source_line": 2830
+    },
+    "Icatian Infantry": {
+      "csvid": 1796,
+      "oracle": {
+        "oracle_id": "9eb274f3-ef55-4545-81b4-29454a48f075",
+        "name": "Icatian Infantry",
+        "oracle_text": "{1}: This creature gains first strike until end of turn.\n{1}: This creature gains banding until end of turn. (Any creatures with banding, and up to one without, can attack in a band. Bands are blocked as a group. If any creatures with banding you control are blocking or being blocked by a creature, you divide that creature's combat damage, not its controller, among any of the creatures it's being blocked by or is blocking.)",
+        "mana_cost": "{W}",
+        "type_line": "Creature \u2014 Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fem/7a/icatian-infantry?utm_source=api"
+      },
+      "handler": "manalinkeh_card_icatian_infantry",
+      "abilities": {
+        "0": {
+          "mode_label": "First Strike",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/fallen_empires.c",
+      "input_source_line": 453
+    },
+    "Fyndhorn Bow": {
+      "csvid": 1940,
+      "oracle": {
+        "oracle_id": "d37fb8bf-d293-4ac3-b744-74e4caade975",
+        "name": "Fyndhorn Bow",
+        "oracle_text": "{3}, {T}: Target creature gains first strike until end of turn.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/318/fyndhorn-bow?utm_source=api"
+      },
+      "handler": "manalinkeh_card_fyndhorn_bow",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/ice_age.c",
+      "input_source_line": 4243
+    },
+    "Hyalopterous Lemure": {
+      "csvid": 1970,
+      "oracle": {
+        "oracle_id": "bc3576fb-3c08-456e-b3b6-9eb01b2366d6",
+        "name": "Hyalopterous Lemure",
+        "oracle_text": "{0}: This creature gets -1/-0 and gains flying until end of turn.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature \u2014 Spirit",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/89/hyalopterous-lemure?utm_source=api"
+      },
+      "handler": "manalinkeh_card_hyalopterous_lemure",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/ice_age.c",
+      "input_source_line": 5200
+    },
+    "War Chariot": {
+      "csvid": 2151,
+      "oracle": {
+        "oracle_id": "989c698a-600e-47d8-acaf-3ca140dcd150",
+        "name": "War Chariot",
+        "oracle_text": "{3}, {T}: Target creature gains trample until end of turn.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ice/348/war-chariot?utm_source=api"
+      },
+      "handler": "manalinkeh_card_war_chariot",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/ice_age.c",
+      "input_source_line": 10987
+    },
+    "Leaping Lizard": {
+      "csvid": 2221,
+      "oracle": {
+        "oracle_id": "23d42beb-5293-4f12-a732-3531a0fa0ca0",
+        "name": "Leaping Lizard",
+        "oracle_text": "{1}{G}: This creature gets -0/-1 and gains flying until end of turn.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Creature \u2014 Lizard",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/171/leaping-lizard?utm_source=api"
+      },
+      "handler": "manalinkeh_card_leaping_lizard",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/homelands.c",
+      "input_source_line": 2660
+    },
+    "Noble Steeds": {
+      "csvid": 2324,
+      "oracle": {
+        "oracle_id": "d6005e47-d545-4c16-b54a-bfe1dde61a98",
+        "name": "Noble Steeds",
+        "oracle_text": "{1}{W}: Target creature gains first strike until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/all/11a/noble-steeds?utm_source=api"
+      },
+      "handler": "manalinkeh_card_noble_steeds",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/alliances.c",
+      "input_source_line": 2573
+    },
+    "Granger Guildmage": {
+      "csvid": 2494,
+      "oracle": {
+        "oracle_id": "0230fdda-d916-457e-9dfd-61783fcf4652",
+        "name": "Granger Guildmage",
+        "oracle_text": "{R}, {T}: This creature deals 1 damage to any target and 1 damage to you.\n{W}, {T}: Target creature gains first strike until end of turn.",
+        "mana_cost": "{G}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G",
+          "R",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/220/granger-guildmage?utm_source=api"
+      },
+      "handler": "manalinkeh_card_granger_guildmage",
+      "abilities": {
+        "1": {
+          "mode_label": "Give First Strike",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mirage.c",
+      "input_source_line": 2782
+    },
+    "Iron Lance": {
+      "csvid": 4505,
+      "oracle": {
+        "oracle_id": "09e588c2-0fb8-4c30-aff3-433db7a07b6e",
+        "name": "Iron Lance",
+        "oracle_text": "{3}, {T}: Target creature gains first strike until end of turn.",
+        "mana_cost": "{2}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/300/iron-lance?utm_source=api"
+      },
+      "handler": "manalinkeh_card_fyndhorn_bow",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/ice_age.c",
+      "input_source_line": 4243
+    },
+    "Predator, Flagship": {
+      "csvid": 4738,
+      "oracle": {
+        "oracle_id": "647c1339-9508-4bb9-8e77-ebc3dfdf4069",
+        "name": "Predator, Flagship",
+        "oracle_text": "{2}: Target creature gains flying until end of turn.\n{5}, {T}: Destroy target creature with flying.",
+        "mana_cost": "{5}",
+        "type_line": "Legendary Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/225/predator-flagship?utm_source=api"
+      },
+      "handler": "manalinkeh_card_predator_flagship",
+      "abilities": {
+        "0": {
+          "mode_label": "Give flying",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/nemesis.c",
+      "input_source_line": 1581
+    },
+    "Cromat": {
+      "csvid": 5349,
+      "oracle": {
+        "oracle_id": "376601b6-fe51-4e2d-8ec6-98f965d649a3",
+        "name": "Cromat",
+        "oracle_text": "{W}{B}: Destroy target creature blocking or blocked by Cromat.\n{U}{R}: Cromat gains flying until end of turn.\n{B}{G}: Regenerate Cromat.\n{R}{W}: Cromat gets +1/+1 until end of turn.\n{G}{U}: Put Cromat on top of its owner's library.",
+        "mana_cost": "{W}{U}{B}{R}{G}",
+        "type_line": "Legendary Creature \u2014 Illusion",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B",
+          "G",
+          "R",
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "G",
+          "R",
+          "U",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/apc/94/cromat?utm_source=api"
+      },
+      "handler": "manalinkeh_card_cromat",
+      "abilities": {
+        "1": {
+          "mode_label": "Gains flying",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/apocalypse.c",
+      "input_source_line": 963
+    },
+    "Bant Battlemage": {
+      "csvid": 9917,
+      "oracle": {
+        "oracle_id": "92d8b956-87db-43e4-bbb5-436ba01b5714",
+        "name": "Bant Battlemage",
+        "oracle_text": "{G}, {T}: Target creature gains trample until end of turn.\n{U}, {T}: Target creature gains flying until end of turn.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ala/5/bant-battlemage?utm_source=api"
+      },
+      "handler": "manalinkeh_card_bant_battlemage",
+      "abilities": {
+        "0": {
+          "mode_label": "Give Trample",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        },
+        "1": {
+          "mode_label": "Give Flying",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/shards_of_alara.c",
+      "input_source_line": 407
+    },
+    "Dreadwing": {
+      "csvid": 10135,
+      "oracle": {
+        "oracle_id": "446b9626-2e64-4933-afc8-891135b8e3d6",
+        "name": "Dreadwing",
+        "oracle_text": "{1}{U}{R}: This creature gets +3/+0 and gains flying until end of turn.",
+        "mana_cost": "{B}",
+        "type_line": "Creature \u2014 Zombie",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B",
+          "R",
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/con/43/dreadwing?utm_source=api"
+      },
+      "handler": "manalinkeh_card_dreadwing",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/conflux.c",
+      "input_source_line": 442
+    },
+    "New Prahv Guildmage": {
+      "csvid": 12777,
+      "oracle": {
+        "oracle_id": "5912d4b7-d18d-4619-a96b-d2615200971f",
+        "name": "New Prahv Guildmage",
+        "oracle_text": "{W}{U}: Target creature gains flying until end of turn.\n{3}{W}{U}: Detain target nonland permanent an opponent controls. (Until your next turn, that permanent can't attack or block and its activated abilities can't be activated.)",
+        "mana_cost": "{W}{U}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Detain"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rtr/181/new-prahv-guildmage?utm_source=api"
+      },
+      "handler": "manalinkeh_card_new_prahv_guildmage",
+      "abilities": {
+        "0": {
+          "mode_label": "Give flying",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/return_to_ravnica.c",
+      "input_source_line": 5380
+    },
+    "Zephyr Charge": {
+      "csvid": 13365,
+      "oracle": {
+        "oracle_id": "576128ba-28aa-4ef9-9e72-8ca13f42c9b4",
+        "name": "Zephyr Charge",
+        "oracle_text": "{1}{U}: Target creature gains flying until end of turn.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/82/zephyr-charge?utm_source=api"
+      },
+      "handler": "manalinkeh_card_zephyr_charge",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/m14.c",
+      "input_source_line": 845
+    },
+    "Miner's Bane": {
+      "csvid": 14138,
+      "oracle": {
+        "oracle_id": "3ca75f61-60bf-487f-8cb3-b955cdd81e2a",
+        "name": "Miner's Bane",
+        "oracle_text": "{2}{R}: This creature gets +1/+0 and gains trample until end of turn. (It can deal excess combat damage to the player or planeswalker it's attacking.)",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature \u2014 Elemental",
+        "power": "6",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/157/miners-bane?utm_source=api"
+      },
+      "handler": "manalinkeh_card_miners_bane",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/m15.c",
+      "input_source_line": 3444
+    },
+    "Firehoof Cavalry": {
+      "csvid": 14270,
+      "oracle": {
+        "oracle_id": "487de0df-0496-4b5d-8050-27b8e617582b",
+        "name": "Firehoof Cavalry",
+        "oracle_text": "{3}{R}: This creature gets +2/+0 and gains trample until end of turn.",
+        "mana_cost": "{W}",
+        "type_line": "Creature \u2014 Human Berserker",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/11/firehoof-cavalry?utm_source=api"
+      },
+      "handler": "manalinkeh_card_firehoof_cavalry",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/khans_of_tarkir.c",
+      "input_source_line": 338
+    },
+    "Savage Knuckleblade": {
+      "csvid": 14367,
+      "oracle": {
+        "oracle_id": "5a4fabfe-a641-49b7-8134-9d9edeb8bf1b",
+        "name": "Savage Knuckleblade",
+        "oracle_text": "{2}{G}: This creature gets +2/+2 until end of turn. Activate only once each turn.\n{2}{U}: Return this creature to its owner's hand.\n{R}: This creature gains haste until end of turn.",
+        "mana_cost": "{G}{U}{R}",
+        "type_line": "Creature \u2014 Ogre Warrior",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "R",
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/197/savage-knuckleblade?utm_source=api"
+      },
+      "handler": "manalinkeh_card_savage_knucklebone",
+      "abilities": {
+        "2": {
+          "mode_label": "Give Haste",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/khans_of_tarkir.c",
+      "input_source_line": 5256
+    },
+    "Oran-Rief Invoker": {
+      "csvid": 15396,
+      "oracle": {
+        "oracle_id": "c5dcab94-f4c0-4e5e-ad99-7b3871be6e89",
+        "name": "Oran-Rief Invoker",
+        "oracle_text": "{8}: This creature gets +5/+5 and gains trample until end of turn.",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature \u2014 Human Shaman",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddr/17/oran-rief-invoker?utm_source=api"
+      },
+      "handler": "manalinkeh_card_oran_rief_invoker",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/battle_for_zendikar.c",
+      "input_source_line": 3924
+    },
+    "Relentless Hunter": {
+      "csvid": 15666,
+      "oracle": {
+        "oracle_id": "6881e3ac-9e3d-49d2-b2ac-63feb6f0f2ff",
+        "name": "Relentless Hunter",
+        "oracle_text": "{1}{R}{G}: This creature gets +1/+1 and gains trample until end of turn.",
+        "mana_cost": "{1}{R}{G}",
+        "type_line": "Creature \u2014 Human Warrior",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/226/relentless-hunter?utm_source=api"
+      },
+      "handler": "manalinkeh_card_relentless_hunter",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/oath_of_the_gatewatch.c",
+      "input_source_line": 5755
+    },
+    "Olivia's Dragoon": {
+      "csvid": 16167,
+      "oracle": {
+        "oracle_id": "a5019399-91a8-4233-b16f-399718c4be9c",
+        "name": "Olivia's Dragoon",
+        "oracle_text": "Discard a card: This creature gains flying until end of turn.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature \u2014 Vampire Berserker",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inr/127/olivias-dragoon?utm_source=api"
+      },
+      "handler": "manalinkeh_card_olivias_dragoon",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {
+            "0": true,
+            "1": false
+          },
+          "probe_dialog": null
+        }
+      },
+      "input_source": "src/manalinkeh/cards/eldritch_moon.c",
+      "input_source_line": 3311
+    },
+    "Sylvan Safekeeper": {
+      "csvid": 6016,
+      "oracle": {
+        "oracle_id": "bddf8f4a-3149-4dd6-a9e5-7747e7e45a1c",
+        "name": "Sylvan Safekeeper",
+        "oracle_text": "Sacrifice a land: Target creature you control gains shroud until end of turn. (It can't be the target of spells or abilities.)",
+        "mana_cost": "{G}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh3/287/sylvan-safekeeper?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sylvan_safekeeper",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/judgement.c",
+      "input_source_line": 2436
+    },
+    "Megatog": {
+      "csvid": 6722,
+      "oracle": {
+        "oracle_id": "bde427fa-8a00-4eff-9371-81324bc75364",
+        "name": "Megatog",
+        "oracle_text": "Sacrifice an artifact: This creature gets +3/+3 and gains trample until end of turn.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature \u2014 Atog",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mrd/100/megatog?utm_source=api"
+      },
+      "handler": "manalinkeh_card_megatog",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mirrodin.c",
+      "input_source_line": 3340
+    },
+    "Sunhome, Fortress of the Legion": {
+      "csvid": 7974,
+      "oracle": {
+        "oracle_id": "a9f8344c-1705-4254-81d6-aa05e0c69c29",
+        "name": "Sunhome, Fortress of the Legion",
+        "oracle_text": "{T}: Add {C}.\n{2}{R}{W}, {T}: Target creature gains double strike until end of turn.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/otc/324/sunhome-fortress-of-the-legion?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sunhome_fortress_of_the_legion",
+      "abilities": {
+        "1": {
+          "mode_label": "Give double strike",
+          "fallback_color": 0,
+          "allow_auto_nonmana": true,
+          "discard_choices": {},
+          "probe_dialog": 1,
+          "sacrifice_choices": {
+            "0": false,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/ravnica.c",
+      "input_source_line": 6760
+    },
+    "Dross Hopper": {
+      "csvid": 11242,
+      "oracle": {
+        "oracle_id": "2ec8c540-73bf-4412-a53a-499e9b9fd213",
+        "name": "Dross Hopper",
+        "oracle_text": "Sacrifice a creature: This creature gains flying until end of turn.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature \u2014 Phyrexian Insect Horror",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/60/dross-hopper?utm_source=api"
+      },
+      "handler": "manalinkeh_card_dross_hopper",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/scars_of_mirrodin.c",
+      "input_source_line": 3166,
+      "measured_cost_victims": {
+        "cleanup_1": "source",
+        "counter_cleanup_1": "source",
+        "effect_1": "source",
+        "fresh_1": "source",
+        "ground_block_1": "source",
+        "payment_1": "source",
+        "pending_snapshot_1": "source",
+        "ready_snapshot_1": "source",
+        "repeat_1": "source",
+        "repeat_source_1": "source",
+        "resolved_snapshot_1": "source",
+        "source_removed_pending_1": "source",
+        "tapped_1": "source"
+      }
+    },
+    "Slayers' Stronghold": {
+      "csvid": 12467,
+      "oracle": {
+        "oracle_id": "2de7367b-a5a4-43f4-8f8f-b931ea28150d",
+        "name": "Slayers' Stronghold",
+        "oracle_text": "{T}: Add {C}.\n{R}{W}, {T}: Target creature gets +2/+0 and gains vigilance and haste until end of turn.",
+        "mana_cost": "",
+        "type_line": "Land",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mkc/295/slayers-stronghold?utm_source=api"
+      },
+      "handler": "manalinkeh_card_slayers_stronghold",
+      "abilities": {
+        "1": {
+          "mode_label": "+2/+0, vigilance and haste to target",
+          "fallback_color": 0,
+          "allow_auto_nonmana": true,
+          "discard_choices": {},
+          "probe_dialog": 1,
+          "sacrifice_choices": {
+            "0": false,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/avacyn_restored.c",
+      "input_source_line": 6619
+    },
+    "Vizkopa Guildmage": {
+      "csvid": 13096,
+      "oracle": {
+        "oracle_id": "f19e7c5c-67fa-4ae4-89b8-afa0e08a6c48",
+        "name": "Vizkopa Guildmage",
+        "oracle_text": "{1}{W}{B}: Target creature gains lifelink until end of turn.\n{1}{W}{B}: Whenever you gain life this turn, each opponent loses that much life.",
+        "mana_cost": "{W}{B}",
+        "type_line": "Creature \u2014 Human Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B",
+          "W"
+        ],
+        "color_identity": [
+          "B",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ima/211/vizkopa-guildmage?utm_source=api"
+      },
+      "handler": "manalinkeh_card_vizkopa_guildmage",
+      "abilities": {
+        "0": {
+          "mode_label": "Give lifelink",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": 0,
+          "sacrifice_choices": {
+            "0": false,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/gatecrash.c",
+      "input_source_line": 6231
+    },
+    "Vial of Poison": {
+      "csvid": 13357,
+      "oracle": {
+        "oracle_id": "3d51077f-4ce5-475a-9e65-e9076d779825",
+        "name": "Vial of Poison",
+        "oracle_text": "{1}, Sacrifice this artifact: Target creature gains deathtouch until end of turn. (Any amount of damage it deals to a creature is enough to destroy it.)",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/226/vial-of-poison?utm_source=api"
+      },
+      "handler": "manalinkeh_card_vial_of_poison",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null,
+          "sacrifice_choices": {
+            "0": false,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/m14.c",
+      "input_source_line": 2860
+    },
+    "Brightling": {
+      "csvid": 18583,
+      "oracle": {
+        "oracle_id": "909ff4a8-8bdd-4478-bd43-ce5175a02d68",
+        "name": "Brightling",
+        "oracle_text": "{W}: This creature gains vigilance until end of turn.\n{W}: This creature gains lifelink until end of turn.\n{W}: Return this creature to its owner's hand.\n{1}: This creature gets +1/-1 or -1/+1 until end of turn.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature \u2014 Shapeshifter",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bbd/25/brightling?utm_source=api"
+      },
+      "handler": "manalinkeh_card_brightling",
+      "abilities": {
+        "0": {
+          "mode_label": "Vigilance",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null,
+          "sacrifice_choices": {
+            "0": false,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        },
+        "1": {
+          "mode_label": "Lifelink",
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null,
+          "sacrifice_choices": {
+            "0": false,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/battlebond.c",
+      "input_source_line": 502
+    },
+    "Need for Speed": {
+      "csvid": 5634,
+      "oracle": {
+        "oracle_id": "8894ab96-17e1-41d8-a4fb-28b510807394",
+        "name": "Need for Speed",
+        "oracle_text": "Sacrifice a land: Target creature gains haste until end of turn.",
+        "mana_cost": "{R}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ody/209/need-for-speed?utm_source=api"
+      },
+      "handler": "manalinkeh_card_need_for_speed",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": true
+        }
+      },
+      "input_source": "src/manalinkeh/cards/odissey.c",
+      "input_source_line": 3898
+    },
+    "Oxidda Daredevil": {
+      "csvid": 11327,
+      "oracle": {
+        "oracle_id": "4be254e7-d082-4c10-8495-1ef8b80721e1",
+        "name": "Oxidda Daredevil",
+        "oracle_text": "Sacrifice an artifact: This creature gains haste until end of turn.",
+        "mana_cost": "{1}{R}",
+        "type_line": "Creature \u2014 Goblin Artificer",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/100/oxidda-daredevil?utm_source=api"
+      },
+      "handler": "manalinkeh_card_oxidda_daredevil",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/scars_of_mirrodin.c",
+      "input_source_line": 5077
+    },
+    "Gnathosaur": {
+      "csvid": 11450,
+      "oracle": {
+        "oracle_id": "7f52993c-a20a-48fe-b463-2a33873b489a",
+        "name": "Gnathosaur",
+        "oracle_text": "Sacrifice an artifact: This creature gains trample until end of turn.",
+        "mana_cost": "{4}{R}{R}",
+        "type_line": "Creature \u2014 Dinosaur",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/63/gnathosaur?utm_source=api"
+      },
+      "handler": "manalinkeh_card_gnathosaur",
+      "abilities": {
+        "0": {
+          "mode_label": null,
+          "fallback_color": 0,
+          "allow_auto_nonmana": false,
+          "discard_choices": {},
+          "probe_dialog": null,
+          "sacrifice_choices": {
+            "0": true,
+            "1": false
+          },
+          "sacrifice_before_target": false
+        }
+      },
+      "input_source": "src/manalinkeh/cards/mirrodin_besieged.c",
+      "input_source_line": 2291
+    }
+  },
+  "witnesses": {
+    "Scion of Glaciers": {
+      "csvid": 14370,
+      "oracle": {
+        "oracle_id": "9d49cef5-8f9c-46cd-aa5e-7861fc1dcaa4",
+        "name": "Scion of Glaciers",
+        "oracle_text": "{U}: This creature gets +1/-1 until end of turn.",
+        "mana_cost": "{2}{U}{U}",
+        "type_line": "Creature \u2014 Elemental",
+        "power": "2",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ktk/53/scion-of-glaciers?utm_source=api"
+      },
+      "handler": "manalinkeh_card_metropolis_sprite"
+    },
+    "Sage of Lat-Nam": {
+      "csvid": 524,
+      "oracle": {
+        "oracle_id": "f34be3cc-ff47-4415-a6a8-ed142891dc0c",
+        "name": "Sage of Lat-Nam",
+        "oracle_text": "{T}, Sacrifice an artifact: Draw a card.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature \u2014 Human Artificer",
+        "power": "1",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dom/64/sage-of-lat-nam?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sage_of_lat_nam"
+    },
+    "Bottle Gnomes": {
+      "csvid": 1705,
+      "oracle": {
+        "oracle_id": "54b5e429-7a44-480d-bea4-4f8eeb7449b5",
+        "name": "Bottle Gnomes",
+        "oracle_text": "Sacrifice this creature: You gain 3 life.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact Creature \u2014 Gnome",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cm2/177/bottle-gnomes?utm_source=api"
+      },
+      "handler": "manalinkeh_card_bottle_gnomes"
+    },
+    "Judge's Familiar": {
+      "csvid": 12760,
+      "oracle": {
+        "oracle_id": "22b7975c-37a5-4895-b209-bdeeec0c6aea",
+        "name": "Judge's Familiar",
+        "oracle_text": "Flying\nSacrifice this creature: Counter target instant or sorcery spell unless its controller pays {1}.",
+        "mana_cost": "{W/U}",
+        "type_line": "Creature \u2014 Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/192/judges-familiar?utm_source=api"
+      },
+      "handler": "manalinkeh_card_judges_familiar"
+    },
+    "Icy Manipulator": {
+      "csvid": 119,
+      "oracle": {
+        "oracle_id": "3608f1f7-8dc5-4dd1-ae91-c830e1de9529",
+        "name": "Icy Manipulator",
+        "oracle_text": "{1}, {T}: Tap target artifact, creature, or land.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/225/icy-manipulator?utm_source=api"
+      },
+      "handler": "manalinkeh_card_icy_manipulator"
+    },
+    "Twiddle": {
+      "csvid": 256,
+      "oracle": {
+        "oracle_id": "773ad2ef-5acc-49ea-8d85-056330e87039",
+        "name": "Twiddle",
+        "oracle_text": "You may tap or untap target artifact, creature, or land.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/111/twiddle?utm_source=api"
+      },
+      "handler": "manalinkeh_card_twiddle"
+    },
+    "Hunger of the Howlpack": {
+      "csvid": 12212,
+      "oracle": {
+        "oracle_id": "296dee6b-6ec1-4ea4-8dc3-23080dd37646",
+        "name": "Hunger of the Howlpack",
+        "oracle_text": "Put a +1/+1 counter on target creature.\nMorbid \u2014 Put three +1/+1 counters on that creature instead if a creature died this turn.",
+        "mana_cost": "{G}",
+        "type_line": "Instant",
+        "keywords": [
+          "Morbid"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cns/168/hunger-of-the-howlpack?utm_source=api"
+      },
+      "handler": "manalinkeh_card_hunger_of_the_howlpack"
+    },
+    "Plains": {
+      "csvid": 188,
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land \u2014 Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Forest": {
+      "csvid": 91,
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land \u2014 Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Island": {
+      "csvid": 126,
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land \u2014 Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer"
+    },
+    "Elvish Mystic": {
+      "csvid": 13284,
+      "oracle": {
+        "oracle_id": "3f3b2c10-21f8-4e13-be83-4ef3fa36e123",
+        "name": "Elvish Mystic",
+        "oracle_text": "{T}: Add {G}.",
+        "mana_cost": "{G}",
+        "type_line": "Creature \u2014 Elf Druid",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/205/elvish-mystic?utm_source=api"
+      },
+      "handler": "manalinkeh_card_elvish_mystic"
+    },
+    "Shield Sphere": {
+      "csvid": 2346,
+      "handler": "manalinkeh_card_shield_sphere",
+      "oracle": {
+        "oracle_id": "df9ec9b0-be22-4136-923b-11a71ca4b6c2",
+        "name": "Shield Sphere",
+        "oracle_text": "Defender\nWhenever this creature blocks, put a -0/-1 counter on it.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature \u2014 Wall",
+        "power": "0",
+        "toughness": "6",
+        "keywords": [
+          "Defender"
+        ],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me1/166/shield-sphere?utm_source=api"
+      }
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "handler": "manalinkeh_card_unsummon",
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      }
+    }
+  }
+}

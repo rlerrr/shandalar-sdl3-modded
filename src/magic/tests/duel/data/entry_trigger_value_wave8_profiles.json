@@ -1,0 +1,1305 @@
+{
+  "version": 1,
+  "sources": {
+    "Accursed Centaur": {
+      "csvid": 6037,
+      "oracle": {
+        "oracle_id": "b1e6921e-e460-4e58-82b0-d98ee31c279d",
+        "name": "Accursed Centaur",
+        "oracle_text": "When this creature enters, sacrifice a creature.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Zombie Centaur",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ons/123/accursed-centaur?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "sacrifice",
+        "clause": "When this creature enters, sacrifice a creature.",
+        "gaps": []
+      }
+    },
+    "Dream Stalker": {
+      "csvid": 8526,
+      "oracle": {
+        "oracle_id": "6e67551b-1f6e-4ef4-9baf-520607b8cb61",
+        "name": "Dream Stalker",
+        "oracle_text": "When this creature enters, return a permanent you control to its owner's hand.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Illusion",
+        "power": "1",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tsr/63/dream-stalker?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "permanent",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a permanent you control to its owner's hand.",
+        "gaps": []
+      }
+    },
+    "Drekavac": {
+      "csvid": 8200,
+      "oracle": {
+        "oracle_id": "f7971f22-2689-4c6f-9fea-1afc4f5afed3",
+        "name": "Drekavac",
+        "oracle_text": "When this creature enters, sacrifice it unless you discard a noncreature card.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Creature — Beast",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dis/43/drekavac?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "noncreature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "discard_gate",
+        "clause": "When this creature enters, sacrifice it unless you discard a noncreature card.",
+        "gaps": []
+      }
+    },
+    "Faerie Impostor": {
+      "csvid": 12722,
+      "oracle": {
+        "oracle_id": "0d78ba2c-4de0-47d9-b1b9-13dc9de8844b",
+        "name": "Faerie Impostor",
+        "oracle_text": "Flying\nWhen this creature enters, sacrifice it unless you return another creature you control to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Faerie Rogue",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddn/43/faerie-impostor?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": true,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce_gate",
+        "clause": "When this creature enters, sacrifice it unless you return another creature you control to its owner's hand.",
+        "gaps": [
+          "Flying"
+        ]
+      }
+    },
+    "Fallow Wurm": {
+      "csvid": 2969,
+      "oracle": {
+        "oracle_id": "7b414f70-a9b1-42c3-9655-6aa520d3b19b",
+        "name": "Fallow Wurm",
+        "oracle_text": "When this creature enters, sacrifice it unless you discard a land card.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/126/fallow-wurm?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "land",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "discard_gate",
+        "clause": "When this creature enters, sacrifice it unless you discard a land card.",
+        "gaps": []
+      }
+    },
+    "Fleshbag Marauder": {
+      "csvid": 9972,
+      "oracle": {
+        "oracle_id": "4b1bf05e-753e-4350-a913-894cf3cecc0c",
+        "name": "Fleshbag Marauder",
+        "oracle_text": "When this creature enters, each player sacrifices a creature of their choice.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Zombie Warrior",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/111/fleshbag-marauder?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "both",
+        "targeted": false,
+        "kind": "sacrifice",
+        "clause": "When this creature enters, each player sacrifices a creature of their choice.",
+        "gaps": []
+      }
+    },
+    "Foul Spirit": {
+      "csvid": 3599,
+      "oracle": {
+        "oracle_id": "d8177d08-a603-42e9-9350-890eac05e184",
+        "name": "Foul Spirit",
+        "oracle_text": "Flying\nWhen this creature enters, sacrifice a land.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Spirit",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me4/81/foul-spirit?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "land",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "sacrifice",
+        "clause": "When this creature enters, sacrifice a land.",
+        "gaps": [
+          "Flying"
+        ]
+      }
+    },
+    "Hidden Horror": {
+      "csvid": 2991,
+      "oracle": {
+        "oracle_id": "db7c5a2f-9aea-4b14-86cf-7af79d6484af",
+        "name": "Hidden Horror",
+        "oracle_text": "When this creature enters, sacrifice it unless you discard a creature card.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature — Horror",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/149/hidden-horror?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "discard_gate",
+        "clause": "When this creature enters, sacrifice it unless you discard a creature card.",
+        "gaps": []
+      }
+    },
+    "Bull Elephant": {
+      "csvid": 2679,
+      "oracle": {
+        "oracle_id": "4ed04ece-64d2-41a4-bf36-b993cbbf2aac",
+        "name": "Bull Elephant",
+        "oracle_text": "When this creature enters, sacrifice it unless you return two Forests you control to their owner's hand.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Elephant",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vis/101/bull-elephant?utm_source=api"
+      },
+      "mechanism": {
+        "count": 2,
+        "scope": "Forest",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce_gate",
+        "clause": "When this creature enters, sacrifice it unless you return two Forests you control to their owner's hand.",
+        "gaps": []
+      }
+    },
+    "Dust Elemental": {
+      "csvid": 8773,
+      "oracle": {
+        "oracle_id": "4d08e822-6535-44b7-a100-e5e1e8f5c3e3",
+        "name": "Dust Elemental",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying; fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nWhen this creature enters, return three creatures you control to their owner's hand.",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Creature — Elemental",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [
+          "Flying",
+          "Fear",
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/plc/5/dust-elemental?utm_source=api"
+      },
+      "mechanism": {
+        "count": 3,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return three creatures you control to their owner's hand.",
+        "gaps": [
+          "Flash (You may cast this spell any time you could cast an instant.)",
+          "Flying; fear (This creature can't be blocked except by artifact creatures and/or black creatures.)"
+        ]
+      }
+    },
+    "Sea Drake": {
+      "csvid": 3619,
+      "oracle": {
+        "oracle_id": "44d1029f-604e-44d6-89f6-bd18344f5d79",
+        "name": "Sea Drake",
+        "oracle_text": "Flying\nWhen this creature enters, return two target lands you control to their owner's hand.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Creature — Drake",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh2/268/sea-drake?utm_source=api"
+      },
+      "mechanism": {
+        "count": 2,
+        "scope": "land",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": true,
+        "kind": "bounce",
+        "clause": "When this creature enters, return two target lands you control to their owner's hand.",
+        "gaps": [
+          "Flying"
+        ]
+      }
+    },
+    "Fleetfoot Panther": {
+      "csvid": 5233,
+      "oracle": {
+        "oracle_id": "d99e8f94-4a8a-42a1-b5d0-2b08cacb8676",
+        "name": "Fleetfoot Panther",
+        "oracle_text": "Flash\nWhen this creature enters, return a green or white creature you control to its owner's hand.",
+        "mana_cost": "{1}{G}{W}",
+        "type_line": "Creature — Cat",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddh/12/fleetfoot-panther?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [
+          "G",
+          "W"
+        ],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a green or white creature you control to its owner's hand.",
+        "gaps": [
+          "Flash"
+        ]
+      }
+    },
+    "Ugin's Construct": {
+      "csvid": 14647,
+      "oracle": {
+        "oracle_id": "6b87a933-b0d2-4120-b4a0-65ab0f3dbe48",
+        "name": "Ugin's Construct",
+        "oracle_text": "When this creature enters, sacrifice a permanent that's one or more colors.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/164/ugins-construct?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "colored_permanent",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "sacrifice",
+        "clause": "When this creature enters, sacrifice a permanent that's one or more colors.",
+        "gaps": []
+      },
+      "presentation": {
+        "scripted_sacrifice": {
+          "0": true,
+          "1": true
+        }
+      }
+    },
+    "Glint Hawk": {
+      "csvid": 11265,
+      "oracle": {
+        "oracle_id": "5d24525f-dbac-434b-bda7-ff8af55245ff",
+        "name": "Glint Hawk",
+        "oracle_text": "Flying\nWhen this creature enters, sacrifice it unless you return an artifact you control to its owner's hand.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/10/glint-hawk?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "artifact",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce_gate",
+        "clause": "When this creature enters, sacrifice it unless you return an artifact you control to its owner's hand.",
+        "gaps": [
+          "Flying"
+        ]
+      }
+    },
+    "Invasive Species": {
+      "csvid": 14119,
+      "oracle": {
+        "oracle_id": "9c4c478c-6f0c-430a-91eb-4125a73d03a7",
+        "name": "Invasive Species",
+        "oracle_text": "When this creature enters, return another permanent you control to its owner's hand.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Insect",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/181/invasive-species?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "permanent",
+        "colors": [],
+        "another": true,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return another permanent you control to its owner's hand.",
+        "gaps": []
+      }
+    },
+    "Cavern Harpy": {
+      "csvid": 5206,
+      "oracle": {
+        "oracle_id": "81c40bd8-b989-41e8-9527-eae8fb87311d",
+        "name": "Cavern Harpy",
+        "oracle_text": "Flying\nWhen this creature enters, return a blue or black creature you control to its owner's hand.\nPay 1 life: Return this creature to its owner's hand.",
+        "mana_cost": "{U}{B}",
+        "type_line": "Creature — Harpy Beast",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pls/97/cavern-harpy?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [
+          "U",
+          "B"
+        ],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a blue or black creature you control to its owner's hand.",
+        "gaps": [
+          "Flying",
+          "Pay 1 life: Return this creature to its owner's hand."
+        ]
+      }
+    },
+    "Commander Greven il-Vec": {
+      "csvid": 3109,
+      "oracle": {
+        "oracle_id": "08fa1bee-cedf-4a29-9b02-cbdcc0926f8f",
+        "name": "Commander Greven il-Vec",
+        "oracle_text": "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)\nWhen Commander Greven il-Vec enters, sacrifice a creature.",
+        "mana_cost": "{3}{B}{B}{B}",
+        "type_line": "Legendary Creature — Phyrexian Human Warrior",
+        "power": "7",
+        "toughness": "5",
+        "keywords": [
+          "Fear"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/88/commander-greven-il-vec?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "sacrifice",
+        "clause": "When Commander Greven il-Vec enters, sacrifice a creature.",
+        "gaps": [
+          "Fear (This creature can't be blocked except by artifact creatures and/or black creatures.)"
+        ]
+      }
+    },
+    "Emancipation Angel": {
+      "csvid": 12361,
+      "oracle": {
+        "oracle_id": "3834d3b0-9b66-465a-a8dc-22875a819fd9",
+        "name": "Emancipation Angel",
+        "oracle_text": "Flying\nWhen this creature enters, return a permanent you control to its owner's hand.",
+        "mana_cost": "{1}{W}{W}",
+        "type_line": "Creature — Angel",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/102/emancipation-angel?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "permanent",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a permanent you control to its owner's hand.",
+        "gaps": [
+          "Flying"
+        ]
+      }
+    },
+    "Horned Kavu": {
+      "csvid": 5243,
+      "oracle": {
+        "oracle_id": "14817050-9f2d-453f-b36b-e6429fa29165",
+        "name": "Horned Kavu",
+        "oracle_text": "When this creature enters, return a red or green creature you control to its owner's hand.",
+        "mana_cost": "{R}{G}",
+        "type_line": "Creature — Kavu",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pls/110/horned-kavu?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [
+          "R",
+          "G"
+        ],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a red or green creature you control to its owner's hand.",
+        "gaps": []
+      }
+    },
+    "Keymaster Rogue": {
+      "csvid": 12986,
+      "oracle": {
+        "oracle_id": "b8c0c102-f0ef-4ab6-9b1a-ee82ee159c54",
+        "name": "Keymaster Rogue",
+        "oracle_text": "This creature can't be blocked.\nWhen this creature enters, return a creature you control to its owner's hand.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Human Rogue",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/47/keymaster-rogue?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a creature you control to its owner's hand.",
+        "gaps": [
+          "This creature can't be blocked."
+        ]
+      }
+    },
+    "Kjeldoran Dead": {
+      "csvid": 1998,
+      "oracle": {
+        "oracle_id": "61e00946-7df7-4298-91b2-c656169e6601",
+        "name": "Kjeldoran Dead",
+        "oracle_text": "When this creature enters, sacrifice a creature.\n{B}: Regenerate this creature.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Skeleton",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/me2/98/kjeldoran-dead?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "sacrifice",
+        "clause": "When this creature enters, sacrifice a creature.",
+        "gaps": [
+          "{B}: Regenerate this creature."
+        ]
+      }
+    },
+    "Kor Skyfisher": {
+      "csvid": 10590,
+      "oracle": {
+        "oracle_id": "054a0193-861e-4644-ab0a-8aa33407abc8",
+        "name": "Kor Skyfisher",
+        "oracle_text": "Flying\nWhen this creature enters, return a permanent you control to its owner's hand.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Kor Soldier",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mm3/11/kor-skyfisher?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "permanent",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a permanent you control to its owner's hand.",
+        "gaps": [
+          "Flying"
+        ]
+      }
+    },
+    "Lava Zombie": {
+      "csvid": 5252,
+      "oracle": {
+        "oracle_id": "2232c38e-49eb-4823-a325-2342a952db72",
+        "name": "Lava Zombie",
+        "oracle_text": "When this creature enters, return a black or red creature you control to its owner's hand.\n{2}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "{1}{B}{R}",
+        "type_line": "Creature — Zombie",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "color_identity": [
+          "B",
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pls/113/lava-zombie?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [
+          "B",
+          "R"
+        ],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a black or red creature you control to its owner's hand.",
+        "gaps": [
+          "{2}: This creature gets +1/+0 until end of turn."
+        ]
+      }
+    },
+    "Mercenary Knight": {
+      "csvid": 2827,
+      "oracle": {
+        "oracle_id": "ed5429bb-233a-4528-bf7d-df5f6b192b1c",
+        "name": "Mercenary Knight",
+        "oracle_text": "When this creature enters, sacrifice it unless you discard a creature card.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Human Mercenary Knight",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/por/99/mercenary-knight?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "discard_gate",
+        "clause": "When this creature enters, sacrifice it unless you discard a creature card.",
+        "gaps": []
+      }
+    },
+    "Quickling": {
+      "csvid": 14157,
+      "oracle": {
+        "oracle_id": "109899e1-abd7-4582-8b67-b0852755bf75",
+        "name": "Quickling",
+        "oracle_text": "Flash (You may cast this spell any time you could cast an instant.)\nFlying\nWhen this creature enters, sacrifice it unless you return another creature you control to its owner's hand.",
+        "mana_cost": "{1}{U}",
+        "type_line": "Creature — Faerie Rogue",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying",
+          "Flash"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/76/quickling?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": true,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce_gate",
+        "clause": "When this creature enters, sacrifice it unless you return another creature you control to its owner's hand.",
+        "gaps": [
+          "Flash (You may cast this spell any time you could cast an instant.)",
+          "Flying"
+        ]
+      }
+    },
+    "Shivan Wurm": {
+      "csvid": 5297,
+      "oracle": {
+        "oracle_id": "fc988ce3-0cad-41a5-8f13-656caca732df",
+        "name": "Shivan Wurm",
+        "oracle_text": "Trample\nWhen this creature enters, return a red or green creature you control to its owner's hand.",
+        "mana_cost": "{3}{R}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/vma/261/shivan-wurm?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [
+          "R",
+          "G"
+        ],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a red or green creature you control to its owner's hand.",
+        "gaps": [
+          "Trample"
+        ]
+      }
+    },
+    "Silver Drake": {
+      "csvid": 5299,
+      "oracle": {
+        "oracle_id": "ec7eb7d8-92b2-4442-856e-a9790301c3b3",
+        "name": "Silver Drake",
+        "oracle_text": "Flying\nWhen this creature enters, return a white or blue creature you control to its owner's hand.",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Creature — Drake",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pls/125/silver-drake?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [
+          "W",
+          "U"
+        ],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a white or blue creature you control to its owner's hand.",
+        "gaps": [
+          "Flying"
+        ]
+      }
+    },
+    "Slum Reaper": {
+      "csvid": 12828,
+      "oracle": {
+        "oracle_id": "0cf742c1-feb5-4108-9976-37fa58528212",
+        "name": "Slum Reaper",
+        "oracle_text": "When this creature enters, each player sacrifices a creature of their choice.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature — Horror",
+        "power": "4",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/114/slum-reaper?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "both",
+        "targeted": false,
+        "kind": "sacrifice",
+        "clause": "When this creature enters, each player sacrifices a creature of their choice.",
+        "gaps": []
+      }
+    },
+    "Spined Fluke": {
+      "csvid": 3914,
+      "oracle": {
+        "oracle_id": "3c880ac2-0b22-4f7e-a55a-381de235e971",
+        "name": "Spined Fluke",
+        "oracle_text": "When this creature enters, sacrifice a creature.\n{B}: Regenerate this creature.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Worm Horror",
+        "power": "5",
+        "toughness": "1",
+        "keywords": [
+          "Regenerate"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/usg/160/spined-fluke?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "sacrifice",
+        "clause": "When this creature enters, sacrifice a creature.",
+        "gaps": [
+          "{B}: Regenerate this creature."
+        ]
+      }
+    },
+    "Whitemane Lion": {
+      "csvid": 8880,
+      "oracle": {
+        "oracle_id": "e8d6084b-9b72-438e-a30a-851b888f3e4d",
+        "name": "Whitemane Lion",
+        "oracle_text": "Flash\nWhen this creature enters, return a creature you control to its owner's hand.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Creature — Cat",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flash"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/35/whitemane-lion?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a creature you control to its owner's hand.",
+        "gaps": [
+          "Flash"
+        ]
+      }
+    },
+    "Ambush Krotiq": {
+      "csvid": 14510,
+      "oracle": {
+        "oracle_id": "e53f5f82-a8e0-44b1-a3be-162a0724755d",
+        "name": "Ambush Krotiq",
+        "oracle_text": "Trample\nWhen this creature enters, return another creature you control to its owner's hand.",
+        "mana_cost": "{5}{G}",
+        "type_line": "Creature — Insect",
+        "power": "5",
+        "toughness": "5",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frf/122/ambush-krotiq?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": true,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return another creature you control to its owner's hand.",
+        "gaps": [
+          "Trample"
+        ]
+      }
+    },
+    "Merciless Executioner": {
+      "csvid": 14590,
+      "oracle": {
+        "oracle_id": "c3c45d50-9038-41df-bb2f-9bc40071845b",
+        "name": "Merciless Executioner",
+        "oracle_text": "When this creature enters, each player sacrifices a creature of their choice.",
+        "mana_cost": "{2}{B}",
+        "type_line": "Creature — Orc Warrior",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/hoc/188/merciless-executioner?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "both",
+        "targeted": false,
+        "kind": "sacrifice",
+        "clause": "When this creature enters, each player sacrifices a creature of their choice.",
+        "gaps": []
+      }
+    },
+    "Ancestral Statue": {
+      "csvid": 14669,
+      "oracle": {
+        "oracle_id": "da69fbf7-c894-41dd-85ec-217de23a362f",
+        "name": "Ancestral Statue",
+        "oracle_text": "When this creature enters, return a nonland permanent you control to its owner's hand.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact Creature — Golem",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/458/ancestral-statue?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "nonland_permanent",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a nonland permanent you control to its owner's hand.",
+        "gaps": []
+      }
+    },
+    "Shrieking Drake": {
+      "csvid": 2775,
+      "oracle": {
+        "oracle_id": "2a8e14be-6f93-428d-a204-e2399dc93797",
+        "name": "Shrieking Drake",
+        "oracle_text": "Flying\nWhen this creature enters, return a creature you control to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Creature — Drake",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh3/272/shrieking-drake?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a creature you control to its owner's hand.",
+        "gaps": [
+          "Flying"
+        ]
+      }
+    },
+    "Thundering Wurm": {
+      "csvid": 2872,
+      "oracle": {
+        "oracle_id": "cdab50a8-1e02-4ba5-8c09-e2837e7652f7",
+        "name": "Thundering Wurm",
+        "oracle_text": "When this creature enters, sacrifice it unless you discard a land card.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature — Wurm",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/por/189/thundering-wurm?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "land",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "discard_gate",
+        "clause": "When this creature enters, sacrifice it unless you discard a land card.",
+        "gaps": []
+      }
+    },
+    "Storm Sculptor": {
+      "csvid": 17550,
+      "oracle": {
+        "oracle_id": "e43eb15e-e910-4165-b9df-25cbe7054e0a",
+        "name": "Storm Sculptor",
+        "oracle_text": "This creature can't be blocked.\nWhen this creature enters, return a creature you control to its owner's hand.",
+        "mana_cost": "{3}{U}",
+        "type_line": "Creature — Merfolk Wizard",
+        "power": "3",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jmp/179/storm-sculptor?utm_source=api"
+      },
+      "mechanism": {
+        "count": 1,
+        "scope": "creature",
+        "colors": [],
+        "another": false,
+        "recipient": "self",
+        "targeted": false,
+        "kind": "bounce",
+        "clause": "When this creature enters, return a creature you control to its owner's hand.",
+        "gaps": [
+          "This creature can't be blocked."
+        ]
+      }
+    }
+  }
+}

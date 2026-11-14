@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Elspeth, Sun's Champion",
+  "csvid": 13426,
+  "recipes": [
+    {
+      "family": "activated_token_creation",
+      "version": 2,
+      "oracle_text": "+1: Create three 1/1 white Soldier creature tokens.\n−3: Destroy all creatures with power 4 or greater.\n−7: You get an emblem with \"Creatures you control get +2/+2 and have flying.\"",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "present_ai_dialogs": true,
+          "sacrifice_choices": {},
+          "casting_colors": []
+        },
+        "inactive_clauses": [
+          "−3: Destroy all creatures with power 4 or greater.",
+          "−7: You get an emblem with \"Creatures you control get +2/+2 and have flying.\""
+        ]
+      },
+      "variants": [
+        "create_0",
+        "payment_0",
+        "bare_zones_0",
+        "offturn_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "source_destroyed_pending_0",
+        "cleanup_0",
+        "repeat_0",
+        "fresh_attack_0",
+        "ready_attack_0",
+        "block_ground_0",
+        "block_flying_0",
+        "destroy_token_0",
+        "bounce_token_0",
+        "exile_token_0",
+        "create_1",
+        "payment_1",
+        "bare_zones_1",
+        "offturn_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "source_destroyed_pending_1",
+        "cleanup_1",
+        "repeat_1",
+        "fresh_attack_1",
+        "ready_attack_1",
+        "block_ground_1",
+        "block_flying_1",
+        "destroy_token_1",
+        "bounce_token_1",
+        "exile_token_1"
+      ]
+    }
+  ]
+}

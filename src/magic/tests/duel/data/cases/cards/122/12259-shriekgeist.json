@@ -1,0 +1,93 @@
+{
+  "version": 1,
+  "card": "Shriekgeist",
+  "csvid": 12259,
+  "recipes": [
+    {
+      "family": "combat_value_trigger",
+      "version": 2,
+      "params": {
+        "schema": 12,
+        "scope": "combat",
+        "recipient": "player",
+        "movement": {
+          "zone": "graveyard",
+          "amount": 2,
+          "target": "damaged"
+        },
+        "condition": null,
+        "entry_life_loss": 0,
+        "unblockable": false,
+        "keywords": [
+          "Flying"
+        ],
+        "inactive_abilities": [],
+        "effects": {
+          "draw": 0,
+          "discard": 0,
+          "mill": false,
+          "self_counters": 0
+        }
+      },
+      "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, that player mills two cards.",
+      "variants": [
+        "unblocked_0",
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "fresh_attack_0",
+        "blocked_0",
+        "zero_power_0",
+        "pump_0",
+        "cleanup_0",
+        "other_attack_0",
+        "two_hits_0",
+        "last_card_two_hits_0",
+        "duplicate_hits_0",
+        "two_sources_0",
+        "ready_snapshot_0",
+        "combat_snapshot_0",
+        "empty_library_0",
+        "exact_library_0",
+        "noncombat_player_0",
+        "noncombat_self_0",
+        "noncombat_creature_0",
+        "noncombat_tapped_0",
+        "noncombat_sick_0",
+        "noncombat_fresh_0",
+        "noncombat_snapshot_0",
+        "noncombat_twice_0",
+        "short_library_0",
+        "unblocked_1",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "fresh_attack_1",
+        "blocked_1",
+        "zero_power_1",
+        "pump_1",
+        "cleanup_1",
+        "other_attack_1",
+        "two_hits_1",
+        "last_card_two_hits_1",
+        "duplicate_hits_1",
+        "two_sources_1",
+        "ready_snapshot_1",
+        "combat_snapshot_1",
+        "empty_library_1",
+        "exact_library_1",
+        "noncombat_player_1",
+        "noncombat_self_1",
+        "noncombat_creature_1",
+        "noncombat_tapped_1",
+        "noncombat_sick_1",
+        "noncombat_fresh_1",
+        "noncombat_snapshot_1",
+        "noncombat_twice_1",
+        "short_library_1"
+      ]
+    }
+  ]
+}

@@ -3038,7 +3038,7 @@ int card_wing_shards(int player, int card, event_t event){
 		}
 		kill_card(player, card, KILL_DESTROY);
 	}
-	return generic_spell(player, card, event, GS_CAN_TARGET, &td, NULL, 1, NULL);
+	return generic_spell(player, card, event, GS_CAN_TARGET, &td, "TARGET_PLAYER", 1, NULL);
 }
 
 int card_wirewood_guardian(int player, int card, event_t event){

@@ -1,0 +1,1197 @@
+{
+  "version": 1,
+  "sources": {
+    "Alaborn Zealot": {
+      "oracle": {
+        "oracle_id": "0d0d97dd-2653-4d37-b475-ac3b50c5ee53",
+        "name": "Alaborn Zealot",
+        "oracle_text": "When this creature blocks a creature, destroy both creatures.",
+        "mana_cost": "{W}",
+        "type_line": "Creature \u2014 Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/p02/6/alaborn-zealot?utm_source=api"
+      },
+      "handler": "manalinkeh_card_alaborn_zealot",
+      "params": {
+        "trigger": "block",
+        "role": "defending",
+        "scope": null,
+        "victims": "both",
+        "timing": "immediate",
+        "predicate": "any",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/portal_1_2_3k.c",
+        "line": 1043,
+        "symbol": "card_alaborn_zealot",
+        "sha256": "9ebb12c4108ac5848332addac2199b3e7416492fe5ce24e38e49aaa7e3d38f33"
+      }
+    },
+    "Arrogant Bloodlord": {
+      "oracle": {
+        "oracle_id": "a35e1882-b878-49cf-a06c-be12a06d4977",
+        "name": "Arrogant Bloodlord",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by a creature with power 1 or less, destroy this creature at end of combat.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Creature \u2014 Vampire Knight",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/roe/94/arrogant-bloodlord?utm_source=api"
+      },
+      "handler": "manalinkeh_card_arrogant_bloodlord",
+      "params": {
+        "trigger": "block",
+        "role": "both",
+        "scope": null,
+        "victims": "self",
+        "timing": "end_combat",
+        "predicate": "power_le1",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/rise_of_the_eldrazi.c",
+        "line": 2676,
+        "symbol": "card_arrogant_bloodlord",
+        "sha256": "9007b22dd36cb1a5a40a9b0eab59e944c96a0bf93d3cd342c3ae2f76898906ec"
+      }
+    },
+    "Engulfing Slagwurm": {
+      "oracle": {
+        "oracle_id": "0340cfcb-fc96-40d2-8175-31a0093615bb",
+        "name": "Engulfing Slagwurm",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by a creature, destroy that creature. You gain life equal to that creature's toughness.",
+        "mana_cost": "{5}{G}{G}",
+        "type_line": "Creature \u2014 Wurm",
+        "power": "7",
+        "toughness": "7",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/som/118/engulfing-slagwurm?utm_source=api"
+      },
+      "handler": "manalinkeh_card_engulfing_slagwurm",
+      "params": {
+        "trigger": "block",
+        "role": "both",
+        "scope": null,
+        "victims": "other",
+        "timing": "immediate",
+        "predicate": "any",
+        "cannot_regenerate": false,
+        "toughness_life": true,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/scars_of_mirrodin.c",
+        "line": 3222,
+        "symbol": "card_engulfing_slagwurm",
+        "sha256": "f0212bb7c1e51d46d378c7ef5b9d9b41a45d553199397c1a455bf49f155d4c75"
+      }
+    },
+    "Infernal Medusa": {
+      "oracle": {
+        "oracle_id": "2cf5ce1f-d5f6-44cd-96e5-87d990d7e770",
+        "name": "Infernal Medusa",
+        "oracle_text": "Whenever this creature blocks a creature, destroy that creature at end of combat.\nWhenever this creature becomes blocked by a non-Wall creature, destroy that creature at end of combat.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature \u2014 Gorgon",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/leg/108/infernal-medusa?utm_source=api"
+      },
+      "handler": "manalinkeh_card_infernal_medusa",
+      "params": {
+        "trigger": "block",
+        "role": "split",
+        "scope": null,
+        "victims": "other",
+        "timing": "end_combat",
+        "predicate": "attacking_nonwall",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/legends.c",
+        "line": 3987,
+        "symbol": "card_infernal_medusa",
+        "sha256": "d7e3d27299b5be320f972f7c3629b9fb6cabaecae969484dff8f0dd41810117a"
+      }
+    },
+    "Lowland Basilisk": {
+      "oracle": {
+        "oracle_id": "effe239e-ade0-4ee2-99d7-f93b2f5ef585",
+        "name": "Lowland Basilisk",
+        "oracle_text": "Whenever this creature deals damage to a creature, destroy that creature at end of combat.",
+        "mana_cost": "{2}{G}",
+        "type_line": "Creature \u2014 Basilisk",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/tpr/178/lowland-basilisk?utm_source=api"
+      },
+      "handler": "manalinkeh_card_lowland_basilisk",
+      "params": {
+        "trigger": "damage",
+        "role": "source",
+        "scope": "any",
+        "victims": "other",
+        "timing": "end_combat",
+        "predicate": "any",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/stronghold.c",
+        "line": 1284,
+        "symbol": "card_lowland_basilisk",
+        "sha256": "ec3fcf5f1a83350c765081584ac8423400d623ca3f5cd3340317f3abd0e94101"
+      }
+    },
+    "Mephitic Ooze": {
+      "oracle": {
+        "oracle_id": "230e0bf3-3f17-4968-8723-3fb6a0909816",
+        "name": "Mephitic Ooze",
+        "oracle_text": "This creature gets +1/+0 for each artifact you control.\nWhenever this creature deals combat damage to a creature, destroy that creature. The creature can't be regenerated.",
+        "mana_cost": "{4}{B}",
+        "type_line": "Creature \u2014 Ooze",
+        "power": "0",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dst/47/mephitic-ooze?utm_source=api"
+      },
+      "handler": "manalinkeh_card_mephitic_ooze",
+      "params": {
+        "trigger": "damage",
+        "role": "source",
+        "scope": "combat",
+        "victims": "other",
+        "timing": "immediate",
+        "predicate": "any",
+        "cannot_regenerate": true,
+        "toughness_life": false,
+        "artifact_power": true,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/darksteel.c",
+        "line": 1729,
+        "symbol": "card_mephitic_ooze",
+        "sha256": "a5ead494687917cd828697821a9072c59133af428403aac05974a25dff71c75e"
+      }
+    },
+    "Sosuke, Son of Seshiro": {
+      "oracle": {
+        "oracle_id": "54856e0f-3264-4f56-a7e0-0160a7b07e3d",
+        "name": "Sosuke, Son of Seshiro",
+        "oracle_text": "Other Snake creatures you control get +1/+0.\nWhenever a Warrior you control deals combat damage to a creature, destroy that creature at end of combat.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Legendary Creature \u2014 Snake Warrior",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/chk/244/sosuke-son-of-seshiro?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sosuke_son_of_seshiro",
+      "params": {
+        "trigger": "damage",
+        "role": "own_warrior",
+        "scope": "combat",
+        "victims": "other",
+        "timing": "end_combat",
+        "predicate": "any",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": true,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/champions_of_kamigawa.c",
+        "line": 5153,
+        "symbol": "card_sosuke_son_of_seshiro",
+        "sha256": "4d98b32c15661e5aeed7a9ce794ca521d96403ea14a546658cd3f5fb5dce0e37"
+      }
+    },
+    "Toxin Sliver": {
+      "oracle": {
+        "oracle_id": "96ccad44-7912-4fdb-bb2d-9d16cc3cd68a",
+        "name": "Toxin Sliver",
+        "oracle_text": "Whenever a Sliver deals combat damage to a creature, destroy that creature. It can't be regenerated.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature \u2014 Sliver",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/lgn/84/toxin-sliver?utm_source=api"
+      },
+      "handler": "manalinkeh_card_toxin_sliver",
+      "params": {
+        "trigger": "damage",
+        "role": "all_slivers",
+        "scope": "combat",
+        "victims": "other",
+        "timing": "immediate",
+        "predicate": "any",
+        "cannot_regenerate": true,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/legions.c",
+        "line": 2055,
+        "symbol": "card_toxin_sliver",
+        "sha256": "03eb683c2362e7bf99a23b1c79bf4e27ea3f443ec52f876c102cb2b040ed20c7"
+      }
+    },
+    "Loyal Sentry": {
+      "oracle": {
+        "oracle_id": "54b1a496-1f8e-4581-8260-bad57b25c6e3",
+        "name": "Loyal Sentry",
+        "oracle_text": "When this creature blocks a creature, destroy that creature and this creature.",
+        "mana_cost": "{W}",
+        "type_line": "Creature \u2014 Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/22/loyal-sentry?utm_source=api"
+      },
+      "handler": "manalinkeh_card_alaborn_zealot",
+      "params": {
+        "trigger": "block",
+        "role": "defending",
+        "scope": null,
+        "victims": "both",
+        "timing": "immediate",
+        "predicate": "any",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/portal_1_2_3k.c",
+        "line": 1043,
+        "symbol": "card_alaborn_zealot",
+        "sha256": "9ebb12c4108ac5848332addac2199b3e7416492fe5ce24e38e49aaa7e3d38f33"
+      },
+      "follow_on": true
+    },
+    "Abomination": {
+      "oracle": {
+        "oracle_id": "2c57c4e9-0a46-45d6-92db-9203fb722b60",
+        "name": "Abomination",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by a green or white creature, destroy that creature at end of combat.",
+        "mana_cost": "{3}{B}{B}",
+        "type_line": "Creature \u2014 Horror",
+        "power": "2",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/4ed/117/abomination?utm_source=api"
+      },
+      "handler": "manalinkeh_card_abomination",
+      "params": {
+        "trigger": "block",
+        "role": "both",
+        "scope": null,
+        "victims": "other",
+        "timing": "end_combat",
+        "predicate": "green_white",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/legends.c",
+        "line": 277,
+        "symbol": "card_abomination",
+        "sha256": "d7e3d27299b5be320f972f7c3629b9fb6cabaecae969484dff8f0dd41810117a"
+      },
+      "follow_on": true
+    },
+    "Dread Specter": {
+      "oracle": {
+        "oracle_id": "da21c21c-88d8-4a93-b2b4-6d7bb28959c9",
+        "name": "Dread Specter",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by a nonblack creature, destroy that creature at end of combat.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature \u2014 Specter",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/119/dread-specter?utm_source=api"
+      },
+      "handler": "manalinkeh_card_deathgazer",
+      "params": {
+        "trigger": "block",
+        "role": "both",
+        "scope": null,
+        "victims": "other",
+        "timing": "end_combat",
+        "predicate": "nonblack",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/mercadian_masques.c",
+        "line": 1342,
+        "symbol": "card_deathgazer",
+        "sha256": "a1caadb199174ad338d612c198d3f239c26dfe18acd3c958d2ea3510d35a99ab"
+      },
+      "follow_on": true
+    },
+    "Rock Basilisk": {
+      "oracle": {
+        "oracle_id": "6e7bb687-8243-4377-80b5-67ce6b65f9b7",
+        "name": "Rock Basilisk",
+        "oracle_text": "Whenever this creature blocks or becomes blocked by a non-Wall creature, destroy that creature at end of combat.",
+        "mana_cost": "{4}{R}{G}",
+        "type_line": "Creature \u2014 Basilisk",
+        "power": "4",
+        "toughness": "5",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mir/279/rock-basilisk?utm_source=api"
+      },
+      "handler": "manalinkeh_card_thicket_basilisk",
+      "params": {
+        "trigger": "block",
+        "role": "both",
+        "scope": null,
+        "victims": "other",
+        "timing": "end_combat",
+        "predicate": "nonwall",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/unlimited.c",
+        "line": 6640,
+        "symbol": "card_thicket_basilisk",
+        "sha256": "b34b0614a1cdd978fbcf606165da0fe163743cd884d34d3c4659bc58b29e1f7a"
+      },
+      "follow_on": true
+    },
+    "Ohran Viper": {
+      "oracle": {
+        "oracle_id": "879fdcd8-62ea-4d39-abd4-44e6d82adf4d",
+        "name": "Ohran Viper",
+        "oracle_text": "Whenever this creature deals combat damage to a creature, destroy that creature at end of combat.\nWhenever this creature deals combat damage to a player, you may draw a card.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Snow Creature \u2014 Snake",
+        "power": "1",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c15/194/ohran-viper?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ohran_viper",
+      "params": {
+        "trigger": "damage",
+        "role": "source",
+        "scope": "combat",
+        "victims": "other",
+        "timing": "end_combat",
+        "predicate": "any",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": true,
+        "keywords": []
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/cards/coldsnap.c",
+        "line": 2617,
+        "symbol": "card_ohran_viper",
+        "sha256": "dc9bd8ed7edc018d65e72363c8a52552b2eac13bca684b8f9efe3fdcabc9a2c8"
+      },
+      "follow_on": true
+    },
+    "Voracious Cobra": {
+      "oracle": {
+        "oracle_id": "5b2e1105-5af0-4f34-bfe9-15a2f6881edd",
+        "name": "Voracious Cobra",
+        "oracle_text": "First strike\nWhenever this creature deals combat damage to a creature, destroy that creature.",
+        "mana_cost": "{2}{R}{G}",
+        "type_line": "Creature \u2014 Snake",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "First strike"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/inv/288/voracious-cobra?utm_source=api"
+      },
+      "handler": "manalinkeh_deathtouch",
+      "params": {
+        "trigger": "damage",
+        "role": "source",
+        "scope": "combat",
+        "victims": "other",
+        "timing": "immediate",
+        "predicate": "any",
+        "cannot_regenerate": false,
+        "toughness_life": false,
+        "artifact_power": false,
+        "snake_bonus": false,
+        "optional_player_draw": false,
+        "keywords": [
+          "First strike"
+        ]
+      },
+      "compiled_source": {
+        "path": "src/manalinkeh/functions/abilities.c",
+        "line": 3122,
+        "symbol": "deathtouch",
+        "sha256": "44c670a0b3910ae8127c700ab57bc184740423759de3dcc5472fd130dc635148"
+      },
+      "follow_on": true
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Lagonna-Band Trailblazer": {
+      "oracle_id": "09cc0faa-71d7-428b-9fc4-5ba09e244e89",
+      "name": "Lagonna-Band Trailblazer",
+      "oracle_text": "Heroic \u2014 Whenever you cast a spell that targets this creature, put a +1/+1 counter on it.",
+      "mana_cost": "{W}",
+      "type_line": "Creature \u2014 Centaur Scout",
+      "power": "0",
+      "toughness": "4",
+      "keywords": [
+        "Heroic"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/jou/14/lagonna-band-trailblazer?utm_source=api"
+    },
+    "Wall of Denial": {
+      "oracle_id": "9cc092f9-e8f0-40ea-847d-813b70f889db",
+      "name": "Wall of Denial",
+      "oracle_text": "Defender, flying\nShroud (This creature can't be the target of spells or abilities.)",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Creature \u2014 Wall",
+      "power": "0",
+      "toughness": "8",
+      "keywords": [
+        "Flying",
+        "Shroud",
+        "Defender"
+      ],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/939/wall-of-denial?utm_source=api"
+    },
+    "Mistform Ultimus": {
+      "oracle_id": "7bf0e628-06b5-4e12-a526-a2bce08844f2",
+      "name": "Mistform Ultimus",
+      "oracle_text": "Mistform Ultimus is every creature type (even if this card isn't on the battlefield).",
+      "mana_cost": "{3}{U}",
+      "type_line": "Legendary Creature \u2014 Illusion",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tsb/26/mistform-ultimus?utm_source=api"
+    },
+    "Darksteel Myr": {
+      "oracle_id": "f90fe86c-5cca-483b-93c2-6e856fa01c88",
+      "name": "Darksteel Myr",
+      "oracle_text": "Indestructible (Damage and effects that say \"destroy\" don't destroy this creature. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature \u2014 Myr",
+      "power": "0",
+      "toughness": "1",
+      "keywords": [
+        "Indestructible"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/151/darksteel-myr?utm_source=api"
+    },
+    "Wall of Brambles": {
+      "oracle_id": "f8d82a00-c10e-4b9e-9642-d05706900a97",
+      "name": "Wall of Brambles",
+      "oracle_text": "Defender (This creature can't attack.)\n{G}: Regenerate this creature.",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature \u2014 Plant Wall",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "Regenerate",
+        "Defender"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/5ed/338/wall-of-brambles?utm_source=api"
+    },
+    "River Boa": {
+      "oracle_id": "86187aed-77ce-4b2d-aab0-0a8f807a9451",
+      "name": "River Boa",
+      "oracle_text": "Islandwalk (This creature can't be blocked as long as defending player controls an Island.)\n{G}: Regenerate this creature.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Snake",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [
+        "Landwalk",
+        "Regenerate",
+        "Islandwalk"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ddm/49/river-boa?utm_source=api"
+    },
+    "Holy Strength": {
+      "oracle_id": "9357de36-f8be-4f49-b2c8-9fe9eaf82b07",
+      "name": "Holy Strength",
+      "oracle_text": "Enchant creature\nEnchanted creature gets +1/+2.",
+      "mana_cost": "{W}",
+      "type_line": "Enchantment \u2014 Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m11/16/holy-strength?utm_source=api"
+    },
+    "Reflexes": {
+      "oracle_id": "dc87b0a5-3d9d-44eb-b415-b022acd63cf1",
+      "name": "Reflexes",
+      "oracle_text": "Enchant creature (Target a creature as you cast this. This card enters attached to that creature.)\nEnchanted creature has first strike. (It deals combat damage before creatures without first strike.)",
+      "mana_cost": "{R}",
+      "type_line": "Enchantment \u2014 Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/211/reflexes?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Withstand Death": {
+      "oracle_id": "c462adf3-4ade-4b90-bdec-7247b080471f",
+      "name": "Withstand Death",
+      "oracle_text": "Target creature gains indestructible until end of turn. (Damage and effects that say \"destroy\" don't destroy it. If its toughness is 0 or less, it still dies.)",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/134/withstand-death?utm_source=api"
+    },
+    "Hermetic Study": {
+      "oracle_id": "792d7818-ee5c-4254-b969-7b50f475c629",
+      "name": "Hermetic Study",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+      "mana_cost": "{1}{U}",
+      "type_line": "Enchantment \u2014 Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/53/hermetic-study?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Changeling Sentinel": {
+      "oracle_id": "2977aae2-225d-4f3f-8bf7-535f542a7391",
+      "name": "Changeling Sentinel",
+      "oracle_text": "Changeling (This card is every creature type.)\nVigilance",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature \u2014 Shapeshifter",
+      "power": "3",
+      "toughness": "2",
+      "keywords": [
+        "Vigilance",
+        "Changeling"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mor/6/changeling-sentinel?utm_source=api"
+    },
+    "Abyssal Specter": {
+      "oracle_id": "51833cff-6519-4806-8d91-0040e9a02189",
+      "name": "Abyssal Specter",
+      "oracle_text": "Flying\nWhenever this creature deals damage to a player, that player discards a card.",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature \u2014 Specter",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mm3/59/abyssal-specter?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    },
+    "Wall of Bone": {
+      "oracle_id": "8ffe4986-9e09-4421-ad26-296a4c0df9e4",
+      "name": "Wall of Bone",
+      "oracle_text": "Defender (This creature can't attack.)\n{B}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature \u2014 Skeleton Wall",
+      "power": "1",
+      "toughness": "4",
+      "keywords": [
+        "Heal",
+        "Regenerate",
+        "Defender"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/gvl/41/wall-of-bone?utm_source=api"
+    },
+    "Wall of Roots": {
+      "oracle_id": "3a21a6ae-b2f2-4f0c-acfd-5f3e8d63fd2f",
+      "name": "Wall of Roots",
+      "oracle_text": "Defender\nPut a -0/-1 counter on this creature: Add {G}. Activate only once each turn.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Plant Wall",
+      "power": "0",
+      "toughness": "5",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/tdc/278/wall-of-roots?utm_source=api"
+    },
+    "Wall of Tanglecord": {
+      "oracle_id": "423bebcc-8fa0-49c4-aa22-728bf51a535b",
+      "name": "Wall of Tanglecord",
+      "oracle_text": "Defender\n{G}: This creature gains reach until end of turn. (It can block creatures with flying.)",
+      "mana_cost": "{2}",
+      "type_line": "Artifact Creature \u2014 Wall",
+      "power": "0",
+      "toughness": "6",
+      "keywords": [
+        "Defender"
+      ],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/som/222/wall-of-tanglecord?utm_source=api"
+    },
+    "Dreg Mangler": {
+      "oracle_id": "71358110-4e28-4794-befa-ea6e27e720ef",
+      "name": "Dreg Mangler",
+      "oracle_text": "Haste\nScavenge {3}{B}{G} ({3}{B}{G}, Exile this card from your graveyard: Put a number of +1/+1 counters equal to this card's power on target creature. Scavenge only as a sorcery.)",
+      "mana_cost": "{1}{B}{G}",
+      "type_line": "Creature \u2014 Plant Zombie",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [
+        "Scavenge",
+        "Haste"
+      ],
+      "colors": [
+        "B",
+        "G"
+      ],
+      "color_identity": [
+        "B",
+        "G"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/2x2/204/dreg-mangler?utm_source=api"
+    },
+    "Cudgel Troll": {
+      "oracle_id": "c2f86723-4765-4dac-a9f6-9cfa543613b2",
+      "name": "Cudgel Troll",
+      "oracle_text": "{G}: Regenerate this creature. (The next time this creature would be destroyed this turn, instead tap it, remove it from combat, and heal all damage on it.)",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Creature \u2014 Troll",
+      "power": "4",
+      "toughness": "3",
+      "keywords": [
+        "Heal",
+        "Regenerate"
+      ],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m12/169/cudgel-troll?utm_source=api"
+    },
+    "Mephitic Ooze": {
+      "oracle_id": "230e0bf3-3f17-4968-8723-3fb6a0909816",
+      "name": "Mephitic Ooze",
+      "oracle_text": "This creature gets +1/+0 for each artifact you control.\nWhenever this creature deals combat damage to a creature, destroy that creature. The creature can't be regenerated.",
+      "mana_cost": "{4}{B}",
+      "type_line": "Creature \u2014 Ooze",
+      "power": "0",
+      "toughness": "5",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 5.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dst/47/mephitic-ooze?utm_source=api"
+    }
+  },
+  "native_characteristics_only_witnesses": [
+    "Grizzly Bears",
+    "Wall of Denial",
+    "Ornithopter"
+  ]
+}

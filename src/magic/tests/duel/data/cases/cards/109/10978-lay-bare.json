@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Lay Bare",
+  "csvid": 10978,
+  "recipes": [
+    {
+      "family": "counterspell_extension",
+      "version": 2,
+      "oracle_text": "Counter target spell. Look at its controller's hand.",
+      "params": {
+        "schema": 7,
+        "extension": {
+          "wave": 7
+        },
+        "kind": "hand_inspection",
+        "token": null,
+        "inactive_components": [
+          "The hand-inspection UI disclosure is not observable through duel state."
+        ]
+      },
+      "variants": [
+        "opponent_0",
+        "own_spell_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_mana_0",
+        "no_stack_0",
+        "snapshot_0",
+        "instant_parent_0",
+        "sorcery_parent_0",
+        "artifact_parent_0",
+        "enchantment_parent_0",
+        "aura_parent_0",
+        "opponent_1",
+        "own_spell_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_mana_1",
+        "no_stack_1",
+        "snapshot_1",
+        "instant_parent_1",
+        "sorcery_parent_1",
+        "artifact_parent_1",
+        "enchantment_parent_1",
+        "aura_parent_1"
+      ]
+    }
+  ]
+}

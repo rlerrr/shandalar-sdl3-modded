@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "card": "Ratchet Bomb",
+  "csvid": 11342,
+  "recipes": [
+    {
+      "family": "charge_counter_activation",
+      "version": 2,
+      "oracle_text": "{T}: Put a charge counter on this artifact.\n{T}, Sacrifice this artifact: Destroy each nonland permanent with mana value equal to the number of charge counters on this artifact.",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "dialogs": {
+            "0": 0,
+            "1": 0
+          },
+          "intent": null,
+          "sacrifice_choices": {},
+          "disabled_tap_mode": false,
+          "mana_shortage_query_only": false,
+          "exact_cost_negatives": false
+        },
+        "inactive_clauses": [
+          "{T}, Sacrifice this artifact: Destroy each nonland permanent with mana value equal to the number of charge counters on this artifact."
+        ]
+      },
+      "variants": [
+        "charge_0",
+        "payment_0",
+        "offturn_0",
+        "tapped_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "source_removed_pending_0",
+        "repeat_0",
+        "repeat_untap_0",
+        "charge_1",
+        "payment_1",
+        "offturn_1",
+        "tapped_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "source_removed_pending_1",
+        "repeat_1",
+        "repeat_untap_1"
+      ]
+    }
+  ]
+}

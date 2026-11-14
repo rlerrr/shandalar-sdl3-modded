@@ -1,0 +1,775 @@
+{
+  "version": 1,
+  "witnesses": {
+    "Grizzly Bears": {
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Hill Giant": {
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Savannah Lions": {
+      "oracle": {
+        "oracle_id": "60ba93eb-39e6-4af2-9c66-cd38f72daff2",
+        "name": "Savannah Lions",
+        "oracle_text": "",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Cat",
+        "power": "2",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fdn/146/savannah-lions?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Watchwolf": {
+      "oracle": {
+        "oracle_id": "a35c2e20-eb90-4132-b65f-be1fcb569819",
+        "name": "Watchwolf",
+        "oracle_text": "",
+        "mana_cost": "{G}{W}",
+        "type_line": "Creature — Wolf",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/a25/220/watchwolf?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Deadly Insect": {
+      "oracle": {
+        "oracle_id": "98273b0d-2b41-486b-9498-30a692c03982",
+        "name": "Deadly Insect",
+        "oracle_text": "Shroud (This creature can't be the target of spells or abilities.)",
+        "mana_cost": "{4}{G}",
+        "type_line": "Creature — Insect",
+        "power": "6",
+        "toughness": "1",
+        "keywords": [
+          "Shroud"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/238/deadly-insect?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Memnite": {
+      "oracle": {
+        "oracle_id": "7663ac7c-1de3-4250-b96a-fae9dbd66a27",
+        "name": "Memnite",
+        "oracle_text": "",
+        "mana_cost": "{0}",
+        "type_line": "Artifact Creature — Construct",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/td2/2/memnite?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Seal of Removal": {
+      "oracle": {
+        "oracle_id": "f0801029-bcf7-4bdb-84bf-e88dcaa9dc03",
+        "name": "Seal of Removal",
+        "oracle_text": "Sacrifice this enchantment: Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mh2/269/seal-of-removal?utm_source=api"
+      },
+      "handler": "manalinkeh_card_seal_of_removal",
+      "reviewed_native_witness": false
+    },
+    "Sol Ring": {
+      "oracle": {
+        "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+        "name": "Sol Ring",
+        "oracle_text": "{T}: Add {C}{C}.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sol_ring",
+      "reviewed_native_witness": false
+    },
+    "Ivory Mask": {
+      "oracle": {
+        "oracle_id": "028bc726-0e86-4c53-9648-625153ae4b01",
+        "name": "Ivory Mask",
+        "oracle_text": "You have shroud. (You can't be the target of spells or abilities.)",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/9ed/23/ivory-mask?utm_source=api"
+      },
+      "handler": "manalinkeh_card_ivory_mask",
+      "reviewed_native_witness": false
+    },
+    "Air Elemental": {
+      "oracle": {
+        "oracle_id": "7744bae4-a8b7-44a5-9b4c-0048ad4cc448",
+        "name": "Air Elemental",
+        "oracle_text": "Flying",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Elemental",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m20/44/air-elemental?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Giant Spider": {
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      },
+      "handler": "card_dummy",
+      "reviewed_native_witness": true
+    },
+    "Unholy Strength": {
+      "oracle": {
+        "oracle_id": "090d88a9-7f2d-4bd1-a30a-7c48d05068be",
+        "name": "Unholy Strength",
+        "oracle_text": "Enchant creature\nEnchanted creature gets +2/+1.",
+        "mana_cost": "{B}",
+        "type_line": "Enchantment — Aura",
+        "keywords": [
+          "Enchant"
+        ],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dvd/47/unholy-strength?utm_source=api"
+      },
+      "handler": "manalinkeh_card_unholy_strenght",
+      "reviewed_native_witness": false
+    },
+    "Urza's Armor": {
+      "oracle": {
+        "oracle_id": "e5fa232a-c8f2-4532-88bf-60d1223181b0",
+        "name": "Urza's Armor",
+        "oracle_text": "If a source would deal damage to you, prevent 1 of that damage.",
+        "mana_cost": "{6}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/8ed/318/urzas-armor?utm_source=api"
+      },
+      "handler": "manalinkeh_card_urzas_armor",
+      "reviewed_native_witness": false
+    },
+    "Unsummon": {
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      },
+      "handler": "manalinkeh_card_unsummon",
+      "reviewed_native_witness": false
+    },
+    "Servo Exhibition": {
+      "oracle": {
+        "oracle_id": "76a6ddc2-f894-4331-89a9-87ca16efd0c0",
+        "name": "Servo Exhibition",
+        "oracle_text": "Create two 1/1 colorless Servo artifact creature tokens.",
+        "mana_cost": "{1}{W}",
+        "type_line": "Sorcery",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/kld/27/servo-exhibition?utm_source=api"
+      },
+      "handler": "manalinkeh_card_servo_exhibition",
+      "reviewed_native_witness": false
+    },
+    "Servo": {
+      "oracle": {
+        "oracle_id": "b6ca7bd1-d72e-4260-8b52-997ee1377279",
+        "name": "Servo",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Servo",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmh3/33/servo?utm_source=api"
+      },
+      "handler": "manalinkeh_card_rhino_token",
+      "reviewed_native_witness": false
+    },
+    "Forest": {
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Island": {
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Plains": {
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Swamp": {
+      "oracle": {
+        "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+        "name": "Swamp",
+        "oracle_text": "({T}: Add {B}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Swamp",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    },
+    "Mountain": {
+      "oracle": {
+        "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+        "name": "Mountain",
+        "oracle_text": "({T}: Add {R}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Mountain",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+      },
+      "handler": "manalinkeh_plain_mana_producer",
+      "reviewed_native_witness": false
+    }
+  },
+  "sources": {
+    "Sunken Hope": {
+      "oracle": {
+        "oracle_id": "1820b6e9-83fd-40b9-953e-ba1a8ae69614",
+        "name": "Sunken Hope",
+        "oracle_text": "At the beginning of each player's upkeep, that player returns a creature they control to its owner's hand.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pca/26/sunken-hope?utm_source=api"
+      },
+      "handler": "manalinkeh_card_sunken_hope",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "active",
+        "pay_dialog": false
+      }
+    },
+    "Cache Raiders": {
+      "oracle": {
+        "oracle_id": "57947037-91b2-4058-be22-158d3257317e",
+        "name": "Cache Raiders",
+        "oracle_text": "At the beginning of your upkeep, return a permanent you control to its owner's hand.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature — Merfolk Rogue",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddi/18/cache-raiders?utm_source=api"
+      },
+      "handler": "manalinkeh_card_cache_riders",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "controller",
+        "pay_dialog": false
+      }
+    },
+    "Esperzoa": {
+      "oracle": {
+        "oracle_id": "c9a188f9-2e65-4a66-826f-0150f25730af",
+        "name": "Esperzoa",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, return an artifact you control to its owner's hand.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Artifact Creature — Jellyfish",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2xm/49/esperzoa?utm_source=api"
+      },
+      "handler": "manalinkeh_card_esperzoa",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "controller",
+        "pay_dialog": false
+      }
+    },
+    "Eiganjo Free-Riders": {
+      "oracle": {
+        "oracle_id": "0e381b7e-2d32-4a9a-a327-e9dd1236dc1b",
+        "name": "Eiganjo Free-Riders",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, return a white creature you control to its owner's hand.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/8/eiganjo-free-riders?utm_source=api"
+      },
+      "handler": "manalinkeh_card_eiganjo_free_riders",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "controller",
+        "pay_dialog": false
+      }
+    },
+    "Oni of Wild Places": {
+      "oracle": {
+        "oracle_id": "f551093d-40b7-43ac-8023-4cfbb6c646da",
+        "name": "Oni of Wild Places",
+        "oracle_text": "Haste\nAt the beginning of your upkeep, return a red creature you control to its owner's hand.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature — Demon Spirit",
+        "power": "6",
+        "toughness": "5",
+        "keywords": [
+          "Haste"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cma/85/oni-of-wild-places?utm_source=api"
+      },
+      "handler": "manalinkeh_card_oni_of_the_wild_places",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "controller",
+        "pay_dialog": false
+      }
+    },
+    "Stampeding Serow": {
+      "oracle": {
+        "oracle_id": "7e605a8c-d6d4-410a-aca4-52576d08d81c",
+        "name": "Stampeding Serow",
+        "oracle_text": "Trample\nAt the beginning of your upkeep, return a green creature you control to its owner's hand.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Antelope Beast",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/150/stampeding-serow?utm_source=api"
+      },
+      "handler": "manalinkeh_card_stampeding_wildebeest",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "controller",
+        "pay_dialog": false
+      }
+    },
+    "Riptide Chimera": {
+      "oracle": {
+        "oracle_id": "718d72c4-ad37-49b6-860a-0b921c0de978",
+        "name": "Riptide Chimera",
+        "oracle_text": "Flying\nAt the beginning of your upkeep, return an enchantment you control to its owner's hand.",
+        "mana_cost": "{2}{U}",
+        "type_line": "Enchantment Creature — Chimera",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/jou/48/riptide-chimera?utm_source=api"
+      },
+      "handler": "manalinkeh_card_riptide_chimera",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "controller",
+        "pay_dialog": false
+      }
+    },
+    "Blood Clock": {
+      "oracle": {
+        "oracle_id": "ef987ddb-25f6-4895-8f83-045254745ea4",
+        "name": "Blood Clock",
+        "oracle_text": "At the beginning of each player's upkeep, that player returns a permanent they control to its owner's hand unless they pay 2 life.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/sok/153/blood-clock?utm_source=api"
+      },
+      "handler": "manalinkeh_card_umbilicus",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "active",
+        "pay_dialog": true
+      }
+    },
+    "Stampeding Wildebeests": {
+      "oracle": {
+        "oracle_id": "c270c770-91ed-4540-b281-c4b60b943b34",
+        "name": "Stampeding Wildebeests",
+        "oracle_text": "Trample (This creature can deal excess combat damage to the player or planeswalker it's attacking.)\nAt the beginning of your upkeep, return a green creature you control to its owner's hand.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Antelope Beast",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/gvl/9/stampeding-wildebeests?utm_source=api"
+      },
+      "handler": "manalinkeh_card_stampeding_wildebeest",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "controller",
+        "pay_dialog": false
+      }
+    },
+    "Umbilicus": {
+      "oracle": {
+        "oracle_id": "c9132e72-d016-4cb7-8662-a16b7d932bef",
+        "name": "Umbilicus",
+        "oracle_text": "At the beginning of each player's upkeep, that player may pay 2 life. If they don't, they return a permanent they control to its owner's hand.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/237/umbilicus?utm_source=api"
+      },
+      "handler": "manalinkeh_card_umbilicus",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "active",
+        "pay_dialog": true
+      }
+    },
+    "Roaring Primadox": {
+      "oracle": {
+        "oracle_id": "2a098296-6a64-48ba-af40-5b68bae06bec",
+        "name": "Roaring Primadox",
+        "oracle_text": "At the beginning of your upkeep, return a creature you control to its owner's hand.",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/196/roaring-primadox?utm_source=api"
+      },
+      "handler": "manalinkeh_card_roaring_primadox",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "controller",
+        "pay_dialog": false
+      }
+    },
+    "Species Gorger": {
+      "oracle": {
+        "oracle_id": "0e741c79-5ea4-457d-a7d3-b11154459246",
+        "name": "Species Gorger",
+        "oracle_text": "At the beginning of your upkeep, return a creature you control to its owner's hand.",
+        "mana_cost": "{3}{G}{U}",
+        "type_line": "Creature — Frog Beast",
+        "power": "6",
+        "toughness": "6",
+        "keywords": [],
+        "colors": [
+          "G",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/105/species-gorger?utm_source=api"
+      },
+      "handler": "manalinkeh_card_species_gorger",
+      "ui": {
+        "status": "provisional_until_capture",
+        "chooser": "controller",
+        "pay_dialog": false
+      }
+    }
+  },
+  "witness_side_effect_audit": "Reviewed native vanilla/Flying/Reach/Shroud static controls have dummy callbacks, not implemented handlers; native carddata provides those flags/stats. Seal/Sol Ring/Mask have no ETB/death/upkeep callbacks, inactive activated abilities not exercised. Servo Exhibition actuallypaid for2 source-defined colorless1/1 artifact Servo tokens; returns cease. Unholy Strength actuallypaid/attached, +2/+1 and detachment expiry modeled. Armor actuallypaid, life payment remains cost. All normal source casts real, every upkeep visit modeled, no source-count/menu suppression. No Wall of Omens/ETB draw seeding or invented life/phase/control mutation."
+}

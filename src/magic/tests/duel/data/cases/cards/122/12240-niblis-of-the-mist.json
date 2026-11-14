@@ -1,0 +1,79 @@
+{
+  "version": 1,
+  "card": "Niblis of the Mist",
+  "csvid": 12240,
+  "recipes": [
+    {
+      "family": "entry_tap_trigger",
+      "version": 2,
+      "oracle_text": "Flying\nWhen this creature enters, you may tap target creature.",
+      "variants": [
+        "tap_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "countered_0",
+        "already_tapped_0",
+        "cleanup_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "bounce_recast_0",
+        "blink_source_0",
+        "nonmatching_entry_0",
+        "source_bounced_0",
+        "source_destroyed_0",
+        "decline_0",
+        "own_target_0",
+        "self_target_0",
+        "block_flying_0",
+        "flying_evasion_0",
+        "flying_reach_0",
+        "tap_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "countered_1",
+        "already_tapped_1",
+        "cleanup_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "bounce_recast_1",
+        "blink_source_1",
+        "nonmatching_entry_1",
+        "source_bounced_1",
+        "source_destroyed_1",
+        "decline_1",
+        "own_target_1",
+        "self_target_1",
+        "block_flying_1",
+        "flying_evasion_1",
+        "flying_reach_1",
+        "whole_decline_0"
+      ],
+      "params": {
+        "schema": 1,
+        "mechanism": {
+          "scope": "creature",
+          "controller": "any",
+          "optional": true,
+          "effect": "tap",
+          "next_untap": false,
+          "flash": false,
+          "flying": true,
+          "enters_tapped": false,
+          "entry_clause": "When this creature enters, you may tap target creature.",
+          "other_clauses": [
+            "Flying"
+          ]
+        },
+        "presentation": {
+          "human_optional_trigger": true,
+          "present_ai_twiddle": false
+        }
+      }
+    }
+  ],
+  "recipe_coverage": "Whole-Oracle calibrated ETB tap/next-untap family with actual source costs/types and full Flying/printed tapped-entry clauses. Actual first/second controller untap, source departure, non-Flash real own-turn casting before later defensive combat; Flying evasion/reach complete combat derives numeric life/death/marked damage from printed stats. Real optional entry/target UI, mandatory no-target receipts, counter/reentry and replay. No synthetic timing/ready flags or dropped printed clauses."
+}

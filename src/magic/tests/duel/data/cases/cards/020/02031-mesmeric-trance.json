@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "card": "Mesmeric Trance",
+  "csvid": 2031,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "Cumulative upkeep {1} (At the beginning of your upkeep, put an age counter on this permanent, then sacrifice it unless you pay its upkeep cost for each age counter on it.)\n{U}, Discard a card: Draw a card.",
+      "params": {
+        "ability": 1
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "tapped_0",
+        "sick_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "cast_0",
+        "fresh_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "source_destroyed_pending_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "tapped_1",
+        "sick_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "cast_1",
+        "fresh_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "source_destroyed_pending_1"
+      ]
+    }
+  ]
+}

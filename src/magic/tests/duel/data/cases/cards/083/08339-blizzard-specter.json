@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "card": "Blizzard Specter",
+  "csvid": 8339,
+  "recipes": [
+    {
+      "family": "return_saboteur_trigger",
+      "version": 2,
+      "params": {
+        "effect": "modal_bounce_discard",
+        "selector": "permanent",
+        "scope": "combat",
+        "recipient": "player",
+        "optional": false,
+        "trigger_cost": null,
+        "cycling": null,
+        "ninjutsu": null,
+        "regeneration": null,
+        "keywords": [
+          "Flying"
+        ]
+      },
+      "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, choose one \u2014\n\u2022 That player returns a permanent they control to its owner's hand.\n\u2022 That player discards a card.",
+      "variants": [
+        "unblocked_0",
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "wrong_color_0",
+        "fresh_attack_0",
+        "blocked_0",
+        "pump_0",
+        "cleanup_0",
+        "two_hits_0",
+        "ready_snapshot_0",
+        "combat_snapshot_0",
+        "noncombat_player_0",
+        "noncombat_self_0",
+        "source_bounce_0",
+        "discard_mode_0",
+        "empty_hand_0",
+        "shroud_return_0",
+        "unblocked_1",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "wrong_color_1",
+        "fresh_attack_1",
+        "blocked_1",
+        "pump_1",
+        "cleanup_1",
+        "two_hits_1",
+        "ready_snapshot_1",
+        "combat_snapshot_1",
+        "noncombat_player_1",
+        "noncombat_self_1",
+        "source_bounce_1",
+        "discard_mode_1",
+        "empty_hand_1",
+        "shroud_return_1"
+      ]
+    }
+  ]
+}

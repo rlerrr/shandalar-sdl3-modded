@@ -1,0 +1,53 @@
+{
+  "version": 1,
+  "card": "Zacama, Primal Calamity",
+  "csvid": 18334,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "Reach, vigilance, trample\nWhen Zacama enters, if you cast it, untap all lands you control.\n{2}{R}: Zacama deals 3 damage to target creature.\n{2}{G}: Destroy target artifact or enchantment.\n{2}{W}: You gain 3 life.",
+      "params": {
+        "ability": 4,
+        "present_ai_dialogs": true,
+        "silent_variants": [
+          "payment_0"
+        ],
+        "activation_dialogs": {
+          "0": 2,
+          "1": 2
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "tapped_0",
+        "sick_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "cast_0",
+        "fresh_0",
+        "source_destroyed_pending_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "tapped_1",
+        "sick_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1",
+        "cast_1",
+        "fresh_1",
+        "source_destroyed_pending_1"
+      ]
+    }
+  ]
+}

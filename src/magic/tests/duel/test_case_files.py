@@ -200,6 +200,26 @@ class UntapStepContractTests(unittest.TestCase):
             with self.subTest(field=field), self.assertRaises(ValueError):
                 validate_untap_step(dict(op='untap_step', player=0, **{field: 1}))
 
+class UpkeepStepContractTests(unittest.TestCase):
+    def test_explicit_players_are_supported(self):
+        from generate_cases import validate_upkeep_step
+        for player in (0, 1):
+            validate_upkeep_step(dict(op='upkeep_step', player=player))
+
+    def test_implicit_boolean_and_foreign_players_are_rejected(self):
+        from generate_cases import validate_upkeep_step
+        for player in (None, True, False, -1, 2, '0', 0.0):
+            with self.subTest(player=player), self.assertRaises(ValueError):
+                validate_upkeep_step(dict(op='upkeep_step', player=player))
+        with self.assertRaises(ValueError):
+            validate_upkeep_step(dict(op='upkeep_step'))
+
+    def test_other_action_fields_cannot_fake_a_phase_or_result(self):
+        from generate_cases import validate_upkeep_step
+        for field in ('value', 'ref', 'color', 'index'):
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                validate_upkeep_step(dict(op='upkeep_step', player=0, **{field: 1}))
+
 class ShuffleObservationContractTests(unittest.TestCase):
     def test_explicit_zero_and_positive_counts(self):
         from generate_cases import validate_shuffle_observation

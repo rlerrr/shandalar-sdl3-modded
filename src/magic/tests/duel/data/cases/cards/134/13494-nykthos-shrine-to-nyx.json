@@ -1,0 +1,111 @@
+{
+  "version": 1,
+  "card": "Nykthos, Shrine to Nyx",
+  "csvid": 13494,
+  "recipes": [
+    {
+      "family": "counted_tap_mana_activation",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}.\n{2}, {T}: Choose a color. Add an amount of mana of that color equal to your devotion to that color. (Your devotion to a color is the number of mana symbols of that color in the mana costs of permanents you control.)",
+      "params": {
+        "ability": 0,
+        "interface": {
+          "mode_dialog": 0,
+          "color_choice": "none"
+        },
+        "other_clauses": [
+          "{2}, {T}: Choose a color. Add an amount of mana of that color equal to your devotion to that color. (Your devotion to a color is the number of mana symbols of that color in the mana costs of permanents you control.)"
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "inactive_0",
+        "tapped_0",
+        "repeat_denied_0",
+        "repeat_untap_0",
+        "spend_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "opponent_turn_0",
+        "fixed_zero_budget_0",
+        "opponent_legend_0",
+        "value_1",
+        "payment_1",
+        "inactive_1",
+        "tapped_1",
+        "repeat_denied_1",
+        "repeat_untap_1",
+        "spend_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "opponent_turn_1",
+        "fixed_zero_budget_1",
+        "opponent_legend_1"
+      ]
+    },
+    {
+      "family": "counted_tap_mana_activation",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}.\n{2}, {T}: Choose a color. Add an amount of mana of that color equal to your devotion to that color. (Your devotion to a color is the number of mana symbols of that color in the mana costs of permanents you control.)",
+      "params": {
+        "ability": 1,
+        "interface": {
+          "mode_dialog": 1,
+          "color_choice": "after_payment"
+        },
+        "other_clauses": [
+          "{T}: Add {C}."
+        ]
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "inactive_0",
+        "tapped_0",
+        "repeat_denied_0",
+        "repeat_untap_0",
+        "spend_0",
+        "ready_snapshot_0",
+        "resolved_snapshot_0",
+        "opponent_turn_0",
+        "minimal_count_0",
+        "partial_count_0",
+        "wrong_owner_0",
+        "contrary_kind_0",
+        "dynamic_count_0",
+        "color_b_0",
+        "color_u_0",
+        "color_g_0",
+        "color_r_0",
+        "color_w_0",
+        "minimum_budget_0",
+        "short_budget_query_0",
+        "opponent_legend_0",
+        "value_1",
+        "payment_1",
+        "inactive_1",
+        "tapped_1",
+        "repeat_denied_1",
+        "repeat_untap_1",
+        "spend_1",
+        "ready_snapshot_1",
+        "resolved_snapshot_1",
+        "opponent_turn_1",
+        "minimal_count_1",
+        "partial_count_1",
+        "wrong_owner_1",
+        "contrary_kind_1",
+        "dynamic_count_1",
+        "color_b_1",
+        "color_u_1",
+        "color_g_1",
+        "color_r_1",
+        "color_w_1",
+        "minimum_budget_1",
+        "short_budget_query_1",
+        "opponent_legend_1"
+      ]
+    }
+  ]
+}

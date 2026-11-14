@@ -1,0 +1,684 @@
+{
+  "version": 1,
+  "sources": {
+    "Augury Adept": {
+      "oracle": {
+        "oracle_id": "be5a65fd-0d06-4771-bee7-0e42cc9871da",
+        "name": "Augury Adept",
+        "oracle_text": "Whenever this creature deals combat damage to a player, reveal the top card of your library and put that card into your hand. You gain life equal to its mana value.",
+        "mana_cost": "{1}{W/U}{W/U}",
+        "type_line": "Creature \u2014 Kithkin Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c13/227/augury-adept?utm_source=api"
+      },
+      "handler": "manalinkeh_card_augury_adept",
+      "params": {
+        "kind": "top_life",
+        "window": 1,
+        "keywords": [],
+        "shield": null,
+        "condition": null,
+        "delirium": false,
+        "land_damage": false,
+        "payment_colors": [
+          "W",
+          "W"
+        ]
+      },
+      "presentation": {
+        "human_reveal_notice": true,
+        "information_display": null
+      }
+    },
+    "Dragonlord Ojutai": {
+      "oracle": {
+        "oracle_id": "654ff673-4630-4068-9bcf-e88a7877eb58",
+        "name": "Dragonlord Ojutai",
+        "oracle_text": "Flying\nDragonlord Ojutai has hexproof as long as it's untapped.\nWhenever Dragonlord Ojutai deals combat damage to a player, look at the top three cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+        "mana_cost": "{3}{W}{U}",
+        "type_line": "Legendary Creature \u2014 Elder Dragon",
+        "power": "5",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ncc/337/dragonlord-ojutai?utm_source=api"
+      },
+      "handler": "manalinkeh_card_dragonlord_ojutai",
+      "params": {
+        "kind": "one_bottom",
+        "window": 3,
+        "keywords": [
+          "Flying"
+        ],
+        "shield": "untapped",
+        "condition": null,
+        "delirium": false,
+        "land_damage": false
+      },
+      "presentation": {
+        "human_reveal_notice": false,
+        "information_display": null
+      }
+    },
+    "Lone Revenant": {
+      "oracle": {
+        "oracle_id": "5d814b0b-82e8-4145-87e1-4fed44d16465",
+        "name": "Lone Revenant",
+        "oracle_text": "Hexproof (This creature can't be the target of spells or abilities your opponents control.)\nWhenever this creature deals combat damage to a player, if you control no other creatures, look at the top four cards of your library. Put one of them into your hand and the rest on the bottom of your library in any order.",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature \u2014 Spirit",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [
+          "Hexproof"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c15/96/lone-revenant?utm_source=api"
+      },
+      "handler": "manalinkeh_card_lone_revenant",
+      "params": {
+        "kind": "one_bottom",
+        "window": 4,
+        "keywords": [
+          "Hexproof"
+        ],
+        "shield": "always",
+        "condition": "alone",
+        "delirium": false,
+        "land_damage": false
+      },
+      "presentation": {
+        "human_reveal_notice": false,
+        "information_display": null
+      }
+    },
+    "Borborygmos Enraged": {
+      "oracle": {
+        "oracle_id": "b7505737-1fc8-4ee8-8b1d-5dde73b6a76d",
+        "name": "Borborygmos Enraged",
+        "oracle_text": "Trample\nWhenever Borborygmos Enraged deals combat damage to a player, reveal the top three cards of your library. Put all land cards revealed this way into your hand and the rest into your graveyard.\nDiscard a land card: Borborygmos Enraged deals 3 damage to any target.",
+        "mana_cost": "{4}{R}{R}{G}{G}",
+        "type_line": "Legendary Creature \u2014 Cyclops",
+        "power": "7",
+        "toughness": "6",
+        "keywords": [
+          "Trample"
+        ],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 8.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/rvr/167/borborygmos-enraged?utm_source=api"
+      },
+      "handler": "manalinkeh_card_borborygmos_enraged",
+      "params": {
+        "kind": "land_partition",
+        "window": 3,
+        "keywords": [
+          "Trample"
+        ],
+        "shield": null,
+        "condition": null,
+        "delirium": false,
+        "land_damage": true
+      },
+      "presentation": {
+        "human_reveal_notice": false,
+        "information_display": "current_then_other"
+      }
+    },
+    "Mirko Vosk, Mind Drinker": {
+      "oracle": {
+        "oracle_id": "469da932-8186-4e54-a858-cfc72c4ded96",
+        "name": "Mirko Vosk, Mind Drinker",
+        "oracle_text": "Flying\nWhenever Mirko Vosk deals combat damage to a player, that player reveals cards from the top of their library until they reveal four land cards, then puts those cards into their graveyard.",
+        "mana_cost": "{3}{U}{B}",
+        "type_line": "Legendary Creature \u2014 Vampire",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "B",
+          "U"
+        ],
+        "color_identity": [
+          "B",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dgm/85/mirko-vosk-mind-drinker?utm_source=api"
+      },
+      "handler": "manalinkeh_card_mirko_vosk_mind_drinker",
+      "params": {
+        "kind": "until_lands",
+        "window": 4,
+        "keywords": [
+          "Flying"
+        ],
+        "shield": null,
+        "condition": null,
+        "delirium": false,
+        "land_damage": false
+      },
+      "presentation": {
+        "human_reveal_notice": false,
+        "information_display": "HUMAN0"
+      }
+    },
+    "Scalpelexis": {
+      "oracle": {
+        "oracle_id": "99eb50ef-352f-47c4-91e3-32813cbe0649",
+        "name": "Scalpelexis",
+        "oracle_text": "Flying (This creature can't be blocked except by creatures with flying or reach.)\nWhenever this creature deals combat damage to a player, that player exiles the top four cards of their library. If two or more of those cards have the same name, repeat this process.",
+        "mana_cost": "{4}{U}",
+        "type_line": "Creature \u2014 Beast",
+        "power": "1",
+        "toughness": "5",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/105/scalpelexis?utm_source=api"
+      },
+      "handler": "manalinkeh_card_scalpelexis",
+      "params": {
+        "kind": "repeat_exile",
+        "window": 4,
+        "keywords": [
+          "Flying"
+        ],
+        "shield": null,
+        "condition": null,
+        "delirium": false,
+        "land_damage": false
+      },
+      "presentation": {
+        "human_reveal_notice": false,
+        "information_display": "current_then_other"
+      }
+    },
+    "Windrider Patrol": {
+      "oracle": {
+        "oracle_id": "dea0f359-19a5-4aef-8c96-574eaa748a31",
+        "name": "Windrider Patrol",
+        "oracle_text": "Flying\nWhenever this creature deals combat damage to a player, scry 2. (Look at the top two cards of your library, then put any number of them on the bottom and the rest on top in any order.)",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Creature \u2014 Merfolk Wizard",
+        "power": "4",
+        "toughness": "3",
+        "keywords": [
+          "Scry",
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/89/windrider-patrol?utm_source=api"
+      },
+      "handler": "manalinkeh_card_windrider_patrol",
+      "params": {
+        "kind": "scry",
+        "window": 2,
+        "keywords": [
+          "Flying",
+          "Scry"
+        ],
+        "shield": null,
+        "condition": null,
+        "delirium": false,
+        "land_damage": false
+      },
+      "presentation": {
+        "human_reveal_notice": false,
+        "information_display": null
+      }
+    },
+    "Grim Flayer": {
+      "oracle": {
+        "oracle_id": "21254bdb-7b1f-4ac6-8fdd-f0ac2c35f47d",
+        "name": "Grim Flayer",
+        "oracle_text": "Trample\nWhenever this creature deals combat damage to a player, surveil 3. (Look at the top three cards of your library, then put any number of them into your graveyard and the rest on top of your library in any order.)\nDelirium \u2014 This creature gets +2/+2 as long as there are four or more card types among cards in your graveyard.",
+        "mana_cost": "{B}{G}",
+        "type_line": "Creature \u2014 Human Warrior",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Delirium",
+          "Surveil",
+          "Trample"
+        ],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dsc/218/grim-flayer?utm_source=api"
+      },
+      "handler": "manalinkeh_card_grim_flayer",
+      "params": {
+        "kind": "surveil",
+        "window": 3,
+        "keywords": [
+          "Delirium",
+          "Surveil",
+          "Trample"
+        ],
+        "shield": null,
+        "condition": null,
+        "delirium": true,
+        "land_damage": false
+      },
+      "presentation": {
+        "human_reveal_notice": false,
+        "information_display": null
+      }
+    }
+  },
+  "witnesses": {
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Swamp": {
+      "oracle_id": "56719f6a-1a6c-4c0a-8d21-18f7d7350b68",
+      "name": "Swamp",
+      "oracle_text": "({T}: Add {B}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Swamp",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/321/swamp?utm_source=api"
+    },
+    "Elvish Visionary": {
+      "oracle_id": "c6a3a882-a127-4590-93d7-679ef4313efe",
+      "name": "Elvish Visionary",
+      "oracle_text": "When this creature enters, draw a card.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Elf Shaman",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/hoc/206/elvish-visionary?utm_source=api"
+    },
+    "Ornithopter": {
+      "oracle_id": "a3a98bc9-caa0-49b7-951c-fe4e4f54e4ba",
+      "name": "Ornithopter",
+      "oracle_text": "Flying",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Thopter",
+      "power": "0",
+      "toughness": "2",
+      "keywords": [
+        "Flying"
+      ],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/233/ornithopter?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Hermetic Study": {
+      "oracle_id": "792d7818-ee5c-4254-b969-7b50f475c629",
+      "name": "Hermetic Study",
+      "oracle_text": "Enchant creature\nEnchanted creature has \"{T}: This creature deals 1 damage to any target.\"",
+      "mana_cost": "{1}{U}",
+      "type_line": "Enchantment \u2014 Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/53/hermetic-study?utm_source=api"
+    },
+    "Reach Through Mists": {
+      "oracle_id": "c81ca8ff-92f3-481e-82f7-0673b6c74ea0",
+      "name": "Reach Through Mists",
+      "oracle_text": "Draw a card.",
+      "mana_cost": "{U}",
+      "type_line": "Instant \u2014 Arcane",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dds/7/reach-through-mists?utm_source=api"
+    },
+    "Fireball": {
+      "oracle_id": "aa7714b0-2bfb-458a-8ebf-37ec2c53383e",
+      "name": "Fireball",
+      "oracle_text": "This spell costs {1} more to cast for each target beyond the first.\nFireball deals X damage divided evenly, rounded down, among any number of targets.",
+      "mana_cost": "{X}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/clb/175/fireball?utm_source=api"
+    },
+    "Dryad Arbor": {
+      "oracle_id": "e996cd67-739c-40f4-b276-0042acf26c71",
+      "name": "Dryad Arbor",
+      "oracle_text": "(This land isn't a spell, it's affected by summoning sickness, and it has \"{T}: Add {G}.\")",
+      "mana_cost": "",
+      "type_line": "Land Creature \u2014 Forest Dryad",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/273/dryad-arbor?utm_source=api"
+    },
+    "Tormod's Crypt": {
+      "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+      "name": "Tormod's Crypt",
+      "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/235/tormods-crypt?utm_source=api"
+    },
+    "Psychic Corrosion": {
+      "oracle_id": "328b42f1-d679-4f9c-80e3-38fe3b965d10",
+      "name": "Psychic Corrosion",
+      "oracle_text": "Whenever you draw a card, each opponent mills two cards.",
+      "mana_cost": "{2}{U}",
+      "type_line": "Enchantment",
+      "keywords": [
+        "Mill"
+      ],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/68/psychic-corrosion?utm_source=api"
+    },
+    "Flamespeaker Adept": {
+      "oracle_id": "ab0707fb-b404-433d-b845-0d50d01cd72e",
+      "name": "Flamespeaker Adept",
+      "oracle_text": "Whenever you scry, this creature gets +2/+0 and gains first strike until end of turn.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature \u2014 Human Shaman",
+      "power": "2",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/ths/123/flamespeaker-adept?utm_source=api"
+    },
+    "Disinformation Campaign": {
+      "oracle_id": "1dd336b0-9b13-4180-b80a-e8ba5d63d04f",
+      "name": "Disinformation Campaign",
+      "oracle_text": "When this enchantment enters, you draw a card and each opponent discards a card.\nWhenever you surveil, return this enchantment to its owner's hand.",
+      "mana_cost": "{1}{U}{B}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "B",
+        "U"
+      ],
+      "color_identity": [
+        "B",
+        "U"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mkc/208/disinformation-campaign?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Wall of Denial": {
+      "oracle_id": "9cc092f9-e8f0-40ea-847d-813b70f889db",
+      "name": "Wall of Denial",
+      "oracle_text": "Defender, flying\nShroud (This creature can't be the target of spells or abilities.)",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Creature \u2014 Wall",
+      "power": "0",
+      "toughness": "8",
+      "keywords": [
+        "Flying",
+        "Shroud",
+        "Defender"
+      ],
+      "colors": [
+        "U",
+        "W"
+      ],
+      "color_identity": [
+        "U",
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/939/wall-of-denial?utm_source=api"
+    }
+  },
+  "native_characteristics_only_witnesses": [
+    "Ornithopter",
+    "Grizzly Bears",
+    "Wall of Denial"
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "version": 1,
+  "profiles": {
+    "Agent of Erebos": {
+      "csvid": 13837,
+      "source": {
+        "oracle_id": "3fa5e109-4a67-4523-8183-90e48a906400",
+        "name": "Agent of Erebos",
+        "oracle_text": "Constellation — Whenever this creature or another enchantment you control enters, exile target player's graveyard.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Enchantment Creature — Zombie",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Constellation"
+        ],
+        "colors": [
+          "B"
+        ],
+        "layout": "normal"
+      },
+      "params": {
+        "schema": 7,
+        "mode": "entry",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "target_player",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": true,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Constellation triggers from other enchantments entering; this profile covers its own entry."
+        ],
+        "battlefield_controls": true
+      }
+    },
+    "Angel of Finality": {
+      "csvid": 13605,
+      "source": {
+        "oracle_id": "48d14b5c-711a-4f8a-9de5-55415cb7a79a",
+        "name": "Angel of Finality",
+        "oracle_text": "Flying\nWhen this creature enters, exile target player's graveyard.",
+        "mana_cost": "{3}{W}",
+        "type_line": "Creature — Angel",
+        "power": "3",
+        "toughness": "4",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "layout": "normal"
+      },
+      "params": {
+        "schema": 7,
+        "mode": "entry",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "target_player",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "Flying combat; the graveyard-exile entry trigger is covered."
+        ],
+        "battlefield_controls": true
+      }
+    },
+    "Rakdos Charm": {
+      "csvid": 12793,
+      "source": {
+        "oracle_id": "5e62b51d-faec-4aa0-9504-cf2c282d08ea",
+        "name": "Rakdos Charm",
+        "oracle_text": "Choose one —\n• Exile target player's graveyard.\n• Destroy target artifact.\n• Each creature deals 1 damage to its controller.",
+        "mana_cost": "{B}{R}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "B",
+          "R"
+        ],
+        "layout": "normal"
+      },
+      "params": {
+        "schema": 7,
+        "mode": "spell",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "target_player",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": [
+            0
+          ],
+          "present_ai_dialogs": true
+        },
+        "additional_components": [
+          "The artifact-destruction and creature-damage modes; this profile explicitly selects the graveyard-exile mode."
+        ],
+        "battlefield_controls": true
+      }
+    },
+    "Tormod's Crypt": {
+      "csvid": 368,
+      "source": {
+        "oracle_id": "1573f7f9-672c-421a-b1ac-3d0d8aea59ca",
+        "name": "Tormod's Crypt",
+        "oracle_text": "{T}, Sacrifice this artifact: Exile target player's graveyard.",
+        "mana_cost": "{0}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "layout": "normal"
+      },
+      "params": {
+        "schema": 7,
+        "mode": "activation",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "target_player",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": {
+          "mana": "",
+          "tap": true,
+          "sacrifice": true,
+          "exile": false,
+          "pay_life": 0
+        },
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [],
+        "battlefield_controls": true
+      }
+    },
+    "Ravenous Trap": {
+      "csvid": 10645,
+      "source": {
+        "oracle_id": "e0bea449-7601-48ee-a522-f1bbe6905f6d",
+        "name": "Ravenous Trap",
+        "oracle_text": "If an opponent had three or more cards put into their graveyard from anywhere this turn, you may pay {0} rather than pay this spell's mana cost.\nExile target player's graveyard.",
+        "mana_cost": "{2}{B}{B}",
+        "type_line": "Instant — Trap",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "layout": "normal"
+      },
+      "params": {
+        "schema": 7,
+        "mode": "spell",
+        "quantity": "all",
+        "scope": "card",
+        "graveyard": "target_player",
+        "draw": 0,
+        "life_per": 0,
+        "life_characteristic": null,
+        "activation": null,
+        "setup_tapped": false,
+        "disable_repeat": false,
+        "inputs": {
+          "dialogs": []
+        },
+        "additional_components": [
+          "The conditional {0} alternative cost after three or more cards entered an opponent graveyard this turn. These cases cast at the printed {2}{B}{B} cost without authored graveyard additions."
+        ],
+        "battlefield_controls": true
+      }
+    }
+  }
+}

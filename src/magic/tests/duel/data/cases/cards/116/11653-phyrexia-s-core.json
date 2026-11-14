@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "card": "Phyrexia's Core",
+  "csvid": 11653,
+  "recipes": [
+    {
+      "family": "permanent_value_activation",
+      "version": 2,
+      "oracle_text": "{T}: Add {C}.\n{1}, {T}, Sacrifice an artifact: You gain 1 life.",
+      "params": {
+        "ability": 1,
+        "present_ai_dialogs": true,
+        "mode_intent": {
+          "mode_label": "Sac artifact & gain life",
+          "fallback_color": 0,
+          "allow_auto_nonmana": true
+        }
+      },
+      "variants": [
+        "value_0",
+        "payment_0",
+        "offturn_0",
+        "empty_hand_0",
+        "bare_zones_0",
+        "ready_snapshot_0",
+        "pending_snapshot_0",
+        "resolved_snapshot_0",
+        "cleanup_0",
+        "value_1",
+        "payment_1",
+        "offturn_1",
+        "empty_hand_1",
+        "bare_zones_1",
+        "ready_snapshot_1",
+        "pending_snapshot_1",
+        "resolved_snapshot_1",
+        "cleanup_1"
+      ]
+    }
+  ]
+}

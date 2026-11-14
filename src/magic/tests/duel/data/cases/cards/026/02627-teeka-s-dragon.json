@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "card": "Teeka's Dragon",
+  "csvid": 2627,
+  "recipes": [
+    {
+      "family": "block_stat_trigger",
+      "version": 2,
+      "params": {
+        "basis": "beyond_first",
+        "power": 4,
+        "toughness": 4,
+        "scope": "self",
+        "keywords": [
+          "Flying",
+          "Rampage",
+          "Trample"
+        ]
+      },
+      "oracle_text": "Flying; trample; rampage 4 (Whenever this creature becomes blocked, it gets +4/+4 until end of turn for each creature blocking it beyond the first.)",
+      "variants": [
+        "zero_blockers_0",
+        "one_blocker_0",
+        "two_blockers_0",
+        "three_blockers_0",
+        "other_attack_0",
+        "defend_0",
+        "unrelated_blockers_0",
+        "cast_0",
+        "payment_0",
+        "insufficient_mana_0",
+        "fresh_attack_0",
+        "tapped_attack_0",
+        "pump_0",
+        "cleanup_0",
+        "two_combats_0",
+        "ready_snapshot_0",
+        "declared_snapshot_0",
+        "damage_snapshot_0",
+        "noncombat_player_0",
+        "ground_block_0",
+        "trample_0",
+        "zero_blockers_1",
+        "one_blocker_1",
+        "two_blockers_1",
+        "three_blockers_1",
+        "other_attack_1",
+        "defend_1",
+        "unrelated_blockers_1",
+        "cast_1",
+        "payment_1",
+        "insufficient_mana_1",
+        "fresh_attack_1",
+        "tapped_attack_1",
+        "pump_1",
+        "cleanup_1",
+        "two_combats_1",
+        "ready_snapshot_1",
+        "declared_snapshot_1",
+        "damage_snapshot_1",
+        "noncombat_player_1",
+        "ground_block_1",
+        "trample_1"
+      ]
+    }
+  ]
+}

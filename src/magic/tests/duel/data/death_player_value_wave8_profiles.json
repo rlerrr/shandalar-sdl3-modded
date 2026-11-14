@@ -1,0 +1,972 @@
+{
+  "version": 1,
+  "oracle_sha256": "c11dcfedde2ed4ce99ff355f5cf30c187c2b3745c87a03319e715bbfec17cf50",
+  "sources": {
+    "Vindictive Vampire": {
+      "csvid": 19787,
+      "handler": "manalinkeh_card_vindictive_vampire",
+      "oracle": {
+        "oracle_id": "11ad664e-36d3-4d5b-8a87-59ea715877e0",
+        "name": "Vindictive Vampire",
+        "oracle_text": "Whenever another creature you control dies, this creature deals 1 damage to each opponent and you gain 1 life.",
+        "mana_cost": "{3}{B}",
+        "type_line": "Creature \u2014 Vampire",
+        "power": "2",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/126/vindictive-vampire?utm_source=api"
+      }
+    },
+    "Dingus Staff": {
+      "csvid": 2961,
+      "handler": "manalinkeh_card_dingus_staff",
+      "oracle": {
+        "oracle_id": "7127fc35-600c-4397-8c01-5327d3c4944b",
+        "name": "Dingus Staff",
+        "oracle_text": "Whenever a creature dies, this artifact deals 2 damage to that creature's controller.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/wth/149/dingus-staff?utm_source=api"
+      }
+    },
+    "Liability": {
+      "csvid": 4521,
+      "handler": "manalinkeh_card_liability",
+      "oracle": {
+        "oracle_id": "65f1bebb-6441-4189-b6de-993ec9d24a59",
+        "name": "Liability",
+        "oracle_text": "Whenever a nontoken permanent is put into a player's graveyard from the battlefield, that player loses 1 life.",
+        "mana_cost": "{1}{B}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mmq/144/liability?utm_source=api"
+      }
+    },
+    "Scrapheap": {
+      "csvid": 4053,
+      "handler": "manalinkeh_card_scrapheap",
+      "oracle": {
+        "oracle_id": "dfed42b8-b35e-4c70-9e75-25a4da158e76",
+        "name": "Scrapheap",
+        "oracle_text": "Whenever an artifact or enchantment is put into your graveyard from the battlefield, you gain 1 life.",
+        "mana_cost": "{3}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ulg/132/scrapheap?utm_source=api"
+      }
+    },
+    "Rage Thrower": {
+      "csvid": 12047,
+      "handler": "manalinkeh_card_rage_thrower",
+      "oracle": {
+        "oracle_id": "f9697a59-46e2-4612-b30b-d041a38fdd30",
+        "name": "Rage Thrower",
+        "oracle_text": "Whenever another creature dies, this creature deals 2 damage to target player or planeswalker.",
+        "mana_cost": "{5}{R}",
+        "type_line": "Creature \u2014 Human Shaman",
+        "power": "4",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/isd/157/rage-thrower?utm_source=api"
+      }
+    },
+    "Boggart Shenanigans": {
+      "csvid": 9083,
+      "handler": "manalinkeh_card_boggart_shenanigans",
+      "oracle": {
+        "oracle_id": "997d2f38-5a50-451e-bd48-e36dcb24d967",
+        "name": "Boggart Shenanigans",
+        "oracle_text": "Whenever another Goblin you control is put into a graveyard from the battlefield, you may have this enchantment deal 1 damage to target player or planeswalker.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Kindred Enchantment \u2014 Goblin",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/evg/54/boggart-shenanigans?utm_source=api"
+      }
+    },
+    "Magnetic Mine": {
+      "csvid": 11475,
+      "handler": "manalinkeh_card_magnetic_mine",
+      "oracle": {
+        "oracle_id": "bbb50cf5-cd07-4ae8-bfa8-d747e44fb1ef",
+        "name": "Magnetic Mine",
+        "oracle_text": "Whenever another artifact is put into a graveyard from the battlefield, this artifact deals 2 damage to that artifact's controller.",
+        "mana_cost": "{4}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mbs/113/magnetic-mine?utm_source=api"
+      }
+    },
+    "Hissing Iguanar": {
+      "csvid": 9987,
+      "handler": "manalinkeh_card_hissing_iguanar",
+      "oracle": {
+        "oracle_id": "7c4fc524-4734-4fb8-a5ca-ac2617242c3f",
+        "name": "Hissing Iguanar",
+        "oracle_text": "Whenever another creature dies, you may have this creature deal 1 damage to target player or planeswalker.",
+        "mana_cost": "{2}{R}",
+        "type_line": "Creature \u2014 Lizard",
+        "power": "3",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/2x2/113/hissing-iguanar?utm_source=api"
+      }
+    }
+  },
+  "cards": {
+    "Boggart Shenanigans": {
+      "oracle_id": "997d2f38-5a50-451e-bd48-e36dcb24d967",
+      "name": "Boggart Shenanigans",
+      "oracle_text": "Whenever another Goblin you control is put into a graveyard from the battlefield, you may have this enchantment deal 1 damage to target player or planeswalker.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Kindred Enchantment \u2014 Goblin",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/evg/54/boggart-shenanigans?utm_source=api"
+    },
+    "Boomerang": {
+      "oracle_id": "dc4a4996-108a-4aac-850f-2d9f76403446",
+      "name": "Boomerang",
+      "oracle_text": "Return target permanent to its owner's hand.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/me3/30/boomerang?utm_source=api"
+    },
+    "Chandra, Pyrogenius": {
+      "oracle_id": "ae2c89c2-66d6-484a-a176-9ea19e00f445",
+      "name": "Chandra, Pyrogenius",
+      "oracle_text": "+2: Chandra deals 2 damage to each opponent.\n\u22123: Chandra deals 4 damage to target creature.\n\u221210: Chandra deals 6 damage to target player or planeswalker and each creature that player or that planeswalker's controller controls.",
+      "mana_cost": "{4}{R}{R}",
+      "type_line": "Legendary Planeswalker \u2014 Chandra",
+      "loyalty": "5",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/kld/265/chandra-pyrogenius?utm_source=api"
+    },
+    "Counterspell": {
+      "oracle_id": "cc187110-1148-4090-bbb8-e205694a39f5",
+      "name": "Counterspell",
+      "oracle_text": "Counter target spell.",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/114/counterspell?utm_source=api"
+    },
+    "Disfigure": {
+      "oracle_id": "77eafe49-b9c5-461d-89c5-cec217dd2974",
+      "name": "Disfigure",
+      "oracle_text": "Target creature gets -2/-2 until end of turn.",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/bro/91/disfigure?utm_source=api"
+    },
+    "Exploration": {
+      "oracle_id": "0c2841bb-038c-4fbf-8360-bc0a1522b58d",
+      "name": "Exploration",
+      "oracle_text": "You may play an additional land on each of your turns.",
+      "mana_cost": "{G}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dmr/159/exploration?utm_source=api"
+    },
+    "Flicker": {
+      "oracle_id": "19ea326f-45ff-4bc0-a957-7d3f22dd8c6f",
+      "name": "Flicker",
+      "oracle_text": "Exile target nontoken permanent, then return it to the battlefield under its owner's control.",
+      "mana_cost": "{1}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/uds/9/flicker?utm_source=api"
+    },
+    "Forest": {
+      "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+      "name": "Forest",
+      "oracle_text": "({T}: Add {G}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Forest",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+    },
+    "Ghostly Changeling": {
+      "oracle_id": "4e779540-e667-457e-9071-4cbbd777d9a9",
+      "name": "Ghostly Changeling",
+      "oracle_text": "Changeling (This card is every creature type.)\n{1}{B}: This creature gets +1/+1 until end of turn.",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature \u2014 Shapeshifter",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [
+        "Changeling"
+      ],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/mm2/83/ghostly-changeling?utm_source=api"
+    },
+    "Giant Growth": {
+      "oracle_id": "5748ebf1-24e3-499d-ab7c-c2cebd462a24",
+      "name": "Giant Growth",
+      "oracle_text": "Target creature gets +3/+3 until end of turn.",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msh/167/giant-growth?utm_source=api"
+    },
+    "Goblin Piker": {
+      "oracle_id": "50608184-90d3-43d2-a221-deb186c78323",
+      "name": "Goblin Piker",
+      "oracle_text": "",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature \u2014 Goblin Warrior",
+      "power": "2",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m12/141/goblin-piker?utm_source=api"
+    },
+    "Grizzly Bears": {
+      "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+      "name": "Grizzly Bears",
+      "oracle_text": "",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature \u2014 Bear",
+      "power": "2",
+      "toughness": "2",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+    },
+    "Hill Giant": {
+      "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+      "name": "Hill Giant",
+      "oracle_text": "",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature \u2014 Giant",
+      "power": "3",
+      "toughness": "3",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+    },
+    "Indestructibility": {
+      "oracle_id": "9aaa0a28-e342-48bd-8f59-0cd289491f98",
+      "name": "Indestructibility",
+      "oracle_text": "Enchant permanent\nEnchanted permanent has indestructible. (Effects that say \"destroy\" don't destroy that permanent. A creature with indestructible can't be destroyed by damage.)",
+      "mana_cost": "{3}{W}",
+      "type_line": "Enchantment \u2014 Aura",
+      "keywords": [
+        "Enchant"
+      ],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m14/23/indestructibility?utm_source=api"
+    },
+    "Island": {
+      "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+      "name": "Island",
+      "oracle_text": "({T}: Add {U}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Island",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+    },
+    "Ivory Mask": {
+      "oracle_id": "028bc726-0e86-4c53-9648-625153ae4b01",
+      "name": "Ivory Mask",
+      "oracle_text": "You have shroud. (You can't be the target of spells or abilities.)",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Enchantment",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/23/ivory-mask?utm_source=api"
+    },
+    "Lightning Bolt": {
+      "oracle_id": "4457ed35-7c10-48c8-9776-456485fdf070",
+      "name": "Lightning Bolt",
+      "oracle_text": "Lightning Bolt deals 3 damage to any target.",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/msc/806/lightning-bolt?utm_source=api"
+    },
+    "Llanowar Elves": {
+      "oracle_id": "eaddc7cf-5d58-422a-ba00-6708dee2d853",
+      "name": "Llanowar Elves",
+      "oracle_text": "{T}: Add {G}.",
+      "mana_cost": "",
+      "type_line": "Token Creature \u2014 Elf Druid",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 0.0,
+      "layout": "token",
+      "scryfall_uri": "https://scryfall.com/card/ttsr/12/llanowar-elves?utm_source=api"
+    },
+    "Memnite": {
+      "oracle_id": "7663ac7c-1de3-4250-b96a-fae9dbd66a27",
+      "name": "Memnite",
+      "oracle_text": "",
+      "mana_cost": "{0}",
+      "type_line": "Artifact Creature \u2014 Construct",
+      "power": "1",
+      "toughness": "1",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/td2/2/memnite?utm_source=api"
+    },
+    "Mountain": {
+      "oracle_id": "a3fb7228-e76b-4e96-a40e-20b5fed75685",
+      "name": "Mountain",
+      "oracle_text": "({T}: Add {R}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Mountain",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/323/mountain?utm_source=api"
+    },
+    "Murder": {
+      "oracle_id": "938b4e2c-88d9-4637-bc00-e228920c9a78",
+      "name": "Murder",
+      "oracle_text": "Destroy target creature.",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "B"
+      ],
+      "color_identity": [
+        "B"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsk/110/murder?utm_source=api"
+    },
+    "Naturalize": {
+      "oracle_id": "bdb3ca68-ec1f-4e16-81cc-d23f8f52c728",
+      "name": "Naturalize",
+      "oracle_text": "Destroy target artifact or enchantment.",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "G"
+      ],
+      "color_identity": [
+        "G"
+      ],
+      "cmc": 2.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m19/190/naturalize?utm_source=api"
+    },
+    "Plains": {
+      "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+      "name": "Plains",
+      "oracle_text": "({T}: Add {W}.)",
+      "mana_cost": "",
+      "type_line": "Basic Land \u2014 Plains",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 0.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+    },
+    "Planar Cleansing": {
+      "oracle_id": "a98c2d81-4add-4292-bbdd-e1b69ff936d4",
+      "name": "Planar Cleansing",
+      "oracle_text": "Destroy all nonland permanents.",
+      "mana_cost": "{3}{W}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 6.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m20/33/planar-cleansing?utm_source=api"
+    },
+    "Return to Dust": {
+      "oracle_id": "3029df1d-d02a-4fed-8ab4-000a2096f823",
+      "name": "Return to Dust",
+      "oracle_text": "Exile target artifact or enchantment. If you cast this spell during your main phase, you may exile up to one other target artifact or enchantment.",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/dsc/102/return-to-dust?utm_source=api"
+    },
+    "Safe Passage": {
+      "oracle_id": "dfa459a1-b065-4488-88d3-4da388261b52",
+      "name": "Safe Passage",
+      "oracle_text": "Prevent all damage that would be dealt to you and creatures you control this turn.",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/m13/30/safe-passage?utm_source=api"
+    },
+    "Sol Ring": {
+      "oracle_id": "6ad8011d-3471-4369-9d68-b264cc027487",
+      "name": "Sol Ring",
+      "oracle_text": "{T}: Add {C}{C}.",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "keywords": [],
+      "colors": [],
+      "color_identity": [],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/21/sol-ring?utm_source=api"
+    },
+    "Stone Rain": {
+      "oracle_id": "6e880df6-fc00-43d2-a9c8-f575f40b78c6",
+      "name": "Stone Rain",
+      "oracle_text": "Destroy target land.",
+      "mana_cost": "{2}{R}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "R"
+      ],
+      "color_identity": [
+        "R"
+      ],
+      "cmc": 3.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/9ed/221/stone-rain?utm_source=api"
+    },
+    "Swords to Plowshares": {
+      "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+      "name": "Swords to Plowshares",
+      "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+    },
+    "Unsummon": {
+      "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+      "name": "Unsummon",
+      "oracle_text": "Return target creature to its owner's hand.",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "keywords": [],
+      "colors": [
+        "U"
+      ],
+      "color_identity": [
+        "U"
+      ],
+      "cmc": 1.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+    },
+    "Wrath of God": {
+      "oracle_id": "34515b16-c9a4-4f98-8c77-416a7a523407",
+      "name": "Wrath of God",
+      "oracle_text": "Destroy all creatures. They can't be regenerated.",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Sorcery",
+      "keywords": [],
+      "colors": [
+        "W"
+      ],
+      "color_identity": [
+        "W"
+      ],
+      "cmc": 4.0,
+      "layout": "normal",
+      "scryfall_uri": "https://scryfall.com/card/cmm/70/wrath-of-god?utm_source=api"
+    }
+  },
+  "registry": {
+    "Boggart Shenanigans": {
+      "csvid": 9083,
+      "iid": 1197,
+      "name": "Boggart Shenanigans",
+      "handler": "manalinkeh_card_boggart_shenanigans",
+      "kind": "card"
+    },
+    "Boomerang": {
+      "csvid": 585,
+      "iid": 1233,
+      "name": "Boomerang",
+      "handler": "manalinkeh_card_boomerang",
+      "kind": "card"
+    },
+    "Chandra, Pyrogenius": {
+      "csvid": 16315,
+      "iid": 16404,
+      "name": "Chandra, Pyrogenius",
+      "handler": "manalinkeh_card_chandra_pyrogenius",
+      "kind": "card"
+    },
+    "Counterspell": {
+      "csvid": 48,
+      "iid": 1996,
+      "name": "Counterspell",
+      "handler": "manalinkeh_card_counterspell",
+      "kind": "card"
+    },
+    "Disfigure": {
+      "csvid": 10530,
+      "iid": 2576,
+      "name": "Disfigure",
+      "handler": "manalinkeh_card_disfigure",
+      "kind": "card"
+    },
+    "Exploration": {
+      "csvid": 3763,
+      "iid": 3196,
+      "name": "Exploration",
+      "handler": "manalinkeh_card_exploration",
+      "kind": "card"
+    },
+    "Flicker": {
+      "csvid": 4130,
+      "iid": 3518,
+      "name": "Flicker",
+      "handler": "manalinkeh_card_flicker2",
+      "kind": "card"
+    },
+    "Forest": {
+      "csvid": 91,
+      "iid": 2,
+      "name": "Forest",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Ghostly Changeling": {
+      "csvid": 9149,
+      "iid": 3843,
+      "name": "Ghostly Changeling",
+      "handler": "manalinkeh_card_ghostly_changeling",
+      "kind": "card"
+    },
+    "Giant Growth": {
+      "csvid": 97,
+      "iid": 3862,
+      "name": "Giant Growth",
+      "handler": "manalinkeh_card_giant_growth",
+      "kind": "card"
+    },
+    "Goblin Piker": {
+      "csvid": 10423,
+      "iid": 4027,
+      "name": "Goblin Piker",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "iid": 4259,
+      "name": "Grizzly Bears",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "iid": 4570,
+      "name": "Hill Giant",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Indestructibility": {
+      "csvid": 10434,
+      "iid": 4842,
+      "name": "Indestructibility",
+      "handler": "manalinkeh_card_indestructibility",
+      "kind": "card"
+    },
+    "Island": {
+      "csvid": 126,
+      "iid": 1,
+      "name": "Island",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Ivory Mask": {
+      "csvid": 1064,
+      "iid": 4976,
+      "name": "Ivory Mask",
+      "handler": "manalinkeh_card_ivory_mask",
+      "kind": "card"
+    },
+    "Lightning Bolt": {
+      "csvid": 145,
+      "iid": 5596,
+      "name": "Lightning Bolt",
+      "handler": "manalinkeh_card_lightning_bolt",
+      "kind": "card"
+    },
+    "Llanowar Elves": {
+      "csvid": 149,
+      "iid": 5655,
+      "name": "Llanowar Elves",
+      "handler": "manalinkeh_card_elvish_mystic",
+      "kind": "card"
+    },
+    "Memnite": {
+      "csvid": 11303,
+      "iid": 6020,
+      "name": "Memnite",
+      "handler": "card_dummy",
+      "kind": "card"
+    },
+    "Mountain": {
+      "csvid": 164,
+      "iid": 3,
+      "name": "Mountain",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Murder": {
+      "csvid": 12594,
+      "iid": 6382,
+      "name": "Murder",
+      "handler": "manalinkeh_card_murder2",
+      "kind": "card"
+    },
+    "Naturalize": {
+      "csvid": 1096,
+      "iid": 6485,
+      "name": "Naturalize",
+      "handler": "manalinkeh_card_disenchant",
+      "kind": "card"
+    },
+    "Plains": {
+      "csvid": 188,
+      "iid": 4,
+      "name": "Plains",
+      "handler": "manalinkeh_plain_mana_producer",
+      "kind": "card"
+    },
+    "Planar Cleansing": {
+      "csvid": 10454,
+      "iid": 7249,
+      "name": "Planar Cleansing",
+      "handler": "manalinkeh_card_planar_cleansing",
+      "kind": "card"
+    },
+    "Return to Dust": {
+      "csvid": 8647,
+      "iid": 7883,
+      "name": "Return to Dust",
+      "handler": "manalinkeh_card_return_to_dust",
+      "kind": "card"
+    },
+    "Safe Passage": {
+      "csvid": 10462,
+      "iid": 8169,
+      "name": "Safe Passage",
+      "handler": "manalinkeh_card_safe_passage",
+      "kind": "card"
+    },
+    "Sol Ring": {
+      "csvid": 230,
+      "iid": 8968,
+      "name": "Sol Ring",
+      "handler": "manalinkeh_card_sol_ring",
+      "kind": "card"
+    },
+    "Stone Rain": {
+      "csvid": 236,
+      "iid": 9381,
+      "name": "Stone Rain",
+      "handler": "manalinkeh_card_ice_storm",
+      "kind": "card"
+    },
+    "Swords to Plowshares": {
+      "csvid": 240,
+      "iid": 9616,
+      "name": "Swords to Plowshares",
+      "handler": "manalinkeh_card_swords_to_plowshares",
+      "kind": "card"
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "iid": 10388,
+      "name": "Unsummon",
+      "handler": "manalinkeh_card_unsummon",
+      "kind": "card"
+    },
+    "Wrath of God": {
+      "csvid": 290,
+      "iid": 11121,
+      "name": "Wrath of God",
+      "handler": "manalinkeh_card_wrath_of_god",
+      "kind": "card"
+    }
+  },
+  "presentation": {
+    "Vindictive Vampire": {
+      "optional_outer": "mandatory",
+      "live_source_selector": false,
+      "dead_legacy_selector": false
+    },
+    "Dingus Staff": {
+      "optional_outer": "mandatory",
+      "live_source_selector": false,
+      "dead_legacy_selector": false
+    },
+    "Liability": {
+      "optional_outer": "mandatory",
+      "live_source_selector": false,
+      "dead_legacy_selector": false
+    },
+    "Scrapheap": {
+      "optional_outer": "mandatory",
+      "live_source_selector": false,
+      "dead_legacy_selector": false
+    },
+    "Rage Thrower": {
+      "optional_outer": "mandatory",
+      "live_source_selector": false,
+      "dead_legacy_selector": false
+    },
+    "Boggart Shenanigans": {
+      "optional_outer": "ai",
+      "live_source_selector": true,
+      "dead_legacy_selector": true
+    },
+    "Magnetic Mine": {
+      "optional_outer": "mandatory",
+      "live_source_selector": false,
+      "dead_legacy_selector": false
+    },
+    "Hissing Iguanar": {
+      "optional_outer": "mandatory",
+      "live_source_selector": false,
+      "dead_legacy_selector": false
+    }
+  },
+  "rules": {
+    "optional_effect_keeps_required_target": true,
+    "token_brief_graveyard_entry_counts_unless_nontoken": true,
+    "death_controller_distinct_from_graveyard_owner": true,
+    "damage_preventable_life_loss_not": true
+  },
+  "token_fixtures": "Seeded token copies retain the full named Oracle types and copied mana value; token creation is not tested.",
+  "vanilla_base_engine_witnesses": [
+    "Goblin Piker",
+    "Grizzly Bears",
+    "Hill Giant",
+    "Memnite"
+  ]
+}

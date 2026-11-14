@@ -1,0 +1,1167 @@
+{
+  "version": 1,
+  "sources": {
+    "Garruk, Apex Predator": {
+      "csvid": 14103,
+      "oracle": {
+        "oracle_id": "ef9a8bdc-3361-440d-89f6-0bf5ff7a09e8",
+        "name": "Garruk, Apex Predator",
+        "oracle_text": "+1: Destroy another target planeswalker.\n+1: Create a 3/3 black Beast creature token with deathtouch.\n−3: Destroy target creature. You gain life equal to its toughness.\n−8: Target opponent gets an emblem with \"Whenever a creature attacks you, it gets +5/+5 and gains trample until end of turn.\"",
+        "mana_cost": "{5}{B}{G}",
+        "type_line": "Legendary Planeswalker — Garruk",
+        "loyalty": "5",
+        "keywords": [],
+        "colors": [
+          "B",
+          "G"
+        ],
+        "color_identity": [
+          "B",
+          "G"
+        ],
+        "cmc": 7.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m15/210/garruk-apex-predator?utm_source=api"
+      },
+      "ability": 1,
+      "interface": {
+        "dialogs": {
+          "0": 1,
+          "1": 1
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/m15.c",
+        "function": "card_garruk_apex_predator"
+      }
+    },
+    "Icatian Crier": {
+      "csvid": 8579,
+      "oracle": {
+        "oracle_id": "668312dd-7b6e-46bf-9c6a-bfb03dd75b8f",
+        "name": "Icatian Crier",
+        "oracle_text": "{1}{W}, {T}, Discard a card: Create two 1/1 white Citizen creature tokens.",
+        "mana_cost": "{2}{W}",
+        "type_line": "Creature — Human Spellshaper",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/uma/22/icatian-crier?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {},
+        "present_ai_dialogs": false,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/time_spiral.c",
+        "function": "card_icatian_crier"
+      }
+    },
+    "Selesnya Guildmage": {
+      "csvid": 7952,
+      "oracle": {
+        "oracle_id": "8fbdca3a-7aa3-4b5a-98d7-9168856045ac",
+        "name": "Selesnya Guildmage",
+        "oracle_text": "{3}{G}: Create a 1/1 green Saproling creature token.\n{3}{W}: Creatures you control get +1/+1 until end of turn.",
+        "mana_cost": "{G/W}{G/W}",
+        "type_line": "Creature — Elf Wizard",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clu/207/selesnya-guildmage?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {
+          "0": 0,
+          "1": 0
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": [
+          "G",
+          "G"
+        ]
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/ravnica.c",
+        "function": "card_selesnya_guildmage"
+      }
+    },
+    "Squirrel Wrangler": {
+      "csvid": 4896,
+      "oracle": {
+        "oracle_id": "4021b6b4-9b87-4dd5-a5df-79540bedbe87",
+        "name": "Squirrel Wrangler",
+        "oracle_text": "{1}{G}, Sacrifice a land: Create two 1/1 green Squirrel creature tokens.\n{1}{G}, Sacrifice a land: Squirrel creatures get +1/+1 until end of turn.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Creature — Human Druid",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/pcy/127/squirrel-wrangler?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {
+          "0": 0,
+          "1": 0
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {
+          "0": true,
+          "1": false
+        },
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/prophecy.c",
+        "function": "card_squirrel_wrangler"
+      }
+    },
+    "Xenagos, the Reveler": {
+      "csvid": 13602,
+      "oracle": {
+        "oracle_id": "942a318e-90eb-4f10-bb30-2e10f5cc922a",
+        "name": "Xenagos, the Reveler",
+        "oracle_text": "+1: Add X mana in any combination of {R} and/or {G}, where X is the number of creatures you control.\n0: Create a 2/2 red and green Satyr creature token with haste.\n−6: Exile the top seven cards of your library. You may put any number of creature and/or land cards from among them onto the battlefield.",
+        "mana_cost": "{2}{R}{G}",
+        "type_line": "Legendary Planeswalker — Xenagos",
+        "loyalty": "3",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R"
+        ],
+        "color_identity": [
+          "G",
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/clb/853/xenagos-the-reveler?utm_source=api"
+      },
+      "ability": 1,
+      "interface": {
+        "dialogs": {
+          "0": 1,
+          "1": 1
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/theros.c",
+        "function": "card_xenagos_the_reveler"
+      }
+    },
+    "Zombie Infestation": {
+      "csvid": 5760,
+      "oracle": {
+        "oracle_id": "bdce1af0-3643-4e77-88f9-320206a191d4",
+        "name": "Zombie Infestation",
+        "oracle_text": "Discard two cards: Create a 2/2 black Zombie creature token.",
+        "mana_cost": "{1}{B}",
+        "type_line": "Enchantment",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/111/zombie-infestation?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {},
+        "present_ai_dialogs": false,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/odissey.c",
+        "function": "card_zombie_infestation"
+      }
+    },
+    "Nissa, Voice of Zendikar": {
+      "csvid": 15648,
+      "oracle": {
+        "oracle_id": "b0f36bf7-bdde-4576-9eca-ec02d41326ab",
+        "name": "Nissa, Voice of Zendikar",
+        "oracle_text": "+1: Create a 0/1 green Plant creature token.\n−2: Put a +1/+1 counter on each creature you control.\n−7: You gain X life and draw X cards, where X is the number of lands you control.",
+        "mana_cost": "{1}{G}{G}",
+        "type_line": "Legendary Planeswalker — Nissa",
+        "loyalty": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/ddr/1/nissa-voice-of-zendikar?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {
+          "0": 0,
+          "1": 0
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/oath_of_the_gatewatch.c",
+        "function": "card_nissa_voice_of_zendikar"
+      }
+    },
+    "Dovin, Grand Arbiter": {
+      "csvid": 19609,
+      "oracle": {
+        "oracle_id": "596237da-3d51-4052-a8ca-2218efc1afb3",
+        "name": "Dovin, Grand Arbiter",
+        "oracle_text": "+1: Until end of turn, whenever a creature you control deals combat damage to a player, put a loyalty counter on Dovin.\n−1: Create a 1/1 colorless Thopter artifact creature token with flying. You gain 1 life.\n−7: Look at the top ten cards of your library. Put three of them into your hand and the rest on the bottom of your library in a random order.",
+        "mana_cost": "{1}{W}{U}",
+        "type_line": "Legendary Planeswalker — Dovin",
+        "loyalty": "3",
+        "keywords": [],
+        "colors": [
+          "U",
+          "W"
+        ],
+        "color_identity": [
+          "U",
+          "W"
+        ],
+        "cmc": 3.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/voc/153/dovin-grand-arbiter?utm_source=api"
+      },
+      "ability": 1,
+      "interface": {
+        "dialogs": {
+          "0": 1,
+          "1": 1
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/ravnica_allegiance.c",
+        "function": "card_dovin_grand_arbiter"
+      }
+    },
+    "Elspeth, Knight-Errant": {
+      "csvid": 9955,
+      "oracle": {
+        "oracle_id": "eab0d8b9-c66f-402f-b259-f46f15cefd78",
+        "name": "Elspeth, Knight-Errant",
+        "oracle_text": "+1: Create a 1/1 white Soldier creature token.\n+1: Target creature gets +3/+3 and gains flying until end of turn.\n−8: You get an emblem with \"Artifacts, creatures, enchantments, and lands you control have indestructible.\"",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Legendary Planeswalker — Elspeth",
+        "loyalty": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/mma/13/elspeth-knight-errant?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {
+          "0": 0,
+          "1": 0
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/shards_of_alara.c",
+        "function": "card_elspeth_knight_errant"
+      }
+    },
+    "Elspeth, Sun's Champion": {
+      "csvid": 13426,
+      "oracle": {
+        "oracle_id": "05e6b243-48a6-4a42-bc5f-413441de9c33",
+        "name": "Elspeth, Sun's Champion",
+        "oracle_text": "+1: Create three 1/1 white Soldier creature tokens.\n−3: Destroy all creatures with power 4 or greater.\n−7: You get an emblem with \"Creatures you control get +2/+2 and have flying.\"",
+        "mana_cost": "{4}{W}{W}",
+        "type_line": "Legendary Planeswalker — Elspeth",
+        "loyalty": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 6.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/24/elspeth-suns-champion?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {
+          "0": 0,
+          "1": 0
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/theros.c",
+        "function": "card_elspeth_suns_champion"
+      }
+    },
+    "Garruk Wildspeaker": {
+      "csvid": 9148,
+      "oracle": {
+        "oracle_id": "186b4def-4fff-4a2b-bcbf-5318b0ac5fa9",
+        "name": "Garruk Wildspeaker",
+        "oracle_text": "+1: Untap two target lands.\n−1: Create a 3/3 green Beast creature token.\n−4: Creatures you control get +3/+3 and gain trample until end of turn.",
+        "mana_cost": "{2}{G}{G}",
+        "type_line": "Legendary Planeswalker — Garruk",
+        "loyalty": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/cmd/157/garruk-wildspeaker?utm_source=api"
+      },
+      "ability": 1,
+      "interface": {
+        "dialogs": {
+          "0": 1,
+          "1": 1
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/lorwyn.c",
+        "function": "card_garruk_wildspeaker"
+      }
+    },
+    "Garruk, Primal Hunter": {
+      "csvid": 11807,
+      "oracle": {
+        "oracle_id": "298a7e1a-b254-442e-bc1d-2a3e5296d849",
+        "name": "Garruk, Primal Hunter",
+        "oracle_text": "+1: Create a 3/3 green Beast creature token.\n−3: Draw cards equal to the greatest power among creatures you control.\n−6: Create a 6/6 green Wurm creature token for each land you control.",
+        "mana_cost": "{2}{G}{G}{G}",
+        "type_line": "Legendary Planeswalker — Garruk",
+        "loyalty": "3",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c21/190/garruk-primal-hunter?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {
+          "0": 0,
+          "1": 0
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/m12.c",
+        "function": "card_garruk_primal_hunter"
+      }
+    },
+    "Gideon, Ally of Zendikar": {
+      "csvid": 15334,
+      "oracle": {
+        "oracle_id": "51eae7ff-fed9-4afe-8053-7690379449dd",
+        "name": "Gideon, Ally of Zendikar",
+        "oracle_text": "+1: Until end of turn, Gideon becomes a 5/5 Human Soldier Ally creature with indestructible that's still a planeswalker. Prevent all damage that would be dealt to him this turn.\n0: Create a 2/2 white Knight Ally creature token.\n−4: You get an emblem with \"Creatures you control get +1/+1.\"",
+        "mana_cost": "{2}{W}{W}",
+        "type_line": "Legendary Planeswalker — Gideon",
+        "loyalty": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/bfz/29/gideon-ally-of-zendikar?utm_source=api"
+      },
+      "ability": 1,
+      "interface": {
+        "dialogs": {
+          "0": 1,
+          "1": 1
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/battle_for_zendikar.c",
+        "function": "card_gideon_ally_of_zendikar"
+      }
+    },
+    "Sarkhan Unbroken": {
+      "csvid": 15002,
+      "oracle": {
+        "oracle_id": "1d37b453-f10c-42f2-8390-626a8a8eb27c",
+        "name": "Sarkhan Unbroken",
+        "oracle_text": "+1: Draw a card, then add one mana of any color.\n−2: Create a 4/4 red Dragon creature token with flying.\n−8: Search your library for any number of Dragon creature cards, put them onto the battlefield, then shuffle.",
+        "mana_cost": "{2}{G}{U}{R}",
+        "type_line": "Legendary Planeswalker — Sarkhan",
+        "loyalty": "4",
+        "keywords": [],
+        "colors": [
+          "G",
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "G",
+          "R",
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dtk/230/sarkhan-unbroken?utm_source=api"
+      },
+      "ability": 1,
+      "interface": {
+        "dialogs": {
+          "0": 1,
+          "1": 1
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/dragons_of_tarkir.c",
+        "function": "card_sarkhan_unbroken"
+      }
+    },
+    "Cryptbreaker": {
+      "csvid": 16064,
+      "oracle": {
+        "oracle_id": "16f75a65-d067-4f79-81b9-833c373cf4d2",
+        "name": "Cryptbreaker",
+        "oracle_text": "{1}{B}, {T}, Discard a card: Create a 2/2 black Zombie creature token.\nTap three untapped Zombies you control: You draw a card and lose 1 life.",
+        "mana_cost": "{B}",
+        "type_line": "Creature — Zombie",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/emn/86/cryptbreaker?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {
+          "0": 0,
+          "1": 0
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": [],
+        "manual_ai_discard": true
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/eldritch_moon.c",
+        "function": "card_cryptbreaker"
+      }
+    },
+    "Thraben Standard Bearer": {
+      "csvid": 16220,
+      "oracle": {
+        "oracle_id": "679d5a1d-8da8-4142-924b-97b359f55309",
+        "name": "Thraben Standard Bearer",
+        "oracle_text": "{1}{W}, {T}, Discard a card: Create a 1/1 white Human Soldier creature token.",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/emn/48/thraben-standard-bearer?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {},
+        "present_ai_dialogs": false,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/eldritch_moon.c",
+        "function": "card_thraben_standard_bearer"
+      }
+    },
+    "Tezzeret, Artifice Master": {
+      "csvid": 19027,
+      "oracle": {
+        "oracle_id": "e22824cf-07a1-4c83-b6c4-9d8fcff3892f",
+        "name": "Tezzeret, Artifice Master",
+        "oracle_text": "+1: Create a 1/1 colorless Thopter artifact creature token with flying.\n0: Draw a card. If you control three or more artifacts, draw two cards instead.\n−9: You get an emblem with \"At the beginning of your end step, search your library for a permanent card, put it onto the battlefield, then shuffle.\"",
+        "mana_cost": "{3}{U}{U}",
+        "type_line": "Legendary Planeswalker — Tezzeret",
+        "loyalty": "5",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 5.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m19/79/tezzeret-artifice-master?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {
+          "0": 0,
+          "1": 0
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/m19.c",
+        "function": "card_tezzeret_artifice_master"
+      }
+    },
+    "Retrofitter Foundry": {
+      "csvid": 19117,
+      "oracle": {
+        "oracle_id": "aaadfe41-b2be-4183-b45e-a70e53a59d2e",
+        "name": "Retrofitter Foundry",
+        "oracle_text": "{3}: Untap this artifact.\n{2}, {T}: Create a 1/1 colorless Servo artifact creature token.\n{1}, {T}, Sacrifice a Servo: Create a 1/1 colorless Thopter artifact creature token with flying.\n{T}, Sacrifice a Thopter: Create a 4/4 colorless Construct artifact creature token.",
+        "mana_cost": "{1}",
+        "type_line": "Artifact",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c18/57/retrofitter-foundry?utm_source=api"
+      },
+      "ability": 1,
+      "interface": {
+        "dialogs": {
+          "0": 1,
+          "1": 1
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": [],
+        "silent_variants": [
+          "payment_0",
+          "repeat_0"
+        ],
+        "exact_activation_budget_variants": [
+          "tapped_0",
+          "tapped_1",
+          "repeat_0",
+          "repeat_1"
+        ]
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/commander_2018.c",
+        "function": "card_retrofitter_foundry"
+      }
+    },
+    "Saheeli, the Gifted": {
+      "csvid": 19119,
+      "oracle": {
+        "oracle_id": "0e084342-31ff-47a5-9fd8-5b385add7a1a",
+        "name": "Saheeli, the Gifted",
+        "oracle_text": "+1: Create a 1/1 colorless Servo artifact creature token.\n+1: The next spell you cast this turn has affinity for artifacts. (It costs {1} less to cast for each artifact you control as you cast it.)\n−7: For each artifact you control, create a token that's a copy of it. Those tokens gain haste. Exile those tokens at the beginning of the next end step.\nSaheeli, the Gifted can be your commander.",
+        "mana_cost": "{2}{U}{R}",
+        "type_line": "Legendary Planeswalker — Saheeli",
+        "loyalty": "4",
+        "keywords": [],
+        "colors": [
+          "R",
+          "U"
+        ],
+        "color_identity": [
+          "R",
+          "U"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/c18/44/saheeli-the-gifted?utm_source=api"
+      },
+      "ability": 0,
+      "interface": {
+        "dialogs": {
+          "0": 0,
+          "1": 0
+        },
+        "present_ai_dialogs": true,
+        "sacrifice_choices": {},
+        "casting_colors": []
+      },
+      "input_source": {
+        "path": "src/manalinkeh/cards/commander_2018.c",
+        "function": "card_saheeli_the_gifted"
+      }
+    }
+  },
+  "witnesses": {
+    "Beast": {
+      "csvid": 18695,
+      "oracle": {
+        "oracle_id": "d2f35b1a-1eba-4007-8f27-737d26b7a6a2",
+        "name": "Beast",
+        "oracle_text": "This creature can't attack or block alone.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Beast",
+        "power": "4",
+        "toughness": "4",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tdsk/3/beast?utm_source=api"
+      }
+    },
+    "Citizen": {
+      "csvid": 18709,
+      "oracle": {
+        "oracle_id": "ffbc4833-01db-45f8-b8b4-c2e2c8235d0c",
+        "name": "Citizen",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Citizen",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G",
+          "W"
+        ],
+        "color_identity": [
+          "G",
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfrc/11/citizen?utm_source=api"
+      }
+    },
+    "Forest": {
+      "csvid": 91,
+      "oracle": {
+        "oracle_id": "b34bb2dc-c1af-4d77-b0b3-a0fb342a5fc6",
+        "name": "Forest",
+        "oracle_text": "({T}: Add {G}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Forest",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/325/forest?utm_source=api"
+      }
+    },
+    "Giant Spider": {
+      "csvid": 98,
+      "oracle": {
+        "oracle_id": "e740ce2f-2134-473c-afa1-1b6d2d1e38ef",
+        "name": "Giant Spider",
+        "oracle_text": "Reach (This creature can block creatures with flying.)",
+        "mana_cost": "{3}{G}",
+        "type_line": "Creature — Spider",
+        "power": "2",
+        "toughness": "4",
+        "keywords": [
+          "Reach"
+        ],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/dmr/163/giant-spider?utm_source=api"
+      }
+    },
+    "Grizzly Bears": {
+      "csvid": 106,
+      "oracle": {
+        "oracle_id": "14c8f55d-d177-4c25-a931-ebeb9e6062a0",
+        "name": "Grizzly Bears",
+        "oracle_text": "",
+        "mana_cost": "{1}{G}",
+        "type_line": "Creature — Bear",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 2.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/268/grizzly-bears?utm_source=api"
+      }
+    },
+    "Hill Giant": {
+      "csvid": 110,
+      "oracle": {
+        "oracle_id": "342199e0-15b6-4824-83da-25caef2592b3",
+        "name": "Hill Giant",
+        "oracle_text": "",
+        "mana_cost": "{3}{R}",
+        "type_line": "Creature — Giant",
+        "power": "3",
+        "toughness": "3",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 4.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/10e/212/hill-giant?utm_source=api"
+      }
+    },
+    "Island": {
+      "csvid": 126,
+      "oracle": {
+        "oracle_id": "b2c6aa39-2d2a-459c-a555-fb48ba993373",
+        "name": "Island",
+        "oracle_text": "({T}: Add {U}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Island",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/319/island?utm_source=api"
+      }
+    },
+    "Plains": {
+      "csvid": 188,
+      "oracle": {
+        "oracle_id": "bc71ebf6-2056-41f7-be35-b2e5c34afa99",
+        "name": "Plains",
+        "oracle_text": "({T}: Add {W}.)",
+        "mana_cost": "",
+        "type_line": "Basic Land — Plains",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/trk/317/plains?utm_source=api"
+      }
+    },
+    "Plant": {
+      "csvid": 18803,
+      "oracle": {
+        "oracle_id": "bcd346a7-4d96-4a0c-9725-fb740e32b730",
+        "name": "Plant",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Plant",
+        "power": "0",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tecc/5/plant?utm_source=api"
+      }
+    },
+    "Saproling": {
+      "csvid": 18813,
+      "oracle": {
+        "oracle_id": "2b7dba01-b08c-4218-9fc1-da55559d9155",
+        "name": "Saproling",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Saproling",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tsoc/18/saproling?utm_source=api"
+      }
+    },
+    "Satyr": {
+      "csvid": 18814,
+      "oracle": {
+        "oracle_id": "fe5006d4-d0c5-4708-9ba0-00d9218e6739",
+        "name": "Satyr",
+        "oracle_text": "This creature can't block.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Satyr",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tcmm/29/satyr?utm_source=api"
+      }
+    },
+    "Squirrel": {
+      "csvid": 18833,
+      "oracle": {
+        "oracle_id": "67f21c0c-2083-4eda-9dc3-cc8aee42289f",
+        "name": "Squirrel",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Squirrel",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "G"
+        ],
+        "color_identity": [
+          "G"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tblb/23/squirrel?utm_source=api"
+      }
+    },
+    "Suntail Hawk": {
+      "csvid": 1195,
+      "oracle": {
+        "oracle_id": "a8d31e2f-7b2e-4135-8074-9e6ef778bd80",
+        "name": "Suntail Hawk",
+        "oracle_text": "Flying",
+        "mana_cost": "{W}",
+        "type_line": "Creature — Bird",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/m14/40/suntail-hawk?utm_source=api"
+      }
+    },
+    "Swords to Plowshares": {
+      "csvid": 240,
+      "oracle": {
+        "oracle_id": "b1544f21-7e98-461b-aed5-e748b0168c52",
+        "name": "Swords to Plowshares",
+        "oracle_text": "Exile target creature. Its controller gains life equal to its power.",
+        "mana_cost": "{W}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/frc/37/swords-to-plowshares?utm_source=api"
+      }
+    },
+    "Thopter": {
+      "csvid": 18837,
+      "oracle": {
+        "oracle_id": "e3c8482e-ce21-43f8-ac07-c26c01941a4d",
+        "name": "Thopter",
+        "oracle_text": "Flying",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Thopter",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmh3/13/thopter?utm_source=api"
+      }
+    },
+    "Unsummon": {
+      "csvid": 260,
+      "oracle": {
+        "oracle_id": "837182db-1bf3-4a2c-bd01-1af9d9873561",
+        "name": "Unsummon",
+        "oracle_text": "Return target creature to its owner's hand.",
+        "mana_cost": "{U}",
+        "type_line": "Instant",
+        "keywords": [],
+        "colors": [
+          "U"
+        ],
+        "color_identity": [
+          "U"
+        ],
+        "cmc": 1.0,
+        "layout": "normal",
+        "scryfall_uri": "https://scryfall.com/card/fra/46/unsummon?utm_source=api"
+      }
+    },
+    "Zombie": {
+      "csvid": 18860,
+      "oracle": {
+        "oracle_id": "ec6e76e8-e80e-4534-990a-03c3bbeda53a",
+        "name": "Zombie",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Zombie",
+        "power": "*",
+        "toughness": "*",
+        "keywords": [],
+        "colors": [
+          "B"
+        ],
+        "color_identity": [
+          "B"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tinr/12/zombie?utm_source=api"
+      }
+    },
+    "Soldier": {
+      "csvid": 18822,
+      "oracle": {
+        "oracle_id": "eac25f12-6459-438c-a09e-93e23d2cf80d",
+        "name": "Soldier",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tfrc/3/soldier?utm_source=api"
+      }
+    },
+    "Knight Ally": {
+      "csvid": 18777,
+      "oracle": {
+        "oracle_id": "289f88eb-87a2-4927-b6d1-0ff1fc4b2b2f",
+        "name": "Knight Ally",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Knight Ally",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tbfz/5/knight-ally?utm_source=api"
+      }
+    },
+    "Dragon": {
+      "csvid": 18719,
+      "oracle": {
+        "oracle_id": "ec6df381-5ea7-4c68-8416-093b107f0784",
+        "name": "Dragon",
+        "oracle_text": "Flying\n{R}: This creature gets +1/+0 until end of turn.",
+        "mana_cost": "",
+        "type_line": "Token Creature — Dragon",
+        "power": "2",
+        "toughness": "2",
+        "keywords": [
+          "Flying"
+        ],
+        "colors": [
+          "R"
+        ],
+        "color_identity": [
+          "R"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/totc/11/dragon?utm_source=api"
+      }
+    },
+    "Human Soldier": {
+      "csvid": 18766,
+      "oracle": {
+        "oracle_id": "a4095286-d51b-4527-b6ce-23aa539fc23a",
+        "name": "Human Soldier",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Creature — Human Soldier",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [
+          "W"
+        ],
+        "color_identity": [
+          "W"
+        ],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/thob/2/human-soldier?utm_source=api"
+      }
+    },
+    "Servo": {
+      "csvid": 18816,
+      "oracle": {
+        "oracle_id": "b6ca7bd1-d72e-4260-8b52-997ee1377279",
+        "name": "Servo",
+        "oracle_text": "",
+        "mana_cost": "",
+        "type_line": "Token Artifact Creature — Servo",
+        "power": "1",
+        "toughness": "1",
+        "keywords": [],
+        "colors": [],
+        "color_identity": [],
+        "cmc": 0.0,
+        "layout": "token",
+        "scryfall_uri": "https://scryfall.com/card/tmh3/33/servo?utm_source=api"
+      }
+    }
+  }
+}
